@@ -41,7 +41,7 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. Reste
 | Groupe 7 · Bois de la Pénombre | 22-24 | |
 | Groupe 8 · Orneval, Les Paluns et Les Serres-Rocheuses | 24-27 | |
 | Groupe 9 · Site de fouilles : Les Paluns (donjon) | 26-29 | |
-| Groupe 10 · Mille pointes, Bois de la Pénombre et Les Paluns | 27-30 | Le diplomate disparu (Hurlevent, puis Bois de la Pénombre) seulement à partir du niveau 28 |
+| Groupe 10 · Mille pointes, Bois de la Pénombre et Les Paluns | 27-30 | The Missing Diplomat (quête 1274) (Hurlevent, puis Bois de la Pénombre) seulement à partir du niveau 28 |
 | Groupe 11 · Cité de Dalaran (donjon) | 30-33 | Niveau 30 requis pour la quête qui ouvre la route, puis la suite de Polestar (Contreforts de Hautebrande, 30-40) |
 
 En retard le midi ? Loch Modan (niveaux 14-16, quêtes de Thelsamar) : ni le paquet ni Polestar n'ont de guide pour cette zone, la suivre avec Questie ou Wowhead.
