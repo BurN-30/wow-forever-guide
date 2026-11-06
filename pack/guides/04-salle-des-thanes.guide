@@ -4,11 +4,11 @@
 # group notes added. Quest ids, givers and levels cross-checked against Polestar 0.3.2's
 # reference data, Polestar's Dungeons codex and RestedXP's free Forever dungeon guide (11-20).
 guide groupe-alliance/04-salle-des-thanes
-title Group 3 · The Hall of Thanes (dungeon 13-18)
+title Group 3 · The Hall of Thanes (dungeon 13-17)
 folder Group Alliance
 category Dungeons
 faction Alliance
-levels 12-16
+levels 13-17
 zone Ironforge
 next groupe-alliance/05-sombrivage
 

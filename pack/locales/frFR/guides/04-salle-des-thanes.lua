@@ -7,7 +7,7 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 3 · The Hall of Thanes (dungeon 13-18)"] = "Groupe 3 · La salle des Thanes (donjon 13-18)",
+	["Group 3 · The Hall of Thanes (dungeon 13-17)"] = "Groupe 3 · La salle des Thanes (donjon 13-17)",
 
 	-- Step 1: Deeprun Tram to Ironforge
 	-- {zone:1455} Ironforge
@@ -48,4 +48,7 @@ return {
 	-- Step 9: Ironforge rewards
 	-- {zone:1455} Ironforge
 	["{zone:1455} rewards"] = "Récompenses à {zone:1455}",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Group 3 · The Hall of Thanes (dungeon 13-18)"] = "Groupe 3 · La salle des Thanes (donjon 13-18)",
 }

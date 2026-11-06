@@ -4,7 +4,7 @@ guide groupe-alliance/08-bois-de-la-penombre
 title Group 7 · Duskwood
 folder Group Alliance
 faction Alliance
-levels 24-26
+levels 22-24
 zone Duskwood
 next groupe-alliance/09-orneval-paluns
 
@@ -14,7 +14,7 @@ next groupe-alliance/09-orneval-paluns
 
 step Duskwood
   zone Duskwood
-  note Group: highest player at most 4 levels above the lowest. Above 26? Wait for the others.
+  note Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others.
   goto 75.8,45.3 "Duskwood"
 
 # Duskwood, Alliance ~22.7 to ~25.4.

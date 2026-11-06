@@ -4,7 +4,7 @@ guide groupe-alliance/03-marche-de-l-ouest
 title Group 2 · Westfall
 folder Group Alliance
 faction Alliance
-levels 11-15
+levels 11-14
 zone Westfall
 next groupe-alliance/04-salle-des-thanes
 
@@ -17,7 +17,7 @@ next groupe-alliance/04-salle-des-thanes
 step The Jansen Stead
   zone Westfall
   tip Follow the road from Elwynn into Westfall: the Furlbrows sit by their burned farm, the first one on the road. Pick up oats from any Sack of Oats you pass on the loop: the rest are gathered in the fields here on the way back.
-  note Group: highest player at most 4 levels above the lowest. Above 15? Stop here and wait.
+  note Group: highest player at most 4 levels above the lowest. Above 14? Stop here and wait.
   accept 109 npc 237 only Human -- Farmer Furlbrow; Humans took it from Deputy Rainer in Elwynn
 
 step Westfall

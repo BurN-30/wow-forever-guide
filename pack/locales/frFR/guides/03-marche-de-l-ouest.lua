@@ -14,7 +14,7 @@ return {
 	["The Jansen Stead"] = "La ferme des Jansen",
 	-- {zone:1436} Westfall · {object:2724} Sack of Oats
 	["Follow the road from Elwynn into {zone:1436}: the Furlbrows sit by their burned farm, the first one on the road. Pick up oats from any {object:2724} you pass on the loop: the rest are gathered in the fields here on the way back."] = "Suivez la route depuis Elwynn vers {zone:1436} : les Furlbrow sont assis près de leur ferme brûlée, la première sur la route. Ramassez de l'avoine sur chaque {object:2724} que vous croisez dans la boucle : le reste est récolté dans les champs ici sur le chemin du retour.",
-	["Group: highest player at most 4 levels above the lowest. Above 15? Stop here and wait."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 15 ? Attendre les autres.",
+	["Group: highest player at most 4 levels above the lowest. Above 14? Stop here and wait."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 14 ? Attendre les autres.",
 	-- {npc:237} Farmer Furlbrow · {npc:963} Deputy Rainer
 	["{npc:237}; Humans took it from {npc:963} in Elwynn"] = "{npc:237} ; les Humains l'ont pris à {npc:963} à Elwynn",
 
@@ -211,6 +211,7 @@ return {
 	-- ["For {npc:266} in {area:69}, Redridge"] = "Pour {npc:266} à {area:69}, dans les Carmines",
 	-- ["Further north along the road. The Furlbrows sit by their burned farm. Collect the oats from the Sacks of Oats in the fields as you go and fill the vial at the stead's well."] = "Plus au nord sur la route. Les Furlbrow sont assis près de leur ferme incendiée. En chemin, ramassez l'avoine des Sacs d'avoine dans les champs et remplissez la fiole au puits de la ferme.",
 	-- ["Further north along the road. The Furlbrows sit by their burned farm. Collect the oats from the Sacks of Oats in the fields as you go."] = "Plus au nord sur la route. Les Furlbrow sont assis près de leur ferme incendiée. En chemin, ramassez l'avoine des Sacs d'avoine dans les champs.",
+	-- ["Group: highest player at most 4 levels above the lowest. Above 15? Stop here and wait."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 15 ? Attendre les autres.",
 	-- ["Head to {zone:1453}. It has no shaman trainer: take the {area:2257} from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back for the boat."] = "Allez à {zone:1453}. Il n'y a pas de formateur chaman : prenez le {area:2257} depuis {object:28027} jusqu'à {zone:1455}, entraînez-vous avec {npc:258098}, puis reprenez le tram pour le bateau.",
 	-- ["Hearth to {area:108}"] = "Pierre de foyer vers {area:108}",
 	-- ["Hearthstone on cooldown? Follow the road north-east."] = "Pierre de foyer en recharge ? Suivez la route vers le nord-est.",

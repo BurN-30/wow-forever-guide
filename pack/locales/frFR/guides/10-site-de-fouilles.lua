@@ -8,7 +8,7 @@
 return {
 	-- Guide
 	-- {zone:1437} Wetlands
-	["Group 9 · Excavation Site: {zone:1437} (dungeon 26-31)"] = "Groupe 9 · Site de fouilles : {zone:1437} (donjon 26-31)",
+	["Group 9 · Excavation Site: {zone:1437} (dungeon 26-29)"] = "Groupe 9 · Site de fouilles : {zone:1437} (donjon 26-29)",
 
 	-- Step 1: Menethil Harbor: dungeon quests
 	-- {object:1162} Menethil Harbor
@@ -42,4 +42,7 @@ return {
 
 	-- Step 7: Menethil rewards
 	["Menethil rewards"] = "Récompenses à Menethil",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Group 9 · Excavation Site: {zone:1437} (dungeon 26-31)"] = "Groupe 9 · Site de fouilles : {zone:1437} (donjon 26-31)",
 }

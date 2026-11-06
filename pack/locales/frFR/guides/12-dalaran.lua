@@ -7,13 +7,15 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 11 · City of Dalaran (dungeon 28-33)"] = "Groupe 11 · Cité de Dalaran (donjon 28-33)",
+	["Group 11 · City of Dalaran (dungeon 30-33)"] = "Groupe 11 · Cité de Dalaran (donjon 30-33)",
 
 	-- Step 1: Stormwind: two dungeon quests
 	-- {zone:1453} Stormwind
 	["{zone:1453}: two dungeon quests"] = "{zone:1453} : deux quêtes du donjon",
 	-- {npc:5502} Shylamiir · {object:2096} Trade District · {npc:5694} High Sorcerer Andromath · {object:2101} Mage Quarter
 	["{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower."] = "{npc:5502} est dans {object:2096}, {npc:5694} dans la tour de {object:2101}.",
+	-- {quest:92432} An Alarming Request
+	["Group: level 30 required for {quest:92432}, the quest that opens the way to Dalaran. Below 30? Level up first."] = "Groupe : niveau 30 requis pour {quest:92432}, la quête qui ouvre la route de Dalaran. En dessous de 30 ? Monter de niveau d'abord.",
 
 	-- Step 2: Southshore: Emissary Jacques
 	-- {npc:247264} Emissary Jacques
@@ -41,4 +43,7 @@ return {
 	-- Step 7: Stormwind rewards
 	-- {zone:1453} Stormwind
 	["{zone:1453} rewards"] = "Récompenses à {zone:1453}",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Group 11 · City of Dalaran (dungeon 28-33)"] = "Groupe 11 · Cité de Dalaran (donjon 28-33)",
 }

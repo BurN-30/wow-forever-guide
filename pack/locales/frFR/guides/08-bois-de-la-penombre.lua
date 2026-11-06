@@ -11,7 +11,7 @@ return {
 	["Group 7 · {zone:1431}"] = "Groupe 7 · {zone:1431}",
 
 	-- Step 1: Duskwood
-	["Group: highest player at most 4 levels above the lowest. Above 26? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 26 ? Attendre les autres.",
+	["Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 24 ? Attendre les autres.",
 
 	-- Step 2: Darkshire
 	["Darkshire"] = "Sombre-Comté",
@@ -208,6 +208,7 @@ return {
 	-- ["Every ghoul of the {area:492}'s northern half can drop a rib: Flesh Eaters, Bone Chewers, Plague Spreaders and Brain Eaters.\nCareful: A {npc:948} casts {spell:3428} as it dies, which brings extra adds."] = "Toutes les goules de la moitié nord du {area:492} peuvent lâcher une côte : Dévoreurs, Mâcheurs d'os, Répandeurs de peste et Mangeurs de cervelle.\nAttention : un {npc:948} lance {spell:3428} en mourant, ce qui fait apparaître des renforts.",
 	-- ["Follow the road south from {area:1002} into {area:10}; {area:42} lies on the east side of the forest."] = "Suivez la route vers le sud depuis {area:1002} jusqu'au {area:10} ; {area:42} se trouve à l'est de la forêt.",
 	-- ["Follow the road south from {area:1002} into {zone:1431}; {area:42} lies on the east side of the forest."] = "Suivez la route vers le sud depuis {area:1002} jusqu'à {zone:1431} ; {area:42} se trouve du côté est de la forêt.",
+	-- ["Group: highest player at most 4 levels above the lowest. Above 26? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 26 ? Attendre les autres.",
 	-- ["Head back east along the road to the {area:245}."] = "Retournez vers l'est par la route jusqu'à {area:245}.",
 	-- ["Head back east to {area:42}."] = "Retournez vers l'est jusqu'à {area:42}.",
 	-- ["Head west along the road out of {area:94} into {area:40}. {npc:7024} watches {npc:7053}'s tower from the hills just inside the border. The {npc:7051} (level 23) guarding the tower carries its key; Klaven's journal is in the chest at the top."] = "Suivez la route vers l'ouest pour quitter {area:94} et entrer en {area:40}. {npc:7024} surveille la tour de {npc:7053} depuis les collines juste après la frontière. Le {npc:7051} (niveau 23) qui garde la tour porte sa clé ; le journal de Klaven se trouve dans le coffre au sommet.",

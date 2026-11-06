@@ -3,15 +3,16 @@
 # choice, shorter tips. Ids cross-checked against Polestar 0.3.2's reference data and Dungeons
 # codex and the MittenQuest Forever pack (Stormwind 31-35). Untested in game (Aurum: past 20).
 guide groupe-alliance/12-dalaran
-title Group 11 · City of Dalaran (dungeon 28-33)
+title Group 11 · City of Dalaran (dungeon 30-33)
 folder Group Alliance
 category Dungeons
 faction Alliance
-levels 28-31
+levels 30-33
 zone Stormwind City
 next forever/alliance/30-40/01-hillsbrad-foothills
 
 step Stormwind: two dungeon quests
+  note Group: level 30 required for An Alarming Request, the quest that opens the way to Dalaran. Below 30? Level up first.
   tip Shylamiir is in the Trade District, High Sorcerer Andromath in the Mage Quarter tower.
   accept 92456
   accept 92489

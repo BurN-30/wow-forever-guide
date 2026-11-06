@@ -145,5 +145,20 @@
   "Fly to Rut'theran Village once more and take the portal up to {npc:4217}, then fly back to Auberdine for the boat.": "Volez encore vers le village de Rut'theran et prenez le portail qui monte vers {npc:4217}, puis revolez vers Auberdine pour le bateau.",
   "{npc:4217}: Bear Form": "{npc:4217} : Forme d'ours",
   "Take the boat to {zone:1453} from Auberdine's docks.": "Prenez le bateau pour {zone:1453} aux quais d'Auberdine.",
-  "Group: the next guide is the meeting point in {zone:1453}.": "Groupe : le guide suivant est le rendez-vous à {zone:1453}."
+  "Group: the next guide is the meeting point in {zone:1453}.": "Groupe : le guide suivant est le rendez-vous à {zone:1453}.",
+  "Group 3 · The Hall of Thanes (dungeon 13-17)": "Groupe 3 · La salle des Thanes (donjon 13-17)",
+  "Group 5 · Ruins of Lordaeron (dungeon 17-21)": "Groupe 5 · Ruines de Lordaeron (donjon 17-21)",
+  "Group 9 · Excavation Site: {zone:1437} (dungeon 26-29)": "Groupe 9 · Site de fouilles : {zone:1437} (donjon 26-29)",
+  "Group 11 · City of Dalaran (dungeon 30-33)": "Groupe 11 · Cité de Dalaran (donjon 30-33)",
+  "Group: highest player at most 4 levels above the lowest. Above 14? Stop here and wait.": "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 14 ? Attendre les autres.",
+  "Only if you are still in {zone:1439} (Ruins of Lordaeron skipped).": "Seulement si le groupe est encore à {zone:1439} (Ruines de Lordaeron sautées).",
+  "Level 28 required: below 28, skip it and its follow-ups in {zone:1431}. Take the Deeprun Tram from {zone:1455}, then the Cathedral and the Keep.": "Niveau 28 requis : en dessous, laisser de côté cette quête et sa suite à {zone:1431}. Tram des profondeurs depuis {zone:1455}, puis la Cathédrale et le Donjon.",
+  "{npc:4982}, in the Cathedral of Light": "{npc:4982}, dans la Cathédrale de la Lumière",
+  "{npc:4959} and {npc:482}": "{npc:4959} et {npc:482}",
+  "{npc:482}, the cheese shop in the {object:2096}": "{npc:482}, la fromagerie du {object:2096}",
+  "{npc:840} again": "De nouveau {npc:840}",
+  "Group: level 30 required for {quest:92432}, the quest that opens the way to Dalaran. Below 30? Level up first.": "Groupe : niveau 30 requis pour {quest:92432}, la quête qui ouvre la route de Dalaran. En dessous de 30 ? Monter de niveau d'abord.",
+  "Group: highest player at most 4 levels above the lowest. Above 23? Wait for the others.": "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 23 ? Attendre les autres.",
+  "Group: highest player at most 4 levels above the lowest. Above 27? Wait for the others.": "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 27 ? Attendre les autres.",
+  "Group: highest player at most 4 levels above the lowest. Above 30? Wait for the others.": "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 30 ? Attendre les autres."
 }

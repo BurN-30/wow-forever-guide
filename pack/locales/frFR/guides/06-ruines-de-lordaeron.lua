@@ -7,7 +7,7 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 5 · Ruins of Lordaeron (dungeon 15-20)"] = "Groupe 5 · Ruines de Lordaeron (donjon 15-20)",
+	["Group 5 · Ruins of Lordaeron (dungeon 17-21)"] = "Groupe 5 · Ruines de Lordaeron (donjon 17-21)",
 
 	-- Step 1: Auberdine: boat to Southshore
 	["Auberdine: boat to Southshore"] = "Auberdine : bateau pour Austrivage",
@@ -39,4 +39,7 @@ return {
 	["{npc:466} by the gate, the Matron at the orphanage, {npc:15991} in the keep."] = "{npc:466} près de la porte, la matrone à l'orphelinat, {npc:15991} au donjon.",
 	-- {zone:1431} Duskwood
 	["Next letter for Darkshire, in {zone:1431} later"] = "Lettre suivante pour Sombre-Comté, plus tard dans {zone:1431}",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Group 5 · Ruins of Lordaeron (dungeon 15-20)"] = "Groupe 5 · Ruines de Lordaeron (donjon 15-20)",
 }

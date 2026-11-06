@@ -4,7 +4,7 @@ guide groupe-alliance/07-carmines
 title Group 6 · Redridge Mountains
 folder Group Alliance
 faction Alliance
-levels 20-24
+levels 20-23
 zone Redridge Mountains
 next groupe-alliance/08-bois-de-la-penombre
 
@@ -15,7 +15,8 @@ next groupe-alliance/08-bois-de-la-penombre
 
 step Boat to Stormwind Harbor
   zone Darkshore
-  note Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others.
+  when zone "Darkshore"
+  tip Only if you are still in Darkshore (Ruins of Lordaeron skipped).
   goto 30.7,41.0 "Boat to Stormwind Harbor"
 
 # Visit 4 of the simulator's consensus Alliance route (Human export,
@@ -95,6 +96,7 @@ step Boat to Stormwind Harbor
 
 step Stormwind
   zone Stormwind City
+  note Group: highest player at most 4 levels above the lowest. Above 23? Wait for the others.
   tip The Auberdine boat docks at Stormwind Harbor. Walk up into the city for training and Baros Alexston, then leave by the main gate and follow the road east through Elwynn Forest.
   train class only Warrior,Paladin,Hunter,Rogue,Priest,Mage,Warlock,Druid -- Level 18 and 20 spells
   turnin 97914                                -- Baros Alexston: Thundris' letter from Auberdine

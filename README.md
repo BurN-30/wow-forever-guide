@@ -30,19 +30,21 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. Reste
 | Guide (`/polestar guides`, Guides de la communauté, Groupe Alliance) | Niveaux | Pour qui |
 |---|---|---|
 | Départ · Humain : Forêt d'Elwynn | 1-11 | Humains (quêtes de démoniste et de mage incluses) |
-| Départ · Nain : Dun Morogh | 1-12 | Nains (quêtes de classe incluses) |
-| Départ · Elfe de la nuit : Teldrassil | 1-12 | Elfes de la nuit (quêtes de druide incluses), finit au bateau pour Hurlevent |
-| Groupe 1 · Rendez-vous à Hurlevent | 10-13 | Tout le monde |
-| Groupe 2 · Marche de l'Ouest | 11-15 | |
-| Groupe 3 · La salle des Thanes (donjon) | 12-16 | Quêtes à prendre à Forgefer et Dun Morogh avant d'entrer |
-| Groupe 4 · Sombrivage | 15-20 | Tout le monde, Elfes de la nuit compris |
-| Groupe 5 · Ruines de Lordaeron (donjon) | 16-20 | |
-| Groupe 6 · Les Carmines | 20-24 | |
-| Groupe 7 · Bois de la Pénombre | 24-26 | |
-| Groupe 8 · Orneval, Les Paluns et Les Serres-Rocheuses | 26-28 | |
-| Groupe 9 · Site de fouilles : Les Paluns (donjon) | 26-30 | |
-| Groupe 10 · Mille pointes, Bois de la Pénombre et Les Paluns | 28-31 | |
-| Groupe 11 · Cité de Dalaran (donjon) | 28-31 | Puis la suite de Polestar (Contreforts de Hautebrande, 30-40) |
+| Départ · Nain : Dun Morogh | 1-11 | Nains (quêtes de classe incluses) |
+| Départ · Elfe de la nuit : Teldrassil | 1-11 | Elfes de la nuit (quêtes de druide incluses), finit au bateau pour Hurlevent |
+| Groupe 1 · Rendez-vous à Hurlevent | 10-12 | Tout le monde |
+| Groupe 2 · Marche de l'Ouest | 11-14 | |
+| Groupe 3 · La salle des Thanes (donjon) | 13-17 | Quêtes à prendre à Forgefer et Dun Morogh avant d'entrer |
+| Groupe 4 · Sombrivage | 15-19 | Tout le monde, Elfes de la nuit compris |
+| Groupe 5 · Ruines de Lordaeron (donjon) | 17-21 | |
+| Groupe 6 · Les Carmines | 20-23 | |
+| Groupe 7 · Bois de la Pénombre | 22-24 | |
+| Groupe 8 · Orneval, Les Paluns et Les Serres-Rocheuses | 24-27 | |
+| Groupe 9 · Site de fouilles : Les Paluns (donjon) | 26-29 | |
+| Groupe 10 · Mille pointes, Bois de la Pénombre et Les Paluns | 27-30 | Le diplomate disparu (Hurlevent, puis Bois de la Pénombre) seulement à partir du niveau 28 |
+| Groupe 11 · Cité de Dalaran (donjon) | 30-33 | Niveau 30 requis pour la quête qui ouvre la route, puis la suite de Polestar (Contreforts de Hautebrande, 30-40) |
+
+En retard le midi ? Loch Modan (niveaux 14-16, quêtes de Thelsamar) : ni le paquet ni Polestar n'ont de guide pour cette zone, la suivre avec Questie ou Wowhead.
 
 ## Premier lancement
 

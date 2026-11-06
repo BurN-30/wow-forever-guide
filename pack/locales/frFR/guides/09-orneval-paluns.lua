@@ -11,7 +11,7 @@ return {
 	["Group 8 · {zone:1440}, {zone:1437} & Stonetalon"] = "Groupe 8 · {zone:1440}, {zone:1437} et Les Serres-Rocheuses",
 
 	-- Step 1: Moonglade
-	["Group: highest player at most 4 levels above the lowest. Above 28? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 28 ? Attendre les autres.",
+	["Group: highest player at most 4 levels above the lowest. Above 27? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 27 ? Attendre les autres.",
 	-- {zone:1450} Moonglade
 	["Cast Teleport: {zone:1450}"] = "Lancez Téléportation : {zone:1450}",
 
@@ -325,8 +325,6 @@ return {
 	["Cathedral of Light"] = "Cathédrale de la Lumière",
 	-- {object:171524} Tinker Town · {zone:1453} Stormwind · {object:28027} Dwarven District · {object:2098} Cathedral Square
 	["Take the Deeprun Tram from {object:171524} to {zone:1453}'s {object:28027}, then walk to the {object:2098}."] = "Prenez le Tram des profondeurs de {object:171524} vers {object:28027} de {zone:1453}, puis marchez jusqu'au {object:2098}.",
-	-- {npc:4982} Thomas
-	["{npc:4982}, in the Cathedral of Light"] = "{npc:4982}, dans la Cathédrale de la Lumière",
 	-- {npc:2228} Lieutenant Farren Orinelle
 	["For {npc:2228} in Southshore: keep it"] = "Pour {npc:2228} à Rivage-du-Sud : gardez-le",
 
@@ -344,13 +342,7 @@ return {
 	-- {object:2164} The Slaughtered Lamb · {object:2101} Mage Quarter
 	["{object:2164} is in the {object:2101}."] = "{object:2164} se trouve dans le {object:2101}.",
 
-	-- Step 87: Jorgen and Elling Trias
-	-- {npc:4959} Jorgen · {npc:482} Elling Trias
-	["{npc:4959} and {npc:482}"] = "{npc:4959} et {npc:482}",
-	-- {npc:482} Elling Trias · {object:2096} Trade District
-	["{npc:482}, the cheese shop in the {object:2096}"] = "{npc:482}, la fromagerie du {object:2096}",
-
-	-- Step 88: Trade District
+	-- Step 87: Trade District
 	["Next: fly to Darkshire."] = "Ensuite : volez vers Sombre-Comté.",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
@@ -376,6 +368,7 @@ return {
 	-- ["For {npc:2228} in {area:271}: keep it"] = "Pour {npc:2228} à {area:271} : gardez-la",
 	-- ["From {area:17203} take the boat to {area:442}; {npc:3649} stands at the north end of the village. Then head south along the road through {zone:1439}."] = "Au {area:17203}, prenez le bateau pour {area:442} ; {npc:3649} se tient au nord du village. Suivez ensuite la route vers le sud à travers {zone:1439}.",
 	-- ["From {area:17203} take the boat to {area:442}; {npc:3649} stands at the north end of the village. Then ride south along the road through {zone:1439}."] = "À {area:17203}, prenez le bateau pour {area:442} ; {npc:3649} se tient à l'extrémité nord du village. Suivez ensuite la route vers le sud à travers {zone:1439}.",
+	-- ["Group: highest player at most 4 levels above the lowest. Above 28? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 28 ? Attendre les autres.",
 	-- ["Head east along the {zone:1437} road, south through {area:836} into {zone:1432} and west through the tunnel into {zone:1426} to {area:1537}."] = "Suivez la route des {zone:1437} vers l'est, passez au sud par {area:836} jusqu'au {zone:1432}, puis à l'ouest par le tunnel jusqu'à {zone:1426} et {area:1537}.",
 	-- ["Head south past {area:421} into the {area:1276} tunnel; it comes out in Stonetalon's {area:461}. {npc:4080} and {npc:4077} camp on the {area:1076} south-west of the crag."] = "Allez au sud après le {area:421}, dans le tunnel du {area:1276} ; il débouche sur le {area:461}, dans les Serres-Rocheuses. {npc:4080} et {npc:4077} campent sur le {area:1076}, au sud-ouest du pic.",
 	-- ["Head west to the shore of {area:441}. Teronis lies among the Saltspittle murlocs; any murloc can drop the {item:5463}."] = "Allez vers l'ouest jusqu'à la rive du {area:441}. Teronis gît parmi les murlocs Crache-sel ; n'importe quel murloc peut lâcher {item:5463}.",
@@ -434,6 +427,9 @@ return {
 	-- ["{npc:4201}, in the hut north of them"] = "{npc:4201}, dans la cabane au nord",
 	-- ["{npc:4276} mines in the {area:2160} at the east end of the crag. Talk to him and fend off the Venture Co. raiders while he mines."] = "{npc:4276} creuse dans la {area:2160}, à l'extrémité est de la combe. Parlez-lui et repoussez les pillards de la KapitalRisk pendant qu'il creuse.",
 	-- ["{npc:4276} mines in the {area:2160} at the east end of the crag. Talk to him and fend off the Venture Co. raiders while he mines.\nCareful: The kobolds arrive in waves. The first wave is melee fighters, and the second adds casters to the mix. Regular mobs in the mine respawn quickly and can join the fight while the waves are coming. A group is recommended."] = "{npc:4276} creuse dans {area:2160}, à l'extrémité est du pic. Parlez-lui et repoussez les pillards de la KapitalRisk pendant qu'il mine.\nAttention : les kobolds arrivent par vagues. La première vague se compose de combattants au corps à corps, la deuxième y ajoute des lanceurs de sorts. Les monstres normaux de la mine réapparaissent vite et peuvent se joindre au combat pendant les vagues. Un groupe est recommandé.",
+	-- ["{npc:482}, the cheese shop in the {object:2096}"] = "{npc:482}, la fromagerie du {object:2096}",
+	-- ["{npc:4959} and {npc:482}"] = "{npc:4959} et {npc:482}",
+	-- ["{npc:4982}, in the Cathedral of Light"] = "{npc:4982}, dans la Cathédrale de la Lumière",
 	-- ["{npc:5082}, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. {npc:1480} stands a short walk north-east of the inn.\n{npc:2104} stands in {area:2103}, a short walk from {npc:1242}.\n{npc:2104} stands in {area:2103}."] = "{npc:5082}, Mikhail et Tapoke Jahn sont tous à l'auberge de Menethil ; Tapoke vous attaque quand vous parlez à Mikhail, mais abandonne une fois battu. {npc:1480} se tient à quelques pas au nord-est de l'auberge.\n{npc:2104} se tient dans {area:2103}, à quelques pas de {npc:1242}.\n{npc:2104} se tient dans {area:2103}.",
 	-- ["{object:176364} Harbor"] = "{object:176364}",
 	-- ["{quest:1009} walks the northern tip of the {area:414} with Wrathtail guards."] = "{quest:1009} arpente la pointe nord de la {area:414} avec des gardes Irequeue.",

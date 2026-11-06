@@ -12,11 +12,13 @@ return {
 
 	-- Step 1: Boat to Stormwind Harbor
 	["Boat to Stormwind Harbor"] = "Bateau pour le port de Hurlevent",
-	["Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 24 ? Attendre les autres.",
+	-- {zone:1439} Darkshore
+	["Only if you are still in {zone:1439} (Ruins of Lordaeron skipped)."] = "Seulement si le groupe est encore à {zone:1439} (Ruines de Lordaeron sautées).",
 
 	-- Step 2: Stormwind
 	-- {npc:1646} Baros Alexston · {zone:1429} Elwynn Forest
 	["The Auberdine boat docks at Stormwind Harbor. Walk up into the city for training and {npc:1646}, then leave by the main gate and follow the road east through {zone:1429}."] = "Le bateau d'Auberdine accoste au port de Hurlevent. Montez en ville pour l'entraînement et {npc:1646}, puis sortez par la porte principale et suivez la route vers l'est à travers {zone:1429}.",
+	["Group: highest player at most 4 levels above the lowest. Above 23? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 23 ? Attendre les autres.",
 	["Level 18 and 20 spells"] = "Sorts des niveaux 18 et 20",
 	-- {npc:1646} Baros Alexston
 	["{npc:1646}: Thundris' letter from Auberdine"] = "{npc:1646} : Lettre de Thundris depuis Auberdine",
@@ -198,6 +200,7 @@ return {
 	-- ["For {npc:3649}, on the return to {area:442} (06-ashenvale)"] = "Pour {npc:3649}, au retour à {area:442} (06-ashenvale)",
 	-- ["Gnolls toward {area:1002}"] = "Gnolls vers {area:1002}",
 	-- ["Greater Tarantulas crawl on the slopes around the mill north-east of the lake; Blackrock Renegades hold the mill itself."] = "Des Grandes tarentules rampent sur les pentes autour du moulin, au nord-est du lac ; des Renégats Blackrock occupent le moulin.",
+	-- ["Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 24 ? Attendre les autres.",
 	-- ["Head north out of {area:69} up the {area:95} to {area:997}. Blackrock Champions camp in the valley."] = "Allez au nord hors de {area:69} par {area:95} jusqu'à {area:997}. Des Champions Blackrock campent dans la vallée.",
 	-- ["Hearth to {area:69}"] = "Pierre de foyer vers {area:69}",
 	-- ["Keeshan hides at the very north end of the valley, by the {zone:1428} border. Escort him down to {area:69}; Blackrock orcs ambush you on the way."] = "Keeshan se cache tout au nord de la vallée, près de la frontière de {zone:1428}. Escortez-le jusqu'à {area:69} ; des orcs Blackrock vous tendent des embuscades en chemin.",
