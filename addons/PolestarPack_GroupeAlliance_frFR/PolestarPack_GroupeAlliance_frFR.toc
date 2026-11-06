@@ -2,7 +2,7 @@
 ## Title: Group Alliance 1-33 (frFR)
 ## Notes: French texts of Group Alliance 1-33. Loaded on demand on a French client.
 ## Author: BurN-30
-## Version: 0.1.0
+## Version: 0.2.0
 ## Category: Polestar
 ## Group: Polestar
 ## LoadOnDemand: 1
