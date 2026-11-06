@@ -48,6 +48,19 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. Reste
 
 En retard le midi ? `/polestar guides` → Guides de la communauté → Groupe Alliance → **Solo · Loch Modan** (quêtes de Thelsamar, de la tour de garde du sud et du pavillon de chasse ; quelques positions marquées **?**). De retour à 4 niveaux du groupe : reprendre le guide du groupe.
 
+### Pas encore couvert
+
+Le parcours ne prend pas toutes les quêtes. Zones et quêtes Alliance de 10 à 31 absentes du paquet (à suivre avec Questie ou Wowhead si besoin d'XP en plus) :
+
+| Zone | Niveaux | Ce qui manque |
+|---|---|---|
+| Les Carmines | 15-24 | 23 quêtes de plus que le Groupe 6 (environ 29 000 XP) |
+| Orneval | 20-28 | 18 quêtes (environ 30 000 XP) |
+| Les Paluns | 27-31 | 13 quêtes (environ 30 000 XP) |
+| Les Serres-Rocheuses | 21-27 | 9 quêtes |
+| Les Tarides (Cabestan) | 14-21 | quêtes neutres, plus une quête Alliance propre à Forever |
+| Après 33 | 30-40 et plus | guides de Polestar seuls, sans notes de groupe |
+
 ## Premier lancement
 
 Rien à choisir : Polestar lit la race, la classe et le niveau du personnage et ouvre le guide du paquet qui lui correspond (les quêtes de classe sont dans les guides). Chaque guide enchaîne tout seul sur le suivant.
