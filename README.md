@@ -35,14 +35,14 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. Reste
 | Départ · Gnome : Dun Morogh | 1-11 | Gnomes (quêtes de classe incluses), même vallée de départ que les Nains |
 | Départ · Elfe de la nuit : Teldrassil | 1-11 | Elfes de la nuit (quêtes de druide incluses), finit au bateau pour Hurlevent |
 | Groupe 1 · Rendez-vous à Hurlevent | 10-12 | Tout le monde |
-| Groupe 2 · Marche de l'Ouest | 11-14 | |
+| Groupe 2 · Marche de l'Ouest | 11-14 | Tout le monde : quêtes de Colline-des-Sentinelles (environ 70 étapes) |
 | Groupe 3 · La salle des Thanes (donjon) | 13-17 | Quêtes à prendre à Forgefer et Dun Morogh avant d'entrer |
 | Groupe 4 · Sombrivage | 15-19 | Tout le monde, Elfes de la nuit compris |
-| Groupe 5 · Ruines de Lordaeron (donjon) | 17-21 | |
-| Groupe 6 · Les Carmines | 20-23 | |
-| Groupe 7 · Bois de la Pénombre | 22-24 | |
-| Groupe 8 · Orneval, Les Paluns et Les Serres-Rocheuses | 24-27 | |
-| Groupe 9 · Site de fouilles : Les Paluns (donjon) | 26-29 | |
+| Groupe 5 · Ruines de Lordaeron (donjon) | 17-21 | Tout le monde : quêtes à prendre avant d'entrer, puis le donjon |
+| Groupe 6 · Les Carmines | 20-23 | Tout le monde : quêtes de Lakeshire (environ 55 étapes) |
+| Groupe 7 · Bois de la Pénombre | 22-24 | Tout le monde : quêtes de Sombre-Comté (environ 65 étapes) |
+| Groupe 8 · Orneval, Les Paluns et Les Serres-Rocheuses | 24-27 | Tout le monde : le plus long guide (environ 130 étapes), trois zones |
+| Groupe 9 · Site de fouilles : Les Paluns (donjon) | 26-29 | Tout le monde : quêtes de donjon, positions marquées **?** (non testé au-delà de 20) |
 | Groupe 10 · Mille pointes, Bois de la Pénombre et Les Paluns | 27-30 | The Missing Diplomat (quête 1274) (Hurlevent, puis Bois de la Pénombre) seulement à partir du niveau 28 |
 | Groupe 11 · Cité de Dalaran (donjon) | 30-33 | Niveau 30 requis pour la quête qui ouvre la route, puis la suite de Polestar (Contreforts de Hautebrande, 30-40) |
 | Solo · Loch Modan (facultatif) | 14-16 | Joueur en retard sur le groupe, seul (le midi par exemple) : environ 1 à 2 niveaux, retour à Forgefer en griffon. Ne s'ouvre jamais tout seul |
