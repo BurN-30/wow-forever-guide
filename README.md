@@ -22,7 +22,38 @@ Windows bloque le fichier ? Clic droit sur `Installer.bat` → **Propriétés** 
 
 ## Le parcours
 
-Chacun fait son **départ** seul (Humain : Elwynn, Nain : Dun Morogh, Elfe de la nuit : guide Teldrassil de Polestar), puis tout le monde se retrouve à **Hurlevent** vers le niveau 10-12 et suit les mêmes guides : Marche de l'Ouest, Sombrivage, Carmines, Bois de la Pénombre, Paluns, Mille pointes, avec 4 donjons (Salle des Thanes, Ruines de Lordaeron, Site de fouilles, Dalaran). Restez à 4 niveaux d'écart maximum : au-delà, l'XP de groupe baisse.
+Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. Restez à 4 niveaux d'écart maximum : au-delà, l'XP de groupe baisse.
+
+| Guide (`/polestar guides`, Guides de la communauté, Groupe Alliance) | Niveaux | Pour qui |
+|---|---|---|
+| Départ · Humain : Forêt d'Elwynn | 1-11 | Humains (quêtes de démoniste et de mage incluses) |
+| Départ · Nain : Dun Morogh | 1-12 | Nains (quêtes de classe incluses) |
+| Départ · Elfe de la nuit : Teldrassil | 1-12 | Elfes de la nuit (quêtes de druide incluses), finit au bateau pour Hurlevent |
+| Groupe 1 · Rendez-vous à Hurlevent | 10-13 | Tout le monde |
+| Groupe 2 · Marche de l'Ouest | 11-15 | |
+| Groupe 3 · La salle des Thanes (donjon) | 12-16 | Quêtes à prendre à Forgefer et Dun Morogh avant d'entrer |
+| Groupe 4 · Sombrivage | 15-20 | Tout le monde, Elfes de la nuit compris |
+| Groupe 5 · Ruines de Lordaeron (donjon) | 16-20 | |
+| Groupe 6 · Les Carmines | 20-24 | |
+| Groupe 7 · Bois de la Pénombre | 24-26 | |
+| Groupe 8 · Orneval, Les Paluns et Les Serres-Rocheuses | 26-28 | |
+| Groupe 9 · Site de fouilles : Les Paluns (donjon) | 26-30 | |
+| Groupe 10 · Mille pointes, Bois de la Pénombre et Les Paluns | 28-31 | |
+| Groupe 11 · Cité de Dalaran (donjon) | 28-31 | Puis la suite de Polestar (Contreforts de Hautebrande, 30-40) |
+
+## Premier lancement
+
+Rien à choisir : Polestar lit la race, la classe et le niveau du personnage et ouvre le guide du paquet qui lui correspond (les quêtes de classe sont dans les guides). Chaque guide enchaîne tout seul sur le suivant.
+
+| Personnage | Guide ouvert | Quoi faire |
+|---|---|---|
+| Humain, Nain ou Elfe de la nuit, niveau 1 | son Départ | rien |
+| Personnage déjà avancé, aucun guide Polestar ouvert avant (ex. Humain niveau 8) | le guide de son niveau, quêtes déjà rendues cochées (Humain 8 : Départ · Humain) | rien |
+| Elfe de la nuit niveau 10 à 12 (ex. druide 11 à Darnassus) | Départ · Elfe de la nuit ou Rendez-vous à Hurlevent, le plus proche | quêtes de Teldrassil pas finies : `/polestar guides` → Départ · Elfe de la nuit |
+| Personnage qui suivait déjà un guide de Polestar | Polestar rouvre ce guide | `/polestar guides` → Guides de la communauté → Groupe Alliance → le guide de son niveau |
+| Gnome ou Skyborne (hors du paquet) | le départ de Polestar, qui part ensuite vers la Marche de l'Ouest de Polestar | à la fin du départ : `/polestar guides` → Groupe 1 · Rendez-vous à Hurlevent |
+
+Changer de guide à tout moment : `/polestar guides`.
 
 ## Un problème ?
 

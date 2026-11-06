@@ -1,5 +1,7 @@
 # Adapted from Polestar's guide forever/alliance/03-darkshore (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3).
-# Changes: guide id, title, next guide, group notes. Quest steps kept as Polestar wrote them.
+# Changes: guide id, title, next guide, group notes. Quest steps kept as Polestar wrote them, except:
+# Night Elves do Darkshore's first quests here with the group (Polestar sends them through its
+# own Night Elf Darkshore guide at 12-14 instead): the `only Dwarf,Gnome,Human,Skyborne` marks are gone.
 guide groupe-alliance/05-sombrivage
 title Group 4 · Darkshore
 folder Group Alliance
@@ -102,21 +104,21 @@ step Boat to Auberdine
 step Auberdine
   zone Darkshore
   tip The boat docks west of the village. The flight master stands on the hill south of the inn; the quest givers are spread along the main street.
-  accept 954 only Dwarf,Gnome,Human,Skyborne -- Thundris Windweaver, north end of the village
+  accept 954 -- Thundris Windweaver, north end of the village
   accept 97914                                -- Thundris Windweaver: for Baros Alexston in Stormwind
   vendor nearest
-  accept 958 only Dwarf,Gnome,Human,Skyborne
+  accept 958
   accept 982                                  -- Gorbold Steelhand
-  accept 984 only Dwarf,Gnome,Human,Skyborne -- Terenthis
+  accept 984 -- Terenthis
   accept 965                                  -- Sentinel Elissa Starbreeze
-  accept 2118 only Dwarf,Gnome,Human,Skyborne -- Tharnariun Treetender
-  accept 4811 only Dwarf,Gnome,Human,Skyborne -- Sentinel Glynda Nal'Shea
+  accept 2118 -- Tharnariun Treetender
+  accept 4811 -- Sentinel Glynda Nal'Shea
   accept 947                                  -- Barithras Moonshade
-  accept 98025 only Dwarf,Gnome,Human,Skyborne -- The WANTED poster outside the inn
+  accept 98025 -- The WANTED poster outside the inn
   accept 4740                                 -- The WANTED poster
   getfp "Auberdine"
   accept 983                                  -- Wizbang Cranktoggle, by the inn
-  accept 3524 only Dwarf,Gnome,Human,Skyborne -- Gwennyth Bly'Leggonde
+  accept 3524 -- Gwennyth Bly'Leggonde
   accept 1138                                 -- Gubber Blump
   accept 963                                  -- Cerellean Whiteclaw, on the pier
   accept 1141 optional                        -- Gubber Blump, on the pier: only with Fishing
@@ -130,26 +132,26 @@ step Fine Crab Chunks on the way
 
 step The beach
   tip Tide Crawlers scuttle along the shore below the village; Buzzbox 827 stands on the beach just south of the docks. Darkshore Threshers swim in the shallows. The Beached Sea Creature lies on the shore just south of the village.
-  collect 12242 quest 3524 only Dwarf,Gnome,Human,Skyborne -- Sea Creature Bones
+  collect 12242 quest 3524 -- Sea Creature Bones
   collect 12238 quest 1141 optional @36.1,44.9 -- Darkshore Grouper: fish from the pier
   collect 5385 quest 983 @35.6,47.1           -- Crawler Legs
   turnin 983                                  -- Buzzbox 827
   accept 1001
 
 step Auberdine
-  turnin 3524 only Dwarf,Gnome,Human,Skyborne -- Gwennyth Bly'Leggonde
-  accept 4681 only Dwarf,Gnome,Human,Skyborne
+  turnin 3524 -- Gwennyth Bly'Leggonde
+  accept 4681
   turnin 1141 optional                        -- Gubber Blump
   sethome "Auberdine"
 
 step The skeletal turtle
-  collect 12289 quest 4681 only Dwarf,Gnome,Human,Skyborne -- Sea Turtle Remains, on the beach west of the docks; underwater
-  turnin 4681 only Dwarf,Gnome,Human,Skyborne -- Gwennyth Bly'Leggonde
+  collect 12289 quest 4681 -- Sea Turtle Remains, on the beach west of the docks; underwater
+  turnin 4681 -- Gwennyth Bly'Leggonde
 
 step Plagued bears
   tip Rabid Thistle Bears roam the hills just east of Auberdine. Use Tharnariun's Hope on one and lead it back to him.
-  complete 2118 @38.21,52.59 map 1439 era only Dwarf,Gnome,Human,Skyborne -- the Rabid Thistle Bears nearest Tharnariun
-  turnin 2118 only Dwarf,Gnome,Human,Skyborne -- Tharnariun Treetender
+  complete 2118 @38.21,52.59 map 1439 era -- the Rabid Thistle Bears nearest Tharnariun
+  turnin 2118 -- Tharnariun Treetender
   accept 2138
 
 step Rabid Thistle Bear on the way
@@ -160,59 +162,58 @@ step Rabid Thistle Bear on the way
 
 step Bears and the Blackwood camp
   tip Kill Rabid Thistle Bears in the hills east of Auberdine, then walk up to the furbolg camp south-east of them: nothing to kill yet.
-  goto 39.9,53.9 only Dwarf,Gnome,Human,Skyborne
-  complete 984 @39.9,53.9                     # any of four furbolg camps completes it; this is the one by the bears (#560) only Dwarf,Gnome,Human,Skyborne
+  complete 984 @39.9,53.9                     # any of four furbolg camps completes it; this is the one by the bears (#560)
 
 step Ameth'Aran
   label q2138
   tip Sentinel Tysha Moonblade stands at the north edge of the ruins. Cursed, Writhing and Wailing Highborne haunt them; Anaya Dawnrunner's ghost walks among them, Jai'vhanel the owl circles east of them. The two tablets lie in the ruins; a Beached Sea Turtle lies on the shore west of them.
-  accept 4722 only Dwarf,Gnome,Human,Skyborne -- Beached Sea Turtle
-  accept 953 only Dwarf,Gnome,Human,Skyborne -- Sentinel Tysha Moonblade
-  collect 5360 quest 958 only Dwarf,Gnome,Human,Skyborne -- Highborne Relics
+  accept 4722 -- Beached Sea Turtle
+  accept 953 -- Sentinel Tysha Moonblade
+  collect 5360 quest 958 -- Highborne Relics
   kill 2164 quest 2138
-  collect 281038 quest 98025 only Dwarf,Gnome,Human,Skyborne -- Feather of Jai'vhanel
-  interact 17188 quest 953.1 only Dwarf,Gnome,Human,Skyborne -- Read the Lay of Ameth'Aran
-  interact 17189 quest 953.2 only Dwarf,Gnome,Human,Skyborne -- Read the Fall of Ameth'Aran
+  collect 281038 quest 98025 -- Feather of Jai'vhanel
+  interact 17188 quest 953.1 -- Read the Lay of Ameth'Aran
+  interact 17189 quest 953.2 -- Read the Fall of Ameth'Aran
   collect 5382 quest 963                      -- Anaya's Pendant
-  turnin 953 only Dwarf,Gnome,Human,Skyborne
+  turnin 953
 
 step The red crystal
   tip Climb the eastern mountains east of Ameth'Aran; the Mysterious Red Crystal sits on a ledge.
-  interact 175524 quest 4811.1 only Dwarf,Gnome,Human,Skyborne -- Mysterious Red Crystal
-  complete 4811 only Dwarf,Gnome,Human,Skyborne
+  interact 175524 quest 4811.1 -- Mysterious Red Crystal
+  complete 4811
 
 step Rabid Thistle Bear
   kill 2164 quest 2138
 
 step Bashal'Aran
   tip North along the hills. Asterion waits in the ruins of Bashal'Aran; Wild Grells and Vile Sprites fill them, Deth'ryll Satyrs the eastern edge. Buzzbox 411 stands by the road west of the ruins; a Beached Sea Creature lies on the shore on the way to him.
-  turnin 954 only Dwarf,Gnome,Human,Skyborne -- Asterion
-  accept 955 only Dwarf,Gnome,Human,Skyborne
-  collect 5336 quest 955 @44.6,36.6 map 1439 only Dwarf,Gnome,Human,Skyborne -- Grell Earrings
-  turnin 955 only Dwarf,Gnome,Human,Skyborne
-  accept 956 only Dwarf,Gnome,Human,Skyborne
-  collect 5338 quest 956 @45.5,36.5 map 1439 only Dwarf,Gnome,Human,Skyborne -- Ancient Moonstone Seal: Deth'ryll Satyrs
-  turnin 956 only Dwarf,Gnome,Human,Skyborne
-  accept 957 only Dwarf,Gnome,Human,Skyborne
-  accept 4723 only Dwarf,Gnome,Human,Skyborne -- Beached Sea Creature
+  turnin 954 -- Asterion
+  accept 955
+  collect 5336 quest 955 @44.6,36.6 map 1439 -- Grell Earrings
+  turnin 955
+  accept 956
+  collect 5338 quest 956 @45.5,36.5 map 1439 -- Ancient Moonstone Seal: Deth'ryll Satyrs
+  turnin 956
+  accept 957
+  accept 4723 -- Beached Sea Creature
 
 step Auberdine
-  turnin 984 only Dwarf,Gnome,Human,Skyborne -- Terenthis
+  turnin 984 -- Terenthis
   accept 4761
-  accept 985 only Dwarf,Gnome,Human,Skyborne
+  accept 985
   turnin 2138                                 -- Tharnariun Treetender
   accept 2139                                 -- Tharnariun Treetender
-  turnin 4811 only Dwarf,Gnome,Human,Skyborne -- Sentinel Glynda Nal'Shea
-  accept 4812 only Dwarf,Gnome,Human,Skyborne
-  turnin 98025 only Dwarf,Gnome,Human,Skyborne
+  turnin 4811 -- Sentinel Glynda Nal'Shea
+  accept 4812
+  turnin 98025
   turnin 4761                                 -- Thundris Windweaver
   accept 4762
-  turnin 958 only Dwarf,Gnome,Human,Skyborne
+  turnin 958
   turnin 963                                  -- Cerellean Whiteclaw
-  turnin 4722 only Dwarf,Gnome,Human,Skyborne -- Gwennyth Bly'Leggonde
-  turnin 4723 only Dwarf,Gnome,Human,Skyborne
+  turnin 4722 -- Gwennyth Bly'Leggonde
+  turnin 4723
   use 14338 quest 4812.1 @37.8,44.0 map 1439
-  collect 14339 quest 4812 only Dwarf,Gnome,Human,Skyborne -- Fill the tube at the moonwell in the village
+  collect 14339 quest 4812 -- Fill the tube at the moonwell in the village
   vendor nearest
 
 step A Lesson to Learn
@@ -257,22 +258,22 @@ step Trial of the Lake
 step Blackwood furbolgs
   zone Darkshore
   tip Blackwood Pathfinders and Windtalkers hold the camp south-east of Auberdine.
-  kill 2167 quest 985 only Dwarf,Gnome,Human,Skyborne
-  kill 2324 quest 985 only Dwarf,Gnome,Human,Skyborne
+  kill 2167 quest 985
+  kill 2324 quest 985
 
 step The southern beaches
   tip Follow the coast south past Ameth'Aran: one Beached Sea Creature lies on the shore west of the Grove, another further south near Remtravel's Excavation. Three more remains lie further south-west among Greymist Oracles and Tidehunters (18-20): the guide leaves them for the last loop, when you are closer to their level.
-  accept 4728 only Dwarf,Gnome,Human,Skyborne -- Beached Sea Creature
+  accept 4728 -- Beached Sea Creature
   accept 4730                                 -- Beached Sea Creature
 
 step The Ancient Flame
   tip The flame burns in the south of Ameth'Aran.
-  interact 16393 quest 957.1 only Dwarf,Gnome,Human,Skyborne -- Ancient Flame
+  interact 16393 quest 957.1 -- Ancient Flame
 
 step The red crystal
   tip Back north-east into the mountains to the crystal.
-  turnin 4812 only Dwarf,Gnome,Human,Skyborne -- Mysterious Red Crystal
-  accept 4813 only Dwarf,Gnome,Human,Skyborne
+  turnin 4812 -- Mysterious Red Crystal
+  accept 4813
 
 step Cliffspring Falls
   tip Follow the hills north to the Cliffspring River and up to the falls. Two more beached remains lie on the north shore: near the Ruins of Mathystra and north of Bashal'Aran.
@@ -283,16 +284,16 @@ step Cliffspring Falls
   accept 4725                                 -- Beached Sea Turtle
 
 step Bashal'Aran
-  turnin 957 only Dwarf,Gnome,Human,Skyborne -- Asterion
+  turnin 957 -- Asterion
 
 step Auberdine
-  turnin 985 only Dwarf,Gnome,Human,Skyborne -- Terenthis
+  turnin 985 -- Terenthis
   accept 986
-  turnin 4728 only Dwarf,Gnome,Human,Skyborne -- Gwennyth Bly'Leggonde
+  turnin 4728 -- Gwennyth Bly'Leggonde
   turnin 4730
   turnin 4727
   turnin 4725
-  turnin 4813 only Dwarf,Gnome,Human,Skyborne -- Sentinel Glynda Nal'Shea
+  turnin 4813 -- Sentinel Glynda Nal'Shea
   turnin 6122 only NightElf,Druid             -- Alanndarian Nightsong
   accept 6123 only NightElf,Druid
   turnin 4762                                 -- Thundris Windweaver
