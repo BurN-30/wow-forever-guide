@@ -7,8 +7,8 @@
    pack (PolestarPack_GroupeAlliance and its _frFR texts addon);
 3. the Groupe Alliance module (addons-src/GroupeAlliance) goes inside Polestar's own
    folder, so there is no extra addon to tick: its files are added to Polestar.toc and
-   UI/GuideFrame.lua gets the "?" help button (POLESTAR_CHANGES below, each applied
-   exactly once or the build stops). Polestar is GPL-3.0: the changed files say so.
+   UI/GuideFrame.lua gets the gear, "?" help and "_" reduce buttons at the tab strip's
+   right end (POLESTAR_CHANGES below, each applied exactly once or the build stops). Polestar is GPL-3.0: the changed files say so.
 """
 import pathlib, shutil, subprocess, sys
 
@@ -24,19 +24,20 @@ POLESTAR_CHANGES = [
      "Alts\\Alts.xml\n# " + NOTICE + ": the Groupe Alliance module.\n"
      + "".join(f"GroupeAlliance\\{f}\n" for f in MODULE)),
     ("UI/GuideFrame.lua", "\tlocal avail = F:GetWidth() - 2 - 30\n",
-     "\tlocal avail = F:GetWidth() - 2 - 30 - 22 -- " + NOTICE + ": room for the \"?\" help button\n"),
+     "\tlocal avail = F:GetWidth() - 2 - 30 - (ns.GA and ns.GA.STRIP_W or 0) -- " + NOTICE
+     + ": room for the Groupe Alliance buttons\n"),
     ("UI/GuideFrame.lua", "\thoverable(strip.Add)\n",
      "\thoverable(strip.Add)\n"
-     "\t-- " + NOTICE + ": the Groupe Alliance \"?\" help button at the strip's right end.\n"
-     "\tif ns.GA and ns.GA.HelpButton then\n"
-     "\t\tstrip.Help = hoverable(ns.GA.HelpButton(strip))\n"
-     "\t\tstrip.Help:SetPoint(\"RIGHT\", strip, \"RIGHT\", -4, 0)\n"
+     "\t-- " + NOTICE + ": the Groupe Alliance buttons (gear, \"?\" help,\n"
+     "\t-- \"_\" reduce) at the strip's right end, placed by the module.\n"
+     "\tif ns.GA and ns.GA.StripButtons then\n"
+     "\t\tfor _, b in ipairs(ns.GA.StripButtons(strip)) do hoverable(b) end\n"
      "\tend\n"),
     ("README.txt", "Leveling guides for World of Warcraft: Forever.\r\n",
      "Leveling guides for World of Warcraft: Forever.\r\n\r\n"
      + NOTICE + ": the GroupeAlliance folder (Wowhead links,\r\n"
      "quest tips, calm defaults) is loaded by Polestar.toc, and UI/GuideFrame.lua\r\n"
-     "has a \"?\" help button. Everything else is Polestar 0.3.2 as released.\r\n"),
+     "has gear, \"?\" help and \"_\" reduce buttons. Everything else is Polestar 0.3.2 as released.\r\n"),
 ]
 
 def run(*args):

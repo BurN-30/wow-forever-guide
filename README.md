@@ -17,7 +17,8 @@ Windows bloque le fichier ? Clic droit sur `Installer.bat` → **Propriétés** 
 ## Utiliser
 
 - Le guide de ton personnage s'ouvre tout seul (voir « Premier lancement »). Changer : `/polestar guides` → **Guides de la communauté** → **Groupe Alliance**.
-- Bouton **?** en haut à droite de la fenêtre du guide : l'aide en bref.
+- En haut à droite de la fenêtre du guide : la **roue dentée** ouvre les réglages de Polestar (flèche de direction, affichage, automatismes), **?** donne l'aide en bref.
+- **Réduire** : bouton **_** à côté du **?**. La fenêtre devient une petite icône Polestar (à glisser où on veut ; clic droit : fine bannière avec l'étape en cours ; clic : la fenêtre revient). Masquer : `/polestar hide`, le bouton Polestar de la minicarte, ou un raccourci dans Options > Raccourcis > Polestar.
 - **Survole** n'importe quelle ligne : l'infobulle explique tout, avec une astuce (en vert) sur les quêtes pénibles.
 - **Ctrl+clic** sur une ligne : lien Wowhead prêt à copier (Ctrl+C), en français ou en anglais selon ton jeu (`/ga lang fr`, `en` ou `auto` pour forcer).
 - **?** dans une infobulle : info pas encore confirmée, à vérifier sur Wowhead.
@@ -84,7 +85,7 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
 <details>
 <summary>Crédits, licence et sources</summary>
 
-- **Polestar** © 2026 The Polestar authors, GPL-3.0 : moteur (dossiers `addons/Polestar*`, release 0.3.2 du 05/11/2026 ; modifiée par BurN-30 : le module Groupe Alliance est dans `Polestar/GroupeAlliance` et chargé par `Polestar.toc`, bouton d'aide dans `UI/GuideFrame.lua`, voir `tools/build.py`) et guides repris dans `pack/guides` (révision `08536e3` du 06/11/2026 ; chaque fichier repris le dit en tête).
+- **Polestar** © 2026 The Polestar authors, GPL-3.0 : moteur (dossiers `addons/Polestar*`, release 0.3.2 du 05/11/2026 ; modifiée par BurN-30 : le module Groupe Alliance est dans `Polestar/GroupeAlliance` et chargé par `Polestar.toc`, boutons réglages, aide et réduire dans `UI/GuideFrame.lua`, voir `tools/build.py`) et guides repris dans `pack/guides` (révision `08536e3` du 06/11/2026 ; chaque fichier repris le dit en tête).
 - **Aurums Night Elf Druid Guide** © 2026 Aurum, GPL-3.0 : chapitres de donjon adaptés à toutes les classes.
 - **Lodestar Guides for Polestar** (conversion de [Lodestar](https://github.com/danielcosta42/lodestar)), licence MIT : guide Loch Modan adapté dans `pack/guides/13-solo-loch-modan.guide` (révision `cc3bf4f` du 21/10/2026 ; trajet réordonné, quêtes vérifiées sur les données Forever, quêtes hors de la zone retirées). Notice exigée par la licence MIT, reprise aussi dans `LICENSE` et en tête du fichier :
 

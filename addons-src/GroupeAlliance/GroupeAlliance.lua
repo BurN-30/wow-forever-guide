@@ -5,12 +5,14 @@
 --  * Hovering a line adds this pack's tip for the quest (Tips.lua), a "?"
 --    reliability line for the quests not fully confirmed (Reliability.lua) and
 --    one hint line ("Ctrl-click: Wowhead link").
---  * A "?" button on the guide window's tab strip: a short help in its tooltip.
+--  * Three buttons at the right end of the guide window's tab strip: a gear
+--    (Polestar's options), "?" (a short help in its tooltip) and "_" (reduce:
+--    the window gives way to a small Polestar icon, see "Reduced window").
 --  * Calm defaults for a group of beginners, as Polestar defaults (the player
 --    can still change them in Polestar's options): no auto accept or turn-in,
 --    no guide-end or route-choice window, no class guide offered by itself,
 --    group quests done, guides suggested from this pack first (Polestar's own
---    fill in where it has none), no welcome window.
+--    fill in where it has none), no welcome window, Polestar's minimap button on.
 --  * /ga lang auto|fr|en: language of the links (default: the client's).
 local _, ns = ...
 local GA = ns.GA or {}
@@ -25,6 +27,9 @@ ns.RegisterDefaults("behavior", {
 	groupQuests = "do", -- a group of friends: group quests are done, no question
 	suggestFrom = "groupe-alliance", -- this pack first, Polestar fills in
 })
+-- Polestar's own minimap button (Maps/MinimapButton.lua), off by default
+-- outside the gamepad interface: on, a click shows or hides the guide.
+ns.RegisterDefaults("maps", { minimapButton = true })
 
 local function settings()
 	local db = ns.DB()
@@ -54,7 +59,19 @@ local T = {
 			"|cffffd100?|r jaune : info pas encore confirmée, à vérifier sur Wowhead.",
 			"Changer de guide : /polestar guides, ou le + des onglets.",
 			"/ga lang fr, en ou auto : langue des liens Wowhead.",
+			"Réduire : bouton _ ; masquer : /polestar hide, raccourci dans Options > Raccourcis > Polestar.",
+			"Roue dentée : réglages de Polestar (flèche, affichage, automatismes).",
 		},
+		reduceTitle = "Réduire",
+		reduce = { "La fenêtre laisse place à une petite icône Polestar. Clic sur l'icône : la rouvrir." },
+		gearTitle = "Réglages",
+		gear = "Réglages : flèche de direction, affichage, automatismes…",
+		noGuide = "Aucun guide ouvert",
+		step = "Étape %d sur %d : %s",
+		done = "Guide terminé",
+		miniClick = "Clic : rouvrir la fenêtre du guide",
+		miniRight = "Clic droit : icône ou bannière",
+		miniDrag = "Glisser : déplacer",
 		report = "Un souci dans un guide Groupe Alliance : le dire au groupe ou ouvrir une issue sur github.com/BurN-30/wow-forever-guide, pas sur le Discord de Polestar.",
 	},
 	enUS = {
@@ -70,7 +87,19 @@ local T = {
 			"Yellow |cffffd100?|r: not confirmed yet, check Wowhead.",
 			"Change guide: /polestar guides, or the tabs' +.",
 			"/ga lang fr, en or auto: Wowhead link language.",
+			"Reduce: the _ button; hide: /polestar hide, key binding in Options > Keybindings > Polestar.",
+			"Gear: Polestar's settings (arrow, display, automation).",
 		},
+		reduceTitle = "Reduce",
+		reduce = { "The window gives way to a small Polestar icon. Click the icon to open it again." },
+		gearTitle = "Settings",
+		gear = "Settings: direction arrow, display, automation…",
+		noGuide = "No guide open",
+		step = "Step %d of %d: %s",
+		done = "Guide complete",
+		miniClick = "Click: open the guide window again",
+		miniRight = "Right-click: icon or banner",
+		miniDrag = "Drag: move",
 		report = "A problem in a Group Alliance guide: tell the group or open an issue on github.com/BurN-30/wow-forever-guide, not on Polestar's Discord.",
 	},
 }
@@ -124,30 +153,220 @@ local function afterTooltip(owner)
 	GameTooltip:Show()
 end
 
--- The "?" button (UI/GuideFrame.lua calls GA.HelpButton(strip) as it builds
--- the tab strip, and keeps room for it at its right end): the help is its
--- tooltip, on hover or on click.
-function GA.HelpButton(parent)
+---------------------------------------------------------------------------
+-- Reduced window: a small Polestar icon (32 px, Polestar's minimap button
+-- look) or, right-click, a thin banner (the icon and the current step on one
+-- line). Reducing hides the guide window the way /polestar hide does
+-- (ui.shown false) and sets groupeAlliance.reduced; the window's own size,
+-- resize grip and combat fade stay untouched, since the window is simply not
+-- shown. Anything that shows the window again (the icon, /polestar, the key
+-- binding, the minimap button) clears the flag and hides the icon; hiding it
+-- for good (/polestar hide) hides the icon too. Saved account-wide, like
+-- ui.shown: groupeAlliance.reduced, .miniBanner, .miniPos.
+---------------------------------------------------------------------------
+
+local ICON, BANNER_W, BANNER_H = 32, 220, 24
+local mini
+
+local function stepLines()
+	local E = ns.Engine
+	local g = E and E.GetGuide and E.GetGuide()
+	if not g then return "Polestar", tr("noGuide") end
+	local i = E.GetStepIndex()
+	if not i then return g.title, tr("done") end
+	local view = E.GetStepView(i)
+	local summary = view and ns.UI and ns.UI.StepSummary and ns.UI.StepSummary(view) or ""
+	return g.title, tr("step"):format(i, E.GetStepCount(), summary)
+end
+
+local function placeMini()
+	mini:ClearAllPoints()
+	local pos = settings().miniPos
+	if type(pos) == "table" and type(pos[1]) == "number" and type(pos[2]) == "number" then
+		mini:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", pos[1], pos[2])
+		return
+	end
+	-- First time: where the guide window's top-right corner was.
+	local F = ns.UI and ns.UI.GuideFrame and ns.UI.GuideFrame.frame
+	local right, top = F and F:GetRight(), F and F:GetTop()
+	if right and top then
+		mini:SetPoint("TOPRIGHT", UIParent, "BOTTOMLEFT", right, top)
+	else
+		mini:SetPoint("TOP", UIParent, "TOP", 0, -120)
+	end
+end
+
+local function paintMini()
+	local banner = settings().miniBanner and true or false
+	mini:SetSize(banner and BANNER_W or ICON, banner and BANNER_H or ICON)
+	mini.Circle:SetShown(not banner)
+	mini.Hover:SetShown(not banner)
+	mini.Back:SetShown(banner)
+	mini.Logo:ClearAllPoints()
+	if banner then
+		mini.Logo:SetSize(BANNER_H - 6, BANNER_H - 6)
+		mini.Logo:SetPoint("LEFT", mini, "LEFT", 4, 0)
+		local _, line = stepLines()
+		mini.Text:SetText(line)
+		mini.Text:Show()
+	else
+		mini.Logo:SetSize(ICON - 10, ICON - 10)
+		mini.Logo:SetPoint("CENTER", mini, "CENTER", 0, 0)
+		mini.Text:Hide()
+	end
+end
+
+local function miniTip(self)
+	local W = ns.Widgets
+	if not (W and W.Tooltip) then return end
+	local title, line = stepLines()
+	W.Tooltip(self, "ANCHOR_BOTTOMLEFT", title, { line, tr("miniClick"), tr("miniRight"), tr("miniDrag") })
+end
+
+local function buildMini()
+	if mini then return mini end
+	local W = ns.Widgets
+	if not (W and W.Tex and W.Text) then return nil end
+	mini = CreateFrame("Button", "PolestarGroupeAllianceMini", UIParent)
+	mini:SetFrameStrata("MEDIUM")
+	mini:SetClampedToScreen(true)
+	mini:SetMovable(true)
+	mini:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+	mini:RegisterForDrag("LeftButton")
+	mini.Circle = W.Tex(mini, "BACKGROUND", "circle", "panel")
+	mini.Circle:SetAllPoints(mini)
+	mini.Back = W.Fill(mini, "panel", "BACKGROUND")
+	mini.Logo = W.Tex(mini, "ARTWORK", "logo")
+	mini.Hover = W.Tex(mini, "HIGHLIGHT", "circle", "accent")
+	mini.Hover:SetAllPoints(mini)
+	mini.Hover:SetAlpha(0.25)
+	-- The step on one line, cut with "..." at the banner's right edge.
+	mini.Text = W.Text(mini, "small", "text")
+	mini.Text:SetPoint("LEFT", mini.Logo, "RIGHT", 4, 0)
+	mini.Text:SetPoint("RIGHT", mini, "RIGHT", -6, 0)
+	mini:SetScript("OnClick", function(self, which)
+		W.HideTooltip(self)
+		if which == "RightButton" then
+			settings().miniBanner = not settings().miniBanner or nil
+			paintMini()
+			miniTip(self)
+		else
+			ns.Fire("SHOW_FRAME")
+		end
+	end)
+	mini:SetScript("OnEnter", miniTip)
+	mini:SetScript("OnLeave", function(self) W.HideTooltip(self) end)
+	mini:SetScript("OnDragStart", function(self)
+		W.HideTooltip(self)
+		self:StartMoving()
+	end)
+	mini:SetScript("OnDragStop", function(self)
+		self:StopMovingOrSizing()
+		local left, top = self:GetLeft(), self:GetTop()
+		if left and top then settings().miniPos = { math.floor(left + 0.5), math.floor(top + 0.5) } end
+		placeMini()
+	end)
+	mini:Hide()
+	return mini
+end
+
+-- The icon shows while the window is reduced, and only then.
+local function refreshMini()
+	if not ns.IsLoggedIn() then return end
+	local s = settings()
+	if s.reduced and ns.Get("ui.shown") then s.reduced = nil end
+	if not s.reduced then
+		if mini then mini:Hide() end
+		return
+	end
+	if not buildMini() then return end
+	placeMini()
+	paintMini()
+	mini:Show()
+end
+
+function GA.Reduce()
+	settings().reduced = true
+	ns.Set("ui.shown", false) -- SETTING_CHANGED shows the icon
+end
+
+ns.On("SETTING_CHANGED", function(path)
+	if path == "ui.shown" or path == "ui" or path == "" then refreshMini() end
+end)
+-- /polestar hide while reduced: hidden for good, no icon left behind.
+ns.On("HIDE_FRAME", function()
+	settings().reduced = nil
+	refreshMini()
+end)
+local function stepMoved()
+	if mini and mini:IsShown() then
+		paintMini()
+		if GameTooltip:IsOwned(mini) then miniTip(mini) end
+	end
+end
+for _, msg in ipairs({ "GUIDE_CHANGED", "STEP_CHANGED", "STEP_UPDATED", "GUIDE_COMPLETED", "TABS_CHANGED" }) do
+	ns.On(msg, stepMoved)
+end
+ns.OnLogin(refreshMini)
+
+---------------------------------------------------------------------------
+-- The strip's buttons (UI/GuideFrame.lua calls GA.StripButtons(strip) as it
+-- builds the tab strip, and keeps STRIP_W pixels for them at its right end):
+-- from left to right the gear (Polestar's options, as the "Open Polestar
+-- options" key binding), "?" (the help is its tooltip, on hover or on click)
+-- and "_" (reduce).
+---------------------------------------------------------------------------
+
+GA.STRIP_W = 64
+
+-- A letter button in the game's gold, white on hover, as Polestar's "?" was.
+local function letterButton(parent, letter, dy, tip, onClick)
 	local b = CreateFrame("Button", nil, parent)
 	b:SetSize(20, 20)
 	local t = b:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-	t:SetPoint("CENTER", b, "CENTER", 0, 0)
-	t:SetText("?")
+	t:SetPoint("CENTER", b, "CENTER", 0, dy or 0)
+	t:SetText(letter)
 	b.Label = t
-	local function show(self)
-		local W = ns.Widgets
-		if W and W.Tooltip then W.Tooltip(self, "ANCHOR_BOTTOMLEFT", tr("helpTitle"), tr("help")) end
-	end
 	b:SetScript("OnEnter", function(self)
 		t:SetTextColor(1, 1, 1)
-		show(self)
+		tip(self)
 	end)
 	b:SetScript("OnLeave", function(self)
 		t:SetTextColor(1, 0.82, 0)
 		if GameTooltip:IsOwned(self) then GameTooltip:Hide() end
 	end)
-	b:SetScript("OnClick", show)
+	b:SetScript("OnClick", onClick or tip)
 	return b
+end
+
+local function tooltip(title, lines)
+	return function(self)
+		local W = ns.Widgets
+		if W and W.Tooltip then W.Tooltip(self, "ANCHOR_BOTTOMLEFT", tr(title), tr(lines)) end
+	end
+end
+
+function GA.StripButtons(parent)
+	local reduce = letterButton(parent, "_", 4, tooltip("reduceTitle", "reduce"), function(self)
+		if GameTooltip:IsOwned(self) then GameTooltip:Hide() end
+		GA.Reduce()
+	end)
+	reduce:SetPoint("RIGHT", parent, "RIGHT", -2, 0)
+	local help = letterButton(parent, "?", 0, tooltip("helpTitle", "help"))
+	help:SetPoint("RIGHT", reduce, "LEFT", 0, 0)
+	local list = { help, reduce }
+	local W = ns.Widgets
+	if W and W.IconButton then
+		local gear = W.IconButton(parent, "gear", 20, nil, function(self)
+			W.HideTooltip(self)
+			ns.Fire("TOGGLE_OPTIONS")
+		end, 12)
+		gear.psTip = tr("gear")
+		gear.psTipAnchor = "ANCHOR_BOTTOMLEFT"
+		gear:SetPoint("RIGHT", help, "LEFT", 0, 0)
+		table.insert(list, 1, gear)
+	end
+	return list
 end
 
 ns.OnInit(function()

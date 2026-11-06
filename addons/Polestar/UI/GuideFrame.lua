@@ -808,7 +808,7 @@ function GF.RenderTabs()
 	local tabs, active = tabsOf(Engine())
 	local n = tabs and #tabs or 0
 	strip.psCount = n
-	local avail = F:GetWidth() - 2 - 30 - 22 -- Modified by BurN-30 on 2026-11-06 (github.com/BurN-30/wow-forever-guide): room for the "?" help button
+	local avail = F:GetWidth() - 2 - 30 - (ns.GA and ns.GA.STRIP_W or 0) -- Modified by BurN-30 on 2026-11-06 (github.com/BurN-30/wow-forever-guide): room for the Groupe Alliance buttons
 	-- The active tab gets the room to read its title; the rest share the remainder.
 	local share = n > 0 and floor(avail / n) or 0
 	local activeW, otherW = share, share
@@ -2943,10 +2943,10 @@ local function build()
 		UI.ShowPicker({ newTab = true })
 	end, 12)
 	hoverable(strip.Add)
-	-- Modified by BurN-30 on 2026-11-06 (github.com/BurN-30/wow-forever-guide): the Groupe Alliance "?" help button at the strip's right end.
-	if ns.GA and ns.GA.HelpButton then
-		strip.Help = hoverable(ns.GA.HelpButton(strip))
-		strip.Help:SetPoint("RIGHT", strip, "RIGHT", -4, 0)
+	-- Modified by BurN-30 on 2026-11-06 (github.com/BurN-30/wow-forever-guide): the Groupe Alliance buttons (gear, "?" help,
+	-- "_" reduce) at the strip's right end, placed by the module.
+	if ns.GA and ns.GA.StripButtons then
+		for _, b in ipairs(ns.GA.StripButtons(strip)) do hoverable(b) end
 	end
 	chrome[#chrome + 1] = strip
 	-- The Forever skin positions its border below the tab strip; expose the strip.

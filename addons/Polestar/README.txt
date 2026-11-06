@@ -3,7 +3,7 @@ Leveling guides for World of Warcraft: Forever.
 
 Modified by BurN-30 on 2026-11-06 (github.com/BurN-30/wow-forever-guide): the GroupeAlliance folder (Wowhead links,
 quest tips, calm defaults) is loaded by Polestar.toc, and UI/GuideFrame.lua
-has a "?" help button. Everything else is Polestar 0.3.2 as released.
+has gear, "?" help and "_" reduce buttons. Everything else is Polestar 0.3.2 as released.
 
 Install
 1. Copy these folders from the zip into
