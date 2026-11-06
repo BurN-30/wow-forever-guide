@@ -94,7 +94,7 @@ do
 			faction = "Alliance",
 			races = { "NightElf" },
 			minLevel = 1,
-			maxLevel = 12,
+			maxLevel = 11,
 			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1438,
@@ -1795,7 +1795,7 @@ do
 			faction = "Alliance",
 			races = { "Dwarf" },
 			minLevel = 1,
-			maxLevel = 12,
+			maxLevel = 11,
 			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1426,
@@ -2847,7 +2847,7 @@ do
 			title = "Group 1 · Meet in {zone:1453}",
 			faction = "Alliance",
 			minLevel = 10,
-			maxLevel = 13,
+			maxLevel = 12,
 			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1453,
@@ -2892,7 +2892,7 @@ do
 			title = "Group 2 · {zone:1436}",
 			faction = "Alliance",
 			minLevel = 11,
-			maxLevel = 15,
+			maxLevel = 14,
 			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1436,
@@ -2907,7 +2907,7 @@ do
 					title = "The Jansen Stead",
 					note = "Follow the road from Elwynn into {zone:1436}: the Furlbrows sit by their burned farm, the first one on the road. Pick up oats from any {object:2724} you pass on the loop: the rest are gathered in the fields here on the way back.",
 					goals = {
-						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 15? Stop here and wait." },
+						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 14? Stop here and wait." },
 						{ t = "accept", quest = 109, title = "Report to Gryan Stoutmantle", npc = 237, npcName = "Farmer Furlbrow", minLevel = 9, qlvl = 10, map = 1436, x = 59.95, y = 19.36, z = 30.5, f = "e", only = { races = { "Human" } }, note = "{npc:237}; Humans took it from {npc:963} in Elwynn" },
 					},
 				},
@@ -3315,10 +3315,10 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/04-salle-des-thanes",
 			pack = "groupe-alliance",
-			title = "Group 3 · The Hall of Thanes (dungeon 13-18)",
+			title = "Group 3 · The Hall of Thanes (dungeon 13-17)",
 			faction = "Alliance",
-			minLevel = 12,
-			maxLevel = 16,
+			minLevel = 13,
+			maxLevel = 17,
 			category = "Dungeons",
 			folder = "Group Alliance",
 			zone = 1455,
@@ -3518,7 +3518,7 @@ do
 			title = "Group 4 · {zone:1439}",
 			faction = "Alliance",
 			minLevel = 15,
-			maxLevel = 20,
+			maxLevel = 19,
 			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1439,
@@ -4210,10 +4210,10 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/06-ruines-de-lordaeron",
 			pack = "groupe-alliance",
-			title = "Group 5 · Ruins of Lordaeron (dungeon 15-20)",
+			title = "Group 5 · Ruins of Lordaeron (dungeon 17-21)",
 			faction = "Alliance",
-			minLevel = 16,
-			maxLevel = 20,
+			minLevel = 17,
+			maxLevel = 21,
 			category = "Dungeons",
 			folder = "Group Alliance",
 			zone = 1439,
@@ -4368,7 +4368,7 @@ do
 			title = "Group 6 · {zone:1433}",
 			faction = "Alliance",
 			minLevel = 20,
-			maxLevel = 24,
+			maxLevel = 23,
 			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1433,
@@ -4376,12 +4376,13 @@ do
 			next = "groupe-alliance/08-bois-de-la-penombre",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:1075"] = "Shadowhide Pendant", ["item:1309"] = "Oslow's Toolbox", ["item:1467"] = "Spotted Sunfish", ["item:15882"] = "Half Pendant of Aquatic Endurance", ["item:280911"] = "Spiked Collar", ["item:2856"] = "Iron Pike", ["item:6846"] = "Defias Script", ["item:6866"] = "Symbol of Life", ["npc:1070"] = "Deputy Feldon", ["npc:11401"] = "Priestess Alathea", ["npc:11406"] = "High Priest Rohan", ["npc:11867"] = "Woo Ping", ["npc:1646"] = "Baros Alexston", ["npc:258098"] = "Eldrun Stormbreaker", ["npc:258785"] = "High Priestess Mims", ["npc:261"] = "Guard Thomas", ["npc:266"] = "Wiley the Black", ["npc:313"] = "Theocritus", ["npc:332"] = "Master Mathias Shaw", ["npc:341"] = "Foreman Oslow", ["npc:342"] = "Martie Jainrose", ["npc:343"] = "Chef Breanna", ["npc:344"] = "Magistrate Solomon", ["npc:345"] = "Bellygrub", ["npc:349"] = "Corporal Keeshan", ["npc:3649"] = "Thundris Windweaver", ["npc:376"] = "High Priestess Laurena", ["npc:381"] = "Dockmaster Baren", ["npc:382"] = "Marshal Marris", ["npc:422"] = "Murloc Flesheater", ["npc:423"] = "Redridge Mongrel", ["npc:426"] = "Redridge Brute", ["npc:428"] = "Dire Condor", ["npc:435"] = "Blackrock Champion", ["npc:464"] = "Guard Parker", ["npc:474"] = "Defias Rogue Wizard", ["npc:505"] = "Greater Tarantula", ["npc:547"] = "Great Goretusk", ["npc:6122"] = "Gakin the Darkbinder", ["npc:6172"] = "Henze Faulk", ["npc:6244"] = "Takar the Seer", ["npc:7024"] = "Agent Kearnen", ["npc:703"] = "Lieutenant Fangore", ["npc:712"] = "Redridge Thrasher", ["npc:900"] = "Bailiff Conacher", ["npc:903"] = "Guard Howe", ["object:116"] = "Stonewatch Keep", ["object:177790"] = "Strange Lockbox", ["object:2096"] = "Trade District", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2164"] = "Slaughtered Lamb", ["object:28027"] = "Dwarven District", ["object:32"] = "Sunken Chest", ["object:81"] = "Sentinel Hill", ["quest:248"] = "Looking Further", ["quest:5676"] = "Arcane Feedback", ["quest:89"] = "The Everstill Bridge", ["quest:94"] = "A Watchful Eye", ["quest:97914"] = "Expanding Horizons", ["zone:1413"] = "Barrens", ["zone:1428"] = "Burning Steppes", ["zone:1429"] = "Elwynn Forest", ["zone:1431"] = "Duskwood", ["zone:1433"] = "Redridge Mountains", ["zone:1436"] = "Westfall", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			names = { ["item:1075"] = "Shadowhide Pendant", ["item:1309"] = "Oslow's Toolbox", ["item:1467"] = "Spotted Sunfish", ["item:15882"] = "Half Pendant of Aquatic Endurance", ["item:280911"] = "Spiked Collar", ["item:2856"] = "Iron Pike", ["item:6846"] = "Defias Script", ["item:6866"] = "Symbol of Life", ["npc:1070"] = "Deputy Feldon", ["npc:11401"] = "Priestess Alathea", ["npc:11406"] = "High Priest Rohan", ["npc:11867"] = "Woo Ping", ["npc:1646"] = "Baros Alexston", ["npc:258098"] = "Eldrun Stormbreaker", ["npc:258785"] = "High Priestess Mims", ["npc:261"] = "Guard Thomas", ["npc:266"] = "Wiley the Black", ["npc:313"] = "Theocritus", ["npc:332"] = "Master Mathias Shaw", ["npc:341"] = "Foreman Oslow", ["npc:342"] = "Martie Jainrose", ["npc:343"] = "Chef Breanna", ["npc:344"] = "Magistrate Solomon", ["npc:345"] = "Bellygrub", ["npc:349"] = "Corporal Keeshan", ["npc:3649"] = "Thundris Windweaver", ["npc:376"] = "High Priestess Laurena", ["npc:381"] = "Dockmaster Baren", ["npc:382"] = "Marshal Marris", ["npc:422"] = "Murloc Flesheater", ["npc:423"] = "Redridge Mongrel", ["npc:426"] = "Redridge Brute", ["npc:428"] = "Dire Condor", ["npc:435"] = "Blackrock Champion", ["npc:464"] = "Guard Parker", ["npc:474"] = "Defias Rogue Wizard", ["npc:505"] = "Greater Tarantula", ["npc:547"] = "Great Goretusk", ["npc:6122"] = "Gakin the Darkbinder", ["npc:6172"] = "Henze Faulk", ["npc:6244"] = "Takar the Seer", ["npc:7024"] = "Agent Kearnen", ["npc:703"] = "Lieutenant Fangore", ["npc:712"] = "Redridge Thrasher", ["npc:900"] = "Bailiff Conacher", ["npc:903"] = "Guard Howe", ["object:116"] = "Stonewatch Keep", ["object:177790"] = "Strange Lockbox", ["object:2096"] = "Trade District", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2164"] = "Slaughtered Lamb", ["object:28027"] = "Dwarven District", ["object:32"] = "Sunken Chest", ["object:81"] = "Sentinel Hill", ["quest:248"] = "Looking Further", ["quest:5676"] = "Arcane Feedback", ["quest:89"] = "The Everstill Bridge", ["quest:94"] = "A Watchful Eye", ["quest:97914"] = "Expanding Horizons", ["zone:1413"] = "Barrens", ["zone:1428"] = "Burning Steppes", ["zone:1429"] = "Elwynn Forest", ["zone:1431"] = "Duskwood", ["zone:1433"] = "Redridge Mountains", ["zone:1436"] = "Westfall", ["zone:1439"] = "Darkshore", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
 			steps = {
 				{
 					title = "Boat to Stormwind Harbor",
+					note = "Only if you are still in {zone:1439} (Ruins of Lordaeron skipped).",
+					when = { { k = "zone", name = "Darkshore", area = 148 } },
 					goals = {
-						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others." },
 						{ t = "goto", text = "Boat to Stormwind Harbor", map = 1439, x = 30.7, y = 41, f = "e" },
 					},
 				},
@@ -4389,6 +4390,7 @@ do
 					title = "{zone:1453}",
 					note = "The Auberdine boat docks at Stormwind Harbor. Walk up into the city for training and {npc:1646}, then leave by the main gate and follow the road east through {zone:1429}.",
 					goals = {
+						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 23? Wait for the others." },
 						{ t = "train", class = true, only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "MAGE", "WARLOCK", "DRUID" } }, note = "Level 18 and 20 spells", candidates = { { npc = 3602, npcName = "Kal", map = 1438, x = 55.95, y = 61.56, z = 1293.8, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 3599, npcName = "Jannok Breezesong", map = 1438, x = 56.38, y = 60.14, z = 1308.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3601, npcName = "Dazalar", map = 1438, x = 56.68, y = 59.49, z = 1308.2, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 3598, npcName = "Kyra Windblade", map = 1438, x = 56.22, y = 59.2, z = 1308.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 3600, npcName = "Laurna Morninglight", map = 1438, x = 55.56, y = 56.75, z = 1313.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 4092, npcName = "Lariia", map = 1457, x = 40.35, y = 88.68, z = 1331.6, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 4165, npcName = "Elissa Dumas", map = 1457, x = 40.6, y = 82.13, z = 1331.7, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 11866, npcName = "Ilyenia Moonfire", map = 1457, x = 57.56, y = 46.73, z = 1330.9, f = "e", faction = "A", classes = { "HUNTER", "PRIEST" } }, { npc = 4089, npcName = "Sildanair", map = 1457, x = 61.78, y = 42.22, z = 1341.5, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 4214, npcName = "Erion Shadewhisper", map = 1457, x = 34.52, y = 25.93, z = 1282.6, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3596, npcName = "Ayanna Everstride", map = 1438, x = 58.66, y = 40.45, z = 1381, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 3595, npcName = "Shanda", map = 1438, x = 59.17, y = 40.44, z = 1346.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 3597, npcName = "Mardant Strongoak", map = 1438, x = 58.63, y = 40.29, z = 1381, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 4146, npcName = "Jocaste", map = 1457, x = 40.38, y = 8.55, z = 1343.2, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 3594, npcName = "Frahun Shadewhisper", map = 1438, x = 59.64, y = 38.66, z = 1329.7, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 3593, npcName = "Alyissia", map = 1438, x = 59.64, y = 38.44, z = 1329.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 6251, npcName = "Strahad Farsan", map = 1413, x = 62.63, y = 35.5, z = 40.5, f = "e", faction = "AH", classes = { "WARLOCK" } }, { npc = 460, npcName = "Alamar Grimm", map = 1426, x = 28.65, y = 66.14, z = 399, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 837, npcName = "Branstock Khalder", map = 1426, x = 28.6, y = 66.39, z = 392.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 895, npcName = "Thorgas Grimson", map = 1426, x = 29.18, y = 67.45, z = 395.6, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 912, npcName = "Thran Khorman", map = 1426, x = 28.83, y = 67.24, z = 395.6, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 916, npcName = "Solm Hargrin", map = 1426, x = 28.37, y = 67.51, z = 395.6, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 926, npcName = "Bromos Grummner", map = 1426, x = 28.83, y = 68.33, z = 395.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 944, npcName = "Marryk Nurribit", map = 1426, x = 28.71, y = 66.37, z = 392.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 1226, npcName = "Maxan Anvol", map = 1426, x = 47.34, y = 52.19, z = 399.7, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 1228, npcName = "Magis Sparkmantle", map = 1426, x = 47.5, y = 52.08, z = 403.6, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 1229, npcName = "Granis Swiftaxe", map = 1426, x = 47.36, y = 52.65, z = 399.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 1231, npcName = "Grif Wildheart", map = 1426, x = 45.81, y = 53.04, z = 407.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 1232, npcName = "Azar Stronghammer", map = 1426, x = 47.6, y = 52.07, z = 403.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 1234, npcName = "Hogral Bakkan", map = 1426, x = 47.56, y = 52.61, z = 399.2, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 5612, npcName = "Gimrizz Shadowcog", map = 1426, x = 47.33, y = 53.69, z = 404.4, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 198, npcName = "Khelden Bremen", map = 1429, x = 49.66, y = 39.4, z = 89.5, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 328, npcName = "Zaldimar Wefhellt", map = 1429, x = 43.25, y = 66.19, z = 63.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 375, npcName = "Priestess Anetta", map = 1429, x = 49.81, y = 39.49, z = 82.1, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 377, npcName = "Priestess Josetta", map = 1429, x = 43.28, y = 65.72, z = 63.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 459, npcName = "Drusilla La Salle", map = 1429, x = 49.87, y = 42.65, z = 80.8, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 906, npcName = "Maximillian Crowe", map = 1429, x = 44.39, y = 66.24, z = 49.9, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 911, npcName = "Llane Beshere", map = 1429, x = 50.24, y = 42.29, z = 82.3, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 913, npcName = "Lyria Du Lac", map = 1429, x = 41.09, y = 65.77, z = 57.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 915, npcName = "Jorik Kerridan", map = 1429, x = 50.31, y = 39.92, z = 80.8, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 917, npcName = "Keryn Sylvius", map = 1429, x = 43.87, y = 65.94, z = 63.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 925, npcName = "Brother Sammuel", map = 1429, x = 50.43, y = 42.12, z = 82.3, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 927, npcName = "Brother Wilhelm", map = 1429, x = 41.1, y = 66.04, z = 57.7, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 248415, npcName = "Tordrin Sternblade", map = 1429, x = 51.21, y = 40.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 251507, npcName = "Josephine Carson", map = 1429, x = 41.15, y = 66.23, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 376, npcName = "High Priestess Laurena", map = 1453, x = 49.53, y = 44.6, z = 109.9, faction = "A", classes = { "PRIEST" } }, { npc = 461, npcName = "Demisette Cloyce", map = 1453, x = 39.24, y = 84.96, z = 101.5, faction = "A", classes = { "WARLOCK" } }, { npc = 914, npcName = "Ander Germaine", map = 1453, x = 80.19, y = 61.26, z = 111.7, faction = "A", classes = { "WARRIOR" } }, { npc = 918, npcName = "Osborne the Night Man", map = 1453, x = 77.43, y = 65.31, z = 101.1, faction = "A", classes = { "ROGUE" } }, { npc = 928, npcName = "Lord Grayson Shadowbreaker", map = 1453, x = 48.43, y = 50.22, z = 106.6, faction = "A", classes = { "PALADIN" } }, { npc = 2485, npcName = "Larimaine Purdue", map = 1453, x = 50.39, y = 85.99, z = 29.7, faction = "A", classes = { "MAGE" } }, { npc = 5504, npcName = "Sheldras Moontree", map = 1453, x = 35.84, y = 67.38, z = 92.6, faction = "A", classes = { "DRUID" } }, { npc = 5515, npcName = "Einris Brightspear", map = 1453, x = 67.35, y = 36.25, z = 95.5, faction = "A", classes = { "HUNTER" } }, { npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9, faction = "A", classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "WARLOCK" } }, { npc = 1901, npcName = "Kelstrum Stonebreaker", map = 1455, x = 66.97, y = 90.15, z = 507.8, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 2489, npcName = "Milstaff Stormeye", map = 1455, x = 25.5, y = 7.07, z = 501.1, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 5115, npcName = "Daera Brightspear", map = 1455, x = 70.97, y = 89.8, z = 510.4, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 5141, npcName = "Theodrus Frostbeard", map = 1455, x = 24.08, y = 8.41, z = 524.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 5147, npcName = "Valgar Highforge", map = 1455, x = 23.7, y = 5.1, z = 524.8, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 5165, npcName = "Hulfdan Blackbeard", map = 1455, x = 51.96, y = 14.84, z = 502, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 5171, npcName = "Thistleheart", map = 1455, x = 51.09, y = 6.61, z = 505, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 11865, npcName = "Buliwyf Stonehand", map = 1455, x = 61.17, y = 89.52, z = 509, f = "e", faction = "A", classes = { "WARRIOR", "PALADIN" } }, { npc = 251373, npcName = "Xyton Silverwind", map = 2521, x = 41.66, y = 23.33, faction = "AH", classes = { "DRUID" } }, { npc = 251376, npcName = "Tai'ree Farsight", map = 2521, x = 42.49, y = 23.79, faction = "AH", classes = { "HUNTER" } }, { npc = 251379, npcName = "Dorii Brightwhisper", map = 2521, x = 41.55, y = 23.68, faction = "A", classes = { "MAGE" } }, { npc = 251389, npcName = "Akeri Duskblade", map = 2521, x = 43.74, y = 24.36, faction = "AH", classes = { "ROGUE" } }, { npc = 251964, npcName = "Blademaster Ren", map = 2521, x = 43.65, y = 24.11, faction = "AH", classes = { "WARRIOR" } }, { npc = 252359, npcName = "Lotheluum Starbreeze", map = 2521, x = 63.99, y = 75.08, faction = "AH", classes = { "DRUID" } }, { npc = 252373, npcName = "Anathamaas Aetherwind", map = 2521, x = 65.91, y = 80.57, faction = "A", classes = { "MAGE" } }, { npc = 252377, npcName = "Seena Skybreaker", map = 2521, x = 59.89, y = 72.87, faction = "AH", classes = { "WARRIOR" } }, { npc = 252379, npcName = "Eltheen Nightbreeze", map = 2521, x = 59.9, y = 72.48, faction = "AH", classes = { "ROGUE" } }, { npc = 252389, npcName = "Quel'ana Quickgale", map = 2521, x = 59.56, y = 72.63, faction = "AH", classes = { "HUNTER" } }, { npc = 254081, npcName = "Naeluna Swiftmend", map = 2521, x = 45.16, y = 44.22, faction = "AH", classes = { "DRUID" } }, { npc = 254084, npcName = "Elayaa Easewind", map = 2521, x = 45.26, y = 44.24, faction = "AH", classes = { "HUNTER" } }, { npc = 254086, npcName = "Shenaan Spellwind", map = 2521, x = 45.1, y = 45.87, faction = "AH", classes = { "MAGE" } }, { npc = 254087, npcName = "Miriaan Mistblade", map = 2521, x = 43.15, y = 43.26, faction = "AH", classes = { "ROGUE" } }, { npc = 254088, npcName = "Corsan Earthrazer", map = 2521, x = 44.95, y = 45.1, faction = "AH", classes = { "WARRIOR" } } } },
 						{ t = "turnin", quest = 97914, title = "Expanding Horizons", npc = 1646, npcName = "Baros Alexston", map = 1453, x = 57.74, y = 47.86, z = 101.8, note = "{npc:1646}: Thundris' letter from Auberdine" },
 						{ t = "accept", quest = 97926, title = "Making Do", npc = 1646, npcName = "Baros Alexston", minLevel = 13, qlvl = 17, pre = { 97914 }, preTitles = { [97914] = "Expanding Horizons" }, map = 1453, x = 57.74, y = 47.86, z = 101.8, optional = true, note = "Only once {quest:97914} is handed in: for {npc:3649}, back in Auberdine (06-ashenvale)" },
@@ -4807,8 +4809,8 @@ do
 			pack = "groupe-alliance",
 			title = "Group 7 · {zone:1431}",
 			faction = "Alliance",
-			minLevel = 24,
-			maxLevel = 26,
+			minLevel = 22,
+			maxLevel = 24,
 			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1431,
@@ -4822,7 +4824,7 @@ do
 				{
 					title = "{zone:1431}",
 					goals = {
-						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 26? Wait for the others." },
+						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others." },
 						{ t = "goto", text = "{zone:1431}", map = 1431, x = 75.8, y = 45.3, f = "e" },
 					},
 				},
@@ -5298,8 +5300,8 @@ do
 			pack = "groupe-alliance",
 			title = "Group 8 · {zone:1440}, {zone:1437} & Stonetalon",
 			faction = "Alliance",
-			minLevel = 26,
-			maxLevel = 28,
+			minLevel = 24,
+			maxLevel = 27,
 			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1440,
@@ -5307,14 +5309,14 @@ do
 			next = "groupe-alliance/10-site-de-fouilles",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:12220"] = "Intact Elemental Bracer", ["item:13536"] = "Horn of Awakening", ["item:15885"] = "Pendant of the Sea Lion", ["item:279996"] = "Goaz Stone", ["item:3349"] = "Sida's Bag", ["item:5352"] = "Book: The Powers Below", ["item:5366"] = "Glowing Soul Gem", ["item:5424"] = "Ancient Statuette", ["item:5456"] = "Divining Scroll", ["item:5463"] = "Glowing Gem", ["npc:1007"] = "Mosshide Gnoll", ["npc:1010"] = "Mosshide Fenrunner", ["npc:1020"] = "Mottled Raptor", ["npc:1021"] = "Mottled Screecher", ["npc:1024"] = "Bluegill Murloc", ["npc:1033"] = "Monstrous Ooze", ["npc:1040"] = "Fen Creeper", ["npc:1076"] = "Merrin Rockweaver", ["npc:1078"] = "Ormer Ironbraid", ["npc:1111"] = "Leech Stalker", ["npc:11218"] = "Kerlonian Evershade", ["npc:11219"] = "Liladris Moonriver", ["npc:11401"] = "Priestess Alathea", ["npc:11406"] = "High Priest Rohan", ["npc:11800"] = "Silva Fil'naveth", ["npc:11802"] = "Dendrite Starblaze", ["npc:11865"] = "Buliwyf Stonehand", ["npc:1217"] = "Glorin Steelbrow", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1242"] = "Karl Boran", ["npc:1244"] = "Rethiel the Greenwarden", ["npc:1259"] = "Gobbler", ["npc:1417"] = "Young Wetlands Crocolisk", ["npc:1440"] = "Milton Sheaf", ["npc:1444"] = "Brother Kristoff", ["npc:1480"] = "Caitlin Grassman", ["npc:1573"] = "Gryth Thurden", ["npc:2086"] = "Valstag Ironjaw", ["npc:2092"] = "Pilot Longbeard", ["npc:2093"] = "Einar Stonegrip", ["npc:2094"] = "James Halloran", ["npc:2096"] = "Tarrel Rockweaver", ["npc:2097"] = "Harlo Barnaby", ["npc:2104"] = "Captain Stoutfist", ["npc:210995"] = "Alonso", ["npc:2111"] = "Sida", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:258785"] = "High Priestess Mims", ["npc:271334"] = "Maddened Rotclaw", ["npc:2786"] = "Gerrig Bonegrip", ["npc:2916"] = "Historian Karnik", ["npc:3585"] = "Therysil", ["npc:3649"] = "Thundris Windweaver", ["npc:3664"] = "Ilkrud Magthrull", ["npc:3691"] = "Raene Wolfrunner", ["npc:3846"] = "Talen", ["npc:3885"] = "Sentinel Velene Starstrike", ["npc:3891"] = "Teronis' Corpse", ["npc:3894"] = "Pelturas Whitemoon", ["npc:3901"] = "Illiyana", ["npc:3916"] = "Shael'dryn", ["npc:3917"] = "Befouled Water Elemental", ["npc:3970"] = "Llana", ["npc:3987"] = "Dal Bloodclaw", ["npc:4040"] = "Cave Stalker", ["npc:4077"] = "Gaxim Rustfizzle", ["npc:4078"] = "Collin Mauren", ["npc:4080"] = "Kaela Shadowspear", ["npc:4081"] = "Lomac Gearstrip", ["npc:4201"] = "Ziz Fizziks", ["npc:4217"] = "Mathrengyl Bearwalker", ["npc:4276"] = "Piznik", ["npc:482"] = "Elling Trias", ["npc:4959"] = "Jorgen", ["npc:4982"] = "Thomas", ["npc:5082"] = "Vincent Hyal", ["npc:928"] = "Lord Grayson Shadowbreaker", ["object:1162"] = "Menethil Harbor", ["object:12893"] = "Grove of the Ancients", ["object:13352"] = "Shrine of Aessina", ["object:142151"] = "Sealed Barrel", ["object:1668"] = "Dun Algaz", ["object:171524"] = "Tinker Town", ["object:176370"] = "Boat to Auberdine", ["object:176634"] = "Kerlonian's Chest", ["object:19555"] = "Windshear Crag", ["object:19863"] = "Maestra's Post", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "The Slaughtered Lamb", ["object:259"] = "Half-buried Barrel", ["object:261"] = "Damaged Crate", ["object:28027"] = "Dwarven District", ["object:32359"] = "Military Ward", ["object:32362"] = "Mystic Ward", ["object:32372"] = "Great Forge", ["object:32383"] = "Forlorn Cavern", ["object:32386"] = "Hall of Mysteries", ["object:376"] = "Dun Modr", ["quest:1009"] = "Ruuzel", ["quest:1010"] = "Bathran's Hair", ["quest:1033"] = "Elune's Tear", ["quest:1034"] = "The Ruins of Stardust", ["quest:337"] = "An Old History Book", ["quest:5061"] = "Aquatic Form", ["quest:5673"] = "Elune's Grace", ["quest:94819"] = "Contingency Plan", ["quest:98197"] = "Spoils of War", ["quest:98283"] = "Carnage", ["zone:1426"] = "Dun Morogh", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1437"] = "Wetlands", ["zone:1439"] = "Darkshore", ["zone:1440"] = "Ashenvale", ["zone:1442"] = "Stonetalon Mountains", ["zone:1450"] = "Moonglade", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			names = { ["item:12220"] = "Intact Elemental Bracer", ["item:13536"] = "Horn of Awakening", ["item:15885"] = "Pendant of the Sea Lion", ["item:279996"] = "Goaz Stone", ["item:3349"] = "Sida's Bag", ["item:5352"] = "Book: The Powers Below", ["item:5366"] = "Glowing Soul Gem", ["item:5424"] = "Ancient Statuette", ["item:5456"] = "Divining Scroll", ["item:5463"] = "Glowing Gem", ["npc:1007"] = "Mosshide Gnoll", ["npc:1010"] = "Mosshide Fenrunner", ["npc:1020"] = "Mottled Raptor", ["npc:1021"] = "Mottled Screecher", ["npc:1024"] = "Bluegill Murloc", ["npc:1033"] = "Monstrous Ooze", ["npc:1040"] = "Fen Creeper", ["npc:1076"] = "Merrin Rockweaver", ["npc:1078"] = "Ormer Ironbraid", ["npc:1111"] = "Leech Stalker", ["npc:11218"] = "Kerlonian Evershade", ["npc:11219"] = "Liladris Moonriver", ["npc:11401"] = "Priestess Alathea", ["npc:11406"] = "High Priest Rohan", ["npc:11800"] = "Silva Fil'naveth", ["npc:11802"] = "Dendrite Starblaze", ["npc:11865"] = "Buliwyf Stonehand", ["npc:1217"] = "Glorin Steelbrow", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1242"] = "Karl Boran", ["npc:1244"] = "Rethiel the Greenwarden", ["npc:1259"] = "Gobbler", ["npc:1417"] = "Young Wetlands Crocolisk", ["npc:1440"] = "Milton Sheaf", ["npc:1444"] = "Brother Kristoff", ["npc:1480"] = "Caitlin Grassman", ["npc:1573"] = "Gryth Thurden", ["npc:2086"] = "Valstag Ironjaw", ["npc:2092"] = "Pilot Longbeard", ["npc:2093"] = "Einar Stonegrip", ["npc:2094"] = "James Halloran", ["npc:2096"] = "Tarrel Rockweaver", ["npc:2097"] = "Harlo Barnaby", ["npc:2104"] = "Captain Stoutfist", ["npc:210995"] = "Alonso", ["npc:2111"] = "Sida", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:258785"] = "High Priestess Mims", ["npc:271334"] = "Maddened Rotclaw", ["npc:2786"] = "Gerrig Bonegrip", ["npc:2916"] = "Historian Karnik", ["npc:3585"] = "Therysil", ["npc:3649"] = "Thundris Windweaver", ["npc:3664"] = "Ilkrud Magthrull", ["npc:3691"] = "Raene Wolfrunner", ["npc:3846"] = "Talen", ["npc:3885"] = "Sentinel Velene Starstrike", ["npc:3891"] = "Teronis' Corpse", ["npc:3894"] = "Pelturas Whitemoon", ["npc:3901"] = "Illiyana", ["npc:3916"] = "Shael'dryn", ["npc:3917"] = "Befouled Water Elemental", ["npc:3970"] = "Llana", ["npc:3987"] = "Dal Bloodclaw", ["npc:4040"] = "Cave Stalker", ["npc:4077"] = "Gaxim Rustfizzle", ["npc:4078"] = "Collin Mauren", ["npc:4080"] = "Kaela Shadowspear", ["npc:4081"] = "Lomac Gearstrip", ["npc:4201"] = "Ziz Fizziks", ["npc:4217"] = "Mathrengyl Bearwalker", ["npc:4276"] = "Piznik", ["npc:5082"] = "Vincent Hyal", ["npc:928"] = "Lord Grayson Shadowbreaker", ["object:1162"] = "Menethil Harbor", ["object:12893"] = "Grove of the Ancients", ["object:13352"] = "Shrine of Aessina", ["object:142151"] = "Sealed Barrel", ["object:1668"] = "Dun Algaz", ["object:171524"] = "Tinker Town", ["object:176370"] = "Boat to Auberdine", ["object:176634"] = "Kerlonian's Chest", ["object:19555"] = "Windshear Crag", ["object:19863"] = "Maestra's Post", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "The Slaughtered Lamb", ["object:259"] = "Half-buried Barrel", ["object:261"] = "Damaged Crate", ["object:28027"] = "Dwarven District", ["object:32359"] = "Military Ward", ["object:32362"] = "Mystic Ward", ["object:32372"] = "Great Forge", ["object:32383"] = "Forlorn Cavern", ["object:32386"] = "Hall of Mysteries", ["object:376"] = "Dun Modr", ["quest:1009"] = "Ruuzel", ["quest:1010"] = "Bathran's Hair", ["quest:1033"] = "Elune's Tear", ["quest:1034"] = "The Ruins of Stardust", ["quest:337"] = "An Old History Book", ["quest:5061"] = "Aquatic Form", ["quest:5673"] = "Elune's Grace", ["quest:94819"] = "Contingency Plan", ["quest:98197"] = "Spoils of War", ["quest:98283"] = "Carnage", ["zone:1426"] = "Dun Morogh", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1437"] = "Wetlands", ["zone:1439"] = "Darkshore", ["zone:1440"] = "Ashenvale", ["zone:1442"] = "Stonetalon Mountains", ["zone:1450"] = "Moonglade", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
 			written = { ["Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to {object:376} and north of Einar's camp. Any ooze there may hold {npc:2111}'s bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of {npc:1244}; almost every one drops flint."] = "Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to Dun Modr and north of Einar's camp. Any ooze there may hold Sida's bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of Rethiel; almost every one drops flint.", ["Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's {object:19555}. {npc:4080} and {npc:4077} camp on the Webwinder Path south-west of the crag."] = "Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's Windshear Crag. Kaela and Gaxim camp on the Webwinder Path south-west of the crag.", ["{npc:3664} and his voidwalkers hold the Ruins of Ordil'Aran south of the shrine. Pull his guards first."] = "Ilkrud and his voidwalkers hold the Ruins of Ordil'Aran south of the shrine. Pull his guards first." },
 			steps = {
 				{
 					title = "{zone:1450}",
 					only = { classes = { "DRUID" }, races = { "NightElf" } },
 					goals = {
-						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 28? Wait for the others." },
+						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 27? Wait for the others." },
 						{ t = "goto", text = "Cast Teleport: {zone:1450}", map = 1450, x = 56.3, y = 32.5, f = "e" },
 					},
 				},
@@ -5979,7 +5981,6 @@ do
 					title = "Cathedral of Light",
 					note = "Take the Deeprun Tram from {object:171524} to {zone:1453}'s {object:28027}, then walk to the {object:2098}.",
 					goals = {
-						{ t = "accept", quest = 1274, title = "The Missing Diplomat", npc = 4982, npcName = "Thomas", minLevel = 28, qlvl = 28, map = 1453, x = 49.64, y = 44.48, z = 109.8, note = "{npc:4982}, in the Cathedral of Light" },
 						{ t = "accept", quest = 98219, title = "The Shamed Lieutenant", npc = 928, npcName = "Lord Grayson Shadowbreaker", minLevel = 20, qlvl = 30, map = 1453, x = 48.43, y = 50.22, z = 106.6, note = "For {npc:2228} in Southshore: keep it" },
 					},
 				},
@@ -5996,8 +5997,6 @@ do
 						{ t = "turnin", quest = 337, title = "An Old History Book", npc = 1440, npcName = "Milton Sheaf", map = 1453, x = 77.07, y = 30.21, z = 122.4, optional = true, note = "Only if you looted {quest:337} in {zone:1431}" },
 						{ t = "turnin", quest = 98190, title = "A Friend of the Family", npc = 1748, npcName = "Highlord Bolvar Fordragon", map = 1453, x = 80.21, y = 38.35, z = 122.6 },
 						{ t = "accept", quest = 98191, title = "A Friend of the Family", npc = 1748, npcName = "Highlord Bolvar Fordragon", minLevel = 20, qlvl = 25, map = 1453, x = 80.21, y = 38.35, z = 122.6 },
-						{ t = "turnin", quest = 1274, title = "The Missing Diplomat", npc = 4960, npcName = "Bishop DeLavey", map = 1453, x = 80.24, y = 44.07, z = 120.9 },
-						{ t = "accept", quest = 1241, title = "The Missing Diplomat", npc = 4960, npcName = "Bishop DeLavey", minLevel = 28, qlvl = 28, pre = { 1274 }, preTitles = { [1274] = "The Missing Diplomat" }, map = 1453, x = 80.24, y = 44.07, z = 120.9 },
 					},
 				},
 				{
@@ -6012,15 +6011,6 @@ do
 					goals = {
 						{ t = "accept", quest = 1078, title = "Retrieval for Mauren", npc = 4078, npcName = "Collin Mauren", minLevel = 17, qlvl = 26, map = 1453, x = 53.02, y = 86.64, z = 105.5 },
 						{ t = "turnin", quest = 1075, title = "A Scroll from Mauren", npc = 4078, npcName = "Collin Mauren", map = 1453, x = 53.02, y = 86.64, z = 105.5 },
-					},
-				},
-				{
-					title = "{npc:4959} and {npc:482}",
-					goals = {
-						{ t = "turnin", quest = 1241, title = "The Missing Diplomat", npc = 4959, npcName = "Jorgen", map = 1453, x = 76.29, y = 85.12, z = 76 },
-						{ t = "accept", quest = 1242, title = "The Missing Diplomat", npc = 4959, npcName = "Jorgen", minLevel = 28, qlvl = 28, pre = { 1241 }, preTitles = { [1241] = "The Missing Diplomat" }, map = 1453, x = 76.29, y = 85.12, z = 76 },
-						{ t = "turnin", quest = 1242, title = "The Missing Diplomat", npc = 482, npcName = "Elling Trias", map = 1453, x = 66.03, y = 74.1, z = 101.2, note = "{npc:482}, the cheese shop in the {object:2096}" },
-						{ t = "accept", quest = 1243, title = "The Missing Diplomat", npc = 482, npcName = "Elling Trias", minLevel = 28, qlvl = 28, pre = { 1242 }, preTitles = { [1242] = "The Missing Diplomat" }, map = 1453, x = 66.03, y = 74.1, z = 101.2 },
 					},
 				},
 				{
@@ -6042,10 +6032,10 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/10-site-de-fouilles",
 			pack = "groupe-alliance",
-			title = "Group 9 · Excavation Site: {zone:1437} (dungeon 26-31)",
+			title = "Group 9 · Excavation Site: {zone:1437} (dungeon 26-29)",
 			faction = "Alliance",
 			minLevel = 26,
-			maxLevel = 30,
+			maxLevel = 29,
 			category = "Dungeons",
 			folder = "Group Alliance",
 			zone = 1437,
@@ -6212,8 +6202,8 @@ do
 			pack = "groupe-alliance",
 			title = "Group 10 · {zone:1441}, {zone:1431} & {zone:1437}",
 			faction = "Alliance",
-			minLevel = 28,
-			maxLevel = 31,
+			minLevel = 27,
+			maxLevel = 30,
 			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1441,
@@ -6222,23 +6212,49 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:190309"] = "Wooden Figurine", ["item:1946"] = "Mary's Looking Glass", ["item:2594"] = "Flagon of Mead", ["item:2658"] = "Ados Fragment", ["item:2659"] = "Modr Fragment", ["item:2660"] = "Golm Fragment", ["item:2661"] = "Neru Fragment", ["item:279996"] = "Goaz Stone", ["item:3619"] = "Snellig's Snuffbox", ["item:4371"] = "Bronze Tube", ["item:5947"] = "Defias Docket", ["npc:1040"] = "Fen Creeper", ["npc:1078"] = "Ormer Ironbraid", ["npc:1110"] = "Skeletal Raider", ["npc:1157"] = "Cursed Sailor", ["npc:1158"] = "Cursed Marine", ["npc:1159"] = "First Mate Snellig", ["npc:1160"] = "Captain Halyndor", ["npc:1212"] = "Bishop Farthing", ["npc:1217"] = "Glorin Steelbrow", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1284"] = "Archbishop Benedictus", ["npc:1353"] = "Sarltooth", ["npc:1418"] = "Bluegill Raider", ["npc:1464"] = "Innkeeper Helbrek", ["npc:205"] = "Nightbane Dark Runner", ["npc:206"] = "Nightbane Vile Fang", ["npc:2089"] = "Giant Wetlands Crocolisk", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:263"] = "Lord Ello Ebonlocke", ["npc:268"] = "Sirra Von'Indi", ["npc:270892"] = "Goaz Warder", ["npc:272273"] = "Lost Watcher", ["npc:276"] = "Viktori Prism'Antras", ["npc:289"] = "Abercrombie", ["npc:302"] = "Blind Mary", ["npc:311"] = "Sven Yorgen", ["npc:3133"] = "Herble Baubbletump", ["npc:4139"] = "Scorpid Terror", ["npc:4140"] = "Scorpid Reaver", ["npc:4142"] = "Sparkleshell Tortoise", ["npc:4147"] = "Saltstone Basilisk", ["npc:4454"] = "Fizzle Brassbolts", ["npc:482"] = "Elling Trias", ["npc:511"] = "Insane Ghoul", ["npc:522"] = "Mor'Ladim", ["npc:533"] = "Nightbane Shadow Weaver", ["npc:604"] = "Plague Spreader", ["npc:6244"] = "Takar the Seer", ["npc:633"] = "Elaine Carevin", ["npc:661"] = "Jonathan Carevin", ["npc:663"] = "Calor", ["npc:6790"] = "Innkeeper Trelayne", ["npc:840"] = "Watcher Backus", ["object:102"] = "Raven Hill", ["object:1162"] = "Menethil Harbor", ["object:119"] = "Abercrombie's Crate", ["object:176369"] = "Boat to Theramore", ["object:19868"] = "Rocket Car Rubble", ["object:21052"] = "Defias Strongbox", ["object:21056"] = "Theramore Isle", ["quest:1738"] = "Heartswood", ["quest:225"] = "The Weathered Grave", ["quest:465"] = "Nek'rosh's Gambit", ["quest:5762"] = "Hemet Nesingwary", ["quest:65602"] = "What Is Love?", ["quest:96138"] = "Merrick's Bow", ["quest:98221"] = "From the Ashes", ["zone:1413"] = "The Barrens", ["zone:1418"] = "Badlands", ["zone:1431"] = "Duskwood", ["zone:1436"] = "Westfall", ["zone:1437"] = "Wetlands", ["zone:1440"] = "Ashenvale", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1445"] = "Dustwallow Marsh", ["zone:1453"] = "Stormwind" },
+			names = { ["item:190309"] = "Wooden Figurine", ["item:1946"] = "Mary's Looking Glass", ["item:2594"] = "Flagon of Mead", ["item:2658"] = "Ados Fragment", ["item:2659"] = "Modr Fragment", ["item:2660"] = "Golm Fragment", ["item:2661"] = "Neru Fragment", ["item:279996"] = "Goaz Stone", ["item:3619"] = "Snellig's Snuffbox", ["item:4371"] = "Bronze Tube", ["item:5947"] = "Defias Docket", ["npc:1040"] = "Fen Creeper", ["npc:1078"] = "Ormer Ironbraid", ["npc:1110"] = "Skeletal Raider", ["npc:1157"] = "Cursed Sailor", ["npc:1158"] = "Cursed Marine", ["npc:1159"] = "First Mate Snellig", ["npc:1160"] = "Captain Halyndor", ["npc:1212"] = "Bishop Farthing", ["npc:1217"] = "Glorin Steelbrow", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1284"] = "Archbishop Benedictus", ["npc:1353"] = "Sarltooth", ["npc:1418"] = "Bluegill Raider", ["npc:1464"] = "Innkeeper Helbrek", ["npc:205"] = "Nightbane Dark Runner", ["npc:206"] = "Nightbane Vile Fang", ["npc:2089"] = "Giant Wetlands Crocolisk", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:263"] = "Lord Ello Ebonlocke", ["npc:268"] = "Sirra Von'Indi", ["npc:270892"] = "Goaz Warder", ["npc:272273"] = "Lost Watcher", ["npc:276"] = "Viktori Prism'Antras", ["npc:289"] = "Abercrombie", ["npc:302"] = "Blind Mary", ["npc:311"] = "Sven Yorgen", ["npc:3133"] = "Herble Baubbletump", ["npc:4139"] = "Scorpid Terror", ["npc:4140"] = "Scorpid Reaver", ["npc:4142"] = "Sparkleshell Tortoise", ["npc:4147"] = "Saltstone Basilisk", ["npc:4454"] = "Fizzle Brassbolts", ["npc:482"] = "Elling Trias", ["npc:4959"] = "Jorgen", ["npc:4982"] = "Thomas", ["npc:511"] = "Insane Ghoul", ["npc:522"] = "Mor'Ladim", ["npc:533"] = "Nightbane Shadow Weaver", ["npc:604"] = "Plague Spreader", ["npc:6244"] = "Takar the Seer", ["npc:633"] = "Elaine Carevin", ["npc:661"] = "Jonathan Carevin", ["npc:663"] = "Calor", ["npc:6790"] = "Innkeeper Trelayne", ["npc:840"] = "Watcher Backus", ["object:102"] = "Raven Hill", ["object:1162"] = "Menethil Harbor", ["object:119"] = "Abercrombie's Crate", ["object:176369"] = "Boat to Theramore", ["object:19868"] = "Rocket Car Rubble", ["object:2096"] = "Trade District", ["object:21052"] = "Defias Strongbox", ["object:21056"] = "Theramore Isle", ["quest:1241"] = "The Missing Diplomat", ["quest:1738"] = "Heartswood", ["quest:225"] = "The Weathered Grave", ["quest:465"] = "Nek'rosh's Gambit", ["quest:5762"] = "Hemet Nesingwary", ["quest:65602"] = "What Is Love?", ["quest:96138"] = "Merrick's Bow", ["quest:98221"] = "From the Ashes", ["zone:1413"] = "The Barrens", ["zone:1418"] = "Badlands", ["zone:1431"] = "Duskwood", ["zone:1436"] = "Westfall", ["zone:1437"] = "Wetlands", ["zone:1440"] = "Ashenvale", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1445"] = "Dustwallow Marsh", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
 			written = { ["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "On the road south through the Barrens, Takar the Seer camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards.", ["The Plague Spreaders walk the northern half of the Raven Hill Cemetery. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "The Plague Spreaders walk the northern half of the Raven Hill Cemetery. Mor'Ladim, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of Sven's camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs.", ["{item:2658} along the way to {npc:1078} and Whelgar"] = "Ados Fragment along the way to Ormer and Whelgar", ["{item:2659} along the way to {npc:1078} and Whelgar"] = "Modr Fragment along the way to Ormer and Whelgar", ["{item:2660} along the way to {npc:1078} and Whelgar"] = "Golm Fragment along the way to Ormer and Whelgar", ["{item:2661} along the way to {npc:1078} and Whelgar"] = "Neru Fragment along the way to Ormer and Whelgar", ["{npc:1078} and Whelgar"] = "Ormer and Whelgar", ["{npc:311}'s Camp"] = "Sven's Camp" },
 			steps = {
 				{
+					title = "{quest:1241}",
+					note = "Level 28 required: below 28, skip it and its follow-ups in {zone:1431}. Take the Deeprun Tram from {zone:1455}, then the Cathedral and the Keep.",
+					when = { { k = "level", op = ">=", n = 28 } },
+					goals = {
+						{ t = "accept", quest = 1274, title = "The Missing Diplomat", npc = 4982, npcName = "Thomas", minLevel = 28, qlvl = 28, map = 1453, x = 49.64, y = 44.48, z = 109.8, note = "{npc:4982}, in the Cathedral of Light" },
+						{ t = "turnin", quest = 1274, title = "The Missing Diplomat", npc = 4960, npcName = "Bishop DeLavey", map = 1453, x = 80.24, y = 44.07, z = 120.9 },
+						{ t = "accept", quest = 1241, title = "The Missing Diplomat", npc = 4960, npcName = "Bishop DeLavey", minLevel = 28, qlvl = 28, pre = { 1274 }, preTitles = { [1274] = "The Missing Diplomat" }, map = 1453, x = 80.24, y = 44.07, z = 120.9 },
+					},
+				},
+				{
+					title = "{npc:4959} and {npc:482}",
+					when = { { k = "onquest", q = { 1241 } } },
+					goals = {
+						{ t = "turnin", quest = 1241, title = "The Missing Diplomat", npc = 4959, npcName = "Jorgen", map = 1453, x = 76.29, y = 85.12, z = 76 },
+						{ t = "accept", quest = 1242, title = "The Missing Diplomat", npc = 4959, npcName = "Jorgen", minLevel = 28, qlvl = 28, pre = { 1241 }, preTitles = { [1241] = "The Missing Diplomat" }, map = 1453, x = 76.29, y = 85.12, z = 76 },
+						{ t = "turnin", quest = 1242, title = "The Missing Diplomat", npc = 482, npcName = "Elling Trias", map = 1453, x = 66.03, y = 74.1, z = 101.2, note = "{npc:482}, the cheese shop in the {object:2096}" },
+						{ t = "accept", quest = 1243, title = "The Missing Diplomat", npc = 482, npcName = "Elling Trias", minLevel = 28, qlvl = 28, pre = { 1242 }, preTitles = { [1242] = "The Missing Diplomat" }, map = 1453, x = 66.03, y = 74.1, z = 101.2 },
+					},
+				},
+				{
 					title = "{zone:1431}",
 					goals = {
-						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 31? Wait for the others." },
+						{ t = "note", text = "Group: highest player at most 4 levels above the lowest. Above 30? Wait for the others." },
 						{ t = "goto", text = "{zone:1431}", map = 1431, x = 74.8, y = 44.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:840}",
+					when = { { k = "onquest", q = { 1243 } } },
+					goals = {
+						{ t = "turnin", quest = 1243, title = "The Missing Diplomat", npc = 840, npcName = "Watcher Backus", map = 1431, x = 74.83, y = 44.22, z = 28.2, f = "e", note = "{npc:840}, at the north entrance of town; walks around Darkshire: look inside the circle on the map" },
+						{ t = "accept", quest = 1244, title = "The Missing Diplomat", npc = 840, npcName = "Watcher Backus", minLevel = 28, qlvl = 30, pre = { 1243 }, preTitles = { [1243] = "The Missing Diplomat" }, map = 1431, x = 74.83, y = 44.22, z = 28.2, f = "e" },
 					},
 				},
 				{
 					title = "Darkshire",
 					goals = {
 						{ t = "sethome", npc = 6790, npcName = "Innkeeper Trelayne", location = "Darkshire", map = 1431, x = 73.87, y = 44.41, z = 28.1, f = "e", note = "{npc:6790}, Scarlet Raven Tavern" },
-						{ t = "turnin", quest = 1243, title = "The Missing Diplomat", npc = 840, npcName = "Watcher Backus", map = 1431, x = 74.83, y = 44.22, z = 28.2, f = "e", note = "{npc:840}, at the north entrance of town; walks around Darkshire: look inside the circle on the map" },
 						{ t = "buy", npc = 3133, npcName = "Herble Baubbletump", item = 4371, itemName = "Bronze Tube", count = 1, map = 1431, x = 77.99, y = 48.33, z = 37.1, f = "e", optional = true, note = "{item:4371}, from {npc:3133}, if you have none" },
-						{ t = "accept", quest = 1244, title = "The Missing Diplomat", npc = 840, npcName = "Watcher Backus", minLevel = 28, qlvl = 30, pre = { 1243 }, preTitles = { [1243] = "The Missing Diplomat" }, map = 1431, x = 74.83, y = 44.22, z = 28.2, f = "e" },
 						{ t = "accept", quest = 58, title = "The Night Watch", npc = 264, npcName = "Commander Althea Ebonlocke", minLevel = 18, qlvl = 30, pre = { 57 }, preTitles = { [57] = "The Night Watch" }, map = 1431, x = 73.54, y = 46.82, z = 28.1, f = "e" },
 						{ t = "turnin", quest = 174, title = "Look To The Stars", npc = 276, npcName = "Viktori Prism'Antras", map = 1431, x = 79.8, y = 48.02, z = 50.4, f = "e", note = "{npc:276}, at the east end of town; inside" },
 						{ t = "accept", quest = 175, title = "Look To The Stars", npc = 276, npcName = "Viktori Prism'Antras", minLevel = 20, qlvl = 25, pre = { 174 }, preTitles = { [174] = "Look To The Stars" }, map = 1431, x = 79.8, y = 48.02, z = 50.4, f = "e" },
@@ -6314,6 +6330,7 @@ do
 				{
 					title = "{object:21052}",
 					note = "The Defias camp lies in the south-west of {zone:1431}, south of {object:102} near the {zone:1436} border. The strongbox stands among the tents.",
+					when = { { k = "onquest", q = { 1244 } } },
 					goals = {
 						{ t = "collect", quest = 1244, title = "The Missing Diplomat", item = 5947, itemName = "Defias Docket", count = 1, oi = 1, map = 1431, x = 23.9, y = 72.1, f = "e", note = "{item:5947}; inside", from = "Defias Strongbox", fromKind = "object", fromId = 21052 },
 					},
@@ -6361,10 +6378,16 @@ do
 					},
 				},
 				{
-					title = "Back to Darkshire",
+					title = "{npc:840} again",
+					when = { { k = "onquest", q = { 1244 } } },
 					goals = {
 						{ t = "turnin", quest = 1244, title = "The Missing Diplomat", npc = 840, npcName = "Watcher Backus", map = 1431, x = 74.83, y = 44.22, z = 28.2, f = "e", note = "{npc:840} walks around Darkshire: look inside the circle on the map" },
 						{ t = "accept", quest = 1245, title = "The Missing Diplomat", npc = 840, npcName = "Watcher Backus", minLevel = 28, qlvl = 30, pre = { 1244 }, preTitles = { [1244] = "The Missing Diplomat" }, map = 1431, x = 74.83, y = 44.22, z = 28.2, f = "e", note = "For {npc:482} in {zone:1453}, in the next guide" },
+					},
+				},
+				{
+					title = "Back to Darkshire",
+					goals = {
 						{ t = "turnin", quest = 58, title = "The Night Watch", npc = 264, npcName = "Commander Althea Ebonlocke", map = 1431, x = 73.54, y = 46.82, z = 28.1, f = "e" },
 						{ t = "turnin", quest = 160, title = "Note to the Mayor", npc = 263, npcName = "Lord Ello Ebonlocke", map = 1431, x = 71.93, y = 46.42, z = 31.5, f = "e", note = "{npc:263}, in the town hall" },
 						{ t = "accept", quest = 251, title = "Translate Abercrombie's Note", npc = 263, npcName = "Lord Ello Ebonlocke", minLevel = 20, qlvl = 30, pre = { 160 }, preTitles = { [160] = "Note to the Mayor" }, map = 1431, x = 71.93, y = 46.42, z = 31.5, f = "e" },
@@ -6575,10 +6598,10 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/12-dalaran",
 			pack = "groupe-alliance",
-			title = "Group 11 · City of Dalaran (dungeon 28-33)",
+			title = "Group 11 · City of Dalaran (dungeon 30-33)",
 			faction = "Alliance",
-			minLevel = 28,
-			maxLevel = 31,
+			minLevel = 30,
+			maxLevel = 33,
 			category = "Dungeons",
 			folder = "Group Alliance",
 			zone = 1453,
@@ -6586,12 +6609,13 @@ do
 			next = "forever/alliance/30-40/01-hillsbrad-foothills",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:251961"] = "Arcane Mote", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2101"] = "Mage Quarter", ["zone:1453"] = "Stormwind" },
+			names = { ["item:251961"] = "Arcane Mote", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2101"] = "Mage Quarter", ["quest:92432"] = "An Alarming Request", ["zone:1453"] = "Stormwind" },
 			steps = {
 				{
 					title = "{zone:1453}: two dungeon quests",
 					note = "{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower.",
 					goals = {
+						{ t = "note", text = "Group: level 30 required for {quest:92432}, the quest that opens the way to Dalaran. Below 30? Level up first." },
 						{ t = "accept", quest = 92456, title = "A Green Sample", npc = 5502, npcName = "Shylamiir", minLevel = 24, qlvl = 33, map = 1453, x = 31.5, y = 62.61, z = 98.3 },
 						{ t = "accept", quest = 92489, title = "Power Overwhelming", npc = 5694, npcName = "High Sorcerer Andromath", minLevel = 24, qlvl = 33, map = 1453, x = 48.71, y = 87.62, z = 148.7 },
 					},
