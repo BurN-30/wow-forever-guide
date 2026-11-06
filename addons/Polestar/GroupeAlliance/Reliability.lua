@@ -26,4 +26,18 @@ ns.GA.Reliability = {
 	[95809] = { "?", BETA_ROUTE }, [95810] = { "?", BETA_ROUTE }, [98824] = { "?", BETA_ROUTE },
 	[92456] = { "?", BETA_ROUTE }, [92489] = { "?", BETA_ROUTE }, [92432] = { "?", BETA_ROUTE },
 	[92457] = { "?", BETA_ROUTE }, [92458] = { "?", BETA_ROUTE },
+	-- Solo · Loch Modan: quests confirmed (Polestar data, RestedXP's live guides, Lodestar),
+	-- but places missing from Polestar's data.
+	[86667] = { "?", {
+		frFR = "Les deux PNJ et la plaque de neige manquent aux données Polestar : positions reprises de Lodestar (bêta) et des guides RestedXP.",
+		enUS = "Both NPCs and the snowy patch are missing from Polestar's data: places from Lodestar (beta) and RestedXP's guides.",
+	} },
+	[86758] = { "?", {
+		frFR = "Daggerfang manque aux données Polestar : position reprise de Lodestar (bêta), sur la rive est selon RestedXP.",
+		enUS = "Daggerfang is missing from Polestar's data: place from Lodestar (beta), on the east shore per RestedXP.",
+	} },
+	[86614] = { "?", {
+		frFR = "La boîte de pêche manque aux données Polestar : plusieurs emplacements possibles au fond du lac (RestedXP).",
+		enUS = "The fishing toolbox is missing from Polestar's data: several possible spots on the lake floor (RestedXP).",
+	} },
 }

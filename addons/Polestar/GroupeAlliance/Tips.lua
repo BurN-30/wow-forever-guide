@@ -126,6 +126,14 @@ ns.GA.Tips = {
 		frFR = "Les araignées sont rares et éparpillées le long de la frontière ouest, vers le camp de Sven ; elles réapparaissent lentement.",
 		enUS = "The spiders are few and scattered along the western border near Sven's camp, and they respawn slowly.",
 	},
+	[257] = { -- A Hunter's Boast (route)
+		frFR = "Quête chronométrée (15 minutes) : la prendre seulement une fois prêt, sacs et vie pleins, puis aller droit aux buses.",
+		enUS = "Timed quest (15 minutes): take it only when ready, bags and health full, then head straight for the buzzards.",
+	},
+	[258] = { -- A Hunter's Challenge (route)
+		frFR = "Encore chronométrée, 12 minutes : les vieux sangliers sont de niveau 16-17, ne pas la prendre trop bas ou fatigué.",
+		enUS = "Timed again, 12 minutes: the elder boars are level 16-17, don't take it under-levelled or low on health.",
+	},
 	[287] = { -- Frostmane Hold (wowhead forever)
 		frFR = "La bonne caverne est au sud-ouest du village de Brewnall, pas celle de la crête au nord-est ; l'exploration se valide au fond.",
 		enUS = "The right cave is south-west of Brewnall Village, not the one on the ridge to the north-east; exploration triggers deep inside.",
@@ -349,6 +357,10 @@ ns.GA.Tips = {
 	[5545] = { -- A Bundle of Trouble (wowhead forever)
 		frFR = "Baisser la densité de l'herbe dans les options graphiques rend les fagots bien plus visibles ; à faire en même temps que la quête des loups et ours voisine.",
 		enUS = "Turning ground clutter down in graphics settings makes the bundles much easier to spot; combine with the nearby wolves and bears quest.",
+	},
+	[86614] = { -- Silver of the Waves (route)
+		frFR = "La boîte n'est pas toujours au même endroit : nager au fond du lac en surveillant la minicarte, loin des monstres marins de niveau 19-20.",
+		enUS = "The toolbox is not always in the same spot: swim along the lake floor watching the minimap, away from the level 19-20 Young Threshadons.",
 	},
 	[91741] = { -- Nibbled-On Book (route)
 		frFR = "Rendre le livre à Frère Paxton dès qu'il tombe : la suite fait ramasser des livres volés sur les mêmes kobolds, autant l'avoir avant de finir le camp.",

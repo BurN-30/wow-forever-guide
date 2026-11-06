@@ -2,7 +2,7 @@
 ## Title: Polestar Community: Group Alliance 1-33
 ## Notes: Alliance route for a group: start guides, Stormwind meeting point, zones and the four Forever dungeons.
 ## Author: BurN-30
-## Version: 0.2.1
+## Version: 0.2.2
 ## Category: Polestar
 ## Group: Polestar
 ## Dependencies: Polestar

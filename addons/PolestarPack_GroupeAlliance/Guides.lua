@@ -793,6 +793,1100 @@ do
 	register()
 end
 
+-- Source: guides/01-depart-gnome.guide
+do
+	local function register()
+		local candidateRecords = {
+			{ npc = 460, npcName = "Alamar Grimm", map = 1426, x = 28.65, y = 66.14, z = 399, f = "e", faction = "A", classes = { "WARLOCK" } },
+			{ npc = 257446, npcName = "Teo Hammerstorm", map = 1426, x = 28.79, y = 66.18, f = "e", faction = "A", classes = { "SHAMAN" } },
+			{ npc = 944, npcName = "Marryk Nurribit", map = 1426, x = 28.71, y = 66.37, z = 392.9, f = "e", faction = "A", classes = { "MAGE" } },
+			{ npc = 837, npcName = "Branstock Khalder", map = 1426, x = 28.6, y = 66.39, z = 392.8, f = "e", faction = "A", classes = { "PRIEST" } },
+			{ npc = 912, npcName = "Thran Khorman", map = 1426, x = 28.83, y = 67.24, z = 395.6, f = "e", faction = "A", classes = { "WARRIOR" } },
+			{ npc = 916, npcName = "Solm Hargrin", map = 1426, x = 28.37, y = 67.51, z = 395.6, f = "e", faction = "A", classes = { "ROGUE" } },
+			{ npc = 895, npcName = "Thorgas Grimson", map = 1426, x = 29.18, y = 67.45, z = 395.6, f = "e", faction = "A", classes = { "HUNTER" } },
+			{ npc = 926, npcName = "Bromos Grummner", map = 1426, x = 28.83, y = 68.33, z = 395.6, f = "e", faction = "A", classes = { "PALADIN" } },
+			{ npc = 1231, npcName = "Grif Wildheart", map = 1426, x = 45.81, y = 53.04, z = 407.8, f = "e", faction = "A", classes = { "HUNTER" } },
+			{ npc = 5612, npcName = "Gimrizz Shadowcog", map = 1426, x = 47.33, y = 53.69, z = 404.4, f = "e", faction = "A", classes = { "WARLOCK" } },
+			{ npc = 1229, npcName = "Granis Swiftaxe", map = 1426, x = 47.36, y = 52.65, z = 399.7, f = "e", faction = "A", classes = { "WARRIOR" } },
+			{ npc = 1226, npcName = "Maxan Anvol", map = 1426, x = 47.34, y = 52.19, z = 399.7, f = "e", faction = "A", classes = { "PRIEST" } },
+			{ npc = 1234, npcName = "Hogral Bakkan", map = 1426, x = 47.56, y = 52.61, z = 399.2, f = "e", faction = "A", classes = { "ROGUE" } },
+			{ npc = 1228, npcName = "Magis Sparkmantle", map = 1426, x = 47.5, y = 52.08, z = 403.6, f = "e", faction = "A", classes = { "MAGE" } },
+			{ npc = 1232, npcName = "Azar Stronghammer", map = 1426, x = 47.6, y = 52.07, z = 403.6, f = "e", faction = "A", classes = { "PALADIN" } },
+			{ npc = 258113, npcName = "Ingrid Dunwald", map = 1426, x = 47.58, y = 51.95, f = "e", faction = "A", classes = { "SHAMAN" } },
+			{ npc = 11865, npcName = "Buliwyf Stonehand", map = 1455, x = 61.17, y = 89.52, z = 509, f = "e", faction = "A", classes = { "WARRIOR", "PALADIN" } },
+			{ npc = 5114, npcName = "Bilban Tosslespanner", map = 1455, x = 65.9, y = 88.41, z = 507.8, f = "e", faction = "A", classes = { "WARRIOR" } },
+			{ npc = 258785, npcName = "High Priestess Mims", map = 1455, x = 24.59, y = 10, f = "e", faction = "A", classes = { "PRIEST" } },
+			{ npc = 5149, npcName = "Brandur Ironhammer", map = 1455, x = 23.13, y = 6.14, z = 502.9, f = "e", faction = "A", classes = { "PALADIN" } },
+			{ npc = 2489, npcName = "Milstaff Stormeye", map = 1455, x = 25.5, y = 7.07, z = 501.1, f = "e", faction = "A", classes = { "MAGE" } },
+			{ npc = 5115, npcName = "Daera Brightspear", map = 1455, x = 70.97, y = 89.8, z = 510.4, f = "e", faction = "A", classes = { "HUNTER" } },
+			{ npc = 258098, npcName = "Eldrun Stormbreaker", map = 1455, x = 47.1, y = 13.79, f = "e", faction = "A", classes = { "SHAMAN" } },
+			{ npc = 5167, npcName = "Fenthwick", map = 1455, x = 51.5, y = 15.33, z = 508.6, f = "e", faction = "A", classes = { "ROGUE" } },
+			{ npc = 5173, npcName = "Alexander Calder", map = 1455, x = 50.08, y = 7.45, z = 511.7, f = "e", faction = "A", classes = { "WARLOCK" } },
+			{ npc = 5516, npcName = "Ulfir Ironbeard", map = 1453, x = 67.59, y = 35.78, z = 95.5, faction = "A", classes = { "HUNTER" } },
+			{ npc = 376, npcName = "High Priestess Laurena", map = 1453, x = 49.53, y = 44.6, z = 109.9, faction = "A", classes = { "PRIEST" } },
+			{ npc = 5492, npcName = "Katherine the Pure", map = 1453, x = 48.48, y = 49.09, z = 106.6, faction = "A", classes = { "PALADIN" } },
+			{ npc = 5480, npcName = "Ilsa Corbin", map = 1453, x = 80.41, y = 59.8, z = 109.5, faction = "A", classes = { "WARRIOR" } },
+			{ npc = 918, npcName = "Osborne the Night Man", map = 1453, x = 77.43, y = 65.31, z = 101.1, faction = "A", classes = { "ROGUE" } },
+			{ npc = 5505, npcName = "Theridran", map = 1453, x = 36.11, y = 64.39, z = 93.8, faction = "A", classes = { "DRUID" } },
+			{ npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9, faction = "A", classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "WARLOCK" } },
+			{ npc = 198, npcName = "Khelden Bremen", map = 1429, x = 49.66, y = 39.4, z = 89.5, f = "e", faction = "A", classes = { "MAGE" } },
+			{ npc = 375, npcName = "Priestess Anetta", map = 1429, x = 49.81, y = 39.49, z = 82.1, f = "e", faction = "A", classes = { "PRIEST" } },
+			{ npc = 915, npcName = "Jorik Kerridan", map = 1429, x = 50.31, y = 39.92, z = 80.8, f = "e", faction = "A", classes = { "ROGUE" } },
+			{ npc = 248415, npcName = "Tordrin Sternblade", map = 1429, x = 51.21, y = 40.8, f = "e", faction = "A", classes = { "HUNTER" } },
+			{ npc = 925, npcName = "Brother Sammuel", map = 1429, x = 50.43, y = 42.12, z = 82.3, f = "e", faction = "A", classes = { "PALADIN" } },
+			{ npc = 911, npcName = "Llane Beshere", map = 1429, x = 50.24, y = 42.29, z = 82.3, f = "e", faction = "A", classes = { "WARRIOR" } },
+			{ npc = 459, npcName = "Drusilla La Salle", map = 1429, x = 49.87, y = 42.65, z = 80.8, f = "e", faction = "A", classes = { "WARLOCK" } },
+			{ npc = 5497, npcName = "Jennea Cannon", map = 1453, x = 49.56, y = 85.8, z = 29.7, faction = "A", classes = { "MAGE" } },
+			{ npc = 5495, npcName = "Ursula Deline", map = 1453, x = 39.89, y = 84.19, z = 101.5, faction = "A", classes = { "WARLOCK" } },
+			{ npc = 913, npcName = "Lyria Du Lac", map = 1429, x = 41.09, y = 65.77, z = 57.9, f = "e", faction = "A", classes = { "WARRIOR" } },
+			{ npc = 377, npcName = "Priestess Josetta", map = 1429, x = 43.28, y = 65.72, z = 63.9, f = "e", faction = "A", classes = { "PRIEST" } },
+			{ npc = 927, npcName = "Brother Wilhelm", map = 1429, x = 41.1, y = 66.04, z = 57.7, f = "e", faction = "A", classes = { "PALADIN" } },
+			{ npc = 251507, npcName = "Josephine Carson", map = 1429, x = 41.15, y = 66.23, f = "e", faction = "A", classes = { "HUNTER" } },
+			{ npc = 917, npcName = "Keryn Sylvius", map = 1429, x = 43.87, y = 65.94, z = 63.9, f = "e", faction = "A", classes = { "ROGUE" } },
+			{ npc = 328, npcName = "Zaldimar Wefhellt", map = 1429, x = 43.25, y = 66.19, z = 63.9, f = "e", faction = "A", classes = { "MAGE" } },
+			{ npc = 906, npcName = "Maximillian Crowe", map = 1429, x = 44.39, y = 66.24, z = 49.9, f = "e", faction = "A", classes = { "WARLOCK" } },
+			{ npc = 6251, npcName = "Strahad Farsan", map = 1413, x = 62.63, y = 35.5, z = 40.5, f = "e", faction = "AH", classes = { "WARLOCK" } },
+			{ npc = 3593, npcName = "Alyissia", map = 1438, x = 59.64, y = 38.44, z = 1329.7, f = "e", faction = "A", classes = { "WARRIOR" } },
+			{ npc = 3594, npcName = "Frahun Shadewhisper", map = 1438, x = 59.64, y = 38.66, z = 1329.7, f = "e", faction = "A", classes = { "ROGUE" } },
+			{ npc = 3595, npcName = "Shanda", map = 1438, x = 59.17, y = 40.44, z = 1346.8, f = "e", faction = "A", classes = { "PRIEST" } },
+			{ npc = 3596, npcName = "Ayanna Everstride", map = 1438, x = 58.66, y = 40.45, z = 1381, f = "e", faction = "A", classes = { "HUNTER" } },
+			{ npc = 3597, npcName = "Mardant Strongoak", map = 1438, x = 58.63, y = 40.29, z = 1381, f = "e", faction = "A", classes = { "DRUID" } },
+			{ npc = 3598, npcName = "Kyra Windblade", map = 1438, x = 56.22, y = 59.2, z = 1308.9, f = "e", faction = "A", classes = { "WARRIOR" } },
+			{ npc = 3599, npcName = "Jannok Breezesong", map = 1438, x = 56.38, y = 60.14, z = 1308.9, f = "e", faction = "A", classes = { "ROGUE" } },
+			{ npc = 3600, npcName = "Laurna Morninglight", map = 1438, x = 55.56, y = 56.75, z = 1313.9, f = "e", faction = "A", classes = { "PRIEST" } },
+			{ npc = 3601, npcName = "Dazalar", map = 1438, x = 56.68, y = 59.49, z = 1308.2, f = "e", faction = "A", classes = { "HUNTER" } },
+			{ npc = 3602, npcName = "Kal", map = 1438, x = 55.95, y = 61.56, z = 1293.8, f = "e", faction = "A", classes = { "DRUID" } },
+			{ npc = 4087, npcName = "Arias'ta Bladesinger", map = 1457, x = 58.71, y = 34.9, z = 1330.9, f = "e", faction = "A", classes = { "WARRIOR" } },
+			{ npc = 4090, npcName = "Astarii Starseeker", map = 1457, x = 38.33, y = 80.95, z = 1360.1, f = "e", faction = "A", classes = { "PRIEST" } },
+			{ npc = 4138, npcName = "Jeen'ra Nightrunner", map = 1457, x = 39.72, y = 5.39, z = 1368.9, f = "e", faction = "A", classes = { "HUNTER" } },
+			{ npc = 4163, npcName = "Syurna", map = 1457, x = 36.99, y = 21.91, z = 1295.1, f = "e", faction = "A", classes = { "ROGUE" } },
+			{ npc = 4165, npcName = "Elissa Dumas", map = 1457, x = 40.6, y = 82.13, z = 1331.7, f = "e", faction = "A", classes = { "MAGE" } },
+			{ npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", faction = "A", classes = { "DRUID" } },
+			{ npc = 11866, npcName = "Ilyenia Moonfire", map = 1457, x = 57.56, y = 46.73, z = 1330.9, f = "e", faction = "A", classes = { "HUNTER", "PRIEST" } },
+			{ npc = 251373, npcName = "Xyton Silverwind", map = 2521, x = 41.66, y = 23.33, faction = "AH", classes = { "DRUID" } },
+			{ npc = 251376, npcName = "Tai'ree Farsight", map = 2521, x = 42.49, y = 23.79, faction = "AH", classes = { "HUNTER" } },
+			{ npc = 251379, npcName = "Dorii Brightwhisper", map = 2521, x = 41.55, y = 23.68, faction = "A", classes = { "MAGE" } },
+			{ npc = 251389, npcName = "Akeri Duskblade", map = 2521, x = 43.74, y = 24.36, faction = "AH", classes = { "ROGUE" } },
+			{ npc = 251964, npcName = "Blademaster Ren", map = 2521, x = 43.65, y = 24.11, faction = "AH", classes = { "WARRIOR" } },
+			{ npc = 252359, npcName = "Lotheluum Starbreeze", map = 2521, x = 63.99, y = 75.08, faction = "AH", classes = { "DRUID" } },
+			{ npc = 252373, npcName = "Anathamaas Aetherwind", map = 2521, x = 65.91, y = 80.57, faction = "A", classes = { "MAGE" } },
+			{ npc = 252377, npcName = "Seena Skybreaker", map = 2521, x = 59.89, y = 72.87, faction = "AH", classes = { "WARRIOR" } },
+			{ npc = 252379, npcName = "Eltheen Nightbreeze", map = 2521, x = 59.9, y = 72.48, faction = "AH", classes = { "ROGUE" } },
+			{ npc = 252389, npcName = "Quel'ana Quickgale", map = 2521, x = 59.56, y = 72.63, faction = "AH", classes = { "HUNTER" } },
+			{ npc = 254081, npcName = "Naeluna Swiftmend", map = 2521, x = 45.16, y = 44.22, faction = "AH", classes = { "DRUID" } },
+			{ npc = 254084, npcName = "Elayaa Easewind", map = 2521, x = 45.26, y = 44.24, faction = "AH", classes = { "HUNTER" } },
+			{ npc = 254086, npcName = "Shenaan Spellwind", map = 2521, x = 45.1, y = 45.87, faction = "AH", classes = { "MAGE" } },
+			{ npc = 254087, npcName = "Miriaan Mistblade", map = 2521, x = 43.15, y = 43.26, faction = "AH", classes = { "ROGUE" } },
+			{ npc = 254088, npcName = "Corsan Earthrazer", map = 2521, x = 44.95, y = 45.1, faction = "AH", classes = { "WARRIOR" } },
+			{ npc = 5143, npcName = "Toldren Deepiron", map = 1455, x = 25.21, y = 10.76, z = 501.2, f = "e", faction = "A", classes = { "PRIEST" } },
+			{ npc = 7312, npcName = "Dink", map = 1455, x = 27.16, y = 8.57, z = 501.2, f = "e", faction = "A", classes = { "MAGE" } },
+			{ npc = 2485, npcName = "Larimaine Purdue", map = 1453, x = 50.39, y = 85.99, z = 29.7, faction = "A", classes = { "MAGE" } },
+			{ npc = 5117, npcName = "Regnus Thundergranite", map = 1455, x = 69.87, y = 82.9, z = 507.8, f = "e", faction = "A", classes = { "HUNTER" } },
+			{ npc = 5517, npcName = "Thorfin Stoneshield", map = 1453, x = 68, y = 35.99, z = 102.6, faction = "A", classes = { "HUNTER" } },
+			{ npc = 5491, npcName = "Arthur the Faithful", map = 1453, x = 49.61, y = 49.84, z = 106.6, faction = "A", classes = { "PALADIN" } },
+		}
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/01-depart-gnome",
+			pack = "groupe-alliance",
+			title = "Start · Gnome: {zone:1426}",
+			faction = "Alliance",
+			races = { "Gnome" },
+			minLevel = 1,
+			maxLevel = 11,
+			category = "Leveling",
+			folder = "Group Alliance",
+			zone = 1426,
+			zoneName = "Dun Morogh",
+			next = "groupe-alliance/02-rendez-vous-hurlevent",
+			author = "BurN-30",
+			version = 1,
+			group = true,
+			names = { ["item:10438"] = "Felix's Box", ["item:13850"] = "Rumbleshot's Ammo", ["item:2004"] = "Grelin Whitebeard's Journal", ["item:2589"] = "Linen Cloth", ["item:263412"] = "Totem of Charged Flames", ["item:264356"] = "Iceclaw Bear Pendant", ["item:2667"] = "MacGrann's Dried Meats", ["item:2676"] = "Shimmerweed", ["item:268548"] = "Empty Powder Keg", ["item:2686"] = "Thunder Ale", ["item:274268"] = "Dark Iron Map", ["item:2770"] = "Copper Ore", ["item:277976"] = "Gozwin's Mechanic's Log", ["item:2840"] = "Copper Bar", ["item:286325"] = "Avala's Core", ["item:2894"] = "Rhapsody Malt", ["item:3083"] = "Restabilization Cog", ["item:3084"] = "Gyromechanic Gear", ["item:3183"] = "Mangy Claw", ["item:5026"] = "Fire Tar", ["item:5175"] = "Earth Totem", ["item:5176"] = "Fire Totem", ["item:6635"] = "Earth Sapta", ["item:6636"] = "Fire Sapta", ["item:6652"] = "Reagent Pouch", ["item:6655"] = "Glowing Ember", ["item:6656"] = "Rough Quartz", ["item:6753"] = "Feather Charm", ["item:6775"] = "Tome of Divinity", ["item:6810"] = "Surena's Choker", ["item:6866"] = "Symbol of Life", ["item:6928"] = "Bloodstone Choker", ["item:7207"] = "Jennea's Flask", ["npc:10090"] = "Belia Thundergranite", ["npc:1115"] = "Rockjaw Skullthumper", ["npc:1116"] = "Rockjaw Ambusher", ["npc:1117"] = "Rockjaw Bonesnapper", ["npc:1118"] = "Rockjaw Backbreaker", ["npc:1123"] = "Frostmane Headhunter", ["npc:1125"] = "Crag Boar", ["npc:1127"] = "Elder Crag Boar", ["npc:1128"] = "Young Black Bear", ["npc:1166"] = "Stonesplinter Seer", ["npc:1174"] = "Tunnel Rat Geomancer", ["npc:11865"] = "Buliwyf Stonehand", ["npc:11867"] = "Woo Ping", ["npc:1196"] = "Ice Claw Bear", ["npc:1201"] = "Snow Leopard", ["npc:1211"] = "Leper Gnome", ["npc:1226"] = "Maxan Anvol", ["npc:1241"] = "Tognus Flintfire", ["npc:1243"] = "Hegnar Rumbleshot", ["npc:1247"] = "Innkeeper Belm", ["npc:1252"] = "Senir Whitebeard", ["npc:1253"] = "Father Gavin", ["npc:1256"] = "Quarrymaster Thesten", ["npc:1265"] = "Rudra Amberstill", ["npc:1266"] = "Tundra MacGrann", ["npc:1267"] = "Ragnar Thunderbrew", ["npc:1269"] = "Razzle Sprysprocket", ["npc:1271"] = "Old Icebeard", ["npc:12738"] = "Nori Pridedrift", ["npc:1274"] = "Senator Barin Redstone", ["npc:1373"] = "Jarven Thunderbrew", ["npc:1374"] = "Rejold Barleybrew", ["npc:1375"] = "Marleth Barleybrew", ["npc:1377"] = "Pilot Stonegear", ["npc:1388"] = "Vagash", ["npc:1397"] = "Frostmane Seer", ["npc:1572"] = "Thorgrum Borrelson", ["npc:1573"] = "Gryth Thurden", ["npc:1681"] = "Brock Stoneseeker", ["npc:1694"] = "Loslor Rudge", ["npc:1698"] = "Frast Dokner", ["npc:1699"] = "Gremlock Pilsnor", ["npc:1872"] = "Tharek Blackstone", ["npc:1960"] = "Pilot Hammerfoot", ["npc:1961"] = "Mangeclaw", ["npc:1965"] = "Mountaineer Thalos", ["npc:1977"] = "Senator Mehr Stonehallow", ["npc:2523"] = "Searing Totem", ["npc:257446"] = "Teo Hammerstorm", ["npc:257597"] = "Bruegs Kindleborn", ["npc:257808"] = "Braldir Ashmantle", ["npc:258098"] = "Eldrun Stormbreaker", ["npc:258113"] = "Ingrid Dunwald", ["npc:258785"] = "High Priestess Mims", ["npc:260157"] = "Elder Snow Leopard", ["npc:264936"] = "Earthseer Farsen", ["npc:265813"] = "Eric Brighthammer", ["npc:269075"] = "Snow Leopard Prowler", ["npc:270459"] = "Alfina Nightgaze", ["npc:271546"] = "Mountaineer Gretchen", ["npc:2756"] = "Grund Drokda", ["npc:276003"] = "Minor Ice Elemental", ["npc:278166"] = "Mountaineer Cornelius", ["npc:4256"] = "Golnir Bouldertoe", ["npc:460"] = "Alamar Grimm", ["npc:5149"] = "Brandur Ironhammer", ["npc:5480"] = "Ilsa Corbin", ["npc:5497"] = "Jennea Cannon", ["npc:5873"] = "Stoneskin Totem", ["npc:5891"] = "Minor Manifestation of Earth", ["npc:5893"] = "Minor Manifestation of Fire", ["npc:6089"] = "Harry Burlguard", ["npc:6090"] = "Bartleby", ["npc:6120"] = "Lago Blackwrench", ["npc:6122"] = "Gakin the Darkbinder", ["npc:6175"] = "John Turner", ["npc:6177"] = "Narm Faulk", ["npc:6178"] = "Muiredon Battleforge", ["npc:6179"] = "Tiza Battleforge", ["npc:658"] = "Sten Stoutarm", ["npc:6782"] = "Hands Springsprocket", ["npc:6806"] = "Tannok Frosthammer", ["npc:706"] = "Frostmane Troll Whelp", ["npc:707"] = "Rockjaw Trogg", ["npc:708"] = "Small Crag Boar", ["npc:713"] = "Balir Frosthammer", ["npc:714"] = "Talin Keeneye", ["npc:724"] = "Burly Rockjaw Trogg", ["npc:786"] = "Grelin Whitebeard", ["npc:808"] = "Grik'nir the Cold", ["npc:836"] = "Durnan Furcutter", ["npc:837"] = "Branstock Khalder", ["npc:8416"] = "Felix Whindlebolt", ["npc:8508"] = "Gretta Ganter", ["npc:881"] = "Surena Caledon", ["npc:912"] = "Thran Khorman", ["npc:916"] = "Solm Hargrin", ["npc:944"] = "Marryk Nurribit", ["npc:946"] = "Frostmane Novice", ["object:149024"] = "Gol'Bolar Quarry", ["object:171524"] = "Tinker Town", ["object:171709"] = "High Seat", ["object:176785"] = "Ammo Crate", ["object:2096"] = "Trade District", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2152"] = "Pig and Whistle Tavern", ["object:2164"] = "Slaughtered Lamb", ["object:269"] = "Guarded Thunder Ale Barrel", ["object:270"] = "Unguarded Thunder Ale Barrel", ["object:28027"] = "Dwarven District", ["object:32359"] = "Military Ward", ["object:32362"] = "Mystic Ward", ["object:32372"] = "Great Forge", ["object:32383"] = "Forlorn Cavern", ["object:32386"] = "Hall of Mysteries", ["object:32390"] = "Hall of Arms", ["object:61934"] = "Brazier of the Dormant Flame", ["object:660964"] = "Misplaced Packages", ["quest:1640"] = "Beat Bartleby", ["quest:1689"] = "The Binding", ["quest:1861"] = "Mirror Lake", ["quest:287"] = "Frostmane Hold", ["quest:3112"] = "Simple Memorandum", ["quest:3113"] = "Encrypted Memorandum", ["quest:3114"] = "Glyphic Memorandum", ["quest:3115"] = "Tainted Memorandum", ["quest:313"] = "The Grizzled Den", ["quest:314"] = "Protecting the Herd", ["quest:6387"] = "Honor Students", ["quest:94373"] = "Call of Earth", ["quest:94824"] = "Confounding Flash", ["quest:95214"] = "Stolen Blasting Powder", ["quest:95998"] = "The Great Outdoors", ["quest:96392"] = "Farsen's Watch", ["quest:96628"] = "The Adventurer", ["quest:97277"] = "Grund and Gozwin", ["quest:98326"] = "Frosthowl", ["quest:98574"] = "Hallowed Memorandum", ["quest:99160"] = "Rime's Wrath", ["skill:185"] = "Cooking", ["zone:1416"] = "Alterac Mountains", ["zone:1426"] = "Dun Morogh", ["zone:1432"] = "Loch Modan", ["zone:1436"] = "Westfall", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			written = { ["Back through the tunnel to {npc:257597}' cave above the farm."] = "Back through the tunnel to Bruegs' cave above the farm.", ["Back to {npc:6122}. Use the {item:6928} at the summoning circle in the {object:2164}'s cellar and defeat the voidwalker it calls. {zone:1436} is next, west of Goldshire."] = "Back to Gakin. Use the Bloodstone Choker at the summoning circle in the Slaughtered Lamb's cellar and defeat the voidwalker it calls. Westfall is next, west of Goldshire.", ["Brewnall Village sits on the lake west of Kharanos. {npc:8508}'s dock is the first stop; {npc:1374} and {npc:1375} are in the village beyond it."] = "Brewnall Village sits on the lake west of Kharanos. Gretta Ganter's dock is the first stop; Rejold and Marleth Barleybrew are in the village beyond it.", ["Follow the road through the tunnel and north-east to Kharanos. Start outside: {npc:1252} and Eric's campfire are in front of the Thunderbrew Distillery.\n{npc:1872} works the forge west of the distillery.\nThen go in: {npc:6806}, the innkeeper, {npc:1226} and {npc:1267}. {npc:1699}'s {skill:185} lesson waits for the return with the ribs, when the copper is there for it."] = "Follow the road through the tunnel and north-east to Kharanos. Start outside: Senir and Eric's campfire are in front of the Thunderbrew Distillery.\nTharek works the forge west of the distillery.\nThen go in: Tannok, the innkeeper, Maxan and Ragnar. Gremlock's Cooking lesson waits for the return with the ribs, when the copper is there for it.", ["Follow the road up to {zone:1455} and take the {object:32362}: {npc:5149}, {npc:6179} and {npc:6178} are in the {object:32386}, Tiza and Muiredon on its upper floor: the stairs up start just north-east of {npc:5149}. {npc:6175}, a beggar, wanders the city. He asks for ten {item:2589}: the troggs and trolls of {zone:1426} drop it, and the Auction House sells it."] = "Follow the road up to Ironforge and take the Mystic Ward: Brandur Ironhammer, Tiza Battleforge and Muiredon Battleforge are in the Hall of Mysteries, Tiza and Muiredon on its upper floor: the stairs up start just north-east of Brandur. John Turner, a beggar, wanders the city. He asks for ten Linen Cloth: the troggs and trolls of Dun Morogh drop it, and the Auction House sells it.", ["Frostmane Troll Whelps fill the slopes south and east of {npc:786}'s camp."] = "Frostmane Troll Whelps fill the slopes south and east of Grelin's camp.", ["Go through the tunnel into {zone:1432}. Just past it, a path marked by stones climbs the hills on the right of the road north to {npc:257808}'s camp."] = "Go through the tunnel into Loch Modan. Just past it, a path marked by stones climbs the hills on the right of the road north to Braldir's camp.", ["Kill the Crag Boars on the way: their ribs drop before you have {npc:1267}'s quest and count toward it. Back in the distillery: {npc:1699} teaches {skill:185}, then the ribs go to {npc:1267}."] = "Kill the Crag Boars on the way: their ribs drop before you have Ragnar's quest and count toward it. Back in the distillery: Gremlock Pilsnor teaches Cooking, then the ribs go to Ragnar.", ["Small Crag Boars graze around {npc:714}'s camp and along the west side of the valley."] = "Small Crag Boars graze around Talin's camp and along the west side of the valley.", ["Stonesplinter Seers (level 13) stand among the troggs in the south of Stonesplinter Valley, south of {npc:257808}; Tunnel Rat Geomancers (level 12) work the Silver Stream Mine at the north end of the loch. The troggs come in packs and some throw from range: pull one at a time."] = "Stonesplinter Seers (level 13) stand among the troggs in the south of Stonesplinter Valley, south of Braldir; Tunnel Rat Geomancers (level 12) work the Silver Stream Mine at the north end of the loch. The troggs come in packs and some throw from range: pull one at a time.", ["{npc:12738}: timed, five minutes to reach {npc:836} in Anvilmar"] = "Nori Pridedrift: timed, five minutes to reach Durnan in Anvilmar", ["{npc:1373} guards the {item:2686} barrels in the distillery basement. Buy a {item:2686} from {npc:1247}, click the guarded barrel, then hand the ale to {npc:1373} from his quest window (there is no quest to accept); after that, the unguarded barrel takes the Barleybrew Scalder."] = "Jarven Thunderbrew guards the Thunder Ale barrels in the distillery basement. Buy a Thunder Ale from Innkeeper Belm, click the guarded barrel, then hand the ale to Jarven from his quest window (there is no quest to accept); after that, the unguarded barrel takes the Barleybrew Scalder.", ["{npc:257597} waits in a cave above the farm north-west of the South Gate Outpost; the path up starts behind the farm."] = "Bruegs waits in a cave above the farm north-west of the South Gate Outpost; the path up starts behind the farm.", ["{npc:257808} gives you the {item:6636}. Climb to the peak above his camp, drink the Sapta beside the Spirit Stone and defeat the {npc:5893}, then place its {item:6655} in the {object:61934}, atop the Shrine of Eternal Flame."] = "Braldir gives you the Fire Sapta. Climb to the peak above his camp, drink the Sapta beside the Spirit Stone and defeat the Minor Manifestation of Fire, then place its Glowing Ember in the Brazier of the Dormant Flame, atop the Shrine of Eternal Flame.", ["{npc:2756} stands by {npc:8416} at the door of Anvilmar. Gozwin's camp is in the hills just north-west; the {npc:269075} prowls around it."] = "Grund Drokda stands by Felix at the door of Anvilmar. Gozwin's camp is in the hills just north-west; the Snow Leopard Prowler prowls around it.", ["{npc:713}, next to {npc:658}"] = "Balir Frosthammer, next to Sten", ["{npc:714}'s camp is at the west end of the valley. {item:10438} lies in the snow south of it, his Chest by the troll cave and his Bucket of Bolts east of the cave: grab them as you pass."] = "Talin's camp is at the west end of the valley. Felix's Box lies in the snow south of it, his Chest by the troll cave and his Bucket of Bolts east of the cave: grab them as you pass.", ["{npc:786} and {npc:12738} camp at the south-west edge of the valley, below the troll cave."] = "Grelin and Nori Pridedrift camp at the south-west edge of the valley, below the troll cave.", ["{npc:808} is inside the troll cave east of {npc:786}'s camp, not on the hill above it: go in at the mouth and follow the tunnel to the back."] = "Grik'nir the Cold is inside the troll cave east of Grelin's camp, not on the hill above it: go in at the mouth and follow the tunnel to the back.", ["{quest:287} is the troll cave in the hills south-west of Brewnall Village. Ice Claw Bears, Elder Crag Boars and Snow Leopards you kill on the way count for {npc:1374}. Kill Headhunters at its mouth and walk through to its far end."] = "Frostmane Hold is the troll cave in the hills south-west of Brewnall Village. Ice Claw Bears, Elder Crag Boars and Snow Leopards you kill on the way count for Rejold. Kill Headhunters at its mouth and walk through to its far end." },
+			steps = {
+				{
+					title = "{npc:658}",
+					note = "You start in front of Anvilmar, the stone hall at the north end of the valley. {npc:658} waits outside the door.",
+					goals = {
+						{ t = "accept", quest = 179, title = "Dwarven Outfitters", npc = 658, npcName = "Sten Stoutarm", minLevel = 1, qlvl = 1, map = 1426, x = 29.93, y = 71.2, z = 383.7, f = "e" },
+					},
+				},
+				{
+					title = "Young wolves",
+					note = "Ragged Young Wolves roam the snow just south of Anvilmar.",
+					goals = {
+						{ t = "collect", quest = 179, title = "Dwarven Outfitters", item = 750, itemName = "Tough Wolf Meat", count = 8, oi = 1, map = 1426, x = 30.79, y = 72.95, f = "e", spots = { { x = 30.5, y = 73.7, r = 41, n = 6 }, { x = 29.9, y = 75, r = 57, n = 9 }, { x = 28.7, y = 73.4, r = 58, n = 11 }, { x = 31.6, y = 70, r = 43, n = 3 }, { x = 27.5, y = 75.3, r = 76, n = 11 }, { x = 28.4, y = 77.5, r = 77, n = 6 }, { x = 26.7, y = 70.7, r = 71, n = 6, alt = true }, { x = 25.3, y = 78.6, r = 32, n = 3, alt = true }, { x = 23.4, y = 78.5, r = 51, n = 5, alt = true } }, from = "Timber Wolf", fromKind = "npc", fromAlso = "Young Wolf", fromId = 69, fromAlsoId = 299, fromNpcs = { { npc = 705, npcName = "Ragged Young Wolf" }, { npc = 704, npcName = "Ragged Timber Wolf" } } },
+					},
+				},
+				{
+					title = "Anvilmar",
+					goals = {
+						{ t = "turnin", quest = 179, title = "Dwarven Outfitters", npc = 658, npcName = "Sten Stoutarm", map = 1426, x = 29.93, y = 71.2, z = 383.7, f = "e" },
+						{ t = "accept", quest = 233, title = "Coldridge Valley Mail Delivery", npc = 658, npcName = "Sten Stoutarm", minLevel = 1, qlvl = 3, pre = { 179 }, preTitles = { [179] = "Dwarven Outfitters" }, map = 1426, x = 29.93, y = 71.2, z = 383.7, f = "e" },
+						{ t = "accept", quest = 3112, title = "Simple Memorandum", npc = 658, npcName = "Sten Stoutarm", minLevel = 1, qlvl = 1, pre = { 179 }, preTitles = { [179] = "Dwarven Outfitters" }, map = 1426, x = 29.93, y = 71.2, z = 383.7, f = "e", only = { classes = { "WARRIOR" }, races = { "Gnome" } }, note = "{npc:658}: {quest:3112}" },
+						{ t = "accept", quest = 3113, title = "Encrypted Memorandum", npc = 658, npcName = "Sten Stoutarm", minLevel = 1, qlvl = 1, pre = { 179 }, preTitles = { [179] = "Dwarven Outfitters" }, map = 1426, x = 29.93, y = 71.2, z = 383.7, f = "e", only = { classes = { "ROGUE" }, races = { "Gnome" } }, note = "{npc:658}: {quest:3113}" },
+						{ t = "accept", quest = 98574, title = "Hallowed Memorandum", npc = 658, npcName = "Sten Stoutarm", minLevel = 1, qlvl = 1, pre = { 179 }, preTitles = { [179] = "Dwarven Outfitters" }, map = 1426, x = 29.93, y = 71.2, z = 383.7, f = "e", only = { classes = { "PRIEST" }, races = { "Gnome" } }, note = "{npc:658}: {quest:98574}" },
+						{ t = "accept", quest = 3114, title = "Glyphic Memorandum", npc = 658, npcName = "Sten Stoutarm", minLevel = 1, qlvl = 1, pre = { 179 }, preTitles = { [179] = "Dwarven Outfitters" }, map = 1426, x = 29.93, y = 71.2, z = 383.7, f = "e", only = { classes = { "MAGE" } }, note = "{npc:658}: {quest:3114}" },
+						{ t = "accept", quest = 3115, title = "Tainted Memorandum", npc = 658, npcName = "Sten Stoutarm", minLevel = 1, qlvl = 1, pre = { 179 }, preTitles = { [179] = "Dwarven Outfitters" }, map = 1426, x = 29.93, y = 71.2, z = 383.7, f = "e", only = { classes = { "WARLOCK" } }, note = "{npc:658}: {quest:3115}" },
+						{ t = "accept", quest = 170, title = "A New Threat", npc = 713, npcName = "Balir Frosthammer", minLevel = 1, qlvl = 2, pre = { 179 }, preTitles = { [179] = "Dwarven Outfitters" }, map = 1426, x = 29.71, y = 71.25, z = 383.5, f = "e", note = "{npc:713}, next to {npc:658}" },
+						{ t = "turnin", quest = 3112, title = "Simple Memorandum", npc = 912, npcName = "Thran Khorman", map = 1426, x = 28.83, y = 67.24, z = 395.6, f = "e", only = { classes = { "WARRIOR" }, races = { "Gnome" } }, note = "{npc:912}, the warrior trainer" },
+						{ t = "turnin", quest = 3113, title = "Encrypted Memorandum", npc = 916, npcName = "Solm Hargrin", map = 1426, x = 28.37, y = 67.51, z = 395.6, f = "e", only = { classes = { "ROGUE" }, races = { "Gnome" } }, note = "{npc:916}, the rogue trainer" },
+						{ t = "turnin", quest = 98574, title = "Hallowed Memorandum", npc = 837, npcName = "Branstock Khalder", map = 1426, x = 28.6, y = 66.39, z = 392.8, f = "e", only = { classes = { "PRIEST" }, races = { "Gnome" } }, note = "{npc:837}, the priest trainer" },
+						{ t = "turnin", quest = 3114, title = "Glyphic Memorandum", npc = 944, npcName = "Marryk Nurribit", map = 1426, x = 28.71, y = 66.37, z = 392.9, f = "e", only = { classes = { "MAGE" } }, note = "{npc:944}, the mage trainer, inside Anvilmar" },
+						{ t = "turnin", quest = 3115, title = "Tainted Memorandum", npc = 460, npcName = "Alamar Grimm", map = 1426, x = 28.65, y = 66.14, z = 399, f = "e", only = { classes = { "WARLOCK" } }, note = "{npc:460}, inside Anvilmar" },
+						{ t = "train", class = true, note = "Inside Anvilmar", candidates = { candidateRecords[1], candidateRecords[2], candidateRecords[3], candidateRecords[4], candidateRecords[5], candidateRecords[6], candidateRecords[7], candidateRecords[8], candidateRecords[9], candidateRecords[10], candidateRecords[11], candidateRecords[12], candidateRecords[13], candidateRecords[14], candidateRecords[15], candidateRecords[16], candidateRecords[17], candidateRecords[18], candidateRecords[19], candidateRecords[20], candidateRecords[21], candidateRecords[22], candidateRecords[23], candidateRecords[24], candidateRecords[25], candidateRecords[26], candidateRecords[27], candidateRecords[28], candidateRecords[29], candidateRecords[30], candidateRecords[31], candidateRecords[32], candidateRecords[33], candidateRecords[34], candidateRecords[35], candidateRecords[36], candidateRecords[37], candidateRecords[38], candidateRecords[39], candidateRecords[40], candidateRecords[41], candidateRecords[42], candidateRecords[43], candidateRecords[44], candidateRecords[45], candidateRecords[46], candidateRecords[47], candidateRecords[48], candidateRecords[49], candidateRecords[50], candidateRecords[51], candidateRecords[52], candidateRecords[53], candidateRecords[54], candidateRecords[55], candidateRecords[56], candidateRecords[57], candidateRecords[58], candidateRecords[59], candidateRecords[60], candidateRecords[61], candidateRecords[62], candidateRecords[63], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68], candidateRecords[69], candidateRecords[70], candidateRecords[71], candidateRecords[72], candidateRecords[73], candidateRecords[74], candidateRecords[75], candidateRecords[76], candidateRecords[77], candidateRecords[78], candidateRecords[79], candidateRecords[80], candidateRecords[81] } },
+						{ t = "accept", quest = 1599, title = "Beginnings", npc = 460, npcName = "Alamar Grimm", minLevel = 1, qlvl = 4, closedBy = { 1598 }, preTitles = { [1598] = "The Stolen Tome" }, map = 1426, x = 28.65, y = 66.14, z = 399, f = "e", only = { classes = { "WARLOCK" } }, note = "{npc:460}, inside Anvilmar" },
+					},
+				},
+				{
+					title = "The troggs",
+					note = "Rockjaw Troggs and Burly Rockjaw Troggs dig all over the valley floor south of Anvilmar.",
+					goals = {
+						{ t = "kill", quest = 170, title = "A New Threat", target = "Rockjaw Trogg", npc = 707, count = 6, oi = 1, map = 1426, x = 24.31, y = 71, z = 393.2, f = "e", spots = { { x = 24.3, y = 71, z = 393.2, r = 40, n = 1 }, { x = 23.4, y = 73.6, r = 40, n = 2 }, { x = 21.8, y = 72.9, r = 40, n = 2 }, { x = 19.8, y = 73.8, r = 40, n = 2 }, { x = 22.8, y = 76.3, z = 386.2, r = 40, n = 1 }, { x = 23.7, y = 77.8, r = 40, n = 2 }, { x = 29.5, y = 77, r = 51, n = 9 }, { x = 30.9, y = 75, z = 380.6, r = 52, n = 10 }, { x = 31.5, y = 76.8, z = 391.2, r = 40, n = 5 }, { x = 32.6, y = 75.2, z = 395.7, r = 40, n = 5 } }, spread = true },
+						{ t = "kill", quest = 170, title = "A New Threat", target = "Burly Rockjaw Trogg", npc = 724, count = 6, oi = 2, map = 1426, x = 24.8, y = 72.38, z = 388.7, f = "e", spots = { { x = 26.4, y = 72.8, z = 386.7, r = 80, n = 16 }, { x = 23.5, y = 74, r = 66, n = 10 }, { x = 21.4, y = 74.1, r = 53, n = 5 }, { x = 20.4, y = 71.6, z = 408.8, r = 53, n = 5 }, { x = 20, y = 76.5, r = 40, n = 2 }, { x = 22.3, y = 77.2, r = 54, n = 5 }, { x = 24, y = 79.6, z = 386.9, r = 40, n = 1 }, { x = 28.5, y = 77.4, r = 50, n = 3 }, { x = 30, y = 77.4, z = 393.3, r = 40, n = 1 }, { x = 30.4, y = 75.4, r = 59, n = 7 }, { x = 31.9, y = 76.2, z = 392.4, r = 40, n = 3 }, { x = 31.6, y = 73.7, z = 391, r = 40, n = 1 } }, spread = true },
+					},
+				},
+				{
+					title = "Back to Anvilmar",
+					goals = {
+						{ t = "turnin", quest = 170, title = "A New Threat", npc = 713, npcName = "Balir Frosthammer", map = 1426, x = 29.71, y = 71.25, z = 383.5, f = "e" },
+						{ t = "accept", quest = 3361, title = "A Refugee's Quandary", npc = 8416, npcName = "Felix Whindlebolt", minLevel = 3, qlvl = 3, map = 1426, x = 28.55, y = 67.64, z = 395.5, f = "e", note = "{npc:8416}, by the door of Anvilmar; inside" },
+					},
+				},
+				{
+					title = "{npc:714}",
+					note = "{npc:714}'s camp is at the west end of the valley. {item:10438} lies in the snow south of it, his Chest by the troll cave and his Bucket of Bolts east of the cave: grab them as you pass.",
+					goals = {
+						{ t = "turnin", quest = 233, title = "Coldridge Valley Mail Delivery", npc = 714, npcName = "Talin Keeneye", map = 1426, x = 22.6, y = 71.43, z = 385, f = "e" },
+						{ t = "accept", quest = 183, title = "The Boar Hunter", npc = 714, npcName = "Talin Keeneye", minLevel = 1, qlvl = 3, map = 1426, x = 22.6, y = 71.43, z = 385, f = "e" },
+						{ t = "accept", quest = 234, title = "Coldridge Valley Mail Delivery", npc = 714, npcName = "Talin Keeneye", minLevel = 1, qlvl = 4, pre = { 233 }, preTitles = { [233] = "Coldridge Valley Mail Delivery" }, map = 1426, x = 22.6, y = 71.43, z = 385, f = "e" },
+					},
+				},
+				{
+					title = "The boars",
+					note = "Small Crag Boars graze around {npc:714}'s camp and along the west side of the valley.",
+					goals = {
+						{ t = "kill", quest = 183, title = "The Boar Hunter", target = "Small Crag Boar", npc = 708, count = 12, oi = 1, map = 1426, x = 22.74, y = 72.42, z = 386.4, f = "e", spots = { { x = 22.2, y = 71.9, z = 386.9, r = 32, n = 4 }, { x = 24.4, y = 71.7, r = 32, n = 2 }, { x = 20.7, y = 72, r = 44, n = 5 }, { x = 21.6, y = 69.7, r = 52, n = 8 }, { x = 24, y = 68.7, r = 35, n = 4 }, { x = 20.2, y = 74.7, z = 395.1, r = 61, n = 7 }, { x = 24, y = 76.5, z = 387.3, r = 15, n = 1, alt = true }, { x = 26, y = 69.5, z = 388.3, r = 57, n = 6, alt = true }, { x = 21.5, y = 78, z = 389.9, r = 15, n = 1, alt = true }, { x = 24.1, y = 79, z = 387.3, r = 33, n = 3, alt = true }, { x = 27.7, y = 72.3, r = 30, n = 2, alt = true }, { x = 31.2, y = 69.2, z = 391.2, r = 15, n = 1, alt = true }, { x = 32.3, y = 71.7, z = 395.6, r = 15, n = 1, alt = true } } },
+					},
+				},
+				{
+					title = "{npc:714}",
+					goals = {
+						{ t = "turnin", quest = 183, title = "The Boar Hunter", npc = 714, npcName = "Talin Keeneye", map = 1426, x = 22.6, y = 71.43, z = 385, f = "e" },
+					},
+				},
+				{
+					title = "{npc:786}",
+					note = "{npc:786} and {npc:12738} camp at the south-west edge of the valley, below the troll cave.",
+					goals = {
+						{ t = "turnin", quest = 234, title = "Coldridge Valley Mail Delivery", npc = 786, npcName = "Grelin Whitebeard", map = 1426, x = 25.08, y = 75.71, z = 385.9, f = "e" },
+						{ t = "accept", quest = 182, title = "The Troll Cave", npc = 786, npcName = "Grelin Whitebeard", minLevel = 1, qlvl = 4, map = 1426, x = 25.08, y = 75.71, z = 385.9, f = "e" },
+					},
+				},
+				{
+					title = "{npc:706} on the way",
+					along = "q182",
+					goals = {
+						{ t = "kill", quest = 182, title = "The Troll Cave", target = "Frostmane Troll Whelp", npc = 706, count = 14, oi = 1, map = 1426, x = 25.86, y = 78.26, z = 385.7, f = "e", spots = { { x = 26.7, y = 79.4, z = 386, r = 57, n = 11 }, { x = 28.5, y = 80.4, z = 382, r = 60, n = 13 }, { x = 28.7, y = 82.4, r = 40, n = 3 }, { x = 30.1, y = 80.4, z = 373.1, r = 55, n = 8 }, { x = 22.8, y = 79.5, z = 386.7, r = 55, n = 9 }, { x = 20.9, y = 76.5, z = 386.4, r = 54, n = 9 } }, spread = true, note = "{npc:706} along the way to {npc:786}" },
+					},
+				},
+				{
+					title = "Coldridge Valley: kill these as you meet them",
+					note = "Frostmane Troll Whelps fill the slopes south and east of {npc:786}'s camp.",
+					goals = {
+						{ t = "collect", quest = 3361, title = "A Refugee's Quandary", item = 16314, itemName = "Felix's Bucket of Bolts", count = 1, oi = 3, map = 1426, x = 26.3, y = 79.3, f = "e", from = "Felix's Bucket of Bolts", fromKind = "object", fromId = 178085 },
+						{ t = "collect", quest = 3361, title = "A Refugee's Quandary", item = 16313, itemName = "Felix's Chest", count = 1, oi = 2, map = 1426, x = 22.8, y = 80, f = "e", from = "Felix's Chest", fromKind = "object", fromId = 178084 },
+						{ t = "collect", quest = 3361, title = "A Refugee's Quandary", item = 10438, itemName = "Felix's Box", count = 1, oi = 1, map = 1426, x = 20.9, y = 76.1, f = "e", from = "Felix's Box", fromKind = "object", fromId = 148499 },
+						{ t = "collect", quest = 1599, title = "Beginnings", item = 6753, itemName = "Feather Charm", count = 3, oi = 1, map = 1426, x = 29.05, y = 81.17, f = "e", spots = { { x = 29.2, y = 82.1, r = 46, n = 5 }, { x = 30.4, y = 80.2, r = 23, n = 3 } }, only = { classes = { "WARLOCK" } }, note = "Feather Charms, from the Frostmane Novices", from = "Frostmane Novice", fromKind = "npc", fromId = 946, fromNpcs = { { npc = 946, npcName = "Frostmane Novice" } } },
+					},
+				},
+				{
+					title = "{npc:786}",
+					label = "q182",
+					goals = {
+						{ t = "accept", quest = 3364, title = "Scalding Mornbrew Delivery", npc = 12738, npcName = "Nori Pridedrift", minLevel = 4, qlvl = 5, map = 1426, x = 24.98, y = 75.96, z = 385.8, f = "e", note = "{npc:12738}: timed, five minutes to reach {npc:836} in Anvilmar" },
+						{ t = "turnin", quest = 182, title = "The Troll Cave", npc = 786, npcName = "Grelin Whitebeard", map = 1426, x = 25.08, y = 75.71, z = 385.9, f = "e" },
+						{ t = "accept", quest = 218, title = "The Stolen Journal", npc = 786, npcName = "Grelin Whitebeard", minLevel = 1, qlvl = 5, pre = { 182 }, preTitles = { [182] = "The Troll Cave" }, map = 1426, x = 25.08, y = 75.71, z = 385.9, f = "e" },
+					},
+				},
+				{
+					title = "Anvilmar",
+					note = "The Scalding Mornbrew lasts five minutes: go straight north to {npc:836} inside Anvilmar.",
+					goals = {
+						{ t = "turnin", quest = 3364, title = "Scalding Mornbrew Delivery", npc = 836, npcName = "Durnan Furcutter", map = 1426, x = 28.77, y = 66.37, z = 392.8, f = "e", note = "{npc:836}, inside Anvilmar; below ground" },
+						{ t = "accept", quest = 3365, title = "Bring Back the Mug", npc = 836, npcName = "Durnan Furcutter", minLevel = 4, qlvl = 5, pre = { 3364 }, preTitles = { [3364] = "Scalding Mornbrew Delivery" }, map = 1426, x = 28.77, y = 66.37, z = 392.8, f = "e" },
+						{ t = "train", class = true, note = "Level 4 spells, before Gozwin's camp", candidates = { candidateRecords[3], candidateRecords[2], candidateRecords[4], candidateRecords[1], candidateRecords[5], candidateRecords[7], candidateRecords[6], candidateRecords[8], candidateRecords[9], candidateRecords[10], candidateRecords[11], candidateRecords[12], candidateRecords[13], candidateRecords[14], candidateRecords[15], candidateRecords[16], candidateRecords[17], candidateRecords[18], candidateRecords[19], candidateRecords[20], candidateRecords[22], candidateRecords[21], candidateRecords[23], candidateRecords[24], candidateRecords[25], candidateRecords[26], candidateRecords[27], candidateRecords[28], candidateRecords[29], candidateRecords[30], candidateRecords[32], candidateRecords[31], candidateRecords[33], candidateRecords[34], candidateRecords[35], candidateRecords[36], candidateRecords[37], candidateRecords[38], candidateRecords[39], candidateRecords[40], candidateRecords[41], candidateRecords[42], candidateRecords[43], candidateRecords[44], candidateRecords[45], candidateRecords[46], candidateRecords[47], candidateRecords[48], candidateRecords[49], candidateRecords[50], candidateRecords[51], candidateRecords[52], candidateRecords[53], candidateRecords[54], candidateRecords[55], candidateRecords[56], candidateRecords[57], candidateRecords[58], candidateRecords[59], candidateRecords[60], candidateRecords[61], candidateRecords[62], candidateRecords[63], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68], candidateRecords[69], candidateRecords[70], candidateRecords[71], candidateRecords[72], candidateRecords[73], candidateRecords[74], candidateRecords[75], candidateRecords[76], candidateRecords[77], candidateRecords[78], candidateRecords[79], candidateRecords[80], candidateRecords[81] } },
+						{ t = "turnin", quest = 1599, title = "Beginnings", npc = 460, npcName = "Alamar Grimm", map = 1426, x = 28.65, y = 66.14, z = 399, f = "e", only = { classes = { "WARLOCK" } }, note = "{npc:460}: Summon Imp" },
+						{ t = "accept", quest = 94373, title = "Call of Earth", npc = 257446, npcName = "Teo Hammerstorm", minLevel = 4, qlvl = 4, map = 1426, x = 28.79, y = 66.18, f = "e", only = { classes = { "SHAMAN" } }, note = "{npc:257446}, inside Anvilmar" },
+						{ t = "turnin", quest = 3361, title = "A Refugee's Quandary", npc = 8416, npcName = "Felix Whindlebolt", map = 1426, x = 28.55, y = 67.64, z = 395.5, f = "e", note = "{npc:8416}, at the door on the way out; inside" },
+					},
+				},
+				{
+					title = "{quest:97277}",
+					note = "{npc:2756} stands by {npc:8416} at the door of Anvilmar. Gozwin's camp is in the hills just north-west; the {npc:269075} prowls around it.",
+					goals = {
+						{ t = "accept", quest = 97277, title = "Grund and Gozwin", npc = 2756, npcName = "Grund Drokda", minLevel = 4, qlvl = 6, map = 1426, x = 28.67, y = 67.52, f = "e", note = "{npc:2756}, inside" },
+						{ t = "collect", quest = 97277, title = "Grund and Gozwin", item = 277976, itemName = "Gozwin's Mechanic's Log", oi = 1, map = 1426, x = 27.27, y = 62.86, f = "e", note = "{item:277976}, in the camp", from = "Gozwin's Mechanic's Log", fromKind = "object", fromId = 664122 },
+						{ t = "kill", quest = 97277, title = "Grund and Gozwin", target = "Snow Leopard Prowler", npc = 269075, oi = 2, map = 1426, x = 27.37, y = 62.86, f = "e" },
+						{ t = "turnin", quest = 97277, title = "Grund and Gozwin", npc = 2756, npcName = "Grund Drokda", map = 1426, x = 28.67, y = 67.52, f = "e" },
+						{ t = "goto", text = "The troll cave", map = 1426, x = 26.93, y = 80.03 },
+					},
+				},
+				{
+					title = "{npc:808}",
+					note = "{npc:808} is inside the troll cave east of {npc:786}'s camp, not on the hill above it: go in at the mouth and follow the tunnel to the back.",
+					goals = {
+						{ t = "collect", quest = 218, title = "The Stolen Journal", item = 2004, itemName = "Grelin Whitebeard's Journal", count = 1, oi = 1, map = 1426, x = 30.48, y = 80.15, f = "e", note = "{item:2004}; below ground", from = "Grik'nir the Cold", fromKind = "npc", fromId = 808, fromNpcs = { { npc = 808, npcName = "Grik'nir the Cold" } } },
+					},
+				},
+				{
+					title = "{npc:786}",
+					goals = {
+						{ t = "turnin", quest = 3365, title = "Bring Back the Mug", npc = 12738, npcName = "Nori Pridedrift", map = 1426, x = 24.98, y = 75.96, z = 385.8, f = "e", note = "{npc:12738}, next to him" },
+						{ t = "collect", quest = 94373, title = "Call of Earth", item = 264356, itemName = "Iceclaw Bear Pendant", oi = 1, map = 1426, x = 25.86, y = 78.26, f = "e", spots = { { x = 26.7, y = 79.4, r = 57, n = 11 }, { x = 28.6, y = 80.5, r = 60, n = 15 }, { x = 29, y = 82.5, r = 55, n = 6 }, { x = 30.2, y = 80.4, r = 53, n = 11 }, { x = 22.8, y = 79.5, r = 55, n = 9 }, { x = 20.9, y = 76.5, r = 54, n = 9 } }, spread = true, only = { classes = { "SHAMAN" } }, note = "Iceclaw Bear Pendants, from the Frostmane Troll Whelps on the slopes above the camp", fromNpcs = { { npc = 706, npcName = "Frostmane Troll Whelp" }, { npc = 946, npcName = "Frostmane Novice" } } },
+						{ t = "turnin", quest = 218, title = "The Stolen Journal", npc = 786, npcName = "Grelin Whitebeard", map = 1426, x = 25.08, y = 75.71, z = 385.9, f = "e" },
+						{ t = "accept", quest = 282, title = "Senir's Observations", npc = 786, npcName = "Grelin Whitebeard", minLevel = 1, qlvl = 5, pre = { 218 }, closedBy = { 287 }, preTitles = { [218] = "The Stolen Journal", [287] = "Frostmane Hold" }, map = 1426, x = 25.08, y = 75.71, z = 385.9, f = "e" },
+					},
+				},
+				{
+					title = "{quest:94373}",
+					note = "Back to {npc:257446} in Anvilmar. He gives you the {item:6635}: take the rubble-marked path that climbs west from the south of the valley to the Spirit Stone on the ridge, drink the Sapta beside it and speak to the {npc:5891}, then bring its {item:6656} back to Teo.",
+					only = { classes = { "SHAMAN" } },
+					goals = {
+						{ t = "turnin", quest = 94373, title = "Call of Earth", npc = 257446, npcName = "Teo Hammerstorm", map = 1426, x = 28.79, y = 66.18, f = "e" },
+						{ t = "accept", quest = 94374, title = "Call of Earth", npc = 257446, npcName = "Teo Hammerstorm", minLevel = 4, qlvl = 4, pre = { 94373 }, preTitles = { [94373] = "Call of Earth" }, map = 1426, x = 28.79, y = 66.18, f = "e" },
+						{ t = "use", item = 6635, itemName = "Earth Sapta", map = 1426, x = 25, y = 62.4, f = "e", note = "{item:6635}, beside the Spirit Stone" },
+						{ t = "turnin", quest = 94374, title = "Call of Earth", npc = 5891, npcName = "Minor Manifestation of Earth", map = 1426, x = 24.84, y = 61.86, f = "e" },
+						{ t = "accept", quest = 94375, title = "Call of Earth", npc = 5891, npcName = "Minor Manifestation of Earth", minLevel = 4, qlvl = 4, pre = { 94374 }, preTitles = { [94374] = "Call of Earth" }, map = 1426, x = 24.84, y = 61.86, f = "e" },
+						{ t = "turnin", quest = 94375, title = "Call of Earth", npc = 257446, npcName = "Teo Hammerstorm", map = 1426, x = 28.79, y = 66.18, f = "e", note = "{npc:257446}: {npc:5873} and your {item:5175}" },
+					},
+				},
+				{
+					title = "The tunnel",
+					note = "{npc:1965} guards the tunnel out of the valley, east of Anvilmar; {npc:6782} stands beside him at its mouth.",
+					goals = {
+						{ t = "turnin", quest = 282, title = "Senir's Observations", npc = 1965, npcName = "Mountaineer Thalos", map = 1426, x = 33.48, y = 71.84, z = 428.4, f = "e" },
+						{ t = "accept", quest = 420, title = "Senir's Observations", npc = 1965, npcName = "Mountaineer Thalos", minLevel = 1, qlvl = 5, pre = { 282 }, preTitles = { [282] = "Senir's Observations" }, map = 1426, x = 33.48, y = 71.84, z = 428.4, f = "e" },
+						{ t = "accept", quest = 96628, title = "The Adventurer", npc = 1965, npcName = "Mountaineer Thalos", minLevel = 4, qlvl = 6, pre = { 282 }, closedBy = { 96608, 96627, 96630, 96638, 96652, 96656, 96659 }, preTitles = { [282] = "Senir's Observations", [96608] = "The Great Outdoors", [96627] = "The Adventurer", [96630] = "The Adventurer", [96638] = "The Adventurer", [96652] = "The Adventurer", [96656] = "The Adventurer", [96659] = "The Adventurer" }, map = 1426, x = 33.48, y = 71.84, z = 428.4, f = "e" },
+						{ t = "accept", quest = 2160, title = "Supplies to Tannok", npc = 6782, npcName = "Hands Springsprocket", minLevel = 1, qlvl = 5, map = 1426, x = 33.85, y = 72.24, z = 431.7, f = "e" },
+					},
+				},
+				{
+					title = "{quest:95998}",
+					note = "Sit by Eric's campfire (type /sit) and wait for the buff.",
+					goals = {
+						{ t = "turnin", quest = 96628, title = "The Adventurer", npc = 265813, npcName = "Eric Brighthammer", map = 1426, x = 46.7, y = 53.94, f = "e", note = "{npc:265813}: {quest:96628}" },
+						{ t = "accept", quest = 96608, title = "The Great Outdoors", npc = 265813, npcName = "Eric Brighthammer", minLevel = 4, qlvl = 6, closedBy = { 95998, 96101, 96604, 96605, 96606, 96607 }, preTitles = { [95998] = "The Great Outdoors", [96101] = "The Great Outdoors", [96604] = "The Great Outdoors", [96605] = "The Great Outdoors", [96606] = "The Great Outdoors", [96607] = "The Great Outdoors" }, map = 1426, x = 46.7, y = 53.94, f = "e" },
+						{ t = "complete", quest = 96608, title = "The Great Outdoors" },
+						{ t = "turnin", quest = 96608, title = "The Great Outdoors", npc = 265813, npcName = "Eric Brighthammer", map = 1426, x = 46.7, y = 53.94, f = "e" },
+						{ t = "accept", quest = 96629, title = "Camping 101: Cooking", npc = 265813, npcName = "Eric Brighthammer", minLevel = 4, qlvl = 6, pre = { 95998, 96101, 96604, 96605, 96606, 96607, 96608 }, closedBy = { 96626, 96634, 96646, 96655, 96658, 96661 }, preTitles = { [95998] = "The Great Outdoors", [96101] = "The Great Outdoors", [96604] = "The Great Outdoors", [96605] = "The Great Outdoors", [96606] = "The Great Outdoors", [96607] = "The Great Outdoors", [96608] = "The Great Outdoors", [96626] = "Camping 101: Cooking", [96634] = "Camping 101: Cooking", [96646] = "Camping 101: Cooking", [96655] = "Camping 101: Cooking", [96658] = "Camping 101: Cooking", [96661] = "Camping 101: Cooking" }, map = 1426, x = 46.7, y = 53.94, f = "e" },
+					},
+				},
+				{
+					title = "Kharanos",
+					note = "Follow the road through the tunnel and north-east to Kharanos. Start outside: {npc:1252} and Eric's campfire are in front of the Thunderbrew Distillery.\n{npc:1872} works the forge west of the distillery.\nThen go in: {npc:6806}, the innkeeper, {npc:1226} and {npc:1267}. {npc:1699}'s {skill:185} lesson waits for the return with the ribs, when the copper is there for it.",
+					goals = {
+						{ t = "turnin", quest = 420, title = "Senir's Observations", npc = 1252, npcName = "Senir Whitebeard", map = 1426, x = 46.73, y = 53.83, z = 396.8, f = "e" },
+						{ t = "accept", quest = 98322, title = "Secure the Mountain", npc = 1252, npcName = "Senir Whitebeard", minLevel = 4, qlvl = 8, map = 1426, x = 46.73, y = 53.83, z = 396.8, f = "e" },
+						{ t = "accept", quest = 98321, title = "Flintfire's Shipment", npc = 1241, npcName = "Tognus Flintfire", minLevel = 4, qlvl = 7, map = 1426, x = 45.34, y = 51.94, z = 397.3, f = "e", note = "{npc:1241}, below ground" },
+						{ t = "accept", quest = 400, title = "Tools for Steelgrill", npc = 1872, npcName = "Tharek Blackstone", minLevel = 2, qlvl = 5, map = 1426, x = 46.02, y = 51.68, z = 402.1, f = "e" },
+						{ t = "accept", quest = 384, title = "Beer Basted Boar Ribs", npc = 1267, npcName = "Ragnar Thunderbrew", minLevel = 5, qlvl = 7, map = 1426, x = 46.83, y = 52.36, z = 400.7, f = "e" },
+						{ t = "turnin", quest = 2160, title = "Supplies to Tannok", npc = 6806, npcName = "Tannok Frosthammer", map = 1426, x = 47.22, y = 52.19, z = 399.7, f = "e", note = "{npc:6806}, inside" },
+						{ t = "accept", quest = 99158, title = "Dawn in the Mountains", npc = 1226, npcName = "Maxan Anvol", minLevel = 5, qlvl = 8, closedBy = { 99159 }, preTitles = { [99159] = "Finding Warmth" }, map = 1426, x = 47.34, y = 52.19, z = 399.7, f = "e", note = "{npc:1226}, upstairs" },
+						{ t = "train", class = true, note = "Last: some classes' trainers stand outside", candidates = { candidateRecords[12], candidateRecords[14], candidateRecords[15], candidateRecords[16], candidateRecords[11], candidateRecords[13], candidateRecords[10], candidateRecords[9], candidateRecords[17], candidateRecords[18], candidateRecords[22], candidateRecords[2], candidateRecords[7], candidateRecords[1], candidateRecords[3], candidateRecords[4], candidateRecords[5], candidateRecords[82], candidateRecords[8], candidateRecords[83], candidateRecords[20], candidateRecords[6], candidateRecords[23], candidateRecords[24], candidateRecords[25], candidateRecords[26], candidateRecords[33], candidateRecords[34], candidateRecords[35], candidateRecords[36], candidateRecords[29], candidateRecords[27], candidateRecords[37], candidateRecords[38], candidateRecords[39], candidateRecords[28], candidateRecords[30], candidateRecords[32], candidateRecords[31], candidateRecords[84], candidateRecords[41], candidateRecords[43], candidateRecords[46], candidateRecords[48], candidateRecords[47], candidateRecords[42], candidateRecords[44], candidateRecords[45], candidateRecords[49], candidateRecords[50], candidateRecords[51], candidateRecords[52], candidateRecords[53], candidateRecords[54], candidateRecords[55], candidateRecords[56], candidateRecords[57], candidateRecords[58], candidateRecords[59], candidateRecords[60], candidateRecords[61], candidateRecords[62], candidateRecords[63], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68], candidateRecords[69], candidateRecords[70], candidateRecords[71], candidateRecords[72], candidateRecords[73], candidateRecords[74], candidateRecords[75], candidateRecords[76], candidateRecords[77], candidateRecords[78], candidateRecords[79], candidateRecords[80], candidateRecords[81] } },
+					},
+				},
+				{
+					title = "Steelgrill's Depot",
+					note = "Follow the road north-east from Kharanos to the depot below the {zone:1455} road.",
+					goals = {
+						{ t = "accept", quest = 317, title = "Stocking Jetsteam", npc = 1378, npcName = "Pilot Bellowfiz", minLevel = 2, qlvl = 6, map = 1426, x = 49.43, y = 48.41, z = 393.9, f = "e" },
+						{ t = "accept", quest = 313, title = "The Grizzled Den", npc = 1377, npcName = "Pilot Stonegear", minLevel = 4, qlvl = 7, map = 1426, x = 49.62, y = 48.61, z = 393.3, f = "e" },
+						{ t = "turnin", quest = 400, title = "Tools for Steelgrill", npc = 1376, npcName = "Beldin Steelgrill", map = 1426, x = 50.44, y = 49.09, z = 394.4, f = "e" },
+						{ t = "accept", quest = 5541, title = "Ammo for Rumbleshot", npc = 1694, npcName = "Loslor Rudge", minLevel = 5, qlvl = 6, map = 1426, x = 50.08, y = 49.42, z = 395.4, f = "e", note = "{npc:1694}, beside him" },
+					},
+				},
+				{
+					title = "{zone:1426}: kill these as you meet them",
+					note = "Crag Boars and Young Black Bears roam the fields around Kharanos and the depot.",
+					goals = {
+						{ t = "collect", quest = 317, title = "Stocking Jetsteam", item = 6952, itemName = "Thick Bear Fur", count = 2, oi = 2, map = 1426, x = 49.17, y = 51, f = "e", spots = { { x = 48.6, y = 50.5, r = 61, n = 2 }, { x = 49.8, y = 60.8, r = 61, n = 2 }, { x = 41.9, y = 66.8, r = 61, n = 1 }, { x = 35, y = 59.8, r = 61, n = 2 }, { x = 26.5, y = 55.4, r = 82, n = 4 }, { x = 29.5, y = 42.1, r = 84, n = 5 }, { x = 37.4, y = 44.3, r = 114, n = 4 }, { x = 35, y = 30.9, r = 61, n = 3 }, { x = 43.8, y = 28.8, r = 61, n = 1 }, { x = 56.3, y = 43.3, r = 61, n = 1 }, { x = 59.3, y = 52, r = 61, n = 1 }, { x = 64.9, y = 60, r = 61, n = 1 }, { x = 50.4, y = 52.8, r = 61, n = 2, alt = true }, { x = 44.6, y = 50.6, r = 61, n = 4, alt = true }, { x = 44.8, y = 55.3, r = 61, n = 1, alt = true }, { x = 51.2, y = 43.1, r = 61, n = 1, alt = true }, { x = 43.7, y = 46.2, r = 61, n = 3, alt = true }, { x = 44.4, y = 58.5, r = 61, n = 2, alt = true }, { x = 46.5, y = 63.3, r = 61, n = 2, alt = true }, { x = 40, y = 60.6, r = 85, n = 8, alt = true }, { x = 58.7, y = 61.3, r = 61, n = 1, alt = true }, { x = 61, y = 56.9, r = 61, n = 1, alt = true }, { x = 38.3, y = 40.9, r = 61, n = 2, alt = true }, { x = 37.8, y = 33.9, r = 61, n = 1, alt = true }, { x = 41.2, y = 29.2, r = 61, n = 1, alt = true }, { x = 32.3, y = 48.5, r = 61, n = 2, alt = true }, { x = 35.2, y = 35.9, r = 61, n = 1, alt = true }, { x = 66.5, y = 50.5, r = 61, n = 1, alt = true }, { x = 31.5, y = 56.7, r = 66, n = 4, alt = true }, { x = 32.6, y = 37.7, r = 61, n = 2, alt = true }, { x = 30.5, y = 59.6, r = 61, n = 1, alt = true }, { x = 28.9, y = 52, r = 61, n = 2, alt = true }, { x = 30.6, y = 35.1, r = 61, n = 1, alt = true }, { x = 27.1, y = 47.1, r = 83, n = 4, alt = true }, { x = 74.8, y = 48.1, r = 61, n = 1, alt = true }, { x = 65.5, y = 12.7, r = 61, n = 1, alt = true }, { x = 80.1, y = 48.6, r = 61, n = 1, alt = true } }, spread = true, from = "Young Black Bear", fromKind = "npc", fromAlso = "Ice Claw Bear", fromId = 1128, fromAlsoId = 1196, fromNpcs = { { npc = 1128, npcName = "Young Black Bear" }, { npc = 1196, npcName = "Ice Claw Bear" } } },
+						{ t = "collect", quest = 384, title = "Beer Basted Boar Ribs", item = 2886, itemName = "Crag Boar Rib", count = 6, oi = 1, map = 1426, x = 50.49, y = 52.07, f = "e", spots = { { x = 50.9, y = 52.1, r = 49, n = 5 }, { x = 61.2, y = 59.3, r = 44, n = 2 }, { x = 70.8, y = 61.5, r = 44, n = 2 }, { x = 75.5, y = 49, r = 44, n = 3 }, { x = 86.7, y = 50.2, r = 44, n = 1 }, { x = 83.1, y = 33.1, r = 44, n = 1 }, { x = 41.1, y = 30.4, r = 52, n = 3 }, { x = 31.7, y = 35.1, r = 44, n = 2 }, { x = 26.9, y = 46.1, r = 59, n = 4 }, { x = 32, y = 57.5, r = 44, n = 2 }, { x = 38.8, y = 47.3, r = 66, n = 5 }, { x = 40.3, y = 68.1, r = 44, n = 2 }, { x = 49.2, y = 54.8, r = 44, n = 2, alt = true }, { x = 48.5, y = 48.9, r = 66, n = 5, alt = true }, { x = 48.6, y = 57.6, r = 53, n = 4, alt = true }, { x = 52.6, y = 58.3, r = 44, n = 2, alt = true }, { x = 45.5, y = 50.3, r = 44, n = 3, alt = true }, { x = 49.4, y = 59.8, r = 57, n = 3, alt = true }, { x = 56.1, y = 54.3, r = 65, n = 4, alt = true }, { x = 50.4, y = 43.2, r = 44, n = 1, alt = true }, { x = 55.9, y = 47.8, r = 44, n = 1, alt = true }, { x = 44.2, y = 52.9, r = 44, n = 1, alt = true }, { x = 45.5, y = 58.5, r = 69, n = 5, alt = true }, { x = 45.2, y = 45.3, r = 44, n = 1, alt = true }, { x = 49.3, y = 62.4, r = 44, n = 3, alt = true }, { x = 55.9, y = 58.8, r = 53, n = 3, alt = true }, { x = 57.3, y = 56.7, r = 44, n = 1, alt = true }, { x = 46.9, y = 62.4, r = 66, n = 6, alt = true }, { x = 43.2, y = 56.2, r = 47, n = 4, alt = true }, { x = 58.5, y = 50.6, r = 44, n = 3, alt = true }, { x = 45.2, y = 42, r = 44, n = 4, alt = true }, { x = 59.8, y = 54.4, r = 55, n = 3, alt = true }, { x = 45.4, y = 64.4, r = 81, n = 9, alt = true }, { x = 59.1, y = 59, r = 44, n = 5, alt = true }, { x = 40.8, y = 47.2, r = 44, n = 2, alt = true }, { x = 41.5, y = 59.8, r = 57, n = 4, alt = true }, { x = 42.5, y = 38.8, r = 56, n = 3, alt = true }, { x = 62.2, y = 56, r = 51, n = 3, alt = true }, { x = 43, y = 66.5, r = 71, n = 6, alt = true }, { x = 38.8, y = 59, r = 54, n = 3, alt = true }, { x = 37.3, y = 51.8, r = 50, n = 5, alt = true }, { x = 64.2, y = 53.9, r = 44, n = 1, alt = true }, { x = 39.1, y = 64.1, r = 44, n = 3, alt = true }, { x = 63.5, y = 59.8, r = 44, n = 2, alt = true }, { x = 43.8, y = 33.2, r = 44, n = 2, alt = true }, { x = 35.5, y = 54.9, r = 63, n = 3, alt = true }, { x = 36.4, y = 61.7, r = 59, n = 3, alt = true }, { x = 66.2, y = 53, r = 44, n = 2, alt = true }, { x = 66.6, y = 50.4, r = 62, n = 4, alt = true }, { x = 39.5, y = 34, r = 44, n = 1, alt = true }, { x = 43.7, y = 29.7, r = 44, n = 2, alt = true }, { x = 34.4, y = 58.7, r = 51, n = 4, alt = true }, { x = 37.3, y = 35.8, r = 53, n = 3, alt = true }, { x = 32.5, y = 48.4, r = 53, n = 4, alt = true }, { x = 35.1, y = 35.7, r = 52, n = 3, alt = true }, { x = 69.9, y = 51.4, r = 61, n = 4, alt = true }, { x = 36.8, y = 31.2, r = 44, n = 1, alt = true }, { x = 33.1, y = 37.5, r = 44, n = 1, alt = true }, { x = 30.5, y = 54, r = 44, n = 2, alt = true }, { x = 29.9, y = 50.8, r = 44, n = 2, alt = true }, { x = 71.4, y = 54.8, r = 44, n = 2, alt = true }, { x = 34.2, y = 31.3, r = 44, n = 2, alt = true }, { x = 30.9, y = 38.6, r = 44, n = 2, alt = true }, { x = 29.6, y = 42.5, r = 44, n = 1, alt = true }, { x = 72.7, y = 60.4, r = 44, n = 2, alt = true }, { x = 27.5, y = 54.1, r = 54, n = 3, alt = true }, { x = 73.6, y = 50.1, r = 66, n = 4, alt = true }, { x = 73.7, y = 54.1, r = 44, n = 2, alt = true }, { x = 27.7, y = 43.3, r = 50, n = 3, alt = true }, { x = 28.4, y = 39.6, r = 44, n = 2, alt = true }, { x = 74.8, y = 61.1, r = 44, n = 2, alt = true }, { x = 75.7, y = 57.8, r = 44, n = 1, alt = true }, { x = 79.2, y = 50.7, r = 44, n = 2, alt = true }, { x = 79.3, y = 57.5, r = 67, n = 4, alt = true }, { x = 80.1, y = 46.7, r = 44, n = 3, alt = true }, { x = 80.3, y = 43.7, r = 44, n = 3, alt = true }, { x = 81.5, y = 54.3, r = 44, n = 2, alt = true }, { x = 80.8, y = 35.2, r = 44, n = 3, alt = true }, { x = 82.8, y = 37.1, r = 53, n = 3, alt = true }, { x = 84.8, y = 49.5, r = 44, n = 2, alt = true }, { x = 86.3, y = 47.5, r = 44, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 1126, npcName = "Large Crag Boar" }, { npc = 1689, npcName = "Scarred Crag Boar" }, { npc = 1127, npcName = "Elder Crag Boar" }, { npc = 1125, npcName = "Crag Boar" } } },
+						{ t = "collect", quest = 317, title = "Stocking Jetsteam", item = 769, itemName = "Chunk of Boar Meat", count = 4, oi = 1, map = 1426, x = 50.49, y = 52.07, f = "e", spots = { { x = 50.9, y = 52.1, r = 49, n = 5 }, { x = 61.2, y = 59.3, r = 44, n = 2 }, { x = 70.8, y = 61.5, r = 44, n = 2 }, { x = 75.5, y = 49, r = 44, n = 3 }, { x = 86.7, y = 50.2, r = 44, n = 1 }, { x = 83.1, y = 33.1, r = 44, n = 1 }, { x = 41.1, y = 30.4, r = 52, n = 3 }, { x = 31.7, y = 35.1, r = 44, n = 2 }, { x = 26.9, y = 46.1, r = 59, n = 4 }, { x = 32, y = 57.5, r = 44, n = 2 }, { x = 38.8, y = 47.3, r = 66, n = 5 }, { x = 40.3, y = 68.1, r = 44, n = 2 }, { x = 49.2, y = 54.8, r = 44, n = 2, alt = true }, { x = 48.5, y = 48.9, r = 66, n = 5, alt = true }, { x = 48.6, y = 57.6, r = 53, n = 4, alt = true }, { x = 52.6, y = 58.3, r = 44, n = 2, alt = true }, { x = 45.5, y = 50.3, r = 44, n = 3, alt = true }, { x = 49.4, y = 59.8, r = 57, n = 3, alt = true }, { x = 56.1, y = 54.3, r = 65, n = 4, alt = true }, { x = 50.4, y = 43.2, r = 44, n = 1, alt = true }, { x = 55.9, y = 47.8, r = 44, n = 1, alt = true }, { x = 44.2, y = 52.9, r = 44, n = 1, alt = true }, { x = 45.5, y = 58.5, r = 69, n = 5, alt = true }, { x = 45.2, y = 45.3, r = 44, n = 1, alt = true }, { x = 49.3, y = 62.4, r = 44, n = 3, alt = true }, { x = 55.9, y = 58.8, r = 53, n = 3, alt = true }, { x = 57.3, y = 56.7, r = 44, n = 1, alt = true }, { x = 46.9, y = 62.4, r = 66, n = 6, alt = true }, { x = 43.2, y = 56.2, r = 47, n = 4, alt = true }, { x = 58.5, y = 50.6, r = 44, n = 3, alt = true }, { x = 45.2, y = 42, r = 44, n = 4, alt = true }, { x = 59.8, y = 54.4, r = 55, n = 3, alt = true }, { x = 45.4, y = 64.4, r = 81, n = 9, alt = true }, { x = 59.1, y = 59, r = 44, n = 5, alt = true }, { x = 40.8, y = 47.2, r = 44, n = 2, alt = true }, { x = 41.5, y = 59.8, r = 57, n = 4, alt = true }, { x = 42.5, y = 38.8, r = 56, n = 3, alt = true }, { x = 62.2, y = 56, r = 51, n = 3, alt = true }, { x = 43, y = 66.5, r = 71, n = 6, alt = true }, { x = 38.8, y = 59, r = 54, n = 3, alt = true }, { x = 37.3, y = 51.8, r = 50, n = 5, alt = true }, { x = 64.2, y = 53.9, r = 44, n = 1, alt = true }, { x = 39.1, y = 64.1, r = 44, n = 3, alt = true }, { x = 63.5, y = 59.8, r = 44, n = 2, alt = true }, { x = 43.8, y = 33.2, r = 44, n = 2, alt = true }, { x = 35.5, y = 54.9, r = 63, n = 3, alt = true }, { x = 36.4, y = 61.7, r = 59, n = 3, alt = true }, { x = 66.2, y = 53, r = 44, n = 2, alt = true }, { x = 66.6, y = 50.4, r = 62, n = 4, alt = true }, { x = 39.5, y = 34, r = 44, n = 1, alt = true }, { x = 43.7, y = 29.7, r = 44, n = 2, alt = true }, { x = 34.4, y = 58.7, r = 51, n = 4, alt = true }, { x = 37.3, y = 35.8, r = 53, n = 3, alt = true }, { x = 32.5, y = 48.4, r = 53, n = 4, alt = true }, { x = 35.1, y = 35.7, r = 52, n = 3, alt = true }, { x = 69.9, y = 51.4, r = 61, n = 4, alt = true }, { x = 36.8, y = 31.2, r = 44, n = 1, alt = true }, { x = 33.1, y = 37.5, r = 44, n = 1, alt = true }, { x = 30.5, y = 54, r = 44, n = 2, alt = true }, { x = 29.9, y = 50.8, r = 44, n = 2, alt = true }, { x = 71.4, y = 54.8, r = 44, n = 2, alt = true }, { x = 34.2, y = 31.3, r = 44, n = 2, alt = true }, { x = 30.9, y = 38.6, r = 44, n = 2, alt = true }, { x = 29.6, y = 42.5, r = 44, n = 1, alt = true }, { x = 72.7, y = 60.4, r = 44, n = 2, alt = true }, { x = 27.5, y = 54.1, r = 54, n = 3, alt = true }, { x = 73.6, y = 50.1, r = 66, n = 4, alt = true }, { x = 73.7, y = 54.1, r = 44, n = 2, alt = true }, { x = 27.7, y = 43.3, r = 50, n = 3, alt = true }, { x = 28.4, y = 39.6, r = 44, n = 2, alt = true }, { x = 74.8, y = 61.1, r = 44, n = 2, alt = true }, { x = 75.7, y = 57.8, r = 44, n = 1, alt = true }, { x = 79.2, y = 50.7, r = 44, n = 2, alt = true }, { x = 79.3, y = 57.5, r = 67, n = 4, alt = true }, { x = 80.1, y = 46.7, r = 44, n = 3, alt = true }, { x = 80.3, y = 43.7, r = 44, n = 3, alt = true }, { x = 81.5, y = 54.3, r = 44, n = 2, alt = true }, { x = 80.8, y = 35.2, r = 44, n = 3, alt = true }, { x = 82.8, y = 37.1, r = 53, n = 3, alt = true }, { x = 84.8, y = 49.5, r = 44, n = 2, alt = true }, { x = 86.3, y = 47.5, r = 44, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 1126, npcName = "Large Crag Boar" }, { npc = 1689, npcName = "Scarred Crag Boar" }, { npc = 1127, npcName = "Elder Crag Boar" }, { npc = 1125, npcName = "Crag Boar" } } },
+					},
+				},
+				{
+					title = "Steelgrill's Depot",
+					goals = {
+						{ t = "turnin", quest = 317, title = "Stocking Jetsteam", npc = 1378, npcName = "Pilot Bellowfiz", map = 1426, x = 49.43, y = 48.41, z = 393.9, f = "e" },
+						{ t = "accept", quest = 318, title = "Evershine", npc = 1378, npcName = "Pilot Bellowfiz", minLevel = 2, qlvl = 7, pre = { 317 }, preTitles = { [317] = "Stocking Jetsteam" }, map = 1426, x = 49.43, y = 48.41, z = 393.9, f = "e" },
+					},
+				},
+				{
+					title = "{item:13850}",
+					note = "The {object:176785} sits next to {npc:271546}, south of the Grizzled Den.",
+					goals = {
+						{ t = "collect", quest = 5541, title = "Ammo for Rumbleshot", item = 13850, itemName = "Rumbleshot's Ammo", count = 1, oi = 1, map = 1426, x = 44.1, y = 57, f = "e", note = "{item:13850}: the {object:176785}", from = "Ammo Crate", fromKind = "object", fromId = 176785 },
+					},
+				},
+				{
+					title = "{npc:271546}",
+					note = "Gretchen camps just outside the Grizzled Den, the wendigo cave south-west of Kharanos.",
+					goals = {
+						{ t = "turnin", quest = 98322, title = "Secure the Mountain", npc = 271546, npcName = "Mountaineer Gretchen", map = 1426, x = 44.1, y = 57.07, f = "e" },
+						{ t = "accept", quest = 98319, title = "Secure the Mountain", npc = 271546, npcName = "Mountaineer Gretchen", minLevel = 4, qlvl = 8, pre = { 98322 }, preTitles = { [98322] = "Secure the Mountain" }, map = 1426, x = 44.1, y = 57.07, f = "e" },
+						{ t = "goto", text = "{quest:313}", map = 1426, x = 42.57, y = 54.68 },
+					},
+				},
+				{
+					title = "{quest:313}",
+					note = "Flintfire's shipments lie on the cave floor, and {npc:278166} is missing somewhere inside.\nCareful: Wendigos stand close together inside the cave, so fights easily pull several at once; drawing them out one at a time with ranged attacks from outside avoids this.",
+					goals = {
+						{ t = "collect", quest = 98321, title = "Flintfire's Shipment", item = 280413, itemName = "Flintfire's Shipment", oi = 1, map = 1426, x = 41.8, y = 52.8, f = "e", spots = { { x = 42.3, y = 52.3, r = 36, n = 2 }, { x = 41.8, y = 49.3, r = 65, n = 5 }, { x = 40.8, y = 46.2, r = 85, n = 8 }, { x = 43.5, y = 49.4, r = 15, n = 1, alt = true } }, from = "Flintfire's Shipment", fromKind = "object", fromId = 672508 },
+						{ t = "collect", quest = 313, title = "The Grizzled Den", item = 2671, itemName = "Wendigo Mane", count = 8, oi = 1, map = 1426, x = 41.92, y = 52.74, f = "e", spots = { { x = 42.1, y = 52.2, r = 51, n = 7 }, { x = 42.3, y = 54.8, r = 38, n = 12 }, { x = 41.6, y = 49.3, r = 47, n = 9 }, { x = 43, y = 49.6, r = 33, n = 7 }, { x = 39.5, y = 47.8, r = 66, n = 12 }, { x = 41.7, y = 46.4, r = 60, n = 10 }, { x = 40.2, y = 53.3, r = 15, n = 1, alt = true } }, from = "Young Wendigo", fromKind = "npc", fromAlso = "Wendigo", fromId = 1134, fromAlsoId = 1135, fromNpcs = { { npc = 1135, npcName = "Wendigo" }, { npc = 1134, npcName = "Young Wendigo" }, { npc = 1137, npcName = "Edan the Howler" } } },
+						{ t = "goto", text = "{npc:278166}", map = 1426, x = 42.9, y = 49.6, f = "e" },
+						{ t = "complete", quest = 98319, title = "Secure the Mountain" },
+					},
+				},
+				{
+					title = "{npc:271546}",
+					goals = {
+						{ t = "turnin", quest = 98319, title = "Secure the Mountain", npc = 271546, npcName = "Mountaineer Gretchen", map = 1426, x = 44.1, y = 57.07, f = "e" },
+						{ t = "accept", quest = 98323, title = "Secure the Mountain", npc = 271546, npcName = "Mountaineer Gretchen", minLevel = 4, qlvl = 8, pre = { 98319 }, preTitles = { [98319] = "Secure the Mountain" }, map = 1426, x = 44.1, y = 57.07, f = "e" },
+					},
+				},
+				{
+					title = "{item:13850}",
+					note = "{npc:1243} camps south-west of it, by the road to Coldridge.",
+					goals = {
+						{ t = "turnin", quest = 5541, title = "Ammo for Rumbleshot", npc = 1243, npcName = "Hegnar Rumbleshot", map = 1426, x = 40.68, y = 65.13, z = 407.4, f = "e" },
+					},
+				},
+				{
+					title = "Kharanos and the depot",
+					goals = {
+						{ t = "turnin", quest = 98323, title = "Secure the Mountain", npc = 1252, npcName = "Senir Whitebeard", map = 1426, x = 46.73, y = 53.83, z = 396.8, f = "e" },
+					},
+				},
+				{
+					title = "Kharanos",
+					goals = {
+						{ t = "buy", npc = 1247, npcName = "Innkeeper Belm", item = 2894, itemName = "Rhapsody Malt", count = 1, map = 1426, x = 47.38, y = 52.52, z = 399.7, f = "e", note = "{item:2894}, from {npc:1247}; upstairs" },
+					},
+				},
+				{
+					title = "Kharanos and the depot",
+					goals = {
+						{ t = "accept", quest = 287, title = "Frostmane Hold", npc = 1252, npcName = "Senir Whitebeard", minLevel = 7, qlvl = 9, pre = { 420 }, preTitles = { [420] = "Senir's Observations" }, map = 1426, x = 46.73, y = 53.83, z = 396.8, f = "e" },
+						{ t = "turnin", quest = 98321, title = "Flintfire's Shipment", npc = 1241, npcName = "Tognus Flintfire", map = 1426, x = 45.34, y = 51.94, z = 397.3, f = "e", note = "{npc:1241}, below ground" },
+					},
+				},
+				{
+					title = "Thunderbrew Distillery",
+					goals = {
+						{ t = "buy", npc = 1247, npcName = "Innkeeper Belm", item = 2894, itemName = "Rhapsody Malt", count = 1, map = 1426, x = 47.38, y = 52.52, z = 399.7, f = "e", note = "{item:2894}, from {npc:1247}; upstairs" },
+					},
+				},
+				{
+					title = "Kharanos",
+					note = "Kill the Crag Boars on the way: their ribs drop before you have {npc:1267}'s quest and count toward it. Back in the distillery: {npc:1699} teaches {skill:185}, then the ribs go to {npc:1267}.",
+					goals = {
+						{ t = "train", npc = 1699, npcName = "Gremlock Pilsnor", skill = "Cooking", skillLine = 185, rank = 1, rankMax = 75, map = 1426, x = 47.67, y = 52.31, z = 398.9, f = "e", note = "{npc:1699}: Camping 101 asks you to learn it; below ground" },
+						{ t = "complete", quest = 96629, title = "Camping 101: Cooking", map = 1426, x = 47.7, y = 52.3, f = "e" },
+						{ t = "turnin", quest = 96629, title = "Camping 101: Cooking", npc = 1699, npcName = "Gremlock Pilsnor", map = 1426, x = 47.67, y = 52.31, z = 398.9, f = "e" },
+						{ t = "turnin", quest = 384, title = "Beer Basted Boar Ribs", npc = 1267, npcName = "Ragnar Thunderbrew", map = 1426, x = 46.83, y = 52.36, z = 400.7, f = "e" },
+						{ t = "sethome", npc = 1247, npcName = "Innkeeper Belm", location = "Thunderbrew Distillery", map = 1426, x = 47.38, y = 52.52, z = 399.7, f = "e", note = "Upstairs" },
+					},
+				},
+				{
+					title = "Kharanos and the depot",
+					goals = {
+						{ t = "turnin", quest = 313, title = "The Grizzled Den", npc = 1377, npcName = "Pilot Stonegear", map = 1426, x = 49.62, y = 48.61, z = 393.3, f = "e", note = "{npc:1377}, at the depot" },
+						{ t = "accept", quest = 412, title = "Operation Recombobulation", npc = 1269, npcName = "Razzle Sprysprocket", minLevel = 7, qlvl = 10, map = 1426, x = 45.85, y = 49.37, z = 395.4, f = "e", note = "{npc:1269}, by the depot; below ground" },
+					},
+				},
+				{
+					title = "On the way",
+					along = "q412",
+					goals = {
+						{ t = "collect", quest = 412, title = "Operation Recombobulation", item = 3083, itemName = "Restabilization Cog", count = 8, oi = 1, map = 1426, x = 27.25, y = 42.99, f = "e", spots = { { x = 26.6, y = 43, r = 39, n = 6 }, { x = 24.9, y = 43.8, r = 59, n = 12 }, { x = 25, y = 40.3, r = 54, n = 6 }, { x = 27.1, y = 36.5, r = 73, n = 15 } }, from = "Leper Gnome", fromKind = "npc", fromAlso = "Gibblewilt", fromId = 1211, fromAlsoId = 8503, fromNpcs = { { npc = 1211, npcName = "Leper Gnome" }, { npc = 8503, npcName = "Gibblewilt" } } },
+						{ t = "collect", quest = 412, title = "Operation Recombobulation", item = 3084, itemName = "Gyromechanic Gear", count = 8, oi = 2, map = 1426, x = 27.25, y = 42.99, f = "e", spots = { { x = 26.6, y = 43, r = 39, n = 6 }, { x = 24.9, y = 43.8, r = 59, n = 12 }, { x = 25, y = 40.3, r = 54, n = 6 }, { x = 27.1, y = 36.5, r = 73, n = 15 } }, from = "Leper Gnome", fromKind = "npc", fromAlso = "Gibblewilt", fromId = 1211, fromAlsoId = 8503, fromNpcs = { { npc = 1211, npcName = "Leper Gnome" }, { npc = 8503, npcName = "Gibblewilt" } } },
+					},
+				},
+				{
+					title = "Brewnall Village",
+					note = "Brewnall Village sits on the lake west of Kharanos. {npc:8508}'s dock is the first stop; {npc:1374} and {npc:1375} are in the village beyond it.",
+					label = "q412",
+					goals = {
+						{ t = "accept", quest = 98326, title = "Frosthowl", npc = 8508, npcName = "Gretta Ganter", minLevel = 5, qlvl = 9, map = 1426, x = 31.53, y = 44.65, z = 388.2, f = "e", note = "{npc:8508}, on the dock" },
+						{ t = "accept", quest = 310, title = "Bitter Rivals", npc = 1375, npcName = "Marleth Barleybrew", minLevel = 2, qlvl = 6, map = 1426, x = 30.19, y = 45.53, z = 394.4, f = "e" },
+						{ t = "turnin", quest = 318, title = "Evershine", npc = 1374, npcName = "Rejold Barleybrew", map = 1426, x = 30.19, y = 45.73, z = 394.3, f = "e" },
+						{ t = "accept", quest = 315, title = "The Perfect Stout", npc = 1374, npcName = "Rejold Barleybrew", minLevel = 5, qlvl = 9, map = 1426, x = 30.19, y = 45.73, z = 394.3, f = "e" },
+						{ t = "accept", quest = 319, title = "A Favor for Evershine", npc = 1374, npcName = "Rejold Barleybrew", minLevel = 2, qlvl = 8, pre = { 318 }, preTitles = { [318] = "Evershine" }, map = 1426, x = 30.19, y = 45.73, z = 394.3, f = "e" },
+						{ t = "kill", quest = 319, title = "A Favor for Evershine", target = "Ice Claw Bear", npc = 1196, count = 6, oi = 1, map = 1426, x = 30.19, y = 42.26, z = 396.4, f = "e", spots = { { x = 29.9, y = 41.8, r = 82, n = 4 }, { x = 37.7, y = 43.2, r = 152, n = 6 }, { x = 35.6, y = 32.5, r = 117, n = 5 }, { x = 42.5, y = 29, r = 82, n = 2 }, { x = 56.3, y = 43.3, z = 389.8, r = 82, n = 1 }, { x = 59.3, y = 52, z = 390.7, r = 82, n = 1 }, { x = 66.5, y = 50.5, z = 406.8, r = 82, n = 1 }, { x = 64.9, y = 60, z = 396.5, r = 82, n = 1 }, { x = 50.3, y = 53.8, z = 403.9, r = 82, n = 1 }, { x = 47.4, y = 63, r = 96, n = 3 }, { x = 30.5, y = 59.6, z = 421, r = 82, n = 1 }, { x = 80.1, y = 48.6, z = 413.5, r = 82, n = 1 }, { x = 27.3, y = 46.3, r = 112, n = 5, alt = true }, { x = 31.9, y = 36.8, r = 86, n = 3, alt = true }, { x = 31.5, y = 49.6, r = 112, n = 3, alt = true }, { x = 26.8, y = 54.8, r = 106, n = 5, alt = true }, { x = 51.2, y = 43.1, z = 388.5, r = 82, n = 1, alt = true }, { x = 50.2, y = 59.4, z = 397.9, r = 82, n = 1, alt = true }, { x = 58.7, y = 61.3, z = 383.1, r = 82, n = 1, alt = true }, { x = 61, y = 56.9, z = 384.6, r = 82, n = 1, alt = true }, { x = 74.8, y = 48.1, z = 401.2, r = 82, n = 1, alt = true } }, spread = true, optional = true, note = "{npc:1196}, on the way to the Hold" },
+						{ t = "kill", quest = 319, title = "A Favor for Evershine", target = "Elder Crag Boar", npc = 1127, count = 8, oi = 2, map = 1426, x = 28.03, y = 42.69, z = 388, f = "e", spots = { { x = 27.2, y = 44.9, r = 86, n = 7 }, { x = 37.7, y = 51.9, z = 421.9, r = 63, n = 1 }, { x = 45.3, y = 42.4, z = 391.9, r = 63, n = 2 }, { x = 43.3, y = 30.6, r = 65, n = 3 }, { x = 35.1, y = 31.2, r = 84, n = 3 }, { x = 58.5, y = 50.6, r = 63, n = 3 }, { x = 55.3, y = 58.6, r = 97, n = 4 }, { x = 63.5, y = 59.8, r = 63, n = 2 }, { x = 67, y = 51.8, r = 83, n = 5 }, { x = 75.8, y = 48.2, z = 404.1, r = 63, n = 1 }, { x = 74.7, y = 61.3, z = 403.7, r = 63, n = 1 }, { x = 81.5, y = 35.6, z = 400.8, r = 63, n = 1 }, { x = 29.1, y = 40, z = 395.7, r = 84, n = 4, alt = true }, { x = 31.6, y = 49.2, r = 116, n = 6, alt = true }, { x = 32.5, y = 36.3, r = 89, n = 5, alt = true }, { x = 27.5, y = 54.1, z = 383.6, r = 63, n = 3, alt = true }, { x = 36.6, y = 35.8, r = 69, n = 5, alt = true }, { x = 37.8, y = 46, z = 393.6, r = 63, n = 1, alt = true }, { x = 40.5, y = 47.2, z = 404.3, r = 63, n = 1, alt = true }, { x = 39.8, y = 32.3, r = 63, n = 2, alt = true }, { x = 42.4, y = 38.9, z = 396.7, r = 63, n = 1, alt = true }, { x = 56.2, y = 55.3, r = 72, n = 4, alt = true }, { x = 59.7, y = 59.1, r = 89, n = 7, alt = true }, { x = 61.6, y = 55.6, r = 69, n = 3, alt = true }, { x = 70.4, y = 51.2, r = 63, n = 3, alt = true }, { x = 71.5, y = 55.6, z = 399.6, r = 63, n = 1, alt = true }, { x = 71.6, y = 61.3, r = 63, n = 2, alt = true }, { x = 73.4, y = 50.4, r = 63, n = 2, alt = true }, { x = 80, y = 44.8, r = 63, n = 2, alt = true }, { x = 79.2, y = 57.3, z = 401.2, r = 63, n = 1, alt = true } }, spread = true },
+						{ t = "kill", quest = 319, title = "A Favor for Evershine", target = "Snow Leopard", npc = 1201, count = 8, oi = 3, map = 1426, x = 28.15, y = 44.98, z = 388.8, f = "e", spots = { { x = 27.9, y = 43.7, r = 46, n = 2 }, { x = 31.2, y = 39.4, z = 397.2, r = 46, n = 1 }, { x = 34.9, y = 35.6, z = 394.5, r = 46, n = 4 }, { x = 34.4, y = 47.7, z = 396.6, r = 46, n = 1 }, { x = 28.4, y = 54, r = 49, n = 4 }, { x = 47.9, y = 62.8, z = 406.6, r = 46, n = 3 }, { x = 55.9, y = 59.1, r = 47, n = 3 }, { x = 56.3, y = 53.3, r = 55, n = 3 }, { x = 59.5, y = 55.9, z = 384.7, r = 46, n = 1 }, { x = 63.6, y = 60.2, z = 390, r = 46, n = 1 }, { x = 82.2, y = 37.6, z = 400.8, r = 46, n = 1 }, { x = 43.3, y = 30.6, r = 46, n = 2 }, { x = 26.2, y = 47.4, r = 46, n = 2, alt = true }, { x = 28.9, y = 49.8, z = 389.2, r = 47, n = 3, alt = true }, { x = 29.2, y = 39.9, z = 395.8, r = 48, n = 3, alt = true }, { x = 32.6, y = 48.5, z = 397.1, r = 46, n = 1, alt = true }, { x = 33.2, y = 37.8, z = 394.9, r = 46, n = 1, alt = true }, { x = 37.6, y = 37.6, r = 47, n = 3, alt = true }, { x = 37.5, y = 32.1, r = 62, n = 3, alt = true }, { x = 40.1, y = 30.8, z = 383.5, r = 46, n = 1, alt = true }, { x = 48.4, y = 57.8, r = 46, n = 2, alt = true }, { x = 49.6, y = 60.9, r = 46, n = 3, alt = true }, { x = 54.1, y = 57.2, r = 46, n = 3, alt = true }, { x = 57.4, y = 56, r = 46, n = 2, alt = true }, { x = 59.8, y = 59.4, r = 72, n = 7, alt = true }, { x = 62.4, y = 57.5, r = 56, n = 4, alt = true }, { x = 79.4, y = 36.2, r = 49, n = 4, alt = true } }, spread = true },
+						{ t = "collect", quest = 412, title = "Operation Recombobulation", item = 3083, itemName = "Restabilization Cog", count = 8, oi = 1, map = 1426, x = 26.77, y = 43.79, f = "e", spots = { { x = 26.6, y = 43, r = 39, n = 6 }, { x = 24.9, y = 43.8, r = 59, n = 12 }, { x = 25, y = 40.3, r = 54, n = 6 }, { x = 27.1, y = 36.5, r = 73, n = 15 } }, from = "Leper Gnome", fromKind = "npc", fromAlso = "Gibblewilt", fromId = 1211, fromAlsoId = 8503, fromNpcs = { { npc = 1211, npcName = "Leper Gnome" }, { npc = 8503, npcName = "Gibblewilt" } } },
+						{ t = "collect", quest = 412, title = "Operation Recombobulation", item = 3084, itemName = "Gyromechanic Gear", count = 8, oi = 2, map = 1426, x = 26.77, y = 43.79, f = "e", spots = { { x = 26.6, y = 43, r = 39, n = 6 }, { x = 24.9, y = 43.8, r = 59, n = 12 }, { x = 25, y = 40.3, r = 54, n = 6 }, { x = 27.1, y = 36.5, r = 73, n = 15 } }, from = "Leper Gnome", fromKind = "npc", fromAlso = "Gibblewilt", fromId = 1211, fromAlsoId = 8503, fromNpcs = { { npc = 1211, npcName = "Leper Gnome" }, { npc = 8503, npcName = "Gibblewilt" } } },
+						{ t = "goto", text = "{quest:287}", map = 1426, x = 25.1, y = 50.94 },
+					},
+				},
+				{
+					title = "{quest:287}",
+					note = "{quest:287} is the troll cave in the hills south-west of Brewnall Village. Ice Claw Bears, Elder Crag Boars and Snow Leopards you kill on the way count for {npc:1374}. Kill Headhunters at its mouth and walk through to its far end.",
+					goals = {
+						{ t = "kill", quest = 287, title = "Frostmane Hold", target = "Frostmane Headhunter", npc = 1123, count = 5, oi = 1, map = 1426, x = 25.5, y = 50.86, z = 391.6, f = "e", spots = { { x = 25.8, y = 51.5, z = 381.4, r = 40, n = 3 }, { x = 23.8, y = 51, z = 399.2, r = 40, n = 5 }, { x = 23.9, y = 53.3, z = 386, r = 40, n = 1 }, { x = 21.9, y = 54.6, r = 40, n = 2 }, { x = 21.7, y = 51.1, r = 40, n = 4 }, { x = 40.9, y = 43.8, z = 441.1, r = 40, n = 1, alt = true }, { x = 39.3, y = 35.9, z = 428.5, r = 40, n = 1, alt = true } }, spread = true, note = "{npc:1123}, below ground" },
+						{ t = "goto", text = "{quest:287}", map = 1426, x = 22.8, y = 52.1, f = "e" },
+						{ t = "complete", quest = 287, title = "Frostmane Hold" },
+					},
+				},
+				{
+					title = "Gnomeregan: kill these as you meet them",
+					note = "Leper Gnomes around Brewnall and the Gnomeregan road carry the cogs and gears. Ice Claw Bears, Elder Crag Boars and Snow Leopards roam the hills around the lake.",
+					goals = {
+						{ t = "kill", quest = 319, title = "A Favor for Evershine", target = "Ice Claw Bear", npc = 1196, count = 6, oi = 1, map = 1426, x = 25.32, y = 55.76, z = 393.5, f = "e", spots = { { x = 26.8, y = 54.8, r = 106, n = 5 }, { x = 29.9, y = 41.8, r = 82, n = 4 }, { x = 37.7, y = 43.2, r = 152, n = 6 }, { x = 35.6, y = 32.5, r = 117, n = 5 }, { x = 42.5, y = 29, r = 82, n = 2 }, { x = 51.2, y = 43.1, z = 388.5, r = 82, n = 1 }, { x = 50.3, y = 53.8, z = 403.9, r = 82, n = 1 }, { x = 47.4, y = 63, r = 96, n = 3 }, { x = 59.3, y = 52, z = 390.7, r = 82, n = 1 }, { x = 66.5, y = 50.5, z = 406.8, r = 82, n = 1 }, { x = 64.9, y = 60, z = 396.5, r = 82, n = 1 }, { x = 80.1, y = 48.6, z = 413.5, r = 82, n = 1 }, { x = 30.5, y = 59.6, z = 421, r = 82, n = 1, alt = true }, { x = 27.3, y = 46.3, r = 112, n = 5, alt = true }, { x = 31.5, y = 49.6, r = 112, n = 3, alt = true }, { x = 31.9, y = 36.8, r = 86, n = 3, alt = true }, { x = 50.2, y = 59.4, z = 397.9, r = 82, n = 1, alt = true }, { x = 56.3, y = 43.3, z = 389.8, r = 82, n = 1, alt = true }, { x = 58.7, y = 61.3, z = 383.1, r = 82, n = 1, alt = true }, { x = 61, y = 56.9, z = 384.6, r = 82, n = 1, alt = true }, { x = 74.8, y = 48.1, z = 401.2, r = 82, n = 1, alt = true } }, spread = true },
+						{ t = "collect", quest = 412, title = "Operation Recombobulation", item = 3083, itemName = "Restabilization Cog", count = 8, oi = 1, map = 1426, x = 25.56, y = 45.29, f = "e", spots = { { x = 24.9, y = 43.8, r = 59, n = 12 }, { x = 26.6, y = 43, r = 39, n = 6 }, { x = 25, y = 40.3, r = 54, n = 6 }, { x = 27.1, y = 36.5, r = 73, n = 15 } }, note = "{item:3083}: Leper Gnomes", from = "Leper Gnome", fromKind = "npc", fromAlso = "Gibblewilt", fromId = 1211, fromAlsoId = 8503, fromNpcs = { { npc = 1211, npcName = "Leper Gnome" }, { npc = 8503, npcName = "Gibblewilt" } } },
+						{ t = "collect", quest = 412, title = "Operation Recombobulation", item = 3084, itemName = "Gyromechanic Gear", count = 8, oi = 2, map = 1426, x = 25.56, y = 45.29, f = "e", spots = { { x = 24.9, y = 43.8, r = 59, n = 12 }, { x = 26.6, y = 43, r = 39, n = 6 }, { x = 25, y = 40.3, r = 54, n = 6 }, { x = 27.1, y = 36.5, r = 73, n = 15 } }, note = "{item:3084}: Leper Gnomes", from = "Leper Gnome", fromKind = "npc", fromAlso = "Gibblewilt", fromId = 1211, fromAlsoId = 8503, fromNpcs = { { npc = 1211, npcName = "Leper Gnome" }, { npc = 8503, npcName = "Gibblewilt" } } },
+					},
+				},
+				{
+					title = "{npc:1374}",
+					goals = {
+						{ t = "turnin", quest = 319, title = "A Favor for Evershine", npc = 1374, npcName = "Rejold Barleybrew", map = 1426, x = 30.19, y = 45.73, z = 394.3, f = "e" },
+						{ t = "accept", quest = 320, title = "Return to Bellowfiz", npc = 1374, npcName = "Rejold Barleybrew", minLevel = 2, qlvl = 8, pre = { 319 }, preTitles = { [319] = "A Favor for Evershine" }, map = 1426, x = 30.19, y = 45.73, z = 394.3, f = "e" },
+					},
+				},
+				{
+					title = "{quest:98326}",
+					goals = {
+						{ t = "goto", text = "{quest:313}", map = 1426, x = 42.57, y = 54.68 },
+						{ t = "collect", quest = 98326, title = "Frosthowl", item = 280426, itemName = "Sack of Fish", count = 1, oi = 1, map = 1426, x = 39.33, y = 48.79, f = "e", from = "Frosthowl", fromKind = "npc", fromId = 271587, fromNpcs = { { npc = 271587, npcName = "Frosthowl" } } },
+					},
+				},
+				{
+					title = "Kharanos",
+					note = "{npc:1373} guards the {item:2686} barrels in the distillery basement. Buy a {item:2686} from {npc:1247}, click the guarded barrel, then hand the ale to {npc:1373} from his quest window (there is no quest to accept); after that, the unguarded barrel takes the Barleybrew Scalder.",
+					goals = {
+						{ t = "turnin", quest = 287, title = "Frostmane Hold", npc = 1252, npcName = "Senir Whitebeard", map = 1426, x = 46.73, y = 53.83, z = 396.8, f = "e" },
+						{ t = "accept", quest = 291, title = "The Reports", npc = 1252, npcName = "Senir Whitebeard", minLevel = 1, qlvl = 10, preAll = { 287, 98323 }, preTitles = { [287] = "Frostmane Hold", [98323] = "Secure the Mountain" }, map = 1426, x = 46.73, y = 53.83, z = 396.8, f = "e", note = "{npc:1252}: {npc:1274} in {zone:1455} takes it" },
+						{ t = "buy", npc = 1247, npcName = "Innkeeper Belm", item = 2686, itemName = "Thunder Ale", count = 1, map = 1426, x = 47.38, y = 52.52, z = 399.7, f = "e", note = "{item:2686}, from {npc:1247} in the distillery; upstairs" },
+						{ t = "turnin", quest = 403, title = "Guarded Thunderbrew Barrel", object = 269, objName = "Guarded Thunder Ale Barrel", qlvl = 1, map = 1426, x = 47.72, y = 52.7, z = 393, f = "e", note = "The {object:269} in the basement", direct = true },
+						{ t = "turnin", quest = 308, title = "Distracting Jarven", npc = 1373, npcName = "Jarven Thunderbrew", qlvl = 7, map = 1426, x = 47.65, y = 52.66, z = 392.4, f = "e", note = "{npc:1373}, beside the barrel; below ground", direct = true },
+						{ t = "turnin", quest = 310, title = "Bitter Rivals", object = 270, objName = "Unguarded Thunder Ale Barrel", map = 1426, x = 47.72, y = 52.7, z = 393, f = "e", note = "The {object:270} in the distillery; below ground" },
+						{ t = "accept", quest = 311, title = "Return to Marleth", object = 270, objName = "Unguarded Thunder Ale Barrel", minLevel = 2, qlvl = 7, pre = { 310 }, preTitles = { [310] = "Bitter Rivals" }, map = 1426, x = 47.72, y = 52.7, z = 393, f = "e" },
+						{ t = "train", class = true, candidates = { candidateRecords[13], candidateRecords[11], candidateRecords[15], candidateRecords[14], candidateRecords[12], candidateRecords[16], candidateRecords[10], candidateRecords[9], candidateRecords[17], candidateRecords[18], candidateRecords[22], candidateRecords[2], candidateRecords[7], candidateRecords[1], candidateRecords[3], candidateRecords[4], candidateRecords[5], candidateRecords[82], candidateRecords[8], candidateRecords[83], candidateRecords[20], candidateRecords[6], candidateRecords[23], candidateRecords[24], candidateRecords[25], candidateRecords[26], candidateRecords[33], candidateRecords[34], candidateRecords[35], candidateRecords[36], candidateRecords[29], candidateRecords[27], candidateRecords[37], candidateRecords[38], candidateRecords[39], candidateRecords[28], candidateRecords[30], candidateRecords[32], candidateRecords[31], candidateRecords[84], candidateRecords[41], candidateRecords[43], candidateRecords[46], candidateRecords[48], candidateRecords[47], candidateRecords[42], candidateRecords[44], candidateRecords[45], candidateRecords[49], candidateRecords[50], candidateRecords[51], candidateRecords[52], candidateRecords[53], candidateRecords[54], candidateRecords[55], candidateRecords[56], candidateRecords[57], candidateRecords[58], candidateRecords[59], candidateRecords[60], candidateRecords[61], candidateRecords[62], candidateRecords[63], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68], candidateRecords[69], candidateRecords[70], candidateRecords[71], candidateRecords[72], candidateRecords[73], candidateRecords[74], candidateRecords[75], candidateRecords[76], candidateRecords[77], candidateRecords[78], candidateRecords[79], candidateRecords[80], candidateRecords[81] } },
+						{ t = "turnin", quest = 412, title = "Operation Recombobulation", npc = 1269, npcName = "Razzle Sprysprocket", map = 1426, x = 45.85, y = 49.37, z = 395.4, f = "e", note = "{npc:1269}, below ground" },
+					},
+				},
+				{
+					title = "{item:2676}",
+					note = "The {item:2676} grows in baskets up on Shimmer Ridge, the snowy slope north of the road between Kharanos and Brewnall: climb from the road west of Kharanos. The Frostmane Seers camped on the ridge drop it too.",
+					goals = {
+						{ t = "collect", quest = 315, title = "The Perfect Stout", item = 2676, itemName = "Shimmerweed", count = 6, oi = 1, map = 1426, x = 42.1, y = 45.52, f = "e", spots = { { x = 41.3, y = 44.5, r = 72, n = 12 }, { x = 41.9, y = 35.3, r = 68, n = 20 } }, from = "Shimmerweed Basket", fromKind = "object", fromId = 276, fromNpcs = { { npc = 1397, npcName = "Frostmane Seer" } } },
+					},
+				},
+				{
+					title = "Brewnall Village",
+					goals = {
+						{ t = "turnin", quest = 315, title = "The Perfect Stout", npc = 1374, npcName = "Rejold Barleybrew", map = 1426, x = 30.19, y = 45.73, z = 394.3, f = "e" },
+						{ t = "accept", quest = 413, title = "Shimmer Stout", npc = 1374, npcName = "Rejold Barleybrew", minLevel = 8, qlvl = 10, pre = { 315 }, preTitles = { [315] = "The Perfect Stout" }, map = 1426, x = 30.19, y = 45.73, z = 394.3, f = "e" },
+						{ t = "turnin", quest = 311, title = "Return to Marleth", npc = 1375, npcName = "Marleth Barleybrew", map = 1426, x = 30.19, y = 45.53, z = 394.4, f = "e" },
+						{ t = "turnin", quest = 98326, title = "Frosthowl", npc = 8508, npcName = "Gretta Ganter", map = 1426, x = 31.53, y = 44.65, z = 388.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:1266}",
+					note = "{npc:1266} camps in Chill Breeze Valley, south of the road back east from Brewnall to Kharanos. His meats are in the locker in {npc:1271}'s cave, east of his camp. {npc:1271} is an elite yeti: wait out of sight until he wanders off on his patrol, then take the meats and leave before he comes back. You don't need to fight him.",
+					goals = {
+						{ t = "accept", quest = 312, title = "Tundra MacGrann's Stolen Stash", npc = 1266, npcName = "Tundra MacGrann", minLevel = 7, qlvl = 12, map = 1426, x = 34.57, y = 51.65, z = 483.9, f = "e" },
+						{ t = "collect", quest = 312, title = "Tundra MacGrann's Stolen Stash", item = 2667, itemName = "MacGrann's Dried Meats", count = 1, oi = 1, map = 1426, x = 38.51, y = 53.93, f = "e", note = "{item:2667}: the meat locker; below ground", from = "MacGrann's Meat Locker", fromKind = "object", fromId = 272 },
+						{ t = "turnin", quest = 312, title = "Tundra MacGrann's Stolen Stash", npc = 1266, npcName = "Tundra MacGrann", map = 1426, x = 34.57, y = 51.65, z = 483.9, f = "e" },
+					},
+				},
+				{
+					title = "Kharanos",
+					note = "Back east through Kharanos: the class quests here wait for level 10.",
+					goals = {
+						{ t = "level", level = 10, only = { classes = { "HUNTER" } } },
+						{ t = "level", level = 10, only = { classes = { "SHAMAN" } } },
+						{ t = "accept", quest = 94449, title = "Call of Fire", npc = 258113, npcName = "Ingrid Dunwald", minLevel = 10, qlvl = 10, map = 1426, x = 47.58, y = 51.95, f = "e", only = { classes = { "SHAMAN" } }, note = "{npc:258113}: {npc:257597} by the South Gate takes it" },
+						{ t = "accept", quest = 94824, title = "Confounding Flash", npc = 1226, npcName = "Maxan Anvol", minLevel = 10, qlvl = 10, closedBy = { 94817, 94821, 94822, 94823, 94825, 94826 }, preTitles = { [94817] = "Confounding Flash", [94821] = "Confounding Flash", [94822] = "Confounding Flash", [94823] = "Confounding Flash", [94825] = "Confounding Flash", [94826] = "Confounding Flash" }, map = 1426, x = 47.34, y = 52.19, z = 399.7, f = "e", only = { classes = { "PRIEST" }, races = { "Gnome" } }, note = "{npc:1226}: {npc:258785} in {zone:1455} takes it" },
+					},
+				},
+				{
+					title = "Steelgrill's Depot",
+					note = "Follow the road north-east from Kharanos to the depot: the whole east of {zone:1426} is one sweep from here.",
+					goals = {
+						{ t = "turnin", quest = 320, title = "Return to Bellowfiz", npc = 1378, npcName = "Pilot Bellowfiz", map = 1426, x = 49.43, y = 48.41, z = 393.9, f = "e" },
+						{ t = "accept", quest = 96408, title = "A Visitor to Dun Morogh", npc = 1376, npcName = "Beldin Steelgrill", minLevel = 9, qlvl = 13, closedBy = { 96392 }, preTitles = { [96392] = "Farsen's Watch" }, map = 1426, x = 50.44, y = 49.09, z = 394.4, f = "e" },
+					},
+				},
+				{
+					title = "Misty Pine Refuge",
+					note = "Follow the road east past the depot to Misty Pine Refuge.",
+					goals = {
+						{ t = "turnin", quest = 99158, title = "Dawn in the Mountains", npc = 1253, npcName = "Father Gavin", map = 1426, x = 57.73, y = 44.88, z = 395, f = "e" },
+						{ t = "accept", quest = 99159, title = "Finding Warmth", npc = 1253, npcName = "Father Gavin", minLevel = 5, qlvl = 8, map = 1426, x = 57.73, y = 44.88, z = 395, f = "e" },
+					},
+				},
+				{
+					title = "Firewood",
+					note = "The firewood lies in the snow around the frozen lake by the refuge.",
+					goals = {
+						{ t = "collect", quest = 99159, title = "Finding Warmth", item = 286339, itemName = "Mostly Dry Firewood", count = 14, oi = 1, map = 1426, x = 57.4, y = 46.4, f = "e", spots = { { x = 57.5, y = 47.5, r = 57, n = 2 }, { x = 54.9, y = 46.6, r = 83, n = 4 }, { x = 51.1, y = 51, r = 67, n = 4 }, { x = 57, y = 53.3, r = 82, n = 8 }, { x = 60.1, y = 53, r = 57, n = 1 }, { x = 58.8, y = 57.6, r = 60, n = 4 } }, spread = true, from = "Fallen Log", fromKind = "object", fromId = 694934 },
+					},
+				},
+				{
+					title = "{npc:1253}",
+					goals = {
+						{ t = "turnin", quest = 99159, title = "Finding Warmth", npc = 1253, npcName = "Father Gavin", map = 1426, x = 57.73, y = 44.88, z = 395, f = "e" },
+						{ t = "accept", quest = 99160, title = "Rime's Wrath", npc = 1253, npcName = "Father Gavin", minLevel = 5, qlvl = 8, pre = { 99159 }, preTitles = { [99159] = "Finding Warmth" }, map = 1426, x = 57.73, y = 44.88, z = 395, f = "e" },
+						{ t = "accept", quest = 99162, title = "Treacherous Cold", npc = 1253, npcName = "Father Gavin", minLevel = 5, qlvl = 8, pre = { 99159 }, preTitles = { [99159] = "Finding Warmth" }, map = 1426, x = 57.73, y = 44.88, z = 395, f = "e" },
+					},
+				},
+				{
+					title = "{npc:276003} on the way",
+					along = "q99160",
+					goals = {
+						{ t = "kill", quest = 99160, title = "Rime's Wrath", target = "Minor Ice Elemental", npc = 276003, count = 10, oi = 1, map = 1426, x = 57.97, y = 45.36, f = "e", spots = { { x = 58, y = 45.5, r = 72, n = 7 }, { x = 57.3, y = 43.2, r = 58, n = 9 }, { x = 56.3, y = 46.5, r = 56, n = 10 }, { x = 57.1, y = 48.4, r = 49, n = 6 }, { x = 55.2, y = 44.6, r = 42, n = 6 }, { x = 55.3, y = 42.4, r = 47, n = 5 }, { x = 58.4, y = 51.6, r = 16, n = 2, alt = true }, { x = 53.7, y = 46.7, r = 59, n = 10, alt = true }, { x = 52.9, y = 43.8, r = 68, n = 10, alt = true }, { x = 52.8, y = 41.5, r = 15, n = 2, alt = true }, { x = 50.5, y = 41.4, r = 15, n = 1, alt = true } }, optional = true, note = "{npc:276003} along the way to {npc:1253}" },
+					},
+				},
+				{
+					title = "Misty Pine Refuge: kill these as you meet them",
+					note = "The three rifles lie in the snow around the frozen lake by the refuge. Minor Ice Elementals drift around the lake and along the way: kill them as you go for {quest:99160}.\nFinish off the Minor Ice Elementals around the small lake just west of the refuge if you are still short.",
+					goals = {
+						{ t = "collect", quest = 99162, title = "Treacherous Cold", item = 286359, itemName = "Sunhammer's Rifle", oi = 2, map = 1426, x = 59.9, y = 50.1, f = "e", from = "Sunhammer's Rifle", fromKind = "object", fromId = 695223 },
+						{ t = "collect", quest = 99162, title = "Treacherous Cold", item = 286358, itemName = "Coalbeard's Rifle", oi = 3, map = 1426, x = 52.1, y = 44.04, f = "e", from = "Coalbeard's Rifle", fromKind = "object", fromId = 695222 },
+						{ t = "collect", quest = 99162, title = "Treacherous Cold", item = 286360, itemName = "Stoneanvil's Rifle", oi = 1, map = 1426, x = 53.16, y = 58.78, f = "e", from = "Stoneanvil's Rifle", fromKind = "object", fromId = 695277 },
+						{ t = "kill", quest = 99160, title = "Rime's Wrath", target = "Minor Ice Elemental", npc = 276003, count = 10, oi = 1, map = 1426, x = 56.37, y = 44.73, note = "{npc:276003}, around the small lake" },
+					},
+				},
+				{
+					title = "{npc:1253}",
+					label = "q99160",
+					goals = {
+						{ t = "turnin", quest = 99162, title = "Treacherous Cold", npc = 1253, npcName = "Father Gavin", map = 1426, x = 57.73, y = 44.88, z = 395, f = "e" },
+						{ t = "turnin", quest = 99160, title = "Rime's Wrath", npc = 1253, npcName = "Father Gavin", map = 1426, x = 57.73, y = 44.88, z = 395, f = "e" },
+						{ t = "accept", quest = 99161, title = "Rime's Wrath", npc = 1253, npcName = "Father Gavin", minLevel = 5, qlvl = 8, pre = { 99160 }, preTitles = { [99160] = "Rime's Wrath" }, map = 1426, x = 57.73, y = 44.88, z = 395, f = "e" },
+					},
+				},
+				{
+					title = "{item:286325}",
+					note = "{item:286325} is by the frozen lake, among the ice elementals.",
+					goals = {
+						{ t = "collect", quest = 99161, title = "Rime's Wrath", item = 286325, itemName = "Avala's Core", oi = 1, map = 1426, x = 58.34, y = 42.06, f = "e", from = "Avala", fromKind = "npc", fromId = 276009, fromNpcs = { { npc = 276009, npcName = "Avala" } } },
+					},
+				},
+				{
+					title = "{npc:1253}",
+					goals = {
+						{ t = "turnin", quest = 99161, title = "Rime's Wrath", npc = 1253, npcName = "Father Gavin", map = 1426, x = 57.73, y = 44.88, z = 395, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1426}",
+					only = { classes = { "HUNTER" } },
+					goals = {
+						{ t = "goto", text = "{zone:1426}", map = 1426, x = 45.8, y = 53, f = "e" },
+					},
+				},
+				{
+					title = "{npc:1265}",
+					goals = {
+						{ t = "accept", quest = 95212, title = "Never Saddle on Quality", npc = 1265, npcName = "Rudra Amberstill", minLevel = 7, qlvl = 10, map = 1426, x = 63.08, y = 49.85, z = 404.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:1265}",
+					when = { { k = "group", q = 314 } },
+					goals = {
+						{ t = "accept", quest = 314, title = "Protecting the Herd", npc = 1265, npcName = "Rudra Amberstill", minLevel = 6, qlvl = 12, map = 1426, x = 63.08, y = 49.85, z = 404.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:264936}",
+					note = "Farsen camps on the ridge overlooking the {object:149024} from the west. Talk to him for his farsight.",
+					goals = {
+						{ t = "turnin", quest = 96408, title = "A Visitor to Dun Morogh", npc = 264936, npcName = "Earthseer Farsen", map = 1426, x = 64.87, y = 58.47, f = "e" },
+						{ t = "accept", quest = 96392, title = "Farsen's Watch", npc = 264936, npcName = "Earthseer Farsen", minLevel = 9, qlvl = 13, map = 1426, x = 64.87, y = 58.47, f = "e" },
+					},
+				},
+				{
+					title = "{quest:96392}",
+					goals = {
+						{ t = "kill", quest = 96392, title = "Farsen's Watch", target = "Earthseer Farsen", npc = 264936, oi = 1, map = 1426, x = 64.9, y = 58.5, f = "e" },
+					},
+				},
+				{
+					title = "{npc:264936}",
+					goals = {
+						{ t = "turnin", quest = 96392, title = "Farsen's Watch", npc = 264936, npcName = "Earthseer Farsen", map = 1426, x = 64.87, y = 58.47, f = "e" },
+						{ t = "accept", quest = 96390, title = "Nip 'Em in the Bud", npc = 264936, npcName = "Earthseer Farsen", minLevel = 9, qlvl = 13, pre = { 96392 }, preTitles = { [96392] = "Farsen's Watch" }, map = 1426, x = 64.87, y = 58.47, f = "e" },
+					},
+				},
+				{
+					title = "{object:149024}",
+					note = "The quarry lies just east of Farsen's ridge.",
+					goals = {
+						{ t = "accept", quest = 433, title = "The Public Servant", npc = 1977, npcName = "Senator Mehr Stonehallow", minLevel = 6, qlvl = 11, map = 1426, x = 68.67, y = 55.97, z = 383.3, f = "e", note = "{npc:1977}, in the quarry" },
+						{ t = "accept", quest = 95217, title = "The Quarry's Smith", npc = 1698, npcName = "Frast Dokner", minLevel = 7, qlvl = 10, map = 1426, x = 69, y = 55.89, z = 383.2, f = "e", optional = true, profLine = 164, profName = "Blacksmithing", profRank = 1, note = "{npc:1698}: blacksmiths only" },
+						{ t = "accept", quest = 432, title = "Those Blasted Troggs!", npc = 1254, npcName = "Foreman Stonebrow", minLevel = 5, qlvl = 9, map = 1426, x = 69.08, y = 56.33, z = 386.1, f = "e" },
+					},
+				},
+				{
+					title = "The quarry troggs",
+					note = "Rockjaw Skullthumpers fill the quarry; Rockjaw Ambushers by Helm's Bed Lake drop the {item:268548}.",
+					goals = {
+						{ t = "kill", quest = 432, title = "Those Blasted Troggs!", target = "Rockjaw Skullthumper", npc = 1115, count = 6, oi = 1, map = 1426, x = 69.65, y = 57.08, z = 359, f = "e", spots = { { x = 69.9, y = 58.2, z = 358.9, r = 63, n = 10 }, { x = 71, y = 55.6, z = 360.8, r = 15, n = 2 }, { x = 67.9, y = 59.6, z = 358.6, r = 53, n = 8 }, { x = 70.6, y = 53.3, z = 363.4, r = 34, n = 5 }, { x = 72.8, y = 52.6, z = 355.5, r = 34, n = 7 }, { x = 71.6, y = 50.9, r = 33, n = 4 } } },
+					},
+				},
+				{
+					title = "{object:149024}",
+					goals = {
+						{ t = "turnin", quest = 432, title = "Those Blasted Troggs!", npc = 1254, npcName = "Foreman Stonebrow", map = 1426, x = 69.08, y = 56.33, z = 386.1, f = "e" },
+					},
+				},
+				{
+					title = "The quarry troggs",
+					goals = {
+						{ t = "collect", item = 268548, itemName = "Empty Powder Keg", map = 1426, x = 69.65, y = 57.08, f = "e", spots = { { x = 70, y = 58.2, r = 41, n = 9 }, { x = 68, y = 59.4, r = 54, n = 9 }, { x = 70.6, y = 53, r = 40, n = 13 }, { x = 71.9, y = 51.1, r = 45, n = 13 }, { x = 73.4, y = 51.8, r = 40, n = 4 }, { x = 72.7, y = 55.3, r = 40, n = 3 }, { x = 74.7, y = 56.2, r = 40, n = 5 }, { x = 75.7, y = 58.2, r = 40, n = 2 }, { x = 76.3, y = 61, r = 40, n = 3 }, { x = 77.9, y = 59.3, r = 49, n = 7 }, { x = 79.9, y = 57.6, r = 40, n = 3 }, { x = 79.5, y = 54.6, r = 40, n = 7 }, { x = 70.9, y = 55.3, r = 46, n = 8, alt = true }, { x = 72.8, y = 53.2, r = 40, n = 8, alt = true } }, spread = true, optional = true, fromNpcs = { { npc = 1115, npcName = "Rockjaw Skullthumper" }, { npc = 1116, npcName = "Rockjaw Ambusher" }, { npc = 1117, npcName = "Rockjaw Bonesnapper" }, { npc = 1118, npcName = "Rockjaw Backbreaker" } } },
+						{ t = "accept", quest = 95213, title = "Stolen Blasting Powder", item = 268548, itemName = "Empty Powder Keg", minLevel = 7, qlvl = 10, optional = true },
+					},
+				},
+				{
+					title = "{npc:1256}",
+					goals = {
+						{ t = "turnin", quest = 95213, title = "Stolen Blasting Powder", npc = 1256, npcName = "Quarrymaster Thesten", map = 1426, x = 69.16, y = 54.8, z = 383.4, f = "e", optional = true },
+						{ t = "accept", quest = 95214, title = "Stolen Blasting Powder", npc = 1256, npcName = "Quarrymaster Thesten", minLevel = 7, qlvl = 10, pre = { 95213 }, preTitles = { [95213] = "Stolen Blasting Powder" }, map = 1426, x = 69.16, y = 54.8, z = 383.4, f = "e", optional = true },
+					},
+				},
+				{
+					title = "Helm's Bed Lake",
+					note = "Rockjaw Ambushers by Helm's Bed Lake, north of the quarry, and Rockjaw Backbreakers further east drop the {quest:95214}. Rockjaw Bonesnappers prowl the quarry and the lake; Dark Iron Spies sneak around the lake shore. One spy drops the {item:274268}.",
+					goals = {
+						{ t = "collect", quest = 95214, title = "Stolen Blasting Powder", item = 267415, itemName = "Stolen Blasting Powder", count = 16, oi = 1, map = 1426, x = 70.79, y = 53.08, f = "e", spots = { { x = 70.8, y = 53.2, r = 45, n = 3 }, { x = 72.7, y = 55, r = 39, n = 4 }, { x = 73.6, y = 51.9, r = 30, n = 3 }, { x = 74.6, y = 56.3, r = 15, n = 2 }, { x = 75.7, y = 58.2, r = 19, n = 2 }, { x = 77.2, y = 59, r = 27, n = 2 }, { x = 79.5, y = 54.7, r = 32, n = 4, alt = true }, { x = 80, y = 57.4, r = 33, n = 2, alt = true } }, fromNpcs = { { npc = 1116, npcName = "Rockjaw Ambusher" }, { npc = 1118, npcName = "Rockjaw Backbreaker" } } },
+					},
+				},
+				{
+					title = "{object:149024}",
+					when = { { k = "onquest", q = { 95214 } } },
+					goals = {
+						{ t = "turnin", quest = 95214, title = "Stolen Blasting Powder", npc = 1256, npcName = "Quarrymaster Thesten", map = 1426, x = 69.16, y = 54.8, z = 383.4, f = "e" },
+					},
+				},
+				{
+					title = "{npc:1117} on the way",
+					along = "q433",
+					goals = {
+						{ t = "kill", quest = 433, title = "The Public Servant", target = "Rockjaw Bonesnapper", npc = 1117, count = 10, oi = 1, map = 1426, x = 70.63, y = 54.61, z = 360.8, f = "e", spots = { { x = 70.8, y = 55.4, z = 360.8, r = 42, n = 5 }, { x = 70.6, y = 52.8, z = 350.2, r = 40, n = 6 }, { x = 71.9, y = 50.9, z = 339.6, r = 43, n = 7 }, { x = 72.8, y = 53.1, r = 40, n = 3 }, { x = 74.8, y = 56.1, z = 399.7, r = 40, n = 3 }, { x = 76.3, y = 61, r = 40, n = 3 }, { x = 78.1, y = 59.4, z = 401.9, r = 42, n = 5 }, { x = 79.8, y = 58.1, z = 401.7, r = 40, n = 1 }, { x = 79.6, y = 54.6, z = 401.2, r = 40, n = 3 } }, spread = true, note = "{npc:1117} along the way to {object:149024}" },
+					},
+				},
+				{
+					title = "{zone:1426}: kill these as you meet them",
+					note = "Snow Leopards and boars roam the snow between the ranch and the quarry. Blacksmiths: Copper Bars come from smelting {item:2770} or the trade vendors.",
+					goals = {
+						{ t = "collect", quest = 95212, title = "Never Saddle on Quality", item = 267414, itemName = "Pristine Leopard Pelt", count = 6, oi = 1, map = 1426, x = 70.19, y = 53.96, f = "e", spots = { { x = 70.5, y = 53.1, r = 94, n = 9 }, { x = 72.9, y = 54.6, r = 61, n = 12 }, { x = 72.3, y = 57.7, r = 41, n = 4 }, { x = 72.6, y = 61, r = 60, n = 12 }, { x = 75.7, y = 61.1, r = 73, n = 11 }, { x = 76.8, y = 58.4, r = 54, n = 10 }, { x = 78.3, y = 60, r = 49, n = 7 }, { x = 79.3, y = 57.3, r = 50, n = 10 }, { x = 78.9, y = 54.3, r = 51, n = 7 }, { x = 81.5, y = 54, r = 40, n = 2 }, { x = 75.4, y = 53.3, r = 40, n = 6 }, { x = 64.9, y = 58.5, r = 40, n = 1 }, { x = 73.9, y = 52.1, r = 71, n = 9, alt = true }, { x = 75.3, y = 55.8, r = 68, n = 11, alt = true }, { x = 77.7, y = 55.9, r = 52, n = 8, alt = true }, { x = 81, y = 55.6, r = 49, n = 6, alt = true }, { x = 81.1, y = 57.3, r = 40, n = 3, alt = true } }, spread = true, from = "Elder Snow Leopard", fromKind = "npc", fromId = 260157, fromNpcs = { { npc = 260157, npcName = "Elder Snow Leopard" } } },
+						{ t = "collect", quest = 95217, title = "The Quarry's Smith", item = 267416, itemName = "Toughened Boar Hide", count = 4, oi = 2, map = 1426, x = 71.17, y = 54.04, f = "e", spots = { { x = 72.9, y = 54.1, r = 86, n = 3 }, { x = 74.6, y = 49.6, r = 76, n = 4 }, { x = 79.6, y = 47.8, r = 76, n = 3 }, { x = 80.6, y = 43.9, r = 76, n = 2 }, { x = 82.1, y = 35.8, r = 103, n = 6 }, { x = 85.6, y = 49.2, r = 76, n = 4 }, { x = 80.9, y = 53.5, r = 83, n = 3 }, { x = 79.3, y = 57.6, r = 76, n = 3 }, { x = 75.7, y = 57.8, r = 76, n = 1 }, { x = 72.9, y = 60.7, r = 103, n = 3 } }, spread = true, optional = true, profLine = 164, profName = "Blacksmithing", profRank = 1, from = "Scarred Crag Boar", fromKind = "npc", fromId = 1689, fromNpcs = { { npc = 1689, npcName = "Scarred Crag Boar" } } },
+					},
+				},
+				{
+					title = "{object:149024}",
+					when = { { k = "onquest", q = { 95217 } } },
+					goals = {
+						{ t = "turnin", quest = 95217, title = "The Quarry's Smith", npc = 1698, npcName = "Frast Dokner", map = 1426, x = 69, y = 55.89, z = 383.2, f = "e", optional = true, profLine = 164, profName = "Blacksmithing", profRank = 1 },
+					},
+				},
+				{
+					title = "Helm's Bed Lake",
+					goals = {
+						{ t = "kill", quest = 96390, title = "Nip 'Em in the Bud", target = "Dark Iron Spy", npc = 6123, count = 10, oi = 1, map = 1426, x = 76.91, y = 59.95, z = 401.2, f = "e", spots = { { x = 77.5, y = 59.9, r = 32, n = 4 }, { x = 77.6, y = 61.8, z = 408.2, r = 44, n = 8 } } },
+						{ t = "collect", item = 274268, itemName = "Dark Iron Map", map = 1426, x = 76.91, y = 59.95, f = "e", spots = { { x = 77.4, y = 60.1, r = 37, n = 5 }, { x = 77.7, y = 62, r = 47, n = 8 } }, optional = true, fromNpcs = { { npc = 6123, npcName = "Dark Iron Spy" }, { npc = 6124, npcName = "Captain Beld" } } },
+						{ t = "accept", quest = 96391, title = "Underground Map", item = 274268, itemName = "Dark Iron Map", minLevel = 9, qlvl = 15, optional = true },
+					},
+				},
+				{
+					title = "{object:149024}",
+					label = "q433",
+					goals = {
+						{ t = "turnin", quest = 433, title = "The Public Servant", npc = 1977, npcName = "Senator Mehr Stonehallow", map = 1426, x = 68.67, y = 55.97, z = 383.3, f = "e" },
+					},
+				},
+				{
+					title = "{quest:314}",
+					note = "These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:1388} is a level 12 elite: most classes solo it at level 14, but you may need help. Skip it if you are alone: the route has you grind the XP back.",
+					when = { { k = "group", q = 314 } },
+					goals = {
+						{ t = "collect", quest = 314, title = "Protecting the Herd", item = 3627, itemName = "Fang of Vagash", count = 1, oi = 1, map = 1426, x = 62.6, y = 46, f = "e", note = "Below ground", from = "Vagash", fromKind = "npc", fromRank = 1, fromId = 1388, fromNpcs = { { npc = 1388, npcName = "Vagash" } }, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{npc:1265}",
+					note = "On the road back west to {zone:1455}.",
+					goals = {
+						{ t = "turnin", quest = 95212, title = "Never Saddle on Quality", npc = 1265, npcName = "Rudra Amberstill", map = 1426, x = 63.08, y = 49.85, z = 404.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:1265}",
+					when = { { k = "group", q = 314 } },
+					goals = {
+						{ t = "turnin", quest = 314, title = "Protecting the Herd", npc = 1265, npcName = "Rudra Amberstill", map = 1426, x = 63.08, y = 49.85, z = 404.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:264936}",
+					goals = {
+						{ t = "turnin", quest = 96390, title = "Nip 'Em in the Bud", npc = 264936, npcName = "Earthseer Farsen", map = 1426, x = 64.87, y = 58.47, f = "e" },
+						{ t = "turnin", quest = 96391, title = "Underground Map", npc = 264936, npcName = "Earthseer Farsen", map = 1426, x = 64.87, y = 58.47, f = "e", optional = true },
+					},
+				},
+				{
+					title = "Level 11.41",
+					note = "If you skipped {quest:314}, grind here to level 11.41 to stay on the route's plan.",
+					when = { { k = "group", neg = true, q = 314 }, { k = "level", op = "<", n = 11, frac = 0.41 } },
+					goals = {
+						{ t = "goto", text = "{npc:260157}", map = 1426, x = 70.9, y = 53.3, f = "e" },
+						{ t = "level", level = 11, frac = 0.41, note = "grind on {npc:260157}" },
+					},
+				},
+				{
+					title = "South Gate Outpost",
+					note = "Follow the road all the way east to the South Gate Outpost at the {zone:1432} tunnel.",
+					goals = {
+						{ t = "turnin", quest = 413, title = "Shimmer Stout", npc = 1959, npcName = "Mountaineer Barleybrew", map = 1426, x = 86.28, y = 48.81, z = 400.7, f = "e" },
+					},
+				},
+				{
+					title = "{npc:257597}",
+					note = "{npc:257597} waits in a cave above the farm north-west of the South Gate Outpost; the path up starts behind the farm.",
+					only = { classes = { "SHAMAN" } },
+					goals = {
+						{ t = "turnin", quest = 94449, title = "Call of Fire", npc = 257597, npcName = "Bruegs Kindleborn", map = 1426, x = 87.94, y = 44.8, f = "e" },
+						{ t = "accept", quest = 94465, title = "Call of Fire", npc = 257597, npcName = "Bruegs Kindleborn", minLevel = 10, qlvl = 11, pre = { 94449 }, preTitles = { [94449] = "Call of Fire" }, map = 1426, x = 87.94, y = 44.8, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1432}",
+					only = { classes = { "SHAMAN" } },
+					goals = {
+						{ t = "goto", text = "{zone:1432}", map = 1432, x = 32.2, y = 66, f = "e" },
+					},
+				},
+				{
+					title = "{npc:257808}",
+					note = "Go through the tunnel into {zone:1432}. Just past it, a path marked by stones climbs the hills on the right of the road north to {npc:257808}'s camp.",
+					only = { classes = { "SHAMAN" } },
+					goals = {
+						{ t = "turnin", quest = 94465, title = "Call of Fire", npc = 257808, npcName = "Braldir Ashmantle", map = 1432, x = 32.17, y = 65.97, f = "e" },
+						{ t = "accept", quest = 94466, title = "Call of Fire", npc = 257808, npcName = "Braldir Ashmantle", minLevel = 10, qlvl = 14, pre = { 94465 }, preTitles = { [94465] = "Call of Fire" }, map = 1432, x = 32.17, y = 65.97, f = "e" },
+					},
+				},
+				{
+					title = "{item:5026} and the {item:6652}",
+					note = "Stonesplinter Seers (level 13) stand among the troggs in the south of Stonesplinter Valley, south of {npc:257808}; Tunnel Rat Geomancers (level 12) work the Silver Stream Mine at the north end of the loch. The troggs come in packs and some throw from range: pull one at a time.",
+					only = { classes = { "SHAMAN" } },
+					goals = {
+						{ t = "collect", quest = 94466, title = "Call of Fire", item = 6652, itemName = "Reagent Pouch", count = 1, oi = 2, map = 1432, x = 36.75, y = 77.75, f = "e", spots = { { x = 36.7, y = 78.7, r = 40, n = 2 }, { x = 35.4, y = 82.7, r = 48, n = 7 }, { x = 34.7, y = 88.4, r = 66, n = 10 }, { x = 28.6, y = 85.3, r = 48, n = 7 }, { x = 28.8, y = 81.3, r = 40, n = 3 }, { x = 49.2, y = 29.1, r = 43, n = 5 }, { x = 50.6, y = 24, r = 40, n = 4 }, { x = 48, y = 21.2, r = 42, n = 6 } }, spread = true, note = "{item:6652}: Stonesplinter Seers", from = "Burning Blade Cultist", fromKind = "npc", fromId = 3199, fromNpcs = { { npc = 1166, npcName = "Stonesplinter Seer" } } },
+						{ t = "collect", quest = 94466, title = "Call of Fire", item = 5026, itemName = "Fire Tar", count = 1, oi = 1, map = 1432, x = 35.55, y = 27.92, f = "e", spots = { { x = 35.8, y = 23.3, r = 49, n = 9 }, { x = 35.6, y = 27.9, r = 15, n = 1, alt = true } }, note = "{item:5026}: Tunnel Rat Geomancers", from = "Razormane Water Seeker", fromKind = "npc", fromAlso = "Razormane Thornweaver", fromId = 3267, fromAlsoId = 3268, fromNpcs = { { npc = 1174, npcName = "Tunnel Rat Geomancer" } } },
+					},
+				},
+				{
+					title = "The Fire Spirit Stone",
+					note = "{npc:257808} gives you the {item:6636}. Climb to the peak above his camp, drink the Sapta beside the Spirit Stone and defeat the {npc:5893}, then place its {item:6655} in the {object:61934}, atop the Shrine of Eternal Flame.",
+					only = { classes = { "SHAMAN" } },
+					goals = {
+						{ t = "turnin", quest = 94466, title = "Call of Fire", npc = 257808, npcName = "Braldir Ashmantle", map = 1432, x = 32.17, y = 65.97, f = "e" },
+						{ t = "accept", quest = 94467, title = "Call of Fire", npc = 257808, npcName = "Braldir Ashmantle", minLevel = 10, qlvl = 14, pre = { 94466 }, preTitles = { [94466] = "Call of Fire" }, map = 1432, x = 32.17, y = 65.97, f = "e" },
+						{ t = "use", item = 6636, itemName = "Fire Sapta", map = 1432, x = 31.9, y = 64.5, f = "e", note = "{item:6636}, beside the Spirit Stone" },
+						{ t = "collect", quest = 94467, title = "Call of Fire", item = 6655, itemName = "Glowing Ember", count = 1, oi = 1, map = 1432, x = 31.9, y = 64.5, f = "e", note = "{item:6655}: {npc:5893}", from = "Minor Manifestation of Fire", fromKind = "npc", fromId = 5893, fromNpcs = { { npc = 5893, npcName = "Minor Manifestation of Fire" } } },
+						{ t = "turnin", quest = 94467, title = "Call of Fire", object = 61934, objName = "Brazier of the Dormant Flame", map = 1432, x = 31.9, y = 64.5, f = "e" },
+						{ t = "accept", quest = 94468, title = "Call of Fire", object = 61934, objName = "Brazier of the Dormant Flame", minLevel = 10, qlvl = 14, pre = { 94467 }, preTitles = { [94467] = "Call of Fire" }, map = 1432, x = 31.9, y = 64.5, f = "e" },
+					},
+				},
+				{
+					title = "Back to {npc:257597}",
+					note = "Back through the tunnel to {npc:257597}' cave above the farm.",
+					only = { classes = { "SHAMAN" } },
+					goals = {
+						{ t = "turnin", quest = 94468, title = "Call of Fire", npc = 257597, npcName = "Bruegs Kindleborn", map = 1426, x = 87.94, y = 44.8, f = "e", note = "{npc:257597}: {npc:2523}, your {item:5176} and the {item:263412}", rewards = { items = { { item = 5176, itemName = "Fire Totem" }, { item = 263412, itemName = "Totem of Charged Flames" } } } },
+					},
+				},
+				{
+					title = "North Gate Outpost",
+					note = "{npc:1960} waits at the North Gate Outpost, north of the South Gate; the dwarven corpse lies up the pass to the west of him.",
+					goals = {
+						{ t = "accept", quest = 419, title = "The Lost Pilot", npc = 1960, npcName = "Pilot Hammerfoot", minLevel = 8, qlvl = 10, map = 1426, x = 83.89, y = 39.19, z = 400.7, f = "e" },
+						{ t = "turnin", quest = 419, title = "The Lost Pilot", object = 2059, objName = "A Dwarven Corpse", map = 1426, x = 79.67, y = 36.17, z = 404.4, f = "e" },
+						{ t = "accept", quest = 417, title = "A Pilot's Revenge", object = 2059, objName = "A Dwarven Corpse", minLevel = 8, qlvl = 11, pre = { 419 }, preTitles = { [419] = "The Lost Pilot" }, map = 1426, x = 79.67, y = 36.17, z = 404.4, f = "e" },
+						{ t = "collect", quest = 417, title = "A Pilot's Revenge", item = 3183, itemName = "Mangy Claw", count = 1, oi = 1, map = 1426, x = 78.31, y = 37.76, f = "e", note = "{item:3183}: {npc:1961}", from = "Mangeclaw", fromKind = "npc", fromId = 1961, fromNpcs = { { npc = 1961, npcName = "Mangeclaw" } } },
+						{ t = "turnin", quest = 417, title = "A Pilot's Revenge", npc = 1960, npcName = "Pilot Hammerfoot", map = 1426, x = 83.89, y = 39.19, z = 400.7, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1426}",
+					only = { classes = { "PALADIN" } },
+					goals = {
+						{ t = "goto", text = "{zone:1426}", map = 1426, x = 78.3, y = 58.1, f = "e" },
+					},
+				},
+				{
+					title = "{quest:6387}",
+					note = "Instead of walking back up to {zone:1455}, go east through the South Gate tunnel into {zone:1432} and follow the road north to Thelsamar. {npc:1681} stands on the east side of town, past the Stoutlager Inn; his errand pays for a flight back to {zone:1455}.",
+					only = { classes = { "PALADIN" } },
+					goals = {
+						{ t = "accept", quest = 6387, title = "Honor Students", npc = 1681, npcName = "Brock Stoneseeker", minLevel = 10, qlvl = 10, map = 1432, x = 37.02, y = 47.81, z = 319.6, f = "e" },
+						{ t = "turnin", quest = 6387, title = "Honor Students", npc = 1572, npcName = "Thorgrum Borrelson", map = 1432, x = 33.94, y = 50.95, z = 347.6, f = "e", note = "{npc:1572}, the gryphon master" },
+						{ t = "accept", quest = 6391, title = "Ride to Ironforge", npc = 1572, npcName = "Thorgrum Borrelson", minLevel = 10, qlvl = 10, pre = { 6387 }, preTitles = { [6387] = "Honor Students" }, map = 1432, x = 33.94, y = 50.95, z = 347.6, f = "e" },
+						{ t = "getfp", npc = 1572, npcName = "Thorgrum Borrelson", location = "Thelsamar", node = 8, map = 1432, x = 33.94, y = 50.95, z = 347.6, f = "e" },
+						{ t = "fly", location = "Ironforge", node = 6 },
+					},
+				},
+				{
+					title = "{npc:4256}",
+					only = { classes = { "PALADIN" } },
+					goals = {
+						{ t = "turnin", quest = 6391, title = "Ride to Ironforge", npc = 4256, npcName = "Golnir Bouldertoe", map = 1455, x = 51.52, y = 26.31, z = 504.5, f = "e", note = "{npc:4256}, in the {object:32372}" },
+						{ t = "accept", quest = 6388, title = "Gryth Thurden", npc = 4256, npcName = "Golnir Bouldertoe", minLevel = 10, qlvl = 10, pre = { 6391 }, preTitles = { [6391] = "Ride to Ironforge" }, map = 1455, x = 51.52, y = 26.31, z = 504.5, f = "e" },
+						{ t = "turnin", quest = 6388, title = "Gryth Thurden", npc = 1573, npcName = "Gryth Thurden", map = 1455, x = 55.5, y = 47.74, z = 502.3, f = "e", note = "{npc:1573}, the gryphon master where you landed" },
+					},
+				},
+				{
+					title = "{npc:11865}",
+					note = "While you're here: learn Two-Handed Axes from {npc:11865} ({object:32359}, 10 silver); two-handers level a Paladin fastest.",
+					only = { classes = { "PALADIN" } },
+					when = { { k = "money", op = ">=", n = 1000 }, { k = "skill", neg = true, n = 1, name = "Two-Handed Axes", skillLine = 172 } },
+					goals = {
+						{ t = "train", npc = 11865, npcName = "Buliwyf Stonehand", map = 1455, x = 61.17, y = 89.52, z = 509, f = "e" },
+					},
+				},
+				{
+					title = "Hearth to Thunderbrew Distillery",
+					goals = {
+						{ t = "hearth", location = "Thunderbrew Distillery" },
+					},
+				},
+				{
+					title = "{zone:1455}",
+					goals = {
+						{ t = "goto", text = "{zone:1455}", map = 1455, x = 72.4, y = 48.6, f = "e" },
+					},
+				},
+				{
+					title = "Inn and flight master",
+					goals = {
+						{ t = "getfp", npc = 1573, npcName = "Gryth Thurden", location = "Ironforge", node = 6, map = 1455, x = 55.5, y = 47.74, z = 502.3, f = "e" },
+					},
+				},
+				{
+					title = "The {item:6775}",
+					note = "Follow the road up to {zone:1455} and take the {object:32362}: {npc:5149}, {npc:6179} and {npc:6178} are in the {object:32386}, Tiza and Muiredon on its upper floor: the stairs up start just north-east of {npc:5149}. {npc:6175}, a beggar, wanders the city. He asks for ten {item:2589}: the troggs and trolls of {zone:1426} drop it, and the Auction House sells it.",
+					only = { classes = { "PALADIN" } },
+					goals = {
+						{ t = "level", level = 12, only = { classes = { "PALADIN" } } },
+					},
+				},
+				{
+					title = "{npc:6177}",
+					note = "Head back out of {zone:1455} and east along the road to Helm's Bed Lake. {npc:6177} lies dead by its shore: use the {item:6866} on him. The Dark Iron Spies sneaking around the lake carry the script.",
+					only = { classes = { "PALADIN" } },
+					goals = {
+						{ t = "level", level = 12, only = { classes = { "PALADIN" } } },
+					},
+				},
+				{
+					title = "{npc:6178}",
+					only = { classes = { "PALADIN" } },
+					goals = {
+						{ t = "level", level = 12, only = { classes = { "PALADIN" } } },
+					},
+				},
+				{
+					title = "{zone:1455} class quests",
+					note = "{npc:10090} is in the {object:32390}, {npc:258785} in the {object:32386}, {npc:6120} in the {object:32383}.",
+					only = { classes = { "HUNTER", "PRIEST", "WARLOCK" } },
+					goals = {
+						{ t = "turnin", quest = 94824, title = "Confounding Flash", npc = 258785, npcName = "High Priestess Mims", map = 1455, x = 24.59, y = 10, f = "e", only = { classes = { "PRIEST" }, races = { "Gnome" } }, note = "{npc:258785}: {quest:94824}" },
+						{ t = "accept", quest = 1715, title = "The Slaughtered Lamb", npc = 6120, npcName = "Lago Blackwrench", minLevel = 10, qlvl = 10, closedBy = { 1685, 1688 }, preTitles = { [1685] = "Gakin's Summons", [1688] = "Surena Caledon" }, map = 1455, x = 47.63, y = 9.26, z = 501.5, f = "e", only = { classes = { "WARLOCK" } }, note = "{npc:6120}: {npc:6122} in {zone:1453} takes it" },
+					},
+				},
+				{
+					title = "The Deeprun Tram",
+					note = "Follow the road up to {zone:1455} and train with your class trainer. The Deeprun Tram leaves from {object:171524}, in the east of the city. Ride it to {zone:1453}.",
+					goals = {
+						{ t = "accept", quest = 97263, title = "Your Package Has Arrived", object = 660964, objName = "Misplaced Packages", minLevel = 1, qlvl = 2, map = 1455, x = 72.31, y = 48.6, f = "e", optional = true, note = "{object:660964}, by the mailbox in {object:171524}" },
+						{ t = "turnin", quest = 97263, title = "Your Package Has Arrived", npc = 258098, npcName = "Eldrun Stormbreaker", map = 1455, x = 47.1, y = 13.79, f = "e", optional = true, note = "{npc:258098}, the shaman trainer, north of the {object:32372}" },
+					},
+				},
+				{
+					title = "Class trainer",
+					only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } },
+					goals = {
+						{ t = "train", class = true, only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } }, candidates = { candidateRecords[23], candidateRecords[24], candidateRecords[25], { npc = 5144, npcName = "Bink", map = 1455, x = 27.25, y = 8.3, z = 501.2, f = "e", faction = "A", classes = { "MAGE" } }, candidateRecords[82], { npc = 5148, npcName = "Beldruk Doombrow", map = 1455, x = 24.55, y = 4.47, z = 502.9, f = "e", faction = "A", classes = { "PALADIN" } }, candidateRecords[85], candidateRecords[17], candidateRecords[18], candidateRecords[16], candidateRecords[15], candidateRecords[14], candidateRecords[12], candidateRecords[13], candidateRecords[11], candidateRecords[10], candidateRecords[9], candidateRecords[2], candidateRecords[1], candidateRecords[3], candidateRecords[4], candidateRecords[7], candidateRecords[5], candidateRecords[6], candidateRecords[8], candidateRecords[86], candidateRecords[33], candidateRecords[34], candidateRecords[35], candidateRecords[36], candidateRecords[37], candidateRecords[38], candidateRecords[39], candidateRecords[29], candidateRecords[27], candidateRecords[30], candidateRecords[87], candidateRecords[32], candidateRecords[84], candidateRecords[41], candidateRecords[43], candidateRecords[46], candidateRecords[48], candidateRecords[47], candidateRecords[42], candidateRecords[44], candidateRecords[45], candidateRecords[49], candidateRecords[50], candidateRecords[51], candidateRecords[52], candidateRecords[53], candidateRecords[55], candidateRecords[56], candidateRecords[57], candidateRecords[58], candidateRecords[60], candidateRecords[61], candidateRecords[62], candidateRecords[63], candidateRecords[64], candidateRecords[66], candidateRecords[68], candidateRecords[69], candidateRecords[70], candidateRecords[71], candidateRecords[73], candidateRecords[74], candidateRecords[75], candidateRecords[76], candidateRecords[78], candidateRecords[79], candidateRecords[80], candidateRecords[81] } },
+					},
+				},
+				{
+					title = "Druid trainer",
+					only = { classes = { "DRUID" } },
+					goals = {
+						{ t = "train", class = true, only = { classes = { "DRUID" } }, note = "{npc:270459} in {zone:1416}; {zone:1426} has no druid trainer", candidates = { candidateRecords[31], candidateRecords[54], candidateRecords[59], candidateRecords[65], candidateRecords[67], candidateRecords[72], candidateRecords[77] } },
+					},
+				},
+				{
+					title = "{npc:11865}",
+					note = "While you're here: learn Two-Handed Axes from {npc:11865} ({object:32359}, 10 silver); two-handers level a Warrior fastest.",
+					only = { classes = { "WARRIOR" } },
+					when = { { k = "money", op = ">=", n = 1000 }, { k = "skill", neg = true, n = 1, name = "Two-Handed Axes", skillLine = 172 } },
+					goals = {
+						{ t = "train", npc = 11865, npcName = "Buliwyf Stonehand", map = 1455, x = 61.17, y = 89.52, z = 509, f = "e" },
+					},
+				},
+				{
+					title = "{npc:11865}",
+					note = "While you're here: learn Two-Handed Maces from {npc:11865} ({object:32359}, 10 silver); two-handers level a Warrior fastest.",
+					only = { classes = { "WARRIOR" } },
+					when = { { k = "money", op = ">=", n = 1000 }, { k = "skill", neg = true, n = 1, name = "Two-Handed Maces", skillLine = 160 } },
+					goals = {
+						{ t = "train", npc = 11865, npcName = "Buliwyf Stonehand", map = 1455, x = 61.17, y = 89.52, z = 509, f = "e" },
+					},
+				},
+				{
+					title = "The Deeprun Tram",
+					goals = {
+						{ t = "train", class = true, candidates = { candidateRecords[17], candidateRecords[18], candidateRecords[85], { npc = 5166, npcName = "Ormyr Flinteye", map = 1455, x = 52.89, y = 15.01, z = 508.6, f = "e", faction = "A", classes = { "ROGUE" } }, candidateRecords[23], candidateRecords[25], candidateRecords[82], candidateRecords[83], candidateRecords[20], candidateRecords[16], candidateRecords[15], candidateRecords[14], candidateRecords[12], candidateRecords[13], candidateRecords[11], candidateRecords[10], candidateRecords[9], candidateRecords[2], candidateRecords[1], candidateRecords[3], candidateRecords[7], candidateRecords[4], candidateRecords[5], candidateRecords[8], candidateRecords[6], candidateRecords[86], candidateRecords[33], candidateRecords[34], candidateRecords[35], candidateRecords[36], candidateRecords[37], candidateRecords[38], candidateRecords[39], { npc = 5479, npcName = "Wu Shen", map = 1453, x = 80.55, y = 59.87, z = 109.5, faction = "A", classes = { "WARRIOR" } }, candidateRecords[27], candidateRecords[30], candidateRecords[87], candidateRecords[32], candidateRecords[31], candidateRecords[84], candidateRecords[41], candidateRecords[46], candidateRecords[43], candidateRecords[48], candidateRecords[47], candidateRecords[42], candidateRecords[44], candidateRecords[45], candidateRecords[49], candidateRecords[50], candidateRecords[51], candidateRecords[52], candidateRecords[53], candidateRecords[54], candidateRecords[55], candidateRecords[56], candidateRecords[57], candidateRecords[58], candidateRecords[59], candidateRecords[60], candidateRecords[61], candidateRecords[62], candidateRecords[63], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68], candidateRecords[69], candidateRecords[70], candidateRecords[71], candidateRecords[72], candidateRecords[73], candidateRecords[74], candidateRecords[75], candidateRecords[76], candidateRecords[77], candidateRecords[78], candidateRecords[79], candidateRecords[80], candidateRecords[81] } },
+						{ t = "turnin", quest = 291, title = "The Reports", npc = 1274, npcName = "Senator Barin Redstone", map = 1455, x = 39.55, y = 57.49, z = 505.8, f = "e", note = "{npc:1274}, in the {object:171709} with King Magni" },
+						{ t = "goto", text = "Deeprun Tram", map = 1455, x = 78, y = 51.4, f = "e" },
+					},
+				},
+				{
+					title = "Tram to {zone:1453}",
+					goals = {
+						{ t = "goto", text = "Tram to {zone:1453}", map = 1455, x = 78, y = 51.4, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1453} flight master",
+					goals = {
+						{ t = "goto", text = "{zone:1453} flight master", map = 1453, x = 66.3, y = 62.7, f = "e" },
+						{ t = "getfp", npc = 352, npcName = "Dungar Longdrink", location = "Stormwind", node = 2, map = 1453, x = 71.29, y = 72.23, z = 109.7 },
+					},
+				},
+				{
+					title = "{npc:11867}",
+					note = "While you're here: learn Two-Handed Swords from {npc:11867} ({object:2096}, 10 silver); two-handers level a Paladin fastest.",
+					only = { classes = { "PALADIN" } },
+					when = { { k = "money", op = ">=", n = 1000 }, { k = "skill", neg = true, n = 1, name = "Two-Handed Swords", skillLine = 55 } },
+					goals = {
+						{ t = "train", npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9 },
+					},
+				},
+				{
+					title = "{npc:11867}",
+					note = "While you're here: learn Staves from {npc:11867} ({object:2096}, 10 silver); a Hunter's melee weapon is mostly its stats, and two-handers carry the most.",
+					only = { classes = { "HUNTER" } },
+					when = { { k = "money", op = ">=", n = 1000 }, { k = "skill", neg = true, n = 1, name = "Staves", skillLine = 136 } },
+					goals = {
+						{ t = "train", npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9 },
+					},
+				},
+				{
+					title = "{npc:11867}",
+					note = "While you're here: learn Swords from {npc:11867} ({object:2096}, 10 silver); a sword in the main hand levels a Rogue steadily.",
+					only = { classes = { "ROGUE" } },
+					when = { { k = "money", op = ">=", n = 1000 }, { k = "skill", neg = true, n = 1, name = "Swords", skillLine = 43 } },
+					goals = {
+						{ t = "train", npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9 },
+					},
+				},
+				{
+					title = "Defensive Stance",
+					note = "The tram arrives in the {object:28027}. {npc:5480} trains warriors in {object:2100}; {npc:6089} and {npc:6090} stand together by the {object:2152} there. {npc:6090} fights you for his mug.",
+					only = { classes = { "WARRIOR" } },
+					goals = {
+						{ t = "accept", quest = 1638, title = "A Warrior's Training", npc = 5480, npcName = "Ilsa Corbin", minLevel = 10, qlvl = 10, closedBy = { 1679, 1684, 1678, 1683, 1639 }, preTitles = { [1639] = "Bartleby the Drunk", [1678] = "Vejrek", [1679] = "Muren Stormpike", [1683] = "Vorlus Vilehoof", [1684] = "Elanaria" }, map = 1453, x = 80.41, y = 59.8, z = 109.5 },
+						{ t = "turnin", quest = 1638, title = "A Warrior's Training", npc = 6089, npcName = "Harry Burlguard", map = 1453, x = 77.13, y = 53.26, z = 103 },
+						{ t = "accept", quest = 1639, title = "Bartleby the Drunk", npc = 6089, npcName = "Harry Burlguard", minLevel = 10, qlvl = 10, closedBy = { 1678, 1683 }, preTitles = { [1678] = "Vejrek", [1683] = "Vorlus Vilehoof" }, map = 1453, x = 77.13, y = 53.26, z = 103 },
+						{ t = "turnin", quest = 1639, title = "Bartleby the Drunk", npc = 6090, npcName = "Bartleby", map = 1453, x = 76.76, y = 52.55, z = 102.9 },
+						{ t = "accept", quest = 1640, title = "Beat Bartleby", npc = 6090, npcName = "Bartleby", minLevel = 10, qlvl = 10, pre = { 1639, 1678, 1683 }, preTitles = { [1639] = "Bartleby the Drunk", [1678] = "Vejrek", [1683] = "Vorlus Vilehoof" }, map = 1453, x = 76.76, y = 52.55, z = 102.9 },
+						{ t = "kill", quest = 1640, title = "Beat Bartleby", target = "Bartleby", npc = 6090, oi = 1, map = 1453, x = 76.76, y = 52.55, z = 102.9, note = "{quest:1640}" },
+						{ t = "turnin", quest = 1640, title = "Beat Bartleby", npc = 6090, npcName = "Bartleby", map = 1453, x = 76.76, y = 52.55, z = 102.9 },
+						{ t = "accept", quest = 1665, title = "Bartleby's Mug", npc = 6090, npcName = "Bartleby", minLevel = 10, qlvl = 10, pre = { 1640 }, preTitles = { [1640] = "Beat Bartleby" }, map = 1453, x = 76.76, y = 52.55, z = 102.9 },
+						{ t = "turnin", quest = 1665, title = "Bartleby's Mug", npc = 6089, npcName = "Harry Burlguard", map = 1453, x = 77.13, y = 53.26, z = 103, note = "{npc:6089}: Defensive Stance" },
+					},
+				},
+				{
+					title = "{npc:11867}",
+					note = "While you're here: learn Two-Handed Swords from {npc:11867} ({object:2096}, 10 silver); two-handers level a Warrior fastest.",
+					only = { classes = { "WARRIOR" } },
+					when = { { k = "money", op = ">=", n = 1000 }, { k = "skill", neg = true, n = 1, name = "Two-Handed Swords", skillLine = 55 } },
+					goals = {
+						{ t = "train", npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9 },
+					},
+				},
+				{
+					title = "{npc:6122}",
+					note = "{npc:6122} waits in the cellar of the {object:2164}, in the {object:2101}.",
+					only = { classes = { "WARLOCK" } },
+					goals = {
+						{ t = "turnin", quest = 1715, title = "The Slaughtered Lamb", npc = 6122, npcName = "Gakin the Darkbinder", map = 1453, x = 39.22, y = 85.23, z = 101.5 },
+						{ t = "accept", quest = 1688, title = "Surena Caledon", npc = 6122, npcName = "Gakin the Darkbinder", minLevel = 10, qlvl = 10, map = 1453, x = 39.22, y = 85.23, z = 101.5 },
+					},
+				},
+				{
+					title = "{npc:11867}",
+					note = "While you're here: learn Staves from {npc:11867} ({object:2096}, 10 silver); a staff carries more spell stats than a one-hander while you level.",
+					only = { classes = { "WARLOCK" } },
+					when = { { k = "money", op = ">=", n = 1000 }, { k = "skill", neg = true, n = 1, name = "Staves", skillLine = 136 } },
+					goals = {
+						{ t = "train", npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9 },
+					},
+				},
+				{
+					title = "{npc:881}",
+					note = "Leave {zone:1453} by the main gate, go south to Goldshire and east along the road to the Brackwell Pumpkin Patch. {npc:881} (level 9) stands by its farmhouse.",
+					only = { classes = { "WARLOCK" } },
+					goals = {
+						{ t = "collect", quest = 1688, title = "Surena Caledon", item = 6810, itemName = "Surena's Choker", count = 1, oi = 1, map = 1429, x = 71.01, y = 80.77, f = "e", note = "{item:6810}: {npc:881}", from = "Surena Caledon", fromKind = "npc", fromId = 881, fromNpcs = { { npc = 881, npcName = "Surena Caledon" } } },
+					},
+				},
+				{
+					title = "{quest:1689}",
+					note = "Back to {npc:6122}. Use the {item:6928} at the summoning circle in the {object:2164}'s cellar and defeat the voidwalker it calls. {zone:1436} is next, west of Goldshire.",
+					only = { classes = { "WARLOCK" } },
+					goals = {
+						{ t = "turnin", quest = 1688, title = "Surena Caledon", npc = 6122, npcName = "Gakin the Darkbinder", map = 1453, x = 39.22, y = 85.23, z = 101.5 },
+						{ t = "accept", quest = 1689, title = "The Binding", npc = 6122, npcName = "Gakin the Darkbinder", minLevel = 10, qlvl = 10, pre = { 1688 }, preTitles = { [1688] = "Surena Caledon" }, map = 1453, x = 39.22, y = 85.23, z = 101.5 },
+						{ t = "complete", quest = 1689, title = "The Binding", note = "Subdue the voidwalker" },
+						{ t = "turnin", quest = 1689, title = "The Binding", npc = 6122, npcName = "Gakin the Darkbinder", map = 1453, x = 39.22, y = 85.23, z = 101.5, note = "Summon Voidwalker" },
+					},
+				},
+				{
+					title = "{npc:5497}",
+					note = "{npc:5497} stands in the Wizard's Sanctum, the tower of the {object:2101}; she gives you a flask for the {quest:1861} waterfall.",
+					only = { classes = { "MAGE" } },
+					goals = {
+						{ t = "accept", quest = 1861, title = "Mirror Lake", npc = 5497, npcName = "Jennea Cannon", minLevel = 10, qlvl = 10, closedBy = { 1880 }, preTitles = { [1880] = "Mage-tastic Gizmonitor" }, map = 1453, x = 49.56, y = 85.8, z = 29.7 },
+					},
+				},
+				{
+					title = "{quest:1861}",
+					note = "Leave {zone:1453} by the main gate. The {quest:1861} waterfall is south-west of the gates, on the way west to {zone:1436}: fill {item:7207} at its base.",
+					only = { classes = { "MAGE" } },
+					goals = {
+						{ t = "collect", quest = 1861, title = "Mirror Lake", item = 7206, itemName = "Mirror Lake Water Sample", count = 1, oi = 1, map = 1429, x = 28.57, y = 61.39, f = "e", from = "Mirror Lake Waterwall", fromKind = "object", fromId = 174794 },
+					},
+				},
+				{
+					title = "{zone:1436}",
+					goals = {
+						{ t = "goto", text = "{zone:1436}", map = 1436, x = 59.9, y = 19.4, f = "e" },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
 -- Source: guides/01-depart-humain.guide
 do
 	local function register()
@@ -6668,6 +7762,229 @@ do
 					goals = {
 						{ t = "turnin", quest = 92456, title = "A Green Sample", npc = 5502, npcName = "Shylamiir", map = 1453, x = 31.5, y = 62.61, z = 98.3 },
 						{ t = "turnin", quest = 92489, title = "Power Overwhelming", npc = 5694, npcName = "High Sorcerer Andromath", map = 1453, x = 48.71, y = 87.62, z = 148.7 },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
+-- Source: guides/13-solo-loch-modan.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/13-solo-loch-modan",
+			pack = "groupe-alliance",
+			title = "Solo · {zone:1432}",
+			faction = "Alliance",
+			minLevel = 14,
+			maxLevel = 16,
+			category = "Miscellaneous",
+			folder = "Group Alliance",
+			zone = 1432,
+			zoneName = "Loch Modan",
+			author = "BurN-30",
+			version = 1,
+			names = { ["item:2640"] = "Miners' Gear", ["item:279591"] = "Marek's Croc-Hunting Knife", ["item:2925"] = "Crocolisk Skin", ["item:3110"] = "Tunnel Rat Ear", ["npc:1090"] = "Mountaineer Wallbang", ["npc:1161"] = "Stonesplinter Trogg", ["npc:1162"] = "Stonesplinter Scout", ["npc:1163"] = "Stonesplinter Skullthumper", ["npc:1164"] = "Stonesplinter Bonesnapper", ["npc:1166"] = "Stonesplinter Seer", ["npc:1192"] = "Elder Mountain Boar", ["npc:1194"] = "Mountain Buzzard", ["npc:1195"] = "Forest Lurker", ["npc:1197"] = "Stonesplinter Shaman", ["npc:1224"] = "Young Threshadon", ["npc:1340"] = "Mountaineer Kadrell", ["npc:1343"] = "Mountaineer Stormpike", ["npc:1344"] = "Prospector Ironband", ["npc:1345"] = "Magmar Fellhew", ["npc:1356"] = "Prospector Stormpike", ["npc:1572"] = "Thorgrum Borrelson", ["npc:1573"] = "Gryth Thurden", ["npc:1681"] = "Brock Stoneseeker", ["npc:1684"] = "Khara Deepwater", ["npc:1693"] = "Loch Crocolisk", ["npc:1963"] = "Vidra Hearthstove", ["npc:2476"] = "Large Loch Crocolisk", ["npc:258043"] = "Norric Lochthane", ["npc:270693"] = "Daggerfang", ["npc:4256"] = "Golnir Bouldertoe", ["npc:49808"] = "Grenhild Darktalon", ["object:271"] = "Miners' League Crates", ["object:32356"] = "Hall of Explorers", ["object:32372"] = "Great Forge", ["object:665289"] = "Discarded Fishing Toolbox", ["quest:258"] = "A Hunter's Challenge", ["quest:436"] = "Ironband's Excavation", ["zone:1426"] = "Dun Morogh", ["zone:1432"] = "Loch Modan", ["zone:1455"] = "Ironforge" },
+			steps = {
+				{
+					title = "The southern guard tower",
+					note = "From {zone:1455}, follow the road east across {zone:1426} to the South Gate Pass tunnel; the guard tower stands where it opens onto {zone:1432}.",
+					goals = {
+						{ t = "note", text = "Solo catch-up for a player behind the group (lunch break, evening off). Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide." },
+						{ t = "accept", quest = 224, title = "In Defense of the King's Lands", npc = 1089, npcName = "Mountaineer Cobbleflint", minLevel = 10, qlvl = 12, map = 1432, x = 22.07, y = 73.13, z = 314.1, f = "e" },
+						{ t = "accept", quest = 267, title = "The Trogg Threat", npc = 1092, npcName = "Captain Rugelfuss", minLevel = 10, qlvl = 12, map = 1432, x = 23.23, y = 73.68, z = 323.1, f = "e" },
+					},
+				},
+				{
+					title = "Thelsamar",
+					note = "North along the road to the town. {npc:1340} walks up and down the road through town; {npc:1963} and {npc:49808} stand in the middle of town, {npc:1681} on the east side, the gryphon master at the south end.",
+					goals = {
+						{ t = "getfp", npc = 1572, npcName = "Thorgrum Borrelson", location = "Thelsamar", node = 8, map = 1432, x = 33.94, y = 50.95, z = 347.6, f = "e" },
+						{ t = "accept", quest = 416, title = "Rat Catching", npc = 1340, npcName = "Mountaineer Kadrell", minLevel = 10, qlvl = 11, map = 1432, x = 32.63, y = 49.74, f = "e" },
+						{ t = "accept", quest = 1339, title = "Mountaineer Stormpike's Task", npc = 1340, npcName = "Mountaineer Kadrell", minLevel = 9, qlvl = 15, closedBy = { 1338 }, preTitles = { [1338] = "Stormpike's Order" }, map = 1432, x = 32.63, y = 49.74, f = "e" },
+						{ t = "accept", quest = 418, title = "Thelsamar Blood Sausages", npc = 1963, npcName = "Vidra Hearthstove", minLevel = 7, qlvl = 11, map = 1432, x = 34.83, y = 49.28, z = 322.1, f = "e" },
+						{ t = "accept", quest = 86667, title = "Snowbound", npc = 49808, npcName = "Grenhild Darktalon", minLevel = 10, qlvl = 10, map = 1432, x = 36.6, y = 48.3, f = "e" },
+						{ t = "accept", quest = 6387, title = "Honor Students", npc = 1681, npcName = "Brock Stoneseeker", minLevel = 10, qlvl = 10, map = 1432, x = 37.02, y = 47.81, z = 319.6, f = "e", only = { races = { "Dwarf", "Gnome" } } },
+						{ t = "turnin", quest = 6387, title = "Honor Students", npc = 1572, npcName = "Thorgrum Borrelson", map = 1432, x = 33.94, y = 50.95, z = 347.6, f = "e", only = { races = { "Dwarf", "Gnome" } }, note = "{npc:1572}, the gryphon master" },
+						{ t = "accept", quest = 6391, title = "Ride to Ironforge", npc = 1572, npcName = "Thorgrum Borrelson", minLevel = 10, qlvl = 10, pre = { 6387 }, preTitles = { [6387] = "Honor Students" }, map = 1432, x = 33.94, y = 50.95, z = 347.6, f = "e", only = { races = { "Dwarf", "Gnome" } }, note = "Handed in at the end, in {zone:1455}" },
+					},
+				},
+				{
+					title = "Sausages on the way",
+					note = "Boars, black bears and Forest Lurkers (spiders) roam the hills west of the road, between the tunnel and the Silver Stream Mine.",
+					along = "q418",
+					goals = {
+						{ t = "collect", quest = 418, title = "Thelsamar Blood Sausages", item = 3172, itemName = "Boar Intestines", count = 3, oi = 1, map = 1432, x = 29.91, y = 46.84, f = "e", spots = { { x = 29.9, y = 46.8, r = 42, n = 1 }, { x = 34.2, y = 62.6, r = 42, n = 1 }, { x = 41.8, y = 55.3, r = 42, n = 1 }, { x = 52.3, y = 74.1, r = 42, n = 2 }, { x = 62, y = 58.9, r = 58, n = 5 }, { x = 60.9, y = 35.8, r = 65, n = 4 }, { x = 70.1, y = 37.8, r = 42, n = 1 }, { x = 76.5, y = 46.9, r = 42, n = 2 }, { x = 77.9, y = 73.7, r = 42, n = 1 }, { x = 39.5, y = 29.2, r = 42, n = 1 }, { x = 31.8, y = 24.1, r = 42, n = 1 }, { x = 25.3, y = 13.9, r = 42, n = 1 }, { x = 27.3, y = 39.1, r = 42, n = 1, alt = true }, { x = 29.5, y = 34.6, r = 42, n = 2, alt = true }, { x = 39, y = 51.3, r = 42, n = 1, alt = true }, { x = 34.1, y = 33.5, r = 58, n = 6, alt = true }, { x = 37.7, y = 36.8, r = 59, n = 7, alt = true }, { x = 28.2, y = 24.9, r = 42, n = 2, alt = true }, { x = 24.3, y = 21.4, r = 42, n = 1, alt = true }, { x = 44.9, y = 64.6, r = 42, n = 2, alt = true }, { x = 30.6, y = 16, r = 42, n = 2, alt = true }, { x = 49.9, y = 70.1, r = 42, n = 2, alt = true }, { x = 59, y = 63.6, r = 69, n = 6, alt = true }, { x = 62, y = 39.8, r = 42, n = 4, alt = true }, { x = 64.1, y = 48.7, r = 42, n = 3, alt = true }, { x = 64.7, y = 58.1, r = 42, n = 3, alt = true }, { x = 64.4, y = 64.5, r = 42, n = 2, alt = true }, { x = 66.2, y = 40, r = 43, n = 6, alt = true }, { x = 66.4, y = 68.9, r = 42, n = 1, alt = true }, { x = 74.6, y = 51.6, r = 42, n = 2, alt = true }, { x = 74.8, y = 42.1, r = 42, n = 1, alt = true }, { x = 74.7, y = 72.5, r = 42, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 1190, npcName = "Mountain Boar" }, { npc = 1191, npcName = "Mangy Mountain Boar" }, { npc = 1192, npcName = "Elder Mountain Boar" } } },
+						{ t = "collect", quest = 418, title = "Thelsamar Blood Sausages", item = 3173, itemName = "Bear Meat", count = 3, oi = 2, map = 1432, x = 29.39, y = 40.28, f = "e", spots = { { x = 29.4, y = 40.3, r = 49, n = 1 }, { x = 38.5, y = 33, r = 49, n = 2 }, { x = 38.7, y = 53.8, r = 63, n = 3 }, { x = 39.9, y = 73.1, r = 49, n = 2 }, { x = 58.6, y = 75, r = 49, n = 1 }, { x = 78.1, y = 68.7, r = 49, n = 1 }, { x = 77.2, y = 41.7, r = 49, n = 2 }, { x = 65.7, y = 44.5, r = 91, n = 6 }, { x = 59.2, y = 28.3, r = 75, n = 4 }, { x = 28.6, y = 12.1, r = 63, n = 4 }, { x = 23.8, y = 25.4, r = 49, n = 1 }, { x = 19.8, y = 76.4, r = 49, n = 2 }, { x = 25.5, y = 38.4, r = 49, n = 2, alt = true }, { x = 27.5, y = 28.7, r = 49, n = 1, alt = true }, { x = 34, y = 30.4, r = 64, n = 4, alt = true }, { x = 30.6, y = 53.9, r = 49, n = 1, alt = true }, { x = 30.1, y = 24.7, r = 49, n = 1, alt = true }, { x = 42.2, y = 63.5, r = 71, n = 4, alt = true }, { x = 63.8, y = 32.7, r = 63, n = 4, alt = true }, { x = 58.4, y = 69.1, r = 49, n = 1, alt = true }, { x = 67.9, y = 49.3, r = 49, n = 1, alt = true }, { x = 71, y = 38, r = 92, n = 6, alt = true }, { x = 66.4, y = 73.2, r = 69, n = 6, alt = true }, { x = 63.2, y = 80.2, r = 49, n = 1, alt = true }, { x = 74.3, y = 44.6, r = 49, n = 3, alt = true }, { x = 75.1, y = 53.2, r = 51, n = 4, alt = true } }, spread = true, fromNpcs = { { npc = 1186, npcName = "Elder Black Bear" }, { npc = 1189, npcName = "Black Bear Patriarch" }, { npc = 1188, npcName = "Grizzled Black Bear" } } },
+						{ t = "collect", quest = 418, title = "Thelsamar Blood Sausages", item = 3174, itemName = "Spider Ichor", count = 3, oi = 3, map = 1432, x = 31.08, y = 41.56, f = "e", spots = { { x = 29.8, y = 43.3, r = 63, n = 4 }, { x = 28.6, y = 57, r = 42, n = 1 }, { x = 38.6, y = 73.9, r = 47, n = 3 }, { x = 48.7, y = 72.9, r = 66, n = 4 }, { x = 56.7, y = 77.8, r = 42, n = 2 }, { x = 63.3, y = 54.5, r = 44, n = 3 }, { x = 78.1, y = 52.4, r = 42, n = 1 }, { x = 80, y = 40.4, r = 42, n = 3 }, { x = 59.3, y = 23.3, r = 42, n = 1 }, { x = 36.9, y = 32, r = 52, n = 4 }, { x = 32.1, y = 17.1, r = 42, n = 1 }, { x = 19.3, y = 83.5, r = 42, n = 1 }, { x = 33.7, y = 40.7, r = 42, n = 2, alt = true }, { x = 29.6, y = 50.1, r = 61, n = 5, alt = true }, { x = 25.3, y = 37.8, r = 42, n = 1, alt = true }, { x = 31.3, y = 31.1, r = 72, n = 4, alt = true }, { x = 35, y = 53.5, r = 42, n = 2, alt = true }, { x = 28.9, y = 19.6, r = 63, n = 6, alt = true }, { x = 21.2, y = 71.6, r = 42, n = 1, alt = true }, { x = 56.8, y = 65.5, r = 42, n = 2, alt = true }, { x = 62.6, y = 64.1, r = 42, n = 1, alt = true }, { x = 66.5, y = 51.7, r = 42, n = 2, alt = true }, { x = 60.2, y = 77.5, r = 42, n = 1, alt = true }, { x = 70.5, y = 51.2, r = 42, n = 2, alt = true }, { x = 75.9, y = 36.4, r = 59, n = 7, alt = true } }, spread = true, fromNpcs = { { npc = 1195, npcName = "Forest Lurker" }, { npc = 1185, npcName = "Wood Lurker" }, { npc = 14266, npcName = "Shanda the Spinner" }, { npc = 1184, npcName = "Cliff Lurker" } } },
+					},
+				},
+				{
+					title = "The snowy patch",
+					note = "Back south along the road, almost to the tunnel: use the Ceramic Jar Grenhild gave you while standing on the patch of snow.",
+					goals = {
+						{ t = "collect", quest = 86667, title = "Snowbound", item = 279379, itemName = "Jar of Snow", count = 1, oi = 1, map = 1432, x = 19.6, y = 63.1, f = "e" },
+					},
+				},
+				{
+					title = "Stonesplinter Valley",
+					note = "The troggs camp in the valley east of the tower. Every trogg can drop a Stone Tooth: no need to hunt one kind.",
+					goals = {
+						{ t = "kill", quest = 224, title = "In Defense of the King's Lands", target = "Stonesplinter Trogg", npc = 1161, count = 10, oi = 1, map = 1432, x = 27.19, y = 57.08, z = 367.4, f = "e", spots = { { x = 27.1, y = 55.9, z = 366.3, r = 40, n = 3 }, { x = 26.8, y = 49.3, z = 363.2, r = 51, n = 8 }, { x = 33, y = 70.9, z = 365.4, r = 40, n = 6 }, { x = 34.9, y = 72.4, z = 358.2, r = 40, n = 4 }, { x = 30.8, y = 74.4, z = 365.6, r = 51, n = 10 }, { x = 32.1, y = 79, z = 372.9, r = 41, n = 8 } }, spread = true, note = "Stonesplinter Troggs" },
+						{ t = "kill", quest = 224, title = "In Defense of the King's Lands", target = "Stonesplinter Scout", npc = 1162, count = 10, oi = 2, map = 1432, x = 27.58, y = 57.78, z = 365.4, f = "e", spots = { { x = 27.2, y = 57.4, z = 365.4, r = 50, n = 6 }, { x = 26.4, y = 48.9, z = 365.7, r = 40, n = 4 }, { x = 34.3, y = 71.2, z = 363.8, r = 40, n = 3 }, { x = 34.2, y = 75.9, z = 366.2, r = 40, n = 5 }, { x = 31.1, y = 74.3, z = 366.5, r = 50, n = 7 }, { x = 31.6, y = 80.5, z = 380.8, r = 40, n = 3 } }, spread = true, note = "Stonesplinter Scouts" },
+						{ t = "collect", quest = 267, title = "The Trogg Threat", item = 2536, itemName = "Trogg Stone Tooth", count = 8, oi = 1, map = 1432, x = 27.58, y = 57.78, f = "e", spots = { { x = 27.1, y = 56.9, r = 59, n = 9 }, { x = 26.7, y = 49.1, r = 53, n = 12 }, { x = 31, y = 74.5, r = 55, n = 18 }, { x = 30.9, y = 80.2, r = 83, n = 13 }, { x = 28.3, y = 85.3, r = 72, n = 11 }, { x = 35.3, y = 83.8, r = 51, n = 13 }, { x = 35.6, y = 93.8, r = 50, n = 12 }, { x = 68.8, y = 61.1, r = 59, n = 10 }, { x = 71.9, y = 68, r = 40, n = 4 }, { x = 48.8, y = 29, r = 49, n = 7 }, { x = 51.6, y = 23.9, r = 47, n = 14 }, { x = 48, y = 21.1, r = 42, n = 9 }, { x = 33.8, y = 71.2, r = 49, n = 12, alt = true }, { x = 34.1, y = 75.9, r = 42, n = 7, alt = true }, { x = 36.2, y = 80, r = 45, n = 5, alt = true }, { x = 30.7, y = 84.7, r = 40, n = 2, alt = true }, { x = 37.2, y = 86.5, r = 40, n = 6, alt = true }, { x = 34.4, y = 89.6, r = 50, n = 17, alt = true }, { x = 36.9, y = 90.5, r = 43, n = 4, alt = true }, { x = 54.2, y = 26.5, r = 40, n = 8, alt = true }, { x = 69.5, y = 66.2, r = 43, n = 10, alt = true }, { x = 72, y = 63.7, r = 40, n = 6, alt = true } }, spread = true, note = "Trogg Stone Teeth", fromNpcs = { { npc = 1162, npcName = "Stonesplinter Scout" }, { npc = 1161, npcName = "Stonesplinter Trogg" }, { npc = 1163, npcName = "Stonesplinter Skullthumper" }, { npc = 1164, npcName = "Stonesplinter Bonesnapper" }, { npc = 1165, npcName = "Stonesplinter Geomancer" } } },
+					},
+				},
+				{
+					title = "The southern guard tower",
+					goals = {
+						{ t = "turnin", quest = 224, title = "In Defense of the King's Lands", npc = 1089, npcName = "Mountaineer Cobbleflint", map = 1432, x = 22.07, y = 73.13, z = 314.1, f = "e" },
+						{ t = "turnin", quest = 267, title = "The Trogg Threat", npc = 1092, npcName = "Captain Rugelfuss", map = 1432, x = 23.23, y = 73.68, z = 323.1, f = "e" },
+						{ t = "accept", quest = 237, title = "In Defense of the King's Lands", npc = 1091, npcName = "Mountaineer Gravelgaw", minLevel = 10, qlvl = 15, pre = { 224 }, preTitles = { [224] = "In Defense of the King's Lands" }, map = 1432, x = 23.54, y = 76.4, z = 311, f = "e" },
+					},
+				},
+				{
+					title = "Deeper in the valley",
+					note = "Further south, past the first camp, Skullthumpers and Seers (13-14) hold the valley's end.",
+					goals = {
+						{ t = "kill", quest = 237, title = "In Defense of the King's Lands", target = "Stonesplinter Skullthumper", npc = 1163, count = 10, oi = 1, map = 1432, x = 27.98, y = 81.18, z = 400.1, f = "e", spots = { { x = 28.5, y = 81.2, z = 400.1, r = 40, n = 2 }, { x = 28.3, y = 86, z = 411.9, r = 40, n = 4 }, { x = 31.3, y = 85.4, z = 413.4, r = 40, n = 1 }, { x = 34.9, y = 87.8, z = 401.2, r = 71, n = 7 }, { x = 36, y = 83.4, z = 401.6, r = 48, n = 8 }, { x = 48, y = 28.8, z = 300.8, r = 40, n = 2 }, { x = 50.9, y = 23.8, z = 304.9, r = 40, n = 2 }, { x = 48.2, y = 20.9, z = 305.5, r = 40, n = 3 } }, spread = true, note = "Stonesplinter Skullthumpers" },
+						{ t = "kill", quest = 237, title = "In Defense of the King's Lands", target = "Stonesplinter Seer", npc = 1166, count = 10, oi = 2, map = 1432, x = 29.05, y = 80.89, z = 383.1, f = "e", spots = { { x = 28.8, y = 81.3, z = 383.1, r = 40, n = 3 }, { x = 28.6, y = 85.3, r = 48, n = 7 }, { x = 34.7, y = 88.4, r = 66, n = 10 }, { x = 35.4, y = 82.7, z = 397.2, r = 48, n = 7 }, { x = 36.7, y = 78.7, r = 40, n = 2 }, { x = 49.2, y = 29.1, z = 299.4, r = 43, n = 5 }, { x = 50.6, y = 24, z = 303.9, r = 40, n = 4 }, { x = 48, y = 21.2, z = 306.6, r = 42, n = 6 } }, spread = true, note = "Stonesplinter Seers" },
+					},
+				},
+				{
+					title = "The southern guard tower",
+					goals = {
+						{ t = "turnin", quest = 237, title = "In Defense of the King's Lands", npc = 1091, npcName = "Mountaineer Gravelgaw", map = 1432, x = 23.54, y = 76.4, z = 311, f = "e" },
+					},
+				},
+				{
+					title = "The valley's end",
+					note = "Level 15 or more: {npc:1090} wants the Shamans and Bonesnappers (15-16) at the very back of the valley. Under 15, skip it.",
+					when = { { k = "level", op = ">=", n = 15 } },
+					goals = {
+						{ t = "accept", quest = 263, title = "In Defense of the King's Lands", npc = 1090, npcName = "Mountaineer Wallbang", minLevel = 10, qlvl = 15, pre = { 237 }, preTitles = { [237] = "In Defense of the King's Lands" }, map = 1432, x = 23.47, y = 74.51, z = 309.2, f = "e" },
+						{ t = "kill", quest = 263, title = "In Defense of the King's Lands", target = "Stonesplinter Shaman", npc = 1197, count = 10, oi = 1, map = 1432, x = 34.27, y = 91.62, z = 405.8, f = "e", spots = { { x = 35.3, y = 93.5, r = 45, n = 10 }, { x = 36.9, y = 90.5, r = 40, n = 2 }, { x = 37.8, y = 87, r = 40, n = 2 }, { x = 53.5, y = 25.5, z = 311.3, r = 57, n = 8 } }, spread = true, note = "Stonesplinter Shamans" },
+						{ t = "kill", quest = 263, title = "In Defense of the King's Lands", target = "Stonesplinter Bonesnapper", npc = 1164, count = 10, oi = 2, map = 1432, x = 34.56, y = 91.52, z = 407.4, f = "e", spots = { { x = 33.6, y = 91.3, z = 404.6, r = 40, n = 3 }, { x = 36.4, y = 93.1, r = 40, n = 5 }, { x = 37.9, y = 87, z = 400.9, r = 40, n = 1 }, { x = 53, y = 24.9, z = 311.8, r = 62, n = 8 } }, spread = true, note = "Stonesplinter Bonesnappers" },
+						{ t = "turnin", quest = 263, title = "In Defense of the King's Lands", npc = 1090, npcName = "Mountaineer Wallbang", map = 1432, x = 23.47, y = 74.51, z = 309.2, f = "e" },
+					},
+				},
+				{
+					title = "Silver Stream Mine",
+					note = "North on the road past Thelsamar to the mine at the north-west end of the loch. {npc:1343} stands at its entrance.",
+					goals = {
+						{ t = "turnin", quest = 1339, title = "Mountaineer Stormpike's Task", npc = 1343, npcName = "Mountaineer Stormpike", map = 1432, x = 24.76, y = 18.4, z = 341.2, f = "e" },
+						{ t = "accept", quest = 307, title = "Filthy Paws", npc = 1343, npcName = "Mountaineer Stormpike", minLevel = 9, qlvl = 15, map = 1432, x = 24.76, y = 18.4, z = 341.2, f = "e" },
+					},
+				},
+				{
+					title = "Rats and crates",
+					note = "The {object:271} sit inside the mine; Tunnel Rat kobolds fill it and the hills around it.",
+					goals = {
+						{ t = "collect", quest = 307, title = "Filthy Paws", item = 2640, itemName = "Miners' Gear", count = 4, oi = 1, map = 1432, x = 34.9, y = 23.44, f = "e", spots = { { x = 35.4, y = 25.6, r = 43, n = 10 }, { x = 35.8, y = 21.2, r = 27, n = 4 } }, note = "{item:2640}, from the crates", from = "Miners' League Crates", fromKind = "object", fromId = 271 },
+						{ t = "collect", quest = 416, title = "Rat Catching", item = 3110, itemName = "Tunnel Rat Ear", count = 12, oi = 1, map = 1432, x = 35.03, y = 23.46, f = "e", spots = { { x = 35.8, y = 24.2, r = 62, n = 27 }, { x = 37.1, y = 27.2, r = 46, n = 7 }, { x = 40.1, y = 24.2, r = 40, n = 2 }, { x = 38.2, y = 21, r = 50, n = 4 }, { x = 40.3, y = 18.7, r = 40, n = 2 }, { x = 36.2, y = 16.9, r = 62, n = 15 }, { x = 38.7, y = 12, r = 62, n = 9 }, { x = 34, y = 11.6, r = 40, n = 2 }, { x = 26.5, y = 26.9, r = 40, n = 1 }, { x = 24.2, y = 29.1, r = 58, n = 10 }, { x = 25, y = 33.9, r = 40, n = 3 }, { x = 26.6, y = 43.4, r = 54, n = 12 }, { x = 26.5, y = 31.8, r = 40, n = 4, alt = true } }, spread = true, note = "Tunnel Rat Ears", from = "Tunnel Rat Vermin", fromKind = "npc", fromAlso = "Tunnel Rat Scout", fromId = 1172, fromAlsoId = 1173, fromNpcs = { { npc = 1175, npcName = "Tunnel Rat Digger" }, { npc = 1172, npcName = "Tunnel Rat Vermin" }, { npc = 1173, npcName = "Tunnel Rat Scout" }, { npc = 1174, npcName = "Tunnel Rat Geomancer" }, { npc = 1176, npcName = "Tunnel Rat Forager" } } },
+					},
+				},
+				{
+					title = "Silver Stream Mine",
+					goals = {
+						{ t = "turnin", quest = 307, title = "Filthy Paws", npc = 1343, npcName = "Mountaineer Stormpike", map = 1432, x = 24.76, y = 18.4, z = 341.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:258043}",
+					note = "His house stands on the north-west shore of the loch, east of the mine.",
+					goals = {
+						{ t = "turnin", quest = 86667, title = "Snowbound", npc = 258043, npcName = "Norric Lochthane", map = 1432, x = 41.8, y = 19, f = "e" },
+					},
+				},
+				{
+					title = "Thelsamar",
+					note = "Back south along the road.",
+					label = "q418",
+					goals = {
+						{ t = "turnin", quest = 416, title = "Rat Catching", npc = 1340, npcName = "Mountaineer Kadrell", map = 1432, x = 32.63, y = 49.74, f = "e" },
+						{ t = "turnin", quest = 418, title = "Thelsamar Blood Sausages", npc = 1963, npcName = "Vidra Hearthstove", map = 1432, x = 34.83, y = 49.28, z = 322.1, f = "e" },
+						{ t = "accept", quest = 436, title = "Ironband's Excavation", npc = 1105, npcName = "Jern Hornhelm", minLevel = 13, qlvl = 18, closedBy = { 297 }, preTitles = { [297] = "Gathering Idols" }, map = 1432, x = 37.24, y = 47.38, z = 319.6, f = "e" },
+					},
+				},
+				{
+					title = "The fishing toolbox",
+					note = "Optional, for swimmers: a {object:665289} lies on the lake floor east of town, at one of several spots: swim until its \"!\" shows on the minimap. Young Threshadons (19-20) swim in the loch: keep clear.",
+					goals = {
+						{ t = "accept", quest = 86614, title = "Silver of the Waves", object = 665289, objName = "Discarded Fishing Toolbox", minLevel = 13, qlvl = 20, map = 1432, x = 48.1, y = 39.7, f = "e", optional = true },
+					},
+				},
+				{
+					title = "{quest:436}",
+					note = "East along the road on the south shore. {npc:1345} and {npc:1344} stand at the dig site; the troggs digging just east of them are 17-20: keep away.",
+					goals = {
+						{ t = "turnin", quest = 436, title = "Ironband's Excavation", npc = 1345, npcName = "Magmar Fellhew", map = 1432, x = 64.9, y = 66.66, z = 323, f = "e" },
+						{ t = "accept", quest = 298, title = "Excavation Progress Report", npc = 1344, npcName = "Prospector Ironband", minLevel = 10, qlvl = 15, map = 1432, x = 65.93, y = 65.62, z = 321.7, f = "e" },
+					},
+				},
+				{
+					title = "Farstrider Lodge",
+					note = "The lodge stands at the east end of the loch. Daryl's quest has a 15-minute timer: the Mountain Buzzards fly over the hills west and south-west of the lodge.",
+					goals = {
+						{ t = "accept", quest = 257, title = "A Hunter's Boast", npc = 1187, npcName = "Daryl the Youngling", minLevel = 11, qlvl = 16, map = 1432, x = 83.47, y = 65.46, z = 407.8, f = "e" },
+						{ t = "accept", quest = 385, title = "Crocolisk Hunting", npc = 1154, npcName = "Marek Ironheart", minLevel = 10, qlvl = 15, map = 1432, x = 81.76, y = 61.66, z = 408, f = "e" },
+						{ t = "accept", quest = 86758, title = "Twisting the Knife", npc = 1154, npcName = "Marek Ironheart", minLevel = 12, qlvl = 16, map = 1432, x = 81.76, y = 61.66, z = 408, f = "e" },
+						{ t = "kill", quest = 257, title = "A Hunter's Boast", target = "Mountain Buzzard", npc = 1194, count = 6, oi = 1, map = 1432, x = 79.2, y = 63.69, z = 391.7, f = "e", spots = { { x = 78.4, y = 64.7, r = 49, n = 3 }, { x = 77.7, y = 57.7, r = 46, n = 5 }, { x = 74.6, y = 66, r = 32, n = 2 }, { x = 76.2, y = 72.8, z = 380.5, r = 52, n = 6 }, { x = 78, y = 76.1, z = 392.6, r = 25, n = 3 }, { x = 70.3, y = 74.3, z = 353.7, r = 58, n = 4 }, { x = 70.9, y = 52.6, z = 344.9, r = 15, n = 1, alt = true }, { x = 68.4, y = 50.5, z = 334, r = 15, n = 1, alt = true } }, note = "Mountain Buzzards" },
+						{ t = "turnin", quest = 257, title = "A Hunter's Boast", npc = 1187, npcName = "Daryl the Youngling", map = 1432, x = 83.47, y = 65.46, z = 407.8, f = "e" },
+					},
+				},
+				{
+					title = "{quest:258}",
+					note = "12 minutes this time: Elder Mountain Boars (16-17) roam the hills north-west of the lodge. Under 15, or short on time, skip it.",
+					when = { { k = "level", op = ">=", n = 15 } },
+					goals = {
+						{ t = "accept", quest = 258, title = "A Hunter's Challenge", npc = 1187, npcName = "Daryl the Youngling", minLevel = 11, qlvl = 17, pre = { 257 }, preTitles = { [257] = "A Hunter's Boast" }, map = 1432, x = 83.47, y = 65.46, z = 407.8, f = "e" },
+						{ t = "kill", quest = 258, title = "A Hunter's Challenge", target = "Elder Mountain Boar", npc = 1192, count = 5, oi = 1, map = 1432, x = 74.78, y = 50.69, z = 340.8, f = "e", spots = { { x = 74.8, y = 50.7, z = 340.8, r = 40, n = 1 }, { x = 76.5, y = 46.9, r = 40, n = 2 }, { x = 74.8, y = 42.1, z = 323.9, r = 40, n = 1 }, { x = 70.1, y = 37.8, z = 332.1, r = 40, n = 1 }, { x = 66.2, y = 40, z = 321.2, r = 43, n = 6 }, { x = 63.2, y = 35.1, z = 311.4, r = 40, n = 1 }, { x = 60.3, y = 35.1, r = 40, n = 2 }, { x = 61.6, y = 39.4, z = 304, r = 53, n = 5 } }, spread = true, note = "Elder Mountain Boars" },
+						{ t = "turnin", quest = 258, title = "A Hunter's Challenge", npc = 1187, npcName = "Daryl the Youngling", map = 1432, x = 83.47, y = 65.46, z = 407.8, f = "e" },
+					},
+				},
+				{
+					title = "The loch shore",
+					note = "Loch Crocolisks line the east and north shores. {npc:270693}, the named one, swims along the east shore north-west of the lodge. Leave the {npc:2476} (level 22) alone.",
+					goals = {
+						{ t = "collect", quest = 385, title = "Crocolisk Hunting", item = 2924, itemName = "Crocolisk Meat", count = 5, oi = 1, map = 1432, x = 62.44, y = 51.52, f = "e", spots = { { x = 62.4, y = 51.5, r = 40, n = 1 }, { x = 58.8, y = 57.6, r = 40, n = 1 }, { x = 55.1, y = 53.9, r = 49, n = 6 }, { x = 61, y = 43.6, r = 45, n = 3 }, { x = 59.5, y = 38.2, r = 40, n = 2 }, { x = 56.2, y = 36.8, r = 58, n = 6 }, { x = 53.8, y = 39.6, r = 44, n = 5 }, { x = 51.2, y = 34.9, r = 40, n = 1 }, { x = 58.2, y = 31.4, r = 40, n = 2 }, { x = 57.8, y = 22.9, r = 40, n = 2 } }, spread = true, fromNpcs = { { npc = 1693, npcName = "Loch Crocolisk" }, { npc = 2476, npcName = "Large Loch Crocolisk" } } },
+						{ t = "collect", quest = 385, title = "Crocolisk Hunting", item = 2925, itemName = "Crocolisk Skin", count = 6, oi = 2, map = 1432, x = 62.44, y = 51.52, f = "e", spots = { { x = 62.4, y = 51.5, r = 40, n = 1 }, { x = 58.8, y = 57.6, r = 40, n = 1 }, { x = 55.1, y = 53.9, r = 49, n = 6 }, { x = 61, y = 43.6, r = 45, n = 3 }, { x = 59.5, y = 38.2, r = 40, n = 2 }, { x = 56.2, y = 36.8, r = 58, n = 6 }, { x = 53.8, y = 39.6, r = 44, n = 5 }, { x = 51.2, y = 34.9, r = 40, n = 1 }, { x = 58.2, y = 31.4, r = 40, n = 2 }, { x = 57.8, y = 22.9, r = 40, n = 2 } }, spread = true, note = "Crocolisk Skins", fromNpcs = { { npc = 1693, npcName = "Loch Crocolisk" }, { npc = 2476, npcName = "Large Loch Crocolisk" } } },
+						{ t = "collect", quest = 86758, title = "Twisting the Knife", item = 279591, itemName = "Marek's Croc-Hunting Knife", oi = 1, map = 1432, x = 62.8, y = 46.8, f = "e", spots = { { x = 62.8, y = 46.8, r = 67, n = 16 }, { x = 61.2, y = 42.5, r = 53, n = 11, alt = true }, { x = 62.9, y = 52.2, r = 44, n = 8, alt = true }, { x = 66.4, y = 49.8, r = 41, n = 4, alt = true }, { x = 63.6, y = 38.1, r = 15, n = 2, alt = true }, { x = 58.9, y = 36.6, r = 67, n = 11, alt = true } }, note = "{item:279591}: {npc:270693}", from = "Daggerfang", fromKind = "npc", fromId = 270693, fromNpcs = { { npc = 270693, npcName = "Daggerfang" } } },
+					},
+				},
+				{
+					title = "Farstrider Lodge",
+					goals = {
+						{ t = "turnin", quest = 385, title = "Crocolisk Hunting", npc = 1154, npcName = "Marek Ironheart", map = 1432, x = 81.76, y = 61.66, z = 408, f = "e" },
+						{ t = "turnin", quest = 86758, title = "Twisting the Knife", npc = 1154, npcName = "Marek Ironheart", map = 1432, x = 81.76, y = 61.66, z = 408, f = "e" },
+					},
+				},
+				{
+					title = "Thelsamar",
+					note = "West along the road. {npc:1684} sells fishing supplies by the water north-east of town.",
+					goals = {
+						{ t = "turnin", quest = 298, title = "Excavation Progress Report", npc = 1105, npcName = "Jern Hornhelm", map = 1432, x = 37.24, y = 47.38, z = 319.6, f = "e" },
+						{ t = "accept", quest = 301, title = "Report to Ironforge", npc = 1105, npcName = "Jern Hornhelm", minLevel = 10, qlvl = 15, pre = { 298 }, preTitles = { [298] = "Excavation Progress Report" }, map = 1432, x = 37.24, y = 47.38, z = 319.6, f = "e" },
+						{ t = "turnin", quest = 86614, title = "Silver of the Waves", npc = 1684, npcName = "Khara Deepwater", map = 1432, x = 40.28, y = 39.28, z = 303.2, f = "e", optional = true },
+					},
+				},
+				{
+					title = "Fly to {zone:1455}",
+					goals = {
+						{ t = "fly", location = "Ironforge", node = 6 },
+					},
+				},
+				{
+					title = "{zone:1455}",
+					note = "{npc:1356} is in the {object:32356}; {npc:4256} in the {object:32372}; {npc:1573} is the gryphon master where you landed.",
+					goals = {
+						{ t = "note", text = "Back with the group: /polestar guides, Group Alliance, the group's guide." },
+						{ t = "turnin", quest = 301, title = "Report to Ironforge", npc = 1356, npcName = "Prospector Stormpike", map = 1455, x = 74.64, y = 11.74, z = 503.5, f = "e" },
+						{ t = "turnin", quest = 6391, title = "Ride to Ironforge", npc = 4256, npcName = "Golnir Bouldertoe", map = 1455, x = 51.52, y = 26.31, z = 504.5, f = "e", only = { races = { "Dwarf", "Gnome" } } },
+						{ t = "accept", quest = 6388, title = "Gryth Thurden", npc = 4256, npcName = "Golnir Bouldertoe", minLevel = 10, qlvl = 10, pre = { 6391 }, preTitles = { [6391] = "Ride to Ironforge" }, map = 1455, x = 51.52, y = 26.31, z = 504.5, f = "e", only = { races = { "Dwarf", "Gnome" } } },
+						{ t = "turnin", quest = 6388, title = "Gryth Thurden", npc = 1573, npcName = "Gryth Thurden", map = 1455, x = 55.5, y = 47.74, z = 502.3, f = "e", only = { races = { "Dwarf", "Gnome" } } },
 					},
 				},
 			},
