@@ -3956,7 +3956,7 @@ do
 					note = "Portal down to Rut'theran Village, boat to Auberdine, then the {zone:1453} boat from the same pier.",
 					only = { races = { "NightElf" } },
 					goals = {
-						{ t = "note", text = "Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class): good solo lunch content." },
+						{ t = "note", text = "Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class)." },
 						{ t = "getfp", npc = 3841, npcName = "Caylais Moonfeather", location = "Auberdine", node = 26, map = 1439, x = 36.34, y = 45.58, z = 16.1, f = "e" },
 					},
 				},
@@ -7792,7 +7792,7 @@ do
 					title = "The southern guard tower",
 					note = "From {zone:1455}, follow the road east across {zone:1426} to the South Gate Pass tunnel; the guard tower stands where it opens onto {zone:1432}.",
 					goals = {
-						{ t = "note", text = "Solo catch-up for a player behind the group (lunch break, evening off). Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide." },
+						{ t = "note", text = "Solo catch-up for a player behind the group. Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide." },
 						{ t = "accept", quest = 224, title = "In Defense of the King's Lands", npc = 1089, npcName = "Mountaineer Cobbleflint", minLevel = 10, qlvl = 12, map = 1432, x = 22.07, y = 73.13, z = 314.1, f = "e" },
 						{ t = "accept", quest = 267, title = "The Trogg Threat", npc = 1092, npcName = "Captain Rugelfuss", minLevel = 10, qlvl = 12, map = 1432, x = 23.23, y = 73.68, z = 323.1, f = "e" },
 					},

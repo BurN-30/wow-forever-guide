@@ -12,7 +12,7 @@ step Night Elves: Darnassus to Stormwind
   only NightElf
   zone Darkshore
   tip Portal down to Rut'theran Village, boat to Auberdine, then the Stormwind boat from the same pier.
-  note Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class): good solo lunch content.
+  note Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class).
   getfp "Auberdine"
 
 step Stormwind: meeting point

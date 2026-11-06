@@ -45,9 +45,9 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. Reste
 | Groupe 9 · Site de fouilles : Les Paluns (donjon) | 26-29 | Tout le monde : quêtes de donjon, positions marquées **?** (non testé au-delà de 20) |
 | Groupe 10 · Mille pointes, Bois de la Pénombre et Les Paluns | 27-30 | The Missing Diplomat (quête 1274) (Hurlevent, puis Bois de la Pénombre) seulement à partir du niveau 28 |
 | Groupe 11 · Cité de Dalaran (donjon) | 30-33 | Niveau 30 requis pour la quête qui ouvre la route, puis la suite de Polestar (Contreforts de Hautebrande, 30-40) |
-| Solo · Loch Modan (facultatif) | 14-16 | Joueur en retard sur le groupe, seul (le midi par exemple) : environ 1 à 2 niveaux, retour à Forgefer en griffon. Ne s'ouvre jamais tout seul |
+| Solo · Loch Modan (facultatif) | 14-16 | Joueur en retard sur le groupe, seul : environ 1 à 2 niveaux, retour à Forgefer en griffon. Ne s'ouvre jamais tout seul |
 
-En retard le midi ? `/polestar guides` → Guides de la communauté → Groupe Alliance → **Solo · Loch Modan** (quêtes de Thelsamar, de la tour de garde du sud et du pavillon de chasse ; quelques positions marquées **?**). De retour à 4 niveaux du groupe : reprendre le guide du groupe.
+En retard sur le groupe ? `/polestar guides` → Guides de la communauté → Groupe Alliance → **Solo · Loch Modan** (quêtes de Thelsamar, de la tour de garde du sud et du pavillon de chasse ; quelques positions marquées **?**). De retour à 4 niveaux du groupe : reprendre le guide du groupe.
 
 ### Pas encore couvert
 

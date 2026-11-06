@@ -50,7 +50,7 @@ zone Loch Modan
 
 step The southern guard tower
   tip From Ironforge, follow the road east across Dun Morogh to the South Gate Pass tunnel; the guard tower stands where it opens onto Loch Modan.
-  note Solo catch-up for a player behind the group (lunch break, evening off). Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide.
+  note Solo catch-up for a player behind the group. Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide.
   accept 224                                  -- Mountaineer Cobbleflint
   accept 267                                  -- Captain Rugelfuss
 

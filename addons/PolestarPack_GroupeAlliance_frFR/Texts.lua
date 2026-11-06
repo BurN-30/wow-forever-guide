@@ -697,7 +697,7 @@ t.guides["groupe-alliance/01-depart-nain"] = (function() return {
 		["{zone:1455} class quests"] = "Quêtes de classe de {zone:1455}",
 } end)()
 t.guides["groupe-alliance/02-rendez-vous-hurlevent"] = (function() return {
-		["Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class): good solo lunch content."] = "Druides : Guérison du poison (14), forme aquatique (16) et forme de félin (20) s'obtiennent par quêtes de classe (guides Polestar, Classe) : idéal en solo le midi.",
+		["Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class)."] = "Druides : Guérison du poison (14), forme aquatique (16) et forme de félin (20) s'obtiennent par quêtes de classe (guides Polestar, Classe).",
 		["Group 1 · Meet in {zone:1453}"] = "Groupe 1 · Rendez-vous à {zone:1453}",
 		["Group XP: keep the whole group within 4 levels. Ahead? Play class quests or professions solo, not zone quests."] = "XP de groupe : pas plus de 4 niveaux d'écart. En avance ? Quêtes de classe ou métiers en solo, pas les quêtes de zone.",
 		["Group up with your friends"] = "Former le groupe avec les autres",
@@ -1342,7 +1342,7 @@ t.guides["groupe-alliance/13-solo-loch-modan"] = (function() return {
 		["Rats and crates"] = "Rats et caisses",
 		["Sausages on the way"] = "Boudins en chemin",
 		["Silver Stream Mine"] = "La mine du nord-ouest",
-		["Solo catch-up for a player behind the group (lunch break, evening off). Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide."] = "Rattrapage en solo pour un joueur en retard sur le groupe (pause de midi, soirée libre). Revenu à 4 niveaux ou moins du plus bas du groupe ? Arrêtez et rejoignez-le : /polestar guides, Groupe Alliance, le guide du groupe.",
+		["Solo catch-up for a player behind the group. Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide."] = "Rattrapage en solo pour un joueur en retard sur le groupe. Revenu à 4 niveaux ou moins du plus bas du groupe ? Arrêtez et rejoignez-le : /polestar guides, Groupe Alliance, le guide du groupe.",
 		["Solo · {zone:1432}"] = "Solo · {zone:1432}",
 		["Stonesplinter Bonesnappers"] = "{npc:1164} ×10",
 		["Stonesplinter Scouts"] = "{npc:1162} ×10",

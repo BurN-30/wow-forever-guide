@@ -14,7 +14,7 @@ return {
 	["The southern guard tower"] = "La tour de garde du sud",
 	-- {zone:1455} Ironforge · {zone:1426} Dun Morogh · {zone:1432} Loch Modan
 	["From {zone:1455}, follow the road east across {zone:1426} to the South Gate Pass tunnel; the guard tower stands where it opens onto {zone:1432}."] = "Depuis {zone:1455}, suivez la route vers l'est à travers {zone:1426} jusqu'au tunnel qui mène au {zone:1432} ; la tour de garde se dresse à sa sortie.",
-	["Solo catch-up for a player behind the group (lunch break, evening off). Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide."] = "Rattrapage en solo pour un joueur en retard sur le groupe (pause de midi, soirée libre). Revenu à 4 niveaux ou moins du plus bas du groupe ? Arrêtez et rejoignez-le : /polestar guides, Groupe Alliance, le guide du groupe.",
+	["Solo catch-up for a player behind the group. Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide."] = "Rattrapage en solo pour un joueur en retard sur le groupe. Revenu à 4 niveaux ou moins du plus bas du groupe ? Arrêtez et rejoignez-le : /polestar guides, Groupe Alliance, le guide du groupe.",
 
 	-- Step 2: Thelsamar
 	["Thelsamar"] = "Thelsamar",

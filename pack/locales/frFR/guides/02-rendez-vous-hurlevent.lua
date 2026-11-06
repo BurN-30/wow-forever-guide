@@ -15,7 +15,7 @@ return {
 	["Night Elves: {zone:1457} to {zone:1453}"] = "Elfes de la nuit : de {zone:1457} à {zone:1453}",
 	-- {zone:1453} Stormwind
 	["Portal down to Rut'theran Village, boat to Auberdine, then the {zone:1453} boat from the same pier."] = "Portail vers Rut'theran, bateau pour Auberdine, puis bateau pour {zone:1453} sur le même ponton.",
-	["Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class): good solo lunch content."] = "Druides : Guérison du poison (14), forme aquatique (16) et forme de félin (20) s'obtiennent par quêtes de classe (guides Polestar, Classe) : idéal en solo le midi.",
+	["Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class)."] = "Druides : Guérison du poison (14), forme aquatique (16) et forme de félin (20) s'obtiennent par quêtes de classe (guides Polestar, Classe).",
 
 	-- Step 2: Stormwind: meeting point
 	-- {zone:1453} Stormwind
