@@ -1,0 +1,22 @@
+# Written for this pack. Travel facts checked against Polestar 0.3.2's travel data
+# (boats Rut'theran - Auberdine and Auberdine - Stormwind Harbor).
+guide groupe-alliance/02-rendez-vous-hurlevent
+title Group 1 · Meet in Stormwind
+folder Group Alliance
+faction Alliance
+levels 10-13
+zone Stormwind City
+next groupe-alliance/03-marche-de-l-ouest
+
+step Night Elves: Darnassus to Stormwind
+  only NightElf
+  zone Darkshore
+  tip Portal down to Rut'theran Village, boat to Auberdine, then the Stormwind boat from the same pier.
+  note Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class): good solo lunch content.
+  getfp "Auberdine"
+
+step Stormwind: meeting point
+  zone Stormwind City
+  tip Group XP: keep the whole group within 4 levels. Ahead? Play class quests or professions solo, not zone quests.
+  getfp "Stormwind"
+  task "Group up with your friends"

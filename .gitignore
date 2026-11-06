@@ -1,0 +1,11 @@
+# Build output of forge (the installer uses addons/, which is committed)
+pack/dist/
+# Path to the game remembered by the installer on each PC
+installer/chemin-wow.txt
+# Local tools and caches
+__pycache__/
+*.pyc
+.venv/
+*.log
+Thumbs.db
+desktop.ini

@@ -1,0 +1,46 @@
+# Adapted from Aurum's chapter aurum-druid/ruins-of-lordaeron (Aurums Night Elf Druid Guide 0.4.37,
+# GPL-3.0). Changes: for every class (no Aquatic Form swim), no fixed reward choice, shorter tips,
+# group notes. Ids cross-checked against Polestar 0.3.2's reference data, Polestar's Dungeons
+# codex and RestedXP's free Forever dungeon guide (11-20).
+# Not checked in game: the walk from Southshore to the Ruins (the arrow plans it).
+guide groupe-alliance/06-ruines-de-lordaeron
+title Group 5 · Ruins of Lordaeron (dungeon 15-20)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 16-20
+zone Darkshore
+next groupe-alliance/07-carmines
+
+step Auberdine: boat to Southshore
+  tip The Southshore boat leaves from Auberdine's pier. Keep 4 free quest log slots.
+  level 16
+
+step Southshore
+  zone Hillsbrad Foothills
+  getfp "Southshore"
+  vendor nearest
+
+step Ruins of Lordaeron entrance
+  zone Tirisfal Glades
+  tip Horde land: travel as a group. The dungeon stairs are on the left of the outer courtyard.
+  goto 63.2,67.5 "Ruins of Lordaeron" r 25
+
+step Inside the dungeon
+  tip Captain Truman stands on the left just after the portal. Right-click each quest item as it drops; every player needs their own.
+  note Share each quest with your group: click it in the quest log, then Share.
+  accept 95250
+  complete 95250
+  accept 95195 -- Bloodied Insignia, from the undead
+  complete 95195
+  accept 95189 -- Crest of Lordaeron, in a tower or side room
+  accept 92415 -- Blood-stained letter, by a body in the graveyard
+  turnin 95250
+
+step Stormwind rewards
+  zone Stormwind City
+  tip General Marcus Jonathan by the gate, the Matron at the orphanage, Lady Dena Kennedy in the keep.
+  turnin 95195
+  turnin 92415
+  accept 95161 optional -- Next letter for Darkshire, in Duskwood later
+  turnin 95189

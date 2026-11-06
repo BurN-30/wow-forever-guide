@@ -1,0 +1,67 @@
+# Adapted from Aurum's chapter aurum-druid/hall-of-thanes (Aurums Night Elf Druid Guide 0.4.37,
+# GPL-3.0, github.com/AurumTitanos/Aurums-Night-Elf-Druid-Guide), itself built on Polestar's guides.
+# Changes: for every class and race, druid-only and profession steps removed, shorter tips,
+# group notes added. Quest ids, givers and levels cross-checked against Polestar 0.3.2's
+# reference data, Polestar's Dungeons codex and RestedXP's free Forever dungeon guide (11-20).
+guide groupe-alliance/04-salle-des-thanes
+title Group 3 · The Hall of Thanes (dungeon 13-18)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 12-16
+zone Ironforge
+next groupe-alliance/05-sombrivage
+
+step Deeprun Tram to Ironforge
+  zone Ironforge
+  tip Every player takes these quests before the run. Keep 6 free quest log slots.
+  getfp "Ironforge"
+
+step Steelgrill's Depot
+  zone Dun Morogh
+  accept 96408
+
+step Earthseer Farsen
+  tip His camp overlooks Gol'Bolar Quarry, east of the depot.
+  turnin 96408
+  accept 96392
+  kill 264936 quest 96392.1 @64.9,58.5 map 1426 -- Talk to him and choose the farsight
+  turnin 96392
+  accept 96390
+
+step Dark Iron Spies
+  tip Spies roam around Ironband's Compound. The Dark Iron Map can drop from them: right-click it.
+  kill 6123 quest 96390
+  accept 96391 optional
+
+step Earthseer Farsen
+  turnin 96390
+  turnin 96391 optional
+  accept 96393 optional
+
+step Ironforge: dungeon quests
+  zone Ironforge
+  tip In the High Seat, take the cobwebbed passage on the left and follow it down to the dungeon.
+  accept 96394
+  accept 96403
+
+step Enter the Hall of Thanes
+  tip Group of 5, level 13 or more. The portal is past the bridge and the meeting stone.
+  goto 27.6,47.8 "The Hall of Thanes" r 25
+
+step Inside the dungeon
+  tip West wing first: the Ghostly Attendant gives a quest before Faldrim. Each player loots their own heirlooms.
+  note Share each quest with your group: click it in the quest log, then Share.
+  accept 96395
+  complete 96403
+  complete 96394
+  complete 96393 optional
+  turnin 96395
+  accept 98423 -- Treaty tablet in the last boss room
+
+step Ironforge rewards
+  zone Ironforge
+  turnin 96403
+  turnin 96394
+  turnin 96393 optional
+  turnin 98423

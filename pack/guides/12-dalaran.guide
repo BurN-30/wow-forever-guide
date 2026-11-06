@@ -1,0 +1,54 @@
+# Adapted from Aurum's chapter aurum-druid/dalaran-finale (Aurums Night Elf Druid Guide 0.4.37,
+# GPL-3.0). Changes: for every class, Stormwind pickups moved before the trip, no fixed reward
+# choice, shorter tips. Ids cross-checked against Polestar 0.3.2's reference data and Dungeons
+# codex and the MittenQuest Forever pack (Stormwind 31-35). Untested in game (Aurum: past 20).
+guide groupe-alliance/12-dalaran
+title Group 11 · City of Dalaran (dungeon 28-33)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 28-31
+zone Stormwind City
+next forever/alliance/30-40/01-hillsbrad-foothills
+
+step Stormwind: two dungeon quests
+  tip Shylamiir is in the Trade District, High Sorcerer Andromath in the Mage Quarter tower.
+  accept 92456
+  accept 92489
+
+step Southshore: Emissary Jacques
+  zone Hillsbrad Foothills
+  tip His quest needs level 30: the whole group should wait for it.
+  level 30
+  getfp "Southshore"
+  accept 92432
+
+step Image of Archmage Modera
+  zone Silverpine Forest
+  tip North-west past Hillsbrad Fields, by Dalaran's outer sewer. Avoid Tarren Mill.
+  turnin 92432
+  accept 92457
+  accept 92458
+
+step City of Dalaran entrance
+  zone Alterac Mountains
+  tip Group of 5. Open the sewer gate with the key from Modera and follow the large pipe.
+  goto 14.7,63 "City of Dalaran" r 25
+
+step Inside the dungeon
+  tip Blossom in the central garden, remnants everywhere, the Arcane Mote at the Violet Citadel end.
+  note Share each quest with your group: click it in the quest log, then Share.
+  complete 92456
+  complete 92489
+  complete 92457
+  complete 92458
+
+step Modera's rewards
+  zone Silverpine Forest
+  turnin 92457
+  turnin 92458
+
+step Stormwind rewards
+  zone Stormwind City
+  turnin 92456
+  turnin 92489
