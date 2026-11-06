@@ -461,7 +461,7 @@ return {
 	-- {zone:1455} Ironforge
 	["{zone:1455} class quests"] = "Quêtes de classe de {zone:1455}",
 	-- {npc:10090} Belia Thundergranite · {object:32390} Hall of Arms · {npc:258785} High Priestess Mims · {object:32386} Hall of Mysteries · {npc:6120} Lago Blackwrench · {object:32383} Forlorn Cavern
-	["{npc:10090} is in the {object:32390}, {npc:258785} in the {object:32386}, {npc:6120} in the {object:32383}."] = "{npc:10090} est dans la Salle des Armes, {npc:258785} dans la Salle des Mystères, {npc:6120} dans la {object:32383}.",
+	["{npc:10090} is in the {object:32390}, {npc:258785} in the {object:32386}, {npc:6120} in the {object:32383}."] = "{npc:10090} est dans {object:32390}, {npc:258785} dans {object:32386}, {npc:6120} dans {object:32383}.",
 	-- {npc:10090} Belia Thundergranite
 	["{npc:10090}: Beast Training"] = "{npc:10090} : Dressage des bêtes",
 	-- {npc:6120} Lago Blackwrench · {npc:6122} Gakin the Darkbinder · {zone:1453} Stormwind

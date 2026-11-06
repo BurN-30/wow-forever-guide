@@ -31,6 +31,7 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. Reste
 |---|---|---|
 | Départ · Humain : Forêt d'Elwynn | 1-11 | Humains (quêtes de démoniste et de mage incluses) |
 | Départ · Nain : Dun Morogh | 1-11 | Nains (quêtes de classe incluses) |
+| Départ · Gnome : Dun Morogh | 1-11 | Gnomes (quêtes de classe incluses), même vallée de départ que les Nains |
 | Départ · Elfe de la nuit : Teldrassil | 1-11 | Elfes de la nuit (quêtes de druide incluses), finit au bateau pour Hurlevent |
 | Groupe 1 · Rendez-vous à Hurlevent | 10-12 | Tout le monde |
 | Groupe 2 · Marche de l'Ouest | 11-14 | |
@@ -43,8 +44,9 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. Reste
 | Groupe 9 · Site de fouilles : Les Paluns (donjon) | 26-29 | |
 | Groupe 10 · Mille pointes, Bois de la Pénombre et Les Paluns | 27-30 | The Missing Diplomat (quête 1274) (Hurlevent, puis Bois de la Pénombre) seulement à partir du niveau 28 |
 | Groupe 11 · Cité de Dalaran (donjon) | 30-33 | Niveau 30 requis pour la quête qui ouvre la route, puis la suite de Polestar (Contreforts de Hautebrande, 30-40) |
+| Solo · Loch Modan (facultatif) | 14-16 | Joueur en retard sur le groupe, seul (le midi par exemple) : environ 1 à 2 niveaux, retour à Forgefer en griffon. Ne s'ouvre jamais tout seul |
 
-En retard le midi ? Loch Modan (niveaux 14-16, quêtes de Thelsamar) : ni le paquet ni Polestar n'ont de guide pour cette zone, la suivre avec Questie ou Wowhead.
+En retard le midi ? `/polestar guides` → Guides de la communauté → Groupe Alliance → **Solo · Loch Modan** (quêtes de Thelsamar, de la tour de garde du sud et du pavillon de chasse ; quelques positions marquées **?**). De retour à 4 niveaux du groupe : reprendre le guide du groupe.
 
 ## Premier lancement
 
@@ -52,11 +54,11 @@ Rien à choisir : Polestar lit la race, la classe et le niveau du personnage et 
 
 | Personnage | Guide ouvert | Quoi faire |
 |---|---|---|
-| Humain, Nain ou Elfe de la nuit, niveau 1 | son Départ | rien |
+| Humain, Nain, Gnome ou Elfe de la nuit, niveau 1 | son Départ | rien |
 | Personnage déjà avancé, aucun guide Polestar ouvert avant (ex. Humain niveau 8) | le guide de son niveau, quêtes déjà rendues cochées (Humain 8 : Départ · Humain) | rien |
 | Elfe de la nuit niveau 10 à 12 (ex. druide 11 à Darnassus) | Départ · Elfe de la nuit ou Rendez-vous à Hurlevent, le plus proche | quêtes de Teldrassil pas finies : `/polestar guides` → Départ · Elfe de la nuit |
 | Personnage qui suivait déjà un guide de Polestar | Polestar rouvre ce guide | `/polestar guides` → Guides de la communauté → Groupe Alliance → le guide de son niveau |
-| Gnome ou Skyborne (hors du paquet) | le départ de Polestar, qui part ensuite vers la Marche de l'Ouest de Polestar | à la fin du départ : `/polestar guides` → Groupe 1 · Rendez-vous à Hurlevent |
+| Skyborne (hors du paquet) | le départ de Polestar, qui part ensuite vers la Marche de l'Ouest de Polestar | à la fin du départ : `/polestar guides` → Groupe 1 · Rendez-vous à Hurlevent |
 
 Changer de guide à tout moment : `/polestar guides`.
 
@@ -71,6 +73,30 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
 
 - **Polestar** © 2026 The Polestar authors, GPL-3.0 : moteur (dossiers `addons/Polestar*`, release 0.3.2 du 05/11/2026 ; modifiée par BurN-30 : le module Groupe Alliance est dans `Polestar/GroupeAlliance` et chargé par `Polestar.toc`, bouton d'aide dans `UI/GuideFrame.lua`, voir `tools/build.py`) et guides repris dans `pack/guides` (révision `08536e3` du 06/11/2026 ; chaque fichier repris le dit en tête).
 - **Aurums Night Elf Druid Guide** © 2026 Aurum, GPL-3.0 : chapitres de donjon adaptés à toutes les classes.
+- **Lodestar Guides for Polestar** (conversion de [Lodestar](https://github.com/danielcosta42/lodestar)), licence MIT : guide Loch Modan adapté dans `pack/guides/13-solo-loch-modan.guide` (révision `cc3bf4f` du 21/10/2026 ; trajet réordonné, quêtes vérifiées sur les données Forever, quêtes hors de la zone retirées). Notice exigée par la licence MIT, reprise aussi dans `LICENSE` et en tête du fichier :
+
+  ```
+  Polestar adaptation: Copyright (c) 2026 Petllama
+  Copyright (c) 2026 Daniel Costa (danielcosta42)
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+  ```
 - Modifications et ajouts par **BurN-30** : enchaînement des guides, rendez-vous de Hurlevent, notes de groupe, textes français ajoutés, module Groupe Alliance (liens Wowhead, astuces de quête, réglages calmes, aide), installateur.
 - L'ensemble est sous **GPL-3.0** (fichier `LICENSE`). Les données du jeu appartiennent à Blizzard Entertainment.
 
@@ -85,7 +111,8 @@ Jeu visé : WoW Forever (client 1.60.1). Sources consultées le 06/11/2026 :
 | [Wowhead Forever](https://www.wowhead.com/forever) | 06/11/2026 | Forever | liens, vérifications, astuces des commentaires reformulées |
 | [Aurums Night Elf Druid Guide](https://github.com/AurumTitanos/Aurums-Night-Elf-Druid-Guide) 0.4.37 | 22/10/2026 | Forever (bêta) | chapitres de donjon |
 | [RestedXP, guides gratuits](https://github.com/RestedXP/RXPGuides) | 06/11/2026 | Forever | méthode et conseils reformulés, aucun texte repris (licence CC BY-NC-SA) |
-| [Lodestar](https://github.com/petllama/lodestar-guides), [MittenQuest](https://github.com/petllama/mittenquest-guides) | 21/10/2026 | Forever (bêta) | recoupement |
+| [Lodestar](https://github.com/petllama/lodestar-guides) (MIT) | 21/10/2026 | Forever (bêta) | guide Solo · Loch Modan adapté, recoupement |
+| [MittenQuest](https://github.com/petllama/mittenquest-guides) (GPL-3.0) | 21/10/2026 | Forever (bêta) | recoupement |
 
 Textes français : ceux de Polestar, complétés par traduction automatique relue par sondage (quelques noms de lieux peuvent différer du jeu). Noms de quêtes, PNJ et objets : ceux du jeu, dans la langue de chaque joueur.
 </details>

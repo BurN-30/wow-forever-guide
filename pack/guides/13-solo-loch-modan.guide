@@ -1,0 +1,191 @@
+# Adapted from Lodestar's guide lodestar/alliance/loch-modan-11-18 (petllama/lodestar-guides,
+# revision cc3bf4f of 2026-10-21 UTC, a Polestar conversion of danielcosta42/lodestar).
+#
+# Lodestar Guides for Polestar: Polestar adaptation Copyright (c) 2026 Petllama;
+# Lodestar Copyright (c) 2026 Daniel Costa (danielcosta42). MIT License:
+#
+#   Permission is hereby granted, free of charge, to any person obtaining a copy
+#   of this software and associated documentation files (the "Software"), to deal
+#   in the Software without restriction, including without limitation the rights
+#   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#   copies of the Software, and to permit persons to whom the Software is
+#   furnished to do so, subject to the following conditions:
+#
+#   The above copyright notice and this permission notice shall be included in all
+#   copies or substantial portions of the Software.
+#
+#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#   SOFTWARE.
+#
+# Changes by BurN-30 (2026-11-06, this file as a whole is GPL-3.0 with the pack):
+# - a solo catch-up for a player behind the group, Loch Modan only: the Stormwind
+#   errands (1338, 353, 92750, 92751, 97237, 97234), the mage quests (1920-1941), the
+#   shaman Call of Fire (done in the Dwarf start), Ironband's escort chain (302, 273,
+#   454, 309), Bingles (2039, 2038: breadcrumb from Ironforge, back and forth across the
+#   loch), the level 16-18 quests (217, 297, 86613, 250, 199, 161) and the Dwarf/Gnome
+#   flight errand's last leg (6392, back to Thelsamar) are left out;
+# - Banner of the Fallen (86585) is left out: its giver and target are in no Forever
+#   source but Lodestar's beta conversion;
+# - route reordered (tower, Thelsamar, snow, troggs, the north, the east, Thelsamar),
+#   steps named, tips rewritten, group notes added, a non-leveling category so Polestar
+#   never opens it by itself;
+# - every quest checked against Polestar's Forever data (data-v2026.11.1) and RestedXP's
+#   free Forever guides (live, 06/11/2026): see the README. Snowbound's two NPCs and the
+#   snowy patch, Daggerfang and the fishing toolbox have no position in Polestar's data:
+#   their places come from Lodestar and RestedXP's guides (marked "?" in Reliability.lua).
+guide groupe-alliance/13-solo-loch-modan
+title Solo · Loch Modan
+folder Group Alliance
+category Miscellaneous
+faction Alliance
+levels 14-16
+zone Loch Modan
+
+# ---------------------------------------------------------------- The southern guard tower
+
+step The southern guard tower
+  tip From Ironforge, follow the road east across Dun Morogh to the South Gate Pass tunnel; the guard tower stands where it opens onto Loch Modan.
+  note Solo catch-up for a player behind the group (lunch break, evening off). Back within 4 levels of the lowest player? Stop and rejoin: /polestar guides, Group Alliance, the group's guide.
+  accept 224                                  -- Mountaineer Cobbleflint
+  accept 267                                  -- Captain Rugelfuss
+
+# ---------------------------------------------------------------- Thelsamar
+
+step Thelsamar
+  tip North along the road to the town. Mountaineer Kadrell walks up and down the road through town; Vidra Hearthstove and Grenhild Darktalon stand in the middle of town, Brock Stoneseeker on the east side, the gryphon master at the south end.
+  getfp "Thelsamar"
+  accept 416                                  -- Mountaineer Kadrell
+  accept 1339                                 -- Mountaineer Kadrell
+  accept 418                                  -- Vidra Hearthstove
+  accept 86667 npc 49808 @36.6,48.3           -- Grenhild Darktalon
+  accept 6387 only Dwarf,Gnome                -- Brock Stoneseeker
+  turnin 6387 only Dwarf,Gnome                -- Thorgrum Borrelson, the gryphon master
+  accept 6391 only Dwarf,Gnome                -- Handed in at the end, in Ironforge
+
+step Sausages on the way
+  along until q418
+  tip Boars, black bears and Forest Lurkers (spiders) roam the hills west of the road, between the tunnel and the Silver Stream Mine.
+  collect 3172 quest 418.1                    -- Boar Intestines
+  collect 3173 quest 418.2                    -- Bear Meat
+  collect 3174 quest 418.3                    -- Spider Ichor
+
+step The snowy patch
+  tip Back south along the road, almost to the tunnel: use the Ceramic Jar Grenhild gave you while standing on the patch of snow.
+  collect 279379 quest 86667.1 @19.6,63.1     -- Jar of Snow
+
+# ---------------------------------------------------------------- Stonesplinter Valley
+
+step Stonesplinter Valley
+  tip The troggs camp in the valley east of the tower. Every trogg can drop a Stone Tooth: no need to hunt one kind.
+  kill 1161 x10 quest 224.1                   -- Stonesplinter Troggs
+  kill 1162 x10 quest 224.2                   -- Stonesplinter Scouts
+  collect 2536 x8 quest 267.1                 -- Trogg Stone Teeth
+
+step The southern guard tower
+  turnin 224                                  -- Mountaineer Cobbleflint
+  turnin 267                                  -- Captain Rugelfuss
+  accept 237                                  -- Mountaineer Gravelgaw
+
+step Deeper in the valley
+  tip Further south, past the first camp, Skullthumpers and Seers (13-14) hold the valley's end.
+  kill 1163 x10 quest 237.1                   -- Stonesplinter Skullthumpers
+  kill 1166 x10 quest 237.2                   -- Stonesplinter Seers
+
+step The southern guard tower
+  turnin 237                                  -- Mountaineer Gravelgaw
+
+step The valley's end
+  when level>=15
+  tip Level 15 or more: Mountaineer Wallbang wants the Shamans and Bonesnappers (15-16) at the very back of the valley. Under 15, skip it.
+  accept 263                                  -- Mountaineer Wallbang
+  kill 1197 x10 quest 263.1                   -- Stonesplinter Shamans
+  kill 1164 x10 quest 263.2                   -- Stonesplinter Bonesnappers
+  turnin 263                                  -- Mountaineer Wallbang
+
+# ---------------------------------------------------------------- The north
+
+step Silver Stream Mine
+  zone Loch Modan
+  tip North on the road past Thelsamar to the mine at the north-west end of the loch. Mountaineer Stormpike stands at its entrance.
+  turnin 1339                                 -- Mountaineer Stormpike
+  accept 307                                  -- Mountaineer Stormpike
+
+step Rats and crates
+  tip The Miners' League Crates sit inside the mine; Tunnel Rat kobolds fill it and the hills around it.
+  collect 2640 x4 quest 307.1                 -- Miners' Gear, from the crates
+  collect 3110 x12 quest 416.1                -- Tunnel Rat Ears
+
+step Silver Stream Mine
+  turnin 307                                  -- Mountaineer Stormpike
+
+step Norric Lochthane
+  tip His house stands on the north-west shore of the loch, east of the mine.
+  turnin 86667 npc 258043 @41.8,19.0          -- Norric Lochthane
+
+step Thelsamar
+  label q418
+  tip Back south along the road.
+  turnin 416                                  -- Mountaineer Kadrell
+  turnin 418                                  -- Vidra Hearthstove
+  accept 436                                  -- Jern Hornhelm
+
+step The fishing toolbox
+  tip Optional, for swimmers: a Discarded Fishing Toolbox lies on the lake floor east of town, at one of several spots: swim until its "!" shows on the minimap. Young Threshadons (19-20) swim in the loch: keep clear.
+  accept 86614 object 665289 optional @48.1,39.7
+
+# ---------------------------------------------------------------- The east
+
+step Ironband's Excavation
+  tip East along the road on the south shore. Magmar Fellhew and Prospector Ironband stand at the dig site; the troggs digging just east of them are 17-20: keep away.
+  turnin 436                                  -- Magmar Fellhew
+  accept 298                                  -- Prospector Ironband
+
+step Farstrider Lodge
+  tip The lodge stands at the east end of the loch. Daryl's quest has a 15-minute timer: the Mountain Buzzards fly over the hills west and south-west of the lodge.
+  accept 257                                  -- Daryl the Youngling
+  accept 385                                  -- Marek Ironheart
+  accept 86758                                -- Marek Ironheart
+  kill 1194 x6 quest 257.1                    -- Mountain Buzzards
+  turnin 257                                  -- Daryl the Youngling
+
+step A Hunter's Challenge
+  when level>=15
+  tip 12 minutes this time: Elder Mountain Boars (16-17) roam the hills north-west of the lodge. Under 15, or short on time, skip it.
+  accept 258                                  -- Daryl the Youngling
+  kill 1192 x5 quest 258.1                    -- Elder Mountain Boars
+  turnin 258                                  -- Daryl the Youngling
+
+step The loch shore
+  tip Loch Crocolisks line the east and north shores. Daggerfang, the named one, swims along the east shore north-west of the lodge. Leave the Large Loch Crocolisk (level 22) alone.
+  collect 2924 x5 quest 385.1                 -- Crocolisk Meat
+  collect 2925 x6 quest 385.2                 -- Crocolisk Skins
+  collect 279591 quest 86758.1 @62.8,46.8     -- Marek's Croc-Hunting Knife: Daggerfang
+
+step Farstrider Lodge
+  turnin 385                                  -- Marek Ironheart
+  turnin 86758                                -- Marek Ironheart
+
+# ---------------------------------------------------------------- Back to Ironforge
+
+step Thelsamar
+  tip West along the road. Khara Deepwater sells fishing supplies by the water north-east of town.
+  turnin 298                                  -- Jern Hornhelm
+  accept 301                                  -- Jern Hornhelm
+  turnin 86614 optional                       -- Khara Deepwater
+
+step Fly to Ironforge
+  fly "Ironforge"
+
+step Ironforge
+  zone Ironforge
+  tip Prospector Stormpike is in the Hall of Explorers; Golnir Bouldertoe in the Great Forge; Gryth Thurden is the gryphon master where you landed.
+  note Back with the group: /polestar guides, Group Alliance, the group's guide.
+  turnin 301                                  -- Prospector Stormpike
+  turnin 6391 only Dwarf,Gnome                -- Golnir Bouldertoe
+  accept 6388 only Dwarf,Gnome
+  turnin 6388 only Dwarf,Gnome                -- Gryth Thurden
