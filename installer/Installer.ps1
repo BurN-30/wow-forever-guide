@@ -110,11 +110,13 @@ foreach ($f in $folders) {
 	Copy-Item -LiteralPath $f.FullName -Destination $dest -Recurse -Force
 	$n++
 }
-# Les anciennes versions de Polestar (0.2.x) avaient des dossiers de langue séparés.
+# Les anciennes versions de Polestar (0.2.x) avaient des dossiers de langue séparés ;
+# l'addon GroupeAlliance (paquet 0.1.0) est maintenant dans le dossier Polestar.
 Get-ChildItem -LiteralPath $addons -Directory -ErrorAction SilentlyContinue |
-	Where-Object { $_.Name -match '^Polestar_(Guides|Names)_[a-z]{2}[A-Z]{2}$' } |
+	Where-Object { $_.Name -match '^Polestar_(Guides|Names)_[a-z]{2}[A-Z]{2}$' -or $_.Name -eq 'GroupeAlliance' } |
 	ForEach-Object { Remove-Item -LiteralPath $_.FullName -Recurse -Force; Say "Ancien dossier retiré : $($_.Name)" }
 
 Say "$n addons installés ou mis à jour." "Green"
-Say "Relancez WoW, puis à l'écran des personnages : bouton AddOns, cochez Polestar et Groupe Alliance."
+Say "Relancez WoW : les guides s'ouvrent tout seuls, rien à cocher."
+Say "Sinon : écran des personnages, bouton AddOns en bas à gauche, cochez Polestar."
 Done 0

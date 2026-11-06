@@ -3,9 +3,12 @@
   python tools/build.py <forge.exe> <polestar checkout with data/forever> <Polestar release folder>
 
 1. forge guide lint, then forge guide compile of pack/ (Polestar's guides as context);
-2. addons/ = the Polestar release (unzipped Polestar-<version>.zip, unchanged),
-   the compiled pack (PolestarPack_GroupeAlliance and its _frFR texts addon)
-   and the companion addon addons-src/GroupeAlliance.
+2. addons/ = the Polestar release (unzipped Polestar-<version>.zip) and the compiled
+   pack (PolestarPack_GroupeAlliance and its _frFR texts addon);
+3. the Groupe Alliance module (addons-src/GroupeAlliance) goes inside Polestar's own
+   folder, so there is no extra addon to tick: its files are added to Polestar.toc and
+   UI/GuideFrame.lua gets the "?" help button (POLESTAR_CHANGES below, each applied
+   exactly once or the build stops). Polestar is GPL-3.0: the changed files say so.
 """
 import pathlib, shutil, subprocess, sys
 
@@ -13,6 +16,28 @@ forge, root, release = sys.argv[1], sys.argv[2], pathlib.Path(sys.argv[3])
 repo = pathlib.Path(__file__).resolve().parent.parent
 pack = repo / "pack"
 addons = repo / "addons"
+MODULE = ["Reliability.lua", "Tips.lua", "GroupeAlliance.lua"]
+NOTICE = "Modified by BurN-30 on 2026-11-06 (github.com/BurN-30/wow-forever-guide)"
+
+POLESTAR_CHANGES = [
+    ("Polestar.toc", "Alts\\Alts.xml\n",
+     "Alts\\Alts.xml\n# " + NOTICE + ": the Groupe Alliance module.\n"
+     + "".join(f"GroupeAlliance\\{f}\n" for f in MODULE)),
+    ("UI/GuideFrame.lua", "\tlocal avail = F:GetWidth() - 2 - 30\n",
+     "\tlocal avail = F:GetWidth() - 2 - 30 - 22 -- " + NOTICE + ": room for the \"?\" help button\n"),
+    ("UI/GuideFrame.lua", "\thoverable(strip.Add)\n",
+     "\thoverable(strip.Add)\n"
+     "\t-- " + NOTICE + ": the Groupe Alliance \"?\" help button at the strip's right end.\n"
+     "\tif ns.GA and ns.GA.HelpButton then\n"
+     "\t\tstrip.Help = hoverable(ns.GA.HelpButton(strip))\n"
+     "\t\tstrip.Help:SetPoint(\"RIGHT\", strip, \"RIGHT\", -4, 0)\n"
+     "\tend\n"),
+    ("README.txt", "Leveling guides for World of Warcraft: Forever.\r\n",
+     "Leveling guides for World of Warcraft: Forever.\r\n\r\n"
+     + NOTICE + ": the GroupeAlliance folder (Wowhead links,\r\n"
+     "quest tips, calm defaults) is loaded by Polestar.toc, and UI/GuideFrame.lua\r\n"
+     "has a \"?\" help button. Everything else is Polestar 0.3.2 as released.\r\n"),
+]
 
 def run(*args):
     r = subprocess.run([forge, *args, str(pack), "--root", root, "--quiet"], cwd=pack,
@@ -33,5 +58,15 @@ for d in sorted(release.iterdir()):
 for d in sorted((pack / "dist").iterdir()):
     if d.is_dir():
         shutil.copytree(d, addons / d.name)
-shutil.copytree(repo / "addons-src" / "GroupeAlliance", addons / "GroupeAlliance")
+
+polestar = addons / "Polestar"
+(polestar / "GroupeAlliance").mkdir()
+for f in MODULE:
+    shutil.copy2(repo / "addons-src" / "GroupeAlliance" / f, polestar / "GroupeAlliance" / f)
+for name, old, new in POLESTAR_CHANGES:
+    p = polestar / name
+    text = p.read_bytes().decode("utf-8")
+    if text.count(old) != 1:
+        sys.exit(f"Polestar change not applied: {name}: {old!r} found {text.count(old)} times")
+    p.write_bytes(text.replace(old, new).encode("utf-8"))
 print("addons:", ", ".join(sorted(p.name for p in addons.iterdir())))

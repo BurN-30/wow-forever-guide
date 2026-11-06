@@ -5,13 +5,14 @@
 -- "?": one Forever source only, or a beta-era source not yet played on live.
 -- "!": taken from Classic, not confirmed for Forever (none so far).
 local _, ns = ...
+ns.GA = ns.GA or {}
 
 local BETA_ROUTE = {
 	frFR = "Ids confirmés (données Polestar, codex Donjons) ; trajet repris d'Aurum (bêta), pas encore joué sur Forever.",
 	enUS = "Ids confirmed (Polestar data, Dungeons codex); route from Aurum (beta), not yet played on Forever.",
 }
 
-ns.Reliability = {
+ns.GA.Reliability = {
 	[92415] = { "?", {
 		frFR = "Deux objets de départ possibles dans les données (251270, 251520).",
 		enUS = "Two possible start items in the data (251270, 251520).",

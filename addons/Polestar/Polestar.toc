@@ -45,3 +45,7 @@ UI\UI.xml
 Rares\Rares.xml
 Talents\Talents.xml
 Alts\Alts.xml
+# Modified by BurN-30 on 2026-11-06 (github.com/BurN-30/wow-forever-guide): the Groupe Alliance module.
+GroupeAlliance\Reliability.lua
+GroupeAlliance\Tips.lua
+GroupeAlliance\GroupeAlliance.lua
