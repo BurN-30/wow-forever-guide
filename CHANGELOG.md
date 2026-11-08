@@ -2,6 +2,14 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.7.2 (2026-11-08)
+
+### Français
+- Un maître perdu : l'astuce dit où chercher les Géniteurs et Matriarches traquelunes (au sud du Glaive du Maître).
+
+### English
+- A Lost Master: the tip says where the Moonstalker Sires and Matriarchs are (south of the Master's Glaive).
+
 ## v0.7.1 (2026-11-08)
 
 ### Français

@@ -2,7 +2,7 @@
 ## Title: Group Alliance 1-60 (frFR)
 ## Notes: French texts of Group Alliance 1-60. Loaded on demand on a French client.
 ## Author: BurN-30
-## Version: 0.7.1
+## Version: 0.7.2
 ## Category: Polestar
 ## Group: Polestar
 ## LoadOnDemand: 1
