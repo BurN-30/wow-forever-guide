@@ -2,6 +2,14 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.6.1 (2026-11-08)
+
+### Français
+- Moins d'allers-retours : après Dalaran, plus de vol vers Hurlevent ; les deux récompenses de Hurlevent se rendent à l'arrêt de Hurlevent du guide suivant (environ 6 minutes gagnées).
+
+### English
+- Fewer back-and-forth trips: after Dalaran, no more flight to Stormwind; the two Stormwind rewards are handed in at the next guide's Stormwind stop (about 6 minutes saved).
+
 ## v0.6.0 (2026-11-08)
 
 ### Français
