@@ -270,6 +270,30 @@ step Kum'isha the Collector
   collect 10593 quest 3501.1
   turnin 3501
 
+# Groupe Alliance 0.7.0: the Sunken Temple, for whoever took Into the Temple of Atal'Hakkar
+# (1475) from Brohann in Stormwind (24-hinterlands, `when group 1475`). From the Blasted Lands
+# north into the Swamp of Sorrows, the dungeon, then the hearthstone as before; Brohann at the
+# Ironforge stop below (Deeprun Tram). Ids, levels and places from Polestar's Forever data and
+# Dungeons codex; no Wowhead Forever comment could be read (blocked): every quest carries a "?".
+
+step Sunken Temple (dungeon, optional): the Pool of Tears
+  when group 1475
+  zone Swamp of Sorrows
+  tip Ride north out of the Blasted Lands into the Swamp of Sorrows, then east past Stonard (Horde) to the Pool of Tears. The temple lies under the water: swim down into it and find the dungeon's entrance inside.
+  note Group of 5, levels 50 to 55. Keep 3 free quest log slots. Share each quest with your group: click it in the quest log, then Share.
+  goto 69.9,53.5 "Sunken Temple" r 25
+
+step Sunken Temple: the tablets and Jammal'an
+  when group 1475
+  tip The Atal'ai Tablets lie in the temple's halls: pick them up as you clear. Jammal'an the Prophet drops his head for the Atal'ai Exile's quest (Hinterlands, west of the Altar of Zul): not on this route, take it there on your own if you pass by.
+  collect 6288 x10 quest 1475         -- Atal'ai Tablet
+
+step Sunken Temple: the Shade of Eranikus
+  when group 1475
+  tip The Shade of Eranikus waits at the very end, past the green dragons. He drops the Essence of Eranikus: right-click it, then hand it in at the Essence Font in his room before you leave.
+  accept 3373 item 10454 optional     -- Essence of Eranikus, a drop
+  turnin 3373 object 148512 optional  -- Essence Font
+
 # Groupe Alliance 0.7.0: hearthstone note (where the stone is bound at this point of the pack, and the way
 # without it when it is still on cooldown). Text only, the step is Polestar's.
 step To Stoutlager Inn
@@ -304,6 +328,12 @@ step Ironforge
   only Warrior,Paladin,Hunter,Rogue,Priest,Shaman,Mage,Warlock
   zone Ironforge
   train class only Warrior,Paladin,Hunter,Rogue,Priest,Shaman,Mage,Warlock
+
+step Stormwind: Brohann Caskbelly
+  when onquest 1475
+  zone Stormwind City
+  tip Take the Deeprun Tram from Ironforge to Stormwind and back: Brohann waits in the Dwarven District.
+  turnin 1475                         -- Brohann Caskbelly
 
 step Fly to Aerie Peak
   zone Ironforge

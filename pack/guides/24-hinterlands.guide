@@ -58,6 +58,15 @@ step Brohann Caskbelly
   zone Stormwind City
   turnin 1469
 
+# Groupe Alliance 0.7.0: the Sunken Temple, optional (asked once here, `when group 1475`; run in
+# 27-steppes-ardentes from the Blasted Lands, Brohann's reward at that guide's Ironforge stop).
+# Ids, givers, levels and the dungeon's place from Polestar's Forever data and Dungeons codex;
+# Wowhead Forever could not be read for it (blocked): no Forever comment behind the tips.
+step Sunken Temple (dungeon, optional): Brohann Caskbelly
+  when group 1475
+  tip The Sunken Temple: a troll and dragon dungeon under the Pool of Tears in the Swamp of Sorrows, best at 50 to 55 with a group of 5. This guide runs it later, from the Blasted Lands (Group 25). Alone? Skip it.
+  accept 1475                         -- Brohann Caskbelly
+
 step Duskwood
   zone Duskwood
   goto 75.8,46.2 "Duskwood"

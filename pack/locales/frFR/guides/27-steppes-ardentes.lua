@@ -165,45 +165,70 @@ return {
 	-- {npc:7363} Kum'isha the Collector
 	["{npc:7363} walks around here: look inside the circle on the map"] = "{npc:7363} se promène par ici : cherchez dans le cercle sur la carte",
 
-	-- Step 43: To Stoutlager Inn
+	-- Step 43: Sunken Temple (dungeon, optional): the Pool of Tears
+	["Sunken Temple (dungeon, optional): the Pool of Tears"] = "Temple englouti (donjon, facultatif) : le Bassin des larmes",
+	-- {zone:1419} Blasted Lands · {zone:1435} Swamp of Sorrows
+	["Ride north out of the {zone:1419} into the {zone:1435}, then east past Stonard (Horde) to the Pool of Tears. The temple lies under the water: swim down into it and find the dungeon's entrance inside."] = "Sortir des {zone:1419} par le nord vers le {zone:1435}, puis aller à l'est après Pierrêche (Horde) jusqu'au Bassin des larmes. Le temple est sous l'eau : plonger, entrer et trouver l'entrée du donjon à l'intérieur.",
+	["Group of 5, levels 50 to 55. Keep 3 free quest log slots. Share each quest with your group: click it in the quest log, then Share."] = "Groupe de 5, niveaux 50 à 55. Garder 3 places libres dans le journal de quêtes. Partagez chaque quête au groupe : clic sur la quête dans le journal, puis Partager.",
+	["Sunken Temple"] = "Temple englouti",
+
+	-- Step 44: Sunken Temple: the tablets and Jammal'an
+	["Sunken Temple: the tablets and Jammal'an"] = "Temple englouti : les tablettes et Jammal'an",
+	-- {npc:5710} Jammal'an the Prophet · {npc:5598} Atal'ai Exile · {zone:1425} Hinterlands
+	-- plural, as words: Atal'ai Tablets = {item:6288} Atal'ai Tablet
+	["The Atal'ai Tablets lie in the temple's halls: pick them up as you clear. {npc:5710} drops his head for the {npc:5598}'s quest ({zone:1425}, west of the Altar of Zul): not on this route, take it there on your own if you pass by."] = "Les tablettes atal'ai sont posées dans les salles du temple : les ramasser en avançant. {npc:5710} donne sa tête pour la quête de l'{npc:5598} ({zone:1425}, à l'ouest de l'autel de Zul) : pas sur ce trajet, la prendre de votre côté si vous passez par là.",
+
+	-- Step 45: Sunken Temple: the Shade of Eranikus
+	-- {npc:5709} Shade of Eranikus
+	["Sunken Temple: the {npc:5709}"] = "Temple englouti : {npc:5709}",
+	-- {npc:5709} Shade of Eranikus · {item:10454} Essence of Eranikus · {object:148512} Essence Font
+	["The {npc:5709} waits at the very end, past the green dragons. He drops the {item:10454}: right-click it, then hand it in at the {object:148512} in his room before you leave."] = "{npc:5709} attend tout au fond, après les dragons verts, et laisse l'{item:10454} : clic droit dessus, puis la rendre au {object:148512}, dans la même salle, avant de partir.",
+	-- {item:10454} Essence of Eranikus
+	["{item:10454}, a drop"] = "{item:10454}, un butin",
+
+	-- Step 46: To Stoutlager Inn
 	["Use your hearthstone (Stoutlager Inn, Thelsamar) if it is ready again. On cooldown? Fly from Nethergarde Keep to Thelsamar."] = "Utilisez votre pierre de foyer (auberge de la Fortebière, Thelsamar) si elle est de nouveau prête. En recharge ? Prenez le griffon du Rempart-du-Néant à Thelsamar.",
 
-	-- Step 50: Fly to Aerie Peak
+	-- Step 53: Stormwind: Brohann Caskbelly
+	-- {zone:1455} Ironforge · {zone:1453} Stormwind · {npc:5384} Brohann Caskbelly · {object:28027} Dwarven District
+	["Take the Deeprun Tram from {zone:1455} to {zone:1453} and back: {npc:5384} waits in the {object:28027}."] = "Prendre le Tram des profondeurs de {zone:1455} à {zone:1453}, aller et retour : {npc:5384} attend dans le {object:28027}.",
+
+	-- Step 54: Fly to Aerie Peak
 	["Fly to Aerie Peak"] = "Envolez-vous vers Nid-de-l'Aigle",
 
-	-- Step 51: Wildkin feathers
+	-- Step 55: Wildkin feathers
 	["Wildkin feathers"] = "Plumes d'Indomptable",
 	-- {zone:1425} Hinterlands
 	-- plural, as words: Wildkin Feathers = {item:10819} Wildkin Feather
 	["The Wildkin Feathers lie on the ground across the {zone:1425}, south and east of Aerie Peak, where the owlbeasts roam; the mobs here are well below you now."] = "Les plumes d'Indomptable jonchent le sol dans {zone:1425}, au sud et à l'est du Nid-de-l'Aigle, là où rôdent les chouettards ; les monstres du coin sont désormais bien en dessous de votre niveau.",
 
-	-- Step 52: The Super Snapper FX
+	-- Step 56: The Super Snapper FX
 	-- {npc:7977} Gammerita
 	["These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:7977} (level 48 elite) needs a group of 2. Skip it if you are alone: the route has you grind the XP back."] = "Ce sont des monstres élites : il est conseillé de se grouper, cherchez des joueurs avec qui le faire. {npc:7977} (élite de niveau 48) demande un groupe de 2. Passez-la si vous êtes seul : l'itinéraire vous fait regagner l'expérience en tuant des monstres.",
 
-	-- Step 54: Fly to Southshore
+	-- Step 58: Fly to Southshore
 	["Fly to Southshore"] = "Envolez-vous pour Austrivage",
 	["Aerie Peak flight master"] = "Maître de vol de Nid-de-l'Aigle",
 
-	-- Step 56: Fly to Rut'theran Village
+	-- Step 60: Fly to Rut'theran Village
 	["Fly to Rut'theran Village"] = "Envolez-vous vers le village de Rut'theran",
 	["Auberdine flight master"] = "Maître de vol d'Auberdine",
 
-	-- Step 57: Rut'theran Village
+	-- Step 61: Rut'theran Village
 	["Rut'theran Village"] = "Village de Rut'theran",
 	-- {zone:1452} Winterspring
 	["The wildkin are in {zone:1452}: keep it"] = "Les Indomptables sont au {zone:1452} : gardez-la",
 
-	-- Step 58: Druid training
+	-- Step 62: Druid training
 	["Druid training"] = "Entraînement de druide",
 	-- {zone:1455} Ironforge · {zone:1457} Darnassus
 	["{zone:1455} has no druid trainer: take the portal up to {zone:1457} and train in the Cenarion Enclave, then come back down to Rut'theran Village."] = "{zone:1455} n'a pas de maître des druides : prenez le portail vers {zone:1457}, entraînez-vous dans l'Enclave cénarienne, puis redescendez à Rut'theran.",
 
-	-- Step 59: Back to Teldrassil
+	-- Step 63: Back to Teldrassil
 	-- {zone:1438} Teldrassil
 	["Back to {zone:1438}"] = "Retour vers {zone:1438}",
 
-	-- Step 60: Daryn Lightwind
+	-- Step 64: Daryn Lightwind
 	-- {npc:7907} Daryn Lightwind · {npc:7916} Erelas Ambersky
 	["{npc:7907} stands upstairs, above {npc:7916}: go up inside, the arrow cannot tell the floors apart."] = "{npc:7907} se tient à l'étage, au-dessus de {npc:7916} : montez à l'intérieur, la flèche ne distingue pas les étages.",
 }

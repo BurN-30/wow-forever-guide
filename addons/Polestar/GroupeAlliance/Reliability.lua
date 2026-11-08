@@ -17,6 +17,11 @@ local ULDAMAN = {
 	enUS = "Quest and giver confirmed (Polestar data, Dungeons codex); rooms and fights from the original game, Wowhead Forever not read yet for Uldaman.",
 }
 
+local SUNKEN = {
+	frFR = "Quête, donneur et niveau confirmés (données Polestar, codex Donjons) ; Wowhead Forever pas lu pour le Temple englouti (accès bloqué), aucun commentaire Forever derrière les conseils.",
+	enUS = "Quest, giver and level confirmed (Polestar data, Dungeons codex); Wowhead Forever not read for the Sunken Temple (access blocked), no Forever comment behind the tips.",
+}
+
 local ZULFARRAK = {
 	frFR = "Quête, donneur et butin confirmés (données Polestar, codex Donjons) ; événement de la pyramide repris du jeu d'origine, pas encore joué sur Forever.",
 	enUS = "Quest, giver and drop confirmed (Polestar data, Dungeons codex); the pyramid event from the original game, not yet played on Forever.",
@@ -115,4 +120,6 @@ ns.GA.Reliability = {
 	} },
 	-- 0.6.0: Zul'Farrak (23-tanaris).
 	[2865] = { "?", ZULFARRAK }, [3042] = { "?", ZULFARRAK }, [2768] = { "?", ZULFARRAK },
+	-- 0.7.0: Sunken Temple (24-hinterlands, 27-steppes-ardentes).
+	[1475] = { "?", SUNKEN }, [3373] = { "?", SUNKEN },
 }
