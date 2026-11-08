@@ -1,0 +1,186 @@
+# Adapted from Polestar's guide forever/alliance/30-40/03-ashenvale (GPL-3.0, github.com/fitzforge/polestar, tag v0.3.4).
+# Changes: guide id, title, folder, next guide, group notes. Quest steps kept as Polestar wrote them,
+# except where a comment marked "Groupe Alliance" says otherwise.
+guide groupe-alliance/16-orneval-paluns
+title Group 14 · Ashenvale & Wetlands
+folder Group Alliance
+faction Alliance
+levels 33-34
+zone Ashenvale
+next groupe-alliance/17-strangleronce
+
+# Forge's route search orders the quests of this guide and its guide writer writes the steps.
+# Fixes go into data/route-fixes.json, data/guide-fixes.json or forever-db/corrections, never
+# into this file.
+# Added here: Velinde Starsong (1037), Blessed Arm (322).
+
+step Astranaar
+  note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
+  sethome "Astranaar"
+  accept 1035                         -- Pelturas Whitemoon, inside
+
+step Dartol's Rod
+  tip The Crazed and Withered Ancients north of the moonwell carry the Wooden Key; the worn chest it opens stands among them.
+  collect 5475 "Wooden Key"
+  collect 5464 quest 1026             -- Iron Shaft
+
+step The Howling Vale
+  tip Take the tunnel into the Howling Vale; the tome lies in the ruins at its west end.
+  interact 19027 quest 1022.1         -- Tome of Mel'Thandris
+
+step Shael'dryn
+  turnin 1026
+  accept 1027
+
+# ---------------------------------------------------------------- Xavian and Forest Song
+
+step Anilia
+  tip Follow the road east to the satyr camps of Xavian; Anilia hides at their edge.
+  turnin 1021
+  accept 1031
+
+step Geltharis
+  tip Geltharis leads the Xavian satyrs; he carries the branch.
+  collect 5461 quest 1031             -- Branch of Cenarius
+
+step Forest Song
+  tip Forest Song, the Night Elf outpost at the eastern end of the road: Kayneth Stillwind stands there.
+  turnin 4581                         -- Kayneth Stillwind
+  accept 1011
+
+# ---------------------------------------------------------------- The south-east
+
+step The Dor'Danil Barrow Den: kill these as you meet them
+  zone Ashenvale
+  tip The Forsaken's camp lies in the woods south of Forest Song.
+  tip Rusty chests lie around the Shadethicket furbolg camps west of the Forsaken; open them until one holds the pommel.
+  tip Careful: Non-elite Forsaken of about level 28-30 guard the camp. Some of them are stealthed, and the ones around the table often aggro together.
+  collect 5519 quest 1027             -- Iron Pommel
+  collect 5440 quest 1011             -- Bottle of Disease
+
+step Fallen Sky Lake
+  tip The Shadethicket Oracle walks the shore of Fallen Sky Lake, south-west of the chests; the Gleaming Crescent Pendant lies north of the lake, on the way.
+  tip Careful: Other mobs, some of them underwater, sit near the island. Clear them first so they don't join the fight when you pull the Oracle.
+  collect 5508 quest 1035             -- Fallen Moonstone
+  accept 98027 object 669176          -- Gleaming Crescent Pendant: for Maliynn in Astranaar
+
+step Kayneth Stillwind
+  turnin 1011
+  accept 1012
+
+step Insane druids
+  tip The three druids stand together at the Forsaken camp south of Forest Song.
+  tip Careful: The den has many mobs that respawn quickly, including stealthed undead and patrols, so extra mobs often join a fight.
+  kill 3940 quest 1012.1              -- Taneel Darkwood, inside The Dor'Danil Barrow Den
+  kill 3941 quest 1012.2              -- Uthil Mooncall, inside The Dor'Danil Barrow Den
+  kill 3942 quest 1012.3              -- Mavoris Cloudsbreak, inside The Dor'Danil Barrow Den
+
+step Satyrnaar
+  tip The Circle of Imprisonment stands in the satyr camp of Satyrnaar, further east along the road.
+  tip Careful: The Felmusk Rogues in Night Run often go stealthed, and Satyrnaar has satyr casters.
+  interact 20352 quest 1140.2         -- Circle of Imprisonment
+
+step Forest Song
+  turnin 1012                         -- Kayneth Stillwind
+
+# ---------------------------------------------------------------- Night Run and the shrine
+
+step Night Run
+  tip The second Circle of Imprisonment lies in the valley of Night Run, on the way west.
+  interact 19901 quest 1140.1         -- Circle of Imprisonment
+
+step Shael'dryn
+  turnin 1027
+  accept 1028
+
+step Hidden Shrine
+  tip The shrine sits on the hill just south-east of the moonwell; follow the winding path up.
+  turnin 1028
+  accept 1055
+
+step Shael'dryn
+  turnin 1055
+  accept 1029
+
+step Astranaar
+  turnin 1029                         -- Raene Wolfrunner
+  accept 1030
+  turnin 98027                        -- Maliynn
+  turnin 1035                         -- Pelturas Whitemoon, inside
+
+# ---------------------------------------------------------------- Krolg
+
+step Krolg
+  tip Krolg, a furbolg untouched by the corruption, sits south of the road below Mystral Lake.
+  turnin 1030
+  accept 1045
+
+step Ran Bloodtooth
+  tip Ran Bloodtooth and his guards camp just east of Krolg.
+  tip Careful: Wolves and spiders roam near the camp and can join a fight. Some of the wolves come in pairs.
+  kill 3932 quest 1045.2              -- Bloodtooth Guard
+  kill 3696 quest 1045.1              -- Ran Bloodtooth
+
+step Krolg
+  turnin 1045
+  accept 1046
+  complete 1046
+
+step Raene Wolfrunner
+  turnin 1046
+
+# ---------------------------------------------------------------- The western posts
+
+step Delgren the Purifier
+  turnin 1140
+
+step Melyria and Illiyana
+  turnin 1022                         -- Sentinel Melyria Frostshadow
+  accept 1037
+  turnin 1031                         -- Illiyana
+
+step Ashenvale
+  zone Ashenvale
+  goto 34.5,48.0 "Ashenvale"
+
+step Fly to Auberdine
+  zone Ashenvale
+  goto 34.5,48.0 "Astranaar flight master"
+  fly "Auberdine"
+  zone Darkshore
+
+# ---------------------------------------------------------------- Menethil Harbor
+
+step Boat to Menethil Harbor
+  zone Darkshore
+  goto 32.4,43.8 "Boat to Menethil Harbor"
+
+step Glorin Steelbrow
+  zone Wetlands
+  tip Glorin stands on the upper floor of Menethil's keep.
+  turnin 270                          -- Inside
+  accept 321
+
+step Deepwater Tavern
+  turnin 1248                         -- Mikhail
+  accept 1249
+  kill 4962 quest 1249 @10.5,60.3 map 1437 -- Tapoke "Slim" Jahn
+  turnin 1249
+  accept 1250                         -- Tapoke "Slim" Jahn
+  turnin 1301                         -- Vincent Hyal
+  accept 1302
+  turnin 1250                         -- Mikhail
+  accept 1264
+
+step Waterlogged Chest
+  tip The wreck of the Flying Osprey lies in the shallows south of the keep.
+  turnin 321
+  accept 324
+
+step Lightforge Ingots
+  tip The Bluegill murlocs on the beach south-west of Menethil carry the ingots.
+  collect 2702 quest 324              -- Lightforge Ingot; underwater
+
+step Glorin Steelbrow
+  turnin 324                          -- Inside
+  accept 322

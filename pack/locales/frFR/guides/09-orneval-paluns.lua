@@ -8,7 +8,7 @@
 return {
 	-- Guide
 	-- {zone:1440} Ashenvale · {zone:1437} Wetlands
-	["Group 8 · {zone:1440}, {zone:1437} & Stonetalon"] = "Groupe 8 · {zone:1440}, {zone:1437} et Les Serres-Rocheuses",
+	["Group 8 · {zone:1440}, {zone:1437} & Stonetalon"] = "Groupe 8 · {zone:1440}, {zone:1437} et les Serres-Rocheuses",
 
 	-- Step 1: Moonglade
 	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
@@ -269,7 +269,7 @@ return {
 
 	-- Step 69: Into Loch Modan
 	-- {zone:1432} Loch Modan
-	["Into {zone:1432}"] = "Vers le {zone:1432}",
+	["Into {zone:1432}"] = "Dans les {zone:1432}",
 
 	-- Step 70: Into Dun Morogh
 	-- {zone:1426} Dun Morogh

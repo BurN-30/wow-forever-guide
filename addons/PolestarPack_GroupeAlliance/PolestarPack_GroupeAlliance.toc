@@ -1,8 +1,8 @@
 ## Interface: 16001
-## Title: Polestar Community: Group Alliance 1-33
-## Notes: Alliance route for friends who play alone or together: start guides, Stormwind meeting point, zones, the four Forever dungeons, the Deadmines and the Stockade, group quests to take or skip.
+## Title: Polestar Community: Group Alliance 1-50
+## Notes: Alliance route to 50 for friends who play alone or together: start guides, Stormwind meeting point, zones, the Forever dungeons, Deadmines, Stockade, Scarlet Monastery, Uldaman, group quests.
 ## Author: BurN-30
-## Version: 0.4.0
+## Version: 0.5.0
 ## Category: Polestar
 ## Group: Polestar
 ## Dependencies: Polestar

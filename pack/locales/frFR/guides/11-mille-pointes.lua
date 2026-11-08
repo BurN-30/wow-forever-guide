@@ -186,7 +186,7 @@ return {
 
 	-- Step 36: Into The Barrens
 	-- {zone:1413} The Barrens
-	["Into {zone:1413}"] = "Vers les {zone:1413}",
+	["Into {zone:1413}"] = "Dans les {zone:1413}",
 
 	-- Step 37: Takar the Seer
 	-- {zone:1413} The Barrens · {npc:6244} Takar the Seer
@@ -207,6 +207,10 @@ return {
 	-- {object:19868} Rocket Car Rubble
 	-- plural, as words: Scorpid Reavers = {npc:4140} Scorpid Reaver · Saltstone Basilisks = {npc:4147} Saltstone Basilisk
 	["{object:19868} lies all over the flats. Scorpid Reavers roam the north half; keep to it, away from the Saltstone Basilisks, Crystalhides and Gazers (32-35) of the middle and the far south."] = "{object:19868} jonchent les Salines. Les Scorpides ravageurs parcourent la moitié nord : restez-y, loin des Basilics du sel gemme, Peaux de cristal et Contemplateurs (32-35) du centre et de l'extrême sud.",
+
+	-- Step 42: Mirage Raceway
+	-- {npc:4454} Fizzle Brassbolts · {zone:1418} Badlands
+	["{npc:4454}: for Martek in the {zone:1418}, at 39; not offered? Go on"] = "{npc:4454} : pour Martek dans {zone:1418}, à 39 ; non proposé ? Continuer",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Back to Menethil"] = "Retour à Menethil",

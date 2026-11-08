@@ -1,0 +1,68 @@
+# Written for this pack by BurN-30 (GPL-3.0). Quest ids, givers, places and levels from
+# Polestar's Forever data (data-v2026.11.1: QuestieDB Forever, the 1.60.1 client) and its
+# Dungeons codex; Wowhead Forever's zone and quest pages (levels 42-52 on Forever, 5 players;
+# Krom's chest and the power stones outside the instance), read on 08/11/2026. Room order and
+# fights from the original game's comments: no Forever comment yet, and the Forever dungeon guide
+# could not be read (pages blocked). Every quest of the chapter carries a "?". Not played in game.
+#
+# Optional chapter: asked once in Ironforge at the end of the previous guide (`when group 2240`,
+# Prospector Stormpike and Krom Stoutarm); every step here needs that answer (`when done
+# uld-start`). Skipped: the whole chapter is left out and the Badlands guide follows.
+#
+# Flow: Ironforge pickups (previous guide) -> Valley of Fangs (Rigglefuzz, optional) -> the outer
+# cave (power stones, Krom's chest) -> Uldaman: Baelog, the Staff of Prehistoria and the hidden
+# chamber, Archaedas and the Discs -> Rigglefuzz -> Ironforge rewards.
+guide groupe-alliance/20b-uldaman
+title Group 18b · Uldaman (dungeon 42-46, optional)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 42-46
+zone Badlands
+next groupe-alliance/21-terres-ingrates-hinterlands
+
+step Uldaman: before going in
+  label uld-start
+  when group 2240
+  tip Uldaman: a 5-player dungeon at the north end of the Badlands, levels 42 to 52 on Forever: best at 43 or more. This chapter takes its quests, runs the dungeon, then hands everything in. Alone? Skip it: the guide goes on in the Badlands.
+  note Keep 5 free quest log slots. Everyone takes the quests at their own pace; meet at the entrance for the run.
+  accept 2418 optional                    -- Rigglefuzz, Valley of Fangs
+
+step The digsite and the outer cave
+  when done uld-start
+  tip The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. Krom's chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards.
+  collect 8009 x8 quest 2418 optional     -- Dentrium Power Stone: Shadowforge dwarves
+  collect 8052 x8 quest 2418 optional     -- An'Alleum Power Stone: Shadowforge dwarves
+  collect 8027 quest 1360                 -- Krom Stoutarm's Treasure, from his chest
+  goto 44.6,12.1 "Uldaman" r 25
+
+step Baelog and the hidden chamber
+  when done uld-start
+  tip Baelog, Eric and Olaf wait in the first halls, at the top of a ramp. The chest beside Baelog holds the Gni'kiv Medallion, Revelosh drops the Shaft of Tsol: together they make the Staff of Prehistoria. Plant it in the Map Room, kill Ironaya (elite), then walk all the way into the chamber.
+  note Share each quest with your group: click it in the quest log, then Share. A Shattered Necklace may drop on the way: its chain goes on with Talvash del Kissel in Ironforge.
+  turnin 2398                             -- Baelog
+  accept 2240
+  complete 2240                           -- Explore the hidden chamber
+  accept 2198 item 7666 optional          -- Shattered Necklace, a drop: for Talvash del Kissel in Ironforge
+
+step Archaedas and the Discs of Norgannon
+  when done uld-start
+  tip Archaedas, the last boss, wakes the stone guardians around his room during the fight. Behind him, the Discs of Norgannon: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave.
+  accept 2278 object 131474 optional      -- The Discs of Norgannon
+  turnin 2278 object 131474 optional
+  accept 2279 object 131474 optional
+
+step Rigglefuzz
+  when done uld-start
+  tip Leave by the front, south to the Valley of Fangs.
+  turnin 2418 optional                    -- Rigglefuzz
+
+step Ironforge rewards
+  when done uld-start
+  zone Ironforge
+  tip Fly from Thelsamar. Prospector Stormpike, Krom Stoutarm and High Explorer Magellas are all in the Hall of Explorers; Talvash del Kissel in the Mystic Ward.
+  turnin 2240                             -- Prospector Stormpike
+  turnin 1360                             -- Krom Stoutarm
+  turnin 2279 optional                    -- High Explorer Magellas
+  turnin 2198 optional                    -- Talvash del Kissel: his follow-ups need another Uldaman run, not in this guide
+  note The Badlands guide next: fly back to Thelsamar and ride south.

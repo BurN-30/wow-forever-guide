@@ -12,6 +12,11 @@ local BETA_ROUTE = {
 	enUS = "Ids confirmed (Polestar data, Dungeons codex); route from Aurum (beta), not yet played on Forever.",
 }
 
+local ULDAMAN = {
+	frFR = "Quête et donneur confirmés (données Polestar, codex Donjons) ; salles et combats repris du jeu d'origine, Wowhead Forever pas encore lu pour Uldaman.",
+	enUS = "Quest and giver confirmed (Polestar data, Dungeons codex); rooms and fights from the original game, Wowhead Forever not read yet for Uldaman.",
+}
+
 ns.GA.Reliability = {
 	[92415] = { "?", {
 		frFR = "Deux objets de départ possibles dans les données (251270, 251520).",
@@ -70,4 +75,25 @@ ns.GA.Reliability = {
 		frFR = "Cellule de Targorr variable selon les commentaires ; le guide Wowhead Forever (bêta) le place au bout du couloir nord.",
 		enUS = "Targorr's cell varies per the comments; Wowhead's Forever guide (beta) puts him at the end of the north corridor.",
 	} },
+	-- 0.5.0: Stormwind chain and Scarlet Monastery (Polestar's Forever data; Wowhead Forever pages
+	-- read on 08/11/2026, some blocked); not played in game yet.
+	[395] = { "?", {
+		frFR = "Fin de chaîne (395, 396) tirée des seules données Polestar : pages Wowhead non lues.",
+		enUS = "End of the chain (395, 396) from Polestar's data only: Wowhead pages not read.",
+	} },
+	[396] = { "?", {
+		frFR = "Rendue à Lady Katrana Prestor d'après les données Polestar : page Wowhead non lue.",
+		enUS = "Handed to Lady Katrana Prestor per Polestar's data: Wowhead page not read.",
+	} },
+	[1050] = { "?", {
+		frFR = "Place du livre dans la Bibliothèque reprise du jeu d'origine, pas encore vérifiée sur Forever.",
+		enUS = "The book's place in the Library comes from the original game, not yet checked on Forever.",
+	} },
+	[1053] = { "?", {
+		frFR = "Ordre des ailes et combats repris du jeu d'origine ; besoin d'une clé pour l'Armurerie et la Cathédrale sur Forever non confirmé.",
+		enUS = "Wing order and fights from the original game; whether the Armory and Cathedral need a key on Forever is not confirmed.",
+	} },
+	-- 0.5.0: Uldaman (20b-uldaman).
+	[2398] = { "?", ULDAMAN }, [2240] = { "?", ULDAMAN }, [1360] = { "?", ULDAMAN }, [2418] = { "?", ULDAMAN },
+	[2278] = { "?", ULDAMAN }, [2279] = { "?", ULDAMAN }, [2198] = { "?", ULDAMAN },
 }

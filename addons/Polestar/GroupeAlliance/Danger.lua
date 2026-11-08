@@ -74,4 +74,9 @@ ns.GA.Danger = {
 		frFR = "Les nagas de Mathystra (18-21) sont en groupes serrés et le cimetière est très loin. Seul : niveau 19, les tirer un par un depuis le bord des ruines.",
 		enUS = "The Mathystra naga (18-21) stand in tight packs and the graveyard is far away. Alone: level 19, pull them one at a time from the edge of the ruins.",
 	},
+	-- Stormwind: the end of the Defias story (12-dalaran)
+	[434] = { lvl = 32, grp = 2,
+		frFR = "Lescovar (31) et Marzon (30) se battent ensemble, avec des gardes royaux à côté. Seul : niveau 32, ou tuer Marzon d'abord dès qu'ils se séparent (Lescovar s'en va, Tyrion relance l'événement quelques minutes plus tard) ; à deux : chacun reçoit le crédit.",
+		enUS = "Lescovar (31) and Marzon (30) fight together, with royal guards nearby. Alone: level 32, or kill Marzon first as soon as they split (Lescovar walks off, Tyrion restarts the event a few minutes later); as a pair: everyone gets the credit.",
+	},
 }

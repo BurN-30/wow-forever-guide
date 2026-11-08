@@ -1,0 +1,249 @@
+# Adapted from Polestar's guide forever/alliance/30-40/06-badlands (GPL-3.0, github.com/fitzforge/polestar, tag v0.3.4).
+# Changes: guide id, title, folder, next guide, group notes. Quest steps kept as Polestar wrote them,
+# except where a comment marked "Groupe Alliance" says otherwise.
+guide groupe-alliance/19-terres-ingrates
+title Group 17 · Badlands & Desolace
+folder Group Alliance
+faction Alliance
+levels 39-40
+zone Badlands
+next groupe-alliance/20-strangleronce-marecage
+
+# Forge's route search orders the quests of this guide and its guide writer writes the steps.
+# Fixes go into data/route-fixes.json, data/guide-fixes.json or forever-db/corrections, never
+# into this file.
+# Added here: Claim Rackmore's Treasure! (6161), The Karnitol Shipwreck (1456).
+
+step Into Badlands
+  zone Badlands
+  note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
+  goto 49.4,8.0 "Into Badlands"
+
+step Badlands
+  zone Badlands
+  goto 53.4,43.4 "Badlands"
+
+# ---------------------------------------------------------------- Hammertoe's Digsite
+
+step Hammertoe's Digsite
+  zone Badlands
+  tip Head back west to the road and follow it south out of Loch Modan through the pass into the Badlands. Prospector Ryedol and Sigrun Ironhew camp side by side at the dig.
+  accept 719                          -- Prospector Ryedol
+  accept 718                          -- Sigrun Ironhew
+
+step Hammertoe's Digsite: kill these as you meet them
+  zone Badlands
+  tip The Shadowforge dwarves camp just north of the digsite; the crumpled map lies among their tents. Tunnelers and Darkweavers carry Ryedol's pick. Crag Coyotes roam the slopes around it.
+  accept 720                          -- Crumpled Map
+  collect 7846 quest 2500             -- Crag Coyote Fang
+  collect 4616 quest 719              -- Ryedol's Lucky Pick
+  collect 7847 quest 2500             -- Buzzard Gizzard
+
+step The excavation crate
+  tip Head north-east to the abandoned dig; the supply crate lies there among the Dustbelcher ogres.
+  collect 4629 quest 718              -- Supply Crate
+
+step Hammertoe's Digsite
+  note Ryedol's next errand goes into Uldaman: skip it.
+  turnin 718                          -- Sigrun Ironhew
+  accept 733
+  turnin 720
+  turnin 719                          -- Prospector Ryedol
+
+# ---------------------------------------------------------------- The middle
+
+step Valley of Fangs
+  tip Martek and Rigglefuzz camp together in the Valley of Fangs, in the middle of the Badlands.
+  turnin 1106 optional                -- Martek the Exiled: if you took his letter in Thousand Needles
+  accept 1108 optional
+  accept 703                          -- Rigglefuzz
+  accept 705                          -- The clams lie on Stranglethorn's north-west coast, in the next guide: keep it
+
+step Indurium Flake on the way
+  along until q1108
+  collect 5797 quest 1108 optional
+
+step Agmond's End
+  tip The battered skeleton lies just east of the ogres, at the edge of the Stonevault trogg camp; the Bonesnappers and Shamans around it drop the flakes. Theldurin sits by the ruined camp further south.
+  turnin 738                          -- Battered Dwarven Skeleton
+
+step Lotwil Veriatus
+  tip Head west into the Dustbowl; Lotwil works by his machines in the middle of it.
+  accept 710
+
+step Agmond's End: kill these as you meet them
+  label q1108
+  zone Badlands
+  tip The Dustbelcher ogres camp just south of the valley; any of them drops scrap. Buzzards circle the plain to the east.
+  tip The battered skeleton lies at the edge of the Stonevault trogg camp; Murdaloc, Agmond's killer, walks among the Bonesnappers.
+  tip The Lesser Rock Elementals wander the Dustbowl west of Lotwil.
+  tip Careful: Dustbelcher Lords are level 44-45. They use Battle Shout and Demoralizing Shout, and below 50% health they call for help from allies within 15 yd. Seven of them stand about 750 yd south of Kargath.
+  collect 4630 quest 733              -- Scrap Metal
+  collect 3404 quest 703              -- Buzzard Wing
+  collect 7847 quest 2500             -- Buzzard Gizzard
+  accept 739                          -- Battered Dwarven Skeleton
+  note The skeleton's next task, Murdaloc, waits until the later Badlands guide at 43.
+  collect 5797 quest 1108 optional    -- Indurium Flake
+  accept 709                          -- Theldurin the Lost
+  collect 7848 quest 2500             -- Rock Elemental Shard
+  collect 4626 quest 710              -- Small Stone Shard
+
+step Lotwil Veriatus
+  turnin 710
+  accept 711
+
+step Lucien Tosselwrench
+  note Lotwil's next test needs crafted gear: skip it.
+
+# ---------------------------------------------------------------- The north
+
+step The Ancient Chest
+  tip Head north-east to the dwarven ruins in the north of the Badlands; the chest sits among the Shadowforge dwarves. Ambassador Infernus nearby is elite: give him room.
+  collect 4631 quest 709              -- Tablet of Ryun'eh; below ground
+
+step Theldurin the Lost
+  tip Head south to Agmond's End.
+  turnin 709
+  accept 727                          -- for Gerrig Bonegrip in Ironforge: keep it
+  kill 2893 quest 739                         -- Stonevault Bonesnapper, 130 yd north
+
+step Rock Elementals
+  tip The Rock Elementals roam south-east of Lotwil; Giant Buzzards and Elder Crag Coyotes share the plain to their west.
+  collect 4627 quest 711              -- Large Stone Slab
+
+step Lotwil Veriatus
+  turnin 711
+  accept 712 optional
+  collect 4628 quest 712 optional     -- Bracers of Rock Binding
+  turnin 712
+
+step Lucien Tosselwrench
+  zone Badlands
+  accept 716 optional                 -- Lucien Tosselwrench, beside Lotwil
+  turnin 716 optional                 -- only if you carry Patterned Bronze Bracers (a blacksmith's craft)
+step To Stoutlager Inn
+  zone Loch Modan
+  goto 35.5,48.4 "Stoutlager Inn"
+
+# ---------------------------------------------------------------- To Theramore
+
+step Thelsamar
+  zone Loch Modan
+  turnin 2500                         -- Ghak Healtouch, in the inn; below ground
+
+step Fly to Menethil Harbor
+  zone Loch Modan
+  goto 33.9,50.8 "Thelsamar flight master"
+  fly "Menethil Harbor"
+  zone Wetlands
+
+step Boat to Theramore
+  zone Wetlands
+  goto 5.13,63.61 "Boat to Theramore"
+
+step Theramore
+  zone Dustwallow Marsh
+  tip The flight master stands by the gate of Foothold Citadel; Clerk Lendry and Commander Samaul are inside the citadel.
+  getfp "Theramore"
+  turnin 1302                         -- Clerk Lendry, on the top floor
+  turnin 1264                         -- Commander Samaul, on the top floor
+  accept 1265                         -- for the Dustwallow loop in the next guide
+
+step Nijel's Point
+  zone Desolace
+  fly "Nijel's Point"
+  sethome "Nijel's Point"
+  turnin 6141                         -- Brother Anton
+  accept 261
+  accept 1466
+  accept 93224                        -- Captain Pentigast
+
+# ---------------------------------------------------------------- Desolace: the south loop
+
+step Bibbly F'utzbuckle
+  tip Follow the road south to Kormek's Hut.
+  accept 5501
+
+step Kodo Graveyard
+  tip Hornizz stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; Kodo Bones lie among the skeletons. A Flesh Picker crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off.
+  collect 13703 quest 5501            -- Kodo Bone
+  kill 217590                         -- Flesh Picker: catch it, for My Little Friends
+  accept 6134                         -- Hornizz Brimbuzzle
+
+step Maraudine centaurs
+  tip The Maraudine centaurs hold the Valley of Spears west of the graveyard; every kind drops the totems.
+  collect 254432 quest 93224.1        -- Carved Centaur Totem
+
+step Melizza Brimbuzzle
+  tip Melizza is held in the centaur camp west of the graveyard. Free her and keep her alive on the walk out; she stops by the graveyard.
+  tip Careful: The scripted groups are linked and only appear during the escort, so you cannot clear them in advance or pull them one at a time. Clearing the normal centaurs on the path before you start does help.
+  accept 6132
+  complete 6132 @40.1,61.6            -- escort Melizza back toward the graveyard
+
+step Mannoroc Coven
+  tip The demons gather at the Mannoroc Coven in southern Desolace: felhounds (Mana Eaters, Mage and Ley Hunters), Nether Maidens and Sisters, and Doomwarder Captains around the pit.
+  tip Careful: Most of the mobs here walk patrol routes, so you can easily pull extra mobs.
+  collect 6251 quest 1466             -- Nether Wing
+  collect 6252 quest 1466             -- Doomwarder Blood
+
+step The Valley of Bones
+  tip Undead Ravagers roam the bone fields south of the Magram village, east of the Coven; at the far south-east, use the Crate of Ghost Magnets to draw the Magrami Spectres.
+  kill 11561 quest 261                -- Undead Ravager
+  use 15848 quest 6134.1 @63.5,91.6 map 1443
+  collect 15849 quest 6134            -- Ghost-o-plasm
+
+step Mannoroc Coven
+  collect 6250 quest 1466             -- Felhound Brain
+
+step Hornizz Brimbuzzle
+  turnin 6132
+  turnin 6134                         -- Hornizz Brimbuzzle
+
+step Azore Aldamort
+  turnin 5741
+  tip Follow the road west across the north of Desolace to the ruins of Ethel Rethor. Azore's tower stands on the hill there, on the way to the wreck.
+  accept 6027
+
+step Karnitol's Chest
+  tip The wrecked ship's chest lies on the shore just west of Azore's tower.
+  turnin 1454                         -- Karnitol's Chest
+  accept 1455
+
+step Claim Rackmore's Treasure!
+  accept 6161 only Dwarf
+  collect 15878 quest 6161.1 @34.7,33.5 map 1443 only Dwarf -- Underwater
+
+step Nijel's Point
+  tip Follow the road north to Nijel's Point.
+  turnin 1466                         -- Kreldig Ungor
+  turnin 1455                         -- Kreldig Ungor
+  accept 1467                         -- for Roetten Stonehammer in Ironforge: keep it
+  accept 1456
+  turnin 93224                        -- Captain Pentigast
+  turnin 261                          -- Brother Anton
+  accept 1052                         -- for Raleigh the Devout in Southshore: keep it
+
+step Sar'theris Strand: kill these as you meet them
+  zone Desolace
+  tip Lord Kragaru, a centaur chieftain, camps on the north-west coast, north of Azore's tower.
+  collect 6245 quest 1456.1 @33.2,10.5 map 1443 -- Underwater
+  collect 15803 quest 6027            -- Book of the Ancients
+
+step Claim Rackmore's Treasure!
+  collect 15881 quest 6161.2 @36.3,23.1 map 1443 only Dwarf
+  turnin 6161 only Dwarf
+
+step Azore Aldamort
+  turnin 6027
+
+step Kormek's Hut
+  turnin 5501                         -- Bibbly F'utzbuckle
+
+step Kreldig Ungor
+  turnin 1456
+  accept 1457
+
+step Fly to Theramore
+  zone Dustwallow Marsh
+  tip The next guide starts in Theramore.
+  fly "Theramore"

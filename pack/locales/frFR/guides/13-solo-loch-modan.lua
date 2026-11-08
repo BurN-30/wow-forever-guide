@@ -117,7 +117,7 @@ return {
 
 	-- Step 22: Fly to Ironforge
 	-- {zone:1455} Ironforge
-	["Fly to {zone:1455}"] = "Vol vers {zone:1455}",
+	["Fly to {zone:1455}"] = "Envolez-vous vers {zone:1455}",
 
 	-- Step 23: Ironforge
 	-- {npc:1356} Prospector Stormpike · {object:32356} Hall of Explorers · {npc:4256} Golnir Bouldertoe · {object:32372} Great Forge · {npc:1573} Gryth Thurden

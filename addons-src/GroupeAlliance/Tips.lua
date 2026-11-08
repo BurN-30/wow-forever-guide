@@ -714,4 +714,36 @@ ns.GA.Tips = {
 		frFR = "Les tas de bric-à-brac sont au milieu du camp murloc : si les murlocs sont trop nombreux autour, mieux vaut laisser cet objectif.",
 		enUS = "The junk piles sit in the middle of the murloc camp: if too many murlocs crowd them, leave this objective.",
 	},
+	[2746] = { -- Items of Some Consequence (wowhead)
+		frFR = "Les pommes sont dans un bol sur la table de la ferme juste devant la porte de Hurlevent, côté Comté-de-l'Or ; la soie tombe souvent sur les humanoïdes de la Prison.",
+		enUS = "The apples sit in a bowl on the table of the farmhouse just outside the Stormwind gate, on the Goldshire side; Silk Cloth drops often from the Stockade's humanoids.",
+	},
+	[434] = { -- The Attack! (wowhead forever)
+		frFR = "Sur Forever, ce n'est plus une escorte : prendre la quête, puis parler à Tyrion pour lancer l'événement. Toucher Lescovar avant qu'il rentre au donjon, sinon tout recommencer ; en groupe, tout le monde est crédité.",
+		enUS = "On Forever it is no longer an escort: take the quest, then talk to Tyrion to start the event. Hit Lescovar before he walks back inside, or start over; in a group everyone gets the credit.",
+	},
+	[1050] = { -- Mythology of the Titans (wowhead)
+		frFR = "Le livre est dans les couloirs étroits de la Bibliothèque, sur un banc ou au sol à gauche en entrant dans la salle ; il réapparaît en une vingtaine de secondes pour le suivant. 8 900 XP sur Forever.",
+		enUS = "The book lies in the Library's narrow corridors, on a bench or the floor to the left as you enter the room; it comes back in about 20 seconds for the next player. 8,900 XP on Forever.",
+	},
+	[1360] = { -- Reclaimed Treasures (wowhead)
+		frFR = "Le coffre de Krom est hors de l'instance, dans la grotte extérieure : salle de gauche, au fond derrière un pilier, deux gardes. Celle de droite est celle de la Horde.",
+		enUS = "Krom's chest is outside the instance, in the outer cave: the left-hand hall, at the back behind a pillar, two guards. The right-hand one is the Horde's.",
+	},
+	[2418] = { -- Power Stones (wowhead)
+		frFR = "Tous les nains Ombreforge de la fouille et de la grotte extérieure les lâchent, sans entrer dans l'instance ; taux faible, à faire en même temps que le reste.",
+		enUS = "Every Shadowforge dwarf of the digsite and the outer cave drops them, no need to enter the instance; the rate is low, do it alongside the rest.",
+	},
+	[2240] = { -- The Hidden Chamber (wowhead)
+		frFR = "Le médaillon du coffre près de Baelog et la hampe que lâche Revelosh forment un bâton (Prehistoria) : le planter dans la salle des cartes, tuer Ironaya, puis entrer jusqu'au fond.",
+		enUS = "The Gni'kiv Medallion (chest by Baelog) and the Shaft of Tsol (Revelosh) make the Staff of Prehistoria: plant it in the Map Room, kill Ironaya, then walk all the way in.",
+	},
+	[2278] = { -- The Platinum Discs (wowhead)
+		frFR = "Cliquer les disques, parler à l'esprit à gauche, puis recliquer les disques pour la copie miniature avant de partir.",
+		enUS = "Click the Discs, talk to the spirit on the left, then click the Discs again for the miniature copy before leaving.",
+	},
+	[96800] = { -- Past Due (wowhead forever)
+		frFR = "Quête propre à Forever : le livre rouge est posé sur une table, à droite dans la salle de l'arcaniste Doan, au fond de la Bibliothèque du Monastère écarlate. 6 750 XP.",
+		enUS = "A Forever-only quest: the red book lies on a table on the right of Arcanist Doan's room, at the far end of the Scarlet Monastery Library. 6,750 XP.",
+	},
 }

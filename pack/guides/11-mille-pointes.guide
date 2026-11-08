@@ -272,5 +272,6 @@ step Mirage Raceway: kill these as you meet them
 step Mirage Raceway
   turnin 1110                             -- Kravel Koalbeard
   turnin 1104                             -- Fizzle Brassbolts
+  accept 1106 optional                    -- Fizzle Brassbolts: for Martek in the Badlands, at 39; not offered? Go on
 
 # ---------------------------------------------------------------- Back to Menethil

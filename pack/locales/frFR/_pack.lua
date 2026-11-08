@@ -7,12 +7,14 @@
 -- The comments are rewritten by sync.
 return {
 	-- Pack
-	["Group Alliance 1-33"] = "Groupe Alliance 1-33",
-	["Alliance route for friends who play alone or together: start guides, Stormwind meeting point, zones, the four Forever dungeons, the Deadmines and the Stockade, group quests to take or skip."] = "Parcours Alliance pour des amis qui jouent seuls ou ensemble : guides de départ, rendez-vous à Hurlevent, zones, les quatre donjons de Forever, les Mortemines et la Prison, quêtes de groupe à faire ou à passer.",
+	["Group Alliance 1-50"] = "Groupe Alliance 1-50",
+	["Alliance route to 50 for friends who play alone or together: start guides, Stormwind meeting point, zones, the Forever dungeons, Deadmines, Stockade, Scarlet Monastery, Uldaman, group quests."] = "Parcours Alliance jusqu'à 50 pour amis jouant seuls ou ensemble : guides de départ, point de rencontre à Hurlevent, zones, donjons Forever, Mortemines, Prison, Monastère écarlate, Uldaman, quêtes de groupe.",
 
 	-- Folders
 	["Group Alliance"] = "Groupe Alliance",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Alliance route for a group: start guides, Stormwind meeting point, zones and the four Forever dungeons."] = "Parcours Alliance en groupe : guides de départ, rendez-vous à Hurlevent, zones et les quatre donjons de Forever.",
+	-- ["Alliance route for friends who play alone or together: start guides, Stormwind meeting point, zones, the four Forever dungeons, the Deadmines and the Stockade, group quests to take or skip."] = "Parcours Alliance pour des amis qui jouent seuls ou ensemble : guides de départ, rendez-vous à Hurlevent, zones, les quatre donjons de Forever, les Mortemines et la Prison, quêtes de groupe à faire ou à passer.",
+	-- ["Group Alliance 1-33"] = "Groupe Alliance 1-33",
 }

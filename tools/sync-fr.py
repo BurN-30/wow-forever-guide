@@ -8,9 +8,9 @@ import pathlib, subprocess, sys
 
 forge, root = sys.argv[1], sys.argv[2]
 pack = pathlib.Path(__file__).resolve().parent.parent / "pack"
-last = pack / "guides" / "12-dalaran.guide"
+last = pack / "guides" / "26-un-goro.guide"
 text = last.read_text(encoding="utf-8")
-line = "next forever/alliance/30-40/01-hillsbrad-foothills\n"
+line = "next forever/alliance/50-60/01-burning-steppes\n"
 assert line in text
 last.write_text(text.replace(line, "# next set aside for the sync\n"), encoding="utf-8", newline="\n")
 try:

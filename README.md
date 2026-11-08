@@ -21,7 +21,7 @@ Windows bloque le fichier ? Clic droit sur `Installer.bat` → **Propriétés** 
 - **Réduire** : bouton **_** à côté du **?**. La fenêtre devient une petite icône Polestar (à glisser où on veut ; clic droit : fine bannière avec l'étape en cours ; clic : la fenêtre revient). Masquer : `/polestar hide`, le bouton Polestar de la minicarte, ou un raccourci dans Options > Raccourcis > Polestar.
 - **Survole** n'importe quelle ligne : l'infobulle explique tout, avec une astuce (en vert) sur les quêtes pénibles. Une petite **étoile verte** en bout de ligne signale qu'une astuce attend.
 - **Marque orange ou rouge** en bout de ligne : passage difficile à ton niveau réel (élite, monstres en groupe, escorte, quête bien au-dessus de toi). L'infobulle dit pourquoi, le niveau conseillé seul, le nombre de joueurs conseillé et comment faire seul ou à plusieurs. Elle disparaît d'elle-même quand tu as le niveau. Orange : il manque 1 ou 2 niveaux ; rouge : 3 ou plus.
-- **Quêtes de groupe et donjons facultatifs** : à la première étape, un bandeau « Quête de groupe » propose **La passer** ou **La faire en groupe** (en anglais : *Skip it*, *Do it with a group*). Seul : La passer, le guide reste sur la route solo. Changer d'avis : roue dentée, Découverte, Quêtes de groupe (une par une), ou tout répondre d'un coup dans le menu déroulant Quêtes de groupe.
+- **Quêtes de groupe et donjons facultatifs** : à la première étape, un bandeau « Quête de groupe » propose **La passer** ou **La faire en groupe** (en anglais : *Skip it*, *Do it with a group*). Seul : La passer, le guide reste sur la route solo. Changer d'avis : roue dentée, Découverte, Quêtes de groupe (une par une), ou tout répondre d'un coup dans le menu déroulant Quêtes de groupe. Dès les départs, quelques élites courtes posent la question (humain : Narf, Nimsy, Croaky ; nain et gnome : Vagash), une seule fois chacune. Donjons facultatifs du paquet : Ruines de Lordaeron, Mortemines, Prison, Site de fouilles, Monastère écarlate, Uldaman.
 - **Carte** : les objectifs des quêtes (avec leur zone), les rendus prêts et les donneurs de quêtes jusqu'à 3 niveaux au-dessus s'affichent sur la carte du monde, ceux de l'étape en cours en avant, les autres atténués (rien sur la minicarte). Réglable dans la roue dentée, Quêtes.
 - **Ctrl+clic** sur une ligne : lien Wowhead prêt à copier (Ctrl+C), en français ou en anglais selon ton jeu (`/ga lang fr`, `en` ou `auto` pour forcer).
 - **?** dans une infobulle : info pas encore confirmée, à vérifier sur Wowhead.
@@ -49,14 +49,28 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. **Cha
 | Groupe 8 · Orneval, Les Paluns et Les Serres-Rocheuses | 24-27 | Tout le monde : le plus long guide (environ 130 étapes), trois zones |
 | Groupe 9 · Mille pointes, Bois de la Pénombre et Les Paluns | 27-30 | The Missing Diplomat (quête 1274) (Hurlevent, puis Bois de la Pénombre) seulement à partir du niveau 28 |
 | Groupe 10 · Site de fouilles : Les Paluns (donjon) | 28-32 | Donjon facultatif, déplacé après les Mille pointes (quêtes de niveau 31, dernier boss 31) : à 5 vers 28-31, environ 39 000 XP de quêtes |
-| Groupe 11 · Cité de Dalaran (donjon) | 30-33 | Niveau 30 requis pour la quête qui ouvre la route, puis la suite de Polestar (Contreforts de Hautebrande, 30-40) |
+| Groupe 11 · Cité de Dalaran (donjon) | 30-33 | Niveau 30 requis pour la quête qui ouvre la route. Avant le départ, à Hurlevent : la fin de l'histoire des Défias (Lescovar, anneau Sceau de Wrynn), seulement pour qui a fini la chaîne de la Prison |
+| Groupe 12 · Les Paluns et les Contreforts de Hautebrande | 31-32 | Tout le monde ; facultatif à plusieurs : Defeat Nek'rosh (élite 32) |
+| Groupe 13 · Désolace | 32-33 | Tout le monde |
+| Groupe 14 · Orneval et Les Paluns | 33-34 | Tout le monde |
+| Groupe 15 · Vallée de Strangleronce | 34-37 | Tout le monde : chasses de Nesingwary, Rebel Camp, Baie-du-Butin ; élites de Nesingwary à plusieurs |
+| Groupe 16 · Hautes-terres d'Arathi, Montagnes d'Alterac et Marais des Chagrins | 37-39 | Tout le monde ; facultatif à plusieurs : The Perenolde Tiara |
+| Groupe 17 · Terres ingrates et Désolace | 39-40 | Tout le monde. La chaîne de Martek (Indurium) seulement si Fizzle l'a proposée aux Mille pointes |
+| Groupe 18 · Vallée de Strangleronce, Marécage d'Âprefange et Marais des Chagrins | 40-43 | Tout le monde ; monture à 40 (chaque race chez son maître de monte). À Forgefer, deux questions : Monastère écarlate et Uldaman |
+| Groupe 18b · Uldaman (donjon) | 41-45 | Donjon facultatif (question à Forgefer) : quêtes du Hall des explorateurs et de Rigglefuzz, le donjon, puis les rendus à Forgefer |
+| Groupe 19 · Terres ingrates et Les Hinterlands | 43 | Tout le monde. Monastère écarlate facultatif (question à Forgefer) : depuis Austrivage, Bibliothèque, Armurerie et Cathédrale, avec la quête Forever Past Due |
+| Groupe 20 · Féralas | 43-45 | Tout le monde |
+| Groupe 21 · Tanaris | 45-47 | Tout le monde |
+| Groupe 22 · Les Hinterlands, Terres foudroyées et Loch Modan | 47-48 | Tout le monde ; élites des Hinterlands à plusieurs |
+| Groupe 23 · Gorge des Vents brûlants | 48-49 | Tout le monde ; quêtes élites à plusieurs |
+| Groupe 24 · Cratère d'Un'Goro | 49-50 | Tout le monde, puis la suite de Polestar (Steppes ardentes, 50-60) |
 | Solo · Loch Modan (facultatif) | 14-16 | Joueur en retard sur le groupe, seul : environ 1 à 2 niveaux, retour à Forgefer en griffon. Ne s'ouvre jamais tout seul |
 
 En retard sur le groupe ? `/polestar guides` → Guides de la communauté → Groupe Alliance → **Solo · Loch Modan** (quêtes de Thelsamar, de la tour de garde du sud et du pavillon de chasse ; quelques positions marquées **?**). De retour à 4 niveaux du groupe : reprendre le guide du groupe.
 
 ### Pas encore couvert
 
-Le parcours ne prend pas toutes les quêtes. Zones et quêtes Alliance de 10 à 31 absentes du paquet (à suivre avec Questie ou Wowhead si besoin d'XP en plus) :
+Le parcours ne prend pas toutes les quêtes. Zones et quêtes Alliance absentes du paquet (à suivre avec Questie ou Wowhead si besoin d'XP en plus) :
 
 | Zone | Niveaux | Ce qui manque |
 |---|---|---|
@@ -65,7 +79,11 @@ Le parcours ne prend pas toutes les quêtes. Zones et quêtes Alliance de 10 à 
 | Les Paluns | 27-31 | 13 quêtes (environ 30 000 XP) |
 | Les Serres-Rocheuses | 21-27 | 9 quêtes |
 | Les Tarides (Cabestan) | 14-21 | quêtes neutres, plus une quête Alliance propre à Forever |
-| Après 33 | 30-40 et plus | guides de Polestar seuls, sans notes de groupe |
+| Désolace | 32-42 | une vingtaine de quêtes (chaîne des Khans kolkar, caravane de Gizelton) |
+| Hautes-terres d'Arathi | 35-42 | Stromgarde (élites : Stromgarde Badges, avis de recherche, chaîne de Trelane) |
+| Bois de la Pénombre | 30-35 | Morbent Fel (fin de la chaîne de Sven), Mor'Ladim (élite), fin de Stalvan |
+| Gnomeregan, Kraal de Tranchebauge | 25-34 | donjons non couverts : Gnomeregan (beaucoup de quêtes à Forgefer) arrive en même temps que le Site de fouilles et Dalaran, le Kraal est loin au sud des Tarides en terre horde |
+| Après 50 | 50-60 | guides de Polestar seuls, sans notes de groupe |
 
 ## Premier lancement
 

@@ -1,8 +1,8 @@
 ## Interface: 16001
-## Title: Group Alliance 1-33 (frFR)
-## Notes: French texts of Group Alliance 1-33. Loaded on demand on a French client.
+## Title: Group Alliance 1-50 (frFR)
+## Notes: French texts of Group Alliance 1-50. Loaded on demand on a French client.
 ## Author: BurN-30
-## Version: 0.4.0
+## Version: 0.5.0
 ## Category: Polestar
 ## Group: Polestar
 ## LoadOnDemand: 1

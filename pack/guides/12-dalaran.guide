@@ -9,7 +9,47 @@ category Dungeons
 faction Alliance
 levels 30-33
 zone Stormwind City
-next forever/alliance/30-40/01-hillsbrad-foothills
+next groupe-alliance/14-paluns-hautebrande
+
+# Groupe Alliance 0.5.0: the end of the Defias story in Stormwind (393 to 396, Seal of Wrynn),
+# only for whoever finished the Stockade chain (The Curious Visitor, 392, in 08b-prison).
+# Ids, givers and places from Polestar's Forever data; event tips from Wowhead Forever comments
+# (October and November 2026), rewritten.
+
+step Stormwind: the end of the Defias story
+  when turnedin 392
+  tip Only if you did The Stockade Riots. Baros Alexston is in the City Hall on Cathedral Square, Mathias Shaw upstairs at SI:7 in Old Town, Elling Trias upstairs in the cheese shop of the Trade District, Tyrion in the garden beside Stormwind Keep.
+  accept 393                              -- Baros Alexston
+  turnin 393                              -- Master Mathias Shaw
+  accept 350
+  turnin 350                              -- Elling Trias
+  accept 2745
+  turnin 2745                             -- Tyrion
+  accept 2746
+
+step Clara's apples
+  when onquest 2746
+  zone Elwynn Forest
+  tip The bowl of apples sits on the table of the farmhouse just outside the Stormwind gate, south-west of the road. Silk Cloth: from your bags, humanoids or the Auction House.
+  collect 8683 x2 quest 2746 @33.95,57.16 -- Clara's Fresh Apple
+  collect 4306 x3 quest 2746              -- Silk Cloth
+
+step The Attack!
+  when onquest 2746
+  zone Stormwind City
+  turnin 2746                             -- Tyrion
+  accept 434
+  complete 434 @72.36,35.12               -- Overhear Lescovar and Marzon in the garden, then kill both
+
+step Brotherhood's End
+  when onquest 434
+  turnin 434                              -- Elling Trias
+  accept 394
+  turnin 394                              -- Master Mathias Shaw
+  accept 395
+  turnin 395                              -- Baros Alexston
+  accept 396
+  turnin 396                              -- Lady Katrana Prestor, in the throne room of Stormwind Keep: Seal of Wrynn
 
 step Stormwind: two dungeon quests
   note Group: level 30 required for An Alarming Request, the quest that opens the way to Dalaran. Below 30? Level up first.

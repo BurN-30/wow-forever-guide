@@ -42,15 +42,23 @@
 - Marques de difficulté (orange, rouge) calculées sur le niveau réel du joueur, avec la façon de faire seul et à plusieurs.
 - Paluns : Razormaw Needling (98245) et la chaîne Lightforge (270, 321, 324, 322) sont déjà dans le guide Polestar qui suit le nôtre (30-40, Contreforts de Hautebrande) ; Trying Times (98246) n'est pas ajoutée (positions des œufs absentes des données). Friend of the Kirin Tor (92459) pas ajoutée.
 
+## Fait en 0.5.0 (08/11/2026)
+
+- **Route jusqu'à 50** : les six guides Polestar 30-40 et les sept guides 40-50 sont repris dans le paquet (Groupes 12 à 24), avec la note « chacun à son rythme », le dossier Groupe Alliance, l'enchaînement Dalaran puis Paluns, et Un'Goro vers les Steppes ardentes de Polestar (50-60). Quêtes de groupe de Polestar gardées (Nek'rosh, élites de Nesingwary, The Perenolde Tiara, Hinterlands, Gorge des Vents brûlants), avec la question « La passer / La faire en groupe ».
+- **Monastère écarlate** (facultatif, question chez Mae Paledust à Forgefer, guide 18 ; parcours dans le guide 19 depuis Austrivage) : Mythology of the Titans (1050), In the Name of the Light (1053, après la chaîne de Brother Anton que la route fait déjà), Past Due (96800, quête Forever, 6 750 XP, livre sur l'arcaniste Doan). Bibliothèque, Armurerie, Cathédrale ; Mae Paledust rendue au passage suivant à Forgefer (guide 22).
+- **Uldaman** (facultatif, question au Hall des explorateurs, chapitre 18b) : The Lost Dwarves, The Hidden Chamber, Reclaimed Treasures, Power Stones, The Platinum Discs, Shattered Necklace (premier maillon seulement). Toutes ses quêtes portent un « ? » : Wowhead n'a pas pu être lu pour ce donjon.
+- **Fin de l'histoire des Défias à Hurlevent** (guide Dalaran, seulement après The Curious Visitor) : Shadow of the Past jusqu'à An Audience with the King (environ 8 500 XP, Sceau de Wrynn). Sur Forever, The Attack! n'est plus une escorte : on lance l'événement en parlant à Tyrion.
+- **Chaîne de Martek** (1106, 1108, 1137, 1190, 1194, environ 9 000 XP) : rendue facultative de bout en bout. Les données Forever de Polestar ne demandent que Salt Flat Venom (1104) pour Martek the Exiled ; la 0.3.0 l'avait retirée en pensant qu'il fallait Hardened Shells (1105). Elle est reproposée chez Fizzle, en facultatif : si Fizzle ne la donne pas, rien ne bloque.
+- **Questions de groupe des départs** (16 lignes `when group` dans les départs humain, nain et gnome) : gardées. Ce ne sont que quatre questions (Narf, Nimsy et Croaky pour les humains, Vagash pour les nains et les gnomes), chacune posée une fois ; ce sont de vrais élites courts, et passer la quête mène à une petite étape de rattrapage d'XP. Nos quatre joueurs ont déjà fini leur départ.
+- **Traductions** : textes français des guides Polestar 30-50 repris de Polestar quand ils existaient (675), le reste (environ 330 textes de route de Polestar sans traduction, plus nos ajouts) traduit pour le paquet ; aucun texte laissé en anglais.
+- **Astuces et marques de difficulté** : The Attack!, Items of Some Consequence, Past Due ; fiabilité « ? » sur ce qui vient du jeu d'origine.
+
 ## Ce qui reste à faire (idées notées, pas faites)
 
-- **Quêtes en plus pour un groupe**, présentes dans les autres guides et que la route solo de Polestar écarte : Carmines (Blackrock Blockade 98387, WANTED: Incinerator Gar'im 95999, élites Tharil'zun 19, Gath'Ilzogg 169, Shadow Magic 115), Bois de la Pénombre (chaîne de Jitters 163, 5, 93, 240), Sombrivage (Baron Marinous 98028, élite 21), Paluns (98245, 98246, chaîne Lightforge 321, 322, 324), Dalaran (Friend of the Kirin Tor 92459), Site de fouilles (98310, 98313 chez Whelgar). Il faut placer chaque étape (positions, ordre) : environ 1 à 2 heures par zone, et un essai en jeu.
-- **Mortemines et Prison** : absentes chez nous, présentes dans tous les autres guides. Un chapitre de donjon chacun, sur le modèle de nos chapitres Salle des Thanes et Ruines : environ 3 heures chacun.
-- **Site de fouilles** : ses quêtes sont de niveau 31, notre guide le met à 26-29. Les autres guides le placent vers 29-32. À revoir après retour en jeu.
-- **Escortes en groupe** : rappeler que tout le monde prend la quête avant de parler au PNJ (idée de TUGs et Doggs).
-- **Plus d'astuces** pour Carmines, Pénombre, Orneval et Paluns, même méthode (une demi-heure par zone).
-
----
+- **Astuces 30-50** : la lecture des commentaires Wowhead Forever a été coupée (blocage du site après trop de pages lues en parallèle, le 08/11). À reprendre une page à la fois, en priorité Paluns, Hautebrande, Strangleronce et Arathi, puis Uldaman et le Monastère pour retirer les « ? ».
+- **Quêtes de groupe en plus**, que la route solo de Polestar écarte : Stromgarde (Stromgarde Badges, élite 37, et la chaîne de Trelane), Bois de la Pénombre 30-35 (Morbent Fel, Mor'Ladim), Désolace (Khans kolkar, caravane de Gizelton), et avant 30 : Carmines (18 quêtes), Orneval, Paluns. Il faut placer chaque étape et un essai en jeu.
+- **Gnomeregan** (25-34, beaucoup de quêtes à Forgefer) et **Kraal de Tranchebauge** : pas de chapitre. Gnomeregan arrive en même temps que le Site de fouilles et Dalaran ; le Kraal est loin, au sud des Tarides.
+- **Escortes en groupe** : rappeler que tout le monde prend la quête avant de parler au PNJ (fait dans l'infobulle des escortes depuis la 0.4.0).
 
 ## Détails : Questie 12.6.4 (07/11/2026)
 
