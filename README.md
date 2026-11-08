@@ -118,8 +118,7 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. **Cha
 | Groupe 16 · Hautes-terres d'Arathi, Montagnes d'Alterac et Marais des Chagrins | 37-39 | Tout le monde ; facultatif à plusieurs : The Perenolde Tiara |
 | Groupe 17 · Terres ingrates et Désolace | 39-40 | Tout le monde. La chaîne de Martek (Indurium) seulement si Fizzle l'a proposée aux Mille pointes |
 | Groupe 18 · Vallée de Strangleronce, Marécage d'Âprefange et Marais des Chagrins | 40-43 | Tout le monde ; monture à 40 (chaque race chez son maître de monte). À Forgefer, deux questions : Monastère écarlate et Uldaman |
-| Groupe 18b · Uldaman (donjon) | 41-45 | Donjon facultatif (question à Forgefer) : quêtes du Hall des explorateurs et de Rigglefuzz, le donjon, puis les rendus à Forgefer |
-| Groupe 19 · Terres ingrates et Les Hinterlands | 43 | Tout le monde. Monastère écarlate facultatif (question à Forgefer) : depuis Austrivage, Bibliothèque, Armurerie et Cathédrale, avec la quête Forever Past Due |
+| Groupe 19 · Terres ingrates et Les Hinterlands | 43-45 | Tout le monde. Uldaman facultatif (question à Forgefer) : après les quêtes des Terres ingrates, le donjon, puis les rendus à Forgefer sur le vol vers Austrivage. Monastère écarlate facultatif (question à Forgefer) : depuis Austrivage, Bibliothèque, Armurerie et Cathédrale, avec la quête Forever Past Due |
 | Groupe 20 · Féralas | 43-45 | Tout le monde |
 | Groupe 21 · Tanaris | 45-47 | Tout le monde. Zul'Farrak facultatif (question à Gadgetzan) : Scarab Shells, Troll Temper et Divino-matic Rod, puis retour à Gadgetzan |
 | Groupe 22 · Les Hinterlands, Terres foudroyées et Loch Modan | 47-48 | Tout le monde ; élites des Hinterlands à plusieurs |

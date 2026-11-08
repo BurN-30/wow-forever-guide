@@ -10921,7 +10921,7 @@ do
 			folder = "Group Alliance",
 			zone = 1434,
 			zoneName = "Stranglethorn Vale",
-			next = "groupe-alliance/20b-uldaman",
+			next = "groupe-alliance/21-terres-ingrates-hinterlands",
 			author = "BurN-30",
 			version = 1,
 			group = true,
@@ -11901,7 +11901,7 @@ do
 				},
 				{
 					title = "Uldaman (dungeon, optional): {object:32356}",
-					note = "Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next chapter runs it from the {zone:1418}. Alone? Skip it. Both stand in the {object:32356}.",
+					note = "Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next guide runs it once its {zone:1418} quests are done. Alone? Skip it. Both stand in the {object:32356}.",
 					when = { { k = "group", q = 2240 } },
 					goals = {
 						{ t = "accept", quest = 2398, title = "The Lost Dwarves", npc = 1356, npcName = "Prospector Stormpike", minLevel = 35, qlvl = 40, closedBy = { 2240 }, preTitles = { [2240] = "The Hidden Chamber" }, map = 1455, x = 74.64, y = 11.74, z = 503.5, f = "e" },
@@ -11984,34 +11984,97 @@ do
 	register()
 end
 
--- Source: guides/20b-uldaman.guide
+-- Source: guides/21-terres-ingrates-hinterlands.guide
 do
 	local function register()
 		Polestar.RegisterGuide({
-			id = "groupe-alliance/20b-uldaman",
+			id = "groupe-alliance/21-terres-ingrates-hinterlands",
 			pack = "groupe-alliance",
-			title = "Group 18b · Uldaman (dungeon 42-46, optional)",
+			title = "Group 19 · {zone:1418} & {zone:1425}",
 			faction = "Alliance",
-			minLevel = 42,
-			maxLevel = 46,
-			category = "Dungeons",
+			minLevel = 43,
+			maxLevel = 43,
+			category = "Leveling",
 			folder = "Group Alliance",
 			zone = 1418,
 			zoneName = "Badlands",
-			next = "groupe-alliance/21-terres-ingrates-hinterlands",
+			next = "groupe-alliance/22-feralas",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:7666"] = "Shattered Necklace", ["item:7733"] = "Staff of Prehistoria", ["item:7740"] = "Gni'kiv Medallion", ["item:8009"] = "Dentrium Power Stone", ["item:8027"] = "Krom Stoutarm's Treasure", ["item:8052"] = "An'Alleum Power Stone", ["npc:1356"] = "Prospector Stormpike", ["npc:2817"] = "Rigglefuzz", ["npc:5387"] = "High Explorer Magellas", ["npc:6294"] = "Krom Stoutarm", ["npc:6826"] = "Talvash del Kissel", ["npc:6906"] = "Baelog", ["object:131474"] = "Discs of Norgannon", ["object:32356"] = "Hall of Explorers", ["object:32362"] = "Mystic Ward", ["zone:1418"] = "Badlands", ["zone:1455"] = "Ironforge" },
-			written = { ["The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. {npc:6294}'s chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards."] = "The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. Krom's chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards." },
+			names = { ["item:273169"] = "The Lost Magic of the Runemasters", ["item:4611"] = "Blue Pearl", ["item:4612"] = "Black Drake's Heart", ["item:7666"] = "Shattered Necklace", ["item:7733"] = "Staff of Prehistoria", ["item:7740"] = "Gni'kiv Medallion", ["item:8009"] = "Dentrium Power Stone", ["item:8027"] = "Krom Stoutarm's Treasure", ["item:8052"] = "An'Alleum Power Stone", ["npc:1182"] = "Brother Anton", ["npc:1356"] = "Prospector Stormpike", ["npc:2616"] = "Privateer Groy", ["npc:264265"] = "Magus Olvek", ["npc:2725"] = "Scalding Whelp", ["npc:2726"] = "Scorched Guardian", ["npc:2817"] = "Rigglefuzz", ["npc:2888"] = "Garek", ["npc:2944"] = "Boss Tho'grun", ["npc:3974"] = "Houndmaster Loksey", ["npc:3975"] = "Herod", ["npc:3976"] = "Scarlet Commander Mograine", ["npc:3977"] = "High Inquisitor Whitemane", ["npc:3980"] = "Raleigh the Devout", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4944"] = "Captain Garran Vimes", ["npc:4968"] = "Lady Jaina Proudmoore", ["npc:5387"] = "High Explorer Magellas", ["npc:5634"] = "Rhapsody Shindigger", ["npc:5635"] = "Falstad Wildhammer", ["npc:5636"] = "Gryphon Master Talonaxe", ["npc:6251"] = "Strahad Farsan", ["npc:6294"] = "Krom Stoutarm", ["npc:6487"] = "Arcanist Doan", ["npc:6826"] = "Talvash del Kissel", ["npc:6906"] = "Baelog", ["npc:7744"] = "Innkeeper Thulfram", ["npc:7884"] = "Fraggar Thundermantle", ["object:1162"] = "Menethil Harbor", ["object:131474"] = "Discs of Norgannon", ["object:151976"] = "Shimmering Flats", ["object:171531"] = "The Library", ["object:176369"] = "Boat to Theramore", ["object:32356"] = "Hall of Explorers", ["object:32362"] = "Mystic Ward", ["quest:1050"] = "Mythology of the Titans", ["quest:1052"] = "Down the Scarlet Path", ["quest:1053"] = "In the Name of the Light", ["quest:1450"] = "Gryphon Master Talonaxe", ["quest:1451"] = "Rhapsody Shindigger", ["quest:3631"] = "Summon Felsteed", ["quest:625"] = "Cortello's Riddle", ["quest:96800"] = "Past Due", ["zone:1413"] = "Barrens", ["zone:1418"] = "Badlands", ["zone:1420"] = "Tirisfal Glades", ["zone:1421"] = "Silverpine Forest", ["zone:1425"] = "The Hinterlands", ["zone:1443"] = "Desolace", ["zone:1446"] = "Tanaris", ["zone:1455"] = "Ironforge" },
+			written = { ["Ride north-east out of Southshore on the road into the {zone:1425}; Aerie Peak sits just past the border. {npc:5635} holds court at the top, {quest:1450} tends the aviary and {npc:7884} stands by the inn."] = "Ride north-east out of Southshore on the road into the Hinterlands; Aerie Peak sits just past the border. Falstad holds court at the top, Gryphon Master Talonaxe tends the aviary and Fraggar Thundermantle stands by the inn.", ["Talonaxe's next task waits for a later {zone:1425} guide."] = "Talonaxe's next task waits for a later Hinterlands guide.", ["The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. {npc:6294}'s chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards."] = "The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. Krom's chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards.", ["The first two cages stand together in the Witherbark village south of {npc:5634}; the third is in the next village to the east. Every Witherbark troll can drop a necklace."] = "The first two cages stand together in the Witherbark village south of Rhapsody; the third is in the next village to the east. Every Witherbark troll can drop a necklace.", ["{npc:5634} camps on the road east of Aerie Peak."] = "Rhapsody camps on the road east of Aerie Peak.", ["{npc:7884} keeps paying for necklaces: hand in any extras"] = "Fraggar keeps paying for necklaces: hand in any extras", ["{quest:1050} goes back to Mae Paledust in {zone:1455}: the {zone:1425} guide (Group 22) passes there."] = "Mythology of the Titans goes back to Mae Paledust in Ironforge: the Hinterlands guide (Group 22) passes there." },
 			steps = {
 				{
-					title = "Uldaman: before going in",
-					note = "Uldaman: a 5-player dungeon at the north end of the {zone:1418}, levels 42 to 52 on Forever: best at 43 or more. This chapter takes its quests, runs the dungeon, then hands everything in. Alone? Skip it: the guide goes on in the {zone:1418}.",
+					title = "Fly to Thelsamar",
+					only = { races = { "Dwarf", "Gnome" } },
+					when = { { k = "zone", neg = true, name = "Badlands", area = 3 } },
+					goals = {
+						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
+						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
+						{ t = "fly", location = "Thelsamar", node = 8 },
+					},
+				},
+				{
+					title = "{zone:1418}",
+					only = { races = { "Dwarf", "Gnome" } },
+					when = { { k = "zone", neg = true, name = "Badlands", area = 3 } },
+					goals = {
+						{ t = "goto", text = "{zone:1418}", map = 1418, x = 49.6, y = 66.3, f = "e" },
+					},
+				},
+				{
+					title = "Agmond's End",
+					goals = {
+						{ t = "kill", quest = 739, title = "Murdaloc", target = "Murdaloc", npc = 2945, count = 1, oi = 1, map = 1418, x = 49.63, y = 66.31, z = 244.6, f = "e" },
+						{ t = "kill", quest = 739, title = "Murdaloc", target = "Stonevault Bonesnapper", npc = 2893, count = 12, oi = 2, map = 1418, x = 50.17, y = 67.12, z = 242.3, f = "e", spots = { { x = 51.3, y = 67, z = 241.8, r = 61, n = 9 }, { x = 49, y = 71, r = 56, n = 5 } } },
+					},
+				},
+				{
+					title = "Valley of Fangs",
+					goals = {
+						{ t = "turnin", quest = 1108, title = "Indurium", npc = 4618, npcName = "Martek the Exiled", map = 1418, x = 42.22, y = 52.69, z = 241.4, f = "e", optional = true },
+						{ t = "accept", quest = 1137, title = "News for Fizzle", npc = 4618, npcName = "Martek the Exiled", minLevel = 28, qlvl = 38, pre = { 1108 }, preTitles = { [1108] = "Indurium" }, map = 1418, x = 42.22, y = 52.69, z = 241.4, f = "e", optional = true, note = "for {npc:4454} in the {object:151976}: the {zone:1446} guide crosses them at 45, keep it" },
+						{ t = "turnin", quest = 703, title = "Barbecued Buzzard Wings", npc = 2817, npcName = "Rigglefuzz", map = 1418, x = 42.39, y = 52.93, z = 240.7, f = "e" },
+						{ t = "turnin", quest = 705, title = "Pearl Diving", npc = 2817, npcName = "Rigglefuzz", map = 1418, x = 42.39, y = 52.93, z = 240.7, f = "e", note = "Blue Pearls from Stranglethorn" },
+						{ t = "note", text = "{npc:2817}'s next quest pays no experience: skip it." },
+					},
+				},
+				{
+					title = "Uldaman (dungeon, optional): {npc:2817}",
+					note = "Uldaman: a 5-player dungeon at the north end of the {zone:1418}, levels 42 to 52 on Forever: best at 43 or more. The {zone:1418} quests come first, then the dungeon, then the rewards in {zone:1455} on the way to Southshore. Alone? Skip it: the guide goes on in the {zone:1418}.",
 					label = "uld-start",
 					when = { { k = "group", q = 2240 } },
 					goals = {
 						{ t = "note", text = "Keep 5 free quest log slots. Everyone takes the quests at their own pace; meet at the entrance for the run." },
 						{ t = "accept", quest = 2418, title = "Power Stones", npc = 2817, npcName = "Rigglefuzz", minLevel = 30, qlvl = 36, map = 1418, x = 42.39, y = 52.93, z = 240.7, f = "e", optional = true, note = "{npc:2817}, Valley of Fangs" },
+					},
+				},
+				{
+					title = "{npc:2944}",
+					note = "Ride west across the {zone:1418} to the Dustbelcher camp at Camp Boff. {npc:2944} stands in its middle with Wyrmhunters and Maulers around him.",
+					goals = {
+						{ t = "collect", quest = 732, title = "Tremors of the Earth", item = 4640, itemName = "Sign of the Earth", count = 1, oi = 1, map = 1418, x = 12.62, y = 75.49, f = "e", from = "Boss Tho'grun", fromKind = "npc", fromId = 2944, fromNpcs = { { npc = 2944, npcName = "Boss Tho'grun" } } },
+					},
+				},
+				{
+					title = "{npc:2888}",
+					note = "Ride back east to Dustwind Gulch.",
+					goals = {
+						{ t = "turnin", quest = 732, title = "Tremors of the Earth", npc = 2888, npcName = "Garek", map = 1418, x = 61.94, y = 54.26, z = 244.2, f = "e" },
+						{ t = "note", text = "{npc:2888}'s next task is an elite hunt: skip it." },
+					},
+				},
+				{
+					title = "Lethlor Ravine",
+					note = "The Scalding Whelps nest in the ravine east of {npc:2888}; leave the Scorched Guardians (elite) alone. The {item:4612} drops rarely: take it if it comes while you grind.",
+					goals = {
+						{ t = "collect", quest = 706, title = "Fiery Blaze Enchantments", item = 4612, itemName = "Black Drake's Heart", count = 1, oi = 1, map = 1418, x = 69.67, y = 53.81, f = "e", spots = { { x = 71.2, y = 52.7, r = 43, n = 3 }, { x = 72.3, y = 57.4, r = 40, n = 1 }, { x = 73.7, y = 65.3, r = 41, n = 4 }, { x = 77.2, y = 63.4, r = 40, n = 1 }, { x = 82.7, y = 42.9, r = 40, n = 1 }, { x = 82.3, y = 38.7, r = 48, n = 3 }, { x = 82.4, y = 32.1, r = 42, n = 7 }, { x = 85.2, y = 28.7, r = 40, n = 4 }, { x = 77.9, y = 34.2, r = 47, n = 3 }, { x = 79.9, y = 56.7, r = 40, n = 1, alt = true } }, spread = true, optional = true, fromNpcs = { { npc = 2725, npcName = "Scalding Whelp" } } },
+					},
+				},
+				{
+					title = "Hammertoe's Digsite",
+					goals = {
+						{ t = "turnin", quest = 706, title = "Fiery Blaze Enchantments", npc = 2860, npcName = "Sigrun Ironhew", map = 1418, x = 53.8, y = 43.3, z = 279.4, f = "e", optional = true },
 					},
 				},
 				{
@@ -12050,112 +12113,33 @@ do
 				{
 					title = "{npc:2817}",
 					note = "Leave by the front, south to the Valley of Fangs.",
-					when = { { k = "done", label = "uld-start" } },
+					when = { { k = "onquest", q = { 2418 } } },
 					goals = {
 						{ t = "turnin", quest = 2418, title = "Power Stones", npc = 2817, npcName = "Rigglefuzz", map = 1418, x = 42.39, y = 52.93, z = 240.7, f = "e", optional = true },
 					},
 				},
 				{
 					title = "{zone:1455} rewards",
-					note = "Fly from Thelsamar. {npc:1356}, {npc:6294} and {npc:5387} are all in the {object:32356}; {npc:6826} in the {object:32362}.",
+					note = "Fly from Thelsamar to {zone:1455}. {npc:1356}, {npc:6294} and {npc:5387} are all in the {object:32356}; {npc:6826} in the {object:32362}.",
 					when = { { k = "done", label = "uld-start" } },
 					goals = {
 						{ t = "turnin", quest = 2240, title = "The Hidden Chamber", npc = 1356, npcName = "Prospector Stormpike", map = 1455, x = 74.64, y = 11.74, z = 503.5, f = "e" },
 						{ t = "turnin", quest = 1360, title = "Reclaimed Treasures", npc = 6294, npcName = "Krom Stoutarm", map = 1455, x = 74.19, y = 9.39, z = 503.5, f = "e" },
 						{ t = "turnin", quest = 2279, title = "The Platinum Discs", npc = 5387, npcName = "High Explorer Magellas", map = 1455, x = 69.93, y = 18.55, z = 503.5, f = "e", optional = true },
 						{ t = "turnin", quest = 2198, title = "The Shattered Necklace", npc = 6826, npcName = "Talvash del Kissel", map = 1455, x = 36.38, y = 3.61, z = 503.7, f = "e", optional = true, note = "{npc:6826}: his follow-ups need another Uldaman run, not in this guide" },
-						{ t = "note", text = "The {zone:1418} guide next: fly back to Thelsamar and ride south." },
-					},
-				},
-			},
-		})
-	end
-	register()
-end
-
--- Source: guides/21-terres-ingrates-hinterlands.guide
-do
-	local function register()
-		Polestar.RegisterGuide({
-			id = "groupe-alliance/21-terres-ingrates-hinterlands",
-			pack = "groupe-alliance",
-			title = "Group 19 · {zone:1418} & {zone:1425}",
-			faction = "Alliance",
-			minLevel = 43,
-			maxLevel = 43,
-			category = "Leveling",
-			folder = "Group Alliance",
-			zone = 1418,
-			zoneName = "Badlands",
-			next = "groupe-alliance/22-feralas",
-			author = "BurN-30",
-			version = 1,
-			names = { ["item:273169"] = "The Lost Magic of the Runemasters", ["item:4611"] = "Blue Pearl", ["item:4612"] = "Black Drake's Heart", ["npc:1182"] = "Brother Anton", ["npc:2616"] = "Privateer Groy", ["npc:264265"] = "Magus Olvek", ["npc:2725"] = "Scalding Whelp", ["npc:2726"] = "Scorched Guardian", ["npc:2817"] = "Rigglefuzz", ["npc:2888"] = "Garek", ["npc:2944"] = "Boss Tho'grun", ["npc:3974"] = "Houndmaster Loksey", ["npc:3975"] = "Herod", ["npc:3976"] = "Scarlet Commander Mograine", ["npc:3977"] = "High Inquisitor Whitemane", ["npc:3980"] = "Raleigh the Devout", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4944"] = "Captain Garran Vimes", ["npc:4968"] = "Lady Jaina Proudmoore", ["npc:5634"] = "Rhapsody Shindigger", ["npc:5635"] = "Falstad Wildhammer", ["npc:5636"] = "Gryphon Master Talonaxe", ["npc:6251"] = "Strahad Farsan", ["npc:6487"] = "Arcanist Doan", ["npc:7744"] = "Innkeeper Thulfram", ["npc:7884"] = "Fraggar Thundermantle", ["object:1162"] = "Menethil Harbor", ["object:151976"] = "Shimmering Flats", ["object:171531"] = "The Library", ["object:176369"] = "Boat to Theramore", ["quest:1050"] = "Mythology of the Titans", ["quest:1052"] = "Down the Scarlet Path", ["quest:1053"] = "In the Name of the Light", ["quest:1450"] = "Gryphon Master Talonaxe", ["quest:1451"] = "Rhapsody Shindigger", ["quest:3631"] = "Summon Felsteed", ["quest:625"] = "Cortello's Riddle", ["quest:96800"] = "Past Due", ["zone:1413"] = "Barrens", ["zone:1418"] = "Badlands", ["zone:1420"] = "Tirisfal Glades", ["zone:1421"] = "Silverpine Forest", ["zone:1425"] = "The Hinterlands", ["zone:1443"] = "Desolace", ["zone:1446"] = "Tanaris", ["zone:1455"] = "Ironforge" },
-			written = { ["Ride north-east out of Southshore on the road into the {zone:1425}; Aerie Peak sits just past the border. {npc:5635} holds court at the top, {quest:1450} tends the aviary and {npc:7884} stands by the inn."] = "Ride north-east out of Southshore on the road into the Hinterlands; Aerie Peak sits just past the border. Falstad holds court at the top, Gryphon Master Talonaxe tends the aviary and Fraggar Thundermantle stands by the inn.", ["Talonaxe's next task waits for a later {zone:1425} guide."] = "Talonaxe's next task waits for a later Hinterlands guide.", ["The first two cages stand together in the Witherbark village south of {npc:5634}; the third is in the next village to the east. Every Witherbark troll can drop a necklace."] = "The first two cages stand together in the Witherbark village south of Rhapsody; the third is in the next village to the east. Every Witherbark troll can drop a necklace.", ["{npc:5634} camps on the road east of Aerie Peak."] = "Rhapsody camps on the road east of Aerie Peak.", ["{npc:7884} keeps paying for necklaces: hand in any extras"] = "Fraggar keeps paying for necklaces: hand in any extras", ["{quest:1050} goes back to Mae Paledust in {zone:1455}: the {zone:1425} guide (Group 22) passes there."] = "Mythology of the Titans goes back to Mae Paledust in Ironforge: the Hinterlands guide (Group 22) passes there." },
-			steps = {
-				{
-					title = "Fly to Thelsamar",
-					only = { races = { "Dwarf", "Gnome" } },
-					goals = {
-						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
-						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
-						{ t = "fly", location = "Thelsamar", node = 8 },
-					},
-				},
-				{
-					title = "{zone:1418}",
-					only = { races = { "Dwarf", "Gnome" } },
-					goals = {
-						{ t = "goto", text = "{zone:1418}", map = 1418, x = 49.6, y = 66.3, f = "e" },
-					},
-				},
-				{
-					title = "Agmond's End",
-					goals = {
-						{ t = "kill", quest = 739, title = "Murdaloc", target = "Murdaloc", npc = 2945, count = 1, oi = 1, map = 1418, x = 49.63, y = 66.31, z = 244.6, f = "e" },
-						{ t = "kill", quest = 739, title = "Murdaloc", target = "Stonevault Bonesnapper", npc = 2893, count = 12, oi = 2, map = 1418, x = 50.17, y = 67.12, z = 242.3, f = "e", spots = { { x = 51.3, y = 67, z = 241.8, r = 61, n = 9 }, { x = 49, y = 71, r = 56, n = 5 } } },
-					},
-				},
-				{
-					title = "Valley of Fangs",
-					goals = {
-						{ t = "turnin", quest = 1108, title = "Indurium", npc = 4618, npcName = "Martek the Exiled", map = 1418, x = 42.22, y = 52.69, z = 241.4, f = "e", optional = true },
-						{ t = "accept", quest = 1137, title = "News for Fizzle", npc = 4618, npcName = "Martek the Exiled", minLevel = 28, qlvl = 38, pre = { 1108 }, preTitles = { [1108] = "Indurium" }, map = 1418, x = 42.22, y = 52.69, z = 241.4, f = "e", optional = true, note = "for {npc:4454} in the {object:151976}: the {zone:1446} guide crosses them at 45, keep it" },
-						{ t = "turnin", quest = 703, title = "Barbecued Buzzard Wings", npc = 2817, npcName = "Rigglefuzz", map = 1418, x = 42.39, y = 52.93, z = 240.7, f = "e" },
-						{ t = "turnin", quest = 705, title = "Pearl Diving", npc = 2817, npcName = "Rigglefuzz", map = 1418, x = 42.39, y = 52.93, z = 240.7, f = "e", note = "Blue Pearls from Stranglethorn" },
-						{ t = "note", text = "{npc:2817}'s next quest pays no experience: skip it." },
-					},
-				},
-				{
-					title = "{npc:2944}",
-					note = "Ride west across the {zone:1418} to the Dustbelcher camp at Camp Boff. {npc:2944} stands in its middle with Wyrmhunters and Maulers around him.",
-					goals = {
-						{ t = "collect", quest = 732, title = "Tremors of the Earth", item = 4640, itemName = "Sign of the Earth", count = 1, oi = 1, map = 1418, x = 12.62, y = 75.49, f = "e", from = "Boss Tho'grun", fromKind = "npc", fromId = 2944, fromNpcs = { { npc = 2944, npcName = "Boss Tho'grun" } } },
-					},
-				},
-				{
-					title = "{npc:2888}",
-					note = "Ride back east to Dustwind Gulch.",
-					goals = {
-						{ t = "turnin", quest = 732, title = "Tremors of the Earth", npc = 2888, npcName = "Garek", map = 1418, x = 61.94, y = 54.26, z = 244.2, f = "e" },
-						{ t = "note", text = "{npc:2888}'s next task is an elite hunt: skip it." },
-					},
-				},
-				{
-					title = "Lethlor Ravine",
-					note = "The Scalding Whelps nest in the ravine east of {npc:2888}; leave the Scorched Guardians (elite) alone. The {item:4612} drops rarely: take it if it comes while you grind.",
-					goals = {
-						{ t = "collect", quest = 706, title = "Fiery Blaze Enchantments", item = 4612, itemName = "Black Drake's Heart", count = 1, oi = 1, map = 1418, x = 69.67, y = 53.81, f = "e", spots = { { x = 71.2, y = 52.7, r = 43, n = 3 }, { x = 72.3, y = 57.4, r = 40, n = 1 }, { x = 73.7, y = 65.3, r = 41, n = 4 }, { x = 77.2, y = 63.4, r = 40, n = 1 }, { x = 82.7, y = 42.9, r = 40, n = 1 }, { x = 82.3, y = 38.7, r = 48, n = 3 }, { x = 82.4, y = 32.1, r = 42, n = 7 }, { x = 85.2, y = 28.7, r = 40, n = 4 }, { x = 77.9, y = 34.2, r = 47, n = 3 }, { x = 79.9, y = 56.7, r = 40, n = 1, alt = true } }, spread = true, optional = true, fromNpcs = { { npc = 2725, npcName = "Scalding Whelp" } } },
-					},
-				},
-				{
-					title = "Hammertoe's Digsite",
-					goals = {
-						{ t = "turnin", quest = 706, title = "Fiery Blaze Enchantments", npc = 2860, npcName = "Sigrun Ironhew", map = 1418, x = 53.8, y = 43.3, z = 279.4, f = "e", optional = true },
 					},
 				},
 				{
 					title = "Fly to Southshore",
+					when = { { k = "done", label = "uld-start" } },
+					goals = {
+						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
+						{ t = "fly", location = "Southshore", node = 14 },
+					},
+				},
+				{
+					title = "Fly to Southshore",
+					when = { { k = "done", neg = true, label = "uld-start" } },
 					goals = {
 						{ t = "goto", text = "Thelsamar flight master", map = 1432, x = 33.9, y = 50.8, f = "e" },
 						{ t = "fly", location = "Southshore", node = 14 },

@@ -400,7 +400,7 @@ return {
 	-- {object:32356} Hall of Explorers
 	["Uldaman (dungeon, optional): {object:32356}"] = "Uldaman (donjon, optionnel) : {object:32356}",
 	-- {zone:1418} Badlands · {object:32356} Hall of Explorers
-	["Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next chapter runs it from the {zone:1418}. Alone? Skip it. Both stand in the {object:32356}."] = "Uldaman : un donjon nain et titan au nord des {zone:1418}, pour un groupe de 5, niveaux 42 à 52 sur Forever : optimal à 43 ou plus. Le chapitre suivant le fait depuis les {zone:1418}. Seul ? Passez. Tous deux se tiennent dans l'{object:32356}.",
+	["Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next guide runs it once its {zone:1418} quests are done. Alone? Skip it. Both stand in the {object:32356}."] = "Uldaman : un donjon nain et titan au nord des {zone:1418}, pour un groupe de 5, niveaux 42 à 52 sur Forever : optimal à 43 ou plus. Le guide suivant le fait une fois ses quêtes des {zone:1418} finies. Seul ? Passez. Tous deux se tiennent dans l'{object:32356}.",
 
 	-- Step 123: Fly to Thelsamar
 	["Fly to Thelsamar"] = "Volez vers Thelsamar",
@@ -434,4 +434,7 @@ return {
 	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. {npc:7954} teaches Gnomes at Steelgrill's Depot, just east of Kharanos, beside {npc:7955}'s mechanostriders. Forever may let any race learn from any riding trainer (unconfirmed). Collectibles, Mounts · Level 40 lists every colour."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. {npc:7954} enseigne aux gnomes au dépôt de Steelgrill, juste à l'est de Kharanos, à côté des méchanostrucs de {npc:7955}. Forever pourrait permettre à n'importe quelle race d'apprendre auprès de n'importe quel maître de monte (non confirmé). Collectibles, Montures · Niveau 40 liste toutes les couleurs.",
 	-- {npc:7955} Milli Featherwhistle
 	["{npc:7955}: other colours, 20g"] = "{npc:7955} : autres couleurs, 20 po",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next chapter runs it from the {zone:1418}. Alone? Skip it. Both stand in the {object:32356}."] = "Uldaman : un donjon nain et titan au nord des {zone:1418}, pour un groupe de 5, niveaux 42 à 52 sur Forever : optimal à 43 ou plus. Le chapitre suivant le fait depuis les {zone:1418}. Seul ? Passez. Tous deux se tiennent dans l'{object:32356}.",
 }

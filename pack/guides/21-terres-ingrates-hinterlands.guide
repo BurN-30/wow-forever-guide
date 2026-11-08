@@ -1,6 +1,17 @@
 # Adapted from Polestar's guide forever/alliance/40-50/02-badlands (GPL-3.0, github.com/fitzforge/polestar, tag v0.3.4).
 # Changes: guide id, title, folder, next guide, group notes. Quest steps kept as Polestar wrote them,
 # except where a comment marked "Groupe Alliance" says otherwise.
+# Groupe Alliance 0.7.0: the Uldaman chapter (ex 20b-uldaman, written for this pack by BurN-30,
+# GPL-3.0; sources in its header: Polestar's Forever data and Dungeons codex, Wowhead Forever's
+# zone and quest pages read on 08/11/2026, room order from the original game's comments) now runs
+# here, after the Badlands quests, instead of before them: the Ironforge rewards are handed in on
+# the flight to Southshore (Thelsamar, Ironforge, Southshore), one trip to Ironforge and back
+# saved (about 7 minutes). Asked once in Ironforge at the end of the previous guide (`when group
+# 2240`); every Uldaman step needs `when done uld-start`. Nothing in it depends on the Badlands
+# quests or the other way round (Polestar's Forever data: no prerequisite between them; Uldaman's
+# minimum levels 30 to 40, lower than the Badlands quests'). Not played in game.
+# The two Dwarf and Gnome steps at the start (back from the riding trainer) now wait for a
+# player who is not in the Badlands already (`when !zone`): one below 40 never left them.
 guide groupe-alliance/21-terres-ingrates-hinterlands
 title Group 19 · Badlands & The Hinterlands
 folder Group Alliance
@@ -17,12 +28,14 @@ next groupe-alliance/22-feralas
 step Fly to Thelsamar
   note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
   only Dwarf,Gnome
+  when !zone "Badlands"
   zone Ironforge
   goto 55.9,47.9 "Ironforge flight master"
   fly "Thelsamar"
 
 step Badlands
   only Dwarf,Gnome
+  when !zone "Badlands"
   zone Badlands
   goto 49.6,66.3 "Badlands"
 
@@ -37,6 +50,13 @@ step Valley of Fangs
   turnin 703                          -- Rigglefuzz
   turnin 705                          -- Blue Pearls from Stranglethorn
   note Rigglefuzz's next quest pays no experience: skip it.
+
+step Uldaman (dungeon, optional): Rigglefuzz
+  label uld-start
+  when group 2240
+  tip Uldaman: a 5-player dungeon at the north end of the Badlands, levels 42 to 52 on Forever: best at 43 or more. The Badlands quests come first, then the dungeon, then the rewards in Ironforge on the way to Southshore. Alone? Skip it: the guide goes on in the Badlands.
+  note Keep 5 free quest log slots. Everyone takes the quests at their own pace; meet at the entrance for the run.
+  accept 2418 optional                    -- Rigglefuzz, Valley of Fangs
 
 step Boss Tho'grun
   tip Ride west across the Badlands to the Dustbelcher camp at Camp Boff. Boss Tho'grun stands in its middle with Wyrmhunters and Maulers around him.
@@ -54,9 +74,59 @@ step Lethlor Ravine
 step Hammertoe's Digsite
   turnin 706 optional                 -- Sigrun Ironhew
 
+# ---------------------------------------------------------------- Uldaman (optional)
+
+step The digsite and the outer cave
+  when done uld-start
+  zone Badlands
+  tip The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. Krom's chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards.
+  collect 8009 x8 quest 2418 optional     -- Dentrium Power Stone: Shadowforge dwarves
+  collect 8052 x8 quest 2418 optional     -- An'Alleum Power Stone: Shadowforge dwarves
+  collect 8027 quest 1360                 -- Krom Stoutarm's Treasure, from his chest
+  goto 44.6,12.1 "Uldaman" r 25
+
+step Baelog and the hidden chamber
+  when done uld-start
+  tip Baelog, Eric and Olaf wait in the first halls, at the top of a ramp. The chest beside Baelog holds the Gni'kiv Medallion, Revelosh drops the Shaft of Tsol: together they make the Staff of Prehistoria. Plant it in the Map Room, kill Ironaya (elite), then walk all the way into the chamber.
+  note Share each quest with your group: click it in the quest log, then Share. A Shattered Necklace may drop on the way: its chain goes on with Talvash del Kissel in Ironforge.
+  turnin 2398                             -- Baelog
+  accept 2240
+  complete 2240                           -- Explore the hidden chamber
+  accept 2198 item 7666 optional          -- Shattered Necklace, a drop: for Talvash del Kissel in Ironforge
+
+step Archaedas and the Discs of Norgannon
+  when done uld-start
+  tip Archaedas, the last boss, wakes the stone guardians around his room during the fight. Behind him, the Discs of Norgannon: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave.
+  accept 2278 object 131474 optional      -- The Discs of Norgannon
+  turnin 2278 object 131474 optional
+  accept 2279 object 131474 optional
+
+step Rigglefuzz
+  when onquest 2418
+  zone Badlands
+  tip Leave by the front, south to the Valley of Fangs.
+  turnin 2418 optional                    -- Rigglefuzz
+
+step Ironforge rewards
+  when done uld-start
+  zone Ironforge
+  tip Fly from Thelsamar to Ironforge. Prospector Stormpike, Krom Stoutarm and High Explorer Magellas are all in the Hall of Explorers; Talvash del Kissel in the Mystic Ward.
+  turnin 2240                             -- Prospector Stormpike
+  turnin 1360                             -- Krom Stoutarm
+  turnin 2279 optional                    -- High Explorer Magellas
+  turnin 2198 optional                    -- Talvash del Kissel: his follow-ups need another Uldaman run, not in this guide
+
+step Fly to Southshore
+  when done uld-start
+  zone Ironforge
+  goto 55.9,47.9 "Ironforge flight master"
+  fly "Southshore"
+  zone Hillsbrad Foothills
+
 # ---------------------------------------------------------------- Southshore and Aerie Peak
 
 step Fly to Southshore
+  when !done uld-start
   zone Loch Modan
   goto 33.9,50.8 "Thelsamar flight master"
   fly "Southshore"

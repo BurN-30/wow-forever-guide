@@ -7,7 +7,7 @@ folder Group Alliance
 faction Alliance
 levels 40-43
 zone Stranglethorn Vale
-next groupe-alliance/20b-uldaman
+next groupe-alliance/21-terres-ingrates-hinterlands
 
 # Forge's route search orders the quests of this guide and its guide writer writes the steps.
 # Fixes go into data/route-fixes.json, data/guide-fixes.json or forever-db/corrections, never
@@ -722,8 +722,8 @@ step Ironforge
   train class only Shaman             -- Stormwind has no shaman trainer
 
 # Groupe Alliance 0.5.0: dungeon pickups in Ironforge, each dungeon asked once (Scarlet Monastery:
-# `when group 1053`, run in the next guide from Southshore; Uldaman: `when group 2240`, the next
-# chapter, 20b-uldaman).
+# `when group 1053`, run in the next guide from Southshore; Uldaman: `when group 2240`, run in the
+# next guide after its Badlands quests, since 0.7.0).
 
 step Scarlet Monastery (dungeon, optional): Librarian Mae Paledust
   when group 1053
@@ -732,7 +732,7 @@ step Scarlet Monastery (dungeon, optional): Librarian Mae Paledust
 
 step Uldaman (dungeon, optional): Hall of Explorers
   when group 2240
-  tip Uldaman: a dwarf and titan dungeon in the north of the Badlands, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next chapter runs it from the Badlands. Alone? Skip it. Both stand in the Hall of Explorers.
+  tip Uldaman: a dwarf and titan dungeon in the north of the Badlands, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next guide runs it once its Badlands quests are done. Alone? Skip it. Both stand in the Hall of Explorers.
   accept 2398                         -- Prospector Stormpike
   accept 1360                         -- Krom Stoutarm
 
