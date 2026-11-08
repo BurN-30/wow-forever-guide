@@ -86,7 +86,37 @@ Un antivirus bloque le programme à tort ? Utiliser la manière 2, et signaler l
 - **« Bigobox 827 », « Bigobox 525 »…** sur la carte ou dans le guide : c'est le vrai nom de ces quêtes de Sombrivage. Une Bigobox est une petite boîte-robot posée dans la nature : on lui rend la quête et elle donne la suivante.
 - **Ctrl+clic** sur une ligne : lien Wowhead prêt à copier (Ctrl+C), en français ou en anglais selon ton jeu (`/ga lang fr`, `en` ou `auto` pour forcer).
 - **?** dans une infobulle : info pas encore confirmée, à vérifier sur Wowhead.
-- Aucune action automatique, aucune fenêtre qui s'ouvre toute seule.
+- Les quêtes de l'étape en cours sont prises et rendues toutes seules (voir « Confort en jeu »). Aucune fenêtre ne s'ouvre toute seule.
+
+## Confort en jeu
+
+Polestar fait déjà, sans autre addon, la plupart des petits automatismes de confort. Tout se règle dans la **roue dentée** (en haut à droite de la fenêtre du guide) ; la case de recherche des réglages trouve chaque option par son nom.
+
+| Quoi | Où, dans la roue dentée | Par défaut |
+|---|---|---|
+| Prendre et rendre les quêtes du guide | Quêtes → Quêtes → Quêtes plus rapides : **Accepter les quêtes du guide**, **Rendre les quêtes du guide** | allumé (depuis la 0.7.3) |
+| Texte de quête instantané, dialogues à choix unique passés, option de dialogue de l'étape choisie | Quêtes → Quêtes → Quêtes plus rapides | allumé |
+| Butin rapide (avec la fouille automatique du jeu) | Quêtes → Quêtes → Quêtes plus rapides : **Fouille automatique rapide** | allumé |
+| Récompenses : la meilleure marquée, prise toute seule, équipée | Quêtes → Récompenses et équipement | marquée seulement |
+| Marchands : vendre les objets gris, réparer, acheter pour le guide | Confort de jeu → Marchands → Marchands | vendre et réparer allumés |
+| Réapprovisionnement (boissons, nourriture, munitions) | Confort de jeu → Marchands → Racheter | bouton allumé, rien n'est acheté sans clic |
+| Sacs : place libre, marques camelote et à garder | Confort de jeu → Marchands → Sacs | allumé |
+| Entraîneurs : apprendre les nouveaux sorts, rappel de monte | Confort de jeu → Marchands → Maîtres | rappel de monte seulement |
+| Maîtres de vol : carte de vol ouverte, destination marquée | Confort de jeu → Voyages → Maîtres de vol | allumé |
+| Pierre de foyer : lieu de repos à l'auberge du guide, bouton | Confort de jeu → Voyages → Pierre de foyer | bouton seulement |
+| Mort : cadavre ou esprit guérisseur, manque d'air | Confort de jeu → Voyages → Mort | cadavre ou esprit guérisseur |
+| Social : invocations, résurrections, groupes d'amis, refus des duels et invitations | Confort de jeu → Social | éteint |
+
+**Quêtes prises et rendues toutes seules** (0.7.3) :
+
+- Seulement les quêtes de l'étape en cours du guide. Jamais de choix entre des récompenses, ni de quête qui coûte de l'or ou active le JcJ. **Maj** enfoncée en parlant au PNJ : pas cette fois.
+- Quêtes de groupe : jamais prises tant que la question n'a pas reçu « La faire en groupe ». Passée (« La passer ») ou sans réponse : rien n'est pris.
+- **Une quête précise** : clic droit sur sa ligne dans le guide → **Ne pas prendre ni rendre automatiquement** (à cocher ou décocher, gardé pour tout le compte). La liste des exceptions, pour les voir et les retirer : roue dentée → Quêtes → Quêtes → **Groupe Alliance : quêtes automatiques**.
+- **Escortes et quêtes partagées** : quand un membre du groupe lance une escorte ou partage une quête, elle est acceptée tout de suite si elle fait partie de l'étape en cours ou des deux suivantes, sauf exception. Réglage **Quêtes partagées et escortes du groupe**, dans la même section.
+- Tout couper : décocher **Accepter les quêtes du guide** et **Rendre les quêtes du guide**.
+- Déjà joueur de la 0.7.2 : l'automatisme s'allume, même pour qui l'avait éteint (Polestar ne garde pas un réglage égal à la valeur par défaut, et l'ancien défaut était « éteint »). Un message dans le chat le dit une fois, à la connexion.
+
+Leatrix Plus reste installable à part (depuis sa page officielle), mais son option « Automate quests » doit rester éteinte : sinon elle prend aussi les quêtes de groupe que le guide propose de passer (le guide prévient une fois s'il la voit allumée).
 
 ## Le parcours
 
@@ -174,7 +204,7 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
 <details>
 <summary>Crédits, licence et sources</summary>
 
-- **Polestar** © 2026 The Polestar authors, GPL-3.0 : moteur (dossiers `addons/Polestar*`, release 0.3.4 du 06/11/2026 ; modifiée par BurN-30 : le module Groupe Alliance est dans `Polestar/GroupeAlliance` et chargé par `Polestar.toc`, boutons réglages, aide et réduire dans `UI/GuideFrame.lua`, voir `tools/build.py`) et guides repris dans `pack/guides` (révision `08536e3` du 06/11/2026, plus les corrections de ces guides jusqu'au tag `v0.3.4` ; chaque fichier repris le dit en tête).
+- **Polestar** © 2026 The Polestar authors, GPL-3.0 : moteur (dossiers `addons/Polestar*`, release 0.3.4 du 06/11/2026 ; modifiée par BurN-30 : le module Groupe Alliance est dans `Polestar/GroupeAlliance` et chargé par `Polestar.toc`, boutons réglages, aide et réduire et entrée du menu de ligne dans `UI/GuideFrame.lua`, `Core/Automation.lua` qui demande au module avant de prendre ou rendre une quête, voir `tools/build.py`) et guides repris dans `pack/guides` (révision `08536e3` du 06/11/2026, plus les corrections de ces guides jusqu'au tag `v0.3.4` ; chaque fichier repris le dit en tête).
 - **Aurums Night Elf Druid Guide** © 2026 Aurum, GPL-3.0 : chapitres de donjon adaptés à toutes les classes.
 - **Lodestar Guides for Polestar** (conversion de [Lodestar](https://github.com/danielcosta42/lodestar)), licence MIT : guide Loch Modan adapté dans `pack/guides/13-solo-loch-modan.guide` (révision `cc3bf4f` du 21/10/2026 ; trajet réordonné, quêtes vérifiées sur les données Forever, quêtes hors de la zone retirées). Notice exigée par la licence MIT, reprise aussi dans `LICENSE` et en tête du fichier :
 

@@ -2,6 +2,22 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.7.3 (2026-11-08)
+
+### Français
+- Quêtes prises et rendues toutes seules, allumé par défaut : seulement celles de l'étape en cours, Maj enfoncée pour passer une fois. Déjà en 0.7.2 : allumé même si vous l'aviez éteint, un message le dit une fois.
+- Quêtes de groupe jamais prises sans la réponse « La faire en groupe ».
+- Clic droit sur une ligne du guide : « Ne pas prendre ni rendre automatiquement » cette quête ; la liste est dans la roue dentée, Quêtes.
+- Escortes et quêtes partagées par le groupe acceptées tout de suite si elles sont dans l'étape en cours ou les deux suivantes.
+- README : section « Confort en jeu » (ce que Polestar fait déjà, où le régler) ; Leatrix Plus : laisser « Automate quests » éteint.
+
+### English
+- Quests accepted and turned in for you, on by default: only the current step's, hold Shift to skip once. Already on 0.7.2: on even if you had switched it off, a message says so once.
+- Group quests are never taken without the "Do it with a group" answer.
+- Right-click a guide line: "Don't accept or turn in automatically" for that quest; the list is under the gear, Questing.
+- Escorts and quests shared by the group are accepted at once when they are in the current step or the next two.
+- README: "Confort en jeu" section (what Polestar already does, where to set it); Leatrix Plus: keep "Automate quests" off.
+
 ## v0.7.2 (2026-11-08)
 
 ### Français

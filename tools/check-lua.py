@@ -146,6 +146,135 @@ return table.concat(out, ", "), n
 failed, ntips = result
 print(f"smoke test: {ntips} tips, " + ("ok" if not failed else "FAILED: " + failed))
 
+# 2b. Quest automation (0.7.3): on by default, the per-quest exception (line menu, options
+# list), group quests held unless answered "do", escorts taken from the next steps, and
+# the built Polestar Core/Automation.lua asking the module before it accepts.
+L.execute(r'''
+SET, PRINTED2, CONFIRMED, ACCEPTED, SPANS = {}, {}, 0, 0, {}
+NS.Get = function(k) local v = SET[k] if v == nil then v = DEFAULTS[k:match("^(%w+)")] and DEFAULTS[k:match("^(%w+)")][k:match("%.(.+)$")] end return v end
+NS.Print = function(s) table.insert(PRINTED2, s) end
+NS.After = function(_, fn) fn() end
+SHIFT, LOGGED = false, {}
+NS.Compat = { IsShiftKeyDown = function() return SHIFT end, IsOnQuest = function(q) return LOGGED[q] == true end,
+  IsQuestCompleted = function() return false end, GetNpcID = function() return 12345 end, InCombat = function() return false end,
+  GetQuestTitle = function(q) return q == 169 and "WANTED: Gath'Ilzogg" or nil end,
+  GetLogQuests = function() return {} end, GetLogCap = function() return 40 end }
+ANSWERS = {}
+STEPS = {
+  { when = { { k = "group", q = 19 } }, goals = { { t = "accept", quest = 169, title = "WANTED: Gath'Ilzogg" }, { t = "accept", quest = 95999 } } },
+  { when = { { k = "group", q = 91752, neg = true } }, goals = { { t = "accept", quest = 500 } } },
+  { goals = { { t = "accept", quest = 983, title = "The Escort" }, { t = "turnin", quest = 984 } } },
+}
+NS.Engine = { GetGuide = function() return { id = "g", steps = STEPS } end, TabIds = function() return {} end,
+  GetLiveStep = function() return 1 end, GroupAnswer = function(q) return ANSWERS[q] end,
+  WantsQuest = function(verb, q, span) table.insert(SPANS, span or 0) return verb == "accept" and (q == 169 or q == 983) and (span or 0) >= 1 or (verb == "accept" and q == 984) end }
+NS.QoL = { ClosePopup = function(which) CLOSED = which end }
+function ConfirmAcceptQuest() CONFIRMED = CONFIRMED + 1 end
+local GA, out = NS.GA, {}
+local function check(ok, what) if not ok then table.insert(out, what) end end
+check(DEFAULTS.behavior.autoAccept == true and DEFAULTS.behavior.autoTurnin == true and DEFAULTS.behavior.gaShared == true, "automation on by default")
+-- The exception, from the line's right-click menu.
+check(not GA.HoldsQuest(983), "a plain quest is not held")
+local items = {}
+GA.RowMenu({ quest = 983, title = "The Escort" }, items)
+local entry = items[#items]
+check(#items == 2 and items[1].separator and entry.checked == false and entry.text:find("automatiquement", 1, true), "line menu entry, unticked")
+entry.onClick()
+check(GA.HoldsQuest(983) and GA.NoAuto(983), "the entry excepts the quest")
+items = {}
+GA.RowMenu({ quest = 983 }, items)
+check(items[#items].checked == true, "line menu entry ticked once excepted")
+check(GA.Listed()[1] == 983, "options list shows the exception")
+check(NS.DB().groupeAlliance.noAuto[983] == "The Escort", "kept in the account's settings")
+items[#items].onClick()
+check(not GA.HoldsQuest(983) and GA.Listed()[1] == 983, "ticked again: back to automation, row kept for the session")
+GA.RowMenu({ t = "note" }, items)
+check(#items == 2, "no entry on a line without a quest")
+-- Group quests: held until answered "do"; a `!group` step is not held.
+check(GA.HoldsQuest(169) and GA.HoldsQuest(95999), "unanswered group step: none of its quests")
+ANSWERS[19] = "skip"
+check(GA.HoldsQuest(169), "skipped group quest held")
+ANSWERS[19] = "do"
+check(not GA.HoldsQuest(169) and not GA.HoldsQuest(95999), "group quest answered do")
+check(not GA.HoldsQuest(500), "solo alternative not held")
+-- Escorts (QUEST_ACCEPT_CONFIRM): a quest of the next steps, by title, at once.
+SET["behavior.autoAccept"] = true
+check(GA.OnEscort(nil, "Ana", "The Escort") == true and CONFIRMED == 1 and CLOSED == "QUEST_ACCEPT", "escort accepted at once")
+check(SPANS[#SPANS] == GA.SPAN, "escort looks at the next steps")
+check(GA.OnEscort(nil, "Ana", "Wanted: Gath'Ilzogg") == true and CONFIRMED == 2, "escort matched on the client's title")
+check(GA.OnEscort(nil, "Ana", "Some other quest") == false and CONFIRMED == 2, "unknown escort left to the player")
+GA.SetNoAuto(983, true)
+check(GA.OnEscort(nil, "Ana", "The Escort") == false and CONFIRMED == 2, "excepted escort left to the player")
+GA.SetNoAuto(983, false)
+SHIFT = true
+check(GA.OnEscort(nil, "Ana", "The Escort") == false, "Shift: escort left to the player")
+SHIFT = false
+SET["behavior.gaShared"] = false
+check(GA.OnEscort(nil, "Ana", "The Escort") == false, "setting off: escort left to the player")
+SET["behavior.gaShared"] = nil
+LOGGED[983] = true
+check(GA.OnEscort(nil, "Ana", "The Escort") == false, "already in the log")
+LOGGED[983] = nil
+-- Shared quest window: the giver is a player.
+check(GA.AcceptSpan() == 0, "NPC quest window: live step only")
+function UnitExists() return true end
+function UnitIsPlayer() return true end
+function UnitIsUnit() return false end
+check(GA.AcceptSpan() == GA.SPAN, "shared quest window: next steps too")
+UnitExists, UnitIsPlayer, UnitIsUnit = nil, nil, nil
+-- Told once.
+NS.DB().groupeAlliance.autoTold = nil
+PRINTED2 = {}
+LeaPlusDB = { AutomateQuests = "On" }
+GA.TellOnce(); GA.TellOnce()
+check(#PRINTED2 == 2 and PRINTED2[1]:find("0.7.3", 1, true) and PRINTED2[2]:find("Leatrix", 1, true), "told once: automation on, Leatrix Plus")
+LeaPlusDB = nil
+OUT = table.concat(out, ", ")
+''')
+failed2 = L.eval("OUT")
+# The built Core/Automation.lua (tools/build.py patch) against the same stubs.
+L.execute(r'''
+function GetTime() return 0 end
+QID = 0
+function GetQuestID() return QID end
+function AcceptQuest() ACCEPTED = ACCEPTED + 1 end
+function QuestGetAutoAccept() return false end
+function QuestFlagsPVP() return false end
+NS.L = setmetatable({}, { __index = function(_, k) return k end })
+NS.Closes = { HoldsOffer = function() return false end }
+NS.RegisterEvent = function() end
+''')
+run((repo / "addons" / "Polestar" / "Core" / "Automation.lua").read_text(encoding="utf-8"), "@Automation.lua")
+L.execute(r'''
+local A, out = NS.Automation, {}
+local function check(ok, what) if not ok then table.insert(out, what) end end
+QID = 984
+check(A.OnQuestDetail() == true and ACCEPTED == 1, "automation accepts a wanted quest")
+GA = NS.GA
+GA.SetNoAuto(984, true)
+check(A.OnQuestDetail() == false and ACCEPTED == 1, "automation leaves an excepted quest")
+GA.SetNoAuto(984, false)
+SHIFT = true
+check(A.OnQuestDetail() == false, "Shift: automation does nothing")
+SHIFT = false
+QID = 983
+check(A.OnQuestDetail() == false and SPANS[#SPANS] == 0, "NPC window: the next steps' quest waits")
+function UnitExists() return true end
+function UnitIsPlayer() return true end
+check(A.OnQuestDetail() == true and ACCEPTED == 2 and SPANS[#SPANS] == NS.GA.SPAN, "shared by a player: taken from the next steps")
+UnitExists, UnitIsPlayer = nil, nil
+ANSWERS[19] = nil
+QID = 169
+function UnitExists() return true end
+function UnitIsPlayer() return true end
+check(A.OnQuestDetail() == false, "unanswered group quest never taken, even shared")
+UnitExists, UnitIsPlayer = nil, nil
+OUT = table.concat(out, ", ")
+''')
+failed3 = L.eval("OUT")
+failed = ", ".join(x for x in (failed, failed2, failed3) if x)
+print("quest automation: " + ("ok" if not (failed2 or failed3) else "FAILED: " + ", ".join(x for x in (failed2, failed3) if x)))
+
 # 3. Per-objective tips: every goals["kind:id"] key of Tips.lua is an objective line (collect,
 # kill, use, interact) of that quest in the built pack's guides.
 import re

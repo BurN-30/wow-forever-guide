@@ -273,6 +273,9 @@ local function rowMenu(row)
 	end
 	items[#items + 1] = { text = L["Skip this quest"], icon = "skip", tip = L["This quest and the ones that follow from it are skipped, in every guide. Right-click it again to bring it back."],
 		onClick = function() E.SkipQuest(goal.quest, true) end }
+	-- Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide): the Groupe Alliance entry
+	-- ("Don't accept or turn in automatically" for this quest).
+	if ns.GA and ns.GA.RowMenu then ns.GA.RowMenu(goal, items) end
 	W.ShowMenu(row, items)
 	return true
 end

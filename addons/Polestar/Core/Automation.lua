@@ -45,8 +45,17 @@ local function canTurnIn()
 	return ns.Get("behavior.autoTurnin") and not suppressed()
 end
 
-local function wantsAccept(q)
-	return q and q ~= 0 and ns.Engine.WantsQuest("accept", q)
+-- Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide): the Groupe Alliance module
+-- holds some quests back (GA.HoldsQuest: the player's exceptions, group quests
+-- not answered "do") and lets a quest a party member shares come from the
+-- next steps too (GA.AcceptSpan); without the module, as released.
+local function held(q)
+	local GA = ns.GA
+	return GA and GA.HoldsQuest and GA.HoldsQuest(q) or false
+end
+
+local function wantsAccept(q, span)
+	return q and q ~= 0 and not held(q) and ns.Engine.WantsQuest("accept", q, span)
 end
 
 -- A `turnin ... direct`: handed in straight from the giver's window with no
@@ -54,14 +63,14 @@ end
 -- log. Picking it there opens the progress window, which onProgress finishes.
 -- Wanted only while its goal is not done (a repeatable's giver keeps offering it).
 local function wantsDirect(q)
-	return q and q ~= 0 and ns.Engine.WantsQuest("direct", q)
+	return q and q ~= 0 and not held(q) and ns.Engine.WantsQuest("direct", q)
 end
 
 -- A quest in the log by its `turnin` goal; one not in the log (its progress or
 -- reward panel opened from the giver's offers) only by a `direct` goal not done.
 local function wantsTurnIn(q)
 	if not (q and q ~= 0) then return false end
-	if ns.Compat.IsOnQuest(q) then return ns.Engine.WantsQuest("turnin", q) end
+	if ns.Compat.IsOnQuest(q) then return not held(q) and ns.Engine.WantsQuest("turnin", q) end
 	return wantsDirect(q)
 end
 
@@ -153,7 +162,7 @@ end
 local function onDetail()
 	if not canAccept() then return false end
 	local q = questID()
-	if not wantsAccept(q) then return false end
+	if not wantsAccept(q, ns.GA and ns.GA.AcceptSpan and ns.GA.AcceptSpan() or 0) then return false end
 	if ns.Closes.HoldsOffer() then return false end -- closes another quest for good: the player chooses
 	if QuestFlagsPVP and QuestFlagsPVP() then return false end -- needs the PvP confirmation
 	noteActed()

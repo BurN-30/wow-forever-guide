@@ -8,10 +8,17 @@
 --  * Three buttons at the right end of the guide window's tab strip: a gear
 --    (Polestar's options), "?" (a short help in its tooltip) and "_" (reduce:
 --    the window gives way to a small Polestar icon, see "Reduced window").
+--  * Quests accepted and turned in for the player (0.7.3), with Polestar's own
+--    engine (Core/Automation.lua): only the quests of the guide's current step,
+--    Shift held skips once, never a reward choice, a quest that costs money or
+--    flags for PvP. On top of it (see "Quest automation" below): never a quest
+--    the player excepted (right-click a guide line, list on the Questing page),
+--    never a group quest not answered "Do it with a group", and the quests a
+--    party member shares or starts (escorts) taken at once from the current
+--    step or the next two.
 --  * Calm defaults for a group of beginners, as Polestar defaults (the player
---    can still change them in Polestar's options): no auto accept or turn-in,
---    no guide-end or route-choice window, no class guide offered by itself,
---    group quests done, guides suggested from this pack first (Polestar's own
+--    can still change them in Polestar's options): no guide-end or route-choice
+--    window, no class guide offered by itself, group quests asked one by one, guides suggested from this pack first (Polestar's own
 --    fill in where it has none), no welcome window, Polestar's minimap button on,
 --    grey quests left out (friends play at different times: whoever is ahead
 --    is not sent back to quests that no longer give XP), and Polestar's quest
@@ -31,9 +38,15 @@ local _, ns = ...
 local GA = ns.GA or {}
 ns.GA = GA
 
+-- 0.7.3: autoAccept and autoTurnin back to Polestar's own default (on), set
+-- here too so the module says what it ships. Only values unlike the default
+-- are stored (Core/Init.lua): a player of 0.7.2 who never touched them, or
+-- who switched them off then (false was the default, so nothing was stored),
+-- gets them on.
 ns.RegisterDefaults("behavior", {
-	autoAccept = false,
-	autoTurnin = false,
+	autoAccept = true,
+	autoTurnin = true,
+	gaShared = true, -- ours: a quest a party member shares or starts (escort), taken from the next steps too
 	guideEnd = "continue", -- the next guide loads in place, no window
 	routeChoice = "recommended", -- no route-choice window
 	offerClassQuests = false, -- no tab opening by itself: class quests are in this pack's guides
@@ -95,6 +108,7 @@ local T = {
 			"|cffffd100?|r jaune : info pas encore confirmée, à vérifier sur Wowhead.",
 			"Marque orange ou rouge : difficile à ton niveau, la survoler pour savoir comment faire seul ou à plusieurs.",
 			"Quête de groupe : le guide propose « La passer » ou « La faire en groupe » ; seul, la passer.",
+			"Quêtes de l'étape en cours prises et rendues toutes seules. Maj enfoncée : pas cette fois. Clic droit sur une ligne : jamais pour cette quête.",
 			"Changer de guide : /polestar guides, ou le + des onglets.",
 			"/ga lang fr, en ou auto : langue des liens Wowhead.",
 			"Réduire : bouton _ ; masquer : /polestar hide, raccourci dans Options > Raccourcis > Polestar.",
@@ -119,6 +133,20 @@ local T = {
 		marksTurnin = "Quêtes à rendre",
 		marksAvailable = "Quêtes disponibles",
 		marksMinimap = "Repères sur la minicarte",
+		autoMenu = "Ne pas prendre ni rendre automatiquement",
+		autoMenuTip = "Cette quête n'est plus prise ni rendue toute seule, pour ce compte. Même entrée pour décocher ; liste dans la roue dentée, Quêtes.",
+		autoHeld = "Prise et rendue à la main (clic droit pour changer).",
+		autoSection = "Groupe Alliance : quêtes automatiques",
+		autoShared = "Quêtes partagées et escortes du groupe",
+		autoSharedHelp = "Une quête qu'un membre du groupe partage, ou une escorte qu'il lance, est acceptée tout de suite si elle est dans l'étape en cours ou les deux suivantes, sauf exception. Avec « Accepter les quêtes du guide » allumé. Maj enfoncée : pas cette fois.",
+		autoList = "Exceptions",
+		autoListHelp = "Quêtes jamais prises ni rendues toutes seules. Ajouter : clic droit sur une ligne du guide. Décocher une quête ci-dessous lui rend l'automatisme.",
+		autoClear = "Tout retirer",
+		autoClearText = "Toutes les quêtes de la liste seront de nouveau prises et rendues toutes seules quand le guide y arrive.",
+		autoRowHelp = "Cochée : jamais prise ni rendue toute seule. Décocher pour lui rendre l'automatisme.",
+		escortTaken = "Groupe Alliance : quête de %s acceptée tout de suite : %s.",
+		autoTold = "Groupe Alliance 0.7.3 : le guide prend et rend tout seul les quêtes de l'étape en cours. Maj enfoncée : pas cette fois. Clic droit sur une ligne : jamais pour cette quête. Couper : roue dentée, Quêtes, Quêtes plus rapides.",
+		leatrix = "Groupe Alliance : l'option « Automate quests » de Leatrix Plus est allumée. Elle prend aussi les quêtes de groupe que le guide propose de passer : l'éteindre dans Leatrix Plus (/ltp). Le guide prend déjà les quêtes de l'étape en cours.",
 	},
 	enUS = {
 		hint = "Ctrl-click: Wowhead link (useful comments)",
@@ -140,6 +168,7 @@ local T = {
 			"Yellow |cffffd100?|r: not confirmed yet, check Wowhead.",
 			"Orange or red mark: hard at your level, hover it to see how to do it alone or in a group.",
 			"Group quest: the guide asks \"Skip it\" or \"Do it with a group\"; alone, Skip it.",
+			"The current step's quests are accepted and turned in for you. Hold Shift: not this time. Right-click a line: never for that quest.",
 			"Change guide: /polestar guides, or the tabs' +.",
 			"/ga lang fr, en or auto: Wowhead link language.",
 			"Reduce: the _ button; hide: /polestar hide, key binding in Options > Keybindings > Polestar.",
@@ -164,6 +193,20 @@ local T = {
 		marksTurnin = "Turn-ins",
 		marksAvailable = "Available quests",
 		marksMinimap = "Markers on the minimap",
+		autoMenu = "Don't accept or turn in automatically",
+		autoMenuTip = "This quest is no longer accepted or turned in for you, on this account. Same entry to untick; list under the gear, Questing.",
+		autoHeld = "Accepted and turned in by hand (right-click to change).",
+		autoSection = "Group Alliance: automatic quests",
+		autoShared = "Shared quests and group escorts",
+		autoSharedHelp = "A quest a party member shares, or an escort they start, is accepted at once when it is in the current step or the next two, unless excepted. With \"Accept guide quests\" on. Hold Shift: not this time.",
+		autoList = "Exceptions",
+		autoListHelp = "Quests never accepted or turned in for you. Add one: right-click a guide line. Untick a quest below to give it back to the automation.",
+		autoClear = "Remove all",
+		autoClearText = "Every quest of the list will be accepted and turned in for you again when the guide gets there.",
+		autoRowHelp = "Ticked: never accepted or turned in for you. Untick to give it back to the automation.",
+		escortTaken = "Group Alliance: %s's quest accepted at once: %s.",
+		autoTold = "Group Alliance 0.7.3: the guide now accepts and turns in the current step's quests for you. Hold Shift: not this time. Right-click a line: never for that quest. Off: gear, Questing, Faster questing.",
+		leatrix = "Group Alliance: Leatrix Plus's \"Automate quests\" is on. It also takes the group quests the guide lets you skip: switch it off in Leatrix Plus (/ltp). The guide already takes the current step's quests.",
 	},
 }
 local function tr(key) return T[locale()][key] end
@@ -267,6 +310,286 @@ ns.OnLogin(function()
 	if (ns.GamepadUI and ns.GamepadUI()) or not (Menu and Menu.ModifyMenu) then return end
 	Menu.ModifyMenu("MENU_WORLD_MAP_TRACKING", GA.AddMarksMenu)
 	Menu.ModifyMenu("MENU_MINIMAP_TRACKING", GA.AddMarksMenu)
+end)
+
+---------------------------------------------------------------------------
+-- Quest automation (0.7.3). Polestar's engine accepts and turns in the
+-- quests of the guide's live step (Core/Automation.lua, Engine.WantsQuest).
+-- tools/build.py makes it ask GA.HoldsQuest(q) before it acts and, on a
+-- quest window a party member opened (a shared quest), GA.AcceptSpan() for
+-- how many steps past the live one it may look. Held back:
+--  * the player's exceptions: right-click a guide line, "Don't accept or
+--    turn in automatically"; account-wide (groupeAlliance.noAuto[q] = the
+--    quest's title, or true), listed on the Questing page;
+--  * a quest of a step that waits on a group answer (`when group X`) unless
+--    X is answered "do". Engine.WantsQuest already leaves out a step whose
+--    answer is "skip" and the one quest an unanswered step asks about, but
+--    not that step's other quests (Redridge: `when group 19` takes 169 and
+--    95999) nor an `along` step, which never waits for its answer.
+-- Polestar's own window closing (behavior.closeSkipped, guideTakes) does not
+-- ask here: a held quest's window stays open for the player.
+-- Escorts: a party member starting one fires QUEST_ACCEPT_CONFIRM (who,
+-- title) and the game shows its QUEST_ACCEPT dialog, whose Yes calls
+-- ConfirmAcceptQuest. With behavior.autoAccept and behavior.gaShared on and
+-- Shift up, a quest of that title the guide takes in the live step or the
+-- next SPAN, not held, is confirmed at once and the dialog closed (as
+-- Polestar's QoL.ClosePopup does for summons; left up under the gamepad
+-- interface). No title match: the dialog stays, the player answers.
+---------------------------------------------------------------------------
+
+local SPAN = 2 -- steps past the live one for shared quests and escorts
+GA.SPAN = SPAN
+
+local function noAuto()
+	local s = settings()
+	if type(s.noAuto) ~= "table" then s.noAuto = {} end
+	return s.noAuto
+end
+
+function GA.NoAuto(q)
+	local s = settings().noAuto
+	return type(q) == "number" and type(s) == "table" and s[q] ~= nil and s[q] ~= false
+end
+
+-- The exceptions the Questing page lists this session: those of login, sorted,
+-- then each one added since. A row stays after its quest is unticked, so it
+-- can be ticked back; it is gone at the next login.
+local listed
+local function listedQuests()
+	if not listed then
+		listed = {}
+		for q in pairs(settings().noAuto or {}) do
+			if type(q) == "number" and GA.NoAuto(q) then listed[#listed + 1] = q end
+		end
+		table.sort(listed)
+	end
+	return listed
+end
+GA.Listed = listedQuests
+
+function GA.SetNoAuto(q, on, title)
+	if type(q) ~= "number" then return end
+	local list = noAuto()
+	if on then
+		list[q] = type(title) == "string" and title ~= "" and title or (type(list[q]) == "string" and list[q]) or true
+		local shown = listedQuests()
+		local found = false
+		for i = 1, #shown do if shown[i] == q then found = true break end end
+		if not found then shown[#shown + 1] = q end
+	else
+		list[q] = nil
+	end
+end
+
+local function questName(q)
+	local N = ns.Names
+	local name = N and N.Quest and N.Quest(q)
+	local s = settings().noAuto
+	if not name and type(s) == "table" and type(s[q]) == "string" then name = s[q] end
+	return name or ("#" .. q)
+end
+
+-- The guides open in tabs, steps read (Engine.TabIds, Guides.Get), the
+-- active one first.
+local function openGuides()
+	local out, seen = {}, {}
+	local E, G = ns.Engine, ns.Guides
+	local function add(g)
+		if type(g) == "table" and not seen[g] and type(g.steps) == "table" then
+			seen[g] = true
+			out[#out + 1] = g
+		end
+	end
+	add(E and E.GetGuide and E.GetGuide())
+	local ids = E and E.TabIds and E.TabIds() or {}
+	for id in pairs(ids) do add(G and G.Get and G.Get(id)) end
+	return out
+end
+
+-- Per guide's step list: quest -> the group quests (`when group X`, not
+-- `!group`) of the steps that accept or turn it in.
+local groupIndex = setmetatable({}, { __mode = "k" })
+local GATED = { accept = true, turnin = true }
+local function groupsOf(steps)
+	local idx = groupIndex[steps]
+	if idx then return idx end
+	idx = {}
+	for _, step in ipairs(steps) do
+		local groups
+		for _, p in ipairs(type(step.when) == "table" and step.when or {}) do
+			if type(p) == "table" and p.k == "group" and not p.neg and type(p.q) == "number" then
+				groups = groups or {}
+				groups[#groups + 1] = p.q
+			end
+		end
+		if groups then
+			for _, goal in ipairs(type(step.goals) == "table" and step.goals or {}) do
+				local q = type(goal) == "table" and GATED[goal.t] and goal.quest
+				if type(q) == "number" then
+					local list = idx[q] or {}
+					for _, x in ipairs(groups) do list[#list + 1] = x end
+					idx[q] = list
+				end
+			end
+		end
+	end
+	groupIndex[steps] = idx
+	return idx
+end
+
+-- A quest of a group step whose answer is not "do" (unanswered or skipped).
+function GA.GroupHeld(q)
+	local E = ns.Engine
+	if type(q) ~= "number" or not (E and E.GroupAnswer) then return false end
+	for _, g in ipairs(openGuides()) do
+		for _, x in ipairs(groupsOf(g.steps)[q] or {}) do
+			if E.GroupAnswer(x) ~= "do" then return true end
+		end
+	end
+	return false
+end
+
+-- Asked by Core/Automation.lua (tools/build.py) before each accept or turn-in.
+function GA.HoldsQuest(q)
+	if type(q) ~= "number" then return false end
+	return GA.NoAuto(q) or GA.GroupHeld(q)
+end
+
+local function readable(v)
+	local C = ns.Compat
+	if C and C.Readable then return C.Readable(v) end
+	return v
+end
+
+-- The quest window shows a quest a party member shares (its giver is a
+-- player, not an NPC): look SPAN steps past the live one. Else Polestar's 0.
+function GA.AcceptSpan()
+	if not ns.Get("behavior.gaShared") then return 0 end
+	if not (UnitExists and UnitIsPlayer) then return 0 end
+	for _, unit in ipairs({ "questnpc", "npc" }) do
+		if readable(UnitExists(unit)) and readable(UnitIsPlayer(unit)) and not (UnitIsUnit and readable(UnitIsUnit(unit, "player"))) then
+			return SPAN
+		end
+	end
+	return 0
+end
+
+local function norm(s)
+	s = readable(s)
+	if type(s) ~= "string" then return nil end
+	s = s:lower():gsub("^%s+", ""):gsub("%s+$", "")
+	return s
+end
+
+-- The quest called `title` (as the game names it) that the guide takes in
+-- the live step or the next SPAN, not in the log, not held; or nil.
+function GA.EscortQuest(title)
+	local want = norm(title)
+	local E, C, N = ns.Engine, ns.Compat, ns.Names
+	if not want or want == "" or not (E and E.WantsQuest and C) then return nil end
+	local seen = {}
+	for _, g in ipairs(openGuides()) do
+		for _, step in ipairs(g.steps) do
+			for _, goal in ipairs(type(step.goals) == "table" and step.goals or {}) do
+				local q = type(goal) == "table" and goal.t == "accept" and goal.quest
+				if type(q) == "number" and not seen[q] then
+					seen[q] = true
+					local named = norm(C.GetQuestTitle and C.GetQuestTitle(q)) == want
+						or norm(N and N.Cached and N.Cached("quest", q)) == want
+						or norm(goal.title) == want
+					if named and not (C.IsOnQuest and C.IsOnQuest(q)) and not GA.HoldsQuest(q) and E.WantsQuest("accept", q, SPAN) then
+						return q
+					end
+				end
+			end
+		end
+	end
+	return nil
+end
+
+function GA.OnEscort(_, who, title)
+	if not (ns.Get("behavior.autoAccept") and ns.Get("behavior.gaShared")) or not ConfirmAcceptQuest then return false end
+	local C = ns.Compat
+	if C and C.IsShiftKeyDown and C.IsShiftKeyDown() then return false end
+	if C and C.GetLogQuests and C.GetLogCap and #C.GetLogQuests() >= C.GetLogCap() then return false end
+	local q = GA.EscortQuest(title)
+	if not q then return false end
+	ConfirmAcceptQuest()
+	local QoL = ns.QoL
+	if QoL and QoL.ClosePopup then QoL.ClosePopup("QUEST_ACCEPT") end
+	if ns.Print then ns.Print(tr("escortTaken"):format(tostring(readable(who) or "?"), questName(q))) end
+	return true
+end
+if ns.RegisterEvent then ns.RegisterEvent("QUEST_ACCEPT_CONFIRM", GA.OnEscort) end
+
+-- The quest titles of the next steps, asked of the server ahead (an escort's
+-- title is matched on them).
+local function askTitles()
+	local E, C = ns.Engine, ns.Compat
+	local g = E and E.GetGuide and E.GetGuide()
+	local i = E and E.GetLiveStep and E.GetLiveStep()
+	if not (g and type(g.steps) == "table" and i and C and C.RequestQuest and C.GetQuestTitle) then return end
+	for s = i, math.min(#g.steps, i + 5) do
+		for _, goal in ipairs(type(g.steps[s].goals) == "table" and g.steps[s].goals or {}) do
+			if goal.t == "accept" and type(goal.quest) == "number" and not C.GetQuestTitle(goal.quest) then C.RequestQuest(goal.quest) end
+		end
+	end
+end
+for _, msg in ipairs({ "GUIDE_CHANGED", "STEP_CHANGED" }) do ns.On(msg, askTitles) end
+
+-- A guide line's right-click menu (UI/GuideFrame.lua, rowMenu, through
+-- tools/build.py): one ticked entry, the quest's exception.
+function GA.RowMenu(goal, items)
+	local q = type(goal) == "table" and goal.quest
+	if type(q) ~= "number" or type(items) ~= "table" then return end
+	items[#items + 1] = { separator = true }
+	items[#items + 1] = { text = tr("autoMenu"), checked = GA.NoAuto(q), tip = tr("autoMenuTip"),
+		onClick = function() GA.SetNoAuto(q, not GA.NoAuto(q), goal.title) end }
+end
+
+local AUTO_SLOTS = 40
+local function autoOptions()
+	if not (ns.RegisterOptions and ns.L) then return end
+	local controls = {
+		{ kind = "toggle", key = "behavior.gaShared", label = tr("autoShared"), help = tr("autoSharedHelp"),
+			search = "escort, share, shared quest, party, group, auto accept" },
+		{ kind = "button", button = tr("autoClear"), icon = "reset", label = tr("autoList"),
+			help = tr("autoListHelp"), search = "exceptions, auto accept, auto turn in, quest, never",
+			confirm = true, confirmTitle = tr("autoClear"), confirmAction = tr("autoClear"), confirmText = tr("autoClearText"),
+			onClick = function()
+				for _, q in ipairs(listedQuests()) do GA.SetNoAuto(q, false) end
+			end },
+	}
+	for i = 1, AUTO_SLOTS do
+		controls[#controls + 1] = { kind = "toggle", child = true, help = tr("autoRowHelp"),
+			label = function() local q = listedQuests()[i] return q and questName(q) or "" end,
+			needs = function() return listedQuests()[i] ~= nil end,
+			get = function() return GA.NoAuto(listedQuests()[i]) end,
+			set = function(on) local q = listedQuests()[i] if q then GA.SetNoAuto(q, on and true or false) end end }
+	end
+	ns.RegisterOptions({ page = ns.L["Questing"], tab = ns.L["Quests"], section = tr("autoSection"), controls = controls })
+end
+GA.AutoOptions = autoOptions
+
+-- Once per account: the automation is on now (0.7.3), and how to stop it.
+-- Leatrix Plus (a separate addon) has its own quest automation, which does
+-- not know the guide's group questions: said once when it is on (its saved
+-- settings, LeaPlusDB.AutomateQuests == "On"; nothing is read otherwise).
+local function tellOnce()
+	local s = settings()
+	if not s.autoTold and (ns.Get("behavior.autoAccept") or ns.Get("behavior.autoTurnin")) then
+		s.autoTold = true
+		if ns.Print then ns.Print(tr("autoTold")) end
+	end
+	local lea = rawget(_G, "LeaPlusDB")
+	if not s.leatrixTold and type(lea) == "table" and lea.AutomateQuests == "On" then
+		s.leatrixTold = true
+		if ns.Print then ns.Print(tr("leatrix")) end
+	end
+end
+GA.TellOnce = tellOnce
+ns.OnLogin(function()
+	if ns.After then ns.After(6, tellOnce) else tellOnce() end
 end)
 
 -- https://www.wowhead.com/forever/quest=96394 (English) and
@@ -407,6 +730,9 @@ local function afterTooltip(owner)
 		if gap >= 3 then r, g, b = 1, 0.3, 0.3 end
 		GameTooltip:AddLine(head .. ".", r, g, b, true)
 		if why then GameTooltip:AddLine(why, 1, 0.82, 0.6, true) end
+	end
+	if q and (goal.t == "accept" or goal.t == "turnin") and goal.status ~= "done" and GA.NoAuto(q) then
+		GameTooltip:AddLine(tr("autoHeld"), 0.8, 0.8, 0.8, true)
 	end
 	if goal.escort and goal.status ~= "done" and goal.status ~= "skipped" then
 		GameTooltip:AddLine(tr("escortGroup"), 1, 0.82, 0.6, true)
@@ -649,6 +975,7 @@ ns.OnInit(function()
 	if W and W.Tooltip then hooksecurefunc(W, "Tooltip", afterTooltip) end
 	markTips()
 	hookPins()
+	autoOptions()
 	if ns.RegisterOptions and ns.L then
 		ns.RegisterOptions({ page = ns.L["Map"], tab = ns.L["Guide & quests"], section = "Groupe Alliance", controls = {
 			{ kind = "toggle", key = "qol.gaStepObjectives", label = tr("marksStep"), help = tr("marksStepHelp"),
