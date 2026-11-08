@@ -35,17 +35,17 @@ return {
 
 	-- Step 11: Lar'korwi Mates and the raft
 	-- plural, as words: Lar'korwi Mates = {npc:9683} Lar'korwi Mate
-	["Lar'korwi Mates and the raft"] = "Compagnons de Lar'korwi et le radeau",
+	["Lar'korwi Mates and the raft"] = "Compagnes de Lar'korwi et le radeau",
 	-- {npc:9619} Torwa Pathfinder · {npc:8737} Linken · {item:11116} A Mangled Journal
 	-- plural, as words: Lar'korwi Mates = {npc:9683} Lar'korwi Mate
-	["The Lar'korwi Mates prowl the jungle west of {npc:9619}. The wrecked raft lies on the shore of the lake there; the small pack sits in the water beside it. Keep the compass, map and key for {npc:8737}. Any beast in the crater may drop {item:11116}: right-click it."] = "Les Compagnons de Lar'korwi rodent dans la jungle à l'ouest de {npc:9619}. L'épave du radeau gît sur la rive du lac là-bas ; le petit paquet repose dans l'eau à côté. Gardez la boussole, la carte et la clé pour {npc:8737}. Toute bête du cratère peut laisser tomber {item:11116} : clic droit dessus.",
+	["The Lar'korwi Mates prowl the jungle west of {npc:9619}. The wrecked raft lies on the shore of the lake there; the small pack sits in the water beside it. Keep the compass, map and key for {npc:8737}. Any beast in the crater may drop {item:11116}: right-click it."] = "Les compagnes de Lar'korwi rôdent dans la jungle à l'ouest de {npc:9619}. L'épave du radeau gît sur la rive du lac là-bas ; le petit paquet repose dans l'eau à côté. Gardez la boussole, la carte et la clé pour {npc:8737}. Toute bête du cratère peut laisser tomber {item:11116} : faites un clic droit dessus.",
 
 	-- Step 12: Karna Remtravel
 	-- {npc:9618} Karna Remtravel
 	["{npc:9618} stands just outside the refuge."] = "{npc:9618} se tient juste devant le refuge.",
 
 	-- Step 13: Marshal's Refuge
-	["Marshal's Refuge"] = "Refuge du Marshal",
+	["Marshal's Refuge"] = "Refuge des Marshal",
 	-- {object:157936} Un'Goro Dirt Pile
 	["Ride west back to the refuge.\nGive the elite devilsaurs and stegodons a wide berth. Pick up every Power Crystal and {object:157936} you pass from here on."] = "Retournez vers l'ouest jusqu'au refuge.\nGardez vos distances avec les diablosaures et les stégodons élites. Ramassez désormais chaque Cristal de puissance et chaque {object:157936} que vous croisez.",
 	-- {npc:9998} Shizzle
@@ -54,13 +54,13 @@ return {
 	["{npc:9117}, at the back of the cave; below ground"] = "{npc:9117}, au fond de la grotte ; sous terre",
 
 	-- Step 14: Fire Plume Ridge and the eastern jungle
-	["Fire Plume Ridge and the eastern jungle"] = "Crête de Panache-de-feu et la jungle est",
+	["Fire Plume Ridge and the eastern jungle"] = "Crête de la Fournaise et la jungle est",
 	-- {item:11113} Crate of Foodstuffs
 	-- plural, as words: Bloodpetal Lashers = {npc:6509} Bloodpetal Lasher
-	["Ride south to Fire Plume Ridge in the middle of the crater, then east into the eastern jungle. Crystal clusters stand all over the crater, many of them around Fire Plume Ridge: take a few extra of each colour. Bloodpetal Lashers and Threshers drop the petals; the expedition's {item:11113} sits at an abandoned camp in the eastern jungle."] = "Allez au sud jusqu'à la Crête de Panache-de-feu au centre du cratère, puis à l'est dans la jungle est. Des grappes de cristal parsèment le cratère, beaucoup autour de la Crête de Panache-de-feu : prenez quelques-unes de chaque couleur en plus. Les Fouetteurs et Broyeurs Pétale-de-sang laissent tomber les pétales ; le {item:11113} de l'expédition se trouve dans un camp abandonné dans la jungle est.",
+	["Ride south to Fire Plume Ridge in the middle of the crater, then east into the eastern jungle. Crystal clusters stand all over the crater, many of them around Fire Plume Ridge: take a few extra of each colour. Bloodpetal Lashers and Threshers drop the petals; the expedition's {item:11113} sits at an abandoned camp in the eastern jungle."] = "Allez au sud jusqu'à la Crête de la Fournaise au centre du cratère, puis à l'est dans la jungle est. Des grappes de cristal parsèment le cratère, beaucoup autour de la Crête de la Fournaise : prenez-en quelques-unes de plus de chaque couleur. Les flagellants et batteurs Pétale-de-sang laissent tomber les pétales ; le {item:11113} de l'expédition se trouve dans un camp abandonné dans la jungle est.",
 
 	-- Step 15: The Marshlands
-	["The Marshlands"] = "Les Marécages",
+	["The Marshlands"] = "La Fondrière",
 	-- {object:161504} A Small Pack
 	["{object:161504}, underwater"] = "{object:161504}, sous l'eau",
 
@@ -83,12 +83,12 @@ return {
 	["{item:11834} from {npc:6518} and {npc:6519}, 60 yd south"] = "{item:11834} auprès de {npc:6518} et {npc:6519}, 60 yd au sud",
 
 	-- Step 19: A-Me 01
-	["Ride north to Ironstone Plateau, where the robot stands among the gorillas. Stay out of the deep cave there."] = "Allez au nord jusqu'au Plateau de Pierre-de-fer, où le robot se tient parmi les gorilles. N'entrez pas dans la grotte profonde là-bas.",
+	["Ride north to Ironstone Plateau, where the robot stands among the gorillas. Stay out of the deep cave there."] = "Allez au nord jusqu'au Plateau de Rochefer, où le robot se tient parmi les gorilles. N'entrez pas dans la grotte profonde là-bas.",
 	["Below ground"] = "Sous terre",
 
 	-- Step 20: Level 49.51
 	["Level 49.51"] = "Niveau 49.51",
-	["Top up here to level 49.51 before the hand-ins at Marshal's Refuge: they take you to level 50."] = "Montez ici jusqu'au niveau 49,51 avant de rendre les quêtes au Refuge du Marshal : elles vous feront atteindre le niveau 50.",
+	["Top up here to level 49.51 before the hand-ins at Marshal's Refuge: they take you to level 50."] = "Montez ici jusqu'au niveau 49,51 avant de rendre les quêtes au Refuge des Marshal : elles vous feront atteindre le niveau 50.",
 	["Pterrordax"] = "Pterreurdactyles",
 	["grind on Pterrordax"] = "tuez des Pterreurdactyles en boucle",
 
@@ -96,7 +96,7 @@ return {
 	["The Gorishi hive"] = "La ruche Gorishi",
 	-- {npc:9619} Torwa Pathfinder · {quest:3764} Un'Goro Soil
 	-- plural, as words: Gorishi Workers = {npc:6552} Gorishi Worker
-	["Ride west from {npc:9619}: the silithid hive fills the south of the crater. Use the Scraping Vial on a hatchery, a chamber with hanging larvae. Gorishi wasps and workers drop {quest:3764}; Pterrordax nest on the southern cliffs if you still need kills.\nCareful: Gorishi silithids are level 51-54 and cast Silithid Pox or Tunneler Acid in melee; Gorishi Workers have a 50% chance to call for help within 25 yd once they fall below 45% health."] = "Allez à l'ouest depuis {npc:9619} : la ruche silithide remplit le sud du cratère. Utilisez la Fiole de grattage sur une nurserie, une chambre avec des larves suspendues. Les guêpes et ouvriers Gorishi donnent {quest:3764} ; des Ptérrodax nichent sur les falaises sud si vous avez encore besoin de kills.\nAttention : les silithides Gorishi sont niveau 51-54 et lancent Variole silithide ou Acide de foreuse au corps à corps ; les Ouvriers Gorishi ont 50 % de chances d'appeler à l'aide dans un rayon de 25 yd une fois sous 45 % de vie.",
+	["Ride west from {npc:9619}: the silithid hive fills the south of the crater. Use the Scraping Vial on a hatchery, a chamber with hanging larvae. Gorishi wasps and workers drop {quest:3764}; Pterrordax nest on the southern cliffs if you still need kills.\nCareful: Gorishi silithids are level 51-54 and cast Silithid Pox or Tunneler Acid in melee; Gorishi Workers have a 50% chance to call for help within 25 yd once they fall below 45% health."] = "Allez à l'ouest depuis {npc:9619} : la ruche silithide remplit le sud du cratère. Utilisez la fiole de grattage sur une nurserie, une chambre avec des larves suspendues. Les guêpes et ouvriers Gorishi donnent {quest:3764} ; des pterreurdactyles nichent sur les falaises sud si vous avez encore des monstres à tuer.\nAttention : les silithides Gorishi sont de niveau 51-54 et lancent Variole silithide ou Acide de foreuse au corps à corps ; les ouvriers Gorishi ont 50 % de chances d'appeler à l'aide dans un rayon de 25 m une fois sous 45 % de vie.",
 	-- {npc:9167} Frenzied Pterrordax
 	["grind on {npc:9167}"] = "tuez en boucle : {npc:9167}",
 
@@ -121,7 +121,7 @@ return {
 	["The pylon stands on the western cliffs. {npc:9167} fly over the whole west side."] = "Le pylône se dresse sur les falaises ouest. Les {npc:9167} volent au-dessus de tout le côté ouest.",
 
 	-- Step 25: The Slithering Scar
-	["The Slithering Scar"] = "La Balafre glissante",
+	["The Slithering Scar"] = "La Balafre sinueuse",
 
 	-- Step 26: Eastern Pylon
 	["Eastern Pylon"] = "Le Pylône est",
@@ -133,8 +133,8 @@ return {
 	["{npc:9998}, at the refuge's entrance"] = "{npc:9998}, à l'entrée du refuge",
 
 	-- Step 29: To Stoutlager Inn
-	["To Stoutlager Inn"] = "Vers l'auberge Stoutlager",
-	["Stoutlager Inn"] = "Auberge Stoutlager",
+	["To Stoutlager Inn"] = "Vers l'Auberge de la Fortebière",
+	["Stoutlager Inn"] = "Auberge de la Fortebière",
 
 	-- Step 30: Fly to Ironforge
 	-- {zone:1455} Ironforge
@@ -170,7 +170,7 @@ return {
 
 	-- Step 39: Level 50.4
 	["Level 50.4"] = "Niveau 50.4",
-	["Top up here to level 50.4 before the hand-ins at Talrendis Point: they take you to level 51."] = "Montez ici jusqu'au niveau 50,4 avant de rendre les quêtes à la Pointe de Talrendis : elles vous feront atteindre le niveau 51.",
+	["Top up here to level 50.4 before the hand-ins at Talrendis Point: they take you to level 51."] = "Montez ici jusqu'au niveau 50,4 avant de rendre les quêtes à la Halte de Talrendis : elles vous feront atteindre le niveau 51.",
 	-- {npc:6116} Highborne Apparition
 	["grind on {npc:6116}"] = "tuez en boucle : {npc:6116}",
 }

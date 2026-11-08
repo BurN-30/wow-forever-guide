@@ -7,7 +7,7 @@ ns.GA = ns.GA or {}
 
 ns.GA.Tips = {
 	[12] = { -- The People's Militia (route)
-		frFR = "Les Trappeurs et Contrebandiers devant la mine de Jango réapparaissent plus vite quand on en tue beaucoup : rester sur place suffit à finir.",
+		frFR = "Les trappeurs et contrebandiers devant la Mine Veine-de-Jango réapparaissent plus vite quand on en tue beaucoup : rester sur place suffit à finir.",
 		enUS = "The Trappers and Smugglers outside Jangolode Mine respawn faster the more you kill: staying put is enough to finish.",
 	},
 	[13] = { -- The People's Militia (wowhead forever)
@@ -51,11 +51,11 @@ ns.GA.Tips = {
 		enUS = "Do not sell the Bag of Marbles it rewards: thrown at an enemy it stuns it, and it stays useful up to level 60.",
 	},
 	[60] = { -- Kobold Candles (wowhead forever)
-		frFR = "Les bougies tombent peu souvent : prendre en même temps la quête de la poudre d'or et celle de la mine de Fargodeep pour tout faire d'un coup.",
+		frFR = "Les bougies tombent peu souvent : prendre en même temps la quête L'échange de poussière d'or et celle de la Mine de Fargodeep pour tout faire d'un coup.",
 		enUS = "Candles drop fairly rarely, so take the Gold Dust and Fargodeep Mine quests too and clear all three in one trip.",
 	},
 	[61] = { -- Shipment to Stormwind (route)
-		frFR = "Prendre les Fusées explosives en récompense : elles font de bons dégâts et servent à séparer un ennemi d'un groupe.",
+		frFR = "Prendre les roquettes explosives en récompense : elles font de bons dégâts et servent à séparer un ennemi d'un groupe.",
 		enUS = "Pick the Explosive Rockets as the reward: they hit hard and help split one enemy off a pack.",
 	},
 	[64] = { -- The Forgotten Heirloom (wowhead forever)
@@ -63,7 +63,7 @@ ns.GA.Tips = {
 		enUS = "The watch can be looted from outside the guarded house by hugging its left wall, without fighting the guards.",
 	},
 	[65] = { -- The Defias Brotherhood (wowhead forever)
-		frFR = "Le contact à Lakeshire est à l'étage de l'auberge, invisible sur la minicarte.",
+		frFR = "Le contact à Comté-du-Lac est à l'étage de l'auberge, invisible sur la minicarte.",
 		enUS = "The contact in Lakeshire is upstairs in the inn, not shown on the minimap.",
 	},
 	[66] = { -- The Legend of Stalvan (wowhead forever)
@@ -71,7 +71,7 @@ ns.GA.Tips = {
 		enUS = "The footlocker is by the stairs in the big Moonbrook town hall; opening it spawns a level 26 enemy.",
 	},
 	[83] = { -- Red Linen Goods (wowhead forever)
-		frFR = "Les bandanas tombent surtout sur les défias du champ de citrouilles de Brackwell ; ailleurs dans Elwynn le taux est bien plus faible.",
+		frFR = "Les bandanas tombent surtout sur les Défias du Champ de potirons des Brackwell ; ailleurs dans Elwynn le taux est bien plus faible.",
 		enUS = "The bandanas drop best from the Defias at the Brackwell Pumpkin Patch; elsewhere in Elwynn the rate is much worse.",
 	},
 	[87] = { -- Goldtooth (wowhead forever)
@@ -79,7 +79,7 @@ ns.GA.Tips = {
 		enUS = "Goldtooth is on the lower floor of Fargodeep Mine; if the path climbs to a wooden platform, it is the wrong level.",
 	},
 	[88] = { -- Princess Must Die! (wowhead forever)
-		frFR = "Princesse est une truie de niveau 9 dans le champ de citrouilles de Brackwell, escortée de deux gardes : la tirer seule ou venir en groupe.",
+		frFR = "Princesse est une truie de niveau 9 dans le Champ de potirons des Brackwell, escortée de deux gardes : la tirer seule ou venir en groupe.",
 		enUS = "Princess is a level 9 sow in the Brackwell Pumpkin Patch with two bodyguards; pull carefully or bring a group.",
 	},
 	[92] = { -- Redridge Goulash (wowhead forever)
@@ -87,7 +87,7 @@ ns.GA.Tips = {
 		enUS = "Condor meat drops very rarely, so start this early and finish it while doing the zone's other quests.",
 	},
 	[93] = { -- Dusky Crab Cakes (wowhead forever)
-		frFR = "Les pattes tombent sur toutes les araignées, le plus souvent sur les Black Widow Hatchlings à l'est de Raven Hill : les faire en même temps que les autres quêtes d'araignées.",
+		frFR = "Les pattes tombent sur toutes les araignées, le plus souvent sur les jeunes veuves noires à l'est de la Colline-aux-Corbeaux : les faire en même temps que les autres quêtes d'araignées.",
 		enUS = "The legs drop from every spider, most often from the Black Widow Hatchlings east of Raven Hill: do it along with the other spider quests.",
 	},
 	[95] = { -- Sven's Revenge (wowhead forever)
@@ -99,11 +99,11 @@ ns.GA.Tips = {
 		enUS = "Ghoul fangs drop poorly; the ghouls in the western cemetery are lower level than the ones in the east.",
 	},
 	[102] = { -- Patrolling Westfall (wowhead forever)
-		frFR = "Les pattes tombent environ une fois sur quatre ; bon coin de gnolls au nord de la mine de Jango (43,14), ils viennent souvent à plusieurs.",
+		frFR = "Les pattes tombent environ une fois sur quatre ; bon coin de gnolls au nord de la Mine Veine-de-Jango (43,14), ils viennent souvent à plusieurs.",
 		enUS = "The paws drop about one in four; a good gnoll camp lies north of Jangolode Mine (43,14), they often come in pairs.",
 	},
 	[115] = { -- Shadow Magic (wowhead forever)
-		frFR = "Seuls les Blackrock Shadowcaster donnent les orbes ; seul, la grotte au nord de Comté-du-Lac, un par un.",
+		frFR = "Seuls les exhalombres Blackrock donnent les orbes ; en solo, la grotte au nord de Comté-du-Lac, un par un.",
 		enUS = "Only Blackrock Shadowcasters drop the orbs; alone, the cave north of Lakeshire, one at a time.",
 	},
 	[125] = { -- The Lost Tools (wowhead forever)
@@ -111,7 +111,7 @@ ns.GA.Tips = {
 		enUS = "The toolbox lies at the bottom of Lake Everstill under the 'L' of Lake on the map; come from the south shore by the bridge to avoid murlocs.",
 	},
 	[132] = { -- The Defias Brotherhood (wowhead forever)
-		frFR = "Wiley the Black attend à l'étage de l'auberge de Comté-du-Lac.",
+		frFR = "Wiley le noir attend à l'étage de l'auberge de Comté-du-Lac.",
 		enUS = "Wiley the Black waits upstairs in the Lakeshire inn.",
 	},
 	[133] = { -- Ghoulish Effigy (wowhead forever)
@@ -127,7 +127,7 @@ ns.GA.Tips = {
 		enUS = "Mathias Shaw is upstairs in the SI:7 building in Old Town: time the trip with a visit to your trainer.",
 	},
 	[142] = { -- The Defias Brotherhood (wowhead forever)
-		frFR = "Le messager part de la forge de Ruisselune vers la carrière de la Côte d'or et revient ; il fuit à faible vie : l'immobiliser (Sarments, Nova de givre) et l'achever vite.",
+		frFR = "Le messager part de la forge de Ruisselune vers la Carrière de la côte de l'Or et revient ; il fuit à faible vie : l'immobiliser (Sarments, Nova de givre) et l'achever vite.",
 		enUS = "The Messenger walks from the Moonbrook smithy to the Gold Coast Quarry and back; he flees at low health: root him (Entangling Roots, Frost Nova) and finish him fast.",
 	},
 	[150] = { -- Murloc Poachers (wowhead forever)
@@ -147,7 +147,7 @@ ns.GA.Tips = {
 		enUS = "At the Moonbrook fountain, crowd-control the caster at once. Traitor not there? Someone is escorting him: wait for him or group up with them.",
 	},
 	[163] = { -- Raven Hill (wowhead forever)
-		frFR = "Jitters tourne autour du puits au sud du cimetière. Pas d'attaque de zone dans les maisons de Raven Hill : des fantômes invisibles ripostent.",
+		frFR = "La Tremblotte tourne autour du puits au sud du cimetière. Pas d'attaque de zone dans les maisons de la Colline-aux-Corbeaux : des fantômes invisibles ripostent.",
 		enUS = "Jitters circles the well south of the cemetery. No area attacks inside the Raven Hill houses: invisible ghosts strike back.",
 	},
 	[166] = { -- The Defias Brotherhood (wowhead forever)
@@ -155,7 +155,7 @@ ns.GA.Tips = {
 		enUS = "VanCleef's head drops for every group member on the quest: take it before going in.",
 	},
 	[167] = { -- Oh Brother. . . (wowhead forever)
-		frFR = "Foreman Thistlenettle est dehors, au bout de la zone violette des morts-vivants avant le portail, avec un mob lié.",
+		frFR = "Le contremaître Crispechardon est dehors, au bout de la zone violette des morts-vivants avant le portail, avec un monstre lié.",
 		enUS = "Foreman Thistlenettle is outside, at the far end of the purple undead area before the portal, with a linked add.",
 	},
 	[168] = { -- Collecting Memories (wowhead forever)
@@ -175,15 +175,15 @@ ns.GA.Tips = {
 		enUS = "The quest starts from a deed that Defias in Elwynn Forest drop only rarely, so expect many kills before it shows up.",
 	},
 	[214] = { -- Red Silk Bandanas (wowhead forever)
-		frFR = "Scout Riell est en haut de la tour de la Colline des Sentinelles, une fois l'escorte du traître faite ; les bandanas tombent sur tous les Défias du donjon.",
+		frFR = "L'éclaireur Riell est en haut de la tour de la Colline des sentinelles, une fois l'escorte du traître faite ; les bandanas tombent sur tous les Défias du donjon.",
 		enUS = "Scout Riell is at the top of the Sentinel Hill tower, once the Traitor's escort is done; the bandanas drop from every Defias in the dungeon.",
 	},
 	[218] = { -- The Stolen Journal (route)
-		frFR = "Grik'nir the Cold se tient au fond de la grotte des trolls, et non sur la colline au-dessus : entrer par l'ouverture et suivre le tunnel.",
+		frFR = "Grik'nir le Froid se tient au fond de la grotte des trolls, et non sur la colline au-dessus : entrer par l'ouverture et suivre le tunnel.",
 		enUS = "Grik'nir the Cold waits at the back of the troll cave, not on the hill above it: enter at the mouth and follow the tunnel.",
 	},
 	[219] = { -- Missing In Action (wowhead forever)
-		frFR = "Keeshan attend au fond de la grande salle de la grotte, par un passage du niveau inférieur ; c'est lui qui mène, à faire avec la quête de primes Rochenoire.",
+		frFR = "Keeshan attend au fond de la grande salle de la grotte, par un passage du niveau inférieur ; c'est lui qui mène, à faire avec la quête La prime Blackrock.",
 		enUS = "Keeshan waits at the back of the big cave room via a lower-level passage; he leads the way, so pair it with the Blackrock Bounty quest.",
 	},
 	[225] = { -- The Weathered Grave (wowhead forever)
@@ -195,7 +195,7 @@ ns.GA.Tips = {
 		enUS = "This quest only shows up after turning in The Jasperlode Mine, so finish that mine quest east of Goldshire first.",
 	},
 	[240] = { -- Return to Jitters (wowhead forever)
-		frFR = "La rendre en repassant à Raven Hill pour Sven ou le cimetière, pas pour un aller exprès.",
+		frFR = "La rendre en repassant à la Colline-aux-Corbeaux pour Sven ou le cimetière, pas pour un aller exprès.",
 		enUS = "Hand it in when you pass Raven Hill for Sven or the cemetery, not on a trip of its own.",
 	},
 	[245] = { -- Eight-Legged Menaces (wowhead forever)
@@ -211,11 +211,11 @@ ns.GA.Tips = {
 		enUS = "Timed again, 12 minutes: the elder boars are level 16-17, don't take it under-levelled or low on health.",
 	},
 	[272] = { -- Trial of the Sea Lion (wowhead forever)
-		frFR = "Demi-pendentifs : Sombrivage au large de l'embouchure de la Cascade, sous l'eau (48,11) ; Marche de l'Ouest dans la caisse près de la fissure bouillonnante (17,33).",
+		frFR = "Demi-pendentifs : Sombrivage au large de l'embouchure de la Bondissante, sous l'eau (48,11) ; Marche de l'Ouest dans la caisse près de la fissure bouillonnante (17,33).",
 		enUS = "Half pendants: Darkshore off the mouth of the Cliffspring River, underwater (48,11); Westfall in the box by the bubbling fissure (17,33).",
 	},
 	[287] = { -- Frostmane Hold (wowhead forever)
-		frFR = "La bonne caverne est au sud-ouest du village de Brewnall, pas celle de la crête au nord-est ; l'exploration se valide au fond.",
+		frFR = "La bonne caverne est au sud-ouest de Brassetout, pas celle de la crête au nord-est ; l'exploration se valide au fond.",
 		enUS = "The right cave is south-west of Brewnall Village, not the one on the ridge to the north-east; exploration triggers deep inside.",
 	},
 	[299] = { -- Uncovering the Past (wowhead forever)
@@ -231,7 +231,7 @@ ns.GA.Tips = {
 		enUS = "Vagash lives in a cave on the hill behind the farm; the trail starts west of the ranch, and he hits hard.",
 	},
 	[317] = { -- Stocking Jetsteam (route)
-		frFR = "Les Ours de la griffe de glace donnent aussi l'Épaisse fourrure d'ours, pas seulement les jeunes ours noirs.",
+		frFR = "Les ours Griffeglace donnent aussi la fourrure d'ours épaisse, pas seulement les jeunes ours noirs.",
 		enUS = "Ice Claw Bears drop the Thick Bear Fur too, not only the Young Black Bears.",
 	},
 	[337] = { -- An Old History Book (wowhead forever)
@@ -247,7 +247,7 @@ ns.GA.Tips = {
 		enUS = "Clear the rooms around the end of the west wing before Dextren: his fear throws the group into fresh packs. Stop him when he flees.",
 	},
 	[384] = { -- Beer Basted Boar Ribs (wowhead forever)
-		frFR = "Le malt Rhapsodie s'achète auprès de l'aubergiste de Kharanos : le prendre avant de partir chasser les sangliers.",
+		frFR = "La bière au malt Rhapsody s'achète auprès de l'aubergiste de Kharanos : la prendre avant de partir chasser les sangliers.",
 		enUS = "Rhapsody Malt is sold by the Kharanos innkeeper; buy it before heading out for the boars.",
 	},
 	[386] = { -- What Comes Around... (wowhead forever)
@@ -263,7 +263,7 @@ ns.GA.Tips = {
 		enUS = "Nikova Raskol wanders Old Town: if she is not at the marker, walk round the district.",
 	},
 	[389] = { -- Bazil Thredd (wowhead forever)
-		frFR = "Warden Thelwater est en haut des marches, devant la porte de la Prison.",
+		frFR = "Le gardien Thelwater est en haut des marches, devant la porte de la Prison.",
 		enUS = "Warden Thelwater stands at the top of the stairs, by the Stockade gate.",
 	},
 	[391] = { -- The Stockade Riots (wowhead forever)
@@ -295,7 +295,7 @@ ns.GA.Tips = {
 		enUS = "Ursal waits in the far south-west near the lake, by a tree covered in purple blossoms; patrols cross the way there.",
 	},
 	[487] = { -- The Road to Darnassus (route)
-		frFR = "La prêtresse lunaire Amara peut être occupée à repousser une embuscade de furbolgs : attendre la fin du combat pour lui parler.",
+		frFR = "La prêtresse de la lune Amara peut être occupée à repousser une embuscade de furbolgs : attendre la fin du combat pour lui parler.",
 		enUS = "Moon Priestess Amara can be busy fighting off a furbolg ambush: wait for the fight to end to talk to her.",
 	},
 	[488] = { -- Zenn's Bidding (wowhead forever)
@@ -303,7 +303,7 @@ ns.GA.Tips = {
 		enUS = "Helping Zenn costs no Night Elf reputation at all; the 'enemy' part is just storyline.",
 	},
 	[489] = { -- Seek Redemption! (wowhead forever)
-		frFR = "Les cônes gangrenés poussent au pied des grands arbres près de Zenn et réapparaissent en une demi-minute environ : attendre sur place.",
+		frFR = "Les gangrenoix poussent au pied des grands arbres près de Zenn et réapparaissent en une demi-minute environ : attendre sur place.",
 		enUS = "Fel Cones grow at the base of the big trees around Zenn and respawn within about half a minute, so waiting nearby works.",
 	},
 	[729] = { -- The Absent Minded Prospector (wowhead forever)
@@ -327,7 +327,7 @@ ns.GA.Tips = {
 		enUS = "The cave is packed with grells and Melenas has several spawn spots: search the whole cave and bring a group around level 6-8.",
 	},
 	[937] = { -- The Enchanted Glade (route)
-		frFR = "Les matriarches Plumesang lancent Vague de soins et Éclair, qui frappe fort : les abattre en priorité et vite.",
+		frFR = "Les matriarches Plumesang lancent Vague de soins et un Éclair qui frappe fort : les abattre en priorité et vite.",
 		enUS = "Bloodfeather Matriarchs cast Healing Wave and a hard-hitting Lightning Bolt: kill them first and fast.",
 	},
 	[945] = { -- Therylune's Escape (wowhead forever)
@@ -335,7 +335,7 @@ ns.GA.Tips = {
 		enUS = "Therylune is stealthed and may need time to respawn; during the escort she pulls everything nearby, so keep heals or crowd control ready.",
 	},
 	[947] = { -- Cave Mushrooms (wowhead forever)
-		frFR = "En solo, prendre à droite juste après l'entrée de la grotte des nagas : deux champignons mortels s'y trouvent avec peu de gardes.",
+		frFR = "En solo, prendre à droite juste après l'entrée de la grotte des nagas : deux amanites phalloïdes s'y trouvent avec peu de gardes.",
 		enUS = "Solo players should go right just inside the naga cave: two Death Caps wait there with only a couple of guards.",
 	},
 	[951] = { -- Mathystra Relics (wowhead forever)
@@ -347,7 +347,7 @@ ns.GA.Tips = {
 		enUS = "The two tablets: one lying at the north-east of the camp (43.3,58.7), one standing at the south (42.7,63.2); both can be read without entering the middle.",
 	},
 	[955] = { -- Bashal'Aran (wowhead forever)
-		frFR = "Les boucles d'oreilles tombent des grells sauvages et des esprits malfaisants (environ une sur quatre) : tuer les deux.",
+		frFR = "Les boucles d'oreilles tombent des grells sauvages et des fées viles (environ une sur quatre) : tuer les deux.",
 		enUS = "The earrings drop from both Wild Grells and Vile Sprites (about one in four): kill both.",
 	},
 	[956] = { -- Bashal'Aran (route)
@@ -395,7 +395,7 @@ ns.GA.Tips = {
 		enUS = "A very hard escort solo: clear the camps along the route before starting it, or bring a healer.",
 	},
 	[995] = { -- Escape Through Stealth (wowhead forever)
-		frFR = "La sortie discrète, faisable seul, donne la même suite que la version Force : Trek to Ashenvale.",
+		frFR = "La sortie discrète, faisable seul, donne la même suite que la version par la force : Voyage vers Ashenvale.",
 		enUS = "The quiet way out, fine alone, leads to the same next quest as the Force way: Trek to Ashenvale.",
 	},
 	[997] = { -- Denalan's Earth (route)
@@ -431,7 +431,7 @@ ns.GA.Tips = {
 		enUS = "Turtles cluster in large numbers around the half-buried ship lying straight north of the racing headquarters on the flats.",
 	},
 	[1106] = { -- Martek the Exiled (wowhead forever)
-		frFR = "Cette quête n'apparaît qu'après avoir rendu les quêtes du venin et des carapaces.",
+		frFR = "Cette quête n'apparaît qu'après avoir rendu Le venin acide des salines et Les carapaces durcies.",
 		enUS = "This quest only appears after turning in both Salt Flat Venom and Hardened Shells.",
 	},
 	[1138] = { -- Fruit of the Sea (wowhead forever)
@@ -439,7 +439,7 @@ ns.GA.Tips = {
 		enUS = "The crab chunks drop poorly: crabs are plentiful under the bridge to the Ruins of Mathystra, do it on the way.",
 	},
 	[2040] = { -- Underground Assault (wowhead forever)
-		frFR = "Gnoam tombe sur Sneed's Shredder ; vider d'abord tous les Goblin Woodcarver, car le broyeur fait fuir de peur vers eux.",
+		frFR = "L'indicateur Gnoam tombe sur le déchiqueteur de Sneed ; vider d'abord tous les sculpteurs gobelins, car la peur que lance le déchiqueteur fait fuir vers eux.",
 		enUS = "Gnoam drops from Sneed's Shredder; clear every Goblin Woodcarver first, the Shredder's fear sends you running into them.",
 	},
 	[2078] = { -- Gyromast's Revenge (wowhead forever)
@@ -451,11 +451,11 @@ ns.GA.Tips = {
 		enUS = "Each key piece comes from one specific mob type: the giant foreststriders down south, the coastal murlocs and the reef crawlers.",
 	},
 	[2118] = { -- Plagued Lands (wowhead forever)
-		frFR = "Seuls les ours enragés (pas les ours ordinaires) comptent : en attirer un, poser le piège à ses pieds puis reculer.",
+		frFR = "Seuls les ours des chardons enragés comptent : en attirer un, poser le piège à ses pieds puis reculer.",
 		enUS = "Only Rabid Thistle Bears count: pull one, drop the trap at your feet and step back.",
 	},
 	[2138] = { -- Cleansing of the Infected (route)
-		frFR = "Dans les combats qui traînent, les Ours chardons enragés transmettent la rage, qui divise par deux la régénération de vie pendant dix minutes : mieux vaut les tuer vite.",
+		frFR = "Dans les combats qui traînent, les ours des chardons enragés transmettent la rage, qui divise par deux la régénération de vie pendant dix minutes : mieux vaut les tuer vite.",
 		enUS = "Rabid Thistle Bears give Rabies in long fights, halving health regeneration for ten minutes: kill them fast.",
 	},
 	[2139] = { -- Tharnariun's Hope (wowhead forever)
@@ -463,7 +463,7 @@ ns.GA.Tips = {
 		enUS = "The den is up a path heading east near 52,35, just south of the naga cave: the mother (19) sleeps among four cubs.",
 	},
 	[2399] = { -- The Sprouted Fronds (route)
-		frFR = "Les frondes germées soignent instantanément sans partager le temps de recharge des potions : les garder pour les combats difficiles.",
+		frFR = "Les racines écloses soignent instantanément sans partager le temps de recharge des potions : les garder pour les combats difficiles.",
 		enUS = "The Sprouted Fronds heal at once without sharing the potion cooldown: keep them for hard fights.",
 	},
 	[2438] = { -- The Emerald Dreamcatcher (wowhead forever)
@@ -483,11 +483,11 @@ ns.GA.Tips = {
 		enUS = "Kill the druid in bear form inside the den first, then use the charm on his corpse.",
 	},
 	[3361] = { -- A Refugee's Quandary (wowhead forever)
-		frFR = "Les trois affaires de Felix sont posées au sol près des feux de camp des trois camps trolls, au sud et à l'ouest d'Anvilmar.",
+		frFR = "Les trois affaires de Felix sont posées au sol près des feux de camp des trois camps trolls, au sud et à l'ouest de Courbenclume.",
 		enUS = "Felix's three items lie on the ground by the campfires of the three troll camps south and west of Anvilmar.",
 	},
 	[3364] = { -- Scalding Mornbrew Delivery (route)
-		frFR = "Le minuteur de cinq minutes démarre à l'acceptation : la prendre juste avant de rentrer à Anvilmar, sans s'arrêter en route ; en cas d'échec, Nori Pridedrift la redonne.",
+		frFR = "Le minuteur de cinq minutes démarre à l'acceptation : la prendre juste avant de rentrer à Courbenclume, sans s'arrêter en route ; en cas d'échec, Nori Pridedrift la redonne.",
 		enUS = "The five-minute timer starts on accepting: take it just before heading back to Anvilmar and do not stop on the way; if it fails, Nori Pridedrift offers it again.",
 	},
 	[3521] = { -- Iverron's Antidote (wowhead forever)
@@ -507,7 +507,7 @@ ns.GA.Tips = {
 		enUS = "The right turtle is not the one on the beach to the south: it is underwater west of the Auberdine pier (31,46), near a wreck.",
 	},
 	[4731] = { -- Beached Sea Turtle (wowhead forever)
-		frFR = "Trois carcasses rapprochées au sud-ouest ; les murlocs autour réapparaissent vite : cliquer et repartir. Elles comptent pour Holy Diver.",
+		frFR = "Trois carcasses rapprochées au sud-ouest ; les murlocs autour réapparaissent vite : cliquer et repartir. Elles comptent pour Plongeur sacré.",
 		enUS = "Three carcasses close together in the south-west; the murlocs around respawn fast: click and move on. They count for Holy Diver.",
 	},
 	[4732] = { -- Beached Sea Turtle (wowhead forever)
@@ -515,11 +515,11 @@ ns.GA.Tips = {
 		enUS = "It can be taken from further away than it used to: no need to clear the murlocs around it.",
 	},
 	[4733] = { -- Beached Sea Creature (route)
-		frFR = "Les oracles des brumes grises lancent des éclairs et se soignent : les attirer un par un et les interrompre si possible.",
+		frFR = "Les oracles Grisebrume lancent des éclairs et se soignent : les attirer un par un et les interrompre si possible.",
 		enUS = "Greymist Oracles cast lightning and heal themselves: pull them one at a time and interrupt them when possible.",
 	},
 	[4740] = { -- WANTED: Murkdeep! (wowhead forever)
-		frFR = "Vider le camp murloc aux huttes puis rester près du feu : plusieurs vagues arrivent avant que Murkdeep apparaisse.",
+		frFR = "Vider le camp murloc aux huttes puis rester près du feu : plusieurs vagues arrivent avant que Fondeboue apparaisse.",
 		enUS = "Clear the murloc hut camp then stand by the fire: several waves arrive before Murkdeep finally shows up.",
 	},
 	[4762] = { -- The Cliffspring River (wowhead forever)
@@ -531,7 +531,7 @@ ns.GA.Tips = {
 		enUS = "Fill the bowl at the Auberdine well first; when the demon dies, the talisman lies on the ground beside him rather than in his loot.",
 	},
 	[4811] = { -- The Red Crystal (wowhead forever)
-		frFR = "Le cristal est sur une hauteur à l'est d'Auberdine, contre les montagnes (47,48) : y monter par le nord, des sélénides enragés rôdent autour.",
+		frFR = "Le cristal est sur une hauteur à l'est d'Auberdine, contre les montagnes (47,48) : y monter par le nord, des séléniens enragés rôdent autour.",
 		enUS = "The crystal sits on a rise east of Auberdine against the mountains (47,48): climb up from the north, Raging Moonkin roam around it.",
 	},
 	[4812] = { -- As Water Cascades (wowhead forever)
@@ -559,7 +559,7 @@ ns.GA.Tips = {
 		enUS = "The Lunar Fungi are tiny spotted mushrooms in the moonkin caves east of Auberdine (five caves): sweep the mouse over them.",
 	},
 	[86614] = { -- Silver of the Waves (route)
-		frFR = "La boîte n'est pas toujours au même endroit : nager au fond du lac en surveillant la minicarte, loin des monstres marins de niveau 19-20.",
+		frFR = "La boîte à outils n'est pas toujours au même endroit : nager au fond du lac en surveillant la minicarte, loin des jeunes battrodons de niveau 19-20.",
 		enUS = "The toolbox is not always in the same spot: swim along the lake floor watching the minimap, away from the level 19-20 Young Threshadons.",
 	},
 	[87760] = { -- Holy Diver (wowhead forever)
@@ -571,7 +571,7 @@ ns.GA.Tips = {
 		enUS = "Hand the book to Brother Paxton as soon as it drops: the follow-up has the same kobolds drop stolen books, so get it before the camp is cleared.",
 	},
 	[91772] = { -- Shhh! We're Hunting Kobolds (route)
-		frFR = "Utiliser le kit de pistage pour afficher les traces de kobold sur la minicarte, puis les cliquer en descendant la route vers Comté-de-l'Or.",
+		frFR = "Utiliser le Kit de pistage des Kobolds pour afficher les traces sur la minicarte, puis cliquer dessus en descendant la route vers Comté-de-l'Or.",
 		enUS = "Use the Kobold Tracking Kit to show the tracks on the minimap, then click them on the road down to Goldshire.",
 	},
 	[91775] = { -- Book Return (route)
@@ -591,7 +591,7 @@ ns.GA.Tips = {
 		enUS = "Low drop rate (often 30 to 40 murlocs): do it with the coast's other murloc quests; keep the murloc eyes for the stew too.",
 	},
 	[92745] = { -- The State of the Mines (wowhead forever)
-		frFR = "La faire avec La milice du peuple : mine de Jango d'abord, rendre, puis la carrière de la Côte d'or avec la suite.",
+		frFR = "La faire avec La milice du peuple : la mine Veine-de-Jango d'abord, rendre, puis la carrière de la côte de l'Or avec la suite.",
 		enUS = "Do it with The People's Militia: Jangolode Mine first, hand in, then the Gold Coast Quarry with the next part.",
 	},
 	[92747] = { -- Moonbrook Espionage (wowhead forever)
@@ -599,7 +599,7 @@ ns.GA.Tips = {
 		enUS = "The crates sit inside Moonbrook's buildings, the big schoolhouse included: no elite to fight.",
 	},
 	[92749] = { -- A Dynamite Plan (wowhead forever)
-		frFR = "Il faut 10 Rough Dynamite (peu chère), pas de la Coarse malgré le texte : hôtel des ventes ou un ami ingénieur.",
+		frFR = "Il faut 10 Dynamite basique (peu chère), pas de la Dynamite grossière malgré le texte : hôtel des ventes ou un ami ingénieur.",
 		enUS = "It needs 10 Rough Dynamite (cheap), not Coarse whatever the text says: Auction House or an engineer friend.",
 	},
 	[92753] = { -- Destruction in Deadmines (wowhead forever)
@@ -615,7 +615,7 @@ ns.GA.Tips = {
 		enUS = "The assembly is a very rare drop from golems all over the zone: do not farm it, hand it in if it drops.",
 	},
 	[95161] = { -- Remember That I Love You (wowhead forever)
-		frFR = "À garder pour le Bois de la Pénombre : Avette Fellwood, à Sombre-Comté, donne le Tarnished Locket, un bon collier.",
+		frFR = "À garder pour le Bois de la Pénombre : Avette Fellwood, à Sombre-Comté, donne le Médaillon terni, un bon collier.",
 		enUS = "Keep it for Duskwood: Avette Fellwood in Darkshire gives the Tarnished Locket, a good necklace.",
 	},
 	[95189] = { -- Crest of Lordaeron (wowhead forever)
@@ -631,11 +631,11 @@ ns.GA.Tips = {
 		enUS = "The Empty Powder Keg is a rare drop from the Rockjaw troggs: do not farm it, it comes or not during the other quarry quests.",
 	},
 	[95250] = { -- Abominable Creatures (wowhead forever)
-		frFR = "Captain Truman est à gauche dès l'entrée ; la tête du Baron tombe pour chaque membre du groupe.",
+		frFR = "Le capitaine Truman est à gauche dès l'entrée ; la tête du baron tombe pour chaque membre du groupe.",
 		enUS = "Captain Truman is on the left at the entrance; the Baron's head drops for every group member.",
 	},
 	[95646] = { -- Horrors in the Highland (wowhead forever)
-		frFR = "Rethiel la donne après ses trois quêtes précédentes ; tuer le Highland Horror du donjon, celui du dehors ne donne pas le cœur de racine.",
+		frFR = "Rethiel la donne après ses trois quêtes précédentes ; tuer l'Horreur des hautes-terres du donjon, celle du dehors ne donne pas le cœur-racine.",
 		enUS = "Rethiel gives it after his three earlier quests; kill the Highland Horror inside, the one outside does not drop the rootcore.",
 	},
 	[95647] = { -- Lost in the Thicket Things (wowhead forever)
@@ -683,15 +683,15 @@ ns.GA.Tips = {
 		enUS = "About one naga in eleven drops a fragment: pool them (tradeable, also on the Auction House) on one player and summon once, everyone gets a globe. Immune to Frost.",
 	},
 	[98042] = { -- It's All Fun and Games Until... (wowhead forever)
-		frFR = "L'Œil sans pareil tombe rarement (8 à 20 crépusculaires selon les joueurs) ; les disciples se soignent, les interrompre. Le livre ne se prend qu'après La glaive du Maître.",
+		frFR = "L'Œil sans pareil tombe rarement (8 à 20 membres du crépuscule tués selon les joueurs) ; les disciples se soignent, les interrompre. Le livre ne se prend qu'après Le Glaive du Maître.",
 		enUS = "The Peerless Eye drops rarely (8 to 20 Twilight kills per player reports); the Disciples heal, interrupt them. The book can only be taken after The Master's Glaive.",
 	},
 	[98387] = { -- Blackrock Blockade (wowhead forever)
-		frFR = "Armes, râteliers, sacs de grain, viande et tonneaux se cliquent au sol dans les camps sous Stonewatch ; ils réapparaissent lentement.",
+		frFR = "Armes, râteliers, sacs de grain, viande et tonneaux d'eau se cliquent au sol dans les camps sous Guet-de-pierre ; ils réapparaissent lentement.",
 		enUS = "Weapons, racks, grain sacks, meat and water barrels are clicked on the ground in the camps below Stonewatch; they come back slowly.",
 	},
 	[98396] = { -- The Great Cat Spirit (wowhead forever)
-		frFR = "À l'entrée des Tertres, la statue donne un camouflage pour passer les élites de niveau 23 (pas en forme d'ours) ; c'est presque obligatoire au niveau 20.",
+		frFR = "À l'entrée des refuges des saisons, la statue donne un camouflage pour passer les élites de niveau 23 (pas en forme d'ours) ; c'est presque obligatoire au niveau 20.",
 		enUS = "At the Barrow Dens entrance, the statue gives stealth to slip past the level 23 elites (not in Bear Form); at level 20 it is nearly a must.",
 	},
 	[98461] = { -- Unrequited Love (wowhead forever)
@@ -699,11 +699,11 @@ ns.GA.Tips = {
 		enUS = "A short breadcrumb to Menethil: Tarrel stands on the bridge leaving the harbor.",
 	},
 	[98815] = { -- Highland Hides (wowhead forever)
-		frFR = "Il faut d'abord Young Crocolisk Skins ; les peaux tombent sur Shadetooth et les raptors Thicket du donjon.",
+		frFR = "Il faut d'abord Les peaux de jeune crocilisque ; les peaux tombent sur Dent-Sombre et les raptors des fourrés du donjon.",
 		enUS = "Young Crocolisk Skins comes first; the hides drop from Shadetooth and the Thicket raptors inside.",
 	},
 	[98824] = { -- Prehistoric Prism (wowhead forever)
-		frFR = "Magellas réclame une Titan Relic que vous n'avez plus ? Abandonner et reprendre la quête chez Whelgar en redonne une.",
+		frFR = "Magellas réclame une Relique des Titans que vous n'avez plus ? Abandonner et reprendre la quête chez Whelgar en redonne une.",
 		enUS = "Magellas asks for a Titan Relic you no longer have? Abandon and take the quest again from Whelgar for a new one.",
 	},
 	[99127] = { -- A Net Disaster (route)
@@ -715,7 +715,7 @@ ns.GA.Tips = {
 		enUS = "The junk piles sit in the middle of the murloc camp: if too many murlocs crowd them, leave this objective.",
 	},
 	[2746] = { -- Items of Some Consequence (wowhead)
-		frFR = "Les pommes sont dans un bol sur la table de la ferme juste devant la porte de Hurlevent, côté Comté-de-l'Or ; la soie tombe souvent sur les humanoïdes de la Prison.",
+		frFR = "Les pommes sont dans un bol sur la table de la ferme juste devant la porte de Hurlevent, côté Comté-de-l'Or ; l'étoffe de soie tombe souvent sur les humanoïdes de la Prison.",
 		enUS = "The apples sit in a bowl on the table of the farmhouse just outside the Stormwind gate, on the Goldshire side; Silk Cloth drops often from the Stockade's humanoids.",
 	},
 	[434] = { -- The Attack! (wowhead forever)
@@ -735,7 +735,7 @@ ns.GA.Tips = {
 		enUS = "Every Shadowforge dwarf of the digsite and the outer cave drops them, no need to enter the instance; the rate is low, do it alongside the rest.",
 	},
 	[2240] = { -- The Hidden Chamber (wowhead)
-		frFR = "Le médaillon du coffre près de Baelog et la hampe que lâche Revelosh forment un bâton (Prehistoria) : le planter dans la salle des cartes, tuer Ironaya, puis entrer jusqu'au fond.",
+		frFR = "Le Médaillon de Gni'kiv (coffre près de Baelog) et la Hampe de Tsol (Revelosh) forment le Bâton de la préhistoire : le planter dans la salle des cartes, tuer Ironaya, puis entrer jusqu'au fond.",
 		enUS = "The Gni'kiv Medallion (chest by Baelog) and the Shaft of Tsol (Revelosh) make the Staff of Prehistoria: plant it in the Map Room, kill Ironaya, then walk all the way in.",
 	},
 	[2278] = { -- The Platinum Discs (wowhead)
@@ -761,7 +761,7 @@ ns.GA.Tips = {
 		enUS = "The letter lies on the same table as the plans, in the Syndicate camp near 58,68 in Alterac: take both in one go.",
 	},
 	[512] = { -- Noble Deaths (classic)
-		frFR = "Les chevalières tombent souvent sur les espions (camouflés) et les sorciers (Métamorphose) du Syndicat à Strahnbrad, vers 60,45 en Alterac.",
+		frFR = "Les chevalières tombent souvent sur les espions (camouflés) et les sorciers (Métamorphose) du Syndicat à Strahnbrande, vers 60,45 dans les montagnes d'Alterac.",
 		enUS = "The signet rings drop often from the Syndicate Spies (stealthed) and Wizards (Polymorph) at Strahnbrad, around 60,45 in Alterac.",
 	},
 	[1387] = { -- Centaur Bounty (classic)
@@ -777,7 +777,7 @@ ns.GA.Tips = {
 		enUS = "Barrow entrance near 75,75; Taneel (77,74, heals herself), Uthil (78,72) and Mavoris (74,74). Stealthed patrols and fast respawns: set your hearthstone first.",
 	},
 	[1027] = { -- Raene's Cleansing (classic)
-		frFR = "Le pommeau n'est pas un butin normal : tuer les vases putrides vers 67,77 fait parfois apparaître un coffre sur le corps, c'est lui qu'il faut ouvrir.",
+		frFR = "Le pommeau n'est pas un butin normal : tuer les gelées pourrissantes vers 67,77 fait parfois apparaître un coffre sur le corps, c'est lui qu'il faut ouvrir.",
 		enUS = "The pommel is not a normal drop: killing the Rotting Slimes near 67,77 sometimes spawns a chest on the corpse, open that.",
 	},
 	[1028] = { -- Raene's Cleansing (classic)
@@ -805,7 +805,7 @@ ns.GA.Tips = {
 		enUS = "About one ear per three or four trolls: do it with the other Bal'lal Ruins quests (29,19), without going into the middle where the shamans pull everything.",
 	},
 	[209] = { -- Skullsplitter Tusks (classic)
-		frFR = "Taux très faible, aux ruines de Ziata'jai (vers 44,37) ; patrouilles de trois ou quatre trolls : à faire avec Troll Witchery.",
+		frFR = "Taux très faible, aux ruines de Ziata'jai (vers 44,37) ; patrouilles de trois ou quatre trolls : à faire avec Sorcellerie troll.",
 		enUS = "Very low drop rate, at the Ziata'jai Ruins (around 44,37); patrols of three or four trolls: do it with Troll Witchery.",
 	},
 	[213] = { -- Hostile Takeover (classic)
@@ -823,7 +823,7 @@ ns.GA.Tips = {
 	-- 0.5.0: guides 37-43 (18 to 21), from Wowhead comments (mostly from the original game,
 	-- three or more agreeing), rewritten.
 	[212] = { -- A Meal Served Cold (classic)
-		frFR = "Trente minutes dès l'acceptation : basilics Œil-froid le long de la route au centre de Strangleronce (vers 34,40). Échouée ? La reprendre sans l'abandonner garde le jarret.",
+		frFR = "Trente minutes dès l'acceptation : basilics Oeil-de-glace le long de la route au centre de Strangleronce (vers 34,40). Échouée ? La reprendre sans l'abandonner garde le jarret.",
 		enUS = "Thirty minutes from the moment you accept: Cold Eye Basilisks along the road in central Stranglethorn (around 34,40). Failed? Take it again without abandoning, the haunch stays.",
 	},
 	[500] = { -- Crushridge Bounty (classic)
@@ -831,11 +831,11 @@ ns.GA.Tips = {
 		enUS = "No need for the elite ogres: the normal level 35 ogres around 50,58 in Alterac drop them about one kill in three.",
 	},
 	[523] = { -- Baron's Demise (classic)
-		frFR = "Le baron Vardus change de camp : au nord de Strahnbrad (vers 49,17 ou 53,20) ou dans la cave de l'auberge (59,43). Pas au premier ? Faire le tour.",
+		frFR = "Le baron Vardus change de camp : au nord de Strahnbrande (vers 49,17 ou 53,20) ou dans la cave de l'auberge (59,43). Pas au premier ? Faire le tour.",
 		enUS = "Baron Vardus moves between camps: north of Strahnbrad (near 49,17 or 53,20) or in the inn's cellar (59,43). Not at the first one? Check the others.",
 	},
 	[537] = { -- Dark Council (classic)
-		frFR = "Nagaz (40) est dans la maison au bord du lac au nord de Dalaran (39,14), avec des assassins ; les mages de l'ombre sont à Strahnbrad.",
+		frFR = "Nagaz (40) est dans la maison au bord du lac au nord de Dalaran (39,14), avec des assassins ; les mages de l'ombre sont à Strahnbrande.",
 		enUS = "Nagaz (40) is in the lakeside house north of Dalaran (39,14), with assassins; the shadow mages are in Strahnbrad.",
 	},
 	[540] = { -- Preserving Knowledge (classic)
@@ -899,7 +899,7 @@ ns.GA.Tips = {
 		enUS = "Elementals near 13,36 by Kargath, buzzards mostly near 16,57; the coyotes are everywhere.",
 	},
 	[703] = { -- Barbecued Buzzard Wings (classic)
-		frFR = "Les ailes tombent peu : les vautours géants tournent en nombre autour de 16,57 et 14,60 ; sinon l'hôtel des ventes.",
+		frFR = "Les ailes tombent peu : les busards géants tournent en nombre autour de 16,57 et 14,60 ; sinon l'hôtel des ventes.",
 		enUS = "The wings drop rarely: the Giant Buzzards circle in numbers around 16,57 and 14,60; otherwise the Auction House.",
 	},
 	[710] = { -- Study of the Elements: Rock (classic)
@@ -907,7 +907,7 @@ ns.GA.Tips = {
 		enUS = "Only the LESSER Rock Elementals (37-39) drop the shard, not the level 40 ones; low rate, best spot near 23,43.",
 	},
 	[716] = { -- Stone Is Better than Cloth (classic)
-		frFR = "Les Patterned Bronze Bracers ne tombent pas : un forgeron les fabrique, ou l'hôtel des ventes (environ 50 pa).",
+		frFR = "Les Brassards guillochés en bronze ne tombent pas : un forgeron les fabrique, ou l'hôtel des ventes (environ 50 pa).",
 		enUS = "The Patterned Bronze Bracers do not drop: a blacksmith crafts them, or the Auction House (about 50 silver).",
 	},
 	[718] = { -- Mirages (classic)
@@ -915,7 +915,7 @@ ns.GA.Tips = {
 		enUS = "The crate is at Camp Kosh (near 65,24), in one of several spots (under the lean-to, by the wagon, by the cauldron): hug the north wall.",
 	},
 	[719] = { -- A Dwarf and His Tools (classic)
-		frFR = "La pioche tombe sur les nains Ombreforge de la fouille de Hammertoe (vers 52,33) et peut demander 20 à 30 victimes ; la carte froissée est sur place, au sol près d'une table (53,34).",
+		frFR = "La pioche tombe sur les nains Ombreforge du site de fouilles d'Hammertoe (vers 52,33) et peut demander 20 à 30 victimes ; la carte froissée est sur place, au sol près d'une table (53,34).",
 		enUS = "The pick drops from the Shadowforge dwarves at Hammertoe's Digsite (near 52,33) and can take 20 to 30 kills; the crumpled map is right there, on the ground by a table (53,34).",
 	},
 	[197] = { -- Raptor Mastery (classic)
@@ -927,11 +927,11 @@ ns.GA.Tips = {
 		enUS = "King Bangalash, on his hill near 38,34, calls two panthers mid-fight that do not leave: kill him on the first try.",
 	},
 	[348] = { -- Stranglethorn Fever (classic)
-		frFR = "Le cœur de Mokk tombe sur le gorille blanc de la troisième vague : se concentrer sur lui ; la quête compte même si on meurt après l'avoir ramassé.",
+		frFR = "Le Coeur de Mokk tombe sur le gorille blanc de la troisième vague : se concentrer sur lui ; la quête compte même si on meurt après l'avoir ramassé.",
 		enUS = "The Heart of Mokk drops from the white gorilla of the third wave: focus him; the quest counts even if you die after looting it.",
 	},
 	[1252] = { -- Lieutenant Paval Reethe (classic)
-		frFR = "Dans l'auberge brûlée de Shady Rest (vers 29,48), l'insigne est minuscule, sur une planche à part : prendre aussi le bouclier et les empreintes en passant.",
+		frFR = "Dans l'auberge du Repos ombragé brûlée (vers 29,48), l'insigne est minuscule, sur une planche à part : prendre aussi le bouclier et les empreintes en passant.",
 		enUS = "In the burned Shady Rest Inn (near 29,48) the badge is tiny, on a single loose plank: also take the shield and the hoofprints while there.",
 	},
 	[1452] = { -- Rhapsody's Kalimdor Kocktail (classic)
@@ -939,7 +939,7 @@ ns.GA.Tips = {
 		enUS = "The roc gizzards drop rarely (about 8%) near Gadgetzan; the livers from the Feralas bears south of Dire Maul (near 58,58).",
 	},
 	[93176] = { -- My Little Friends (wowhead forever)
-		frFR = "Trois zones à visiter : Arbor Tarantula vers 45.5,19.6, Hay Weevil vers 32.4,28.5, Flesh Picker vers 53.3,58.3 : beaucoup de trajet, la faire en passant.",
+		frFR = "Trois zones à visiter : Arbor Tarantula vers 45.5,19.6, Charançon des foins vers 32.4,28.5, Pique-chair vers 53.3,58.3 : beaucoup de trajet, la faire en passant.",
 		enUS = "Three zones to visit: Arbor Tarantula near 45.5,19.6, Hay Weevil near 32.4,28.5, Flesh Picker near 53.3,58.3: lots of travel, do it on the way.",
 	},
 }

@@ -39,7 +39,7 @@ return {
 	["Forest Song, the Night Elf outpost at the eastern end of the road: {npc:3848} stands there."] = "Chant des forêts, le poste avancé des elfes de la nuit à l'extrémité est de la route : {npc:3848} s'y trouve.",
 
 	-- Step 8: The Dor'Danil Barrow Den: kill these as you meet them
-	["The Dor'Danil Barrow Den: kill these as you meet them"] = "Le terrier de Dor'Danil : tuez-les au fur et à mesure.",
+	["The Dor'Danil Barrow Den: kill these as you meet them"] = "Le Refuge des saisons de Dor'danil : tuez-les au fur et à mesure",
 	["The Forsaken's camp lies in the woods south of Forest Song.\nRusty chests lie around the Shadethicket furbolg camps west of the Forsaken; open them until one holds the pommel.\nCareful: Non-elite Forsaken of about level 28-30 guard the camp. Some of them are stealthed, and the ones around the table often aggro together."] = "Le camp des Réprouvés se trouve dans les bois au sud de Chant des forêts.\nDes coffres rouillés se trouvent autour des camps des furbolgs Ombrefeuille à l'ouest des Réprouvés ; ouvrez-les jusqu'à ce que l'un contienne le pommeau.\nAttention : des Réprouvés non-élites d'environ niveau 28-30 gardent le camp. Certains sont camouflés, et ceux autour de la table aggro souvent ensemble.",
 
 	-- Step 9: Fallen Sky Lake
@@ -52,22 +52,22 @@ return {
 	["Insane druids"] = "Druides fous",
 	["The three druids stand together at the Forsaken camp south of Forest Song.\nCareful: The den has many mobs that respawn quickly, including stealthed undead and patrols, so extra mobs often join a fight."] = "Les trois druides se tiennent ensemble au camp des Réprouvés au sud de Chant des forêts.\nAttention : le terrier contient beaucoup de monstres qui réapparaissent vite, y compris des morts-vivants camouflés et des patrouilles, donc des monstres supplémentaires rejoignent souvent le combat.",
 	-- {npc:3940} Taneel Darkwood
-	["{npc:3940}, inside The Dor'Danil Barrow Den"] = "{npc:3940}, à l'intérieur de The Dor'Danil Barrow Den",
+	["{npc:3940}, inside The Dor'Danil Barrow Den"] = "{npc:3940}, à l'intérieur du Refuge des saisons de Dor'danil",
 	-- {npc:3941} Uthil Mooncall
-	["{npc:3941}, inside The Dor'Danil Barrow Den"] = "{npc:3941}, à l'intérieur de The Dor'Danil Barrow Den",
+	["{npc:3941}, inside The Dor'Danil Barrow Den"] = "{npc:3941}, à l'intérieur du Refuge des saisons de Dor'danil",
 	-- {npc:3942} Mavoris Cloudsbreak
-	["{npc:3942}, inside The Dor'Danil Barrow Den"] = "{npc:3942}, à l'intérieur de The Dor'Danil Barrow Den",
+	["{npc:3942}, inside The Dor'Danil Barrow Den"] = "{npc:3942}, à l'intérieur du Refuge des saisons de Dor'danil",
 
 	-- Step 12: Satyrnaar
 	["Satyrnaar"] = "Satyrnaar",
 	-- {object:19901} Circle of Imprisonment
 	-- plural, as words: Felmusk Rogues = {npc:3759} Felmusk Rogue
-	["The {object:19901} stands in the satyr camp of Satyrnaar, further east along the road.\nCareful: The Felmusk Rogues in Night Run often go stealthed, and Satyrnaar has satyr casters."] = "Le {object:19901} se trouve dans le camp satyre de Satyrnaar, plus à l'est le long de la route.\nAttention : les Voleurs Gangremusc dans Night Run sont souvent camouflés, et Satyrnaar compte des lanceurs de sorts satyres.",
+	["The {object:19901} stands in the satyr camp of Satyrnaar, further east along the road.\nCareful: The Felmusk Rogues in Night Run often go stealthed, and Satyrnaar has satyr casters."] = "Le {object:19901} se trouve dans le camp satyre de Satyrnaar, plus à l'est le long de la route.\nAttention : les voleurs Gangremusc du Défilé de la nuit sont souvent camouflés, et Satyrnaar compte des lanceurs de sorts satyres.",
 
 	-- Step 14: Night Run
-	["Night Run"] = "Night Run",
+	["Night Run"] = "Défilé de la nuit",
 	-- {object:19901} Circle of Imprisonment
-	["The second {object:19901} lies in the valley of Night Run, on the way west."] = "Le second {object:19901} se trouve dans la vallée de Night Run, sur la route vers l'ouest.",
+	["The second {object:19901} lies in the valley of Night Run, on the way west."] = "Le second {object:19901} se trouve dans la vallée du Défilé de la nuit, sur la route vers l'ouest.",
 
 	-- Step 16: Hidden Shrine
 	["The shrine sits on the hill just south-east of the moonwell; follow the winding path up."] = "L'Autel caché se trouve sur la colline juste au sud-est du puits de lune ; suivez le sentier sinueux.",
@@ -98,7 +98,7 @@ return {
 	["Inside"] = "À l'intérieur",
 
 	-- Step 29: Deepwater Tavern
-	["Deepwater Tavern"] = "Taverne d'Eaux-Profondes",
+	["Deepwater Tavern"] = "Taverne de l'Eau-profonde",
 
 	-- Step 30: Waterlogged Chest
 	["The wreck of the Flying Osprey lies in the shallows south of the keep."] = "L'épave du Flying Osprey repose dans les hauts-fonds au sud du donjon.",

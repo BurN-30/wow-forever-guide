@@ -23,10 +23,10 @@ return {
 	["Only if you looted a {item:1972} in Elwynn: right-click it"] = "Seulement si vous avez ramassé un {item:1972} dans la forêt d'Elwynn : faites un clic droit dessus",
 
 	-- Step 4: Saldean's Farm
-	["Saldean's Farm"] = "Ferme de Saldean",
+	["Saldean's Farm"] = "Ferme des Saldean",
 	-- {npc:233} Farmer Saldean · {npc:235} Salma Saldean · {npc:253395} Ozwin Ironsprocket
 	-- plural, as words: Young Goretusks = {npc:454} Young Goretusk
-	["South along the road, past the fork. {npc:233} stands outside, {npc:235} in the house, {npc:253395} in the barn to the west. Young Goretusks and Fleshrippers roam the fields around the farm: start on livers and the stew's meat on the way."] = "Au sud de la route, après l'embranchement. {npc:233} se tient dehors, {npc:235} dans la maison, {npc:253395} dans la grange à l'ouest. De jeunes Défenses et Écorcheurs rôdent dans les champs autour de la ferme : commencez par les foies et la viande du ragoût en chemin.",
+	["South along the road, past the fork. {npc:233} stands outside, {npc:235} in the house, {npc:253395} in the barn to the west. Young Goretusks and Fleshrippers roam the fields around the farm: start on livers and the stew's meat on the way."] = "Au sud par la route, après l'embranchement. {npc:233} se tient dehors, {npc:235} dans la maison, {npc:253395} dans la grange à l'ouest. De jeunes broche-tripes et des déchireurs rôdent dans les champs autour de la ferme : commencez à récupérer les foies et la viande du ragoût en chemin.",
 	-- {npc:235} Salma Saldean
 	["{npc:235}, inside"] = "{npc:235}, à l'intérieur",
 
@@ -62,10 +62,10 @@ return {
 	["{item:729}: Fleshrippers"] = "{item:729} : Déchireurs",
 
 	-- Step 12: Furlbrow's Pumpkin Farm: kill these as you meet them
-	["Furlbrow's Pumpkin Farm: kill these as you meet them"] = "Ferme aux citrouilles des Furlbrow : tuez-les au fur et à mesure",
+	["Furlbrow's Pumpkin Farm: kill these as you meet them"] = "Ferme de potirons de Froncebouille : tuez-les au fur et à mesure",
 	-- {object:83} Jangolode Mine · {npc:502} Benny Blaanco
 	-- plural, as words: Riverpaw Gnolls = {npc:117} Riverpaw Gnoll · Murloc Coastrunners = {npc:126} Murloc Coastrunner
-	["Riverpaw Gnolls and Scouts (level 11-13) roam the hills south of the coast, from above {object:83} east to the Jansen Stead. The gnolls further south and west are 13-19: stay in the north hills.\nMurloc Coastrunners and Raiders line the beach north of the mine. They flee at low health: pull one at a time.\nCareful: Gnolls that stand close together tend to join a fight as a group. Pulling one at a time is safer.\nCareful: Two Defias stand guard inside the house, one of them the level 15 named {npc:502}. They are linked, so attacking either one brings both."] = "Les gnolls et éclaireurs Patte-de-fleuve (niveau 11-13) rodent dans les collines au sud de la côte, depuis au-dessus de {object:83} à l'est jusqu'à la ferme des Jansen. Les gnolls plus au sud et à l'ouest sont niveau 13-19 : restez dans les collines du nord.\nLes coureurs des côtes et raiders murlocs longent la plage au nord de la mine. Ils fuient à basse vie : tirez-les un par un.\nAttention : Les gnolls qui se tiennent près les uns des autres ont tendance à se joindre au combat en groupe. Les tirer un par un est plus sûr.\nAttention : Deux Défias montent la garde dans la maison, dont le {npc:502} niveau 15. Ils sont liés, donc en attaquer un attire l'autre.",
+	["Riverpaw Gnolls and Scouts (level 11-13) roam the hills south of the coast, from above {object:83} east to the Jansen Stead. The gnolls further south and west are 13-19: stay in the north hills.\nMurloc Coastrunners and Raiders line the beach north of the mine. They flee at low health: pull one at a time.\nCareful: Gnolls that stand close together tend to join a fight as a group. Pulling one at a time is safer.\nCareful: Two Defias stand guard inside the house, one of them the level 15 named {npc:502}. They are linked, so attacking either one brings both."] = "Les gnolls et éclaireurs Rivepatte (niveau 11-13) rôdent dans les collines au sud de la côte, depuis les hauteurs au-dessus de {object:83} à l'est jusqu'à la ferme des Jansen. Les gnolls plus au sud et à l'ouest sont niveau 13-19 : restez dans les collines du nord.\nLes cours-la-côte et écumeurs murlocs longent la plage au nord de la mine. Ils fuient quand leur vie est basse : tirez-les un par un.\nAttention : Les gnolls qui se tiennent près les uns des autres ont tendance à se joindre au combat en groupe. Les tirer un par un est plus sûr.\nAttention : Deux Défias montent la garde dans la maison, dont {npc:502}, un nommé de niveau 15. Ils sont liés, donc en attaquer un attire l'autre.",
 	-- {quest:153} Red Leather Bandanas
 	["{quest:153}: every Defias drops them"] = "{quest:153} : tous les Défias en lâchent",
 	-- plural, as words: Gnoll Paws = {item:725} Gnoll Paw
@@ -83,33 +83,33 @@ return {
 
 	-- Step 15: Sentinel Hill
 	-- {npc:266} Wiley the Black
-	["For {npc:266} in Lakeshire, Redridge"] = "Pour {npc:266} à Lakeshire, les Carmines",
+	["For {npc:266} in Lakeshire, Redridge"] = "Pour {npc:266} à Comté-du-Lac, dans les Carmines",
 
 	-- Step 16: Jangolode Mine
 	-- plural, as words: Kobold Diggers = {npc:1236} Kobold Digger
-	["Back north past Molsen Farm to the mine: Kobold Diggers work inside."] = "Remontez au nord passé la ferme de Molsen jusqu'à la mine : des foreurs kobolds travaillent à l'intérieur.",
+	["Back north past Molsen Farm to the mine: Kobold Diggers work inside."] = "Remontez au nord en passant la ferme des Molsen jusqu'à la mine : des terrassiers kobolds travaillent à l'intérieur.",
 	-- plural, as words: Kobold Diggers = {npc:1236} Kobold Digger
 	["Kobold Diggers"] = "Terrassiers kobolds",
 
 	-- Step 17: The Gold Coast Quarry
-	["The Gold Coast Quarry"] = "La carrière de la Côte-d'Or",
+	["The Gold Coast Quarry"] = "Carrière de la côte de l'Or",
 	-- plural, as words: Riverpaw Miners = {npc:1426} Riverpaw Miner
-	["South-west to the coast, west of Molsen Farm. Riverpaw Miners work the quarry."] = "Sud-ouest vers la côte, à l'ouest de la ferme de Molsen. Des mineurs Patte-de-fleuve travaillent la carrière.",
+	["South-west to the coast, west of Molsen Farm. Riverpaw Miners work the quarry."] = "Au sud-ouest vers la côte, à l'ouest de la ferme des Molsen. Des mineurs Rivepatte travaillent dans la carrière.",
 	-- plural, as words: Riverpaw Miners = {npc:1426} Riverpaw Miner
 	["Riverpaw Miners"] = "Mineurs Rivepatte",
 
 	-- Step 18: Moonbrook: kill these as you meet them
-	["Moonbrook: kill these as you meet them"] = "Lune-d'Argent : tuez-les au fur et à mesure",
+	["Moonbrook: kill these as you meet them"] = "Ruisselune : tuez-les au fur et à mesure",
 	-- {object:81} Sentinel Hill
 	-- plural, as words: Defias Pillagers = {npc:589} Defias Pillager
-	["Defias Pillagers and Looters hold the farms west of {object:81}, between the coast road and Moonbrook.\nCareful: The Gold Coast Quarry cave holds many Defias packed together, so it is easy to pull several at once there."] = "Des pilleurs et maraudeurs Défias occupent les fermes à l'ouest de {object:81}, entre la route côtière et Lune-d'Argent.\nAttention : La grotte de la carrière de la Côte-d'Or contient beaucoup de Défias serrés, il est donc facile d'en attirer plusieurs à la fois.",
+	["Defias Pillagers and Looters hold the farms west of {object:81}, between the coast road and Moonbrook.\nCareful: The Gold Coast Quarry cave holds many Defias packed together, so it is easy to pull several at once there."] = "Des pilleurs et pillards défias occupent les fermes à l'ouest de {object:81}, entre la route côtière et Ruisselune.\nAttention : La grotte de la carrière de la côte de l'Or contient beaucoup de Défias serrés, il est donc facile d'en attirer plusieurs à la fois.",
 
 	-- Step 20: Moonbrook and the Defias hills
-	["Moonbrook and the Defias hills"] = "Lune-d'Argent et les collines des Défias",
+	["Moonbrook and the Defias hills"] = "Ruisselune et les collines des Défias",
 	-- plural, as words: Defias Pathstalkers = {npc:121} Defias Pathstalker
-	["Defias Pathstalkers and Knuckledusters walk Moonbrook; Highwaymen (level 17) patrol the hills south and east of it in pairs: pull them apart. The Deadmines entrance in the smithy is a group dungeon.\nCareful: The camps in the hills hold mixed groups of Defias, so it is easy to pull more than one at a time if you are low level."] = "Des traqueurs et brise-poings Défias arpentent Lune-d'Argent ; des Highwaymen (niveau 17) patrouillent les collines au sud et à l'est par paires : séparez-les. L'entrée des Mortemines dans la forge est un donjon de groupe.\nAttention : Les camps dans les collines contiennent des groupes mixtes de Défias, il est donc facile d'en attirer plus d'un à la fois si vous êtes bas niveau.",
+	["Defias Pathstalkers and Knuckledusters walk Moonbrook; Highwaymen (level 17) patrol the hills south and east of it in pairs: pull them apart. The Deadmines entrance in the smithy is a group dungeon.\nCareful: The camps in the hills hold mixed groups of Defias, so it is easy to pull more than one at a time if you are low level."] = "Des éclaireurs et truands défias arpentent Ruisselune ; des malandrins (niveau 17) patrouillent par paires dans les collines au sud et à l'est : séparez-les. L'entrée des Mortemines, dans la forge, mène à un donjon de groupe.\nAttention : Les camps dans les collines contiennent des groupes mixtes de Défias, il est donc facile d'en attirer plus d'un à la fois si vous êtes bas niveau.",
 	-- {item:254676} Suspicious Industrial Supplies
-	["{item:254676}, from the crates around Moonbrook"] = "{item:254676}, dans les caisses autour de Lune-d'Argent",
+	["{item:254676}, from the crates around Moonbrook"] = "{item:254676}, dans les caisses autour de Ruisselune",
 
 	-- Step 21: Back to Sentinel Hill
 	-- {object:81} Sentinel Hill
@@ -134,7 +134,7 @@ return {
 	-- {item:6775} Tome of Divinity
 	["Right-click the {item:6775} he gives you"] = "Faites un clic droit sur le {item:6775} qu'il vous donne",
 	-- {npc:6172} Henze Faulk
-	["{npc:6172}, by Stone Cairn Lake in Elwynn, on the road to Redridge"] = "{npc:6172}, au lac des Cairns de pierre en Elwynn, sur la route des Carmines",
+	["{npc:6172}, by Stone Cairn Lake in Elwynn, on the road to Redridge"] = "{npc:6172}, près du lac du Cairn dans la forêt d'Elwynn, sur la route des Carmines",
 
 	-- Step 29: Tram to Ironforge
 	-- {zone:1455} Ironforge
@@ -143,7 +143,7 @@ return {
 	-- Step 30: Shaman training
 	["Shaman training"] = "Entraînement de chaman",
 	-- {zone:1453} Stormwind · {object:28027} Dwarven District · {zone:1455} Ironforge · {npc:258098} Eldrun Stormbreaker
-	["Head to {zone:1453}. It has no shaman trainer: take the Deeprun Tram from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back for the boat."] = "Allez à {zone:1453}. Il n'y a pas de maître des chamans : prenez le tram des Tréfonds depuis {object:28027} vers {zone:1455}, entraînez-vous avec {npc:258098}, puis reprenez le tram pour le bateau.",
+	["Head to {zone:1453}. It has no shaman trainer: take the Deeprun Tram from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back for the boat."] = "Allez à {zone:1453}. Il n'y a pas de maître des chamans : prenez le Tram des profondeurs depuis {object:28027} jusqu'à {zone:1455}, entraînez-vous auprès de {npc:258098}, puis reprenez le tram pour le bateau.",
 
 	-- Step 31: Stormwind
 	-- {zone:1453} Stormwind · {object:2100} Old Town · {object:2101} Mage Quarter

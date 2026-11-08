@@ -57,7 +57,7 @@ return {
 	-- plural, as words: Nightbane Vile Fangs = {npc:206} Nightbane Vile Fang
 	["Nightbane Vile Fangs and the {npc:511}"] = "Crocs noirs Plaie-de-nuit et {npc:511}",
 	-- {npc:511} Insane Ghoul
-	["The strongest worgen roam the woods south of Darkshire, west and south of the Tranquil Gardens Cemetery. The {npc:511} hides in the small crypt by the cemetery.\nCareful: Curse of Blood lasts 10 minutes and adds 13 to each hit of physical damage you take.\nCareful: Some worgen outside the cave stand in groups, including one camp of four. To avoid adds, pull them one at a time from the raised ground next to the cave entrance."] = "Les worgens les plus forts rodent dans les bois au sud de Sombre-Comté, à l'ouest et au sud du Cimetière des Jardins Tranquilles. {npc:511} se cache dans la petite crypte près du cimetière.\nAttention : Malédiction de sang dure 10 minutes et ajoute 13 à chaque coup de dégâts physiques que vous subissez.\nAttention : Certains worgens à l'extérieur de la grotte sont en groupes, dont un camp de quatre. Pour éviter les adds, tirez-les un par un depuis le terrain surélevé à côté de l'entrée de la grotte.",
+	["The strongest worgen roam the woods south of Darkshire, west and south of the Tranquil Gardens Cemetery. The {npc:511} hides in the small crypt by the cemetery.\nCareful: Curse of Blood lasts 10 minutes and adds 13 to each hit of physical damage you take.\nCareful: Some worgen outside the cave stand in groups, including one camp of four. To avoid adds, pull them one at a time from the raised ground next to the cave entrance."] = "Les worgens les plus forts rôdent dans les bois au sud de Sombre-Comté, à l'ouest et au sud du cimetière des jardins paisibles. {npc:511} se cache dans la petite crypte près du cimetière.\nAttention : Malédiction de sang dure 10 minutes et ajoute 13 à chaque coup de dégâts physiques que vous subissez.\nAttention : Certains worgens à l'extérieur de la grotte sont en groupes, dont un camp de quatre. Pour éviter les renforts, tirez-les un par un depuis le terrain surélevé à côté de l'entrée de la grotte.",
 	-- {item:1946} Mary's Looking Glass
 	["{item:1946}; inside"] = "{item:1946} ; à l'intérieur",
 
@@ -68,7 +68,7 @@ return {
 	["{npc:661}, by {npc:633}'s house; inside"] = "{npc:661}, près de la maison de {npc:633} ; à l'intérieur",
 
 	-- Step 13: Vul'Gol Ogre Mound: kill these as you meet them
-	["Vul'Gol Ogre Mound: kill these as you meet them"] = "Monticule des ogres Vul'Gol : tuez-les au fur et à mesure.",
+	["Vul'Gol Ogre Mound: kill these as you meet them"] = "Tertre des ogres Vul'Gol : tuez-les au fur et à mesure",
 	-- {object:119} Abercrombie's Crate
 	["Head east to the ogre mound. {object:119} sits in the camp at its entrance; Splinter Fist ogres guard it."] = "Allez vers l'est jusqu'au tertre des ogres. {object:119} se trouve dans le camp à son entrée ; des ogres Brisepoing la gardent.",
 	-- {npc:272273} Lost Watcher · {quest:96138} Merrick's Bow
@@ -82,10 +82,10 @@ return {
 	["{item:5947}; inside"] = "{item:5947} ; à l'intérieur",
 
 	-- Step 16: Raven Hill Cemetery: kill these as you meet them
-	["Raven Hill Cemetery: kill these as you meet them"] = "Cimetière de la colline aux Corbeaux : tuez-les au fur et à mesure",
+	["Raven Hill Cemetery: kill these as you meet them"] = "Cimetière de Colline-aux-Corbeaux : tuez-les au fur et à mesure",
 	-- {npc:522} Mor'Ladim · {npc:311} Sven Yorgen
 	-- plural, as words: Plague Spreaders = {npc:604} Plague Spreader · Skeletal Raiders = {npc:1110} Skeletal Raider
-	["The Plague Spreaders walk the northern half of the Raven Hill Cemetery. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "Les Répandeurs de peste arpentent la moitié nord du Cimetière de la Colline aux Corbeaux. {npc:522}, un élite, erre parmi les tombes : tenez-vous à l'écart.\nLes Récupérateurs squelettes, Soigneurs et Gardiens occupent la partie ouest du cimetière, juste à l'est du camp de {npc:311}.\nAttention : Les squelettes dans les catacombes sont serrés, vous pouvez donc facilement attirer des mobs supplémentaires.",
+	["The Plague Spreaders walk the northern half of the Raven Hill Cemetery. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "Les répandeurs de peste arpentent la moitié nord du cimetière de Colline-aux-Corbeaux. {npc:522}, un élite, erre parmi les tombes : tenez-vous à l'écart.\nDes écumeurs, soigneurs et gardiens squelettes occupent la partie ouest du cimetière, juste à l'est du camp de {npc:311}.\nAttention : Les squelettes dans les catacombes sont serrés, vous pouvez donc facilement attirer des mobs supplémentaires.",
 
 	-- Step 18: Sven Yorgen's Camp
 	-- {npc:311} Sven Yorgen
@@ -154,10 +154,10 @@ return {
 	["{item:2661} along the way to {npc:1078} and Whelgar"] = "{item:2661} en chemin vers {npc:1078} et Whelgar",
 
 	-- Step 30: Whelgar's Excavation Site: kill these as you meet them
-	["Whelgar's Excavation Site: kill these as you meet them"] = "Site de fouilles de Whelgar : tuez-les au fur et à mesure",
+	["Whelgar's Excavation Site: kill these as you meet them"] = "Excavations de Whelgar : tuez-les au fur et à mesure",
 	-- {item:279996} Goaz Stone · {npc:1353} Sarltooth
 	-- plural, as words: Goaz Warders = {npc:270892} Goaz Warder
-	["The Goaz Warders stand just west of Whelgar's camp: use the {item:279996} he gave you beside one.\nThe relics lie in the dig itself. {npc:1353}, a big Razormaw, prowls the raptor valley just west of it.\nThe Dragonmaw orcs camp east of the excavation site. Raiders and Swamprunners carry the war banners."] = "Les Gardiens de Goaz se tiennent juste à l'ouest du camp de Whelgar : utilisez à côté de l'un d'eux la {item:279996} qu'il vous a donnée.\nLes reliques se trouvent dans les fouilles elles-mêmes. {npc:1353}, un gros Tranchegueule, rôde dans la vallée des raptors juste à l'ouest.\nLes orcs Dragonmaw campent à l'est du site de fouilles. Les Écumeurs et les Arpenteurs portent les bannières de guerre.",
+	["The Goaz Warders stand just west of Whelgar's camp: use the {item:279996} he gave you beside one.\nThe relics lie in the dig itself. {npc:1353}, a big Razormaw, prowls the raptor valley just west of it.\nThe Dragonmaw orcs camp east of the excavation site. Raiders and Swamprunners carry the war banners."] = "Les Goaz Warders se tiennent juste à l'ouest du camp de Whelgar : utilisez à côté de l'un d'eux le {item:279996} qu'il vous a donné.\nLes reliques se trouvent dans les fouilles elles-mêmes. {npc:1353}, un gros tranchegueule, rôde dans la vallée des raptors juste à l'ouest.\nLes orcs Dragonmaw campent à l'est du site de fouilles. Les écumeurs et les arpenteurs portent les bannières de guerre.",
 
 	-- Step 31: Ormer Ironbraid and Whelgar
 	-- {npc:1078} Ormer Ironbraid
@@ -171,9 +171,9 @@ return {
 	["{quest:98221}: {quest:465} comes after it on Forever"] = "{quest:98221} : sur Forever, {quest:465} vient après",
 
 	-- Step 33: Angerfang Encampment
-	["Angerfang Encampment"] = "Campement Crocs-de-rage",
+	["Angerfang Encampment"] = "Campement de Hargnecroc",
 	-- {npc:2091} Chieftain Nek'rosh
-	["Head east again to the Dragonmaw camp. The four sets of Attack Plans lie in the Angerfang Encampment; {npc:2091}, an elite, stands in the camp too."] = "Reprenez la direction de l'est vers le camp Gueule-de-dragon. Les quatre ensembles de plans d'attaque se trouvent au Campement Crocs-de-rage ; {npc:2091}, un élite, s'y tient également.",
+	["Head east again to the Dragonmaw camp. The four sets of Attack Plans lie in the Angerfang Encampment; {npc:2091}, an elite, stands in the camp too."] = "Reprenez la direction de l'est vers le camp Dragonmaw. Les quatre plans d'attaque se trouvent au campement de Hargnecroc ; {npc:2091}, un élite, s'y tient également.",
 
 	-- Step 34: To Theramore
 	["To Theramore"] = "Vers Theramore",
@@ -197,13 +197,13 @@ return {
 	["{quest:65602}: the incubus, beside the succubus; the {item:190309} is near the {quest:1738}"] = "{quest:65602} : l'incube, à côté de la succube ; la {item:190309} est près de {quest:1738}",
 
 	-- Step 40: Mirage Raceway
-	["Mirage Raceway"] = "Circuit des Mirages",
-	["Follow the canyons east to the salt flats. The goblins and gnomes of the Mirage Raceway are neutral and give quests to both factions."] = "Suivez les canyons vers l'est jusqu'aux plaines de sel. Les gobelins et gnomes du Circuit des Mirages sont neutres et donnent des quêtes aux deux factions.",
+	["Mirage Raceway"] = "Piste des mirages",
+	["Follow the canyons east to the salt flats. The goblins and gnomes of the Mirage Raceway are neutral and give quests to both factions."] = "Suivez les canyons vers l'est jusqu'aux plaines de sel. Les gobelins et gnomes de la Piste des mirages sont neutres et donnent des quêtes aux deux factions.",
 	-- {quest:5762} Hemet Nesingwary
 	["For {quest:5762} in Stranglethorn, later"] = "Pour {quest:5762} à Strangleronce, plus tard",
 
 	-- Step 41: Mirage Raceway: kill these as you meet them
-	["Mirage Raceway: kill these as you meet them"] = "Circuit des Mirages : tuez-les au fur et à mesure",
+	["Mirage Raceway: kill these as you meet them"] = "Piste des mirages : tuez-les au fur et à mesure",
 	-- {object:19868} Rocket Car Rubble
 	-- plural, as words: Scorpid Reavers = {npc:4140} Scorpid Reaver · Saltstone Basilisks = {npc:4147} Saltstone Basilisk
 	["{object:19868} lies all over the flats. Scorpid Reavers roam the north half; keep to it, away from the Saltstone Basilisks, Crystalhides and Gazers (32-35) of the middle and the far south."] = "{object:19868} jonchent les Salines. Les Scorpides ravageurs parcourent la moitié nord : restez-y, loin des Basilics du sel gemme, Peaux de cristal et Contemplateurs (32-35) du centre et de l'extrême sud.",

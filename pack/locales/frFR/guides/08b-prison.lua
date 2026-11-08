@@ -33,7 +33,7 @@ return {
 	-- {npc:1696} Targorr the Dread
 	["Cells line both sides, 3 or 4 elites each, and runners flee into the next cell for help: stop them or clear each cell as you pass. {npc:1696} hides in a side cell of this corridor (often first on the right or second on the left); a patrol walks between the two wings."] = "Des cellules des deux côtés, 3 ou 4 élites chacune, et les fuyards courent chercher de l'aide dans la cellule voisine : les arrêter ou vider chaque cellule au passage. {npc:1696} se cache dans une cellule de ce couloir (souvent la 1re à droite ou la 2e à gauche) ; une patrouille circule entre les deux ailes.",
 	-- plural, as words: Red Wool Bandanas = {item:2909} Red Wool Bandana
-	["Share each quest with your group: click it in the quest log, then Share. Red Wool Bandanas and the prisoners for Quell the Uprising come from every Defias."] = "Partager chaque quête avec le groupe : la cliquer dans le journal, puis Partager. Bandanas de laine rouge et prisonniers de la quête de la révolte viennent de tous les Défias.",
+	["Share each quest with your group: click it in the quest log, then Share. Red Wool Bandanas and the prisoners for Quell the Uprising come from every Defias."] = "Partager chaque quête avec le groupe : la cliquer dans le journal, puis Partager. Les foulards en laine rouge et les prisonniers d'Écraser la rébellion viennent de tous les Défias.",
 	-- {item:3630} Head of Targorr · {npc:1696} Targorr the Dread
 	["{item:3630}: {npc:1696}, elite 24"] = "{item:3630} : {npc:1696}, élite 24",
 	-- {npc:1720} Bruegal Ironknuckle
@@ -52,7 +52,7 @@ return {
 	-- {npc:1666} Kam Deepfury · {npc:1717} Hamhock · {npc:1716} Bazil Thredd
 	["Right at the junction. {npc:1666} sits in a cell (second on the left); {npc:1717} comes with two linked Insurgents and casts Chain Lightning: crowd-control an add and spread out. {npc:1716} waits at the very end: he hits one target hard and his Smoke Bomb stuns, so keep the tank topped up."] = "À droite au croisement. {npc:1666} est dans une cellule (la 2e à gauche) ; {npc:1717} vient avec deux insurgés liés et lance Chaîne d'éclairs : neutraliser un des deux et s'écarter. {npc:1716} attend tout au bout : il frappe fort une seule cible et sa bombe fumigène étourdit, garder le tank plein de vie.",
 	-- {npc:1666} Kam Deepfury · {zone:1437} Wetlands
-	["{npc:1666}: his head is for The Fury Runs Deep, a {zone:1437} quest left for later"] = "{npc:1666} : sa tête sert à une quête des {zone:1437} laissée pour plus tard",
+	["{npc:1666}: his head is for The Fury Runs Deep, a {zone:1437} quest left for later"] = "{npc:1666} : sa tête sert à Fureur dans les Profondeurs, une quête des {zone:1437} laissée pour plus tard",
 	-- {item:2926} Head of Bazil Thredd
 	["{item:2926}, elite 29"] = "{item:2926}, élite 29",
 
@@ -60,7 +60,7 @@ return {
 	["Finish the clear"] = "Finir le nettoyage",
 	["One Convict short after a full clear? Wait a few minutes at the entrance for the respawn rather than resetting. Two chests, one in each wing. Leaving through the portal drops whatever chases you."] = "Un forçat manquant après un tour complet ? Attendre quelques minutes la réapparition à l'entrée plutôt que réinitialiser. Deux coffres, un par aile. Ressortir par le portail fait lâcher prise à ce qui vous poursuit.",
 	-- plural, as words: Defias Prisoners = {npc:1706} Defias Prisoner
-	["Defias Prisoners, Convicts and Insurgents"] = "Prisonniers, forçats et insurgés défias",
+	["Defias Prisoners, Convicts and Insurgents"] = "Prisonniers, détenus et insurgés défias",
 	-- {item:2909} Red Wool Bandana
 	["{item:2909}: any Defias inside"] = "{item:2909} : n'importe quel Défias à l'intérieur",
 

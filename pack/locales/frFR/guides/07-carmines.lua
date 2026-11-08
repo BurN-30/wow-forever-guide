@@ -56,7 +56,7 @@ return {
 	-- Step 7: Shaman training
 	["Shaman training"] = "Entraînement de chaman",
 	-- {zone:1453} Stormwind · {object:28027} Dwarven District · {zone:1455} Ironforge · {npc:258098} Eldrun Stormbreaker
-	["{zone:1453} has no shaman trainer: take the Deeprun Tram from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back."] = "{zone:1453} n'a pas de maître des chamans : prenez le tram des Tréfonds depuis {object:28027} jusqu'à {zone:1455}, entraînez-vous avec {npc:258098}, puis reprenez le tram.",
+	["{zone:1453} has no shaman trainer: take the Deeprun Tram from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back."] = "{zone:1453} n'a pas de maître des chamans : prenez le Tram des profondeurs depuis {object:28027} jusqu'à {zone:1455}, entraînez-vous auprès de {npc:258098}, puis reprenez le tram.",
 
 	-- Step 8: Fly to Sentinel Hill
 	-- {object:81} Sentinel Hill
@@ -77,7 +77,7 @@ return {
 	-- Step 13: Henze Faulk
 	-- {npc:6172} Henze Faulk · {item:6866} Symbol of Life · {item:6846} Defias Script
 	-- plural, as words: Defias Rogue Wizards = {npc:474} Defias Rogue Wizard
-	["On the road east, past the Tower of Azora, head north from the bridge to Stone Cairn Lake. {npc:6172} lies south of the lake: use the {item:6866} on him. The Defias Rogue Wizards around him carry the {item:6846}."] = "Sur la route vers l'est, après la tour d'Azora, allez au nord depuis le pont vers le lac de Pierre-Cairn. {npc:6172} se trouve au sud du lac : utilisez {item:6866} sur lui. Les mages voleurs défias autour de lui portent {item:6846}.",
+	["On the road east, past the Tower of Azora, head north from the bridge to Stone Cairn Lake. {npc:6172} lies south of the lake: use the {item:6866} on him. The Defias Rogue Wizards around him carry the {item:6846}."] = "Sur la route vers l'est, après la tour d'Azora, allez au nord depuis le pont jusqu'au lac du Cairn. {npc:6172} se trouve au sud du lac : utilisez {item:6866} sur lui. Les sorciers-voleurs défias autour de lui portent {item:6846}.",
 	-- {item:6866} Symbol of Life · {npc:6172} Henze Faulk
 	["Use the {item:6866} on {npc:6172}"] = "Utilisez le {item:6866} sur {npc:6172}",
 	-- {item:6846} Defias Script
@@ -85,14 +85,14 @@ return {
 	["{item:6846}: Defias Rogue Wizards"] = "{item:6846} : Sorciers-voleurs défias",
 
 	-- Step 15: Three Corners
-	["Three Corners"] = "Les Trois-Cornes",
+	["Three Corners"] = "Trois chemins",
 	-- {npc:464} Guard Parker · {zone:1431} Duskwood
-	["The road from Elwynn enters Redridge at Three Corners. {npc:464} stands where the roads to Redridge and {zone:1431} meet."] = "La route depuis la Forêt d'Elwynn entre dans les Carmines aux Trois-Cornes. {npc:464} se tient là où se rejoignent les routes vers les Carmines et {zone:1431}.",
+	["The road from Elwynn enters Redridge at Three Corners. {npc:464} stands where the roads to Redridge and {zone:1431} meet."] = "La route venant de la forêt d'Elwynn entre dans les Carmines à Trois chemins. {npc:464} se tient là où se rejoignent les routes vers les Carmines et {zone:1431}.",
 	-- {npc:464} Guard Parker
-	["{npc:464} walks around Three Corners: look inside the circle on the map"] = "{npc:464} se promène aux Trois-Cornes : regardez à l'intérieur du cercle sur la carte",
+	["{npc:464} walks around Three Corners: look inside the circle on the map"] = "{npc:464} se promène à Trois chemins : regardez à l'intérieur du cercle sur la carte",
 
 	-- Step 16: Lakeridge Highway
-	["Lakeridge Highway"] = "Route du Lac",
+	["Lakeridge Highway"] = "Grand-route de la Crête du lac",
 	-- {npc:1070} Deputy Feldon · {npc:903} Guard Howe
 	["Follow the road along the south shore of Lake Everstill to the gryphon master. {npc:1070} and {npc:903} stand by the road next to her."] = "Suivez la route le long de la rive sud du lac Placide jusqu'au maître des griffons. {npc:1070} et {npc:903} se tiennent près de la route à côté d'elle.",
 
@@ -116,9 +116,9 @@ return {
 	["{item:1309}; underwater"] = "{item:1309} ; sous l'eau",
 
 	-- Step 21: Lakeridge Highway: kill these as you meet them
-	["Lakeridge Highway: kill these as you meet them"] = "Route du Lac : tuez-les au fur et à mesure",
+	["Lakeridge Highway: kill these as you meet them"] = "Grand-route de la Crête du lac : tuez-les au fur et à mesure",
 	-- plural, as words: Redridge Mongrels = {npc:423} Redridge Mongrel · Redridge Thrashers = {npc:712} Redridge Thrasher · Redridge Brutes = {npc:426} Redridge Brute · Iron Pikes = {item:2856} Iron Pike · Dire Condors = {npc:428} Dire Condor · Great Goretusks = {npc:547} Great Goretusk
-	["Redridge Mongrels and other gnolls hold the hills east of Three Corners, north of the road; Redridge Thrashers prowl among them, Poachers camp south of the road. Redridge Brutes, for the Iron Pikes and Rivets, hold the hills further north; Dire Condors and Great Goretusks roam the hills east of them."] = "Les mongrels des Carmines et d'autres gnolls occupent les collines à l'est des Trois-Cornes, au nord de la route ; les massacreurs des Carmines rôdent parmi eux, les braconniers campent au sud de la route. Les brutes des Carmines, pour les piques en fer et les rivets, tiennent les collines plus au nord ; les condors terribles et les grands goretusks errent sur les collines à l'est d'eux.",
+	["Redridge Mongrels and other gnolls hold the hills east of Three Corners, north of the road; Redridge Thrashers prowl among them, Poachers camp south of the road. Redridge Brutes, for the Iron Pikes and Rivets, hold the hills further north; Dire Condors and Great Goretusks roam the hills east of them."] = "Les bâtards des Carmines et d'autres gnolls occupent les collines à l'est de Trois chemins, au nord de la route ; les vandales des Carmines rôdent parmi eux, les braconniers campent au sud de la route. Les brutes des Carmines, pour les clous et les vis en fer, tiennent les collines plus au nord ; les condors redoutables et les grands broche-tripes errent dans les collines à l'est.",
 	-- {item:280911} Spiked Collar
 	-- plural, as words: Redridge Thrashers = {npc:712} Redridge Thrasher
 	["{item:280911}: Redridge Thrashers"] = "{item:280911} : Vandales des Carmines",
@@ -145,9 +145,9 @@ return {
 	["Back to Lakeshire"] = "Retour à Comté-du-Lac",
 
 	-- Step 30: Render's Valley
-	["Render's Valley"] = "Vallée de Render",
+	["Render's Valley"] = "Vallée des Etripeurs",
 	-- plural, as words: Blackrock Champions = {npc:435} Blackrock Champion
-	["Head north out of Lakeshire up the Redridge Canyons to Render's Valley. Blackrock Champions camp in the valley."] = "Sortez au nord de Comté-du-Lac par les canyons des Carmines jusqu'à la vallée de Render. Les champions rochenoires y campent.",
+	["Head north out of Lakeshire up the Redridge Canyons to Render's Valley. Blackrock Champions camp in the valley."] = "Sortez de Comté-du-Lac par le nord et remontez les canyons des Carmines jusqu'à la vallée des Etripeurs. Les champions Blackrock y campent.",
 	-- {npc:435} Blackrock Champion
 	["{npc:435}, below ground"] = "{npc:435}, sous terre",
 
@@ -169,7 +169,7 @@ return {
 	-- {npc:859} Guard Berton
 	["{npc:859}, by the town hall"] = "{npc:859}, près de l'hôtel de ville",
 	-- {zone:1431} Duskwood
-	["{zone:1431} is next: follow the road west to Three Corners, then south to Darkshire."] = "{zone:1431} est la suite : suivez la route vers l'ouest jusqu'aux Trois-Cornes, puis au sud jusqu'à Sombre-Comté.",
+	["{zone:1431} is next: follow the road west to Three Corners, then south to Darkshire."] = "{zone:1431} est la suite : suivez la route vers l'ouest jusqu'à Trois chemins, puis au sud jusqu'à Sombre-Comté.",
 
 	-- Step 34: Blackrock Blockade
 	-- {npc:382} Marshal Marris · {object:116} Stonewatch Keep
@@ -203,7 +203,7 @@ return {
 	-- Step 41: Stonewatch Keep
 	-- {npc:334} Gath'Ilzogg
 	-- plural, as words: Blackrock Shadowcasters = {npc:436} Blackrock Shadowcaster
-	["Only the Blackrock Shadowcasters drop the orbs, all through the keep. {npc:334} holds the top floor with two guards and a fire-breathing whelp: a full group only, and keep moving, the keep respawns fast."] = "Seuls les lanceurs d'ombre Rochenoire donnent les orbes, dans tout le donjon. {npc:334} tient le dernier étage avec deux gardes et un dragonnet qui crache du feu : groupe complet seulement, et sans traîner, le donjon réapparaît vite.",
+	["Only the Blackrock Shadowcasters drop the orbs, all through the keep. {npc:334} holds the top floor with two guards and a fire-breathing whelp: a full group only, and keep moving, the keep respawns fast."] = "Seuls les exhalombres Blackrock donnent les orbes, dans tout le donjon. {npc:334} tient le dernier étage avec deux gardes et un dragonnet qui crache du feu : groupe complet seulement, et sans traîner, le donjon réapparaît vite.",
 	-- {quest:115} Shadow Magic · {zone:1428} Burning Steppes
 	["{quest:115} alone: the cave far north of Lakeshire (by the {zone:1428} road) holds Shadowcasters too; pull them one at a time and leave its level 24 boss alone."] = "{quest:115} seul : la grotte loin au nord de Comté-du-Lac (près de la route de {zone:1428}) a aussi des lanceurs d'ombre ; les tirer un par un et laisser son chef de niveau 24.",
 	-- {item:1261} Midnight Orb · {npc:436} Blackrock Shadowcaster

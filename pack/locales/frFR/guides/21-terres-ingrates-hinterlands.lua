@@ -33,7 +33,7 @@ return {
 	["Ride west across the {zone:1418} to the Dustbelcher camp at Camp Boff. {npc:2944} stands in its middle with Wyrmhunters and Maulers around him."] = "Traversez les {zone:1418} vers l'ouest jusqu'au camp des Dustbelcher au camp Boff. {npc:2944} se tient au milieu avec des chasseurs de wyrms et des maulers autour de lui.",
 
 	-- Step 6: Garek
-	["Ride back east to Dustwind Gulch."] = "Retournez vers l'est au ravin de Poussièvent.",
+	["Ride back east to Dustwind Gulch."] = "Retournez vers l'est au Goulet de la Bourrasque.",
 	-- {npc:2888} Garek
 	["{npc:2888}'s next task is an elite hunt: skip it."] = "La tâche suivante de {npc:2888} est une chasse élite : passez-la.",
 
@@ -44,7 +44,7 @@ return {
 	["The Scalding Whelps nest in the ravine east of {npc:2888}; leave the Scorched Guardians (elite) alone. The {item:4612} drops rarely: take it if it comes while you grind."] = "Les Dragonnets flamboyants nichent dans le ravin à l'est de {npc:2888} ; laissez tranquilles les Gardiens des terres brûlées (élites). Le {item:4612} tombe rarement : prenez-le s'il tombe pendant que vous tuez des monstres.",
 
 	-- Step 8: Hammertoe's Digsite
-	["Hammertoe's Digsite"] = "Site de fouilles de Marteleur",
+	["Hammertoe's Digsite"] = "Site de fouilles d'Hammertoe",
 
 	-- Step 9: Fly to Southshore
 	["Fly to Southshore"] = "Envolez-vous pour Austrivage",
@@ -66,7 +66,7 @@ return {
 	["{npc:3980}, upstairs in the inn: four Scarlet bosses"] = "{npc:3980}, à l'étage à l'auberge : quatre boss écarlates",
 
 	-- Step 12: Magus Olvek
-	["On the way north: he stands on the western edge of the Dalaran crater, by the road from Hillsbrad to Silverpine."] = "En route vers le nord : il se tient sur le bord ouest du cratère de Dalaran, près de la route de Hautebrande à Silverpine.",
+	["On the way north: he stands on the western edge of the Dalaran crater, by the road from Hillsbrad to Silverpine."] = "En route vers le nord : il se tient sur le bord ouest du cratère de Dalaran, près de la route de Hautebrande à Pins-Argentés.",
 	-- {npc:264265} Magus Olvek · {quest:96800} Past Due · {npc:6487} Arcanist Doan
 	["{npc:264265}: {quest:96800}, {npc:6487}'s book"] = "{npc:264265} : {quest:96800}, livre de {npc:6487}",
 
@@ -162,7 +162,7 @@ return {
 	["{npc:4968}, on the top floor"] = "{npc:4968}, au dernier étage",
 
 	-- Step 27: Cortello's Riddle
-	["Inside Bloodfen Burrow"] = "À l'intérieur de la tanière de Sangrebourbe",
+	["Inside Bloodfen Burrow"] = "À l'intérieur du Terrier des Rougefanges",
 
 	-- Step 28: Theramore flight master
 	["Theramore flight master"] = "Maître de vol de Theramore",

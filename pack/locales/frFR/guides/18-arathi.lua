@@ -28,17 +28,17 @@ return {
 	["Young crocolisks, Sorrow Spinners and Swamp Jaguars all roam the swamp around the road."] = "Jeunes crocilisques, Tisseuses des pleurs et Jaguars du marécage parcourent tous le marais autour de la route.",
 
 	-- Step 6: The Harborage
-	["The Harborage"] = "The Harborage",
+	["The Harborage"] = "Le Havre boueux",
 	["Follow the road north to the draenei of the Harborage."] = "Suivez la route vers le nord jusqu'aux draeneï du Harborage.",
 
 	-- Step 7: Fallow Sanctuary
-	["Fallow Sanctuary"] = "Fallow Sanctuary",
+	["Fallow Sanctuary"] = "Sanctuaire des friches",
 	-- {npc:256028} The Lost One
-	["East along the road to the Fallow Sanctuary. {npc:256028} mobs drop the crystals; Noboru walks the ruins and drops his cudgel."] = "Vers l'est le long de la route jusqu'au Fallow Sanctuary. Les sbires de {npc:256028} laissent tomber les cristaux ; Noboru arpente les ruines et laisse tomber sa massue.",
+	["East along the road to the Fallow Sanctuary. {npc:256028} mobs drop the crystals; Noboru walks the ruins and drops his cudgel."] = "Vers l'est le long de la route jusqu'au Sanctuaire des friches. Les sbires de {npc:256028} laissent tomber les cristaux ; Noboru arpente les ruines et laisse tomber son gourdin.",
 
 	-- Step 8: The Lost Caravan
 	-- plural, as words: Lost Ones = {npc:254797} Lost One
-	["The wrecked caravan lies off the road near Biggs.\nCareful: The camp is full of Lost Ones around level 38. They stand in linked groups of 2-3, many are casters, and they respawn quickly."] = "La caravane détruite se trouve à l'écart de la route, près de Biggs.\nAttention : le camp est rempli d'Égarés de niveau 38 environ. Ils se tiennent en groupes liés de 2 ou 3, beaucoup lancent des sorts, et ils réapparaissent vite.",
+	["The wrecked caravan lies off the road near Biggs.\nCareful: The camp is full of Lost Ones around level 38. They stand in linked groups of 2-3, many are casters, and they respawn quickly."] = "La caravane détruite se trouve à l'écart de la route, près de Biggs.\nAttention : le camp est rempli de Lost Ones de niveau 38 environ. Ils se tiennent en groupes liés de 2 ou 3, beaucoup lancent des sorts, et ils réapparaissent vite.",
 
 	-- Step 9: Galen Goodward
 	-- {npc:5391} Galen Goodward
@@ -101,7 +101,7 @@ return {
 
 	-- Step 28: Northfold Manor
 	-- {object:2685} Refuge Pointe · {npc:217589} Hay Weevil · {npc:217412} Amaryllis Webb
-	["The Syndicate hold the farm north-west of {object:2685}. A {npc:217589} crawls about the farm: catch one with {npc:217412}'s Entomology Starter Kit, then tick it off.\nCareful: Syndicate Highwaymen are level 30-31 and can cast Sneak while out of combat, so they are often stealthed and hard to spot."] = "Le Syndicat occupe la ferme au nord-ouest de {object:2685}. Un {npc:217589} rampent dans la ferme : attrapez-en un avec le Kit de démarrage en entomologie de {npc:217412}, puis cochez-le.\nAttention : les Routiers du Syndicat sont de niveau 30-31 et peuvent lancer Camouflage hors combat, ils sont donc souvent camouflés et difficiles à repérer.",
+	["The Syndicate hold the farm north-west of {object:2685}. A {npc:217589} crawls about the farm: catch one with {npc:217412}'s Entomology Starter Kit, then tick it off.\nCareful: Syndicate Highwaymen are level 30-31 and can cast Sneak while out of combat, so they are often stealthed and hard to spot."] = "Le Syndicat occupe la ferme au nord-ouest de {object:2685}. Un {npc:217589} rampe dans la ferme : attrapez-en un avec le kit de démarrage en entomologie de {npc:217412}, puis cochez-le.\nAttention : les malandrins du Syndicat sont de niveau 30-31 et peuvent lancer Camouflage hors combat, ils sont donc souvent camouflés et difficiles à repérer.",
 	-- {npc:217589} Hay Weevil · {quest:93176} My Little Friends
 	["{npc:217589}: catch it, for {quest:93176}"] = "{npc:217589} : capturez-le, pour {quest:93176}",
 
@@ -115,7 +115,7 @@ return {
 	["Escort the professor to the beach north of the cove and guard him while he works; naga attack in waves.\nCareful: The ambush is two level 40 water elementals, and they are immune to frost. If the fight happens inside the cave, the professor joins in instead of working and further elementals keep appearing; holding the elementals at the cave entrance, away from him, lets him finish with only the first two to deal with."] = "Escortez le professeur jusqu'à la plage au nord de la crique et protégez-le pendant qu'il travaille ; les nagas attaquent par vagues.\nAttention : l'embuscade se compose de deux élémentaires d'eau de niveau 40, insensibles au givre. Si le combat a lieu dans la grotte, le professeur s'y joint au lieu de travailler et d'autres élémentaires continuent d'apparaître ; retenir les élémentaires à l'entrée de la grotte, loin de lui, lui permet de terminer avec seulement les deux premiers à affronter.",
 
 	-- Step 32: The Drowned Reef: kill these as you meet them
-	["The Drowned Reef: kill these as you meet them"] = "Le Récif Noyé : tuez-les au fur et à mesure",
+	["The Drowned Reef: kill these as you meet them"] = "Le récif englouti : tuez-les au fur et à mesure",
 	["The two wrecks lie in the bay west of the cove. The charts and logs are inside them; the gems lie on the sea floor around them. Daggerspine naga swim the whole bay."] = "Les deux épaves reposent dans la baie à l'ouest de la crique. Les cartes et les journaux sont à l'intérieur ; les gemmes gisent au fond de la mer autour. Des nagas Daguéchine nagent dans toute la baie.",
 	-- {npc:2595} Daggerspine Raider
 	["{npc:2595}, underwater"] = "{npc:2595}, sous l'eau",
@@ -147,23 +147,23 @@ return {
 	["{item:5040}; below ground"] = "{item:5040} ; sous terre",
 
 	-- Step 36: Shards of Myzrael
-	["Head north past Go'Shek Farm; the shards glitter on the hill by the Circle of East Binding."] = "Allez au nord passé la ferme de Go'Shek ; les éclats brillent sur la colline près du Cercle de Liaison Est.",
+	["Head north past Go'Shek Farm; the shards glitter on the hill by the Circle of East Binding."] = "Allez au nord après la Ferme de Go'Shek ; les éclats brillent sur la colline près du Cercle de lien oriental.",
 	["Only if Gluggle gave you the pendant in Stranglethorn"] = "Seulement si Gluggle vous a donné le pendentif à Strangleronce",
 
 	-- Step 37: Drywhisker Gorge: kill these as you meet them
-	["Drywhisker Gorge: kill these as you meet them"] = "Gorge Sèche-Moustache : tuez-les au fur et à mesure",
-	["The Drywhisker kobolds dig in the gorge east of Hammerfall (Horde); skirt the town to the north. They drop both the motes and Krazek's ore.\nCareful: Every kobold type runs off for help when low on health (Kobolds at 30%, Surveyors and Diggers at 15%), which can pull more of them."] = "Les kobolds Sèche-Moustache creusent dans la gorge à l'est de Hammerfall (Horde) ; contournez la ville par le nord. Ils laissent tomber à la fois les particules et le minerai de Krazek.\nAttention : chaque type de kobold s'enfuit chercher de l'aide quand sa vie est basse (kobolds à 30 %, arpenteurs et foreurs à 15 %), ce qui peut en attirer d'autres.",
+	["Drywhisker Gorge: kill these as you meet them"] = "Gorge des Sèches-moustaches : tuez-les au fur et à mesure",
+	["The Drywhisker kobolds dig in the gorge east of Hammerfall (Horde); skirt the town to the north. They drop both the motes and Krazek's ore.\nCareful: Every kobold type runs off for help when low on health (Kobolds at 30%, Surveyors and Diggers at 15%), which can pull more of them."] = "Les kobolds Sèche-moustache creusent dans la gorge à l'est de Trépas-d'Orgrim (Horde) ; contournez la ville par le nord. Ils laissent tomber à la fois les particules et le minerai de Krazek.\nAttention : chaque type de kobold s'enfuit chercher de l'aide quand sa vie est basse (kobolds à 30 %, géomètres et terrassiers à 15 %), ce qui peut en attirer d'autres.",
 	-- {item:4435} Mote of Myzrael · {npc:2572} Drywhisker Kobold · {npc:2573} Drywhisker Surveyor · {npc:2574} Drywhisker Digger
 	["{item:4435} from {npc:2572}, {npc:2573} and {npc:2574}, by this stop"] = "{item:4435} depuis {npc:2572}, {npc:2573} et {npc:2574}, à cet arrêt",
 
 	-- Step 38: Iridescent Shards
-	["The shards lie at the far end of Drywhisker Gorge."] = "Les éclats se trouvent au fond de la Gorge Sèche-Moustache.",
+	["The shards lie at the far end of Drywhisker Gorge."] = "Les éclats se trouvent au fond de la Gorge des Sèches-moustaches.",
 	["Below ground"] = "Sous terre",
 
 	-- Step 39: Stones of Binding
 	-- {object:2685} Refuge Pointe · {object:2702} Stone of Inner Binding
 	-- plural, as words: Burning Exiles = {npc:2760} Burning Exile · Thundering Exiles = {npc:2762} Thundering Exile · Cresting Exiles = {npc:2761} Cresting Exile
-	["Each key lies at one of the Highlands' standing-stone circles: east of the shards, near {object:2685} and in the west. The {object:2702} stands west of {object:2685}.\nCareful: Each center stone is guarded by around three elementals near level 39 that attack together if you click the stone without clearing them: Burning Exiles at West, Thundering Exiles at Outer, Cresting Exiles at East."] = "Chaque clé se trouve dans l'un des cercles de pierres dressées des Hautes-terres : à l'est des éclats, près de {object:2685} et à l'ouest. Le {object:2702} se trouve à l'ouest de {object:2685}.\nAttention : chaque pierre centrale est gardée par environ trois élémentaires de niveau 39 environ qui attaquent ensemble si vous cliquez sur la pierre sans les avoir éliminés : Exilés ardents à l'Ouest, Exilés tonnants à l'Extérieur, Exilés déferlants à l'Est.",
+	["Each key lies at one of the Highlands' standing-stone circles: east of the shards, near {object:2685} and in the west. The {object:2702} stands west of {object:2685}.\nCareful: Each center stone is guarded by around three elementals near level 39 that attack together if you click the stone without clearing them: Burning Exiles at West, Thundering Exiles at Outer, Cresting Exiles at East."] = "Chaque clé se trouve dans l'un des cercles de pierres dressées des Hautes-terres : à l'est des éclats, près de {object:2685} et à l'ouest. Le {object:2702} se trouve à l'ouest de {object:2685}.\nAttention : chaque pierre centrale est gardée par environ trois élémentaires de niveau 39 environ qui attaquent ensemble si vous cliquez sur la pierre sans les avoir éliminés : exilés ardents au cercle occidental, exilés foudroyants au cercle extérieur, exilés grimpeurs au cercle oriental.",
 
 	-- Step 40: Quae
 	-- {object:2685} Refuge Pointe · {npc:2712} Quae · {npc:2713} Kinelory
@@ -173,7 +173,7 @@ return {
 	["The courier walks the road west of Go'Shek Farm with two guards; pull them off the road."] = "Le courrier emprunte la route à l'ouest de la ferme de Go'Shek avec deux gardes ; attirez-les hors de la route.",
 
 	-- Step 42: Circle of Outer Binding
-	["Circle of Outer Binding"] = "Cercle de Liaison Extérieur",
+	["Circle of Outer Binding"] = "Cercle de lien extérieur",
 
 	-- Step 43: Quae and Kinelory
 	-- {npc:2712} Quae · {npc:2713} Kinelory
@@ -190,7 +190,7 @@ return {
 	["For {npc:2711} in {quest:538}"] = "Pour {npc:2711} dans {quest:538}",
 
 	-- Step 46: Circle of West Binding
-	["Circle of West Binding"] = "Cercle de Liaison Ouest",
+	["Circle of West Binding"] = "Cercle de lien occidental",
 
 	-- Step 48: Kor'gresh Coldrage
 	-- {npc:2793} Kor'gresh Coldrage
@@ -203,14 +203,14 @@ return {
 	["{object:2685} flight master"] = "Maître de vol de {object:2685}",
 
 	-- Step 52: Gavin's Naze
-	["Gavin's Naze"] = "Cap de Gavin",
+	["Gavin's Naze"] = "Promontoire de Gavin",
 	-- {quest:538} Southshore · {npc:2306} Baron Vardus
-	["Follow the road north out of {quest:538} into the mountains. Mountain lions roam the slopes; the Syndicate in Strahnbrad wear the signet rings, and {npc:2306} walks the manor grounds on the north side of town."] = "Suivez la route vers le nord depuis {quest:538} jusqu'aux montagnes. Des lions des montagnes rodent sur les pentes ; le Syndicat à Strahnbrad porte les anneaux sigillaires, et {npc:2306} se promène dans le domaine du manoir au nord de la ville.",
+	["Follow the road north out of {quest:538} into the mountains. Mountain lions roam the slopes; the Syndicate in Strahnbrad wear the signet rings, and {npc:2306} walks the manor grounds on the north side of town."] = "Suivez la route vers le nord depuis {quest:538} jusqu'aux montagnes. Des lions des montagnes rôdent sur les pentes ; les membres du Syndicat à Strahnbrande portent les chevalières, et {npc:2306} se promène dans le domaine du manoir au nord de la ville.",
 
 	-- Step 53: Ruins of Alterac: kill these as you meet them
 	["Ruins of Alterac: kill these as you meet them"] = "Ruines d'Alterac : tuez-les au fur et à mesure",
 	-- plural, as words: Argus Shadow Mages = {npc:2318} Argus Shadow Mage · Crushridge Warmongers = {npc:2287} Crushridge Warmonger
-	["The tomes lie in the ruined keep west of Strahnbrad; Argus Shadow Mages hold the ruins.\nCareful: Crushridge Warmongers call nearby allies within 15 yd once they fall below half health."] = "Les tomes se trouvent dans le donjon en ruine à l'ouest de Strahnbrad ; des mages de l'ombre Argus occupent les ruines.\nAttention : les belliqueux Crêtecrin appellent les alliés proches dans un rayon de 15 m une fois leur vie descendue sous la moitié.",
+	["The tomes lie in the ruined keep west of Strahnbrad; Argus Shadow Mages hold the ruins.\nCareful: Crushridge Warmongers call nearby allies within 15 yd once they fall below half health."] = "Les tomes se trouvent dans le donjon en ruine à l'ouest de Strahnbrande ; des mages de l'ombre d'Argus occupent les ruines.\nAttention : les combattants Cassecrête appellent les alliés proches dans un rayon de 15 m une fois leur vie descendue sous la moitié.",
 	-- {item:3658} Recovered Tome
 	["{item:3658}: Crushridge ogres"] = "{item:3658} : ogres Cassecrête",
 	-- {item:3659} Worn Leather Book · {object:1760} Weathered Bookcase
@@ -221,14 +221,14 @@ return {
 	["These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:2417} is a level 40 elite: most classes solo it at level 42, but you may need help. Skip it if you are alone: the route has you grind the XP back."] = "Ce sont des monstres élites : il est conseillé de se grouper, cherchez des joueurs avec qui le faire. {npc:2417} est un élite de niveau 40 : la plupart des classes le battent seules au niveau 42, mais vous aurez peut-être besoin d'aide. Passez-le si vous êtes seul : l'itinéraire vous fait regagner l'expérience en tuant des monstres.",
 
 	-- Step 55: Strahnbrad: kill these as you meet them
-	["Strahnbrad: kill these as you meet them"] = "Strahnbrad : tuez-les au fur et à mesure",
+	["Strahnbrad: kill these as you meet them"] = "Strahnbrande : tuez-les au fur et à mesure",
 	-- {npc:2320} Nagaz
-	["Careful: Syndicate Spies and Assassins can be stealthed. Assassins also poison you.\nCareful: About three stealthed Syndicate mobs are inside {npc:2320}'s house. {npc:2320} does not join when they are pulled, and a ranged attack through the doorway brings him out by himself."] = "Attention : les Espions et les Assassins du Syndicat peuvent être camouflés. Les Assassins vous empoisonnent aussi.\nAttention : environ trois membres du Syndicat camouflés se trouvent dans la maison de {npc:2320}. {npc:2320} ne se joint pas au combat quand vous les attirez, et une attaque à distance par la porte le fait sortir seul.",
+	["Careful: Syndicate Spies and Assassins can be stealthed. Assassins also poison you.\nCareful: About three stealthed Syndicate mobs are inside {npc:2320}'s house. {npc:2320} does not join when they are pulled, and a ranged attack through the doorway brings him out by himself."] = "Attention : les espions et les assassins du Syndicat peuvent être camouflés. Les assassins vous empoisonnent aussi.\nAttention : environ trois membres du Syndicat camouflés se trouvent dans la maison de {npc:2320}. {npc:2320} ne se joint pas au combat quand vous les attirez, et une attaque à distance par la porte le fait sortir seul.",
 
 	-- Step 56: Crushridge ogres
 	["Crushridge ogres"] = "Ogres Cassecrête",
 	-- {item:3706} Ensorcelled Parchment · {npc:2320} Nagaz · {quest:537} Dark Council
-	["The Crushridge ogres hold the hills north of Strahnbrad. Farther north, a worn wooden chest holds the {item:3706}; {npc:2320} of the {quest:537} stands right by it."] = "Les ogres Crêtecrin occupent les collines au nord de Strahnbrad. Plus au nord, une caisse en bois usée contient le {item:3706} ; {npc:2320} du {quest:537} se tient juste à côté.",
+	["The Crushridge ogres hold the hills north of Strahnbrad. Farther north, a worn wooden chest holds the {item:3706}; {npc:2320} of the {quest:537} stands right by it."] = "Les ogres Cassecrête occupent les collines au nord de Strahnbrande. Plus au nord, un coffre en bois usé contient le {item:3706} ; {npc:2320} du {quest:537} se tient juste à côté.",
 	["Inside"] = "À l'intérieur",
 
 	-- Step 58: Dalaran

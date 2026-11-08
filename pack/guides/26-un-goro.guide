@@ -7,7 +7,7 @@ folder Group Alliance
 faction Alliance
 levels 49-50
 zone Un'Goro Crater
-next forever/alliance/50-60/01-burning-steppes
+next groupe-alliance/27-steppes-ardentes
 
 # Forge's route search orders the quests of this guide and its guide writer writes the steps.
 # Fixes go into data/route-fixes.json, data/guide-fixes.json or forever-db/corrections, never

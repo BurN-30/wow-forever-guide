@@ -23,7 +23,7 @@ return {
 	-- Step 2: Sentry Point
 	-- {object:21053} Sentry Point
 	-- plural, as words: Mudrock Burrowers = {npc:4398} Mudrock Burrower
-	["Follow the road north-west out of Theramore to the watchtower at {object:21053}. Mudrock Burrowers roam the marsh around it."] = "Suivez la route au nord-ouest depuis Theramore jusqu'à la tour de guet à {object:21053}. Des fouisseurs de boue rôdent dans le marais autour.",
+	["Follow the road north-west out of Theramore to the watchtower at {object:21053}. Mudrock Burrowers roam the marsh around it."] = "Suivez la route au nord-ouest depuis Theramore jusqu'à la tour de guet à {object:21053}. Des creuseuses Rochefange rôdent dans le marais autour.",
 
 	-- Step 3: Archmage Tervosh
 	-- {object:21057} Foothold Citadel
@@ -35,7 +35,7 @@ return {
 	["{npc:4794}, inside"] = "{npc:4794}, à l'intérieur",
 
 	-- Step 7: Swamplight Manor
-	["Swamplight Manor"] = "Manoir de Marécagelum",
+	["Swamplight Manor"] = "Manoir des Flammeroles",
 	["Take the road north to the ruined manor; Jarl lives in the shack beside it and the loose dirt is at the corner of the house."] = "Prenez la route vers le nord jusqu'au manoir en ruine ; Jarl vit dans la cabane voisine et la terre meuble se trouve à l'angle de la maison.",
 	-- {quest:1218} Soothing Spices
 	["{quest:1218}, for \"Swamp Eye\" Jarl"] = "{quest:1218}, pour « Œil-des-marais » Jarl",
@@ -51,7 +51,7 @@ return {
 	["{npc:4966} holds the tower with a few deserters. He turns on you: beat him until he yields.\nCareful: Hendel has two guards who join the fight when he turns hostile. The guards flee once he surrenders."] = "{npc:4966} tient la tour avec quelques déserteurs. Il se retourne contre vous : battez-le jusqu'à ce qu'il se rende.\nAttention : Hendel a deux gardes qui se joignent au combat quand il devient hostile. Les gardes s'enfuient dès qu'il se rend.",
 
 	-- Step 10: Darkmist Cavern
-	["Darkmist Cavern"] = "Caverne de Brume-noire",
+	["Darkmist Cavern"] = "Caverne de Sombrebrume",
 	-- plural, as words: Darkmist Lurkers = {npc:4377} Darkmist Lurker
 	["The Darkmist spiders nest around the cavern in the north-west of the marsh; every spider drops eyes.\nCareful: Darkmist Lurkers move about stealthed and use poison once in combat. The spiders stand close together, so adds are common; pulling single targets from the outer edge cuts down on them."] = "Les araignées Sombrebrume nichent autour de la caverne au nord-ouest du marais ; toutes lâchent des yeux.\nAttention : les Rôdeuses de Sombrebrume se déplacent camouflées et empoisonnent une fois en combat. Les araignées se tiennent près les unes des autres, les renforts sont donc fréquents ; attirer des cibles isolées depuis la bordure les limite.",
 
@@ -75,7 +75,7 @@ return {
 
 	-- Step 14: Mirefin murlocs
 	["Mirefin murlocs"] = "Murlocs Aileron boueux",
-	["The Mirefin murlocs crowd the north coast past Swamplight Manor; finish the tongues on the tortoises beside them."] = "Les murlocs Mirefin encombrent la côte nord au-delà du manoir de Marécagelum ; terminez les langues sur les tortues à côté d'eux.",
+	["The Mirefin murlocs crowd the north coast past Swamplight Manor; finish the tongues on the tortoises beside them."] = "Les murlocs Aileron boueux encombrent la côte nord au-delà du Manoir des Flammeroles ; terminez les langues sur les tortues à côté d'eux.",
 
 	-- Step 15: Swamplight Manor
 	-- {item:3853} Moonsteel Broadsword
@@ -87,7 +87,7 @@ return {
 
 	-- Step 19: The Affray
 	-- {npc:6236} Klannoc Macleod · {npc:6238} Big Will
-	["On the ride north to Ratchet, Fray Island lies off the Merchant Coast south of the town: wade over the sand bar shallows. {npc:6236} sends four challengers and then {npc:6238} (level 33) at you, one at a time."] = "Sur la route vers le nord jusqu'à Cabestan, l'île de Fray se trouve au large de la côte des Marchands au sud de la ville : traversez les bas-fonds du banc de sable. {npc:6236} envoie quatre challengers puis {npc:6238} (niveau 33) contre vous, un à la fois.",
+	["On the ride north to Ratchet, Fray Island lies off the Merchant Coast south of the town: wade over the sand bar shallows. {npc:6236} sends four challengers and then {npc:6238} (level 33) at you, one at a time."] = "Sur la route vers le nord jusqu'à Cabestan, l'île de la Dispute se trouve au large de la Côte des marchands, au sud de la ville : traversez les bas-fonds du banc de sable. {npc:6236} envoie quatre adversaires puis {npc:6238} (niveau 33) contre vous, un à la fois.",
 	-- {npc:6238} Big Will
 	["Defeat the challengers and {npc:6238}"] = "Vainquez les adversaires et {npc:6238}",
 	-- {npc:6236} Klannoc Macleod
@@ -114,9 +114,9 @@ return {
 
 	-- Step 25: Riding at 40
 	-- {npc:265756} Genn Fairweather
-	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. Skyborne learn it from {npc:265756}, the stablemaster and riding trainer at the Fairweather Stables in Valanaar on Zephras Isle, who also sells the Galestriders: the skyboat to the isle leaves the north side of Dalaran about every five minutes. Collectibles, Mounts · Level 40 lists the Galestriders."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. Les Célestes l'apprennent auprès de {npc:265756}, l'écuyer et maître de monte aux écuries de Bellebrise à Valanaar sur l'île de Zephras, qui vend aussi les galestriders : le bateau céleste pour l'île part du côté nord de Dalaran environ toutes les cinq minutes. Collectibles, Montures · Niveau 40 liste les galestriders.",
+	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. Skyborne learn it from {npc:265756}, the stablemaster and riding trainer at the Fairweather Stables in Valanaar on Zephras Isle, who also sells the Galestriders: the skyboat to the isle leaves the north side of Dalaran about every five minutes. Collectibles, Mounts · Level 40 lists the Galestriders."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. Les Skyborne l'apprennent auprès de {npc:265756}, le maître des écuries et maître de monte aux Écuries Beautemps à Valanaar sur l'Île de Zéphras, qui vend aussi les trotteurs des trombes : le bateau céleste pour l'île part du côté nord de Dalaran environ toutes les cinq minutes. Collectibles, Montures · Niveau 40 liste les trotteurs des trombes.",
 	-- {npc:265756} Genn Fairweather
-	["Riding and Galestriders: {npc:265756}, at the Fairweather Stables in Valanaar on Zephras Isle."] = "Monte et galestriders : {npc:265756}, aux écuries de Bellebrise à Valanaar sur l'île de Zephras.",
+	["Riding and Galestriders: {npc:265756}, at the Fairweather Stables in Valanaar on Zephras Isle."] = "Monte et trotteurs des trombes : {npc:265756}, aux Écuries Beautemps à Valanaar sur l'Île de Zéphras.",
 	["Skyboat to Zephras Isle: the north side of Dalaran, about every five minutes."] = "Bateau céleste pour l'île de Zephras : le côté nord de Dalaran, environ toutes les cinq minutes.",
 
 	-- Step 26: Boat to Booty Bay
@@ -160,9 +160,9 @@ return {
 	["{npc:2624} swims off the north-west coast, on the northern loop"] = "{npc:2624} nage au large de la côte nord-ouest, lors de la boucle nord",
 
 	-- Step 52: Wild Shore: kill these as you meet them
-	["Wild Shore: kill these as you meet them"] = "Rivage sauvage : tuez-les au fur et à mesure",
+	["Wild Shore: kill these as you meet them"] = "Le Rivage cruel : tuez-les au fur et à mesure",
 	-- {item:3910} Snuff · {npc:2493} Dizzy One-Eye · {object:3204} Booty Bay
-	["Every Bloodsail drops {item:3910} and one of them carries {npc:2493}'s eye; the Swashbucklers walk the shore just north of town. The charts and orders lie in the pirate camp on the Wild Shore, south of {object:3204}."] = "Chaque voile-sang laisse tomber {item:3910} et l'un d'eux porte l'œil de {npc:2493} ; les flibustiers arpentent le rivage juste au nord de la ville. Les cartes et les ordres se trouvent dans le camp de pirates sur le rivage sauvage, au sud de {object:3204}.",
+	["Every Bloodsail drops {item:3910} and one of them carries {npc:2493}'s eye; the Swashbucklers walk the shore just north of town. The charts and orders lie in the pirate camp on the Wild Shore, south of {object:3204}."] = "Chaque pirate de la Voile sanglante laisse tomber {item:3910} et l'un d'eux porte l'œil de {npc:2493} ; les bretteurs arpentent le rivage juste au nord de la ville. Les cartes et les ordres se trouvent dans le camp de pirates du Rivage cruel, au sud de {object:3204}.",
 
 	-- Step 53: Mistvale Giblets on the way
 	-- {item:3919} Mistvale Giblets
@@ -174,7 +174,7 @@ return {
 	-- plural, as words: Elder Mistvale Gorillas = {npc:1557} Elder Mistvale Gorilla
 	["Ride inland to the Mistvale gorilla hills. Elder Mistvale Gorillas drop the giblets; {npc:1449} sits among them."] = "Chevauchez vers l'intérieur jusqu'aux collines des gorilles de Valbrume. Les Anciens gorilles de Valbrume laissent tomber les abats ; {npc:1449} est assis parmi eux.",
 	-- {npc:1449} Witch Doctor Unbagwa
-	["{npc:1449}, inside Spirit Den"] = "{npc:1449}, à l'intérieur de la tanière des esprits",
+	["{npc:1449}, inside Spirit Den"] = "{npc:1449}, à l'intérieur de l'Antre des esprits",
 
 	-- Step 56: Unbagwa's ritual
 	["Unbagwa's ritual"] = "Le rituel d'Unbagwa",
@@ -195,7 +195,7 @@ return {
 	-- Step 60: The Bloodsail captains
 	["The Bloodsail captains"] = "Les capitaines de la Voile sanglante",
 	-- {npc:2546} Fleet Master Firallon
-	["The captains stand on the ships anchored off the Wild Shore, each with a crew of 42-45 pirates: Stillwater (45) and Keelhaul (46) on the nearer decks, {npc:2546} (48) on the flagship. At 42 this is a fight for a group or for the end of the guide; clear each deck first if you go. Cortello's scroll lies on the wreck by the shore."] = "Les capitaines se tiennent sur les navires ancrés au large du rivage sauvage, chacun avec un équipage de 42-45 pirates : Eau-plate (45) et Carène (46) sur les ponts les plus proches, {npc:2546} (48) sur le vaisseau amiral. Au niveau 42, c'est un combat pour un groupe ou pour la fin du guide ; nettoyez chaque pont d'abord si vous y allez. Le parchemin de Cortello gît sur l'épave près du rivage.",
+	["The captains stand on the ships anchored off the Wild Shore, each with a crew of 42-45 pirates: Stillwater (45) and Keelhaul (46) on the nearer decks, {npc:2546} (48) on the flagship. At 42 this is a fight for a group or for the end of the guide; clear each deck first if you go. Cortello's scroll lies on the wreck by the shore."] = "Les capitaines se tiennent sur les navires ancrés au large du Rivage cruel, chacun avec un équipage de pirates de niveau 42-45 : Stillwater (45) et Keelhaul (46) sur les ponts les plus proches, {npc:2546} (48) sur le vaisseau amiral. Au niveau 42, c'est un combat pour un groupe ou pour la fin du guide ; nettoyez chaque pont d'abord si vous y allez. Le parchemin de Cortello gît sur l'épave près du rivage.",
 	-- {zone:1435} Swamp of Sorrows
 	["for the {zone:1435} later"] = "pour {zone:1435} plus tard",
 
@@ -238,7 +238,7 @@ return {
 	-- Step 68: Ruins of Zul'Mamwe: kill these as you meet them
 	["Ruins of Zul'Mamwe: kill these as you meet them"] = "Ruines de Zul'Mamwe : tuez-les au fur et à mesure",
 	-- plural, as words: Shadowmaw Panthers = {npc:684} Shadowmaw Panther
-	["The Skullsplitter trolls hold the ruins just east of the mine; any of them can drop tusks, their panthers always do.\nFollow the road north-east to the Venture Co. camp at the Crystalvein Mine; the miners, surveyors and foremen drop the crystals.\nCareful: Stealthed Shadowmaw Panthers and Stranglethorn Tigresses roam the area around the camp."] = "Les trolls Brisecrâne occupent les ruines juste à l'est de la mine ; n'importe lequel peut laisser tomber des défenses, leurs panthères le font toujours.\nSuivez la route au nord-est jusqu'au camp de la KapitalRisk à la mine de Cristalveine ; les mineurs, arpenteurs et contremaîtres laissent tomber les cristaux.\nAttention : des panthères gueule-d'ombre camouflées et des tigresses de Strangleronce rôdent dans la zone autour du camp.",
+	["The Skullsplitter trolls hold the ruins just east of the mine; any of them can drop tusks, their panthers always do.\nFollow the road north-east to the Venture Co. camp at the Crystalvein Mine; the miners, surveyors and foremen drop the crystals.\nCareful: Stealthed Shadowmaw Panthers and Stranglethorn Tigresses roam the area around the camp."] = "Les trolls Skullsplitter occupent les ruines juste à l'est de la mine ; n'importe lequel peut laisser tomber des défenses, leurs panthères le font toujours.\nSuivez la route au nord-est jusqu'au camp de la KapitalRisk à la Mine aux cristaux ; les mineurs, géomètres et contremaîtres laissent tomber les cristaux.\nAttention : des panthères Ombregueule camouflées et des tigresses de Strangleronce rôdent dans la zone autour du camp.",
 
 	-- Step 69: Booty Bay
 	-- {npc:2498} Crank Fizzlebub · {zone:1441} Thousand Needles
@@ -280,7 +280,7 @@ return {
 	-- {npc:1141} Angus Stern · {object:2169} Blue Recluse · {npc:5384} Brohann Caskbelly · {object:28027} Dwarven District
 	["{npc:1141} cooks in the {object:2169}; {npc:5384} is in the {object:28027}."] = "{npc:1141} cuisine au {object:2169} ; {npc:5384} est dans {object:28027}.",
 	-- {npc:5694} High Sorcerer Andromath
-	["{npc:5694}: for Nethergarde Keep, keep it"] = "{npc:5694} : pour le poste de la Garde-du-Néant, gardez-le",
+	["{npc:5694}: for Nethergarde Keep, keep it"] = "{npc:5694} : pour Rempart-du-Néant, gardez-le",
 
 	-- Step 84: Stormwind
 	-- {npc:1440} Milton Sheaf · {object:2117} Stormwind Keep
@@ -306,7 +306,7 @@ return {
 	["{zone:1453} flight master"] = "Maître de vol de {zone:1453}",
 
 	-- Step 91: Misty Valley
-	["Misty Valley"] = "Vallée brumeuse",
+	["Misty Valley"] = "Vallée des brumes",
 	["The scroll lies in the marsh north of Biggs. The Swampwalkers north of it can drop Khadgar's essays."] = "Le parchemin se trouve dans le marais au nord de Biggs. Les Maraistreurs au nord peuvent laisser tomber les essais de Khadgar.",
 	["The riddle's next scroll lies in western Dustwallow: skip it."] = "Le parchemin suivant de l'énigme se trouve dans l'ouest d'Âprefange : passez-le.",
 
@@ -365,14 +365,14 @@ return {
 	-- Step 111: The sunken temple
 	["The sunken temple"] = "Le temple englouti",
 	-- plural, as words: Tangled Horrors = {npc:766} Tangled Horror
-	["Ride east; the Tangled Horrors along the way also drop the essays. Search the edge of the Pool of Tears, where the temple's ruins break the water."] = "Allez vers l'est ; les horreurs emmêlées sur le chemin laissent aussi tomber les essais. Fouillez le bord du bassin des Larmes, où les ruines du temple émergent de l'eau.",
+	["Ride east; the Tangled Horrors along the way also drop the essays. Search the edge of the Pool of Tears, where the temple's ruins break the water."] = "Allez vers l'est ; les horreurs enchevêtrées sur le chemin laissent aussi tomber les essais. Fouillez le bord du Bassin des larmes, où les ruines du temple émergent de l'eau.",
 
 	-- Step 112: Misty Reed Strand
-	["Misty Reed Strand"] = "Rivage des roseaux brumeux",
+	["Misty Reed Strand"] = "Grève de Brumejonc",
 	["The driftwood washes up along the eastern shore."] = "Le bois flotté s'échoue le long de la rive est.",
 
 	-- Step 113: Watcher Biggs
-	["for Nethergarde Keep: keep it"] = "pour le poste de la Garde-du-Néant : gardez-le",
+	["for Nethergarde Keep: keep it"] = "pour Rempart-du-Néant : gardez-le",
 
 	-- Step 116: Stormwind
 	-- {npc:5635} Falstad Wildhammer
@@ -408,7 +408,7 @@ return {
 	["{zone:1455} flight master"] = "Maître de vol de {zone:1455}",
 
 	-- Step 125: Hammertoe's Digsite
-	["Hammertoe's Digsite"] = "Site de fouilles de Marteleur",
+	["Hammertoe's Digsite"] = "Site de fouilles d'Hammertoe",
 
 	-- Step 126: Hammertoe's Digsite
 	-- {zone:1432} Loch Modan · {zone:1418} Badlands · {npc:2860} Sigrun Ironhew
@@ -416,11 +416,11 @@ return {
 
 	-- Step 127: Garek
 	-- {npc:2888} Garek
-	["{npc:2888} camps by himself in Dustwind Gulch, south-east of the digsite."] = "{npc:2888} campe seul dans le ravin de Poussièvent, au sud-est du site de fouilles.",
+	["{npc:2888} camps by himself in Dustwind Gulch, south-east of the digsite."] = "{npc:2888} campe seul dans le Goulet de la Bourrasque, au sud-est du site de fouilles.",
 
 	-- Step 129: Riding at 40
 	-- {npc:4772} Ultham Ironhorn · {zone:1432} Loch Modan · {npc:1261} Veron Amberstill
-	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. {npc:4772} teaches Dwarves at Amberstill Ranch, east of Kharanos on the road to {zone:1432}, beside {npc:1261}'s rams. Forever may let any race learn from any riding trainer (unconfirmed). Collectibles, Mounts · Level 40 lists every colour."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. {npc:4772} enseigne aux nains au ranch Amberstill, à l'est de Kharanos sur la route vers {zone:1432}, à côté des béliers de {npc:1261}. Forever pourrait permettre à n'importe quelle race d'apprendre auprès de n'importe quel maître de monte (non confirmé). Collectibles, Montures · Niveau 40 liste toutes les couleurs.",
+	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. {npc:4772} teaches Dwarves at Amberstill Ranch, east of Kharanos on the road to {zone:1432}, beside {npc:1261}'s rams. Forever may let any race learn from any riding trainer (unconfirmed). Collectibles, Mounts · Level 40 lists every colour."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. {npc:4772} enseigne aux nains à la Ferme des Amberstill, à l'est de Kharanos sur la route vers {zone:1432}, à côté des béliers de {npc:1261}. Forever pourrait permettre à n'importe quelle race d'apprendre auprès de n'importe quel maître de monte (non confirmé). Collectibles, Montures · Niveau 40 liste toutes les couleurs.",
 	-- {npc:1261} Veron Amberstill
 	["{npc:1261}: other colours, 20g"] = "{npc:1261} : autres couleurs, 20 po",
 

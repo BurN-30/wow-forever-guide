@@ -56,7 +56,7 @@ return {
 	["Ride east to the Gordunni camp in the hills south-east of the yeti valley: Warlocks and Shaman hold the camp, Brutes wander the slopes around it and further north."] = "Chevauchez vers l'est jusqu'au camp Gordunni dans les collines au sud-est de la vallée des yétis : des Démonistes Gordunni et des Chamans Gordunni tiennent le camp, des Brutes Gordunni errent sur les pentes alentour et plus au nord.",
 
 	-- Step 14: Feral Scar Vale
-	["Feral Scar Vale"] = "Val de la Cicatrice farouche",
+	["Feral Scar Vale"] = "Val des Griffes farouches",
 	-- {npc:5346} Bloodroar the Stalker
 	["Ride north into the yeti valley. Every Feral Scar yeti can drop a thick hide; {npc:5346} (level 48) prowls the middle."] = "Chevauchez vers le nord dans la vallée des yétis. Tout Yéti Griffe farouche peut laisser tomber une peau épaisse ; {npc:5346} (niveau 48) rôde au milieu.",
 
@@ -67,10 +67,10 @@ return {
 	["{npc:7879}, upstairs"] = "{npc:7879}, à l'étage",
 
 	-- Step 18: Isle of Dread
-	["Isle of Dread"] = "Île de l'Effroi",
+	["Isle of Dread"] = "Île de l'effroi",
 	-- {npc:8136} Lord Shalzaru
 	-- plural, as words: Hatecrest Serpent Guards = {npc:5333} Hatecrest Serpent Guard
-	["The Isle of Dread is the island just south of Sardor Isle: swim over. Hatecrest Serpent Guards and Sorceresses hold it; {npc:8136} (level 47) waits in the cave at its south end. Pull his guards first."] = "L'île de l'Effroi est l'île juste au sud de l'île de Sardor : nagez jusqu'à elle. Des gardes serpents et des sorcières Hatecrest l'occupent ; {npc:8136} (niveau 47) attend dans la grotte à son extrémité sud. Tirez d'abord ses gardes.",
+	["The Isle of Dread is the island just south of Sardor Isle: swim over. Hatecrest Serpent Guards and Sorceresses hold it; {npc:8136} (level 47) waits in the cave at its south end. Pull his guards first."] = "L'Île de l'effroi est l'île juste au sud de l'île de Sardor : rejoignez-la à la nage. Des gardes-serpents et des ensorceleuses Hainecrête l'occupent ; {npc:8136} (niveau 47) attend dans la grotte à son extrémité sud. Attirez d'abord ses gardes.",
 	-- {item:9248} Mysterious Relic
 	["{item:9248}; below ground"] = "{item:9248} ; sous terre",
 
@@ -82,7 +82,7 @@ return {
 	["Grimtotem camp"] = "Le camp Totem sinistre",
 	-- {zone:1444} Feralas · {npc:7956} Kindal Moonweaver
 	-- plural, as words: Sprite Darters = {npc:5278} Sprite Darter
-	["Boat to the Forgotten Coast and ride east across {zone:1444} to the Grimtotem camp north of the road. {npc:7956} waits outside it; free the Sprite Darters from the pen in the middle and keep {npc:7956} and at least six of them alive."] = "Prenez le bateau pour la Côte oubliée et traversez les {zone:1444} vers l'est jusqu'au camp Grimtotem au nord de la route. {npc:7956} attend à l'extérieur ; libérez les traqueurs feutrés de l'enclos au centre et gardez {npc:7956} et au moins six d'entre eux en vie.",
+	["Boat to the Forgotten Coast and ride east across {zone:1444} to the Grimtotem camp north of the road. {npc:7956} waits outside it; free the Sprite Darters from the pen in the middle and keep {npc:7956} and at least six of them alive."] = "Prenez le bateau pour la Côte oubliée et traversez les {zone:1444} vers l'est jusqu'au camp du Totem sinistre au nord de la route. {npc:7956} attend à l'extérieur ; libérez les fées fléchetteuses de l'enclos au centre et gardez {npc:7956} et au moins six d'entre elles en vie.",
 
 	-- Step 24: Grimtotem tauren
 	["Grimtotem tauren"] = "Taurens Totem sinistre",
@@ -105,7 +105,7 @@ return {
 	["Ride back west along the road, then north into the Rage Scar hills. Every yeti here can drop a hide; one may drop a {quest:7735}, which {npc:7852} pays for too."] = "Revenez vers l'ouest par la route, puis montez au nord dans les collines du Repaire des Griffes féroces. Tout yéti ici peut laisser tomber une peau ; l'un d'eux peut donner une {quest:7735}, que {npc:7852} McGrubben paie aussi.",
 
 	-- Step 28: Rage Scar Hold
-	["Rage Scar Hold"] = "Fort de la Cicatrice de rage",
+	["Rage Scar Hold"] = "Repaire des Griffes féroces",
 
 	-- Step 30: Feathermoon Stronghold
 	-- {npc:3936} Shandris Feathermoon · {zone:1457} Darnassus
@@ -114,9 +114,9 @@ return {
 	-- Step 31: Grind to 45
 	["Grind to 45"] = "Farmer jusqu'au niveau 45",
 	-- {npc:14637} Zorbin Fandazzle
-	["Boat to the Forgotten Coast and ride east into Feral Scar Vale. {npc:14637}'s quests on the coast need level 45."] = "Prenez le bateau pour la Côte oubliée et allez vers l'est dans le Val de la Cicatrice farouche. Les quêtes de {npc:14637} sur la côte nécessitent le niveau 45.",
+	["Boat to the Forgotten Coast and ride east into Feral Scar Vale. {npc:14637}'s quests on the coast need level 45."] = "Prenez le bateau pour la Côte oubliée et allez vers l'est dans le Val des Griffes farouches. Les quêtes de {npc:14637} sur la côte nécessitent le niveau 45.",
 	-- {npc:5292} Feral Scar Yeti · {zone:1444} Feralas
-	["grind on {npc:5292} at Feral Scar Vale, {zone:1444}"] = "Farmez {npc:5292} au Val de la Cicatrice farouche, {zone:1444}",
+	["grind on {npc:5292} at Feral Scar Vale, {zone:1444}"] = "Farmez {npc:5292} au Val des Griffes farouches, {zone:1444}",
 
 	-- Step 33: Zorbin Fandazzle
 	["Ride back to the Forgotten Coast; the goblin stands by the dock."] = "Retournez à la Côte oubliée ; le gobelin se tient près du quai.",

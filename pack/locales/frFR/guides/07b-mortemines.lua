@@ -34,7 +34,7 @@ return {
 	-- {npc:550} Defias Messenger
 	["The {npc:550}"] = "{npc:550}",
 	-- {object:83} Jangolode Mine
-	["He walks the road from the Moonbrook smithy to the Gold Coast Quarry and the {object:83}, and back: wait for him by the smithy. He runs at low health and can drag Moonbrook's Defias along: root or slow him and finish him fast."] = "Il suit la route de la forge de Ruisselune à la carrière de la Côte d'or et à {object:83}, puis revient : l'attendre devant la forge. Il fuit à faible vie et peut attirer les Défias de Ruisselune : l'immobiliser ou le ralentir et l'achever vite.",
+	["He walks the road from the Moonbrook smithy to the Gold Coast Quarry and the {object:83}, and back: wait for him by the smithy. He runs at low health and can drag Moonbrook's Defias along: root or slow him and finish him fast."] = "Il suit la route de la forge de Ruisselune à la carrière de la côte de l'Or et à {object:83}, puis revient : l'attendre devant la forge. Il fuit à faible vie et peut attirer les Défias de Ruisselune : l'immobiliser ou le ralentir et l'achever vite.",
 
 	-- Step 6: Sentinel Hill
 	-- {npc:467} The Defias Traitor
@@ -55,7 +55,7 @@ return {
 	["The mine outside the portal"] = "La mine avant le portail",
 	-- {npc:626} Foreman Thistlenettle
 	-- plural, as words: Miners' Union Cards = {item:1894} Miners' Union Card
-	["Moonbrook's smithy hides the mine. Before the portal, the purple area of the minimap holds elite undead miners in pairs: the Miners' Union Cards drop there, not inside, and {npc:626} stands at the far end with a linked add."] = "La forge de Ruisselune cache la mine. Avant le portail, la zone violette de la minicarte abrite des mineurs morts-vivants élites, par paires : les cartes du syndicat tombent là, pas dans l'instance, et {npc:626} se tient au bout avec un mob lié.",
+	["Moonbrook's smithy hides the mine. Before the portal, the purple area of the minimap holds elite undead miners in pairs: the Miners' Union Cards drop there, not inside, and {npc:626} stands at the far end with a linked add."] = "La forge de Ruisselune cache la mine. Avant le portail, la zone violette de la minicarte abrite des mineurs morts-vivants élites, par paires : les cartes du syndicat des mineurs tombent là, pas dans l'instance, et {npc:626} se tient au bout avec un mob lié.",
 	["Alone: around 20-21 for the cards, 23 for the Foreman. Two players: fine at 19-20. The cards drop rarely and each player loots their own: skip them if time runs short."] = "Seul : vers 20-21 pour les cartes, 23 pour le contremaître. À deux : faisable vers 19-20. Les cartes tombent rarement et chacun ramasse les siennes : les laisser si le temps manque.",
 	-- {item:1894} Miners' Union Card
 	-- plural, as words: Undead Excavators = {npc:624} Undead Excavator
@@ -94,13 +94,13 @@ return {
 
 	-- Step 14: Mr. Smite
 	-- plural, as words: Defias Blackguards = {npc:636} Defias Blackguard
-	["In the cove: two stealthed Defias Blackguards join him by the walkway, kill them before he reaches 66%. At 66% and 33% he stuns the whole group for a few seconds and changes weapons: keep the tank's health up before each."] = "Dans la crique : deux Défias camouflés le rejoignent près de la passerelle, les tuer avant qu'il arrive à 66 %. À 66 % et 33 %, il étourdit tout le groupe quelques secondes et change d'arme : garder le tank plein de vie avant chaque fois.",
+	["In the cove: two stealthed Defias Blackguards join him by the walkway, kill them before he reaches 66%. At 66% and 33% he stuns the whole group for a few seconds and changes weapons: keep the tank's health up before each."] = "Dans la crique : deux canailles défias camouflées le rejoignent près de la passerelle, les tuer avant qu'il arrive à 66 %. À 66 % et 33 %, il étourdit tout le groupe quelques secondes et change d'arme : garder le tank plein de vie avant chaque fois.",
 
 	-- Step 15: Captain Greenskin
 	["On the ship. Crowd-control the Squallshaper, kill the Companion, then the Pirate, then Greenskin facing away from the group (Cleave)."] = "Sur le bateau. Neutraliser le façonneur de grains, tuer le compagnon, puis le pirate, puis Peau-Verte tourné dos au groupe (Enchaînement).",
 
 	-- Step 16: Edwin VanCleef
-	["Captain's cabin, top of the ship. Two Blackguards join at the pull, two more at half health: a stun at 51 to 55% skips the second pair. Everyone on the quest loots their own head and their own letter."] = "Cabine du capitaine, en haut du bateau. Deux gardes noirs le rejoignent au début, deux autres à mi-vie : un étourdissement vers 51 à 55 % évite la seconde paire. Chaque joueur qui a la quête ramasse sa tête et sa lettre.",
+	["Captain's cabin, top of the ship. Two Blackguards join at the pull, two more at half health: a stun at 51 to 55% skips the second pair. Everyone on the quest loots their own head and their own letter."] = "Cabine du capitaine, en haut du bateau. Deux canailles le rejoignent au début, deux autres à mi-vie : un étourdissement vers 51 à 55 % évite la seconde paire. Chaque joueur qui a la quête ramasse sa tête et sa lettre.",
 	-- {item:2874} An Unsent Letter
 	["{item:2874}, on VanCleef: right-click it, it opens the Stockade chain"] = "{item:2874}, sur VanCleef : clic droit dessus, elle ouvre la suite vers la Prison",
 	["Cookie, on the lower deck, is optional: interrupt his healing cast. Do not hearth: leave by the back, along the coast."] = "Macaron, sur le pont inférieur, est facultatif : interrompre son soin. Pas de pierre de foyer : sortir par l'arrière, le long de la côte.",

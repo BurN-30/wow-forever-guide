@@ -12658,7 +12658,7 @@ do
 			next = "groupe-alliance/24-hinterlands",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:8584"] = "Untapped Dowsing Widget", ["item:8585"] = "Tapped Dowsing Widget", ["item:8593"] = "Scrimshank's Surveying Gear", ["npc:11758"] = "Andi Lynn", ["npc:12046"] = "Gor'marok the Ravager", ["npc:4196"] = "Silithid Swarm", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4630"] = "Pozzik", ["npc:4709"] = "Zamek", ["npc:5457"] = "Centipaar Swarmer", ["npc:5474"] = "Dunemaul Brute", ["npc:5490"] = "Gnarled Thistleshrub", ["npc:5594"] = "Alchemist Pestlezugg", ["npc:5615"] = "Wastewander Rogue", ["npc:5634"] = "Rhapsody Shindigger", ["npc:5955"] = "Tooga", ["npc:6015"] = "Torta", ["npc:7407"] = "Chief Engineer Bilgewhizzle", ["npc:7408"] = "Spigot Operator Luglunket", ["npc:7583"] = "Sprinkle", ["npc:7763"] = "Curgle Cranklehop", ["npc:7771"] = "Marvon Rivetseeker", ["npc:7847"] = "Caliph Scorpidsting", ["npc:7881"] = "Stoley", ["npc:7882"] = "Security Chief Bilgewhizzle", ["npc:7883"] = "Andre Firebeard", ["object:1162"] = "Menethil Harbor", ["object:151975"] = "Steamwheedle Port", ["object:151976"] = "Shimmering Flats", ["object:20805"] = "Rizzle's Unguarded Plans", ["object:3204"] = "Booty Bay", ["quest:1137"] = "News for Fizzle", ["quest:1452"] = "Rhapsody's Kalimdor Kocktail", ["quest:2641"] = "Sprinkle's Secret Ingredient", ["quest:2864"] = "Tran'rek", ["quest:2873"] = "Stoley's Shipment", ["quest:3161"] = "Gahz'ridian", ["quest:3362"] = "Thistleshrub Valley", ["zone:1425"] = "Hinterlands", ["zone:1441"] = "Thousand Needles", ["zone:1446"] = "Tanaris", ["zone:1457"] = "Darnassus" },
+			names = { ["item:8584"] = "Untapped Dowsing Widget", ["item:8585"] = "Tapped Dowsing Widget", ["item:8593"] = "Scrimshank's Surveying Gear", ["npc:11758"] = "Andi Lynn", ["npc:12046"] = "Gor'marok the Ravager", ["npc:4196"] = "Silithid Swarm", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4630"] = "Pozzik", ["npc:4709"] = "Zamek", ["npc:5457"] = "Centipaar Swarmer", ["npc:5474"] = "Dunemaul Brute", ["npc:5490"] = "Gnarled Thistleshrub", ["npc:5594"] = "Alchemist Pestlezugg", ["npc:5615"] = "Wastewander Rogue", ["npc:5634"] = "Rhapsody Shindigger", ["npc:5955"] = "Tooga", ["npc:6015"] = "Torta", ["npc:7267"] = "Chief Ukorz Sandscalp", ["npc:7272"] = "Theka the Martyr", ["npc:7407"] = "Chief Engineer Bilgewhizzle", ["npc:7408"] = "Spigot Operator Luglunket", ["npc:7583"] = "Sprinkle", ["npc:7604"] = "Sergeant Bly", ["npc:7763"] = "Curgle Cranklehop", ["npc:7771"] = "Marvon Rivetseeker", ["npc:7804"] = "Trenton Lighthammer", ["npc:7847"] = "Caliph Scorpidsting", ["npc:7876"] = "Tran'rek", ["npc:7881"] = "Stoley", ["npc:7882"] = "Security Chief Bilgewhizzle", ["npc:7883"] = "Andre Firebeard", ["object:1162"] = "Menethil Harbor", ["object:151975"] = "Steamwheedle Port", ["object:151976"] = "Shimmering Flats", ["object:20805"] = "Rizzle's Unguarded Plans", ["object:3204"] = "Booty Bay", ["quest:1137"] = "News for Fizzle", ["quest:1452"] = "Rhapsody's Kalimdor Kocktail", ["quest:2641"] = "Sprinkle's Secret Ingredient", ["quest:2768"] = "Divino-matic Rod", ["quest:2864"] = "Tran'rek", ["quest:2865"] = "Scarab Shells", ["quest:2873"] = "Stoley's Shipment", ["quest:3042"] = "Troll Temper", ["quest:3161"] = "Gahz'ridian", ["quest:3362"] = "Thistleshrub Valley", ["zone:1425"] = "Hinterlands", ["zone:1441"] = "Thousand Needles", ["zone:1446"] = "Tanaris", ["zone:1457"] = "Darnassus" },
 			written = { ["Follow the coast south to the pirate cove. Southsea pirates crowd the beach and the boats: work along the edge and pull one at a time. {npc:7883} stands on the far side; {npc:7881}'s stolen cargo lies in the camp.\nCareful: Two or three pirates stand with {npc:7883}, and many more pirates from the town join the fight once it starts."] = "Follow the coast south to the pirate cove. Southsea pirates crowd the beach and the boats: work along the edge and pull one at a time. Andre Firebeard stands on the far side; Stoley's stolen cargo lies in the camp.\nCareful: Two or three pirates stand with Andre, and many more pirates from the town join the fight once it starts.", ["Ride south to the dig camp at the Broken Pillar. {npc:7771} hands you a detector helm: wear it to see the {quest:3161} mounds, which lie thick in the sand around the camp and south-west toward the ogres."] = "Ride south to the dig camp at the Broken Pillar. Marvon hands you a detector helm: wear it to see the Gahz'ridian mounds, which lie thick in the sand around the camp and south-west toward the ogres.", ["Ride south-east to Waterspring Field. {npc:7847} stands in the middle of the southern Wastewander camp: clear around him first.\nCareful: Two stealthed Wastewander Rogues travel with him wherever he goes. At his spawn camp, two shadowmages and their minions are close enough to join a fight with him. Out by the towers you can fight him without them."] = "Ride south-east to Waterspring Field. Caliph stands in the middle of the southern Wastewander camp: clear around him first.\nCareful: Two stealthed Wastewander Rogues travel with him wherever he goes. At his spawn camp, two shadowmages and their minions are close enough to join a fight with him. Out by the towers you can fight him without them.", ["The same poster: {npc:7847} comes much later, after Gadgetzan"] = "The same poster: Caliph comes much later, after Gadgetzan", ["{zone:1425}"] = "The Hinterlands" },
 			steps = {
 				{
@@ -12884,6 +12884,39 @@ do
 						{ t = "accept", quest = 113, title = "Insect Part Analysis", npc = 5594, npcName = "Alchemist Pestlezugg", minLevel = 39, qlvl = 48, pre = { 110 }, preTitles = { [110] = "Insect Part Analysis" }, map = 1446, x = 50.89, y = 26.96, z = 8.9, f = "e" },
 						{ t = "turnin", quest = 113, title = "Insect Part Analysis", npc = 7724, npcName = "Senior Surveyor Fizzledowser", map = 1446, x = 50.21, y = 27.48, z = 21, f = "e" },
 						{ t = "accept", quest = 162, title = "Rise of the Silithid", npc = 7724, npcName = "Senior Surveyor Fizzledowser", minLevel = 39, qlvl = 49, pre = { 113 }, preTitles = { [113] = "Insect Part Analysis" }, map = 1446, x = 50.21, y = 27.48, z = 21, f = "e", note = "for {zone:1457}: the route takes you there at 47" },
+					},
+				},
+				{
+					title = "Zul'Farrak (dungeon, optional): Gadgetzan",
+					note = "Zul'Farrak: a troll city in the north-west of {zone:1446}, levels 44 to 54, best at 45 or more with a full group. Three quests from Gadgetzan, all done inside. Alone? Skip it: the guide flies on to Theramore.",
+					label = "zf-start",
+					when = { { k = "group", q = 2865 } },
+					goals = {
+						{ t = "note", text = "Keep 3 free quest log slots. {npc:7876}, {npc:7804} and {npc:7407} are all in Gadgetzan." },
+						{ t = "accept", quest = 2865, title = "Scarab Shells", npc = 7876, npcName = "Tran'rek", minLevel = 40, qlvl = 45, map = 1446, x = 51.57, y = 26.76, z = 8.8, f = "e", note = "{npc:7876}: {quest:2865}" },
+						{ t = "accept", quest = 3042, title = "Troll Temper", npc = 7804, npcName = "Trenton Lighthammer", minLevel = 40, qlvl = 45, map = 1446, x = 51.41, y = 28.75, z = 8.9, f = "e", note = "{npc:7804}: {quest:3042}" },
+						{ t = "accept", quest = 2768, title = "Divino-matic Rod", npc = 7407, npcName = "Chief Engineer Bilgewhizzle", minLevel = 40, qlvl = 47, map = 1446, x = 52.46, y = 28.51, z = 8.7, f = "e", note = "{npc:7407}: {quest:2768}" },
+					},
+				},
+				{
+					title = "Zul'Farrak",
+					note = "Ride north-west from Gadgetzan to the walled city, at the edge of the dunes. Inside, every troll can drop {quest:3042}; the scarabs by the graveyard of {npc:7272} drop the shells.\nThe pyramid event: free {npc:7604} and his crew from the cage at the top of the stairs, then hold the stairs against the troll waves. Once the trolls are dead, Bly turns on you: he drops the {quest:2768}.",
+					when = { { k = "done", label = "zf-start" } },
+					goals = {
+						{ t = "note", text = "Group of 5: share each quest (quest log, Share) before going in. {npc:7267}, the last boss, waits behind the door Weegli blows open after the pyramid event." },
+						{ t = "goto", text = "Zul'Farrak", map = 1446, x = 38.7, y = 20.1, f = "e" },
+						{ t = "collect", quest = 2865, title = "Scarab Shells", item = 9238, itemName = "Uncracked Scarab Shell", count = 5, oi = 1 },
+						{ t = "collect", quest = 3042, title = "Troll Temper", item = 9523, itemName = "Troll Temper", count = 20, oi = 1 },
+						{ t = "collect", quest = 2768, title = "Divino-matic Rod", item = 8548, itemName = "Divino-matic Rod", count = 1, oi = 1, note = "{quest:2768}: {npc:7604}" },
+					},
+				},
+				{
+					title = "Gadgetzan: Zul'Farrak rewards",
+					when = { { k = "done", label = "zf-start" } },
+					goals = {
+						{ t = "turnin", quest = 2865, title = "Scarab Shells", npc = 7876, npcName = "Tran'rek", map = 1446, x = 51.57, y = 26.76, z = 8.8, f = "e" },
+						{ t = "turnin", quest = 3042, title = "Troll Temper", npc = 7804, npcName = "Trenton Lighthammer", map = 1446, x = 51.41, y = 28.75, z = 8.9, f = "e" },
+						{ t = "turnin", quest = 2768, title = "Divino-matic Rod", npc = 7407, npcName = "Chief Engineer Bilgewhizzle", map = 1446, x = 52.46, y = 28.51, z = 8.7, f = "e" },
 					},
 				},
 				{
@@ -13667,7 +13700,7 @@ do
 			folder = "Group Alliance",
 			zone = 1449,
 			zoneName = "Un'Goro Crater",
-			next = "forever/alliance/50-60/01-burning-steppes",
+			next = "groupe-alliance/27-steppes-ardentes",
 			author = "BurN-30",
 			version = 1,
 			names = { ["item:11112"] = "Research Equipment", ["item:11113"] = "Crate of Foodstuffs", ["item:11114"] = "Dinosaur Bone", ["item:11116"] = "A Mangled Journal", ["item:11834"] = "Super Sticky Tar", ["npc:11406"] = "High Priest Rohan", ["npc:6116"] = "Highborne Apparition", ["npc:6509"] = "Bloodpetal Lasher", ["npc:6518"] = "Tar Lurker", ["npc:6519"] = "Tar Lord", ["npc:6552"] = "Gorishi Worker", ["npc:7583"] = "Sprinkle", ["npc:7775"] = "Gregan Brewspewer", ["npc:8517"] = "Xiggs Fuselighter", ["npc:8737"] = "Linken", ["npc:8879"] = "Royal Historian Archesonus", ["npc:9117"] = "J.D. Collie", ["npc:9162"] = "Young Diemetradon", ["npc:9164"] = "Elder Diemetradon", ["npc:9165"] = "Fledgling Pterrordax", ["npc:9167"] = "Frenzied Pterrordax", ["npc:9298"] = "Donova Snowden", ["npc:9616"] = "Laris Geardawdle", ["npc:9618"] = "Karna Remtravel", ["npc:9619"] = "Torwa Pathfinder", ["npc:9623"] = "A-Me 01", ["npc:9683"] = "Lar'korwi Mate", ["npc:9998"] = "Shizzle", ["object:1162"] = "Menethil Harbor", ["object:157936"] = "Un'Goro Dirt Pile", ["object:161504"] = "A Small Pack", ["object:164955"] = "Northern Crystal Pylon", ["object:164956"] = "Western Crystal Pylon", ["object:164957"] = "Eastern Crystal Pylon", ["object:166863"] = "Fresh Threshadon Carcass", ["object:171709"] = "High Seat", ["object:176369"] = "Boat to Theramore", ["object:176370"] = "Boat to Auberdine", ["object:32356"] = "Hall of Explorers", ["object:32359"] = "Military Ward", ["object:32362"] = "Mystic Ward", ["quest:3764"] = "Un'Goro Soil", ["zone:1428"] = "Burning Steppes", ["zone:1444"] = "Feralas", ["zone:1447"] = "Azshara", ["zone:1448"] = "Felwood", ["zone:1449"] = "Un'Goro Crater", ["zone:1452"] = "Winterspring", ["zone:1455"] = "Ironforge" },
@@ -13994,6 +14027,2988 @@ do
 					goals = {
 						{ t = "goto", text = "{npc:6116}", map = 1447, x = 17, y = 69.4, f = "e" },
 						{ t = "level", level = 50, frac = 0.4, note = "grind on {npc:6116}" },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
+-- Source: guides/27-steppes-ardentes.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/27-steppes-ardentes",
+			pack = "groupe-alliance",
+			title = "Group 25 · {zone:1428} & {zone:1447}",
+			faction = "Alliance",
+			minLevel = 50,
+			maxLevel = 53,
+			category = "Leveling",
+			folder = "Group Alliance",
+			zone = 1428,
+			zoneName = "Burning Steppes",
+			next = "groupe-alliance/28-gangrebois",
+			author = "BurN-30",
+			version = 1,
+			group = true,
+			names = { ["item:10445"] = "Drawing Kit", ["item:10450"] = "Undamaged Hippogryph Feather", ["item:10566"] = "Rubbing: Rune of Sael'hai", ["item:10593"] = "Imperfect Draenethyst Fragment", ["item:10819"] = "Wildkin Feather", ["item:11467"] = "Blackrock Medallion", ["item:12284"] = "Draco-Incarcinatrix 900", ["item:13815"] = "Some Rune", ["item:7972"] = "Ichor of Undeath", ["npc:3836"] = "Mountaineer Pebblebitty", ["npc:6196"] = "Spitelash Myrmidon", ["npc:6375"] = "Thunderhead Hippogryph", ["npc:7034"] = "Firegut Ogre Mage", ["npc:7047"] = "Black Broodling", ["npc:7363"] = "Kum'isha the Collector", ["npc:7664"] = "Razelikh the Defiler", ["npc:7864"] = "Lingering Highborne", ["npc:7907"] = "Daryn Lightwind", ["npc:7916"] = "Erelas Ambersky", ["npc:7977"] = "Gammerita", ["npc:8256"] = "Curator Thorius", ["npc:8392"] = "Pilot Xiggs Fuselighter", ["npc:8395"] = "Sanath Lim-yo", ["npc:8405"] = "Ogtinc", ["npc:8420"] = "Kim'jael", ["npc:8507"] = "Tymor", ["npc:8761"] = "Mosshoof Courser", ["npc:9176"] = "Gor'tesh", ["npc:9177"] = "Oralius", ["npc:9459"] = "Cyrus Therepentous", ["npc:9461"] = "Frenzied Black Drake", ["npc:9690"] = "Ember Worg", ["object:141891"] = "Razelikh's Tear", ["object:147516"] = "Dark Iron", ["object:153556"] = "Thaurissan Relic", ["object:176370"] = "Boat to Auberdine", ["object:32362"] = "Mystic Ward", ["quest:2944"] = "The Super Snapper FX", ["quest:4022"] = "A Taste of Flame", ["quest:4023"] = "A Taste of Flame", ["quest:4808"] = "Felnok Steelspring", ["zone:1419"] = "Blasted Lands", ["zone:1425"] = "Hinterlands", ["zone:1426"] = "Dun Morogh", ["zone:1428"] = "Burning Steppes", ["zone:1432"] = "Loch Modan", ["zone:1438"] = "Teldrassil", ["zone:1447"] = "Azshara", ["zone:1452"] = "Winterspring", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			written = { ["{npc:7363} waits at the Rise of the Defiler, the hill south-west of the keep. The {zone:1419} mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, {npc:7664} and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds {object:141891}, Flames of Chaos and then Enrage at 15%."] = "Kum'isha waits at the Rise of the Defiler, the hill south-west of the keep. The Blasted Lands mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, Razelikh the Defiler and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds Razelikh's Tear, Flames of Chaos and then Enrage at 15%.", ["{zone:1425}"] = "The Hinterlands" },
+			steps = {
+				{
+					title = "Shadowsong Shrine",
+					note = "The shrine lies in the south-west corner of {zone:1447}, south of Talrendis Point.",
+					goals = {
+						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
+						{ t = "getfp", npc = 12577, npcName = "Jarrodenus", location = "Talrendis Point", node = 64, map = 1447, x = 11.9, y = 77.59, z = 101.5, f = "e" },
+						{ t = "accept", quest = 5535, title = "Spiritual Unrest", npc = 11548, npcName = "Loh'atu", minLevel = 45, qlvl = 47, map = 1447, x = 11.37, y = 78.17, z = 102.6, f = "e" },
+						{ t = "accept", quest = 5536, title = "A Land Filled with Hatred", npc = 11548, npcName = "Loh'atu", minLevel = 45, qlvl = 47, map = 1447, x = 11.37, y = 78.17, z = 102.6, f = "e" },
+						{ t = "kill", quest = 5535, title = "Spiritual Unrest", target = "Highborne Apparition", npc = 6116, count = 6, oi = 1, map = 1447, x = 14.7, y = 73.48, z = 139.7, f = "e", spots = { { x = 14.4, y = 72.5, z = 133.9, r = 37, n = 3 }, { x = 16.2, y = 73.2, r = 24, n = 2 }, { x = 17, y = 69.4, r = 49, n = 4 }, { x = 17.5, y = 66.8, r = 38, n = 2 } } },
+						{ t = "kill", quest = 5535, title = "Spiritual Unrest", target = "Highborne Lichling", npc = 6117, count = 6, oi = 2, map = 1447, x = 14.58, y = 72.62, z = 137.1, f = "e", spots = { { x = 14, y = 72.9, r = 31, n = 2 }, { x = 16.7, y = 71.2, z = 104.2, r = 16, n = 2 }, { x = 17.2, y = 67.5, z = 101.1, r = 37, n = 5 }, { x = 17.9, y = 70, z = 100.5, r = 15, n = 1, alt = true } } },
+					},
+				},
+				{
+					title = "{zone:1447}: kill these as you meet them",
+					note = "The Highborne ghosts haunt the ruins around the shrine; the Haldarr satyrs hold the camp just north of it.",
+					goals = {
+						{ t = "kill", quest = 5536, title = "A Land Filled with Hatred", target = "Haldarr Felsworn", npc = 6127, count = 2, oi = 3, map = 1447, x = 19.1, y = 64.04, z = 98.3, f = "e", spots = { { x = 19.1, y = 64, z = 98.3, r = 15, n = 1 }, { x = 20, y = 60.9, z = 131.1, r = 39, n = 3 } } },
+						{ t = "kill", quest = 5536, title = "A Land Filled with Hatred", target = "Haldarr Trickster", npc = 6126, count = 2, oi = 2, map = 1447, x = 19.69, y = 63.84, z = 100.4, f = "e", spots = { { x = 19.7, y = 63.8, z = 100.4, r = 15, n = 1 }, { x = 19.8, y = 62, r = 26, n = 2 }, { x = 20.9, y = 59.9, z = 131.3, r = 15, n = 1 } } },
+						{ t = "kill", quest = 5536, title = "A Land Filled with Hatred", target = "Haldarr Satyr", npc = 6125, count = 6, oi = 1, map = 1447, x = 20.4, y = 63.69, z = 104.5, f = "e", spots = { { x = 19.6, y = 61.9, z = 127, r = 37, n = 3 }, { x = 21, y = 61, r = 27, n = 3 }, { x = 20.4, y = 63.7, z = 104.5, r = 15, n = 1, alt = true } } },
+					},
+				},
+				{
+					title = "Shadowsong Shrine",
+					goals = {
+						{ t = "turnin", quest = 5535, title = "Spiritual Unrest", npc = 11548, npcName = "Loh'atu", map = 1447, x = 11.37, y = 78.17, z = 102.6, f = "e" },
+						{ t = "turnin", quest = 5536, title = "A Land Filled with Hatred", npc = 11548, npcName = "Loh'atu", map = 1447, x = 11.37, y = 78.17, z = 102.6, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1447}",
+					only = { classes = { "PRIEST" } },
+					goals = {
+						{ t = "goto", text = "{zone:1447}", map = 1447, x = 42.4, y = 42.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:8405}",
+					note = "Ride north-east from the shrine: {npc:8405} camps at the Bear's Head, in the hills above the road.",
+					only = { classes = { "PRIEST" } },
+					goals = {
+						{ t = "turnin", quest = 8254, title = "Cenarion Aid", npc = 8405, npcName = "Ogtinc", map = 1447, x = 42.4, y = 42.62, z = 154.5, f = "e" },
+						{ t = "accept", quest = 8255, title = "Of Coursers We Know", npc = 8405, npcName = "Ogtinc", minLevel = 50, qlvl = 52, pre = { 8254 }, preTitles = { [8254] = "Cenarion Aid" }, map = 1447, x = 42.4, y = 42.62, z = 154.5, f = "e" },
+					},
+				},
+				{
+					title = "Mosshoof Coursers",
+					note = "The nearest Mosshoof Coursers graze the hills north-east of the Bear's Head, toward the Legashi Encampment; a larger herd roams the open ground to the south.",
+					only = { classes = { "PRIEST" } },
+					goals = {
+						{ t = "collect", quest = 8255, title = "Of Coursers We Know", item = 20027, itemName = "Healthy Courser Gland", count = 4, oi = 1, map = 1447, x = 52.1, y = 35.39, f = "e", spots = { { x = 52.1, y = 35.4, r = 61, n = 1 }, { x = 52.4, y = 25.2, r = 61, n = 3 }, { x = 53, y = 14.7, r = 61, n = 2 }, { x = 46.2, y = 18.6, r = 61, n = 1 }, { x = 62.5, y = 16.1, r = 103, n = 5 }, { x = 70.7, y = 29.2, r = 61, n = 3 }, { x = 75.7, y = 22.6, r = 61, n = 1 }, { x = 83, y = 24.1, r = 61, n = 1 }, { x = 57.1, y = 85.8, r = 94, n = 6 }, { x = 45.4, y = 80.8, r = 102, n = 7 }, { x = 42.1, y = 72.1, r = 81, n = 3 }, { x = 36, y = 67.2, r = 78, n = 6 }, { x = 52, y = 31, r = 87, n = 6, alt = true }, { x = 49.5, y = 26.4, r = 101, n = 7, alt = true }, { x = 56.8, y = 22.3, r = 69, n = 3, alt = true }, { x = 48.5, y = 20.6, r = 61, n = 1, alt = true }, { x = 55.9, y = 17.7, r = 61, n = 4, alt = true }, { x = 58.5, y = 18.4, r = 61, n = 2, alt = true }, { x = 61.9, y = 19.5, r = 61, n = 2, alt = true }, { x = 65.2, y = 23.4, r = 65, n = 3, alt = true }, { x = 67.4, y = 26.9, r = 61, n = 2, alt = true }, { x = 73.1, y = 32.3, r = 61, n = 2, alt = true }, { x = 68.4, y = 15.2, r = 61, n = 1, alt = true }, { x = 73.1, y = 22.2, r = 61, n = 1, alt = true }, { x = 78.1, y = 26.3, r = 116, n = 4, alt = true }, { x = 39.2, y = 70.5, r = 96, n = 7, alt = true }, { x = 50.7, y = 76, r = 70, n = 3, alt = true }, { x = 46.8, y = 75.4, r = 79, n = 3, alt = true }, { x = 57.9, y = 77.7, r = 61, n = 4, alt = true }, { x = 81, y = 27.2, r = 61, n = 1, alt = true }, { x = 54.1, y = 79.7, r = 61, n = 4, alt = true }, { x = 50.7, y = 80.6, r = 93, n = 7, alt = true }, { x = 81.2, y = 18.6, r = 61, n = 1, alt = true }, { x = 59.3, y = 81.4, r = 61, n = 4, alt = true }, { x = 54, y = 83.5, r = 61, n = 4, alt = true }, { x = 48, y = 83.3, r = 90, n = 7, alt = true } }, spread = true, from = "Mosshoof Courser", fromKind = "npc", fromId = 8761, fromNpcs = { { npc = 8761, npcName = "Mosshoof Courser" } } },
+					},
+				},
+				{
+					title = "{zone:1447}",
+					only = { classes = { "PRIEST" } },
+					goals = {
+						{ t = "goto", text = "{zone:1447}", map = 1447, x = 42.4, y = 42.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:8405}",
+					only = { classes = { "PRIEST" } },
+					goals = {
+						{ t = "turnin", quest = 8255, title = "Of Coursers We Know", npc = 8405, npcName = "Ogtinc", map = 1447, x = 42.4, y = 42.62, z = 154.5, f = "e" },
+						{ t = "accept", quest = 8256, title = "The Ichor of Undeath", npc = 8405, npcName = "Ogtinc", minLevel = 50, qlvl = 52, pre = { 8255 }, preTitles = { [8255] = "Of Coursers We Know" }, map = 1447, x = 42.4, y = 42.62, z = 154.5, f = "e" },
+					},
+				},
+				{
+					title = "{npc:8395}",
+					note = "Optional: {npc:8395} wants two Undamaged Hippogryph Feathers from the hippogryphs around his camp. The data lists no experience for it.",
+					goals = {
+						{ t = "accept", quest = 3381, title = "A Meeting with the Master", npc = 8395, npcName = "Sanath Lim-yo", minLevel = 45, qlvl = 48, map = 1447, x = 28.11, y = 50.09, z = 121.1, f = "e", optional = true },
+						{ t = "collect", quest = 3381, title = "A Meeting with the Master", item = 10450, itemName = "Undamaged Hippogryph Feather", count = 2, oi = 1, map = 1447, x = 21.11, y = 54.18, f = "e", spots = { { x = 21.1, y = 54.2, r = 52, n = 1 }, { x = 17.7, y = 79.4, r = 72, n = 4 }, { x = 36.8, y = 84.6, r = 52, n = 1 }, { x = 48.1, y = 84.8, r = 52, n = 2 }, { x = 49.5, y = 70, r = 52, n = 1 }, { x = 63.8, y = 87.6, r = 52, n = 2 }, { x = 51.9, y = 37.6, r = 52, n = 2 }, { x = 39.4, y = 40.8, r = 96, n = 6 }, { x = 48.4, y = 16, r = 52, n = 1 }, { x = 61.2, y = 14.5, r = 52, n = 2 }, { x = 67.3, y = 27.3, r = 52, n = 3 }, { x = 85.1, y = 20.2, r = 52, n = 1 }, { x = 20.5, y = 57.6, r = 52, n = 2, alt = true }, { x = 18.6, y = 52.8, r = 52, n = 3, alt = true }, { x = 18, y = 56.3, r = 89, n = 6, alt = true }, { x = 19.1, y = 49.3, r = 52, n = 1, alt = true }, { x = 16.4, y = 51.8, r = 70, n = 4, alt = true }, { x = 16, y = 49.2, r = 52, n = 1, alt = true }, { x = 18.1, y = 62.5, r = 52, n = 2, alt = true }, { x = 19.3, y = 65.6, r = 52, n = 1, alt = true }, { x = 35.7, y = 43.7, r = 52, n = 3, alt = true }, { x = 20.7, y = 78.7, r = 52, n = 1, alt = true }, { x = 26.1, y = 79.5, r = 52, n = 4, alt = true }, { x = 32.4, y = 80.2, r = 87, n = 4, alt = true }, { x = 40.7, y = 35.8, r = 53, n = 2, alt = true }, { x = 34.6, y = 82.8, r = 57, n = 4, alt = true }, { x = 41, y = 31.8, r = 52, n = 2, alt = true }, { x = 44.2, y = 35.6, r = 65, n = 5, alt = true }, { x = 41.7, y = 27.6, r = 52, n = 1, alt = true }, { x = 45.3, y = 33, r = 52, n = 2, alt = true }, { x = 46.5, y = 73.9, r = 52, n = 1, alt = true }, { x = 45.8, y = 78, r = 52, n = 2, alt = true }, { x = 47.7, y = 34.8, r = 52, n = 1, alt = true }, { x = 42.3, y = 23.2, r = 52, n = 1, alt = true }, { x = 48.7, y = 74.1, r = 52, n = 1, alt = true }, { x = 44.9, y = 83.9, r = 52, n = 1, alt = true }, { x = 46.3, y = 81.4, r = 52, n = 1, alt = true }, { x = 50, y = 34.4, r = 52, n = 1, alt = true }, { x = 48, y = 23.7, r = 82, n = 6, alt = true }, { x = 50.1, y = 81.2, r = 67, n = 3, alt = true }, { x = 52.6, y = 33, r = 52, n = 3, alt = true }, { x = 51, y = 28.2, r = 80, n = 6, alt = true }, { x = 47.8, y = 19.2, r = 52, n = 4, alt = true }, { x = 53.9, y = 74.8, r = 52, n = 1, alt = true }, { x = 50.9, y = 24.5, r = 62, n = 3, alt = true }, { x = 52.8, y = 79.6, r = 52, n = 1, alt = true }, { x = 52.9, y = 83.6, r = 52, n = 1, alt = true }, { x = 53.7, y = 25.2, r = 73, n = 4, alt = true }, { x = 55.3, y = 79.6, r = 52, n = 1, alt = true }, { x = 57.8, y = 75.9, r = 52, n = 1, alt = true }, { x = 57.8, y = 79.6, r = 52, n = 1, alt = true }, { x = 56.3, y = 21.3, r = 79, n = 6, alt = true }, { x = 57.9, y = 84.8, r = 59, n = 3, alt = true }, { x = 55.1, y = 15.9, r = 82, n = 7, alt = true }, { x = 58.5, y = 22, r = 85, n = 6, alt = true }, { x = 60.8, y = 81.2, r = 52, n = 2, alt = true }, { x = 58.5, y = 88.2, r = 52, n = 1, alt = true }, { x = 59.1, y = 17.5, r = 97, n = 6, alt = true }, { x = 61.3, y = 19.9, r = 79, n = 7, alt = true }, { x = 65, y = 81.1, r = 52, n = 1, alt = true }, { x = 64.7, y = 24.2, r = 52, n = 3, alt = true }, { x = 64.7, y = 20.1, r = 52, n = 2, alt = true }, { x = 67.2, y = 23.6, r = 52, n = 1, alt = true }, { x = 69.8, y = 26.7, r = 57, n = 3, alt = true }, { x = 72, y = 30.9, r = 103, n = 5, alt = true }, { x = 67.5, y = 12.9, r = 52, n = 1, alt = true }, { x = 72.9, y = 28.1, r = 52, n = 3, alt = true }, { x = 74.5, y = 34.1, r = 52, n = 2, alt = true }, { x = 71.6, y = 20.4, r = 52, n = 1, alt = true }, { x = 71.4, y = 17, r = 52, n = 1, alt = true }, { x = 73.9, y = 24.3, r = 52, n = 1, alt = true }, { x = 75.7, y = 29.5, r = 52, n = 1, alt = true }, { x = 76.8, y = 26.8, r = 52, n = 3, alt = true }, { x = 78.9, y = 28.3, r = 52, n = 1, alt = true }, { x = 78.7, y = 25.2, r = 52, n = 3, alt = true }, { x = 77.1, y = 16.5, r = 52, n = 1, alt = true }, { x = 81.2, y = 25.7, r = 60, n = 3, alt = true }, { x = 83, y = 22.2, r = 52, n = 2, alt = true }, { x = 83.4, y = 18.4, r = 52, n = 1, alt = true } }, spread = true, optional = true, fromNpcs = { { npc = 6375, npcName = "Thunderhead Hippogryph" }, { npc = 6377, npcName = "Thunderhead Stagwing" }, { npc = 6378, npcName = "Thunderhead Skystormer" }, { npc = 6379, npcName = "Thunderhead Patriarch" }, { npc = 6380, npcName = "Thunderhead Consort" } } },
+						{ t = "turnin", quest = 3381, title = "A Meeting with the Master", npc = 8395, npcName = "Sanath Lim-yo", map = 1447, x = 28.11, y = 50.09, z = 121.1, f = "e", optional = true },
+						{ t = "level", level = 50, frac = 0.56, note = "grind on {npc:6375}" },
+					},
+				},
+				{
+					title = "{npc:8420}",
+					note = "{npc:8420} camps at the Legashi Encampment in the north; his equipment lies all over the Thalassian Base Camp just south-east of him.",
+					goals = {
+						{ t = "accept", quest = 3601, title = "Kim'jael Indeed!", npc = 8420, npcName = "Kim'jael", minLevel = 47, qlvl = 53, map = 1447, x = 53.45, y = 21.82, z = 169.7, f = "e" },
+						{ t = "collect", quest = 3601, title = "Kim'jael Indeed!", item = 10717, itemName = "Kim'Jael's Compass", count = 1, oi = 1, map = 1447, x = 56.4, y = 28.4, f = "e", spots = { { x = 56.6, y = 29.1, r = 43, n = 5 }, { x = 58.5, y = 28.9, r = 32, n = 3 }, { x = 58.5, y = 25.5, r = 18, n = 2 }, { x = 58.2, y = 27.7, r = 15, n = 1, alt = true }, { x = 59.6, y = 30.9, r = 15, n = 1, alt = true }, { x = 59.2, y = 23, r = 15, n = 1, alt = true } }, from = "Kim'jael's Equipment", fromKind = "object", fromId = 153123 },
+						{ t = "collect", quest = 3601, title = "Kim'jael Indeed!", item = 10715, itemName = "Kim'Jael's Scope", count = 1, oi = 2, map = 1447, x = 56.4, y = 28.4, f = "e", spots = { { x = 56.6, y = 29.1, r = 43, n = 5 }, { x = 58.5, y = 28.9, r = 32, n = 3 }, { x = 58.5, y = 25.5, r = 18, n = 2 }, { x = 58.2, y = 27.7, r = 15, n = 1, alt = true }, { x = 59.6, y = 30.9, r = 15, n = 1, alt = true }, { x = 59.2, y = 23, r = 15, n = 1, alt = true } }, from = "Kim'jael's Equipment", fromKind = "object", fromId = 153123 },
+						{ t = "collect", quest = 3601, title = "Kim'jael Indeed!", item = 10722, itemName = "Kim'Jael's Stuffed Chicken", count = 1, oi = 3, map = 1447, x = 56.4, y = 28.4, f = "e", spots = { { x = 56.6, y = 29.1, r = 43, n = 5 }, { x = 58.5, y = 28.9, r = 32, n = 3 }, { x = 58.5, y = 25.5, r = 18, n = 2 }, { x = 58.2, y = 27.7, r = 15, n = 1, alt = true }, { x = 59.6, y = 30.9, r = 15, n = 1, alt = true }, { x = 59.2, y = 23, r = 15, n = 1, alt = true } }, from = "Kim'jael's Equipment", fromKind = "object", fromId = 153123 },
+						{ t = "collect", quest = 3601, title = "Kim'jael Indeed!", item = 10718, itemName = "Kim'Jael's Wizzlegoober", count = 1, oi = 4, map = 1447, x = 56.4, y = 28.4, f = "e", spots = { { x = 56.6, y = 29.1, r = 43, n = 5 }, { x = 58.5, y = 28.9, r = 32, n = 3 }, { x = 58.5, y = 25.5, r = 18, n = 2 }, { x = 58.2, y = 27.7, r = 15, n = 1, alt = true }, { x = 59.6, y = 30.9, r = 15, n = 1, alt = true }, { x = 59.2, y = 23, r = 15, n = 1, alt = true } }, from = "Kim'jael's Equipment", fromKind = "object", fromId = 153123 },
+						{ t = "turnin", quest = 3601, title = "Kim'jael Indeed!", npc = 8420, npcName = "Kim'jael", map = 1447, x = 53.45, y = 21.82, z = 169.7, f = "e" },
+						{ t = "accept", quest = 5534, title = "Kim'jael's \"Missing\" Equipment", npc = 8420, npcName = "Kim'jael", minLevel = 47, qlvl = 53, pre = { 3601 }, preTitles = { [3601] = "Kim'jael Indeed!" }, map = 1447, x = 53.45, y = 21.82, z = 169.7, f = "e" },
+						{ t = "level", level = 50, frac = 0.65, note = "grind on {npc:6196}" },
+					},
+				},
+				{
+					title = "The Ruins of Eldarath",
+					note = "The Spitelash naga of the Ruins of Eldarath carry {item:13815}. {npc:8507}'s four runes stand among the ruins: use his {item:10445} on each.",
+					goals = {
+						{ t = "collect", quest = 3449, title = "Arcane Runes", item = 10563, itemName = "Rubbing: Rune of Beth'Amara", count = 1, oi = 1, map = 1447, x = 36.91, y = 53.17, f = "e", from = "Rune of Beth'Amara", fromKind = "object", fromId = 149481 },
+						{ t = "level", level = 50, frac = 0.69, note = "grind on {npc:6196}" },
+					},
+				},
+				{
+					title = "The Shattered Strand",
+					goals = {
+						{ t = "collect", quest = 5534, title = "Kim'jael's \"Missing\" Equipment", item = 13815, itemName = "Some Rune", count = 1, oi = 1, map = 1447, x = 38.85, y = 52.3, f = "e", spots = { { x = 38.6, y = 53.1, r = 43, n = 3 }, { x = 39, y = 46.2, r = 43, n = 1 }, { x = 43.2, y = 45.3, r = 43, n = 1 }, { x = 49.5, y = 43, r = 43, n = 4 }, { x = 47.4, y = 54.6, r = 59, n = 6 }, { x = 49.5, y = 60.2, r = 43, n = 1 }, { x = 49.6, y = 66.4, r = 55, n = 5 }, { x = 42.7, y = 63.6, r = 61, n = 4 }, { x = 35.5, y = 58.8, r = 43, n = 1 }, { x = 66, y = 77.3, r = 43, n = 3 }, { x = 72, y = 83.4, r = 43, n = 1 }, { x = 70.3, y = 90.3, r = 68, n = 5 }, { x = 41, y = 52.5, r = 58, n = 7, alt = true }, { x = 37.7, y = 55.8, r = 68, n = 6, alt = true }, { x = 39.3, y = 48.4, r = 60, n = 3, alt = true }, { x = 37.2, y = 48.7, r = 52, n = 3, alt = true }, { x = 40.3, y = 56.2, r = 46, n = 3, alt = true }, { x = 35.7, y = 51.4, r = 48, n = 3, alt = true }, { x = 34.8, y = 54.5, r = 57, n = 4, alt = true }, { x = 42.9, y = 47.9, r = 74, n = 4, alt = true }, { x = 38.6, y = 60.4, r = 43, n = 2, alt = true }, { x = 44.8, y = 50.6, r = 66, n = 8, alt = true }, { x = 45.3, y = 54, r = 54, n = 6, alt = true }, { x = 39.8, y = 62.3, r = 43, n = 2, alt = true }, { x = 44.7, y = 57.4, r = 81, n = 9, alt = true }, { x = 45, y = 60.9, r = 58, n = 6, alt = true }, { x = 46.9, y = 47.7, r = 73, n = 8, alt = true }, { x = 45.1, y = 42.6, r = 82, n = 6, alt = true }, { x = 48, y = 50.4, r = 56, n = 8, alt = true }, { x = 47.2, y = 58.6, r = 64, n = 7, alt = true }, { x = 47.4, y = 43.7, r = 74, n = 5, alt = true }, { x = 49.3, y = 52.9, r = 43, n = 3, alt = true }, { x = 48.4, y = 45.6, r = 43, n = 4, alt = true }, { x = 49.1, y = 57.4, r = 51, n = 4, alt = true }, { x = 47.3, y = 62.7, r = 64, n = 7, alt = true }, { x = 46.6, y = 40.5, r = 43, n = 2, alt = true }, { x = 47.1, y = 65.8, r = 73, n = 4, alt = true }, { x = 49.2, y = 63.4, r = 56, n = 4, alt = true }, { x = 68.7, y = 83.2, r = 85, n = 6, alt = true }, { x = 70.1, y = 80.8, r = 43, n = 4, alt = true }, { x = 66.5, y = 89.3, r = 43, n = 1, alt = true }, { x = 66.5, y = 91.5, r = 64, n = 6, alt = true }, { x = 70.9, y = 86.1, r = 52, n = 3, alt = true } }, spread = true, fromNpcs = { { npc = 6195, npcName = "Spitelash Siren" }, { npc = 6196, npcName = "Spitelash Myrmidon" }, { npc = 7885, npcName = "Spitelash Battlemaster" }, { npc = 7886, npcName = "Spitelash Enchantress" } } },
+					},
+				},
+				{
+					title = "{npc:8420}",
+					goals = {
+						{ t = "turnin", quest = 5534, title = "Kim'jael's \"Missing\" Equipment", npc = 8420, npcName = "Kim'jael", map = 1447, x = 53.45, y = 21.82, z = 169.7, f = "e" },
+					},
+				},
+				{
+					title = "The Ruins of Eldarath",
+					goals = {
+						{ t = "collect", quest = 3449, title = "Arcane Runes", item = 10564, itemName = "Rubbing: Rune of Jin'yael", count = 1, oi = 2, map = 1447, x = 39.56, y = 50.25, f = "e", from = "Rune of Jin'yael", fromKind = "object", fromId = 149480 },
+						{ t = "level", level = 50, frac = 0.8, note = "grind on {npc:6196}" },
+						{ t = "collect", quest = 3449, title = "Arcane Runes", item = 10565, itemName = "Rubbing: Rune of Markri", count = 1, oi = 3, map = 1447, x = 39.36, y = 55.48, f = "e", from = "Rune of Markri", fromKind = "object", fromId = 149482 },
+						{ t = "level", level = 50, frac = 0.85, note = "grind on {npc:6196}" },
+					},
+				},
+				{
+					title = "{item:10566}",
+					goals = {
+						{ t = "collect", quest = 3449, title = "Arcane Runes", item = 10566, itemName = "Rubbing: Rune of Sael'hai", count = 1, oi = 4, map = 1447, x = 42.38, y = 64.15, f = "e", from = "Rune of Sael'hai", fromKind = "object", fromId = 149483 },
+						{ t = "collect", quest = 8256, title = "The Ichor of Undeath", item = 7972, itemName = "Ichor of Undeath", count = 1, oi = 1, map = 1447, x = 38.83, y = 60.57, f = "e", spots = { { x = 38.8, y = 60.6, r = 40, n = 1 }, { x = 39.1, y = 55.3, r = 40, n = 1 }, { x = 39.4, y = 50.3, r = 40, n = 1 }, { x = 40.3, y = 46.1, r = 40, n = 1 }, { x = 36.3, y = 48, r = 40, n = 1 }, { x = 35.2, y = 51.8, r = 40, n = 1 }, { x = 17.3, y = 66.4, r = 40, n = 3 }, { x = 17, y = 68.3, r = 47, n = 6 }, { x = 17.7, y = 69.8, r = 40, n = 3 }, { x = 16.4, y = 72.2, r = 56, n = 4 }, { x = 14.2, y = 72.7, r = 40, n = 5 } }, spread = true, only = { classes = { "PRIEST" } }, note = "{item:7972}: the {npc:7864}, about 10%", fromNpcs = { { npc = 7864, npcName = "Lingering Highborne" }, { npc = 6116, npcName = "Highborne Apparition" }, { npc = 6117, npcName = "Highborne Lichling" } } },
+					},
+				},
+				{
+					title = "{npc:8405}",
+					only = { classes = { "PRIEST" } },
+					goals = {
+						{ t = "turnin", quest = 8256, title = "The Ichor of Undeath", npc = 8405, npcName = "Ogtinc", map = 1447, x = 42.4, y = 42.62, z = 154.5, f = "e", only = { classes = { "PRIEST" } } },
+					},
+				},
+				{
+					title = "Ravencrest Monument",
+					note = "Swim to the small island off the southern tip of {zone:1447}: {npc:8392} waits by the monument.",
+					goals = {
+						{ t = "turnin", quest = 3449, title = "Arcane Runes", npc = 8392, npcName = "Pilot Xiggs Fuselighter", map = 1447, x = 77.81, y = 91.4, f = "e" },
+						{ t = "accept", quest = 3461, title = "Return to Tymor", npc = 8392, npcName = "Pilot Xiggs Fuselighter", minLevel = 45, qlvl = 52, pre = { 3449 }, preTitles = { [3449] = "Arcane Runes" }, map = 1447, x = 77.81, y = 91.4, f = "e" },
+					},
+				},
+				{
+					title = "Level 50.89",
+					note = "Top up here to level 50.89 before the hand-ins at {zone:1426}: they take you to level 51.",
+					when = { { k = "level", op = "<", n = 50, frac = 0.89 } },
+					goals = {
+						{ t = "goto", text = "{npc:6196}", map = 1447, x = 48.8, y = 43.4, f = "e" },
+						{ t = "level", level = 50, frac = 0.89, note = "grind on {npc:6196}" },
+					},
+				},
+				{
+					title = "To Stoutlager Inn",
+					goals = {
+						{ t = "goto", text = "Stoutlager Inn", map = 1432, x = 35.5, y = 48.4, f = "e" },
+					},
+				},
+				{
+					title = "Fly to {zone:1455}",
+					goals = {
+						{ t = "goto", text = "Thelsamar flight master", map = 1432, x = 33.9, y = 50.8, f = "e" },
+						{ t = "fly", location = "Ironforge", node = 6 },
+					},
+				},
+				{
+					title = "{zone:1455}",
+					goals = {
+						{ t = "turnin", quest = 3461, title = "Return to Tymor", npc = 8507, npcName = "Tymor", map = 1455, x = 30.96, y = 4.83, z = 509, f = "e", note = "{npc:8507}, {object:32362}" },
+					},
+				},
+				{
+					title = "Fly to Morgan's Vigil",
+					goals = {
+						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
+						{ t = "fly", location = "Morgan's Vigil", node = 71 },
+					},
+				},
+				{
+					title = "Morgan's Vigil",
+					note = "Morgan's Vigil sits in the south-east of the Steppes, at the top of the pass up from Redridge.",
+					goals = {
+						{ t = "accept", quest = 3823, title = "Extinguish the Firegut", npc = 9177, npcName = "Oralius", minLevel = 48, qlvl = 52, map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+					},
+				},
+				{
+					title = "Dreadmaul Rock",
+					note = "The Firegut ogres hold the great rock north of the Vigil, with the Brutes on its east side.",
+					goals = {
+						{ t = "kill", quest = 3823, title = "Extinguish the Firegut", target = "Firegut Ogre Mage", npc = 7034, count = 15, oi = 1, map = 1428, x = 83.52, y = 52.21, z = 152.4, f = "e", spots = { { x = 82.2, y = 46.6, z = 159.1, r = 36, n = 5 }, { x = 80.1, y = 43, z = 174.2, r = 69, n = 8 }, { x = 82.7, y = 38.2, r = 35, n = 3 }, { x = 78, y = 35.1, r = 36, n = 2 }, { x = 83.5, y = 52.2, z = 152.4, r = 15, n = 1, alt = true }, { x = 77, y = 51.2, z = 137.6, r = 15, n = 1, alt = true }, { x = 74.6, y = 47.2, z = 133.7, r = 15, n = 1, alt = true }, { x = 74.6, y = 43.3, z = 135.1, r = 15, n = 1, alt = true }, { x = 78.1, y = 38.3, z = 170.9, r = 15, n = 1, alt = true }, { x = 82.6, y = 33.6, z = 142.8, r = 15, n = 1, alt = true }, { x = 74.7, y = 37.1, z = 146.5, r = 15, n = 1, alt = true } }, note = "{npc:7034}, below ground" },
+						{ t = "kill", quest = 3823, title = "Extinguish the Firegut", target = "Firegut Ogre", npc = 7033, count = 15, oi = 2, map = 1428, x = 83.83, y = 53.61, z = 142.8, f = "e", spots = { { x = 83.1, y = 53.5, r = 23, n = 2 }, { x = 87, y = 47, z = 138.3, r = 35, n = 3 }, { x = 77.2, y = 55.7, r = 43, n = 4 }, { x = 80.2, y = 44.8, z = 176.4, r = 55, n = 4 }, { x = 76, y = 48.5, r = 49, n = 5 }, { x = 77, y = 44.4, r = 57, n = 4 }, { x = 79.2, y = 41.7, r = 30, n = 2, alt = true }, { x = 74.5, y = 39.3, r = 17, n = 2, alt = true }, { x = 77.9, y = 33.4, z = 142.6, r = 15, n = 1, alt = true } } },
+						{ t = "kill", quest = 3823, title = "Extinguish the Firegut", target = "Firegut Brute", npc = 7035, count = 7, oi = 3, map = 1428, x = 82.42, y = 48.21, z = 156.9, f = "e", spots = { { x = 81.7, y = 47.7, r = 42, n = 4 }, { x = 84.4, y = 45.9, r = 27, n = 3 }, { x = 82.4, y = 42.7, r = 22, n = 2 }, { x = 79.6, y = 43.2, z = 122.9, r = 70, n = 7 }, { x = 81.5, y = 40.6, r = 24, n = 2 }, { x = 85.1, y = 36.6, r = 22, n = 2 }, { x = 79.1, y = 35.4, z = 159.6, r = 15, n = 1, alt = true } } },
+					},
+				},
+				{
+					title = "Morgan's Vigil",
+					goals = {
+						{ t = "accept", quest = 4283, title = "FIFTY! YEP!", npc = 9177, npcName = "Oralius", minLevel = 50, qlvl = 56, map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e", note = "{npc:9177}: the Blackrock orcs drop the medallions, keep it open all through the Steppes" },
+						{ t = "turnin", quest = 3823, title = "Extinguish the Firegut", npc = 9177, npcName = "Oralius", map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+						{ t = "accept", quest = 3824, title = "Gor'tesh the Brute Lord", npc = 9177, npcName = "Oralius", minLevel = 48, qlvl = 53, pre = { 3823 }, preTitles = { [3823] = "Extinguish the Firegut" }, map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+					},
+				},
+				{
+					title = "{item:11467} on the way",
+					along = "q3701",
+					goals = {
+						{ t = "collect", quest = 4283, title = "FIFTY! YEP!", item = 11467, itemName = "Blackrock Medallion", count = 50, oi = 1, map = 1428, x = 84.06, y = 60.61, f = "e", spots = { { x = 84.1, y = 60.6, r = 40, n = 1 }, { x = 72.4, y = 46.9, r = 40, n = 1 }, { x = 68.2, y = 61, r = 40, n = 1 }, { x = 58.4, y = 63.9, r = 40, n = 1 }, { x = 48.9, y = 58.1, r = 40, n = 4 }, { x = 39.5, y = 54.9, r = 51, n = 4 }, { x = 26.5, y = 57.7, r = 40, n = 1 }, { x = 24.5, y = 69.2, r = 40, n = 1 }, { x = 17.5, y = 29.6, r = 40, n = 5 }, { x = 40.4, y = 34.1, r = 46, n = 17 }, { x = 79.3, y = 30.6, r = 40, n = 1 }, { x = 90.6, y = 40, r = 40, n = 1 }, { x = 81.5, y = 56.7, r = 40, n = 1, alt = true }, { x = 86.7, y = 55.6, r = 40, n = 1, alt = true }, { x = 91.9, y = 59.3, r = 40, n = 1, alt = true }, { x = 88.9, y = 50.9, r = 46, n = 3, alt = true }, { x = 82.7, y = 30.4, r = 40, n = 1, alt = true }, { x = 75.5, y = 32.9, r = 40, n = 1, alt = true }, { x = 63.1, y = 54.3, r = 40, n = 1, alt = true }, { x = 61.5, y = 59.9, r = 40, n = 1, alt = true }, { x = 55.3, y = 53.8, r = 62, n = 13, alt = true }, { x = 50.8, y = 54.1, r = 40, n = 6, alt = true }, { x = 50.5, y = 61.3, r = 40, n = 3, alt = true }, { x = 44.8, y = 57.4, r = 40, n = 3, alt = true }, { x = 44.8, y = 50.8, r = 40, n = 2, alt = true }, { x = 42.6, y = 55.5, r = 40, n = 4, alt = true }, { x = 43, y = 37, r = 40, n = 5, alt = true }, { x = 43.6, y = 34.4, r = 40, n = 3, alt = true }, { x = 26.5, y = 62.8, r = 40, n = 1, alt = true }, { x = 23.6, y = 59.5, r = 40, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 9690, npcName = "Ember Worg" }, { npc = 7055, npcName = "Blackrock Worg" }, { npc = 9694, npcName = "Slavering Ember Worg" }, { npc = 9697, npcName = "Giant Ember Worg" }, { npc = 7025, npcName = "Blackrock Soldier" } } },
+					},
+				},
+				{
+					title = "{object:153556} on the way",
+					when = { { k = "onquest", q = { 3701 } } },
+					along = "q3701",
+					goals = {
+						{ t = "interact", quest = 3701, title = "The Smoldering Ruins of Thaurissan", object = 153556, objName = "Thaurissan Relic", oi = 1, map = 1428, x = 67.59, y = 43.73, z = 136.3, f = "e", spots = { { x = 66.3, y = 42.6, r = 71, n = 5 }, { x = 68.8, y = 37.5, r = 49, n = 3 }, { x = 63, y = 36.5, r = 84, n = 6 }, { x = 59.1, y = 40.9, r = 71, n = 6 }, { x = 54.8, y = 38.1, r = 84, n = 7 }, { x = 72.4, y = 33.9, z = 147.7, r = 15, n = 1, alt = true } } },
+					},
+				},
+				{
+					title = "Level 51.39",
+					note = "Top up here to level 51.39 before the hand-ins at Flame Crest: they take you to level 52.",
+					when = { { k = "level", op = "<", n = 51, frac = 0.39 } },
+					goals = {
+						{ t = "goto", text = "{npc:7034}", map = 1428, x = 78.7, y = 44.7, f = "e" },
+						{ t = "level", level = 51, frac = 0.39, note = "grind on {npc:7034}" },
+					},
+				},
+				{
+					title = "Flame Crest",
+					note = "Follow the road west, then climb north to the goblin camp on Flame Crest.",
+					goals = {
+						{ t = "accept", quest = 4726, title = "Broodling Essence", npc = 10267, npcName = "Tinkee Steamboil", minLevel = 50, qlvl = 52, map = 1428, x = 65.24, y = 24, z = 165.8, f = "e" },
+						{ t = "accept", quest = 4296, title = "Tablet of the Seven", npc = 9536, npcName = "Maxwort Uberglint", minLevel = 50, qlvl = 50, map = 1428, x = 65.15, y = 23.91, z = 165.6, f = "e" },
+					},
+				},
+				{
+					title = "Level 52",
+					note = "Top up here to level 52 before the hand-ins at Flame Crest: they take you to level 53.",
+					when = { { k = "level", op = "<", n = 52 } },
+					goals = {
+						{ t = "goto", text = "{npc:7034}", map = 1428, x = 78.7, y = 44.7, f = "e" },
+						{ t = "level", level = 52, note = "grind on {npc:7034}" },
+					},
+				},
+				{
+					title = "Ruins of Thaurissan: kill these as you meet them",
+					note = "The relics are the carved stones scattered through the Ruins of Thaurissan around Flame Crest: click them until the information is recovered.\nRead the tablet in the {object:147516} camp among the ruins, south-west of Flame Crest, to copy the transcript.\nUse the {item:12284} on a {npc:7047} on the slopes east of Flame Crest just before it dies, then loot the essence it leaves.",
+					label = "q3701",
+					goals = {
+						{ t = "interact", quest = 3701, title = "The Smoldering Ruins of Thaurissan", object = 153556, objName = "Thaurissan Relic", oi = 1, map = 1428, x = 72.39, y = 33.93, z = 147.7, f = "e", spots = { { x = 68.8, y = 37.5, r = 49, n = 3 }, { x = 66.3, y = 42.6, r = 71, n = 5 }, { x = 63, y = 36.5, r = 84, n = 6 }, { x = 59.1, y = 40.9, r = 71, n = 6 }, { x = 54.8, y = 38.1, r = 84, n = 7 }, { x = 72.4, y = 33.9, z = 147.7, r = 15, n = 1, alt = true } } },
+						{ t = "collect", quest = 4726, title = "Broodling Essence", item = 12283, itemName = "Broodling Essence", count = 8, oi = 1, map = 1428, x = 72.4, y = 28.17, f = "e", spots = { { x = 72.8, y = 27.6, r = 62, n = 2 }, { x = 91.7, y = 35.8, r = 62, n = 3 }, { x = 90.5, y = 50.9, r = 62, n = 1 }, { x = 84.6, y = 62.1, r = 62, n = 1 }, { x = 70.9, y = 62.1, r = 62, n = 1 }, { x = 57.8, y = 64.2, r = 62, n = 2 }, { x = 37.8, y = 62.5, r = 62, n = 1 }, { x = 28.7, y = 57.8, r = 62, n = 1 }, { x = 23.4, y = 68.9, r = 62, n = 3 }, { x = 17, y = 55.4, r = 62, n = 1 }, { x = 39.8, y = 47.5, r = 62, n = 2 }, { x = 52.7, y = 26, r = 62, n = 1 }, { x = 80.3, y = 27.4, r = 62, n = 3, alt = true }, { x = 59.3, y = 31.7, r = 62, n = 3, alt = true }, { x = 87, y = 31.4, r = 64, n = 4, alt = true }, { x = 90.2, y = 45.5, r = 62, n = 3, alt = true }, { x = 64.1, y = 58.9, r = 62, n = 2, alt = true }, { x = 34.6, y = 55.4, r = 62, n = 1, alt = true }, { x = 25.1, y = 46.5, r = 62, n = 2, alt = true }, { x = 22.3, y = 58.9, r = 62, n = 1, alt = true } }, spread = true, from = "Broodling Essence", fromKind = "object", fromId = 175264 },
+						{ t = "collect", quest = 4283, title = "FIFTY! YEP!", item = 11467, itemName = "Blackrock Medallion", count = 50, oi = 1, map = 1428, x = 75.54, y = 32.89, f = "e", spots = { { x = 75.5, y = 32.9, r = 40, n = 1 }, { x = 72.4, y = 46.9, r = 40, n = 1 }, { x = 68.2, y = 61, r = 40, n = 1 }, { x = 81.5, y = 56.7, r = 40, n = 1 }, { x = 91.9, y = 59.3, r = 40, n = 1 }, { x = 90.6, y = 40, r = 40, n = 1 }, { x = 55.3, y = 53.8, r = 62, n = 13 }, { x = 44.8, y = 57.4, r = 40, n = 3 }, { x = 40.4, y = 34.1, r = 46, n = 17 }, { x = 26.5, y = 57.7, r = 40, n = 1 }, { x = 24.5, y = 69.2, r = 40, n = 1 }, { x = 17.5, y = 29.6, r = 40, n = 5 }, { x = 79.3, y = 30.6, r = 40, n = 1, alt = true }, { x = 82.7, y = 30.4, r = 40, n = 1, alt = true }, { x = 88.9, y = 50.9, r = 46, n = 3, alt = true }, { x = 86.7, y = 55.6, r = 40, n = 1, alt = true }, { x = 63.1, y = 54.3, r = 40, n = 1, alt = true }, { x = 84.1, y = 60.6, r = 40, n = 1, alt = true }, { x = 61.5, y = 59.9, r = 40, n = 1, alt = true }, { x = 58.4, y = 63.9, r = 40, n = 1, alt = true }, { x = 50.8, y = 54.1, r = 40, n = 6, alt = true }, { x = 50.5, y = 61.3, r = 40, n = 3, alt = true }, { x = 48.9, y = 58.1, r = 40, n = 4, alt = true }, { x = 43.6, y = 34.4, r = 40, n = 3, alt = true }, { x = 43, y = 37, r = 40, n = 5, alt = true }, { x = 44.8, y = 50.8, r = 40, n = 2, alt = true }, { x = 42.6, y = 55.5, r = 40, n = 4, alt = true }, { x = 39.5, y = 54.9, r = 51, n = 4, alt = true }, { x = 26.5, y = 62.8, r = 40, n = 1, alt = true }, { x = 23.6, y = 59.5, r = 40, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 10077, npcName = "Deathmaw" }, { npc = 7055, npcName = "Blackrock Worg" }, { npc = 9690, npcName = "Ember Worg" }, { npc = 9694, npcName = "Slavering Ember Worg" }, { npc = 9697, npcName = "Giant Ember Worg" } } },
+						{ t = "use", quest = 4726, title = "Broodling Essence", item = 12284, itemName = "Draco-Incarcinatrix 900", oi = 1, map = 1428, x = 72.4, y = 28.2, f = "e" },
+						{ t = "collect", quest = 4296, title = "Tablet of the Seven", item = 11470, itemName = "Tablet Transcript", count = 1, oi = 1, map = 1428, x = 54.12, y = 40.76, f = "e", from = "Tablet of the Seven", fromKind = "object", fromId = 169294 },
+					},
+				},
+				{
+					title = "Flame Crest",
+					goals = {
+						{ t = "turnin", quest = 4726, title = "Broodling Essence", npc = 10267, npcName = "Tinkee Steamboil", map = 1428, x = 65.24, y = 24, z = 165.8, f = "e" },
+						{ t = "accept", quest = 4808, title = "Felnok Steelspring", npc = 10267, npcName = "Tinkee Steamboil", minLevel = 50, qlvl = 54, pre = { 4726 }, preTitles = { [4726] = "Broodling Essence" }, map = 1428, x = 65.24, y = 24, z = 165.8, f = "e", note = "Ends with {quest:4808} in Everlook, {zone:1452}: keep it" },
+						{ t = "turnin", quest = 4296, title = "Tablet of the Seven", npc = 9536, npcName = "Maxwort Uberglint", map = 1428, x = 65.15, y = 23.91, z = 165.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9459}",
+					when = { { k = "group", q = 4023 } },
+					goals = {
+						{ t = "accept", quest = 4023, title = "A Taste of Flame", npc = 9459, npcName = "Cyrus Therepentous", minLevel = 52, qlvl = 54, closedBy = { 4022 }, preTitles = { [4022] = "A Taste of Flame" }, map = 1428, x = 95.09, y = 31.56, z = 131.3, f = "e", note = "Below ground" },
+					},
+				},
+				{
+					title = "{quest:4023}",
+					note = "These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:9461} is a level 54 elite: most classes solo it at level 56, but you may need help. Skip it if you are alone: the route has you grind the XP back.",
+					when = { { k = "group", q = 4023 } },
+					goals = {
+						{ t = "collect", quest = 4023, title = "A Taste of Flame", item = 10575, itemName = "Black Dragonflight Molt", count = 1, oi = 1, map = 1428, x = 94.4, y = 31.8, f = "e", from = "Frenzied Black Drake", fromKind = "npc", fromRank = 1, fromId = 9461, fromNpcs = { { npc = 9461, npcName = "Frenzied Black Drake" } } },
+					},
+				},
+				{
+					title = "{npc:9459}",
+					when = { { k = "group", q = 4023 } },
+					goals = {
+						{ t = "turnin", quest = 4023, title = "A Taste of Flame", npc = 9459, npcName = "Cyrus Therepentous", map = 1428, x = 95.09, y = 31.56, z = 131.3, f = "e", note = "Below ground" },
+					},
+				},
+				{
+					title = "Level 52.08",
+					note = "If you skipped {quest:4022}, grind here to level 52.08 to stay on the route's plan.",
+					when = { { k = "group", neg = true, q = 4023 }, { k = "level", op = "<", n = 52, frac = 0.08 } },
+					goals = {
+						{ t = "goto", text = "{npc:9690}", map = 1428, x = 89.6, y = 51.2, f = "e" },
+						{ t = "level", level = 52, frac = 0.08, note = "grind on {npc:9690}" },
+					},
+				},
+				{
+					title = "Blackrock Stronghold",
+					note = "{npc:9176} and the Blackrock orcs hold the camps and the stronghold at the foot of Blackrock Mountain, west of Flame Crest. Pull them one at a time; every orc and worg may drop a medallion, so kill them until you have fifty.\nCareful: {npc:9176} has a guard linked to him that joins the fight, and a second soldier patrols close by; clear the patrol before pulling.",
+					goals = {
+						{ t = "collect", quest = 4283, title = "FIFTY! YEP!", item = 11467, itemName = "Blackrock Medallion", count = 50, oi = 1, map = 1428, x = 89.34, y = 50.65, f = "e", spots = { { x = 88.9, y = 50.9, r = 46, n = 3 }, { x = 81.5, y = 56.7, r = 40, n = 1 }, { x = 72.4, y = 46.9, r = 40, n = 1 }, { x = 75.5, y = 32.9, r = 40, n = 1 }, { x = 68.2, y = 61, r = 40, n = 1 }, { x = 58.4, y = 63.9, r = 40, n = 1 }, { x = 50.5, y = 61.3, r = 40, n = 3 }, { x = 39.5, y = 54.9, r = 51, n = 4 }, { x = 26.5, y = 57.7, r = 40, n = 1 }, { x = 24.5, y = 69.2, r = 40, n = 1 }, { x = 17.5, y = 29.6, r = 40, n = 5 }, { x = 40.4, y = 34.1, r = 46, n = 17 }, { x = 86.7, y = 55.6, r = 40, n = 1, alt = true }, { x = 91.9, y = 59.3, r = 40, n = 1, alt = true }, { x = 90.6, y = 40, r = 40, n = 1, alt = true }, { x = 84.1, y = 60.6, r = 40, n = 1, alt = true }, { x = 82.7, y = 30.4, r = 40, n = 1, alt = true }, { x = 79.3, y = 30.6, r = 40, n = 1, alt = true }, { x = 63.1, y = 54.3, r = 40, n = 1, alt = true }, { x = 61.5, y = 59.9, r = 40, n = 1, alt = true }, { x = 55.3, y = 53.8, r = 62, n = 13, alt = true }, { x = 50.8, y = 54.1, r = 40, n = 6, alt = true }, { x = 48.9, y = 58.1, r = 40, n = 4, alt = true }, { x = 44.8, y = 50.8, r = 40, n = 2, alt = true }, { x = 44.8, y = 57.4, r = 40, n = 3, alt = true }, { x = 42.6, y = 55.5, r = 40, n = 4, alt = true }, { x = 43.6, y = 34.4, r = 40, n = 3, alt = true }, { x = 43, y = 37, r = 40, n = 5, alt = true }, { x = 26.5, y = 62.8, r = 40, n = 1, alt = true }, { x = 23.6, y = 59.5, r = 40, n = 1, alt = true } }, spread = true, note = "{item:11467}; inside", fromNpcs = { { npc = 9690, npcName = "Ember Worg" }, { npc = 7055, npcName = "Blackrock Worg" }, { npc = 9694, npcName = "Slavering Ember Worg" }, { npc = 9697, npcName = "Giant Ember Worg" }, { npc = 7025, npcName = "Blackrock Soldier" } } },
+						{ t = "collect", quest = 3824, title = "Gor'tesh the Brute Lord", item = 11080, itemName = "Gor'tesh's Lopped Off Head", count = 1, oi = 1, map = 1428, x = 39.33, y = 55.3, f = "e", from = "Gor'tesh", fromKind = "npc", fromId = 9176, fromNpcs = { { npc = 9176, npcName = "Gor'tesh" } } },
+					},
+				},
+				{
+					title = "Morgan's Vigil",
+					note = "Ride back east along the road to the Vigil.",
+					goals = {
+						{ t = "turnin", quest = 4283, title = "FIFTY! YEP!", npc = 9177, npcName = "Oralius", map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+						{ t = "turnin", quest = 3824, title = "Gor'tesh the Brute Lord", npc = 9177, npcName = "Oralius", map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+						{ t = "accept", quest = 3825, title = "Ogre Head On A Stick = Party", npc = 9177, npcName = "Oralius", minLevel = 48, qlvl = 53, pre = { 3824 }, preTitles = { [3824] = "Gor'tesh the Brute Lord" }, map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+					},
+				},
+				{
+					title = "Dreadmaul Rock",
+					note = "Climb to the top of Dreadmaul Rock and plant the head in the soft dirt mound.",
+					goals = {
+						{ t = "interact", quest = 3825, title = "Ogre Head On A Stick = Party", object = 160840, objName = "Soft Dirt Mound", oi = 1, map = 1428, x = 81, y = 46.79, z = 218.2, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil",
+					goals = {
+						{ t = "turnin", quest = 3825, title = "Ogre Head On A Stick = Party", npc = 9177, npcName = "Oralius", map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+						{ t = "vendor", candidates = { { npc = 1296, npcName = "Felder Stover", map = 1428, x = 85.21, y = 68.39, z = 187.6, f = "e", faction = "A" }, { npc = 9544, npcName = "Yuka Screwspigot", map = 1418, x = 4.9, y = 94.7, z = 165.4, f = "e", faction = "AH" }, { npc = 956, npcName = "Dorin Songblade", map = 1433, x = 25.79, y = 46.44, z = 64.1, faction = "A" }, { npc = 3097, npcName = "Bernard Brubaker", map = 1433, x = 83.16, y = 71.02, z = 122.1, faction = "A" }, { npc = 256730, npcName = "Stondry Darkhammer", map = 1433, x = 10.38, y = 73.85, faction = "A" }, { npc = 9179, npcName = "Jazzrik", map = 1418, x = 42.47, y = 52.5, z = 241.2, f = "e", faction = "AH" }, { npc = 1198, npcName = "Rallic Finn", map = 1429, x = 83.28, y = 66.09, z = 47.4, f = "e", faction = "A" }, { npc = 11703, npcName = "Graw Cornerstone", map = 1427, x = 41.5, y = 74.97, z = 254.8, f = "e", faction = "A" }, { npc = 959, npcName = "Morley Eberlein", map = 1429, x = 64.69, y = 69.51, z = 90.5, f = "e", faction = "A" }, { npc = 259861, npcName = "Paige Armstrong", map = 2548, x = 64.35, y = 82.02, faction = "A" }, { npc = 14624, npcName = "Master Smith Burninate", map = 1427, x = 38.8, y = 28.51, z = 309.3, f = "e", faction = "AH" }, { npc = 5508, npcName = "Strumner Flintheel", map = 1419, x = 66.08, y = 17.16, z = 66.8, f = "e", faction = "A" }, { npc = 1213, npcName = "Godric Rothgar", map = 1429, x = 47.69, y = 41.42, z = 82, f = "e", faction = "A" }, { npc = 228, npcName = "Avette Fellwood", map = 1431, x = 73.03, y = 44.42, z = 26.3, f = "e", faction = "A" }, { npc = 1214, npcName = "Aldren Cordon", map = 1432, x = 64.82, y = 66.05, z = 322.9, f = "e", faction = "A" }, { npc = 1698, npcName = "Frast Dokner", map = 1426, x = 69, y = 55.89, z = 383.2, f = "e", faction = "A" }, { npc = 259766, npcName = "Mika Darby", map = 2548, x = 77.76, y = 52.03, faction = "A" }, { npc = 260566, npcName = "Fizzix Boomshot", map = 2548, x = 78.59, y = 53.66, faction = "AH" }, { npc = 268238, npcName = "Nordun Steadysight", map = 1429, x = 42.01, y = 66.39, f = "e", faction = "A" }, { npc = 167, npcName = "Morhan Coppertongue", map = 1432, x = 34.02, y = 46.54, z = 324.4, f = "e", faction = "A" }, { npc = 954, npcName = "Kat Sampson", map = 1432, x = 82.65, y = 64.11, z = 407.8, f = "e", faction = "A" }, { npc = 1324, npcName = "Heinrich Stone", map = 1453, x = 77.22, y = 57.37, z = 104.5, faction = "A" }, { npc = 3177, npcName = "Turuk Amberstill", map = 1426, x = 62.9, y = 49.89, z = 406.2, f = "e", faction = "A" }, { npc = 5512, npcName = "Kaita Deepforge", map = 1453, x = 63.26, y = 37.74, z = 95.4, faction = "A" }, { npc = 1297, npcName = "Lina Stover", map = 1453, x = 58.72, y = 68.72, z = 102.4, faction = "A" }, { npc = 1362, npcName = "Gothor Brumn", map = 1432, x = 24.13, y = 18.21, z = 327.2, f = "e", faction = "A" }, { npc = 1273, npcName = "Grawn Thromwyn", map = 1426, x = 45.29, y = 52.19, z = 397.4, f = "e", faction = "A" }, { npc = 1645, npcName = "Quartermaster Hicks", map = 1429, x = 25.37, y = 74, z = 38.7, f = "e", faction = "A" }, { npc = 7976, npcName = "Thalgus Thunderfist", map = 1455, x = 61.55, y = 89.43, z = 502.3, f = "e", faction = "A" }, { npc = 222, npcName = "Nillen Andemar", map = 1432, x = 42.87, y = 9.89, z = 310.4, f = "e", faction = "A" }, { npc = 1104, npcName = "Grundel Harkin", map = 1426, x = 28.79, y = 67.84, z = 395.6, f = "e", faction = "A" }, { npc = 5106, npcName = "Bromiir Ormsen", map = 1455, x = 31.72, y = 58.27, z = 511.8, f = "e", faction = "A" }, { npc = 5170, npcName = "Hjoldir Stoneblade", map = 1455, x = 44.99, y = 6.79, z = 503.7, f = "e", faction = "A" }, { npc = 2483, npcName = "Jaquilina Dramet", map = 1434, x = 35.75, y = 10.66, z = 11, f = "e", faction = "AH" }, { npc = 3162, npcName = "Burdrak Harglhelm", map = 1426, x = 30.11, y = 45.28, z = 394.2, f = "e", faction = "A" }, { npc = 1668, npcName = "William MacGregor", map = 1436, x = 57.71, y = 53.94, z = 33, f = "e", faction = "A" }, { npc = 1450, npcName = "Brahnmar", map = 1437, x = 11.54, y = 59.86, z = 11.6, f = "e", faction = "A" }, { npc = 1669, npcName = "Defias Profiteer", map = 1436, x = 43.47, y = 66.76, z = 50.6, f = "e", faction = "AH" }, { npc = 14921, npcName = "Rin'wosho the Trader", map = 1434, x = 15.07, y = 16, z = 6.9, f = "e", faction = "AH" }, { npc = 2679, npcName = "Wenna Silkbeard", map = 1437, x = 25.61, y = 25.8, z = 8.7, f = "e", faction = "A" }, { npc = 2845, npcName = "Fargon Mortalak", map = 1434, x = 29.04, y = 74.99, z = 24.5, f = "e", faction = "AH" }, { npc = 1471, npcName = "Jannos Ironwill", map = 1417, x = 45.98, y = 47.72, z = 21.5, f = "e", faction = "A" }, { npc = 3543, npcName = "Robert Aebischer", map = 1424, x = 51.21, y = 56.98, z = 15.3, f = "e", faction = "A" }, { npc = 3536, npcName = "Kris Legace", map = 1424, x = 80.14, y = 38.89, z = 88.3, f = "e", faction = "AH" }, { npc = 3537, npcName = "Zixil", map = 1416, x = 53.6, y = 98.7, f = "e", faction = "AH" }, { npc = 2404, npcName = "Blacksmith Verringtan", map = 1424, x = 32.11, y = 44.42, z = 49.4, f = "e", faction = "A" }, { npc = 13217, npcName = "Thanthaldis Snowgleam", map = 1416, x = 39.45, y = 81.65, z = 131.2, f = "e", faction = "A" }, { npc = 3534, npcName = "Wallace the Blind", map = 1421, x = 46.5, y = 86.49, z = 17.1, f = "e", faction = "AH" }, { npc = 8161, npcName = "Harggan", map = 1424, x = 98.7, y = 3.1, z = 131.6, f = "e", faction = "A" }, { npc = 3530, npcName = "Pyrewood Tailor", map = 1421, x = 46.55, y = 72.39, f = "e", faction = "A" }, { npc = 275623, npcName = "Valaden Silverblade", map = 1416, x = 14.73, y = 71.22, f = "e", faction = "AH" }, { npc = 275598, npcName = "Valerie Langrom", map = 1416, x = 12.64, y = 71.05, f = "e", faction = "A" }, { npc = 28990, npcName = "Anthony Durain", map = 1416, x = 20.15, y = 63.77, f = "e", faction = "A" }, { npc = 12942, npcName = "Leonard Porter", map = 1422, x = 43.08, y = 84.31, z = 62.7, f = "e", faction = "A" }, { npc = 10857, npcName = "Argent Quartermaster Lightspark", map = 1422, x = 42.84, y = 83.72, z = 65.3, f = "e", faction = "AH" }, { npc = 11278, npcName = "Magnus Frostwake", map = 1422, x = 68.12, y = 77.57, z = 62.1, f = "e", faction = "AH" }, { npc = 10856, npcName = "Argent Quartermaster Hasana", map = 1422, x = 26.6, y = 55.2, z = 59.5, f = "e", faction = "AH" }, { npc = 16376, npcName = "Craftsman Wilhelm", map = 1423, x = 71.24, y = 49.9, z = 81.9, faction = "AH" }, { npc = 3491, npcName = "Ironzar", map = 1413, x = 62.24, y = 37.48, z = 8.2, f = "e", faction = "AH" }, { npc = 3683, npcName = "Kiknikle", map = 1413, x = 41.79, y = 38.69, z = 91.9, f = "e", faction = "AH" }, { npc = 263569, npcName = "Bryanna Embreeze", map = 1413, x = 63.45, y = 58.74, f = "e", faction = "A" }, { npc = 3588, npcName = "Khardan Proudblade", map = 1438, x = 58.72, y = 39.67, z = 1322.8, f = "e", faction = "A" }, { npc = 3609, npcName = "Shalomon", map = 1438, x = 56.31, y = 59.49, z = 1308.9, f = "e", faction = "A" }, { npc = 4183, npcName = "Naram Longclaw", map = 1439, x = 37.57, y = 40.35, z = 8.3, f = "e", faction = "A" }, { npc = 3951, npcName = "Bhaldaran Ravenshade", map = 1440, x = 50.27, y = 67.27, z = 101.8, f = "e", faction = "A" }, { npc = 3952, npcName = "Aeolynn", map = 1440, x = 34.47, y = 49.52, z = 111.2, f = "e", faction = "A" }, { npc = 14753, npcName = "Illiyana Moonblaze", map = 1440, x = 61.49, y = 83.86, z = 126.3, f = "e", faction = "A" }, { npc = 222685, npcName = "Quartermaster Kyleen", map = 1440, x = 89.4, y = 40.4, f = "e", faction = "AH" }, { npc = 1695, npcName = "Rendow", map = 1441, x = 7.6, y = 17.9, z = -36.6, f = "e", faction = "A" }, { npc = 3053, npcName = "Synge", map = 1441, x = 80.4, y = 77.01, z = -58.7, f = "e", faction = "AH" }, { npc = 4085, npcName = "Nizzik", map = 1442, x = 62.7, y = 40.18, z = 104.6, f = "e", faction = "AH" }, { npc = 4086, npcName = "Veenix", map = 1442, x = 58.22, y = 51.74, z = 65.5, f = "e", faction = "AH" }, { npc = 4188, npcName = "Illyanie", map = 1442, x = 35.59, y = 7.35, z = 234.9, f = "e", faction = "A" }, { npc = 1322, npcName = "Maxton Strang", map = 1443, x = 67.93, y = 8.31, z = 168.1, f = "e", faction = "A" }, { npc = 7852, npcName = "Pratt McGrubben", map = 1444, x = 30.63, y = 42.71, z = 10.1, f = "e", faction = "A" }, { npc = 4886, npcName = "Hans Weston", map = 1445, x = 64.63, y = 50.42, z = 16.9, f = "e", faction = "A" }, { npc = 5411, npcName = "Krinkle Goodsteel", map = 1446, x = 51.46, y = 28.81, z = 8.8, f = "e", faction = "AH" }, { npc = 14301, npcName = "Brinna Valanaar", map = 1447, x = 12, y = 78.38, z = 109.2, f = "e", faction = "A" }, { npc = 15315, npcName = "Mylini Frostmoon", map = 1448, x = 62.41, y = 25.78, z = 574.7, f = "e", faction = "A" }, { npc = 3000, npcName = "Gibbert", map = 1449, x = 44.1, y = 7.19, z = -202.8, f = "e", faction = "AH" }, { npc = 4184, npcName = "Geenia Sunshadow", map = 1450, x = 52, y = 32.89, z = 493.1, f = "e", faction = "AH" }, { npc = 15176, npcName = "Vargus", map = 1451, x = 51.23, y = 38.86, z = 42.6, f = "e", faction = "AH" }, { npc = 11182, npcName = "Nixxrak", map = 1452, x = 61.62, y = 37.87, z = 721.5, f = "e", faction = "AH" }, { npc = 4164, npcName = "Cylania", map = 1457, x = 59.24, y = 46.36, z = 1330.9, f = "e", faction = "A" }, { npc = 4234, npcName = "Andrus", map = 1457, x = 56.13, y = 88.91, z = 1330.1, f = "e", faction = "A" }, { npc = 4257, npcName = "Lana Thunderbrew", map = 1459, x = 43.41, y = 15.64, f = "e", faction = "A" }, { npc = 243855, npcName = "Toron Rockhoof", map = 2482, x = 69, y = 47.36, faction = "A" }, { npc = 265866, npcName = "Trigg Ironhand", map = 2482, x = 15.6, y = 50.6, faction = "A" }, { npc = 265883, npcName = "Chagrak Hammerstrike", map = 2482, x = 13.6, y = 52.4, faction = "AH" }, { npc = 251364, npcName = "Destin Thriceforged", map = 2521, x = 43.43, y = 23.5, faction = "AH" }, { npc = 251913, npcName = "Aedi Thriceforged", map = 2521, x = 44.88, y = 44.37, faction = "AH" }, { npc = 252479, npcName = "Daeann Steelwind", map = 2521, x = 65.47, y = 80.28, faction = "AH" }, { npc = 257422, npcName = "Railee Thriceforged", map = 2521, x = 58.98, y = 75.46, faction = "AH" }, { npc = 265756, npcName = "Genn Fairweather", map = 2521, x = 53.83, y = 81.33, faction = "AH" } } },
+					},
+				},
+				{
+					title = "Fly to Nethergarde Keep",
+					goals = {
+						{ t = "goto", text = "Morgan's Vigil flight master", map = 1428, x = 84.4, y = 68.3, f = "e" },
+						{ t = "fly", location = "Nethergarde Keep", node = 45 },
+					},
+				},
+				{
+					title = "{npc:7363}",
+					note = "{npc:7363} waits at the Rise of the Defiler, the hill south-west of the keep. The {zone:1419} mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, {npc:7664} and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds {object:141891}, Flames of Chaos and then Enrage at 15%.",
+					goals = {
+						{ t = "accept", quest = 3501, title = "Everything Counts In Large Amounts", npc = 7363, npcName = "Kum'isha the Collector", minLevel = 45, qlvl = 55, map = 1419, x = 51.98, y = 35.65, z = 0.8, f = "e", note = "{npc:7363} walks around here: look inside the circle on the map" },
+						{ t = "collect", quest = 3501, title = "Everything Counts In Large Amounts", item = 10593, itemName = "Imperfect Draenethyst Fragment", count = 1, oi = 1, map = 1419, x = 50.06, y = 41.14, f = "e", spots = { { x = 49.2, y = 41.4, r = 40, n = 4 }, { x = 42.9, y = 40.8, r = 69, n = 12 }, { x = 44.3, y = 33.6, r = 40, n = 1 }, { x = 39.3, y = 31.9, r = 57, n = 15 }, { x = 43.7, y = 11.6, r = 40, n = 5 }, { x = 64.7, y = 34.2, r = 46, n = 8 }, { x = 67.6, y = 30.8, r = 64, n = 15 }, { x = 62.9, y = 41, r = 50, n = 13 }, { x = 63.9, y = 46.6, r = 57, n = 13 }, { x = 63, y = 56.3, r = 40, n = 2 }, { x = 55.1, y = 48.6, r = 40, n = 1 }, { x = 52.5, y = 58, r = 40, n = 2 }, { x = 47.8, y = 43.7, r = 65, n = 13, alt = true }, { x = 55.3, y = 44.1, r = 40, n = 1, alt = true }, { x = 54.1, y = 52.5, r = 40, n = 1, alt = true }, { x = 61.8, y = 51.2, r = 40, n = 1, alt = true }, { x = 65.2, y = 31.8, r = 61, n = 13, alt = true }, { x = 42.2, y = 13.5, r = 63, n = 14, alt = true } }, spread = true, fromNpcs = { { npc = 5978, npcName = "Dreadmaul Warlock" }, { npc = 5975, npcName = "Dreadmaul Ogre Mage" }, { npc = 6009, npcName = "Shadowsworn Dreadweaver" }, { npc = 6005, npcName = "Shadowsworn Thug" }, { npc = 7670, npcName = "Servant of Allistarj" } } },
+						{ t = "turnin", quest = 3501, title = "Everything Counts In Large Amounts", npc = 7363, npcName = "Kum'isha the Collector", map = 1419, x = 51.98, y = 35.65, z = 0.8, f = "e" },
+					},
+				},
+				{
+					title = "To Stoutlager Inn",
+					goals = {
+						{ t = "goto", text = "Stoutlager Inn", map = 1432, x = 35.5, y = 48.4, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1432}",
+					goals = {
+						{ t = "goto", text = "{zone:1432}", map = 1432, x = 18.2, y = 84, f = "e" },
+					},
+				},
+				{
+					title = "{npc:3836}",
+					when = { { k = "group", q = 3181 } },
+					goals = {
+						{ t = "turnin", quest = 3181, title = "The Horn of the Beast", npc = 3836, npcName = "Mountaineer Pebblebitty", map = 1432, x = 18.18, y = 84.01, z = 310.1, f = "e" },
+						{ t = "accept", quest = 3182, title = "Proof of Deed", npc = 3836, npcName = "Mountaineer Pebblebitty", minLevel = 40, qlvl = 48, pre = { 3181 }, preTitles = { [3181] = "The Horn of the Beast" }, map = 1432, x = 18.18, y = 84.01, z = 310.1, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1432}",
+					goals = {
+						{ t = "goto", text = "{zone:1432}", map = 1432, x = 33.9, y = 50.8, f = "e" },
+					},
+				},
+				{
+					title = "Fly to {zone:1455}",
+					goals = {
+						{ t = "goto", text = "Thelsamar flight master", map = 1432, x = 33.9, y = 50.8, f = "e" },
+						{ t = "fly", location = "Ironforge", node = 6 },
+					},
+				},
+				{
+					title = "{npc:8256}",
+					when = { { k = "group", q = 3181 } },
+					goals = {
+						{ t = "turnin", quest = 3182, title = "Proof of Deed", npc = 8256, npcName = "Curator Thorius", map = 1455, x = 71.5, y = 15.74, z = 503.5, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1455}",
+					only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } },
+					goals = {
+						{ t = "train", class = true, only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } }, candidates = { { npc = 5166, npcName = "Ormyr Flinteye", map = 1455, x = 52.89, y = 15.01, z = 508.6, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 5171, npcName = "Thistleheart", map = 1455, x = 51.09, y = 6.61, z = 505, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 258098, npcName = "Eldrun Stormbreaker", map = 1455, x = 47.1, y = 13.79, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 5144, npcName = "Bink", map = 1455, x = 27.25, y = 8.3, z = 501.2, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 5117, npcName = "Regnus Thundergranite", map = 1455, x = 69.87, y = 82.9, z = 507.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 5143, npcName = "Toldren Deepiron", map = 1455, x = 25.21, y = 10.76, z = 501.2, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 5148, npcName = "Beldruk Doombrow", map = 1455, x = 24.55, y = 4.47, z = 502.9, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 5114, npcName = "Bilban Tosslespanner", map = 1455, x = 65.9, y = 88.41, z = 507.8, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 11865, npcName = "Buliwyf Stonehand", map = 1455, x = 61.17, y = 89.52, z = 509, f = "e", faction = "A", classes = { "WARRIOR", "PALADIN" } }, { npc = 258113, npcName = "Ingrid Dunwald", map = 1426, x = 47.58, y = 51.95, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 1232, npcName = "Azar Stronghammer", map = 1426, x = 47.6, y = 52.07, z = 403.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 1228, npcName = "Magis Sparkmantle", map = 1426, x = 47.5, y = 52.08, z = 403.6, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 1226, npcName = "Maxan Anvol", map = 1426, x = 47.34, y = 52.19, z = 399.7, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 1234, npcName = "Hogral Bakkan", map = 1426, x = 47.56, y = 52.61, z = 399.2, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 1229, npcName = "Granis Swiftaxe", map = 1426, x = 47.36, y = 52.65, z = 399.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 5612, npcName = "Gimrizz Shadowcog", map = 1426, x = 47.33, y = 53.69, z = 404.4, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 1231, npcName = "Grif Wildheart", map = 1426, x = 45.81, y = 53.04, z = 407.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 257446, npcName = "Teo Hammerstorm", map = 1426, x = 28.79, y = 66.18, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 460, npcName = "Alamar Grimm", map = 1426, x = 28.65, y = 66.14, z = 399, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 944, npcName = "Marryk Nurribit", map = 1426, x = 28.71, y = 66.37, z = 392.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 837, npcName = "Branstock Khalder", map = 1426, x = 28.6, y = 66.39, z = 392.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 895, npcName = "Thorgas Grimson", map = 1426, x = 29.18, y = 67.45, z = 395.6, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 912, npcName = "Thran Khorman", map = 1426, x = 28.83, y = 67.24, z = 395.6, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 916, npcName = "Solm Hargrin", map = 1426, x = 28.37, y = 67.51, z = 395.6, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 926, npcName = "Bromos Grummner", map = 1426, x = 28.83, y = 68.33, z = 395.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 5517, npcName = "Thorfin Stoneshield", map = 1453, x = 68, y = 35.99, z = 102.6, faction = "A", classes = { "HUNTER" } }, { npc = 198, npcName = "Khelden Bremen", map = 1429, x = 49.66, y = 39.4, z = 89.5, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 375, npcName = "Priestess Anetta", map = 1429, x = 49.81, y = 39.49, z = 82.1, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 915, npcName = "Jorik Kerridan", map = 1429, x = 50.31, y = 39.92, z = 80.8, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 248415, npcName = "Tordrin Sternblade", map = 1429, x = 51.21, y = 40.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 925, npcName = "Brother Sammuel", map = 1429, x = 50.43, y = 42.12, z = 82.3, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 911, npcName = "Llane Beshere", map = 1429, x = 50.24, y = 42.29, z = 82.3, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 459, npcName = "Drusilla La Salle", map = 1429, x = 49.87, y = 42.65, z = 80.8, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 5479, npcName = "Wu Shen", map = 1453, x = 80.55, y = 59.87, z = 109.5, faction = "A", classes = { "WARRIOR" } }, { npc = 376, npcName = "High Priestess Laurena", map = 1453, x = 49.53, y = 44.6, z = 109.9, faction = "A", classes = { "PRIEST" } }, { npc = 918, npcName = "Osborne the Night Man", map = 1453, x = 77.43, y = 65.31, z = 101.1, faction = "A", classes = { "ROGUE" } }, { npc = 5491, npcName = "Arthur the Faithful", map = 1453, x = 49.61, y = 49.84, z = 106.6, faction = "A", classes = { "PALADIN" } }, { npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9, faction = "A", classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "WARLOCK" } }, { npc = 2485, npcName = "Larimaine Purdue", map = 1453, x = 50.39, y = 85.99, z = 29.7, faction = "A", classes = { "MAGE" } }, { npc = 5495, npcName = "Ursula Deline", map = 1453, x = 39.89, y = 84.19, z = 101.5, faction = "A", classes = { "WARLOCK" } }, { npc = 917, npcName = "Keryn Sylvius", map = 1429, x = 43.87, y = 65.94, z = 63.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 377, npcName = "Priestess Josetta", map = 1429, x = 43.28, y = 65.72, z = 63.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 906, npcName = "Maximillian Crowe", map = 1429, x = 44.39, y = 66.24, z = 49.9, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 328, npcName = "Zaldimar Wefhellt", map = 1429, x = 43.25, y = 66.19, z = 63.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 913, npcName = "Lyria Du Lac", map = 1429, x = 41.09, y = 65.77, z = 57.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 927, npcName = "Brother Wilhelm", map = 1429, x = 41.1, y = 66.04, z = 57.7, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 251507, npcName = "Josephine Carson", map = 1429, x = 41.15, y = 66.23, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 6251, npcName = "Strahad Farsan", map = 1413, x = 62.63, y = 35.5, z = 40.5, f = "e", faction = "AH", classes = { "WARLOCK" } }, { npc = 3593, npcName = "Alyissia", map = 1438, x = 59.64, y = 38.44, z = 1329.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 3594, npcName = "Frahun Shadewhisper", map = 1438, x = 59.64, y = 38.66, z = 1329.7, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3595, npcName = "Shanda", map = 1438, x = 59.17, y = 40.44, z = 1346.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 3596, npcName = "Ayanna Everstride", map = 1438, x = 58.66, y = 40.45, z = 1381, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 3598, npcName = "Kyra Windblade", map = 1438, x = 56.22, y = 59.2, z = 1308.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 3599, npcName = "Jannok Breezesong", map = 1438, x = 56.38, y = 60.14, z = 1308.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3600, npcName = "Laurna Morninglight", map = 1438, x = 55.56, y = 56.75, z = 1313.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 3601, npcName = "Dazalar", map = 1438, x = 56.68, y = 59.49, z = 1308.2, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 4087, npcName = "Arias'ta Bladesinger", map = 1457, x = 58.71, y = 34.9, z = 1330.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 4090, npcName = "Astarii Starseeker", map = 1457, x = 38.33, y = 80.95, z = 1360.1, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 4138, npcName = "Jeen'ra Nightrunner", map = 1457, x = 39.72, y = 5.39, z = 1368.9, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 4163, npcName = "Syurna", map = 1457, x = 36.99, y = 21.91, z = 1295.1, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 4165, npcName = "Elissa Dumas", map = 1457, x = 40.6, y = 82.13, z = 1331.7, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 11866, npcName = "Ilyenia Moonfire", map = 1457, x = 57.56, y = 46.73, z = 1330.9, f = "e", faction = "A", classes = { "HUNTER", "PRIEST" } }, { npc = 251376, npcName = "Tai'ree Farsight", map = 2521, x = 42.49, y = 23.79, faction = "AH", classes = { "HUNTER" } }, { npc = 251379, npcName = "Dorii Brightwhisper", map = 2521, x = 41.55, y = 23.68, faction = "A", classes = { "MAGE" } }, { npc = 251389, npcName = "Akeri Duskblade", map = 2521, x = 43.74, y = 24.36, faction = "AH", classes = { "ROGUE" } }, { npc = 251964, npcName = "Blademaster Ren", map = 2521, x = 43.65, y = 24.11, faction = "AH", classes = { "WARRIOR" } }, { npc = 252373, npcName = "Anathamaas Aetherwind", map = 2521, x = 65.91, y = 80.57, faction = "A", classes = { "MAGE" } }, { npc = 252377, npcName = "Seena Skybreaker", map = 2521, x = 59.89, y = 72.87, faction = "AH", classes = { "WARRIOR" } }, { npc = 252379, npcName = "Eltheen Nightbreeze", map = 2521, x = 59.9, y = 72.48, faction = "AH", classes = { "ROGUE" } }, { npc = 252389, npcName = "Quel'ana Quickgale", map = 2521, x = 59.56, y = 72.63, faction = "AH", classes = { "HUNTER" } }, { npc = 254084, npcName = "Elayaa Easewind", map = 2521, x = 45.26, y = 44.24, faction = "AH", classes = { "HUNTER" } }, { npc = 254086, npcName = "Shenaan Spellwind", map = 2521, x = 45.1, y = 45.87, faction = "AH", classes = { "MAGE" } }, { npc = 254087, npcName = "Miriaan Mistblade", map = 2521, x = 43.15, y = 43.26, faction = "AH", classes = { "ROGUE" } }, { npc = 254088, npcName = "Corsan Earthrazer", map = 2521, x = 44.95, y = 45.1, faction = "AH", classes = { "WARRIOR" } } } },
+					},
+				},
+				{
+					title = "Fly to Aerie Peak",
+					goals = {
+						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
+						{ t = "fly", location = "Aerie Peak", node = 43 },
+					},
+				},
+				{
+					title = "Wildkin feathers",
+					note = "The Wildkin Feathers lie on the ground across the {zone:1425}, south and east of Aerie Peak, where the owlbeasts roam; the mobs here are well below you now.",
+					goals = {
+						{ t = "collect", quest = 3661, title = "Favored of Elune?", item = 10819, itemName = "Wildkin Feather", count = 15, oi = 1, map = 1425, x = 39.08, y = 52.94, f = "e", spots = { { x = 38.3, y = 53.9, r = 57, n = 1 }, { x = 33.8, y = 45.4, r = 87, n = 6 }, { x = 27.4, y = 53.4, r = 63, n = 7 }, { x = 22.1, y = 55.2, r = 107, n = 5 }, { x = 15.7, y = 52.1, r = 77, n = 3 }, { x = 27.9, y = 66.5, r = 84, n = 5 }, { x = 46.8, y = 50.1, r = 57, n = 1 }, { x = 52.7, y = 51.4, r = 57, n = 1 }, { x = 52.5, y = 40.7, r = 92, n = 5 }, { x = 60.2, y = 43.8, r = 57, n = 1 }, { x = 63.4, y = 61.6, r = 57, n = 1 }, { x = 49.9, y = 63.2, r = 57, n = 2 }, { x = 40.6, y = 50.9, r = 57, n = 1, alt = true }, { x = 35.9, y = 52, r = 75, n = 3, alt = true }, { x = 43.1, y = 57.1, r = 73, n = 4, alt = true }, { x = 34.6, y = 56.8, r = 57, n = 2, alt = true }, { x = 38.7, y = 45.2, r = 57, n = 3, alt = true }, { x = 32.2, y = 54.1, r = 80, n = 5, alt = true }, { x = 43.7, y = 44.9, r = 65, n = 3, alt = true }, { x = 45.9, y = 60, r = 57, n = 1, alt = true }, { x = 31.4, y = 62, r = 77, n = 4, alt = true }, { x = 47.8, y = 42.7, r = 57, n = 2, alt = true }, { x = 51.8, y = 57.5, r = 74, n = 3, alt = true }, { x = 26.4, y = 59.2, r = 85, n = 5, alt = true }, { x = 23.3, y = 51.4, r = 57, n = 4, alt = true }, { x = 56.2, y = 45.5, r = 104, n = 7, alt = true }, { x = 19.3, y = 48.3, r = 57, n = 3, alt = true }, { x = 61.8, y = 50.5, r = 73, n = 3, alt = true } }, spread = true, from = "Wildkin Feather", fromKind = "object", fromId = 153239 },
+					},
+				},
+				{
+					title = "{quest:2944}",
+					note = "These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:7977} (level 48 elite) needs a group of 2. Skip it if you are alone: the route has you grind the XP back.",
+					when = { { k = "group", q = 2944 } },
+					goals = {
+						{ t = "collect", quest = 2944, title = "The Super Snapper FX", item = 9330, itemName = "Snapshot of Gammerita", count = 1, oi = 1, map = 1425, x = 80.4, y = 58.2, f = "e", from = "Gammerita", fromKind = "npc", fromRank = 1, fromId = 7977, fromNpcs = { { npc = 7977, npcName = "Gammerita" } }, group = { kind = "group", size = 2 } },
+						{ t = "use", quest = 2944, title = "The Super Snapper FX", item = 9328, itemName = "Super Snapper FX", oi = 1, map = 1425, x = 80.4, y = 58.2, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1425}",
+					goals = {
+						{ t = "goto", text = "{zone:1425}", map = 1425, x = 11.1, y = 46.1, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Southshore",
+					goals = {
+						{ t = "goto", text = "Aerie Peak flight master", map = 1425, x = 11.1, y = 46.1, f = "e" },
+						{ t = "fly", location = "Southshore", node = 14 },
+					},
+				},
+				{
+					title = "{object:176370}",
+					goals = {
+						{ t = "goto", text = "{object:176370}", map = 1424, x = 50.6, y = 69.9, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Rut'theran Village",
+					goals = {
+						{ t = "goto", text = "Auberdine flight master", map = 1439, x = 36.4, y = 45.6, f = "e" },
+						{ t = "fly", location = "Rut'theran Village", node = 27 },
+					},
+				},
+				{
+					title = "Rut'theran Village",
+					goals = {
+						{ t = "turnin", quest = 3661, title = "Favored of Elune?", npc = 7916, npcName = "Erelas Ambersky", map = 1438, x = 55.5, y = 92.05, z = 14.2, f = "e" },
+						{ t = "accept", quest = 978, title = "Moontouched Wildkin", npc = 7916, npcName = "Erelas Ambersky", minLevel = 52, qlvl = 55, pre = { 3661 }, preTitles = { [3661] = "Favored of Elune?" }, map = 1438, x = 55.5, y = 92.05, z = 14.2, f = "e", note = "The wildkin are in {zone:1452}: keep it" },
+					},
+				},
+				{
+					title = "Druid training",
+					note = "{zone:1455} has no druid trainer: take the portal up to {zone:1457} and train in the Cenarion Enclave, then come back down to Rut'theran Village.",
+					only = { classes = { "DRUID" } },
+					goals = {
+						{ t = "train", class = true, candidates = { { npc = 3602, npcName = "Kal", map = 1438, x = 55.95, y = 61.56, z = 1293.8, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 3597, npcName = "Mardant Strongoak", map = 1438, x = 58.63, y = 40.29, z = 1381, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 5504, npcName = "Sheldras Moontree", map = 1453, x = 35.84, y = 67.38, z = 92.6, faction = "A", classes = { "DRUID" } }, { npc = 251373, npcName = "Xyton Silverwind", map = 2521, x = 41.66, y = 23.33, faction = "AH", classes = { "DRUID" } }, { npc = 252359, npcName = "Lotheluum Starbreeze", map = 2521, x = 63.99, y = 75.08, faction = "AH", classes = { "DRUID" } }, { npc = 254081, npcName = "Naeluna Swiftmend", map = 2521, x = 45.16, y = 44.22, faction = "AH", classes = { "DRUID" } } } },
+					},
+				},
+				{
+					title = "Back to {zone:1438}",
+					only = { classes = { "DRUID" } },
+					goals = {
+						{ t = "goto", text = "{zone:1438}", map = 1438, x = 55.4, y = 92.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:7907}",
+					note = "{npc:7907} stands upstairs, above {npc:7916}: go up inside, the arrow cannot tell the floors apart.",
+					when = { { k = "group", q = 2944 } },
+					goals = {
+						{ t = "turnin", quest = 2944, title = "The Super Snapper FX", npc = 7907, npcName = "Daryn Lightwind", map = 1438, x = 55.41, y = 92.23, z = 23.6, f = "e" },
+						{ t = "accept", quest = 2943, title = "Return to Troyas", npc = 7907, npcName = "Daryn Lightwind", minLevel = 42, qlvl = 48, pre = { 2944 }, preTitles = { [2944] = "The Super Snapper FX" }, map = 1438, x = 55.41, y = 92.23, z = 23.6, f = "e" },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
+-- Source: guides/28-gangrebois.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/28-gangrebois",
+			pack = "groupe-alliance",
+			title = "Group 26 · {zone:1448}",
+			faction = "Alliance",
+			minLevel = 53,
+			maxLevel = 53,
+			category = "Leveling",
+			folder = "Group Alliance",
+			zone = 1448,
+			zoneName = "Felwood",
+			next = "groupe-alliance/29-berceau-de-l-hiver",
+			author = "BurN-30",
+			version = 1,
+			names = { ["item:11503"] = "Blood Amber", ["item:11674"] = "Jadefire Felbind", ["item:12922"] = "Empty Canteen", ["item:13140"] = "Blood Red Key", ["item:21377"] = "Deadwood Headdress Feather", ["item:9328"] = "Super Snapper FX", ["npc:10648"] = "Xavaric", ["npc:11016"] = "Captured Arko'narin", ["npc:11018"] = "Arko'narin", ["npc:11020"] = "Remains of Trey Lightforge", ["npc:11554"] = "Grazle", ["npc:11557"] = "Meilosh", ["npc:11558"] = "Kernda", ["npc:15395"] = "Nafien", ["npc:7092"] = "Tainted Ooze", ["npc:7109"] = "Jadefire Felsworn", ["npc:7110"] = "Jadefire Shadowstalker", ["npc:7125"] = "Jaedenar Hound", ["npc:7153"] = "Deadwood Warrior", ["npc:7155"] = "Deadwood Pathfinder", ["npc:9116"] = "Eridan Bluewind", ["npc:9454"] = "Xavathras", ["npc:9518"] = "Rakaiah", ["npc:9528"] = "Arathandris Silversky", ["npc:9878"] = "Entropic Beast", ["quest:6031"] = "Runecloth", ["quest:8470"] = "Deadwood Ritual Totem", ["quest:939"] = "Flute of Xavaric", ["zone:1413"] = "Barrens", ["zone:1448"] = "Felwood", ["zone:1452"] = "Winterspring", ["zone:1457"] = "Darnassus" },
+			steps = {
+				{
+					title = "Fly to Astranaar",
+					goals = {
+						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
+						{ t = "goto", text = "Rut'theran Village flight master", map = 1438, x = 58.4, y = 93.9, f = "e" },
+						{ t = "fly", location = "Astranaar", node = 28 },
+					},
+				},
+				{
+					title = "{zone:1448}",
+					goals = {
+						{ t = "goto", text = "{zone:1448}", map = 1448, x = 54.2, y = 86.8, f = "e" },
+					},
+				},
+				{
+					title = "The Emerald Sanctuary",
+					goals = {
+						{ t = "accept", quest = 4101, title = "Cleansing Felwood", npc = 9528, npcName = "Arathandris Silversky", minLevel = 48, qlvl = 55, map = 1448, x = 54.15, y = 86.83, z = 210.4, f = "e", note = "{npc:9528}, in the ruins just east of {npc:11554}" },
+						{ t = "accept", quest = 4421, title = "The Corruption of the Jadefire", npc = 9116, npcName = "Eridan Bluewind", minLevel = 49, qlvl = 54, map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", note = "{npc:9116}, inside" },
+						{ t = "accept", quest = 5156, title = "Verifying the Corruption", npc = 10921, npcName = "Taronn Redfeather", minLevel = 48, qlvl = 54, map = 1448, x = 50.89, y = 81.62, z = 254.3, f = "e" },
+						{ t = "accept", quest = 5155, title = "Forces of Jaedenar", npc = 10922, npcName = "Greta Mosshoof", minLevel = 48, qlvl = 51, map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:11554}",
+					note = "Ride north out of Astranaar into {zone:1448}. {npc:11554} the furbolg stands by the road just south of the Emerald Sanctuary.",
+					goals = {
+						{ t = "accept", quest = 8460, title = "Timbermaw Ally", npc = 11554, npcName = "Grazle", minLevel = 45, qlvl = 48, map = 1448, x = 50.93, y = 85.01, z = 220.5, f = "e" },
+					},
+				},
+				{
+					title = "Deadwood Village",
+					note = "The Deadwood furbolgs live in the village just south-west of {npc:11554}; keep the Deadwood Headdress Feathers they drop.",
+					goals = {
+						{ t = "kill", quest = 8460, title = "Timbermaw Ally", target = "Deadwood Warrior", npc = 7153, count = 6, oi = 1, map = 1448, x = 49.73, y = 88.18, z = 209.8, f = "e", spots = { { x = 49.2, y = 88.6, r = 35, n = 2 }, { x = 48.7, y = 91, r = 80, n = 8 }, { x = 48.3, y = 93.5, z = 221.6, r = 42, n = 5 }, { x = 46.3, y = 89.2, z = 228.1, r = 15, n = 1, alt = true }, { x = 46.6, y = 92, z = 221, r = 15, n = 1, alt = true } } },
+						{ t = "kill", quest = 8460, title = "Timbermaw Ally", target = "Deadwood Gardener", npc = 7154, count = 6, oi = 3, map = 1448, x = 48.77, y = 88.88, z = 207.8, f = "e", spots = { { x = 48.3, y = 89.2, r = 40, n = 3 }, { x = 48.5, y = 92, r = 69, n = 4 }, { x = 46.4, y = 89.6, r = 54, n = 3 } } },
+						{ t = "kill", quest = 8460, title = "Timbermaw Ally", target = "Deadwood Pathfinder", npc = 7155, count = 6, oi = 2, map = 1448, x = 48.3, y = 89.46, z = 207.9, f = "e", spots = { { x = 48.3, y = 89.5, z = 207.9, r = 15, n = 1 }, { x = 49.2, y = 91.7, z = 213.4, r = 15, n = 1 }, { x = 46.3, y = 89.4, r = 21, n = 2 }, { x = 47.4, y = 93.4, z = 223.4, r = 15, n = 1 } } },
+					},
+				},
+				{
+					title = "Level 52.58",
+					note = "If you skipped The Horn of the Beast or The {item:9328}, grind here to level 52.58 to stay on the route's plan.",
+					when = { { k = "level", op = "<", n = 52, frac = 0.58 } },
+					goals = {
+						{ t = "goto", text = "{npc:7153}", map = 1448, x = 48.7, y = 92.1, f = "e" },
+						{ t = "level", level = 52, frac = 0.58, note = "grind on {npc:7153}" },
+					},
+				},
+				{
+					title = "{npc:11554}",
+					goals = {
+						{ t = "turnin", quest = 8460, title = "Timbermaw Ally", npc = 11554, npcName = "Grazle", map = 1448, x = 50.93, y = 85.01, z = 220.5, f = "e" },
+						{ t = "accept", quest = 8462, title = "Speak to Nafien", npc = 11554, npcName = "Grazle", minLevel = 45, qlvl = 55, pre = { 8460 }, preTitles = { [8460] = "Timbermaw Ally" }, map = 1448, x = 50.93, y = 85.01, z = 220.5, f = "e", note = "{npc:15395} waits at the north end of {zone:1448}" },
+						{ t = "accept", quest = 8466, title = "Feathers for Grazle", npc = 11554, npcName = "Grazle", minLevel = 45, qlvl = 55, pre = { 8460 }, preTitles = { [8460] = "Timbermaw Ally" }, map = 1448, x = 50.93, y = 85.01, z = 220.5, f = "e", optional = true, note = "Five feathers buy a little Timbermaw reputation" },
+						{ t = "turnin", quest = 8466, title = "Feathers for Grazle", npc = 11554, npcName = "Grazle", map = 1448, x = 50.93, y = 85.01, z = 220.5, f = "e", optional = true },
+					},
+				},
+				{
+					title = "Level 52.69",
+					note = "Top up here to level 52.69 before the hand-ins at Jaedenar: they take you to level 53.",
+					when = { { k = "level", op = "<", n = 52, frac = 0.69 } },
+					goals = {
+						{ t = "goto", text = "{npc:7155}", map = 1448, x = 46.3, y = 89.4, f = "e" },
+						{ t = "level", level = 52, frac = 0.69, note = "grind on {npc:7155}" },
+					},
+				},
+				{
+					title = "Jadefire Glen",
+					note = "The Jadefire satyrs hold the glen west of the road, with {npc:9454} at its back.\nCareful: Jadefire Shadowstalkers (level 51-52) use Sneak and Slowing Poison and are stealthed, so they often join fights uninvited.",
+					goals = {
+						{ t = "kill", quest = 4421, title = "The Corruption of the Jadefire", target = "Jadefire Felsworn", npc = 7109, count = 11, oi = 1, map = 1448, x = 44.02, y = 88.89, z = 334.2, f = "e", spots = { { x = 43.3, y = 88.4, z = 310, r = 46, n = 4 }, { x = 44.2, y = 86.4, z = 302.6, r = 40, n = 1 }, { x = 42.1, y = 85.7, r = 40, n = 2 }, { x = 42.8, y = 83.6, z = 324.3, r = 40, n = 2 }, { x = 40.3, y = 85.2, r = 59, n = 5 }, { x = 38.9, y = 82.4, z = 339.7, r = 42, n = 4 }, { x = 37.3, y = 69.4, r = 40, n = 3 }, { x = 37.5, y = 67.3, z = 296, r = 40, n = 2 }, { x = 35.3, y = 66.8, z = 304.3, r = 40, n = 2 }, { x = 32.9, y = 66.8, z = 299.6, r = 40, n = 3 } }, spread = true },
+						{ t = "level", level = 52, frac = 0.74, note = "grind on {npc:7109}" },
+					},
+				},
+				{
+					title = "Ruins of Constellas",
+					goals = {
+						{ t = "kill", quest = 4421, title = "The Corruption of the Jadefire", target = "Jadefire Shadowstalker", npc = 7110, count = 9, oi = 2, map = 1448, x = 38.01, y = 69.09, z = 291.7, f = "e", spots = { { x = 37.4, y = 68.9, z = 301.8, r = 37, n = 5 }, { x = 37.4, y = 66.9, r = 22, n = 2 }, { x = 32.3, y = 66.1, z = 300.6, r = 27, n = 3 }, { x = 33.9, y = 66.6, z = 299.9, r = 15, n = 1, alt = true } } },
+						{ t = "kill", quest = 4421, title = "The Corruption of the Jadefire", target = "Jadefire Rogue", npc = 7106, count = 9, oi = 3, map = 1448, x = 38.12, y = 69.46, z = 290.4, f = "e", spots = { { x = 37.9, y = 69, r = 43, n = 2 }, { x = 36.8, y = 66.6, z = 303.9, r = 74, n = 4 }, { x = 31.9, y = 67, z = 299.7, r = 43, n = 1 } }, spread = true },
+						{ t = "kill", quest = 4421, title = "The Corruption of the Jadefire", target = "Xavathras", npc = 9454, count = 1, oi = 4, map = 1448, x = 32.23, y = 67.11, z = 299.9, f = "e" },
+					},
+				},
+				{
+					title = "Jaedenar",
+					note = "Jaedenar is the ruined temple north of the glen. Some of its cultists drop a {item:13140}, about one kill in thirty: it opens {npc:11018}'s cell in Shadow Hold, the cave at the back. If it drops, clear the way out before you free her; if not, skip her quests.",
+					goals = {
+						{ t = "kill", quest = 5155, title = "Forces of Jaedenar", target = "Jaedenar Hound", npc = 7125, count = 4, oi = 1, map = 1448, x = 34.47, y = 60.13, z = 354.8, f = "e", spots = { { x = 35.1, y = 60.3, r = 41, n = 2 }, { x = 38.7, y = 60.8, r = 66, n = 5 }, { x = 36.5, y = 61.9, z = 339.3, r = 15, n = 1, alt = true } } },
+						{ t = "kill", quest = 5155, title = "Forces of Jaedenar", target = "Jaedenar Guardian", npc = 7113, count = 4, oi = 2, map = 1448, x = 34.97, y = 59.4, z = 352.1, f = "e", spots = { { x = 35.5, y = 59.7, r = 44, n = 3 }, { x = 36.7, y = 61.8, r = 49, n = 4 }, { x = 38.5, y = 60.4, r = 62, n = 6 }, { x = 38.5, y = 57.7, z = 324.4, r = 15, n = 1, alt = true } } },
+						{ t = "kill", quest = 5155, title = "Forces of Jaedenar", target = "Jaedenar Adept", npc = 7115, count = 6, oi = 3, map = 1448, x = 34.53, y = 59.73, z = 355.4, f = "e", spots = { { x = 35.9, y = 61.4, r = 30, n = 2 }, { x = 38.2, y = 61.2, z = 275.2, r = 54, n = 7 }, { x = 34.5, y = 59.7, z = 355.4, r = 15, n = 1, alt = true }, { x = 39.2, y = 58.5, z = 308.4, r = 15, n = 1, alt = true } } },
+						{ t = "kill", quest = 5155, title = "Forces of Jaedenar", target = "Jaedenar Cultist", npc = 7112, count = 6, oi = 4, map = 1448, x = 34.9, y = 60.32, z = 351, f = "e", spots = { { x = 35.6, y = 60.9, r = 54, n = 5 }, { x = 38.3, y = 61.7, z = 278.1, r = 43, n = 5 }, { x = 39.5, y = 58.2, z = 308, r = 15, n = 1, alt = true } } },
+						{ t = "collect", item = 13140, itemName = "Blood Red Key", map = 1448, x = 35.39, y = 57.85, f = "e", spots = { { x = 35.8, y = 56.9, r = 58, n = 5 }, { x = 37.6, y = 54.4, r = 63, n = 7 }, { x = 36.8, y = 52.5, r = 50, n = 7 }, { x = 38.4, y = 50.6, r = 33, n = 5 }, { x = 39.8, y = 49.3, r = 15, n = 2 }, { x = 36.2, y = 46.1, r = 15, n = 2 }, { x = 38, y = 46.6, r = 66, n = 11, alt = true }, { x = 40.3, y = 48.3, r = 55, n = 7, alt = true } }, optional = true, note = "{item:13140}, a rare drop", fromNpcs = { { npc = 7114, npcName = "Jaedenar Enforcer" }, { npc = 7118, npcName = "Jaedenar Darkweaver" }, { npc = 7120, npcName = "Jaedenar Warlock" }, { npc = 14523, npcName = "Ulathek" }, { npc = 9862, npcName = "Jaedenar Legionnaire" } } },
+						{ t = "accept", quest = 5202, title = "A Strange Red Key", item = 13140, itemName = "Blood Red Key", minLevel = 49, qlvl = 55, optional = true },
+						{ t = "turnin", quest = 5202, title = "A Strange Red Key", npc = 11016, npcName = "Captured Arko'narin", map = 1448, x = 36.21, y = 55.47, z = 319.1, f = "e", optional = true, note = "{npc:11016}, in Shadow Hold; below ground" },
+						{ t = "accept", quest = 5203, title = "Rescue From Jaedenar", npc = 11016, npcName = "Captured Arko'narin", minLevel = 49, qlvl = 55, pre = { 5202 }, preTitles = { [5202] = "A Strange Red Key" }, map = 1448, x = 36.21, y = 55.47, z = 319.1, f = "e", optional = true, escort = true },
+						{ t = "level", level = 52, frac = 0.87, note = "grind on {npc:7125}" },
+					},
+				},
+				{
+					title = "Jaedenar",
+					when = { { k = "onquest", q = { 5203 } } },
+					goals = {
+						{ t = "goto", map = 1448, x = 35.4, y = 59.1, f = "e" },
+						{ t = "complete", quest = 5203, title = "Rescue From Jaedenar", optional = true, note = "Keep her alive until she is out of the cave", escort = true },
+					},
+				},
+				{
+					title = "Level 52.9",
+					note = "Top up here to level 52.9 before the hand-ins at Emerald Sanctuary: they take you to level 53.",
+					when = { { k = "level", op = "<", n = 52, frac = 0.9 } },
+					goals = {
+						{ t = "goto", text = "{npc:7125}", map = 1448, x = 38.3, y = 61.7, f = "e" },
+						{ t = "level", level = 52, frac = 0.9, note = "grind on {npc:7125}" },
+					},
+				},
+				{
+					title = "The Emerald Sanctuary",
+					goals = {
+						{ t = "turnin", quest = 5155, title = "Forces of Jaedenar", npc = 10922, npcName = "Greta Mosshoof", map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e" },
+						{ t = "accept", quest = 5157, title = "Collection of the Corrupt Water", npc = 10922, npcName = "Greta Mosshoof", minLevel = 48, qlvl = 52, pre = { 5155 }, preTitles = { [5155] = "Forces of Jaedenar" }, map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e" },
+						{ t = "turnin", quest = 5203, title = "Rescue From Jaedenar", npc = 11019, npcName = "Jessir Moonbow", map = 1448, x = 51.35, y = 82.01, z = 253.6, f = "e", optional = true },
+						{ t = "accept", quest = 5204, title = "Retribution of the Light", npc = 11019, npcName = "Jessir Moonbow", minLevel = 49, qlvl = 57, pre = { 5203 }, preTitles = { [5203] = "Rescue From Jaedenar" }, map = 1448, x = 51.35, y = 82.01, z = 253.6, f = "e", optional = true },
+						{ t = "turnin", quest = 4421, title = "The Corruption of the Jadefire", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", note = "{npc:9116}, inside" },
+						{ t = "accept", quest = 4906, title = "Further Corruption", npc = 9116, npcName = "Eridan Bluewind", minLevel = 49, qlvl = 54, pre = { 4421 }, preTitles = { [4421] = "The Corruption of the Jadefire" }, map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e" },
+					},
+				},
+				{
+					title = "Shatter Scar Vale",
+					note = "Follow the road north to the cratered vale and walk to each crater, killing the Entropic Beasts and Horrors between them.",
+					goals = {
+						{ t = "goto", text = "First crater", map = 1448, x = 41.6, y = 43, f = "e" },
+						{ t = "goto", text = "Second crater", map = 1448, x = 40.4, y = 41.2, f = "e" },
+						{ t = "goto", text = "Third crater", map = 1448, x = 42.2, y = 40.3, f = "e" },
+						{ t = "complete", quest = 5156, title = "Verifying the Corruption" },
+						{ t = "kill", quest = 5156, title = "Verifying the Corruption", target = "Entropic Beast", npc = 9878, count = 2, oi = 1, map = 1448, x = 41.73, y = 40.15, z = 341.6, f = "e", spots = { { x = 41.1, y = 39.2, r = 54, n = 4 }, { x = 41, y = 41.3, r = 38, n = 2 }, { x = 43.1, y = 40.9, r = 47, n = 4 }, { x = 42.7, y = 38.2, z = 377.6, r = 43, n = 3 }, { x = 40.6, y = 43.1, r = 45, n = 3 }, { x = 44.7, y = 40.8, z = 377.1, r = 25, n = 3 }, { x = 45.1, y = 38.6, r = 37, n = 2, alt = true } } },
+						{ t = "kill", quest = 5156, title = "Verifying the Corruption", target = "Entropic Horror", npc = 9879, count = 2, oi = 2, map = 1448, x = 41.73, y = 40.15, z = 341.6, f = "e", spots = { { x = 41.1, y = 39.2, r = 54, n = 4 }, { x = 41, y = 41.3, r = 38, n = 2 }, { x = 43.1, y = 40.9, r = 47, n = 4 }, { x = 42.7, y = 38.2, z = 377.6, r = 43, n = 3 }, { x = 40.6, y = 43.1, r = 45, n = 3 }, { x = 44.7, y = 40.8, z = 377.1, r = 25, n = 3 }, { x = 45.1, y = 38.6, r = 37, n = 2, alt = true } } },
+					},
+				},
+				{
+					title = "Irontree Woods",
+					note = "The Warpwood treants of Irontree Woods, east of Jadefire Run, carry the {item:11503}.",
+					goals = {
+						{ t = "collect", quest = 4101, title = "Cleansing Felwood", item = 11503, itemName = "Blood Amber", count = 15, oi = 1, map = 1448, x = 55, y = 19.63, f = "e", spots = { { x = 55.2, y = 17, r = 53, n = 6 }, { x = 57.6, y = 18.3, r = 63, n = 10 }, { x = 57.8, y = 21.7, r = 54, n = 7 }, { x = 59.3, y = 20.5, r = 40, n = 5 }, { x = 55, y = 19.6, r = 15, n = 1, alt = true } }, note = "Below ground", from = "Warpwood Moss Flayer", fromKind = "npc", fromAlso = "Warpwood Shredder", fromId = 7100, fromAlsoId = 7101, fromNpcs = { { npc = 7100, npcName = "Warpwood Moss Flayer" }, { npc = 7101, npcName = "Warpwood Shredder" } } },
+					},
+				},
+				{
+					title = "{npc:15395}",
+					note = "Follow the road north to the cave mouth of Timbermaw Hold; {npc:15395} guards it.",
+					goals = {
+						{ t = "turnin", quest = 8462, title = "Speak to Nafien", npc = 15395, npcName = "Nafien", map = 1448, x = 64.77, y = 8.13, z = 623.3, f = "e" },
+						{ t = "accept", quest = 8461, title = "Deadwood of the North", npc = 15395, npcName = "Nafien", minLevel = 45, qlvl = 55, map = 1448, x = 64.77, y = 8.13, z = 623.3, f = "e" },
+					},
+				},
+				{
+					title = "Felpaw Village",
+					note = "The Deadwood furbolgs of Felpaw Village fill the hills west of the cave. The Avengers can drop a {quest:8470}.\nCareful: Den Watchers are level 53-54; they call nearby allies within 25 yd once below 50% health and run off for help below 15%.",
+					goals = {
+						{ t = "kill", quest = 8461, title = "Deadwood of the North", target = "Deadwood Den Watcher", npc = 7156, count = 6, oi = 1, map = 1448, x = 63.68, y = 6.05, z = 583.2, f = "e", spots = { { x = 61.1, y = 6.8, r = 79, n = 6 }, { x = 62.4, y = 9.6, r = 65, n = 4 }, { x = 63.7, y = 6.1, z = 583.2, r = 15, n = 1, alt = true }, { x = 62.5, y = 13.2, z = 551, r = 15, n = 1, alt = true } } },
+						{ t = "kill", quest = 8461, title = "Deadwood of the North", target = "Deadwood Avenger", npc = 7157, count = 6, oi = 2, map = 1448, x = 62.96, y = 7.33, z = 551.5, f = "e", spots = { { x = 63.1, y = 8.2, z = 566, r = 35, n = 6 }, { x = 61.1, y = 8.4, z = 551, r = 26, n = 3 }, { x = 63.1, y = 10.8, r = 37, n = 4 }, { x = 60.1, y = 6.1, z = 569.5, r = 29, n = 3 }, { x = 63.3, y = 13, z = 551.9, r = 15, n = 1, alt = true } } },
+						{ t = "kill", quest = 8461, title = "Deadwood of the North", target = "Deadwood Shaman", npc = 7158, count = 6, oi = 3, map = 1448, x = 62.71, y = 7.14, z = 555.9, f = "e", spots = { { x = 63, y = 6.7, r = 59, n = 3 }, { x = 60.3, y = 7.4, z = 564, r = 58, n = 3 }, { x = 62.2, y = 10.8, r = 60, n = 6 }, { x = 63, y = 12.5, r = 39, n = 2 }, { x = 63.6, y = 9.1, z = 567.4, r = 15, n = 1, alt = true } } },
+					},
+				},
+				{
+					title = "{npc:15395}",
+					goals = {
+						{ t = "turnin", quest = 8461, title = "Deadwood of the North", npc = 15395, npcName = "Nafien", map = 1448, x = 64.77, y = 8.13, z = 623.3, f = "e" },
+						{ t = "accept", quest = 8465, title = "Speak to Salfa", npc = 15395, npcName = "Nafien", minLevel = 45, qlvl = 55, pre = { 8461 }, preTitles = { [8461] = "Deadwood of the North" }, map = 1448, x = 64.77, y = 8.13, z = 623.3, f = "e", note = "Salfa stands at the {zone:1452} end of the tunnel: keep it" },
+						{ t = "accept", quest = 8467, title = "Feathers for Nafien", npc = 15395, npcName = "Nafien", minLevel = 45, qlvl = 55, pre = { 8461 }, preTitles = { [8461] = "Deadwood of the North" }, map = 1448, x = 64.77, y = 8.13, z = 623.3, f = "e", optional = true },
+					},
+				},
+				{
+					title = "Felpaw Village",
+					goals = {
+						{ t = "collect", item = 20741, itemName = "Deadwood Ritual Totem", map = 1448, x = 63.67, y = 8.17, f = "e", spots = { { x = 63.1, y = 8.9, r = 47, n = 7 }, { x = 63.8, y = 6.4, r = 20, n = 2 }, { x = 62.5, y = 7.1, r = 53, n = 7 }, { x = 62.3, y = 10.6, r = 55, n = 9 }, { x = 60.8, y = 8.3, r = 44, n = 6 }, { x = 63.1, y = 12.4, r = 45, n = 6 }, { x = 60.3, y = 6.2, r = 51, n = 7, alt = true } }, optional = true, note = "{quest:8470}, a rare drop", fromNpcs = { { npc = 7157, npcName = "Deadwood Avenger" }, { npc = 7156, npcName = "Deadwood Den Watcher" }, { npc = 7158, npcName = "Deadwood Shaman" } } },
+						{ t = "accept", quest = 8470, title = "Deadwood Ritual Totem", item = 20741, itemName = "Deadwood Ritual Totem", minLevel = 45, qlvl = 55, optional = true },
+					},
+				},
+				{
+					title = "{npc:15395}",
+					when = { { k = "onquest", q = { 8467 } } },
+					goals = {
+						{ t = "turnin", quest = 8467, title = "Feathers for Nafien", npc = 15395, npcName = "Nafien", map = 1448, x = 64.77, y = 8.13, z = 623.3, f = "e", optional = true },
+					},
+				},
+				{
+					title = "Timbermaw Hold",
+					note = "Step into the cave: {npc:11558} and {npc:11557} stand just inside.",
+					goals = {
+						{ t = "turnin", quest = 8470, title = "Deadwood Ritual Totem", npc = 11558, npcName = "Kernda", map = 1448, x = 65.5, y = 3.52, z = 589.2, f = "e", optional = true, note = "{npc:11558}: the Timbermaw speak to you only from Neutral; walks around here: look inside the circle on the map" },
+						{ t = "accept", quest = 6031, title = "Runecloth", npc = 11557, npcName = "Meilosh", minLevel = 50, qlvl = 55, map = 1448, x = 65.69, y = 2.81, z = 586.4, f = "e", optional = true, note = "{npc:11557}: thirty {quest:6031}, handed in when you pass through again at 57; below ground" },
+					},
+				},
+				{
+					title = "Jadefire Run: kill these as you meet them",
+					note = "Jadefire Run is the satyr valley in the north-west, with {npc:10648} at its far end. He drops the {quest:939}; every Jadefire satyr can drop {item:11674}.",
+					goals = {
+						{ t = "collect", item = 11668, itemName = "Flute of Xavaric", map = 1448, x = 39.07, y = 22.35, f = "e", from = "Xavaric", fromKind = "npc", fromId = 10648, fromNpcs = { { npc = 10648, npcName = "Xavaric" } } },
+						{ t = "accept", quest = 939, title = "Flute of Xavaric", item = 11668, itemName = "Flute of Xavaric", minLevel = 49, qlvl = 54 },
+						{ t = "collect", quest = 939, title = "Flute of Xavaric", item = 11674, itemName = "Jadefire Felbind", count = 5, oi = 1, map = 1448, x = 39.24, y = 22.28, f = "e", spots = { { x = 39.4, y = 21.9, r = 40, n = 6 }, { x = 41.7, y = 21.7, r = 40, n = 1 }, { x = 42.5, y = 18, r = 45, n = 6 }, { x = 42.9, y = 15.1, r = 48, n = 9 }, { x = 46.2, y = 14.4, r = 40, n = 1 }, { x = 36.7, y = 56.7, r = 40, n = 2 }, { x = 35.4, y = 66.8, r = 40, n = 3 }, { x = 37.5, y = 69.1, r = 46, n = 10 }, { x = 32.4, y = 66.5, r = 40, n = 6 }, { x = 38.3, y = 80.9, r = 40, n = 4 }, { x = 40.4, y = 85.5, r = 68, n = 11 }, { x = 43.3, y = 88.2, r = 50, n = 8 }, { x = 41.4, y = 19.8, r = 62, n = 8, alt = true }, { x = 44.7, y = 14, r = 40, n = 3, alt = true }, { x = 37.3, y = 66.9, r = 40, n = 7, alt = true }, { x = 33.6, y = 66.7, r = 40, n = 2, alt = true }, { x = 39.1, y = 83, r = 43, n = 8, alt = true }, { x = 42.2, y = 84.3, r = 48, n = 8, alt = true }, { x = 42, y = 86.6, r = 42, n = 6, alt = true }, { x = 44, y = 86.6, r = 40, n = 4, alt = true } }, spread = true, fromNpcs = { { npc = 7108, npcName = "Jadefire Betrayer" }, { npc = 7105, npcName = "Jadefire Satyr" }, { npc = 7106, npcName = "Jadefire Rogue" }, { npc = 7107, npcName = "Jadefire Trickster" }, { npc = 7109, npcName = "Jadefire Felsworn" } } },
+						{ t = "kill", quest = 4906, title = "Further Corruption", target = "Jadefire Trickster", npc = 7107, count = 8, oi = 3, map = 1448, x = 41.02, y = 20.41, z = 472.2, f = "e", spots = { { x = 41, y = 20.2, z = 472.2, r = 40, n = 3 }, { x = 42.7, y = 18, z = 473.5, r = 42, n = 4 }, { x = 43, y = 15.5, z = 474.7, r = 40, n = 5 }, { x = 44.5, y = 13.9, r = 40, n = 2 }, { x = 46.2, y = 14.4, z = 463, r = 40, n = 1 }, { x = 36.7, y = 56.8, z = 319.3, r = 40, n = 1, alt = true } }, spread = true },
+						{ t = "kill", quest = 4906, title = "Further Corruption", target = "Jadefire Betrayer", npc = 7108, count = 8, oi = 2, map = 1448, x = 41.63, y = 19.6, z = 468.8, f = "e", spots = { { x = 42, y = 19.3, z = 470.9, r = 40, n = 4 }, { x = 42.4, y = 17.1, z = 473.7, r = 40, n = 1 }, { x = 42.5, y = 14.4, z = 474.8, r = 40, n = 1 }, { x = 45.1, y = 14.3, z = 473.9, r = 40, n = 1 }, { x = 39.1, y = 22.2, z = 472.6, r = 40, n = 2 } }, spread = true },
+						{ t = "kill", quest = 4906, title = "Further Corruption", target = "Jadefire Hellcaller", npc = 7111, count = 8, oi = 1, map = 1448, x = 41.05, y = 18.86, z = 474.8, f = "e", spots = { { x = 41.1, y = 19.8, r = 40, n = 2 }, { x = 41.7, y = 21.7, z = 468.3, r = 40, n = 1 }, { x = 39.5, y = 21.8, z = 483.8, r = 40, n = 4 }, { x = 42.9, y = 14.6, r = 40, n = 3 }, { x = 36.8, y = 56.5, z = 319.3, r = 40, n = 1, alt = true } }, spread = true },
+						{ t = "kill", quest = 4906, title = "Further Corruption", target = "Xavaric", npc = 10648, count = 1, oi = 4, map = 1448, x = 39.07, y = 22.35, z = 468.6, f = "e" },
+					},
+				},
+				{
+					title = "Jaedenar again",
+					note = "Use the {item:12922} at the corrupted moonwell in the middle of Jaedenar. If you freed {npc:11018}, go back into Shadow Hold for the succubus {npc:9518}.",
+					goals = {
+						{ t = "use", quest = 5157, title = "Collection of the Corrupt Water", item = 12922, itemName = "Empty Canteen", oi = 1, map = 1448, x = 35.2, y = 59.8, f = "e" },
+						{ t = "collect", quest = 5157, title = "Collection of the Corrupt Water", item = 12907, itemName = "Corrupt Moonwell Water", count = 1, oi = 1, map = 1448, x = 35.17, y = 59.79, f = "e", from = "Corrupt Jaedenar Moonwell", fromKind = "object", fromId = 176184 },
+					},
+				},
+				{
+					title = "Oozes",
+					note = "The Cursed and Tainted Oozes slide about the streams and fel pools around Jaedenar and Bloodvenom Falls: kill them and use Laris's Empty Ooze Jars on their remains.",
+					goals = {
+						{ t = "collect", quest = 4512, title = "A Little Slime Goes a Long Way", item = 11947, itemName = "Filled Cursed Ooze Jar", count = 6, oi = 1, map = 1448, x = 40.23, y = 65.75, f = "e", spots = { { x = 40.5, y = 66.2, r = 25, n = 3 }, { x = 40.4, y = 67.6, r = 49, n = 4 }, { x = 41.8, y = 67.4, r = 30, n = 4 }, { x = 40.6, y = 71.3, r = 47, n = 6 }, { x = 39.2, y = 71.9, r = 49, n = 7 } }, from = "Cursed Ooze", fromKind = "npc", fromId = 7086, fromNpcs = { { npc = 7086, npcName = "Cursed Ooze" } } },
+					},
+				},
+				{
+					title = "Jaedenar again",
+					note = "Trey Lightforge's remains lie beside her.",
+					goals = {
+						{ t = "kill", quest = 5204, title = "Retribution of the Light", target = "Rakaiah", npc = 9518, count = 1, oi = 1, map = 1448, x = 38.3, y = 50.5, z = 287.2, f = "e", optional = true, note = "{npc:9518}, below ground" },
+						{ t = "turnin", quest = 5204, title = "Retribution of the Light", npc = 11020, npcName = "Remains of Trey Lightforge", map = 1448, x = 38.5, y = 50.41, z = 289.2, f = "e", optional = true, note = "{npc:11020}, below ground" },
+						{ t = "accept", quest = 5385, title = "The Remains of Trey Lightforge", npc = 11020, npcName = "Remains of Trey Lightforge", minLevel = 49, qlvl = 57, pre = { 5204 }, preTitles = { [5204] = "Retribution of the Light" }, map = 1448, x = 38.5, y = 50.41, z = 289.2, f = "e", optional = true },
+					},
+				},
+				{
+					title = "Jaedenar",
+					goals = {
+						{ t = "collect", quest = 4512, title = "A Little Slime Goes a Long Way", item = 11949, itemName = "Filled Tainted Ooze Jar", count = 6, oi = 2, map = 1448, x = 38.46, y = 49.16, f = "e", spots = { { x = 39.4, y = 48.6, r = 59, n = 5 }, { x = 41.7, y = 49.5, r = 40, n = 3 }, { x = 42.7, y = 50.8, r = 40, n = 2 }, { x = 43.3, y = 48.2, r = 45, n = 3 }, { x = 44, y = 46.4, r = 40, n = 1 }, { x = 41.4, y = 46.3, r = 47, n = 4 }, { x = 39.9, y = 54.9, r = 47, n = 8 }, { x = 40.6, y = 59.3, r = 40, n = 4 }, { x = 34.5, y = 48.4, r = 40, n = 2 } }, spread = true, from = "Tainted Ooze", fromKind = "npc", fromId = 7092, fromNpcs = { { npc = 7092, npcName = "Tainted Ooze" } } },
+					},
+				},
+				{
+					title = "The Emerald Sanctuary",
+					note = "Ride south-east from Jaedenar to the Emerald Sanctuary, the druids' camp by the road in southern {zone:1448}.",
+					goals = {
+						{ t = "turnin", quest = 5156, title = "Verifying the Corruption", npc = 10921, npcName = "Taronn Redfeather", map = 1448, x = 50.89, y = 81.62, z = 254.3, f = "e" },
+						{ t = "accept", quest = 5249, title = "To Winterspring!", npc = 10924, npcName = "Ivy Leafrunner", minLevel = 53, qlvl = 56, closedBy = { 5244, 5250 }, preTitles = { [5244] = "The Ruins of Kel'Theril", [5250] = "Starfall" }, map = 1448, x = 50.96, y = 81.58, z = 254.4, f = "e" },
+					},
+				},
+				{
+					title = "The Emerald Sanctuary",
+					goals = {
+						{ t = "turnin", quest = 939, title = "Flute of Xavaric", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", optional = true },
+						{ t = "accept", quest = 4441, title = "Felbound Ancients", npc = 9116, npcName = "Eridan Bluewind", minLevel = 49, qlvl = 54, pre = { 939 }, preTitles = { [939] = "Flute of Xavaric" }, map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", note = "The vial is filled in {zone:1457}: keep it; inside" },
+						{ t = "turnin", quest = 4906, title = "Further Corruption", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e" },
+						{ t = "turnin", quest = 5385, title = "The Remains of Trey Lightforge", npc = 11019, npcName = "Jessir Moonbow", map = 1448, x = 51.35, y = 82.01, z = 253.6, f = "e", optional = true },
+						{ t = "turnin", quest = 5157, title = "Collection of the Corrupt Water", npc = 10922, npcName = "Greta Mosshoof", map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e" },
+						{ t = "accept", quest = 5158, title = "Seeking Spiritual Aid", npc = 10922, npcName = "Greta Mosshoof", minLevel = 48, qlvl = 52, pre = { 5157 }, preTitles = { [5157] = "Collection of the Corrupt Water" }, map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e", note = "Ends in the {zone:1413}: keep it" },
+						{ t = "turnin", quest = 4101, title = "Cleansing Felwood", npc = 9528, npcName = "Arathandris Silversky", map = 1448, x = 54.15, y = 86.83, z = 210.4, f = "e" },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
+-- Source: guides/29-berceau-de-l-hiver.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/29-berceau-de-l-hiver",
+			pack = "groupe-alliance",
+			title = "Group 27 · {zone:1452} & {zone:1423}",
+			faction = "Alliance",
+			minLevel = 53,
+			maxLevel = 56,
+			category = "Leveling",
+			folder = "Group Alliance",
+			zone = 1452,
+			zoneName = "Winterspring",
+			next = "groupe-alliance/30-maleterres",
+			author = "BurN-30",
+			version = 1,
+			names = { ["item:12367"] = "Pristine Yeti Horn", ["item:12383"] = "Moontouched Feather", ["item:12771"] = "Empty Firewater Flask", ["item:12886"] = "Pamela's Doll's Head", ["item:12888"] = "Pamela's Doll's Right Side", ["item:12928"] = "Umi's Mechanical Yeti", ["item:15785"] = "Zaeldarr's Head", ["npc:10301"] = "Jaron Stoneshaper", ["npc:10408"] = "Rockwing Gargoyle", ["npc:10411"] = "Eye of Naxxramas", ["npc:10431"] = "Gregor Greystone", ["npc:10738"] = "High Chief Winterfall", ["npc:10926"] = "Pamela Redpath", ["npc:10977"] = "Quixxil", ["npc:10978"] = "Legacki", ["npc:11038"] = "Caretaker Alen", ["npc:11064"] = "Darrowshire Spirit", ["npc:11079"] = "Wynd Nightchaser", ["npc:11118"] = "Innkeeper Vizzie", ["npc:11552"] = "Timbermaw Mystic", ["npc:11556"] = "Salfa", ["npc:11616"] = "Nathaniel Dumah", ["npc:11629"] = "Jessica Redpath", ["npc:11754"] = "Meggi Peppinrocker", ["npc:12250"] = "Zaeldarr the Outcast", ["npc:7440"] = "Winterfall Den Watcher", ["npc:7441"] = "Winterfall Totemic", ["npc:7442"] = "Winterfall Pathfinder", ["npc:7448"] = "Chillwind Chimaera", ["npc:7459"] = "Ice Thistle Matriarch", ["npc:7583"] = "Sprinkle", ["npc:9298"] = "Donova Snowden", ["object:1162"] = "Menethil Harbor", ["object:176970"] = "Corin's Crossing", ["object:177132"] = "Starfall Village", ["quest:5152"] = "Auntie Marlene", ["quest:5244"] = "The Ruins of Kel'Theril", ["quest:6031"] = "Runecloth", ["quest:8471"] = "Winterfall Ritual Totem", ["zone:1422"] = "Western Plaguelands", ["zone:1423"] = "Eastern Plaguelands", ["zone:1444"] = "Feralas", ["zone:1448"] = "Felwood", ["zone:1452"] = "Winterspring" },
+			written = { ["Follow the road west to {npc:9298}'s camp beside the hot springs."] = "Follow the road west to Donova's camp beside the hot springs.", ["Follow the southern road east into the {zone:1423}; the ruins of Darrowshire lie south of it. {npc:10926}'s ghost plays by the ruined house at the south end."] = "Follow the southern road east into the Eastern Plaguelands; the ruins of Darrowshire lie south of it. Pamela's ghost plays by the ruined house at the south end.", ["Pick up the supplies around the wagon and take {npc:10301}'s amulet back from the owlbeasts nearby."] = "Pick up the supplies around the wagon and take Jaron's amulet back from the owlbeasts nearby.", ["Ride south-east down the valley to {npc:10301}'s damaged crate in the snow at Mazthoril, with his wrecked wagon just east of it."] = "Ride south-east down the valley to Jaron's damaged crate in the snow at Mazthoril, with his wrecked wagon just east of it.", ["The western Winterfall camp sits in the hills between {npc:11556} and {npc:9298}. Any furbolg here can drop an {item:12771} (about one in ten) and, rarely, a {quest:8471}: right-click whichever drops. Keep the {quest:6031} the furbolgs drop for Meilosh."] = "The western Winterfall camp sits in the hills between Salfa and Donova. Any furbolg here can drop an Empty Firewater Flask (about one in ten) and, rarely, a Winterfall Ritual Totem: right-click whichever drops. Keep the Runecloth the furbolgs drop for Meilosh.", ["{npc:10301}'s camp"] = "Jaron's camp", ["{npc:10301}'s supplies"] = "Jaron's supplies", ["{npc:10926}'s doll"] = "Pamela's doll", ["{npc:11038}: {npc:12250} is a level 54 elite"] = "Caretaker Alen: Zaeldarr is a level 54 elite", ["{npc:11556} guards the mouth of Timbermaw Hold, north-west of {npc:9298}."] = "Salfa guards the mouth of Timbermaw Hold, north-west of Donova.", ["{npc:12250} is elite: grouping up is advised. He waits at the bottom of the Undercroft, the crypt in the south-west of the zone."] = "Zaeldarr is elite: grouping up is advised. He waits at the bottom of the Undercroft, the crypt in the south-west of the zone." },
+			steps = {
+				{
+					title = "Into {zone:1452}",
+					goals = {
+						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
+						{ t = "goto", text = "Into {zone:1452}", map = 1452, x = 28, y = 34.6, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1452}",
+					goals = {
+						{ t = "goto", text = "{zone:1452}", map = 1452, x = 61.3, y = 39, f = "e" },
+					},
+				},
+				{
+					title = "Everlook",
+					goals = {
+						{ t = "getfp", npc = 11138, npcName = "Maethrya", location = "Everlook", node = 52, map = 1452, x = 62.33, y = 36.61, z = 701.6, f = "e" },
+						{ t = "sethome", npc = 11118, npcName = "Innkeeper Vizzie", location = "Everlook", map = 1452, x = 61.36, y = 38.83, z = 721.7, f = "e", note = "{npc:11118}: the last guide binds here, so this usually ticks at once" },
+						{ t = "accept", quest = 5601, title = "Sister Pamela", npc = 11629, npcName = "Jessica Redpath", minLevel = 50, qlvl = 55, closedBy = { 5149, 5142 }, preTitles = { [5142] = "Little Pamela", [5149] = "Pamela's Doll" }, map = 1452, x = 61.28, y = 38.98, z = 721.7, f = "e", note = "{npc:11629}: keep it for Darrowshire; inside" },
+						{ t = "accept", quest = 6028, title = "The Everlook Report", npc = 10431, npcName = "Gregor Greystone", minLevel = 50, qlvl = 52, map = 1452, x = 61.35, y = 38.97, z = 721.7, f = "e", note = "{npc:10431}: keep both for the Plaguelands; inside" },
+						{ t = "accept", quest = 6030, title = "Duke Nicholas Zverenhoff", npc = 10431, npcName = "Gregor Greystone", minLevel = 50, qlvl = 52, map = 1452, x = 61.35, y = 38.97, z = 721.7, f = "e" },
+						{ t = "turnin", quest = 4808, title = "Felnok Steelspring", npc = 10468, npcName = "Felnok Steelspring", map = 1452, x = 61.63, y = 38.61, z = 721.3, f = "e" },
+						{ t = "accept", quest = 4809, title = "Chillwind Horns", npc = 10468, npcName = "Felnok Steelspring", minLevel = 50, qlvl = 54, pre = { 4808 }, preTitles = { [4808] = "Felnok Steelspring" }, map = 1452, x = 61.63, y = 38.61, z = 721.3, f = "e" },
+						{ t = "accept", quest = 6604, title = "Enraged Wildkin", npc = 11755, npcName = "Harlo Wigglesworth", minLevel = 53, qlvl = 59, closedBy = { 4861 }, preTitles = { [4861] = "Enraged Wildkin" }, map = 1452, x = 61.12, y = 38.43, z = 721.7, f = "e" },
+						{ t = "accept", quest = 6603, title = "Trouble in Winterspring!", npc = 11754, npcName = "Meggi Peppinrocker", minLevel = 52, qlvl = 56, closedBy = { 5082 }, preTitles = { [5082] = "Threat of the Winterfall" }, map = 1452, x = 60.66, y = 38.17, z = 721.1, f = "e", note = "{npc:11754} walks around Everlook: look inside the circle on the map" },
+						{ t = "accept", quest = 3783, title = "Are We There, Yeti?", npc = 10305, npcName = "Umi Rumplesnicker", minLevel = 52, qlvl = 56, map = 1452, x = 60.88, y = 37.62, z = 721.8, f = "e" },
+						{ t = "collect", quest = 978, title = "Moontouched Wildkin", item = 12383, itemName = "Moontouched Feather", count = 10, oi = 1, map = 1452, x = 63.35, y = 38.36, f = "e", spots = { { x = 63.4, y = 38.4, r = 72, n = 1 }, { x = 59.4, y = 33.6, r = 103, n = 3 }, { x = 58.3, y = 27.2, r = 72, n = 1 }, { x = 58, y = 20.9, r = 72, n = 1 }, { x = 56.8, y = 13.8, r = 72, n = 3 }, { x = 50.5, y = 38, r = 72, n = 1 }, { x = 47.3, y = 44.7, r = 72, n = 2 }, { x = 40, y = 38.2, r = 72, n = 2 }, { x = 35.4, y = 44.7, r = 85, n = 4 }, { x = 30.4, y = 45.7, r = 86, n = 5 }, { x = 62.9, y = 55, r = 72, n = 2 }, { x = 66.1, y = 47.3, r = 72, n = 1 }, { x = 65.4, y = 43.3, r = 72, n = 1, alt = true }, { x = 67.4, y = 44.6, r = 72, n = 1, alt = true }, { x = 63.6, y = 48.4, r = 72, n = 2, alt = true }, { x = 66.8, y = 50.5, r = 72, n = 1, alt = true }, { x = 60.7, y = 24.4, r = 72, n = 1, alt = true }, { x = 65.8, y = 53.5, r = 76, n = 3, alt = true }, { x = 49.5, y = 40.8, r = 72, n = 1, alt = true }, { x = 59.1, y = 17, r = 92, n = 3, alt = true }, { x = 44.6, y = 43.3, r = 125, n = 11, alt = true }, { x = 37.8, y = 44.6, r = 90, n = 6, alt = true }, { x = 32.3, y = 44, r = 72, n = 4, alt = true } }, spread = true, note = "{item:12383}, 110 yd north", from = "Moontouched Feather", fromKind = "object", fromId = 175407 },
+					},
+				},
+				{
+					title = "{npc:11079}",
+					goals = {
+						{ t = "turnin", quest = 5249, title = "To Winterspring!", npc = 11079, npcName = "Wynd Nightchaser", map = 1452, x = 51.97, y = 30.39, z = 744.9, f = "e" },
+						{ t = "accept", quest = 5244, title = "The Ruins of Kel'Theril", npc = 11079, npcName = "Wynd Nightchaser", minLevel = 53, qlvl = 56, map = 1452, x = 51.97, y = 30.39, z = 744.9, f = "e" },
+						{ t = "turnin", quest = 6604, title = "Enraged Wildkin", npc = 10301, npcName = "Jaron Stoneshaper", map = 1452, x = 52.14, y = 30.43, z = 744.9, f = "e" },
+						{ t = "turnin", quest = 5244, title = "The Ruins of Kel'Theril", npc = 10301, npcName = "Jaron Stoneshaper", map = 1452, x = 52.14, y = 30.43, z = 744.9, f = "e" },
+						{ t = "accept", quest = 5245, title = "Troubled Spirits of Kel'Theril", npc = 10301, npcName = "Jaron Stoneshaper", minLevel = 53, qlvl = 56, pre = { 5244 }, preTitles = { [5244] = "The Ruins of Kel'Theril" }, map = 1452, x = 52.14, y = 30.43, z = 744.9, f = "e" },
+						{ t = "accept", quest = 4861, title = "Enraged Wildkin", npc = 10301, npcName = "Jaron Stoneshaper", minLevel = 53, qlvl = 59, map = 1452, x = 52.14, y = 30.43, z = 744.9, f = "e" },
+					},
+				},
+				{
+					title = "Ice Thistle Hills: kill these as you meet them",
+					note = "Ice Thistle yetis live in the hills south of Winterfall Village, Chillwind Chimaeras in the valley toward Everlook.",
+					goals = {
+						{ t = "collect", quest = 3783, title = "Are We There, Yeti?", item = 12366, itemName = "Thick Yeti Fur", count = 10, oi = 1, map = 1452, x = 52.41, y = 32.44, f = "e", spots = { { x = 52.5, y = 33.1, r = 49, n = 2 }, { x = 50.8, y = 40.1, r = 49, n = 1 }, { x = 49, y = 46.9, r = 49, n = 1 }, { x = 44.5, y = 44.5, r = 49, n = 1 }, { x = 45.8, y = 37.7, r = 49, n = 2 }, { x = 39.9, y = 38.2, r = 57, n = 3 }, { x = 33.8, y = 40.3, r = 49, n = 1 }, { x = 28.9, y = 46.5, r = 49, n = 1 }, { x = 57.8, y = 29, r = 49, n = 1 }, { x = 61.4, y = 31.8, r = 55, n = 3 }, { x = 65, y = 39.9, r = 68, n = 3 }, { x = 71.8, y = 40.2, r = 49, n = 1 }, { x = 54.7, y = 30.1, r = 49, n = 1, alt = true }, { x = 53.8, y = 36.1, r = 49, n = 2, alt = true }, { x = 55.2, y = 33.2, r = 49, n = 1, alt = true }, { x = 48.9, y = 34.4, r = 49, n = 2, alt = true }, { x = 51.4, y = 37.9, r = 49, n = 1, alt = true }, { x = 47.8, y = 37.7, r = 49, n = 1, alt = true }, { x = 58.3, y = 33.6, r = 49, n = 2, alt = true }, { x = 44.8, y = 35.5, r = 49, n = 2, alt = true }, { x = 43.4, y = 33.2, r = 49, n = 1, alt = true }, { x = 47.3, y = 43.9, r = 55, n = 4, alt = true }, { x = 44.7, y = 41.2, r = 49, n = 1, alt = true }, { x = 43.4, y = 38, r = 49, n = 2, alt = true }, { x = 41.1, y = 36.1, r = 49, n = 1, alt = true }, { x = 38.5, y = 41.2, r = 49, n = 1, alt = true }, { x = 66.2, y = 42.6, r = 73, n = 7, alt = true }, { x = 67.8, y = 41.8, r = 57, n = 5, alt = true }, { x = 66.8, y = 45.2, r = 86, n = 8, alt = true }, { x = 70.2, y = 39.9, r = 77, n = 5, alt = true }, { x = 33.8, y = 44, r = 49, n = 1, alt = true }, { x = 32.4, y = 40, r = 49, n = 1, alt = true }, { x = 30.3, y = 39.2, r = 49, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 7458, npcName = "Ice Thistle Yeti" }, { npc = 7457, npcName = "Rogue Ice Thistle" } } },
+						{ t = "collect", quest = 4809, title = "Chillwind Horns", item = 12444, itemName = "Uncracked Chillwind Horn", count = 8, oi = 1, map = 1452, x = 53.2, y = 37.74, f = "e", spots = { { x = 52.3, y = 38.2, r = 71, n = 2 }, { x = 55.6, y = 47.3, r = 71, n = 3 }, { x = 63.4, y = 46.5, r = 71, n = 2 }, { x = 67.1, y = 52.6, r = 121, n = 7 }, { x = 63.3, y = 62.1, r = 71, n = 1 }, { x = 62, y = 30, r = 71, n = 1 }, { x = 67.6, y = 30.5, r = 71, n = 2 }, { x = 57.7, y = 24.2, r = 104, n = 7 }, { x = 59.8, y = 11.9, r = 71, n = 2 }, { x = 44.8, y = 43.7, r = 91, n = 3 }, { x = 38.5, y = 38.5, r = 71, n = 1 }, { x = 29.6, y = 48.5, r = 71, n = 1 }, { x = 55.6, y = 37.1, r = 71, n = 1, alt = true }, { x = 57.4, y = 40.8, r = 71, n = 2, alt = true }, { x = 49, y = 40.8, r = 71, n = 1, alt = true }, { x = 48.3, y = 44, r = 71, n = 2, alt = true }, { x = 59.1, y = 44, r = 105, n = 4, alt = true }, { x = 45, y = 36.3, r = 71, n = 1, alt = true }, { x = 61.2, y = 41.7, r = 71, n = 1, alt = true }, { x = 42.8, y = 35, r = 71, n = 1, alt = true }, { x = 55.1, y = 21.5, r = 83, n = 4, alt = true }, { x = 61.9, y = 25.9, r = 71, n = 1, alt = true }, { x = 60.1, y = 22.3, r = 84, n = 7, alt = true }, { x = 58.2, y = 20.1, r = 88, n = 5, alt = true }, { x = 65.8, y = 29.4, r = 88, n = 3, alt = true }, { x = 62.3, y = 54.6, r = 71, n = 2, alt = true }, { x = 65.5, y = 25.7, r = 71, n = 2, alt = true }, { x = 59, y = 17, r = 71, n = 3, alt = true }, { x = 67, y = 48.6, r = 71, n = 3, alt = true }, { x = 37.2, y = 44.5, r = 71, n = 1, alt = true }, { x = 58.5, y = 13.6, r = 71, n = 3, alt = true }, { x = 61, y = 14.8, r = 71, n = 3, alt = true }, { x = 33.8, y = 44.6, r = 71, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 7447, npcName = "Fledgling Chillwind" }, { npc = 7448, npcName = "Chillwind Chimaera" }, { npc = 7449, npcName = "Chillwind Ravager" } } },
+					},
+				},
+				{
+					title = "{quest:5244}",
+					note = "The ruins lie around the frozen lake south of {object:177132}. Pick up the four relic fragments lying in the ruins and the Moontouched Feathers on the ground where the wildkin roam.",
+					goals = {
+						{ t = "collect", quest = 5245, title = "Troubled Spirits of Kel'Theril", item = 12897, itemName = "Second Relic Fragment", count = 1, oi = 2, map = 1452, x = 50.88, y = 41.71, f = "e", from = "Highborne Relic Fragment", fromKind = "object", fromId = 175891 },
+						{ t = "collect", quest = 978, title = "Moontouched Wildkin", item = 12383, itemName = "Moontouched Feather", count = 10, oi = 1, map = 1452, x = 49.48, y = 40.84, f = "e", spots = { { x = 49.5, y = 40.8, r = 72, n = 1 }, { x = 44.6, y = 43.3, r = 125, n = 11 }, { x = 40, y = 38.2, r = 72, n = 2 }, { x = 35.4, y = 44.7, r = 85, n = 4 }, { x = 30.4, y = 45.7, r = 86, n = 5 }, { x = 59.4, y = 33.6, r = 103, n = 3 }, { x = 63.4, y = 38.4, r = 72, n = 1 }, { x = 67.4, y = 44.6, r = 72, n = 1 }, { x = 66.8, y = 50.5, r = 72, n = 1 }, { x = 62.9, y = 55, r = 72, n = 2 }, { x = 60.7, y = 24.4, r = 72, n = 1 }, { x = 56.8, y = 13.8, r = 72, n = 3 }, { x = 50.5, y = 38, r = 72, n = 1, alt = true }, { x = 47.3, y = 44.7, r = 72, n = 2, alt = true }, { x = 37.8, y = 44.6, r = 90, n = 6, alt = true }, { x = 58.3, y = 27.2, r = 72, n = 1, alt = true }, { x = 63.6, y = 48.4, r = 72, n = 2, alt = true }, { x = 58, y = 20.9, r = 72, n = 1, alt = true }, { x = 65.4, y = 43.3, r = 72, n = 1, alt = true }, { x = 66.1, y = 47.3, r = 72, n = 1, alt = true }, { x = 32.3, y = 44, r = 72, n = 4, alt = true }, { x = 65.8, y = 53.5, r = 76, n = 3, alt = true }, { x = 59.1, y = 17, r = 92, n = 3, alt = true } }, spread = true, from = "Moontouched Feather", fromKind = "object", fromId = 175407 },
+					},
+				},
+				{
+					title = "{npc:9298}",
+					note = "Follow the road west to {npc:9298}'s camp beside the hot springs.",
+					goals = {
+						{ t = "turnin", quest = 3908, title = "It's a Secret to Everybody", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+						{ t = "accept", quest = 3909, title = "The Videre Elixir", npc = 9298, npcName = "Donova Snowden", minLevel = 47, qlvl = 52, pre = { 3908 }, preTitles = { [3908] = "It's a Secret to Everybody" }, map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e", note = "Keep it: Gregan in {zone:1444} brews the elixir later" },
+						{ t = "turnin", quest = 6603, title = "Trouble in Winterspring!", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+						{ t = "accept", quest = 5082, title = "Threat of the Winterfall", npc = 9298, npcName = "Donova Snowden", minLevel = 52, qlvl = 56, map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+					},
+				},
+				{
+					title = "{npc:11556}",
+					note = "{npc:11556} guards the mouth of Timbermaw Hold, north-west of {npc:9298}.",
+					goals = {
+						{ t = "turnin", quest = 8465, title = "Speak to Salfa", npc = 11556, npcName = "Salfa", map = 1452, x = 27.73, y = 34.5, z = 586.1, f = "e" },
+						{ t = "accept", quest = 8464, title = "Winterfall Activity", npc = 11556, npcName = "Salfa", minLevel = 45, qlvl = 58, map = 1452, x = 27.73, y = 34.5, z = 586.1, f = "e" },
+					},
+				},
+				{
+					title = "On the way",
+					along = "q8464",
+					goals = {
+						{ t = "kill", quest = 8464, title = "Winterfall Activity", target = "Winterfall Den Watcher", npc = 7440, count = 8, oi = 2, map = 1452, x = 30.34, y = 36.33, z = 557.5, f = "e", spots = { { x = 30.5, y = 36.3, z = 557.5, r = 40, n = 3 }, { x = 41.6, y = 42.6, z = 574.6, r = 40, n = 1 }, { x = 66.5, y = 34.9, r = 58, n = 6 }, { x = 67.6, y = 35.9, z = 693.6, r = 40, n = 3 }, { x = 68.3, y = 34.7, r = 40, n = 2 } }, spread = true },
+						{ t = "kill", quest = 8464, title = "Winterfall Activity", target = "Winterfall Ursa", npc = 7438, count = 8, oi = 3, map = 1452, x = 65.11, y = 37.18, z = 763.7, f = "e", spots = { { x = 65.8, y = 37.6, z = 774.3, r = 67, n = 5 }, { x = 67.2, y = 39.4, r = 48, n = 3 }, { x = 68.3, y = 37.6, r = 39, n = 3 } } },
+					},
+				},
+				{
+					title = "On the way",
+					along = "q5082",
+					goals = {
+						{ t = "kill", quest = 5082, title = "Threat of the Winterfall", target = "Winterfall Pathfinder", npc = 7442, count = 8, oi = 1, map = 1452, x = 42.55, y = 43.04, z = 588, f = "e", spots = { { x = 42.4, y = 42.8, z = 579, r = 44, n = 2 }, { x = 42.2, y = 44.4, r = 44, n = 2 }, { x = 40.8, y = 43.1, r = 44, n = 4 }, { x = 39, y = 42.8, z = 592.1, r = 44, n = 1 }, { x = 34.7, y = 37, z = 578.7, r = 44, n = 1 }, { x = 33.3, y = 37, r = 67, n = 4 }, { x = 30.9, y = 35.7, r = 61, n = 5 } }, spread = true, note = "{npc:7442} along the way to {npc:9298}" },
+						{ t = "kill", quest = 5082, title = "Threat of the Winterfall", target = "Winterfall Den Watcher", npc = 7440, count = 8, oi = 2, map = 1452, x = 41.6, y = 42.64, z = 574.6, f = "e", spots = { { x = 41.6, y = 42.6, z = 574.6, r = 40, n = 1 }, { x = 30.5, y = 36.3, z = 557.5, r = 40, n = 3 }, { x = 66.5, y = 34.9, r = 58, n = 6 }, { x = 67.6, y = 35.9, z = 693.6, r = 40, n = 3 }, { x = 68.3, y = 34.7, r = 40, n = 2 } }, spread = true, note = "{npc:7440} along the way to {npc:9298}" },
+						{ t = "kill", quest = 5082, title = "Threat of the Winterfall", target = "Winterfall Totemic", npc = 7441, count = 8, oi = 3, map = 1452, x = 41.44, y = 42.67, z = 573.9, f = "e", spots = { { x = 41.4, y = 42.7, z = 573.9, r = 40, n = 1 }, { x = 39.9, y = 43, z = 571.4, r = 40, n = 3 }, { x = 39.6, y = 44.3, r = 40, n = 3 }, { x = 32.9, y = 37, z = 544.6, r = 47, n = 3 }, { x = 30.1, y = 36.4, z = 551, r = 45, n = 3 } }, spread = true, note = "{npc:7441} along the way to {npc:9298}" },
+					},
+				},
+				{
+					title = "Frostfire Hot Springs: kill these as you meet them",
+					note = "The western Winterfall camp sits in the hills between {npc:11556} and {npc:9298}. Any furbolg here can drop an {item:12771} (about one in ten) and, rarely, a {quest:8471}: right-click whichever drops. Keep the {quest:6031} the furbolgs drop for Meilosh.",
+					label = "q8464",
+					goals = {
+						{ t = "collect", item = 12771, itemName = "Empty Firewater Flask", map = 1452, x = 41.44, y = 42.67, f = "e", spots = { { x = 41.1, y = 42.9, r = 51, n = 6 }, { x = 42.2, y = 44.4, r = 40, n = 2 }, { x = 39.6, y = 43.5, r = 58, n = 7 }, { x = 34.7, y = 37, r = 40, n = 1 }, { x = 32.8, y = 37.3, r = 45, n = 4 }, { x = 31.4, y = 36.3, r = 40, n = 1 }, { x = 27.9, y = 34.5, r = 40, n = 1 }, { x = 65.5, y = 37.8, r = 51, n = 4 }, { x = 67.3, y = 39.5, r = 56, n = 4 }, { x = 69.5, y = 38.3, r = 40, n = 1 }, { x = 68.2, y = 35, r = 40, n = 3 }, { x = 66.5, y = 34.9, r = 58, n = 6 }, { x = 42.4, y = 42.8, r = 40, n = 2, alt = true }, { x = 33.6, y = 36.5, r = 40, n = 3, alt = true }, { x = 31.2, y = 35, r = 40, n = 2, alt = true }, { x = 30.3, y = 36.3, r = 54, n = 8, alt = true }, { x = 67.3, y = 36, r = 69, n = 5, alt = true }, { x = 68.2, y = 37.5, r = 45, n = 5, alt = true } }, spread = true, optional = true, note = "{item:12771}, a rare drop", fromNpcs = { { npc = 7441, npcName = "Winterfall Totemic" }, { npc = 7438, npcName = "Winterfall Ursa" }, { npc = 7439, npcName = "Winterfall Shaman" }, { npc = 7440, npcName = "Winterfall Den Watcher" }, { npc = 7442, npcName = "Winterfall Pathfinder" } } },
+						{ t = "accept", quest = 5083, title = "Winterfall Firewater", item = 12771, itemName = "Empty Firewater Flask", minLevel = 52, qlvl = 56, optional = true },
+						{ t = "kill", quest = 8464, title = "Winterfall Activity", target = "Winterfall Den Watcher", npc = 7440, count = 8, oi = 2, map = 1452, x = 41.6, y = 42.64, z = 574.6, f = "e", spots = { { x = 41.6, y = 42.6, z = 574.6, r = 40, n = 1 }, { x = 30.5, y = 36.3, z = 557.5, r = 40, n = 3 }, { x = 66.5, y = 34.9, r = 58, n = 6 }, { x = 67.6, y = 35.9, z = 693.6, r = 40, n = 3 }, { x = 68.3, y = 34.7, r = 40, n = 2 } }, spread = true },
+						{ t = "kill", quest = 8464, title = "Winterfall Activity", target = "Winterfall Ursa", npc = 7438, count = 8, oi = 3, map = 1452, x = 65.11, y = 37.18, z = 763.7, f = "e", spots = { { x = 65.8, y = 37.6, z = 774.3, r = 67, n = 5 }, { x = 67.2, y = 39.4, r = 48, n = 3 }, { x = 68.3, y = 37.6, r = 39, n = 3 } } },
+						{ t = "collect", quest = 6031, title = "Runecloth", item = 14047, itemName = "Runecloth", count = 30, oi = 1, map = 1452, x = 61.93, y = 37.7, f = "e", spots = { { x = 61.3, y = 38.1, r = 58, n = 12 } }, optional = true, note = "{quest:6031}, for Meilosh later", fromNpcs = { { npc = 11190, npcName = "Everlook Bruiser" } } },
+						{ t = "collect", item = 20742, itemName = "Winterfall Ritual Totem", map = 1452, x = 65.11, y = 37.18, f = "e", spots = { { x = 65.5, y = 37.8, r = 51, n = 4 }, { x = 67.3, y = 39.5, r = 56, n = 4 }, { x = 69.5, y = 38.3, r = 40, n = 1 }, { x = 68.2, y = 35, r = 40, n = 3 }, { x = 66.5, y = 34.9, r = 58, n = 6 }, { x = 42.2, y = 44.4, r = 40, n = 2 }, { x = 41.1, y = 42.9, r = 51, n = 6 }, { x = 39.6, y = 43.5, r = 58, n = 7 }, { x = 34.7, y = 37, r = 40, n = 1 }, { x = 32.8, y = 37.3, r = 45, n = 4 }, { x = 31.4, y = 36.3, r = 40, n = 1 }, { x = 27.9, y = 34.5, r = 40, n = 1 }, { x = 67.3, y = 36, r = 69, n = 5, alt = true }, { x = 68.2, y = 37.5, r = 45, n = 5, alt = true }, { x = 42.4, y = 42.8, r = 40, n = 2, alt = true }, { x = 33.6, y = 36.5, r = 40, n = 3, alt = true }, { x = 31.2, y = 35, r = 40, n = 2, alt = true }, { x = 30.3, y = 36.3, r = 54, n = 8, alt = true } }, spread = true, optional = true, note = "{quest:8471}, a rare drop", fromNpcs = { { npc = 7438, npcName = "Winterfall Ursa" }, { npc = 7441, npcName = "Winterfall Totemic" }, { npc = 10916, npcName = "Winterfall Runner" }, { npc = 7442, npcName = "Winterfall Pathfinder" }, { npc = 7440, npcName = "Winterfall Den Watcher" } } },
+						{ t = "accept", quest = 8471, title = "Winterfall Ritual Totem", item = 20742, itemName = "Winterfall Ritual Totem", minLevel = 50, qlvl = 56, optional = true, note = "For Kernda in Timbermaw Hold: keep it" },
+					},
+				},
+				{
+					title = "{npc:9298}",
+					label = "q5082",
+					goals = {
+						{ t = "turnin", quest = 5082, title = "Threat of the Winterfall", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+						{ t = "turnin", quest = 5083, title = "Winterfall Firewater", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e", optional = true },
+						{ t = "accept", quest = 5084, title = "Falling to Corruption", npc = 9298, npcName = "Donova Snowden", minLevel = 52, qlvl = 56, pre = { 5083 }, preTitles = { [5083] = "Winterfall Firewater" }, map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e", optional = true, note = "The Deadwood cauldron in {zone:1448}: keep it" },
+					},
+				},
+				{
+					title = "Level 55.05",
+					note = "Top up here to level 55.05 before the hand-ins at Everlook: they take you to level 56.",
+					when = { { k = "level", op = "<", n = 55, frac = 0.05 } },
+					goals = {
+						{ t = "goto", text = "{npc:11552}", map = 1452, x = 27.9, y = 34.5, f = "e" },
+						{ t = "level", level = 55, frac = 0.05, note = "grind on {npc:11552}" },
+					},
+				},
+				{
+					title = "Everlook",
+					goals = {
+						{ t = "turnin", quest = 4809, title = "Chillwind Horns", npc = 10468, npcName = "Felnok Steelspring", map = 1452, x = 61.63, y = 38.61, z = 721.3, f = "e" },
+						{ t = "turnin", quest = 3783, title = "Are We There, Yeti?", npc = 10305, npcName = "Umi Rumplesnicker", map = 1452, x = 60.88, y = 37.62, z = 721.8, f = "e" },
+						{ t = "accept", quest = 977, title = "Are We There, Yeti?", npc = 10305, npcName = "Umi Rumplesnicker", minLevel = 52, qlvl = 58, pre = { 3783 }, preTitles = { [3783] = "Are We There, Yeti?" }, map = 1452, x = 60.88, y = 37.62, z = 721.8, f = "e" },
+					},
+				},
+				{
+					title = "Winterfall Village",
+					note = "The Winterfall furbolg village lies east of Everlook: Shaman (56-57), Den Watchers (55-56) and Ursa (57-58), all above you. Kill the Shaman first, they heal, and pull from the edge. {npc:10738} in the cave at the back is elite: stay out.",
+					goals = {
+						{ t = "kill", quest = 8464, title = "Winterfall Activity", target = "Winterfall Shaman", npc = 7439, count = 8, oi = 1, map = 1452, x = 67.37, y = 35.22, z = 692.7, f = "e", spots = { { x = 67.5, y = 35.4, z = 692.7, r = 15, n = 2 }, { x = 68, y = 37.5, r = 32, n = 2 }, { x = 69.5, y = 38.3, r = 15, n = 1 }, { x = 67.5, y = 39.8, r = 15, n = 1 } } },
+						{ t = "kill", quest = 8464, title = "Winterfall Activity", target = "Winterfall Den Watcher", npc = 7440, count = 8, oi = 2, map = 1452, x = 67.51, y = 35.91, z = 693.6, f = "e", spots = { { x = 67.6, y = 35.9, z = 693.6, r = 40, n = 3 }, { x = 68.3, y = 34.7, r = 40, n = 2 }, { x = 66.5, y = 34.9, r = 58, n = 6 }, { x = 41.6, y = 42.6, z = 574.6, r = 40, n = 1 }, { x = 30.5, y = 36.3, z = 557.5, r = 40, n = 3 } }, spread = true },
+						{ t = "kill", quest = 8464, title = "Winterfall Activity", target = "Winterfall Ursa", npc = 7438, count = 8, oi = 3, map = 1452, x = 68.08, y = 36.86, z = 731.9, f = "e", spots = { { x = 68.3, y = 37.6, r = 39, n = 3 }, { x = 67.2, y = 39.4, r = 48, n = 3 }, { x = 65.8, y = 37.6, z = 774.3, r = 67, n = 5 } } },
+					},
+				},
+				{
+					title = "Optional: Sunken Temple",
+					goals = {
+						{ t = "note", text = "Short of level 54 after the yetis? Running the Sunken Temple (50-54) instead of grinding gets you there faster in a group. Come back to Everlook afterwards." },
+					},
+				},
+				{
+					title = "Pristine Yeti Horns",
+					note = "Back to the hills: only the Ice Thistle Matriarchs and Patriarchs carry the horns. Keep killing yetis until level 54: Harlo's wildkin quests are red before that.",
+					goals = {
+						{ t = "collect", quest = 977, title = "Are We There, Yeti?", item = 12367, itemName = "Pristine Yeti Horn", count = 2, oi = 1, map = 1452, x = 70.51, y = 37.62, f = "e", spots = { { x = 70.7, y = 37.6, r = 40, n = 2 }, { x = 70.4, y = 38.9, r = 52, n = 4 }, { x = 71.4, y = 39.1, r = 40, n = 3 }, { x = 71.3, y = 40.6, r = 40, n = 2 }, { x = 70, y = 41.5, r = 50, n = 5 }, { x = 68.7, y = 41.2, r = 40, n = 3 }, { x = 66.8, y = 41.4, r = 40, n = 2 }, { x = 65.9, y = 43.6, r = 40, n = 1 }, { x = 66.9, y = 44.9, r = 40, n = 1 }, { x = 67.7, y = 46.3, r = 40, n = 1 }, { x = 64.8, y = 40.5, r = 40, n = 2 } }, spread = true, fromNpcs = { { npc = 7460, npcName = "Ice Thistle Patriarch" }, { npc = 7459, npcName = "Ice Thistle Matriarch" } } },
+					},
+				},
+				{
+					title = "Everlook",
+					goals = {
+						{ t = "turnin", quest = 977, title = "Are We There, Yeti?", npc = 10305, npcName = "Umi Rumplesnicker", map = 1452, x = 60.88, y = 37.62, z = 721.8, f = "e" },
+						{ t = "accept", quest = 5163, title = "Are We There, Yeti?", npc = 10305, npcName = "Umi Rumplesnicker", minLevel = 52, qlvl = 58, pre = { 977 }, preTitles = { [977] = "Are We There, Yeti?" }, map = 1452, x = 60.88, y = 37.62, z = 721.8, f = "e" },
+						{ t = "use", item = 12928, itemName = "Umi's Mechanical Yeti", text = "{item:12928}", map = 1452, x = 61.5, y = 38.6, f = "e", note = "On {npc:10978}, by the inn" },
+						{ t = "kill", quest = 5163, title = "Are We There, Yeti?", target = "Legacki", npc = 10978, count = 1, oi = 1, map = 1452, x = 61.54, y = 38.61, z = 722, f = "e", note = "{npc:10978}: {npc:7583} and {npc:10977} come later" },
+					},
+				},
+				{
+					title = "{npc:10301}'s camp",
+					note = "Ride south-east down the valley to {npc:10301}'s damaged crate in the snow at Mazthoril, with his wrecked wagon just east of it.",
+					goals = {
+						{ t = "turnin", quest = 4861, title = "Enraged Wildkin", object = 175587, objName = "Damaged Crate", map = 1452, x = 58.99, y = 59.79, z = 762.9, f = "e" },
+						{ t = "accept", quest = 4863, title = "Enraged Wildkin", object = 175587, objName = "Damaged Crate", minLevel = 53, qlvl = 59, pre = { 4861 }, preTitles = { [4861] = "Enraged Wildkin" }, map = 1452, x = 58.99, y = 59.79, z = 762.9, f = "e" },
+						{ t = "turnin", quest = 4863, title = "Enraged Wildkin", object = 175586, objName = "Jaron's Wagon", map = 1452, x = 61.44, y = 60.68, z = 775.1, f = "e" },
+						{ t = "accept", quest = 4864, title = "Enraged Wildkin", object = 175586, objName = "Jaron's Wagon", minLevel = 53, qlvl = 59, pre = { 4863 }, preTitles = { [4863] = "Enraged Wildkin" }, map = 1452, x = 61.44, y = 60.68, z = 775.1, f = "e" },
+					},
+				},
+				{
+					title = "{npc:10301}'s supplies",
+					note = "Pick up the supplies around the wagon and take {npc:10301}'s amulet back from the owlbeasts nearby.",
+					goals = {
+						{ t = "collect", quest = 4864, title = "Enraged Wildkin", item = 12524, itemName = "Blue-feathered Amulet", count = 1, oi = 2, map = 1452, x = 59.41, y = 59.79, f = "e", spots = { { x = 58.9, y = 59.6, r = 47, n = 7 }, { x = 64.2, y = 59.1, r = 50, n = 4 }, { x = 64.9, y = 61.3, r = 75, n = 9 }, { x = 66.3, y = 60.2, r = 40, n = 2 }, { x = 64.8, y = 64.6, r = 56, n = 3 }, { x = 67.1, y = 25.2, r = 40, n = 2 }, { x = 67.4, y = 22, r = 57, n = 4 }, { x = 66.5, y = 19.6, r = 40, n = 2 }, { x = 65.3, y = 22.6, r = 46, n = 6 }, { x = 63.6, y = 23.1, r = 40, n = 2 }, { x = 63.4, y = 19.5, r = 40, n = 2 }, { x = 63.7, y = 16.6, r = 40, n = 3 }, { x = 65.7, y = 58.4, r = 49, n = 4, alt = true }, { x = 66, y = 62.2, r = 40, n = 2, alt = true }, { x = 64.3, y = 25, r = 40, n = 1, alt = true }, { x = 66.5, y = 23.6, r = 67, n = 4, alt = true }, { x = 63.8, y = 21.5, r = 61, n = 7, alt = true }, { x = 65.6, y = 20.7, r = 60, n = 5, alt = true }, { x = 65.4, y = 18.4, r = 46, n = 4, alt = true }, { x = 62.2, y = 16.8, r = 59, n = 4, alt = true } }, spread = true, from = "Crazed Owlbeast", fromKind = "npc", fromAlso = "Moontouched Owlbeast", fromId = 7452, fromAlsoId = 7453, fromNpcs = { { npc = 7452, npcName = "Crazed Owlbeast" }, { npc = 7453, npcName = "Moontouched Owlbeast" }, { npc = 7454, npcName = "Berserk Owlbeast" } } },
+						{ t = "collect", quest = 4864, title = "Enraged Wildkin", item = 12525, itemName = "Jaron's Supplies", count = 1, oi = 1, map = 1452, x = 61.39, y = 60.73, f = "e", spots = { { x = 61.4, y = 60.7, r = 15, n = 2 } }, from = "Jaron's Supplies", fromKind = "object", fromId = 175628 },
+					},
+				},
+				{
+					title = "{quest:5244}",
+					goals = {
+						{ t = "collect", quest = 5245, title = "Troubled Spirits of Kel'Theril", item = 12896, itemName = "First Relic Fragment", count = 1, oi = 1, map = 1452, x = 55.14, y = 42.98, f = "e", from = "Highborne Relic Fragment", fromKind = "object", fromId = 175888 },
+						{ t = "collect", quest = 5245, title = "Troubled Spirits of Kel'Theril", item = 12898, itemName = "Third Relic Fragment", count = 1, oi = 3, map = 1452, x = 53.31, y = 43.44, f = "e", from = "Highborne Relic Fragment", fromKind = "object", fromId = 175892 },
+						{ t = "collect", quest = 5245, title = "Troubled Spirits of Kel'Theril", item = 12899, itemName = "Fourth Relic Fragment", count = 1, oi = 4, map = 1452, x = 52.42, y = 41.5, f = "e", from = "Highborne Relic Fragment", fromKind = "object", fromId = 175893 },
+					},
+				},
+				{
+					title = "{object:177132}",
+					note = "Ride north-west back to the village.",
+					goals = {
+						{ t = "turnin", quest = 4864, title = "Enraged Wildkin", npc = 10301, npcName = "Jaron Stoneshaper", map = 1452, x = 52.14, y = 30.43, z = 744.9, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1452}",
+					goals = {
+						{ t = "goto", text = "{zone:1452}", map = 1452, x = 62.3, y = 36.6, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Theramore",
+					goals = {
+						{ t = "goto", text = "Everlook flight master", map = 1452, x = 62.3, y = 36.6, f = "e" },
+						{ t = "fly", location = "Theramore", node = 32 },
+					},
+				},
+				{
+					title = "Boat to {object:1162}",
+					goals = {
+						{ t = "goto", text = "Boat to {object:1162}", map = 1445, x = 71.6, y = 56.4, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Southshore",
+					goals = {
+						{ t = "goto", text = "{object:1162} flight master", map = 1437, x = 9.5, y = 59.7, f = "e" },
+						{ t = "fly", location = "Southshore", node = 14 },
+					},
+				},
+				{
+					title = "{zone:1422}",
+					goals = {
+						{ t = "goto", text = "{zone:1422}", map = 1422, x = 42.9, y = 85, f = "e" },
+					},
+				},
+				{
+					title = "Chillwind Camp",
+					note = "From Southshore, ride north up the road through Alterac to Chillwind Camp.",
+					goals = {
+						{ t = "turnin", quest = 6028, title = "The Everlook Report", npc = 10840, npcName = "Argent Officer Pureheart", map = 1422, x = 42.97, y = 83.55, z = 65.2, f = "e" },
+						{ t = "accept", quest = 5903, title = "A Plague Upon Thee", npc = 11616, npcName = "Nathaniel Dumah", minLevel = 48, qlvl = 55, map = 1422, x = 43.42, y = 84.83, z = 62.7, f = "e", note = "{npc:11616}: the termites come later, in Terrordale" },
+						{ t = "getfp", npc = 12596, npcName = "Bibilfaz Featherwhistle", location = "Chillwind Camp", node = 66, map = 1422, x = 42.92, y = 85.06, z = 64.8, f = "e" },
+					},
+				},
+				{
+					title = "Into {zone:1423}",
+					goals = {
+						{ t = "goto", text = "Into {zone:1423}", map = 1423, x = 8.8, y = 66.2, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1423}",
+					goals = {
+						{ t = "goto", text = "{zone:1423}", map = 1423, x = 36.4, y = 90.8, f = "e" },
+					},
+				},
+				{
+					title = "{npc:10926}",
+					note = "Follow the southern road east into the {zone:1423}; the ruins of Darrowshire lie south of it. {npc:10926}'s ghost plays by the ruined house at the south end.",
+					goals = {
+						{ t = "turnin", quest = 5601, title = "Sister Pamela", npc = 10926, npcName = "Pamela Redpath", map = 1423, x = 31.15, y = 77.98, z = 87 },
+						{ t = "accept", quest = 5149, title = "Pamela's Doll", npc = 10926, npcName = "Pamela Redpath", minLevel = 50, qlvl = 55, map = 1423, x = 31.15, y = 77.98, z = 87 },
+					},
+				},
+				{
+					title = "{npc:10926}'s doll",
+					note = "The three pieces of the doll lie in the ruined houses of Darrowshire; picking one up can call out ghosts. Combine them into the doll.",
+					goals = {
+						{ t = "goto", map = 1423, x = 36.4, y = 90.8, f = "e" },
+						{ t = "collect", item = 12886, itemName = "Pamela's Doll's Head", count = 1, map = 1423, x = 32.58, y = 79.56, spots = { { x = 32.6, y = 79.6, r = 15, n = 1 }, { x = 34.1, y = 77.3, r = 15, n = 1 } }, optional = true, note = "{item:12886}; inside", from = "Pamela's Doll's Head", fromKind = "object", fromId = 176116 },
+						{ t = "collect", item = 12887, itemName = "Pamela's Doll's Left Side", count = 1, map = 1423, x = 32.72, y = 79.12, spots = { { x = 33.3, y = 79.4, r = 27, n = 2 } }, optional = true, from = "Pamela's Doll's Left Side", fromKind = "object", fromId = 176142 },
+						{ t = "collect", item = 12888, itemName = "Pamela's Doll's Right Side", count = 1, map = 1423, x = 33.1, y = 79.67, spots = { { x = 33.1, y = 79.7, r = 15, n = 1 }, { x = 33.9, y = 77.3, r = 15, n = 1 } }, optional = true, note = "{item:12888}; inside", from = "Pamela's Doll's Right Side", fromKind = "object", fromId = 176143 },
+						{ t = "complete", quest = 5149, title = "Pamela's Doll" },
+					},
+				},
+				{
+					title = "{npc:10926}",
+					goals = {
+						{ t = "turnin", quest = 5149, title = "Pamela's Doll", npc = 10926, npcName = "Pamela Redpath", map = 1423, x = 31.15, y = 77.98, z = 87 },
+						{ t = "accept", quest = 5152, title = "Auntie Marlene", npc = 10926, npcName = "Pamela Redpath", minLevel = 50, qlvl = 56, pre = { 5149 }, preTitles = { [5149] = "Pamela's Doll" }, map = 1423, x = 31.15, y = 77.98, z = 87, note = "{quest:5152}, in the {zone:1422}: keep it" },
+						{ t = "accept", quest = 5241, title = "Uncle Carlin", npc = 10926, npcName = "Pamela Redpath", minLevel = 50, qlvl = 56, pre = { 5149 }, closedBy = { 5211 }, preTitles = { [5149] = "Pamela's Doll", [5211] = "Defenders of Darrowshire" }, map = 1423, x = 31.15, y = 77.98, z = 87 },
+					},
+				},
+				{
+					title = "Light's Hope Chapel",
+					note = "Follow the road east across the zone to the chapel.",
+					goals = {
+						{ t = "getfp", npc = 12617, npcName = "Khaelyn Steelwing", location = "Light's Hope Chapel", node = 67, map = 1423, x = 71.81, y = 49.6, z = 87 },
+						{ t = "sethome", npc = 16256, npcName = "Jessica Chambers", location = "Light's Hope Chapel", map = 1423, x = 71.8, y = 48.52, z = 90.9 },
+						{ t = "turnin", quest = 5241, title = "Uncle Carlin", npc = 11063, npcName = "Carlin Redpath", map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+						{ t = "accept", quest = 5211, title = "Defenders of Darrowshire", npc = 11063, npcName = "Carlin Redpath", minLevel = 50, qlvl = 55, map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+						{ t = "turnin", quest = 6030, title = "Duke Nicholas Zverenhoff", npc = 11039, npcName = "Duke Nicholas Zverenhoff", map = 1423, x = 71.63, y = 50.09, z = 86.3 },
+						{ t = "accept", quest = 5503, title = "Argent Dawn Commission", npc = 11039, npcName = "Duke Nicholas Zverenhoff", minLevel = 50, qlvl = 55, closedBy = { 5401, 5405 }, preTitles = { [5401] = "Argent Dawn Commission", [5405] = "Argent Dawn Commission" }, map = 1423, x = 71.63, y = 50.09, z = 86.3 },
+						{ t = "turnin", quest = 5503, title = "Argent Dawn Commission", npc = 11039, npcName = "Duke Nicholas Zverenhoff", map = 1423, x = 71.63, y = 50.09, z = 86.3 },
+						{ t = "accept", quest = 5509, title = "Invader's Scourgestones", npc = 11039, npcName = "Duke Nicholas Zverenhoff", minLevel = 50, qlvl = 55, pre = { 5401, 5503, 5405 }, preTitles = { [5401] = "Argent Dawn Commission", [5405] = "Argent Dawn Commission", [5503] = "Argent Dawn Commission" }, map = 1423, x = 71.63, y = 50.09, z = 86.3 },
+						{ t = "accept", quest = 5510, title = "Minion's Scourgestones", npc = 11039, npcName = "Duke Nicholas Zverenhoff", minLevel = 50, qlvl = 55, pre = { 5401, 5503, 5405 }, preTitles = { [5401] = "Argent Dawn Commission", [5405] = "Argent Dawn Commission", [5503] = "Argent Dawn Commission" }, map = 1423, x = 71.63, y = 50.09, z = 86.3 },
+						{ t = "accept", quest = 6021, title = "Zaeldarr the Outcast", npc = 11038, npcName = "Caretaker Alen", minLevel = 50, qlvl = 55, map = 1423, x = 69.93, y = 53.72, z = 95.9, optional = true, note = "{npc:11038}: {npc:12250} is a level 54 elite" },
+					},
+				},
+				{
+					title = "Light's Hope Chapel",
+					goals = {
+						{ t = "accept", quest = 5281, title = "The Restless Souls", npc = 11038, npcName = "Caretaker Alen", minLevel = 55, qlvl = 60, map = 1423, x = 69.93, y = 53.72, z = 95.9, note = "{npc:11038}, by the graves south of the chapel" },
+					},
+				},
+				{
+					title = "{object:176970}",
+					note = "The Scourge around {object:176970}, west of the chapel, drop both kinds of Scourgestone; Darrowshire Spirits rise from them: talk to each one to free it.",
+					goals = {
+						{ t = "kill", quest = 5211, title = "Defenders of Darrowshire", target = "Darrowshire Spirit", npc = 11064, count = 15, oi = 1, text = "Free Darrowshire Spirits: talk to them", map = 1423, x = 69.61, y = 46.79, spots = { { x = 69.6, y = 46.8, r = 47, n = 1 }, { x = 75, y = 33.9, r = 47, n = 1 }, { x = 57.5, y = 31.4, r = 74, n = 8 }, { x = 52.2, y = 62.1, r = 51, n = 3 }, { x = 34.1, y = 42, r = 47, n = 2 }, { x = 32.1, y = 27.5, r = 51, n = 4 }, { x = 36.3, y = 16.8, r = 51, n = 3 }, { x = 23.3, y = 21.8, r = 47, n = 2 }, { x = 21.4, y = 29.6, r = 47, n = 1 }, { x = 18.5, y = 14.3, r = 47, n = 2 }, { x = 11.1, y = 25.4, r = 47, n = 1 }, { x = 27.9, y = 53.7, r = 47, n = 2 }, { x = 66.4, y = 42, r = 47, n = 1, alt = true }, { x = 68.1, y = 38.9, r = 47, n = 1, alt = true }, { x = 72, y = 35, r = 47, n = 2, alt = true }, { x = 53.4, y = 56.8, r = 76, n = 4, alt = true }, { x = 52.7, y = 54.8, r = 47, n = 1, alt = true }, { x = 36.2, y = 25.9, r = 47, n = 1, alt = true }, { x = 32.1, y = 46.6, r = 56, n = 4, alt = true }, { x = 36.1, y = 20.8, r = 47, n = 2, alt = true }, { x = 30.8, y = 22.6, r = 47, n = 2, alt = true }, { x = 31.4, y = 17.1, r = 47, n = 2, alt = true }, { x = 26.8, y = 26.3, r = 52, n = 3, alt = true }, { x = 21.5, y = 25.4, r = 47, n = 3, alt = true }, { x = 14.1, y = 24.9, r = 67, n = 5, alt = true } }, spread = true },
+					},
+				},
+				{
+					title = "Light's Hope Chapel",
+					goals = {
+						{ t = "turnin", quest = 5211, title = "Defenders of Darrowshire", npc = 11063, npcName = "Carlin Redpath", map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+					},
+				},
+				{
+					title = "The Undercroft",
+					note = "{npc:12250} is elite: grouping up is advised. He waits at the bottom of the Undercroft, the crypt in the south-west of the zone.",
+					goals = {
+						{ t = "collect", quest = 6021, title = "Zaeldarr the Outcast", item = 15785, itemName = "Zaeldarr's Head", count = 1, oi = 1, map = 1423, x = 23.07, y = 72.63, optional = true, note = "{item:15785}; below ground", from = "Zaeldarr the Outcast", fromKind = "npc", fromId = 12250, fromNpcs = { { npc = 12250, npcName = "Zaeldarr the Outcast" } } },
+					},
+				},
+				{
+					title = "Browman Mill: kill these as you meet them",
+					note = "Careful: {npc:10411} goes invisible when out of combat and calls Rockwing Gargoyles once a fight starts. Only 3 exist and they respawn every 15 min.",
+					goals = {
+						{ t = "collect", quest = 5510, title = "Minion's Scourgestones", item = 12840, itemName = "Minion's Scourgestone", count = 20, oi = 1, map = 1423, x = 21.14, y = 78.22, spots = { { x = 21.1, y = 78.2, r = 40, n = 1 }, { x = 13.4, y = 56, r = 40, n = 1 }, { x = 6, y = 31.1, r = 40, n = 4 }, { x = 18.1, y = 17.7, r = 40, n = 1 }, { x = 32.4, y = 14.9, r = 46, n = 8 }, { x = 37, y = 29.2, r = 59, n = 6 }, { x = 42.7, y = 50.5, r = 40, n = 1 }, { x = 54.5, y = 55.8, r = 40, n = 4 }, { x = 55.6, y = 73.7, r = 40, n = 1 }, { x = 38.3, y = 71.1, r = 40, n = 1 }, { x = 68.8, y = 55.8, r = 40, n = 1 }, { x = 57.6, y = 28.8, r = 52, n = 4 }, { x = 16.7, y = 67.9, r = 40, n = 1, alt = true }, { x = 29.8, y = 70.6, r = 40, n = 1, alt = true }, { x = 20.3, y = 60.8, r = 40, n = 1, alt = true }, { x = 11.1, y = 66.2, r = 40, n = 1, alt = true }, { x = 15.6, y = 57.8, r = 40, n = 1, alt = true }, { x = 31, y = 61.8, r = 40, n = 1, alt = true }, { x = 36.5, y = 65.5, r = 40, n = 1, alt = true }, { x = 39.8, y = 59.9, r = 40, n = 1, alt = true }, { x = 42.4, y = 68.1, r = 40, n = 1, alt = true }, { x = 49.2, y = 65.1, r = 40, n = 1, alt = true }, { x = 50.4, y = 68.1, r = 40, n = 1, alt = true }, { x = 22.8, y = 29.3, r = 62, n = 6, alt = true }, { x = 51.5, y = 58.7, r = 82, n = 22, alt = true }, { x = 45.6, y = 44.5, r = 40, n = 1, alt = true }, { x = 52.4, y = 61.1, r = 62, n = 15, alt = true }, { x = 50.5, y = 52.4, r = 40, n = 2, alt = true }, { x = 29, y = 28, r = 56, n = 5, alt = true }, { x = 25.5, y = 27, r = 40, n = 3, alt = true }, { x = 32.3, y = 29, r = 50, n = 5, alt = true }, { x = 14.6, y = 27, r = 40, n = 6, alt = true }, { x = 52.5, y = 55.6, r = 63, n = 13, alt = true }, { x = 53.6, y = 58.6, r = 64, n = 14, alt = true }, { x = 34.6, y = 29.7, r = 40, n = 4, alt = true }, { x = 50.6, y = 48.4, r = 40, n = 1, alt = true }, { x = 16.6, y = 25.3, r = 40, n = 2, alt = true }, { x = 21.4, y = 24.8, r = 51, n = 10, alt = true }, { x = 7.5, y = 28.7, r = 45, n = 3, alt = true }, { x = 31.7, y = 26.5, r = 40, n = 3, alt = true }, { x = 24.2, y = 24.2, r = 50, n = 6, alt = true }, { x = 27, y = 24.3, r = 48, n = 6, alt = true }, { x = 13.4, y = 24.8, r = 64, n = 13, alt = true }, { x = 14.5, y = 24.2, r = 47, n = 6, alt = true }, { x = 10.6, y = 25.6, r = 71, n = 8, alt = true }, { x = 30.3, y = 23.8, r = 76, n = 8, alt = true }, { x = 34.9, y = 26, r = 52, n = 7, alt = true }, { x = 53.4, y = 49.1, r = 40, n = 1, alt = true }, { x = 19, y = 21.1, r = 57, n = 5, alt = true }, { x = 22.5, y = 20.5, r = 51, n = 4, alt = true }, { x = 38.6, y = 26.3, r = 40, n = 3, alt = true }, { x = 24.6, y = 18.7, r = 47, n = 4, alt = true }, { x = 28, y = 19.1, r = 55, n = 7, alt = true }, { x = 31.5, y = 19.9, r = 73, n = 6, alt = true }, { x = 20.9, y = 17.7, r = 49, n = 4, alt = true }, { x = 37.2, y = 20.7, r = 44, n = 4, alt = true }, { x = 30.4, y = 17.2, r = 65, n = 4, alt = true }, { x = 38.7, y = 21.4, r = 40, n = 3, alt = true }, { x = 35.6, y = 18.1, r = 63, n = 8, alt = true }, { x = 18.8, y = 13.9, r = 60, n = 7, alt = true }, { x = 20.6, y = 13.7, r = 40, n = 2, alt = true }, { x = 38.5, y = 17.4, r = 53, n = 3, alt = true }, { x = 35.1, y = 14.9, r = 40, n = 2, alt = true }, { x = 62.1, y = 48.1, r = 40, n = 1, alt = true }, { x = 57.4, y = 32.4, r = 40, n = 3, alt = true }, { x = 59.8, y = 31.8, r = 46, n = 7, alt = true }, { x = 68, y = 53.3, r = 40, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 8534, npcName = "Putrid Gargoyle" }, { npc = 8551, npcName = "Dark Summoner" }, { npc = 8540, npcName = "Torn Screamer" }, { npc = 8547, npcName = "Death Cultist" }, { npc = 8524, npcName = "Cursed Mage" } } },
+						{ t = "collect", quest = 5509, title = "Invader's Scourgestones", item = 12841, itemName = "Invader's Scourgestone", count = 10, oi = 1, map = 1423, x = 28.65, y = 55.99, spots = { { x = 28.8, y = 54.9, r = 63, n = 7 }, { x = 35.4, y = 39.6, r = 44, n = 7 }, { x = 34.9, y = 30.6, r = 40, n = 1 }, { x = 37.5, y = 19.4, r = 40, n = 1 }, { x = 26.2, y = 15.1, r = 40, n = 2 }, { x = 22.7, y = 29.2, r = 40, n = 1 }, { x = 10.9, y = 17.7, r = 54, n = 4 }, { x = 6.2, y = 31.3, r = 40, n = 1 }, { x = 57.1, y = 31, r = 52, n = 11 }, { x = 63.2, y = 23.9, r = 42, n = 8 }, { x = 76.3, y = 32.1, r = 40, n = 4 }, { x = 68.8, y = 45.9, r = 51, n = 9 }, { x = 29.3, y = 50.7, r = 58, n = 10, alt = true }, { x = 31.4, y = 47.2, r = 57, n = 15, alt = true }, { x = 32.6, y = 44.2, r = 73, n = 17, alt = true }, { x = 35.2, y = 44.9, r = 54, n = 7, alt = true }, { x = 33.6, y = 41.3, r = 51, n = 16, alt = true }, { x = 35.7, y = 42.1, r = 40, n = 9, alt = true }, { x = 25.9, y = 21.2, r = 40, n = 1, alt = true }, { x = 14.3, y = 24.9, r = 46, n = 3, alt = true }, { x = 27.9, y = 17.7, r = 40, n = 1, alt = true }, { x = 14.8, y = 21.5, r = 40, n = 5, alt = true }, { x = 8.7, y = 27.9, r = 40, n = 1, alt = true }, { x = 11.8, y = 23.1, r = 40, n = 5, alt = true }, { x = 9.7, y = 25.1, r = 40, n = 1, alt = true }, { x = 11.4, y = 20.5, r = 64, n = 7, alt = true }, { x = 8.9, y = 21.2, r = 40, n = 7, alt = true }, { x = 58.3, y = 33.3, r = 54, n = 9, alt = true }, { x = 58, y = 28.7, r = 56, n = 9, alt = true }, { x = 59.9, y = 31.7, r = 45, n = 6, alt = true }, { x = 61.2, y = 23.2, r = 54, n = 9, alt = true }, { x = 67.3, y = 42.4, r = 70, n = 22, alt = true }, { x = 69.1, y = 37.3, r = 60, n = 10, alt = true }, { x = 72.4, y = 37.7, r = 46, n = 4, alt = true }, { x = 71.8, y = 34.6, r = 64, n = 13, alt = true }, { x = 73.6, y = 32.1, r = 64, n = 25, alt = true }, { x = 75.4, y = 36.2, r = 59, n = 19, alt = true } }, spread = true, fromNpcs = { { npc = 8545, npcName = "Abomination" }, { npc = 8544, npcName = "Gangled Golem" }, { npc = 8528, npcName = "Dread Weaver" }, { npc = 8550, npcName = "Shadowmage" }, { npc = 8546, npcName = "Dark Adept" } } },
+					},
+				},
+				{
+					title = "Light's Hope Chapel",
+					goals = {
+						{ t = "turnin", quest = 5509, title = "Invader's Scourgestones", npc = 11039, npcName = "Duke Nicholas Zverenhoff", map = 1423, x = 71.63, y = 50.09, z = 86.3 },
+						{ t = "turnin", quest = 5510, title = "Minion's Scourgestones", npc = 11039, npcName = "Duke Nicholas Zverenhoff", map = 1423, x = 71.63, y = 50.09, z = 86.3 },
+						{ t = "turnin", quest = 6021, title = "Zaeldarr the Outcast", npc = 11038, npcName = "Caretaker Alen", map = 1423, x = 69.93, y = 53.72, z = 95.9, optional = true },
+						{ t = "note", text = "The next guide starts here and flies to Chillwind Camp." },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
+-- Source: guides/30-maleterres.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/30-maleterres",
+			pack = "groupe-alliance",
+			title = "Group 28 · {zone:1422}, {zone:1423} & {zone:1444}",
+			faction = "Alliance",
+			minLevel = 56,
+			maxLevel = 58,
+			category = "Leveling",
+			folder = "Group Alliance",
+			zone = 1422,
+			zoneName = "Western Plaguelands",
+			next = "groupe-alliance/31-silithus",
+			author = "BurN-30",
+			version = 1,
+			names = { ["item:11018"] = "Un'Goro Soil", ["item:11020"] = "Evergreen Pouch", ["item:11040"] = "Morrowgrain", ["item:11243"] = "Videre Elixir", ["item:11478"] = "Un'Goro Gorilla Pelt", ["item:11479"] = "Un'Goro Stomper Pelt", ["item:11480"] = "Un'Goro Thunderer Pelt", ["item:11568"] = "Torwa's Pouch", ["item:11682"] = "Eridan's Vial", ["item:11804"] = "Spraggle's Canteen", ["item:11834"] = "Super Sticky Tar", ["item:12627"] = "Temporal Displacer", ["item:12815"] = "Beacon Torch", ["item:12894"] = "Joseph's Wedding Ring", ["item:12928"] = "Umi's Mechanical Yeti", ["item:12954"] = "Davil's Libram", ["item:12955"] = "Redpath's Shield", ["item:12956"] = "Skull of Horgus", ["item:13853"] = "Slab of Carrion Worm Meat", ["item:15042"] = "Empty Termite Jar", ["item:9328"] = "Super Snapper FX", ["npc:10302"] = "Krakle", ["npc:10304"] = "Aurora Skycaller", ["npc:10408"] = "Rockwing Gargoyle", ["npc:10411"] = "Eye of Naxxramas", ["npc:10541"] = "Krakle's Thermometer", ["npc:10605"] = "Scarlet Medic", ["npc:10667"] = "Chromie", ["npc:10717"] = "Temporal Parasite", ["npc:10739"] = "Mulgris Deepriver", ["npc:10778"] = "Janice Felstone", ["npc:10836"] = "Farmer Dalson", ["npc:10878"] = "Herald Moonstalker", ["npc:10902"] = "Andorhal Tower One", ["npc:10903"] = "Andorhal Tower Two", ["npc:10904"] = "Andorhal Tower Three", ["npc:10905"] = "Andorhal Tower Four", ["npc:10927"] = "Marlene Redpath", ["npc:10936"] = "Joseph Redpath", ["npc:11075"] = "Cauldron Lord Bilemaw", ["npc:11078"] = "Cauldron Lord Soulwrath", ["npc:11140"] = "Egan", ["npc:11610"] = "Kirsta Deepshadow", ["npc:11611"] = "Cavalier Durgen", ["npc:11613"] = "Huntsman Radley", ["npc:11735"] = "Stonelash Scorpid", ["npc:11736"] = "Stonelash Pincer", ["npc:11738"] = "Sand Skitterer", ["npc:11739"] = "Rock Stalker", ["npc:11740"] = "Dredge Striker", ["npc:11741"] = "Dredge Crusher", ["npc:11886"] = "Mercutio Filthgorger", ["npc:12248"] = "Infiltrator Hameya", ["npc:12384"] = "Augustus the Touched", ["npc:13220"] = "Layo Starstrike", ["npc:14637"] = "Zorbin Fandazzle", ["npc:15189"] = "Beetix Ficklespragg", ["npc:17082"] = "Rifleman Torrig", ["npc:1783"] = "Skeletal Flayer", ["npc:1791"] = "Slavering Ghoul", ["npc:1833"] = "Scarlet Knight", ["npc:1852"] = "Araj the Summoner", ["npc:1855"] = "Tirion Fordring", ["npc:5411"] = "Krinkle Goodsteel", ["npc:5594"] = "Alchemist Pestlezugg", ["npc:5901"] = "Islen Waterseer", ["npc:6514"] = "Un'Goro Gorilla", ["npc:6517"] = "Tar Beast", ["npc:6552"] = "Gorishi Worker", ["npc:7583"] = "Sprinkle", ["npc:7740"] = "Gracina Spiritmight", ["npc:7771"] = "Marvon Rivetseeker", ["npc:7775"] = "Gregan Brewspewer", ["npc:7900"] = "Angelas Moonbreeze", ["npc:8496"] = "Liv Rizzlefix", ["npc:8596"] = "Plaguehound Runt", ["npc:8597"] = "Plaguehound", ["npc:8598"] = "Frenzied Plaguehound", ["npc:8600"] = "Plaguebat", ["npc:8603"] = "Carrion Grub", ["npc:8737"] = "Linken", ["npc:9047"] = "Jenal", ["npc:9117"] = "J.D. Collie", ["npc:9298"] = "Donova Snowden", ["npc:9299"] = "Gaeriyan", ["npc:9619"] = "Torwa Pathfinder", ["npc:9622"] = "U'cha", ["npc:9684"] = "Lar'korwi", ["npc:9997"] = "Spraggle Frock", ["npc:9999"] = "Ringo", ["object:152574"] = "Twin Colossals", ["object:152576"] = "Feathermoon Stronghold", ["object:175894"] = "Janice's Parcel", ["object:175924"] = "Locked Cabinet", ["object:176370"] = "Boat to Auberdine", ["object:176498"] = "Portal to Darnassus", ["object:177667"] = "Torn Scroll", ["quest:1123"] = "Rabine Saturna", ["quest:3444"] = "The Stone Circle", ["quest:5058"] = "Mrs. Dalson's Diary", ["quest:5154"] = "The Annals of Darrowshire", ["quest:5181"] = "Villains of Darrowshire", ["quest:5210"] = "Brother Carlin", ["quest:5537"] = "Skeletal Fragments", ["quest:5742"] = "Redemption", ["quest:6762"] = "Rabine Saturna", ["zone:1413"] = "The Barrens", ["zone:1422"] = "Western Plaguelands", ["zone:1423"] = "Eastern Plaguelands", ["zone:1425"] = "The Hinterlands", ["zone:1438"] = "Teldrassil", ["zone:1444"] = "Feralas", ["zone:1446"] = "Tanaris", ["zone:1448"] = "Felwood", ["zone:1449"] = "Un'Goro Crater", ["zone:1450"] = "Moonglade", ["zone:1451"] = "Silithus", ["zone:1452"] = "Winterspring", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			written = { ["Cross the river west to {npc:1855}'s hut."] = "Cross the river west to Tirion's hut.", ["Cross the south of the crater to {npc:9619} by the ramp."] = "Cross the south of the crater to Torwa by the ramp.", ["Fly from Gadgetzan to Marshal's Refuge. {npc:8737}'s hut stands at the Lakkari Tar Pits, west of the refuge; J.D.\n{npc:9997}'s friend {npc:9999} has gone missing."] = "Fly from Gadgetzan to Marshal's Refuge. Linken's hut stands at the Lakkari Tar Pits, west of the refuge; J.D.\nSpraggle's friend Ringo has gone missing.", ["From Theramore, ride west into the {zone:1413} and north up the coast to Ratchet."] = "From Theramore, ride west into the Barrens and north up the coast to Ratchet.", ["Ride down the ramp into the crater: {npc:9619} camps at its foot."] = "Ride down the ramp into the crater: Torwa camps at its foot.", ["Ride east to the border river: {npc:1855} lives in a small hut on the bank."] = "Ride east to the border river: Tirion lives in a small hut on the bank.", ["Ride north to Terrordale. {npc:12384} lives in the ruined hut, and his receipt book lies in the ruined inn nearby.\n{npc:11140} stands by {npc:12384}' hut in Terrordale."] = "Ride north to Terrordale. Augustus lives in the ruined hut, and his receipt book lies in the ruined inn nearby.\nEgan stands by Augustus' hut in Terrordale.", ["Ride north up the road to the Northridge lumber mill; {npc:11610} hides at the camp's edge."] = "Ride north up the road to the Northridge lumber mill; Kirsta hides at the camp's edge.", ["Take the boat to the mainland and ride north-east to {npc:14637}'s camp by the {object:152574}."] = "Take the boat to the mainland and ride north-east to Zorbin's camp by the Twin Colossals.", ["The cauldron sits at the Writhing Haunt, by {npc:10739}' farm."] = "The cauldron sits at the Writhing Haunt, by Mulgris' farm.", ["The tortured druids and sentinels haunt the ruined village south-west of {npc:13220}."] = "The tortured druids and sentinels haunt the ruined village south-west of Layo.", ["{item:12954} lies in the town hall of Hearthglen, west of {npc:1855}: the Scarlet guards stand close together."] = "Davil's Libram lies in the town hall of Hearthglen, west of Tirion: the Scarlet guards stand close together.", ["{npc:10739} stands by the farm at the Writhing Haunt, north-east of the fields."] = "Mulgris stands by the farm at the Writhing Haunt, north-east of the fields.", ["{npc:10778}'s ghost wanders by the farmhouse of Felstone Field, west of Dalson's Tears; her parcel lies inside."] = "Janice's ghost wanders by the farmhouse of Felstone Field, west of Dalson's Tears; her parcel lies inside.", ["{npc:10927}'s farmhouse stands on the hill east of the camp; {npc:10936}'s monument is just north of it."] = "Marlene's farmhouse stands on the hill east of the camp; Joseph Redpath's monument is just north of it.", ["{npc:11613} walks the Northridge camp east of {npc:11610}; {npc:11611} guards the tower at Hearthglen's southern approach.\nCareful: Guards stand at the tower's base and one more circles it on patrol. Clear them before you engage Durgen so they don't join the fight."] = "Huntsman Radley walks the Northridge camp east of Kirsta; Cavalier Durgen guards the tower at Hearthglen's southern approach.\nCareful: Guards stand at the tower's base and one more circles it on patrol. Clear them before you engage Durgen so they don't join the fight.", ["{npc:7775}'s camp lies north of the {object:152574}. He sells the {item:11243} once he has his bait."] = "Gregan's camp lies north of the Twin Colossals. He sells the Videre Elixir once he has his bait.", ["{npc:9684}'s lair lies in the jungle north of {npc:9619}, below the eastern cliffs: use {item:11568} there. {npc:9684} is level 56: start at full health."] = "Lar'korwi's lair lies in the jungle north of Torwa, below the eastern cliffs: use Torwa's Pouch there. Lar'korwi is level 56: start at full health." },
+			steps = {
+				{
+					title = "Chillwind Camp",
+					goals = {
+						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
+						{ t = "fly", location = "Chillwind Camp", node = 66 },
+						{ t = "accept", quest = 5092, title = "Clear the Way", npc = 10838, npcName = "Commander Ashlam Valorfist", minLevel = 50, qlvl = 52, map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e" },
+						{ t = "accept", quest = 5402, title = "Minion's Scourgestones", npc = 10840, npcName = "Argent Officer Pureheart", minLevel = 50, qlvl = 55, pre = { 5401, 5503, 5405 }, preTitles = { [5401] = "Argent Dawn Commission", [5405] = "Argent Dawn Commission", [5503] = "Argent Dawn Commission" }, map = 1422, x = 42.97, y = 83.55, z = 65.2, f = "e" },
+						{ t = "accept", quest = 5403, title = "Invader's Scourgestones", npc = 10840, npcName = "Argent Officer Pureheart", minLevel = 50, qlvl = 55, pre = { 5401, 5503, 5405 }, preTitles = { [5401] = "Argent Dawn Commission", [5405] = "Argent Dawn Commission", [5503] = "Argent Dawn Commission" }, map = 1422, x = 42.97, y = 83.55, z = 65.2, f = "e" },
+					},
+				},
+				{
+					title = "Sorrow Hill: kill these as you meet them",
+					note = "Skeletal Flayers and Slavering Ghouls roam the fields north of the camp; all the Scourge here drop Scourgestones.\nCareful: These undead notice you from far away, and other undead nearby join the fight when one is pulled.\nCareful: The {npc:10411} (3 spawns, 15 min respawn) turns invisible when out of combat and calls in Rockwing Gargoyles once a fight starts.",
+					goals = {
+						{ t = "kill", quest = 5092, title = "Clear the Way", target = "Skeletal Flayer", npc = 1783, count = 10, oi = 1, map = 1422, x = 47.37, y = 84.3, z = 67.6, f = "e", spots = { { x = 47.4, y = 84.3, z = 67.6, r = 40, n = 1 }, { x = 48.2, y = 81.5, r = 49, n = 6 }, { x = 50.8, y = 80.6, z = 63.2, r = 40, n = 1 }, { x = 49.2, y = 77.5, z = 62.4, r = 56, n = 4 }, { x = 50.6, y = 75.7, z = 62.8, r = 40, n = 2 }, { x = 54.3, y = 80.4, z = 30.8, r = 40, n = 4 }, { x = 38.7, y = 56.6, z = 60.8, r = 40, n = 4 }, { x = 37.9, y = 54.6, r = 60, n = 8 }, { x = 36.5, y = 56.9, z = 59.7, r = 50, n = 7 }, { x = 37.4, y = 58.6, z = 60.3, r = 40, n = 4 } }, spread = true },
+						{ t = "collect", quest = 5402, title = "Minion's Scourgestones", item = 12840, itemName = "Minion's Scourgestone", count = 20, oi = 1, map = 1422, x = 47.37, y = 84.3, f = "e", spots = { { x = 47.6, y = 83, r = 40, n = 3 }, { x = 49.9, y = 77, r = 52, n = 11 }, { x = 47.1, y = 71.6, r = 43, n = 7 }, { x = 48.7, y = 63.3, r = 46, n = 6 }, { x = 43.5, y = 63.3, r = 81, n = 11 }, { x = 40.9, y = 72.4, r = 66, n = 10 }, { x = 36.6, y = 56.4, r = 65, n = 23 }, { x = 47.3, y = 50.3, r = 57, n = 28 }, { x = 54.4, y = 65.7, r = 46, n = 6 }, { x = 54.2, y = 80.4, r = 40, n = 15 }, { x = 63.9, y = 56.8, r = 50, n = 15 }, { x = 69.3, y = 18, r = 40, n = 2 }, { x = 49.3, y = 82.3, r = 40, n = 2, alt = true }, { x = 48.4, y = 80.2, r = 49, n = 7, alt = true }, { x = 50.2, y = 80.5, r = 40, n = 6, alt = true }, { x = 50.7, y = 75.7, r = 40, n = 5, alt = true }, { x = 45.6, y = 74.1, r = 62, n = 9, alt = true }, { x = 42.4, y = 74.2, r = 59, n = 9, alt = true }, { x = 43.9, y = 72.3, r = 43, n = 7, alt = true }, { x = 45.4, y = 69.8, r = 55, n = 13, alt = true }, { x = 48.2, y = 68.9, r = 62, n = 10, alt = true }, { x = 50, y = 68, r = 42, n = 4, alt = true }, { x = 42.1, y = 69.4, r = 60, n = 13, alt = true }, { x = 44.9, y = 67.7, r = 62, n = 10, alt = true }, { x = 39.3, y = 70.2, r = 61, n = 9, alt = true }, { x = 49.4, y = 65.7, r = 40, n = 6, alt = true }, { x = 45.8, y = 65.6, r = 50, n = 5, alt = true }, { x = 53.3, y = 67.5, r = 40, n = 10, alt = true }, { x = 47.5, y = 64.5, r = 41, n = 5, alt = true }, { x = 42, y = 66.1, r = 59, n = 9, alt = true }, { x = 39.5, y = 67.4, r = 69, n = 10, alt = true }, { x = 52.6, y = 65.2, r = 52, n = 10, alt = true }, { x = 46.1, y = 62.2, r = 59, n = 10, alt = true }, { x = 53.4, y = 63.4, r = 40, n = 3, alt = true }, { x = 45.6, y = 54.8, r = 48, n = 7, alt = true }, { x = 37.8, y = 58.1, r = 54, n = 12, alt = true }, { x = 47.5, y = 52.7, r = 42, n = 7, alt = true }, { x = 38.3, y = 55, r = 66, n = 27, alt = true }, { x = 45.7, y = 51.8, r = 77, n = 20, alt = true }, { x = 62.1, y = 59.1, r = 68, n = 14, alt = true }, { x = 64.6, y = 59.4, r = 69, n = 10, alt = true }, { x = 73.3, y = 54.8, r = 40, n = 1, alt = true }, { x = 78.9, y = 56.5, r = 40, n = 1, alt = true }, { x = 83.3, y = 66.9, r = 40, n = 1, alt = true }, { x = 75.6, y = 44.6, r = 40, n = 1, alt = true }, { x = 68.2, y = 19.7, r = 46, n = 4, alt = true } }, spread = true, fromNpcs = { { npc = 1783, npcName = "Skeletal Flayer" }, { npc = 1785, npcName = "Skeletal Terror" }, { npc = 1784, npcName = "Skeletal Sorcerer" }, { npc = 1804, npcName = "Wailing Death" }, { npc = 1802, npcName = "Hungering Wraith" } } },
+						{ t = "kill", quest = 5092, title = "Clear the Way", target = "Slavering Ghoul", npc = 1791, count = 10, oi = 2, map = 1422, x = 49.61, y = 82.77, z = 70.2, f = "e", spots = { { x = 49.6, y = 82.8, z = 70.2, r = 40, n = 1 }, { x = 49.6, y = 80.3, r = 51, n = 8 }, { x = 50.2, y = 76.6, z = 62.1, r = 47, n = 11 }, { x = 54.1, y = 80.6, z = 30.8, r = 40, n = 4 }, { x = 38.8, y = 55.9, r = 42, n = 4 }, { x = 37.3, y = 55, r = 71, n = 7 }, { x = 37.4, y = 57.9, r = 40, n = 3 } }, spread = true },
+					},
+				},
+				{
+					title = "{npc:10927}",
+					note = "{npc:10927}'s farmhouse stands on the hill east of the camp; {npc:10936}'s monument is just north of it.",
+					goals = {
+						{ t = "turnin", quest = 5152, title = "Auntie Marlene", npc = 10927, npcName = "Marlene Redpath", map = 1422, x = 49.17, y = 78.57, z = 67.6, f = "e", note = "Upstairs" },
+						{ t = "accept", quest = 5153, title = "A Strange Historian", npc = 10927, npcName = "Marlene Redpath", minLevel = 50, qlvl = 56, pre = { 5152 }, preTitles = { [5152] = "Auntie Marlene" }, map = 1422, x = 49.17, y = 78.57, z = 67.6, f = "e" },
+						{ t = "collect", quest = 5153, title = "A Strange Historian", item = 12894, itemName = "Joseph's Wedding Ring", count = 1, oi = 1, map = 1422, x = 49.7, y = 76.76, f = "e", note = "{item:12894}, at the monument", from = "Joseph Redpath's Monument", fromKind = "object", fromId = 176145 },
+					},
+				},
+				{
+					title = "{npc:10739}",
+					note = "{npc:10739} stands by the farm at the Writhing Haunt, north-east of the fields.",
+					goals = {
+						{ t = "accept", quest = 4984, title = "The Wildlife Suffers Too", npc = 10739, npcName = "Mulgris Deepriver", minLevel = 51, qlvl = 54, map = 1422, x = 53.73, y = 64.66, z = 60.6, f = "e", note = "Inside" },
+					},
+				},
+				{
+					title = "Dalson's Tears",
+					note = "Ride north-west to the Dalson farm. The diary lies in the barn; a wandering skeleton carries the outhouse key, and {npc:10836} waits in the outhouse with the cabinet key.",
+					goals = {
+						{ t = "accept", quest = 5058, title = "Mrs. Dalson's Diary", object = 175926, objName = "Mrs. Dalson's Diary", minLevel = 52, qlvl = 55, map = 1422, x = 47.8, y = 50.67, z = 60.4, f = "e", note = "{quest:5058}, inside" },
+						{ t = "turnin", quest = 5058, title = "Mrs. Dalson's Diary", object = 175926, objName = "Mrs. Dalson's Diary", map = 1422, x = 47.8, y = 50.67, z = 60.4, f = "e" },
+						{ t = "accept", quest = 5059, title = "Locked Away", object = 175925, objName = "Outhouse", minLevel = 52, qlvl = 55, map = 1422, x = 48.11, y = 49.65, z = 59.5, f = "e" },
+						{ t = "accept", quest = 5060, title = "Locked Away", object = 175924, objName = "Locked Cabinet", minLevel = 52, qlvl = 55, map = 1422, x = 47.35, y = 49.63, z = 65.8, f = "e", note = "Inside" },
+					},
+				},
+				{
+					title = "The Writhing Haunt: kill these as you meet them",
+					goals = {
+						{ t = "collect", quest = 5403, title = "Invader's Scourgestones", item = 12841, itemName = "Invader's Scourgestone", count = 10, oi = 1, map = 1422, x = 46.11, y = 52.61, f = "e", spots = { { x = 46.1, y = 52.6, r = 150, n = 1 }, { x = 36.9, y = 57.4, r = 150, n = 1 }, { x = 52.9, y = 66.1, r = 150, n = 1 }, { x = 54.2, y = 80.4, r = 150, n = 1 }, { x = 62.2, y = 59.1, r = 150, n = 1 }, { x = 68.4, y = 20, r = 150, n = 1 }, { x = 45.6, y = 69.3, r = 150, n = 2, alt = true } }, spread = true, fromNpcs = { { npc = 11077, npcName = "Cauldron Lord Malvinious" }, { npc = 11873, npcName = "Spectral Attendant" }, { npc = 11075, npcName = "Cauldron Lord Bilemaw" }, { npc = 11076, npcName = "Cauldron Lord Razarch" }, { npc = 8558, npcName = "Crypt Slayer" } } },
+						{ t = "kill", quest = 4984, title = "The Wildlife Suffers Too", target = "Diseased Wolf", npc = 1817, count = 8, oi = 1, map = 1422, x = 44.88, y = 49.51, z = 64.5, f = "e", spots = { { x = 45.3, y = 48.9, r = 45, n = 2 }, { x = 46.7, y = 43.3, r = 65, n = 5 }, { x = 46.2, y = 37.8, r = 62, n = 4 }, { x = 45, y = 32.1, z = 101.9, r = 45, n = 1 }, { x = 48.2, y = 27.8, r = 88, n = 6 }, { x = 51.1, y = 33.1, z = 103.8, r = 62, n = 4 }, { x = 51.1, y = 47, r = 45, n = 2 }, { x = 51.2, y = 51.9, r = 45, n = 2 }, { x = 48.9, y = 60, r = 56, n = 4 }, { x = 43.2, y = 55.5, z = 62.4, r = 50, n = 4 }, { x = 40.4, y = 48.4, r = 45, n = 2 }, { x = 52.5, y = 70.5, z = 69.2, r = 45, n = 1 }, { x = 44.6, y = 46.1, z = 86.2, r = 66, n = 5, alt = true }, { x = 47.3, y = 47.2, r = 45, n = 4, alt = true }, { x = 45.1, y = 40.9, r = 72, n = 5, alt = true }, { x = 45.7, y = 59.9, r = 45, n = 2, alt = true }, { x = 49.3, y = 37.6, r = 91, n = 6, alt = true }, { x = 51.7, y = 60.8, z = 62.4, r = 45, n = 2, alt = true }, { x = 50.7, y = 63.9, r = 45, n = 2, alt = true } }, spread = true },
+					},
+				},
+				{
+					title = "Dalson's Tears",
+					goals = {
+						{ t = "collect", quest = 5059, title = "Locked Away", item = 12738, itemName = "Dalson Outhouse Key", count = 1, oi = 1, map = 1422, x = 47.7, y = 49.9, f = "e", from = "Wandering Skeleton", fromKind = "npc", fromId = 10816, fromNpcs = { { npc = 10816, npcName = "Wandering Skeleton" } } },
+						{ t = "turnin", quest = 5059, title = "Locked Away", object = 175925, objName = "Outhouse", map = 1422, x = 48.11, y = 49.65, z = 59.5, f = "e" },
+						{ t = "collect", quest = 5060, title = "Locked Away", item = 12739, itemName = "Dalson Cabinet Key", count = 1, oi = 1, map = 1422, x = 48.2, y = 49.7, f = "e", from = "Farmer Dalson", fromKind = "npc", fromId = 10836, fromNpcs = { { npc = 10836, npcName = "Farmer Dalson" } } },
+						{ t = "turnin", quest = 5060, title = "Locked Away", object = 175924, objName = "Locked Cabinet", map = 1422, x = 47.35, y = 49.63, z = 65.8, f = "e", note = "{object:175924}, in the farmhouse; inside" },
+					},
+				},
+				{
+					title = "Chillwind Camp",
+					note = "Ride back south to the camp.",
+					goals = {
+						{ t = "turnin", quest = 5402, title = "Minion's Scourgestones", npc = 10840, npcName = "Argent Officer Pureheart", map = 1422, x = 42.97, y = 83.55, z = 65.2, f = "e" },
+						{ t = "turnin", quest = 5403, title = "Invader's Scourgestones", npc = 10840, npcName = "Argent Officer Pureheart", map = 1422, x = 42.97, y = 83.55, z = 65.2, f = "e" },
+						{ t = "turnin", quest = 5092, title = "Clear the Way", npc = 10838, npcName = "Commander Ashlam Valorfist", map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e" },
+						{ t = "accept", quest = 5097, title = "All Along the Watchtowers", npc = 10838, npcName = "Commander Ashlam Valorfist", minLevel = 50, qlvl = 56, pre = { 5092 }, preTitles = { [5092] = "Clear the Way" }, map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e" },
+						{ t = "accept", quest = 5215, title = "The Scourge Cauldrons", npc = 10838, npcName = "Commander Ashlam Valorfist", minLevel = 50, qlvl = 53, pre = { 5092 }, preTitles = { [5092] = "Clear the Way" }, map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e" },
+						{ t = "turnin", quest = 5215, title = "The Scourge Cauldrons", npc = 11053, npcName = "High Priestess MacDonnell", map = 1422, x = 42.97, y = 84.5, z = 64, f = "e" },
+						{ t = "accept", quest = 5216, title = "Target: Felstone Field", npc = 11053, npcName = "High Priestess MacDonnell", minLevel = 50, qlvl = 53, pre = { 5215 }, preTitles = { [5215] = "The Scourge Cauldrons" }, map = 1422, x = 42.97, y = 84.5, z = 64, f = "e" },
+					},
+				},
+				{
+					title = "The Andorhal watchtowers",
+					note = "Use the {item:12815} at the foot of each of the four watchtowers around the edge of Andorhal, north of the camp.",
+					goals = {
+						{ t = "use", item = 12815, itemName = "Beacon Torch", map = 1422, x = 40, y = 71.6, f = "e" },
+						{ t = "kill", quest = 5097, title = "All Along the Watchtowers", target = "Andorhal Tower One", npc = 10902, count = 1, oi = 1, text = "Mark {npc:10902} with the {item:12815}", map = 1422, x = 40.05, y = 71.6, z = 63.8, f = "e" },
+						{ t = "kill", quest = 5097, title = "All Along the Watchtowers", target = "Andorhal Tower Two", npc = 10903, count = 1, oi = 2, text = "Mark {npc:10903} with the {item:12815}", map = 1422, x = 42.33, y = 66.24, z = 67.1, f = "e" },
+					},
+				},
+				{
+					title = "{npc:10667}",
+					note = "{npc:10667} waits in the ruined inn on the west side of Andorhal.",
+					goals = {
+						{ t = "turnin", quest = 5153, title = "A Strange Historian", npc = 10667, npcName = "Chromie", map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e", note = "Upstairs" },
+						{ t = "accept", quest = 5154, title = "The Annals of Darrowshire", npc = 10667, npcName = "Chromie", minLevel = 50, qlvl = 56, pre = { 5153 }, preTitles = { [5153] = "A Strange Historian" }, map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e" },
+						{ t = "accept", quest = 4971, title = "A Matter of Time", npc = 10667, npcName = "Chromie", minLevel = 53, qlvl = 56, map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e" },
+					},
+				},
+				{
+					title = "Felstone Field cauldron",
+					note = "{npc:11075} guards the cauldron in Felstone Field, west of Andorhal.",
+					goals = {
+						{ t = "collect", quest = 5216, title = "Target: Felstone Field", item = 13194, itemName = "Felstone Field Cauldron Key", count = 1, oi = 1, map = 1422, x = 36.93, y = 57.41, f = "e", from = "Cauldron Lord Bilemaw", fromKind = "npc", fromId = 11075, fromNpcs = { { npc = 11075, npcName = "Cauldron Lord Bilemaw" } } },
+						{ t = "turnin", quest = 5216, title = "Target: Felstone Field", object = 176361, objName = "Scourge Cauldron", map = 1422, x = 37.25, y = 56.78, z = 59.3, f = "e" },
+						{ t = "accept", quest = 5217, title = "Return to Chillwind Camp", object = 176361, objName = "Scourge Cauldron", minLevel = 50, qlvl = 53, pre = { 5216 }, preTitles = { [5216] = "Target: Felstone Field" }, map = 1422, x = 37.25, y = 56.78, z = 59.3, f = "e" },
+					},
+				},
+				{
+					title = "{npc:10778}",
+					note = "{npc:10778}'s ghost wanders by the farmhouse of Felstone Field, west of Dalson's Tears; her parcel lies inside.",
+					goals = {
+						{ t = "accept", quest = 5021, title = "Better Late Than Never", npc = 10778, npcName = "Janice Felstone", minLevel = 50, qlvl = 52, map = 1422, x = 38.4, y = 54.05, z = 65.2, f = "e", note = "Upstairs" },
+						{ t = "turnin", quest = 5021, title = "Better Late Than Never", object = 175894, objName = "Janice's Parcel", map = 1422, x = 38.73, y = 55.24, z = 59.8, f = "e", note = "{object:175894}, inside" },
+						{ t = "accept", quest = 5022, title = "Better Late Than Never", object = 175894, objName = "Janice's Parcel", minLevel = 50, qlvl = 52, pre = { 5021 }, preTitles = { [5021] = "Better Late Than Never" }, map = 1422, x = 38.73, y = 55.24, z = 59.8, f = "e", note = "For {zone:1453}: keep it" },
+					},
+				},
+				{
+					title = "The Andorhal watchtowers",
+					goals = {
+						{ t = "kill", quest = 5097, title = "All Along the Watchtowers", target = "Andorhal Tower Three", npc = 10904, count = 1, oi = 3, text = "Mark {npc:10904} with the {item:12815}", map = 1422, x = 44.3, y = 63.25, z = 67.7, f = "e" },
+						{ t = "kill", quest = 5097, title = "All Along the Watchtowers", target = "Andorhal Tower Four", npc = 10905, count = 1, oi = 4, text = "Mark {npc:10905} with the {item:12815}", map = 1422, x = 46.62, y = 71.05, z = 61.2, f = "e" },
+					},
+				},
+				{
+					title = "Chillwind Camp",
+					goals = {
+						{ t = "turnin", quest = 5217, title = "Return to Chillwind Camp", npc = 11053, npcName = "High Priestess MacDonnell", map = 1422, x = 42.97, y = 84.5, z = 64, f = "e" },
+						{ t = "accept", quest = 5219, title = "Target: Dalson's Tears", npc = 11053, npcName = "High Priestess MacDonnell", minLevel = 50, qlvl = 55, pre = { 5217 }, preTitles = { [5217] = "Return to Chillwind Camp" }, map = 1422, x = 42.97, y = 84.5, z = 64, f = "e" },
+						{ t = "turnin", quest = 5097, title = "All Along the Watchtowers", npc = 10838, npcName = "Commander Ashlam Valorfist", map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e" },
+						{ t = "accept", quest = 211, title = "Alas, Andorhal", npc = 10838, npcName = "Commander Ashlam Valorfist", minLevel = 50, qlvl = 60, pre = { 5097 }, preTitles = { [5097] = "All Along the Watchtowers" }, map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e", optional = true, note = "{npc:1852} is a level 61 elite" },
+						{ t = "accept", quest = 5533, title = "Scholomance", npc = 10838, npcName = "Commander Ashlam Valorfist", minLevel = 55, qlvl = 55, pre = { 5097 }, preTitles = { [5097] = "All Along the Watchtowers" }, map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e" },
+						{ t = "turnin", quest = 5533, title = "Scholomance", npc = 11056, npcName = "Alchemist Arbington", map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e" },
+						{ t = "accept", quest = 5537, title = "Skeletal Fragments", npc = 11056, npcName = "Alchemist Arbington", minLevel = 55, qlvl = 57, pre = { 5533 }, preTitles = { [5533] = "Scholomance" }, map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e" },
+					},
+				},
+				{
+					title = "Dalson's Tears cauldron",
+					note = "The cauldron sits at Dalson's Tears, north-east of Felstone; its Cauldron Lord stands beside it.",
+					goals = {
+						{ t = "collect", quest = 5219, title = "Target: Dalson's Tears", item = 13195, itemName = "Dalson's Tears Cauldron Key", count = 1, oi = 1, map = 1422, x = 46.1, y = 52.6, f = "e", from = "Cauldron Lord Malvinious", fromKind = "npc", fromId = 11077, fromNpcs = { { npc = 11077, npcName = "Cauldron Lord Malvinious" } } },
+						{ t = "turnin", quest = 5219, title = "Target: Dalson's Tears", object = 177289, objName = "Scourge Cauldron", map = 1422, x = 46.18, y = 51.9, z = 58.9, f = "e" },
+						{ t = "accept", quest = 5220, title = "Return to Chillwind Camp", object = 177289, objName = "Scourge Cauldron", minLevel = 50, qlvl = 55, pre = { 5219 }, preTitles = { [5219] = "Target: Dalson's Tears" }, map = 1422, x = 46.18, y = 51.9, z = 58.9, f = "e" },
+					},
+				},
+				{
+					title = "Andorhal",
+					note = "Use the {item:12627} by the grain silos to draw out Temporal Parasites. {quest:5154} is one of the musty tomes in the town hall. Every skeleton in town drops {quest:5537}.",
+					goals = {
+						{ t = "collect", quest = 5154, title = "The Annals of Darrowshire", item = 12900, itemName = "Annals of Darrowshire", count = 1, oi = 1, map = 1422, x = 43.42, y = 68.78, f = "e", spots = { { x = 43.4, y = 69.3, r = 20, n = 4 } }, from = "Musty Tome", fromKind = "object", fromId = 176150 },
+					},
+				},
+				{
+					title = "Chillwind Camp",
+					goals = {
+						{ t = "turnin", quest = 5220, title = "Return to Chillwind Camp", npc = 11053, npcName = "High Priestess MacDonnell", map = 1422, x = 42.97, y = 84.5, z = 64, f = "e" },
+						{ t = "accept", quest = 5222, title = "Target: Writhing Haunt", npc = 11053, npcName = "High Priestess MacDonnell", minLevel = 50, qlvl = 55, pre = { 5220 }, preTitles = { [5220] = "Return to Chillwind Camp" }, map = 1422, x = 42.97, y = 84.5, z = 64, f = "e" },
+					},
+				},
+				{
+					title = "Writhing Haunt cauldron",
+					note = "The cauldron sits at the Writhing Haunt, by {npc:10739}' farm.",
+					goals = {
+						{ t = "collect", quest = 5222, title = "Target: Writhing Haunt", item = 13197, itemName = "Writhing Haunt Cauldron Key", count = 1, oi = 1, map = 1422, x = 52.88, y = 66.08, f = "e", from = "Cauldron Lord Razarch", fromKind = "npc", fromId = 11076, fromNpcs = { { npc = 11076, npcName = "Cauldron Lord Razarch" } } },
+						{ t = "turnin", quest = 5222, title = "Target: Writhing Haunt", object = 176393, objName = "Scourge Cauldron", map = 1422, x = 53.02, y = 65.61, z = 58.4, f = "e" },
+						{ t = "accept", quest = 5223, title = "Return to Chillwind Camp", object = 176393, objName = "Scourge Cauldron", minLevel = 50, qlvl = 55, pre = { 5222 }, preTitles = { [5222] = "Target: Writhing Haunt" }, map = 1422, x = 53.02, y = 65.61, z = 58.4, f = "e" },
+					},
+				},
+				{
+					title = "{npc:10739}",
+					goals = {
+						{ t = "turnin", quest = 4984, title = "The Wildlife Suffers Too", npc = 10739, npcName = "Mulgris Deepriver", map = 1422, x = 53.73, y = 64.66, z = 60.6, f = "e", note = "Inside" },
+						{ t = "accept", quest = 4985, title = "The Wildlife Suffers Too", npc = 10739, npcName = "Mulgris Deepriver", minLevel = 51, qlvl = 56, pre = { 4984 }, preTitles = { [4984] = "The Wildlife Suffers Too" }, map = 1422, x = 53.73, y = 64.66, z = 60.6, f = "e" },
+					},
+				},
+				{
+					title = "Diseased Grizzlies",
+					goals = {
+						{ t = "kill", quest = 4985, title = "The Wildlife Suffers Too", target = "Diseased Grizzly", npc = 1816, count = 8, oi = 1, map = 1422, x = 55.16, y = 64.54, z = 60.2, f = "e", spots = { { x = 55.5, y = 64.1, r = 40, n = 2 }, { x = 56.5, y = 59.1, r = 59, n = 5 }, { x = 59.1, y = 60.3, r = 40, n = 2 }, { x = 60, y = 53.9, r = 49, n = 3 }, { x = 56.5, y = 53, r = 64, n = 6 }, { x = 53.5, y = 50.2, z = 77.3, r = 62, n = 6 }, { x = 54.6, y = 46.5, r = 40, n = 2 }, { x = 52.2, y = 54.3, z = 63.5, r = 40, n = 1 }, { x = 53, y = 59.2, r = 40, n = 2 }, { x = 62.5, y = 47.3, r = 43, n = 3 }, { x = 67.8, y = 45.8, z = 64.3, r = 40, n = 2 }, { x = 66.7, y = 56.4, z = 67.4, r = 45, n = 3 }, { x = 54.2, y = 61.8, r = 40, n = 3, alt = true }, { x = 57.6, y = 61.4, r = 43, n = 3, alt = true }, { x = 55.9, y = 50.6, r = 40, n = 4, alt = true }, { x = 60, y = 50.8, z = 76.6, r = 52, n = 6, alt = true }, { x = 62.5, y = 50.7, z = 59.8, r = 42, n = 3, alt = true }, { x = 65.9, y = 53.9, z = 59.2, r = 46, n = 5, alt = true }, { x = 64.5, y = 49.9, z = 60.4, r = 40, n = 3, alt = true }, { x = 64.4, y = 46.6, z = 61.5, r = 55, n = 4, alt = true }, { x = 67, y = 48.4, z = 62.3, r = 48, n = 5, alt = true }, { x = 66, y = 44.9, r = 40, n = 2, alt = true } }, spread = true },
+					},
+				},
+				{
+					title = "{npc:10739}",
+					goals = {
+						{ t = "turnin", quest = 4985, title = "The Wildlife Suffers Too", npc = 10739, npcName = "Mulgris Deepriver", map = 1422, x = 53.73, y = 64.66, z = 60.6, f = "e", note = "Inside" },
+						{ t = "accept", quest = 4986, title = "Glyphed Oaken Branch", npc = 10739, npcName = "Mulgris Deepriver", minLevel = 51, qlvl = 56, pre = { 4985 }, preTitles = { [4985] = "The Wildlife Suffers Too" }, map = 1422, x = 53.73, y = 64.66, z = 60.6, f = "e", note = "For the druids of {zone:1457}: keep it" },
+					},
+				},
+				{
+					title = "Andorhal",
+					goals = {
+						{ t = "use", item = 12627, itemName = "Temporal Displacer", text = "{item:12627}", map = 1422, x = 45.1, y = 62.3, f = "e" },
+						{ t = "kill", quest = 4971, title = "A Matter of Time", target = "Temporal Parasite", npc = 10717, count = 10, oi = 1, map = 1422, x = 45.1, y = 62.3, f = "e", spots = { { x = 45.1, y = 62.3, r = 85, n = 5 }, { x = 48.3, y = 63.7, r = 27, n = 4, alt = true }, { x = 47.8, y = 66, r = 26, n = 4, alt = true }, { x = 50.2, y = 66.6, r = 19, n = 4, alt = true }, { x = 49.2, y = 69, r = 15, n = 3, alt = true } } },
+					},
+				},
+				{
+					title = "Chillwind Camp",
+					goals = {
+						{ t = "turnin", quest = 5223, title = "Return to Chillwind Camp", npc = 11053, npcName = "High Priestess MacDonnell", map = 1422, x = 42.97, y = 84.5, z = 64, f = "e" },
+						{ t = "accept", quest = 5225, title = "Target: Gahrron's Withering", npc = 11053, npcName = "High Priestess MacDonnell", minLevel = 50, qlvl = 58, pre = { 5223 }, preTitles = { [5223] = "Return to Chillwind Camp" }, map = 1422, x = 42.97, y = 84.5, z = 64, f = "e" },
+					},
+				},
+				{
+					title = "{npc:10667}",
+					goals = {
+						{ t = "turnin", quest = 4971, title = "A Matter of Time", npc = 10667, npcName = "Chromie", map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e", note = "Upstairs" },
+						{ t = "accept", quest = 4972, title = "Counting Out Time", npc = 10667, npcName = "Chromie", minLevel = 53, qlvl = 56, pre = { 4971 }, preTitles = { [4971] = "A Matter of Time" }, map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e" },
+						{ t = "turnin", quest = 5154, title = "The Annals of Darrowshire", npc = 10667, npcName = "Chromie", map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e" },
+						{ t = "accept", quest = 5210, title = "Brother Carlin", npc = 10667, npcName = "Chromie", minLevel = 50, qlvl = 56, pre = { 5154 }, preTitles = { [5154] = "The Annals of Darrowshire" }, map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e", note = "{quest:5210}, at Light's Hope Chapel: keep it" },
+					},
+				},
+				{
+					title = "Sorrow Hill: kill these as you meet them",
+					note = "{npc:1852} is elite: grouping up is advised. He guards his phylactery in the middle of Andorhal.\nSmall lockboxes lie in the rubble all over Andorhal; each holds a watch.\nCareful: Ghouls and skeletons usually stand next to the boxes and attack when you come close. Searing ghouls also hurt anyone nearby and will break stealth.",
+					goals = {
+						{ t = "collect", quest = 5537, title = "Skeletal Fragments", item = 14619, itemName = "Skeletal Fragments", count = 15, oi = 1, map = 1422, x = 39.69, y = 67.57, f = "e", spots = { { x = 39.5, y = 68.5, r = 57, n = 6 }, { x = 42.6, y = 70.7, r = 40, n = 2 }, { x = 44.1, y = 74.1, r = 50, n = 3 }, { x = 47.1, y = 71.6, r = 43, n = 5 }, { x = 49.1, y = 66.5, r = 46, n = 3 }, { x = 46.3, y = 61.8, r = 54, n = 5 }, { x = 43.3, y = 63.4, r = 75, n = 7 }, { x = 38.4, y = 54.7, r = 45, n = 14 }, { x = 47.6, y = 50.4, r = 40, n = 9 }, { x = 49.2, y = 77.5, r = 56, n = 4 }, { x = 47.4, y = 84.3, r = 40, n = 1 }, { x = 54.2, y = 80.3, r = 40, n = 11 }, { x = 41.9, y = 68.9, r = 40, n = 5, alt = true }, { x = 39.4, y = 71.3, r = 40, n = 4, alt = true }, { x = 41.9, y = 65.8, r = 73, n = 6, alt = true }, { x = 41.8, y = 74.2, r = 42, n = 5, alt = true }, { x = 44.8, y = 66.3, r = 49, n = 6, alt = true }, { x = 45.4, y = 69.6, r = 60, n = 9, alt = true }, { x = 37.9, y = 57.9, r = 52, n = 10, alt = true }, { x = 46, y = 73.8, r = 40, n = 4, alt = true }, { x = 47.4, y = 64.6, r = 58, n = 5, alt = true }, { x = 36.5, y = 56.2, r = 69, n = 16, alt = true }, { x = 48.3, y = 69.5, r = 47, n = 5, alt = true }, { x = 49.1, y = 63.9, r = 40, n = 3, alt = true }, { x = 50, y = 68, r = 40, n = 2, alt = true }, { x = 50.6, y = 75.7, r = 40, n = 2, alt = true }, { x = 45.8, y = 51.1, r = 49, n = 6, alt = true }, { x = 48.2, y = 81.5, r = 49, n = 6, alt = true }, { x = 50.8, y = 80.6, r = 40, n = 1, alt = true } }, spread = true, from = "Skeletal Flayer", fromKind = "npc", fromAlso = "Skeletal Sorcerer", fromId = 1783, fromAlsoId = 1784, fromNpcs = { { npc = 1787, npcName = "Skeletal Executioner" }, { npc = 1783, npcName = "Skeletal Flayer" }, { npc = 1784, npcName = "Skeletal Sorcerer" }, { npc = 1785, npcName = "Skeletal Terror" }, { npc = 1789, npcName = "Skeletal Acolyte" } } },
+						{ t = "collect", quest = 211, title = "Alas, Andorhal", item = 17114, itemName = "Araj's Phylactery Shard", count = 1, oi = 1, map = 1422, x = 45.27, y = 69.21, f = "e", optional = true, from = "Araj's Phylactery", fromKind = "object", fromId = 177241 },
+						{ t = "collect", quest = 4972, title = "Counting Out Time", item = 12638, itemName = "Andorhal Watch", count = 5, oi = 1, map = 1422, x = 44.82, y = 70.43, f = "e", spots = { { x = 45.3, y = 72.5, r = 63, n = 4 }, { x = 42.3, y = 69.1, r = 50, n = 4 }, { x = 45.8, y = 66.2, r = 36, n = 2 }, { x = 42.5, y = 73.3, r = 48, n = 4 }, { x = 39.7, y = 67.9, r = 79, n = 5 }, { x = 48.7, y = 69.8, r = 15, n = 1, alt = true } }, from = "Small Lockbox", fromKind = "object", fromId = 175802 },
+					},
+				},
+				{
+					title = "{npc:10667}",
+					goals = {
+						{ t = "turnin", quest = 4972, title = "Counting Out Time", npc = 10667, npcName = "Chromie", map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e", note = "Upstairs" },
+						{ t = "accept", quest = 4973, title = "Counting Out Time", npc = 10667, npcName = "Chromie", minLevel = 53, qlvl = 56, pre = { 4972 }, preTitles = { [4972] = "Counting Out Time" }, map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e" },
+					},
+				},
+				{
+					title = "More watches",
+					goals = {
+						{ t = "collect", quest = 4973, title = "Counting Out Time", item = 12638, itemName = "Andorhal Watch", count = 5, oi = 1, map = 1422, x = 40.32, y = 66.47, f = "e", spots = { { x = 39.7, y = 67.9, r = 79, n = 5 }, { x = 42.3, y = 69.1, r = 50, n = 4 }, { x = 42.5, y = 73.3, r = 48, n = 4 }, { x = 45.8, y = 66.2, r = 36, n = 2 }, { x = 45.3, y = 72.5, r = 63, n = 4 }, { x = 48.7, y = 69.8, r = 15, n = 1, alt = true } }, from = "Small Lockbox", fromKind = "object", fromId = 175802 },
+					},
+				},
+				{
+					title = "{npc:10667}",
+					goals = {
+						{ t = "turnin", quest = 4973, title = "Counting Out Time", npc = 10667, npcName = "Chromie", map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e", note = "Upstairs" },
+					},
+				},
+				{
+					title = "{npc:11610}",
+					note = "Ride north up the road to the Northridge lumber mill; {npc:11610} hides at the camp's edge.",
+					goals = {
+						{ t = "accept", quest = 6004, title = "Unfinished Business", npc = 11610, npcName = "Kirsta Deepshadow", minLevel = 50, qlvl = 56, map = 1422, x = 51.92, y = 28.06, z = 33.5, f = "e" },
+					},
+				},
+				{
+					title = "{npc:1833} on the way",
+					along = "q6004",
+					goals = {
+						{ t = "kill", quest = 6004, title = "Unfinished Business", target = "Scarlet Knight", npc = 1833, count = 2, oi = 4, map = 1422, x = 49.61, y = 33.19, z = 108.2, f = "e", spots = { { x = 49.2, y = 33.8, r = 27, n = 2 }, { x = 46.4, y = 34.4, r = 28, n = 2 }, { x = 53.2, y = 36.9, z = 90.7, r = 18, n = 3 }, { x = 50.4, y = 41.2, z = 59.5, r = 31, n = 6 }, { x = 47.4, y = 31.9, z = 106.9, r = 15, n = 1, alt = true }, { x = 57.7, y = 36.4, z = 168.9, r = 15, n = 1, alt = true } }, note = "{npc:1833} along the way to {npc:11610}" },
+					},
+				},
+				{
+					title = "The Scarlet Crusade",
+					note = "The Scarlet Medics, Hunters, Knights and Mages patrol the lumber camp and the road toward Hearthglen.",
+					goals = {
+						{ t = "kill", quest = 6004, title = "Unfinished Business", target = "Scarlet Mage", npc = 1826, count = 2, oi = 3, map = 1422, x = 52.83, y = 36.65, z = 92.2, f = "e", spots = { { x = 53.1, y = 37.3, r = 24, n = 3 }, { x = 51.2, y = 40.3, z = 63.9, r = 15, n = 2 }, { x = 57.5, y = 35.9, z = 165.8, r = 15, n = 2 } } },
+						{ t = "kill", quest = 6004, title = "Unfinished Business", target = "Scarlet Hunter", npc = 1831, count = 2, oi = 2, map = 1422, x = 52.2, y = 43.96, z = 57.9, f = "e", spots = { { x = 51.9, y = 44.3, z = 57.4, r = 40, n = 4 }, { x = 47.3, y = 51.4, z = 60.6, r = 40, n = 1 }, { x = 40.8, y = 52.4, z = 61.3, r = 40, n = 3 }, { x = 38.6, y = 56, z = 60.2, r = 40, n = 1 }, { x = 43.7, y = 67.8, z = 54, r = 40, n = 1, alt = true } }, spread = true },
+						{ t = "kill", quest = 6004, title = "Unfinished Business", target = "Scarlet Medic", npc = 10605, count = 2, oi = 1, map = 1422, x = 51.76, y = 44.83, z = 58.6, f = "e", spots = { { x = 51.8, y = 44.8, z = 58.6, r = 128, n = 1 }, { x = 47.3, y = 51.3, z = 60.6, r = 128, n = 1 }, { x = 40.1, y = 52.9, r = 128, n = 4 }, { x = 43.7, y = 67.8, z = 54, r = 128, n = 1, alt = true } }, spread = true },
+					},
+				},
+				{
+					title = "{npc:11610}",
+					label = "q6004",
+					goals = {
+						{ t = "turnin", quest = 6004, title = "Unfinished Business", npc = 11610, npcName = "Kirsta Deepshadow", map = 1422, x = 51.92, y = 28.06, z = 33.5, f = "e" },
+						{ t = "accept", quest = 6023, title = "Unfinished Business", npc = 11610, npcName = "Kirsta Deepshadow", minLevel = 50, qlvl = 57, pre = { 6004 }, preTitles = { [6004] = "Unfinished Business" }, map = 1422, x = 51.92, y = 28.06, z = 33.5, f = "e" },
+					},
+				},
+				{
+					title = "Radley and Durgen",
+					note = "{npc:11613} walks the Northridge camp east of {npc:11610}; {npc:11611} guards the tower at Hearthglen's southern approach.\nCareful: Guards stand at the tower's base and one more circles it on patrol. Clear them before you engage Durgen so they don't join the fight.",
+					goals = {
+						{ t = "kill", quest = 6023, title = "Unfinished Business", target = "Huntsman Radley", npc = 11613, count = 1, oi = 1, map = 1422, x = 57.83, y = 36.1, z = 168.5, f = "e" },
+						{ t = "kill", quest = 6023, title = "Unfinished Business", target = "Cavalier Durgen", npc = 11611, count = 1, oi = 2, map = 1422, x = 55.15, y = 23.62, z = 107.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:11610}",
+					goals = {
+						{ t = "turnin", quest = 6023, title = "Unfinished Business", npc = 11610, npcName = "Kirsta Deepshadow", map = 1422, x = 51.92, y = 28.06, z = 33.5, f = "e" },
+						{ t = "accept", quest = 6025, title = "Unfinished Business", npc = 11610, npcName = "Kirsta Deepshadow", minLevel = 50, qlvl = 58, pre = { 6023 }, preTitles = { [6023] = "Unfinished Business" }, map = 1422, x = 51.92, y = 28.06, z = 33.5, f = "e" },
+					},
+				},
+				{
+					title = "Hearthglen overlook",
+					note = "Climb the hill west of Hearthglen to look down on the town.\nCareful: Sentinels posted at the gate can detect stealthed players. Additional sentinels are found within the town, and an elite walks a patrol route nearby.",
+					goals = {
+						{ t = "goto", map = 1422, x = 45.8, y = 18.3, f = "e" },
+						{ t = "complete", quest = 6025, title = "Unfinished Business", map = 1422, x = 45.8, y = 18.3, f = "e" },
+					},
+				},
+				{
+					title = "{npc:11610}",
+					goals = {
+						{ t = "turnin", quest = 6025, title = "Unfinished Business", npc = 11610, npcName = "Kirsta Deepshadow", map = 1422, x = 51.92, y = 28.06, z = 33.5, f = "e" },
+					},
+				},
+				{
+					title = "{npc:1855}",
+					note = "Ride east to the border river: {npc:1855} lives in a small hut on the bank.",
+					goals = {
+						{ t = "accept", quest = 5542, title = "Demon Dogs", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 56, map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+						{ t = "accept", quest = 5543, title = "Blood Tinged Skies", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 56, map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+						{ t = "accept", quest = 5544, title = "Carrion Grubbage", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 56, map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+					},
+				},
+				{
+					title = "{item:13853} on the way",
+					along = "q5544",
+					goals = {
+						{ t = "collect", quest = 5544, title = "Carrion Grubbage", item = 13853, itemName = "Slab of Carrion Worm Meat", count = 15, oi = 1, map = 1423, x = 4.46, y = 34.21, spots = { { x = 4.5, y = 36.6, r = 70, n = 3 }, { x = 14.9, y = 21.6, r = 70, n = 2 }, { x = 27.4, y = 34.8, r = 72, n = 4 }, { x = 36.3, y = 56.2, r = 70, n = 2 }, { x = 28.8, y = 71.6, r = 104, n = 3 }, { x = 15.5, y = 56.4, r = 80, n = 3 }, { x = 48.3, y = 67.6, r = 77, n = 4 }, { x = 52.1, y = 46.1, r = 70, n = 4 }, { x = 54.4, y = 26.2, r = 114, n = 6 }, { x = 65.9, y = 26.1, r = 70, n = 1 }, { x = 69.4, y = 59.6, r = 70, n = 3 }, { x = 42.4, y = 21.3, r = 70, n = 1 }, { x = 7.3, y = 48.5, r = 70, n = 1, alt = true }, { x = 19.1, y = 31.4, r = 70, n = 1, alt = true }, { x = 12.9, y = 65.2, r = 114, n = 5, alt = true }, { x = 19.4, y = 60.7, r = 91, n = 3, alt = true }, { x = 30.6, y = 31.9, r = 70, n = 1, alt = true }, { x = 27.4, y = 53.4, r = 70, n = 1, alt = true }, { x = 18.9, y = 67.9, r = 70, n = 2, alt = true }, { x = 28.1, y = 60.6, r = 109, n = 4, alt = true }, { x = 26.2, y = 66.5, r = 70, n = 1, alt = true }, { x = 33.4, y = 60, r = 105, n = 4, alt = true }, { x = 20.9, y = 79.8, r = 70, n = 2, alt = true }, { x = 39.8, y = 32.5, r = 101, n = 4, alt = true }, { x = 39.5, y = 61.7, r = 70, n = 2, alt = true }, { x = 35.7, y = 70.7, r = 70, n = 2, alt = true }, { x = 42.4, y = 53.3, r = 88, n = 5, alt = true }, { x = 44.6, y = 35.1, r = 70, n = 2, alt = true }, { x = 46.5, y = 46.8, r = 113, n = 7, alt = true }, { x = 47.4, y = 29.7, r = 91, n = 4, alt = true }, { x = 42.6, y = 67.5, r = 93, n = 3, alt = true }, { x = 38.4, y = 78.1, r = 70, n = 1, alt = true }, { x = 49.4, y = 40.4, r = 70, n = 2, alt = true }, { x = 51.6, y = 51.5, r = 70, n = 1, alt = true }, { x = 53, y = 18.7, r = 70, n = 2, alt = true }, { x = 54.9, y = 36.4, r = 70, n = 1, alt = true }, { x = 58.2, y = 21.7, r = 90, n = 5, alt = true }, { x = 59.3, y = 49.9, r = 74, n = 4, alt = true }, { x = 60.3, y = 27.7, r = 70, n = 2, alt = true }, { x = 61.1, y = 36.1, r = 80, n = 4, alt = true }, { x = 59.5, y = 55.4, r = 118, n = 5, alt = true }, { x = 55.1, y = 73.4, r = 70, n = 2, alt = true }, { x = 62.1, y = 42.5, r = 90, n = 3, alt = true }, { x = 59.8, y = 61.3, r = 79, n = 3, alt = true }, { x = 64.8, y = 31.8, r = 70, n = 1, alt = true }, { x = 62.3, y = 68, r = 90, n = 3, alt = true }, { x = 65.6, y = 60.2, r = 92, n = 3, alt = true }, { x = 67.3, y = 51.4, r = 70, n = 2, alt = true } }, spread = true, from = "Carrion Grub", fromKind = "npc", fromAlso = "Carrion Devourer", fromId = 8603, fromAlsoId = 8605, fromNpcs = { { npc = 8603, npcName = "Carrion Grub" }, { npc = 8605, npcName = "Carrion Devourer" } } },
+					},
+				},
+				{
+					title = "Gahrron's Withering cauldron",
+					note = "Ride south to Gahrron's Withering, where {npc:11078} guards the cauldron.",
+					goals = {
+						{ t = "collect", quest = 5225, title = "Target: Gahrron's Withering", item = 13196, itemName = "Gahrron's Withering Cauldron Key", count = 1, oi = 1, map = 1422, x = 62.18, y = 59.06, f = "e", from = "Cauldron Lord Soulwrath", fromKind = "npc", fromId = 11078, fromNpcs = { { npc = 11078, npcName = "Cauldron Lord Soulwrath" } } },
+						{ t = "turnin", quest = 5225, title = "Target: Gahrron's Withering", object = 176392, objName = "Scourge Cauldron", map = 1422, x = 62.54, y = 58.47, z = 58.9, f = "e" },
+						{ t = "accept", quest = 5226, title = "Return to Chillwind Camp", object = 176392, objName = "Scourge Cauldron", minLevel = 50, qlvl = 58, pre = { 5225 }, preTitles = { [5225] = "Target: Gahrron's Withering" }, map = 1422, x = 62.54, y = 58.47, z = 58.9, f = "e" },
+					},
+				},
+				{
+					title = "Chillwind Camp",
+					note = "Ride south-west to the camp.",
+					goals = {
+						{ t = "turnin", quest = 5226, title = "Return to Chillwind Camp", npc = 11053, npcName = "High Priestess MacDonnell", map = 1422, x = 42.97, y = 84.5, z = 64, f = "e" },
+						{ t = "turnin", quest = 211, title = "Alas, Andorhal", npc = 10838, npcName = "Commander Ashlam Valorfist", map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e", optional = true },
+						{ t = "accept", quest = 5237, title = "Mission Accomplished!", npc = 10838, npcName = "Commander Ashlam Valorfist", minLevel = 50, qlvl = 58, pre = { 5226 }, preTitles = { [5226] = "Return to Chillwind Camp" }, map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e" },
+						{ t = "turnin", quest = 5237, title = "Mission Accomplished!", npc = 10838, npcName = "Commander Ashlam Valorfist", map = 1422, x = 42.7, y = 84.03, z = 66.3, f = "e" },
+						{ t = "turnin", quest = 5537, title = "Skeletal Fragments", npc = 11056, npcName = "Alchemist Arbington", map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e" },
+						{ t = "accept", quest = 5538, title = "Mold Rhymes With...", npc = 11056, npcName = "Alchemist Arbington", minLevel = 55, qlvl = 57, pre = { 5537 }, preTitles = { [5537] = "Skeletal Fragments" }, map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e", note = "{npc:5411} in Gadgetzan: keep it" },
+						{ t = "vendor", candidates = { { npc = 10857, npcName = "Argent Quartermaster Lightspark", map = 1422, x = 42.84, y = 83.72, z = 65.3, f = "e", faction = "AH" }, { npc = 12942, npcName = "Leonard Porter", map = 1422, x = 43.08, y = 84.31, z = 62.7, f = "e", faction = "A" }, { npc = 8161, npcName = "Harggan", map = 1424, x = 98.7, y = 3.1, z = 131.6, f = "e", faction = "A" }, { npc = 10856, npcName = "Argent Quartermaster Hasana", map = 1422, x = 26.6, y = 55.2, z = 59.5, f = "e", faction = "AH" }, { npc = 11278, npcName = "Magnus Frostwake", map = 1422, x = 68.12, y = 77.57, z = 62.1, f = "e", faction = "AH" }, { npc = 3536, npcName = "Kris Legace", map = 1424, x = 80.14, y = 38.89, z = 88.3, f = "e", faction = "AH" }, { npc = 13217, npcName = "Thanthaldis Snowgleam", map = 1416, x = 39.45, y = 81.65, z = 131.2, f = "e", faction = "A" }, { npc = 3537, npcName = "Zixil", map = 1416, x = 53.6, y = 98.7, f = "e", faction = "AH" }, { npc = 28990, npcName = "Anthony Durain", map = 1416, x = 20.15, y = 63.77, f = "e", faction = "A" }, { npc = 28989, npcName = "Aemara", map = 1416, x = 16.59, y = 70.12, f = "e", faction = "AH" }, { npc = 3543, npcName = "Robert Aebischer", map = 1424, x = 51.21, y = 56.98, z = 15.3, f = "e", faction = "A" }, { npc = 275598, npcName = "Valerie Langrom", map = 1416, x = 12.64, y = 71.05, f = "e", faction = "A" }, { npc = 2404, npcName = "Blacksmith Verringtan", map = 1424, x = 32.11, y = 44.42, z = 49.4, f = "e", faction = "A" }, { npc = 15127, npcName = "Samuel Hawke", map = 1417, x = 45.97, y = 45.21, z = 21.9, f = "e", faction = "A" }, { npc = 3528, npcName = "Pyrewood Armorer", map = 1421, x = 46.4, y = 71.88, z = 19, f = "e", faction = "A" }, { npc = 3534, npcName = "Wallace the Blind", map = 1421, x = 46.5, y = 86.49, z = 17.1, f = "e", faction = "AH" }, { npc = 2679, npcName = "Wenna Silkbeard", map = 1437, x = 25.61, y = 25.8, z = 8.7, f = "e", faction = "A" }, { npc = 16376, npcName = "Craftsman Wilhelm", map = 1423, x = 71.24, y = 49.9, z = 81.9, faction = "AH" }, { npc = 1454, npcName = "Jennabink Powerseam", map = 1437, x = 8.12, y = 55.84, z = 16.1, f = "e", faction = "A" }, { npc = 5155, npcName = "Ingrys Stonebrow", map = 1455, x = 38.25, y = 5.15, z = 512, f = "e", faction = "A" }, { npc = 5108, npcName = "Raena Flinthammer", map = 1455, x = 32.62, y = 57.39, z = 505.2, f = "e", faction = "A" }, { npc = 5123, npcName = "Bretta Goldfury", map = 1455, x = 72.21, y = 65.24, z = 505.4, f = "e", faction = "A" }, { npc = 222, npcName = "Nillen Andemar", map = 1432, x = 42.87, y = 9.89, z = 310.4, f = "e", faction = "A" }, { npc = 1362, npcName = "Gothor Brumn", map = 1432, x = 24.13, y = 18.21, z = 327.2, f = "e", faction = "A" }, { npc = 1469, npcName = "Vrok Blunderblast", map = 1432, x = 35.83, y = 43.46, z = 341.8, f = "e", faction = "A" }, { npc = 3177, npcName = "Turuk Amberstill", map = 1426, x = 62.9, y = 49.89, z = 406.2, f = "e", faction = "A" }, { npc = 3162, npcName = "Burdrak Harglhelm", map = 1426, x = 30.11, y = 45.28, z = 394.2, f = "e", faction = "A" }, { npc = 1690, npcName = "Thrawn Boltar", map = 1426, x = 45.3, y = 51.53, z = 397.4, f = "e", faction = "A" }, { npc = 1698, npcName = "Frast Dokner", map = 1426, x = 69, y = 55.89, z = 383.2, f = "e", faction = "A" }, { npc = 1214, npcName = "Aldren Cordon", map = 1432, x = 64.82, y = 66.05, z = 322.9, f = "e", faction = "A" }, { npc = 1687, npcName = "Cliff Hadin", map = 1432, x = 83.02, y = 62.96, z = 407.8, f = "e", faction = "A" }, { npc = 836, npcName = "Durnan Furcutter", map = 1426, x = 28.77, y = 66.37, z = 392.8, f = "e", faction = "A" }, { npc = 14624, npcName = "Master Smith Burninate", map = 1427, x = 38.8, y = 28.51, z = 309.3, f = "e", faction = "AH" }, { npc = 9179, npcName = "Jazzrik", map = 1418, x = 42.47, y = 52.5, z = 241.2, f = "e", faction = "AH" }, { npc = 11703, npcName = "Graw Cornerstone", map = 1427, x = 41.5, y = 74.97, z = 254.8, f = "e", faction = "A" }, { npc = 9544, npcName = "Yuka Screwspigot", map = 1418, x = 4.9, y = 94.7, z = 165.4, f = "e", faction = "AH" }, { npc = 1296, npcName = "Felder Stover", map = 1428, x = 85.21, y = 68.39, z = 187.6, f = "e", faction = "A" }, { npc = 5509, npcName = "Kathrum Axehand", map = 1453, x = 59.3, y = 33.82, z = 95.4, faction = "A" }, { npc = 1324, npcName = "Heinrich Stone", map = 1453, x = 77.22, y = 57.37, z = 104.5, faction = "A" }, { npc = 1213, npcName = "Godric Rothgar", map = 1429, x = 47.69, y = 41.42, z = 82, f = "e", faction = "A" }, { npc = 1299, npcName = "Lisbeth Schneider", map = 1453, x = 58.3, y = 67.15, z = 99.6, faction = "A" }, { npc = 259766, npcName = "Mika Darby", map = 2548, x = 77.76, y = 52.03, faction = "A" }, { npc = 260566, npcName = "Fizzix Boomshot", map = 2548, x = 78.59, y = 53.66, faction = "AH" }, { npc = 3088, npcName = "Henry Chapal", map = 1433, x = 18.75, y = 41.32, z = 89, faction = "A" }, { npc = 1198, npcName = "Rallic Finn", map = 1429, x = 83.28, y = 66.09, z = 47.4, f = "e", faction = "A" }, { npc = 74, npcName = "Kurran Steele", map = 1429, x = 41.37, y = 65.59, z = 58.4, f = "e", faction = "A" }, { npc = 959, npcName = "Morley Eberlein", map = 1429, x = 64.69, y = 69.51, z = 90.5, f = "e", faction = "A" }, { npc = 256730, npcName = "Stondry Darkhammer", map = 1433, x = 10.38, y = 73.85, faction = "A" }, { npc = 259861, npcName = "Paige Armstrong", map = 2548, x = 64.35, y = 82.02, faction = "A" }, { npc = 3097, npcName = "Bernard Brubaker", map = 1433, x = 83.16, y = 71.02, z = 122.1, faction = "A" }, { npc = 896, npcName = "Veldan Lightfoot", map = 1429, x = 25.18, y = 73.89, z = 38.7, f = "e", faction = "A" }, { npc = 228, npcName = "Avette Fellwood", map = 1431, x = 73.03, y = 44.42, z = 26.3, f = "e", faction = "A" }, { npc = 1668, npcName = "William MacGregor", map = 1436, x = 57.71, y = 53.94, z = 33, f = "e", faction = "A" }, { npc = 5508, npcName = "Strumner Flintheel", map = 1419, x = 66.08, y = 17.16, z = 66.8, f = "e", faction = "A" }, { npc = 1669, npcName = "Defias Profiteer", map = 1436, x = 43.47, y = 66.76, z = 50.6, f = "e", faction = "AH" }, { npc = 2483, npcName = "Jaquilina Dramet", map = 1434, x = 35.75, y = 10.66, z = 11, f = "e", faction = "AH" }, { npc = 14921, npcName = "Rin'wosho the Trader", map = 1434, x = 15.07, y = 16, z = 6.9, f = "e", faction = "AH" }, { npc = 2839, npcName = "Haren Kanmae", map = 1434, x = 28.31, y = 74.56, z = 6.7, f = "e", faction = "AH" }, { npc = 3491, npcName = "Ironzar", map = 1413, x = 62.24, y = 37.48, z = 8.2, f = "e", faction = "AH" }, { npc = 3683, npcName = "Kiknikle", map = 1413, x = 41.79, y = 38.69, z = 91.9, f = "e", faction = "AH" }, { npc = 263569, npcName = "Bryanna Embreeze", map = 1413, x = 63.45, y = 58.74, f = "e", faction = "A" }, { npc = 3588, npcName = "Khardan Proudblade", map = 1438, x = 58.72, y = 39.67, z = 1322.8, f = "e", faction = "A" }, { npc = 3609, npcName = "Shalomon", map = 1438, x = 56.31, y = 59.49, z = 1308.9, f = "e", faction = "A" }, { npc = 4183, npcName = "Naram Longclaw", map = 1439, x = 37.57, y = 40.35, z = 8.3, f = "e", faction = "A" }, { npc = 3951, npcName = "Bhaldaran Ravenshade", map = 1440, x = 50.27, y = 67.27, z = 101.8, f = "e", faction = "A" }, { npc = 3952, npcName = "Aeolynn", map = 1440, x = 34.47, y = 49.52, z = 111.2, f = "e", faction = "A" }, { npc = 14753, npcName = "Illiyana Moonblaze", map = 1440, x = 61.49, y = 83.86, z = 126.3, f = "e", faction = "A" }, { npc = 222685, npcName = "Quartermaster Kyleen", map = 1440, x = 89.4, y = 40.4, f = "e", faction = "AH" }, { npc = 1695, npcName = "Rendow", map = 1441, x = 7.6, y = 17.9, z = -36.6, f = "e", faction = "A" }, { npc = 3053, npcName = "Synge", map = 1441, x = 80.4, y = 77.01, z = -58.7, f = "e", faction = "AH" }, { npc = 4085, npcName = "Nizzik", map = 1442, x = 62.7, y = 40.18, z = 104.6, f = "e", faction = "AH" }, { npc = 4086, npcName = "Veenix", map = 1442, x = 58.22, y = 51.74, z = 65.5, f = "e", faction = "AH" }, { npc = 4188, npcName = "Illyanie", map = 1442, x = 35.59, y = 7.35, z = 234.9, f = "e", faction = "A" }, { npc = 1322, npcName = "Maxton Strang", map = 1443, x = 67.93, y = 8.31, z = 168.1, f = "e", faction = "A" }, { npc = 7852, npcName = "Pratt McGrubben", map = 1444, x = 30.63, y = 42.71, z = 10.1, f = "e", faction = "A" }, { npc = 4886, npcName = "Hans Weston", map = 1445, x = 64.63, y = 50.42, z = 16.9, f = "e", faction = "A" }, { npc = 5411, npcName = "Krinkle Goodsteel", map = 1446, x = 51.46, y = 28.81, z = 8.8, f = "e", faction = "AH" }, { npc = 14301, npcName = "Brinna Valanaar", map = 1447, x = 12, y = 78.38, z = 109.2, f = "e", faction = "A" }, { npc = 15315, npcName = "Mylini Frostmoon", map = 1448, x = 62.41, y = 25.78, z = 574.7, f = "e", faction = "A" }, { npc = 3000, npcName = "Gibbert", map = 1449, x = 44.1, y = 7.19, z = -202.8, f = "e", faction = "AH" }, { npc = 4184, npcName = "Geenia Sunshadow", map = 1450, x = 52, y = 32.89, z = 493.1, f = "e", faction = "AH" }, { npc = 15176, npcName = "Vargus", map = 1451, x = 51.23, y = 38.86, z = 42.6, f = "e", faction = "AH" }, { npc = 11182, npcName = "Nixxrak", map = 1452, x = 61.62, y = 37.87, z = 721.5, f = "e", faction = "AH" }, { npc = 4164, npcName = "Cylania", map = 1457, x = 59.24, y = 46.36, z = 1330.9, f = "e", faction = "A" }, { npc = 4234, npcName = "Andrus", map = 1457, x = 56.13, y = 88.91, z = 1330.1, f = "e", faction = "A" }, { npc = 4257, npcName = "Lana Thunderbrew", map = 1459, x = 43.41, y = 15.64, f = "e", faction = "A" }, { npc = 243855, npcName = "Toron Rockhoof", map = 2482, x = 69, y = 47.36, faction = "A" }, { npc = 265866, npcName = "Trigg Ironhand", map = 2482, x = 15.6, y = 50.6, faction = "A" }, { npc = 265883, npcName = "Chagrak Hammerstrike", map = 2482, x = 13.6, y = 52.4, faction = "AH" }, { npc = 251364, npcName = "Destin Thriceforged", map = 2521, x = 43.43, y = 23.5, faction = "AH" }, { npc = 251913, npcName = "Aedi Thriceforged", map = 2521, x = 44.88, y = 44.37, faction = "AH" }, { npc = 252479, npcName = "Daeann Steelwind", map = 2521, x = 65.47, y = 80.28, faction = "AH" }, { npc = 257422, npcName = "Railee Thriceforged", map = 2521, x = 58.98, y = 75.46, faction = "AH" }, { npc = 265756, npcName = "Genn Fairweather", map = 2521, x = 53.83, y = 81.33, faction = "AH" } } },
+					},
+				},
+				{
+					title = "Fly to Light's Hope Chapel",
+					goals = {
+						{ t = "goto", text = "Chillwind Camp flight master", map = 1422, x = 42.9, y = 85, f = "e" },
+						{ t = "fly", location = "Light's Hope Chapel", node = 67 },
+					},
+				},
+				{
+					title = "Light's Hope Chapel",
+					goals = {
+						{ t = "turnin", quest = 5210, title = "Brother Carlin", npc = 11063, npcName = "Carlin Redpath", map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+						{ t = "accept", quest = 5168, title = "Heroes of Darrowshire", npc = 11063, npcName = "Carlin Redpath", minLevel = 50, qlvl = 56, pre = { 5210 }, preTitles = { [5210] = "Brother Carlin" }, map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+						{ t = "accept", quest = 5181, title = "Villains of Darrowshire", npc = 11063, npcName = "Carlin Redpath", minLevel = 50, qlvl = 57, pre = { 5210 }, preTitles = { [5210] = "Brother Carlin" }, map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+					},
+				},
+				{
+					title = "{npc:10304}",
+					note = "Ride north-west to Quel'Lithien Lodge, at the edge of the Plaguewood.",
+					goals = {
+						{ t = "turnin", quest = 5245, title = "Troubled Spirits of Kel'Theril", npc = 10304, npcName = "Aurora Skycaller", map = 1423, x = 46.49, y = 16.03, z = 98.2 },
+					},
+				},
+				{
+					title = "{quest:5181}",
+					note = "Horgus' skull lies at Blackwood Lake and Marduk's sword in the Infectis Scar, each where ghosts fight; grown Plaguehounds hunt the plains between.",
+					label = "q5544",
+					goals = {
+						{ t = "collect", quest = 5181, title = "Villains of Darrowshire", item = 12956, itemName = "Skull of Horgus", count = 1, oi = 1, map = 1423, x = 44.34, y = 41.18, note = "{item:12956}; underwater", from = "Horgus' Skull", fromKind = "object", fromId = 176208 },
+						{ t = "kill", quest = 5542, title = "Demon Dogs", target = "Plaguehound", npc = 8597, count = 20, oi = 2, map = 1423, x = 42.74, y = 46.68, z = 77, spots = { { x = 42.7, y = 46.7, z = 77, r = 51, n = 1 }, { x = 40.9, y = 52.7, r = 51, n = 2 }, { x = 46.2, y = 51.8, z = 75.4, r = 51, n = 3 }, { x = 50.2, y = 50.1, r = 51, n = 2 }, { x = 56.8, y = 48, r = 51, n = 2 }, { x = 62.3, y = 51.3, z = 77.5, r = 51, n = 1 }, { x = 64.3, y = 45, z = 76.4, r = 51, n = 1 }, { x = 67.3, y = 54.2, r = 64, n = 3 }, { x = 66.3, y = 59.5, r = 61, n = 4 }, { x = 70.3, y = 60.4, r = 51, n = 2 }, { x = 61.8, y = 61.6, z = 86.5, r = 51, n = 1 }, { x = 57.8, y = 58.4, r = 51, n = 3 }, { x = 47.4, y = 47.2, r = 65, n = 5, alt = true }, { x = 56.3, y = 51, z = 73.9, r = 51, n = 1, alt = true }, { x = 59.7, y = 49.1, z = 119.3, r = 51, n = 1, alt = true }, { x = 60.4, y = 55.2, r = 51, n = 2, alt = true } }, spread = true },
+						{ t = "collect", quest = 5544, title = "Carrion Grubbage", item = 13853, itemName = "Slab of Carrion Worm Meat", count = 15, oi = 1, map = 1423, x = 44.06, y = 49.17, spots = { { x = 46.5, y = 46.8, r = 113, n = 7 }, { x = 33.4, y = 60, r = 105, n = 4 }, { x = 38.4, y = 78.1, r = 70, n = 1 }, { x = 55.1, y = 73.4, r = 70, n = 2 }, { x = 69.4, y = 59.6, r = 70, n = 3 }, { x = 65.9, y = 26.1, r = 70, n = 1 }, { x = 42.4, y = 21.3, r = 70, n = 1 }, { x = 27.4, y = 34.8, r = 72, n = 4 }, { x = 14.9, y = 21.6, r = 70, n = 2 }, { x = 4.5, y = 36.6, r = 70, n = 3 }, { x = 15.5, y = 56.4, r = 80, n = 3 }, { x = 20.9, y = 79.8, r = 70, n = 2 }, { x = 42.4, y = 53.3, r = 88, n = 5, alt = true }, { x = 51.6, y = 51.5, r = 70, n = 1, alt = true }, { x = 49.4, y = 40.4, r = 70, n = 2, alt = true }, { x = 52.1, y = 46.1, r = 70, n = 4, alt = true }, { x = 36.3, y = 56.2, r = 70, n = 2, alt = true }, { x = 44.6, y = 35.1, r = 70, n = 2, alt = true }, { x = 39.5, y = 61.7, r = 70, n = 2, alt = true }, { x = 39.8, y = 32.5, r = 101, n = 4, alt = true }, { x = 42.6, y = 67.5, r = 93, n = 3, alt = true }, { x = 48.3, y = 67.6, r = 77, n = 4, alt = true }, { x = 47.4, y = 29.7, r = 91, n = 4, alt = true }, { x = 54.9, y = 36.4, r = 70, n = 1, alt = true }, { x = 59.3, y = 49.9, r = 74, n = 4, alt = true }, { x = 59.5, y = 55.4, r = 118, n = 5, alt = true }, { x = 35.7, y = 70.7, r = 70, n = 2, alt = true }, { x = 27.4, y = 53.4, r = 70, n = 1, alt = true }, { x = 28.1, y = 60.6, r = 109, n = 4, alt = true }, { x = 59.8, y = 61.3, r = 79, n = 3, alt = true }, { x = 30.6, y = 31.9, r = 70, n = 1, alt = true }, { x = 54.4, y = 26.2, r = 114, n = 6, alt = true }, { x = 62.1, y = 42.5, r = 90, n = 3, alt = true }, { x = 61.1, y = 36.1, r = 80, n = 4, alt = true }, { x = 26.2, y = 66.5, r = 70, n = 1, alt = true }, { x = 28.8, y = 71.6, r = 104, n = 3, alt = true }, { x = 60.3, y = 27.7, r = 70, n = 2, alt = true }, { x = 62.3, y = 68, r = 90, n = 3, alt = true }, { x = 53, y = 18.7, r = 70, n = 2, alt = true }, { x = 65.6, y = 60.2, r = 92, n = 3, alt = true }, { x = 58.2, y = 21.7, r = 90, n = 5, alt = true }, { x = 67.3, y = 51.4, r = 70, n = 2, alt = true }, { x = 64.8, y = 31.8, r = 70, n = 1, alt = true }, { x = 19.4, y = 60.7, r = 91, n = 3, alt = true }, { x = 19.1, y = 31.4, r = 70, n = 1, alt = true }, { x = 18.9, y = 67.9, r = 70, n = 2, alt = true }, { x = 12.9, y = 65.2, r = 114, n = 5, alt = true }, { x = 7.3, y = 48.5, r = 70, n = 1, alt = true } }, spread = true, from = "Carrion Grub", fromKind = "npc", fromAlso = "Carrion Devourer", fromId = 8603, fromAlsoId = 8605, fromNpcs = { { npc = 8603, npcName = "Carrion Grub" }, { npc = 8605, npcName = "Carrion Devourer" } } },
+						{ t = "collect", quest = 5181, title = "Villains of Darrowshire", item = 12957, itemName = "Shattered Sword of Marduk", count = 1, oi = 2, map = 1423, x = 46.86, y = 55.43, from = "Shattered Sword of Marduk", fromKind = "object", fromId = 176209 },
+					},
+				},
+				{
+					title = "{zone:1423}: kill these as you meet them",
+					note = "Ride west to Terrordale. Plaguehound Runts, Plaguebats and Carrion Grubs roam its woods; fill the {item:15042} at the big termite mounds and kill the Frenzied Plaguehounds further north.",
+					goals = {
+						{ t = "kill", quest = 5543, title = "Blood Tinged Skies", target = "Plaguebat", npc = 8600, count = 30, oi = 1, map = 1423, x = 47.8, y = 64.37, z = 90.5, spots = { { x = 48.3, y = 66.5, r = 72, n = 7 }, { x = 53.5, y = 74.2, r = 50, n = 3 }, { x = 57.3, y = 65.5, z = 86.8, r = 50, n = 1 }, { x = 64, y = 71.7, r = 50, n = 2 }, { x = 40.4, y = 60, r = 52, n = 3 }, { x = 30.7, y = 59.3, z = 121.1, r = 50, n = 3 }, { x = 24.5, y = 59.1, z = 104.9, r = 73, n = 6 }, { x = 18, y = 52.1, z = 103.6, r = 50, n = 1 }, { x = 12.6, y = 66.8, r = 74, n = 6 }, { x = 21.1, y = 80.1, r = 50, n = 2 }, { x = 28.2, y = 71.7, r = 75, n = 6 }, { x = 38.5, y = 76.3, z = 156.5, r = 50, n = 1 }, { x = 44.6, y = 67.5, r = 61, n = 4, alt = true }, { x = 40.8, y = 73.3, z = 150, r = 50, n = 1, alt = true }, { x = 56.4, y = 72.7, z = 84.2, r = 50, n = 1, alt = true }, { x = 37.2, y = 64.7, r = 50, n = 2, alt = true }, { x = 36.8, y = 71.4, r = 63, n = 5, alt = true }, { x = 60.3, y = 68.2, z = 93.6, r = 50, n = 1, alt = true }, { x = 35.6, y = 57.9, r = 68, n = 4, alt = true }, { x = 32.1, y = 72.1, z = 108.9, r = 50, n = 1, alt = true }, { x = 29.6, y = 63.1, r = 84, n = 4, alt = true }, { x = 28.4, y = 58.4, z = 110.6, r = 50, n = 1, alt = true }, { x = 26.4, y = 54.1, z = 134, r = 50, n = 1, alt = true }, { x = 23, y = 55.4, r = 50, n = 2, alt = true }, { x = 21.3, y = 75.2, r = 64, n = 3, alt = true }, { x = 18.4, y = 56.2, r = 67, n = 3, alt = true }, { x = 15.8, y = 68.3, r = 50, n = 3, alt = true }, { x = 15, y = 58.8, r = 50, n = 3, alt = true }, { x = 14.7, y = 63.8, r = 50, n = 3, alt = true }, { x = 13.5, y = 55.1, r = 52, n = 3, alt = true } }, spread = true },
+						{ t = "kill", quest = 5542, title = "Demon Dogs", target = "Plaguehound Runt", npc = 8596, count = 20, oi = 1, map = 1423, x = 46.41, y = 64.6, z = 89.6, spots = { { x = 45.2, y = 65.5, r = 73, n = 3 }, { x = 38.9, y = 74.2, z = 175, r = 59, n = 1 }, { x = 30.8, y = 70.5, z = 120.8, r = 59, n = 1 }, { x = 19.4, y = 68.2, z = 78.2, r = 59, n = 1 }, { x = 11.9, y = 67, r = 84, n = 5 }, { x = 13.1, y = 54, r = 59, n = 4 }, { x = 5.8, y = 44.1, r = 61, n = 3 }, { x = 3.9, y = 35.2, z = 62.9, r = 59, n = 1 }, { x = 26.7, y = 51.5, z = 171.1, r = 59, n = 1 }, { x = 36.7, y = 55.2, z = 139.6, r = 59, n = 1 }, { x = 55.2, y = 62.8, z = 86.3, r = 59, n = 1 }, { x = 61.4, y = 69.4, r = 59, n = 3 }, { x = 50.4, y = 70.5, r = 59, n = 3, alt = true }, { x = 38.2, y = 68.5, z = 126.8, r = 59, n = 1, alt = true }, { x = 37.9, y = 61.8, r = 77, n = 4, alt = true }, { x = 26.8, y = 71.2, r = 59, n = 2, alt = true }, { x = 22, y = 55.1, r = 59, n = 2, alt = true }, { x = 20.5, y = 61, r = 59, n = 2, alt = true }, { x = 20.7, y = 75.4, z = 104.6, r = 59, n = 1, alt = true }, { x = 17.7, y = 55.5, r = 68, n = 4, alt = true }, { x = 16.6, y = 59.5, r = 59, n = 2, alt = true }, { x = 15.8, y = 67.4, r = 59, n = 4, alt = true }, { x = 8.1, y = 48.8, z = 73.7, r = 59, n = 1, alt = true } }, spread = true },
+					},
+				},
+				{
+					title = "{npc:12384}",
+					note = "Ride north to Terrordale. {npc:12384} lives in the ruined hut, and his receipt book lies in the ruined inn nearby.\n{npc:11140} stands by {npc:12384}' hut in Terrordale.",
+					goals = {
+						{ t = "accept", quest = 6164, title = "Augustus' Receipt Book", npc = 12384, npcName = "Augustus the Touched", minLevel = 50, qlvl = 55, map = 1423, x = 11.36, y = 26.37, z = 109.7, note = "Inside" },
+						{ t = "turnin", quest = 5281, title = "The Restless Souls", npc = 11140, npcName = "Egan", map = 1423, x = 11.36, y = 26.6, z = 109.7, note = "Inside" },
+					},
+				},
+				{
+					title = "{npc:12384}",
+					goals = {
+						{ t = "collect", quest = 6164, title = "Augustus' Receipt Book", item = 15884, itemName = "Augustus' Receipt Book", count = 1, oi = 1, map = 1423, x = 14, y = 24.2, note = "Upstairs", from = "Augustus' Receipt Book", fromKind = "object", fromId = 177789 },
+						{ t = "turnin", quest = 6164, title = "Augustus' Receipt Book", npc = 12384, npcName = "Augustus the Touched", map = 1423, x = 11.36, y = 26.37, z = 109.7, note = "Inside" },
+						{ t = "kill", quest = 5542, title = "Demon Dogs", target = "Frenzied Plaguehound", npc = 8598, count = 5, oi = 3, map = 1423, x = 16.72, y = 20.39, z = 123.2, spots = { { x = 16.5, y = 18.9, z = 126.1, r = 58, n = 5 }, { x = 19.5, y = 28.2, r = 42, n = 3 }, { x = 26.9, y = 33.4, r = 42, n = 2 }, { x = 40, y = 30.5, z = 102.9, r = 81, n = 6 }, { x = 45.5, y = 24.5, r = 48, n = 3 }, { x = 50.5, y = 14.9, z = 114.3, r = 42, n = 2 }, { x = 59.3, y = 19.9, z = 100.4, r = 42, n = 1 }, { x = 55.1, y = 29.3, r = 45, n = 3 }, { x = 54.8, y = 39.3, z = 81, r = 42, n = 2 }, { x = 49.1, y = 37.7, z = 79.3, r = 42, n = 1 }, { x = 61.1, y = 39.2, r = 43, n = 2 }, { x = 63.6, y = 32.2, r = 47, n = 3 }, { x = 26.3, y = 29.4, z = 96.3, r = 42, n = 1, alt = true }, { x = 29.8, y = 33.5, r = 42, n = 3, alt = true }, { x = 42.3, y = 23.5, r = 42, n = 2, alt = true }, { x = 43.6, y = 32.3, z = 95.8, r = 47, n = 4, alt = true }, { x = 44.5, y = 28.3, z = 96, r = 42, n = 1, alt = true }, { x = 45.8, y = 31.5, z = 90.2, r = 42, n = 4, alt = true }, { x = 45.4, y = 35, z = 89.4, r = 42, n = 1, alt = true }, { x = 48.7, y = 23, r = 45, n = 4, alt = true }, { x = 50.7, y = 27.5, z = 92.4, r = 42, n = 1, alt = true }, { x = 52.2, y = 22.3, r = 42, n = 2, alt = true }, { x = 54.1, y = 25, r = 44, n = 3, alt = true }, { x = 54.6, y = 18.2, z = 105.3, r = 42, n = 1, alt = true }, { x = 55.3, y = 21.4, z = 119.8, r = 42, n = 1, alt = true }, { x = 56.1, y = 35.3, r = 68, n = 3, alt = true }, { x = 57.9, y = 25.9, r = 57, n = 4, alt = true }, { x = 60.4, y = 29.8, r = 42, n = 2, alt = true }, { x = 61.5, y = 35.3, r = 42, n = 3, alt = true } }, spread = true, note = "{npc:8598}, 170 yd north-east" },
+					},
+				},
+				{
+					title = "Plaguewood: kill these as you meet them",
+					goals = {
+						{ t = "collect", quest = 5903, title = "A Plague Upon Thee", item = 15043, itemName = "Plagueland Termites", count = 100, oi = 1, map = 1423, x = 16.67, y = 20.58, spots = { { x = 18.6, y = 20.4, r = 75, n = 5 }, { x = 15.9, y = 26.8, r = 57, n = 1 }, { x = 22.1, y = 28.9, r = 94, n = 6 }, { x = 27.8, y = 29.1, r = 57, n = 2 }, { x = 32.7, y = 29.3, r = 57, n = 3 }, { x = 36.9, y = 31.9, r = 60, n = 3 }, { x = 37.5, y = 24.9, r = 102, n = 7 }, { x = 39, y = 19.8, r = 71, n = 4 }, { x = 42.2, y = 24, r = 57, n = 1 }, { x = 34.7, y = 18.9, r = 65, n = 4 }, { x = 30, y = 18.5, r = 57, n = 3 }, { x = 25.5, y = 16.3, r = 57, n = 2 }, { x = 18.5, y = 16, r = 75, n = 4, alt = true }, { x = 22.3, y = 17.8, r = 57, n = 1, alt = true }, { x = 22.9, y = 24.2, r = 57, n = 2, alt = true }, { x = 29, y = 23, r = 95, n = 4, alt = true } }, spread = true, from = "Large Termite Mound", fromKind = "object", fromId = 177464 },
+						{ t = "kill", quest = 5542, title = "Demon Dogs", target = "Frenzied Plaguehound", npc = 8598, count = 5, oi = 3, map = 1423, x = 16.72, y = 20.39, z = 123.2, spots = { { x = 16.5, y = 18.9, z = 126.1, r = 58, n = 5 }, { x = 19.5, y = 28.2, r = 42, n = 3 }, { x = 26.9, y = 33.4, r = 42, n = 2 }, { x = 40, y = 30.5, z = 102.9, r = 81, n = 6 }, { x = 45.5, y = 24.5, r = 48, n = 3 }, { x = 50.5, y = 14.9, z = 114.3, r = 42, n = 2 }, { x = 59.3, y = 19.9, z = 100.4, r = 42, n = 1 }, { x = 55.1, y = 29.3, r = 45, n = 3 }, { x = 54.8, y = 39.3, z = 81, r = 42, n = 2 }, { x = 49.1, y = 37.7, z = 79.3, r = 42, n = 1 }, { x = 61.1, y = 39.2, r = 43, n = 2 }, { x = 63.6, y = 32.2, r = 47, n = 3 }, { x = 26.3, y = 29.4, z = 96.3, r = 42, n = 1, alt = true }, { x = 29.8, y = 33.5, r = 42, n = 3, alt = true }, { x = 42.3, y = 23.5, r = 42, n = 2, alt = true }, { x = 43.6, y = 32.3, z = 95.8, r = 47, n = 4, alt = true }, { x = 44.5, y = 28.3, z = 96, r = 42, n = 1, alt = true }, { x = 45.8, y = 31.5, z = 90.2, r = 42, n = 4, alt = true }, { x = 45.4, y = 35, z = 89.4, r = 42, n = 1, alt = true }, { x = 48.7, y = 23, r = 45, n = 4, alt = true }, { x = 50.7, y = 27.5, z = 92.4, r = 42, n = 1, alt = true }, { x = 52.2, y = 22.3, r = 42, n = 2, alt = true }, { x = 54.1, y = 25, r = 44, n = 3, alt = true }, { x = 54.6, y = 18.2, z = 105.3, r = 42, n = 1, alt = true }, { x = 55.3, y = 21.4, z = 119.8, r = 42, n = 1, alt = true }, { x = 56.1, y = 35.3, r = 68, n = 3, alt = true }, { x = 57.9, y = 25.9, r = 57, n = 4, alt = true }, { x = 60.4, y = 29.8, r = 42, n = 2, alt = true }, { x = 61.5, y = 35.3, r = 42, n = 3, alt = true } }, spread = true },
+						{ t = "collect", quest = 5544, title = "Carrion Grubbage", item = 13853, itemName = "Slab of Carrion Worm Meat", count = 15, oi = 1, map = 1423, x = 14.68, y = 20.87, spots = { { x = 14.9, y = 21.6, r = 70, n = 2 }, { x = 30.6, y = 31.9, r = 70, n = 1 }, { x = 27.4, y = 53.4, r = 70, n = 1 }, { x = 42.4, y = 53.3, r = 88, n = 5 }, { x = 38.4, y = 78.1, r = 70, n = 1 }, { x = 55.1, y = 73.4, r = 70, n = 2 }, { x = 69.4, y = 59.6, r = 70, n = 3 }, { x = 64.8, y = 31.8, r = 70, n = 1 }, { x = 53, y = 18.7, r = 70, n = 2 }, { x = 7.3, y = 48.5, r = 70, n = 1 }, { x = 12.9, y = 65.2, r = 114, n = 5 }, { x = 20.9, y = 79.8, r = 70, n = 2 }, { x = 19.1, y = 31.4, r = 70, n = 1, alt = true }, { x = 4.5, y = 36.6, r = 70, n = 3, alt = true }, { x = 27.4, y = 34.8, r = 72, n = 4, alt = true }, { x = 15.5, y = 56.4, r = 80, n = 3, alt = true }, { x = 39.8, y = 32.5, r = 101, n = 4, alt = true }, { x = 19.4, y = 60.7, r = 91, n = 3, alt = true }, { x = 42.4, y = 21.3, r = 70, n = 1, alt = true }, { x = 28.1, y = 60.6, r = 109, n = 4, alt = true }, { x = 44.6, y = 35.1, r = 70, n = 2, alt = true }, { x = 18.9, y = 67.9, r = 70, n = 2, alt = true }, { x = 36.3, y = 56.2, r = 70, n = 2, alt = true }, { x = 33.4, y = 60, r = 105, n = 4, alt = true }, { x = 26.2, y = 66.5, r = 70, n = 1, alt = true }, { x = 47.4, y = 29.7, r = 91, n = 4, alt = true }, { x = 46.5, y = 46.8, r = 113, n = 7, alt = true }, { x = 28.8, y = 71.6, r = 104, n = 3, alt = true }, { x = 39.5, y = 61.7, r = 70, n = 2, alt = true }, { x = 49.4, y = 40.4, r = 70, n = 2, alt = true }, { x = 35.7, y = 70.7, r = 70, n = 2, alt = true }, { x = 54.4, y = 26.2, r = 114, n = 6, alt = true }, { x = 52.1, y = 46.1, r = 70, n = 4, alt = true }, { x = 54.9, y = 36.4, r = 70, n = 1, alt = true }, { x = 42.6, y = 67.5, r = 93, n = 3, alt = true }, { x = 51.6, y = 51.5, r = 70, n = 1, alt = true }, { x = 58.2, y = 21.7, r = 90, n = 5, alt = true }, { x = 48.3, y = 67.6, r = 77, n = 4, alt = true }, { x = 60.3, y = 27.7, r = 70, n = 2, alt = true }, { x = 61.1, y = 36.1, r = 80, n = 4, alt = true }, { x = 59.3, y = 49.9, r = 74, n = 4, alt = true }, { x = 62.1, y = 42.5, r = 90, n = 3, alt = true }, { x = 59.5, y = 55.4, r = 118, n = 5, alt = true }, { x = 65.9, y = 26.1, r = 70, n = 1, alt = true }, { x = 59.8, y = 61.3, r = 79, n = 3, alt = true }, { x = 67.3, y = 51.4, r = 70, n = 2, alt = true }, { x = 62.3, y = 68, r = 90, n = 3, alt = true }, { x = 65.6, y = 60.2, r = 92, n = 3, alt = true } }, spread = true, from = "Carrion Grub", fromKind = "npc", fromAlso = "Carrion Devourer", fromId = 8603, fromAlsoId = 8605, fromNpcs = { { npc = 8605, npcName = "Carrion Devourer" }, { npc = 8603, npcName = "Carrion Grub" } } },
+					},
+				},
+				{
+					title = "{npc:1855}",
+					note = "Cross the river west to {npc:1855}'s hut.",
+					goals = {
+						{ t = "turnin", quest = 5543, title = "Blood Tinged Skies", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+						{ t = "turnin", quest = 5544, title = "Carrion Grubbage", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+						{ t = "turnin", quest = 5542, title = "Demon Dogs", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+						{ t = "accept", quest = 5742, title = "Redemption", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 56, preAll = { 5542, 5543, 5544 }, preTitles = { [5542] = "Demon Dogs", [5543] = "Blood Tinged Skies", [5544] = "Carrion Grubbage" }, map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+					},
+				},
+				{
+					title = "{quest:5742}",
+					goals = {
+						{ t = "kill", quest = 5742, title = "Redemption", target = "Tirion Fordring", npc = 1855, oi = 1, map = 1423, x = 5.2, y = 35.6, z = 72.7 },
+					},
+				},
+				{
+					title = "{npc:1855}",
+					goals = {
+						{ t = "turnin", quest = 5742, title = "Redemption", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7, note = "Listen to his story" },
+						{ t = "accept", quest = 5781, title = "Of Forgotten Memories", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 57, pre = { 5742 }, preTitles = { [5742] = "Redemption" }, map = 1423, x = 5.16, y = 35.57, z = 72.7, optional = true, note = "{npc:11886} is elite: grouping up is advised" },
+					},
+				},
+				{
+					title = "{item:12954}",
+					note = "{item:12954} lies in the town hall of Hearthglen, west of {npc:1855}: the Scarlet guards stand close together.",
+					goals = {
+						{ t = "collect", quest = 5168, title = "Heroes of Darrowshire", item = 12954, itemName = "Davil's Libram", count = 1, oi = 1, map = 1422, x = 42.52, y = 18.99, f = "e", note = "{item:12954}; inside", from = "Davil's Libram", fromKind = "object", fromId = 176206 },
+					},
+				},
+				{
+					title = "{item:12955}",
+					note = "{item:12955} lies east of the barn at Gahrron's Withering.",
+					goals = {
+						{ t = "collect", quest = 5168, title = "Heroes of Darrowshire", item = 12955, itemName = "Redpath's Shield", count = 1, oi = 2, map = 1422, x = 63.79, y = 57.19, f = "e", from = "Redpath's Shield", fromKind = "object", fromId = 176207 },
+					},
+				},
+				{
+					title = "{zone:1423}",
+					goals = {
+						{ t = "goto", text = "{zone:1423}", map = 1423, x = 27.3, y = 85.2, f = "e" },
+					},
+				},
+				{
+					title = "The Undercroft",
+					note = "Cross the river east to the Undercroft, the crypt in the south-west of the zone. The {object:177667} lies inside: its key is on {npc:12248} in the far north-east, done in the next guide.",
+					goals = {
+						{ t = "accept", quest = 6024, title = "Hameya's Plea", object = 177667, objName = "Torn Scroll", minLevel = 54, qlvl = 60, map = 1423, x = 22.9, y = 72.96, z = 66.8, note = "{object:177667}, below ground" },
+					},
+				},
+				{
+					title = "{zone:1425}",
+					goals = {
+						{ t = "goto", text = "{zone:1425}", map = 1425, x = 11.1, y = 46.1, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Southshore",
+					goals = {
+						{ t = "goto", text = "Aerie Peak flight master", map = 1425, x = 11.1, y = 46.1, f = "e" },
+						{ t = "fly", location = "Southshore", node = 14 },
+					},
+				},
+				{
+					title = "{object:176370}",
+					goals = {
+						{ t = "goto", text = "{object:176370}", map = 1424, x = 50.6, y = 69.9, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Rut'theran Village",
+					goals = {
+						{ t = "goto", text = "Auberdine flight master", map = 1439, x = 36.4, y = 45.6, f = "e" },
+						{ t = "fly", location = "Rut'theran Village", node = 27 },
+					},
+				},
+				{
+					title = "{object:176498}",
+					goals = {
+						{ t = "goto", text = "{object:176498}", map = 1438, x = 55.9, y = 89.3, f = "e" },
+					},
+				},
+				{
+					title = "The Temple Gardens",
+					note = "{npc:10878} and {npc:7740} stand by the Temple of the Moon; fill {item:11682} at the moonwell inside.",
+					goals = {
+						{ t = "accept", quest = 1047, title = "The New Frontier", npc = 10878, npcName = "Herald Moonstalker", minLevel = 54, qlvl = 55, closedBy = { 1015, 1019 }, preTitles = { [1015] = "The New Frontier", [1019] = "The New Frontier" }, map = 1457, x = 47.81, y = 81.97, z = 1335.7, f = "e" },
+						{ t = "accept", quest = 4493, title = "March of the Silithid", npc = 7740, npcName = "Gracina Spiritmight", minLevel = 50, qlvl = 53, pre = { 162 }, preTitles = { [162] = "Rise of the Silithid" }, map = 1457, x = 41.83, y = 85.62, z = 1354.9, f = "e", note = "{npc:7740}: keep it for Gadgetzan" },
+						{ t = "use", quest = 4441, title = "Felbound Ancients", item = 11682, itemName = "Eridan's Vial", oi = 1, map = 1457, x = 39.2, y = 85.6, f = "e" },
+						{ t = "collect", quest = 4441, title = "Felbound Ancients", item = 5646, itemName = "Vial of Blessed Water", count = 1, oi = 1, map = 1457, x = 39.2, y = 85.6, f = "e", from = "Temple of the Moon Fountain", fromKind = "object", fromId = 138498 },
+					},
+				},
+				{
+					title = "{zone:1457}",
+					note = "The portal in Rut'theran Village leads up to {zone:1457}.",
+					goals = {
+						{ t = "turnin", quest = 3764, title = "Un'Goro Soil", npc = 9047, npcName = "Jenal", map = 1457, x = 31.49, y = 8.23, z = 1322.2, f = "e", note = "{npc:9047}, in the Cenarion Enclave" },
+						{ t = "accept", quest = 3781, title = "Morrowgrain Research", npc = 3516, npcName = "Arch Druid Fandral Staghelm", minLevel = 47, qlvl = 50, pre = { 3764 }, preTitles = { [3764] = "Un'Goro Soil" }, map = 1457, x = 34.81, y = 9.26, z = 1367, f = "e" },
+						{ t = "turnin", quest = 1047, title = "The New Frontier", npc = 3516, npcName = "Arch Druid Fandral Staghelm", map = 1457, x = 34.81, y = 9.26, z = 1367, f = "e" },
+						{ t = "accept", quest = 6761, title = "The New Frontier", npc = 3516, npcName = "Arch Druid Fandral Staghelm", minLevel = 54, qlvl = 55, pre = { 1015, 1019, 1047 }, preTitles = { [1015] = "The New Frontier", [1019] = "The New Frontier", [1047] = "The New Frontier" }, map = 1457, x = 34.81, y = 9.26, z = 1367, f = "e" },
+						{ t = "turnin", quest = 3781, title = "Morrowgrain Research", npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e" },
+						{ t = "turnin", quest = 4986, title = "Glyphed Oaken Branch", npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e" },
+						{ t = "train", class = true, only = { classes = { "DRUID" } }, note = "{zone:1455}, where the next guide trains, has no druid trainer", candidates = { { npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 3602, npcName = "Kal", map = 1438, x = 55.95, y = 61.56, z = 1293.8, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 3597, npcName = "Mardant Strongoak", map = 1438, x = 58.63, y = 40.29, z = 1381, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 5504, npcName = "Sheldras Moontree", map = 1453, x = 35.84, y = 67.38, z = 92.6, faction = "A", classes = { "DRUID" } }, { npc = 251373, npcName = "Xyton Silverwind", map = 2521, x = 41.66, y = 23.33, faction = "AH", classes = { "DRUID" } }, { npc = 252359, npcName = "Lotheluum Starbreeze", map = 2521, x = 63.99, y = 75.08, faction = "AH", classes = { "DRUID" } }, { npc = 254081, npcName = "Naeluna Swiftmend", map = 2521, x = 45.16, y = 44.22, faction = "AH", classes = { "DRUID" } } } },
+						{ t = "accept", quest = 3785, title = "Morrowgrain Research", npc = 4217, npcName = "Mathrengyl Bearwalker", minLevel = 47, qlvl = 50, pre = { 3781 }, preTitles = { [3781] = "Morrowgrain Research" }, map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", optional = true, note = "Ten {item:11040} from the {item:11020}" },
+						{ t = "turnin", quest = 3785, title = "Morrowgrain Research", npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", optional = true },
+						{ t = "accept", quest = 3803, title = "Morrowgrain to Darnassus", npc = 4217, npcName = "Mathrengyl Bearwalker", minLevel = 47, qlvl = 55, pre = { 3785 }, preTitles = { [3785] = "Morrowgrain Research" }, map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", optional = true },
+						{ t = "turnin", quest = 6761, title = "The New Frontier", npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e" },
+						{ t = "turnin", quest = 3803, title = "Morrowgrain to Darnassus", npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", optional = true },
+						{ t = "accept", quest = 6762, title = "Rabine Saturna", npc = 4217, npcName = "Mathrengyl Bearwalker", minLevel = 54, qlvl = 55, pre = { 6761 }, preTitles = { [6761] = "The New Frontier" }, map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", note = "{quest:6762} in {zone:1450}: keep it" },
+					},
+				},
+				{
+					title = "Portal to {zone:1438}",
+					goals = {
+						{ t = "goto", text = "Portal to {zone:1438}", map = 1457, x = 29.1, y = 41.2, f = "e" },
+					},
+				},
+				{
+					title = "Rut'theran Village",
+					goals = {
+						{ t = "turnin", quest = 978, title = "Moontouched Wildkin", npc = 7916, npcName = "Erelas Ambersky", map = 1438, x = 55.5, y = 92.05, z = 14.2, f = "e" },
+						{ t = "accept", quest = 979, title = "Find Ranshalla", npc = 7916, npcName = "Erelas Ambersky", minLevel = 52, qlvl = 57, pre = { 978 }, preTitles = { [978] = "Moontouched Wildkin" }, map = 1438, x = 55.5, y = 92.05, z = 14.2, f = "e", note = "Ranshalla in {zone:1452}: keep it" },
+					},
+				},
+				{
+					title = "{object:152576}",
+					note = "From Rut'theran Village, fly to {object:152576}.",
+					goals = {
+						{ t = "fly", location = "Feathermoon", node = 41 },
+						{ t = "accept", quest = 3445, title = "The Sunken Temple", npc = 7900, npcName = "Angelas Moonbreeze", minLevel = 46, qlvl = 51, map = 1444, x = 31.83, y = 45.61, z = 13.8, f = "e", note = "{npc:7900}: keep it for {zone:1446}" },
+					},
+				},
+				{
+					title = "{object:152576}",
+					when = { { k = "group", q = 2944 } },
+					goals = {
+						{ t = "turnin", quest = 2943, title = "Return to Troyas", npc = 7764, npcName = "Troyas Moonbreeze", map = 1444, x = 31.78, y = 45.5, z = 13.7, f = "e" },
+					},
+				},
+				{
+					title = "Boat to The Forgotten Coast",
+					goals = {
+						{ t = "goto", text = "Boat to The Forgotten Coast", map = 1444, x = 31, y = 39.8, f = "e" },
+					},
+				},
+				{
+					title = "{npc:14637}",
+					note = "Take the boat to the mainland and ride north-east to {npc:14637}'s camp by the {object:152574}.",
+					goals = {
+						{ t = "accept", quest = 7725, title = "Again With the Zapped Giants", npc = 14637, npcName = "Zorbin Fandazzle", minLevel = 45, qlvl = 55, pre = { 7003 }, preTitles = { [7003] = "Zapped Giants" }, map = 1444, x = 44.81, y = 43.42, z = 1.5, f = "e" },
+						{ t = "accept", quest = 7726, title = "Refuel for the Zapping", npc = 14637, npcName = "Zorbin Fandazzle", minLevel = 45, qlvl = 55, pre = { 7721 }, preTitles = { [7721] = "Fuel for the Zapping" }, map = 1444, x = 44.81, y = 43.42, z = 1.5, f = "e" },
+					},
+				},
+				{
+					title = "The Forgotten Coast: kill these as you meet them",
+					note = "The shrunken giants roam the {object:152574}; the sea elementals wade along the coast to the west.",
+					goals = {
+						{ t = "collect", quest = 7726, title = "Refuel for the Zapping", item = 18958, itemName = "Water Elemental Core", count = 6, oi = 1, map = 1444, x = 44.97, y = 46.29, f = "e", spots = { { x = 45, y = 46.3, r = 46, n = 1 }, { x = 45.4, y = 52, r = 46, n = 2 }, { x = 46.5, y = 56.2, r = 49, n = 5 }, { x = 46.7, y = 61.2, r = 46, n = 2 }, { x = 45.7, y = 65.3, r = 46, n = 2 }, { x = 43.6, y = 65.3, r = 46, n = 1 }, { x = 44.6, y = 68, r = 59, n = 3 }, { x = 48.2, y = 50, r = 64, n = 4 }, { x = 44.2, y = 39.1, r = 49, n = 4 }, { x = 40.4, y = 37.5, r = 55, n = 3 }, { x = 37.7, y = 33.3, r = 58, n = 3 }, { x = 34.6, y = 34.6, r = 66, n = 4 }, { x = 44.6, y = 49.1, r = 46, n = 2, alt = true }, { x = 47.1, y = 53.1, r = 56, n = 4, alt = true }, { x = 49.2, y = 52.4, r = 54, n = 4, alt = true }, { x = 41.9, y = 38.7, r = 46, n = 2, alt = true }, { x = 46.3, y = 59.6, r = 62, n = 4, alt = true }, { x = 37.2, y = 35.5, r = 78, n = 4, alt = true }, { x = 35.6, y = 36.6, r = 46, n = 1, alt = true }, { x = 46, y = 63.5, r = 47, n = 4, alt = true } }, spread = true, from = "Sea Elemental", fromKind = "npc", fromAlso = "Sea Spray", fromId = 5461, fromAlsoId = 5462, fromNpcs = { { npc = 5462, npcName = "Sea Spray" }, { npc = 5461, npcName = "Sea Elemental" } } },
+						{ t = "collect", quest = 7725, title = "Again With the Zapped Giants", item = 18956, itemName = "Miniaturization Residue", count = 10, oi = 1, map = 1444, x = 44.34, y = 46.61, f = "e", spots = { { x = 44.3, y = 46.6, r = 44, n = 1 }, { x = 42.5, y = 46.9, r = 44, n = 1 }, { x = 44.1, y = 49.6, r = 44, n = 2 }, { x = 45.2, y = 52.9, r = 44, n = 1 }, { x = 43.1, y = 53, r = 44, n = 1 }, { x = 46.3, y = 57.9, r = 44, n = 2 }, { x = 46.8, y = 62.2, r = 44, n = 1 }, { x = 45, y = 66.4, r = 44, n = 1 }, { x = 40.2, y = 38.7, r = 44, n = 1 }, { x = 38, y = 34.7, r = 44, n = 2 }, { x = 36.4, y = 36.1, r = 44, n = 2 }, { x = 34.5, y = 34, r = 44, n = 1 }, { x = 46.5, y = 59.6, r = 44, n = 1, alt = true }, { x = 45.3, y = 62.1, r = 44, n = 2, alt = true }, { x = 36.1, y = 33.4, r = 44, n = 1, alt = true }, { x = 40.8, y = 24.9, r = 44, n = 4, alt = true }, { x = 38.6, y = 23.9, r = 45, n = 4, alt = true }, { x = 40.1, y = 22.3, r = 68, n = 5, alt = true }, { x = 38.2, y = 21.5, r = 45, n = 4, alt = true }, { x = 38.1, y = 18.3, r = 44, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 14638, npcName = "Zapped Wave Strider" }, { npc = 14603, npcName = "Zapped Shore Strider" }, { npc = 14604, npcName = "Zapped Land Walker" }, { npc = 14639, npcName = "Zapped Deep Strider" }, { npc = 14640, npcName = "Zapped Cliff Giant" } } },
+						{ t = "use", quest = 7725, title = "Again With the Zapped Giants", item = 18904, itemName = "Zorbin's Ultra-Shrinker", oi = 1, map = 1444, x = 44.3, y = 46.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:14637}",
+					goals = {
+						{ t = "turnin", quest = 7725, title = "Again With the Zapped Giants", npc = 14637, npcName = "Zorbin Fandazzle", map = 1444, x = 44.81, y = 43.42, z = 1.5, f = "e" },
+						{ t = "turnin", quest = 7726, title = "Refuel for the Zapping", npc = 14637, npcName = "Zorbin Fandazzle", map = 1444, x = 44.81, y = 43.42, z = 1.5, f = "e" },
+					},
+				},
+				{
+					title = "{npc:7775}",
+					note = "{npc:7775}'s camp lies north of the {object:152574}. He sells the {item:11243} once he has his bait.",
+					goals = {
+						{ t = "turnin", quest = 4142, title = "A Visit to Gregan", npc = 7775, npcName = "Gregan Brewspewer", map = 1444, x = 45.12, y = 25.57, z = 62.8, f = "e" },
+						{ t = "collect", quest = 3909, title = "The Videre Elixir", item = 11243, itemName = "Videre Elixir", count = 1, oi = 1, map = 1444, x = 45.12, y = 25.57, f = "e", from = "Gregan Brewspewer", fromKind = "npc", fromFaction = "AH", fromId = 7775, fromNpcs = { { npc = 7775, npcName = "Gregan Brewspewer" } } },
+					},
+				},
+				{
+					title = "{zone:1444}",
+					goals = {
+						{ t = "goto", text = "{zone:1444}", map = 1444, x = 89.5, y = 45.9, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Theramore",
+					goals = {
+						{ t = "goto", text = "Thalanaar flight master", map = 1444, x = 89.5, y = 45.9, f = "e" },
+						{ t = "fly", location = "Theramore", node = 32 },
+					},
+				},
+				{
+					title = "{zone:1413}",
+					goals = {
+						{ t = "goto", text = "{zone:1413}", map = 1413, x = 65.8, y = 43.8, f = "e" },
+					},
+				},
+				{
+					title = "Ratchet",
+					note = "From Theramore, ride west into the {zone:1413} and north up the coast to Ratchet.",
+					goals = {
+						{ t = "turnin", quest = 5158, title = "Seeking Spiritual Aid", npc = 5901, npcName = "Islen Waterseer", map = 1413, x = 65.83, y = 43.78, z = 6, f = "e", note = "{npc:5901}, on the coast north of town" },
+						{ t = "accept", quest = 5159, title = "Cleansed Water Returns to Felwood", npc = 5901, npcName = "Islen Waterseer", minLevel = 48, qlvl = 54, pre = { 5158 }, preTitles = { [5158] = "Seeking Spiritual Aid" }, map = 1413, x = 65.83, y = 43.78, z = 6, f = "e", note = "For {zone:1448}: keep it" },
+						{ t = "getfp", npc = 16227, npcName = "Bragok", location = "Ratchet", node = 80, map = 1413, x = 63.08, y = 37.16, z = 11.8, f = "e" },
+						{ t = "sethome", npc = 6791, npcName = "Innkeeper Wiley", location = "Ratchet", map = 1413, x = 62.05, y = 39.41, z = 24, f = "e" },
+						{ t = "accept", quest = 4502, title = "Volcanic Activity", npc = 8496, npcName = "Liv Rizzlefix", minLevel = 49, qlvl = 55, map = 1413, x = 62.45, y = 38.73, z = 4.6, f = "e", note = "{npc:8496}: keep it for Un'Goro; inside" },
+					},
+				},
+				{
+					title = "Fly to Everlook",
+					goals = {
+						{ t = "goto", text = "Ratchet flight master", map = 1413, x = 63.1, y = 37.1, f = "e" },
+						{ t = "fly", location = "Everlook", node = 52 },
+					},
+				},
+				{
+					title = "{zone:1452}",
+					goals = {
+						{ t = "goto", text = "{zone:1452}", map = 1452, x = 31.3, y = 45.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9298}",
+					note = "Ride west along the road to the hot springs.",
+					goals = {
+						{ t = "turnin", quest = 3909, title = "The Videre Elixir", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+						{ t = "accept", quest = 3912, title = "Meet at the Grave", npc = 9298, npcName = "Donova Snowden", minLevel = 47, qlvl = 52, pre = { 3909 }, preTitles = { [3909] = "The Videre Elixir" }, map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e", note = "{npc:9299} in Gadgetzan: keep it" },
+					},
+				},
+				{
+					title = "{zone:1450}",
+					goals = {
+						{ t = "goto", text = "{zone:1450}", map = 1450, x = 51.7, y = 45.1, f = "e" },
+					},
+				},
+				{
+					title = "{quest:1123}",
+					note = "Walk into Timbermaw Hold and take the {zone:1450} branch of the tunnel to Nighthaven.",
+					goals = {
+						{ t = "turnin", quest = 6762, title = "Rabine Saturna", npc = 11801, npcName = "Rabine Saturna", map = 1450, x = 51.69, y = 45.1, z = 488.6, f = "e" },
+						{ t = "accept", quest = 5527, title = "A Reliquary of Purity", npc = 11801, npcName = "Rabine Saturna", minLevel = 56, qlvl = 60, map = 1450, x = 51.69, y = 45.1, z = 488.6, f = "e" },
+						{ t = "accept", quest = 1124, title = "Wasteland", npc = 11801, npcName = "Rabine Saturna", minLevel = 54, qlvl = 55, pre = { 1123, 6762 }, preTitles = { [1123] = "Rabine Saturna", [6762] = "Rabine Saturna" }, map = 1450, x = 51.69, y = 45.1, z = 488.6, f = "e", note = "For {zone:1451}: keep it" },
+					},
+				},
+				{
+					title = "Fly to Gadgetzan",
+					goals = {
+						{ t = "goto", text = "Ratchet flight master", map = 1413, x = 63.1, y = 37.1, f = "e" },
+						{ t = "fly", location = "Gadgetzan", node = 39 },
+					},
+				},
+				{
+					title = "Gadgetzan",
+					goals = {
+						{ t = "turnin", quest = 4493, title = "March of the Silithid", npc = 5594, npcName = "Alchemist Pestlezugg", map = 1446, x = 50.89, y = 26.96, z = 8.9, f = "e", note = "{npc:5594}, inside" },
+						{ t = "accept", quest = 4496, title = "Bungle in the Jungle", npc = 5594, npcName = "Alchemist Pestlezugg", minLevel = 50, qlvl = 53, pre = { 4493, 4494 }, preTitles = { [4493] = "March of the Silithid", [4494] = "March of the Silithid" }, map = 1446, x = 50.89, y = 26.96, z = 8.9, f = "e" },
+						{ t = "use", item = 12928, itemName = "Umi's Mechanical Yeti", text = "{item:12928}", map = 1446, x = 51.1, y = 26.9, f = "e", note = "On {npc:7583}" },
+						{ t = "kill", quest = 5163, title = "Are We There, Yeti?", target = "Sprinkle", npc = 7583, count = 1, oi = 2, map = 1446, x = 51.1, y = 26.9, z = 8.6, f = "e" },
+						{ t = "turnin", quest = 5538, title = "Mold Rhymes With...", npc = 5411, npcName = "Krinkle Goodsteel", map = 1446, x = 51.46, y = 28.81, z = 8.8, f = "e" },
+						{ t = "accept", quest = 5801, title = "Fire Plume Forged", npc = 5411, npcName = "Krinkle Goodsteel", minLevel = 55, qlvl = 57, pre = { 5538 }, preTitles = { [5538] = "Mold Rhymes With..." }, map = 1446, x = 51.46, y = 28.81, z = 8.8, f = "e", note = "For Chillwind Camp: keep it" },
+					},
+				},
+				{
+					title = "{npc:9299}",
+					note = "{npc:9299} waits at the graveyard just east of town; the gravestone stands nearby.",
+					goals = {
+						{ t = "turnin", quest = 3912, title = "Meet at the Grave", npc = 9299, npcName = "Gaeriyan", map = 1446, x = 53.92, y = 23.33, z = 31.5, f = "e" },
+						{ t = "accept", quest = 3913, title = "A Grave Situation", npc = 9299, npcName = "Gaeriyan", minLevel = 47, qlvl = 52, pre = { 3912 }, preTitles = { [3912] = "Meet at the Grave" }, map = 1446, x = 53.92, y = 23.33, z = 31.5, f = "e" },
+						{ t = "turnin", quest = 3913, title = "A Grave Situation", object = 148504, objName = "A Conspicuous Gravestone", map = 1446, x = 53.81, y = 29.06, z = 8.9, f = "e" },
+						{ t = "accept", quest = 3914, title = "Linken's Sword", object = 148504, objName = "A Conspicuous Gravestone", minLevel = 47, qlvl = 52, pre = { 3913 }, preTitles = { [3913] = "A Grave Situation" }, map = 1446, x = 53.81, y = 29.06, z = 8.9, f = "e" },
+					},
+				},
+				{
+					title = "Broken Pillar",
+					note = "Ride south-west to {npc:7771}'s camp at the Broken Pillar.",
+					goals = {
+						{ t = "turnin", quest = 3445, title = "The Sunken Temple", npc = 7771, npcName = "Marvon Rivetseeker", map = 1446, x = 52.71, y = 45.92, z = 17.8, f = "e" },
+						{ t = "accept", quest = 3444, title = "The Stone Circle", npc = 7771, npcName = "Marvon Rivetseeker", minLevel = 46, qlvl = 51, pre = { 3380, 3445 }, preTitles = { [3380] = "The Sunken Temple", [3445] = "The Sunken Temple" }, map = 1446, x = 52.71, y = 45.92, z = 17.8, f = "e", note = "{quest:3444} is in Ratchet" },
+					},
+				},
+				{
+					title = "{zone:1446}",
+					goals = {
+						{ t = "goto", text = "{zone:1446}", map = 1446, x = 51, y = 29.3, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Marshal's Refuge",
+					goals = {
+						{ t = "goto", text = "Gadgetzan flight master", map = 1446, x = 51, y = 29.3, f = "e" },
+						{ t = "fly", location = "Marshal's Refuge", node = 79 },
+					},
+				},
+				{
+					title = "{npc:8737}",
+					note = "Fly from Gadgetzan to Marshal's Refuge. {npc:8737}'s hut stands at the Lakkari Tar Pits, west of the refuge; J.D.\n{npc:9997}'s friend {npc:9999} has gone missing.",
+					goals = {
+						{ t = "turnin", quest = 3914, title = "Linken's Sword", npc = 8737, npcName = "Linken", map = 1449, x = 44.66, y = 8.1, z = -213.3, f = "e" },
+						{ t = "accept", quest = 3941, title = "A Gnome's Assistance", npc = 8737, npcName = "Linken", minLevel = 47, qlvl = 52, pre = { 3914 }, preTitles = { [3914] = "Linken's Sword" }, map = 1449, x = 44.66, y = 8.1, z = -213.3, f = "e" },
+						{ t = "accept", quest = 4492, title = "Lost!", npc = 9997, npcName = "Spraggle Frock", minLevel = 50, qlvl = 55, map = 1449, x = 43.62, y = 8.5, z = -203.8, f = "e" },
+						{ t = "accept", quest = 4501, title = "Beware of Pterrordax", object = 174682, objName = "Beware of Pterrordax", minLevel = 49, qlvl = 55, map = 1449, x = 43.53, y = 8.44, z = -202.6, f = "e", note = "The wooden sign beside {npc:9997}" },
+					},
+				},
+				{
+					title = "{zone:1451}",
+					goals = {
+						{ t = "goto", text = "{zone:1451}", map = 1451, x = 51.6, y = 38.6, f = "e" },
+					},
+				},
+				{
+					title = "Cenarion Hold",
+					note = "Ride out of the crater's north-western pass into {zone:1451} and on to Cenarion Hold. {npc:15189} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart.",
+					goals = {
+						{ t = "accept", quest = 8277, title = "Deadly Desert Venom", npc = 15189, npcName = "Beetix Ficklespragg", minLevel = 54, qlvl = 55, map = 1451, x = 51.61, y = 38.63, z = 55.1, f = "e" },
+						{ t = "sethome", npc = 15174, npcName = "Calandrath", location = "Cenarion Hold", map = 1451, x = 51.89, y = 39.16, z = 45.7, f = "e" },
+						{ t = "accept", quest = 8280, title = "Securing the Supply Lines", npc = 15191, npcName = "Windcaller Proudhorn", minLevel = 54, qlvl = 55, map = 1451, x = 51.15, y = 38.29, z = 42.2, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1451}: kill these as you meet them",
+					note = "Dredge Strikers dig in the dunes north-west of the hold; Stonelash Scorpids and Sand Skitterers roam all around.",
+					goals = {
+						{ t = "kill", quest = 8280, title = "Securing the Supply Lines", target = "Dredge Striker", npc = 11740, count = 15, oi = 1, map = 1451, x = 51.43, y = 31.98, z = 19.7, f = "e", spots = { { x = 53.9, y = 32.1, z = 7.7, r = 87, n = 4 }, { x = 57.2, y = 23.6, r = 55, n = 4 }, { x = 63.3, y = 22.1, r = 53, n = 3 }, { x = 67.5, y = 31.1, r = 49, n = 2 }, { x = 72.4, y = 37.5, r = 49, n = 2 }, { x = 67.5, y = 47.1, z = 5.1, r = 49, n = 1 }, { x = 60.2, y = 41.7, z = 4.2, r = 49, n = 1 }, { x = 43.6, y = 37.9, r = 66, n = 4 }, { x = 37.8, y = 34.4, r = 53, n = 4 }, { x = 32.7, y = 25.4, r = 49, n = 3 }, { x = 35.6, y = 17.1, r = 49, n = 2 }, { x = 55.3, y = 12.5, r = 59, n = 4 }, { x = 54.9, y = 28.4, r = 49, n = 2, alt = true }, { x = 59.9, y = 31.7, r = 70, n = 4, alt = true }, { x = 52.6, y = 18.4, r = 87, n = 7, alt = true }, { x = 61.2, y = 27.3, r = 49, n = 2, alt = true }, { x = 55.9, y = 17.7, z = 0.7, r = 49, n = 1, alt = true }, { x = 38.4, y = 28.5, r = 49, n = 2, alt = true }, { x = 63.8, y = 39.2, z = -0.1, r = 59, n = 3, alt = true }, { x = 59.9, y = 15.5, r = 69, n = 4, alt = true }, { x = 64.9, y = 44.4, r = 49, n = 2, alt = true }, { x = 34.3, y = 31.1, r = 49, n = 2, alt = true }, { x = 68.7, y = 40.8, r = 49, n = 2, alt = true }, { x = 70.6, y = 31.5, r = 49, n = 2, alt = true } }, spread = true },
+						{ t = "collect", quest = 8277, title = "Deadly Desert Venom", item = 20376, itemName = "Sand Skitterer Fang", count = 8, oi = 2, map = 1451, x = 51.05, y = 30.29, f = "e", spots = { { x = 52.8, y = 29.7, r = 63, n = 3 }, { x = 57.4, y = 22.5, r = 65, n = 4 }, { x = 63.9, y = 28.1, r = 74, n = 3 }, { x = 62.5, y = 44.3, r = 48, n = 2 }, { x = 73.1, y = 39, r = 48, n = 2 }, { x = 76.6, y = 29.4, r = 48, n = 2 }, { x = 57.4, y = 11, r = 48, n = 2 }, { x = 50.7, y = 15.3, r = 48, n = 3 }, { x = 38.7, y = 16.8, r = 48, n = 2 }, { x = 30.9, y = 25.9, r = 48, n = 2 }, { x = 38.5, y = 34.2, r = 48, n = 2 }, { x = 44.8, y = 41.8, r = 48, n = 2 }, { x = 52.9, y = 24.4, r = 48, n = 3, alt = true }, { x = 57.1, y = 27.4, r = 48, n = 3, alt = true }, { x = 58, y = 31.8, r = 48, n = 1, alt = true }, { x = 42.3, y = 35.1, r = 48, n = 1, alt = true }, { x = 56.1, y = 18.2, r = 97, n = 5, alt = true }, { x = 61, y = 31.6, r = 48, n = 2, alt = true }, { x = 53.7, y = 12.2, r = 48, n = 1, alt = true }, { x = 62.8, y = 40.4, r = 48, n = 3, alt = true }, { x = 64.4, y = 23.4, r = 48, n = 1, alt = true }, { x = 62.4, y = 17.4, r = 56, n = 4, alt = true }, { x = 36.4, y = 31.8, r = 52, n = 4, alt = true }, { x = 66.7, y = 40.7, r = 68, n = 3, alt = true }, { x = 35.2, y = 20.5, r = 76, n = 6, alt = true }, { x = 68.4, y = 31.8, r = 72, n = 4, alt = true }, { x = 68.6, y = 44.1, r = 53, n = 3, alt = true }, { x = 70.9, y = 35.4, r = 48, n = 2, alt = true }, { x = 74.3, y = 33.8, r = 48, n = 1, alt = true } }, spread = true, from = "Sand Skitterer", fromKind = "npc", fromId = 11738, fromNpcs = { { npc = 11738, npcName = "Sand Skitterer" } } },
+						{ t = "collect", quest = 8277, title = "Deadly Desert Venom", item = 20373, itemName = "Stonelash Scorpid Stinger", count = 8, oi = 1, map = 1451, x = 56.06, y = 30.24, f = "e", spots = { { x = 56.5, y = 32.2, r = 49, n = 3 }, { x = 55.3, y = 23.4, r = 46, n = 2 }, { x = 57.9, y = 12.3, r = 46, n = 2 }, { x = 63.9, y = 15.6, r = 46, n = 2 }, { x = 66.5, y = 30.9, r = 46, n = 2 }, { x = 61.1, y = 39.8, r = 46, n = 2 }, { x = 68.1, y = 45.2, r = 46, n = 2 }, { x = 76.2, y = 31.8, r = 46, n = 3 }, { x = 48.9, y = 13.4, r = 46, n = 1 }, { x = 37, y = 16.7, r = 46, n = 1 }, { x = 33.5, y = 28.9, r = 62, n = 5 }, { x = 43.4, y = 38.8, r = 57, n = 3 }, { x = 53, y = 29.1, r = 48, n = 3, alt = true }, { x = 59.9, y = 26.5, r = 68, n = 5, alt = true }, { x = 63.6, y = 31.7, r = 46, n = 4, alt = true }, { x = 60.4, y = 20.1, r = 76, n = 6, alt = true }, { x = 51.3, y = 19.6, r = 46, n = 1, alt = true }, { x = 64.3, y = 26.6, r = 80, n = 4, alt = true }, { x = 61.5, y = 43.4, r = 46, n = 2, alt = true }, { x = 65.7, y = 37.6, r = 46, n = 1, alt = true }, { x = 54.7, y = 14, r = 46, n = 2, alt = true }, { x = 66.1, y = 23.4, r = 46, n = 1, alt = true }, { x = 61.4, y = 14.9, r = 46, n = 2, alt = true }, { x = 65.1, y = 43.6, r = 46, n = 2, alt = true }, { x = 69.6, y = 39.7, r = 46, n = 3, alt = true }, { x = 39.9, y = 32, r = 46, n = 2, alt = true }, { x = 71.9, y = 36.2, r = 46, n = 2, alt = true }, { x = 40.2, y = 37.4, r = 46, n = 3, alt = true }, { x = 36.4, y = 27.7, r = 46, n = 2, alt = true }, { x = 36, y = 21.4, r = 71, n = 4, alt = true } }, spread = true, from = "Stonelash Scorpid", fromKind = "npc", fromId = 11735, fromNpcs = { { npc = 11735, npcName = "Stonelash Scorpid" } } },
+					},
+				},
+				{
+					title = "Level 56.89",
+					note = "If you skipped The {item:9328}, grind here to level 56.89 to stay on the route's plan.",
+					when = { { k = "group", neg = true, q = 2944 }, { k = "level", op = "<", n = 56, frac = 0.89 } },
+					goals = {
+						{ t = "goto", text = "{npc:11740}", map = 1451, x = 54.9, y = 31.2, f = "e" },
+						{ t = "level", level = 56, frac = 0.89, note = "grind on {npc:11740}" },
+					},
+				},
+				{
+					title = "Cenarion Hold",
+					note = "Follow the road south-west out of the pass to Cenarion Hold. {npc:15189} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart.",
+					goals = {
+						{ t = "accept", quest = 9415, title = "Report to Marshal Bluewall", npc = 17082, npcName = "Rifleman Torrig", minLevel = 1, qlvl = 60, map = 1451, x = 50.68, y = 34.71, z = 89.7, f = "e", note = "{npc:17082}, at the Alliance tents" },
+						{ t = "getfp", npc = 15177, npcName = "Cloud Skydancer", location = "Cenarion Hold", node = 73, map = 1451, x = 50.58, y = 34.45, z = 89.1, f = "e" },
+						{ t = "turnin", quest = 8277, title = "Deadly Desert Venom", npc = 15189, npcName = "Beetix Ficklespragg", map = 1451, x = 51.61, y = 38.63, z = 55.1, f = "e" },
+						{ t = "accept", quest = 8278, title = "Noggle's Last Hope", npc = 15189, npcName = "Beetix Ficklespragg", minLevel = 54, qlvl = 57, pre = { 8277 }, preTitles = { [8277] = "Deadly Desert Venom" }, map = 1451, x = 51.61, y = 38.63, z = 55.1, f = "e" },
+						{ t = "turnin", quest = 8280, title = "Securing the Supply Lines", npc = 15191, npcName = "Windcaller Proudhorn", map = 1451, x = 51.15, y = 38.29, z = 42.2, f = "e" },
+						{ t = "accept", quest = 8281, title = "Stepping Up Security", npc = 15191, npcName = "Windcaller Proudhorn", minLevel = 54, qlvl = 57, pre = { 8280 }, preTitles = { [8280] = "Securing the Supply Lines" }, map = 1451, x = 51.15, y = 38.29, z = 42.2, f = "e" },
+						{ t = "accept", quest = 8284, title = "The Twilight Mystery", npc = 15183, npcName = "Geologist Larksbane", minLevel = 54, qlvl = 58, map = 1451, x = 49.67, y = 37.46, z = 52.1, f = "e" },
+						{ t = "accept", quest = 8318, title = "Secret Communication", npc = 15306, npcName = "Bor Wildmane", minLevel = 57, qlvl = 60, map = 1451, x = 48.57, y = 37.78, z = 49.1, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1451}: kill these as you meet them",
+					note = "Dredge Crushers dig further west; Stonelash Pincers, Flayers and Rock Stalkers hunt the same sands.",
+					goals = {
+						{ t = "collect", quest = 8278, title = "Noggle's Last Hope", item = 20374, itemName = "Stonelash Pincer Stinger", count = 3, oi = 2, map = 1451, x = 43.38, y = 45.05, f = "e", spots = { { x = 43.4, y = 45.1, r = 40, n = 1 }, { x = 42.7, y = 58, r = 40, n = 2 }, { x = 40.3, y = 66.7, r = 40, n = 1 }, { x = 34.1, y = 66.8, r = 40, n = 1 }, { x = 34.7, y = 54.8, r = 40, n = 3 }, { x = 28.5, y = 43.2, r = 40, n = 1 }, { x = 34.3, y = 35.1, r = 40, n = 2 }, { x = 30.2, y = 28.2, r = 52, n = 3 }, { x = 20.7, y = 35.3, r = 41, n = 2 }, { x = 49.6, y = 64.2, r = 40, n = 4 }, { x = 56.5, y = 56.1, r = 40, n = 2 }, { x = 64.8, y = 61.4, r = 46, n = 3 }, { x = 43.5, y = 51.1, r = 40, n = 2, alt = true }, { x = 46.9, y = 52.8, r = 40, n = 1, alt = true }, { x = 42, y = 54.2, r = 51, n = 3, alt = true }, { x = 39.5, y = 54.2, r = 50, n = 3, alt = true }, { x = 37.3, y = 51.7, r = 40, n = 2, alt = true }, { x = 36.4, y = 40.7, r = 40, n = 1, alt = true }, { x = 45.7, y = 57.4, r = 40, n = 2, alt = true }, { x = 34, y = 46.7, r = 80, n = 5, alt = true }, { x = 49.7, y = 55.8, r = 40, n = 2, alt = true }, { x = 33.3, y = 40.3, r = 60, n = 5, alt = true }, { x = 48.2, y = 60.2, r = 41, n = 3, alt = true }, { x = 40.5, y = 61.6, r = 42, n = 3, alt = true }, { x = 36.1, y = 58.5, r = 40, n = 4, alt = true }, { x = 42.5, y = 63.1, r = 40, n = 2, alt = true }, { x = 52.6, y = 57.8, r = 59, n = 4, alt = true }, { x = 45.9, y = 63.6, r = 51, n = 3, alt = true }, { x = 31.9, y = 35.7, r = 67, n = 6, alt = true }, { x = 35.4, y = 61.6, r = 62, n = 5, alt = true }, { x = 38.2, y = 64.1, r = 43, n = 4, alt = true }, { x = 51.8, y = 62.6, r = 40, n = 2, alt = true }, { x = 28.9, y = 38.7, r = 40, n = 1, alt = true }, { x = 56.1, y = 58.9, r = 40, n = 1, alt = true }, { x = 55.9, y = 62.8, r = 48, n = 4, alt = true }, { x = 26.1, y = 43.7, r = 40, n = 2, alt = true }, { x = 58.8, y = 64.5, r = 57, n = 4, alt = true }, { x = 60.7, y = 61.5, r = 44, n = 3, alt = true }, { x = 22.6, y = 41.9, r = 66, n = 7, alt = true }, { x = 62.5, y = 65, r = 40, n = 2, alt = true } }, spread = true, from = "Stonelash Pincer", fromKind = "npc", fromId = 11736, fromNpcs = { { npc = 11736, npcName = "Stonelash Pincer" } } },
+						{ t = "kill", quest = 8281, title = "Stepping Up Security", target = "Dredge Crusher", npc = 11741, count = 20, oi = 1, map = 1451, x = 44.21, y = 48.19, z = 3.3, f = "e", spots = { { x = 44, y = 49.7, r = 50, n = 2 }, { x = 49.4, y = 56.7, r = 89, n = 7 }, { x = 52.8, y = 65, r = 50, n = 2 }, { x = 57.8, y = 59, z = 4.5, r = 50, n = 1 }, { x = 63.3, y = 62.5, r = 50, n = 2 }, { x = 42.1, y = 62.8, r = 50, n = 2 }, { x = 33.1, y = 62.4, r = 76, n = 3 }, { x = 34.8, y = 53.9, r = 50, n = 2 }, { x = 32.7, y = 45.7, r = 73, n = 4 }, { x = 32.4, y = 31.3, z = 4.2, r = 50, n = 1 }, { x = 21, y = 36.8, z = 0.4, r = 50, n = 1 }, { x = 20.1, y = 47.3, z = -1, r = 50, n = 1 }, { x = 40.1, y = 50.8, r = 50, n = 4, alt = true }, { x = 38.5, y = 55.9, r = 50, n = 4, alt = true }, { x = 48.2, y = 62.9, z = -0.9, r = 50, n = 1, alt = true }, { x = 35.1, y = 39.1, r = 92, n = 5, alt = true }, { x = 37.8, y = 62.6, z = 1.2, r = 97, n = 4, alt = true }, { x = 55.1, y = 56.8, z = -0.3, r = 50, n = 1, alt = true }, { x = 54, y = 61.1, r = 50, n = 5, alt = true }, { x = 29.1, y = 42.3, r = 135, n = 10, alt = true }, { x = 27.4, y = 27.8, r = 50, n = 2, alt = true }, { x = 21, y = 40.9, r = 50, n = 2, alt = true } }, spread = true, note = "{npc:11741} walks around here: look inside the circle on the map" },
+						{ t = "collect", quest = 8278, title = "Noggle's Last Hope", item = 20377, itemName = "Rock Stalker Fang", count = 3, oi = 3, map = 1451, x = 40.4, y = 66.72, f = "e", spots = { { x = 39.5, y = 68, r = 54, n = 3 }, { x = 45.3, y = 74, r = 40, n = 4 }, { x = 41.5, y = 79.7, r = 43, n = 4 }, { x = 45.5, y = 87.2, r = 49, n = 4 }, { x = 35.8, y = 89.8, r = 47, n = 3 }, { x = 29.5, y = 77, r = 41, n = 3 }, { x = 31.8, y = 67.8, r = 40, n = 1 }, { x = 19.6, y = 77.4, r = 40, n = 1 }, { x = 23.1, y = 88.6, r = 40, n = 1 }, { x = 50.4, y = 69.8, r = 40, n = 1 }, { x = 63.4, y = 72.5, r = 40, n = 1 }, { x = 64.9, y = 86.3, r = 40, n = 1 }, { x = 41.7, y = 68.7, r = 40, n = 3, alt = true }, { x = 37.1, y = 66.1, r = 40, n = 1, alt = true }, { x = 38.9, y = 75, r = 40, n = 2, alt = true }, { x = 34.5, y = 68.5, r = 40, n = 2, alt = true }, { x = 36.3, y = 73.8, r = 40, n = 2, alt = true }, { x = 42.6, y = 76.3, r = 40, n = 3, alt = true }, { x = 48, y = 68.5, r = 40, n = 2, alt = true }, { x = 33.3, y = 74.2, r = 49, n = 5, alt = true }, { x = 45.3, y = 79.2, r = 40, n = 2, alt = true }, { x = 33.9, y = 78.8, r = 53, n = 4, alt = true }, { x = 37.2, y = 83.2, r = 78, n = 7, alt = true }, { x = 41.1, y = 84.6, r = 59, n = 4, alt = true }, { x = 44.3, y = 83.8, r = 40, n = 2, alt = true }, { x = 42.2, y = 87.2, r = 40, n = 1, alt = true }, { x = 30.8, y = 82.1, r = 49, n = 3, alt = true }, { x = 26.9, y = 76.4, r = 50, n = 3, alt = true }, { x = 27.7, y = 83.5, r = 40, n = 2, alt = true }, { x = 24.9, y = 81.4, r = 40, n = 2, alt = true }, { x = 23.1, y = 78.2, r = 40, n = 2, alt = true }, { x = 66.3, y = 75.6, r = 40, n = 3, alt = true } }, spread = true, from = "Rock Stalker", fromKind = "npc", fromId = 11739, fromNpcs = { { npc = 11739, npcName = "Rock Stalker" } } },
+						{ t = "collect", quest = 8278, title = "Noggle's Last Hope", item = 20375, itemName = "Stonelash Flayer Stinger", count = 3, oi = 1, map = 1451, x = 41.23, y = 69.7, f = "e", spots = { { x = 40.3, y = 70.7, r = 65, n = 4 }, { x = 41.3, y = 81.1, r = 77, n = 6 }, { x = 37.3, y = 87.1, r = 88, n = 6 }, { x = 35.1, y = 78.9, r = 46, n = 2 }, { x = 29.7, y = 82.1, r = 53, n = 3 }, { x = 27.3, y = 74.4, r = 46, n = 2 }, { x = 21.9, y = 77.7, r = 62, n = 4 }, { x = 24.3, y = 89.9, r = 46, n = 1 }, { x = 44.8, y = 91.5, r = 46, n = 2 }, { x = 48.5, y = 68.7, r = 61, n = 3 }, { x = 63.4, y = 68.5, r = 73, n = 6 }, { x = 67.4, y = 79.2, r = 46, n = 2 }, { x = 43.1, y = 73.9, r = 46, n = 1, alt = true }, { x = 45.1, y = 70.5, r = 46, n = 3, alt = true }, { x = 34.9, y = 69.8, r = 81, n = 5, alt = true }, { x = 35.4, y = 74.6, r = 46, n = 2, alt = true }, { x = 31.8, y = 74.1, r = 63, n = 4, alt = true }, { x = 44.4, y = 84.3, r = 92, n = 5, alt = true }, { x = 32, y = 77.9, r = 46, n = 2, alt = true }, { x = 45.4, y = 87.2, r = 46, n = 1, alt = true }, { x = 26.4, y = 78.9, r = 74, n = 8, alt = true }, { x = 23.8, y = 84.8, r = 59, n = 4, alt = true }, { x = 64.3, y = 74.9, r = 65, n = 5, alt = true }, { x = 67.6, y = 76.1, r = 46, n = 1, alt = true } }, spread = true, from = "Stonelash Flayer", fromKind = "npc", fromId = 11737, fromNpcs = { { npc = 11737, npcName = "Stonelash Flayer" } } },
+					},
+				},
+				{
+					title = "{npc:13220}",
+					note = "Ride east to {npc:13220}.",
+					goals = {
+						{ t = "turnin", quest = 1124, title = "Wasteland", npc = 13220, npcName = "Layo Starstrike", map = 1451, x = 81.87, y = 18.93, z = -1.4, f = "e" },
+						{ t = "accept", quest = 1125, title = "The Spirits of Southwind", npc = 13220, npcName = "Layo Starstrike", minLevel = 54, qlvl = 55, pre = { 1124 }, preTitles = { [1124] = "Wasteland" }, map = 1451, x = 81.87, y = 18.93, z = -1.4, f = "e" },
+					},
+				},
+				{
+					title = "Southwind Village",
+					note = "The tortured druids and sentinels haunt the ruined village south-west of {npc:13220}.",
+					goals = {
+						{ t = "kill", quest = 1125, title = "The Spirits of Southwind", target = "Tortured Druid", npc = 12178, count = 8, oi = 1, map = 1451, x = 64.92, y = 47.2, z = 5.8, f = "e", spots = { { x = 64.1, y = 47.6, r = 31, n = 3 }, { x = 61.9, y = 50.2, r = 54, n = 5 }, { x = 62.6, y = 53.8, r = 36, n = 3 }, { x = 59.8, y = 53.7, z = 13.5, r = 41, n = 3 }, { x = 63.3, y = 58.4, r = 24, n = 2 }, { x = 60.4, y = 57.5, r = 28, n = 2 } } },
+						{ t = "kill", quest = 1125, title = "The Spirits of Southwind", target = "Tortured Sentinel", npc = 12179, count = 8, oi = 2, map = 1451, x = 65.91, y = 48.49, z = 3.9, f = "e", spots = { { x = 65.9, y = 49.2, r = 17, n = 2 }, { x = 62.7, y = 49.5, z = 17.9, r = 44, n = 5 }, { x = 63.5, y = 53.1, z = 35.1, r = 59, n = 7 }, { x = 62.6, y = 56.2, z = 40.6, r = 61, n = 5 }, { x = 60, y = 55, r = 58, n = 4 }, { x = 64.7, y = 58.2, z = 12.2, r = 15, n = 1, alt = true } } },
+					},
+				},
+				{
+					title = "{npc:13220}",
+					goals = {
+						{ t = "turnin", quest = 1125, title = "The Spirits of Southwind", npc = 13220, npcName = "Layo Starstrike", map = 1451, x = 81.87, y = 18.93, z = -1.4, f = "e" },
+						{ t = "accept", quest = 1126, title = "Hive in the Tower", npc = 13220, npcName = "Layo Starstrike", minLevel = 54, qlvl = 57, pre = { 1125 }, preTitles = { [1125] = "The Spirits of Southwind" }, map = 1451, x = 81.87, y = 18.93, z = -1.4, f = "e" },
+					},
+				},
+				{
+					title = "The Hive'Ashi tower",
+					note = "Ride east to the Hive'Ashi tower in Southwind Village; climb it and kill the ambushers that rise for the encrusted object.",
+					goals = {
+						{ t = "collect", quest = 1126, title = "Hive in the Tower", item = 17346, itemName = "Encrusted Silithid Object", count = 1, oi = 1, map = 1451, x = 60.2, y = 52.4, f = "e", from = "Hive'Ashi Ambusher", fromKind = "npc", fromId = 13301, fromNpcs = { { npc = 13301, npcName = "Hive'Ashi Ambusher" } } },
+					},
+				},
+				{
+					title = "{npc:13220}",
+					goals = {
+						{ t = "turnin", quest = 1126, title = "Hive in the Tower", npc = 13220, npcName = "Layo Starstrike", map = 1451, x = 81.87, y = 18.93, z = -1.4, f = "e" },
+						{ t = "accept", quest = 6844, title = "Umber, Archivist", npc = 13220, npcName = "Layo Starstrike", minLevel = 54, qlvl = 57, pre = { 1126 }, preTitles = { [1126] = "Hive in the Tower" }, map = 1451, x = 81.87, y = 18.93, z = -1.4, f = "e", note = "Umber in {zone:1450}: keep it" },
+					},
+				},
+				{
+					title = "{zone:1449}",
+					goals = {
+						{ t = "goto", text = "{zone:1449}", map = 1449, x = 33.2, y = 48.4, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1449}: kill these as you meet them",
+					goals = {
+						{ t = "kill", quest = 4501, title = "Beware of Pterrordax", target = "Frenzied Pterrordax", npc = 9167, count = 15, oi = 2, map = 1449, x = 30.8, y = 46, f = "e", spots = { { x = 31.1, y = 44.8, z = -271.5, r = 40, n = 4 }, { x = 27.7, y = 55, r = 40, n = 4 }, { x = 21.3, y = 60, r = 44, n = 9 }, { x = 32.2, y = 67.2, r = 40, n = 2 }, { x = 32.4, y = 78.6, r = 40, n = 2 }, { x = 40.1, y = 76.4, r = 40, n = 2 }, { x = 40.6, y = 65.1, r = 40, n = 4 }, { x = 41.5, y = 52.8, r = 40, n = 2 }, { x = 41.6, y = 38.2, r = 54, n = 6 }, { x = 30.7, y = 28.8, r = 40, n = 2 }, { x = 39.2, y = 19.6, z = -275.1, r = 40, n = 2 }, { x = 21.3, y = 40.2, z = -212.3, r = 41, n = 6 }, { x = 28.5, y = 46.9, z = -269.7, r = 40, n = 3, alt = true }, { x = 32.5, y = 42.7, r = 40, n = 3, alt = true }, { x = 28.8, y = 41.7, r = 40, n = 5, alt = true }, { x = 34.4, y = 44.9, r = 40, n = 3, alt = true }, { x = 26.5, y = 44.2, r = 57, n = 5, alt = true }, { x = 34.6, y = 39.7, r = 40, n = 2, alt = true }, { x = 32.6, y = 37.2, z = -272, r = 40, n = 2, alt = true }, { x = 26.9, y = 38.6, z = -272, r = 40, n = 5, alt = true }, { x = 29.2, y = 36.8, r = 40, n = 1, alt = true }, { x = 37, y = 41.3, r = 40, n = 6, alt = true }, { x = 24.5, y = 39.8, r = 57, n = 10, alt = true }, { x = 31, y = 33.8, r = 40, n = 2, alt = true }, { x = 23.1, y = 50, z = -229.4, r = 40, n = 5, alt = true }, { x = 39, y = 45, r = 40, n = 3, alt = true }, { x = 38.8, y = 50.2, r = 40, n = 4, alt = true }, { x = 27.3, y = 34.2, r = 40, n = 2, alt = true }, { x = 35.8, y = 35.3, z = -271.4, r = 40, n = 5, alt = true }, { x = 38.1, y = 38.3, r = 40, n = 3, alt = true }, { x = 39.6, y = 42.2, r = 40, n = 1, alt = true }, { x = 40.2, y = 48.5, r = 40, n = 2, alt = true }, { x = 33.2, y = 32, r = 40, n = 1, alt = true }, { x = 29.2, y = 31.5, z = -272.1, r = 53, n = 4, alt = true }, { x = 37.8, y = 34.8, r = 40, n = 2, alt = true }, { x = 36.1, y = 32.2, r = 40, n = 3, alt = true }, { x = 34.4, y = 29.9, r = 40, n = 3, alt = true }, { x = 23.8, y = 59.8, z = -225.7, r = 58, n = 7, alt = true }, { x = 36.5, y = 63.2, r = 40, n = 2, alt = true }, { x = 26.3, y = 64.2, z = -272.1, r = 40, n = 4, alt = true }, { x = 34.6, y = 65.3, r = 40, n = 2, alt = true }, { x = 32.4, y = 26, r = 40, n = 1, alt = true }, { x = 40.2, y = 31.4, r = 40, n = 1, alt = true }, { x = 38.6, y = 29.3, r = 40, n = 3, alt = true }, { x = 36.4, y = 26.6, r = 40, n = 2, alt = true }, { x = 41.9, y = 29.6, r = 40, n = 4, alt = true }, { x = 31.3, y = 71.2, z = -267.9, r = 40, n = 2, alt = true }, { x = 36.4, y = 70.6, z = -270.8, r = 40, n = 1, alt = true }, { x = 39.6, y = 68.4, r = 40, n = 1, alt = true }, { x = 36.5, y = 77.7, r = 48, n = 5, alt = true } }, spread = true },
+						{ t = "kill", quest = 4501, title = "Beware of Pterrordax", target = "Pterrordax", npc = 9166, count = 10, oi = 1, map = 1449, x = 42.8, y = 85.4, z = -256.2, f = "e", spots = { { x = 43.6, y = 87.1, z = -227.3, r = 52, n = 6 }, { x = 43.6, y = 91.3, r = 40, n = 5 }, { x = 50.4, y = 88.6, r = 40, n = 4 }, { x = 56.9, y = 90.7, z = -215.1, r = 43, n = 8 }, { x = 57.3, y = 87.4, z = -237, r = 46, n = 4 }, { x = 56.8, y = 11.7, r = 56, n = 7 }, { x = 57.2, y = 8.5, r = 40, n = 8 }, { x = 50.5, y = 11.3, z = -228.2, r = 40, n = 5 } }, spread = true },
+					},
+				},
+				{
+					title = "{npc:10302}",
+					note = "Ride west past Marshal's Refuge and south down the western side to Golakka Hot Springs: {npc:10302} the goblin sits by the water.",
+					goals = {
+						{ t = "accept", quest = 974, title = "Finding the Source", npc = 10302, npcName = "Krakle", minLevel = 51, qlvl = 55, map = 1449, x = 30.93, y = 50.44, z = -269.1, f = "e" },
+					},
+				},
+				{
+					title = "{npc:10541}",
+					note = "Ride east to Fire Plume Ridge, climb it and use {npc:10541} at the lava vents near the top.",
+					goals = {
+						{ t = "interact", quest = 974, title = "Finding the Source", object = 148503, objName = "Fire Plume Ridge Hot Spot", oi = 1, map = 1449, x = 49.69, y = 45.64, z = -187.9, f = "e" },
+					},
+				},
+				{
+					title = "{npc:10302}",
+					goals = {
+						{ t = "turnin", quest = 974, title = "Finding the Source", npc = 10302, npcName = "Krakle", map = 1449, x = 30.93, y = 50.44, z = -269.1, f = "e" },
+						{ t = "accept", quest = 980, title = "The New Springs", npc = 10302, npcName = "Krakle", minLevel = 51, qlvl = 55, pre = { 974 }, preTitles = { [974] = "Finding the Source" }, map = 1449, x = 30.93, y = 50.44, z = -269.1, f = "e", note = "Ends with {npc:9298} in {zone:1452}: keep it" },
+					},
+				},
+				{
+					title = "{item:11834} on the way",
+					when = { { k = "onquest", q = { 4504 } } },
+					along = "q4504",
+					goals = {
+						{ t = "collect", quest = 4504, title = "Super Sticky", item = 11834, itemName = "Super Sticky Tar", count = 12, oi = 1, map = 1449, x = 46.41, y = 35.78, f = "e", spots = { { x = 47.5, y = 34.1, r = 61, n = 7 }, { x = 49, y = 29.8, r = 60, n = 4 }, { x = 50.5, y = 24.5, r = 61, n = 6 }, { x = 47.9, y = 20.7, r = 73, n = 5 }, { x = 46.7, y = 16.4, r = 50, n = 4 }, { x = 44.2, y = 17.8, r = 48, n = 5 }, { x = 42.8, y = 20.9, r = 41, n = 4 }, { x = 53.7, y = 19.9, r = 40, n = 1 }, { x = 54.6, y = 23.7, r = 40, n = 1 }, { x = 60, y = 23.8, r = 40, n = 4 }, { x = 64.3, y = 23.5, r = 40, n = 4 }, { x = 59.2, y = 30.8, r = 60, n = 5 }, { x = 53, y = 26.4, r = 58, n = 4, alt = true }, { x = 49.3, y = 18.3, r = 40, n = 1, alt = true }, { x = 61.5, y = 31.9, r = 40, n = 3, alt = true } }, spread = true, fromNpcs = { { npc = 6517, npcName = "Tar Beast" }, { npc = 6518, npcName = "Tar Lurker" }, { npc = 6519, npcName = "Tar Lord" }, { npc = 6527, npcName = "Tar Creeper" } } },
+					},
+				},
+				{
+					title = "Northern Pylon",
+					goals = {
+						{ t = "kill", quest = 4501, title = "Beware of Pterrordax", target = "Pterrordax", npc = 9166, count = 10, oi = 1, map = 1449, x = 50.4, y = 12.6, f = "e", spots = { { x = 50.5, y = 11.3, z = -228.2, r = 40, n = 5 }, { x = 56.8, y = 11.7, r = 56, n = 7 }, { x = 57.2, y = 8.5, r = 40, n = 8 }, { x = 57.3, y = 87.4, z = -237, r = 46, n = 4 }, { x = 56.9, y = 90.7, z = -215.1, r = 43, n = 8 }, { x = 50.4, y = 88.6, r = 40, n = 4 }, { x = 43.6, y = 87.1, z = -227.3, r = 52, n = 6 }, { x = 43.6, y = 91.3, r = 40, n = 5 } }, spread = true },
+					},
+				},
+				{
+					title = "{npc:9117}",
+					note = "Collie is up the hill behind it.",
+					goals = {
+						{ t = "turnin", quest = 3941, title = "A Gnome's Assistance", npc = 9117, npcName = "J.D. Collie", map = 1449, x = 41.92, y = 2.7, z = -217.1, f = "e", note = "{npc:9117}, below ground" },
+						{ t = "accept", quest = 3942, title = "Linken's Memory", npc = 9117, npcName = "J.D. Collie", minLevel = 47, qlvl = 54, pre = { 3941 }, preTitles = { [3941] = "A Gnome's Assistance" }, map = 1449, x = 41.92, y = 2.7, z = -217.1, f = "e", note = "For {zone:1448}: keep it" },
+					},
+				},
+				{
+					title = "Marshal's Refuge",
+					goals = {
+						{ t = "turnin", quest = 4501, title = "Beware of Pterrordax", npc = 9997, npcName = "Spraggle Frock", map = 1449, x = 43.62, y = 8.5, z = -203.8, f = "e" },
+					},
+				},
+				{
+					title = "The crater",
+					note = "Tar Beasts wallow in the Lakkari Tar Pits; the fire elementals of Fire Plume Ridge in the middle carry the ash; the Gorishi wasps of the Slithering Scar in the south carry the gland. Every creature in the crater can drop {item:11018}.\nCareful: Gorishi Workers that drop below 45% health have a 50% chance to call for help from allies within 25 yd.",
+					goals = {
+						{ t = "collect", quest = 4496, title = "Bungle in the Jungle", item = 11837, itemName = "Gorishi Scent Gland", count = 1, oi = 1, map = 1449, x = 45.5, y = 72.3, f = "e", spots = { { x = 46.4, y = 73.4, r = 43, n = 3 }, { x = 44.4, y = 76.7, r = 44, n = 4 }, { x = 47.7, y = 76.5, r = 54, n = 5 }, { x = 44, y = 80.8, r = 74, n = 11 }, { x = 51.6, y = 73.1, r = 26, n = 3 }, { x = 50.9, y = 76.9, r = 52, n = 5 }, { x = 48.6, y = 81.3, r = 66, n = 7, alt = true }, { x = 45.5, y = 83.6, r = 63, n = 10, alt = true }, { x = 51.5, y = 80.4, r = 50, n = 3, alt = true }, { x = 53.8, y = 75.7, r = 38, n = 4, alt = true }, { x = 49, y = 84.4, r = 41, n = 6, alt = true }, { x = 47.2, y = 86.4, r = 77, n = 10, alt = true }, { x = 54.3, y = 79.1, r = 15, n = 1, alt = true }, { x = 52.4, y = 84.5, r = 52, n = 6, alt = true }, { x = 55.2, y = 84.4, r = 53, n = 5, alt = true } }, fromNpcs = { { npc = 6553, npcName = "Gorishi Reaver" }, { npc = 6551, npcName = "Gorishi Wasp" }, { npc = 6552, npcName = "Gorishi Worker" }, { npc = 6554, npcName = "Gorishi Stinger" }, { npc = 6555, npcName = "Gorishi Tunneler" } } },
+					},
+				},
+				{
+					title = "{npc:9619}",
+					goals = {
+						{ t = "turnin", quest = 4291, title = "The Scent of Lar'korwi", npc = 9619, npcName = "Torwa Pathfinder", map = 1449, x = 71.64, y = 75.96, z = -254.3, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9619}",
+					note = "Ride down the ramp into the crater: {npc:9619} camps at its foot.",
+					goals = {
+						{ t = "accept", quest = 4292, title = "The Bait for Lar'korwi", npc = 9619, npcName = "Torwa Pathfinder", minLevel = 48, qlvl = 56, pre = { 4291 }, preTitles = { [4291] = "The Scent of Lar'korwi" }, map = 1449, x = 71.64, y = 75.96, z = -254.3, f = "e" },
+						{ t = "accept", quest = 4289, title = "The Apes of Un'Goro", npc = 9619, npcName = "Torwa Pathfinder", minLevel = 47, qlvl = 55, map = 1449, x = 71.64, y = 75.96, z = -254.3, f = "e", note = "The pelts come after loop 2, on the gorilla plateau" },
+					},
+				},
+				{
+					title = "Lakkari Tar Pits: kill these as you meet them",
+					note = "The gorillas live on Ironstone Plateau, east of Marshal's Refuge. Keep their pelts for {npc:9619}. Stay out of the deepest cave: {npc:9622} is level 55.\nCareful: Un'Goro Gorillas (level 50-51) call for help from allies within 20 yd once they drop to 25% health. There is a cave full of apes in the area, and fighting there brings many adds.",
+					label = "q4504",
+					goals = {
+						{ t = "collect", quest = 4504, title = "Super Sticky", item = 11834, itemName = "Super Sticky Tar", count = 12, oi = 1, map = 1449, x = 61.85, y = 33.36, f = "e", spots = { { x = 61.5, y = 31.9, r = 40, n = 3 }, { x = 60, y = 23.8, r = 40, n = 4 }, { x = 64.3, y = 23.5, r = 40, n = 4 }, { x = 53.7, y = 19.9, r = 40, n = 1 }, { x = 53, y = 26.4, r = 58, n = 4 }, { x = 50.5, y = 24.5, r = 61, n = 6 }, { x = 47.9, y = 20.7, r = 73, n = 5 }, { x = 46.7, y = 16.4, r = 50, n = 4 }, { x = 44.2, y = 17.8, r = 48, n = 5 }, { x = 42.8, y = 20.9, r = 41, n = 4 }, { x = 49, y = 29.8, r = 60, n = 4 }, { x = 47.5, y = 34.1, r = 61, n = 7 }, { x = 59.2, y = 30.8, r = 60, n = 5, alt = true }, { x = 54.6, y = 23.7, r = 40, n = 1, alt = true }, { x = 49.3, y = 18.3, r = 40, n = 1, alt = true } }, spread = true, fromNpcs = { { npc = 6517, npcName = "Tar Beast" }, { npc = 6518, npcName = "Tar Lurker" }, { npc = 6519, npcName = "Tar Lord" }, { npc = 6527, npcName = "Tar Creeper" } } },
+						{ t = "collect", quest = 4289, title = "The Apes of Un'Goro", item = 11478, itemName = "Un'Goro Gorilla Pelt", count = 2, oi = 1, map = 1449, x = 62.63, y = 19.67, f = "e", spots = { { x = 62.2, y = 17.4, r = 69, n = 5 }, { x = 65.5, y = 15.9, r = 52, n = 7 }, { x = 68.5, y = 16.9, r = 42, n = 4 }, { x = 67.9, y = 14.9, r = 46, n = 8 }, { x = 62.6, y = 19.7, r = 15, n = 1, alt = true } }, note = "{item:11478}; below ground", from = "Un'Goro Gorilla", fromKind = "npc", fromId = 6514, fromNpcs = { { npc = 6514, npcName = "Un'Goro Gorilla" } } },
+						{ t = "collect", quest = 4289, title = "The Apes of Un'Goro", item = 11479, itemName = "Un'Goro Stomper Pelt", count = 2, oi = 2, map = 1449, x = 62.63, y = 19.67, f = "e", spots = { { x = 62.2, y = 17.4, r = 69, n = 5 }, { x = 65.5, y = 15.9, r = 52, n = 7 }, { x = 68.5, y = 16.9, r = 42, n = 4 }, { x = 67.9, y = 14.9, r = 46, n = 8 }, { x = 62.6, y = 19.7, r = 15, n = 1, alt = true } }, note = "{item:11479}; below ground", from = "Un'Goro Stomper", fromKind = "npc", fromId = 6513, fromNpcs = { { npc = 6513, npcName = "Un'Goro Stomper" } } },
+						{ t = "collect", quest = 4289, title = "The Apes of Un'Goro", item = 11480, itemName = "Un'Goro Thunderer Pelt", count = 2, oi = 3, map = 1449, x = 62.63, y = 19.67, f = "e", spots = { { x = 62.2, y = 17.4, r = 69, n = 5 }, { x = 65.5, y = 15.9, r = 52, n = 7 }, { x = 68.5, y = 16.9, r = 42, n = 4 }, { x = 67.9, y = 14.9, r = 46, n = 8 }, { x = 62.6, y = 19.7, r = 15, n = 1, alt = true } }, note = "{item:11480}; below ground", from = "Un'Goro Thunderer", fromKind = "npc", fromId = 6516, fromNpcs = { { npc = 6516, npcName = "Un'Goro Thunderer" } } },
+					},
+				},
+				{
+					title = "{npc:9619}",
+					goals = {
+						{ t = "turnin", quest = 4289, title = "The Apes of Un'Goro", npc = 9619, npcName = "Torwa Pathfinder", map = 1449, x = 71.64, y = 75.96, z = -254.3, f = "e" },
+						{ t = "accept", quest = 4301, title = "The Mighty U'cha", npc = 9619, npcName = "Torwa Pathfinder", minLevel = 50, qlvl = 55, pre = { 4289 }, preTitles = { [4289] = "The Apes of Un'Goro" }, map = 1449, x = 71.64, y = 75.96, z = -254.3, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9622}",
+					note = "Ride north along the east side to the gorilla plateau. {npc:9622}, a level 55 gorilla, sits in its deepest cave: clear the gorillas at the cave mouth first.",
+					goals = {
+						{ t = "collect", quest = 4301, title = "The Mighty U'cha", item = 11476, itemName = "U'cha's Pelt", count = 1, oi = 1, map = 1449, x = 68.14, y = 12.56, f = "e", note = "Below ground", from = "U'cha", fromKind = "npc", fromId = 9622, fromNpcs = { { npc = 9622, npcName = "U'cha" } } },
+					},
+				},
+				{
+					title = "{npc:9684}",
+					note = "{npc:9684}'s lair lies in the jungle north of {npc:9619}, below the eastern cliffs: use {item:11568} there. {npc:9684} is level 56: start at full health.",
+					goals = {
+						{ t = "collect", quest = 4292, title = "The Bait for Lar'korwi", item = 11510, itemName = "Lar'korwi's Head", count = 1, oi = 1, map = 1449, x = 79.65, y = 49.83, f = "e", from = "Lar'korwi", fromKind = "npc", fromId = 9684, fromNpcs = { { npc = 9684, npcName = "Lar'korwi" } } },
+					},
+				},
+				{
+					title = "{npc:9619}",
+					note = "Cross the south of the crater to {npc:9619} by the ramp.",
+					goals = {
+						{ t = "turnin", quest = 4301, title = "The Mighty U'cha", npc = 9619, npcName = "Torwa Pathfinder", map = 1449, x = 71.64, y = 75.96, z = -254.3, f = "e" },
+						{ t = "turnin", quest = 4292, title = "The Bait for Lar'korwi", npc = 9619, npcName = "Torwa Pathfinder", map = 1449, x = 71.64, y = 75.96, z = -254.3, f = "e" },
+					},
+				},
+				{
+					title = "The Marshlands: kill these as you meet them",
+					goals = {
+						{ t = "collect", quest = 4496, title = "Bungle in the Jungle", item = 11018, itemName = "Un'Goro Soil", count = 5, oi = 2, map = 1449, x = 70.65, y = 65.81, f = "e", spots = { { x = 71.8, y = 65.1, r = 51, n = 3 }, { x = 72.3, y = 39.2, r = 51, n = 4 }, { x = 59.7, y = 34.7, r = 51, n = 2 }, { x = 62.2, y = 17.6, r = 51, n = 1 }, { x = 50.3, y = 47.7, r = 51, n = 2 }, { x = 36.9, y = 47.1, r = 51, n = 2 }, { x = 28.7, y = 61.2, r = 51, n = 2 }, { x = 21.9, y = 38.6, r = 51, n = 1 }, { x = 39.1, y = 23.5, r = 101, n = 6 }, { x = 48.1, y = 76, r = 76, n = 6 }, { x = 56.6, y = 83.5, r = 51, n = 1 }, { x = 38.2, y = 81.7, r = 51, n = 1 }, { x = 73.4, y = 58.3, r = 51, n = 1, alt = true }, { x = 70.5, y = 76.2, r = 51, n = 2, alt = true }, { x = 62.3, y = 64, r = 51, n = 1, alt = true }, { x = 64.9, y = 78.4, r = 51, n = 1, alt = true }, { x = 75.1, y = 48.6, r = 63, n = 3, alt = true }, { x = 63.3, y = 47.9, r = 51, n = 1, alt = true }, { x = 75.3, y = 44.4, r = 51, n = 2, alt = true }, { x = 60, y = 81.8, r = 51, n = 1, alt = true }, { x = 56, y = 56.9, r = 51, n = 1, alt = true }, { x = 63.8, y = 42.3, r = 51, n = 2, alt = true }, { x = 53.3, y = 76.9, r = 82, n = 7, alt = true }, { x = 52.8, y = 55.9, r = 51, n = 1, alt = true }, { x = 57.1, y = 44.2, r = 51, n = 1, alt = true }, { x = 60.4, y = 40.1, r = 51, n = 2, alt = true }, { x = 51.3, y = 73.9, r = 51, n = 3, alt = true }, { x = 67.1, y = 35.8, r = 76, n = 4, alt = true }, { x = 53, y = 83.6, r = 72, n = 6, alt = true }, { x = 48.9, y = 58, r = 51, n = 1, alt = true }, { x = 52.8, y = 45.4, r = 51, n = 1, alt = true }, { x = 63.7, y = 33.4, r = 51, n = 1, alt = true }, { x = 69.5, y = 31.3, r = 51, n = 3, alt = true }, { x = 57.3, y = 36.7, r = 51, n = 4, alt = true }, { x = 49.1, y = 81.4, r = 61, n = 6, alt = true }, { x = 53.6, y = 39, r = 51, n = 1, alt = true }, { x = 64.7, y = 29.3, r = 51, n = 1, alt = true }, { x = 70.7, y = 27.7, r = 51, n = 1, alt = true }, { x = 50.5, y = 90.1, r = 51, n = 1, alt = true }, { x = 45.9, y = 53.7, r = 51, n = 2, alt = true }, { x = 47.3, y = 86.3, r = 81, n = 9, alt = true }, { x = 61.1, y = 27.6, r = 51, n = 1, alt = true }, { x = 68.5, y = 24.7, r = 66, n = 3, alt = true }, { x = 45.6, y = 83.4, r = 52, n = 7, alt = true }, { x = 44.2, y = 80.1, r = 97, n = 9, alt = true }, { x = 55.6, y = 28.7, r = 51, n = 1, alt = true }, { x = 50.2, y = 34.3, r = 51, n = 1, alt = true }, { x = 40.8, y = 59.7, r = 51, n = 1, alt = true }, { x = 69.2, y = 20.5, r = 51, n = 1, alt = true }, { x = 40.7, y = 54, r = 77, n = 5, alt = true }, { x = 40.9, y = 79.3, r = 51, n = 2, alt = true }, { x = 41.9, y = 48.1, r = 51, n = 1, alt = true }, { x = 41.9, y = 43.8, r = 51, n = 3, alt = true }, { x = 44.1, y = 33.8, r = 51, n = 1, alt = true }, { x = 36.6, y = 69.2, r = 51, n = 3, alt = true }, { x = 36.4, y = 76.9, r = 60, n = 3, alt = true }, { x = 39.9, y = 38.1, r = 60, n = 3, alt = true }, { x = 41.2, y = 32.5, r = 51, n = 1, alt = true }, { x = 33.6, y = 64.6, r = 63, n = 3, alt = true }, { x = 32.9, y = 70.9, r = 51, n = 2, alt = true }, { x = 35.2, y = 40.8, r = 74, n = 4, alt = true }, { x = 39.8, y = 28.6, r = 51, n = 2, alt = true }, { x = 31.7, y = 77.5, r = 65, n = 3, alt = true }, { x = 30.6, y = 68, r = 52, n = 2, alt = true }, { x = 35.5, y = 35.2, r = 51, n = 2, alt = true }, { x = 30, y = 56.8, r = 51, n = 2, alt = true }, { x = 35.3, y = 30.4, r = 51, n = 1, alt = true }, { x = 29.9, y = 44.3, r = 51, n = 1, alt = true }, { x = 26.9, y = 68.1, r = 51, n = 1, alt = true }, { x = 28.5, y = 40.8, r = 67, n = 4, alt = true }, { x = 32.5, y = 28.4, r = 51, n = 1, alt = true }, { x = 25, y = 57.9, r = 51, n = 1, alt = true }, { x = 30.1, y = 32.4, r = 61, n = 4, alt = true }, { x = 25.9, y = 46.5, r = 51, n = 2, alt = true }, { x = 24.8, y = 52.2, r = 51, n = 1, alt = true }, { x = 33.2, y = 22.3, r = 51, n = 3, alt = true } }, spread = true, fromNpcs = { { npc = 6511, npcName = "Bloodpetal Thresher" }, { npc = 10040, npcName = "Gorishi Hive Guard" }, { npc = 6552, npcName = "Gorishi Worker" }, { npc = 6554, npcName = "Gorishi Stinger" }, { npc = 6551, npcName = "Gorishi Wasp" } } },
+						{ t = "collect", quest = 4502, title = "Volcanic Activity", item = 11829, itemName = "Un'Goro Ash", count = 9, oi = 1, map = 1449, x = 55.55, y = 57.9, f = "e", spots = { { x = 50.2, y = 54.6, r = 60, n = 3 }, { x = 51.9, y = 50.4, r = 62, n = 4 }, { x = 54.7, y = 48, r = 29, n = 2 }, { x = 46.5, y = 54.4, r = 53, n = 3 }, { x = 53.4, y = 44.1, r = 66, n = 5 }, { x = 47.2, y = 51.2, r = 56, n = 3 }, { x = 55.6, y = 57.9, r = 15, n = 1, alt = true }, { x = 54, y = 54.8, r = 15, n = 1, alt = true }, { x = 49.3, y = 46.2, r = 94, n = 10, alt = true }, { x = 44.7, y = 47.7, r = 51, n = 4, alt = true } }, from = "Scorching Elemental", fromKind = "npc", fromAlso = "Living Blaze", fromId = 6520, fromAlsoId = 6521, fromNpcs = { { npc = 6521, npcName = "Living Blaze" }, { npc = 6520, npcName = "Scorching Elemental" }, { npc = 14460, npcName = "Blazing Invader" } } },
+					},
+				},
+				{
+					title = "{npc:9999}",
+					note = "{npc:9999} sits on the south-east slope of Fire Plume Ridge, in the middle of the crater.",
+					goals = {
+						{ t = "turnin", quest = 4492, title = "Lost!", npc = 9999, npcName = "Ringo", map = 1449, x = 51.9, y = 49.85, z = -231.4, f = "e", note = "Below ground" },
+						{ t = "accept", quest = 4491, title = "A Little Help From My Friends", npc = 9999, npcName = "Ringo", minLevel = 50, qlvl = 55, pre = { 4492 }, preTitles = { [4492] = "Lost!" }, map = 1449, x = 51.9, y = 49.85, z = -231.4, f = "e", escort = true },
+					},
+				},
+				{
+					title = "Escort {npc:9999}",
+					note = "Lead {npc:9999} north to Marshal's Refuge. When he faints, use {item:11804} on him to wake him.",
+					goals = {
+						{ t = "goto", map = 1449, x = 43.7, y = 8.3, f = "e" },
+						{ t = "complete", quest = 4491, title = "A Little Help From My Friends", escort = true },
+					},
+				},
+				{
+					title = "{npc:9997}",
+					goals = {
+						{ t = "turnin", quest = 4491, title = "A Little Help From My Friends", npc = 9997, npcName = "Spraggle Frock", map = 1449, x = 43.62, y = 8.5, z = -203.8, f = "e" },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
+-- Source: guides/31-silithus.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/31-silithus",
+			pack = "groupe-alliance",
+			title = "Group 29 · {zone:1423}",
+			faction = "Alliance",
+			minLevel = 58,
+			maxLevel = 58,
+			category = "Leveling",
+			folder = "Group Alliance",
+			zone = 1451,
+			zoneName = "Silithus",
+			next = "groupe-alliance/32-silithus-fin",
+			author = "BurN-30",
+			version = 1,
+			names = { ["item:13155"] = "Resonating Skull", ["item:13156"] = "Mystic Crystal", ["item:14613"] = "Taelan's Hammer", ["npc:10778"] = "Janice Felstone", ["npc:11063"] = "Carlin Redpath", ["npc:11886"] = "Mercutio Filthgorger", ["npc:12248"] = "Infiltrator Hameya", ["npc:14724"] = "Bubulo Acerbus", ["npc:332"] = "Master Mathias Shaw", ["npc:3520"] = "Ol' Emma", ["npc:8496"] = "Liv Rizzlefix", ["npc:8529"] = "Scourge Champion", ["object:2117"] = "Stormwind Keep", ["object:3204"] = "Booty Bay", ["quest:6184"] = "Flint Shadowmore", ["zone:1423"] = "Eastern Plaguelands", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			written = { ["Scourge Champions (59) roam the Noxious Glade, north of Light's Hope Chapel. Pass {npc:11063}'s {item:13156} over each one you kill: the skulls that resonate are the ones he wants. Pull them one at a time."] = "Scourge Champions (59) roam the Noxious Glade, north of Light's Hope Chapel. Pass Carlin's Mystic Crystal over each one you kill: the skulls that resonate are the ones he wants. Pull them one at a time.", ["{zone:1453}"] = "Stormwind City" },
+			steps = {
+				{
+					title = "Ratchet",
+					note = "Fly from Marshal's Refuge to Ratchet.",
+					goals = {
+						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
+						{ t = "fly", location = "Ratchet", node = 80 },
+						{ t = "sethome", npc = 6791, npcName = "Innkeeper Wiley", location = "Ratchet", map = 1413, x = 62.05, y = 39.41, z = 24, f = "e" },
+						{ t = "turnin", quest = 4502, title = "Volcanic Activity", npc = 8496, npcName = "Liv Rizzlefix", map = 1413, x = 62.45, y = 38.73, z = 4.6, f = "e", note = "{npc:8496}, inside" },
+						{ t = "collect", quest = 3444, title = "The Stone Circle", item = 10556, itemName = "Stone Circle", count = 1, oi = 1, map = 1413, x = 62.5, y = 38.5, f = "e", from = "Marvon's Chest", fromKind = "object", fromId = 149036 },
+					},
+				},
+				{
+					title = "Boat to {object:3204}",
+					goals = {
+						{ t = "goto", text = "Boat to {object:3204}", map = 1413, x = 63.4, y = 38.5, f = "e" },
+					},
+				},
+				{
+					title = "Fly to {zone:1453}",
+					goals = {
+						{ t = "goto", text = "{object:3204} flight master", map = 1434, x = 27.5, y = 77.7, f = "e" },
+						{ t = "fly", location = "Stormwind", node = 2 },
+					},
+				},
+				{
+					title = "{zone:1455}",
+					note = "Take the Deeprun Tram to {zone:1455}.",
+					only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } },
+					goals = {
+						{ t = "train", class = true, only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } }, candidates = { { npc = 251507, npcName = "Josephine Carson", map = 1429, x = 41.15, y = 66.23, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 927, npcName = "Brother Wilhelm", map = 1429, x = 41.1, y = 66.04, z = 57.7, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 328, npcName = "Zaldimar Wefhellt", map = 1429, x = 43.25, y = 66.19, z = 63.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 906, npcName = "Maximillian Crowe", map = 1429, x = 44.39, y = 66.24, z = 49.9, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 913, npcName = "Lyria Du Lac", map = 1429, x = 41.09, y = 65.77, z = 57.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 917, npcName = "Keryn Sylvius", map = 1429, x = 43.87, y = 65.94, z = 63.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 377, npcName = "Priestess Josetta", map = 1429, x = 43.28, y = 65.72, z = 63.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 5498, npcName = "Elsharin", map = 1453, x = 48.21, y = 87.22, z = 29.7, faction = "A", classes = { "MAGE" } }, { npc = 5496, npcName = "Sandahl", map = 1453, x = 39.66, y = 85.74, z = 101.5, faction = "A", classes = { "WARLOCK" } }, { npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9, faction = "A", classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "WARLOCK" } }, { npc = 13283, npcName = "Lord Tony Romano", map = 1453, x = 80.28, y = 68.58, z = 103.2, faction = "A", classes = { "ROGUE" } }, { npc = 459, npcName = "Drusilla La Salle", map = 1429, x = 49.87, y = 42.65, z = 80.8, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 911, npcName = "Llane Beshere", map = 1429, x = 50.24, y = 42.29, z = 82.3, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 925, npcName = "Brother Sammuel", map = 1429, x = 50.43, y = 42.12, z = 82.3, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 248415, npcName = "Tordrin Sternblade", map = 1429, x = 51.21, y = 40.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 11397, npcName = "Nara Meideros", map = 1453, x = 35.68, y = 63.18, z = 92.6, faction = "A", classes = { "PRIEST" } }, { npc = 914, npcName = "Ander Germaine", map = 1453, x = 80.19, y = 61.26, z = 111.7, faction = "A", classes = { "WARRIOR" } }, { npc = 915, npcName = "Jorik Kerridan", map = 1429, x = 50.31, y = 39.92, z = 80.8, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 375, npcName = "Priestess Anetta", map = 1429, x = 49.81, y = 39.49, z = 82.1, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 198, npcName = "Khelden Bremen", map = 1429, x = 49.66, y = 39.4, z = 89.5, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 928, npcName = "Lord Grayson Shadowbreaker", map = 1453, x = 48.43, y = 50.22, z = 106.6, faction = "A", classes = { "PALADIN" } }, { npc = 5484, npcName = "Brother Benjamin", map = 1453, x = 52.28, y = 47.65, z = 106.5, faction = "A", classes = { "PRIEST" } }, { npc = 5515, npcName = "Einris Brightspear", map = 1453, x = 67.35, y = 36.25, z = 95.5, faction = "A", classes = { "HUNTER" } }, { npc = 926, npcName = "Bromos Grummner", map = 1426, x = 28.83, y = 68.33, z = 395.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 916, npcName = "Solm Hargrin", map = 1426, x = 28.37, y = 67.51, z = 395.6, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 895, npcName = "Thorgas Grimson", map = 1426, x = 29.18, y = 67.45, z = 395.6, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 912, npcName = "Thran Khorman", map = 1426, x = 28.83, y = 67.24, z = 395.6, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 837, npcName = "Branstock Khalder", map = 1426, x = 28.6, y = 66.39, z = 392.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 944, npcName = "Marryk Nurribit", map = 1426, x = 28.71, y = 66.37, z = 392.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 257446, npcName = "Teo Hammerstorm", map = 1426, x = 28.79, y = 66.18, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 460, npcName = "Alamar Grimm", map = 1426, x = 28.65, y = 66.14, z = 399, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 5612, npcName = "Gimrizz Shadowcog", map = 1426, x = 47.33, y = 53.69, z = 404.4, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 1231, npcName = "Grif Wildheart", map = 1426, x = 45.81, y = 53.04, z = 407.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 1229, npcName = "Granis Swiftaxe", map = 1426, x = 47.36, y = 52.65, z = 399.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 1234, npcName = "Hogral Bakkan", map = 1426, x = 47.56, y = 52.61, z = 399.2, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 1226, npcName = "Maxan Anvol", map = 1426, x = 47.34, y = 52.19, z = 399.7, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 1228, npcName = "Magis Sparkmantle", map = 1426, x = 47.5, y = 52.08, z = 403.6, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 1232, npcName = "Azar Stronghammer", map = 1426, x = 47.6, y = 52.07, z = 403.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 258113, npcName = "Ingrid Dunwald", map = 1426, x = 47.58, y = 51.95, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 11865, npcName = "Buliwyf Stonehand", map = 1455, x = 61.17, y = 89.52, z = 509, f = "e", faction = "A", classes = { "WARRIOR", "PALADIN" } }, { npc = 1901, npcName = "Kelstrum Stonebreaker", map = 1455, x = 66.97, y = 90.15, z = 507.8, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 5115, npcName = "Daera Brightspear", map = 1455, x = 70.97, y = 89.8, z = 510.4, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 5143, npcName = "Toldren Deepiron", map = 1455, x = 25.21, y = 10.76, z = 501.2, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 5167, npcName = "Fenthwick", map = 1455, x = 51.5, y = 15.33, z = 508.6, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 258098, npcName = "Eldrun Stormbreaker", map = 1455, x = 47.1, y = 13.79, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 7312, npcName = "Dink", map = 1455, x = 27.16, y = 8.57, z = 501.2, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 5149, npcName = "Brandur Ironhammer", map = 1455, x = 23.13, y = 6.14, z = 502.9, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 5173, npcName = "Alexander Calder", map = 1455, x = 50.08, y = 7.45, z = 511.7, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 6251, npcName = "Strahad Farsan", map = 1413, x = 62.63, y = 35.5, z = 40.5, f = "e", faction = "AH", classes = { "WARLOCK" } }, { npc = 3593, npcName = "Alyissia", map = 1438, x = 59.64, y = 38.44, z = 1329.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 3594, npcName = "Frahun Shadewhisper", map = 1438, x = 59.64, y = 38.66, z = 1329.7, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3595, npcName = "Shanda", map = 1438, x = 59.17, y = 40.44, z = 1346.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 3596, npcName = "Ayanna Everstride", map = 1438, x = 58.66, y = 40.45, z = 1381, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 3598, npcName = "Kyra Windblade", map = 1438, x = 56.22, y = 59.2, z = 1308.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 3599, npcName = "Jannok Breezesong", map = 1438, x = 56.38, y = 60.14, z = 1308.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3600, npcName = "Laurna Morninglight", map = 1438, x = 55.56, y = 56.75, z = 1313.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 3601, npcName = "Dazalar", map = 1438, x = 56.68, y = 59.49, z = 1308.2, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 4087, npcName = "Arias'ta Bladesinger", map = 1457, x = 58.71, y = 34.9, z = 1330.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 4090, npcName = "Astarii Starseeker", map = 1457, x = 38.33, y = 80.95, z = 1360.1, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 4138, npcName = "Jeen'ra Nightrunner", map = 1457, x = 39.72, y = 5.39, z = 1368.9, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 4163, npcName = "Syurna", map = 1457, x = 36.99, y = 21.91, z = 1295.1, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 4165, npcName = "Elissa Dumas", map = 1457, x = 40.6, y = 82.13, z = 1331.7, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 11866, npcName = "Ilyenia Moonfire", map = 1457, x = 57.56, y = 46.73, z = 1330.9, f = "e", faction = "A", classes = { "HUNTER", "PRIEST" } }, { npc = 251376, npcName = "Tai'ree Farsight", map = 2521, x = 42.49, y = 23.79, faction = "AH", classes = { "HUNTER" } }, { npc = 251379, npcName = "Dorii Brightwhisper", map = 2521, x = 41.55, y = 23.68, faction = "A", classes = { "MAGE" } }, { npc = 251389, npcName = "Akeri Duskblade", map = 2521, x = 43.74, y = 24.36, faction = "AH", classes = { "ROGUE" } }, { npc = 251964, npcName = "Blademaster Ren", map = 2521, x = 43.65, y = 24.11, faction = "AH", classes = { "WARRIOR" } }, { npc = 252373, npcName = "Anathamaas Aetherwind", map = 2521, x = 65.91, y = 80.57, faction = "A", classes = { "MAGE" } }, { npc = 252377, npcName = "Seena Skybreaker", map = 2521, x = 59.89, y = 72.87, faction = "AH", classes = { "WARRIOR" } }, { npc = 252379, npcName = "Eltheen Nightbreeze", map = 2521, x = 59.9, y = 72.48, faction = "AH", classes = { "ROGUE" } }, { npc = 252389, npcName = "Quel'ana Quickgale", map = 2521, x = 59.56, y = 72.63, faction = "AH", classes = { "HUNTER" } }, { npc = 254084, npcName = "Elayaa Easewind", map = 2521, x = 45.26, y = 44.24, faction = "AH", classes = { "HUNTER" } }, { npc = 254086, npcName = "Shenaan Spellwind", map = 2521, x = 45.1, y = 45.87, faction = "AH", classes = { "MAGE" } }, { npc = 254087, npcName = "Miriaan Mistblade", map = 2521, x = 43.15, y = 43.26, faction = "AH", classes = { "ROGUE" } }, { npc = 254088, npcName = "Corsan Earthrazer", map = 2521, x = 44.95, y = 45.1, faction = "AH", classes = { "WARRIOR" } } } },
+					},
+				},
+				{
+					title = "{zone:1453}",
+					note = "Take the boat from Ratchet to {object:3204} and fly to {zone:1453}.",
+					goals = {
+						{ t = "turnin", quest = 5022, title = "Better Late Than Never", npc = 10782, npcName = "Royal Factor Bathrilor", map = 1453, x = 57.17, y = 48.07, z = 108.8 },
+						{ t = "accept", quest = 5048, title = "Good Natured Emma", npc = 10782, npcName = "Royal Factor Bathrilor", minLevel = 50, qlvl = 52, pre = { 5022 }, preTitles = { [5022] = "Better Late Than Never" }, map = 1453, x = 57.17, y = 48.07, z = 108.8 },
+						{ t = "turnin", quest = 5048, title = "Good Natured Emma", npc = 3520, npcName = "Ol' Emma", map = 1453, x = 60.2, y = 57.03, z = 108.1, note = "{npc:3520}, who walks the canals" },
+						{ t = "accept", quest = 5050, title = "Good Luck Charm", npc = 3520, npcName = "Ol' Emma", minLevel = 50, qlvl = 52, pre = { 5048, 5049 }, preTitles = { [5048] = "Good Natured Emma", [5049] = "The Jeremiah Blues" }, map = 1453, x = 60.2, y = 57.03, z = 108.1, note = "For {npc:10778}: keep it" },
+						{ t = "accept", quest = 7791, title = "A Donation of Wool", npc = 14722, npcName = "Clavicus Knavingham", minLevel = 12, qlvl = 60, map = 1453, x = 53.93, y = 81.69, z = 97.4, optional = true },
+						{ t = "accept", quest = 7793, title = "A Donation of Silk", npc = 14722, npcName = "Clavicus Knavingham", minLevel = 26, qlvl = 60, map = 1453, x = 53.93, y = 81.69, z = 97.4, optional = true },
+						{ t = "accept", quest = 7794, title = "A Donation of Mageweave", npc = 14722, npcName = "Clavicus Knavingham", minLevel = 40, qlvl = 60, map = 1453, x = 53.93, y = 81.69, z = 97.4, optional = true },
+					},
+				},
+				{
+					title = "{object:2117}",
+					goals = {
+						{ t = "accept", quest = 6182, title = "The First and the Last", npc = 1748, npcName = "Highlord Bolvar Fordragon", minLevel = 56, qlvl = 60, map = 1453, x = 80.21, y = 38.35, z = 122.6 },
+						{ t = "turnin", quest = 6182, title = "The First and the Last", npc = 332, npcName = "Master Mathias Shaw", map = 1453, x = 78.31, y = 70.74, z = 109.6, note = "{npc:332}, in SI:7" },
+						{ t = "accept", quest = 6183, title = "Honor the Dead", npc = 332, npcName = "Master Mathias Shaw", minLevel = 56, qlvl = 60, pre = { 6182 }, preTitles = { [6182] = "The First and the Last" }, map = 1453, x = 78.31, y = 70.74, z = 109.6 },
+						{ t = "turnin", quest = 6183, title = "Honor the Dead", npc = 332, npcName = "Master Mathias Shaw", map = 1453, x = 78.31, y = 70.74, z = 109.6 },
+						{ t = "accept", quest = 6184, title = "Flint Shadowmore", npc = 332, npcName = "Master Mathias Shaw", minLevel = 56, qlvl = 60, pre = { 6183 }, preTitles = { [6183] = "Honor the Dead" }, map = 1453, x = 78.31, y = 70.74, z = 109.6, note = "{quest:6184} at Chillwind Camp: keep it" },
+					},
+				},
+				{
+					title = "Tram to {zone:1455}",
+					goals = {
+						{ t = "goto", text = "Tram to {zone:1455}", map = 1453, x = 64.5, y = 7.5, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1455}",
+					goals = {
+						{ t = "turnin", quest = 4512, title = "A Little Slime Goes a Long Way", npc = 9616, npcName = "Laris Geardawdle", map = 1455, x = 75.77, y = 23.38, z = 503.4, f = "e" },
+						{ t = "accept", quest = 4513, title = "A Little Slime Goes a Long Way", npc = 9616, npcName = "Laris Geardawdle", minLevel = 48, qlvl = 54, pre = { 4512 }, preTitles = { [4512] = "A Little Slime Goes a Long Way" }, map = 1455, x = 75.77, y = 23.38, z = 503.4, f = "e", note = "Its jars are filled on the next Un'Goro visit" },
+						{ t = "accept", quest = 7807, title = "A Donation of Wool", npc = 14724, npcName = "Bubulo Acerbus", minLevel = 12, qlvl = 60, map = 1455, x = 74.09, y = 48.22, z = 502, f = "e", optional = true, note = "{npc:14724}, by the tram" },
+						{ t = "accept", quest = 7808, title = "A Donation of Silk", npc = 14724, npcName = "Bubulo Acerbus", minLevel = 26, qlvl = 60, map = 1455, x = 74.09, y = 48.22, z = 502, f = "e", optional = true },
+						{ t = "accept", quest = 7809, title = "A Donation of Mageweave", npc = 14724, npcName = "Bubulo Acerbus", minLevel = 40, qlvl = 60, map = 1455, x = 74.09, y = 48.22, z = 502, f = "e", optional = true },
+						{ t = "turnin", quest = 3701, title = "The Smoldering Ruins of Thaurissan", npc = 8879, npcName = "Royal Historian Archesonus", map = 1455, x = 38.37, y = 55.31, z = 505.8, f = "e" },
+						{ t = "accept", quest = 7802, title = "A Donation of Wool", npc = 14723, npcName = "Mistina Steelshield", minLevel = 12, qlvl = 60, map = 1455, x = 43.22, y = 31.57, z = 502.3, f = "e", optional = true },
+						{ t = "accept", quest = 7803, title = "A Donation of Silk", npc = 14723, npcName = "Mistina Steelshield", minLevel = 26, qlvl = 60, map = 1455, x = 43.22, y = 31.57, z = 502.3, f = "e", optional = true },
+						{ t = "accept", quest = 7804, title = "A Donation of Mageweave", npc = 14723, npcName = "Mistina Steelshield", minLevel = 40, qlvl = 60, map = 1455, x = 43.22, y = 31.57, z = 502.3, f = "e", optional = true },
+						{ t = "accept", quest = 7261, title = "The Sovereign Imperative", npc = 13843, npcName = "Lieutenant Rotimer", minLevel = 51, qlvl = 60, closedBy = { 7162 }, preTitles = { [7162] = "Proving Grounds" }, map = 1455, x = 32.21, y = 63.26, z = 501.5, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Light's Hope Chapel",
+					goals = {
+						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
+						{ t = "fly", location = "Light's Hope Chapel", node = 67 },
+					},
+				},
+				{
+					title = "Light's Hope Chapel",
+					goals = {
+						{ t = "turnin", quest = 5181, title = "Villains of Darrowshire", npc = 11063, npcName = "Carlin Redpath", map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+					},
+				},
+				{
+					title = "Light's Hope Chapel",
+					note = "Ride on north to Chillwind Camp and fly to Light's Hope Chapel.",
+					goals = {
+						{ t = "turnin", quest = 5168, title = "Heroes of Darrowshire", npc = 11063, npcName = "Carlin Redpath", map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+						{ t = "accept", quest = 5206, title = "Marauders of Darrowshire", npc = 11063, npcName = "Carlin Redpath", minLevel = 50, qlvl = 60, preAll = { 5168, 5181 }, preTitles = { [5168] = "Heroes of Darrowshire", [5181] = "Villains of Darrowshire" }, map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+					},
+				},
+				{
+					title = "Scourge Champions",
+					note = "Scourge Champions (59) roam the Noxious Glade, north of Light's Hope Chapel. Pass {npc:11063}'s {item:13156} over each one you kill: the skulls that resonate are the ones he wants. Pull them one at a time.",
+					goals = {
+						{ t = "kill", target = "Scourge Champion", npc = 8529, map = 1423, x = 66.62, y = 43.08, z = 76.8, spots = { { x = 67, y = 41.6, z = 76.6, r = 70, n = 3 }, { x = 72.1, y = 33.5, r = 96, n = 5 }, { x = 76.7, y = 36, z = 159.9, r = 70, n = 1 }, { x = 34.8, y = 40.2, z = 178.8, r = 70, n = 1 }, { x = 31.3, y = 48, z = 171.1, r = 70, n = 2 }, { x = 28.8, y = 53.3, r = 70, n = 2 } }, spread = true, optional = true },
+						{ t = "collect", quest = 5206, title = "Marauders of Darrowshire", item = 13155, itemName = "Resonating Skull", count = 5, oi = 1, map = 1423, x = 81.5, y = 44, f = "e", note = "{item:13155}, from the Scourge Champions" },
+					},
+				},
+				{
+					title = "Light's Hope Chapel",
+					goals = {
+						{ t = "turnin", quest = 5206, title = "Marauders of Darrowshire", npc = 11063, npcName = "Carlin Redpath", map = 1423, x = 71.7, y = 50.04, z = 86.8 },
+						{ t = "accept", quest = 5941, title = "Return to Chromie", npc = 11063, npcName = "Carlin Redpath", minLevel = 50, qlvl = 60, pre = { 5206 }, preTitles = { [5206] = "Marauders of Darrowshire" }, map = 1423, x = 71.7, y = 50.04, z = 86.8, note = "Chromie in Andorhal: keep it" },
+					},
+				},
+				{
+					title = "{npc:12248}",
+					note = "Ride north to the Plaguewood's north-eastern edge.\nCareful: The trolls along the path to Zul'Mashar are level 57-59. They run away at low health and call for help, so they often bring adds with them.",
+					goals = {
+						{ t = "collect", quest = 6024, title = "Hameya's Plea", item = 15767, itemName = "Hameya's Key", count = 1, oi = 1, map = 1423, x = 61.96, y = 11.11, from = "Infiltrator Hameya", fromKind = "npc", fromId = 12248, fromNpcs = { { npc = 12248, npcName = "Infiltrator Hameya" } } },
+					},
+				},
+				{
+					title = "The Undercroft",
+					note = "Ride south-west to the Undercroft. The mound of dirt lies inside. {npc:11886} is elite: grouping up is advised.\nCareful: About four non-elite adds come with Mercutio. They walk to the grave instead of appearing on the spot.",
+					goals = {
+						{ t = "turnin", quest = 6024, title = "Hameya's Plea", object = 177675, objName = "Mound of Dirt", map = 1423, x = 23.58, y = 73.79, z = 87.9 },
+						{ t = "collect", quest = 5781, title = "Of Forgotten Memories", item = 14613, itemName = "Taelan's Hammer", count = 1, oi = 1, map = 1423, x = 23.85, y = 74.22, optional = true, note = "{item:14613}, from {npc:11886}", from = "Mercutio Filthgorger", fromKind = "npc", fromId = 11886, fromNpcs = { { npc = 11886, npcName = "Mercutio Filthgorger" } } },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
+-- Source: guides/32-silithus-fin.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/32-silithus-fin",
+			pack = "groupe-alliance",
+			title = "Group 30 · {zone:1451}, {zone:1448}, {zone:1452} & the Plaguelands",
+			faction = "Alliance",
+			minLevel = 58,
+			maxLevel = 60,
+			category = "Leveling",
+			folder = "Group Alliance",
+			zone = 1451,
+			zoneName = "Silithus",
+			author = "BurN-30",
+			version = 1,
+			names = { ["item:11169"] = "Book of Aquor", ["item:11172"] = "Silvery Claws", ["item:11953"] = "Empty Pure Sample Jar", ["item:12359"] = "Thorium Bar", ["item:12906"] = "Purified Moonwell Water", ["item:14047"] = "Runecloth", ["item:14644"] = "Skeleton Key Mold", ["item:20378"] = "Twilight Tablet Fragment", ["item:20404"] = "Encrypted Twilight Text", ["item:2592"] = "Wool Cloth", ["item:4306"] = "Silk Cloth", ["item:4338"] = "Mageweave Cloth", ["npc:10041"] = "Gorishi Hive Queen", ["npc:10300"] = "Ranshalla", ["npc:10667"] = "Chromie", ["npc:10778"] = "Janice Felstone", ["npc:10801"] = "Jabbering Ghoul", ["npc:10977"] = "Quixxil", ["npc:10980"] = "Umi's Mechanical Yeti", ["npc:11556"] = "Salfa", ["npc:11557"] = "Meilosh", ["npc:11558"] = "Kernda", ["npc:11744"] = "Dust Stormer", ["npc:11746"] = "Desert Rumbler", ["npc:11801"] = "Rabine Saturna", ["npc:11803"] = "Twilight Keeper Exeter", ["npc:11804"] = "Twilight Keeper Havunth", ["npc:11936"] = "Artist Renfray", ["npc:11939"] = "Umber", ["npc:12179"] = "Tortured Sentinel", ["npc:13841"] = "Lieutenant Haggerdin", ["npc:14564"] = "Terrordale Spirit", ["npc:14722"] = "Clavicus Knavingham", ["npc:14723"] = "Mistina Steelshield", ["npc:14724"] = "Bubulo Acerbus", ["npc:15170"] = "Rutgar Glyphshaper", ["npc:15171"] = "Frankal Stonebridge", ["npc:15189"] = "Beetix Ficklespragg", ["npc:15190"] = "Noggle Ficklespragg", ["npc:15194"] = "Hermit Ortell", ["npc:15200"] = "Twilight Keeper Mayna", ["npc:15306"] = "Bor Wildmane", ["npc:17080"] = "Marshal Bluewall", ["npc:1852"] = "Araj the Summoner", ["npc:1855"] = "Tirion Fordring", ["npc:3516"] = "Arch Druid Fandral Staghelm", ["npc:4155"] = "Idriana", ["npc:5594"] = "Alchemist Pestlezugg", ["npc:6557"] = "Primal Ooze", ["npc:7110"] = "Jadefire Shadowstalker", ["npc:7139"] = "Irontree Stomper", ["npc:7446"] = "Rabid Shardtooth", ["npc:7740"] = "Gracina Spiritmight", ["npc:7771"] = "Marvon Rivetseeker", ["npc:7916"] = "Erelas Ambersky", ["npc:8737"] = "Linken", ["npc:8961"] = "Felpaw Ravager", ["npc:9116"] = "Eridan Bluewind", ["npc:9117"] = "J.D. Collie", ["npc:9298"] = "Donova Snowden", ["npc:9517"] = "Shadow Lord Fel'dan", ["npc:9598"] = "Arei", ["npc:9616"] = "Laris Geardawdle", ["npc:9860"] = "Salia", ["npc:9861"] = "Moora", ["object:1162"] = "Menethil Harbor", ["object:176091"] = "Deadwood Cauldron", ["object:176158"] = "Brazier of Pain", ["object:176159"] = "Brazier of Malice", ["object:176160"] = "Brazier of Suffering", ["object:176161"] = "Brazier of Hatred", ["object:176498"] = "Portal to Darnassus", ["object:177404"] = "Altar of Elune", ["object:179565"] = "Dusty Reliquary", ["object:2096"] = "Trade District", ["quest:4005"] = "Aquementas", ["quest:5085"] = "Mystery Goo", ["quest:5086"] = "Toxic Horrors", ["quest:5242"] = "A Final Blow", ["quest:5505"] = "The Key to Scholomance", ["quest:5781"] = "Of Forgotten Memories", ["quest:5801"] = "Fire Plume Forged", ["quest:5845"] = "Of Lost Honor", ["quest:6031"] = "Runecloth", ["quest:8323"] = "True Believers", ["zone:1416"] = "Alterac Mountains", ["zone:1422"] = "Western Plaguelands", ["zone:1423"] = "Eastern Plaguelands", ["zone:1438"] = "Teldrassil", ["zone:1440"] = "Ashenvale", ["zone:1444"] = "Feralas", ["zone:1447"] = "Azshara", ["zone:1448"] = "Felwood", ["zone:1449"] = "Un'Goro Crater", ["zone:1450"] = "Moonglade", ["zone:1451"] = "Silithus", ["zone:1452"] = "Winterspring", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			written = { ["Climb Fire Plume Ridge in the middle of the crater and use the {item:14644} by the lava lake at the top, with two Thorium Bars in your bags. Fill {npc:9616}'s Empty Pure Sample Jars on the Primal Oozes in the pools around the ridge."] = "Climb Fire Plume Ridge in the middle of the crater and use the Skeleton Key Mold by the lava lake at the top, with two Thorium Bars in your bags. Fill Laris's Empty Pure Sample Jars on the Primal Oozes in the pools around the ridge.", ["Cross the river east of {npc:1855} into Terrordale. The Terrordale Spirits haunt the woods there."] = "Cross the river east of Tirion into Terrordale. The Terrordale Spirits haunt the woods there.", ["Follow {npc:9298}'s directions to the mouth of Darkwhisper Gorge, past the Frostmaul giants: pass them one at a time."] = "Follow Donova's directions to the mouth of Darkwhisper Gorge, past the Frostmaul giants: pass them one at a time.", ["Keep west on the road to {npc:9298}'s camp beside the hot springs."] = "Keep west on the road to Donova's camp beside the hot springs.", ["Ride south-west to the dwarves' camp near the southern mountains and question {npc:15171} and {npc:15170}. {npc:15190}'s satchel lies in the sand just south-east of the camp."] = "Ride south-west to the dwarves' camp near the southern mountains and question Frankal Stonebridge and Rutgar Glyphshaper. Noggle's satchel lies in the sand just south-east of the camp.", ["Take the Timbermaw Hold tunnel from its {zone:1452} mouth, west of {npc:9298}, and follow the {zone:1450} branch to Nighthaven. {npc:11939} studies by the lake shore."] = "Take the Timbermaw Hold tunnel from its Winterspring mouth, west of Donova, and follow the Moonglade branch to Nighthaven. Umber studies by the lake shore.", ["Wait a moment for {npc:9116}"] = "Wait a moment for Eridan", ["{npc:10778}'s ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves."] = "Janice's ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves.", ["{npc:14722} takes sixty Silk, sixty Mageweave and sixty {quest:6031}: hand in what you carry (or buy at the Auction House), skip the rest."] = "Clavicus takes sixty Silk, sixty Mageweave and sixty Runecloth: hand in what you carry (or buy at the Auction House), skip the rest.", ["{npc:1855} lives in a small hut on the border river, north-east of the lumber camp. Hand in {quest:5781} if you finished it."] = "Tirion lives in a small hut on the border river, north-east of the lumber camp. Hand in Of Forgotten Memories if you finished it." },
+			steps = {
+				{
+					title = "To Ratchet",
+					goals = {
+						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
+						{ t = "goto", text = "Ratchet", map = 1413, x = 62, y = 39.4, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Talrendis Point",
+					goals = {
+						{ t = "goto", text = "Ratchet flight master", map = 1413, x = 63.1, y = 37.1, f = "e" },
+						{ t = "fly", location = "Talrendis Point", node = 64 },
+					},
+				},
+				{
+					title = "{zone:1448}",
+					goals = {
+						{ t = "goto", text = "{zone:1448}", map = 1448, x = 51.2, y = 82.1, f = "e" },
+					},
+				},
+				{
+					title = "The Emerald Sanctuary",
+					note = "Ride north out of Astranaar into {zone:1448} to the druids' camp on the road just past the border.",
+					goals = {
+						{ t = "turnin", quest = 5159, title = "Cleansed Water Returns to Felwood", npc = 10922, npcName = "Greta Mosshoof", map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e" },
+						{ t = "accept", quest = 5165, title = "Dousing the Flames of Protection", npc = 10922, npcName = "Greta Mosshoof", minLevel = 48, qlvl = 55, pre = { 5159 }, preTitles = { [5159] = "Cleansed Water Returns to Felwood" }, map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e" },
+						{ t = "turnin", quest = 4441, title = "Felbound Ancients", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", optional = true },
+						{ t = "accept", quest = 4442, title = "Purified!", npc = 9116, npcName = "Eridan Bluewind", minLevel = 49, qlvl = 54, pre = { 4441 }, preTitles = { [4441] = "Felbound Ancients" }, map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", note = "Inside" },
+						{ t = "turnin", quest = 4442, title = "Purified!", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", note = "Wait a moment for {npc:9116}" },
+						{ t = "turnin", quest = 3942, title = "Linken's Memory", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e" },
+						{ t = "accept", quest = 4084, title = "Silver Heart", npc = 9116, npcName = "Eridan Bluewind", minLevel = 47, qlvl = 54, pre = { 3942 }, preTitles = { [3942] = "Linken's Memory" }, map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e" },
+					},
+				},
+				{
+					title = "Shadow Hold braziers",
+					note = "Shadow Hold is the cave at the back of Jaedenar, west of the road. Use the {item:12906} on the four braziers inside. Kill the Angerclaw bears and Felpaw wolves you pass for the {item:11172}.\nCareful: Shadow Council mobs of level 53-55 fill the cave and often come in large linked groups, many with stuns. A group of 2-3 players is recommended.",
+					goals = {
+						{ t = "collect", quest = 4084, title = "Silver Heart", item = 11172, itemName = "Silvery Claws", count = 11, oi = 1, map = 1448, x = 51.42, y = 80.62, f = "e", spots = { { x = 52.1, y = 82, r = 66, n = 4 }, { x = 56.5, y = 91.4, r = 40, n = 2 }, { x = 46, y = 73.3, r = 63, n = 8 }, { x = 37.5, y = 73.4, r = 57, n = 3 }, { x = 42.2, y = 58.1, r = 40, n = 2 }, { x = 38, y = 43.7, r = 71, n = 7 }, { x = 41.2, y = 23.6, r = 40, n = 1 }, { x = 47.7, y = 16, r = 40, n = 1 }, { x = 56.2, y = 20.9, r = 61, n = 5 }, { x = 51.8, y = 30.9, r = 42, n = 7 }, { x = 64.7, y = 20, r = 40, n = 2 }, { x = 56.2, y = 7.4, r = 40, n = 2 }, { x = 49.7, y = 80, r = 40, n = 3, alt = true }, { x = 49.3, y = 82.4, r = 62, n = 5, alt = true }, { x = 50, y = 77.1, r = 40, n = 1, alt = true }, { x = 53.5, y = 83.7, r = 43, n = 5, alt = true }, { x = 48.4, y = 77.9, r = 43, n = 3, alt = true }, { x = 49.5, y = 85.1, r = 40, n = 2, alt = true }, { x = 47.8, y = 80.5, r = 42, n = 3, alt = true }, { x = 51.3, y = 86.4, r = 73, n = 4, alt = true }, { x = 54.6, y = 84.9, r = 46, n = 4, alt = true }, { x = 47.1, y = 84, r = 40, n = 1, alt = true }, { x = 47.9, y = 75.1, r = 40, n = 3, alt = true }, { x = 52.6, y = 88.1, r = 40, n = 2, alt = true }, { x = 48.3, y = 86.8, r = 40, n = 2, alt = true }, { x = 46.4, y = 78.6, r = 40, n = 1, alt = true }, { x = 56.2, y = 83.9, r = 51, n = 3, alt = true }, { x = 46.7, y = 76.6, r = 49, n = 3, alt = true }, { x = 45.6, y = 82, r = 40, n = 1, alt = true }, { x = 45.5, y = 84.7, r = 40, n = 3, alt = true }, { x = 45.9, y = 87, r = 40, n = 2, alt = true }, { x = 44.3, y = 80.7, r = 57, n = 3, alt = true }, { x = 55.9, y = 89.4, r = 47, n = 3, alt = true }, { x = 44.2, y = 82.9, r = 42, n = 3, alt = true }, { x = 54, y = 91.2, r = 40, n = 2, alt = true }, { x = 58, y = 87.1, r = 40, n = 3, alt = true }, { x = 43.3, y = 76.6, r = 40, n = 1, alt = true }, { x = 45.2, y = 70.2, r = 47, n = 7, alt = true }, { x = 42.1, y = 81.4, r = 40, n = 6, alt = true }, { x = 41.9, y = 75.6, r = 40, n = 3, alt = true }, { x = 41, y = 78.1, r = 40, n = 4, alt = true }, { x = 44.6, y = 68.2, r = 52, n = 5, alt = true }, { x = 40.4, y = 80.4, r = 41, n = 2, alt = true }, { x = 41.6, y = 70.1, r = 40, n = 1, alt = true }, { x = 44, y = 65.3, r = 40, n = 7, alt = true }, { x = 44.4, y = 63.3, r = 40, n = 2, alt = true }, { x = 39.7, y = 70.1, r = 40, n = 1, alt = true }, { x = 42.9, y = 63.1, r = 41, n = 5, alt = true }, { x = 38.1, y = 56, r = 40, n = 1, alt = true }, { x = 38, y = 53.6, r = 40, n = 2, alt = true }, { x = 39, y = 51.1, r = 50, n = 3, alt = true }, { x = 38.8, y = 47.2, r = 40, n = 2, alt = true }, { x = 38.8, y = 45.4, r = 41, n = 4, alt = true }, { x = 48, y = 38.5, r = 40, n = 1, alt = true }, { x = 49.3, y = 35.7, r = 40, n = 2, alt = true }, { x = 39.3, y = 38.8, r = 40, n = 1, alt = true }, { x = 37.6, y = 39.3, r = 43, n = 3, alt = true }, { x = 50, y = 32.7, r = 55, n = 4, alt = true }, { x = 40.7, y = 33.5, r = 57, n = 6, alt = true }, { x = 39.5, y = 30.9, r = 40, n = 2, alt = true }, { x = 53.7, y = 27.4, r = 57, n = 6, alt = true }, { x = 56.1, y = 26.9, r = 40, n = 3, alt = true }, { x = 56.5, y = 24.5, r = 40, n = 2, alt = true }, { x = 55.1, y = 24.1, r = 46, n = 3, alt = true }, { x = 45, y = 24, r = 40, n = 1, alt = true }, { x = 41, y = 24.9, r = 41, n = 2, alt = true }, { x = 42.9, y = 24.1, r = 40, n = 1, alt = true }, { x = 43.8, y = 22.3, r = 40, n = 2, alt = true }, { x = 46.8, y = 19.6, r = 40, n = 1, alt = true }, { x = 45, y = 18.3, r = 40, n = 2, alt = true }, { x = 62.4, y = 19.7, r = 40, n = 3, alt = true }, { x = 57.7, y = 17.8, r = 48, n = 3, alt = true }, { x = 52.6, y = 16, r = 40, n = 2, alt = true }, { x = 50.4, y = 15.7, r = 55, n = 3, alt = true }, { x = 46.3, y = 15.6, r = 40, n = 1, alt = true }, { x = 61.6, y = 16.8, r = 59, n = 3, alt = true }, { x = 53.9, y = 14.4, r = 40, n = 2, alt = true }, { x = 60.2, y = 14.9, r = 40, n = 1, alt = true }, { x = 50.6, y = 12.5, r = 63, n = 6, alt = true }, { x = 56.7, y = 12.9, r = 40, n = 1, alt = true }, { x = 61.9, y = 13.5, r = 40, n = 1, alt = true }, { x = 63.6, y = 13.5, r = 40, n = 1, alt = true }, { x = 55.8, y = 10.8, r = 40, n = 3, alt = true } }, spread = true, note = "Angerclaw bears and Felpaw wolves", fromNpcs = { { npc = 8959, npcName = "Felpaw Wolf" }, { npc = 8956, npcName = "Angerclaw Bear" }, { npc = 8957, npcName = "Angerclaw Grizzly" }, { npc = 8958, npcName = "Angerclaw Mauler" }, { npc = 8960, npcName = "Felpaw Scavenger" } } },
+						{ t = "interact", quest = 5165, title = "Dousing the Flames of Protection", object = 176159, objName = "Brazier of Malice", oi = 2, map = 1448, x = 37.68, y = 52.69, z = 296.6, f = "e", note = "{object:176159}, below ground" },
+						{ t = "interact", quest = 5165, title = "Dousing the Flames of Protection", object = 176160, objName = "Brazier of Suffering", oi = 3, map = 1448, x = 36.73, y = 53.27, z = 298.2, f = "e", note = "{object:176160}, below ground" },
+						{ t = "interact", quest = 5165, title = "Dousing the Flames of Protection", object = 176158, objName = "Brazier of Pain", oi = 1, map = 1448, x = 36.27, y = 56.3, z = 316, f = "e", note = "{object:176158}, below ground" },
+						{ t = "interact", quest = 5165, title = "Dousing the Flames of Protection", object = 176161, objName = "Brazier of Hatred", oi = 4, map = 1448, x = 36.48, y = 55.19, z = 321.9, f = "e", note = "{object:176161}, below ground" },
+					},
+				},
+				{
+					title = "The Emerald Sanctuary",
+					goals = {
+						{ t = "turnin", quest = 5165, title = "Dousing the Flames of Protection", npc = 10922, npcName = "Greta Mosshoof", map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e" },
+						{ t = "accept", quest = 5242, title = "A Final Blow", npc = 10922, npcName = "Greta Mosshoof", minLevel = 48, qlvl = 58, pre = { 5165 }, preTitles = { [5165] = "Dousing the Flames of Protection" }, map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e" },
+					},
+				},
+				{
+					title = "Irontree Woods",
+					note = "Follow the road north to Irontree Woods. The Irontree Stompers carry the heart; finish the claws on the Angerclaw Grizzlies and Felpaw Ravagers of the north.",
+					goals = {
+						{ t = "collect", quest = 4084, title = "Silver Heart", item = 11172, itemName = "Silvery Claws", count = 11, oi = 1, map = 1448, x = 51.42, y = 80.62, f = "e", spots = { { x = 52.1, y = 82, r = 66, n = 4 }, { x = 56.5, y = 91.4, r = 40, n = 2 }, { x = 46, y = 73.3, r = 63, n = 8 }, { x = 37.5, y = 73.4, r = 57, n = 3 }, { x = 42.2, y = 58.1, r = 40, n = 2 }, { x = 38, y = 43.7, r = 71, n = 7 }, { x = 41.2, y = 23.6, r = 40, n = 1 }, { x = 47.7, y = 16, r = 40, n = 1 }, { x = 56.2, y = 20.9, r = 61, n = 5 }, { x = 51.8, y = 30.9, r = 42, n = 7 }, { x = 64.7, y = 20, r = 40, n = 2 }, { x = 56.2, y = 7.4, r = 40, n = 2 }, { x = 49.7, y = 80, r = 40, n = 3, alt = true }, { x = 49.3, y = 82.4, r = 62, n = 5, alt = true }, { x = 50, y = 77.1, r = 40, n = 1, alt = true }, { x = 53.5, y = 83.7, r = 43, n = 5, alt = true }, { x = 48.4, y = 77.9, r = 43, n = 3, alt = true }, { x = 49.5, y = 85.1, r = 40, n = 2, alt = true }, { x = 47.8, y = 80.5, r = 42, n = 3, alt = true }, { x = 51.3, y = 86.4, r = 73, n = 4, alt = true }, { x = 54.6, y = 84.9, r = 46, n = 4, alt = true }, { x = 47.1, y = 84, r = 40, n = 1, alt = true }, { x = 47.9, y = 75.1, r = 40, n = 3, alt = true }, { x = 52.6, y = 88.1, r = 40, n = 2, alt = true }, { x = 48.3, y = 86.8, r = 40, n = 2, alt = true }, { x = 46.4, y = 78.6, r = 40, n = 1, alt = true }, { x = 56.2, y = 83.9, r = 51, n = 3, alt = true }, { x = 46.7, y = 76.6, r = 49, n = 3, alt = true }, { x = 45.6, y = 82, r = 40, n = 1, alt = true }, { x = 45.5, y = 84.7, r = 40, n = 3, alt = true }, { x = 45.9, y = 87, r = 40, n = 2, alt = true }, { x = 44.3, y = 80.7, r = 57, n = 3, alt = true }, { x = 55.9, y = 89.4, r = 47, n = 3, alt = true }, { x = 44.2, y = 82.9, r = 42, n = 3, alt = true }, { x = 54, y = 91.2, r = 40, n = 2, alt = true }, { x = 58, y = 87.1, r = 40, n = 3, alt = true }, { x = 43.3, y = 76.6, r = 40, n = 1, alt = true }, { x = 45.2, y = 70.2, r = 47, n = 7, alt = true }, { x = 42.1, y = 81.4, r = 40, n = 6, alt = true }, { x = 41.9, y = 75.6, r = 40, n = 3, alt = true }, { x = 41, y = 78.1, r = 40, n = 4, alt = true }, { x = 44.6, y = 68.2, r = 52, n = 5, alt = true }, { x = 40.4, y = 80.4, r = 41, n = 2, alt = true }, { x = 41.6, y = 70.1, r = 40, n = 1, alt = true }, { x = 44, y = 65.3, r = 40, n = 7, alt = true }, { x = 44.4, y = 63.3, r = 40, n = 2, alt = true }, { x = 39.7, y = 70.1, r = 40, n = 1, alt = true }, { x = 42.9, y = 63.1, r = 41, n = 5, alt = true }, { x = 38.1, y = 56, r = 40, n = 1, alt = true }, { x = 38, y = 53.6, r = 40, n = 2, alt = true }, { x = 39, y = 51.1, r = 50, n = 3, alt = true }, { x = 38.8, y = 47.2, r = 40, n = 2, alt = true }, { x = 38.8, y = 45.4, r = 41, n = 4, alt = true }, { x = 48, y = 38.5, r = 40, n = 1, alt = true }, { x = 49.3, y = 35.7, r = 40, n = 2, alt = true }, { x = 39.3, y = 38.8, r = 40, n = 1, alt = true }, { x = 37.6, y = 39.3, r = 43, n = 3, alt = true }, { x = 50, y = 32.7, r = 55, n = 4, alt = true }, { x = 40.7, y = 33.5, r = 57, n = 6, alt = true }, { x = 39.5, y = 30.9, r = 40, n = 2, alt = true }, { x = 53.7, y = 27.4, r = 57, n = 6, alt = true }, { x = 56.1, y = 26.9, r = 40, n = 3, alt = true }, { x = 56.5, y = 24.5, r = 40, n = 2, alt = true }, { x = 55.1, y = 24.1, r = 46, n = 3, alt = true }, { x = 45, y = 24, r = 40, n = 1, alt = true }, { x = 41, y = 24.9, r = 41, n = 2, alt = true }, { x = 42.9, y = 24.1, r = 40, n = 1, alt = true }, { x = 43.8, y = 22.3, r = 40, n = 2, alt = true }, { x = 46.8, y = 19.6, r = 40, n = 1, alt = true }, { x = 45, y = 18.3, r = 40, n = 2, alt = true }, { x = 62.4, y = 19.7, r = 40, n = 3, alt = true }, { x = 57.7, y = 17.8, r = 48, n = 3, alt = true }, { x = 52.6, y = 16, r = 40, n = 2, alt = true }, { x = 50.4, y = 15.7, r = 55, n = 3, alt = true }, { x = 46.3, y = 15.6, r = 40, n = 1, alt = true }, { x = 61.6, y = 16.8, r = 59, n = 3, alt = true }, { x = 53.9, y = 14.4, r = 40, n = 2, alt = true }, { x = 60.2, y = 14.9, r = 40, n = 1, alt = true }, { x = 50.6, y = 12.5, r = 63, n = 6, alt = true }, { x = 56.7, y = 12.9, r = 40, n = 1, alt = true }, { x = 61.9, y = 13.5, r = 40, n = 1, alt = true }, { x = 63.6, y = 13.5, r = 40, n = 1, alt = true }, { x = 55.8, y = 10.8, r = 40, n = 3, alt = true } }, spread = true, fromNpcs = { { npc = 8959, npcName = "Felpaw Wolf" }, { npc = 8956, npcName = "Angerclaw Bear" }, { npc = 8957, npcName = "Angerclaw Grizzly" }, { npc = 8958, npcName = "Angerclaw Mauler" }, { npc = 8960, npcName = "Felpaw Scavenger" } } },
+						{ t = "collect", quest = 4084, title = "Silver Heart", item = 11173, itemName = "Irontree Heart", count = 1, oi = 2, map = 1448, x = 48.51, y = 29.84, f = "e", spots = { { x = 48.5, y = 29.5, r = 15, n = 2 }, { x = 47.9, y = 27.2, r = 31, n = 2 }, { x = 46.6, y = 23.9, r = 49, n = 5 }, { x = 51.8, y = 24.8, r = 47, n = 4 }, { x = 53.2, y = 23.4, r = 16, n = 2 }, { x = 48.8, y = 20.3, r = 37, n = 4 }, { x = 49.8, y = 29.1, r = 15, n = 1, alt = true }, { x = 51, y = 20.7, r = 54, n = 4, alt = true }, { x = 52.9, y = 21.7, r = 26, n = 2, alt = true }, { x = 49.7, y = 18.3, r = 39, n = 3, alt = true } }, note = "Irontree Stompers", fromNpcs = { { npc = 7139, npcName = "Irontree Stomper" }, { npc = 7138, npcName = "Irontree Wanderer" } } },
+					},
+				},
+				{
+					title = "{npc:9598}",
+					note = "{npc:9598} waits in Irontree Woods. Escort her out of the woods and keep her alive.\nCareful: Three {quest:5086} ambush you soon after the escort starts.",
+					goals = {
+						{ t = "accept", quest = 4261, title = "Ancient Spirit", npc = 9598, npcName = "Arei", minLevel = 49, qlvl = 56, pre = { 4442 }, preTitles = { [4442] = "Purified!" }, map = 1448, x = 49.57, y = 29.6, f = "e", escort = true },
+						{ t = "complete", quest = 4261, title = "Ancient Spirit", escort = true },
+					},
+				},
+				{
+					title = "Felpaw Village",
+					note = "Ride north to the Deadwood furbolgs' village by the Timbermaw Hold cave mouth.",
+					goals = {
+						{ t = "turnin", quest = 5084, title = "Falling to Corruption", object = 176091, objName = "Deadwood Cauldron", map = 1448, x = 60.2, y = 5.84, z = 570.6, f = "e", optional = true, note = "{object:176091}, if you found the Firewater flask in {zone:1452}" },
+						{ t = "accept", quest = 5085, title = "Mystery Goo", object = 176091, objName = "Deadwood Cauldron", minLevel = 52, qlvl = 56, pre = { 5084 }, preTitles = { [5084] = "Falling to Corruption" }, map = 1448, x = 60.2, y = 5.84, z = 570.6, f = "e", optional = true, note = "{quest:5085}: {npc:9298} in {zone:1452}, keep it" },
+					},
+				},
+				{
+					title = "{quest:5242}",
+					note = "Back into Shadow Hold: {npc:9861} and {npc:9860} guard {npc:9517} in its deepest chamber.\nCareful: The three bosses fight as a group. Kill the nearby mobs first so you don't pull extra enemies.",
+					goals = {
+						{ t = "kill", quest = 5242, title = "A Final Blow", target = "Moora", npc = 9861, count = 1, oi = 1, map = 1448, x = 38.81, y = 46.87, z = 247.1, f = "e", note = "{npc:9861}, below ground" },
+						{ t = "kill", quest = 5242, title = "A Final Blow", target = "Salia", npc = 9860, count = 1, oi = 2, map = 1448, x = 38.79, y = 46.7, z = 247.1, f = "e", note = "{npc:9860}, below ground" },
+						{ t = "collect", quest = 5242, title = "A Final Blow", item = 13207, itemName = "Shadow Lord Fel'dan's Head", count = 1, oi = 3, map = 1448, x = 38.82, y = 46.78, f = "e", note = "{npc:9517}; below ground", from = "Shadow Lord Fel'dan", fromKind = "npc", fromId = 9517, fromNpcs = { { npc = 9517, npcName = "Shadow Lord Fel'dan" } } },
+					},
+				},
+				{
+					title = "The Emerald Sanctuary",
+					note = "Ride back south along the road to the Sanctuary.",
+					goals = {
+						{ t = "turnin", quest = 4084, title = "Silver Heart", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", note = "{npc:9116}, inside" },
+						{ t = "accept", quest = 4005, title = "Aquementas", npc = 9116, npcName = "Eridan Bluewind", minLevel = 47, qlvl = 54, pre = { 4084 }, preTitles = { [4084] = "Silver Heart" }, map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", note = "Keep the {item:11169}, the claws and the heart he hands back" },
+						{ t = "turnin", quest = 5242, title = "A Final Blow", npc = 10922, npcName = "Greta Mosshoof", map = 1448, x = 51.21, y = 82.11, z = 251.2, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1447}",
+					goals = {
+						{ t = "goto", text = "{zone:1447}", map = 1447, x = 11.9, y = 77.5, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Gadgetzan",
+					goals = {
+						{ t = "goto", text = "Talrendis Point flight master", map = 1447, x = 11.9, y = 77.5, f = "e" },
+						{ t = "fly", location = "Gadgetzan", node = 39 },
+					},
+				},
+				{
+					title = "Gadgetzan",
+					note = "Fly to Gadgetzan. Buy two Thorium Bars at the Auction House here for {quest:5801}.",
+					goals = {
+						{ t = "turnin", quest = 4496, title = "Bungle in the Jungle", npc = 5594, npcName = "Alchemist Pestlezugg", map = 1446, x = 50.89, y = 26.96, z = 8.9, f = "e", note = "{npc:5594}, inside" },
+						{ t = "accept", quest = 4507, title = "Pawn Captures Queen", npc = 5594, npcName = "Alchemist Pestlezugg", minLevel = 50, qlvl = 54, pre = { 4496 }, preTitles = { [4496] = "Bungle in the Jungle" }, map = 1446, x = 50.89, y = 26.96, z = 8.9, f = "e" },
+						{ t = "turnin", quest = 4504, title = "Super Sticky", npc = 7876, npcName = "Tran'rek", map = 1446, x = 51.57, y = 26.76, z = 8.8, f = "e" },
+					},
+				},
+				{
+					title = "{quest:4005}",
+					note = "Ride east into the hills. Use the {item:11169} to summon {quest:4005}, then defeat him for the totem.",
+					goals = {
+						{ t = "collect", quest = 4005, title = "Aquementas", item = 11522, itemName = "Silver Totem of Aquementas", count = 1, oi = 1, map = 1446, x = 70.4, y = 49.9, f = "e", from = "Aquementas", fromKind = "npc", fromId = 9453, fromNpcs = { { npc = 9453, npcName = "Aquementas" } } },
+					},
+				},
+				{
+					title = "Broken Pillar",
+					note = "Ride south-west to {npc:7771}'s camp at the Broken Pillar.",
+					goals = {
+						{ t = "turnin", quest = 3444, title = "The Stone Circle", npc = 7771, npcName = "Marvon Rivetseeker", map = 1446, x = 52.71, y = 45.92, z = 17.8, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1449}",
+					goals = {
+						{ t = "goto", text = "{zone:1449}", map = 1449, x = 43.8, y = 81.4, f = "e" },
+					},
+				},
+				{
+					title = "The Slithering Scar",
+					note = "Take the road west down into the crater and ride to the Slithering Scar, the silithid cave in the south. The {npc:10041} waits in its deepest chamber.",
+					goals = {
+						{ t = "use", quest = 4507, title = "Pawn Captures Queen", item = 11833, itemName = "Gorishi Queen Lure", oi = 1, map = 1449, x = 43.5, y = 81, f = "e" },
+						{ t = "collect", quest = 4507, title = "Pawn Captures Queen", item = 11835, itemName = "Gorishi Queen Brain", count = 1, oi = 1, map = 1449, x = 43.85, y = 81.39, f = "e", from = "Gorishi Hive Queen", fromKind = "npc", fromId = 10041, fromNpcs = { { npc = 10041, npcName = "Gorishi Hive Queen" } } },
+					},
+				},
+				{
+					title = "Fire Plume Ridge",
+					note = "Climb Fire Plume Ridge in the middle of the crater and use the {item:14644} by the lava lake at the top, with two Thorium Bars in your bags. Fill {npc:9616}'s Empty Pure Sample Jars on the Primal Oozes in the pools around the ridge.",
+					goals = {
+						{ t = "collect", quest = 4513, title = "A Little Slime Goes a Long Way", item = 11954, itemName = "Filled Pure Sample Jar", count = 10, oi = 1, map = 1449, x = 37.61, y = 81.45, f = "e", spots = { { x = 37.8, y = 80.2, r = 82, n = 2 }, { x = 30.1, y = 63.4, r = 117, n = 5 }, { x = 25.2, y = 44.7, r = 82, n = 2 }, { x = 37, y = 31.1, r = 123, n = 3 }, { x = 42.9, y = 54.7, r = 82, n = 1 }, { x = 50.5, y = 67.6, r = 113, n = 3 }, { x = 60.7, y = 58.4, r = 82, n = 2 }, { x = 59.1, y = 38, r = 82, n = 2 }, { x = 68.7, y = 24.6, r = 83, n = 2 }, { x = 73.4, y = 37.5, r = 82, n = 2 }, { x = 51.8, y = 17.9, r = 82, n = 1 }, { x = 57.5, y = 83, r = 82, n = 1 }, { x = 36.8, y = 73.2, r = 82, n = 3, alt = true }, { x = 32, y = 76.5, r = 82, n = 3, alt = true }, { x = 37.9, y = 64.6, r = 129, n = 5, alt = true }, { x = 44.7, y = 66.5, r = 118, n = 5, alt = true }, { x = 38.1, y = 58.1, r = 82, n = 2, alt = true }, { x = 49, y = 63.4, r = 82, n = 1, alt = true }, { x = 55.5, y = 73.7, r = 82, n = 1, alt = true }, { x = 56.8, y = 66, r = 121, n = 5, alt = true }, { x = 40, y = 48.4, r = 108, n = 4, alt = true }, { x = 32, y = 42.9, r = 88, n = 3, alt = true }, { x = 38.4, y = 39.4, r = 99, n = 5, alt = true }, { x = 58.8, y = 48.1, r = 96, n = 3, alt = true }, { x = 31.9, y = 35, r = 139, n = 4, alt = true }, { x = 51.2, y = 32.2, r = 82, n = 2, alt = true }, { x = 72.6, y = 68.1, r = 82, n = 1, alt = true }, { x = 46.8, y = 25, r = 82, n = 2, alt = true }, { x = 74.3, y = 54.8, r = 82, n = 1, alt = true }, { x = 66, y = 36.7, r = 82, n = 2, alt = true }, { x = 38.6, y = 19.3, r = 82, n = 2, alt = true }, { x = 61.8, y = 25.4, r = 82, n = 1, alt = true }, { x = 69.7, y = 31.6, r = 82, n = 1, alt = true } }, spread = true, note = "Use the jars on slain oozes", fromNpcs = { { npc = 6559, npcName = "Glutinous Ooze" }, { npc = 6556, npcName = "Muculent Ooze" }, { npc = 6557, npcName = "Primal Ooze" } } },
+						{ t = "use", quest = 5801, title = "Fire Plume Forged", item = 14644, itemName = "Skeleton Key Mold", oi = 1, map = 1449, x = 48.9, y = 47, f = "e" },
+						{ t = "collect", quest = 5801, title = "Fire Plume Forged", item = 14645, itemName = "Unfinished Skeleton Key", count = 1, oi = 1, map = 1449, x = 48.9, y = 47, f = "e", from = "Fire Plume Ridge Lava Lake", fromKind = "object", fromId = 4004 },
+					},
+				},
+				{
+					title = "Marshal's Refuge",
+					note = "Ride north to Marshal's Refuge. Use {npc:10980} beside {npc:10977}.",
+					goals = {
+						{ t = "turnin", quest = 4005, title = "Aquementas", npc = 9117, npcName = "J.D. Collie", map = 1449, x = 41.92, y = 2.7, z = -217.1, f = "e", note = "{npc:9117}, below ground" },
+						{ t = "accept", quest = 3961, title = "Linken's Adventure", npc = 9117, npcName = "J.D. Collie", minLevel = 47, qlvl = 54, pre = { 4005 }, preTitles = { [4005] = "Aquementas" }, map = 1449, x = 41.92, y = 2.7, z = -217.1, f = "e" },
+						{ t = "turnin", quest = 3961, title = "Linken's Adventure", npc = 8737, npcName = "Linken", map = 1449, x = 44.66, y = 8.1, z = -213.3, f = "e", note = "{npc:8737}, at the back of the refuge" },
+						{ t = "kill", quest = 5163, title = "Are We There, Yeti?", target = "Quixxil", npc = 10977, count = 1, oi = 3, map = 1449, x = 43.66, y = 9.37, z = -209.4, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Cenarion Hold",
+					goals = {
+						{ t = "goto", text = "Marshal's Refuge flight master", map = 1449, x = 45.3, y = 6, f = "e" },
+						{ t = "fly", location = "Cenarion Hold", node = 73 },
+					},
+				},
+				{
+					title = "Cenarion Hold",
+					note = "{npc:15189} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart.",
+					goals = {
+						{ t = "turnin", quest = 8281, title = "Stepping Up Security", npc = 15191, npcName = "Windcaller Proudhorn", map = 1451, x = 51.15, y = 38.29, z = 42.2, f = "e" },
+						{ t = "turnin", quest = 8278, title = "Noggle's Last Hope", npc = 15189, npcName = "Beetix Ficklespragg", map = 1451, x = 51.61, y = 38.63, z = 55.1, f = "e" },
+					},
+				},
+				{
+					title = "Hive'Ashi: kill these as you meet them",
+					note = "The Twilight's Hammer dig fills the north-west corner: tablet fragments lie on the ground and the Dust Stormers and Desert Rumblers carry them too. Every cultist can drop an {item:20404}: keep twenty, ten for {npc:15306} and ten for {npc:15194} later.",
+					goals = {
+						{ t = "collect", quest = 8318, title = "Secret Communication", item = 20404, itemName = "Encrypted Twilight Text", count = 10, oi = 1, map = 1451, x = 41.84, y = 44.13, f = "e", spots = { { x = 40.9, y = 44.7, r = 54, n = 13 }, { x = 39, y = 41.7, r = 40, n = 5 }, { x = 27.5, y = 32.8, r = 66, n = 14 }, { x = 24.9, y = 36.7, r = 51, n = 9 }, { x = 18, y = 31.2, r = 40, n = 1 }, { x = 22.8, y = 68.7, r = 40, n = 1 }, { x = 18.4, y = 81.7, r = 43, n = 8 }, { x = 19.9, y = 87.8, r = 45, n = 5 }, { x = 57.1, y = 17.5, r = 40, n = 2 }, { x = 66.1, y = 16, r = 59, n = 6 }, { x = 66.4, y = 20.9, r = 54, n = 12 }, { x = 73.6, y = 12.5, r = 40, n = 4 }, { x = 39, y = 46.5, r = 59, n = 10, alt = true }, { x = 38.3, y = 44.2, r = 60, n = 15, alt = true }, { x = 25.7, y = 33.6, r = 73, n = 16, alt = true }, { x = 68, y = 18, r = 40, n = 5, alt = true }, { x = 20.6, y = 84.5, r = 47, n = 8, alt = true }, { x = 71.1, y = 13.4, r = 54, n = 9, alt = true }, { x = 18, y = 84.8, r = 67, n = 14, alt = true }, { x = 72.7, y = 14.8, r = 40, n = 4, alt = true } }, spread = true, note = "Twilight's Hammer cultists", fromNpcs = { { npc = 11880, npcName = "Twilight Avenger" }, { npc = 15213, npcName = "Twilight Overlord" }, { npc = 11882, npcName = "Twilight Stonecaller" }, { npc = 15201, npcName = "Twilight Flamereaver" }, { npc = 11881, npcName = "Twilight Geolord" } } },
+						{ t = "collect", quest = 8284, title = "The Twilight Mystery", item = 20378, itemName = "Twilight Tablet Fragment", count = 8, oi = 1, map = 1451, x = 28.49, y = 27.24, f = "e", spots = { { x = 28.5, y = 26.9, r = 40, n = 3 }, { x = 29, y = 22, r = 40, n = 5 }, { x = 31.1, y = 16.5, r = 66, n = 15 }, { x = 28.2, y = 14.7, r = 68, n = 12 }, { x = 24.6, y = 11.1, r = 49, n = 9 }, { x = 23.2, y = 15.3, r = 77, n = 11 }, { x = 20.2, y = 17.3, r = 64, n = 15 }, { x = 21.7, y = 8.6, r = 43, n = 6 }, { x = 17.8, y = 26.1, r = 65, n = 12 }, { x = 19.2, y = 31.2, r = 71, n = 12 }, { x = 23.2, y = 27.1, r = 40, n = 3 }, { x = 34.8, y = 12.9, r = 40, n = 4 }, { x = 29.2, y = 18.7, r = 54, n = 9, alt = true }, { x = 21.6, y = 29.1, r = 45, n = 7, alt = true }, { x = 21.1, y = 25.1, r = 61, n = 11, alt = true }, { x = 22, y = 20.8, r = 64, n = 12, alt = true }, { x = 33.2, y = 14.3, r = 60, n = 12, alt = true }, { x = 19.2, y = 21.4, r = 55, n = 13, alt = true }, { x = 27.2, y = 12, r = 43, n = 8, alt = true }, { x = 21.3, y = 11.7, r = 71, n = 15, alt = true } }, spread = true, note = "Twilight Tablet Fragments", from = "Dust Stormer", fromKind = "npc", fromAlso = "Desert Rumbler", fromId = 11744, fromAlsoId = 11746, fromNpcs = { { npc = 14455, npcName = "Whirling Invader" }, { npc = 11744, npcName = "Dust Stormer" }, { npc = 11746, npcName = "Desert Rumbler" } } },
+						{ t = "collect", item = 20404, itemName = "Encrypted Twilight Text", count = 20, map = 1451, x = 28.38, y = 30.99, f = "e", spots = { { x = 27.5, y = 32.8, r = 66, n = 14 }, { x = 24.9, y = 36.7, r = 51, n = 9 }, { x = 18, y = 31.2, r = 40, n = 1 }, { x = 39, y = 41.7, r = 40, n = 5 }, { x = 40.9, y = 44.7, r = 54, n = 13 }, { x = 22.8, y = 68.7, r = 40, n = 1 }, { x = 18.4, y = 81.7, r = 43, n = 8 }, { x = 19.9, y = 87.8, r = 45, n = 5 }, { x = 57.1, y = 17.5, r = 40, n = 2 }, { x = 66.1, y = 16, r = 59, n = 6 }, { x = 66.4, y = 20.9, r = 54, n = 12 }, { x = 73.6, y = 12.5, r = 40, n = 4 }, { x = 25.7, y = 33.6, r = 73, n = 16, alt = true }, { x = 38.3, y = 44.2, r = 60, n = 15, alt = true }, { x = 39, y = 46.5, r = 59, n = 10, alt = true }, { x = 20.6, y = 84.5, r = 47, n = 8, alt = true }, { x = 18, y = 84.8, r = 67, n = 14, alt = true }, { x = 68, y = 18, r = 40, n = 5, alt = true }, { x = 71.1, y = 13.4, r = 54, n = 9, alt = true }, { x = 72.7, y = 14.8, r = 40, n = 4, alt = true } }, spread = true, optional = true, note = "Ten more for {quest:8323}", fromNpcs = { { npc = 11880, npcName = "Twilight Avenger" }, { npc = 15213, npcName = "Twilight Overlord" }, { npc = 11882, npcName = "Twilight Stonecaller" }, { npc = 15201, npcName = "Twilight Flamereaver" }, { npc = 11881, npcName = "Twilight Geolord" } } },
+					},
+				},
+				{
+					title = "Hive'Zora",
+					note = "{npc:17080} camps outside Hive'Zora, the western hive. Pick up a Silithyst at one of the red geysers nearby and carry it to the Alliance extractor at his camp.\nCareful: You lose the Silithyst if you mount, stealth, use Divine Shield, Feign Death or Vanish. Blink and Power Word: Shield do not drop it.",
+					goals = {
+						{ t = "turnin", quest = 9415, title = "Report to Marshal Bluewall", npc = 17080, npcName = "Marshal Bluewall", map = 1451, x = 33.29, y = 51.06, z = 3.3, f = "e" },
+						{ t = "accept", quest = 9419, title = "Scouring the Desert", npc = 17080, npcName = "Marshal Bluewall", minLevel = 1, qlvl = 60, pre = { 9415 }, preTitles = { [9415] = "Report to Marshal Bluewall" }, map = 1451, x = 33.29, y = 51.06, z = 3.3, f = "e" },
+						{ t = "complete", quest = 9419, title = "Scouring the Desert" },
+						{ t = "turnin", quest = 9419, title = "Scouring the Desert", npc = 17080, npcName = "Marshal Bluewall", map = 1451, x = 33.29, y = 51.06, z = 3.3, f = "e" },
+					},
+				},
+				{
+					title = "Cenarion Hold",
+					goals = {
+						{ t = "turnin", quest = 8318, title = "Secret Communication", npc = 15306, npcName = "Bor Wildmane", map = 1451, x = 48.57, y = 37.78, z = 49.1, f = "e" },
+						{ t = "accept", quest = 8304, title = "Dearest Natalia", npc = 15181, npcName = "Commander Mar'alith", minLevel = 58, qlvl = 60, map = 1451, x = 49.2, y = 34.18, z = 57.4, f = "e" },
+						{ t = "turnin", quest = 8284, title = "The Twilight Mystery", npc = 15183, npcName = "Geologist Larksbane", map = 1451, x = 49.67, y = 37.46, z = 52.1, f = "e" },
+						{ t = "accept", quest = 8285, title = "The Deserter", npc = 15183, npcName = "Geologist Larksbane", minLevel = 54, qlvl = 59, pre = { 8284 }, preTitles = { [8284] = "The Twilight Mystery" }, map = 1451, x = 49.67, y = 37.46, z = 52.1, f = "e" },
+					},
+				},
+				{
+					title = "Cenarion Hold",
+					note = "{npc:15190} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart.",
+					goals = {
+						{ t = "sethome", npc = 15174, npcName = "Calandrath", location = "Cenarion Hold", map = 1451, x = 51.89, y = 39.16, z = 45.7, f = "e" },
+						{ t = "accept", quest = 8282, title = "Noggle's Lost Satchel", npc = 15190, npcName = "Noggle Ficklespragg", minLevel = 54, qlvl = 58, pre = { 8278 }, preTitles = { [8278] = "Noggle's Last Hope" }, map = 1451, x = 51.63, y = 38.5, z = 56, f = "e" },
+					},
+				},
+				{
+					title = "Southwind Village",
+					note = "Ride east to the ruins of Southwind Village. The {object:179565} lies among the ruined buildings, watched by Tortured Sentinels.",
+					goals = {
+						{ t = "collect", quest = 5527, title = "A Reliquary of Purity", item = 22201, itemName = "Reliquary of Purity", count = 1, oi = 1, map = 1451, x = 63.23, y = 55.35, f = "e", note = "{object:179565}; inside", from = "Dusty Reliquary", fromKind = "object", fromId = 179565 },
+					},
+				},
+				{
+					title = "{npc:15194}",
+					note = "The hermit hides among the rocks south-east of Southwind Village.",
+					goals = {
+						{ t = "turnin", quest = 8285, title = "The Deserter", npc = 15194, npcName = "Hermit Ortell", map = 1451, x = 67.19, y = 69.76, z = 11.5, f = "e", note = "Below ground" },
+						{ t = "accept", quest = 8279, title = "The Twilight Lexicon", npc = 15194, npcName = "Hermit Ortell", minLevel = 54, qlvl = 60, pre = { 8285 }, preTitles = { [8285] = "The Deserter" }, map = 1451, x = 67.19, y = 69.76, z = 11.5, f = "e" },
+					},
+				},
+				{
+					title = "Bronzebeard's Encampment",
+					note = "Ride south-west to the dwarves' camp near the southern mountains and question {npc:15171} and {npc:15170}. {npc:15190}'s satchel lies in the sand just south-east of the camp.",
+					goals = {
+						{ t = "collect", quest = 8282, title = "Noggle's Lost Satchel", item = 20379, itemName = "Noggle's Satchel", count = 1, oi = 1, map = 1451, x = 44.56, y = 91.38, f = "e", from = "Noggle's Satchel", fromKind = "object", fromId = 180435 },
+						{ t = "kill", quest = 8304, title = "Dearest Natalia", target = "Frankal Stonebridge", npc = 15171, oi = 1, map = 1451, x = 40.81, y = 88.86, z = 2.8, f = "e" },
+						{ t = "kill", quest = 8304, title = "Dearest Natalia", target = "Rutgar Glyphshaper", npc = 15170, oi = 2, map = 1451, x = 41.28, y = 88.45, z = 4.7, f = "e" },
+					},
+				},
+				{
+					title = "The Twilight Post",
+					note = "{npc:11803} holds the cultists' camp in the far south-west.",
+					goals = {
+						{ t = "collect", quest = 8279, title = "The Twilight Lexicon", item = 20395, itemName = "Twilight Lexicon - Chapter 2", count = 1, oi = 2, map = 1451, x = 16.09, y = 86.37, f = "e", from = "Twilight Keeper Exeter", fromKind = "npc", fromId = 11803, fromNpcs = { { npc = 11803, npcName = "Twilight Keeper Exeter" } } },
+					},
+				},
+				{
+					title = "{npc:15200}",
+					note = "Ride north along the west side to Mayna's small camp.",
+					goals = {
+						{ t = "collect", quest = 8279, title = "The Twilight Lexicon", item = 20394, itemName = "Twilight Lexicon - Chapter 1", count = 1, oi = 1, map = 1451, x = 26.35, y = 36.62, f = "e", from = "Twilight Keeper Mayna", fromKind = "npc", fromId = 15200, fromNpcs = { { npc = 15200, npcName = "Twilight Keeper Mayna" } } },
+					},
+				},
+				{
+					title = "{npc:11804}",
+					note = "Havunth's camp sits just west of Cenarion Hold.",
+					goals = {
+						{ t = "collect", quest = 8279, title = "The Twilight Lexicon", item = 20396, itemName = "Twilight Lexicon - Chapter 3", count = 1, oi = 3, map = 1451, x = 40.86, y = 42.22, f = "e", from = "Twilight Keeper Havunth", fromKind = "npc", fromId = 11804, fromNpcs = { { npc = 11804, npcName = "Twilight Keeper Havunth" } } },
+					},
+				},
+				{
+					title = "{npc:15194}",
+					note = "Ride back south-east to the hermit.",
+					goals = {
+						{ t = "turnin", quest = 8279, title = "The Twilight Lexicon", npc = 15194, npcName = "Hermit Ortell", map = 1451, x = 67.19, y = 69.76, z = 11.5, f = "e", note = "Below ground" },
+						{ t = "accept", quest = 8287, title = "A Terrible Purpose", npc = 15194, npcName = "Hermit Ortell", minLevel = 54, qlvl = 60, pre = { 8279 }, preTitles = { [8279] = "The Twilight Lexicon" }, map = 1451, x = 67.19, y = 69.76, z = 11.5, f = "e" },
+						{ t = "accept", quest = 8323, title = "True Believers", npc = 15194, npcName = "Hermit Ortell", minLevel = 54, qlvl = 59, pre = { 8279 }, preTitles = { [8279] = "The Twilight Lexicon" }, map = 1451, x = 67.19, y = 69.76, z = 11.5, f = "e", note = "Hand him the ten texts you kept" },
+						{ t = "turnin", quest = 8323, title = "True Believers", npc = 15194, npcName = "Hermit Ortell", map = 1451, x = 67.19, y = 69.76, z = 11.5, f = "e" },
+					},
+				},
+				{
+					title = "Cenarion Hold",
+					note = "{npc:15190} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart.",
+					goals = {
+						{ t = "turnin", quest = 8282, title = "Noggle's Lost Satchel", npc = 15190, npcName = "Noggle Ficklespragg", map = 1451, x = 51.63, y = 38.5, z = 56, f = "e" },
+						{ t = "vendor", candidates = { { npc = 15176, npcName = "Vargus", map = 1451, x = 51.23, y = 38.86, z = 42.6, f = "e", faction = "AH" }, { npc = 3000, npcName = "Gibbert", map = 1449, x = 44.1, y = 7.19, z = -202.8, f = "e", faction = "AH" }, { npc = 1695, npcName = "Rendow", map = 1441, x = 7.6, y = 17.9, z = -36.6, f = "e", faction = "A" }, { npc = 10293, npcName = "Dulciea Frostmoon", map = 1444, x = 30.79, y = 43.15, z = 13.6, f = "e", faction = "A" }, { npc = 8131, npcName = "Blizrik Buckshot", map = 1446, x = 50.74, y = 27.53, z = 8.6, f = "e", faction = "AH" }, { npc = 3053, npcName = "Synge", map = 1441, x = 80.4, y = 77.01, z = -58.7, f = "e", faction = "AH" }, { npc = 4886, npcName = "Hans Weston", map = 1445, x = 64.63, y = 50.42, z = 16.9, f = "e", faction = "A" }, { npc = 3683, npcName = "Kiknikle", map = 1413, x = 41.79, y = 38.69, z = 91.9, f = "e", faction = "AH" }, { npc = 263569, npcName = "Bryanna Embreeze", map = 1413, x = 63.45, y = 58.74, f = "e", faction = "A" }, { npc = 1322, npcName = "Maxton Strang", map = 1443, x = 67.93, y = 8.31, z = 168.1, f = "e", faction = "A" }, { npc = 3658, npcName = "Lizzarik", map = 1413, x = 61.76, y = 38.29, z = 19.2, f = "e", faction = "AH" }, { npc = 4086, npcName = "Veenix", map = 1442, x = 58.22, y = 51.74, z = 65.5, f = "e", faction = "AH" }, { npc = 4085, npcName = "Nizzik", map = 1442, x = 62.7, y = 40.18, z = 104.6, f = "e", faction = "AH" }, { npc = 14753, npcName = "Illiyana Moonblaze", map = 1440, x = 61.49, y = 83.86, z = 126.3, f = "e", faction = "A" }, { npc = 3951, npcName = "Bhaldaran Ravenshade", map = 1440, x = 50.27, y = 67.27, z = 101.8, f = "e", faction = "A" }, { npc = 4188, npcName = "Illyanie", map = 1442, x = 35.59, y = 7.35, z = 234.9, f = "e", faction = "A" }, { npc = 11137, npcName = "Xai'ander", map = 1440, x = 35.79, y = 52.05, z = 110.8, f = "e", faction = "A" }, { npc = 14301, npcName = "Brinna Valanaar", map = 1447, x = 12, y = 78.38, z = 109.2, f = "e", faction = "A" }, { npc = 222685, npcName = "Quartermaster Kyleen", map = 1440, x = 89.4, y = 40.4, f = "e", faction = "AH" }, { npc = 265883, npcName = "Chagrak Hammerstrike", map = 2482, x = 13.6, y = 52.4, faction = "AH" }, { npc = 265866, npcName = "Trigg Ironhand", map = 2482, x = 15.6, y = 50.6, faction = "A" }, { npc = 264797, npcName = "Aisarra Nightmeadow", map = 2482, x = 71.09, y = 51.32, faction = "A" }, { npc = 15315, npcName = "Mylini Frostmoon", map = 1448, x = 62.41, y = 25.78, z = 574.7, f = "e", faction = "A" }, { npc = 4187, npcName = "Harlon Thornguard", map = 1439, x = 37.05, y = 41.34, z = 9.1, f = "e", faction = "A" }, { npc = 11184, npcName = "Wixxrak", map = 1452, x = 61.72, y = 38.03, z = 721.5, f = "e", faction = "AH" }, { npc = 12024, npcName = "Meliri", map = 1450, x = 51.18, y = 42.31, z = 489.4, f = "e", faction = "AH" }, { npc = 4234, npcName = "Andrus", map = 1457, x = 56.13, y = 88.91, z = 1330.1, f = "e", faction = "A" }, { npc = 3612, npcName = "Sinda", map = 1438, x = 56.33, y = 59.59, z = 1308.9, f = "e", faction = "A" }, { npc = 4164, npcName = "Cylania", map = 1457, x = 59.24, y = 46.36, z = 1330.9, f = "e", faction = "A" }, { npc = 3589, npcName = "Keina", map = 1438, x = 59.31, y = 41.09, z = 1322.8, f = "e", faction = "A" }, { npc = 3537, npcName = "Zixil", map = 1416, x = 53.6, y = 98.7, f = "e", faction = "AH" }, { npc = 13217, npcName = "Thanthaldis Snowgleam", map = 1416, x = 39.45, y = 81.65, z = 131.2, f = "e", faction = "A" }, { npc = 28989, npcName = "Aemara", map = 1416, x = 16.59, y = 70.12, f = "e", faction = "AH" }, { npc = 28990, npcName = "Anthony Durain", map = 1416, x = 20.15, y = 63.77, f = "e", faction = "A" }, { npc = 275598, npcName = "Valerie Langrom", map = 1416, x = 12.64, y = 71.05, f = "e", faction = "A" }, { npc = 1471, npcName = "Jannos Ironwill", map = 1417, x = 45.98, y = 47.72, z = 21.5, f = "e", faction = "A" }, { npc = 9179, npcName = "Jazzrik", map = 1418, x = 42.47, y = 52.5, z = 241.2, f = "e", faction = "AH" }, { npc = 9544, npcName = "Yuka Screwspigot", map = 1418, x = 4.9, y = 94.7, z = 165.4, f = "e", faction = "AH" }, { npc = 5508, npcName = "Strumner Flintheel", map = 1419, x = 66.08, y = 17.16, z = 66.8, f = "e", faction = "A" }, { npc = 3528, npcName = "Pyrewood Armorer", map = 1421, x = 46.4, y = 71.88, z = 19, f = "e", faction = "A" }, { npc = 3534, npcName = "Wallace the Blind", map = 1421, x = 46.5, y = 86.49, z = 17.1, f = "e", faction = "AH" }, { npc = 10856, npcName = "Argent Quartermaster Hasana", map = 1422, x = 26.6, y = 55.2, z = 59.5, f = "e", faction = "AH" }, { npc = 10857, npcName = "Argent Quartermaster Lightspark", map = 1422, x = 42.84, y = 83.72, z = 65.3, f = "e", faction = "AH" }, { npc = 11278, npcName = "Magnus Frostwake", map = 1422, x = 68.12, y = 77.57, z = 62.1, f = "e", faction = "AH" }, { npc = 12942, npcName = "Leonard Porter", map = 1422, x = 43.08, y = 84.31, z = 62.7, f = "e", faction = "A" }, { npc = 16376, npcName = "Craftsman Wilhelm", map = 1423, x = 71.24, y = 49.9, z = 81.9, faction = "AH" }, { npc = 2404, npcName = "Blacksmith Verringtan", map = 1424, x = 32.11, y = 44.42, z = 49.4, f = "e", faction = "A" }, { npc = 3536, npcName = "Kris Legace", map = 1424, x = 80.14, y = 38.89, z = 88.3, f = "e", faction = "AH" }, { npc = 3543, npcName = "Robert Aebischer", map = 1424, x = 51.21, y = 56.98, z = 15.3, f = "e", faction = "A" }, { npc = 8161, npcName = "Harggan", map = 1424, x = 98.7, y = 3.1, z = 131.6, f = "e", faction = "A" }, { npc = 836, npcName = "Durnan Furcutter", map = 1426, x = 28.77, y = 66.37, z = 392.8, f = "e", faction = "A" }, { npc = 1238, npcName = "Gamili Frosthide", map = 1426, x = 45.18, y = 51.93, z = 397.4, f = "e", faction = "A" }, { npc = 1698, npcName = "Frast Dokner", map = 1426, x = 69, y = 55.89, z = 383.2, f = "e", faction = "A" }, { npc = 3162, npcName = "Burdrak Harglhelm", map = 1426, x = 30.11, y = 45.28, z = 394.2, f = "e", faction = "A" }, { npc = 3177, npcName = "Turuk Amberstill", map = 1426, x = 62.9, y = 49.89, z = 406.2, f = "e", faction = "A" }, { npc = 11703, npcName = "Graw Cornerstone", map = 1427, x = 41.5, y = 74.97, z = 254.8, f = "e", faction = "A" }, { npc = 14624, npcName = "Master Smith Burninate", map = 1427, x = 38.8, y = 28.51, z = 309.3, f = "e", faction = "AH" }, { npc = 1296, npcName = "Felder Stover", map = 1428, x = 85.21, y = 68.39, z = 187.6, f = "e", faction = "A" }, { npc = 54, npcName = "Corina Steele", map = 1429, x = 41.53, y = 65.9, z = 58.5, f = "e", faction = "A" }, { npc = 78, npcName = "Janos Hammerknuckle", map = 1429, x = 47.24, y = 41.9, z = 82, f = "e", faction = "A" }, { npc = 896, npcName = "Veldan Lightfoot", map = 1429, x = 25.18, y = 73.89, z = 38.7, f = "e", faction = "A" }, { npc = 959, npcName = "Morley Eberlein", map = 1429, x = 64.69, y = 69.51, z = 90.5, f = "e", faction = "A" }, { npc = 1198, npcName = "Rallic Finn", map = 1429, x = 83.28, y = 66.09, z = 47.4, f = "e", faction = "A" }, { npc = 225, npcName = "Gavin Gnarltree", map = 1431, x = 73.6, y = 50.04, z = 27.1, f = "e", faction = "A" }, { npc = 167, npcName = "Morhan Coppertongue", map = 1432, x = 34.02, y = 46.54, z = 324.4, f = "e", faction = "A" }, { npc = 222, npcName = "Nillen Andemar", map = 1432, x = 42.87, y = 9.89, z = 310.4, f = "e", faction = "A" }, { npc = 954, npcName = "Kat Sampson", map = 1432, x = 82.65, y = 64.11, z = 407.8, f = "e", faction = "A" }, { npc = 1214, npcName = "Aldren Cordon", map = 1432, x = 64.82, y = 66.05, z = 322.9, f = "e", faction = "A" }, { npc = 1362, npcName = "Gothor Brumn", map = 1432, x = 24.13, y = 18.21, z = 327.2, f = "e", faction = "A" }, { npc = 789, npcName = "Kimberly Hiett", map = 1433, x = 21.99, y = 45.55, z = 64.4, faction = "A" }, { npc = 3097, npcName = "Bernard Brubaker", map = 1433, x = 83.16, y = 71.02, z = 122.1, faction = "A" }, { npc = 256730, npcName = "Stondry Darkhammer", map = 1433, x = 10.38, y = 73.85, faction = "A" }, { npc = 2482, npcName = "Zarena Cromwind", map = 1434, x = 28.34, y = 75.46, z = 6.8, f = "e", faction = "AH" }, { npc = 2483, npcName = "Jaquilina Dramet", map = 1434, x = 35.75, y = 10.66, z = 11, f = "e", faction = "AH" }, { npc = 14921, npcName = "Rin'wosho the Trader", map = 1434, x = 15.07, y = 16, z = 6.9, f = "e", faction = "AH" }, { npc = 1668, npcName = "William MacGregor", map = 1436, x = 57.71, y = 53.94, z = 33, f = "e", faction = "A" }, { npc = 1669, npcName = "Defias Profiteer", map = 1436, x = 43.47, y = 66.76, z = 50.6, f = "e", faction = "AH" }, { npc = 1441, npcName = "Brak Durnad", map = 1437, x = 11.44, y = 59.69, z = 11.6, f = "e", faction = "A" }, { npc = 2679, npcName = "Wenna Silkbeard", map = 1437, x = 25.61, y = 25.8, z = 8.7, f = "e", faction = "A" }, { npc = 1287, npcName = "Marda Weller", map = 1453, x = 64.07, y = 68.36, z = 96.9, faction = "A" }, { npc = 5509, npcName = "Kathrum Axehand", map = 1453, x = 59.3, y = 33.82, z = 95.4, faction = "A" }, { npc = 4259, npcName = "Thurgrum Deepforge", map = 1455, x = 51.74, y = 42.78, z = 498.9, f = "e", faction = "A" }, { npc = 5119, npcName = "Hegnar Swiftaxe", map = 1455, x = 62.19, y = 88.16, z = 502.3, f = "e", faction = "A" }, { npc = 5133, npcName = "Harick Boulderdrum", map = 1455, x = 23.13, y = 15.94, z = 502.3, f = "e", faction = "A" }, { npc = 4257, npcName = "Lana Thunderbrew", map = 1459, x = 43.41, y = 15.64, f = "e", faction = "A" }, { npc = 251364, npcName = "Destin Thriceforged", map = 2521, x = 43.43, y = 23.5, faction = "AH" }, { npc = 251913, npcName = "Aedi Thriceforged", map = 2521, x = 44.88, y = 44.37, faction = "AH" }, { npc = 252479, npcName = "Daeann Steelwind", map = 2521, x = 65.47, y = 80.28, faction = "AH" }, { npc = 257422, npcName = "Railee Thriceforged", map = 2521, x = 58.98, y = 75.46, faction = "AH" }, { npc = 265756, npcName = "Genn Fairweather", map = 2521, x = 53.83, y = 81.33, faction = "AH" }, { npc = 259766, npcName = "Mika Darby", map = 2548, x = 77.76, y = 52.03, faction = "A" }, { npc = 259861, npcName = "Paige Armstrong", map = 2548, x = 64.35, y = 82.02, faction = "A" }, { npc = 260566, npcName = "Fizzix Boomshot", map = 2548, x = 78.59, y = 53.66, faction = "AH" } } },
+						{ t = "turnin", quest = 8304, title = "Dearest Natalia", npc = 15181, npcName = "Commander Mar'alith", map = 1451, x = 49.2, y = 34.18, z = 57.4, f = "e" },
+						{ t = "turnin", quest = 8287, title = "A Terrible Purpose", npc = 15181, npcName = "Commander Mar'alith", map = 1451, x = 49.2, y = 34.18, z = 57.4, f = "e" },
+					},
+				},
+				{
+					title = "Gadgetzan",
+					note = "Fly to Gadgetzan.",
+					goals = {
+						{ t = "fly", location = "Gadgetzan", node = 39 },
+						{ t = "turnin", quest = 4507, title = "Pawn Captures Queen", npc = 5594, npcName = "Alchemist Pestlezugg", map = 1446, x = 50.89, y = 26.96, z = 8.9, f = "e", note = "{npc:5594}, inside" },
+						{ t = "accept", quest = 4508, title = "Calm Before the Storm", npc = 5594, npcName = "Alchemist Pestlezugg", minLevel = 50, qlvl = 54, pre = { 4507 }, preTitles = { [4507] = "Pawn Captures Queen" }, map = 1446, x = 50.89, y = 26.96, z = 8.9, f = "e", note = "{npc:7740} in {zone:1457}: keep it" },
+					},
+				},
+				{
+					title = "Forest Song",
+					note = "Fly to Talrendis Point in {zone:1447} and ride west along the road to Forest Song, just over the {zone:1440} border.",
+					when = { { k = "onquest", q = { 4261 } } },
+					goals = {
+						{ t = "fly", location = "Talrendis Point", node = 64 },
+						{ t = "turnin", quest = 4261, title = "Ancient Spirit", npc = 3848, npcName = "Kayneth Stillwind", map = 1440, x = 85.24, y = 44.71, z = 169.2, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Everlook",
+					goals = {
+						{ t = "goto", text = "Talrendis Point flight master", map = 1447, x = 11.9, y = 77.5, f = "e" },
+						{ t = "fly", location = "Everlook", node = 52 },
+					},
+				},
+				{
+					title = "Everlook",
+					note = "Ride back to Talrendis Point and fly to Everlook.",
+					when = { { k = "onquest", q = { 5163 } } },
+					goals = {
+						{ t = "turnin", quest = 5163, title = "Are We There, Yeti?", npc = 10305, npcName = "Umi Rumplesnicker", map = 1452, x = 60.88, y = 37.62, z = 721.8, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9298}",
+					goals = {
+						{ t = "turnin", quest = 980, title = "The New Springs", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+						{ t = "accept", quest = 4842, title = "Strange Sources", npc = 9298, npcName = "Donova Snowden", minLevel = 51, qlvl = 56, pre = { 980 }, preTitles = { [980] = "The New Springs" }, map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+					},
+				},
+				{
+					title = "{npc:10300}",
+					note = "{npc:10300} waits at Owl Wing Thicket, south of Everlook.\nProtect {npc:10300} while she lights the torches on the way to the {object:177404}.",
+					goals = {
+						{ t = "turnin", quest = 979, title = "Find Ranshalla", npc = 10300, npcName = "Ranshalla", map = 1452, x = 63.07, y = 59.48, z = 778.1, f = "e", note = "{npc:10300}: her escort comes later on the route" },
+						{ t = "accept", quest = 4901, title = "Guardians of the Altar", npc = 10300, npcName = "Ranshalla", minLevel = 52, qlvl = 59, pre = { 979 }, preTitles = { [979] = "Find Ranshalla" }, map = 1452, x = 63.07, y = 59.48, z = 778.1, f = "e", escort = true },
+						{ t = "complete", quest = 4901, title = "Guardians of the Altar", escort = true },
+					},
+				},
+				{
+					title = "Darkwhisper Gorge",
+					note = "Follow {npc:9298}'s directions to the mouth of Darkwhisper Gorge, past the Frostmaul giants: pass them one at a time.",
+					goals = {
+						{ t = "goto", text = "Darkwhisper Gorge", map = 1452, x = 59.8, y = 74.2, f = "e" },
+						{ t = "complete", quest = 4842, title = "Strange Sources" },
+					},
+				},
+				{
+					title = "{npc:9298}",
+					goals = {
+						{ t = "turnin", quest = 4842, title = "Strange Sources", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+					},
+				},
+				{
+					title = "Dire Maul (optional)",
+					note = "Running Dire Maul in {zone:1444} instead of grinding gets you there faster in a group. Skip this step to grind solo.",
+					goals = {
+						{ t = "note", text = "Dire Maul fits levels 55 to 60; the {npc:7446} grind below gets you to 59 alone." },
+					},
+				},
+				{
+					title = "{npc:9298}",
+					note = "Keep west on the road to {npc:9298}'s camp beside the hot springs.",
+					goals = {
+						{ t = "turnin", quest = 5085, title = "Mystery Goo", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e", optional = true },
+						{ t = "accept", quest = 5086, title = "Toxic Horrors", npc = 9298, npcName = "Donova Snowden", minLevel = 52, qlvl = 56, pre = { 5085 }, preTitles = { [5085] = "Mystery Goo" }, map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1448}",
+					goals = {
+						{ t = "goto", text = "{zone:1448}", map = 1448, x = 50, y = 26.9, f = "e" },
+					},
+				},
+				{
+					title = "{quest:5086}",
+					goals = {
+						{ t = "collect", quest = 5086, title = "Toxic Horrors", item = 12822, itemName = "Toxic Horror Droplet", count = 3, oi = 1, map = 1448, x = 49.8, y = 27.4, f = "e", spots = { { x = 49.8, y = 27.4, r = 77, n = 5 }, { x = 48.4, y = 24.3, r = 33, n = 3, alt = true }, { x = 50.4, y = 23.2, r = 55, n = 4, alt = true } }, from = "Toxic Horror", fromKind = "npc", fromId = 7132, fromNpcs = { { npc = 7132, npcName = "Toxic Horror" } } },
+					},
+				},
+				{
+					title = "Felpaw Village",
+					when = { { k = "onquest", q = { 8471, 6031 } } },
+					goals = {
+						{ t = "turnin", quest = 8471, title = "Winterfall Ritual Totem", npc = 11558, npcName = "Kernda", map = 1448, x = 65.5, y = 3.52, z = 589.2, f = "e", optional = true, note = "{npc:11558}, just inside the cave: only from Neutral with the Timbermaw; walks around here: look inside the circle on the map" },
+						{ t = "turnin", quest = 6031, title = "Runecloth", npc = 11557, npcName = "Meilosh", map = 1448, x = 65.69, y = 2.81, z = 586.4, f = "e", optional = true, note = "{npc:11557}, if you have thirty {quest:6031}; below ground" },
+					},
+				},
+				{
+					title = "{zone:1452}",
+					goals = {
+						{ t = "goto", text = "{zone:1452}", map = 1452, x = 31.3, y = 45.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9298}",
+					goals = {
+						{ t = "turnin", quest = 5086, title = "Toxic Horrors", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e", optional = true },
+						{ t = "accept", quest = 5087, title = "Winterfall Runners", npc = 9298, npcName = "Donova Snowden", minLevel = 52, qlvl = 57, pre = { 5086 }, preTitles = { [5086] = "Toxic Horrors" }, map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+					},
+				},
+				{
+					title = "{npc:11556}",
+					goals = {
+						{ t = "turnin", quest = 8464, title = "Winterfall Activity", npc = 11556, npcName = "Salfa", map = 1452, x = 27.73, y = 34.5, z = 586.1, f = "e" },
+						{ t = "accept", quest = 8469, title = "Beads for Salfa", npc = 11556, npcName = "Salfa", minLevel = 50, qlvl = 56, pre = { 8464 }, preTitles = { [8464] = "Winterfall Activity" }, map = 1452, x = 27.73, y = 34.5, z = 586.1, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1452}: kill these as you meet them",
+					note = "The western Winterfall furbolgs drop the beads.\nCareful: Turning in spawns three or four level 56-57 Winterfall ambushers that attack you; you can escape them while mounted, in stealth or with Feign Death, and they then gather by the lake so you can take the next quest.",
+					goals = {
+						{ t = "collect", quest = 8469, title = "Beads for Salfa", item = 21383, itemName = "Winterfall Spirit Beads", count = 5, oi = 1, map = 1452, x = 27.9, y = 34.48, f = "e", spots = { { x = 27.9, y = 34.5, r = 40, n = 1 }, { x = 31.4, y = 36.3, r = 40, n = 1 }, { x = 32.8, y = 37.3, r = 45, n = 4 }, { x = 34.7, y = 37, r = 40, n = 1 }, { x = 39.6, y = 43.5, r = 58, n = 7 }, { x = 41.1, y = 42.9, r = 51, n = 6 }, { x = 42.2, y = 44.4, r = 40, n = 2 }, { x = 65.5, y = 37.8, r = 51, n = 4 }, { x = 67.3, y = 39.5, r = 56, n = 4 }, { x = 69.5, y = 38.3, r = 40, n = 1 }, { x = 68.2, y = 35, r = 40, n = 3 }, { x = 66.5, y = 34.9, r = 58, n = 6 }, { x = 30.3, y = 36.3, r = 54, n = 8, alt = true }, { x = 31.2, y = 35, r = 40, n = 2, alt = true }, { x = 33.6, y = 36.5, r = 40, n = 3, alt = true }, { x = 42.4, y = 42.8, r = 40, n = 2, alt = true }, { x = 67.3, y = 36, r = 69, n = 5, alt = true }, { x = 68.2, y = 37.5, r = 45, n = 5, alt = true } }, spread = true, fromNpcs = { { npc = 10916, npcName = "Winterfall Runner" }, { npc = 7442, npcName = "Winterfall Pathfinder" }, { npc = 7440, npcName = "Winterfall Den Watcher" }, { npc = 7441, npcName = "Winterfall Totemic" }, { npc = 7438, npcName = "Winterfall Ursa" } } },
+						{ t = "collect", quest = 5087, title = "Winterfall Runners", item = 12829, itemName = "Winterfall Crate", count = 1, oi = 1, map = 1452, x = 27.9, y = 34.5, f = "e", from = "Winterfall Runner", fromKind = "npc", fromId = 10916, fromNpcs = { { npc = 10916, npcName = "Winterfall Runner" } } },
+					},
+				},
+				{
+					title = "{npc:11556}",
+					goals = {
+						{ t = "turnin", quest = 8469, title = "Beads for Salfa", npc = 11556, npcName = "Salfa", map = 1452, x = 27.73, y = 34.5, z = 586.1, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9298}",
+					when = { { k = "onquest", q = { 5087 } } },
+					goals = {
+						{ t = "turnin", quest = 5087, title = "Winterfall Runners", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1450}",
+					goals = {
+						{ t = "goto", text = "{zone:1450}", map = 1450, x = 44.9, y = 35.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:11939}",
+					note = "Take the Timbermaw Hold tunnel from its {zone:1452} mouth, west of {npc:9298}, and follow the {zone:1450} branch to Nighthaven. {npc:11939} studies by the lake shore.",
+					goals = {
+						{ t = "turnin", quest = 6844, title = "Umber, Archivist", npc = 11939, npcName = "Umber", map = 1450, x = 44.88, y = 35.6, z = 494.1, f = "e", note = "{npc:11939} walks around Nighthaven: look inside the circle on the map" },
+						{ t = "accept", quest = 6845, title = "Uncovering Past Secrets", npc = 11939, npcName = "Umber", minLevel = 54, qlvl = 57, pre = { 6844 }, preTitles = { [6844] = "Umber, Archivist" }, map = 1450, x = 44.88, y = 35.6, z = 494.1, f = "e" },
+					},
+				},
+				{
+					title = "{npc:11801}",
+					note = "{npc:11801}'s house stands in Nighthaven, east of {npc:11939}.",
+					goals = {
+						{ t = "turnin", quest = 5527, title = "A Reliquary of Purity", npc = 11801, npcName = "Rabine Saturna", map = 1450, x = 51.69, y = 45.1, z = 488.6, f = "e" },
+						{ t = "turnin", quest = 6845, title = "Uncovering Past Secrets", npc = 11801, npcName = "Rabine Saturna", map = 1450, x = 51.69, y = 45.1, z = 488.6, f = "e" },
+					},
+				},
+				{
+					title = "{npc:11939}",
+					goals = {
+						{ t = "accept", quest = 1185, title = "Under the Chitin Was...", npc = 11939, npcName = "Umber", minLevel = 54, qlvl = 57, pre = { 6845 }, preTitles = { [6845] = "Uncovering Past Secrets" }, map = 1450, x = 44.88, y = 35.6, z = 494.1, f = "e", note = "{npc:11939} walks around Nighthaven: look inside the circle on the map" },
+						{ t = "turnin", quest = 1185, title = "Under the Chitin Was...", npc = 11939, npcName = "Umber", map = 1450, x = 44.88, y = 35.6, z = 494.1, f = "e" },
+					},
+				},
+				{
+					title = "Nighthaven",
+					note = "Learn the flight path in Nighthaven.",
+					goals = {
+						{ t = "getfp", npc = 10897, npcName = "Sindrayl", location = "Moonglade", node = 49, map = 1450, x = 48.1, y = 67.34, z = 462.7, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Rut'theran Village",
+					goals = {
+						{ t = "fly", location = "Rut'theran Village", node = 27 },
+					},
+				},
+				{
+					title = "Rut'theran Village",
+					note = "The flight lands in Rut'theran Village. {npc:7916} stands a short walk north-west of the flight master.",
+					goals = {
+						{ t = "turnin", quest = 4901, title = "Guardians of the Altar", npc = 7916, npcName = "Erelas Ambersky", map = 1438, x = 55.5, y = 92.05, z = 14.2, f = "e" },
+						{ t = "accept", quest = 4902, title = "Wildkin of Elune", npc = 7916, npcName = "Erelas Ambersky", minLevel = 52, qlvl = 57, pre = { 4901 }, preTitles = { [4901] = "Guardians of the Altar" }, map = 1438, x = 55.5, y = 92.05, z = 14.2, f = "e" },
+					},
+				},
+				{
+					title = "{object:176498}",
+					goals = {
+						{ t = "goto", text = "{object:176498}", map = 1438, x = 55.9, y = 89.3, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1457}",
+					note = "Take the portal up to {zone:1457}.",
+					goals = {
+						{ t = "turnin", quest = 4508, title = "Calm Before the Storm", npc = 7740, npcName = "Gracina Spiritmight", map = 1457, x = 41.83, y = 85.62, z = 1354.9, f = "e", note = "{npc:7740}, in the Temple of the Moon" },
+						{ t = "accept", quest = 4510, title = "Calm Before the Storm", npc = 7740, npcName = "Gracina Spiritmight", minLevel = 50, qlvl = 54, pre = { 4508 }, preTitles = { [4508] = "Calm Before the Storm" }, map = 1457, x = 41.83, y = 85.62, z = 1354.9, f = "e" },
+						{ t = "turnin", quest = 4510, title = "Calm Before the Storm", npc = 4155, npcName = "Idriana", map = 1457, x = 39.39, y = 42.44, z = 1317.7, f = "e", note = "{npc:4155}, in the bank" },
+						{ t = "turnin", quest = 4902, title = "Wildkin of Elune", npc = 3516, npcName = "Arch Druid Fandral Staghelm", map = 1457, x = 34.81, y = 9.26, z = 1367, f = "e", note = "{npc:3516}, atop the Cenarion Enclave" },
+					},
+				},
+				{
+					title = "Portal to {zone:1438}",
+					goals = {
+						{ t = "goto", text = "Portal to {zone:1438}", map = 1457, x = 29.1, y = 41.2, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Auberdine",
+					goals = {
+						{ t = "goto", text = "Rut'theran Village flight master", map = 1438, x = 58.4, y = 93.9, f = "e" },
+						{ t = "fly", location = "Auberdine", node = 26 },
+					},
+				},
+				{
+					title = "Boat to {object:1162}",
+					goals = {
+						{ t = "goto", text = "Boat to {object:1162}", map = 1439, x = 32.4, y = 43.8, f = "e" },
+					},
+				},
+				{
+					title = "Fly to {zone:1455}",
+					goals = {
+						{ t = "goto", text = "{object:1162} flight master", map = 1437, x = 9.5, y = 59.7, f = "e" },
+						{ t = "fly", location = "Ironforge", node = 6 },
+					},
+				},
+				{
+					title = "Fly to {zone:1453}",
+					goals = {
+						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
+						{ t = "fly", location = "Stormwind", node = 2 },
+					},
+				},
+				{
+					title = "{zone:1453}",
+					note = "{npc:14722} takes sixty Silk, sixty Mageweave and sixty {quest:6031}: hand in what you carry (or buy at the Auction House), skip the rest.",
+					goals = {
+						{ t = "train", class = true, only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "MAGE", "WARLOCK", "DRUID" } }, candidates = { { npc = 5166, npcName = "Ormyr Flinteye", map = 1455, x = 52.89, y = 15.01, z = 508.6, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 5117, npcName = "Regnus Thundergranite", map = 1455, x = 69.87, y = 82.9, z = 507.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 5173, npcName = "Alexander Calder", map = 1455, x = 50.08, y = 7.45, z = 511.7, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 11865, npcName = "Buliwyf Stonehand", map = 1455, x = 61.17, y = 89.52, z = 509, f = "e", faction = "A", classes = { "WARRIOR", "PALADIN" } }, { npc = 5114, npcName = "Bilban Tosslespanner", map = 1455, x = 65.9, y = 88.41, z = 507.8, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 7312, npcName = "Dink", map = 1455, x = 27.16, y = 8.57, z = 501.2, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 5143, npcName = "Toldren Deepiron", map = 1455, x = 25.21, y = 10.76, z = 501.2, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 5148, npcName = "Beldruk Doombrow", map = 1455, x = 24.55, y = 4.47, z = 502.9, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 1232, npcName = "Azar Stronghammer", map = 1426, x = 47.6, y = 52.07, z = 403.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 1228, npcName = "Magis Sparkmantle", map = 1426, x = 47.5, y = 52.08, z = 403.6, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 1226, npcName = "Maxan Anvol", map = 1426, x = 47.34, y = 52.19, z = 399.7, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 1234, npcName = "Hogral Bakkan", map = 1426, x = 47.56, y = 52.61, z = 399.2, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 1229, npcName = "Granis Swiftaxe", map = 1426, x = 47.36, y = 52.65, z = 399.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 5612, npcName = "Gimrizz Shadowcog", map = 1426, x = 47.33, y = 53.69, z = 404.4, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 1231, npcName = "Grif Wildheart", map = 1426, x = 45.81, y = 53.04, z = 407.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 460, npcName = "Alamar Grimm", map = 1426, x = 28.65, y = 66.14, z = 399, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 944, npcName = "Marryk Nurribit", map = 1426, x = 28.71, y = 66.37, z = 392.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 895, npcName = "Thorgas Grimson", map = 1426, x = 29.18, y = 67.45, z = 395.6, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 837, npcName = "Branstock Khalder", map = 1426, x = 28.6, y = 66.39, z = 392.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 912, npcName = "Thran Khorman", map = 1426, x = 28.83, y = 67.24, z = 395.6, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 926, npcName = "Bromos Grummner", map = 1426, x = 28.83, y = 68.33, z = 395.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 916, npcName = "Solm Hargrin", map = 1426, x = 28.37, y = 67.51, z = 395.6, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 5517, npcName = "Thorfin Stoneshield", map = 1453, x = 68, y = 35.99, z = 102.6, faction = "A", classes = { "HUNTER" } }, { npc = 198, npcName = "Khelden Bremen", map = 1429, x = 49.66, y = 39.4, z = 89.5, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 375, npcName = "Priestess Anetta", map = 1429, x = 49.81, y = 39.49, z = 82.1, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 915, npcName = "Jorik Kerridan", map = 1429, x = 50.31, y = 39.92, z = 80.8, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 248415, npcName = "Tordrin Sternblade", map = 1429, x = 51.21, y = 40.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 925, npcName = "Brother Sammuel", map = 1429, x = 50.43, y = 42.12, z = 82.3, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 911, npcName = "Llane Beshere", map = 1429, x = 50.24, y = 42.29, z = 82.3, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 459, npcName = "Drusilla La Salle", map = 1429, x = 49.87, y = 42.65, z = 80.8, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 5479, npcName = "Wu Shen", map = 1453, x = 80.55, y = 59.87, z = 109.5, faction = "A", classes = { "WARRIOR" } }, { npc = 376, npcName = "High Priestess Laurena", map = 1453, x = 49.53, y = 44.6, z = 109.9, faction = "A", classes = { "PRIEST" } }, { npc = 918, npcName = "Osborne the Night Man", map = 1453, x = 77.43, y = 65.31, z = 101.1, faction = "A", classes = { "ROGUE" } }, { npc = 5491, npcName = "Arthur the Faithful", map = 1453, x = 49.61, y = 49.84, z = 106.6, faction = "A", classes = { "PALADIN" } }, { npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9, faction = "A", classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "WARLOCK" } }, { npc = 5505, npcName = "Theridran", map = 1453, x = 36.11, y = 64.39, z = 93.8, faction = "A", classes = { "DRUID" } }, { npc = 2485, npcName = "Larimaine Purdue", map = 1453, x = 50.39, y = 85.99, z = 29.7, faction = "A", classes = { "MAGE" } }, { npc = 5495, npcName = "Ursula Deline", map = 1453, x = 39.89, y = 84.19, z = 101.5, faction = "A", classes = { "WARLOCK" } }, { npc = 917, npcName = "Keryn Sylvius", map = 1429, x = 43.87, y = 65.94, z = 63.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 377, npcName = "Priestess Josetta", map = 1429, x = 43.28, y = 65.72, z = 63.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 906, npcName = "Maximillian Crowe", map = 1429, x = 44.39, y = 66.24, z = 49.9, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 328, npcName = "Zaldimar Wefhellt", map = 1429, x = 43.25, y = 66.19, z = 63.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 913, npcName = "Lyria Du Lac", map = 1429, x = 41.09, y = 65.77, z = 57.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 927, npcName = "Brother Wilhelm", map = 1429, x = 41.1, y = 66.04, z = 57.7, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 251507, npcName = "Josephine Carson", map = 1429, x = 41.15, y = 66.23, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 6251, npcName = "Strahad Farsan", map = 1413, x = 62.63, y = 35.5, z = 40.5, f = "e", faction = "AH", classes = { "WARLOCK" } }, { npc = 3593, npcName = "Alyissia", map = 1438, x = 59.64, y = 38.44, z = 1329.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 3594, npcName = "Frahun Shadewhisper", map = 1438, x = 59.64, y = 38.66, z = 1329.7, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3595, npcName = "Shanda", map = 1438, x = 59.17, y = 40.44, z = 1346.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 3596, npcName = "Ayanna Everstride", map = 1438, x = 58.66, y = 40.45, z = 1381, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 3597, npcName = "Mardant Strongoak", map = 1438, x = 58.63, y = 40.29, z = 1381, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 3598, npcName = "Kyra Windblade", map = 1438, x = 56.22, y = 59.2, z = 1308.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 3599, npcName = "Jannok Breezesong", map = 1438, x = 56.38, y = 60.14, z = 1308.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3600, npcName = "Laurna Morninglight", map = 1438, x = 55.56, y = 56.75, z = 1313.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 3601, npcName = "Dazalar", map = 1438, x = 56.68, y = 59.49, z = 1308.2, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 3602, npcName = "Kal", map = 1438, x = 55.95, y = 61.56, z = 1293.8, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 4087, npcName = "Arias'ta Bladesinger", map = 1457, x = 58.71, y = 34.9, z = 1330.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 4090, npcName = "Astarii Starseeker", map = 1457, x = 38.33, y = 80.95, z = 1360.1, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 4138, npcName = "Jeen'ra Nightrunner", map = 1457, x = 39.72, y = 5.39, z = 1368.9, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 4163, npcName = "Syurna", map = 1457, x = 36.99, y = 21.91, z = 1295.1, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 4165, npcName = "Elissa Dumas", map = 1457, x = 40.6, y = 82.13, z = 1331.7, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 4217, npcName = "Mathrengyl Bearwalker", map = 1457, x = 35.37, y = 8.4, z = 1340.1, f = "e", faction = "A", classes = { "DRUID" } }, { npc = 11866, npcName = "Ilyenia Moonfire", map = 1457, x = 57.56, y = 46.73, z = 1330.9, f = "e", faction = "A", classes = { "HUNTER", "PRIEST" } }, { npc = 251373, npcName = "Xyton Silverwind", map = 2521, x = 41.66, y = 23.33, faction = "AH", classes = { "DRUID" } }, { npc = 251376, npcName = "Tai'ree Farsight", map = 2521, x = 42.49, y = 23.79, faction = "AH", classes = { "HUNTER" } }, { npc = 251379, npcName = "Dorii Brightwhisper", map = 2521, x = 41.55, y = 23.68, faction = "A", classes = { "MAGE" } }, { npc = 251389, npcName = "Akeri Duskblade", map = 2521, x = 43.74, y = 24.36, faction = "AH", classes = { "ROGUE" } }, { npc = 251964, npcName = "Blademaster Ren", map = 2521, x = 43.65, y = 24.11, faction = "AH", classes = { "WARRIOR" } }, { npc = 252359, npcName = "Lotheluum Starbreeze", map = 2521, x = 63.99, y = 75.08, faction = "AH", classes = { "DRUID" } }, { npc = 252373, npcName = "Anathamaas Aetherwind", map = 2521, x = 65.91, y = 80.57, faction = "A", classes = { "MAGE" } }, { npc = 252377, npcName = "Seena Skybreaker", map = 2521, x = 59.89, y = 72.87, faction = "AH", classes = { "WARRIOR" } }, { npc = 252379, npcName = "Eltheen Nightbreeze", map = 2521, x = 59.9, y = 72.48, faction = "AH", classes = { "ROGUE" } }, { npc = 252389, npcName = "Quel'ana Quickgale", map = 2521, x = 59.56, y = 72.63, faction = "AH", classes = { "HUNTER" } }, { npc = 254081, npcName = "Naeluna Swiftmend", map = 2521, x = 45.16, y = 44.22, faction = "AH", classes = { "DRUID" } }, { npc = 254084, npcName = "Elayaa Easewind", map = 2521, x = 45.26, y = 44.24, faction = "AH", classes = { "HUNTER" } }, { npc = 254086, npcName = "Shenaan Spellwind", map = 2521, x = 45.1, y = 45.87, faction = "AH", classes = { "MAGE" } }, { npc = 254087, npcName = "Miriaan Mistblade", map = 2521, x = 43.15, y = 43.26, faction = "AH", classes = { "ROGUE" } }, { npc = 254088, npcName = "Corsan Earthrazer", map = 2521, x = 44.95, y = 45.1, faction = "AH", classes = { "WARRIOR" } } } },
+						{ t = "collect", quest = 7793, title = "A Donation of Silk", item = 4306, itemName = "Silk Cloth", count = 60, oi = 1, map = 1453, x = 61.2, y = 71.3, optional = true, note = "{item:4306}, from your bags" },
+						{ t = "collect", quest = 7794, title = "A Donation of Mageweave", item = 4338, itemName = "Mageweave Cloth", count = 60, oi = 1, map = 1453, x = 61.2, y = 71.3, optional = true, note = "{item:4338}, from your bags" },
+						{ t = "turnin", quest = 7793, title = "A Donation of Silk", npc = 14722, npcName = "Clavicus Knavingham", map = 1453, x = 53.93, y = 81.69, z = 97.4, optional = true, note = "{npc:14722}, in the {object:2096}" },
+						{ t = "turnin", quest = 7794, title = "A Donation of Mageweave", npc = 14722, npcName = "Clavicus Knavingham", map = 1453, x = 53.93, y = 81.69, z = 97.4, optional = true },
+					},
+				},
+				{
+					title = "{zone:1455}",
+					note = "Take the Deeprun Tram to {zone:1455}. {npc:14724} and {npc:14723} each take sixty Wool, sixty Silk and sixty Mageweave, then sixty {item:14047}: hand in what you carry (or buy at the Auction House), skip the rest.\nCareful: Jadefire Shadowstalkers are level 51-52 and move stealthed. They use Slowing Poison and are found about 550 yd south of Bloodvenom Post.\nCareful: Jadefire Shadowstalkers sneak around and use Slowing Poison.",
+					goals = {
+						{ t = "turnin", quest = 4513, title = "A Little Slime Goes a Long Way", npc = 9616, npcName = "Laris Geardawdle", map = 1455, x = 75.77, y = 23.38, z = 503.4, f = "e" },
+						{ t = "collect", quest = 7807, title = "A Donation of Wool", item = 2592, itemName = "Wool Cloth", count = 60, oi = 1, map = 1455, x = 24.2, y = 74.7, f = "e", optional = true, note = "{item:2592}, from your bags" },
+						{ t = "collect", quest = 7808, title = "A Donation of Silk", item = 4306, itemName = "Silk Cloth", count = 60, oi = 1, map = 1455, x = 24.2, y = 74.7, f = "e", optional = true, note = "{item:4306}, from your bags" },
+						{ t = "collect", quest = 7809, title = "A Donation of Mageweave", item = 4338, itemName = "Mageweave Cloth", count = 60, oi = 1, map = 1455, x = 24.2, y = 74.7, f = "e", optional = true, note = "{item:4338}, from your bags" },
+						{ t = "turnin", quest = 7807, title = "A Donation of Wool", npc = 14724, npcName = "Bubulo Acerbus", map = 1455, x = 74.09, y = 48.22, z = 502, f = "e", optional = true },
+						{ t = "turnin", quest = 7808, title = "A Donation of Silk", npc = 14724, npcName = "Bubulo Acerbus", map = 1455, x = 74.09, y = 48.22, z = 502, f = "e", optional = true },
+						{ t = "turnin", quest = 7809, title = "A Donation of Mageweave", npc = 14724, npcName = "Bubulo Acerbus", map = 1455, x = 74.09, y = 48.22, z = 502, f = "e", optional = true },
+						{ t = "accept", quest = 7811, title = "A Donation of Runecloth", npc = 14724, npcName = "Bubulo Acerbus", minLevel = 50, qlvl = 60, preAll = { 7807, 7808, 7809 }, preTitles = { [7807] = "A Donation of Wool", [7808] = "A Donation of Silk", [7809] = "A Donation of Mageweave" }, map = 1455, x = 74.09, y = 48.22, z = 502, f = "e", optional = true },
+						{ t = "collect", quest = 7811, title = "A Donation of Runecloth", item = 14047, itemName = "Runecloth", count = 60, oi = 1, map = 1455, x = 24.2, y = 74.7, f = "e", optional = true, note = "{item:14047}, from your bags" },
+						{ t = "turnin", quest = 7811, title = "A Donation of Runecloth", npc = 14724, npcName = "Bubulo Acerbus", map = 1455, x = 74.09, y = 48.22, z = 502, f = "e", optional = true },
+						{ t = "collect", quest = 7802, title = "A Donation of Wool", item = 2592, itemName = "Wool Cloth", count = 60, oi = 1, map = 1455, x = 24.2, y = 74.7, f = "e", optional = true, note = "{item:2592}, from your bags" },
+						{ t = "collect", quest = 7803, title = "A Donation of Silk", item = 4306, itemName = "Silk Cloth", count = 60, oi = 1, map = 1455, x = 24.2, y = 74.7, f = "e", optional = true, note = "{item:4306}, from your bags" },
+						{ t = "collect", quest = 7804, title = "A Donation of Mageweave", item = 4338, itemName = "Mageweave Cloth", count = 60, oi = 1, map = 1455, x = 24.2, y = 74.7, f = "e", optional = true, note = "{item:4338}, from your bags" },
+						{ t = "turnin", quest = 7802, title = "A Donation of Wool", npc = 14723, npcName = "Mistina Steelshield", map = 1455, x = 43.22, y = 31.57, z = 502.3, f = "e", optional = true },
+						{ t = "turnin", quest = 7803, title = "A Donation of Silk", npc = 14723, npcName = "Mistina Steelshield", map = 1455, x = 43.22, y = 31.57, z = 502.3, f = "e", optional = true },
+						{ t = "turnin", quest = 7804, title = "A Donation of Mageweave", npc = 14723, npcName = "Mistina Steelshield", map = 1455, x = 43.22, y = 31.57, z = 502.3, f = "e", optional = true },
+						{ t = "accept", quest = 7805, title = "A Donation of Runecloth", npc = 14723, npcName = "Mistina Steelshield", minLevel = 50, qlvl = 60, preAll = { 7802, 7803, 7804 }, preTitles = { [7802] = "A Donation of Wool", [7803] = "A Donation of Silk", [7804] = "A Donation of Mageweave" }, map = 1455, x = 43.22, y = 31.57, z = 502.3, f = "e", optional = true },
+						{ t = "collect", quest = 7805, title = "A Donation of Runecloth", item = 14047, itemName = "Runecloth", count = 60, oi = 1, map = 1455, x = 24.2, y = 74.7, f = "e", optional = true, note = "{item:14047}, from your bags" },
+						{ t = "turnin", quest = 7805, title = "A Donation of Runecloth", npc = 14723, npcName = "Mistina Steelshield", map = 1455, x = 43.22, y = 31.57, z = 502.3, f = "e", optional = true },
+						{ t = "train", class = true, only = { classes = { "SHAMAN" } }, note = "{zone:1453} has no shaman trainer", candidates = { { npc = 258098, npcName = "Eldrun Stormbreaker", map = 1455, x = 47.1, y = 13.79, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 258113, npcName = "Ingrid Dunwald", map = 1426, x = 47.58, y = 51.95, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 257446, npcName = "Teo Hammerstorm", map = 1426, x = 28.79, y = 66.18, f = "e", faction = "A", classes = { "SHAMAN" } } } },
+					},
+				},
+				{
+					title = "Fly to {zone:1453}",
+					goals = {
+						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
+						{ t = "fly", location = "Stormwind", node = 2 },
+					},
+				},
+				{
+					title = "Stormwind City",
+					when = { { k = "onquest", q = { 7791 } } },
+					goals = {
+						{ t = "turnin", quest = 7791, title = "A Donation of Wool", npc = 14722, npcName = "Clavicus Knavingham", map = 1453, x = 53.93, y = 81.69, z = 97.4, optional = true, note = "Sixty {item:2592}, if you carry them" },
+					},
+				},
+				{
+					title = "{zone:1453}",
+					goals = {
+						{ t = "accept", quest = 7795, title = "A Donation of Runecloth", npc = 14722, npcName = "Clavicus Knavingham", minLevel = 50, qlvl = 60, preAll = { 7791, 7793, 7794 }, preTitles = { [7791] = "A Donation of Wool", [7793] = "A Donation of Silk", [7794] = "A Donation of Mageweave" }, map = 1453, x = 53.93, y = 81.69, z = 97.4, optional = true },
+						{ t = "collect", quest = 7795, title = "A Donation of Runecloth", item = 14047, itemName = "Runecloth", count = 60, oi = 1, map = 1453, x = 61.2, y = 71.3, spots = { { x = 61.2, y = 71.3, r = 15, n = 0 }, { x = 69.2, y = 82.7, r = 15, n = 1, alt = true }, { x = 74.4, y = 46.2, r = 35, n = 7, alt = true }, { x = 74.3, y = 32.8, r = 22, n = 4, alt = true }, { x = 80.1, y = 38.3, r = 34, n = 12, alt = true } }, optional = true, note = "{item:14047}, from your bags", fromNpcs = { { npc = 466, npcName = "General Marcus Jonathan" } } },
+						{ t = "turnin", quest = 7795, title = "A Donation of Runecloth", npc = 14722, npcName = "Clavicus Knavingham", map = 1453, x = 53.93, y = 81.69, z = 97.4, optional = true },
+					},
+				},
+				{
+					title = "Fly to Southshore",
+					goals = {
+						{ t = "goto", text = "{zone:1453} flight master", map = 1453, x = 66.3, y = 62.7, f = "e" },
+						{ t = "fly", location = "Southshore", node = 14 },
+					},
+				},
+				{
+					title = "{zone:1416}",
+					goals = {
+						{ t = "goto", text = "{zone:1416}", map = 1416, x = 39.5, y = 81.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:13841}",
+					goals = {
+						{ t = "turnin", quest = 7261, title = "The Sovereign Imperative", npc = 13841, npcName = "Lieutenant Haggerdin", map = 1416, x = 39.46, y = 81.23, z = 131.3, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1422}",
+					goals = {
+						{ t = "goto", text = "{zone:1422}", map = 1422, x = 42.7, y = 83.8, f = "e" },
+					},
+				},
+				{
+					title = "Chillwind Camp",
+					goals = {
+						{ t = "turnin", quest = 5801, title = "Fire Plume Forged", npc = 11056, npcName = "Alchemist Arbington", map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e" },
+						{ t = "accept", quest = 5803, title = "Araj's Scarab", npc = 11056, npcName = "Alchemist Arbington", minLevel = 55, qlvl = 60, pre = { 5801 }, preTitles = { [5801] = "Fire Plume Forged" }, map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e", optional = true, note = "{npc:1852} is a level 61 elite" },
+						{ t = "turnin", quest = 6184, title = "Flint Shadowmore", npc = 12425, npcName = "Flint Shadowmore", map = 1422, x = 43.61, y = 84.51, z = 62.6, f = "e" },
+						{ t = "turnin", quest = 5903, title = "A Plague Upon Thee", npc = 11616, npcName = "Nathaniel Dumah", map = 1422, x = 43.42, y = 84.83, z = 62.7, f = "e" },
+						{ t = "accept", quest = 5904, title = "A Plague Upon Thee", npc = 11616, npcName = "Nathaniel Dumah", minLevel = 48, qlvl = 55, pre = { 5903 }, preTitles = { [5903] = "A Plague Upon Thee" }, map = 1422, x = 43.42, y = 84.83, z = 62.7, f = "e" },
+					},
+				},
+				{
+					title = "Andorhal",
+					note = "{npc:10667} waits in the ruined inn on the west side of Andorhal, the ruined city north of the camp. {npc:1852} guards his phylactery in the middle of the town.",
+					goals = {
+						{ t = "collect", quest = 5803, title = "Araj's Scarab", item = 14610, itemName = "Araj's Scarab", count = 1, oi = 1, map = 1422, x = 45.27, y = 69.21, f = "e", optional = true, note = "Araj is elite: grouping up is advised.", from = "Araj's Phylactery", fromKind = "object", fromId = 177241 },
+						{ t = "turnin", quest = 5941, title = "Return to Chromie", npc = 10667, npcName = "Chromie", map = 1422, x = 39.46, y = 66.76, z = 68.6, f = "e", note = "{npc:10667}, upstairs" },
+					},
+				},
+				{
+					title = "Felstone Field",
+					note = "{npc:10778}'s ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves.",
+					goals = {
+						{ t = "turnin", quest = 5050, title = "Good Luck Charm", npc = 10778, npcName = "Janice Felstone", map = 1422, x = 38.4, y = 54.05, z = 65.2, f = "e", note = "Upstairs" },
+						{ t = "kill", target = "Jabbering Ghoul", npc = 10801, map = 1422, x = 38.4, y = 55.4, f = "e", spots = { { x = 37.5, y = 56.6, r = 56, n = 8 } }, optional = true },
+						{ t = "accept", quest = 5051, title = "Two Halves Become One", npc = 10778, npcName = "Janice Felstone", minLevel = 50, qlvl = 54, pre = { 5050 }, preTitles = { [5050] = "Good Luck Charm" }, map = 1422, x = 38.4, y = 54.05, z = 65.2, f = "e" },
+						{ t = "complete", quest = 5051, title = "Two Halves Become One" },
+						{ t = "turnin", quest = 5051, title = "Two Halves Become One", npc = 10778, npcName = "Janice Felstone", map = 1422, x = 38.4, y = 54.05, z = 65.2, f = "e" },
+					},
+				},
+				{
+					title = "Northridge Lumber Camp",
+					note = "Ride north up the road to the lumber mill and set the termite barrel down in the middle of it.",
+					goals = {
+						{ t = "turnin", quest = 5904, title = "A Plague Upon Thee", object = 177491, objName = "Termite Barrel", map = 1422, x = 48.34, y = 31.99, z = 104.4, f = "e" },
+						{ t = "accept", quest = 6389, title = "A Plague Upon Thee", object = 177491, objName = "Termite Barrel", minLevel = 48, qlvl = 55, pre = { 5904 }, preTitles = { [5904] = "A Plague Upon Thee" }, map = 1422, x = 48.34, y = 31.99, z = 104.4, f = "e" },
+					},
+				},
+				{
+					title = "{npc:1855} (optional)",
+					note = "{npc:1855} lives in a small hut on the border river, north-east of the lumber camp. Hand in {quest:5781} if you finished it.",
+					goals = {
+						{ t = "turnin", quest = 5781, title = "Of Forgotten Memories", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7, optional = true },
+						{ t = "accept", quest = 5845, title = "Of Lost Honor", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 58, pre = { 5781 }, preTitles = { [5781] = "Of Forgotten Memories" }, map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+					},
+				},
+				{
+					title = "{zone:1423}",
+					goals = {
+						{ t = "goto", text = "{zone:1423}", map = 1423, x = 71.3, y = 34, f = "e" },
+					},
+				},
+				{
+					title = "{quest:5845}",
+					goals = {
+						{ t = "collect", quest = 5845, title = "Of Lost Honor", item = 14625, itemName = "Symbol of Lost Honor", count = 1, oi = 1, map = 1423, x = 62.5, y = 26.8, note = "Underwater", from = "Symbol of Lost Honor", fromKind = "object", fromId = 177264 },
+					},
+				},
+				{
+					title = "{npc:1855}",
+					goals = {
+						{ t = "turnin", quest = 5845, title = "Of Lost Honor", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7, optional = true },
+						{ t = "accept", quest = 5846, title = "Of Love and Family", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 58, pre = { 5845 }, preTitles = { [5845] = "Of Lost Honor" }, map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+					},
+				},
+				{
+					title = "{npc:11936}",
+					when = { { k = "onquest", q = { 5846 } } },
+					goals = {
+						{ t = "goto", text = "{zone:1422}", map = 1422, x = 65.8, y = 75.4, f = "e" },
+						{ t = "turnin", quest = 5846, title = "Of Love and Family", npc = 11936, npcName = "Artist Renfray", map = 1422, x = 65.77, y = 75.37, z = 61.2, f = "e", note = "Inside" },
+					},
+				},
+				{
+					title = "Scholomance (optional)",
+					note = "Running Scholomance (Caer Darrow, south-east {zone:1422}) or Stratholme instead of grinding gets you there faster in a group. Skip this step to grind solo.",
+					goals = {
+						{ t = "note", text = "Scholomance fits levels 58 to 60; {quest:5505} is handed in at Chillwind Camp below." },
+					},
+				},
+				{
+					title = "Grind to 60",
+					note = "Cross the river east of {npc:1855} into Terrordale. The Terrordale Spirits haunt the woods there.",
+					goals = {
+						{ t = "level", level = 60, note = "grind on {npc:14564} at Terrordale, {zone:1423}" },
+					},
+				},
+				{
+					title = "{zone:1422}",
+					goals = {
+						{ t = "goto", text = "{zone:1422}", map = 1422, x = 43.4, y = 84.8, f = "e" },
+					},
+				},
+				{
+					title = "Chillwind Camp",
+					note = "Ride back south-west to Chillwind Camp.",
+					goals = {
+						{ t = "turnin", quest = 6389, title = "A Plague Upon Thee", npc = 11616, npcName = "Nathaniel Dumah", map = 1422, x = 43.42, y = 84.83, z = 62.7, f = "e" },
+						{ t = "turnin", quest = 5803, title = "Araj's Scarab", npc = 11056, npcName = "Alchemist Arbington", map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e", optional = true },
+						{ t = "accept", quest = 5505, title = "The Key to Scholomance", npc = 11056, npcName = "Alchemist Arbington", minLevel = 55, qlvl = 60, pre = { 5803 }, preTitles = { [5803] = "Araj's Scarab" }, map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e", optional = true },
+						{ t = "turnin", quest = 5505, title = "The Key to Scholomance", npc = 11056, npcName = "Alchemist Arbington", map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e", optional = true },
 					},
 				},
 			},

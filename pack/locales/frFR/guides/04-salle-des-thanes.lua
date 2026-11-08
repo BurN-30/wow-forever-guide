@@ -15,7 +15,7 @@ return {
 	["Every player takes these quests before the run. Keep 6 free quest log slots."] = "Chaque joueur prend ces quêtes avant le donjon. Garder 6 places libres dans le journal.",
 
 	-- Step 2: Steelgrill's Depot
-	["Steelgrill's Depot"] = "Dépôt de Gaillegrille",
+	["Steelgrill's Depot"] = "Dépôt de Steelgrill",
 
 	-- Step 3: Earthseer Farsen
 	-- {object:149024} Gol'Bolar Quarry
@@ -25,7 +25,7 @@ return {
 	-- Step 4: Dark Iron Spies
 	["Dark Iron Spies"] = "Espions Sombrefer",
 	-- {item:274268} Dark Iron Map
-	["Spies roam around Ironband's Compound. The {item:274268} can drop from them: right-click it."] = "Les espions rôdent autour du domaine des Ferbandes. Ils peuvent lâcher {item:274268} : clic droit dessus.",
+	["Spies roam around Ironband's Compound. The {item:274268} can drop from them: right-click it."] = "Des espions rôdent autour de la base d'Ironband. Ils peuvent lâcher {item:274268} : faites un clic droit dessus.",
 
 	-- Step 6: Ironforge: dungeon quests
 	-- {zone:1455} Ironforge

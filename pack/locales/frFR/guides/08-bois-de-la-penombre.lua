@@ -16,7 +16,7 @@ return {
 	-- Step 2: Darkshire
 	["Darkshire"] = "Sombre-Comté",
 	-- {zone:1431} Duskwood
-	["Follow the road south from Three Corners into {zone:1431}; Darkshire lies on the east side of the forest."] = "Suivez la route au sud depuis les Trois-Cornes jusqu'à {zone:1431} ; Sombre-Comté se trouve sur le flanc est de la forêt.",
+	["Follow the road south from Three Corners into {zone:1431}; Darkshire lies on the east side of the forest."] = "Suivez la route au sud depuis Trois chemins jusqu'à {zone:1431} ; Sombre-Comté se trouve sur le flanc est de la forêt.",
 	["Only if you took the letter after the Ruins of Lordaeron"] = "Seulement si vous avez pris la lettre après les Ruines de Lordaeron",
 	-- {npc:2409} Felicia Maline
 	["{npc:2409}, at the north end of town"] = "{npc:2409}, à l'extrémité nord de la ville",
@@ -54,7 +54,7 @@ return {
 	["{npc:533} on the way"] = "{npc:533} en chemin",
 
 	-- Step 5: Tranquil Gardens Cemetery: kill these as you meet them
-	["Tranquil Gardens Cemetery: kill these as you meet them"] = "Cimetière des Jardins tranquilles : tuez-les au fur et à mesure",
+	["Tranquil Gardens Cemetery: kill these as you meet them"] = "Cimetière des jardins paisibles : tuez-les au fur et à mesure",
 	-- {npc:302} Blind Mary · {zone:1431} Duskwood · {item:2378} Skeleton Finger
 	-- plural, as words: Skeletal Warriors = {npc:48} Skeletal Warrior · Skeletal Mages = {npc:203} Skeletal Mage
 	["Skeletal Warriors and Skeletal Mages walk among the graves south-east of Darkshire, below {npc:302}'s house on the hill. Every skeleton in {zone:1431} can drop a {item:2378}.\nCareful: Because the skeletons stand near each other, running straight in tends to pull several at once."] = "Les guerriers squelettes et mages squelettes errent parmi les tombes au sud-est de Sombre-Comté, sous la maison de {npc:302} sur la colline. Chaque squelette de {zone:1431} peut laisser tomber {item:2378}.\nAttention : Comme les squelettes sont proches les uns des autres, foncer droit dedans a tendance à en attirer plusieurs à la fois.",
@@ -95,16 +95,16 @@ return {
 	["The Hushed Bank: kill these as you meet them"] = "La Rive silencieuse : tuez-les au fur et à mesure",
 	-- {npc:289} Abercrombie · {zone:1436} Westfall
 	-- plural, as words: Pygmy Venom Web Spiders = {npc:539} Pygmy Venom Web Spider
-	["Rabid Dire Wolves roam the woods around the cemetery and {npc:289}, Starving Dire Wolves the hills north-east of him. Pygmy Venom Web Spiders crawl east of the cemetery and drop the venom. Every ghoul of the cemetery's northern half can drop a fang.\nCareful: Wolves and other spider types share the area along the {zone:1436} border, so you can easily pull several mobs at once."] = "Les loups terribles enragés rodent dans les bois autour du cimetière et de {npc:289}, les loups terribles affamés sur les collines au nord-est de lui. Les araignées venimeuses pygmées rampent à l'est du cimetière et laissent tomber le venin. Chaque goule de la moitié nord du cimetière peut laisser tomber une croc.\nAttention : Loups et autres types d'araignées partagent la zone le long de la frontière de {zone:1436}, vous pouvez donc facilement attirer plusieurs monstres à la fois.",
+	["Rabid Dire Wolves roam the woods around the cemetery and {npc:289}, Starving Dire Wolves the hills north-east of him. Pygmy Venom Web Spiders crawl east of the cemetery and drop the venom. Every ghoul of the cemetery's northern half can drop a fang.\nCareful: Wolves and other spider types share the area along the {zone:1436} border, so you can easily pull several mobs at once."] = "Des loups redoutables enragés rôdent dans les bois autour du cimetière et de {npc:289}, des loups redoutables affamés dans les collines au nord-est de lui. Des araignées Tisse-venin pygmées rampent à l'est du cimetière et laissent tomber le venin. Chaque goule de la moitié nord du cimetière peut laisser tomber un croc.\nAttention : Loups et autres types d'araignées partagent la zone le long de la frontière de {zone:1436}, vous pouvez donc facilement attirer plusieurs monstres à la fois.",
 
 	-- Step 14: Abercrombie
-	["The hermit's shack stands in the woods north-east of the Raven Hill Cemetery."] = "La cabane de l'ermite se trouve dans les bois au nord-est du cimetière de la colline aux Corbeaux.",
+	["The hermit's shack stands in the woods north-east of the Raven Hill Cemetery."] = "La cabane de l'ermite se trouve dans les bois au nord-est du cimetière de Colline-aux-Corbeaux.",
 
 	-- Step 15: Raven Hill Cemetery: kill these as you meet them
-	["Raven Hill Cemetery: kill these as you meet them"] = "Cimetière de la colline aux Corbeaux : tuez-les au fur et à mesure",
+	["Raven Hill Cemetery: kill these as you meet them"] = "Cimetière de Colline-aux-Corbeaux : tuez-les au fur et à mesure",
 	-- {npc:522} Mor'Ladim
 	-- plural, as words: Skeletal Horrors = {npc:202} Skeletal Horror · Skeletal Fiends = {npc:531} Skeletal Fiend
-	["The cemetery lies north of the village. Skeletal Horrors and Skeletal Fiends walk its southern half. {npc:522}, an elite, wanders the graves: keep away from him."] = "Le cimetière se trouve au nord du village. Les Squelettes infernaux et les Démons squelettes errent dans sa moitié sud. {npc:522}, un élite, rôde parmi les tombes : tenez-vous à l'écart.",
+	["The cemetery lies north of the village. Skeletal Horrors and Skeletal Fiends walk its southern half. {npc:522}, an elite, wanders the graves: keep away from him."] = "Le cimetière se trouve au nord du village. Des squelettes infernaux et des démons squelettes errent dans sa moitié sud. {npc:522}, un élite, rôde parmi les tombes : tenez-vous à l'écart.",
 
 	-- Step 16: Watcher Dodds
 	["Head back east along the road to the Yorgen Farmstead."] = "Revenez vers l'est par la route jusqu'à la ferme des Yorgen.",
@@ -114,7 +114,7 @@ return {
 	["The mound of loose dirt lies south of the farmhouse, by the old stump."] = "Le monticule de poussière se trouve au sud de la ferme, près de la vieille souche.",
 
 	-- Step 18: Brightwood Grove
-	["Brightwood Grove"] = "Bosquet de Bois-clair",
+	["Brightwood Grove"] = "Bosquet de Clairbois",
 
 	-- Step 19: Darkshire
 	-- {npc:272} Chef Grual
@@ -124,17 +124,17 @@ return {
 
 	-- Step 20: Gooey Spider Legs on the way
 	-- plural, as words: Gooey Spider Legs = {item:2251} Gooey Spider Leg
-	["Gooey Spider Legs on the way"] = "Pattes d'araignée gluantes en chemin",
+	["Gooey Spider Legs on the way"] = "Pattes d'araignée fondantes en chemin",
 	-- {quest:163} Raven Hill
 	-- plural, as words: Black Widow Hatchlings = {npc:930} Black Widow Hatchling
 	["Any spider can drop them, the Black Widow Hatchlings east of {quest:163} most often."] = "N'importe quelle araignée peut les lâcher, le plus souvent les jeunes veuves noires à l'est de {quest:163}.",
 
 	-- Step 21: Blind Mary
-	["Her house stands on the hill south-east of Darkshire, above the Tranquil Gardens Cemetery."] = "Sa maison se dresse sur la colline au sud-est de Sombre-Comté, au-dessus du cimetière des Jardins tranquilles.",
+	["Her house stands on the hill south-east of Darkshire, above the Tranquil Gardens Cemetery."] = "Sa maison se dresse sur la colline au sud-est de Sombre-Comté, au-dessus du cimetière des jardins paisibles.",
 	["Inside"] = "À l'intérieur",
 
 	-- Step 22: Tranquil Gardens Cemetery
-	["Tranquil Gardens Cemetery"] = "Cimetière des Jardins tranquilles",
+	["Tranquil Gardens Cemetery"] = "Cimetière des jardins paisibles",
 	-- {quest:337} An Old History Book · {zone:1431} Duskwood
 	["{quest:337}: a rare drop from {zone:1431}'s mobs"] = "{quest:337} : un butin rare des monstres de {zone:1431}",
 
@@ -151,7 +151,7 @@ return {
 	-- plural, as words: Rot Blossoms = {item:1598} Rot Blossom
 	["Rot Blossoms"] = "Racines pourries ({item:1598})",
 	-- plural, as words: Skeletal Horrors = {npc:202} Skeletal Horror · Rot Blossoms = {item:1598} Rot Blossom
-	["Skeletal Horrors walk the hillside between Darkshire and the Tranquil Gardens Cemetery, south-east of town; they drop the Rot Blossoms."] = "Les horreurs squelettiques hantent le flanc de colline entre Sombre-Comté et le cimetière des Jardins tranquilles, au sud-est de la ville ; elles laissent tomber les fleurs de pourriture.",
+	["Skeletal Horrors walk the hillside between Darkshire and the Tranquil Gardens Cemetery, south-east of town; they drop the Rot Blossoms."] = "Des squelettes infernaux hantent le flanc de colline entre Sombre-Comté et le cimetière des jardins paisibles, au sud-est de la ville ; ils laissent tomber les racines pourries.",
 
 	-- Step 29: Abercrombie
 	["Head west to the hermit once more."] = "Retournez une fois de plus vers l'ouest jusqu'à l'ermite.",
@@ -161,7 +161,7 @@ return {
 	["Ghoul Ribs"] = "Côtes de goule",
 	-- {npc:948} Rotted One
 	-- plural, as words: Flesh Eaters = {npc:3} Flesh Eater · Bone Chewers = {npc:210} Bone Chewer · Plague Spreaders = {npc:604} Plague Spreader · Brain Eaters = {npc:570} Brain Eater
-	["Every ghoul of the Raven Hill Cemetery's northern half can drop a rib: Flesh Eaters, Bone Chewers, Plague Spreaders and Brain Eaters.\nCareful: A {npc:948} casts Summon Flesh Eating Worms as it dies, which brings extra adds."] = "Chaque goule de la moitié nord du cimetière de la colline aux Corbeaux peut laisser tomber une côte : mangeurs de chair, rongeurs d'os, propagateurs de peste et mangeurs de cervelle.\nAttention : Un {npc:948} lance Invocation de vers mange-chair en mourant, ce qui fait apparaître des renforts.",
+	["Every ghoul of the Raven Hill Cemetery's northern half can drop a rib: Flesh Eaters, Bone Chewers, Plague Spreaders and Brain Eaters.\nCareful: A {npc:948} casts Summon Flesh Eating Worms as it dies, which brings extra adds."] = "Chaque goule de la moitié nord du cimetière de Colline-aux-Corbeaux peut laisser tomber une côte : dévoreurs, mâcheurs d'os, répandeurs de peste et mangeurs de cervelle.\nAttention : Un {npc:948} lance Invocation de vers mangeurs de chair en mourant, ce qui fait apparaître des renforts.",
 
 	-- Step 32: Jitters
 	-- {npc:288} Jitters · {quest:163} Raven Hill
@@ -210,7 +210,7 @@ return {
 	-- Step 41: Shaman training
 	["Shaman training"] = "Entraînement de chaman",
 	-- {zone:1453} Stormwind · {object:28027} Dwarven District · {zone:1455} Ironforge · {npc:258098} Eldrun Stormbreaker
-	["{zone:1453} has no shaman trainer: take the Deeprun Tram from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back for the Auberdine boat."] = "{zone:1453} n'a pas de maître des chamans : prenez le tram des Tréfonds depuis {object:28027} jusqu'à {zone:1455}, entraînez-vous avec {npc:258098}, puis reprenez le tram pour le bateau d'Auberdine.",
+	["{zone:1453} has no shaman trainer: take the Deeprun Tram from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back for the Auberdine boat."] = "{zone:1453} n'a pas de maître des chamans : prenez le Tram des profondeurs depuis {object:28027} jusqu'à {zone:1455}, entraînez-vous auprès de {npc:258098}, puis reprenez le tram pour le bateau d'Auberdine.",
 
 	-- Step 42: Rogue training
 	["Rogue training"] = "Entraînement de voleur",

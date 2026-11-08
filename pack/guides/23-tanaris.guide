@@ -193,6 +193,37 @@ step Gadgetzan
   turnin 113                          -- Senior Surveyor Fizzledowser
   accept 162                          -- for Darnassus: the route takes you there at 47
 
+# Groupe Alliance 0.6.0: Zul'Farrak, optional, asked once (`when group 2865`). Quests, givers and
+# drops from Polestar's Dungeons codex (data-v2026.11.1) and Wowhead Forever; the pyramid event
+# from the original game. Skipped: these steps are left out and the flight to Theramore follows.
+
+step Zul'Farrak (dungeon, optional): Gadgetzan
+  label zf-start
+  when group 2865
+  tip Zul'Farrak: a troll city in the north-west of Tanaris, levels 44 to 54, best at 45 or more with a full group. Three quests from Gadgetzan, all done inside. Alone? Skip it: the guide flies on to Theramore.
+  note Keep 3 free quest log slots. Tran'rek, Trenton Lighthammer and Chief Engineer Bilgewhizzle are all in Gadgetzan.
+  accept 2865                         -- Tran'rek: Scarab Shells
+  accept 3042                         -- Trenton Lighthammer: Troll Temper
+  accept 2768                         -- Chief Engineer Bilgewhizzle: Divino-matic Rod
+
+step Zul'Farrak
+  when done zf-start
+  zone Tanaris
+  tip Ride north-west from Gadgetzan to the walled city, at the edge of the dunes. Inside, every troll can drop Troll Temper; the scarabs by the graveyard of Theka the Martyr drop the shells.
+  tip The pyramid event: free Sergeant Bly and his crew from the cage at the top of the stairs, then hold the stairs against the troll waves. Once the trolls are dead, Bly turns on you: he drops the Divino-matic Rod.
+  note Group of 5: share each quest (quest log, Share) before going in. Chief Ukorz Sandscalp, the last boss, waits behind the door Weegli blows open after the pyramid event.
+  goto 38.7,20.1 "Zul'Farrak"
+  collect 9238 x5 quest 2865          -- Uncracked Scarab Shell
+  collect 9523 x20 quest 3042         -- Troll Temper
+  collect 8548 quest 2768             -- Divino-matic Rod: Sergeant Bly
+
+step Gadgetzan: Zul'Farrak rewards
+  when done zf-start
+  zone Tanaris
+  turnin 2865                         -- Tran'rek
+  turnin 3042                         -- Trenton Lighthammer
+  turnin 2768                         -- Chief Engineer Bilgewhizzle
+
 step Fly to Theramore
   zone Tanaris
   goto 51.0,29.3 "Gadgetzan flight master"

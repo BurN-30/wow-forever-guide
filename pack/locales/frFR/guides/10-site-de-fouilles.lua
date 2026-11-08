@@ -14,8 +14,8 @@ return {
 	-- {object:1162} Menethil Harbor
 	["Back to {object:1162}"] = "Retour à {object:1162}",
 	-- {zone:1441} Thousand Needles
-	["From {zone:1441}: use your hearthstone, bound in Menethil's Deepwater Tavern."] = "Depuis {zone:1441} : utiliser la pierre de foyer, liée à la taverne de Menethil.",
-	["Deepwater Tavern"] = "Taverne d'Eaux-Profondes",
+	["From {zone:1441}: use your hearthstone, bound in Menethil's Deepwater Tavern."] = "Depuis {zone:1441} : utiliser la pierre de foyer, liée à la taverne de l'Eau-profonde de Menethil.",
+	["Deepwater Tavern"] = "Taverne de l'Eau-profonde",
 
 	-- Step 2: Menethil Harbor: dungeon quests
 	-- {object:1162} Menethil Harbor
@@ -30,7 +30,7 @@ return {
 	["Needs {quest:484} done"] = "Demande {quest:484} finie",
 
 	-- Step 3: Rethiel the Greenwarden
-	["On the Green Belt, east of the road. He gives it once his three earlier quests are done (The Greenwarden, Tramping Paws, Fire Taboo, then Blisters on the Land)."] = "Sur la Ceinture verte, à l'est de la route. Il la donne une fois ses quêtes précédentes faites (celles du gardien vert, jusqu'aux cloques sur la terre).",
+	["On the Green Belt, east of the road. He gives it once his three earlier quests are done (The Greenwarden, Tramping Paws, Fire Taboo, then Blisters on the Land)."] = "Sur la Ceinture verte, à l'est de la route. Il la donne une fois ses trois quêtes précédentes terminées (Le Gouverneur vert, Piétinements de pattes, Feu interdit, puis Fièvre sur le pays).",
 
 	-- Step 4: Excavation Site entrance
 	["Excavation Site entrance"] = "Entrée du site de fouilles",
@@ -38,17 +38,17 @@ return {
 	["Excavation Site"] = "Site de fouilles",
 
 	-- Step 5: Saltspine
-	["Saltspine"] = "Saltspine",
+	["Saltspine"] = "Seléchine",
 	["Clear around him first. Tendon Rip slows the tank hard and his Dust Storm makes everyone within 10 yards miss: casters stay out of it."] = "Nettoyer autour de lui d'abord. Il ralentit fortement le tank et sa tempête de poussière fait rater tout le monde à 10 mètres : les lanceurs de sorts restent en dehors.",
 	-- {npc:262681} Ardin Grassman
 	["Share each quest with your group: click it in the quest log, then Share. Talk to {npc:262681} and Daewyn as soon as you find them inside: their follow-ups start with them."] = "Partager chaque quête avec le groupe : la cliquer dans le journal, puis Partager. Parler à {npc:262681} et à Daewyn dès qu'on les trouve à l'intérieur : leurs suites commencent avec eux.",
 
 	-- Step 6: The tall grass and Shadetooth
-	["The tall grass and Shadetooth"] = "Les hautes herbes et Shadetooth",
+	["The tall grass and Shadetooth"] = "Les hautes herbes et Dent-Sombre",
 	-- plural, as words: Thicket Lurkers = {npc:260800} Thicket Lurker · Thicket Hunters = {npc:260801} Thicket Hunter
-	["The most dangerous stretch: Thicket Lurkers leap out of the tall grass, and Matriarchs call more of them at low health. Keep to the narrow path, fight in the open, kill the others before a Matriarch. Shadetooth comes with two Thicket Hunters (dispel Infected Wound): crowd-control one, kill the other, and fight him in the crocodile cove on the left so his fear cannot throw anyone into the grass."] = "Le passage le plus dangereux : des raptors surgissent des hautes herbes, et les matriarches en appellent d'autres à faible vie. Rester sur le chemin étroit, combattre à découvert, tuer les autres avant une matriarche. Shadetooth vient avec deux chasseurs (dissiper la blessure infectée) : en neutraliser un, tuer l'autre, et le combattre dans l'anse aux crocodiles à gauche pour que sa peur n'envoie personne dans les herbes.",
+	["The most dangerous stretch: Thicket Lurkers leap out of the tall grass, and Matriarchs call more of them at low health. Keep to the narrow path, fight in the open, kill the others before a Matriarch. Shadetooth comes with two Thicket Hunters (dispel Infected Wound): crowd-control one, kill the other, and fight him in the crocodile cove on the left so his fear cannot throw anyone into the grass."] = "Le passage le plus dangereux : des raptors surgissent des hautes herbes, et les matriarches en appellent d'autres à faible vie. Rester sur le chemin étroit, combattre à découvert, tuer les autres avant une matriarche. Dent-Sombre vient avec deux chasseurs des fourrés (dissiper la blessure infectée) : en neutraliser un, tuer l'autre, et le combattre dans l'anse aux crocodiles à gauche pour que sa peur n'envoie personne dans les herbes.",
 	-- {item:284845} Thicket Raptor Hide
-	["{item:284845}: Shadetooth and the Thicket raptors"] = "{item:284845} : Shadetooth et les raptors des fourrés",
+	["{item:284845}: Shadetooth and the Thicket raptors"] = "{item:284845} : Dent-Sombre et les raptors des fourrés",
 
 	-- Step 7: Daewyn and the Highland Horror
 	-- {npc:260808} Highland Horror

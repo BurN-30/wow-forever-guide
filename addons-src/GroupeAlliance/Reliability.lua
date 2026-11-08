@@ -17,6 +17,11 @@ local ULDAMAN = {
 	enUS = "Quest and giver confirmed (Polestar data, Dungeons codex); rooms and fights from the original game, Wowhead Forever not read yet for Uldaman.",
 }
 
+local ZULFARRAK = {
+	frFR = "Quête, donneur et butin confirmés (données Polestar, codex Donjons) ; événement de la pyramide repris du jeu d'origine, pas encore joué sur Forever.",
+	enUS = "Quest, giver and drop confirmed (Polestar data, Dungeons codex); the pyramid event from the original game, not yet played on Forever.",
+}
+
 ns.GA.Reliability = {
 	[92415] = { "?", {
 		frFR = "Deux objets de départ possibles dans les données (251270, 251520).",
@@ -38,7 +43,7 @@ ns.GA.Reliability = {
 		enUS = "Both NPCs and the snowy patch are missing from Polestar's data: places from Lodestar (beta) and RestedXP's guides.",
 	} },
 	[86758] = { "?", {
-		frFR = "Daggerfang manque aux données Polestar : position reprise de Lodestar (bêta), sur la rive est selon RestedXP.",
+		frFR = "Daguecroc manque aux données Polestar : position reprise de Lodestar (bêta), sur la rive est selon RestedXP.",
 		enUS = "Daggerfang is missing from Polestar's data: place from Lodestar (beta), on the east shore per RestedXP.",
 	} },
 	[86614] = { "?", {
@@ -52,11 +57,11 @@ ns.GA.Reliability = {
 		enUS = "Gar'im is at 72.8, 86.3 in Polestar's data, near 77, 86 per a 2026 Wowhead comment: to check in game.",
 	} },
 	[115] = { "?", {
-		frFR = "Les données Polestar demandent Blackrock Blockade rendue d'abord ; un commentaire Wowhead ajoute Alther's Mill, contredit par un autre.",
+		frFR = "Les données Polestar demandent Barricade rochenoire rendue d'abord ; un commentaire Wowhead ajoute La scierie d'Alther, contredit par un autre.",
 		enUS = "Polestar's data needs Blackrock Blockade handed in first; one Wowhead comment adds Alther's Mill, another says no.",
 	} },
 	[92749] = { "?", {
-		frFR = "Le nombre (10) et le type (Rough Dynamite) viennent de deux commentaires Wowhead de la bêta, le texte de la quête dit encore Coarse.",
+		frFR = "Le nombre (10) et le type (Dynamite basique) viennent de deux commentaires Wowhead de la bêta ; le texte de la quête dit encore Dynamite grossière.",
 		enUS = "The amount (10) and kind (Rough Dynamite) come from two beta Wowhead comments; the quest text still says Coarse.",
 	} },
 	[95646] = { "?", {
@@ -64,7 +69,7 @@ ns.GA.Reliability = {
 		enUS = "Polestar's data has no prerequisite; two Wowhead comments require Rethiel's chain (463, 276, 277, 275).",
 	} },
 	[98028] = { "?", {
-		frFR = "Taux des fragments tiré du tableau de butin de Wowhead (environ 9 % sur les nagas, 42 % sur la Beastmistress) ; Fathom Stone d'après les commentaires.",
+		frFR = "Taux des fragments tiré du tableau de butin de Wowhead (environ 9 % sur les nagas, 42 % sur la maîtresse des bêtes) ; Pierre de la Brasse d'après les commentaires.",
 		enUS = "Fragment rates from Wowhead's drop table (about 9% from the naga, 42% from the Beastmistress); the Fathom Stone from the comments.",
 	} },
 	[2078] = { "?", {
@@ -82,7 +87,7 @@ ns.GA.Reliability = {
 		enUS = "End of the chain (395, 396) from Polestar's data only: Wowhead pages not read.",
 	} },
 	[396] = { "?", {
-		frFR = "Rendue à Lady Katrana Prestor d'après les données Polestar : page Wowhead non lue.",
+		frFR = "Rendue à Dame Katrana Prestor d'après les données Polestar : page Wowhead non lue.",
 		enUS = "Handed to Lady Katrana Prestor per Polestar's data: Wowhead page not read.",
 	} },
 	[1050] = { "?", {
@@ -97,7 +102,9 @@ ns.GA.Reliability = {
 	[2398] = { "?", ULDAMAN }, [2240] = { "?", ULDAMAN }, [1360] = { "?", ULDAMAN }, [2418] = { "?", ULDAMAN },
 	[2278] = { "?", ULDAMAN }, [2279] = { "?", ULDAMAN }, [2198] = { "?", ULDAMAN },
 	[1437] = { "?", {
-		frFR = "Coffre vers 56,17 au nord de Hache-Tonnerre ; en 2021 sur Classic il restait grisé (quête impossible), aucun retour de Forever encore.",
+		frFR = "Coffre vers 56,17 au nord de la Forteresse de Hache-Tonnerre ; en 2021 sur Classic il restait grisé (quête impossible), aucun retour de Forever encore.",
 		enUS = "Chest near 56,17 north of Thunder Axe Fortress; in 2021 on Classic it stayed greyed out (quest impossible), no Forever report yet.",
 	} },
+	-- 0.6.0: Zul'Farrak (23-tanaris).
+	[2865] = { "?", ZULFARRAK }, [3042] = { "?", ZULFARRAK }, [2768] = { "?", ZULFARRAK },
 }

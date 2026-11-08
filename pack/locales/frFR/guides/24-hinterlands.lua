@@ -17,10 +17,10 @@ return {
 	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
 
 	-- Step 2: Skulk Rock
-	["Skulk Rock"] = "Skulk Rock",
+	["Skulk Rock"] = "Rocher de l'Affût",
 	-- {zone:1425} The Hinterlands
 	-- plural, as words: Green Sludges = {npc:2655} Green Sludge · Jade Oozes = {npc:2656} Jade Ooze
-	["Ride north to Skulk Rock in the middle of the {zone:1425}. Green Sludges and Jade Oozes crawl all around it.\nCareful: Panthers move around the area in stealth."] = "Allez au nord jusqu'au Skulk Rock au milieu des {zone:1425}. Des Limons verts et des Gelées de jade rampent tout autour.\nAttention : Des panthères se déplacent dans la zone camouflées.",
+	["Ride north to Skulk Rock in the middle of the {zone:1425}. Green Sludges and Jade Oozes crawl all around it.\nCareful: Panthers move around the area in stealth."] = "Allez au nord jusqu'au Rocher de l'Affût au milieu des {zone:1425}. Des limaces vertes et des limons de jade rampent tout autour.\nAttention : des panthères se déplacent camouflées dans la zone.",
 
 	-- Step 3: Aerie Peak
 	["Aerie Peak"] = "Nid-de-l'Aigle",
@@ -28,7 +28,7 @@ return {
 	-- {npc:5636} Gryphon Master Talonaxe
 	["{npc:5636}, inside"] = "{npc:5636}, à l'intérieur",
 	-- {quest:2990} Thadius Grimshade
-	["for {quest:2990} at Nethergarde Keep, later"] = "pour {quest:2990} au Nethergarde Keep, plus tard",
+	["for {quest:2990} at Nethergarde Keep, later"] = "pour {quest:2990} à Rempart-du-Néant, plus tard",
 
 	-- Step 4: Fly to Ironforge
 	-- {zone:1455} Ironforge
@@ -50,17 +50,17 @@ return {
 	["Darkshire"] = "Sombre-Comté",
 
 	-- Step 11: Fly to Lakeshire
-	["Fly to Lakeshire"] = "Envolez-vous vers Lakeshire",
+	["Fly to Lakeshire"] = "Envolez-vous vers Comté-du-Lac",
 	["Darkshire flight master"] = "Maître de vol de Sombre-Comté",
 
 	-- Step 12: Morgan's Vigil flight master
-	["Morgan's Vigil flight master"] = "Maître de vol de Morgan's Vigil",
+	["Morgan's Vigil flight master"] = "Maître de vol de la Veille de Morgan",
 
 	-- Step 13: Fly to Thelsamar
 	["Fly to Thelsamar"] = "Volez vers Thelsamar",
 
 	-- Step 15: Ironband's Excavation Site
-	["Ironband's Excavation Site"] = "Ironband's Excavation Site",
+	["Ironband's Excavation Site"] = "Excavations de Baguefer",
 	["Ride east along the south shore of the loch to Ironband's camp."] = "Chevauchez vers l'est le long de la rive sud du Loch jusqu'aux Excavations de Baguefer.",
 
 	-- Step 16: Thelsamar
@@ -136,7 +136,7 @@ return {
 	-- Step 40: The bloodmages
 	["The bloodmages"] = "Les mages de sang",
 	-- {zone:1419} Blasted Lands
-	["The bloodmages' camp is the first stop beside the road into the {zone:1419}, north-west of Nethergarde Keep."] = "Le camp des mages de sang est le premier arrêt au bord de la route menant aux {zone:1419}, au nord-ouest du Nethergarde Keep.",
+	["The bloodmages' camp is the first stop beside the road into the {zone:1419}, north-west of Nethergarde Keep."] = "Le camp des mages de sang est le premier arrêt au bord de la route menant aux {zone:1419}, au nord-ouest de Rempart-du-Néant.",
 
 	-- Step 41: Nethergarde Keep
 	["Nethergarde Keep"] = "Rempart-du-Néant",
@@ -154,7 +154,7 @@ return {
 	["{zone:1419}: kill these as you meet them"] = "{zone:1419} : tuez-les au fur et à mesure que vous les rencontrez",
 	-- {npc:5982} Black Slayer · {npc:8301} Clack the Reaver
 	-- plural, as words: Starving Snickerfangs = {npc:5984} Starving Snickerfang · Scorpok Stingers = {npc:5988} Scorpok Stinger · Ashmane Boars = {npc:5992} Ashmane Boar · Redstone Basilisks = {npc:5990} Redstone Basilisk
-	["Ride west: Starving Snickerfangs roam the dry hills just south of the bloodmages' camp; Scorpok Stingers (level 50) scuttle across the middle of the north. {npc:5982} vultures circle over all of it. Pull one at a time.\nAshmane Boars and Redstone Basilisks share the slopes south-west of the keep. Keep clear of the Helboars further south: they are level 52.\nCareful: Scorpok Stingers use Venom Sting; {npc:8301} adds Knockdown."] = "Allez à l'ouest : des Crocs-féroces affamés rodent sur les collines sèches juste au sud du camp des mages de sang ; des Aiguillonneurs scorpok (niveau 50) traversent le milieu du nord. Des vautours {npc:5982} tournent au-dessus de tout cela. Attirez-en un à la fois.\nDes Sangliers cendrés et des Basilics de pierre rouge partagent les pentes au sud-ouest du donjon. Éloignez-vous des Gangresangs plus au sud : ils sont de niveau 52.\nAttention : Les Aiguillonneurs scorpok utilisent Piqûre venimeuse ; {npc:8301} ajoute Renversement.",
+	["Ride west: Starving Snickerfangs roam the dry hills just south of the bloodmages' camp; Scorpok Stingers (level 50) scuttle across the middle of the north. {npc:5982} vultures circle over all of it. Pull one at a time.\nAshmane Boars and Redstone Basilisks share the slopes south-west of the keep. Keep clear of the Helboars further south: they are level 52.\nCareful: Scorpok Stingers use Venom Sting; {npc:8301} adds Knockdown."] = "Allez à l'ouest : des raillecrocs affamées rôdent sur les collines sèches juste au sud du camp des mages de sang ; des aiguillonneurs scorpok (niveau 50) traversent le milieu du nord. Des vautours {npc:5982} tournent au-dessus de tout cela. Attirez-en un à la fois.\nDes sangliers cendrés et des basilics Rougepierre partagent les pentes au sud-ouest du donjon. Éloignez-vous des sangliers infernaux plus au sud : ils sont de niveau 52.\nAttention : les aiguillonneurs scorpok utilisent Piqûre venimeuse ; {npc:8301} ajoute Renversement.",
 
 	-- Step 43: The bloodmages
 	["The bloodmages' second tier pays for the same parts with a buff item and no experience: skip it."] = "Le second palier des mages de sang paie les mêmes morceaux avec un objet d'amélioration et sans expérience : passez-le.",
@@ -162,7 +162,7 @@ return {
 	-- Step 44: Fly to Booty Bay
 	-- {object:3204} Booty Bay
 	["Fly to {object:3204}"] = "Envolez-vous pour {object:3204}",
-	["Nethergarde Keep flight master"] = "Maître de vol du Nethergarde Keep",
+	["Nethergarde Keep flight master"] = "Maître de vol de Rempart-du-Néant",
 
 	-- Step 45: Monogrammed Sash
 	-- {quest:8552} The Monogrammed Sash

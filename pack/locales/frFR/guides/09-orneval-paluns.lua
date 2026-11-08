@@ -17,7 +17,7 @@ return {
 
 	-- Step 2: Aquatic Form
 	-- {item:15885} Pendant of the Sea Lion · {zone:1450} Moonglade · {npc:11802} Dendrite Starblaze · {npc:11800} Silva Fil'naveth
-	["Take the boat from Stormwind Harbor to Auberdine. Join the two half pendants into the {item:15885} and cast Teleport: {zone:1450}: {npc:11802} is in Nighthaven. Then {npc:11800} in Nighthaven flies Druids straight to Rut'theran Village. {npc:11802} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart."] = "Prenez le bateau du port de Hurlevent pour Auberdine. Assemblez les deux demi-pendentifs pour former le {item:15885} et lancez Téléportation : {zone:1450} : {npc:11802} se trouve à Reflet-de-Lune. Ensuite, {npc:11800} à Reflet-de-Lune emmène les druides directement au village de Rut'theran. {npc:11802} se tient à l'étage de son bâtiment : montez par l'intérieur, la flèche ne distingue pas les étages.",
+	["Take the boat from Stormwind Harbor to Auberdine. Join the two half pendants into the {item:15885} and cast Teleport: {zone:1450}: {npc:11802} is in Nighthaven. Then {npc:11800} in Nighthaven flies Druids straight to Rut'theran Village. {npc:11802} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart."] = "Prenez le bateau du port de Hurlevent pour Auberdine. Assemblez les deux demi-pendentifs pour former le {item:15885} et lancez Téléportation : {zone:1450} : {npc:11802} se trouve à Havrenuit. Ensuite, {npc:11800} à Havrenuit emmène les druides directement à Rut'theran. {npc:11802} se tient à l'étage de son bâtiment : montez par l'intérieur, la flèche ne distingue pas les étages.",
 	-- {item:15885} Pendant of the Sea Lion
 	["{item:15885}: join the two halves"] = "{item:15885} : assemblez les deux moitiés",
 
@@ -47,9 +47,9 @@ return {
 	["Escort {npc:11218} to {object:19863} in {zone:1440}."] = "Escortez {npc:11218} jusqu'au {object:19863} en {zone:1440}.",
 
 	-- Step 15: Bathran's Haunt: kill these as you meet them
-	["Bathran's Haunt: kill these as you meet them"] = "Hantise de Bathran : tuez-les au passage.",
+	["Bathran's Haunt: kill these as you meet them"] = "Repaire de Bathran : tuez-les au fur et à mesure",
 	-- {item:5366} Glowing Soul Gem
-	["North of Maestra's Post, plant bundles lie around the ruins of Bathran's Haunt. Dark Strand cultists hold the ruins just south of them: any of them can drop the {item:5366}."] = "Au nord du Poste de Maestra, des fagots de plantes gisent autour des ruines de l'Hantise de Bathran. Des sectateurs de la Brume noire occupent les ruines juste au sud : n'importe lequel peut laisser tomber le {item:5366}.",
+	["North of Maestra's Post, plant bundles lie around the ruins of Bathran's Haunt. Dark Strand cultists hold the ruins just south of them: any of them can drop the {item:5366}."] = "Au nord du poste de Maestra, des fagots de plantes gisent autour des ruines du Repaire de Bathran. Des sectateurs de la Rive noire occupent les ruines juste au sud : n'importe lequel peut laisser tomber le {item:5366}.",
 	-- {quest:1010} Bathran's Hair
 	["{quest:1010}, from the plant bundles"] = "{quest:1010}, sur les bottes de plantes",
 
@@ -77,7 +77,7 @@ return {
 	["Head west to the shore of Lake Falathim. Teronis lies among the Saltspittle murlocs; any murloc can drop the {item:5463}."] = "Allez vers l'ouest jusqu'au rivage du lac Falathim. Teronis se trouve parmi les murlocs Crache-sel ; n'importe quel murloc peut laisser tomber le {item:5463}.",
 
 	-- Step 21: The Zoram Strand
-	["The Zoram Strand"] = "Le Rivage de Zoram",
+	["The Zoram Strand"] = "La grève de Zoram",
 	-- {npc:3846} Talen
 	["Follow the coast north to the Zoram Strand. {npc:3846} camps on the beach; Wrathtail nagas fill the shore."] = "Suivez la côte vers le nord jusqu'au Rivage de Zoram. {npc:3846} campe sur la plage ; les nagas Queue-de-rage couvrent le rivage.",
 	-- {item:5424} Ancient Statuette
@@ -100,13 +100,13 @@ return {
 
 	-- Step 31: The Foulweald
 	["The Foulweald"] = "Les Vile-sylve",
-	["The Foulweald furbolgs live in the woods south of the road, south-east of Astranaar. The Den Watcher and the Ursas guard the den."] = "Les furbolgs Gangrebois vivent dans les bois au sud de la route, au sud-est d'Astranaar. Le Gardien de la tanière et les Ourses gardent la tanière.",
+	["The Foulweald furbolgs live in the woods south of the road, south-east of Astranaar. The Den Watcher and the Ursas guard the den."] = "Les furbolgs Vile-sylve vivent dans les bois au sud de la route, au sud-est d'Astranaar. Le protecteur et les ursas gardent la tanière.",
 
 	-- Step 32: Mystral Lake
 	["Mystral Lake"] = "Lac Mystral",
 	-- {npc:3885} Sentinel Velene Starstrike · {npc:210995} Alonso
 	-- plural, as words: Befouled Water Elementals = {npc:3917} Befouled Water Elemental
-	["{npc:3885} stands at the Silverwind Refuge on the east shore of Mystral Lake; {npc:210995} camps on its west shore. Befouled Water Elementals wade in the lake between them."] = "{npc:3885} se trouve au Refuge de Brise-argent sur la rive est du lac Mystral ; {npc:210995} campe sur la rive ouest. Des élémentaires d'eau souillés pataugent dans le lac entre eux.",
+	["{npc:3885} stands at the Silverwind Refuge on the east shore of Mystral Lake; {npc:210995} camps on its west shore. Befouled Water Elementals wade in the lake between them."] = "{npc:3885} se trouve au refuge de Vent-argent sur la rive est du lac Mystral ; {npc:210995} campe sur la rive ouest. Des élémentaires d'eau souillés pataugent dans le lac entre eux.",
 	["Underwater"] = "Sous l'eau",
 	-- {item:5456} Divining Scroll
 	-- plural, as words: Intact Elemental Bracers = {item:12220} Intact Elemental Bracer
@@ -114,22 +114,22 @@ return {
 
 	-- Step 33: Alonso
 	-- {npc:210995} Alonso
-	["{npc:210995} may not offer these to every class; if he doesn't, carry on.; walks around The Talondeep Path: the map marks where to look"] = "{npc:210995} ne propose pas forcément ces quêtes à toutes les classes ; s'il ne le fait pas, continuez. ; se promène autour du Sentier de Talondeep : la carte indique où chercher",
+	["{npc:210995} may not offer these to every class; if he doesn't, carry on.; walks around The Talondeep Path: the map marks where to look"] = "{npc:210995} ne propose pas forcément ces quêtes à toutes les classes ; s'il ne le fait pas, continuez. ; se promène autour de la Perce des Serres : la carte indique où chercher",
 
 	-- Step 34: The Ruins of Stardust
 	["West of Mystral Lake, the stardust bushes grow among the ruins."] = "À l'ouest du Lac Mystral, les buissons couverts de poussière d'étoile poussent parmi les ruines.",
 
 	-- Step 37: Piznik
 	-- {npc:4276} Piznik
-	["{npc:4276} mines in the Windshear Mine at the east end of the crag. Talk to him and fend off the Venture Co. raiders while he mines.\nCareful: The kobolds arrive in waves. The first wave is melee fighters, and the second adds casters to the mix. Regular mobs in the mine respawn quickly and can join the fight while the waves are coming. A group is recommended."] = "{npc:4276} mine dans la mine de Tranchevent à l'extrémité est de la crête. Parlez-lui et repoussez les raiders de la Compagnie des eaux de Sombrivage pendant qu'il mine.\nAttention : Les kobolds arrivent par vagues. La première vague est composée de combattants au corps à corps, et la seconde ajoute des lanceurs de sorts. Les mobs normaux de la mine réapparaissent rapidement et peuvent se joindre au combat pendant l'arrivée des vagues. Un groupe est recommandé.",
+	["{npc:4276} mines in the Windshear Mine at the east end of the crag. Talk to him and fend off the Venture Co. raiders while he mines.\nCareful: The kobolds arrive in waves. The first wave is melee fighters, and the second adds casters to the mix. Regular mobs in the mine respawn quickly and can join the fight while the waves are coming. A group is recommended."] = "{npc:4276} mine dans la mine des Cisailles, à l'extrémité est de la combe. Parlez-lui et repoussez les assaillants de la KapitalRisk pendant qu'il mine.\nAttention : Les kobolds arrivent par vagues. La première vague est composée de combattants au corps à corps, et la seconde ajoute des lanceurs de sorts. Les mobs normaux de la mine réapparaissent rapidement et peuvent se joindre au combat pendant l'arrivée des vagues. Un groupe est recommandé.",
 	["Below ground"] = "Sous terre",
 
 	-- Step 38: Windshear Crag
 	-- {object:19555} Windshear Crag · {npc:4080} Kaela Shadowspear · {npc:4077} Gaxim Rustfizzle
-	["Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's {object:19555}. {npc:4080} and {npc:4077} camp on the Webwinder Path south-west of the crag."] = "Dirigez-vous au sud en passant le lac Mystral pour entrer dans le tunnel du sentier de Talondeep ; il débouche dans les Serres-Rocheuses au {object:19555}. {npc:4080} et {npc:4077} campent sur le sentier des Tisse-toiles au sud-ouest de la crête.",
+	["Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's {object:19555}. {npc:4080} and {npc:4077} camp on the Webwinder Path south-west of the crag."] = "Dirigez-vous au sud en passant le lac Mystral pour entrer dans le tunnel de la Perce des Serres ; il débouche dans les Serres-Rocheuses, au {object:19555}. {npc:4080} et {npc:4077} campent sur le sentier des Tisseuses, au sud-ouest de la combe.",
 
 	-- Step 39: Webwinder Path
-	["Webwinder Path"] = "Sentier des Tisse-toiles",
+	["Webwinder Path"] = "Sentier des Tisseuses",
 	-- {npc:4201} Ziz Fizziks
 	["{npc:4201}, inside"] = "{npc:4201}, à l'intérieur",
 
@@ -212,7 +212,7 @@ return {
 	["Three containers in the murloc hovels, south to north: the {object:261}, then the {object:142151}, then the {object:259} at the north end."] = "Trois conteneurs dans les huttes des murlocs, du sud au nord : {object:261}, puis {object:142151}, puis {object:259} à l'extrémité nord.",
 
 	-- Step 54: Whelgar's Excavation Site
-	["Whelgar's Excavation Site"] = "Site de fouilles de Whelgar",
+	["Whelgar's Excavation Site"] = "Excavations de Whelgar",
 	["The excavation site sits on the hill south of the road."] = "Le site de fouilles se trouve sur la colline au sud de la route.",
 	-- {npc:1076} Merrin Rockweaver
 	["{npc:1076}, below ground"] = "{npc:1076}, sous terre",
@@ -239,27 +239,27 @@ return {
 	["{npc:1244}: {quest:98283}, an elite raptor"] = "{npc:1244} : {quest:98283}, un raptor élite",
 
 	-- Step 60: Thelgen Rock
-	["Thelgen Rock"] = "Roche de Thelgen",
+	["Thelgen Rock"] = "Rocher de Thelgen",
 	-- plural, as words: Cave Stalkers = {npc:4040} Cave Stalker · Leech Stalkers = {npc:1111} Leech Stalker
-	["Cave Stalkers and Leech Stalkers fill Thelgen Rock, the cave south-east of the excavation site."] = "Traqueurs des cavernes et Traqueurs sangsues infestent la Roche de Thelgen, la caverne au sud-est du site de fouilles.",
+	["Cave Stalkers and Leech Stalkers fill Thelgen Rock, the cave south-east of the excavation site."] = "Des traqueuses des grottes et des traqueuses sanguines infestent le rocher de Thelgen, la grotte au sud-est du site de fouilles.",
 
 	-- Step 61: The Mosshide gnolls
 	["The Mosshide gnolls"] = "Les gnolls Poil-moussu",
 	-- plural, as words: Mosshide Gnolls = {npc:1007} Mosshide Gnoll
-	["Mosshide Gnolls and Mongrels hold the hills south-east of the Green Belt."] = "Les Gnolls Moussus et Molosses moussus tiennent les collines au sud-est de la Ceinture Verte.",
+	["Mosshide Gnolls and Mongrels hold the hills south-east of the Green Belt."] = "Les gnolls et bâtards Poil-moussu tiennent les collines au sud-est de la Ceinture verte.",
 
 	-- Step 63: Wetlands: kill these as you meet them
 	-- {zone:1437} Wetlands
 	["{zone:1437}: kill these as you meet them"] = "{zone:1437} : tuez-les au passage",
 	-- {object:376} Dun Modr · {npc:2111} Sida · {npc:1244} Rethiel the Greenwarden
 	-- plural, as words: Monstrous Oozes = {npc:1033} Monstrous Ooze · Mosshide Fenrunners = {npc:1010} Mosshide Fenrunner
-	["Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to {object:376} and north of Einar's camp. Any ooze there may hold {npc:2111}'s bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of {npc:1244}; almost every one drops flint."] = "Gelées noires, cramoisies et monstrueuses remplissent le Tombeau de Barbe-de-fer, juste à l'ouest de la route vers {object:376} et au nord du camp d'Einar. Toute gelée là-bas peut contenir le sac de {npc:2111}.\nCoureurs des brumes et Tisse-brume moussus rodent sur les berges juste à l'ouest et au sud de {npc:1244} ; presque tous laissent du silex.",
+	["Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to {object:376} and north of Einar's camp. Any ooze there may hold {npc:2111}'s bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of {npc:1244}; almost every one drops flint."] = "Des limons noirs, cramoisis et monstrueux remplissent la tombe d'Ironbeard, juste à l'ouest de la route vers {object:376} et au nord du camp d'Einar. N'importe quel limon peut contenir le sac de {npc:2111}.\nDes paludiers et tisseurs de brumes Poil-moussu rôdent sur les berges juste à l'ouest et au sud de {npc:1244} ; presque tous laissent du silex.",
 
 	-- Step 65: The Green Belt: kill these as you meet them
-	["The Green Belt: kill these as you meet them"] = "Ceinture Verte : tuez-les au fur et à mesure",
+	["The Green Belt: kill these as you meet them"] = "La Ceinture verte : tuez-les au fur et à mesure",
 	-- {item:279996} Goaz Stone · {quest:98283} Carnage
 	-- plural, as words: Maddened Rotclaws = {npc:271334} Maddened Rotclaw · Fen Creepers = {npc:1040} Fen Creeper
-	["Red whelps fill the hills west of the gates, Maddened Rotclaws the Green Belt, Razormaws the northern slopes; Neru stands in the north-east (use the {item:279996}).\n{quest:98283} is elite: grouping up is advised.\nFen Creepers hide in the marsh pools north-west of the Green Belt.\nCareful: When out of combat, Fen Creepers cast Sneak from time to time, so they are stealthed and hard to see."] = "Dragonnets rouges infestent les collines à l'ouest des portes, Griffepourris affolés la Ceinture Verte, Gueules-acérées les pentes nord ; Neru se tient au nord-est (utilisez le {item:279996}).\n{quest:98283} est élite : former un groupe est conseillé.\nRôdeurs des marais se cachent dans les mares au nord-ouest de la Ceinture Verte.\nAttention : Hors combat, les Rôdeurs des marais lancent Camouflage par moments, ils sont donc camouflés et difficiles à voir.",
+	["Red whelps fill the hills west of the gates, Maddened Rotclaws the Green Belt, Razormaws the northern slopes; Neru stands in the north-east (use the {item:279996}).\n{quest:98283} is elite: grouping up is advised.\nFen Creepers hide in the marsh pools north-west of the Green Belt.\nCareful: When out of combat, Fen Creepers cast Sneak from time to time, so they are stealthed and hard to see."] = "Des dragonnets rouges infestent les collines à l'ouest des portes, des griffes pourries affolées la Ceinture verte, des tranchegueules les pentes nord ; Neru se tient au nord-est (utilisez le {item:279996}).\n{quest:98283} est élite : former un groupe est conseillé.\nDes rampants des tourbières se cachent dans les mares au nord-ouest de la Ceinture verte.\nAttention : Hors combat, les rampants des tourbières lancent Camouflage par moments, ils sont donc camouflés et difficiles à voir.",
 
 	-- Step 68: Menethil
 	["Menethil"] = "Menethil",
@@ -326,7 +326,7 @@ return {
 
 	-- Step 81: Lord Grayson Shadowbreaker
 	-- {npc:2228} Lieutenant Farren Orinelle
-	["For {npc:2228} in Southshore: keep it"] = "Pour {npc:2228} à Rivage-du-Sud : gardez-le",
+	["For {npc:2228} in Southshore: keep it"] = "Pour {npc:2228} à Austrivage : gardez-le",
 
 	-- Step 82: Collin Mauren
 	-- {object:2164} The Slaughtered Lamb · {object:2101} Mage Quarter

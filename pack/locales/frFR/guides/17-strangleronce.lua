@@ -68,7 +68,7 @@ return {
 	["{object:287}, upstairs"] = "{object:287}, à l'étage",
 
 	-- Step 16: Kurzen's Compound: kill these as you meet them
-	["Kurzen's Compound: kill these as you meet them"] = "Composé de Kurzen : tuez-les au fur et à mesure.",
+	["Kurzen's Compound: kill these as you meet them"] = "Base de Kurzen : tuez-les au fur et à mesure",
 	["The Kurzen rebels hold the camp east of the Rebel Camp; work its outer edge, where Jungle Fighters and Medicine Men stand, and loot the supply crates by the tents."] = "Les rebelles de Kurzen occupent le camp à l'est du Camp rebelle ; travaillez sa lisière extérieure, où se tiennent des Combattants de la jungle et des Hommes-médecine, et pillez les caisses de ravitaillement près des tentes.",
 	-- {item:2634} Venom Fern Extract · {object:263} Kurzen Supplies
 	["{item:2634}, from a {object:263} crate"] = "{item:2634}, dans une caisse de {object:263}",
@@ -91,7 +91,7 @@ return {
 	["{npc:729} and the Lashtail raptors"] = "{npc:729} et les raptors flagellants",
 	-- {npc:729} Sin'Dall · {object:3204} Booty Bay
 	-- plural, as words: Lashtail Raptors = {npc:686} Lashtail Raptor
-	["{npc:729}, the great tiger, lairs on the hilltop south-west of the camp; Lashtail Raptors run south of it, along the way to {object:3204}."] = "{npc:729}, le grand tigre, réside au sommet de la colline au sud-ouest du camp ; des Raptors fouette-queue courent au sud de celui-ci, le long de la route vers {object:3204}.",
+	["{npc:729}, the great tiger, lairs on the hilltop south-west of the camp; Lashtail Raptors run south of it, along the way to {object:3204}."] = "{npc:729}, le grand tigre, a son repaire au sommet de la colline au sud-ouest du camp ; des raptors flagellants courent au sud de celle-ci, le long de la route vers {object:3204}.",
 
 	-- Step 22: Down to Booty Bay
 	-- {object:3204} Booty Bay
@@ -124,7 +124,7 @@ return {
 	-- Step 25: The Savage Coast: kill these as you meet them
 	["The Savage Coast: kill these as you meet them"] = "La Côte sauvage : tuez-les au fur et à mesure.",
 	-- plural, as words: Crystal Spine Basilisks = {npc:689} Crystal Spine Basilisk
-	["Walk back north; the Crystalvein Mine lies west of the road in the middle of the jungle. The Crystal Spine Basilisks there drop the shards.\nThe Bloodscalp trolls hold the ruins on the coast west of Nesingwary's camp."] = "Remontez vers le nord ; la Mine de Cristalveine se trouve à l'ouest de la route au milieu de la jungle. Les Basilisks Cristalléchine y laissent tomber les éclats.\nLes trolls Scalp-rouge occupent les ruines sur la côte à l'ouest du camp de Nesingwary.",
+	["Walk back north; the Crystalvein Mine lies west of the road in the middle of the jungle. The Crystal Spine Basilisks there drop the shards.\nThe Bloodscalp trolls hold the ruins on the coast west of Nesingwary's camp."] = "Remontez vers le nord ; la Mine aux cristaux se trouve à l'ouest de la route au milieu de la jungle. Les basilics de cristal y laissent tomber les éclats.\nLes trolls Bloodscalp occupent les ruines sur la côte à l'ouest du camp de Nesingwary.",
 
 	-- Step 26: River crocolisks
 	["River crocolisks"] = "Crocilisques des rivières",
@@ -149,7 +149,7 @@ return {
 	["Snapjaw Crocolisks"] = "Crocilisques Gueule d'acier",
 	-- {object:3204} Booty Bay
 	-- plural, as words: Snapjaw Crocolisks = {npc:1152} Snapjaw Crocolisk
-	["Snapjaw Crocolisks bask on the shore and islands along the coast north of {object:3204}."] = "Des Crocilisques Mâchouillent se prélassent sur le rivage et les îles le long de la côte au nord de {object:3204}.",
+	["Snapjaw Crocolisks bask on the shore and islands along the coast north of {object:3204}."] = "Des crocilisques Gueule d'acier se prélassent sur le rivage et les îles le long de la côte au nord de {object:3204}.",
 
 	-- Step 32: Fly to Darkshire
 	["Fly to Darkshire"] = "Envolez-vous pour Sombre-Comté.",
@@ -159,7 +159,7 @@ return {
 	["Into {zone:1434}"] = "Vers {zone:1434}",
 
 	-- Step 35: Kurzen's Compound
-	["Kurzen's Compound"] = "Composé de Kurzen",
+	["Kurzen's Compound"] = "Base de Kurzen",
 	-- plural, as words: Kurzen Commandos = {npc:938} Kurzen Commando
 	["Headshrinkers stand deeper in the compound; the Commandos lurk stealthed around it and in the cave. Pick up Green Hills pages as they drop.\nCareful: Kurzen Commandos are level 34-35, not elite, and often spawn stealthed; near death they use Smoke Bomb."] = "Les Réducteurs de tête se tiennent plus loin dans le composé ; les Commandos rôdent camouflés autour et dans la grotte. Ramassez les pages des Collines verdoyantes au fur et à mesure.\nAttention : les Commandos de Kurzen sont de niveau 34-35, non élites, et apparaissent souvent camouflés ; près de la mort, ils utilisent Bombe fumigène.",
 	-- {npc:941} Kurzen Headshrinker
@@ -168,7 +168,7 @@ return {
 	-- Step 36: The jungle ruins
 	["The jungle ruins"] = "Les ruines de la jungle",
 	-- plural, as words: Shadowmaw Panthers = {npc:684} Shadowmaw Panther · Tumbled Crystals = {item:4106} Tumbled Crystal
-	["Loop through the troll ruins of the north and centre: each holds one stone tablet of the troll legends. Shadowmaw Panthers prowl stealthed in the jungle around them; the Venture Co. camp on Lake Nazferiti carries the Tumbled Crystals."] = "Faites le tour des ruines trolls du nord et du centre : chacune contient une tablette de pierre des légendes trolls. Des Panthères Ombre-gueule rodent camouflées dans la jungle alentour ; le camp de la KapitalRisk au Lac Nazferiti contient les Cristaux ébréchés.",
+	["Loop through the troll ruins of the north and centre: each holds one stone tablet of the troll legends. Shadowmaw Panthers prowl stealthed in the jungle around them; the Venture Co. camp on Lake Nazferiti carries the Tumbled Crystals."] = "Faites le tour des ruines trolls du nord et du centre : chacune contient une tablette de pierre des légendes trolls. Des panthères Ombregueule rôdent camouflées dans la jungle alentour ; le camp de la KapitalRisk au Lac Nazfériti contient les cristaux réduits.",
 	-- {item:2006} The Second Troll Legend · {object:58} Gri'lek the Wanderer
 	["{item:2006}: {object:58}; underwater"] = "{item:2006} : {object:58} ; sous l'eau",
 

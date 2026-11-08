@@ -38,7 +38,7 @@ return {
 
 	-- Step 7: Lordamere Overlook: Viktor the Vile (optional)
 	-- {npc:256035} Viktor the Vile
-	["Lordamere Overlook: {npc:256035} (optional)"] = "Belvédère de Lordamere : {npc:256035} (facultatif)",
+	["Lordamere Overlook: {npc:256035} (optional)"] = "Surplomb de Lordamere : {npc:256035} (facultatif)",
 	-- plural, as words: Flesh Golems = {npc:1805} Flesh Golem
 	["Flesh Golems hit hard and knock you into other packs; ghouls come in threes and fours. Viktor is optional: light the chimney of the ruined house in the south-west, survive 4 to 6 waves (leave the last enemy of each wave alive a moment so casters can drink), then he jumps out. Short group? Skip him."] = "Les golems de chair frappent fort et projettent dans d'autres groupes ; les goules viennent par trois ou quatre. Viktor est facultatif : allumer la cheminée de la maison en ruine au sud-ouest, tenir 4 à 6 vagues (laisser vivre un moment le dernier ennemi de chaque vague pour que les lanceurs de sorts boivent), puis il surgit. Groupe réduit ? Le laisser.",
 	-- {npc:256035} Viktor the Vile

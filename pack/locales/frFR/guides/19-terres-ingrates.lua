@@ -16,12 +16,12 @@ return {
 	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
 
 	-- Step 3: Hammertoe's Digsite
-	["Hammertoe's Digsite"] = "Site de fouilles de Marteleur",
+	["Hammertoe's Digsite"] = "Site de fouilles d'Hammertoe",
 	-- {zone:1432} Loch Modan · {zone:1418} Badlands · {npc:2910} Prospector Ryedol · {npc:2860} Sigrun Ironhew
 	["Head back west to the road and follow it south out of {zone:1432} through the pass into the {zone:1418}. {npc:2910} and {npc:2860} camp side by side at the dig."] = "Revenez à l'ouest vers la route et suivez-la vers le sud hors de {zone:1432} à travers le col jusqu'à {zone:1418}. {npc:2910} et {npc:2860} campent côte à côte sur le site de fouilles.",
 
 	-- Step 4: Hammertoe's Digsite: kill these as you meet them
-	["Hammertoe's Digsite: kill these as you meet them"] = "Site de fouilles de Marteleur : tuez-les au fur et à mesure",
+	["Hammertoe's Digsite: kill these as you meet them"] = "Site de fouilles d'Hammertoe : tuez-les au fur et à mesure",
 	-- plural, as words: Crag Coyotes = {npc:2727} Crag Coyote
 	["The Shadowforge dwarves camp just north of the digsite; the crumpled map lies among their tents. Tunnelers and Darkweavers carry Ryedol's pick. Crag Coyotes roam the slopes around it."] = "Les nains Ombreforge campent juste au nord du site de fouilles ; la carte froissée se trouve parmi leurs tentes. Les Tunneliers Ombreforge et les Tisseurs d'ombre Ombreforge portent la pioche de Ryedol. Des Coyotes des rochers parcourent les pentes alentour.",
 
@@ -47,7 +47,7 @@ return {
 	-- Step 9: Agmond's End
 	["Agmond's End"] = "Fin d'Agmond",
 	-- {npc:2785} Theldurin the Lost
-	["The battered skeleton lies just east of the ogres, at the edge of the Stonevault trogg camp; the Bonesnappers and Shamans around it drop the flakes. {npc:2785} sits by the ruined camp further south."] = "Le squelette maltraité gît juste à l'est des ogres, au bord du camp des troggs de Cavepierre ; les Brise-os et chamans autour laissent tomber les écailles. {npc:2785} est assis près du camp en ruine plus au sud.",
+	["The battered skeleton lies just east of the ogres, at the edge of the Stonevault trogg camp; the Bonesnappers and Shamans around it drop the flakes. {npc:2785} sits by the ruined camp further south."] = "Le squelette maltraité gît juste à l'est des ogres, au bord du camp des troggs Cavepierre ; les briseurs d'os et les chamans autour laissent tomber les écailles. {npc:2785} est assis près du camp en ruine plus au sud.",
 
 	-- Step 10: Lotwil Veriatus
 	-- {npc:2921} Lotwil Veriatus
@@ -57,7 +57,7 @@ return {
 	["Agmond's End: kill these as you meet them"] = "Fin d'Agmond : tuez-les au fur et à mesure",
 	-- {quest:739} Murdaloc · {npc:2921} Lotwil Veriatus
 	-- plural, as words: Lesser Rock Elementals = {npc:2735} Lesser Rock Elemental · Dustbelcher Lords = {npc:2719} Dustbelcher Lord
-	["The Dustbelcher ogres camp just south of the valley; any of them drops scrap. Buzzards circle the plain to the east.\nThe battered skeleton lies at the edge of the Stonevault trogg camp; {quest:739}, Agmond's killer, walks among the Bonesnappers.\nThe Lesser Rock Elementals wander the Dustbowl west of {npc:2921}.\nCareful: Dustbelcher Lords are level 44-45. They use Battle Shout and Demoralizing Shout, and below 50% health they call for help from allies within 15 yd. Seven of them stand about 750 yd south of Kargath."] = "Les ogres Poussiéreux campent juste au sud de la vallée ; chacun laisse tomber de la ferraille. Des vautours tournent au-dessus de la plaine à l'est.\nLe squelette maltraité gît au bord du camp des troggs de Cavepierre ; {quest:739}, le tueur d'Agmond, se promène parmi les Brise-os.\nLes élémentaires de roche inférieurs errent dans la Cuvette Poussiéreuse à l'ouest de {npc:2921}.\nAttention : les seigneurs Poussiéreux sont de niveau 44-45. Ils utilisent Cri de guerre et Cri démoralisant, et en dessous de 50 % de vie, ils appellent à l'aide les alliés dans un rayon de 15 m. Sept d'entre eux se tiennent à environ 750 m au sud de Kargath.",
+	["The Dustbelcher ogres camp just south of the valley; any of them drops scrap. Buzzards circle the plain to the east.\nThe battered skeleton lies at the edge of the Stonevault trogg camp; {quest:739}, Agmond's killer, walks among the Bonesnappers.\nThe Lesser Rock Elementals wander the Dustbowl west of {npc:2921}.\nCareful: Dustbelcher Lords are level 44-45. They use Battle Shout and Demoralizing Shout, and below 50% health they call for help from allies within 15 yd. Seven of them stand about 750 yd south of Kargath."] = "Les ogres Crache-poussières campent juste au sud de la vallée ; chacun laisse tomber de la ferraille. Des busards tournent au-dessus de la plaine à l'est.\nLe squelette maltraité gît au bord du camp des troggs Cavepierre ; {quest:739}, le tueur d'Agmond, se promène parmi les briseurs d'os.\nLes élémentaires de roche inférieurs errent dans la Vallée de la poussière à l'ouest de {npc:2921}.\nAttention : les seigneurs Crache-poussières sont de niveau 44-45. Ils utilisent Cri de guerre et Cri démoralisant, et en dessous de 50 % de vie, ils appellent à l'aide les alliés dans un rayon de 15 m. Sept d'entre eux se tiennent à environ 750 m au sud de Kargath.",
 	-- {quest:739} Murdaloc · {zone:1418} Badlands
 	["The skeleton's next task, {quest:739}, waits until the later {zone:1418} guide at 43."] = "La prochaine tâche du squelette, {quest:739}, attend le guide {zone:1418} ultérieur au niveau 43.",
 
@@ -85,7 +85,7 @@ return {
 	["Rock Elementals"] = "Elémentaires de roche",
 	-- {npc:2921} Lotwil Veriatus
 	-- plural, as words: Rock Elementals = {npc:92} Rock Elemental · Giant Buzzards = {npc:2831} Giant Buzzard · Elder Crag Coyotes = {npc:2729} Elder Crag Coyote
-	["The Rock Elementals roam south-east of {npc:2921}; Giant Buzzards and Elder Crag Coyotes share the plain to their west."] = "Les élémentaires de roche rodent au sud-est de {npc:2921} ; de grands vautours et des coyotes des rochers anciens partagent la plaine à leur ouest.",
+	["The Rock Elementals roam south-east of {npc:2921}; Giant Buzzards and Elder Crag Coyotes share the plain to their west."] = "Les élémentaires de roche rôdent au sud-est de {npc:2921} ; des busards géants et des anciens coyotes des rochers partagent la plaine à leur ouest.",
 
 	-- Step 18: Lucien Tosselwrench
 	-- {npc:2920} Lucien Tosselwrench · {npc:2921} Lotwil Veriatus
@@ -94,8 +94,8 @@ return {
 	["only if you carry {item:2868} (a blacksmith's craft)"] = "seulement si vous avez des {item:2868} (fabriqués par un forgeron)",
 
 	-- Step 19: To Stoutlager Inn
-	["To Stoutlager Inn"] = "Vers l'auberge Stoutlager",
-	["Stoutlager Inn"] = "Auberge Stoutlager",
+	["To Stoutlager Inn"] = "Vers l'Auberge de la Fortebière",
+	["Stoutlager Inn"] = "Auberge de la Fortebière",
 
 	-- Step 20: Thelsamar
 	["Thelsamar"] = "Thelsamar",
@@ -125,7 +125,7 @@ return {
 	-- {npc:6019} Hornizz Brimbuzzle · {object:176751} Kodo Bones · {npc:217590} Flesh Picker
 	["{npc:6019} stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; {object:176751} lie among the skeletons. A {npc:217590} crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off."] = "{npc:6019} se tient au bord du cimetière des kodos, au sud-ouest de la hutte de Kormek ; {object:176751} gisent parmi les squelettes. Un {npc:217590} rampent dans le cimetière : attrapez-en un avec le kit de démarrage d'entomologie, puis cochez-le.",
 	-- {npc:217590} Flesh Picker
-	["{npc:217590}: catch it, for My Little Friends"] = "{npc:217590} : attrapez-le, pour My Little Friends",
+	["{npc:217590}: catch it, for My Little Friends"] = "{npc:217590} : attrapez-le, pour Mes petits amis",
 
 	-- Step 27: Maraudine centaurs
 	["Maraudine centaurs"] = "Centaures maraudine",
@@ -138,13 +138,13 @@ return {
 	["escort {npc:12277} back toward the graveyard"] = "escortez {npc:12277} jusqu'au cimetière",
 
 	-- Step 29: Mannoroc Coven
-	["Mannoroc Coven"] = "Coven de Mannoroc",
+	["Mannoroc Coven"] = "Convent de Mannoroc",
 	-- {zone:1443} Desolace
 	-- plural, as words: Mana Eaters = {npc:4678} Mana Eater · Ley Hunters = {npc:4685} Ley Hunter · Nether Maidens = {npc:4679} Nether Maiden · Doomwarder Captains = {npc:4680} Doomwarder Captain
-	["The demons gather at the Mannoroc Coven in southern {zone:1443}: felhounds (Mana Eaters, Mage and Ley Hunters), Nether Maidens and Sisters, and Doomwarder Captains around the pit.\nCareful: Most of the mobs here walk patrol routes, so you can easily pull extra mobs."] = "Les démons se rassemblent au Coven de Mannoroc au sud de {zone:1443} : gangrechiens (mangeurs de mana, chasseurs de mages et de ley), servantes et sœurs du Néant, et capitaines garde-funeste autour de la fosse.\nAttention : la plupart des monstres ici suivent des routes de patrouille, vous pouvez donc facilement attirer des monstres supplémentaires.",
+	["The demons gather at the Mannoroc Coven in southern {zone:1443}: felhounds (Mana Eaters, Mage and Ley Hunters), Nether Maidens and Sisters, and Doomwarder Captains around the pit.\nCareful: Most of the mobs here walk patrol routes, so you can easily pull extra mobs."] = "Les démons se rassemblent au Convent de Mannoroc au sud de {zone:1443} : gangrechiens (mange-mana, chasseurs de mages et chasseurs Ley), vierges et sœurs du néant, et capitaines de la Garde funeste autour de la fosse.\nAttention : la plupart des monstres ici suivent des routes de patrouille, vous pouvez donc facilement attirer des monstres supplémentaires.",
 
 	-- Step 30: The Valley of Bones
-	["The Valley of Bones"] = "La vallée des Os",
+	["The Valley of Bones"] = "Vallée des Ossements",
 	-- {item:15848} Crate of Ghost Magnets
 	-- plural, as words: Undead Ravagers = {npc:11561} Undead Ravager · Magrami Spectres = {npc:11560} Magrami Spectre
 	["Undead Ravagers roam the bone fields south of the Magram village, east of the Coven; at the far south-east, use the {item:15848} to draw the Magrami Spectres."] = "Des Ravageurs morts-vivants parcourent les champs d'ossements au sud du Village des Magram, à l'est du Convent de Mannoroc ; à l'extrême sud-est, utilisez la {item:15848} pour attirer les Spectres magrami.",
@@ -169,7 +169,7 @@ return {
 	["for {npc:3980} in Southshore: keep it"] = "pour {npc:3980} à Austrivage : gardez-le",
 
 	-- Step 37: Sar'theris Strand: kill these as you meet them
-	["Sar'theris Strand: kill these as you meet them"] = "Rivage de Sar'theris : tuez-les au fur et à mesure",
+	["Sar'theris Strand: kill these as you meet them"] = "Grève de Sar'theris : tuez-les au fur et à mesure",
 	-- {npc:12369} Lord Kragaru · {npc:11863} Azore Aldamort
 	["{npc:12369}, a centaur chieftain, camps on the north-west coast, north of {npc:11863}'s tower."] = "{npc:12369}, un chef centaure, campe sur la côte nord-ouest, au nord de la tour d'{npc:11863}.",
 

@@ -24,7 +24,7 @@ return {
 	["Sargeron"] = "Sargeron",
 	-- {object:176948} Nijel's Point
 	-- plural, as words: Hatefury Rogues = {npc:4670} Hatefury Rogue · Hatefury Tricksters = {npc:4671} Hatefury Trickster
-	["The Hatefury satyrs hold the ruins of Sargeron, east of {object:176948}.\nCareful: Hatefury Rogues spawn stealthed, and Hatefury Tricksters have a poison proc on their attacks."] = "Les satyres Haineffroi occupent les ruines de Sargeron, à l'est de {object:176948}.\nAttention : les voleurs Haineffroi apparaissent camouflés, et les trompeurs Haineffroi ont un effet de poison sur leurs attaques.",
+	["The Hatefury satyrs hold the ruins of Sargeron, east of {object:176948}.\nCareful: Hatefury Rogues spawn stealthed, and Hatefury Tricksters have a poison proc on their attacks."] = "Les satyres Fielfurie occupent les ruines de Sargeron, à l'est de {object:176948}.\nAttention : Les voleurs Fielfurie apparaissent camouflés, et les entourloupeurs Fielfurie ont un effet de poison sur leurs attaques.",
 
 	-- Step 6: Azore Aldamort
 	-- {npc:11863} Azore Aldamort
@@ -56,7 +56,7 @@ return {
 
 	-- Step 10: Smeed Scrabblescrew
 	-- {npc:11596} Smeed Scrabblescrew
-	["{npc:11596}'s camp is on the road south of Kolkar Village, by the Kodo Graveyard."] = "Le camp de {npc:11596} se trouve sur la route au sud du village Kolkar, près du cimetière des kodos.",
+	["{npc:11596}'s camp is on the road south of Kolkar Village, by the Kodo Graveyard."] = "Le camp de {npc:11596} se trouve sur la route au sud du village des Kolkar, près du cimetière des kodos.",
 
 	-- Step 11: Kodo Graveyard
 	["Kodo Graveyard"] = "Cimetière des kodos",
@@ -69,9 +69,9 @@ return {
 	["The Scorpashi scorpids hunt the hills around Kormek's Hut on the road south."] = "Les scorpides Scorpashi chassent dans les collines autour de la hutte de Kormek sur la route vers le sud.",
 
 	-- Step 15: Kolkar Village
-	["Kolkar Village"] = "Village Kolkar",
+	["Kolkar Village"] = "Village des Kolkar",
 	-- {npc:5752} Corporal Melkins
-	["The Kolkar roam the plains around Kolkar Village; their ears are for {npc:5752}."] = "Les Kolkar errent dans les plaines autour du village Kolkar ; leurs oreilles sont pour {npc:5752}.",
+	["The Kolkar roam the plains around Kolkar Village; their ears are for {npc:5752}."] = "Les Kolkar errent dans les plaines autour du village des Kolkar ; leurs oreilles sont pour {npc:5752}.",
 
 	-- Step 17: Fly to Astranaar
 	["Fly to Astranaar"] = "Envolez-vous vers Astranaar",

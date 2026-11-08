@@ -11,9 +11,9 @@ return {
 	["Group 12 · {zone:1437} & {zone:1424}"] = "Groupe 12 · {zone:1437} et {zone:1424}",
 
 	-- Step 1: To Deepwater Tavern
-	["To Deepwater Tavern"] = "Vers Deepwater Tavern",
+	["To Deepwater Tavern"] = "Vers la taverne de l'Eau-profonde",
 	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
-	["Deepwater Tavern"] = "Taverne d'Eaux-Profondes",
+	["Deepwater Tavern"] = "Taverne de l'Eau-profonde",
 
 	-- Step 2: Menethil Harbor
 	-- {npc:2104} Captain Stoutfist · {npc:270637} Howin Kindfeather
@@ -24,9 +24,9 @@ return {
 	["For King Magni in {zone:1455}, at the end of this guide"] = "Pour le roi Magni à {zone:1455}, à la fin de ce guide",
 
 	-- Step 4: Angerfang Encampment
-	["Angerfang Encampment"] = "Campement Crocs-de-rage",
+	["Angerfang Encampment"] = "Campement de Hargnecroc",
 	-- {object:671518} Tattered Spellbook
-	["South to the Dragonmaw's Angerfang Encampment: the first catapult stands on the way, and the {object:671518} lies in the camp."] = "Au sud vers le camp de la Griffe-enragée des Gueule-de-dragon : la première catapulte se trouve sur le chemin, et le {object:671518} se trouve dans le camp.",
+	["South to the Dragonmaw's Angerfang Encampment: the first catapult stands on the way, and the {object:671518} lies in the camp."] = "Au sud vers le campement de Hargnecroc des Dragonmaw : la première catapulte se trouve sur le chemin, et le {object:671518} se trouve dans le camp.",
 
 	-- Step 6: Angerfang Encampment
 	-- {quest:474} Defeat Nek'rosh
@@ -43,9 +43,9 @@ return {
 	["{npc:271462} stands in the south-eastern hills: use the {item:279996} beside it."] = "{npc:271462} se dresse dans les collines du sud-est : utilisez la {item:279996} à côté.",
 
 	-- Step 9: Dragonmaw Gates: kill these as you meet them
-	["Dragonmaw Gates: kill these as you meet them"] = "Portes des Gueule-de-dragon : tuez-les au fur et à mesure.",
+	["Dragonmaw Gates: kill these as you meet them"] = "Portes des Dragonmaw : tuez-les au fur et à mesure",
 	-- {npc:271338} Ados · {item:279996} Goaz Stone
-	["North-east to the Dragonmaw Gates: {npc:271338} stands at the gates (use the {item:279996})."] = "Au nord-est vers les Portes des Gueule-de-dragon : {npc:271338} se trouve aux portes (utiliser le {item:279996}).",
+	["North-east to the Dragonmaw Gates: {npc:271338} stands at the gates (use the {item:279996})."] = "Au nord-est vers les Portes des Dragonmaw : {npc:271338} se trouve aux portes (utiliser le {item:279996}).",
 
 	-- Step 10: The Green Belt
 	["The Green Belt"] = "La Ceinture Verte",
@@ -112,7 +112,7 @@ return {
 
 	-- Step 25: Torn Fin murlocs
 	["Torn Fin murlocs"] = "Murlocs Aileron déchiré",
-	["The Torn Fin murlocs crowd the Western Strand, south-west of Southshore.\nCareful: One camp holds a tight cluster of Oracles that all aggro together."] = "Les murlocs Aileron-déchiré encombrent le Rivage occidental, au sud-ouest d'Austrivage.\nAttention : un camp contient un groupe serré d'oracles qui s'aggro tous ensemble.",
+	["The Torn Fin murlocs crowd the Western Strand, south-west of Southshore.\nCareful: One camp holds a tight cluster of Oracles that all aggro together."] = "Les murlocs Aileron déchiré encombrent le Rivage occidental, au sud-ouest d'Austrivage.\nAttention : Un camp contient un groupe serré d'oracles qui attaquent tous ensemble.",
 
 	-- Step 26: Farren
 	["Farren"] = "Farren",
@@ -146,12 +146,12 @@ return {
 	-- Step 37: Syndicate camp
 	["Syndicate camp"] = "Camp du Syndicat",
 	-- {object:1772} Tarren Mill
-	["The Syndicate camp sits on the Alterac border in northern Hillsbrad, west of {object:1772} (Horde); the documents lie in the camp."] = "Le camp du Syndicat se trouve à la frontière d'Alterac dans le nord d'Hillsbrad, à l'ouest de {object:1772} (Horde) ; les documents se trouvent dans le camp.",
+	["The Syndicate camp sits on the Alterac border in northern Hillsbrad, west of {object:1772} (Horde); the documents lie in the camp."] = "Le camp du Syndicat se trouve à la frontière d'Alterac dans le nord de Hautebrande, à l'ouest de {object:1772} (Horde) ; les documents se trouvent dans le camp.",
 
 	-- Step 39: Snapjaws
 	["Snapjaws"] = "Gueules d'acier",
 	-- {object:1772} Tarren Mill
-	["The Snapjaw turtles bask along the river east of Southshore, south of {object:1772} (Horde)."] = "Les tortues Mâchouillent se prélassent le long de la rivière à l'est d'Austrivage, au sud de {object:1772} (Horde).",
+	["The Snapjaw turtles bask along the river east of Southshore, south of {object:1772} (Horde)."] = "Les tortues Gueule d'acier se prélassent le long de la rivière à l'est d'Austrivage, au sud de {object:1772} (Horde).",
 
 	-- Step 43: Fly to Ironforge
 	-- {zone:1455} Ironforge
@@ -161,7 +161,7 @@ return {
 	-- Step 44: Deeprun Tram
 	["Deeprun Tram"] = "Tram des profondeurs",
 	-- {object:28027} Dwarven District · {zone:1455} Ironforge
-	["Take the Deeprun Tram from the {object:28027} to {zone:1455}."] = "Prenez le tram des Tréfonds depuis le {object:28027} jusqu'à {zone:1455}.",
+	["Take the Deeprun Tram from the {object:28027} to {zone:1455}."] = "Prenez le Tram des profondeurs depuis le {object:28027} jusqu'à {zone:1455}.",
 	["Level 30 and 32 spells"] = "Sorts des niveaux 30 et 32",
 
 	-- Step 47: Deeprun Tram
@@ -176,7 +176,7 @@ return {
 
 	-- Step 50: The Islander
 	-- {npc:5479} Wu Shen · {object:2100} Old Town · {npc:6236} Klannoc Macleod · {zone:1413} Barrens
-	["{npc:5479} trains warriors in {object:2100}, beside the Pig and Whistle. {npc:6236} waits on Fray Island in the {zone:1413}, on the way to Ratchet much later (40-50/01)."] = "{npc:5479} forme les guerriers dans {object:2100}, à côté du Pig and Whistle. {npc:6236} attend sur l'île de Fray dans {zone:1413}, sur la route vers Cabestan bien plus tard (40-50/01).",
+	["{npc:5479} trains warriors in {object:2100}, beside the Pig and Whistle. {npc:6236} waits on Fray Island in the {zone:1413}, on the way to Ratchet much later (40-50/01)."] = "{npc:5479} forme les guerriers dans {object:2100}, à côté de la taverne du Cochon siffleur. {npc:6236} attend sur l'île de la Dispute dans {zone:1413}, sur la route de Cabestan, bien plus tard (40-50/01).",
 
 	-- Step 51: Elling Trias
 	-- {object:2096} Trade District
