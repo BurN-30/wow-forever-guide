@@ -34,6 +34,14 @@
 6. Hurlevent, avant le bateau : Borgus Steelhand propose bien Business in Auberdine (position notée dans les données, pas encore vérifiée en jeu).
 7. Un joueur qui a déjà fait des quêtes seul : le guide les saute.
 
+## Fait en 0.4.0 (08/11/2026)
+
+- Quêtes de groupe réintégrées, chacune demandée une fois (bandeau de Polestar « La passer / La faire en groupe », réglage du paquet passé de « toujours » à « demander ») : Carmines (Blackrock Blockade seul ; Tharil'zun, Shadow Magic, Gath'Ilzogg, Incinerator Gar'im à plusieurs), Sombrivage (Baron Marinous, Gyromast's Revenge ; Volcor en force à plusieurs, discret seul), Bois de la Pénombre (chaîne de Jitters, facultative, sans question : ce n'est pas une quête de groupe).
+- Chapitres Mortemines (Groupe 6b, après les Carmines) et Prison (Groupe 7b, après le Bois de la Pénombre), boss par boss ; Ruines de Lordaeron et Site de fouilles réécrits de même et rendus facultatifs.
+- Site de fouilles déplacé après les Mille pointes (28-32) : quêtes de niveau 31 et dernier boss 31 sur Wowhead Forever.
+- Marques de difficulté (orange, rouge) calculées sur le niveau réel du joueur, avec la façon de faire seul et à plusieurs.
+- Paluns : Razormaw Needling (98245) et la chaîne Lightforge (270, 321, 324, 322) sont déjà dans le guide Polestar qui suit le nôtre (30-40, Contreforts de Hautebrande) ; Trying Times (98246) n'est pas ajoutée (positions des œufs absentes des données). Friend of the Kirin Tor (92459) pas ajoutée.
+
 ## Ce qui reste à faire (idées notées, pas faites)
 
 - **Quêtes en plus pour un groupe**, présentes dans les autres guides et que la route solo de Polestar écarte : Carmines (Blackrock Blockade 98387, WANTED: Incinerator Gar'im 95999, élites Tharil'zun 19, Gath'Ilzogg 169, Shadow Magic 115), Bois de la Pénombre (chaîne de Jitters 163, 5, 93, 240), Sombrivage (Baron Marinous 98028, élite 21), Paluns (98245, 98246, chaîne Lightforge 321, 322, 324), Dalaran (Friend of the Kirin Tor 92459), Site de fouilles (98310, 98313 chez Whelgar). Il faut placer chaque étape (positions, ordre) : environ 1 à 2 heures par zone, et un essai en jeu.

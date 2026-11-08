@@ -46,6 +46,8 @@ TIPLINES, PRINTED = {}, {}
 function CreateFrame() return obj() end
 UIParent, GameTooltip = obj(), obj()
 function GetLocale() return "frFR" end
+PLAYER_LEVEL = 18
+function UnitLevel() return PLAYER_LEVEL end
 HOOKS = {}
 function hooksecurefunc(t, name, fn) HOOKS[name] = fn end
 function IsControlKeyDown() return false end
@@ -63,13 +65,14 @@ NS = {
 }
 ''')
 run = L.eval("function(src, name) local f, err = loadstring(src, name); if not f then error(err) end; f('Polestar', NS) end")
-for name in ("Reliability.lua", "Tips.lua", "GroupeAlliance.lua"):
+for name in ("Reliability.lua", "Tips.lua", "Danger.lua", "GroupeAlliance.lua"):
     run((repo / "addons-src" / "GroupeAlliance" / name).read_text(encoding="utf-8"), "@" + name)
 result = L.execute(r'''
 INIT()
 local out = {}
 local function check(ok, what) if not ok then table.insert(out, what) end end
 check(DEFAULTS.behavior.skipGrey == true, "skipGrey default")
+check(DEFAULTS.behavior.groupQuests == "ask", "group quests asked")
 check(DEFAULTS.qol.mapObjectives == true and DEFAULTS.qol.guideDim == true, "quest marks defaults")
 local tipQuest
 for q in pairs(NS.GA.Tips) do tipQuest = q break end
@@ -81,6 +84,24 @@ HOOKS.Tooltip({ psGoal = { quest = tipQuest }, HookScript = function() end })
 check(#TIPLINES >= 2 and TIPLINES[1]:find("Astuce", 1, true) ~= nil, "tooltip tip line")
 SlashCmdList.GROUPEALLIANCE("")
 check(#PRINTED > 0, "/ga prints its help")
+-- Difficulty marks: an elite quest above the player (from Polestar's data), a
+-- curated entry, nothing once the player has the level.
+NS.Compat = { GetQuestLevel = function(q) return q == 900001 and 20 or (q == 900002 and 30) or nil end }
+local elite = { quest = 900001, t = "complete", status = "active", party = { kind = "elite" } }
+check(NS.UI.GoalLine(elite):find("icon-kill", 1, true) ~= nil, "danger mark on an elite quest above the player")
+check(NS.UI.GoalLine({ quest = 900001, t = "turnin", status = "active", party = { kind = "elite" } }):find("icon-kill", 1, true) == nil, "no danger mark on a turn-in")
+check(NS.UI.GoalLine({ quest = 900002, t = "accept", status = "active" }):find("icon-kill", 1, true) ~= nil, "danger mark on a red quest")
+PLAYER_LEVEL = 25
+check(NS.UI.GoalLine(elite):find("icon-kill", 1, true) == nil, "no danger mark once strong enough")
+PLAYER_LEVEL = 10
+for q, e in pairs(NS.GA.Danger) do
+  check(type(e.lvl) == "number" and type(e.frFR) == "string" and type(e.enUS) == "string", "danger " .. q .. " in both languages")
+  check(NS.UI.GoalLine({ quest = q, t = "complete", status = "active" }):find("icon-kill", 1, true) ~= nil or e.lvl <= 10, "danger mark " .. q)
+end
+TIPLINES = {}
+HOOKS.Tooltip({ psGoal = elite, HookScript = function() end })
+check(TIPLINES[1] and TIPLINES[1]:find("Difficile au niveau 10", 1, true) ~= nil, "tooltip danger line")
+for q, r in pairs(NS.GA.Reliability) do check(type(r[2].frFR) == "string" and type(r[2].enUS) == "string", "reliability " .. q .. " in both languages") end
 local n = 0 for _ in pairs(NS.GA.Tips) do n = n + 1 end
 for q, t in pairs(NS.GA.Tips) do check(type(t.frFR) == "string" and type(t.enUS) == "string", "tip " .. q .. " in both languages") end
 return table.concat(out, ", "), n

@@ -19,7 +19,7 @@ return {
 	["Ragged Young Wolves roam the snow just south of Anvilmar."] = "Jeunes loups hirsutes rodent dans la neige juste au sud d'Anvilmar.",
 
 	-- Step 3: Anvilmar
-	["Anvilmar"] = "",
+	["Anvilmar"] = "Anvilmar",
 	-- {npc:713} Balir Frosthammer · {npc:658} Sten Stoutarm
 	["{npc:713}, next to {npc:658}"] = "{npc:713}, à côté de {npc:658}",
 	-- {npc:912} Thran Khorman
@@ -127,7 +127,7 @@ return {
 	["Sit by Eric's campfire (type /sit) and wait for the buff."] = "Asseyez-vous près du feu de camp d'Eric (tapez /asseoir) et attendez l'amélioration.",
 
 	-- Step 20: Kharanos
-	["Kharanos"] = "",
+	["Kharanos"] = "Kharanos",
 	-- {npc:1252} Senir Whitebeard · {npc:1872} Tharek Blackstone · {npc:6806} Tannok Frosthammer · {npc:1226} Maxan Anvol · {npc:1267} Ragnar Thunderbrew · {npc:1699} Gremlock Pilsnor · {skill:185} Cooking
 	["Follow the road through the tunnel and north-east to Kharanos. Start outside: {npc:1252} and Eric's campfire are in front of the Thunderbrew Distillery.\n{npc:1872} works the forge west of the distillery.\nThen go in: {npc:6806}, the innkeeper, {npc:1226} and {npc:1267}. {npc:1699}'s {skill:185} lesson waits for the return with the ribs, when the copper is there for it."] = "Suivez la route à travers le tunnel et au nord-est jusqu'à Kharanos. Commencez à l'extérieur : {npc:1252} et le feu de camp d'Eric sont devant la Distillerie Thunderbrew.\n{npc:1872} travaille à la forge à l'ouest de la distillerie.\nEntrez ensuite : {npc:6806}, l'aubergiste, {npc:1226} et {npc:1267}. La leçon de {skill:185} de {npc:1699} attend le retour avec les côtes, quand vous aurez le cuivre pour la payer.",
 	-- {npc:1241} Tognus Flintfire

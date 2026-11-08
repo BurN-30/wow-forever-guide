@@ -48,4 +48,5 @@ Alts\Alts.xml
 # Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide): the Groupe Alliance module.
 GroupeAlliance\Reliability.lua
 GroupeAlliance\Tips.lua
+GroupeAlliance\Danger.lua
 GroupeAlliance\GroupeAlliance.lua

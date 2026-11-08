@@ -2,6 +2,9 @@
 # GPL-3.0). Changes: for every class (no Aquatic Form swim), no fixed reward choice, shorter tips,
 # group notes. Ids cross-checked against Polestar 0.3.2's reference data, Polestar's Dungeons
 # codex and RestedXP's free Forever dungeon guide (11-20).
+# 0.4.0 (BurN-30): optional (asked once, `when group 95250`, then `when done rl-start`), the
+# dungeon boss by boss, after Wowhead Forever's Ruins of Lordaeron guide (updated 2026-11-05)
+# and the quest comments read on 2026-11-08, rewritten.
 # Not checked in game: the walk from Southshore to the Ruins (the arrow plans it).
 guide groupe-alliance/06-ruines-de-lordaeron
 title Group 5 · Ruins of Lordaeron (dungeon 17-21)
@@ -13,34 +16,74 @@ zone Darkshore
 next groupe-alliance/07-carmines
 
 step Auberdine: boat to Southshore
-  tip The Southshore boat leaves from Auberdine's pier. Keep 4 free quest log slots.
+  label rl-start
+  when group 95250
+  tip Ruins of Lordaeron: a 5-player Forever dungeon in Tirisfal Glades, best at 16 to 22 (17 or more is comfortable). Alone? Skip it: the guide takes you to Stormwind for Redridge. The Southshore boat leaves from Auberdine's pier. Keep 4 free quest log slots.
   level 16
 
 step Southshore
+  when done rl-start
   zone Hillsbrad Foothills
   getfp "Southshore"
   vendor nearest
 
 step Ruins of Lordaeron entrance
+  when done rl-start
   zone Tirisfal Glades
-  tip Horde land: travel as a group. The dungeon stairs are on the left of the outer courtyard.
+  tip Horde land: travel together. North past Hillsbrad Fields, around Dalaran, then swim north up Lordamere Lake into Tirisfal and follow the road. If you die inside, the spirit healer is right outside the dungeon.
   goto 63.2,67.5 "Ruins of Lordaeron" r 25
 
-step Inside the dungeon
-  tip Captain Truman stands on the left just after the portal. Right-click each quest item as it drops; every player needs their own.
+step Captain Truman
+  when done rl-start
+  tip On your left just after the portal. The bosses can be done in any order. Any undead may drop a Bloodied Insignia: right-click it, then keep looting them, there are plenty for everyone.
   note Share each quest with your group: click it in the quest log, then Share.
   accept 95250
-  complete 95250
-  accept 95195 -- Bloodied Insignia, from the undead
-  complete 95195
-  accept 95189 -- Crest of Lordaeron, in a tower or side room
-  accept 92415 -- Blood-stained letter, by a body in the graveyard
-  turnin 95250
+  accept 95195 item 268535 -- Bloodied Insignia, from any undead: right-click it
+
+step Witherfang
+  when done rl-start
+  tip The spider wing, King's Alley. Witherfang patrols with two spiders: kill them first and cleanse Leech Poison off the tank. Spider packs patrol too: pull with care.
+  kill 250483 -- Witherfang
+
+step The Baron
+  when done rl-start
+  tip Right from the entrance. Skeletons and banshees guard him; the banshees silence, so stun the packs. His head drops for everyone on the quest. The crypt door with a banshee in front of him is one of the Crest's spots.
+  collect 268518 quest 95250 -- Head of the Baron
+  kill 250660 -- The Baron
+
+step Lordamere Overlook: Viktor the Vile (optional)
+  when done rl-start
+  tip Flesh Golems hit hard and knock you into other packs; ghouls come in threes and fours. Viktor is optional: light the chimney of the ruined house in the south-west, survive 4 to 6 waves (leave the last enemy of each wave alive a moment so casters can drink), then he jumps out. Short group? Skip him.
+  task "Viktor the Vile, or skipped" optional
+
+step Market Street: The Abandoned (optional)
+  when done rl-start
+  tip The statue with green eyes starts 3 waves, and the skeleton mage in the south corridor must die too; then The Abandoned: Frost Nova, slows melee, drains the tank. Optional. The top of the west tower next to it is one of the Crest's spots.
+  task "The Abandoned, or skipped" optional
+
+step The Crest of Lordaeron
+  when done rl-start
+  tip One crest per run, at a random spot with no mark on the minimap: the top of the east tower (left of the top floor doors), the banshee crypt door before The Baron, the top of the west tower, the foot of the north-west tower by the double stairs, or the wall of Bjork's gazebo (nearly invisible: hover the wall).
+  accept 95189 -- Crest of Lordaeron: each player clicks it
+
+step Bjork
+  when done rl-start
+  tip The undead troll patrolling the north-west: a simple fight, just wait out his short Anti-Magic Shield.
+  kill 256097 -- Bjork
+
+step Rath'mael
+  when done rl-start
+  tip The graveyard at the back. His one spell, Flamestrike, lands where the tank stood when he began it: step out at once, or stun him to stop it. The rare Lordaeron Captain is friendly to the Alliance: leave him be.
+  kill 250657 -- Rath'mael
+  collect 268540 x10 quest 95195 -- Bloodied Insignia, from the undead all run long
+  accept 92415 -- Blood-stained letter, by Rath'mael: each player clicks their own
+  turnin 95250 -- Captain Truman, by the entrance
 
 step Stormwind rewards
+  when done rl-start
   zone Stormwind City
   tip General Marcus Jonathan by the gate, the Matron at the orphanage, Lady Dena Kennedy in the keep.
   turnin 95195
   turnin 92415
-  accept 95161 optional -- Next letter for Darkshire, in Duskwood later
+  accept 95161 optional -- Next letter for Darkshire, in Duskwood later: Avette Fellwood gives the Tarnished Locket
   turnin 95189

@@ -2,10 +2,10 @@
 	"id": "groupe-alliance",
 	"title": "Group Alliance 1-33",
 	"author": "BurN-30",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"license": "GPL-3.0-only",
 	"website": "https://github.com/BurN-30/wow-forever-guide",
 	"source": "Polestar's own Forever guides and Aurum's dungeon chapters (GPL-3.0), a Loch Modan route after Lodestar (MIT), adapted for a group of friends",
-	"notes": "Alliance route for a group: start guides, Stormwind meeting point, zones and the four Forever dungeons.",
+	"notes": "Alliance route for friends who play alone or together: start guides, Stormwind meeting point, zones, the four Forever dungeons, the Deadmines and the Stockade, group quests to take or skip.",
 	"folder": "PolestarPack_GroupeAlliance"
 }

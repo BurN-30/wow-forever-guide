@@ -468,6 +468,22 @@ step The Ruins of Mathystra
   turnin 2098
   collect 15883 x1 only NightElf,Druid        -- Half Pendant of Aquatic Agility: the Strange Lockbox under the water off the north coast, west of the ruins
 
+step Gyromast's Revenge (group, optional)
+  when group 2078
+  tip Gelkak's key wakes the Threshwackonator 4100 on the shore south of his island; lead it back and it turns hostile near Gelkak: a level 20 elite robot. Alone you need a root or a fear: Druids root it and Moonfire from afar, Warlocks dot, Fear and let the Voidwalker hold it, Mages kite with Frost Nova. Melee: come with a friend. Water only resets it.
+  accept 2078                                 -- Gelkak Gyromast
+  kill 6669 quest 2078                        -- The robot, elite level 20
+  turnin 2078
+
+step Baron Marinous (group, optional)
+  when group 98028
+  tip The Stormscale naga of the ruins drop Mathystral Amulet Fragments, about one naga in eleven (the Stormscale Beastmistress, for Holy Diver, nearly one in two): 20 make the amulet at the Fathom Stone, down the spiral stairs in the ruins. Using it summons Baron Marinous, a level 21 elite; his Clouded Water Globe starts the quest.
+  note Group: everyone hands their fragments to one player (they can be traded, the Auction House sells them too), who summons him once; every member loots a globe. Alone at 20 or more: hide behind a pillar as each cast ends, step out to shoot. He is immune to Frost: Mages use Fire. Stone gone? Someone just summoned him: it comes back in 5 to 10 minutes.
+  collect 279276 x20                          -- Mathystral Amulet Fragment: any Stormscale naga, while you kill them for Arbal
+  use 279277 @59.1,22.8                       -- Mathystral Amulet, at the Fathom Stone: summons Baron Marinous
+  kill 270294 @59.1,22.8                      -- Elite level 21
+  accept 98028 item 279275                    -- Clouded Water Globe, from the Baron: right-click it
+
 step Mist's Edge: kill these as you meet them
   zone Darkshore
   kill 2181 quest 98013
@@ -480,16 +496,33 @@ step Back south
   turnin 951                                  -- Onu, at the Grove
   turnin 98013                                -- Arbal
 
+step Onu: Baron Marinous
+  when group 98028
+  turnin 98028                                -- Onu: speak to him again afterwards, he has one more thing for you
+
 step Volcor
-  tip Volcor hides in the hills east of the Master's Glaive. Help him back to the road; he fights on his way out.
+  tip Volcor hides in Blackwood Den, in the hills east of the Master's Glaive. Equip the Enchanted Moonstalker Cloak from Terenthis and use it near the cave: it slips you past the furbolgs. Then choose his way out.
   turnin 993                                  -- Volcor, inside Blackwood Den
+
+step Volcor: Escape Through Force (group)
+  when group 994
+  tip He charges into the furbolg camp and more furbolgs come even if you cleared it, two shamans healing them. Two or three players; a healer helps.
   accept 994
-  complete 994
+  complete 994                                -- Help Volcor to the road
+
+step Volcor: Escape Through Stealth
+  when !group 994
+  tip Alone, the quiet way out: same reward line, same next quest (Trek to Ashenvale). Hearth back to Auberdine afterwards.
+  accept 995
+  complete 995                                -- Help Volcor escape the cave
+
+step Darkshore before Auberdine
   kill 12298 quest 6124.1 only NightElf,Druid -- Sickly Deer: use the Curative Animal Salve on them; they roam all of Darkshore
   level 19.66                          -- grind on Moonstalker Sire
 
 step Auberdine
-  turnin 994                                  -- Terenthis
+  turnin 994 optional                         -- Terenthis
+  turnin 995 optional
   accept 990                                  -- Sentinel Selarin: for Raene Wolfrunner in Astranaar, on the later Ashenvale leg
 
 step Level 20

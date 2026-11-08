@@ -20,6 +20,11 @@
 --    minimap): what Questie would add, from Polestar's own quest data.
 --  * A small green mark at the end of a guide line whose quest has a tip:
 --    hover it to read the tip.
+--  * A small orange or red warning mark on a line that is hard at the player's
+--    real level (Danger.lua: elites, packs, escorts, quests well above the
+--    player); its tooltip says why, the level advised alone and the group size.
+--  * Group quests are asked, one by one (Polestar's "Skip it / Do it with a
+--    group" banner): whoever plays alone skips them in one click.
 --  * /ga lang auto|fr|en: language of the links (default: the client's).
 local _, ns = ...
 local GA = ns.GA or {}
@@ -31,7 +36,7 @@ ns.RegisterDefaults("behavior", {
 	guideEnd = "continue", -- the next guide loads in place, no window
 	routeChoice = "recommended", -- no route-choice window
 	offerClassQuests = false, -- no tab opening by itself: class quests are in this pack's guides
-	groupQuests = "do", -- a group of friends: group quests are done, no question
+	groupQuests = "ask", -- friends who often play alone: each group quest is asked once (Skip it / Do it with a group)
 	suggestFrom = "groupe-alliance", -- this pack first, Polestar fills in
 	skipGrey = true, -- whoever went ahead alone is not sent back to grey quests
 })
@@ -69,11 +74,20 @@ local T = {
 		lang = "Langue des liens Wowhead : %s (auto, fr, en).",
 		reliable = "Fiabilité",
 		tip = "Astuce",
+		danger = "Difficile au niveau %d",
+		dangerSolo = "conseillé seul : niveau %d",
+		dangerGroup = "ou à %d joueurs",
+		dangerElite = "Quête élite : un ennemi élite tape bien plus fort qu'un ennemi normal. Seul : revenir quelques niveaux plus tard ; sinon à deux ou trois.",
+		dangerEscort = "Escorte : le PNJ attire des embuscades. Seul : soigner ou tuer vite, rester près de lui.",
+		dangerHigh = "Quête bien au-dessus du niveau : ennemis plus forts, plus de coups ratés. Seul : la garder pour plus tard ; à plusieurs, elle passe.",
+		escortGroup = "Escorte à plusieurs : chacun prend la quête AVANT que l'un d'eux lance l'escorte, sinon elle ne compte pas pour lui.",
 		helpTitle = "Groupe Alliance : aide",
 		help = {
 			"Survoler une ligne : détails et astuces.",
 			"Ctrl+clic sur une ligne : lien Wowhead, Ctrl+C pour le copier.",
 			"|cffffd100?|r jaune : info pas encore confirmée, à vérifier sur Wowhead.",
+			"Marque orange ou rouge : difficile à ton niveau, la survoler pour savoir comment faire seul ou à plusieurs.",
+			"Quête de groupe : le guide propose « La passer » ou « La faire en groupe » ; seul, la passer.",
 			"Changer de guide : /polestar guides, ou le + des onglets.",
 			"/ga lang fr, en ou auto : langue des liens Wowhead.",
 			"Réduire : bouton _ ; masquer : /polestar hide, raccourci dans Options > Raccourcis > Polestar.",
@@ -97,11 +111,20 @@ local T = {
 		lang = "Wowhead link language: %s (auto, fr, en).",
 		reliable = "Reliability",
 		tip = "Tip",
+		danger = "Hard at level %d",
+		dangerSolo = "advised alone: level %d",
+		dangerGroup = "or %d players",
+		dangerElite = "Elite quest: an elite enemy hits far harder than a normal one. Alone: come back a few levels later; else bring one or two friends.",
+		dangerEscort = "Escort: the NPC draws ambushes. Alone: heal or kill fast and stay close to them.",
+		dangerHigh = "Quest well above your level: tougher enemies, more missed hits. Alone: keep it for later; in a group it is fine.",
+		escortGroup = "Escort in a group: everyone takes the quest BEFORE one of you starts the escort, or it does not count for them.",
 		helpTitle = "Group Alliance: help",
 		help = {
 			"Hover a line: details and tips.",
 			"Ctrl-click a line: Wowhead link, Ctrl-C to copy it.",
 			"Yellow |cffffd100?|r: not confirmed yet, check Wowhead.",
+			"Orange or red mark: hard at your level, hover it to see how to do it alone or in a group.",
+			"Group quest: the guide asks \"Skip it\" or \"Do it with a group\"; alone, Skip it.",
 			"Change guide: /polestar guides, or the tabs' +.",
 			"/ga lang fr, en or auto: Wowhead link language.",
 			"Reduce: the _ button; hide: /polestar hide, key binding in Options > Keybindings > Polestar.",
@@ -151,6 +174,58 @@ end
 -- The tip mark: Polestar's own star (Media/UI/star.tga, 32x32), tinted the
 -- tooltip's tip green, after the line's text.
 local TIP_MARK = "  |TInterface\\AddOns\\Polestar\\Media\\UI\\star:12:12:0:0:32:32:0:32:0:32:140:255:140|t"
+-- Difficulty (Danger.lua): the advised level and group for goal's quest at the
+-- player's real level (UnitLevel), or nil when it is fine. -> rec, grp, text, gap
+local DANGER_KINDS = { accept = true, complete = true, kill = true, collect = true, interact = true, use = true, talk = true }
+local function questLevel(q)
+	local C = ns.Compat
+	local l = C and C.GetQuestLevel and C.GetQuestLevel(q)
+	if type(l) ~= "number" then
+		local Q = ns.QuestDB
+		if Q and Q.F and Q.QuestRecord and (not Q.IsLoaded or Q.IsLoaded()) then
+			local r = Q.QuestRecord(q)
+			l = r and r[Q.F.LEVEL]
+		end
+	end
+	return type(l) == "number" and l > 0 and l or nil
+end
+local function playerLevel()
+	local l = UnitLevel and UnitLevel("player")
+	return type(l) == "number" and l > 0 and l or nil
+end
+function GA.DangerOf(goal)
+	if type(goal) ~= "table" or goal.status == "done" or goal.status == "skipped" then return nil end
+	local q = goal.quest
+	if not q or (goal.t and not DANGER_KINDS[goal.t]) then return nil end
+	local plvl = playerLevel()
+	if not plvl then return nil end
+	local e = GA.Danger and GA.Danger[q]
+	local rec, grp, text
+	if e then
+		rec, grp, text = e.lvl, e.grp, e[locale()] or e.enUS
+	else
+		local qlvl = questLevel(q)
+		if not qlvl then return nil end
+		local p = goal.party
+		if type(p) == "table" and p.kind == "elite" then
+			rec, grp, text = qlvl + 2, 3, tr("dangerElite")
+		elseif goal.escort then
+			rec, text = qlvl, tr("dangerEscort")
+		elseif qlvl >= plvl + 3 then
+			rec, grp, text = qlvl - 1, 2, tr("dangerHigh")
+		end
+	end
+	if not rec or plvl >= rec then return nil end
+	return rec, grp, text, rec - plvl
+end
+GA.PlayerLevel = playerLevel
+-- Polestar's own kill icon (Media/UI/icon-kill.tga, 32x32, white), orange
+-- 1-2 levels short, red 3 or more.
+local DANGER_MARK = "  |TInterface\\AddOns\\Polestar\\Media\\UI\\icon-kill:12:12:0:0:32:32:0:32:0:32:%s|t"
+local function dangerMark(gap)
+	return DANGER_MARK:format(gap >= 3 and "255:70:70" or "255:150:30")
+end
+
 local function markTips()
 	local UI = ns.UI
 	if not (UI and UI.GoalLine) or UI.psGATipMark then return end
@@ -159,7 +234,11 @@ local function markTips()
 		local text = line(goal, ...)
 		local q = type(goal) == "table" and goal.quest
 		if q and GA.Tips and GA.Tips[q] and goal.status ~= "done" and goal.status ~= "skipped" and type(text) == "string" then
-			return text .. TIP_MARK
+			text = text .. TIP_MARK
+		end
+		if type(text) == "string" then
+			local rec, _, _, gap = GA.DangerOf(goal)
+			if rec then text = text .. dangerMark(gap) end
 		end
 		return text
 	end
@@ -176,13 +255,25 @@ local function afterTooltip(owner)
 		hooked[owner] = true
 	end
 	local q = goal.quest
+	local rec, grp, why, gap = GA.DangerOf(goal)
+	if rec then
+		local head = tr("danger"):format(playerLevel()) .. (locale() == "frFR" and " : " or ": ") .. tr("dangerSolo"):format(rec)
+		if grp then head = head .. ", " .. tr("dangerGroup"):format(grp) end
+		local r, g, b = 1, 0.6, 0.12
+		if gap >= 3 then r, g, b = 1, 0.3, 0.3 end
+		GameTooltip:AddLine(head .. ".", r, g, b, true)
+		if why then GameTooltip:AddLine(why, 1, 0.82, 0.6, true) end
+	end
+	if goal.escort and goal.status ~= "done" and goal.status ~= "skipped" then
+		GameTooltip:AddLine(tr("escortGroup"), 1, 0.82, 0.6, true)
+	end
 	local tip = q and GA.Tips and GA.Tips[q]
 	if tip then
-		GameTooltip:AddLine(("%s : %s"):format(tr("tip"), tip[locale()] or tip.enUS), 0.55, 1, 0.55, true)
+		GameTooltip:AddLine(tr("tip") .. (locale() == "frFR" and " : " or ": ") .. (tip[locale()] or tip.enUS), 0.55, 1, 0.55, true)
 	end
 	local rel = q and GA.Reliability and GA.Reliability[q]
 	if rel then
-		GameTooltip:AddLine(("|cffffd100%s|r  %s : %s"):format(rel[1], tr("reliable"), rel[2][locale()]), 0.8, 0.8, 0.8, true)
+		GameTooltip:AddLine(("|cffffd100%s|r  %s%s%s"):format(rel[1], tr("reliable"), locale() == "frFR" and " : " or ": ", rel[2][locale()] or rel[2].enUS), 0.8, 0.8, 0.8, true)
 	end
 	GameTooltip:AddLine(tr("hint"), 0.55, 0.75, 1, true)
 	GameTooltip:Show()

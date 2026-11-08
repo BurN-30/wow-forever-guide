@@ -160,8 +160,63 @@ return {
 	-- Step 32: Lakeshire
 	-- {npc:903} Guard Howe
 	["{npc:903}, by the gryphons south of the bridge"] = "{npc:903}, près des griffons au sud du pont",
+
+	-- Step 33: The Stockade, later (dungeon, optional): Guard Berton
+	-- {npc:859} Guard Berton
+	["The Stockade, later (dungeon, optional): {npc:859}"] = "La Prison, plus tard (donjon, facultatif) : {npc:859}",
+	-- {zone:1453} Stormwind · {zone:1431} Duskwood
+	["What Comes Around is for the Stockade, the prison dungeon in {zone:1453} after {zone:1431} (group of 5, 24 to 28). Alone? Skip it."] = "Cette quête est pour la Prison, le donjon de {zone:1453} après le {zone:1431} (groupe de 5, 24 à 28). Seul ? La passer.",
+	-- {npc:859} Guard Berton
+	["{npc:859}, by the town hall"] = "{npc:859}, près de l'hôtel de ville",
 	-- {zone:1431} Duskwood
 	["{zone:1431} is next: follow the road west to Three Corners, then south to Darkshire."] = "{zone:1431} est la suite : suivez la route vers l'ouest jusqu'aux Trois-Cornes, puis au sud jusqu'à Sombre-Comté.",
+
+	-- Step 34: Blackrock Blockade
+	-- {npc:382} Marshal Marris · {object:116} Stonewatch Keep
+	["{npc:382} has one more quest, done alone: the stolen weapons and the Blackrock supplies lie on the ground in the orc camps south-east of {object:116}, where you found the axes."] = "{npc:382} a une quête de plus, faisable seul : les armes volées et les provisions Rochenoire sont au sol dans les camps orcs au sud-est de {object:116}, là où étaient les haches.",
+
+	-- Step 35: Stonewatch elites (group, optional)
+	["Stonewatch elites (group, optional)"] = "Les élites de Guet-de-pierre (groupe, facultatif)",
+	-- {object:116} Stonewatch Keep · {npc:382} Marshal Marris · {quest:98387} Blackrock Blockade
+	["Four elite quests around {object:116}, about 12,000 XP: best with 3 to 5 players at 23 to 25. Alone: the guide skips them. {npc:382} gives his two once {quest:98387} is handed in."] = "Quatre quêtes élites autour de {object:116}, environ 12 000 XP : idéal à 3 à 5 joueurs, niveaux 23 à 25. Seul : le guide les passe. {npc:382} donne les deux siennes une fois {quest:98387} rendue.",
+	["The WANTED poster by the town hall door"] = "L'affiche AVIS DE RECHERCHE près de la porte de l'hôtel de ville",
+	["The other WANTED poster beside it"] = "L'autre affiche AVIS DE RECHERCHE juste à côté",
+
+	-- Step 36: The camps below Stonewatch
+	["The camps below Stonewatch"] = "Les camps sous Guet-de-pierre",
+	["Click the weapons and racks, the grain sacks, meat and water barrels in the camps; they come back slowly and other players take them too."] = "Cliquer les armes et râteliers, sacs de grain, viandes et tonneaux d'eau des camps ; ils reviennent lentement et d'autres joueurs les prennent aussi.",
+
+	-- Step 37: Incinerator Gar'im
+	["At the back of a cave south-east of the camps, with an imp and two helpers: kill the helpers first and keep an interrupt (Counterspell, Spell Lock) for his long fire cast. Two players are enough at 23."] = "Au fond d'une grotte au sud-est des camps, avec un diablotin et deux aides : tuer les aides d'abord et garder une interruption (Contresort, Verrou magique) pour sa longue incantation de feu. Deux joueurs suffisent au niveau 23.",
+	-- {item:271872} Broken Staff of Incinerator Gar'im · {npc:214519} Incinerator Gar'im
+	["{item:271872}: {npc:214519}, elite 23"] = "{item:271872} : {npc:214519}, élite 23",
+
+	-- Step 39: Marshal Marris: elite quests
+	-- {npc:382} Marshal Marris
+	["{npc:382}: elite quests"] = "{npc:382} : quêtes élites",
+
+	-- Step 40: Tharil'zun
+	["Not inside the keep: behind the broken gate on the right of its entrance, by a camp fire, with two guards. Crowd-control a guard and burst him. Two or three players at 23-25; alone, nearer 29."] = "Pas dans le donjon : derrière le portail cassé à droite de son entrée, près d'un feu de camp, avec deux gardes. Neutraliser un garde et le tuer vite. À deux ou trois vers 23-25 ; seul, plutôt vers 29.",
+	-- {item:1260} Tharil'zun's Head · {quest:19} Tharil'zun
+	["{item:1260}: {quest:19}, elite 24"] = "{item:1260} : {quest:19}, élite 24",
+
+	-- Step 41: Stonewatch Keep
+	-- {npc:334} Gath'Ilzogg
+	-- plural, as words: Blackrock Shadowcasters = {npc:436} Blackrock Shadowcaster
+	["Only the Blackrock Shadowcasters drop the orbs, all through the keep. {npc:334} holds the top floor with two guards and a fire-breathing whelp: a full group only, and keep moving, the keep respawns fast."] = "Seuls les lanceurs d'ombre Rochenoire donnent les orbes, dans tout le donjon. {npc:334} tient le dernier étage avec deux gardes et un dragonnet qui crache du feu : groupe complet seulement, et sans traîner, le donjon réapparaît vite.",
+	-- {quest:115} Shadow Magic · {zone:1428} Burning Steppes
+	["{quest:115} alone: the cave far north of Lakeshire (by the {zone:1428} road) holds Shadowcasters too; pull them one at a time and leave its level 24 boss alone."] = "{quest:115} seul : la grotte loin au nord de Comté-du-Lac (près de la route de {zone:1428}) a aussi des lanceurs d'ombre ; les tirer un par un et laisser son chef de niveau 24.",
+	-- {item:1261} Midnight Orb · {npc:436} Blackrock Shadowcaster
+	["{item:1261}: {npc:436}, elite"] = "{item:1261} : {npc:436}, élite",
+	-- {item:3633} Head of Gath'Ilzogg · {npc:334} Gath'Ilzogg
+	["{item:3633}: {npc:334}, elite 26, top floor"] = "{item:3633} : {npc:334}, élite 26, dernier étage",
+
+	-- Step 42: Lakeshire rewards
+	["Lakeshire rewards"] = "Récompenses à Comté-du-Lac",
+	-- {npc:344} Magistrate Solomon
+	["{npc:344}, in the town hall"] = "{npc:344}, dans l'hôtel de ville",
+	-- {npc:344} Magistrate Solomon
+	["{npc:344}: hand it in even if the log does not show it complete"] = "{npc:344} : la rendre même si le journal ne la dit pas finie",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Back to {area:12}"] = "Retour dans la {area:12}",

@@ -6,7 +6,7 @@ folder Group Alliance
 faction Alliance
 levels 20-23
 zone Redridge Mountains
-next groupe-alliance/08-bois-de-la-penombre
+next groupe-alliance/07b-mortemines
 
 # Forge's route search orders the quests of this guide and its guide writer writes the steps.
 # Fixes go into data/route-fixes.json, data/guide-fixes.json or forever-db/corrections, never
@@ -295,4 +295,71 @@ step Corporal Keeshan
 step Lakeshire
   turnin 219                                  -- Marshal Marris
   turnin 128                                  -- Guard Howe, by the gryphons south of the bridge
+
+step The Stockade, later (dungeon, optional): Guard Berton
+  when group 387
+  when level>=22
+  tip What Comes Around is for the Stockade, the prison dungeon in Stormwind after Duskwood (group of 5, 24 to 28). Alone? Skip it.
+  accept 386                                  -- Guard Berton, by the town hall
   note Duskwood is next: follow the road west to Three Corners, then south to Darkshire.
+
+# ---------------------------------------------------------------- Optional: Blackrock Blockade and the Stonewatch elites
+# Added by BurN-30 (facts: Polestar's Forever data, Wowhead Forever comments of 2026-11-08).
+# Blackrock Blockade (98387, Forever, level 21) is solo: picked up from the ground. The four
+# elite quests (Tharil'zun 19, Shadow Magic 115, WANTED: Gath'Ilzogg 169, WANTED: Incinerator
+# Gar'im 95999) are asked once (`when group 19`): skipped, the guide ends here.
+
+step Blackrock Blockade
+  when level<25
+  tip Marshal Marris has one more quest, done alone: the stolen weapons and the Blackrock supplies lie on the ground in the orc camps south-east of Stonewatch Keep, where you found the axes.
+  accept 98387                                -- Marshal Marris
+
+step Stonewatch elites (group, optional)
+  when group 19
+  when level<27
+  tip Four elite quests around Stonewatch Keep, about 12,000 XP: best with 3 to 5 players at 23 to 25. Alone: the guide skips them. Marshal Marris gives his two once Blackrock Blockade is handed in.
+  accept 169                                  -- The WANTED poster by the town hall door
+  accept 95999                                -- The other WANTED poster beside it
+
+step The camps below Stonewatch
+  when level<25
+  tip Click the weapons and racks, the grain sacks, meat and water barrels in the camps; they come back slowly and other players take them too.
+  collect 280841 x8 quest 98387 @69.4,80.3 live -- Stolen Weapon
+  collect 280839 x10 quest 98387 @69.7,80.4 live -- Blackrock Supplies
+
+step Incinerator Gar'im
+  when group 19
+  when level<27
+  tip At the back of a cave south-east of the camps, with an imp and two helpers: kill the helpers first and keep an interrupt (Counterspell, Spell Lock) for his long fire cast. Two players are enough at 23.
+  collect 271872 quest 95999 @72.8,86.3 live  -- Broken Staff of Incinerator Gar'im: Incinerator Gar'im, elite 23
+
+step Marshal Marris
+  when level<27
+  turnin 98387                                -- Marshal Marris
+
+step Marshal Marris: elite quests
+  when group 19
+  when level<27
+  accept 19                                   -- Tharil'zun
+  accept 115                                  -- Shadow Magic
+
+step Tharil'zun
+  when group 19
+  when level<27
+  tip Not inside the keep: behind the broken gate on the right of its entrance, by a camp fire, with two guards. Crowd-control a guard and burst him. Two or three players at 23-25; alone, nearer 29.
+  collect 1260 quest 19 @64.4,59.4 live       -- Tharil'zun's Head: Tharil'zun, elite 24
+
+step Stonewatch Keep
+  when group 19
+  when level<27
+  tip Only the Blackrock Shadowcasters drop the orbs, all through the keep. Gath'Ilzogg holds the top floor with two guards and a fire-breathing whelp: a full group only, and keep moving, the keep respawns fast.
+  note Shadow Magic alone: the cave far north of Lakeshire (by the Burning Steppes road) holds Shadowcasters too; pull them one at a time and leave its level 24 boss alone.
+  collect 1261 quest 115                      -- Midnight Orb: Blackrock Shadowcaster, elite
+  collect 3633 quest 169 @64.5,55.8 live      -- Head of Gath'Ilzogg: Gath'Ilzogg, elite 26, top floor
+
+step Lakeshire rewards
+  when level<27
+  turnin 19 optional
+  turnin 115 optional
+  turnin 169 optional                         -- Magistrate Solomon, in the town hall
+  turnin 95999 optional                       -- Magistrate Solomon: hand it in even if the log does not show it complete

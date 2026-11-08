@@ -16,7 +16,7 @@ forge, root, release = sys.argv[1], sys.argv[2], pathlib.Path(sys.argv[3])
 repo = pathlib.Path(__file__).resolve().parent.parent
 pack = repo / "pack"
 addons = repo / "addons"
-MODULE = ["Reliability.lua", "Tips.lua", "GroupeAlliance.lua"]
+MODULE = ["Reliability.lua", "Tips.lua", "Danger.lua", "GroupeAlliance.lua"]
 NOTICE = "Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide)"
 
 POLESTAR_CHANGES = [

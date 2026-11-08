@@ -19,7 +19,7 @@ return {
 	["Ragged Young Wolves roam the snow just south of Anvilmar."] = "Jeunes loups hirsutes rodent dans la neige juste au sud d'Anvilmar.",
 
 	-- Step 3: Anvilmar
-	["Anvilmar"] = "",
+	["Anvilmar"] = "Anvilmar",
 	-- {npc:658} Sten Stoutarm · {npc:895} Thorgas Grimson
 	["{npc:658}: a rune for {npc:895}"] = "{npc:658} : une rune pour {npc:895}",
 	-- {npc:658} Sten Stoutarm · {quest:98581} Archaic Rune
@@ -130,7 +130,7 @@ return {
 	["{npc:1965} guards the tunnel out of the valley, east of Anvilmar; {npc:6782} stands beside him at its mouth."] = "{npc:1965} garde le tunnel sortant de la vallée, à l'est d'Anvilmar ; {npc:6782} se tient à côté de lui à son entrée.",
 
 	-- Step 19: Kharanos
-	["Kharanos"] = "",
+	["Kharanos"] = "Kharanos",
 	-- {npc:1252} Senir Whitebeard
 	["Follow the road through the tunnel and north-east to Kharanos. Start outside: {npc:1252} and Eric's campfire are in front of the Thunderbrew Distillery."] = "Suivez la route à travers le tunnel et au nord-est jusqu'à Kharanos. Commencez à l'extérieur : {npc:1252} et le feu de camp d'Eric sont devant la Distillerie Thunderbrew.",
 

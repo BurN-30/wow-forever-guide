@@ -1,0 +1,99 @@
+# Written for this pack by BurN-30 (GPL-3.0). Quest ids, givers, places and levels from
+# Polestar's Forever data (data-v2026.11.1: QuestieDB Forever, the 1.60.1 client) and its
+# Dungeons codex; bosses, quest drops and tips from Wowhead Forever (quest and NPC pages
+# and their comments, read on 2026-11-08), rewritten. Not played in game yet.
+#
+# Optional chapter: every step asks once (`when group 387`, Polestar's "Skip it / Do it with a
+# group" banner). Skipped, or over level 29: the chapter is left out and Ashenvale follows.
+# What Comes Around (386, Lakeshire) and Crime and Punishment (377, Darkshire) are asked on
+# their own, in 07-carmines and 08-bois-de-la-penombre; their turn-ins here only for whoever
+# carries them. The Stockade Riots (391) only after the Deadmines (VanCleef's letter, 373, 389).
+# The Fury Runs Deep (378) needs The Dark Iron War (303, level 30, Wetlands): left to later.
+guide groupe-alliance/08b-prison
+title Group 7b · The Stockade (dungeon 24-28, optional)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 24-27
+zone Stormwind City
+next groupe-alliance/09-orneval-paluns
+
+step Stormwind: Stockade quests
+  when group 387
+  when level<30
+  zone Stormwind City
+  tip The Stockade, Stormwind's prison taken over by rioting Defias, is a group dungeon in the canals between the Mage Quarter and Old Town, best at 24 to 28. Alone? Skip it: the guide goes on to Ashenvale.
+  note Keep 6 free quest log slots. Every player takes the quests on their own; meet at the prison gate for the run.
+  accept 387                                  -- Warden Thelwater, at the prison gate
+  turnin 389 optional                         -- Warden Thelwater: Bazil Thredd, after the Deadmines
+  accept 391 optional
+  accept 388                                  -- Nikova Raskol, Old Town
+
+step Enter the Stockade
+  when group 387
+  when level<30
+  tip The gate is by Warden Thelwater, at the top of the stairs on the canal. Group of 5 at 24 to 28, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.
+  goto 52.4,70 "The Stockade" r 20 live
+
+step The entry corridor and Targorr
+  when group 387
+  when level<30
+  tip Cells line both sides, 3 or 4 elites each, and runners flee into the next cell for help: stop them or clear each cell as you pass. Targorr the Dread hides in a side cell of this corridor (often first on the right or second on the left); a patrol walks between the two wings.
+  note Share each quest with your group: click it in the quest log, then Share. Red Wool Bandanas and the prisoners for Quell the Uprising come from every Defias.
+  collect 3630 quest 386 optional             -- Head of Targorr: Targorr the Dread, elite 24
+  kill 1696                                   -- Targorr the Dread
+  note At the junction, type /target Bruegal Ironknuckle: if a frame shows, the rare elite (26) is in a cell nearby, with the best loot of the dungeon.
+
+step The west wing: Dextren Ward
+  when group 387
+  when level<30
+  tip Left at the junction, to the small hall at the end. Clear every room around it first: his Intimidating Shout fears the group into fresh packs. He runs at low health: stop him.
+  collect 3628 quest 377 optional             -- Hand of Dextren Ward, elite 26
+  kill 1663                                   -- Dextren Ward
+
+step The east wing: Kam, Hamhock and Bazil Thredd
+  when group 387
+  when level<30
+  tip Right at the junction. Kam Deepfury sits in a cell (second on the left); Hamhock comes with two linked Insurgents and casts Chain Lightning: crowd-control an add and spread out. Bazil Thredd waits at the very end: he hits one target hard and his Smoke Bomb stuns, so keep the tank topped up.
+  kill 1666                                   -- Kam Deepfury: his head is for The Fury Runs Deep, a Wetlands quest left for later
+  kill 1717                                   -- Hamhock
+  collect 2926 quest 391 optional             -- Head of Bazil Thredd, elite 29
+  kill 1716                                   -- Bazil Thredd
+
+step Finish the clear
+  when group 387
+  when level<30
+  tip One Convict short after a full clear? Wait a few minutes at the entrance for the respawn rather than resetting. Two chests, one in each wing. Leaving through the portal drops whatever chases you.
+  complete 387                                -- Defias Prisoners, Convicts and Insurgents
+  collect 2909 quest 388                      -- Red Wool Bandana: any Defias inside
+
+step Stormwind rewards
+  when group 387
+  when level<30
+  turnin 387                                  -- Warden Thelwater
+  turnin 391 optional
+  accept 392 optional                         -- The Curious Visitor: for Baros Alexston, Cathedral Square
+  turnin 392 optional
+  turnin 388                                  -- Nikova Raskol, Old Town
+
+step Lakeshire: Guard Berton
+  zone Redridge Mountains
+  when onquest 386
+  tip Fly to Lakeshire and back: a few minutes for the biggest reward of the prison.
+  fly "Lakeshire"
+  turnin 386                                  -- Guard Berton
+  accept 95772 optional                       -- Dorin Songblade, in the stables past the bridge: for the Excavation Site, later
+
+step Darkshire: Councilman Millstipe
+  zone Duskwood
+  when onquest 377
+  fly "Darkshire"
+  turnin 377                                  -- Councilman Millstipe, town hall
+
+step Back to Stormwind
+  when group 387
+  when level<30
+  zone Stormwind City
+  tip Fly back to Stormwind if you went to Lakeshire or Darkshire.
+  enter "Stormwind City"
+  note Ashenvale next: the boat for Auberdine leaves from Stormwind Harbor.

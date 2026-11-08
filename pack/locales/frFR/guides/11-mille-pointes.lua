@@ -8,7 +8,7 @@
 return {
 	-- Guide
 	-- {zone:1441} Thousand Needles · {zone:1431} Duskwood · {zone:1437} Wetlands
-	["Group 10 · {zone:1441}, {zone:1431} & {zone:1437}"] = "Groupe 10 · {zone:1441}, {zone:1431} et {zone:1437}",
+	["Group 9 · {zone:1441}, {zone:1431} & {zone:1437}"] = "Groupe 9 · {zone:1441}, {zone:1431} et {zone:1437}",
 
 	-- Step 1: The Missing Diplomat
 	-- {zone:1431} Duskwood · {zone:1455} Ironforge
@@ -222,6 +222,7 @@ return {
 	-- ["For {npc:4048} in {zone:1444}, much later"] = "Pour {npc:4048} en {zone:1444}, bien plus tard",
 	-- ["From Theramore follow the road west out of Dustwallow into the {zone:1413} and south along it; give {area:378} a wide berth. {area:485} at the {zone:1413}' south end takes you down into {zone:1441}. The journal lies at the foot of the lift."] = "Depuis Theramore, suivez la route vers l'ouest pour quitter Âprefange et entrer dans {zone:1413}, puis vers le sud ; évitez largement {area:378}. {area:485}, à l'extrémité sud de {zone:1413}, vous fait descendre à {zone:1441}. Le journal se trouve au pied de l'élévateur.",
 	-- ["From {npc:352} in {zone:1453}"] = "De {npc:352} à {zone:1453}",
+	-- ["Group 10 · {zone:1441}, {zone:1431} & {zone:1437}"] = "Groupe 10 · {zone:1441}, {zone:1431} et {zone:1437}",
 	-- ["Group: highest player at most 4 levels above the lowest. Above 30? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 30 ? Attendre les autres.",
 	-- ["Group: highest player at most 4 levels above the lowest. Above 31? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 31 ? Attendre les autres.",
 	-- ["Head east again to the Dragonmaw camp. The four sets of Attack Plans lie in the {area:1036}; {npc:2091}, an elite, stands in the camp too."] = "Retournez vers l'est jusqu'au camp Dragonmaw. Les quatre jeux de plans d'attaque se trouvent au {area:1036} ; {npc:2091}, un élite, se tient aussi dans le camp.",

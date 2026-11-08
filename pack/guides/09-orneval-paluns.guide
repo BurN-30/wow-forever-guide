@@ -6,7 +6,7 @@ folder Group Alliance
 faction Alliance
 levels 24-27
 zone Ashenvale
-next groupe-alliance/10-site-de-fouilles
+next groupe-alliance/11-mille-pointes
 
 # Forge's route search orders the quests of this guide and its guide writer writes the steps.
 # Fixes go into data/route-fixes.json, data/guide-fixes.json or forever-db/corrections, never

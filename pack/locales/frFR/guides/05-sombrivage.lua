@@ -18,7 +18,7 @@ return {
 	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
 
 	-- Step 3: Auberdine
-	["Auberdine"] = "",
+	["Auberdine"] = "Auberdine",
 	-- {npc:3666} Wizbang Cranktoggle
 	["The boat docks west of the village. The flight master stands on the hill south of the inn; the quest givers are spread along the main street. {npc:3666} stands upstairs in the inn: take the stairs inside, the arrow cannot tell the floors apart."] = "Le bateau accoste à l'ouest du village. Le maître de vol se tient sur la colline au sud de l'auberge ; les donneurs de quêtes sont répartis le long de la rue principale. {npc:3666} se tient à l'étage de l'auberge : prenez l'escalier intérieur, la flèche ne distingue pas les étages.",
 	-- {npc:3649} Thundris Windweaver
@@ -290,64 +290,107 @@ return {
 	-- {item:15883} Half Pendant of Aquatic Agility · {object:177792} Strange Lockbox
 	["{item:15883}: the {object:177792} under the water off the north coast, west of the ruins"] = "{item:15883} : l'{object:177792} sous l'eau au large de la côte nord, à l'ouest des ruines",
 
-	-- Step 51: Mist's Edge: kill these as you meet them
+	-- Step 51: Gyromast's Revenge (group, optional)
+	-- {quest:2078} Gyromast's Revenge
+	["{quest:2078} (group, optional)"] = "{quest:2078} (groupe, facultatif)",
+	-- {npc:6667} Gelkak Gyromast · {npc:6669} Threshwackonator 4100
+	["{npc:6667}'s key wakes the {npc:6669} on the shore south of his island; lead it back and it turns hostile near {npc:6667}: a level 20 elite robot. Alone you need a root or a fear: Druids root it and Moonfire from afar, Warlocks dot, Fear and let the Voidwalker hold it, Mages kite with Frost Nova. Melee: come with a friend. Water only resets it."] = "La clé de {npc:6667} réveille {npc:6669} sur la rive au sud de son île ; le ramener, il devient hostile près de {npc:6667} : un robot élite de niveau 20. Seul, il faut une immobilisation ou une peur : druide, Sarments puis Éclat lunaire de loin ; démoniste, sorts sur la durée, Peur et le marcheur du Vide devant ; mage, le promener avec Nova de givre. Corps à corps : venir à deux. L'eau ne fait que le réinitialiser.",
+	["The robot, elite level 20"] = "Le robot, élite de niveau 20",
+
+	-- Step 52: Baron Marinous (group, optional)
+	-- {quest:98028} Baron Marinous
+	["{quest:98028} (group, optional)"] = "{quest:98028} (groupe, facultatif)",
+	-- {npc:271903} Stormscale Beastmistress · {quest:87760} Holy Diver · {object:177964} Fathom Stone · {quest:98028} Baron Marinous · {item:279275} Clouded Water Globe
+	-- plural, as words: Mathystral Amulet Fragments = {item:279276} Mathystral Amulet Fragment
+	["The Stormscale naga of the ruins drop Mathystral Amulet Fragments, about one naga in eleven (the {npc:271903}, for {quest:87760}, nearly one in two): 20 make the amulet at the {object:177964}, down the spiral stairs in the ruins. Using it summons {quest:98028}, a level 21 elite; his {item:279275} starts the quest."] = "Les nagas Écaille-des-tempêtes des ruines lâchent des fragments d'amulette, environ un naga sur onze ({npc:271903}, pour {quest:87760}, presque un sur deux) : 20 forment l'amulette à {object:177964}, en bas de l'escalier en colimaçon des ruines. L'utiliser invoque {quest:98028}, un élite de niveau 21 ; son {item:279275} lance la quête.",
+	["Group: everyone hands their fragments to one player (they can be traded, the Auction House sells them too), who summons him once; every member loots a globe. Alone at 20 or more: hide behind a pillar as each cast ends, step out to shoot. He is immune to Frost: Mages use Fire. Stone gone? Someone just summoned him: it comes back in 5 to 10 minutes."] = "En groupe : chacun donne ses fragments à un seul joueur (ils s'échangent, l'hôtel des ventes en vend aussi), qui l'invoque une fois ; chaque membre ramasse un globe. Seul, au niveau 20 ou plus : se cacher derrière un pilier à la fin de chaque incantation, ressortir pour tirer. Il est insensible au Givre : mages en Feu. La pierre a disparu ? Quelqu'un vient de l'invoquer : elle revient en 5 à 10 minutes.",
+	-- {item:279276} Mathystral Amulet Fragment · {npc:270269} Arbal
+	["{item:279276}: any Stormscale naga, while you kill them for {npc:270269}"] = "{item:279276} : n'importe quel naga Écaille-des-tempêtes, en les tuant pour {npc:270269}",
+	-- {item:279277} Mathystral Amulet · {object:177964} Fathom Stone · {quest:98028} Baron Marinous
+	["{item:279277}, at the {object:177964}: summons {quest:98028}"] = "{item:279277}, à {object:177964} : invoque {quest:98028}",
+	["Elite level 21"] = "Élite de niveau 21",
+	-- {item:279275} Clouded Water Globe
+	["{item:279275}, from the Baron: right-click it"] = "{item:279275}, sur le baron : clic droit dessus",
+
+	-- Step 53: Mist's Edge: kill these as you meet them
 	["Mist's Edge: kill these as you meet them"] = "Bord-de-la-Brume : tuez-les au fur et à mesure.",
 
-	-- Step 52: Back south
+	-- Step 54: Back south
 	["Back south"] = "Retour au sud",
 	-- {npc:3616} Onu
 	["{npc:3616}, at the Grove"] = "{npc:3616}, au Bosquet des Anciens",
 
-	-- Step 53: Volcor
-	-- {npc:3692} Volcor
-	["{npc:3692} hides in the hills east of the Master's Glaive. Help him back to the road; he fights on his way out."] = "{npc:3692} se cache dans les collines à l'est du Glaive du Maître. Aidez-le à regagner la route ; il se bat en chemin.",
+	-- Step 55: Onu: Baron Marinous
+	-- {npc:3616} Onu
+	["{npc:3616}: speak to him again afterwards, he has one more thing for you"] = "{npc:3616} : lui reparler ensuite, il a encore quelque chose à donner",
+
+	-- Step 56: Volcor
+	-- {npc:3692} Volcor · {item:5387} Enchanted Moonstalker Cloak · {npc:3693} Terenthis
+	["{npc:3692} hides in Blackwood Den, in the hills east of the Master's Glaive. Equip the {item:5387} from {npc:3693} and use it near the cave: it slips you past the furbolgs. Then choose his way out."] = "{npc:3692} se cache dans le repaire des Sombrebois, dans les collines à l'est du Glaive du maître. Équiper {item:5387} reçue de {npc:3693} et l'utiliser près de la grotte : elle permet de passer les furbolgs sans être vu. Choisir ensuite sa façon de sortir.",
 	-- {npc:3692} Volcor
 	["{npc:3692}, inside Blackwood Den"] = "{npc:3692}, dans la Tanière de Bois-Noir",
+
+	-- Step 57: Volcor: Escape Through Force (group)
+	-- {npc:3692} Volcor · {quest:994} Escape Through Force
+	["{npc:3692}: {quest:994} (group)"] = "{npc:3692} : {quest:994} (groupe)",
+	["He charges into the furbolg camp and more furbolgs come even if you cleared it, two shamans healing them. Two or three players; a healer helps."] = "Il fonce dans le camp des furbolgs et d'autres arrivent même camp vidé, avec deux chamans qui les soignent. À deux ou trois ; un soigneur aide.",
+	-- {npc:3692} Volcor
+	["Help {npc:3692} to the road"] = "Aider {npc:3692} à rejoindre la route",
+
+	-- Step 58: Volcor: Escape Through Stealth
+	-- {quest:990} Trek to Ashenvale
+	["Alone, the quiet way out: same reward line, same next quest ({quest:990}). Hearth back to Auberdine afterwards."] = "Seul, la sortie discrète : même suite ({quest:990}). Revenir ensuite à Auberdine par la pierre de foyer.",
+	-- {npc:3692} Volcor
+	["Help {npc:3692} escape the cave"] = "Aider {npc:3692} à quitter la grotte",
+
+	-- Step 59: Darkshore before Auberdine
+	-- {zone:1439} Darkshore
+	["{zone:1439} before Auberdine"] = "{zone:1439} avant Auberdine",
 	-- {npc:12298} Sickly Deer · {item:15826} Curative Animal Salve · {zone:1439} Darkshore
 	["{npc:12298}: use the {item:15826} on them; they roam all of {zone:1439}"] = "{npc:12298} : utilisez le {item:15826} sur eux ; ils errent dans tout {zone:1439}",
 	-- {npc:2237} Moonstalker Sire
 	["grind on {npc:2237}"] = "tuez en boucle : {npc:2237}",
 
-	-- Step 54: Auberdine
+	-- Step 60: Auberdine
 	-- {npc:3694} Sentinel Selarin · {npc:3691} Raene Wolfrunner · {zone:1440} Ashenvale
 	["{npc:3694}: for {npc:3691} in Astranaar, on the later {zone:1440} leg"] = "{npc:3694} : pour {npc:3691} à Astranaar, lors de l'étape ultérieure en {zone:1440}",
 
-	-- Step 55: Level 20
+	-- Step 61: Level 20
 	["Level 20"] = "Niveau 20",
 	-- {zone:1453} Stormwind
 	["Top up here to level 20 before the hand-ins at {zone:1453}: they take you to level 21."] = "Complétez ici jusqu'au niveau 20 avant les rendus de quêtes à {zone:1453} : ils vous font passer au niveau 21.",
 	-- {npc:2187} Elder Darkshore Thresher
 	["grind on {npc:2187}"] = "tuez en boucle : {npc:2187}",
 
-	-- Step 56: Auberdine flight master
+	-- Step 62: Auberdine flight master
 	["Auberdine flight master"] = "Maître de vol d'Auberdine",
 
-	-- Step 57: The Great Cat Spirit
+	-- Step 63: The Great Cat Spirit
 	-- {npc:4217} Mathrengyl Bearwalker
 	["Night Elves fly from Auberdine to Rut'theran Village; Skyborne take the boat from the Auberdine dock and learn the Rut'theran flight path there. Take the portal up to {npc:4217} in the Cenarion Enclave."] = "Les Elfes de la nuit volent d'Auberdine au village de Rut'theran ; les Éolides prennent le bateau au quai d'Auberdine et y apprennent le point de vol de Rut'theran. Prenez le portail pour monter jusqu'à {npc:4217} dans l'Enclave cénarienne.",
 
-	-- Step 61: Dendrite Starblaze
+	-- Step 67: Dendrite Starblaze
 	-- {zone:1450} Moonglade · {npc:11802} Dendrite Starblaze
 	["Cast Teleport: {zone:1450}. {npc:11802} stands upstairs in his building in Nighthaven: go up inside, the arrow cannot tell the floors apart. Learn the flight path there if you do not have it."] = "Lancez Téléportation : {zone:1450}. {npc:11802} se tient à l'étage de son bâtiment à Reflet-de-Lune : montez par l'intérieur, la flèche ne distingue pas les étages. Apprenez le point de vol là-bas si vous ne l'avez pas.",
 
-	-- Step 62: Dendrite Starblaze
+	-- Step 68: Dendrite Starblaze
 	-- {npc:11802} Dendrite Starblaze
 	["{npc:11802} stands upstairs in his building in Nighthaven: go up inside, the arrow cannot tell the floors apart."] = "{npc:11802} se tient à l'étage de son bâtiment à Reflet-de-Lune : montez par l'intérieur, la flèche ne distingue pas les étages.",
 	-- {npc:11802} Dendrite Starblaze
 	["{npc:11802}: the welcome from Sheldras"] = "{npc:11802} : le message de bienvenue de Sheldras Moontree",
 
-	-- Step 64: The relics of the Barrow Dens
+	-- Step 70: The relics of the Barrow Dens
 	["The relics of the Barrow Dens"] = "Les reliques du Refuge des saisons",
 	-- {quest:98394} The Great Cat Spirit · {npc:272054} Avatar of Saeyleenan · {zone:1450} Moonglade · {object:177116} Stormrage Barrow Dens
 	["{quest:98394} (Night Elves) and the {npc:272054} (Skyborne) wait in southern {zone:1450}. The three relics lie in the {object:177116}, east of them. Reports from the first weeks say a relic gives no loot while another player is looting it: wait a moment and try again."] = "{quest:98394} (Elfes de la nuit) et le {npc:272054} (Célestes) attendent au sud de {zone:1450}. Les trois reliques se trouvent dans le {object:177116}, à l'est d'eux. Les rapports des premières semaines indiquent qu'une relique ne donne pas de butin tant qu'un autre joueur la pille : attendez un instant et réessayez.",
 
-	-- Step 65: Back to Dendrite Starblaze
+	-- Step 71: Back to Dendrite Starblaze
 	-- {npc:11802} Dendrite Starblaze
 	["Back to {npc:11802}"] = "Retour auprès de {npc:11802}",
 	-- {npc:11802} Dendrite Starblaze · {npc:11800} Silva Fil'naveth
 	["Back to {npc:11802} in Nighthaven, then {npc:11800} there flies Druids straight to Rut'theran Village. {npc:11802} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart."] = "Retournez auprès de {npc:11802} à Reflet-de-Lune, puis {npc:11800} y fait voler les druides directement au village de Rut'theran. {npc:11802} se tient à l'étage de son bâtiment : montez par l'intérieur, la flèche ne distingue pas les étages.",
 
-	-- Step 67: To Darnassus
+	-- Step 73: To Darnassus
 	-- {npc:4217} Mathrengyl Bearwalker · {zone:1453} Stormwind
 	["Take the portal up to {npc:4217}, then fly back to Auberdine for the boat to {zone:1453}."] = "Prenez le portail jusqu'à {npc:4217}, puis volez de retour à Auberdine pour prendre le bateau vers {zone:1453}.",
 	-- {npc:4217} Mathrengyl Bearwalker
@@ -407,12 +450,14 @@ return {
 	-- ["{item:12237} on the way"] = "{item:12237} en chemin",
 	-- ["{item:12289}, on the beach west of the docks"] = "{item:12289}, sur la plage à l'ouest des quais",
 	-- ["{item:15883}: the {object:177790} under the water off the north coast, west of the ruins"] = "{item:15883} : le {object:177790} sous l'eau au large de la côte nord, à l'ouest des ruines",
+	-- ["{item:279276}: any Stormscale naga, along with Swelling Seas"] = "{item:279276} : n'importe quel naga Écaille-des-tempêtes, en même temps que la quête des nagas",
 	-- ["{item:5414} on the way"] = "{item:5414} en chemin",
 	-- ["{npc:10323} camps on the beach west of the glaive: kill the murlocs at the camp fire; he comes in the third wave with his hound. Three beached remains lie on the beaches south of {area:450}."] = "{npc:10323} campe sur la plage à l'ouest du glaive : tuez les murlocs autour du feu de camp ; il arrive à la troisième vague avec son chien. Trois restes échoués gisent sur les plages au sud de l'{area:450}.",
 	-- ["{npc:10323} camps on the beach west of the glaive: kill the murlocs at the camp fire; he comes in the third wave with his hound. Three beached remains lie on the beaches west and south-west of {area:450}."] = "{npc:10323} campe sur la plage à l'ouest du glaive : tuez les murlocs autour du feu de camp ; il arrive à la troisième vague avec son chien. Trois restes échoués gisent sur les plages à l'ouest et au sud-ouest de l'{area:450}.",
 	-- ["{npc:11218}: his escort to {area:413} is done on the {zone:1440} leg"] = "{npc:11218} : son escorte jusqu'au {area:413} se fait lors du passage en {zone:1440}",
 	-- ["{npc:11218}: his escort to {object:19863} is done on the {zone:1440} leg"] = "{npc:11218} : son escorte jusqu'à {object:19863} se fait lors de l'étape {zone:1440}",
 	-- ["{npc:3666}, by the inn"] = "{npc:3666}, près de l'auberge",
+	-- ["{npc:3692} hides in the hills east of the Master's Glaive. Help him back to the road; he fights on his way out."] = "{npc:3692} se cache dans les collines à l'est du Glaive du Maître. Aidez-le à regagner la route ; il se bat en chemin.",
 	-- ["{npc:3692} hides in the hills east of the {area:449}. Help him back to the road; he fights on his way out."] = "{npc:3692} se cache dans les collines à l'est du {area:449}. Aidez-le à regagner la route ; il se bat en chemin.",
 	-- ["{npc:3692}, inside {area:455}"] = "{npc:3692}, à l'intérieur de {area:455}",
 	-- ["{npc:3694}: for {npc:3691} in {area:415}, on the later {zone:1440} leg"] = "{npc:3694} : pour {npc:3691} à {area:415}, lors du passage ultérieur en {zone:1440}",

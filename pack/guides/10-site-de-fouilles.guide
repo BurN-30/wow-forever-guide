@@ -1,54 +1,96 @@
 # Adapted from Aurum's chapter aurum-druid/excavation-site (Aurums Night Elf Druid Guide 0.4.37,
 # GPL-3.0). Changes: for every class, Sarltooth and the book pickups left to Polestar's own
-# guides, the Songblade quests left out (their breadcrumb from Lakeshire is not in this route), shorter
-# tips, group notes. Ids cross-checked against Polestar 0.3.2's reference data and Dungeons
-# codex, and the MittenQuest and Lodestar Forever packs (Wetlands).
-# Aurum marks everything past level 20 as untested in game: so is this chapter.
+# guides, shorter tips, group notes. Ids cross-checked against Polestar 0.3.2's reference data
+# and Dungeons codex, and the MittenQuest and Lodestar Forever packs (Wetlands).
+# 0.4.0 (BurN-30): moved after Thousand Needles (its quests are level 31 on Wowhead Forever, its
+# last boss 31: Wowhead's dungeon guide of 2026-11-05 advises 26 to 32, not 24); optional (asked
+# once, `when group 95647`, then `when done xs-start`), the dungeon step by step, the Songblade
+# quests for whoever took Dorin's in Lakeshire (08b-prison), facts and tips from Wowhead Forever
+# (pages and comments read on 2026-11-08), rewritten.
 guide groupe-alliance/10-site-de-fouilles
-title Group 9 · Excavation Site: Wetlands (dungeon 26-29)
+title Group 10 · Excavation Site: Wetlands (dungeon 28-32)
 folder Group Alliance
 category Dungeons
 faction Alliance
-levels 26-29
+levels 29-32
 zone Wetlands
-next groupe-alliance/11-mille-pointes
+next groupe-alliance/12-dalaran
+
+step Back to Menethil Harbor
+  zone Wetlands
+  when !zone "Wetlands"
+  tip From Thousand Needles: use your hearthstone, bound in Menethil's Deepwater Tavern.
+  goto 10.7,61.0 "Deepwater Tavern"
 
 step Menethil Harbor: dungeon quests
-  tip Caitlin Grassman is in her house, James Halloran by the north gate. Keep 6 free quest log slots.
-  level 26
+  label xs-start
+  when group 95647
+  tip Excavation Site: a 5-player Forever dungeon up the hill in the middle of the Wetlands, best at 28 to 31, with 5 players (4 with a real tank or healer). Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards. Alone? Skip it: the guide goes on to Dalaran.
+  note Keep 6 free quest log slots. Caitlin Grassman is in her house, James Halloran by the north gate. Seeking Caitlin, from Llana in Astranaar, can no longer be taken once you hold Caitlin's quest.
+  level 28
+  turnin 95737 optional                       -- Caitlin Grassman: Seeking Caitlin, if you took it in Astranaar
   accept 95647
-  accept 98815
+  accept 98815                                -- Needs Young Crocolisk Skins done
 
 step Rethiel the Greenwarden
-  tip On the Green Belt, east of the road. Needs his Blisters on the Land done.
-  accept 95646
+  when done xs-start
+  tip On the Green Belt, east of the road. He gives it once his three earlier quests are done (The Greenwarden, Tramping Paws, Fire Taboo, then Blisters on the Land).
+  accept 95646 optional
 
 step Excavation Site entrance
-  tip From the meeting stone near Thelgen Rock, follow the mountain path up to the portal.
+  when done xs-start
+  tip From the meeting stone near Thelgen Rock, follow the mountain path up to the portal. A single graveyard serves the area: a wipe means a long walk back.
   goto 47.8,56.2 "Excavation Site" r 25
 
-step Inside the dungeon
-  tip Thicket Raptor Hides drop in the raptor area. Ardin Grassman waits on the wooden scaffold by the last arena.
-  note Share each quest with your group: click it in the quest log, then Share.
-  complete 98815
-  complete 95646
-  turnin 95647
+step Saltspine
+  when done xs-start
+  tip Clear around him first. Tendon Rip slows the tank hard and his Dust Storm makes everyone within 10 yards miss: casters stay out of it.
+  note Share each quest with your group: click it in the quest log, then Share. Talk to Ardin Grassman and Daewyn as soon as you find them inside: their follow-ups start with them.
+  task "Saltspine" optional
+
+step The tall grass and Shadetooth
+  when done xs-start
+  tip The most dangerous stretch: Thicket Lurkers leap out of the tall grass, and Matriarchs call more of them at low health. Keep to the narrow path, fight in the open, kill the others before a Matriarch. Shadetooth comes with two Thicket Hunters (dispel Infected Wound): crowd-control one, kill the other, and fight him in the crocodile cove on the left so his fear cannot throw anyone into the grass.
+  collect 284845 quest 98815                  -- Thicket Raptor Hide: Shadetooth and the Thicket raptors
+
+step Daewyn and the Highland Horror
+  when done xs-start
+  tip The Highland Horror (elite 28) stands right of the Dragonmaw and the burned dig camp; only this one inside drops the rootcore, not the one outside the dungeon.
+  turnin 95772 optional                       -- Daewyn: Songblade Search, from Dorin in Lakeshire
+  accept 95795 optional
+  collect 270180 quest 95646 optional         -- Horrible Rootcore: Highland Horror, elite 28
+
+step Relic Guardian
+  when done xs-start
+  tip The last boss, level 31, woken by the Archival Panel on its right. Thunderclap slows everyone within 10 yards, and it knocks back and stuns the tank for 5 seconds: rotate stuns and slows, keep healing the tank, kite round the structures if need be. Ardin Grassman waits on the wooden scaffold by its arena.
+  turnin 95647                                -- Ardin Grassman, each player talks to him
   accept 95809
-  accept 95810 -- Titan Relic, from the last boss
+  accept 95810 item 270865                    -- Titan Relic, from the Relic Guardian: right-click it
 
 step Rethiel's reward
-  turnin 95646
+  when done xs-start
+  turnin 95646 optional
 
 step Prospector Whelgar
+  when done xs-start
   tip In the small cave of the outdoor dig, west of the road.
   turnin 95810
   accept 98824
 
 step Menethil rewards
-  turnin 98815
-  turnin 95809
+  when done xs-start
+  turnin 98815                                -- James Halloran: the reward may be missing (bug reported on 07/11)
+  turnin 95809                                -- Caitlin Grassman: pick mana potions for casters
 
 step Ironforge: High Explorer Magellas
+  when done xs-start
   zone Ironforge
-  tip Hall of Explorers.
+  tip Hall of Explorers. He says you lack the Titan Relic? Abandon the quest and take it again from Whelgar for a new relic.
   turnin 98824
+
+step Lakeshire: Dorin Songblade
+  when onquest 95795
+  zone Redridge Mountains
+  tip Fly to Lakeshire on your way to Stormwind: Dorin is in the stables past the bridge.
+  fly "Lakeshire"
+  turnin 95795

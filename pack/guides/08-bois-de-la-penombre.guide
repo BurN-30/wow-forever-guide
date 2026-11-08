@@ -6,7 +6,7 @@ folder Group Alliance
 faction Alliance
 levels 22-24
 zone Duskwood
-next groupe-alliance/09-orneval-paluns
+next groupe-alliance/08b-prison
 
 # Forge's route search orders the quests of this guide and its guide writer writes the steps.
 # Fixes go into data/route-fixes.json, data/guide-fixes.json or forever-db/corrections, never
@@ -94,6 +94,7 @@ step Darkshire
   accept 96139                            -- Sirra Von'Indi, in the house behind the town hall
   accept 56                               -- Commander Althea Ebonlocke, in the town hall
   accept 164                              -- Elaine Carevin, at the south end of town; inside
+  accept 163 optional                     -- Elaine Carevin: Jitters' chain, small XP on the trips west you make anyway
   accept 165
   sethome "Darkshire" npc 6790            -- Innkeeper Trelayne, Scarlet Raven Tavern
   accept 173                              -- Calor, by the town hall
@@ -120,6 +121,11 @@ step Darkshire
   accept 57
   vendor nearest
 
+step The Stockade, later (dungeon, optional): Councilman Millstipe
+  when group 387
+  tip Crime and Punishment is for the Stockade, the prison dungeon in Stormwind after Duskwood (group of 5, 24 to 28). Alone? Skip it.
+  accept 377                              -- Councilman Millstipe, in the town hall
+
 step Skeletal Horror on the way
   along until q57-2
   kill 202 quest 57
@@ -137,6 +143,8 @@ step Skeletal Fiend on the way
 step Raven Hill
   tip Continue west to Raven Hill. The Memory of Valor glows by the ruined house south of the road.
   collect 281046 quest 96139              -- Raven Hill Tome, from the Memory of Valor
+  turnin 163 optional                     -- Jitters, round the well south of the cemetery
+  accept 5 optional
 
 step Sven's Camp
   tip Follow the road north-west past the cemetery to Sven's camp on the far west edge of the forest. Lars stands beside Sven.
@@ -183,12 +191,19 @@ step Brightwood Grove
   collect 1130 quest 101                  -- Vial of Spider Venom
 
 step Darkshire
+  turnin 5 optional                       -- Chef Grual, in the tavern
+  accept 93 optional
   turnin 96139                            -- Sirra Von'Indi, inside
   turnin 57                               -- Commander Althea Ebonlocke
   turnin 101                              -- Madame Eva, inside
   turnin 148
   accept 149
   vendor nearest
+
+step Gooey Spider Legs on the way
+  along until q93
+  tip Any spider can drop them, the Black Widow Hatchlings east of Raven Hill most often.
+  collect 2251 x6 quest 93 optional       -- Gooey Spider Leg
 
 step Blind Mary
   tip Her house stands on the hill south-east of Darkshire, above the Tranquil Gardens Cemetery.
@@ -216,7 +231,10 @@ step Sven's Camp
   accept 262
 
 step Back to Darkshire
+  label q93
   tip Head back east to Darkshire.
+  turnin 93 optional                      -- Chef Grual, in the tavern
+  accept 240 optional
   turnin 262                              -- Madame Eva, inside
   accept 265
   turnin 265                              -- Clerk Daltry, in the town hall
@@ -257,6 +275,7 @@ step Jitters
   tip Jitters hides in the house at the west end of Raven Hill.
   turnin 453
   accept 268
+  turnin 240 optional                     -- Jitters again: Return to Jitters
 
 step Sven's Camp
   turnin 268                              -- Sven Yorgen

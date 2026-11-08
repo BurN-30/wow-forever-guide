@@ -54,7 +54,7 @@ return {
 	["{quest:1010}, from the plant bundles"] = "{quest:1010}, sur les bottes de plantes",
 
 	-- Step 17: Astranaar
-	["Astranaar"] = "",
+	["Astranaar"] = "Astranaar",
 	-- {npc:3970} Llana · {npc:1480} Caitlin Grassman
 	["{npc:3970}: for {npc:1480} in Menethil, at the end of this guide; inside"] = "{npc:3970} : pour {npc:1480} à Menethil, à la fin de ce guide ; à l'intérieur",
 	-- {npc:3691} Raene Wolfrunner
@@ -196,7 +196,7 @@ return {
 	["{npc:2094} stands by the north gate."] = "{npc:2094} se tient près de la porte nord.",
 
 	-- Step 50: Bluegill Marsh
-	["Bluegill Marsh"] = "",
+	["Bluegill Marsh"] = "Marais des Branchies-bleues",
 	-- {npc:1259} Gobbler
 	-- plural, as words: Bluegill Murlocs = {npc:1024} Bluegill Murloc
 	["Follow the coast north out of Menethil. Bluegill Murlocs fill the marsh; {npc:1259} walks with a pack in the middle of it."] = "Sortez de Menethil en longeant la côte vers le nord. Les Murlocs Branchie-bleue grouillent dans le marais ; {npc:1259} se promène avec un groupe en son milieu.",

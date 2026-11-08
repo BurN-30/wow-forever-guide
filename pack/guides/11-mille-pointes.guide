@@ -1,12 +1,12 @@
 # Adapted from Polestar's guide forever/alliance/07-thousand-needles (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3, with the fixes of the same guide up to tag v0.3.4).
 # Changes: guide id, title, next guide, group notes. Quest steps kept as Polestar wrote them.
 guide groupe-alliance/11-mille-pointes
-title Group 10 · Thousand Needles, Duskwood & Wetlands
+title Group 9 · Thousand Needles, Duskwood & Wetlands
 folder Group Alliance
 faction Alliance
 levels 27-30
 zone Thousand Needles
-next groupe-alliance/12-dalaran
+next groupe-alliance/10-site-de-fouilles
 
 # Forge's route search orders the quests of this guide and its guide writer writes the steps.
 # Fixes go into data/route-fixes.json, data/guide-fixes.json or forever-db/corrections, never
