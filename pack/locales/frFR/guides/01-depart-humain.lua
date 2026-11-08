@@ -39,7 +39,7 @@ return {
 	["{npc:247229}, in the library; inside"] = "{npc:247229}, dans la bibliothèque ; à l'intérieur",
 
 	-- Step 6: Echo Ridge Mine: kill these as you meet them
-	["Echo Ridge Mine: kill these as you meet them"] = "Mine de la Crête de l'Écho : tuez-les au fur et à mesure",
+	["Echo Ridge Mine: kill these as you meet them"] = "Mine de la Crête aux échos : tuez-les au fur et à mesure",
 	-- {object:83763} Stolen Books
 	-- plural, as words: Kobold Workers = {npc:257} Kobold Worker
 	["Follow the path north to the mine. Kobold Workers swarm outside it; every kobold in the valley can drop the {object:83763}."] = "Suivez le chemin vers le nord jusqu'à la mine. Les Ouvriers kobolds grouillent devant ; tous les kobolds de la vallée peuvent laisser tomber les {object:83763}.",
@@ -85,12 +85,12 @@ return {
 	["She stands outside the mine entrance. {npc:248362}, inside, is elite: grouping up is advised."] = "Elle se tient devant l'entrée de la mine. {npc:248362}, à l'intérieur, est élite : il est conseillé de former un groupe.",
 
 	-- Step 15: Inside Echo Ridge Mine
-	["Inside Echo Ridge Mine"] = "À l'intérieur de la mine de la Crête de l'Écho",
+	["Inside Echo Ridge Mine"] = "À l'intérieur de la Mine de la Crête aux échos",
 	-- {npc:248362} Shinyfinder Narf
 	-- plural, as words: Kobold Laborers = {npc:80} Kobold Laborer
 	["Kobold Laborers work the tunnels inside the mine. {npc:248362} waits down the second turn on the right."] = "Les Travailleurs kobolds creusent les tunnels de la mine. {npc:248362} attend au fond du deuxième embranchement à droite.",
 	-- {npc:80} Kobold Laborer
-	["{npc:80} walks around Echo Ridge Mine: look inside the circle on the map"] = "{npc:80} rôde autour de la mine de la Crête de l'Écho : regardez à l'intérieur du cercle sur la carte",
+	["{npc:80} walks around Echo Ridge Mine: look inside the circle on the map"] = "{npc:80} rôde autour de la Mine de la Crête aux échos : regardez à l'intérieur du cercle sur la carte",
 
 	-- Step 16: Inside Echo Ridge Mine
 	-- {npc:248362} Shinyfinder Narf
@@ -131,18 +131,18 @@ return {
 	-- Step 24: The lake shore
 	["The lake shore"] = "La rive du lac",
 	-- {npc:263399} Sam Sarsaparilla · {npc:6306} Helene Peltskinner · {npc:383} Jason Mathers · {npc:1651} Lee Brown
-	["{npc:263399} camps north-east of the inn; {npc:6306}, {npc:383} and {npc:1651} stand on the shore of Crystal Lake east of town."] = "{npc:263399} campe au nord-est de l'auberge ; {npc:6306}, {npc:383} et {npc:1651} se tiennent sur la rive du Lac Cristal à l'est de la ville.",
+	["{npc:263399} camps north-east of the inn; {npc:6306}, {npc:383} and {npc:1651} stand on the shore of Crystal Lake east of town."] = "{npc:263399} campe au nord-est de l'auberge ; {npc:6306}, {npc:383} et {npc:1651} se tiennent sur la rive du Lac de Cristal à l'est de la ville.",
 	["Sit (/sit) by his campfire until you have Boosted Rest"] = "Asseyez-vous (/assis) près de son feu de camp jusqu'à obtenir Repos amélioré",
 	-- {npc:6306} Helene Peltskinner
 	["{npc:6306}: skinners only, the pelts are skinned; inside"] = "{npc:6306} : dépeceurs seulement, les peaux se dépècent ; à l'intérieur",
 
 	-- Step 25: Crystal Lake
-	["Crystal Lake"] = "Lac Cristal",
+	["Crystal Lake"] = "Lac de Cristal",
 	-- plural, as words: Fishing Traps = {object:694772} Fishing Trap
 	["The Fishing Traps sit along the west shore of the lake."] = "Les Pièges à poissons se trouvent le long de la rive ouest du lac.",
 
 	-- Step 27: Crystal Lake: kill these as you meet them
-	["Crystal Lake: kill these as you meet them"] = "Lac Cristal : tuez-les au fur et à mesure",
+	["Crystal Lake: kill these as you meet them"] = "Lac de Cristal : tuez-les au fur et à mesure",
 	-- plural, as words: Murloc Streamrunners = {npc:735} Murloc Streamrunner · Junk Piles = {object:694785} Junk Pile
 	["Murlocs and Murloc Streamrunners hold the east shore; the Junk Piles lie in their camp."] = "Les Murlocs et les Ruisseliers murlocs occupent la rive est ; les Tas de camelote se trouvent dans leur camp.",
 
@@ -185,7 +185,7 @@ return {
 	["\"Auntie\" Bernice Stonefield"] = "\"Tatie\" Bernice Stonefield",
 
 	-- Step 38: The Maclure Vineyards: kill these as you meet them
-	["The Maclure Vineyards: kill these as you meet them"] = "Les Vignobles Maclure : tuez-les au fur et à mesure",
+	["The Maclure Vineyards: kill these as you meet them"] = "Les vignes des Maclure : tuez-les au fur et à mesure",
 	-- {npc:248464} Nimsy
 	-- plural, as words: Kobold Miners = {npc:40} Kobold Miner
 	["The mine is west of the vineyards. Kobold Miners and Tunnelers fill both levels; {npc:248464}, a named kobold, holds the picture book in the lower tunnels. {npc:248464} is elite: grouping up is advised."] = "La mine se trouve à l'ouest des vignes. Les Mineurs kobolds et les Tunneliers kobolds occupent les deux niveaux ; {npc:248464}, un kobold nommé, détient le livre d'images dans les tunnels inférieurs. {npc:248464} est élite : il est conseillé de former un groupe.",
@@ -252,7 +252,7 @@ return {
 	["{quest:91733} and {npc:330}"] = "{quest:91733} et {npc:330}",
 	-- {item:247813} Waterlogged Saw · {npc:330} Princess · {npc:390} Porcine Entourage · {npc:248278} Croaky
 	-- plural, as words: Prowlers = {npc:118} Prowler · Young Forest Bears = {npc:822} Young Forest Bear
-	["The {item:247813}, Axe and Toolbox lie in the river south of the bridge. {npc:330}, a big boar, roots in the Brackwell Pumpkin Patch west of the river with her {npc:390}: pull the piglets away first. Kill Prowlers and Young Forest Bears on the way. Careful: {npc:248278} is a level 11 elite on the murloc shore. Only go for his head with a group or once you're level 10; otherwise leave him: it's optional."] = "Le {item:247813}, la hache et la boîte à outils gisent dans la rivière au sud du pont. {npc:330}, un gros sanglier, fouit dans le champ de citrouilles de Brackwell à l'ouest de la rivière avec son {npc:390} : éloignez d'abord les marcassins. Tuez les rôdeurs et les jeunes ours des forêts sur le chemin. Attention : {npc:248278} est un élite de niveau 11 sur la rive des murlocs. Ne l'affrontez qu'en groupe ou une fois niveau 10 ; sinon laissez-le : c'est optionnel.",
+	["The {item:247813}, Axe and Toolbox lie in the river south of the bridge. {npc:330}, a big boar, roots in the Brackwell Pumpkin Patch west of the river with her {npc:390}: pull the piglets away first. Kill Prowlers and Young Forest Bears on the way. Careful: {npc:248278} is a level 11 elite on the murloc shore. Only go for his head with a group or once you're level 10; otherwise leave him: it's optional."] = "Le {item:247813}, la hache et la boîte à outils gisent dans la rivière au sud du pont. {npc:330}, un gros sanglier, fouit dans le Champ de potirons des Brackwell à l'ouest de la rivière avec son {npc:390} : éloignez d'abord les marcassins. Tuez les rôdeurs et les jeunes ours des forêts sur le chemin. Attention : {npc:248278} est un élite de niveau 11 sur la rive des murlocs. Ne l'affrontez qu'en groupe ou une fois niveau 10 ; sinon laissez-le : c'est optionnel.",
 
 	-- Step 52: Downstream and Princess
 	-- {quest:91740} Croaky's Head
@@ -279,31 +279,31 @@ return {
 	["It lies by the river north-west of the logging camp."] = "Il gît près de la rivière, au nord-ouest du camp de bûcherons.",
 
 	-- Step 59: Stone Cairn Lake
-	["Stone Cairn Lake"] = "Lac de Stone Cairn",
+	["Stone Cairn Lake"] = "Lac du Cairn",
 	-- {object:56} Rolf's corpse
 	-- plural, as words: Defias Rogue Wizards = {npc:474} Defias Rogue Wizard · Red Linen Bandanas = {item:1019} Red Linen Bandana
-	["Defias Rogue Wizards camp on the shores of Stone Cairn Lake; they drop the Red Linen Bandanas too. {object:56} lies in the murloc village on the north-east shore."] = "Les mages voleurs défias campent sur les rives du lac de Stone Cairn ; ils laissent aussi tomber les bandeaux en lin rouge. Le {object:56} se trouve dans le village murloc sur la rive nord-est.",
+	["Defias Rogue Wizards camp on the shores of Stone Cairn Lake; they drop the Red Linen Bandanas too. {object:56} lies in the murloc village on the north-east shore."] = "Les sorciers-voleurs défias campent sur les rives du Lac du Cairn ; ils laissent aussi tomber les masques rouges en lin. Le {object:56} se trouve dans le village murloc sur la rive nord-est.",
 	-- plural, as words: Red Linen Bandanas = {item:1019} Red Linen Bandana
 	["Red Linen Bandanas"] = "Masques rouges en lin",
 
 	-- Step 60: The gnoll camps
 	["The gnoll camps"] = "Les camps gnolls",
 	-- {quest:91725} Stolen Enchanting Supplies
-	["Riverpaw gnolls camp in the hills west of Stone Cairn Lake; the {quest:91725} lie in their camps."] = "Les gnolls Patte-de-flot campent dans les collines à l'ouest du lac de Stone Cairn ; les {quest:91725} se trouvent dans leurs camps.",
+	["Riverpaw gnolls camp in the hills west of Stone Cairn Lake; the {quest:91725} lie in their camps."] = "Les gnolls Rivepatte campent dans les collines à l'ouest du Lac du Cairn ; les {quest:91725} se trouvent dans leurs camps.",
 
 	-- Step 61: The Jasperlode Mine's entrance
 	-- {quest:76} The Jasperlode Mine
 	["{quest:76}'s entrance"] = "Entrée de {quest:76}",
-	["Jasperlode Mine"] = "Mine de Jasperlode",
+	["Jasperlode Mine"] = "Mine Veine-de-jaspe",
 
 	-- Step 62: Jasperlode Mine: kill these as you meet them
-	["Jasperlode Mine: kill these as you meet them"] = "Mine de Jasperlode : tuez-les au fur et à mesure",
+	["Jasperlode Mine: kill these as you meet them"] = "Mine Veine-de-jaspe : tuez-les au fur et à mesure",
 	-- {item:247816} Mining Tools
 	-- plural, as words: Kobold Geomancers = {npc:476} Kobold Geomancer
 	["The mine is south-west of the gnoll camps. {item:247816} lie near the entrance; Kobold Geomancers hold the tunnels."] = "La mine se trouve au sud-ouest des camps gnolls. Les {item:247816} traînent près de l'entrée ; les Géomanciens kobolds occupent les tunnels.",
 	["Walk into the mine"] = "Entrez dans la mine",
 	-- {npc:476} Kobold Geomancer
-	["{npc:476} walks around Jasperlode Mine: look inside the circle on the map"] = "{npc:476} rôde autour de la mine de Jasperlode : regardez à l'intérieur du cercle sur la carte",
+	["{npc:476} walks around Jasperlode Mine: look inside the circle on the map"] = "{npc:476} rôde autour de la Mine Veine-de-jaspe : regardez à l'intérieur du cercle sur la carte",
 
 	-- Step 63: The Tower of Azora
 	["Follow the hills south to the tower."] = "Suivez les collines vers le sud jusqu'à la tour.",
@@ -321,7 +321,7 @@ return {
 
 	-- Step 69: Crystal Lake: kill these as you meet them
 	-- plural, as words: Prowlers = {npc:118} Prowler
-	["The murlocs on the east shore drop the kelp. Skinners: Gray Forest Wolves roam the woods between the lake and the Tower of Azora; Prowlers further east give pelts too."] = "Les murlocs de la rive est laissent tomber le varech. Dépeceurs : les loups gris des forêts rodent dans les bois entre le lac et la tour d'Azora ; les rôdeurs plus à l'est donnent aussi des peaux.",
+	["The murlocs on the east shore drop the kelp. Skinners: Gray Forest Wolves roam the woods between the lake and the Tower of Azora; Prowlers further east give pelts too."] = "Les murlocs de la rive est laissent tomber le varech. Dépeceurs : les loups forestiers gris rôdent dans les bois entre le lac et la Tour d'Azora ; les rôdeurs plus à l'est donnent aussi des peaux.",
 	-- plural, as words: Crystal Kelp Fronds = {item:1256} Crystal Kelp Frond
 	["Crystal Kelp Fronds"] = "Feuilles de Varech cristallin",
 
@@ -371,7 +371,7 @@ return {
 
 	-- Step 81: Surena Caledon
 	-- {npc:881} Surena Caledon
-	["Head back out through Goldshire and east along the road to the Brackwell Pumpkin Patch. {npc:881} (level 9) stands by its farmhouse."] = "Repartez par Comté-de-l'Or et prenez la route vers l'est jusqu'au champ de citrouilles de Brackwell. {npc:881} (niveau 9) se tient près de sa ferme.",
+	["Head back out through Goldshire and east along the road to the Brackwell Pumpkin Patch. {npc:881} (level 9) stands by its farmhouse."] = "Repartez par Comté-de-l'Or et prenez la route vers l'est jusqu'au Champ de potirons des Brackwell. {npc:881} (niveau 9) se tient près de sa ferme.",
 
 	-- Step 82: The Binding
 	-- {npc:6122} Gakin the Darkbinder · {item:6928} Bloodstone Choker · {object:2164} Slaughtered Lamb
@@ -384,7 +384,7 @@ return {
 	["Back to {zone:1429}"] = "Retour à {zone:1429}",
 
 	-- Step 84: Forest's Edge
-	["Forest's Edge"] = "Lisière de la forêt",
+	["Forest's Edge"] = "La Lisière",
 	-- {zone:1436} Westfall
 	-- plural, as words: Riverpaw Runts = {npc:97} Riverpaw Runt
 	["Riverpaw Runts and Outrunners hold the hills south of the garrison, along the {zone:1436} border."] = "Des Rivepatte chétifs et des Estafettes Rivepatte tiennent les collines au sud de la garnison, le long de la frontière de {zone:1436}.",
@@ -394,7 +394,7 @@ return {
 	-- Step 87: Taming the Beast
 	-- {npc:251507} Josephine Carson · {item:15908} Taming Rod
 	-- plural, as words: Rockhide Boars = {npc:524} Rockhide Boar · Young Forest Bears = {npc:822} Young Forest Bear
-	["{npc:251507} stands with the Goldshire trainers. Each of her quests hands you a {item:15908}: use it on the beast she names, then bring the rod back to her. Rockhide Boars and Young Forest Bears roam the hills south of the Maclure Vineyards, Gray Forest Wolves the woods east of Crystal Lake."] = "{npc:251507} se tient avec les maîtres de Comté-de-l'Or. Chacune de ses quêtes vous donne un {item:15908} : utilisez-le sur la bête qu'elle désigne, puis rapportez-lui la baguette. Les sangliers rochecuir et les jeunes ours des forêts rodent dans les collines au sud des Vignobles Maclure, les loups gris des forêts dans les bois à l'est du Lac Cristal.",
+	["{npc:251507} stands with the Goldshire trainers. Each of her quests hands you a {item:15908}: use it on the beast she names, then bring the rod back to her. Rockhide Boars and Young Forest Bears roam the hills south of the Maclure Vineyards, Gray Forest Wolves the woods east of Crystal Lake."] = "{npc:251507} se tient avec les maîtres de Comté-de-l'Or. Chacune de ses quêtes vous donne un {item:15908} : utilisez-le sur la bête qu'elle désigne, puis rapportez-lui la baguette. Les sangliers Rochecuir et les jeunes ours des forêts rôdent dans les collines au sud des vignes des Maclure, les loups forestiers gris dans les bois à l'est du Lac de Cristal.",
 	-- {npc:524} Rockhide Boar · {item:15908} Taming Rod
 	["{npc:524}: tame it with the {item:15908}"] = "{npc:524} : apprivoisez-le avec le {item:15908}",
 	-- {npc:524} Rockhide Boar

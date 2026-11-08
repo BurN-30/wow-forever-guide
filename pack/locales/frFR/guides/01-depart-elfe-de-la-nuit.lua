@@ -44,7 +44,7 @@ return {
 	["{npc:8583}, east of the tree"] = "{npc:8583}, à l'est de l'arbre",
 
 	-- Step 5: North to Shadowthread Cave
-	["North to Shadowthread Cave"] = "Au nord, vers la grotte de Tissombre",
+	["North to Shadowthread Cave"] = "Au nord, vers la Grotte de Sombrefil",
 	-- {npc:1994} Githyiss the Vile
 	-- plural, as words: Mangy Nightsabers = {npc:2032} Mangy Nightsaber · Thistle Boars = {npc:1985} Thistle Boar
 	["Mangy Nightsabers and Thistle Boars roam north of Aldrassil, on the way to the cave. {npc:1994} sits deep inside."] = "Les sabres-de-nuit galeux et les sangliers des chardons rôdent au nord d'Aldrassil, sur le chemin de la grotte. {npc:1994} se tient tout au fond.",
@@ -80,10 +80,10 @@ return {
 	["{quest:917} and the antidote"] = "{quest:917} et l'antidote",
 	-- {object:4406} Webwood Eggs
 	-- plural, as words: Hyacinth Mushrooms = {item:10639} Hyacinth Mushroom
-	["The {object:4406} lie at the back of Shadowthread Cave: take the central path, then left where it splits, up to the high ledge. Hyacinth Mushrooms drop from Grells, Moonpetal Lilies grow by the ponds north of Aldrassil."] = "Les {object:4406} sont au fond de la grotte de Tissombre : prenez le chemin central, puis à gauche à l'embranchement, jusqu'à la corniche en hauteur. Les grells lâchent les champignons jacinthe, les lys pétale-de-lune poussent près des mares au nord d'Aldrassil.",
+	["The {object:4406} lie at the back of Shadowthread Cave: take the central path, then left where it splits, up to the high ledge. Hyacinth Mushrooms drop from Grells, Moonpetal Lilies grow by the ponds north of Aldrassil."] = "Les {object:4406} sont au fond de la Grotte de Sombrefil : prenez le chemin central, puis à gauche à l'embranchement, jusqu'à la corniche en hauteur. Les grells lâchent les champignons jacinthe, les lys pétale de lune poussent près des mares au nord d'Aldrassil.",
 
 	-- Step 11: Shadowthread Cave
-	["Shadowthread Cave"] = "Grotte de Tissombre",
+	["Shadowthread Cave"] = "Grotte de Sombrefil",
 
 	-- Step 12: Shadowglen
 	["Shadowglen"] = "Sombrevallon",
@@ -153,7 +153,7 @@ return {
 	["{quest:940}: kill these as you meet them"] = "{quest:940} : tuez-les au passage",
 	-- {object:12352} Starbreeze Village
 	-- plural, as words: Nightsabers = {npc:2042} Nightsaber · Strigid Owls = {npc:1995} Strigid Owl · Webwood Lurkers = {npc:1998} Webwood Lurker
-	["Nightsabers, Strigid Owls and Webwood Lurkers roam all around Dolanaar and along the road east; the lurkers also drop the recipe's spider legs. The moonwell is at the west edge of {object:12352}."] = "Les sabres-de-nuit, chouettes strigides et rôdeuses de Tisse-bois rôdent tout autour de Dolanaar et le long de la route vers l'est ; les rôdeuses lâchent aussi les pattes d'araignée de la recette. Le puits de lune est à l'ouest de {object:12352}.",
+	["Nightsabers, Strigid Owls and Webwood Lurkers roam all around Dolanaar and along the road east; the lurkers also drop the recipe's spider legs. The moonwell is at the west edge of {object:12352}."] = "Les sabres-de-nuit sauvages, hiboux Strigid et rôdeuses Tissebois rôdent tout autour de Dolanaar et le long de la route vers l'est ; les rôdeuses lâchent aussi les pattes d'araignée de la recette. Le puits de lune est à l'ouest de {object:12352}.",
 	-- plural, as words: Nightsabers = {npc:2042} Nightsaber
 	["Nightsabers"] = "Sabres-de-nuit sauvages",
 	-- plural, as words: Webwood Lurkers = {npc:1998} Webwood Lurker
@@ -196,7 +196,7 @@ return {
 	["Gnarlpine Ambushers hide along the road west of Fel Rock."] = "Les embusqués Pin-tordu se cachent le long de la route à l'ouest de Gangreroche.",
 
 	-- Step 33: Ban'ethil Barrow Den
-	["Ban'ethil Barrow Den"] = "Antre du tertre de Ban'ethil",
+	["Ban'ethil Barrow Den"] = "Refuge des saisons de Ban'ethil",
 	-- {npc:275744} Sentinel Lynessa Duskblossom · {npc:7317} Oben Rageclaw
 	["The barrow is south of the road. {npc:275744} is held inside, {npc:7317} sleeps in its depths, and the four relic chests sit in the lower rooms."] = "Le refuge se trouve au sud de la route. {npc:275744} y est retenue, {npc:7317} dort dans ses profondeurs, et les quatre coffres à reliques se trouvent dans les salles inférieures.",
 	-- {npc:7317} Oben Rageclaw
@@ -219,14 +219,14 @@ return {
 	["Use the {item:5621} at the moonwell"] = "Utilisez la {item:5621} au puits de lune",
 
 	-- Step 36: Gnarlpine Hold
-	["Gnarlpine Hold"] = "Repaire des Pin-tordu",
+	["Gnarlpine Hold"] = "Camp des Pins-tordus",
 	-- {object:6751} Strange Fruited Plant
 	["South of the pools. The {object:6751} grows by the Hold."] = "Au sud des bassins. La {object:6751} pousse près du Camp des Pins-tordus.",
 
 	-- Step 38: Seek Redemption!
 	-- {npc:2150} Zenn Foulhoof · {npc:7234} Ferocitas the Dream Eater
 	-- plural, as words: Fel Cones = {item:3418} Fel Cone
-	["Fel Cones lie under the trees all around Dolanaar and {npc:2150}: pick them up on the road east and hand them to {npc:2150} on the way to {npc:7234}."] = "Les gangrecônes sont au pied des arbres tout autour de Dolanaar et de {npc:2150} : ramassez-les sur la route de l'est et donnez-les à {npc:2150} en allant vers {npc:7234}.",
+	["Fel Cones lie under the trees all around Dolanaar and {npc:2150}: pick them up on the road east and hand them to {npc:2150} on the way to {npc:7234}."] = "Les gangrenoix sont au pied des arbres tout autour de Dolanaar et de {npc:2150} : ramassez-les sur la route de l'est et donnez-les à {npc:2150} en allant vers {npc:7234}.",
 
 	-- Step 39: Ferocitas the Dream Eater
 	-- {npc:7234} Ferocitas the Dream Eater · {object:12352} Starbreeze Village · {item:8049} Gnarlpine Necklace
@@ -307,7 +307,7 @@ return {
 	-- Step 52: Taming the Beast
 	-- {item:15908} Taming Rod
 	-- plural, as words: Webwood Lurkers = {npc:1998} Webwood Lurker · Nightsaber Stalkers = {npc:2043} Nightsaber Stalker · Strigid Screechers = {npc:1996} Strigid Screecher
-	["Each of Dazalar's quests hands you a {item:15908}: use it on the beast he names, then bring the rod back to him in Dolanaar. Webwood Lurkers creep around the village, Nightsaber Stalkers and Strigid Screechers roam the woods south of it."] = "Chaque quête de Dazalar donne un {item:15908} : utilisez-le sur la bête indiquée, puis rapportez-le-lui à Dolanaar. Les rôdeuses de Tisse-bois rampent autour du village, les traqueurs sabre-de-nuit et les chouettes strigides hurlantes parcourent les bois au sud.",
+	["Each of Dazalar's quests hands you a {item:15908}: use it on the beast he names, then bring the rod back to him in Dolanaar. Webwood Lurkers creep around the village, Nightsaber Stalkers and Strigid Screechers roam the woods south of it."] = "Chaque quête de Dazalar donne un {item:15908} : utilisez-le sur la bête indiquée, puis rapportez-le-lui à Dolanaar. Les rôdeuses Tissebois rampent autour du village, les rôdeurs sabre-de-nuit et les hurleurs Strigid parcourent les bois au sud.",
 	-- {npc:1998} Webwood Lurker · {item:15908} Taming Rod
 	["{npc:1998}: tame it with the {item:15908}"] = "{npc:1998} : apprivoisez-la avec le {item:15908}",
 	-- {npc:1998} Webwood Lurker
@@ -391,7 +391,7 @@ return {
 
 	-- Step 67: Moonglade
 	-- {quest:5921} Moonglade · {npc:11802} Dendrite Starblaze · {quest:5929} Great Bear Spirit · {npc:11800} Silva Fil'naveth
-	["Cast Teleport: {quest:5921}. {npc:11802} is in Nighthaven; the {quest:5929} sits in the woods to the north-west. Then {npc:11800} in Nighthaven flies Druids straight to Rut'theran Village, no flight path needed. {npc:11802} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart."] = "Lancez Téléportation : {quest:5921}. {npc:11802} est à Reflet-de-Lune ; l'{quest:5929} se tient dans les bois au nord-ouest. Ensuite, {npc:11800} à Reflet-de-Lune emmène les druides directement au village de Rut'theran, sans trajet de vol à connaître. {npc:11802} se tient à l'étage de son bâtiment : montez par l'intérieur, la flèche ne distingue pas les étages.",
+	["Cast Teleport: {quest:5921}. {npc:11802} is in Nighthaven; the {quest:5929} sits in the woods to the north-west. Then {npc:11800} in Nighthaven flies Druids straight to Rut'theran Village, no flight path needed. {npc:11802} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart."] = "Lancez Téléportation : {quest:5921}. {npc:11802} est à Havrenuit ; l'{quest:5929} se tient dans les bois au nord-ouest. Ensuite, {npc:11800} à Havrenuit emmène les druides directement au village de Rut'theran, sans trajet de vol à connaître. {npc:11802} se tient à l'étage de son bâtiment : montez par l'intérieur, la flèche ne distingue pas les étages.",
 	-- {quest:5929} Great Bear Spirit
 	["Speak with the {quest:5929}"] = "Parlez à l'{quest:5929}",
 
@@ -403,7 +403,7 @@ return {
 	-- {object:177525} Moonkin Stone
 	["The {object:177525}"] = "{object:177525}",
 	-- {object:177525} Moonkin Stone · {item:15208} Cenarion Moondust · {npc:12144} Lunaclaw Spirit
-	["Go back down to Rut'theran Village and fly to Auberdine. The {object:177525} stands in the hills just east of the village: use the {item:15208} there, defeat Lunaclaw and speak to the {npc:12144}."] = "Redescendez au village de Rut'theran et volez vers Auberdine. La {object:177525} se dresse dans les collines juste à l'est du village : utilisez-y la {item:15208}, battez Griffe-de-lune et parlez à l'{npc:12144}.",
+	["Go back down to Rut'theran Village and fly to Auberdine. The {object:177525} stands in the hills just east of the village: use the {item:15208} there, defeat Lunaclaw and speak to the {npc:12144}."] = "Redescendez au village de Rut'theran et volez vers Auberdine. La {object:177525} se dresse dans les collines juste à l'est du village : utilisez-y la {item:15208}, battez Lunegriffe et parlez à l'{npc:12144}.",
 
 	-- Step 70: Body and Heart
 	-- {npc:4217} Mathrengyl Bearwalker

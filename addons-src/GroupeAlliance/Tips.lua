@@ -691,7 +691,7 @@ ns.GA.Tips = {
 		enUS = "Weapons, racks, grain sacks, meat and water barrels are clicked on the ground in the camps below Stonewatch; they come back slowly.",
 	},
 	[98396] = { -- The Great Cat Spirit (wowhead forever)
-		frFR = "À l'entrée des refuges des saisons, la statue donne un camouflage pour passer les élites de niveau 23 (pas en forme d'ours) ; c'est presque obligatoire au niveau 20.",
+		frFR = "À l'entrée des Barrow Dens, la statue donne un camouflage pour passer les élites de niveau 23 (pas en forme d'ours) ; c'est presque obligatoire au niveau 20.",
 		enUS = "At the Barrow Dens entrance, the statue gives stealth to slip past the level 23 elites (not in Bear Form); at level 20 it is nearly a must.",
 	},
 	[98461] = { -- Unrequited Love (wowhead forever)

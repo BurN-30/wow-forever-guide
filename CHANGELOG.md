@@ -2,6 +2,20 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.6.0 (2026-11-08)
+
+### Français
+- Vrais noms français : lieux, PNJ, monstres, objets et quêtes écrits dans les textes reprennent ceux du client français (environ 470 textes corrigés, départs compris).
+- Parcours jusqu'au niveau 60 : Steppes ardentes, Gangrebois, Berceau-de-l'Hiver, Maleterres et Silithus (Groupes 25 à 30), avec la note « chacun à son rythme ».
+- Nouveau donjon facultatif : Zul'Farrak, question posée à Gadgetzan (trois quêtes).
+- Quêtes 30-43 relues contre Wowhead Forever (donneur, rendu, niveau, position) ; astuces ajoutées aux zones 40-50.
+
+### English
+- Real French names: places, NPCs, creatures, items and quests written in the French texts now use the French client's names (about 470 texts fixed, start zones included).
+- Route up to level 60: Burning Steppes, Felwood, Winterspring, the Plaguelands and Silithus (Groups 25 to 30), with the "everyone at their own pace" note.
+- New optional dungeon: Zul'Farrak, asked in Gadgetzan (three quests).
+- Quests 30-43 checked against Wowhead Forever (giver, ender, level, position); tips added to the 40-50 zones.
+
 ## v0.5.0 (2026-11-08)
 
 ### Français

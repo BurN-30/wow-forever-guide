@@ -75,7 +75,7 @@ Un antivirus bloque le programme à tort ? Utiliser la manière 2, et signaler l
 - **Réduire** : bouton **_** à côté du **?**. La fenêtre devient une petite icône Polestar (à glisser où on veut ; clic droit : fine bannière avec l'étape en cours ; clic : la fenêtre revient). Masquer : `/polestar hide`, le bouton Polestar de la minicarte, ou un raccourci dans Options > Raccourcis > Polestar.
 - **Survole** n'importe quelle ligne : l'infobulle explique tout, avec une astuce (en vert) sur les quêtes pénibles. Une petite **étoile verte** en bout de ligne signale qu'une astuce attend.
 - **Marque orange ou rouge** en bout de ligne : passage difficile à ton niveau réel (élite, monstres en groupe, escorte, quête bien au-dessus de toi). L'infobulle dit pourquoi, le niveau conseillé seul, le nombre de joueurs conseillé et comment faire seul ou à plusieurs. Elle disparaît d'elle-même quand tu as le niveau. Orange : il manque 1 ou 2 niveaux ; rouge : 3 ou plus.
-- **Quêtes de groupe et donjons facultatifs** : à la première étape, un bandeau « Quête de groupe » propose **La passer** ou **La faire en groupe** (en anglais : *Skip it*, *Do it with a group*). Seul : La passer, le guide reste sur la route solo. Changer d'avis : roue dentée, Découverte, Quêtes de groupe (une par une), ou tout répondre d'un coup dans le menu déroulant Quêtes de groupe. Dès les départs, quelques élites courtes posent la question (humain : Narf, Nimsy, Croaky ; nain et gnome : Vagash), une seule fois chacune. Donjons facultatifs du paquet : Ruines de Lordaeron, Mortemines, Prison, Site de fouilles, Monastère écarlate, Uldaman.
+- **Quêtes de groupe et donjons facultatifs** : à la première étape, un bandeau « Quête de groupe » propose **La passer** ou **La faire en groupe** (en anglais : *Skip it*, *Do it with a group*). Seul : La passer, le guide reste sur la route solo. Changer d'avis : roue dentée, Découverte, Quêtes de groupe (une par une), ou tout répondre d'un coup dans le menu déroulant Quêtes de groupe. Dès les départs, quelques élites courtes posent la question (humain : Narf, Nimsy, Croaky ; nain et gnome : Vagash), une seule fois chacune. Donjons facultatifs du paquet : Ruines de Lordaeron, Mortemines, Prison, Site de fouilles, Monastère écarlate, Uldaman, Zul'Farrak.
 - **Carte** : les objectifs des quêtes (avec leur zone), les rendus prêts et les donneurs de quêtes jusqu'à 3 niveaux au-dessus s'affichent sur la carte du monde, ceux de l'étape en cours en avant, les autres atténués (rien sur la minicarte). Réglable dans la roue dentée, Quêtes.
 - **Ctrl+clic** sur une ligne : lien Wowhead prêt à copier (Ctrl+C), en français ou en anglais selon ton jeu (`/ga lang fr`, `en` ou `auto` pour forcer).
 - **?** dans une infobulle : info pas encore confirmée, à vérifier sur Wowhead.
@@ -114,10 +114,16 @@ Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. **Cha
 | Groupe 18b · Uldaman (donjon) | 41-45 | Donjon facultatif (question à Forgefer) : quêtes du Hall des explorateurs et de Rigglefuzz, le donjon, puis les rendus à Forgefer |
 | Groupe 19 · Terres ingrates et Les Hinterlands | 43 | Tout le monde. Monastère écarlate facultatif (question à Forgefer) : depuis Austrivage, Bibliothèque, Armurerie et Cathédrale, avec la quête Forever Past Due |
 | Groupe 20 · Féralas | 43-45 | Tout le monde |
-| Groupe 21 · Tanaris | 45-47 | Tout le monde |
+| Groupe 21 · Tanaris | 45-47 | Tout le monde. Zul'Farrak facultatif (question à Gadgetzan) : Scarab Shells, Troll Temper et Divino-matic Rod, puis retour à Gadgetzan |
 | Groupe 22 · Les Hinterlands, Terres foudroyées et Loch Modan | 47-48 | Tout le monde ; élites des Hinterlands à plusieurs |
 | Groupe 23 · Gorge des Vents brûlants | 48-49 | Tout le monde ; quêtes élites à plusieurs |
-| Groupe 24 · Cratère d'Un'Goro | 49-50 | Tout le monde, puis la suite de Polestar (Steppes ardentes, 50-60) |
+| Groupe 24 · Cratère d'Un'Goro | 49-50 | Tout le monde |
+| Groupe 25 · Steppes ardentes et Azshara | 50-53 | Tout le monde ; facultatif à plusieurs : A Taste of Flame (Cyrus Therepentous), The Horn of the Beast (Loch Modan et Forgefer), The Super Snapper FX (élites des Hinterlands) |
+| Groupe 26 · Gangrebois | 53 | Tout le monde |
+| Groupe 27 · Berceau-de-l'Hiver et Maleterres de l'Est | 53-56 | Tout le monde |
+| Groupe 28 · Maleterres de l'Ouest, Maleterres de l'Est et Féralas | 56-58 | Tout le monde : le plus long guide 50-60 (environ 120 étapes) |
+| Groupe 29 · Maleterres de l'Est | 58 | Tout le monde (départ par Cabestan vers Silithus) |
+| Groupe 30 · Silithus, Gangrebois, Berceau-de-l'Hiver et Maleterres | 58-60 | Tout le monde, jusqu'au niveau 60 |
 | Solo · Loch Modan (facultatif) | 14-16 | Joueur en retard sur le groupe, seul : environ 1 à 2 niveaux, retour à Forgefer en griffon. Ne s'ouvre jamais tout seul |
 
 En retard sur le groupe ? `/polestar guides` → Guides de la communauté → Groupe Alliance → **Solo · Loch Modan** (quêtes de Thelsamar, de la tour de garde du sud et du pavillon de chasse ; quelques positions marquées **?**). De retour à 4 niveaux du groupe : reprendre le guide du groupe.
@@ -137,7 +143,7 @@ Le parcours ne prend pas toutes les quêtes. Zones et quêtes Alliance absentes 
 | Hautes-terres d'Arathi | 35-42 | Stromgarde (élites : Stromgarde Badges, avis de recherche, chaîne de Trelane) |
 | Bois de la Pénombre | 30-35 | Morbent Fel (fin de la chaîne de Sven), Mor'Ladim (élite), fin de Stalvan |
 | Gnomeregan, Kraal de Tranchebauge | 25-34 | donjons non couverts : Gnomeregan (beaucoup de quêtes à Forgefer) arrive en même temps que le Site de fouilles et Dalaran, le Kraal est loin au sud des Tarides en terre horde |
-| Après 50 | 50-60 | guides de Polestar seuls, sans notes de groupe |
+| Donjons 50-60 | 48-60 | aucun chapitre : Temple englouti, Profondeurs de Blackrock, Sommet et Bas du pic Rochenoire, Maraudon, Hache-Tripes, Stratholme, Scholomance (prévus pour une prochaine version) |
 
 ## Premier lancement
 
@@ -188,7 +194,7 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
   ```
-- Modifications et ajouts par **BurN-30** : enchaînement des guides, rendez-vous de Hurlevent, notes de groupe, textes français ajoutés, module Groupe Alliance (liens Wowhead, astuces de quête, marques de difficulté, réglages calmes, aide), chapitres Mortemines, Prison, Monastère écarlate et Uldaman, guides Polestar 30-50 repris avec notes de groupe, installateur.
+- Modifications et ajouts par **BurN-30** : enchaînement des guides, rendez-vous de Hurlevent, notes de groupe, textes français ajoutés, module Groupe Alliance (liens Wowhead, astuces de quête, marques de difficulté, réglages calmes, aide), chapitres Mortemines, Prison, Monastère écarlate et Uldaman, guides Polestar 30-60 repris avec notes de groupe, chapitre Zul'Farrak, installateur.
 - L'ensemble est sous **GPL-3.0** (fichier `LICENSE`). Les données du jeu appartiennent à Blizzard Entertainment.
 
 Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/2026 :
@@ -199,13 +205,15 @@ Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/202
 | [Données Forever de Polestar](https://github.com/fitzforge/polestar/releases/tag/data-v2026.11.1) | 02/11/2026 | Forever | vérification des quêtes |
 | [QuestieDB Forever](https://github.com/Questie/Questie/releases) 1.0.11 | 06/11/2026 | Forever | vérification |
 | [wago.tools](https://wago.tools), client 1.60.1.70532 | 06/11/2026 | Forever | cartes et zones |
+| [wago.tools](https://wago.tools), `AreaTable` enUS et frFR, client 1.60.1.70532 | 08/11/2026 | Forever | noms français des lieux |
+| [Wowhead Forever en français](https://fr.wowhead.com/forever) | 08/11/2026 | Forever | noms français des PNJ absents des données de Polestar |
 | [Wowhead Forever](https://www.wowhead.com/forever) | 08/11/2026 | Forever | liens, vérifications, astuces des commentaires reformulées, guides de donjon (Ruines de Lordaeron, Mortemines, Prison, Site de fouilles), pages du Monastère écarlate et d'Uldaman, niveaux des marques de difficulté |
 | [Aurums Night Elf Druid Guide](https://github.com/AurumTitanos/Aurums-Night-Elf-Druid-Guide) 0.4.37 | 22/10/2026 | Forever (bêta) | chapitres de donjon |
 | [RestedXP, guides gratuits](https://github.com/RestedXP/RXPGuides) | 06/11/2026 | Forever | méthode et conseils reformulés, aucun texte repris (licence CC BY-NC-SA) |
 | [Lodestar](https://github.com/petllama/lodestar-guides) (MIT) | 21/10/2026 | Forever (bêta) | guide Solo · Loch Modan adapté, recoupement |
 | [MittenQuest](https://github.com/petllama/mittenquest-guides) (GPL-3.0) | 21/10/2026 | Forever (bêta) | recoupement |
 
-Textes français : ceux de Polestar, complétés par traduction automatique relue par sondage (quelques noms de lieux peuvent différer du jeu). Noms de quêtes, PNJ et objets : ceux du jeu, dans la langue de chaque joueur.
+Textes français : ceux de Polestar, complétés par traduction pour le paquet. Depuis la 0.6.0, les noms écrits en toutes lettres (lieux, PNJ, monstres, objets, quêtes) sont ceux du client français : tables du client 1.60.1 (wago.tools, `AreaTable` en frFR), noms français de Polestar (`Polestar_frFR`), et Wowhead en français pour les PNJ qui manquaient. Un nom absent de ces sources reste en anglais. Noms affichés par Polestar dans les lignes du guide : ceux du jeu, dans la langue de chaque joueur.
 </details>
 
 <details>
