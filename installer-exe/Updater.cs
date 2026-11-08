@@ -20,6 +20,8 @@ namespace GuideWoWForever
 		void Progress(int percent);
 		string AskFolder(string description);
 		RunningChoice AskWowRunning();
+		/// <summary>Le message de fin, en gros et bien visible.</summary>
+		void Banner(string text, Kind kind);
 	}
 
 	sealed class HeadlessUi : IUi
@@ -33,6 +35,10 @@ namespace GuideWoWForever
 		public void Progress(int percent) { }
 		public string AskFolder(string description) { return null; }
 		public RunningChoice AskWowRunning() { return o.IgnoreRunning ? RunningChoice.Ignore : RunningChoice.Abort; }
+		public void Banner(string text, Kind kind)
+		{
+			try { Console.WriteLine("\n==== " + text + " ====\n"); } catch { }
+		}
 	}
 
 	sealed class Updater
@@ -117,12 +123,23 @@ namespace GuideWoWForever
 			if (o.Wow == null && !Paths.Same(game, st.Game ?? "")) { st.Game = game; st.Save(); }
 			Say(L.T("Dossier du jeu : ", "Game folder: ") + game);
 
-			CheckGameClosed(game);
-
 			string addons = Path.Combine(game, "Interface", "AddOns");
 			Directory.CreateDirectory(addons);
-			Version installed = TocVersion(addons);
-			if (installed != null) Say(L.T("Version installée : ", "Installed version: ") + "v" + installed);
+			Version installed = TocVersion(addons, PackFolder);
+			Version polestar = TocVersion(addons, "Polestar");
+			bool restartMarked = RestartMarked(release.Body);
+			if (installed != null)
+			{
+				if (installed == release.Version)
+					Say(L.T("Guide déjà installé : v", "Guide already installed: v") + installed);
+				else
+					Say(L.T("Mise à jour de v", "Update from v") + installed + L.T(" vers v", " to v") + release.Version, Kind.Ok);
+			}
+			else if (polestar != null)
+				Say(L.T("Première installation du guide (Polestar v", "First install of the guide (Polestar v") + polestar
+					+ L.T(" est déjà là : il sera remplacé par celui du guide).", " is already there: it will be replaced by the guide's)."), Kind.Ok);
+			else
+				Say(L.T("Première installation : v", "First install: v") + release.Version, Kind.Ok);
 
 			if (!o.Force && installed != null && installed == release.Version && FoldersPresent(addons))
 			{
@@ -130,6 +147,13 @@ namespace GuideWoWForever
 				InstallCopyAndShortcut();
 				return 0;
 			}
+
+			// Un /reload relit les fichiers Lua déjà listés dans les .toc ; un nouveau dossier
+			// d'addon ou un .toc qui change de liste ne sont lus qu'au lancement du jeu. Les notes
+			// de la release le disent (puce « Relancer le jeu », tools/release.py).
+			bool restart = installed == null || restartMarked;
+			if (restartMarked) Journal.Write("Notes de la release : relancer le jeu.");
+			CheckGameClosed(game, restart);
 
 			var zipAsset = release.Find(Program.ZipAsset);
 			if (zipAsset == null) throw GitHub.Incomplete(Program.ZipAsset);
@@ -158,11 +182,40 @@ namespace GuideWoWForever
 				Say(L.T("Ancienne version sauvegardée dans ", "Previous version backed up in ") + result.Backup);
 			Say(L.T("Vos autres addons et vos réglages (dossier WTF) n'ont pas été touchés.",
 				"Your other addons and your settings (WTF folder) were not touched."));
+			if (result.Added.Count > 0)
+			{
+				Journal.Write("Nouveaux dossiers d'addon : " + string.Join(";", result.Added));
+				restart = true;
+			}
 
 			InstallCopyAndShortcut();
 			ShowNotes(release);
-			Say(L.T("Relancez WoW : le guide s'ouvre tout seul, rien à cocher.", "Restart WoW: the guide opens by itself, nothing to tick."), Kind.Ok);
+			string end;
+			if (installed == null)
+				end = L.T("Relancez WoW : le guide s'ouvre tout seul, rien à cocher.", "Restart WoW: the guide opens by itself, nothing to tick.");
+			else if (restart)
+				end = L.T("Mise à jour faite. Quittez complètement le jeu puis relancez-le (un /reload ne suffit pas pour cette version).",
+					"Update done. Quit the game completely, then start it again (a /reload is not enough for this version).");
+			else
+				end = L.T("Mise à jour faite. En jeu, tapez /reload dans le chat : pas besoin de relancer le jeu.",
+					"Update done. In game, type /reload in the chat: no need to restart the game.");
+			Say(end, Kind.Ok);
+			ui.Banner(end, restart && installed != null ? Kind.Warn : Kind.Ok);
 			return 0;
+		}
+
+		/// <summary>Les notes de la release demandent de relancer le jeu : une puce qui commence par
+		/// « Relancer le jeu » ou « Restart the game » (ajoutée par tools/release.py quand un .toc
+		/// change de liste de fichiers ou qu'un dossier d'addon apparaît ou disparaît).</summary>
+		public static bool RestartMarked(string body)
+		{
+			foreach (string raw in (body ?? "").Replace("\r", "").Split('\n'))
+			{
+				string l = raw.Trim().TrimStart('-', '*', ' ').Replace("**", "").Trim();
+				if (l.StartsWith("Relancer le jeu", StringComparison.OrdinalIgnoreCase)
+					|| l.StartsWith("Restart the game", StringComparison.OrdinalIgnoreCase)) return true;
+			}
+			return false;
 		}
 
 		void Progress(long done, long total)
@@ -205,8 +258,17 @@ namespace GuideWoWForever
 			}
 		}
 
-		void CheckGameClosed(string game)
+		void CheckGameClosed(string game, bool restart)
 		{
+			if (!restart && GameFinder.RunningGame(game).Count > 0)
+			{
+				// Le jeu lit les fichiers d'addon au lancement et à chaque /reload, sans les garder
+				// ouverts : ils se remplacent jeu ouvert. Un fichier bloqué quand même ? Install
+				// remet l'ancienne version et le dit (Locked).
+				Say(L.T("World of Warcraft est ouvert : pas besoin de le fermer pour cette mise à jour, un /reload suffira.",
+					"World of Warcraft is running: no need to close it for this update, a /reload will do."));
+				return;
+			}
 			while (GameFinder.RunningGame(game).Count > 0)
 			{
 				Say(L.T("World of Warcraft est ouvert.", "World of Warcraft is running."), Kind.Warn);
@@ -223,9 +285,9 @@ namespace GuideWoWForever
 			}
 		}
 
-		static Version TocVersion(string addons)
+		static Version TocVersion(string addons, string folder)
 		{
-			string toc = Path.Combine(addons, PackFolder, PackFolder + ".toc");
+			string toc = Path.Combine(addons, folder, folder + ".toc");
 			try
 			{
 				if (!File.Exists(toc)) return null;
@@ -251,6 +313,7 @@ namespace GuideWoWForever
 		{
 			public List<string> Folders = new List<string>();
 			public List<string> Removed = new List<string>();
+			public List<string> Added = new List<string>();
 			public string Backup;
 		}
 
@@ -346,6 +409,7 @@ namespace GuideWoWForever
 			DeleteDir(staging);
 			res.Folders = roots.ToList();
 			res.Removed = obsolete;
+			res.Added = roots.Where(r => !moved.Contains(r, StringComparer.OrdinalIgnoreCase)).ToList();
 			if (moved.Count > 0)
 			{
 				File.WriteAllText(Path.Combine(backup, "LISEZMOI.txt"), L.T(
@@ -474,9 +538,13 @@ namespace GuideWoWForever
 						Journal.Write("Programme copié dans " + target);
 					}
 				}
-				if (st.ShortcutDone) return;
 				string name = L.T("Mettre à jour le guide WoW", "Update the WoW guide") + ".lnk";
 				string desc = L.T("Installe ou met à jour le guide WoW Forever", "Installs or updates the WoW Forever guide");
+				if (st.ShortcutDone)
+				{
+					FixShortcuts(target, desc);
+					return;
+				}
 				string desktop = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), name);
 				Shortcut.Create(desktop, target, desc);
 				try
@@ -496,6 +564,25 @@ namespace GuideWoWForever
 				Say(L.T("Raccourci non créé (le guide est bien installé). Pour mettre à jour plus tard, relancez ce programme.",
 					"Shortcut not created (the guide is installed). To update later, run this program again."), Kind.Warn);
 			}
+		}
+
+		/// <summary>Raccourcis déjà créés (nom français ou anglais, Bureau et menu Démarrer) qui
+		/// visent un autre fichier que la copie fixe : refaits vers elle.</summary>
+		static void FixShortcuts(string target, string desc)
+		{
+			foreach (var folder in new[] { Environment.SpecialFolder.DesktopDirectory, Environment.SpecialFolder.Programs })
+				foreach (string name in new[] { "Mettre à jour le guide WoW.lnk", "Update the WoW guide.lnk" })
+				{
+					try
+					{
+						string lnk = Path.Combine(Environment.GetFolderPath(folder), name);
+						string cur = Shortcut.Target(lnk);
+						if (cur == null || Paths.Same(cur, target)) continue;
+						Shortcut.Create(lnk, target, desc);
+						Journal.Write("Raccourci " + lnk + " : visait " + cur + ", refait vers " + target);
+					}
+					catch (Exception e) { Journal.Write("Raccourci non vérifié : " + e.Message); }
+				}
 		}
 
 		// ---- Notes de version ------------------------------------------------------------

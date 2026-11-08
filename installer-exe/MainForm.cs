@@ -13,6 +13,7 @@ namespace GuideWoWForever
 		readonly RichTextBox box;
 		readonly ProgressBar bar;
 		readonly Button close, log;
+		readonly Label banner;
 		volatile bool working = true;
 		public int ExitCode = 1;
 
@@ -46,7 +47,15 @@ namespace GuideWoWForever
 			bottom.Controls.Add(close, 2, 0);
 			var pad = new Panel { Dock = DockStyle.Fill, Padding = new Padding(12, 12, 12, 4), BackColor = SystemColors.Window };
 			pad.Controls.Add(box);
+			// Le message de fin, en gros en haut de la fenêtre (Banner).
+			banner = new Label
+			{
+				Dock = DockStyle.Top, Visible = false, AutoSize = false, Height = 92,
+				Font = new Font("Segoe UI", 14f, FontStyle.Bold), TextAlign = ContentAlignment.MiddleCenter,
+				Padding = new Padding(16, 8, 16, 8), ForeColor = Color.White, BackColor = Color.ForestGreen,
+			};
 			Controls.Add(pad);
+			Controls.Add(banner);
 			Controls.Add(bottom);
 			AcceptButton = close;
 
@@ -90,6 +99,17 @@ namespace GuideWoWForever
 					: kind == Kind.Ok ? Color.ForestGreen : SystemColors.WindowText;
 				box.SelectionFont = kind == Kind.Info ? box.Font : new Font(box.Font, FontStyle.Bold);
 				box.AppendText(text + "\n");
+				box.ScrollToCaret();
+			}));
+		}
+
+		public void Banner(string text, Kind kind)
+		{
+			BeginInvoke((Action)(() =>
+			{
+				banner.Text = text;
+				banner.BackColor = kind == Kind.Warn ? Color.FromArgb(200, 90, 0) : Color.ForestGreen;
+				banner.Visible = true;
 				box.ScrollToCaret();
 			}));
 		}

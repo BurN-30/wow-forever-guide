@@ -23,6 +23,22 @@ namespace GuideWoWForever
 			finally { Marshal.ReleaseComObject(link); }
 		}
 
+		/// <summary>La cible d'un raccourci .lnk, ou null s'il est absent ou illisible.</summary>
+		public static string Target(string lnk)
+		{
+			if (!File.Exists(lnk)) return null;
+			var link = (IShellLinkW)new CShellLink();
+			try
+			{
+				((IPersistFile)link).Load(lnk, 0);
+				var sb = new StringBuilder(1024);
+				link.GetPath(sb, sb.Capacity, IntPtr.Zero, 0);
+				return sb.Length > 0 ? sb.ToString() : null;
+			}
+			catch { return null; }
+			finally { Marshal.ReleaseComObject(link); }
+		}
+
 		[ComImport, Guid("00021401-0000-0000-C000-000000000046")]
 		class CShellLink { }
 

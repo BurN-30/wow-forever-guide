@@ -11,10 +11,15 @@ Deux manières, au choix : le programme (recommandé, 1 clic) ou le ZIP avec `In
 
 1. Télécharger **[GuideWoWForever.exe](https://github.com/BurN-30/wow-forever-guide/releases/latest/download/GuideWoWForever.exe)** (toujours la dernière version).
 2. Double-cliquer dessus. Au premier lancement, Windows affiche « Windows a protégé votre ordinateur » : cliquer sur **Informations complémentaires**, puis **Exécuter quand même** (pourquoi : voir « Avertissement de Windows » plus bas).
-3. Le programme trouve WoW Forever tout seul (sinon il demande le dossier `World of Warcraft`), télécharge la dernière version du guide, la vérifie, l'installe et dit en clair ce qu'il a fait. Si WoW est ouvert, il demande de le fermer.
+3. Le programme trouve WoW Forever tout seul (sinon il demande le dossier `World of Warcraft`), télécharge la dernière version du guide, la vérifie, l'installe et dit en clair ce qu'il a fait (« Première installation » ou « Mise à jour de 0.6.2 vers 0.7.0 »). Pour une première installation, si WoW est ouvert, il demande de le fermer.
 4. Relancer WoW (un `/reload` ne suffit pas pour un premier ajout) : rien à cocher, le guide s'ouvre tout seul.
 
-**Mettre à jour** : double-clic sur le raccourci **Mettre à jour le guide WoW** du Bureau (créé au premier lancement, aussi dans le menu Démarrer). S'il n'y a rien de neuf, il le dit. Le programme se met aussi à jour lui-même.
+**Mettre à jour** : double-clic sur le raccourci **Mettre à jour le guide WoW** du Bureau (créé au premier lancement, aussi dans le menu Démarrer). S'il n'y a rien de neuf, il le dit. Le jeu peut en général rester ouvert (sinon le programme le dit) : à la fin, un bandeau en gros dit quoi faire.
+
+- Bandeau vert « **Mise à jour faite. En jeu, tapez /reload dans le chat** » : taper `/reload` dans le chat du jeu suffit, pas besoin de relancer.
+- Bandeau orange « **Quittez complètement le jeu puis relancez-le** » : cette version ajoute ou retire des fichiers d'addon, que le jeu ne lit qu'au lancement ; un `/reload` ne suffit pas. Les notes de la version le disent aussi (« Relancer le jeu »).
+
+Le programme se met aussi à jour lui-même : s'il est plus ancien que la dernière version publiée, il télécharge le nouveau, vérifie son empreinte, se remplace et se relance tout seul. Un ancien `GuideWoWForever.exe` (0.5.0 ou 0.6.x) passe donc au nouveau dès son prochain lancement.
 
 Le guide ne s'ouvre pas ? Écran de sélection des personnages → bouton **AddOns** en bas à gauche → cocher **Polestar** (avec tout ce qu'il regroupe) et, si besoin, **Charger les addons périmés**.
 
@@ -23,6 +28,7 @@ Le guide ne s'ouvre pas ? Écran de sélection des personnages → bouton **AddO
 
 - Il lit la dernière version publiée sur GitHub (page [Releases](https://github.com/BurN-30/wow-forever-guide/releases/latest)), télécharge `GuideWoWForever-addons.zip` et refuse le fichier si sa taille ou son empreinte SHA-256 diffère de celle publiée (`SHA256SUMS.txt`).
 - Dossier du jeu : celui retenu la fois d'avant, le jeu ouvert, le registre et la configuration de Battle.net, les emplacements habituels sur chaque disque, sinon une fenêtre de choix (le choix est retenu).
+- Il repère une installation existante (version écrite dans le `.toc` du paquet, ou Polestar seul déjà présent) et l'annonce avant de commencer.
 - Il remplace seulement les dossiers du guide dans `World of Warcraft\_forever_\Interface\AddOns` (`Polestar` et `Polestar...`) et retire ceux d'une ancienne version du guide. Les autres addons et le dossier `WTF` (réglages, progression du guide) ne sont pas touchés.
 - L'ancienne version est mise de côté dans `_forever_\Interface\_guide-sauvegarde` (seulement la dernière). En cas de problème pendant le remplacement, elle est remise en place toute seule.
 - Aucun droit administrateur. Ses fichiers sont dans `%LOCALAPPDATA%\GuideWoWForever` : la copie du programme visée par le raccourci, `journal.txt` (le détail de chaque lancement, à joindre en cas de problème) et `etat.txt` (dossier du jeu et version installée).
@@ -45,10 +51,10 @@ Two ways: the program (recommended, 1 click) or the ZIP with `Installer.bat` (fa
 
 1. Download **[GuideWoWForever.exe](https://github.com/BurN-30/wow-forever-guide/releases/latest/download/GuideWoWForever.exe)** (always the latest version).
 2. Double-click it. On the first run, Windows shows "Windows protected your PC": click **More info**, then **Run anyway** (why: see "Windows warning" below).
-3. The program finds WoW Forever by itself (otherwise it asks for the `World of Warcraft` folder), downloads the latest guide, checks it, installs it and tells you what it did, in English if Windows is in English. If WoW is running, it asks you to close it.
+3. The program finds WoW Forever by itself (otherwise it asks for the `World of Warcraft` folder), downloads the latest guide, checks it, installs it and tells you what it did ("First install" or "Update from 0.6.2 to 0.7.0"), in English if Windows is in English. For a first install, if WoW is running, it asks you to close it.
 4. Restart WoW (a `/reload` is not enough the first time): nothing to tick, the guide opens by itself.
 
-**Update**: double-click the **Update the WoW guide** shortcut on the desktop (created on the first run, also in the Start menu). If there is nothing new, it says so. The program also updates itself.
+**Update**: double-click the **Update the WoW guide** shortcut on the desktop (created on the first run, also in the Start menu). If there is nothing new, it says so. The game can usually stay open (otherwise the program says so): at the end, a large banner says what to do. Green "**Update done. In game, type /reload in the chat**": `/reload` is enough. Orange "**Quit the game completely, then start it again**": this version adds or removes addon files, which the game only reads at startup. The program also updates itself (downloads the new one, checks its checksum, replaces itself and restarts), so an old `GuideWoWForever.exe` switches to the new one on its next run.
 
 It only replaces the guide folders (`Polestar...`) in `World of Warcraft\_forever_\Interface\AddOns`. Other addons and the `WTF` folder (settings, guide progress) are left alone. The previous version is kept in `_forever_\Interface\_guide-sauvegarde`. Log in case of trouble: `%LOCALAPPDATA%\GuideWoWForever\journal.txt`. No admin rights needed.
 
