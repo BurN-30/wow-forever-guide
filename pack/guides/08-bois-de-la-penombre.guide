@@ -1,4 +1,4 @@
-# Adapted from Polestar's guide forever/alliance/05-duskwood (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3).
+# Adapted from Polestar's guide forever/alliance/05-duskwood (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3, with the fixes of the same guide up to tag v0.3.4).
 # Changes: guide id, title, next guide, group notes. Quest steps kept as Polestar wrote them.
 guide groupe-alliance/08-bois-de-la-penombre
 title Group 7 · Duskwood
@@ -14,7 +14,7 @@ next groupe-alliance/09-orneval-paluns
 
 step Duskwood
   zone Duskwood
-  note Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others.
+  note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
   goto 75.8,45.3 "Duskwood"
 
 # Duskwood, Alliance ~22.7 to ~25.4.
@@ -120,10 +120,6 @@ step Darkshire
   accept 57
   vendor nearest
 
-step Skeletal Fiend on the way
-  along until q57
-  kill 531 quest 57
-
 step Skeletal Horror on the way
   along until q57-2
   kill 202 quest 57
@@ -133,6 +129,10 @@ step Skeletal Horror on the way
 step Watcher Dodds
   tip Watcher Dodds stands south of the road, at the Yorgen Farmstead.
   accept 245
+
+step Skeletal Fiend on the way
+  along until q57
+  kill 531 quest 57
 
 step Raven Hill
   tip Continue west to Raven Hill. The Memory of Valor glows by the ruined house south of the road.
@@ -214,9 +214,6 @@ step Sven's Camp
   turnin 226                              -- Lars
   turnin 230                              -- Sven Yorgen
   accept 262
-
-step Hearth to Darkshire
-  hearth "Darkshire"
 
 step Back to Darkshire
   tip Head back east to Darkshire.

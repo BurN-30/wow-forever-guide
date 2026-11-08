@@ -23,7 +23,7 @@ return {
 	["{npc:482}, the cheese shop in the {object:2096}"] = "{npc:482}, la fromagerie du {object:2096}",
 
 	-- Step 3: Duskwood
-	["Group: highest player at most 4 levels above the lowest. Above 30? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 30 ? Attendre les autres.",
+	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
 
 	-- Step 4: Watcher Backus
 	-- {npc:840} Watcher Backus
@@ -93,10 +93,7 @@ return {
 	-- {npc:1212} Bishop Farthing · {zone:1453} Stormwind
 	["For {npc:1212} in {zone:1453}, in the next guide"] = "Pour {npc:1212} à {zone:1453}, dans le guide suivant",
 
-	-- Step 19: Hearth to Darkshire
-	["Hearth to Darkshire"] = "Pierre de foyer pour Sombre-Comté",
-
-	-- Step 21: Watcher Backus again
+	-- Step 20: Watcher Backus again
 	-- {npc:840} Watcher Backus
 	["{npc:840} again"] = "De nouveau {npc:840}",
 	-- {npc:840} Watcher Backus
@@ -104,7 +101,7 @@ return {
 	-- {npc:482} Elling Trias · {zone:1453} Stormwind
 	["For {npc:482} in {zone:1453}, in the next guide"] = "Pour {npc:482} à {zone:1453}, dans le guide suivant",
 
-	-- Step 22: Back to Darkshire
+	-- Step 21: Back to Darkshire
 	["Back to Darkshire"] = "Retour à Sombre-Comté",
 	-- {npc:263} Lord Ello Ebonlocke
 	["{npc:263}, in the town hall"] = "{npc:263}, à l'hôtel de ville",
@@ -112,23 +109,23 @@ return {
 	["{npc:268}, in the house behind the town hall"] = "{npc:268}, dans la maison derrière l'hôtel de ville",
 	["Wait a moment, then speak with her again"] = "Patientez un instant, puis parlez-lui de nouveau",
 
-	-- Step 23: Fly to Stormwind
+	-- Step 22: Fly to Stormwind
 	-- {zone:1453} Stormwind
 	["Fly to {zone:1453}"] = "Prendre un vol pour {zone:1453}",
 	["Darkshire flight master"] = "Maître de vol de Sombre-Comté",
 
-	-- Step 24: Fly to Menethil Harbor
+	-- Step 23: Fly to Menethil Harbor
 	-- {object:1162} Menethil Harbor
 	["Fly to {object:1162}"] = "Envolez-vous vers {object:1162}",
 	-- {zone:1453} Stormwind
 	["{zone:1453} flight master"] = "Maître de vol de {zone:1453}",
 
-	-- Step 25: Menethil Bay
+	-- Step 24: Menethil Bay
 	["Menethil Bay"] = "Baie de Menethil",
 	-- plural, as words: Bluegill Raiders = {npc:1418} Bluegill Raider
 	["Follow the coast north-east past the wreck: the Bluegill Raiders hold the marsh beyond the Giant Crocolisks."] = "Suivez la côte vers le nord-est après l'épave : les Écumeurs Branchie-bleue tiennent le marais au-delà des Crocilisques géants.",
 
-	-- Step 26: Menethil Harbor
+	-- Step 25: Menethil Harbor
 	-- {npc:1239} First Mate Fitzsimmons
 	["{npc:1239}, in the inn"] = "{npc:1239}, à l'auberge",
 	-- {npc:1217} Glorin Steelbrow
@@ -136,16 +133,16 @@ return {
 	-- {item:2594} Flagon of Mead · {npc:1464} Innkeeper Helbrek
 	["{item:2594}, from {npc:1464}"] = "{item:2594}, chez {npc:1464}",
 
-	-- Step 27: The Lost Fleet: kill these as you meet them
+	-- Step 26: The Lost Fleet: kill these as you meet them
 	["The Lost Fleet: kill these as you meet them"] = "La Flotte perdue : tuez-les au fur et à mesure",
 	-- {npc:1159} First Mate Snellig
 	-- plural, as words: Cursed Sailors = {npc:1157} Cursed Sailor · Cursed Marines = {npc:1158} Cursed Marine · Giant Wetlands Crocolisks = {npc:2089} Giant Wetlands Crocolisk · Fen Creepers = {npc:1040} Fen Creeper
 	["Follow the coast north to the wrecked ship. Cursed Sailors walk the beach, Cursed Marines the deck; {npc:1159} stands on the beach by the bow. Giant Wetlands Crocolisks lurk on the coast just north of it.\nCareful: Fen Creepers hide in stealth where the river splits close to the ghost ship, and they can join a fight."] = "Suivez la côte vers le nord jusqu'à l'épave. Des Marins maudits arpentent la plage, des Soldats de marine maudits le pont ; {npc:1159} se tient sur la plage près de la proue. Des Crocilisques géants des Paluns rôdent sur la côte juste au nord.\nAttention : des Rampants des tourbières se cachent, camouflés, là où la rivière se divise près du navire fantôme, et peuvent se joindre au combat.",
 
-	-- Step 29: Captain Halyndor
+	-- Step 28: Captain Halyndor
 	["The captain walks the deck of the wrecked ship; his strongbox sits in the hold."] = "Le capitaine arpente le pont du navire échoué ; son coffre est dans la cale.",
 
-	-- Step 30: On the way
+	-- Step 29: On the way
 	["On the way"] = "En chemin",
 	-- {item:2658} Ados Fragment · {npc:1078} Ormer Ironbraid
 	["{item:2658} along the way to {npc:1078} and Whelgar"] = "{item:2658} en chemin vers {npc:1078} et Whelgar",
@@ -156,29 +153,29 @@ return {
 	-- {item:2661} Neru Fragment · {npc:1078} Ormer Ironbraid
 	["{item:2661} along the way to {npc:1078} and Whelgar"] = "{item:2661} en chemin vers {npc:1078} et Whelgar",
 
-	-- Step 31: Whelgar's Excavation Site: kill these as you meet them
+	-- Step 30: Whelgar's Excavation Site: kill these as you meet them
 	["Whelgar's Excavation Site: kill these as you meet them"] = "Site de fouilles de Whelgar : tuez-les au fur et à mesure",
 	-- {item:279996} Goaz Stone · {npc:1353} Sarltooth
 	-- plural, as words: Goaz Warders = {npc:270892} Goaz Warder
 	["The Goaz Warders stand just west of Whelgar's camp: use the {item:279996} he gave you beside one.\nThe relics lie in the dig itself. {npc:1353}, a big Razormaw, prowls the raptor valley just west of it.\nThe Dragonmaw orcs camp east of the excavation site. Raiders and Swamprunners carry the war banners."] = "Les Gardiens de Goaz se tiennent juste à l'ouest du camp de Whelgar : utilisez à côté de l'un d'eux la {item:279996} qu'il vous a donnée.\nLes reliques se trouvent dans les fouilles elles-mêmes. {npc:1353}, un gros Tranchegueule, rôde dans la vallée des raptors juste à l'ouest.\nLes orcs Dragonmaw campent à l'est du site de fouilles. Les Écumeurs et les Arpenteurs portent les bannières de guerre.",
 
-	-- Step 32: Ormer Ironbraid and Whelgar
+	-- Step 31: Ormer Ironbraid and Whelgar
 	-- {npc:1078} Ormer Ironbraid
 	["{npc:1078} and Whelgar"] = "{npc:1078} et Whelgar",
 
-	-- Step 33: Glorin Steelbrow
+	-- Step 32: Glorin Steelbrow
 	-- {npc:1284} Archbishop Benedictus · {zone:1453} Stormwind
 	["For {npc:1284} in {zone:1453}, in the next guide"] = "Pour {npc:1284} à {zone:1453}, dans le guide suivant",
 	["On the top floor"] = "Au dernier étage",
 	-- {quest:98221} From the Ashes · {quest:465} Nek'rosh's Gambit
 	["{quest:98221}: {quest:465} comes after it on Forever"] = "{quest:98221} : sur Forever, {quest:465} vient après",
 
-	-- Step 34: Angerfang Encampment
+	-- Step 33: Angerfang Encampment
 	["Angerfang Encampment"] = "Campement Crocs-de-rage",
 	-- {npc:2091} Chieftain Nek'rosh
 	["Head east again to the Dragonmaw camp. The four sets of Attack Plans lie in the Angerfang Encampment; {npc:2091}, an elite, stands in the camp too."] = "Reprenez la direction de l'est vers le camp Gueule-de-dragon. Les quatre ensembles de plans d'attaque se trouvent au Campement Crocs-de-rage ; {npc:2091}, un élite, s'y tient également.",
 
-	-- Step 35: To Theramore
+	-- Step 34: To Theramore
 	["To Theramore"] = "Vers Theramore",
 	-- {npc:2104} Captain Stoutfist
 	["{npc:2104}, in Menethil Keep; on the top floor"] = "{npc:2104}, au Donjon de Menethil ; au dernier étage",
@@ -187,11 +184,11 @@ return {
 	-- {object:21056} Theramore Isle · {zone:1445} Dustwallow Marsh
 	["Take the boat from Menethil's pier to {object:21056} in {zone:1445}."] = "Prenez le bateau depuis le quai de Menethil jusqu'à {object:21056} en {zone:1445}.",
 
-	-- Step 37: Into The Barrens
+	-- Step 36: Into The Barrens
 	-- {zone:1413} The Barrens
 	["Into {zone:1413}"] = "Vers les {zone:1413}",
 
-	-- Step 38: Takar the Seer
+	-- Step 37: Takar the Seer
 	-- {zone:1413} The Barrens · {npc:6244} Takar the Seer
 	["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "Sur la route vers le sud à travers {zone:1413}, {npc:6244} campe à l'est de la route, au nord-est du Camp Taurajo ; arrivez par l'est et évitez les gardes de la Horde.",
 	-- {quest:1738} Heartswood · {zone:1440} Ashenvale · {zone:1443} Desolace
@@ -199,21 +196,17 @@ return {
 	-- {quest:65602} What Is Love? · {item:190309} Wooden Figurine · {quest:1738} Heartswood
 	["{quest:65602}: the incubus, beside the succubus; the {item:190309} is near the {quest:1738}"] = "{quest:65602} : l'incube, à côté de la succube ; la {item:190309} est près de {quest:1738}",
 
-	-- Step 41: Mirage Raceway
+	-- Step 40: Mirage Raceway
 	["Mirage Raceway"] = "Circuit des Mirages",
 	["Follow the canyons east to the salt flats. The goblins and gnomes of the Mirage Raceway are neutral and give quests to both factions."] = "Suivez les canyons vers l'est jusqu'aux plaines de sel. Les gobelins et gnomes du Circuit des Mirages sont neutres et donnent des quêtes aux deux factions.",
 	-- {quest:5762} Hemet Nesingwary
 	["For {quest:5762} in Stranglethorn, later"] = "Pour {quest:5762} à Strangleronce, plus tard",
 
-	-- Step 42: Mirage Raceway: kill these as you meet them
+	-- Step 41: Mirage Raceway: kill these as you meet them
 	["Mirage Raceway: kill these as you meet them"] = "Circuit des Mirages : tuez-les au fur et à mesure",
 	-- {object:19868} Rocket Car Rubble
-	-- plural, as words: Scorpid Reavers = {npc:4140} Scorpid Reaver · Sparkleshell Tortoises = {npc:4142} Sparkleshell Tortoise · Saltstone Basilisks = {npc:4147} Saltstone Basilisk · Scorpid Terrors = {npc:4139} Scorpid Terror
-	["{object:19868} lies all over the flats. Scorpid Reavers, Sparkleshell Tortoises and Saltstone Basilisks roam the north half, Crystalhides, Scorpid Terrors and Snappers the middle, and the Gazers (34-35, five levels above you: one at a time) the far south. Vultures circle over all of it."] = "{object:19868} jonchent les Salines. Les Scorpides ravageurs, Tortues nacrétoile et Basilics du sel gemme parcourent la moitié nord, les Peaux de cristal, Scorpides terrifiants et Mordeuses au milieu, et les Contemplateurs (34-35, cinq niveaux au-dessus de vous : un à la fois) à l'extrême sud. Des vautours tournoient au-dessus de tout cela.",
-
-	-- Step 43: Mirage Raceway
-	-- {npc:4454} Fizzle Brassbolts · {zone:1418} Badlands
-	["{npc:4454}: for Martek in the {zone:1418}, later"] = "{npc:4454} : pour Martek dans {zone:1418}, plus tard",
+	-- plural, as words: Scorpid Reavers = {npc:4140} Scorpid Reaver · Saltstone Basilisks = {npc:4147} Saltstone Basilisk
+	["{object:19868} lies all over the flats. Scorpid Reavers roam the north half; keep to it, away from the Saltstone Basilisks, Crystalhides and Gazers (32-35) of the middle and the far south."] = "{object:19868} jonchent les Salines. Les Scorpides ravageurs parcourent la moitié nord : restez-y, loin des Basilics du sel gemme, Peaux de cristal et Contemplateurs (32-35) du centre et de l'extrême sud.",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Back to Menethil"] = "Retour à Menethil",
@@ -229,8 +222,10 @@ return {
 	-- ["For {npc:4048} in {zone:1444}, much later"] = "Pour {npc:4048} en {zone:1444}, bien plus tard",
 	-- ["From Theramore follow the road west out of Dustwallow into the {zone:1413} and south along it; give {area:378} a wide berth. {area:485} at the {zone:1413}' south end takes you down into {zone:1441}. The journal lies at the foot of the lift."] = "Depuis Theramore, suivez la route vers l'ouest pour quitter Âprefange et entrer dans {zone:1413}, puis vers le sud ; évitez largement {area:378}. {area:485}, à l'extrémité sud de {zone:1413}, vous fait descendre à {zone:1441}. Le journal se trouve au pied de l'élévateur.",
 	-- ["From {npc:352} in {zone:1453}"] = "De {npc:352} à {zone:1453}",
+	-- ["Group: highest player at most 4 levels above the lowest. Above 30? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 30 ? Attendre les autres.",
 	-- ["Group: highest player at most 4 levels above the lowest. Above 31? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 31 ? Attendre les autres.",
 	-- ["Head east again to the Dragonmaw camp. The four sets of Attack Plans lie in the {area:1036}; {npc:2091}, an elite, stands in the camp too."] = "Retournez vers l'est jusqu'au camp Dragonmaw. Les quatre jeux de plans d'attaque se trouvent au {area:1036} ; {npc:2091}, un élite, se tient aussi dans le camp.",
+	-- ["Hearth to Darkshire"] = "Pierre de foyer pour Sombre-Comté",
 	-- ["Hearth to {area:42}"] = "Pierre de foyer vers {area:42}",
 	-- ["Her house stands on the hill south-east of {area:42}."] = "Sa maison se trouve sur la colline au sud-est de {area:42}.",
 	-- ["Nightbane Shadow Weavers"] = "Tisseurs d'ombre Plaie-de-nuit",
@@ -273,9 +268,11 @@ return {
 	-- ["{npc:2104}, in {area:2103}; on the top floor"] = "{npc:2104}, dans {area:2103} ; au dernier étage",
 	-- ["{npc:267}, in the town hall"] = "{npc:267}, à l'hôtel de ville",
 	-- ["{npc:276}, at the east end of town"] = "{npc:276}, à l'extrémité est de la ville",
+	-- ["{npc:4454}: for Martek in the {zone:1418}, later"] = "{npc:4454} : pour Martek dans {zone:1418}, plus tard",
 	-- ["{npc:661}, by {npc:633}'s house"] = "{npc:661}, près de la maison de {npc:633}",
 	-- ["{npc:663}, by the town hall"] = "{npc:663}, près de l'hôtel de ville",
 	-- ["{npc:840} walks around {area:42}: look inside the circle on the map"] = "{npc:840} se promène autour de {area:42} : cherchez dans le cercle sur la carte",
 	-- ["{npc:840}, at the north entrance of town"] = "{npc:840}, à l'entrée nord de la ville",
 	-- ["{npc:840}, at the north entrance of town; walks around {area:42}: look inside the circle on the map"] = "{npc:840}, à l'entrée nord de la ville ; patrouille autour de {area:42} : regardez dans le cercle sur la carte",
+	-- ["{object:19868} lies all over the flats. Scorpid Reavers, Sparkleshell Tortoises and Saltstone Basilisks roam the north half, Crystalhides, Scorpid Terrors and Snappers the middle, and the Gazers (34-35, five levels above you: one at a time) the far south. Vultures circle over all of it."] = "{object:19868} jonchent les Salines. Les Scorpides ravageurs, Tortues nacrétoile et Basilics du sel gemme parcourent la moitié nord, les Peaux de cristal, Scorpides terrifiants et Mordeuses au milieu, et les Contemplateurs (34-35, cinq niveaux au-dessus de vous : un à la fois) à l'extrême sud. Des vautours tournoient au-dessus de tout cela.",
 }

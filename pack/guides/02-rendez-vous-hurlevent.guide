@@ -17,6 +17,6 @@ step Night Elves: Darnassus to Stormwind
 
 step Stormwind: meeting point
   zone Stormwind City
-  tip Group XP: keep the whole group within 4 levels. Ahead? Play class quests or professions solo, not zone quests.
+  tip Play at your own pace: quests already turned in tick themselves and the guide picks up where you are, so friends who play at other times can go ahead or fall behind. Together, group XP is best within 4 levels; ahead of the others, help them with their quests when you play together.
   getfp "Stormwind"
-  task "Group up with your friends"
+  task "Group up with your friends when they are online" optional

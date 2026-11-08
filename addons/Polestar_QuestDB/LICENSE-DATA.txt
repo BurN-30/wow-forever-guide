@@ -54,8 +54,8 @@ the web quest database: zone quest lists (XP, levels, Forever change notes)
 Revision: 4234 listed quests read 2026-10-16T16:29:21.749Z; cache data/sources/web/zones.json
 License: Public web pages; facts (ids, XP, levels, instance categories, rewards) only, used locally
 
-World of Warcraft: Forever client tables (UiMap, UiMapAssignment, AreaTable, ChrRaces, ChrClasses, CharBaseInfo, Faction, Map, ItemSparse, SpellName) read from the client (a saved copy of build 1.60.1.70532)
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+World of Warcraft: Forever client tables (UiMap, UiMapAssignment, AreaTable, ChrRaces, ChrClasses, CharBaseInfo, Faction, Map, ItemSparse, SpellName, SpellEffect) read from the installed client
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Revision: wow_classic_beta 1.60.1.70532
 License: Blizzard Entertainment game client data; factual map geometry, names, item durations and race/class combinations only
 
@@ -76,3 +76,9 @@ CMaNGOS classic-db: quest objective counts
 URL: https://raw.githubusercontent.com/cmangos/classic-db/22b51464f1625f6ef6275771de1f5466c6f5d19e/Full_DB/ClassicDB_1_12_1_z2815.sql.gz
 Revision: 22b51464f1625f6ef6275771de1f5466c6f5d19e
 License: GPL-3.0; quest objective counts only, used as facts: an objective whose count QuestieDB and pfQuest lack takes the matching quest_template count
+
+Forever TrinityCore world database (sniffed spawns, quest objectives, timers, loot, class and profession trainers)
+------------------------------------------------------------------------------------------------------------------
+URL: https://github.com/advocaite/TrinityCore/tree/forever
+Revision: forever-tdb-2026-10-14 + 367ac384fa20
+License: GPL-2.0; used as facts: objective counts, quest time limits and next quests, sniffed spawn positions (gathering nodes too), sniffed drop rates, class trainer lists and costs, profession trainers' learn ranks and costs

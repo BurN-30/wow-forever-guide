@@ -508,7 +508,7 @@ R("items", 159, 4801, [[
 4770	'Bristleback Belt;2;2952;80;2953;80;0
 4801	'Stalker Claws;1;2959;44;0
 ]])
-R("items", 4802, 8191, [[
+R("items", 4802, 8192, [[
 
 4802	'Cougar Claws;1;3035;44;0
 4803	'Prairie Alpha Tooth;1;2960;36;0
@@ -954,7 +954,6 @@ R("items", 4802, 8191, [[
 7848	'Rock Elemental Shard;8;2735;20;2736;20;2791;20;92;15;2745;15;2752;15;2919;15;8278;15;0
 7867	'Vessel of Dragon's Blood;1;2726;0;0
 7871	'Token of Thievery;0;1;121264;100
-7906	'Horns of Nez'ra;8;334;100;435;100;436;100;437;100;440;100;485;100;486;100;615;100;0
 7908	'Klaven Mortwake's Journal;0;1;123214;100
 7910	'Star Ruby;8;12396;6.7;12497;6.1;9397;5.6;8718;5.3;5718;4;13529;3.7;1840;3.5;11673;3.3;6;179697;2.3;142184;1.7;141979;1.5;2047;0.9;123309;0.9;150081;0.9
 7922	'Steel Plate Helm;0;0
@@ -1010,10 +1009,10 @@ R("items", 4802, 8191, [[
 8187	'Turtle Scale Gloves;0;0
 8189	'Turtle Scale Breastplate;0;0
 8191	'Turtle Scale Helm;0;0
-]])
-R("items", 8192, 13853, [[
-
 8192	'Nightscape Shoulders;0;0
+]])
+R("items", 8193, 13858, [[
+
 8193	'Nightscape Pants;0;0
 8197	'Nightscape Boots;0;0
 8198	'Turtle Scale Bracers;0;0
@@ -1513,10 +1512,10 @@ R("items", 8192, 13853, [[
 13850	'Rumbleshot's Ammo;0;1;176785;100
 13852	'The Grand Crusader's Command;0;0
 13853	'Slab of Carrion Worm Meat;3;8603;80;8605;80;222412;0;0
-]])
-R("items", 13858, 20560, [[
-
 13858	'Runecloth Robe;0;0
+]])
+R("items", 13864, 20606, [[
+
 13864	'Runecloth Boots;0;0
 13872	'Bundle of Wood;0;1;176793;100
 13890	'Plated Armorfish;0;0
@@ -2016,10 +2015,10 @@ R("items", 13858, 20560, [[
 20558	'Warsong Gulch Mark of Honor;0;0
 20559	'Arathi Basin Mark of Honor;0;0
 20560	'Alterac Valley Mark of Honor;0;0
-]])
-R("items", 20606, 264141, [[
-
 20606	'Amber Voodoo Feather;5;5713;100;5716;100;221759;0;221837;0;223588;0;0
+]])
+R("items", 20607, 264142, [[
+
 20607	'Blue Voodoo Feather;6;5715;100;5717;100;221833;0;221835;0;223586;0;223587;0;0
 20608	'Green Voodoo Feather;4;5712;100;5714;100;221834;0;221836;0;0
 20610	'Bloodshot Spider Eye;7;1809;20;1822;20;1821;2;1824;2;1810;0;1811;0;250488;0;0
@@ -2519,10 +2518,10 @@ R("items", 20606, 264141, [[
 264139	'Craftsman's Writ%3A Field Repair Bot 74A;0;0
 264140	'Craftsman's Writ%3A Truesilver Transformer;0;0
 264141	'Craftsman's Writ%3A Sniper Scope;0;0
-]])
-R("items", 264142, 286360, [[
-
 264142	'Craftsman's Writ%3A Tranquil Mechanical Yeti;0;0
+]])
+R("items", 264143, 286360, [[
+
 264143	'Craftsman's Writ%3A Wicked Leather Pants;0;0
 264144	'Craftsman's Writ%3A Gordok Ogre Suit;0;0
 264145	'Craftsman's Writ%3A Volcanic Breastplate;0;0

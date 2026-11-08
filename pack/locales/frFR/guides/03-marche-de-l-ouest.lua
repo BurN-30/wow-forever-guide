@@ -14,7 +14,7 @@ return {
 	["The Jansen Stead"] = "La ferme des Jansen",
 	-- {zone:1436} Westfall · {object:2724} Sack of Oats
 	["Follow the road from Elwynn into {zone:1436}: the Furlbrows sit by their burned farm, the first one on the road. Pick up oats from any {object:2724} you pass on the loop: the rest are gathered in the fields here on the way back."] = "Suivez la route depuis Elwynn vers {zone:1436} : les Furlbrow sont assis près de leur ferme brûlée, la première sur la route. Ramassez de l'avoine sur chaque {object:2724} que vous croisez dans la boucle : le reste est récolté dans les champs ici sur le chemin du retour.",
-	["Group: highest player at most 4 levels above the lowest. Above 14? Stop here and wait."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 14 ? Attendre les autres.",
+	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
 	-- {npc:237} Farmer Furlbrow · {npc:963} Deputy Rainer
 	["{npc:237}; Humans took it from {npc:963} in Elwynn"] = "{npc:237} ; les Humains l'ont pris à {npc:963} à Elwynn",
 
@@ -111,28 +111,24 @@ return {
 	-- {item:254676} Suspicious Industrial Supplies
 	["{item:254676}, from the crates around Moonbrook"] = "{item:254676}, dans les caisses autour de Lune-d'Argent",
 
-	-- Step 21: Hearth to Sentinel Hill
-	-- {object:81} Sentinel Hill
-	["Hearth to {object:81}"] = "Pierre de foyer vers {object:81}",
-
-	-- Step 22: Back to Sentinel Hill
+	-- Step 21: Back to Sentinel Hill
 	-- {object:81} Sentinel Hill
 	["Back to {object:81}"] = "Retour à {object:81}",
 	-- {npc:11026} Sprite Jumpsprocket · {zone:1453} Stormwind · {object:28027} Dwarven District
 	["For {npc:11026} in {zone:1453}'s {object:28027}"] = "Pour {npc:11026} dans {object:28027} de {zone:1453}",
 
-	-- Step 24: Defensive Stance
+	-- Step 23: Defensive Stance
 	["Defensive Stance"] = "Posture défensive",
 	-- {zone:1453} Stormwind · {npc:5480} Ilsa Corbin · {object:2100} Old Town · {npc:6089} Harry Burlguard · {npc:6090} Bartleby · {object:2152} Pig and Whistle Tavern
-	["Fly or walk to {zone:1453}. {npc:5480} trains warriors in {object:2100}; {npc:6089} and {npc:6090} stand together by the {object:2152} there. {npc:6090} fights you for his mug."] = "Volez ou marchez jusqu'à {zone:1453}. {npc:5480} entraîne les guerriers dans {object:2100} ; {npc:6089} et {npc:6090} se tiennent ensemble près de {object:2152} là-bas. {npc:6090} vous combat pour sa chope.",
+	["Walk to {zone:1453}. {npc:5480} trains warriors in {object:2100}; {npc:6089} and {npc:6090} stand together by the {object:2152} there. {npc:6090} fights you for his mug."] = "Marchez jusqu'à {zone:1453}. {npc:5480} entraîne les guerriers dans {object:2100} ; {npc:6089} et {npc:6090} se tiennent ensemble près de {object:2152}. {npc:6090} vous combat pour sa chope.",
 	-- {npc:6089} Harry Burlguard
 	["{npc:6089}: Defensive Stance"] = "{npc:6089} : Posture défensive",
 
-	-- Step 26: High Priestess Laurena
+	-- Step 25: High Priestess Laurena
 	-- {zone:1453} Stormwind · {npc:376} High Priestess Laurena
-	["Fly or walk to {zone:1453}. {npc:376} is in the Cathedral of Light."] = "Volez ou marchez jusqu'à {zone:1453}. {npc:376} est dans la Cathédrale de la Lumière.",
+	["Walk to {zone:1453}. {npc:376} is in the Cathedral of Light."] = "Marchez jusqu'à {zone:1453}. {npc:376} est dans la cathédrale de la Lumière.",
 
-	-- Step 28: The Tome of Divinity
+	-- Step 27: The Tome of Divinity
 	-- {npc:6171} Duthorian Rall · {npc:6173} Gazin Tenorm · {npc:6174} Stephanie Turner · {object:2096} Trade District · {item:2589} Linen Cloth
 	["{npc:6171} and {npc:6173} are in the Cathedral of Light; {npc:6174} stands in the {object:2096} and asks for ten {item:2589} (humanoids drop it; the Auction House sells it)."] = "{npc:6171} et {npc:6173} sont dans la Cathédrale de la Lumière ; {npc:6174} se tient dans {object:2096} et demande dix {item:2589} (les humanoïdes en lâchent, l'hôtel des ventes en vend).",
 	-- {item:6775} Tome of Divinity
@@ -140,52 +136,52 @@ return {
 	-- {npc:6172} Henze Faulk
 	["{npc:6172}, by Stone Cairn Lake in Elwynn, on the road to Redridge"] = "{npc:6172}, au lac des Cairns de pierre en Elwynn, sur la route des Carmines",
 
-	-- Step 30: Tram to Ironforge
+	-- Step 29: Tram to Ironforge
 	-- {zone:1455} Ironforge
 	["Tram to {zone:1455}"] = "Tram pour {zone:1455}",
 
-	-- Step 31: Shaman training
+	-- Step 30: Shaman training
 	["Shaman training"] = "Entraînement de chaman",
 	-- {zone:1453} Stormwind · {object:28027} Dwarven District · {zone:1455} Ironforge · {npc:258098} Eldrun Stormbreaker
 	["Head to {zone:1453}. It has no shaman trainer: take the Deeprun Tram from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back for the boat."] = "Allez à {zone:1453}. Il n'y a pas de maître des chamans : prenez le tram des Tréfonds depuis {object:28027} vers {zone:1455}, entraînez-vous avec {npc:258098}, puis reprenez le tram pour le bateau.",
 
-	-- Step 32: Stormwind
+	-- Step 31: Stormwind
 	-- {zone:1453} Stormwind · {object:2100} Old Town · {object:2101} Mage Quarter
-	["Fly or walk to {zone:1453}. Trainers: {object:2100} (Warriors, Rogues), the Cathedral (Paladins, Priests), the {object:2101} (Mages, Warlocks), the Park (Druids)."] = "Volez ou marchez jusqu'à {zone:1453}. Formateurs : {object:2100} (Guerriers, Voleurs), la Cathédrale (Paladins, Prêtres), {object:2101} (Mages, Démonistes), le Parc (Druides).",
+	["Walk to {zone:1453}, or fly if you know its flight path. Trainers: {object:2100} (Warriors, Rogues), the Cathedral (Paladins, Priests), the {object:2101} (Mages, Warlocks), the Park (Druids)."] = "Marchez jusqu'à {zone:1453}, ou volez si vous connaissez son point de vol. Maîtres de classe : {object:2100} (guerriers, voleurs), la cathédrale (paladins, prêtres), {object:2101} (mages, démonistes), le parc (druides).",
 	["Level 12, 14 and 16 spells"] = "Sorts des niveaux 12, 14 et 16",
 
-	-- Step 33: Back to Stormwind
+	-- Step 32: Back to Stormwind
 	-- {zone:1453} Stormwind
 	["Back to {zone:1453}"] = "Retour à {zone:1453}",
 	["Stormwind City"] = "Cité de Hurlevent",
 
-	-- Step 35: Stormwind
+	-- Step 34: Stormwind
 	-- {item:2449} Earthroot · {zone:1439} Darkshore · {npc:1313} Maria Lumere
 	["{item:2449} for Gathering the Cure (6123) in {zone:1439}: {npc:1313}, Alchemy Supplies; herbalists pick it there instead"] = "{item:2449} pour Rassembler les ingrédients du remède (6123) à {zone:1439} : {npc:1313}, Fournitures d'alchimie ; les herboristes la cueillent plutôt là-bas",
 	-- {npc:5497} Jennea Cannon · {quest:1861} Mirror Lake
 	["{npc:5497}, Wizard's Sanctum: {quest:1861}"] = "{npc:5497}, au sanctum des mages : {quest:1861}",
 
-	-- Step 38: Woo Ping
+	-- Step 37: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Two-Handed Swords from {npc:11867} ({object:2096}, 10 silver); two-handers level a Warrior fastest."] = "Pendant que vous êtes ici : apprenez Épées à deux mains auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; les armes à deux mains font monter un guerrier le plus vite.",
 
-	-- Step 39: Woo Ping
+	-- Step 38: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Two-Handed Swords from {npc:11867} ({object:2096}, 10 silver); two-handers level a Paladin fastest."] = "Pendant que vous êtes ici : apprenez Épées à deux mains auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; les armes à deux mains font monter un paladin le plus vite.",
 
-	-- Step 40: Woo Ping
+	-- Step 39: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Staves from {npc:11867} ({object:2096}, 10 silver); a Hunter's melee weapon is mostly its stats, and two-handers carry the most."] = "Pendant que vous y êtes : apprenez le maniement des bâtons auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; l'arme de mêlée d'un Chasseur vaut surtout par ses caractéristiques, et les armes à deux mains en portent le plus.",
 
-	-- Step 41: Woo Ping
+	-- Step 40: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Swords from {npc:11867} ({object:2096}, 10 silver); a sword in the main hand levels a Rogue steadily."] = "Pendant que vous y êtes : apprenez le maniement des épées auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; une épée en main droite fait progresser un Voleur régulièrement.",
 
-	-- Step 42: Woo Ping
+	-- Step 41: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Staves from {npc:11867} ({object:2096}, 10 silver); a staff carries more spell stats than a one-hander while you level."] = "Pendant que vous y êtes : apprenez le maniement des bâtons auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; un bâton apporte plus de caractéristiques de sorts qu'une arme à une main pendant la progression.",
 
-	-- Step 44: Fishin' Time
+	-- Step 43: Fishin' Time
 	-- {npc:5494} Catherine Leland · {object:2096} Trade District · {npc:267118} Gilbert Gray
 	["{npc:5494} sells fishing supplies along the canal just west of the {object:2096}; {npc:267118} fishes at the harbor, on the way to the boat."] = "{npc:5494} vend des articles de pêche le long du canal, juste à l'ouest de {object:2096} ; {npc:267118} pêche au port, sur le chemin du bateau.",
 	-- {item:6529} Shiny Bauble · {npc:5494} Catherine Leland
@@ -205,15 +201,20 @@ return {
 	-- ["Fly or ride to {zone:1453}. Trainers: {object:2100} (Warriors, Rogues), the Cathedral (Paladins, Priests), the {object:2101} (Mages, Warlocks), the {object:23299} (Druids). {npc:11026} works in the {object:28027}, {npc:279} in the {object:2096}."] = "Rendez-vous à {zone:1453} en vol ou à cheval. Maîtres : {object:2100} (guerriers, voleurs), la cathédrale (paladins, prêtres), {object:2101} (mages, démonistes), {object:23299} (druides). {npc:11026} travaille dans {object:28027}, {npc:279} dans {object:2096}.",
 	-- ["Fly or ride to {zone:1453}. {npc:376} is in the Cathedral of Light."] = "Rendez-vous à {zone:1453} en vol ou à cheval. {npc:376} est dans la cathédrale de la Lumière.",
 	-- ["Fly or ride to {zone:1453}. {npc:5480} trains warriors in {object:2100}; {npc:6089} and {npc:6090} stand together by the {object:2152} there. {npc:6090} fights you for his mug."] = "Rendez-vous à {zone:1453} en vol ou à cheval. {npc:5480} entraîne les guerriers dans {object:2100} ; {npc:6089} et {npc:6090} s'y tiennent ensemble près de {object:2152}. {npc:6090} vous affronte pour sa chope.",
+	-- ["Fly or walk to {zone:1453}. Trainers: {object:2100} (Warriors, Rogues), the Cathedral (Paladins, Priests), the {object:2101} (Mages, Warlocks), the Park (Druids)."] = "Volez ou marchez jusqu'à {zone:1453}. Formateurs : {object:2100} (Guerriers, Voleurs), la Cathédrale (Paladins, Prêtres), {object:2101} (Mages, Démonistes), le Parc (Druides).",
+	-- ["Fly or walk to {zone:1453}. {npc:376} is in the Cathedral of Light."] = "Volez ou marchez jusqu'à {zone:1453}. {npc:376} est dans la Cathédrale de la Lumière.",
+	-- ["Fly or walk to {zone:1453}. {npc:5480} trains warriors in {object:2100}; {npc:6089} and {npc:6090} stand together by the {object:2152} there. {npc:6090} fights you for his mug."] = "Volez ou marchez jusqu'à {zone:1453}. {npc:5480} entraîne les guerriers dans {object:2100} ; {npc:6089} et {npc:6090} se tiennent ensemble près de {object:2152} là-bas. {npc:6090} vous combat pour sa chope.",
 	-- ["Follow the road from Elwynn into {area:40}: the Furlbrows sit by their burned farm, the first one on the road. Pick up oats from any {object:2724} you pass on the loop: the rest are gathered in the fields here on the way back."] = "Suivez la route depuis la forêt d'Elwynn jusqu'à {area:40} : les Furlbrow sont assis près de leur ferme incendiée, la première sur la route. Ramassez de l'avoine sur chaque {object:2724} que vous croisez pendant la boucle : le reste se ramasse dans les champs d'ici, au retour.",
 	-- ["Follow the road from Elwynn into {zone:1436}: the Furlbrows sit by their burned farm, the first one on the road. Collect the oats from the Sacks of Oats in the fields as you go."] = "Suivez la route depuis Elwynn vers {zone:1436} : les Furlbrow sont assis près de leur ferme brûlée, la première sur la route. Ramassez l'avoine dans les Sacs d'avoine des champs en chemin.",
 	-- ["Follow the road north. {npc:233} stands outside, {npc:235} in the house, {npc:253395} in the barn to the west."] = "Suivez la route vers le nord. {npc:233} se tient dehors, {npc:235} dans la maison, {npc:253395} dans la grange à l'ouest.",
 	-- ["For {npc:266} in {area:69}, Redridge"] = "Pour {npc:266} à {area:69}, dans les Carmines",
 	-- ["Further north along the road. The Furlbrows sit by their burned farm. Collect the oats from the Sacks of Oats in the fields as you go and fill the vial at the stead's well."] = "Plus au nord sur la route. Les Furlbrow sont assis près de leur ferme incendiée. En chemin, ramassez l'avoine des Sacs d'avoine dans les champs et remplissez la fiole au puits de la ferme.",
 	-- ["Further north along the road. The Furlbrows sit by their burned farm. Collect the oats from the Sacks of Oats in the fields as you go."] = "Plus au nord sur la route. Les Furlbrow sont assis près de leur ferme incendiée. En chemin, ramassez l'avoine des Sacs d'avoine dans les champs.",
+	-- ["Group: highest player at most 4 levels above the lowest. Above 14? Stop here and wait."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 14 ? Attendre les autres.",
 	-- ["Group: highest player at most 4 levels above the lowest. Above 15? Stop here and wait."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 15 ? Attendre les autres.",
 	-- ["Head to {zone:1453}. It has no shaman trainer: take the {area:2257} from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back for the boat."] = "Allez à {zone:1453}. Il n'y a pas de formateur chaman : prenez le {area:2257} depuis {object:28027} jusqu'à {zone:1455}, entraînez-vous avec {npc:258098}, puis reprenez le tram pour le bateau.",
 	-- ["Hearth to {area:108}"] = "Pierre de foyer vers {area:108}",
+	-- ["Hearth to {object:81}"] = "Pierre de foyer vers {object:81}",
 	-- ["Hearthstone on cooldown? Follow the road north-east."] = "Pierre de foyer en recharge ? Suivez la route vers le nord-est.",
 	-- ["Murloc Coastrunners and Raiders line the beach north of the mine. They flee at low health: pull one at a time."] = "Des Cours-la-côte murlocs et des Ecumeurs murlocs bordent la plage au nord de la mine. Ils fuient quand ils sont blessés : attirez-les un par un.",
 	-- ["North of Molsen Farm. Defias Trappers and Smugglers camp outside the mine, Kobold Diggers work inside. {object:290} stands by the ruined house east of the mine."] = "Au nord de la ferme des Molsen. Des Trappeurs défias et des Contrebandiers défias campent devant la mine, des Terrassiers kobolds travaillent à l'intérieur. {object:290} se trouve près de la maison en ruine à l'est de la mine.",

@@ -1,5 +1,5 @@
-# Adapted from Polestar's guide forever/alliance/dwarf/01-dun-morogh (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3).
-# Changes: guide id, title, next guide, group notes. Quest steps kept as Polestar wrote them.
+# Adapted from Polestar's guide forever/alliance/dwarf/01-dun-morogh (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3, with the fixes of the same guide up to tag v0.3.4).
+# Changes: Scalding Mornbrew (3364) taken on the way back, as in the Gnome start, so its five minutes are enough; guide id, title, next guide, group notes. Quest steps kept as Polestar wrote them.
 guide groupe-alliance/01-depart-nain
 title Start · Dwarf: Dun Morogh
 folder Group Alliance
@@ -69,7 +69,6 @@ step Grelin Whitebeard
   tip Grelin and Nori Pridedrift camp at the south-west edge of the valley, below the troll cave.
   turnin 234                                  -- Grelin Whitebeard
   accept 182
-  accept 3364                                 -- Nori Pridedrift: timed, five minutes to reach Durnan in Anvilmar
 
 step Frostmane Troll Whelp on the way
   along until q182
@@ -85,6 +84,7 @@ step Coldridge Valley: kill these as you meet them
 
 step Grelin Whitebeard
   label q182
+  accept 3364                                 -- Nori Pridedrift: timed, five minutes to reach Durnan in Anvilmar
   turnin 182
   accept 218
 
@@ -154,10 +154,10 @@ step Kharanos
   tip Tharek works the forge west of the distillery.
   accept 400                                  -- Tharek Blackstone
   tip Then go in: Tannok, the innkeeper, Maxan and Ragnar. Gremlock's Cooking lesson waits for the return with the ribs, when the copper is there for it.
-  train class                                 -- Last: some classes' trainers stand outside
   accept 384                                  -- Ragnar Thunderbrew
   turnin 2160                                 -- Tannok Frosthammer, inside
   accept 99158                                -- Maxan Anvol, upstairs
+  train class                                 -- Last: some classes' trainers stand outside
 
 step Steelgrill's Depot
   tip Follow the road north-east from Kharanos to the depot below the Ironforge road.
@@ -399,7 +399,7 @@ step Earthseer Farsen
   accept 96392
 
 step Farsen's Watch
-  kill 264936 quest 96392.1 @64.9,58.5 map 1426
+  complete 96392 @64.9,58.5 map 1426           -- Talk to the scout at Farsen's Watch
 
 step Earthseer Farsen
   turnin 96392
@@ -442,6 +442,7 @@ step Dun Morogh: kill these as you meet them
   tip Snow Leopards and boars roam the snow between the ranch and the quarry. Blacksmiths: Copper Bars come from smelting Copper Ore or the trade vendors.
   collect 267414 quest 95212.1                -- Pristine Leopard Pelt
   collect 267416 quest 95217.2 optional       -- Toughened Boar Hide
+  collect 2840 quest 95217.1 optional         -- Copper Bar: smelt Copper Ore, or buy it at the Auction House
 
 step Gol'Bolar Quarry
   when onquest 95217
@@ -569,10 +570,6 @@ step Buliwyf Stonehand
   tip While you're here: learn Two-Handed Axes from Buliwyf Stonehand (Military Ward, 10 silver); two-handers level a Paladin fastest.
   train 11865                         -- Buliwyf Stonehand
 
-step Hearth to Thunderbrew Distillery
-  zone Dun Morogh
-  hearth "Thunderbrew Distillery"
-
 step Ironforge
   zone Ironforge
   goto 72.4,48.6 "Ironforge"
@@ -601,7 +598,7 @@ step The Tome of Divinity
   accept 1779
   turnin 1779                                 -- Muiredon Battleforge
   accept 1783
-  complete 1783 only Paladin @78.32,58.09 map 1426 era -- Use the Symbol of Life on Narm Faulk
+  use 6866 quest 1783.1 only Paladin @78.32,58.09 map 1426 era -- Use the Symbol of Life on Narm Faulk
   turnin 1783 only Paladin -- Narm Faulk
 
 step Narm Faulk
@@ -643,7 +640,7 @@ step Class trainer
 
 step Druid trainer
   only Druid
-  train class only Druid -- Alfina Nightgaze in Alterac Mountains; Dun Morogh has no druid trainer
+  train class only Druid -- Theridran in Stormwind City; Dun Morogh has no druid trainer
 
 step Buliwyf Stonehand
   only Warrior

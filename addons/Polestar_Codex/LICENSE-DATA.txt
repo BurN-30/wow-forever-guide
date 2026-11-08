@@ -31,8 +31,8 @@ the web quest database: zone quest lists (XP, levels, Forever change notes)
 Version: 4234 listed quests read 2026-10-16T16:29:21.749Z; cache data/sources/web/zones.json
 Licence: Public web pages; facts (ids, XP, levels, instance categories, rewards) only, used locally
 
-World of Warcraft: Forever client tables (UiMap, UiMapAssignment, AreaTable, ChrRaces, ChrClasses, CharBaseInfo, Faction, Map, ItemSparse, SpellName) read from the client (a saved copy of build 1.60.1.70532)
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+World of Warcraft: Forever client tables (UiMap, UiMapAssignment, AreaTable, ChrRaces, ChrClasses, CharBaseInfo, Faction, Map, ItemSparse, SpellName, SpellEffect) read from the installed client
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Version: wow_classic_beta 1.60.1.70532
 Licence: Blizzard Entertainment game client data; factual map geometry, names, item durations and race/class combinations only
 
@@ -50,6 +50,16 @@ CMaNGOS classic-db: quest objective counts
 ------------------------------------------
 Version: 22b51464f1625f6ef6275771de1f5466c6f5d19e
 Licence: GPL-3.0; quest objective counts only, used as facts: an objective whose count QuestieDB and pfQuest lack takes the matching quest_template count
+
+Forever TrinityCore world database (sniffed spawns, quest objectives, timers, loot, class and profession trainers)
+------------------------------------------------------------------------------------------------------------------
+Version: forever-tdb-2026-10-14 + 367ac384fa20
+Licence: GPL-2.0; used as facts: objective counts, quest time limits and next quests, sniffed spawn positions (gathering nodes too), sniffed drop rates, class trainer lists and costs, profession trainers' learn ranks and costs
+
+Polestar's open Forever database (forever-db): quest XP
+-------------------------------------------------------
+Version: 4293 quests; forever-db/data/quest.jsonl
+Licence: See forever-db/NOTICE.md and datapackage.json
 
 The web quest database's Forever pages: NPC and object pages, item tooltips, NPC list levels
 --------------------------------------------------------------------------------------------

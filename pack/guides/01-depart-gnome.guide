@@ -1,4 +1,4 @@
-# Adapted from Polestar's guide forever/alliance/gnome/01-dun-morogh (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3).
+# Adapted from Polestar's guide forever/alliance/gnome/01-dun-morogh (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3, with the fixes of the same guide up to tag v0.3.4).
 # Changes: guide id, title, next guide, group notes. Quest steps kept as Polestar wrote them.
 guide groupe-alliance/01-depart-gnome
 title Start · Gnome: Dun Morogh
@@ -380,7 +380,7 @@ step Earthseer Farsen
   accept 96392
 
 step Farsen's Watch
-  kill 264936 quest 96392.1 @64.9,58.5 map 1426
+  complete 96392 @64.9,58.5 map 1426           -- Talk to the scout at Farsen's Watch
 
 step Earthseer Farsen
   turnin 96392
@@ -424,6 +424,7 @@ step Dun Morogh: kill these as you meet them
   tip Snow Leopards and boars roam the snow between the ranch and the quarry. Blacksmiths: Copper Bars come from smelting Copper Ore or the trade vendors.
   collect 267414 quest 95212.1                -- Pristine Leopard Pelt
   collect 267416 quest 95217.2 optional       -- Toughened Boar Hide
+  collect 2840 quest 95217.1 optional         -- Copper Bar: smelt Copper Ore, or buy it at the Auction House
 
 step Gol'Bolar Quarry
   when onquest 95217
@@ -551,10 +552,6 @@ step Buliwyf Stonehand
   tip While you're here: learn Two-Handed Axes from Buliwyf Stonehand (Military Ward, 10 silver); two-handers level a Paladin fastest.
   train 11865                         -- Buliwyf Stonehand
 
-step Hearth to Thunderbrew Distillery
-  zone Dun Morogh
-  hearth "Thunderbrew Distillery"
-
 step Ironforge
   zone Ironforge
   goto 72.4,48.6 "Ironforge"
@@ -600,7 +597,7 @@ step Class trainer
 
 step Druid trainer
   only Druid
-  train class only Druid -- Alfina Nightgaze in Alterac Mountains; Dun Morogh has no druid trainer
+  train class only Druid -- Theridran in Stormwind City; Dun Morogh has no druid trainer
 
 step Buliwyf Stonehand
   only Warrior

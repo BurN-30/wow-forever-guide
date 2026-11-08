@@ -64,15 +64,15 @@ end
 
 C.Register("meta", {
 	build = "1.60.1.70532",
-	builtAt = "2026-11-02T16:05:25.128Z",
+	builtAt = "2026-11-06T22:03:08.242Z",
 	counts = {
 		instance = 30,
 		item = 19900,
 		mount = 139,
-		npc = 9524,
-		object = 1246,
+		npc = 9523,
+		object = 1244,
 		pet = 97,
-		quest = 5408,
+		quest = 5407,
 		rare = 411,
 		recipe = 2609,
 		tabard = 40,
@@ -297,8 +297,8 @@ C.Register("meta", {
 				notInForever = 0,
 				unverified = 0,
 			},
-			match = 662,
-			share = 0.961,
+			match = 583,
+			share = 0.846,
 			total = 689,
 		},
 		["quest chains"] = {
@@ -453,7 +453,7 @@ C.Register("meta", {
 		},
 		{
 			licence = "Blizzard Entertainment game client data; factual map geometry, names, item durations and race/class combinations only",
-			name = "World of Warcraft: Forever client tables (UiMap, UiMapAssignment, AreaTable, ChrRaces, ChrClasses, CharBaseInfo, Faction, Map, ItemSparse, SpellName) read from the client (a saved copy of build 1.60.1.70532)",
+			name = "World of Warcraft: Forever client tables (UiMap, UiMapAssignment, AreaTable, ChrRaces, ChrClasses, CharBaseInfo, Faction, Map, ItemSparse, SpellName, SpellEffect) read from the installed client",
 			version = "wow_classic_beta 1.60.1.70532",
 		},
 		{
@@ -470,6 +470,16 @@ C.Register("meta", {
 			licence = "GPL-3.0; quest objective counts only, used as facts: an objective whose count QuestieDB and pfQuest lack takes the matching quest_template count",
 			name = "CMaNGOS classic-db: quest objective counts",
 			version = "22b51464f1625f6ef6275771de1f5466c6f5d19e",
+		},
+		{
+			licence = "GPL-2.0; used as facts: objective counts, quest time limits and next quests, sniffed spawn positions (gathering nodes too), sniffed drop rates, class trainer lists and costs, profession trainers' learn ranks and costs",
+			name = "Forever TrinityCore world database (sniffed spawns, quest objectives, timers, loot, class and profession trainers)",
+			version = "forever-tdb-2026-10-14 + 367ac384fa20",
+		},
+		{
+			licence = "See forever-db/NOTICE.md and datapackage.json",
+			name = "Polestar's open Forever database (forever-db): quest XP",
+			version = "4293 quests; forever-db/data/quest.jsonl",
 		},
 		{
 			licence = "Public web pages; facts only (levels, classification, positions, drop counts, requirements)",

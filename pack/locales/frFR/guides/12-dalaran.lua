@@ -20,7 +20,7 @@ return {
 	-- Step 2: Southshore: Emissary Jacques
 	-- {npc:247264} Emissary Jacques
 	["Southshore: {npc:247264}"] = "Austrivage : {npc:247264}",
-	["His quest needs level 30: the whole group should wait for it."] = "Sa quête demande le niveau 30 : tout le groupe doit l'attendre.",
+	["His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own."] = "Sa quête demande le niveau 30 : en dessous, le guide attend ici. En avance sur les autres ? Prenez-la, ils la prendront plus tard auprès de lui de leur côté.",
 
 	-- Step 3: Image of Archmage Modera
 	-- {object:1772} Tarren Mill
@@ -46,4 +46,5 @@ return {
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Group 11 · City of Dalaran (dungeon 28-33)"] = "Groupe 11 · Cité de Dalaran (donjon 28-33)",
+	-- ["His quest needs level 30: the whole group should wait for it."] = "Sa quête demande le niveau 30 : tout le groupe doit l'attendre.",
 }

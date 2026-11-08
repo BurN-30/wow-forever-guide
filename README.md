@@ -19,14 +19,15 @@ Windows bloque le fichier ? Clic droit sur `Installer.bat` → **Propriétés** 
 - Le guide de ton personnage s'ouvre tout seul (voir « Premier lancement »). Changer : `/polestar guides` → **Guides de la communauté** → **Groupe Alliance**.
 - En haut à droite de la fenêtre du guide : la **roue dentée** ouvre les réglages de Polestar (flèche de direction, affichage, automatismes), **?** donne l'aide en bref.
 - **Réduire** : bouton **_** à côté du **?**. La fenêtre devient une petite icône Polestar (à glisser où on veut ; clic droit : fine bannière avec l'étape en cours ; clic : la fenêtre revient). Masquer : `/polestar hide`, le bouton Polestar de la minicarte, ou un raccourci dans Options > Raccourcis > Polestar.
-- **Survole** n'importe quelle ligne : l'infobulle explique tout, avec une astuce (en vert) sur les quêtes pénibles.
+- **Survole** n'importe quelle ligne : l'infobulle explique tout, avec une astuce (en vert) sur les quêtes pénibles. Une petite **étoile verte** en bout de ligne signale qu'une astuce attend.
+- **Carte** : les objectifs des quêtes (avec leur zone), les rendus prêts et les donneurs de quêtes jusqu'à 3 niveaux au-dessus s'affichent sur la carte du monde, ceux de l'étape en cours en avant, les autres atténués (rien sur la minicarte). Réglable dans la roue dentée, Quêtes.
 - **Ctrl+clic** sur une ligne : lien Wowhead prêt à copier (Ctrl+C), en français ou en anglais selon ton jeu (`/ga lang fr`, `en` ou `auto` pour forcer).
 - **?** dans une infobulle : info pas encore confirmée, à vérifier sur Wowhead.
 - Aucune action automatique, aucune fenêtre qui s'ouvre toute seule.
 
 ## Le parcours
 
-Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. Restez à 4 niveaux d'écart maximum : au-delà, l'XP de groupe baisse.
+Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. **Chacun joue à son rythme** : le guide relit le journal de quêtes à chaque connexion, coche tout seul ce qui est déjà rendu ou en cours, et reprend au bon endroit. Un joueur en avance n'est pas renvoyé vers les quêtes devenues grises (réglage « Passer les quêtes grises », activé par défaut). En groupe, avec Polestar chez tout le monde, le panneau de groupe s'ouvre seul et montre où en est chacun ; l'XP de groupe est meilleure à 4 niveaux d'écart ou moins.
 
 | Guide (`/polestar guides`, Guides de la communauté, Groupe Alliance) | Niveaux | Pour qui |
 |---|---|---|
@@ -85,7 +86,7 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
 <details>
 <summary>Crédits, licence et sources</summary>
 
-- **Polestar** © 2026 The Polestar authors, GPL-3.0 : moteur (dossiers `addons/Polestar*`, release 0.3.2 du 05/11/2026 ; modifiée par BurN-30 : le module Groupe Alliance est dans `Polestar/GroupeAlliance` et chargé par `Polestar.toc`, boutons réglages, aide et réduire dans `UI/GuideFrame.lua`, voir `tools/build.py`) et guides repris dans `pack/guides` (révision `08536e3` du 06/11/2026 ; chaque fichier repris le dit en tête).
+- **Polestar** © 2026 The Polestar authors, GPL-3.0 : moteur (dossiers `addons/Polestar*`, release 0.3.4 du 06/11/2026 ; modifiée par BurN-30 : le module Groupe Alliance est dans `Polestar/GroupeAlliance` et chargé par `Polestar.toc`, boutons réglages, aide et réduire dans `UI/GuideFrame.lua`, voir `tools/build.py`) et guides repris dans `pack/guides` (révision `08536e3` du 06/11/2026, plus les corrections de ces guides jusqu'au tag `v0.3.4` ; chaque fichier repris le dit en tête).
 - **Aurums Night Elf Druid Guide** © 2026 Aurum, GPL-3.0 : chapitres de donjon adaptés à toutes les classes.
 - **Lodestar Guides for Polestar** (conversion de [Lodestar](https://github.com/danielcosta42/lodestar)), licence MIT : guide Loch Modan adapté dans `pack/guides/13-solo-loch-modan.guide` (révision `cc3bf4f` du 21/10/2026 ; trajet réordonné, quêtes vérifiées sur les données Forever, quêtes hors de la zone retirées). Notice exigée par la licence MIT, reprise aussi dans `LICENSE` et en tête du fichier :
 
@@ -118,7 +119,7 @@ Jeu visé : WoW Forever (client 1.60.1). Sources consultées le 06/11/2026 :
 
 | Source | Mise à jour | Jeu | Usage |
 |---|---|---|---|
-| [Polestar](https://github.com/fitzforge/polestar) 0.3.2 et guides | 05-06/11/2026 | Forever | base reprise |
+| [Polestar](https://github.com/fitzforge/polestar) 0.3.4 et guides | 06/11/2026 | Forever | base reprise |
 | [Données Forever de Polestar](https://github.com/fitzforge/polestar/releases/tag/data-v2026.11.1) | 02/11/2026 | Forever | vérification des quêtes |
 | [QuestieDB Forever](https://github.com/Questie/Questie/releases) 1.0.11 | 06/11/2026 | Forever | vérification |
 | [wago.tools](https://wago.tools), client 1.60.1.70532 | 06/11/2026 | Forever | cartes et zones |
@@ -134,13 +135,16 @@ Textes français : ceux de Polestar, complétés par traduction automatique relu
 <details>
 <summary>Questie, modification du paquet</summary>
 
-**Questie** n'est pas inclus (plus de 200 Mo, Polestar a ses propres repères). Pour l'ajouter : [releases Questie](https://github.com/Questie/Questie/releases), copier les dossiers `Questie` et `QuestieDB` dans `World of Warcraft\_forever_\Interface\AddOns`.
+**Questie** n'est pas inclus : Polestar affiche déjà les mêmes repères de quêtes à partir de sa propre base (voir `docs/etude-questie-guidelime.md`). Pour l'ajouter quand même : [releases Questie](https://github.com/Questie/Questie/releases), copier les dossiers `Questie` et `QuestieDB` dans `World of Warcraft\_forever_\Interface\AddOns`.
 
-Guides : `pack/guides` (format Polestar, [aide-mémoire](https://github.com/fitzforge/polestar/blob/next/docs/GUIDE_CHEATSHEET.md)), textes français : `pack/locales/frFR`. Reconstruire avec [`forge`](https://github.com/fitzforge/polestar/releases) (forge-v0.2.0) :
+Guides : `pack/guides` (format Polestar, [aide-mémoire](https://github.com/fitzforge/polestar/blob/next/docs/GUIDE_CHEATSHEET.md)), textes français : `pack/locales/frFR`. Reconstruire avec [`forge`](https://github.com/fitzforge/polestar/releases) (forge-v0.2.0). Le clone de Polestar est au tag `v0.3.4`, avec dans `data/forever` les données de la release [`data-v2026.11.1`](https://github.com/fitzforge/polestar/releases/tag/data-v2026.11.1) (dossier ignoré par git, à copier à la main) :
 
 ```
 python tools/sync-fr.py <forge.exe> <clone de polestar>
-python tools/fill-fr.py tools/fr-texts.json
-python tools/build.py <forge.exe> <clone de polestar> <Polestar-0.3.2 dézippé>
+python tools/fill-fr.py tools/fr-texts-polestar.json tools/fr-texts.json
+python tools/build.py <forge.exe> <clone de polestar> <Polestar-0.3.4 dézippé>
+python tools/check-lua.py
 ```
+
+`check-lua.py` (Python et `pip install lupa`) vérifie la syntaxe Lua 5.1 du module et du paquet, et fait tourner le module Groupe Alliance contre de petites imitations du jeu : il attrape les fautes de frappe, pas les bugs visibles en jeu.
 </details>

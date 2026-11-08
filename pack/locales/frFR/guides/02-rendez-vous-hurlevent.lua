@@ -20,6 +20,10 @@ return {
 	-- Step 2: Stormwind: meeting point
 	-- {zone:1453} Stormwind
 	["{zone:1453}: meeting point"] = "{zone:1453} : point de rendez-vous",
-	["Group XP: keep the whole group within 4 levels. Ahead? Play class quests or professions solo, not zone quests."] = "XP de groupe : pas plus de 4 niveaux d'écart. En avance ? Quêtes de classe ou métiers en solo, pas les quêtes de zone.",
-	["Group up with your friends"] = "Former le groupe avec les autres",
+	["Play at your own pace: quests already turned in tick themselves and the guide picks up where you are, so friends who play at other times can go ahead or fall behind. Together, group XP is best within 4 levels; ahead of the others, help them with their quests when you play together."] = "Chacun joue à son rythme : les quêtes déjà rendues se cochent toutes seules et le guide reprend où vous en êtes, donc on peut prendre de l'avance ou du retard sur les autres. Ensemble, l'XP de groupe est meilleure à 4 niveaux d'écart ou moins ; en avance, aidez les autres sur leurs quêtes quand vous jouez ensemble.",
+	["Group up with your friends when they are online"] = "Former le groupe avec les autres s'ils sont connectés",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Group XP: keep the whole group within 4 levels. Ahead? Play class quests or professions solo, not zone quests."] = "XP de groupe : pas plus de 4 niveaux d'écart. En avance ? Quêtes de classe ou métiers en solo, pas les quêtes de zone.",
+	-- ["Group up with your friends"] = "Former le groupe avec les autres",
 }

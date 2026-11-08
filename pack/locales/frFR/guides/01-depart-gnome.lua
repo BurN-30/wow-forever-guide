@@ -290,6 +290,10 @@ return {
 	-- {object:149024} Gol'Bolar Quarry
 	["Farsen camps on the ridge overlooking the {object:149024} from the west. Talk to him for his farsight."] = "Farsen campe sur la crête surplombant le {object:149024} depuis l'ouest. Parlez-lui pour sa clairvoyance.",
 
+	-- Step 59: Farsen's Watch
+	-- {quest:96392} Farsen's Watch
+	["Talk to the scout at {quest:96392}"] = "Parlez à l'éclaireur pour {quest:96392}",
+
 	-- Step 61: Gol'Bolar Quarry
 	["The quarry lies just east of Farsen's ridge."] = "La carrière se trouve juste à l'est de la crête de Farsen.",
 	-- {npc:1977} Senator Mehr Stonehallow
@@ -319,6 +323,8 @@ return {
 	-- {item:2770} Copper Ore
 	-- plural, as words: Snow Leopards = {npc:1201} Snow Leopard · Copper Bars = {item:2840} Copper Bar
 	["Snow Leopards and boars roam the snow between the ranch and the quarry. Blacksmiths: Copper Bars come from smelting {item:2770} or the trade vendors."] = "Les Léopards des neiges et les sangliers parcourent la neige entre la ferme et la carrière. Forgerons : les Barres de cuivre s'obtiennent en fondant du {item:2770} ou auprès des marchands d'artisanat.",
+	-- {item:2840} Copper Bar · {item:2770} Copper Ore
+	["{item:2840}: smelt {item:2770}, or buy it at the Auction House"] = "{item:2840} : fondre du {item:2770}, ou l'acheter à l'hôtel des ventes",
 
 	-- Step 73: Protecting the Herd
 	-- {npc:1388} Vagash
@@ -398,23 +404,20 @@ return {
 	-- {npc:11865} Buliwyf Stonehand · {object:32359} Military Ward
 	["While you're here: learn Two-Handed Axes from {npc:11865} ({object:32359}, 10 silver); two-handers level a Paladin fastest."] = "Pendant que vous êtes ici : apprenez Haches à deux mains auprès de {npc:11865} ({object:32359}, 10 pièces d'argent) ; les armes à deux mains font monter un paladin le plus vite.",
 
-	-- Step 90: Hearth to Thunderbrew Distillery
-	["Hearth to Thunderbrew Distillery"] = "Pierre de foyer à la Distillerie Tonnerre",
-
-	-- Step 92: Inn and flight master
+	-- Step 91: Inn and flight master
 	["Inn and flight master"] = "Auberge et maître de vol",
 
-	-- Step 93: The Tome of Divinity
+	-- Step 92: The Tome of Divinity
 	-- {item:6775} Tome of Divinity
 	["The {item:6775}"] = "{item:6775}",
 	-- {zone:1455} Ironforge · {object:32362} Mystic Ward · {npc:5149} Brandur Ironhammer · {npc:6179} Tiza Battleforge · {npc:6178} Muiredon Battleforge · {object:32386} Hall of Mysteries · {npc:6175} John Turner · {item:2589} Linen Cloth · {zone:1426} Dun Morogh
 	["Follow the road up to {zone:1455} and take the {object:32362}: {npc:5149}, {npc:6179} and {npc:6178} are in the {object:32386}, Tiza and Muiredon on its upper floor: the stairs up start just north-east of {npc:5149}. {npc:6175}, a beggar, wanders the city. He asks for ten {item:2589}: the troggs and trolls of {zone:1426} drop it, and the Auction House sells it."] = "Suivez la route jusqu'à {zone:1455} et prenez le {object:32362} : {npc:5149}, {npc:6179} et {npc:6178} sont dans le {object:32386}, Tiza et Muiredon à l'étage supérieur : l'escalier commence juste au nord-est de {npc:5149}. {npc:6175}, un mendiant, erre dans la ville. Il demande dix {item:2589} : les troggs et trolls de {zone:1426} en laissent tomber, et l'Hôtel des ventes en vend.",
 
-	-- Step 94: Narm Faulk
+	-- Step 93: Narm Faulk
 	-- {zone:1455} Ironforge · {npc:6177} Narm Faulk · {item:6866} Symbol of Life
 	["Head back out of {zone:1455} and east along the road to Helm's Bed Lake. {npc:6177} lies dead by its shore: use the {item:6866} on him. The Dark Iron Spies sneaking around the lake carry the script."] = "Sortez de {zone:1455} et allez vers l'est le long de la route jusqu'au Lac du Lit de Helm. {npc:6177} gît mort sur sa rive : utilisez l'{item:6866} sur lui. Les Espions Sombrefer qui rôdent autour du lac portent le script.",
 
-	-- Step 96: Ironforge class quests
+	-- Step 95: Ironforge class quests
 	-- {zone:1455} Ironforge
 	["{zone:1455} class quests"] = "Quêtes de classe de {zone:1455}",
 	-- {npc:10090} Belia Thundergranite · {object:32390} Hall of Arms · {npc:258785} High Priestess Mims · {object:32386} Hall of Mysteries · {npc:6120} Lago Blackwrench · {object:32383} Forlorn Cavern
@@ -422,7 +425,7 @@ return {
 	-- {npc:6120} Lago Blackwrench · {npc:6122} Gakin the Darkbinder · {zone:1453} Stormwind
 	["{npc:6120}: {npc:6122} in {zone:1453} takes it"] = "{npc:6120} : à rendre à {npc:6122}, à {zone:1453}",
 
-	-- Step 97: The Deeprun Tram
+	-- Step 96: The Deeprun Tram
 	["The Deeprun Tram"] = "Le Tram des profondeurs",
 	-- {zone:1455} Ironforge · {object:171524} Tinker Town · {zone:1453} Stormwind
 	["Follow the road up to {zone:1455} and train with your class trainer. The Deeprun Tram leaves from {object:171524}, in the east of the city. Ride it to {zone:1453}."] = "Suivez la route jusqu'à {zone:1455} et entraînez-vous avec votre maître de classe. Le Tram des profondeurs part de {object:171524}, à l'est de la ville. Prenez-le pour {zone:1453}.",
@@ -431,81 +434,85 @@ return {
 	-- {npc:258098} Eldrun Stormbreaker · {object:32372} Great Forge
 	["{npc:258098}, the shaman trainer, north of the {object:32372}"] = "{npc:258098}, le maître des chamans, au nord de {object:32372}",
 
-	-- Step 98: Class trainer
+	-- Step 97: Class trainer
 	["Class trainer"] = "Maître de classe",
 
-	-- Step 99: Druid trainer
+	-- Step 98: Druid trainer
 	["Druid trainer"] = "Maître des druides",
-	-- {npc:270459} Alfina Nightgaze · {zone:1416} Alterac Mountains · {zone:1426} Dun Morogh
-	["{npc:270459} in {zone:1416}; {zone:1426} has no druid trainer"] = "{npc:270459} à {zone:1416} ; {zone:1426} n'a pas de maître druide",
+	-- {npc:5505} Theridran · {zone:1453} Stormwind · {zone:1426} Dun Morogh
+	["{npc:5505} in {zone:1453}; {zone:1426} has no druid trainer"] = "{npc:5505} à {zone:1453} ; {zone:1426} n'a pas de maître des druides",
 
-	-- Step 100: Buliwyf Stonehand
+	-- Step 99: Buliwyf Stonehand
 	-- {npc:11865} Buliwyf Stonehand · {object:32359} Military Ward
 	["While you're here: learn Two-Handed Axes from {npc:11865} ({object:32359}, 10 silver); two-handers level a Warrior fastest."] = "Pendant que vous êtes ici : apprenez Haches à deux mains auprès de {npc:11865} ({object:32359}, 10 pièces d'argent) ; les armes à deux mains font monter un guerrier le plus vite.",
 
-	-- Step 101: Buliwyf Stonehand
+	-- Step 100: Buliwyf Stonehand
 	-- {npc:11865} Buliwyf Stonehand · {object:32359} Military Ward
 	["While you're here: learn Two-Handed Maces from {npc:11865} ({object:32359}, 10 silver); two-handers level a Warrior fastest."] = "Pendant que vous êtes ici : apprenez Masses à deux mains auprès de {npc:11865} ({object:32359}, 10 pièces d'argent) ; les armes à deux mains font monter un guerrier le plus vite.",
 
-	-- Step 102: The Deeprun Tram
+	-- Step 101: The Deeprun Tram
 	-- {npc:1274} Senator Barin Redstone · {object:171709} High Seat
 	["{npc:1274}, in the {object:171709} with King Magni"] = "{npc:1274}, au {object:171709} avec le roi Magni",
 	["Deeprun Tram"] = "Tram des profondeurs",
 
-	-- Step 103: Tram to Stormwind
+	-- Step 102: Tram to Stormwind
 	-- {zone:1453} Stormwind
 	["Tram to {zone:1453}"] = "Tram pour {zone:1453}",
 
-	-- Step 104: Stormwind flight master
+	-- Step 103: Stormwind flight master
 	-- {zone:1453} Stormwind
 	["{zone:1453} flight master"] = "Maître de vol de {zone:1453}",
 
-	-- Step 105: Woo Ping
+	-- Step 104: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Two-Handed Swords from {npc:11867} ({object:2096}, 10 silver); two-handers level a Paladin fastest."] = "Pendant que vous êtes ici : apprenez Épées à deux mains auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; les armes à deux mains font monter un paladin le plus vite.",
 
-	-- Step 106: Woo Ping
+	-- Step 105: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Staves from {npc:11867} ({object:2096}, 10 silver); a Hunter's melee weapon is mostly its stats, and two-handers carry the most."] = "Pendant que vous y êtes : apprenez le maniement des bâtons auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; l'arme de mêlée d'un Chasseur vaut surtout par ses caractéristiques, et les armes à deux mains en portent le plus.",
 
-	-- Step 107: Woo Ping
+	-- Step 106: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Swords from {npc:11867} ({object:2096}, 10 silver); a sword in the main hand levels a Rogue steadily."] = "Pendant que vous y êtes : apprenez le maniement des épées auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; une épée en main droite fait progresser un Voleur régulièrement.",
 
-	-- Step 108: Defensive Stance
+	-- Step 107: Defensive Stance
 	["Defensive Stance"] = "Posture défensive",
 	-- {object:28027} Dwarven District · {npc:5480} Ilsa Corbin · {object:2100} Old Town · {npc:6089} Harry Burlguard · {npc:6090} Bartleby · {object:2152} Pig and Whistle Tavern
 	["The tram arrives in the {object:28027}. {npc:5480} trains warriors in {object:2100}; {npc:6089} and {npc:6090} stand together by the {object:2152} there. {npc:6090} fights you for his mug."] = "Le tram arrive dans {object:28027}. {npc:5480} entraîne les guerriers dans {object:2100} ; {npc:6089} et {npc:6090} s'y tiennent ensemble près de {object:2152}. {npc:6090} vous affronte pour sa chope.",
 	-- {npc:6089} Harry Burlguard
 	["{npc:6089}: Defensive Stance"] = "{npc:6089} : Posture défensive",
 
-	-- Step 109: Woo Ping
+	-- Step 108: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Two-Handed Swords from {npc:11867} ({object:2096}, 10 silver); two-handers level a Warrior fastest."] = "Pendant que vous êtes ici : apprenez Épées à deux mains auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; les armes à deux mains font monter un guerrier le plus vite.",
 
-	-- Step 110: Gakin the Darkbinder
+	-- Step 109: Gakin the Darkbinder
 	-- {npc:6122} Gakin the Darkbinder · {object:2164} Slaughtered Lamb · {object:2101} Mage Quarter
 	["{npc:6122} waits in the cellar of the {object:2164}, in the {object:2101}."] = "{npc:6122} attend dans la cave de {object:2164}, dans {object:2101}.",
 
-	-- Step 111: Woo Ping
+	-- Step 110: Woo Ping
 	-- {npc:11867} Woo Ping · {object:2096} Trade District
 	["While you're here: learn Staves from {npc:11867} ({object:2096}, 10 silver); a staff carries more spell stats than a one-hander while you level."] = "Pendant que vous y êtes : apprenez le maniement des bâtons auprès de {npc:11867} ({object:2096}, 10 pièces d'argent) ; un bâton apporte plus de caractéristiques de sorts qu'une arme à une main pendant la progression.",
 
-	-- Step 112: Surena Caledon
+	-- Step 111: Surena Caledon
 	-- {zone:1453} Stormwind · {npc:881} Surena Caledon
 	["Leave {zone:1453} by the main gate, go south to Goldshire and east along the road to the Brackwell Pumpkin Patch. {npc:881} (level 9) stands by its farmhouse."] = "Quittez {zone:1453} par la porte principale, allez au sud jusqu'à Comté-de-l'Or et vers l'est le long de la route jusqu'au Champ de citrouilles de Brackwell. {npc:881} (niveau 9) se tient près de sa ferme.",
 
-	-- Step 113: The Binding
+	-- Step 112: The Binding
 	-- {npc:6122} Gakin the Darkbinder · {item:6928} Bloodstone Choker · {object:2164} Slaughtered Lamb · {zone:1436} Westfall
 	["Back to {npc:6122}. Use the {item:6928} at the summoning circle in the {object:2164}'s cellar and defeat the voidwalker it calls. {zone:1436} is next, west of Goldshire."] = "Retournez voir {npc:6122}. Utilisez l'{item:6928} au cercle d'invocation dans la cave de {object:2164} et vainquez le marcheur du Vide qu'il invoque. {zone:1436} est la suite, à l'ouest de Comté-de-l'Or.",
 	["Subdue the voidwalker"] = "Soumettez le marcheur du Vide",
 	["Summon Voidwalker"] = "Invocation d'un marcheur du Vide",
 
-	-- Step 114: Jennea Cannon
+	-- Step 113: Jennea Cannon
 	-- {npc:5497} Jennea Cannon · {object:2101} Mage Quarter · {quest:1861} Mirror Lake
 	["{npc:5497} stands in the Wizard's Sanctum, the tower of the {object:2101}; she gives you a flask for the {quest:1861} waterfall."] = "{npc:5497} se tient dans le Sanctum des sorciers, la tour de {object:2101} ; elle vous donne une flasque pour la cascade de {quest:1861}.",
 
-	-- Step 115: Mirror Lake
+	-- Step 114: Mirror Lake
 	-- {zone:1453} Stormwind · {quest:1861} Mirror Lake · {zone:1436} Westfall · {item:7207} Jennea's Flask
 	["Leave {zone:1453} by the main gate. The {quest:1861} waterfall is south-west of the gates, on the way west to {zone:1436}: fill {item:7207} at its base."] = "Quittez {zone:1453} par la porte principale. La cascade du {quest:1861} se trouve au sud-ouest des portes, sur le chemin de la {zone:1436} à l'ouest : remplissez la {item:7207} à son pied.",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Hearth to Thunderbrew Distillery"] = "Pierre de foyer à la Distillerie Tonnerre",
+	-- ["{npc:270459} in {zone:1416}; {zone:1426} has no druid trainer"] = "{npc:270459} à {zone:1416} ; {zone:1426} n'a pas de maître druide",
 }

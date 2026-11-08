@@ -82,6 +82,83 @@ function Compat.GetPlayerInfo()
 	}
 end
 
+-- Character names. Forever's characters carry a surname. Its client gives
+-- a party member's as UnitName's second return, where other clients give
+-- the realm (Forever's FrameXML: Blizzard_FrameXMLUtil/Camelot/NameUtil.lua,
+-- `local name, surname = UnitName(unit)`); the player's own name comes
+-- either complete ("Ana Smith") or split the same way, and
+-- UnitNameUnmodified("player") splits it. Chat and addon-message senders
+-- read "Ana Smith" (Constants.CharacterNameSeparatorConsts'
+-- CHARACTERNAME_SURNAME_SEPARATOR, a space), with "-Realm" from another
+-- realm. RegionalUniqueNamesEnabled() is no guide (other addons on Forever
+-- found it off there). Other clients never name a realm for the player nor
+-- put a space in a name, so either of those for "player" means surnames.
+local function surnameSeparator()
+	local c = Constants and Constants.CharacterNameSeparatorConsts
+	local sep = c and c.CHARACTERNAME_SURNAME_SEPARATOR
+	return type(sep) == "string" and sep ~= "" and sep or " "
+end
+
+local function surnames()
+	for _, fn in ipairs({ UnitNameUnmodified or false, UnitName or false }) do
+		if fn then
+			local name, second = fn("player")
+			name, second = readable(name), readable(second)
+			if type(second) == "string" and second ~= "" then return true end
+			if type(name) == "string" and name:find(surnameSeparator(), 1, true) then return true end
+		end
+	end
+	return false
+end
+
+-- A unit's character name as chat senders give it once Ambiguate(sender,
+-- "none") has run: "Ana Smith" on Forever, "Ana" or "Ana-OtherRealm"
+-- (the realm without spaces or hyphens) elsewhere; and its first name, to
+-- show. nil while the client does not know it, false while it keeps it
+-- secret (identity restricted).
+function Compat.UnitFullName(unit)
+	if not UnitName then return nil end
+	local name, second = UnitName(unit)
+	if isSecret(name) or isSecret(second) then return false end
+	if type(name) ~= "string" or name == "" or name == UNKNOWNOBJECT then return nil end
+	local sep = surnameSeparator()
+	-- Already complete (Forever's player name).
+	local first = name:find(sep, 1, true) and name:sub(1, name:find(sep, 1, true) - 1)
+	if first and first ~= "" then return name, first end
+	if type(second) ~= "string" or second == "" then return name, name end
+	if surnames() then return name .. sep .. second, name end
+	return name .. "-" .. second:gsub("[%s%-]", ""), name
+end
+
+-- A chat or addon-message sender in Compat.UnitFullName's form, or nil.
+-- Forever's UnitName gives no realm, so there a sender's realm is left off.
+function Compat.SenderName(sender)
+	if type(sender) ~= "string" or isSecret(sender) or sender == "" then return nil end
+	local name = Ambiguate and Ambiguate(sender, "none") or sender
+	if type(name) ~= "string" or isSecret(name) then return nil end
+	if surnames() then name = name:match("^([^%-]+)") or name end
+	return name
+end
+
+-- Whether the client says a sender is `unit`: a group member's name is a
+-- unit id (other addons on Forever ask UnitInParty and UnitIsUnit with the
+-- "Ana Smith" sender). False when it cannot say or keeps the answer secret.
+function Compat.SenderIsUnit(sender, unit)
+	if type(sender) ~= "string" or isSecret(sender) or not UnitIsUnit then return false end
+	local name = Ambiguate and Ambiguate(sender, "none") or sender
+	if type(name) ~= "string" or isSecret(name) then return false end
+	local ok, same = pcall(UnitIsUnit, name, unit)
+	if not ok or isSecret(same) then return false end
+	return same and true or false
+end
+
+-- Whether a sender is the player (the game echoes group messages back).
+function Compat.SenderIsMe(sender)
+	local name = Compat.SenderName(sender)
+	if name ~= nil and name == Compat.UnitFullName("player") then return true end
+	return Compat.SenderIsUnit(sender, "player")
+end
+
 function Compat.GetPlayerFacing()
 	return GetPlayerFacing and GetPlayerFacing() or nil
 end
@@ -408,11 +485,27 @@ function Compat.IsQuestTrivial(qlvl, level)
 	return qlvl <= greyLevel(level)
 end
 
+-- A quest's level as the game shows it (the "[12]" before its title in the
+-- log: C_QuestLog.GetQuestDifficultyLevel), or nil when the client can't say.
+function Compat.GetQuestLevel(questID)
+	local QL = C_QuestLog
+	local level = QL and QL.GetQuestDifficultyLevel and Compat.Readable(QL.GetQuestDifficultyLevel(questID))
+	return type(level) == "number" and level > 0 and level or nil
+end
+
 -- includeBank: the bank's too (a key left there still counts as owned).
 function Compat.GetItemCount(itemID, includeBank)
 	local fn = (C_Item and C_Item.GetItemCount) or GetItemCount
 	if not fn then return 0 end
 	return fn(itemID, includeBank and true or nil) or 0
+end
+
+-- Whether an item does something when used (it has a spell): Tharnariun's
+-- Hope, a quest's trap. True where the client cannot tell.
+function Compat.ItemUsable(itemID)
+	local fn = (C_Item and C_Item.GetItemSpell) or GetItemSpell
+	if not fn then return true end
+	return fn(itemID) ~= nil
 end
 
 -- The client's quality for an item (0 poor .. 7 heirloom), or nil while the
@@ -430,6 +523,26 @@ function Compat.GetItemQuality(itemID)
 		if ok and type(q) == "number" then return q end
 	end
 	return nil
+end
+
+-- The colour the game's tooltip gives an item's name (r, g, b), or nil where
+-- the client has no C_TooltipInfo or the item is not loaded yet: its first
+-- line is then the red "Retrieving item information". Kept for the session.
+local itemTipColors = {}
+function Compat.ItemTipColor(itemID)
+	if type(itemID) ~= "number" then return nil end
+	local known = itemTipColors[itemID]
+	if known then return known[1], known[2], known[3] end
+	local get = C_TooltipInfo and C_TooltipInfo.GetItemByID
+	if not get then return nil end
+	local ok, data = pcall(get, itemID)
+	local line = ok and type(data) == "table" and type(data.lines) == "table" and data.lines[1]
+	if type(line) ~= "table" then return nil end
+	local text, c = line.leftText, line.leftColor
+	if type(text) ~= "string" or text == "" or isSecret(text) or text == RETRIEVING_ITEM_INFO then return nil end
+	if type(c) ~= "table" or type(c.r) ~= "number" or isSecret(c.r) then return nil end
+	itemTipColors[itemID] = { c.r, c.g, c.b }
+	return c.r, c.g, c.b
 end
 
 -- The client's colour for an item quality as "ffrrggbb" (|c escapes), or nil.
@@ -613,6 +726,34 @@ function Compat.GetPlayerMapPosition()
 	local x, y = xyOf(pos)
 	if not x or not y or (x == 0 and y == 0) then return nil end
 	return map, x * 100, y * 100
+end
+
+-- Where a party unit stands on its best map, as GetPlayerMapPosition gives
+-- it (map, x and y in 0-100); nil where the client does not say (an
+-- instance, a member out of the world, a client without party positions).
+function Compat.GetUnitMapPosition(unit)
+	if not (C_Map and C_Map.GetBestMapForUnit and C_Map.GetPlayerMapPosition) then return nil end
+	local map = C_Map.GetBestMapForUnit(unit)
+	if not map then return nil end
+	local pos = C_Map.GetPlayerMapPosition(map, unit)
+	local x, y = xyOf(pos)
+	if not x or not y or (x == 0 and y == 0) then return nil end
+	return map, x * 100, y * 100
+end
+
+-- The zone (Enum.UIMapType.Zone = 3) a unit is in: its best map, climbed
+-- through the parentMapID chain past caves, towns and other micro maps; nil
+-- when the client does not say (an instance, no C_Map).
+local ZONE_TYPE = 3
+function Compat.GetUnitZone(unit)
+	local map = C_Map and C_Map.GetBestMapForUnit and C_Map.GetBestMapForUnit(unit)
+	if not map then return nil end
+	for _ = 1, 12 do
+		local info = C_Map.GetMapInfo and C_Map.GetMapInfo(map)
+		if not info or (info.mapType or ZONE_TYPE) <= ZONE_TYPE or not info.parentMapID or info.parentMapID == 0 then break end
+		map = info.parentMapID
+	end
+	return map
 end
 
 -- Where the player stands, as guide lines ready to paste into a step: the

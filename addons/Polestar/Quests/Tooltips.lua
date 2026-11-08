@@ -17,7 +17,7 @@ local ADDON, ns = ...
 
 local Q = ns.QuestDB
 local L = ns.L
-local type, pairs = type, pairs
+local type, pairs, ipairs = type, pairs, ipairs
 
 local function tooltipsOn()
 	return Q.IsRunning() and ns.Get("qol.questTooltips")
@@ -87,6 +87,71 @@ local function addStartLines(tt, itemID)
 	return added
 end
 
+-- Quests the running guide still has ahead (from the live step on, whichever
+-- step is on screen) that the player has neither accepted nor handed in, by
+-- the items their objectives ask for: the log index above only knows quests
+-- already accepted. Only steps and goals for this character count (another
+-- class's or race's are left out). Built on first use for the live step,
+-- dropped when the guide or the database changes.
+local ahead, aheadFrom
+local function questsAhead()
+	local E = ns.Engine
+	local from = E and E.GetLiveStep and E.GetLiveStep()
+	if ahead and aheadFrom == from then return ahead end
+	ahead, aheadFrom = {}, from
+	local guide = from and E.GetGuide and E.GetGuide()
+	local steps = guide and type(guide.steps) == "table" and guide.steps
+	if not steps or not E.Applies then return ahead end
+	local C, seen = ns.Compat, {}
+	for s = from, #steps do
+		local goals = type(steps[s]) == "table" and E.Applies(s) and steps[s].goals
+		for g = 1, goals and #goals or 0 do
+			local q = goals[g].quest
+			if type(q) == "number" and not seen[q] and E.Applies(s, g) then
+				seen[q] = true
+				local rec = not C.IsQuestCompleted(q) and not C.IsOnQuest(q) and Q.GetQuest(q)
+				for _, o in ipairs(rec and rec.objectives or {}) do
+					if o.kind == "item" and o.id then
+						local list = ahead[o.id]
+						if not list then
+							list = {}
+							ahead[o.id] = list
+						end
+						list[#list + 1] = { q = q, n = o.count or 1 }
+					end
+				end
+			end
+		end
+	end
+	return ahead
+end
+
+-- Whether the running guide has a quest ahead that wants item itemID.
+function Q.IsItemNeededAhead(itemID)
+	return questsAhead()[itemID] ~= nil
+end
+
+-- The ahead list for an item: { { q = quest id, n = count }, ... } or nil.
+function Q.ItemAheadList(itemID)
+	return questsAhead()[itemID]
+end
+
+local function addAheadLines(tt, itemID)
+	local list = questsAhead()[itemID]
+	if not list then return 0 end
+	local qc, dim = Q.Color("quest"), Q.Color("textDim")
+	for i = 1, #list do
+		local e = list[i]
+		local have = ns.Compat.GetItemCount and ns.Compat.GetItemCount(itemID) or 0
+		addLine(tt, (Q.GetQuestTitle(e.q) or tostring(e.q)) .. ":", L["%d/%d (not accepted)"]:format(math.min(have, e.n), e.n), qc, dim)
+	end
+	return #list
+end
+
+ns.On("STEP_CHANGED", function() ahead = nil end)
+ns.On("GUIDE_CHANGED", function() ahead = nil end)
+ns.On("QUESTDB_UPDATED", function() ahead = nil end)
+
 -- Public so other tooltip paths (and tests) can ask for the same lines.
 function Q.AddUnitLines(tt, npcID)
 	if not (npcID and tooltipsOn()) then return 0 end
@@ -95,7 +160,7 @@ end
 
 function Q.AddItemLines(tt, itemID)
 	if not (itemID and tooltipsOn()) then return 0 end
-	return addObjectiveLines(tt, Q.ObjectivesForItem(itemID), 2, itemID) + addStartLines(tt, itemID)
+	return addObjectiveLines(tt, Q.ObjectivesForItem(itemID), 2, itemID) + addAheadLines(tt, itemID) + addStartLines(tt, itemID)
 end
 
 function Q.AddObjectLines(tt, objectID, name)
@@ -195,10 +260,19 @@ end
 -- then the base plate itself. Every access is guarded; a failure falls back
 -- to the base plate.
 local ICON_SIZE, ICON_MIN, ICON_MAX = 16, 14, 20
-local ICON_GAP = 3 -- px between the icon and the left end of the bar
+local ICON_GAP = 3 -- px between the icon and the end of the bar (or the name below it)
 local ICON_LIFT = 5 -- frame levels above the frame the icon sits on
 local COUNT_GAP = 2 -- px between the progress and the icon
 local isIcon = setmetatable({}, { __mode = "k" })
+
+-- Which side of the health bar the icon and its count sit on
+-- (qol.nameplateIconSide): left (the default), right, or above the name.
+-- Another addon's quest icon often takes the left end of the bar (#995).
+local SIDES = { left = true, right = true, above = true }
+local function iconSide()
+	local s = ns.Get("qol.nameplateIconSide")
+	return SIDES[s] and s or "left"
+end
 
 -- Walk `frame` and its children to depth `d`, looking for a visible FontString
 -- (other than our own icon frames) whose text matches an "N/M" objective count.
@@ -300,7 +374,9 @@ local function blizzardPlate(plate)
 end
 
 -- owner (icon parent), ref (frame the icon must sit above), bar, above (what
--- the icon sits on when there is no bar), replaced (a replacement plate found).
+-- the icon sits on when there is no bar), replaced (a replacement plate found),
+-- name (the unit's name text over the bar, if shown), level (Blizzard's level
+-- badge right of the bar, if shown).
 local function locate(plate, unit)
 	local host, bar = knownPlate(plate, unit)
 	if not host then host, bar = genericPlate(plate) end
@@ -308,22 +384,35 @@ local function locate(plate, unit)
 		-- Parented to the replacement frame: it follows that frame's alpha and
 		-- scale (non-target fading, target scaling) and hides with it.
 		if not shown(bar) then bar = nil end
-		local name = not bar and host.name
-		return host, bar or host, bar, shown(name) and name or host, true
+		local name = shown(host.name) and host.name or nil
+		return host, bar or host, bar, not bar and name or host, true, name, nil
 	end
 	local uf
 	uf, bar = blizzardPlate(plate)
 	if uf then
-		local name = not bar and uf.name
-		return plate, bar or uf, bar, shown(name) and name or plate, false
+		local name = shown(uf.name) and uf.name or nil
+		local level = shown(uf.PlayerLevelDiffFrame) and uf.PlayerLevelDiffFrame or shown(uf.LevelFrame) and uf.LevelFrame or nil
+		return plate, bar or uf, bar, not bar and name or plate, false, name, level
 	end
-	return plate, plate, nil, plate, false
+	return plate, plate, nil, plate, false, nil, nil
+end
+
+-- The progress goes on the far side of the icon from the bar: left of it
+-- when the icon is left of the bar, right of it otherwise.
+local function placeCount(f, side)
+	f.count:ClearAllPoints()
+	if side == "left" then
+		f.count:SetPoint("RIGHT", f, "LEFT", -COUNT_GAP, 0)
+	else
+		f.count:SetPoint("LEFT", f, "RIGHT", COUNT_GAP, 0)
+	end
 end
 
 -- Anchors `f` to what the player sees on `plate`. Returns ok, replaced.
 local function place(f, plate, unit)
-	local found, owner, ref, bar, above, replaced = pcall(locate, plate, unit)
-	if not found then owner, ref, bar, above, replaced = plate, plate, nil, plate, false end
+	local found, owner, ref, bar, above, replaced, name, level = pcall(locate, plate, unit)
+	if not found then owner, ref, bar, above, replaced, name, level = plate, plate, nil, plate, false, nil, nil end
+	local side = iconSide()
 	local ok = pcall(function()
 		f:SetParent(owner)
 		f:ClearAllPoints()
@@ -331,7 +420,13 @@ local function place(f, plate, unit)
 			local s = math.floor(bar:GetHeight() + 0.5)
 			if s < ICON_MIN then s = ICON_MIN elseif s > ICON_MAX then s = ICON_MAX end
 			f:SetSize(s, s)
-			f:SetPoint("RIGHT", bar, "LEFT", -ICON_GAP, 0)
+			if side == "right" then
+				f:SetPoint("LEFT", level or bar, "RIGHT", ICON_GAP, 0)
+			elseif side == "above" then
+				f:SetPoint("BOTTOM", name or bar, "TOP", 0, ICON_GAP)
+			else
+				f:SetPoint("RIGHT", bar, "LEFT", -ICON_GAP, 0)
+			end
 		else
 			f:SetSize(ICON_SIZE, ICON_SIZE)
 			f:SetPoint("BOTTOM", above, "TOP", 0, above == plate and -2 or 2)
@@ -339,6 +434,7 @@ local function place(f, plate, unit)
 		f:SetFrameStrata(ref:GetFrameStrata())
 		f:SetFrameLevel(ref:GetFrameLevel() + ICON_LIFT)
 	end)
+	placeCount(f, side)
 	f._hasBar = bar ~= nil
 	f._countChecked = nil
 	if ok or owner == plate then return ok, ok and replaced end
@@ -371,7 +467,6 @@ local function acquire(plate, unit)
 		else
 			fs:SetFontObject("GameFontHighlightSmall")
 		end
-		fs:SetPoint("RIGHT", f, "LEFT", -COUNT_GAP, 0)
 		fs:SetWordWrap(false)
 		f.count = fs
 		isIcon[f] = true
@@ -510,6 +605,15 @@ end
 
 ns.On("QUESTDB_UPDATED", refreshAll)
 ns.On("QUESTDB_STARTED", refreshAll)
+-- A new side moves the icons already on plates at once.
+local function replaceIcons()
+	for unit, f in pairs(icons) do
+		local plate = plateFor(unit)
+		if plate then place(f, plate, unit) end
+	end
+end
+
 ns.On("SETTING_CHANGED", function(path)
+	if path == "qol.nameplateIconSide" or path == "qol" or path == "" then replaceIcons() end
 	if path == "qol.nameplateIcons" or path == "qol.questTooltips" or path == "qol.questDB" or path == "qol" or path == "" then refreshAll() end
 end)

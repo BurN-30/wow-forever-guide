@@ -19,7 +19,7 @@ step Stormwind: two dungeon quests
 
 step Southshore: Emissary Jacques
   zone Hillsbrad Foothills
-  tip His quest needs level 30: the whole group should wait for it.
+  tip His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own.
   level 30
   getfp "Southshore"
   accept 92432

@@ -17,7 +17,7 @@ repo = pathlib.Path(__file__).resolve().parent.parent
 pack = repo / "pack"
 addons = repo / "addons"
 MODULE = ["Reliability.lua", "Tips.lua", "GroupeAlliance.lua"]
-NOTICE = "Modified by BurN-30 on 2026-11-06 (github.com/BurN-30/wow-forever-guide)"
+NOTICE = "Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide)"
 
 POLESTAR_CHANGES = [
     ("Polestar.toc", "Alts\\Alts.xml\n",
@@ -37,7 +37,7 @@ POLESTAR_CHANGES = [
      "Leveling guides for World of Warcraft: Forever.\r\n\r\n"
      + NOTICE + ": the GroupeAlliance folder (Wowhead links,\r\n"
      "quest tips, calm defaults) is loaded by Polestar.toc, and UI/GuideFrame.lua\r\n"
-     "has gear, \"?\" help and \"_\" reduce buttons. Everything else is Polestar 0.3.2 as released.\r\n"),
+     "has gear, \"?\" help and \"_\" reduce buttons. Everything else is Polestar 0.3.4 as released.\r\n"),
 ]
 
 def run(*args):

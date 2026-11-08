@@ -11,7 +11,7 @@ return {
 	["Group 7 · {zone:1431}"] = "Groupe 7 · {zone:1431}",
 
 	-- Step 1: Duskwood
-	["Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 24 ? Attendre les autres.",
+	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
 
 	-- Step 2: Darkshire
 	["Darkshire"] = "Sombre-Comté",
@@ -57,17 +57,17 @@ return {
 	-- plural, as words: Skeletal Warriors = {npc:48} Skeletal Warrior · Skeletal Mages = {npc:203} Skeletal Mage
 	["Skeletal Warriors and Skeletal Mages walk among the graves south-east of Darkshire, below {npc:302}'s house on the hill. Every skeleton in {zone:1431} can drop a {item:2378}.\nCareful: Because the skeletons stand near each other, running straight in tends to pull several at once."] = "Les guerriers squelettes et mages squelettes errent parmi les tombes au sud-est de Sombre-Comté, sous la maison de {npc:302} sur la colline. Chaque squelette de {zone:1431} peut laisser tomber {item:2378}.\nAttention : Comme les squelettes sont proches les uns des autres, foncer droit dedans a tendance à en attirer plusieurs à la fois.",
 
-	-- Step 7: Skeletal Fiend on the way
-	-- {npc:531} Skeletal Fiend
-	["{npc:531} on the way"] = "{npc:531} en chemin",
-
-	-- Step 8: Skeletal Horror on the way
+	-- Step 7: Skeletal Horror on the way
 	-- {npc:202} Skeletal Horror
 	["{npc:202} on the way"] = "{npc:202} en chemin",
 
-	-- Step 9: Watcher Dodds
+	-- Step 8: Watcher Dodds
 	-- {npc:888} Watcher Dodds
 	["{npc:888} stands south of the road, at the Yorgen Farmstead."] = "{npc:888} se tient au sud de la route, à la ferme des Yorgen.",
+
+	-- Step 9: Skeletal Fiend on the way
+	-- {npc:531} Skeletal Fiend
+	["{npc:531} on the way"] = "{npc:531} en chemin",
 
 	-- Step 10: Raven Hill
 	-- {object:102} Raven Hill · {object:673515} Memory of Valor
@@ -120,46 +120,43 @@ return {
 	-- Step 22: Abercrombie
 	["Head west along the road once more."] = "Repartez une fois de plus vers l'ouest par la route.",
 
-	-- Step 24: Hearth to Darkshire
-	["Hearth to Darkshire"] = "Pierre de foyer pour Sombre-Comté",
-
-	-- Step 25: Back to Darkshire
+	-- Step 24: Back to Darkshire
 	["Back to Darkshire"] = "Retour à Sombre-Comté",
 	["Head back east to Darkshire."] = "Revenez vers l'est à Sombre-Comté.",
 	-- {npc:273} Tavernkeep Smitts
 	["{npc:273}, in the tavern"] = "{npc:273}, dans la taverne",
 
-	-- Step 26: Rot Blossoms
+	-- Step 25: Rot Blossoms
 	-- plural, as words: Rot Blossoms = {item:1598} Rot Blossom
 	["Rot Blossoms"] = "Racines pourries ({item:1598})",
 	-- plural, as words: Skeletal Horrors = {npc:202} Skeletal Horror · Rot Blossoms = {item:1598} Rot Blossom
 	["Skeletal Horrors walk the hillside between Darkshire and the Tranquil Gardens Cemetery, south-east of town; they drop the Rot Blossoms."] = "Les horreurs squelettiques hantent le flanc de colline entre Sombre-Comté et le cimetière des Jardins tranquilles, au sud-est de la ville ; elles laissent tomber les fleurs de pourriture.",
 
-	-- Step 28: Abercrombie
+	-- Step 27: Abercrombie
 	["Head west to the hermit once more."] = "Retournez une fois de plus vers l'ouest jusqu'à l'ermite.",
 
-	-- Step 29: Ghoul Ribs
+	-- Step 28: Ghoul Ribs
 	-- plural, as words: Ghoul Ribs = {item:884} Ghoul Rib
 	["Ghoul Ribs"] = "Côtes de goule",
 	-- {npc:948} Rotted One
 	-- plural, as words: Flesh Eaters = {npc:3} Flesh Eater · Bone Chewers = {npc:210} Bone Chewer · Plague Spreaders = {npc:604} Plague Spreader · Brain Eaters = {npc:570} Brain Eater
 	["Every ghoul of the Raven Hill Cemetery's northern half can drop a rib: Flesh Eaters, Bone Chewers, Plague Spreaders and Brain Eaters.\nCareful: A {npc:948} casts Summon Flesh Eating Worms as it dies, which brings extra adds."] = "Chaque goule de la moitié nord du cimetière de la colline aux Corbeaux peut laisser tomber une côte : mangeurs de chair, rongeurs d'os, propagateurs de peste et mangeurs de cervelle.\nAttention : Un {npc:948} lance Invocation de vers mange-chair en mourant, ce qui fait apparaître des renforts.",
 
-	-- Step 31: Jitters
+	-- Step 30: Jitters
 	-- {npc:288} Jitters · {object:102} Raven Hill
 	["{npc:288} hides in the house at the west end of {object:102}."] = "{npc:288} se cache dans la maison à l'extrémité ouest de {object:102}.",
 
-	-- Step 32: Sven's Camp
+	-- Step 31: Sven's Camp
 	-- {zone:1453} Stormwind · {zone:1440} Ashenvale
 	["Next: {zone:1453} for training, then the boat from Stormwind Harbor to Auberdine for {zone:1440}."] = "Suivant : {zone:1453} pour l'entraînement, puis le bateau du port de Hurlevent à Auberdine pour {zone:1440}.",
 
-	-- Step 34: Agent Kearnen
+	-- Step 33: Agent Kearnen
 	-- {object:102} Raven Hill · {zone:1436} Westfall · {npc:7024} Agent Kearnen · {npc:7053} Klaven Mortwake · {npc:7051} Malformed Defias Drone
 	["Head west along the road out of {object:102} into {zone:1436}. {npc:7024} watches {npc:7053}'s tower from the hills just inside the border. The {npc:7051} (level 23) guarding the tower carries its key; Klaven's journal is in the chest at the top."] = "Prenez la route vers l'ouest hors de {object:102} vers {zone:1436}. {npc:7024} surveille la tour de {npc:7053} depuis les collines juste à l'intérieur de la frontière. Le {npc:7051} (niveau 23) qui garde la tour porte sa clé ; le journal de Klaven est dans le coffre au sommet.",
 	-- {item:7908} Klaven Mortwake's Journal
 	["{item:7908}, in the chest"] = "{item:7908}, dans le coffre",
 
-	-- Step 35: Master Mathias Shaw
+	-- Step 34: Master Mathias Shaw
 	-- {zone:1453} Stormwind · {object:2100} Old Town
 	["Head north through Elwynn to {zone:1453}; Mathias Shaw is at SI:7 in {object:2100}."] = "Remontez vers le nord à travers la forêt d'Elwynn jusqu'à {zone:1453} ; Mathias Shaw se trouve au SI:7, dans {object:2100}.",
 	-- {npc:332} Master Mathias Shaw · {item:18160} Recipe: Thistle Tea
@@ -171,33 +168,33 @@ return {
 	-- {item:3372} Leaded Vial · {npc:1313} Maria Lumere
 	["{item:3372}: {npc:1313}, Alchemy Supplies"] = "{item:3372} : {npc:1313}, Fournitures d'alchimie",
 
-	-- Step 36: Fly to Stormwind
+	-- Step 35: Fly to Stormwind
 	-- {zone:1453} Stormwind
 	["Fly to {zone:1453}"] = "Prendre un vol pour {zone:1453}",
 	-- {object:81} Sentinel Hill
 	["{object:81} flight master"] = "{object:81} maître de vol",
 
-	-- Step 37: Gazin Tenorm
+	-- Step 36: Gazin Tenorm
 	-- {npc:6173} Gazin Tenorm · {npc:6171} Duthorian Rall
 	["{npc:6173} and {npc:6171} are in the Cathedral of Light."] = "{npc:6173} et {npc:6171} sont dans la Cathédrale de la Lumière.",
 	-- {npc:6171} Duthorian Rall
 	["{npc:6171}: Redemption"] = "{npc:6171} : Rédemption",
 
-	-- Step 39: Tram to Ironforge
+	-- Step 38: Tram to Ironforge
 	-- {zone:1455} Ironforge
 	["Tram to {zone:1455}"] = "Tram pour {zone:1455}",
 
-	-- Step 40: Shaman training
+	-- Step 39: Shaman training
 	["Shaman training"] = "Entraînement de chaman",
 	-- {zone:1453} Stormwind · {object:28027} Dwarven District · {zone:1455} Ironforge · {npc:258098} Eldrun Stormbreaker
 	["{zone:1453} has no shaman trainer: take the Deeprun Tram from the {object:28027} to {zone:1455}, train with {npc:258098}, then ride the tram back for the Auberdine boat."] = "{zone:1453} n'a pas de maître des chamans : prenez le tram des Tréfonds depuis {object:28027} jusqu'à {zone:1455}, entraînez-vous avec {npc:258098}, puis reprenez le tram pour le bateau d'Auberdine.",
 
-	-- Step 41: Rogue training
+	-- Step 40: Rogue training
 	["Rogue training"] = "Entraînement de voleur",
 	-- {zone:1453} Stormwind
 	["Train here, in {zone:1453}, before you go on."] = "Entraînez-vous ici, à {zone:1453}, avant de continuer.",
 
-	-- Step 43: Class trainer
+	-- Step 42: Class trainer
 	["Class trainer"] = "Maître de classe",
 	["Level 22 and 24 spells"] = "Sorts des niveaux 22 et 24",
 
@@ -208,10 +205,12 @@ return {
 	-- ["Every ghoul of the {area:492}'s northern half can drop a rib: Flesh Eaters, Bone Chewers, Plague Spreaders and Brain Eaters.\nCareful: A {npc:948} casts {spell:3428} as it dies, which brings extra adds."] = "Toutes les goules de la moitié nord du {area:492} peuvent lâcher une côte : Dévoreurs, Mâcheurs d'os, Répandeurs de peste et Mangeurs de cervelle.\nAttention : un {npc:948} lance {spell:3428} en mourant, ce qui fait apparaître des renforts.",
 	-- ["Follow the road south from {area:1002} into {area:10}; {area:42} lies on the east side of the forest."] = "Suivez la route vers le sud depuis {area:1002} jusqu'au {area:10} ; {area:42} se trouve à l'est de la forêt.",
 	-- ["Follow the road south from {area:1002} into {zone:1431}; {area:42} lies on the east side of the forest."] = "Suivez la route vers le sud depuis {area:1002} jusqu'à {zone:1431} ; {area:42} se trouve du côté est de la forêt.",
+	-- ["Group: highest player at most 4 levels above the lowest. Above 24? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 24 ? Attendre les autres.",
 	-- ["Group: highest player at most 4 levels above the lowest. Above 26? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 26 ? Attendre les autres.",
 	-- ["Head back east along the road to the {area:245}."] = "Retournez vers l'est par la route jusqu'à {area:245}.",
 	-- ["Head back east to {area:42}."] = "Retournez vers l'est jusqu'à {area:42}.",
 	-- ["Head west along the road out of {area:94} into {area:40}. {npc:7024} watches {npc:7053}'s tower from the hills just inside the border. The {npc:7051} (level 23) guarding the tower carries its key; Klaven's journal is in the chest at the top."] = "Suivez la route vers l'ouest pour quitter {area:94} et entrer en {area:40}. {npc:7024} surveille la tour de {npc:7053} depuis les collines juste après la frontière. Le {npc:7051} (niveau 23) qui garde la tour porte sa clé ; le journal de Klaven se trouve dans le coffre au sommet.",
+	-- ["Hearth to Darkshire"] = "Pierre de foyer pour Sombre-Comté",
 	-- ["Hearth to {area:42}"] = "Pierre de foyer vers {area:42}",
 	-- ["Her house stands on the hill south-east of {area:42}, above the {area:121}."] = "Sa maison se trouve sur la colline au sud-est de {area:42}, au-dessus de {area:121}.",
 	-- ["Next: {zone:1453} for training, then the boat from {area:17203} to {area:442} for {zone:1440}."] = "Ensuite : {zone:1453} pour l'entraînement, puis le bateau de {area:17203} pour {area:442}, vers {zone:1440}.",

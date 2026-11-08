@@ -12,7 +12,14 @@
 --    can still change them in Polestar's options): no auto accept or turn-in,
 --    no guide-end or route-choice window, no class guide offered by itself,
 --    group quests done, guides suggested from this pack first (Polestar's own
---    fill in where it has none), no welcome window, Polestar's minimap button on.
+--    fill in where it has none), no welcome window, Polestar's minimap button on,
+--    grey quests left out (friends play at different times: whoever is ahead
+--    is not sent back to quests that no longer give XP), and Polestar's quest
+--    map marks on (objectives and their areas, turn-ins, quest givers up to 3
+--    levels above, the guide's quests lit, the others dimmed; not on the
+--    minimap): what Questie would add, from Polestar's own quest data.
+--  * A small green mark at the end of a guide line whose quest has a tip:
+--    hover it to read the tip.
 --  * /ga lang auto|fr|en: language of the links (default: the client's).
 local _, ns = ...
 local GA = ns.GA or {}
@@ -26,6 +33,16 @@ ns.RegisterDefaults("behavior", {
 	offerClassQuests = false, -- no tab opening by itself: class quests are in this pack's guides
 	groupQuests = "do", -- a group of friends: group quests are done, no question
 	suggestFrom = "groupe-alliance", -- this pack first, Polestar fills in
+	skipGrey = true, -- whoever went ahead alone is not sent back to grey quests
+})
+-- Polestar's quest marks (Quests/QuestDB.lua), off by default there.
+ns.RegisterDefaults("qol", {
+	mapObjectives = true,
+	objectiveAreas = true,
+	turnInMarkers = true,
+	availableQuests = true,
+	questLevelWindow = 3,
+	guideDim = true,
 })
 -- Polestar's own minimap button (Maps/MinimapButton.lua), off by default
 -- outside the gamepad interface: on, a click shows or hides the guide.
@@ -131,6 +148,24 @@ end
 
 -- Polestar's tooltips go through Widgets.Tooltip(owner, anchor, title, lines);
 -- a goal row carries its goal as owner.psGoal.
+-- The tip mark: Polestar's own star (Media/UI/star.tga, 32x32), tinted the
+-- tooltip's tip green, after the line's text.
+local TIP_MARK = "  |TInterface\\AddOns\\Polestar\\Media\\UI\\star:12:12:0:0:32:32:0:32:0:32:140:255:140|t"
+local function markTips()
+	local UI = ns.UI
+	if not (UI and UI.GoalLine) or UI.psGATipMark then return end
+	local line = UI.GoalLine
+	UI.GoalLine = function(goal, ...)
+		local text = line(goal, ...)
+		local q = type(goal) == "table" and goal.quest
+		if q and GA.Tips and GA.Tips[q] and goal.status ~= "done" and goal.status ~= "skipped" and type(text) == "string" then
+			return text .. TIP_MARK
+		end
+		return text
+	end
+	UI.psGATipMark = true
+end
+
 local hooked = setmetatable({}, { __mode = "k" })
 local function afterTooltip(owner)
 	if not (owner and owner.psGoal and GameTooltip:IsOwned(owner)) then return end
@@ -377,6 +412,7 @@ ns.OnInit(function()
 	if (tonumber(db.welcomeSeen) or 0) < 1 then db.welcomeSeen = 1 end
 	local W = ns.Widgets
 	if W and W.Tooltip then hooksecurefunc(W, "Tooltip", afterTooltip) end
+	markTips()
 	-- The bug button sends reports to Polestar's Discord: say where ours go.
 	local GF = ns.UI and ns.UI.GuideFrame
 	local nav = GF and GF.menuButton and GF.menuButton:GetParent()

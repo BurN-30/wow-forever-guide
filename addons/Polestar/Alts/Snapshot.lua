@@ -60,11 +60,23 @@ local function chars()
 	return db.alts.chars
 end
 
--- Formed exactly as Maps/Instances.lua's charName() forms it.
+-- "Name-Realm", the name as Compat.UnitFullName gives it ("Ana Smith" on
+-- Forever, whose names carry a surname, so two characters with one first
+-- name keep their own entries). Formed exactly as Maps/Instances.lua's
+-- charName() forms it.
 function Alts.Key()
 	local info = Compat and Compat.GetPlayerInfo and Compat.GetPlayerInfo()
-	if not (info and info.name) then return nil end
-	return info.realm and (info.name .. "-" .. info.realm) or info.name
+	local name = Compat and Compat.UnitFullName and Compat.UnitFullName("player")
+	if not (info and name) then return nil end
+	return info.realm and (name .. "-" .. info.realm) or name
+end
+
+-- The key up to 0.3.3, the first name alone: what a Forever character's
+-- entry was filed under before; nil when it is the same as `key`.
+local function oldKey(key)
+	local info = Compat.GetPlayerInfo()
+	local old = info and info.name and (info.realm and (info.name .. "-" .. info.realm) or info.name)
+	return old ~= key and old or nil
 end
 
 local function maxLevel()
@@ -103,7 +115,8 @@ local function tabList()
 	local out = {}
 	for i = 1, min(#list, MAX_TABS) do
 		local t = list[i]
-		out[i] = { id = t.guideId, title = t.title, step = t.stepIndex, count = t.stepCount, complete = t.complete or nil }
+		-- The step as that character counts it (#942: steps not theirs left out).
+		out[i] = { id = t.guideId, title = t.title, step = t.stepNumber or t.stepIndex, count = t.stepTotal or t.stepCount, complete = t.complete or nil }
 	end
 	if #out == 0 then return nil end
 	return out, active
@@ -164,7 +177,10 @@ function Alts.Write(silent, touch)
 		return true
 	end
 	if type(e) ~= "table" then
-		e = {}
+		-- Filed under the first name alone before (0.3.3): moved to this key.
+		local old = oldKey(key)
+		e = old and type(store[old]) == "table" and store[old] or {}
+		if old then store[old] = nil end
 		store[key] = e
 	end
 	e.key = key
@@ -174,7 +190,7 @@ function Alts.Write(silent, touch)
 		if resting ~= nil then e.resting = resting and true or nil end
 		e.rested = liveRested()
 		local info = Compat.GetPlayerInfo()
-		e.name, e.realm = info.name or e.name, info.realm or e.realm
+		e.name, e.realm = Compat.UnitFullName("player") or info.name or e.name, info.realm or e.realm
 		e.class, e.race = info.class or e.class, info.race or e.race
 		e.faction = Compat.GetPlayerFaction() or e.faction
 		local level = number(UnitLevel and UnitLevel("player"))
