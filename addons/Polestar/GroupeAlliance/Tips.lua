@@ -400,8 +400,8 @@ ns.GA.Tips = {
 		enUS = "\"Buzzbox 827\" is the quest's real name: a buzzbox is a small robot box standing out in the wild. You hand the quest in to it and it gives the next one, up to Buzzbox 525.",
 	},
 	[986] = { -- A Lost Master (wowhead forever)
-		frFR = "Seuls les mâles et les matriarches comptent et ils lâchent peu ; tuer aussi les grands oiseaux du coin, qui partagent leurs points d'apparition, en fait revenir.",
-		enUS = "Only sires and matriarchs count and drops are poor; killing the local foreststriders, which share their spawns, brings more of them.",
+		frFR = "Seuls les Géniteurs traquelunes et les Matriarches traquelunes lâchent la peau (environ 4 fois sur 10) ; les Traquelunes simples et chétifs ne lâchent rien. Tuer aussi les grands oiseaux du coin, qui partagent leurs points d'apparition, fait revenir les bons.",
+		enUS = "Only Moonstalker Sires and Moonstalker Matriarchs drop the pelt (about 4 times in 10); plain and runt Moonstalkers drop nothing. Killing the local foreststriders, which share their spawns, brings the right ones back.",
 	},
 	[990] = { -- Trek to Ashenvale (wowhead forever)
 		frFR = "Après le rendu de l'évasion de Volcor, attendre un peu : la sentinelle Selarin arrive en courant et la propose.",

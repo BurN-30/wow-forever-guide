@@ -2,6 +2,14 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.7.1 (2026-11-08)
+
+### Français
+- Un maître perdu (Sombrivage) : l'astuce donne les vrais noms des monstres qui lâchent la Belle peau de traquelune (Géniteur et Matriarche traquelunes, pas les Traquelunes simples).
+
+### English
+- A Lost Master (Darkshore): the tip now names the creatures that drop the Fine Moonstalker Pelt (Moonstalker Sires and Matriarchs, not plain Moonstalkers).
+
 ## v0.7.0 (2026-11-08)
 
 ### Français
