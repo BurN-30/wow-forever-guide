@@ -322,9 +322,21 @@ step Mage Quarter
   accept 690                          -- Archmage Malin
   accept 1301                         -- Connor Rivers
 
+# Groupe Alliance 0.6.1: the City of Dalaran rewards (12-dalaran), on this Stormwind stop's way
+# instead of a trip back from Silverpine: Andromath beside the Mage Quarter step, Shylamiir on the
+# way to the harbour.
+
+step High Sorcerer Andromath
+  when onquest 92489
+  turnin 92489
+
 step Elling Trias
   turnin 1247
   accept 1248
+
+step Shylamiir
+  when onquest 92456
+  turnin 92456
 
 step Boat to Auberdine
   zone Stormwind City

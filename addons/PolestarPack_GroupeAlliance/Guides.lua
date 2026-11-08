@@ -8195,7 +8195,7 @@ do
 			next = "groupe-alliance/14-paluns-hautebrande",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:251961"] = "Arcane Mote", ["item:2933"] = "Seal of Wrynn", ["item:4306"] = "Silk Cloth", ["npc:1646"] = "Baros Alexston", ["npc:1749"] = "Lady Katrana Prestor", ["npc:1755"] = "Marzon the Silent Blade", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:482"] = "Elling Trias", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["npc:7766"] = "Tyrion", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2159"] = "City Hall", ["quest:395"] = "Brotherhood's End", ["quest:434"] = "The Attack!", ["quest:92432"] = "An Alarming Request", ["zone:1453"] = "Stormwind" },
+			names = { ["item:251961"] = "Arcane Mote", ["item:2933"] = "Seal of Wrynn", ["item:4306"] = "Silk Cloth", ["npc:1646"] = "Baros Alexston", ["npc:1749"] = "Lady Katrana Prestor", ["npc:1755"] = "Marzon the Silent Blade", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:482"] = "Elling Trias", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["npc:7766"] = "Tyrion", ["object:1162"] = "Menethil Harbor", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2159"] = "City Hall", ["quest:395"] = "Brotherhood's End", ["quest:434"] = "The Attack!", ["quest:92432"] = "An Alarming Request", ["zone:1453"] = "Stormwind" },
 			written = { ["Overhear Lescovar and {npc:1755} in the garden, then kill both"] = "Overhear Lescovar and Marzon in the garden, then kill both" },
 			steps = {
 				{
@@ -8293,13 +8293,7 @@ do
 					goals = {
 						{ t = "turnin", quest = 92457, title = "Starving Arcane", npc = 269127, npcName = "Image of Archmage Modera", map = 1421, x = 68.62, y = 45.13, f = "e" },
 						{ t = "turnin", quest = 92458, title = "Heart of Disruption", npc = 269127, npcName = "Image of Archmage Modera", map = 1421, x = 68.62, y = 45.13, f = "e" },
-					},
-				},
-				{
-					title = "{zone:1453} rewards",
-					goals = {
-						{ t = "turnin", quest = 92456, title = "A Green Sample", npc = 5502, npcName = "Shylamiir", map = 1453, x = 31.5, y = 62.61, z = 98.3 },
-						{ t = "turnin", quest = 92489, title = "Power Overwhelming", npc = 5694, npcName = "High Sorcerer Andromath", map = 1453, x = 48.71, y = 87.62, z = 148.7 },
+						{ t = "note", text = "Next: {object:1162}, where your hearthstone is still bound (Deepwater Tavern). {npc:5502} and {npc:5694} take their quests at the next guide's {zone:1453} stop." },
 					},
 				},
 			},
@@ -8549,7 +8543,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:2321"] = "Fine Thread", ["item:279996"] = "Goaz Stone", ["item:2997"] = "Bolt of Woolen Cloth", ["item:3713"] = "Soothing Spices", ["item:3719"] = "Hillman's Cloak", ["item:4433"] = "Waterlogged Envelope", ["npc:1071"] = "Longbraid the Grim", ["npc:1072"] = "Roggo Harlbarrow", ["npc:1075"] = "Rhag Garmason", ["npc:1077"] = "Prospector Whelgar", ["npc:1356"] = "Prospector Stormpike", ["npc:1418"] = "Bluegill Raider", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:211033"] = "Garion Wendell", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:2276"] = "Magistrate Henry Maleb", ["npc:2366"] = "Barkeep Kelly", ["npc:2381"] = "Micha Yance", ["npc:2382"] = "Darren Malvew", ["npc:2430"] = "Chef Jessen", ["npc:2438"] = "Bartolo Ginsetti", ["npc:251493"] = "Captain McManus", ["npc:2695"] = "Sara Balloo", ["npc:2696"] = "Foggy MacKreel", ["npc:270637"] = "Howin Kindfeather", ["npc:2708"] = "Archmage Malin", ["npc:2711"] = "Phin Odelic", ["npc:271322"] = "Essene Villard", ["npc:271338"] = "Ados", ["npc:271460"] = "Modr", ["npc:271462"] = "Golm", ["npc:271481"] = "Captive Fire Elemental", ["npc:2784"] = "King Magni Bronzebeard", ["npc:2916"] = "Historian Karnik", ["npc:482"] = "Elling Trias", ["npc:4961"] = "Dashel Stonefist", ["npc:5081"] = "Connor Rivers", ["npc:5479"] = "Wu Shen", ["npc:5504"] = "Sheldras Moontree", ["npc:5683"] = "Comar Villard", ["npc:6236"] = "Klannoc Macleod", ["object:1162"] = "Menethil Harbor", ["object:171709"] = "High Seat", ["object:176370"] = "Boat to Auberdine", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "Slaughtered Lamb", ["object:2673"] = "Thandol Span", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["object:376"] = "Dun Modr", ["object:386691"] = "Library Book", ["object:671518"] = "Tattered Spellbook", ["quest:1078"] = "Retrieval for Mauren", ["quest:1718"] = "The Islander", ["quest:474"] = "Defeat Nek'rosh", ["quest:559"] = "Farren's Proof", ["zone:1413"] = "Barrens", ["zone:1416"] = "Alterac Mountains", ["zone:1424"] = "Hillsbrad Foothills", ["zone:1437"] = "Wetlands", ["zone:1442"] = "Stonetalon Mountains", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			names = { ["item:2321"] = "Fine Thread", ["item:279996"] = "Goaz Stone", ["item:2997"] = "Bolt of Woolen Cloth", ["item:3713"] = "Soothing Spices", ["item:3719"] = "Hillman's Cloak", ["item:4433"] = "Waterlogged Envelope", ["npc:1071"] = "Longbraid the Grim", ["npc:1072"] = "Roggo Harlbarrow", ["npc:1075"] = "Rhag Garmason", ["npc:1077"] = "Prospector Whelgar", ["npc:1356"] = "Prospector Stormpike", ["npc:1418"] = "Bluegill Raider", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:211033"] = "Garion Wendell", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:2276"] = "Magistrate Henry Maleb", ["npc:2366"] = "Barkeep Kelly", ["npc:2381"] = "Micha Yance", ["npc:2382"] = "Darren Malvew", ["npc:2430"] = "Chef Jessen", ["npc:2438"] = "Bartolo Ginsetti", ["npc:251493"] = "Captain McManus", ["npc:2695"] = "Sara Balloo", ["npc:2696"] = "Foggy MacKreel", ["npc:270637"] = "Howin Kindfeather", ["npc:2708"] = "Archmage Malin", ["npc:2711"] = "Phin Odelic", ["npc:271322"] = "Essene Villard", ["npc:271338"] = "Ados", ["npc:271460"] = "Modr", ["npc:271462"] = "Golm", ["npc:271481"] = "Captive Fire Elemental", ["npc:2784"] = "King Magni Bronzebeard", ["npc:2916"] = "Historian Karnik", ["npc:482"] = "Elling Trias", ["npc:4961"] = "Dashel Stonefist", ["npc:5081"] = "Connor Rivers", ["npc:5479"] = "Wu Shen", ["npc:5502"] = "Shylamiir", ["npc:5504"] = "Sheldras Moontree", ["npc:5683"] = "Comar Villard", ["npc:5694"] = "High Sorcerer Andromath", ["npc:6236"] = "Klannoc Macleod", ["object:1162"] = "Menethil Harbor", ["object:171709"] = "High Seat", ["object:176370"] = "Boat to Auberdine", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "Slaughtered Lamb", ["object:2673"] = "Thandol Span", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["object:376"] = "Dun Modr", ["object:386691"] = "Library Book", ["object:671518"] = "Tattered Spellbook", ["quest:1078"] = "Retrieval for Mauren", ["quest:1718"] = "The Islander", ["quest:474"] = "Defeat Nek'rosh", ["quest:559"] = "Farren's Proof", ["zone:1413"] = "Barrens", ["zone:1416"] = "Alterac Mountains", ["zone:1424"] = "Hillsbrad Foothills", ["zone:1437"] = "Wetlands", ["zone:1442"] = "Stonetalon Mountains", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
 			written = { ["{npc:2438} also wants a {item:3719}, a {item:2997} and {item:2321}: crafted or bought; the cloak is turned in when you are back in Southshore later."] = "Bartolo also wants a Hillman's Cloak, a Bolt of Woolen Cloth and Fine Thread: crafted or bought; the cloak is turned in when you are back in Southshore later.", ["{npc:4961} waits in the Pig and Whistle tavern in {object:2100}; he and his two thugs fight you, but stop once beaten."] = "Dashel waits in the Pig and Whistle tavern in Old Town; he and his two thugs fight you, but stop once beaten.", ["{npc:5683} waits north of {object:376} by the {object:2673}; {npc:271322} a short walk further north-east."] = "Comar Villard waits north of Dun Modr by the Thandol Span; Essene a short walk further north-east." },
 			steps = {
 				{
@@ -8993,10 +8987,24 @@ do
 					},
 				},
 				{
+					title = "{npc:5694}",
+					when = { { k = "onquest", q = { 92489 } } },
+					goals = {
+						{ t = "turnin", quest = 92489, title = "Power Overwhelming", npc = 5694, npcName = "High Sorcerer Andromath", map = 1453, x = 48.71, y = 87.62, z = 148.7 },
+					},
+				},
+				{
 					title = "{npc:482}",
 					goals = {
 						{ t = "turnin", quest = 1247, title = "The Missing Diplomat", npc = 482, npcName = "Elling Trias", map = 1453, x = 66.03, y = 74.1, z = 101.2 },
 						{ t = "accept", quest = 1248, title = "The Missing Diplomat", npc = 482, npcName = "Elling Trias", minLevel = 28, qlvl = 33, pre = { 1247 }, preTitles = { [1247] = "The Missing Diplomat" }, map = 1453, x = 66.03, y = 74.1, z = 101.2 },
+					},
+				},
+				{
+					title = "{npc:5502}",
+					when = { { k = "onquest", q = { 92456 } } },
+					goals = {
+						{ t = "turnin", quest = 92456, title = "A Green Sample", npc = 5502, npcName = "Shylamiir", map = 1453, x = 31.5, y = 62.61, z = 98.3 },
 					},
 				},
 				{

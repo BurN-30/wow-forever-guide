@@ -61,6 +61,8 @@ return {
 	["The Villards"] = "Les Villard",
 	-- {npc:5683} Comar Villard · {object:376} Dun Modr · {object:2673} Thandol Span · {npc:271322} Essene Villard
 	["{npc:5683} waits north of {object:376} by the {object:2673}; {npc:271322} a short walk further north-east."] = "{npc:5683} attend au nord de {object:376} près du {object:2673} ; {npc:271322} un peu plus loin au nord-est.",
+	-- {npc:5683} Comar Villard
+	["{npc:5683} (Groupe Alliance: optional, Forever players report he no longer offers it)"] = "{npc:5683} (Groupe Alliance : facultative, des joueurs de Forever signalent qu'il ne la propose plus)",
 
 	-- Step 15: Dun Modr
 	-- {npc:1071} Longbraid the Grim
@@ -201,7 +203,7 @@ return {
 	-- plural, as words: Library Books = {object:386691} Library Book
 	["{npc:211033}: only offered once you have handed in library books (the Library Books guide)"] = "{npc:211033} : proposée seulement une fois que vous avez rendu des livres de la bibliothèque (le guide Livres de la bibliothèque)",
 
-	-- Step 60: Fly to Astranaar
+	-- Step 62: Fly to Astranaar
 	["Fly to Astranaar"] = "Envolez-vous vers Astranaar",
 	["Auberdine flight master"] = "Maître de vol d'Auberdine",
 }

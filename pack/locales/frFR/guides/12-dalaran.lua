@@ -58,12 +58,11 @@ return {
 
 	-- Step 10: Modera's rewards
 	["Modera's rewards"] = "Récompenses de Modera",
-
-	-- Step 11: Stormwind rewards
-	-- {zone:1453} Stormwind
-	["{zone:1453} rewards"] = "Récompenses à {zone:1453}",
+	-- {object:1162} Menethil Harbor · {npc:5502} Shylamiir · {npc:5694} High Sorcerer Andromath · {zone:1453} Stormwind
+	["Next: {object:1162}, where your hearthstone is still bound (Deepwater Tavern). {npc:5502} and {npc:5694} take their quests at the next guide's {zone:1453} stop."] = "Ensuite : {object:1162}, où votre pierre de foyer est toujours liée (taverne de l'Eau-profonde). {npc:5502} et {npc:5694} attendent leurs quêtes à l'étape de {zone:1453} du guide suivant.",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Group 11 · City of Dalaran (dungeon 28-33)"] = "Groupe 11 · Cité de Dalaran (donjon 28-33)",
 	-- ["His quest needs level 30: the whole group should wait for it."] = "Sa quête demande le niveau 30 : tout le groupe doit l'attendre.",
+	-- ["{zone:1453} rewards"] = "Récompenses à {zone:1453}",
 }

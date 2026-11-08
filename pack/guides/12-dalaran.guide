@@ -84,12 +84,12 @@ step Inside the dungeon
   complete 92457
   complete 92458
 
+# Groupe Alliance 0.6.1: no Stormwind trip after the dungeon. The next guide starts at the
+# Deepwater Tavern, where the hearthstone is bound (Thousand Needles guide), and stops in Stormwind
+# later on (14-paluns-hautebrande): A Green Sample and Power Overwhelming are handed in there.
+
 step Modera's rewards
   zone Silverpine Forest
   turnin 92457
   turnin 92458
-
-step Stormwind rewards
-  zone Stormwind City
-  turnin 92456
-  turnin 92489
+  note Next: Menethil Harbor, where your hearthstone is still bound (Deepwater Tavern). Shylamiir and High Sorcerer Andromath take their quests at the next guide's Stormwind stop.

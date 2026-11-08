@@ -1732,5 +1732,7 @@
   "Head back out through Goldshire and east along the road to the Brackwell Pumpkin Patch. {npc:881} (level 9) stands by its farmhouse.": "Repartez par Comté-de-l'Or et prenez la route vers l'est jusqu'au Champ de potirons des Brackwell. {npc:881} (niveau 9) se tient près de sa ferme.",
   "Forest's Edge": "La Lisière",
   "{npc:251507} stands with the Goldshire trainers. Each of her quests hands you a {item:15908}: use it on the beast she names, then bring the rod back to her. Rockhide Boars and Young Forest Bears roam the hills south of the Maclure Vineyards, Gray Forest Wolves the woods east of Crystal Lake.": "{npc:251507} se tient avec les maîtres de Comté-de-l'Or. Chacune de ses quêtes vous donne un {item:15908} : utilisez-le sur la bête qu'elle désigne, puis rapportez-lui la baguette. Les sangliers Rochecuir et les jeunes ours des forêts rôdent dans les collines au sud des vignes des Maclure, les loups forestiers gris dans les bois à l'est du Lac de Cristal.",
-  "Amberstill Ranch": "Ferme des Amberstill"
+  "Amberstill Ranch": "Ferme des Amberstill",
+  "{npc:5683} (Groupe Alliance: optional, Forever players report he no longer offers it)": "{npc:5683} (Groupe Alliance : facultative, des joueurs de Forever signalent qu'il ne la propose plus)",
+  "Next: {object:1162}, where your hearthstone is still bound (Deepwater Tavern). {npc:5502} and {npc:5694} take their quests at the next guide's {zone:1453} stop.": "Ensuite : {object:1162}, où votre pierre de foyer est toujours liée (taverne de l'Eau-profonde). {npc:5502} et {npc:5694} attendent leurs quêtes à l'étape de {zone:1453} du guide suivant."
 }
