@@ -141,6 +141,33 @@ local fungus = NS.GA.TipOf({ t = "collect", quest = 6123, item = 15851, status =
 check(root and fungus and root ~= fungus and root.enUS:find("Earthroot", 1, true) and fungus.enUS:find("Lunar", 1, true), "tips per objective")
 check(NS.GA.TipOf({ t = "accept", quest = 6123, npc = 3702 }) == nil, "no objective tip on the accept line")
 check(NS.UI.GoalLine({ t = "collect", quest = 6123, item = 2449, status = "active" }):find("star", 1, true) ~= nil, "tip mark on an objective line")
+-- Escort badge (0.7.4): on an open escort line (Polestar's flag or our list), before the
+-- difficulty mark, not on a turn-in nor once done, off with ui.gaEscortBadge; its tooltip.
+PLAYER_LEVEL = 10
+local esc = { t = "accept", quest = 900003, status = "active", escort = true }
+NS.Compat = { GetQuestLevel = function(q) return q == 900003 and 20 or nil end }
+local line = NS.UI.GoalLine(esc)
+check(line:find("Escorte", 1, true) ~= nil, "escort badge on a flagged line")
+check(line:find("icon-kill", 1, true) ~= nil and line:find("Escorte", 1, true) < line:find("icon-kill", 1, true), "badge before the difficulty mark")
+check(NS.UI.GoalLine({ t = "accept", quest = 900003, status = "done", escort = true }):find("Escorte", 1, true) == nil, "no badge once done")
+check(NS.UI.GoalLine({ t = "accept", quest = 995, status = "active" }):find("Escorte", 1, true) ~= nil, "badge from our list (995)")
+check(NS.UI.GoalLine({ t = "kill", quest = 2078, status = "active" }):find("Escorte", 1, true) ~= nil, "badge from our list (2078)")
+check(NS.UI.GoalLine({ t = "turnin", quest = 995, status = "active" }):find("Escorte", 1, true) == nil, "no badge on a turn-in")
+check(NS.UI.GoalLine({ t = "accept", quest = 1, status = "active" }):find("Escorte", 1, true) == nil, "no badge on a plain quest")
+TIPLINES = {}
+HOOKS.Tooltip({ psGoal = esc, HookScript = function() end })
+local said = table.concat(TIPLINES, "\n")
+check(said:find("Escorte : Un PNJ", 1, true) and said:find("AVANT", 1, true) and said:find("éloigner", 1, true), "badge tooltip")
+local getBadge = NS.Get
+NS.Get = function(k) if k == "ui.gaEscortBadge" then return false end return getBadge(k) end
+check(NS.UI.GoalLine(esc):find("Escorte", 1, true) == nil, "badge off with the setting")
+TIPLINES = {}
+HOOKS.Tooltip({ psGoal = esc, HookScript = function() end })
+said = table.concat(TIPLINES, "\n")
+check(said:find("AVANT", 1, true) and not said:find("Escorte : Un PNJ", 1, true), "badge off: the group line only")
+NS.Get = getBadge
+check(DEFAULTS.ui.gaEscortBadge == true, "badge on by default")
+NS.Compat = nil
 return table.concat(out, ", "), n
 ''')
 failed, ntips = result
@@ -294,4 +321,24 @@ for m in re.finditer(r"^\t\[(\d+)\] = \{[^\n]*\n\t\tgoals = \{\n(.*?)\n\t\t\},",
         if f"{m.group(1)}:{key}" not in objectives:
             missing.append(f"{m.group(1)} {key}")
 print(f"objective tips: {nkeys} keys, " + ("ok" if not missing else "NOT IN THE GUIDES: " + ", ".join(missing)))
-sys.exit(1 if bad or failed or missing else 0)
+
+# 4. Escort badge (0.7.4): the quests whose lines get the badge in the built guides
+# (GA.IsEscort on each goal: Polestar's compiled `escort` plus GA.EXTRA_ESCORTS) are
+# exactly the pack's known escorts below; each quest of our list is in the guides.
+ESCORTS = {155, 219, 660, 665, 731, 945, 994, 995, 1222, 1393, 1440, 1560, 2078, 3367,
+           4261, 4491, 4901, 5203, 5321, 6132, 87491, 99053}
+is_escort = L.eval("function(t, q, e) return NS.GA.IsEscort({ t = t, quest = q, escort = e or nil }) end")
+marked, quests = set(), set()
+for m in re.finditer(r'\{ t = "(\w+)", quest = (\d+),([^\n]*)', guides):
+    q = int(m.group(2))
+    quests.add(q)
+    if is_escort(m.group(1), q, "escort = true" in m.group(3)):
+        marked.add(q)
+extra = {int(q) for q in L.eval("(function() local o = {} for q in pairs(NS.GA.EXTRA_ESCORTS) do o[#o + 1] = q end return table.concat(o, ',') end)()").split(",")}
+escort_bad = []
+if marked != ESCORTS:
+    escort_bad.append("marked " + str(sorted(marked - ESCORTS)) + ", missing " + str(sorted(ESCORTS - marked)))
+if extra - quests:
+    escort_bad.append("listed but not in the guides " + str(sorted(extra - quests)))
+print(f"escort badge: {len(marked)} quests ({len(extra)} from our list), " + ("ok" if not escort_bad else "FAILED: " + "; ".join(escort_bad)))
+sys.exit(1 if bad or failed or missing or escort_bad else 0)

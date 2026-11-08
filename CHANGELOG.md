@@ -2,6 +2,20 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.7.4 (2026-11-08)
+
+### Français
+- Étiquette violette « Escorte » en bout de ligne sur les quêtes d'escorte (22 sur le parcours), avant la marque de difficulté.
+- Son infobulle : ce qu'est une escorte, la prendre AVANT le départ en groupe, rester près du PNJ, acceptée toute seule quand un membre du groupe la lance.
+- Masquer l'étiquette : roue dentée, Guide, Fenêtre, Groupe Alliance (allumée par défaut).
+- Mise à jour : un `/reload` suffit.
+
+### English
+- A purple "Escort" label at the end of escort quests' lines (22 on the route), before the difficulty mark.
+- Its tooltip: what an escort is, take it BEFORE the start in a group, stay close to the NPC, accepted for you when a party member starts it.
+- Hide the label: gear, Guide, Window, Groupe Alliance (on by default).
+- Update: a `/reload` is enough.
+
 ## v0.7.3 (2026-11-08)
 
 ### Français

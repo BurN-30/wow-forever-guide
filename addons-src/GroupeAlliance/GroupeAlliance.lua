@@ -31,6 +31,9 @@
 --  * A small orange or red warning mark on a line that is hard at the player's
 --    real level (Danger.lua: elites, packs, escorts, quests well above the
 --    player); its tooltip says why, the level advised alone and the group size.
+--  * A purple "Escort" label at the end of an escort quest's lines (0.7.4,
+--    GA.IsEscort: Polestar's `escort` flag plus GA.EXTRA_ESCORTS); its tooltip
+--    says what an escort is and how to do it in a group. Off: ui.gaEscortBadge.
 --  * Group quests are asked, one by one (Polestar's "Skip it / Do it with a
 --    group" banner): whoever plays alone skips them in one click.
 --  * /ga lang auto|fr|en: language of the links (default: the client's).
@@ -101,12 +104,19 @@ local T = {
 		dangerEscort = "Escorte : le PNJ attire des embuscades. Seul : soigner ou tuer vite, rester près de lui.",
 		dangerHigh = "Quête bien au-dessus du niveau : ennemis plus forts, plus de coups ratés. Seul : la garder pour plus tard ; à plusieurs, elle passe.",
 		escortGroup = "Escorte à plusieurs : chacun prend la quête AVANT que l'un d'eux lance l'escorte, sinon elle ne compte pas pour lui.",
+		escortBadge = "Escorte",
+		escortWhat = "Un PNJ marche jusqu'à un lieu et il faut le protéger en route : s'il meurt, la quête échoue et il faut la reprendre.",
+		escortNear = "Ne pas trop s'éloigner du PNJ : s'il se retrouve seul trop longtemps, l'escorte peut échouer.",
+		escortAuto = "Lancée par un membre du groupe, l'escorte est acceptée toute seule si elle est dans l'étape en cours ou les deux suivantes (Maj enfoncée : pas cette fois).",
+		escortOption = "Badge « Escorte »",
+		escortOptionHelp = "Une étiquette violette « Escorte » en bout de ligne sur les quêtes d'escorte ; la survoler explique comment faire seul ou en groupe.",
 		helpTitle = "Groupe Alliance : aide",
 		help = {
 			"Survoler une ligne : détails et astuces.",
 			"Ctrl+clic sur une ligne : lien Wowhead, Ctrl+C pour le copier.",
 			"|cffffd100?|r jaune : info pas encore confirmée, à vérifier sur Wowhead.",
 			"Marque orange ou rouge : difficile à ton niveau, la survoler pour savoir comment faire seul ou à plusieurs.",
+			"|cffa385ffEscorte|r en bout de ligne : quête d'escorte, en groupe chacun la prend avant le départ.",
 			"Quête de groupe : le guide propose « La passer » ou « La faire en groupe » ; seul, la passer.",
 			"Quêtes de l'étape en cours prises et rendues toutes seules. Maj enfoncée : pas cette fois. Clic droit sur une ligne : jamais pour cette quête.",
 			"Changer de guide : /polestar guides, ou le + des onglets.",
@@ -161,12 +171,19 @@ local T = {
 		dangerEscort = "Escort: the NPC draws ambushes. Alone: heal or kill fast and stay close to them.",
 		dangerHigh = "Quest well above your level: tougher enemies, more missed hits. Alone: keep it for later; in a group it is fine.",
 		escortGroup = "Escort in a group: everyone takes the quest BEFORE one of you starts the escort, or it does not count for them.",
+		escortBadge = "Escort",
+		escortWhat = "An NPC walks to a place and you protect them on the way: if they die, the quest fails and you take it again.",
+		escortNear = "Do not stray far from the NPC: left alone too long, the escort can fail.",
+		escortAuto = "Started by a party member, the escort is accepted for you when it is in the current step or the next two (hold Shift: not this time).",
+		escortOption = "\"Escort\" badge",
+		escortOptionHelp = "A purple \"Escort\" label at the end of an escort quest's lines; hover it to see how to do it alone or in a group.",
 		helpTitle = "Group Alliance: help",
 		help = {
 			"Hover a line: details and tips.",
 			"Ctrl-click a line: Wowhead link, Ctrl-C to copy it.",
 			"Yellow |cffffd100?|r: not confirmed yet, check Wowhead.",
 			"Orange or red mark: hard at your level, hover it to see how to do it alone or in a group.",
+			"|cffa385ffEscort|r at the end of a line: an escort quest, in a group everyone takes it before the start.",
 			"Group quest: the guide asks \"Skip it\" or \"Do it with a group\"; alone, Skip it.",
 			"The current step's quests are accepted and turned in for you. Hold Shift: not this time. Right-click a line: never for that quest.",
 			"Change guide: /polestar guides, or the tabs' +.",
@@ -642,6 +659,36 @@ function GA.TipOf(goal)
 end
 
 local TIP_MARK = "  |TInterface\\AddOns\\Polestar\\Media\\UI\\star:12:12:0:0:32:32:0:32:0:32:140:255:140|t"
+
+-- Escorts (0.7.4). Polestar compiles `escort` on an escort quest's accept and
+-- objective lines (Core/Engine.lua, goal views). Two escorts of this pack's
+-- route lack it in Polestar's data, listed here (accept and objective lines,
+-- never the turn-in): Escape Through Stealth (995, Volcor walks out of the
+-- cave, the same NPC as 994, flagged) and Gyromast's Revenge (2078, the
+-- Threshwackonator follows the player to Gelkak).
+GA.EXTRA_ESCORTS = { [995] = true, [2078] = true }
+local ESCORT_KINDS = { accept = true, complete = true, kill = true, collect = true, interact = true, use = true, talk = true }
+function GA.IsEscort(goal)
+	if type(goal) ~= "table" then return false end
+	if goal.escort == true then return true end
+	local q = goal.quest
+	return type(q) == "number" and GA.EXTRA_ESCORTS[q] == true and ESCORT_KINDS[goal.t] == true
+end
+-- The badge: a purple label (Polestar's own escort colour, Theme "dungeon")
+-- at the end of an open escort line, before the tip and difficulty marks; off
+-- with ui.gaEscortBadge (Guide page, Window tab, Groupe Alliance section).
+ns.RegisterDefaults("ui", { gaEscortBadge = true })
+local function escortHex()
+	local Th = ns.Theme
+	local ok, hex = false, nil
+	if Th and Th.Hex then ok, hex = pcall(Th.Hex, "dungeon") end
+	return ok and type(hex) == "string" and hex or "ffa385ff"
+end
+function GA.EscortBadge(goal)
+	if not GA.IsEscort(goal) or goal.status == "done" or goal.status == "skipped" then return nil end
+	if ns.Get("ui.gaEscortBadge") == false then return nil end
+	return "  |c" .. escortHex() .. tr("escortBadge") .. "|r"
+end
 -- Difficulty (Danger.lua): the advised level and group for goal's quest at the
 -- player's real level (UnitLevel), or nil when it is fine. -> rec, grp, text, gap
 local DANGER_KINDS = { accept = true, complete = true, kill = true, collect = true, interact = true, use = true, talk = true }
@@ -677,7 +724,7 @@ function GA.DangerOf(goal)
 		local p = goal.party
 		if type(p) == "table" and p.kind == "elite" then
 			rec, grp, text = qlvl + 2, 3, tr("dangerElite")
-		elseif goal.escort then
+		elseif GA.IsEscort(goal) then
 			rec, text = qlvl, tr("dangerEscort")
 		elseif qlvl >= plvl + 3 then
 			rec, grp, text = qlvl - 1, 2, tr("dangerHigh")
@@ -700,6 +747,8 @@ local function markTips()
 	local line = UI.GoalLine
 	UI.GoalLine = function(goal, ...)
 		local text = line(goal, ...)
+		local badge = type(text) == "string" and GA.EscortBadge(goal)
+		if badge then text = text .. badge end
 		if GA.TipOf(goal) and goal.status ~= "done" and goal.status ~= "skipped" and type(text) == "string" then
 			text = text .. TIP_MARK
 		end
@@ -711,6 +760,13 @@ local function markTips()
 	end
 	UI.psGATipMark = true
 end
+
+-- The guide window redraws its lines at once when the badge is switched.
+ns.On("SETTING_CHANGED", function(path)
+	if path ~= "ui.gaEscortBadge" then return end
+	local GF = ns.UI and ns.UI.GuideFrame
+	if GF and GF.Render then GF.Render() end
+end)
 
 local hooked = setmetatable({}, { __mode = "k" })
 local function afterTooltip(owner)
@@ -734,7 +790,18 @@ local function afterTooltip(owner)
 	if q and (goal.t == "accept" or goal.t == "turnin") and goal.status ~= "done" and GA.NoAuto(q) then
 		GameTooltip:AddLine(tr("autoHeld"), 0.8, 0.8, 0.8, true)
 	end
-	if goal.escort and goal.status ~= "done" and goal.status ~= "skipped" then
+	-- The badge's tooltip: the line's own, with what an escort is and how to
+	-- do it in a group. Badge off: the group line only, as in 0.7.3.
+	if GA.EscortBadge(goal) then
+		local hex = escortHex()
+		local r, g, b = tonumber(hex:sub(3, 4), 16) / 255, tonumber(hex:sub(5, 6), 16) / 255, tonumber(hex:sub(7, 8), 16) / 255
+		GameTooltip:AddLine(tr("escortBadge") .. (locale() == "frFR" and " : " or ": ") .. tr("escortWhat"), r, g, b, true)
+		GameTooltip:AddLine(tr("escortGroup"), 1, 0.82, 0.6, true)
+		GameTooltip:AddLine(tr("escortNear"), 1, 0.82, 0.6, true)
+		if ns.Get("behavior.autoAccept") and ns.Get("behavior.gaShared") then
+			GameTooltip:AddLine(tr("escortAuto"), 0.8, 0.8, 0.8, true)
+		end
+	elseif GA.IsEscort(goal) and goal.status ~= "done" and goal.status ~= "skipped" then
 		GameTooltip:AddLine(tr("escortGroup"), 1, 0.82, 0.6, true)
 	end
 	local tip = GA.TipOf(goal)
@@ -980,6 +1047,10 @@ ns.OnInit(function()
 		ns.RegisterOptions({ page = ns.L["Map"], tab = ns.L["Guide & quests"], section = "Groupe Alliance", controls = {
 			{ kind = "toggle", key = "qol.gaStepObjectives", label = tr("marksStep"), help = tr("marksStepHelp"),
 				search = "map pins, markers, objectives, guide step, crowded" },
+		} })
+		ns.RegisterOptions({ page = ns.L["Guide"], tab = ns.L["Window"], section = "Groupe Alliance", controls = {
+			{ kind = "toggle", key = "ui.gaEscortBadge", label = tr("escortOption"), help = tr("escortOptionHelp"),
+				search = "escort, escorte, badge, label, group, groupe" },
 		} })
 	end
 	-- The bug button sends reports to Polestar's Discord: say where ours go.
