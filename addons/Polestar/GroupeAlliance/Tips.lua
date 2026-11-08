@@ -746,4 +746,78 @@ ns.GA.Tips = {
 		frFR = "Quête propre à Forever : le livre rouge est posé sur une table, à droite dans la salle de l'arcaniste Doan, au fond de la Bibliothèque du Monastère écarlate. 6 750 XP.",
 		enUS = "A Forever-only quest: the red book lies on a table on the right of Arcanist Doan's room, at the far end of the Scarlet Monastery Library. 6,750 XP.",
 	},
+	-- 0.5.0: guides 30-40 (14 to 17), from Wowhead comments (mostly from the original game,
+	-- several agreeing), rewritten.
+	[474] = { -- Defeat Nek'rosh (classic)
+		frFR = "Nek'rosh est vers 54,56 : grimper la crête depuis la route vers 55,56 pour arriver dans son dos sans nettoyer le camp ; un garde lié vient avec lui.",
+		enUS = "Nek'rosh stands near 54,56: climb the ridge from the road around 55,56 to reach his back without clearing the camp; one linked guard comes with him.",
+	},
+	[510] = { -- Foreboding Plans (classic)
+		frFR = "Ce n'est pas un butin : les plans sont posés sur la table du camp du Syndicat (vers 58,68 en Alterac), à côté de la lettre chiffrée de la quête suivante.",
+		enUS = "Not a drop: the plans lie on the table of the Syndicate camp (near 58,68 in Alterac), next to the encrypted letter of the other quest.",
+	},
+	[511] = { -- Encrypted Letter (classic)
+		frFR = "La lettre est sur la même table que les plans, dans le camp du Syndicat vers 58,68 en Alterac : les deux se prennent d'un coup.",
+		enUS = "The letter lies on the same table as the plans, in the Syndicate camp near 58,68 in Alterac: take both in one go.",
+	},
+	[512] = { -- Noble Deaths (classic)
+		frFR = "Les chevalières tombent souvent sur les espions (camouflés) et les sorciers (Métamorphose) du Syndicat à Strahnbrad, vers 60,45 en Alterac.",
+		enUS = "The signet rings drop often from the Syndicate Spies (stealthed) and Wizards (Polymorph) at Strahnbrad, around 60,45 in Alterac.",
+	},
+	[1387] = { -- Centaur Bounty (classic)
+		frFR = "Les oreilles tombent mal (environ une fois sur trois) au village kolkar, vers 70,43 : à faire en même temps que les autres quêtes de centaures.",
+		enUS = "The ears drop poorly (about one kill in three) at the Kolkar village, around 70,43: do it alongside the other centaur quests.",
+	},
+	[1438] = { -- Vahlarriel's Search (classic)
+		frFR = "Dalinda est dans le grand bâtiment central de la forteresse de Hache-Tonnerre, vers 55,27 : nettoyer l'étage avant de lancer l'escorte.",
+		enUS = "Dalinda is in the big central building of Thunder Axe Fortress, near 55,27: clear the floor before starting the escort.",
+	},
+	[1012] = { -- Insane Druids (classic)
+		frFR = "Entrée du tertre vers 75,75 ; Taneel (77,74, se soigne), Uthil (78,72) et Mavoris (74,74). Patrouilles camouflées et réapparitions rapides : régler sa pierre de foyer avant.",
+		enUS = "Barrow entrance near 75,75; Taneel (77,74, heals herself), Uthil (78,72) and Mavoris (74,74). Stealthed patrols and fast respawns: set your hearthstone first.",
+	},
+	[1027] = { -- Raene's Cleansing (classic)
+		frFR = "Le pommeau n'est pas un butin normal : tuer les vases putrides vers 67,77 fait parfois apparaître un coffre sur le corps, c'est lui qu'il faut ouvrir.",
+		enUS = "The pommel is not a normal drop: killing the Rotting Slimes near 67,77 sometimes spawns a chest on the corpse, open that.",
+	},
+	[1028] = { -- Raene's Cleansing (classic)
+		frFR = "Le sanctuaire caché est vers 56,49 : le sentier monte depuis 55,51, au-dessus du puits de lune.",
+		enUS = "The hidden shrine is near 56,49: the path climbs from 55,51, above the moonwell.",
+	},
+	[1030] = { -- Raene's Cleansing (wowhead forever)
+		frFR = "Prendre la forme de furbolg avec le bâton AVANT d'approcher Krolg, au-dessus de la cascade vers 51,75. Sur Forever, le bâton reste dans les Collections (Maj+P).",
+		enUS = "Take furbolg form with the rod BEFORE you get close to Krolg, above the waterfall near 51,75. On Forever the rod stays in Collections (Shift+P).",
+	},
+	[1031] = { -- The Branch of Cenarius (classic)
+		frFR = "Le prince Raze (32, pas élite) se tient vers 78,43, au nord derrière la seule arche : arriver par le camp au sud.",
+		enUS = "Prince Raze (32, not elite) stands near 78,43, north past the only archway: come in through the camp to the south.",
+	},
+	[185] = { -- Tiger Mastery (classic)
+		frFR = "Parler d'abord au nain du camp, qui envoie vers Hemet Nesingwary : sans lui, aucune quête de chasse ne s'affiche.",
+		enUS = "Talk to the dwarf in camp first, who sends you to Hemet Nesingwary: without him, no hunting quest shows up.",
+	},
+	[188] = { -- Tiger Mastery (classic)
+		frFR = "Sin'Dall rôde sur une petite colline vers 32,17 ; il peut mettre jusqu'à un quart d'heure à réapparaître.",
+		enUS = "Sin'Dall prowls a small hill near 32,17; he can take up to a quarter of an hour to come back.",
+	},
+	[189] = { -- Bloodscalp Ears (classic)
+		frFR = "Environ une oreille pour trois ou quatre trolls : la faire avec les autres quêtes des ruines de Bal'lal (29,19), sans entrer au centre des ruines où les chamans attirent tout.",
+		enUS = "About one ear per three or four trolls: do it with the other Bal'lal Ruins quests (29,19), without going into the middle where the shamans pull everything.",
+	},
+	[209] = { -- Skullsplitter Tusks (classic)
+		frFR = "Taux très faible, aux ruines de Ziata'jai (vers 44,37) ; patrouilles de trois ou quatre trolls : à faire avec Troll Witchery.",
+		enUS = "Very low drop rate, at the Ziata'jai Ruins (around 44,37); patrols of three or four trolls: do it with Troll Witchery.",
+	},
+	[213] = { -- Hostile Takeover (classic)
+		frFR = "Les gobelins du lac (vers 45,19) se fondent dans le décor et attaquent de loin : avancer doucement, ils bougent sans arrêt.",
+		enUS = "The lake goblins (around 45,19) blend into the scenery and aggro from far: move slowly, they never stop wandering.",
+	},
+	[215] = { -- Jungle Secrets (classic)
+		frFR = "Le soldat Thorsen ne la donne que si on le sauve : en patrouille, il est pris en embuscade vers 40,8 par deux agents Kurzen. Les tuer, puis accepter tout de suite avant qu'il reparte.",
+		enUS = "Private Thorsen only offers it if you save him: on patrol he is ambushed near 40,8 by two Kurzen agents. Kill them, then accept at once before he walks back.",
+	},
+	[328] = { -- The Hidden Key (classic)
+		frFR = "Grotte vers 45,8 : suivre le mur de droite, à la première fourche descendre à droite ; le coffret est parmi les caisses, gardé par 4 ou 5 élites Kurzen.",
+		enUS = "Cave near 45,8: follow the right-hand wall, at the first fork go down to the right; the strongbox sits among the crates, guarded by 4 or 5 Kurzen elites.",
+	},
 }

@@ -96,4 +96,8 @@ ns.GA.Reliability = {
 	-- 0.5.0: Uldaman (20b-uldaman).
 	[2398] = { "?", ULDAMAN }, [2240] = { "?", ULDAMAN }, [1360] = { "?", ULDAMAN }, [2418] = { "?", ULDAMAN },
 	[2278] = { "?", ULDAMAN }, [2279] = { "?", ULDAMAN }, [2198] = { "?", ULDAMAN },
+	[1437] = { "?", {
+		frFR = "Coffre vers 56,17 au nord de Hache-Tonnerre ; en 2021 sur Classic il restait grisé (quête impossible), aucun retour de Forever encore.",
+		enUS = "Chest near 56,17 north of Thunder Axe Fortress; in 2021 on Classic it stayed greyed out (quest impossible), no Forever report yet.",
+	} },
 }

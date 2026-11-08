@@ -79,4 +79,9 @@ ns.GA.Danger = {
 		frFR = "Lescovar (31) et Marzon (30) se battent ensemble, avec des gardes royaux à côté. Seul : niveau 32, ou tuer Marzon d'abord dès qu'ils se séparent (Lescovar s'en va, Tyrion relance l'événement quelques minutes plus tard) ; à deux : chacun reçoit le crédit.",
 		enUS = "Lescovar (31) and Marzon (30) fight together, with royal guards nearby. Alone: level 32, or kill Marzon first as soon as they split (Lescovar walks off, Tyrion restarts the event a few minutes later); as a pair: everyone gets the credit.",
 	},
+	-- Wetlands (14-paluns-hautebrande)
+	[474] = { lvl = 34, grp = 2,
+		frFR = "Nek'rosh est un élite 32 avec un garde lié et des lanceurs de sorts autour. Seul : niveau 34, en passant par la crête dans son dos ; à deux vers 30-32 : le garde d'abord.",
+		enUS = "Nek'rosh is a level 32 elite with a linked guard and casters around him. Alone: level 34, coming over the ridge behind him; two players at 30-32: the guard first.",
+	},
 }
