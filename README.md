@@ -1,6 +1,6 @@
 # Groupe Alliance : guides WoW Forever entre amis
 
-> Basé sur l'addon gratuit [Polestar](https://github.com/fitzforge/polestar) et des guides de la communauté, recoupés avec Wowhead Forever. Préparé avec l'aide de l'IA : des erreurs restent possibles, vérifiez sur Wowhead en cas de doute.
+> Basé sur l'addon gratuit [Polestar](https://github.com/fitzforge/polestar) et des guides de la communauté, recoupés avec Wowhead Forever. Des erreurs restent possibles, vérifiez sur Wowhead en cas de doute.
 > *Based on the free [Polestar](https://github.com/fitzforge/polestar) addon and community guides, cross-checked with Wowhead Forever. Prepared with AI help: mistakes are possible, check Wowhead when in doubt.*
 
 ## Installer
