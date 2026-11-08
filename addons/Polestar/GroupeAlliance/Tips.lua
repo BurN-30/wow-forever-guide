@@ -820,4 +820,126 @@ ns.GA.Tips = {
 		frFR = "Grotte vers 45,8 : suivre le mur de droite, à la première fourche descendre à droite ; le coffret est parmi les caisses, gardé par 4 ou 5 élites Kurzen.",
 		enUS = "Cave near 45,8: follow the right-hand wall, at the first fork go down to the right; the strongbox sits among the crates, guarded by 4 or 5 Kurzen elites.",
 	},
+	-- 0.5.0: guides 37-43 (18 to 21), from Wowhead comments (mostly from the original game,
+	-- three or more agreeing), rewritten.
+	[212] = { -- A Meal Served Cold (classic)
+		frFR = "Trente minutes dès l'acceptation : basilics Œil-froid le long de la route au centre de Strangleronce (vers 34,40). Échouée ? La reprendre sans l'abandonner garde le jarret.",
+		enUS = "Thirty minutes from the moment you accept: Cold Eye Basilisks along the road in central Stranglethorn (around 34,40). Failed? Take it again without abandoning, the haunch stays.",
+	},
+	[500] = { -- Crushridge Bounty (classic)
+		frFR = "Pas besoin des ogres élites : les ogres normaux de niveau 35 vers 50,58 en Alterac lâchent les dents environ une fois sur trois.",
+		enUS = "No need for the elite ogres: the normal level 35 ogres around 50,58 in Alterac drop them about one kill in three.",
+	},
+	[523] = { -- Baron's Demise (classic)
+		frFR = "Le baron Vardus change de camp : au nord de Strahnbrad (vers 49,17 ou 53,20) ou dans la cave de l'auberge (59,43). Pas au premier ? Faire le tour.",
+		enUS = "Baron Vardus moves between camps: north of Strahnbrad (near 49,17 or 53,20) or in the inn's cellar (59,43). Not at the first one? Check the others.",
+	},
+	[537] = { -- Dark Council (classic)
+		frFR = "Nagaz (40) est dans la maison au bord du lac au nord de Dalaran (39,14), avec des assassins ; les mages de l'ombre sont à Strahnbrad.",
+		enUS = "Nagaz (40) is in the lakeside house north of Dalaran (39,14), with assassins; the shadow mages are in Strahnbrad.",
+	},
+	[540] = { -- Preserving Knowledge (classic)
+		frFR = "La bibliothèque au livre est dans l'école vers 39,46, gardée par un élite 40 ; les tomes tombent sur les ogres normaux dehors.",
+		enUS = "The bookcase with the book is in the schoolhouse near 39,46, guarded by a level 40 elite; the tomes drop from the normal ogres outside.",
+	},
+	[543] = { -- The Perenolde Tiara (classic)
+		frFR = "Grel'borg l'Avare, ogre mage élite 39 à deux têtes, erre vers 41,46 dans les ruines d'Alterac. Rendu au donjon de Hurlevent (74,30).",
+		enUS = "Grel'borg the Miser, a two-headed level 39 elite ogre mage, roams near 41,46 in the Ruins of Alterac. Handed in at Stormwind Keep (74,30).",
+	},
+	[551] = { -- The Ensorcelled Parchment (classic)
+		frFR = "Le coffre est dans la maison de Nagaz (39,14), avec des hommes de main camouflés : avancer prudemment.",
+		enUS = "The chest is in Nagaz's house (39,14), with hidden henchmen: move in carefully.",
+	},
+	[642] = { -- The Princess Trapped (classic)
+		frFR = "Le chemin de la grotte part vers 80,40, la grotte est vers 81,36 ; des lanceurs de sorts kobolds. Après les 12 éclats, cliquer le grand cristal.",
+		enUS = "The path to the cave starts near 80,40, the cave is near 81,36; kobold casters inside. After the 12 shards, click the large crystal.",
+	},
+	[651] = { -- Stones of Binding (classic)
+		frFR = "Les trois clés : Tonnerre vers 52,50, Feu vers 25,30, Crête vers 66,29 (monter la colline, pas le premier cercle). Le combat final fait venir des élémentaires.",
+		enUS = "The three keys: Thundering near 52,50, Burning near 25,30, Cresting near 66,29 (climb the hill, not the first circle). The last fight brings elemental adds.",
+	},
+	[660] = { -- Hints of a New Plague? (classic)
+		frFR = "Avant de lancer Kinelory (vers 60,55), nettoyer les orcs en contrebas : elle fonce dans les groupes.",
+		enUS = "Before starting Kinelory (near 60,55), clear the orcs below: she runs straight into packs.",
+	},
+	[662] = { -- Deep Sea Salvage (classic)
+		frFR = "Le journal du Maiden's Folly (épave est, vers 23,85, près du chaudron d'angle) est le plus dur ; les nagas passent à travers les cloisons.",
+		enUS = "The Maiden's Folly log (east wreck, near 23,85, by the corner cauldron) is the hardest; the naga come through the walls.",
+	},
+	[665] = { -- Sunken Treasure (classic)
+		frFR = "Rester à l'entrée de la grotte pendant que le gnome travaille : se battre au fond fait réapparaître sans fin. Deux élémentaires d'eau (40) insensibles au Givre.",
+		enUS = "Stay at the cave mouth while the gnome works: fighting deeper in makes things respawn endlessly. Two level 40 water elementals, immune to Frost.",
+	},
+	[666] = { -- Sunken Treasure (classic)
+		frFR = "Les lunettes montrent les gemmes, qui reviennent en une minute environ ; vers 21,90, deux apparaissent ensemble.",
+		enUS = "The goggles show the gems, which come back in about a minute; around 21,90, two appear together.",
+	},
+	[691] = { -- Worth Its Weight in Gold (classic)
+		frFR = "La grotte des trolls est vers 68,75 (en bas à droite) : défenses sur tous les trolls, sacoche sur ceux qui ont du mana. L'autre grotte, ce sont des ogres.",
+		enUS = "The troll cave is near 68,75 (lower right): tusks from any troll, the pouch from those with mana. The other cave holds ogres.",
+	},
+	[738] = { -- Find Agmond (classic)
+		frFR = "Le squelette de nain est vers 51,62, facile à manquer : clic droit dessus.",
+		enUS = "The dwarven skeleton lies near 51,62, easy to miss: right-click it.",
+	},
+	[739] = { -- Murdaloc (classic)
+		frFR = "Murdaloc apparaît vers 49,66 derrière le camp, toutes les 3 à 4 minutes : /cible Murdaloc pour le repérer, tirer ses gardes un par un.",
+		enUS = "Murdaloc appears near 49,66 behind the camp, every 3 to 4 minutes: /target Murdaloc to spot him, pull his guards one at a time.",
+	},
+	[1389] = { -- Draenethyst Crystals (classic)
+		frFR = "Ce ne sont pas des butins : des cristaux à ramasser au sol, vers 53,29 et 55,27 près du Sanctuaire des Friches.",
+		enUS = "Not drops: crystals to pick up from the ground, near 53,29 and 55,27 by Fallow Sanctuary.",
+	},
+	[1393] = { -- Galen's Escape (classic)
+		frFR = "Tout nettoyer avant : Galen, presque sans armure, attire tout sur son passage. Le coffre est vers 47,39.",
+		enUS = "Clear everything first: Galen, with almost no armor, pulls everything on his way. The chest is near 47,39.",
+	},
+	[2500] = { -- Badlands Reagent Run (classic)
+		frFR = "Élémentaires vers 13,36 près de Kargath, vautours surtout vers 16,57 ; les coyotes sont partout.",
+		enUS = "Elementals near 13,36 by Kargath, buzzards mostly near 16,57; the coyotes are everywhere.",
+	},
+	[703] = { -- Barbecued Buzzard Wings (classic)
+		frFR = "Les ailes tombent peu : les vautours géants tournent en nombre autour de 16,57 et 14,60 ; sinon l'hôtel des ventes.",
+		enUS = "The wings drop rarely: the Giant Buzzards circle in numbers around 16,57 and 14,60; otherwise the Auction House.",
+	},
+	[710] = { -- Study of the Elements: Rock (classic)
+		frFR = "Seuls les PETITS élémentaires de roche (37-39) lâchent l'éclat, pas ceux de niveau 40 ; taux faible, le meilleur coin vers 23,43.",
+		enUS = "Only the LESSER Rock Elementals (37-39) drop the shard, not the level 40 ones; low rate, best spot near 23,43.",
+	},
+	[716] = { -- Stone Is Better than Cloth (classic)
+		frFR = "Les Patterned Bronze Bracers ne tombent pas : un forgeron les fabrique, ou l'hôtel des ventes (environ 50 pa).",
+		enUS = "The Patterned Bronze Bracers do not drop: a blacksmith crafts them, or the Auction House (about 50 silver).",
+	},
+	[718] = { -- Mirages (classic)
+		frFR = "La caisse est au camp Kosh (vers 65,24), à plusieurs places possibles (sous l'appentis, près du chariot, du chaudron) : longer le mur nord.",
+		enUS = "The crate is at Camp Kosh (near 65,24), in one of several spots (under the lean-to, by the wagon, by the cauldron): hug the north wall.",
+	},
+	[719] = { -- A Dwarf and His Tools (classic)
+		frFR = "La pioche tombe sur les nains Ombreforge de la fouille de Hammertoe (vers 52,33) et peut demander 20 à 30 victimes ; la carte froissée est sur place, au sol près d'une table (53,34).",
+		enUS = "The pick drops from the Shadowforge dwarves at Hammertoe's Digsite (near 52,33) and can take 20 to 30 kills; the crumpled map is right there, on the ground by a table (53,34).",
+	},
+	[197] = { -- Raptor Mastery (classic)
+		frFR = "Tethis rôde près d'un chariot cassé au nord-ouest de l'arène (vers 28,43), avec Déchirure de tendon qui ralentit : nettoyer les camps de raptors autour d'abord.",
+		enUS = "Tethis prowls by a broken wagon north-west of the arena (near 28,43), with a slowing Tendon Rip: clear the raptor camps around first.",
+	},
+	[208] = { -- Big Game Hunter (classic)
+		frFR = "Le roi Bangalash, sur sa colline vers 38,34, appelle deux panthères en cours de combat qui ne repartent pas : le tuer du premier coup.",
+		enUS = "King Bangalash, on his hill near 38,34, calls two panthers mid-fight that do not leave: kill him on the first try.",
+	},
+	[348] = { -- Stranglethorn Fever (classic)
+		frFR = "Le cœur de Mokk tombe sur le gorille blanc de la troisième vague : se concentrer sur lui ; la quête compte même si on meurt après l'avoir ramassé.",
+		enUS = "The Heart of Mokk drops from the white gorilla of the third wave: focus him; the quest counts even if you die after looting it.",
+	},
+	[1252] = { -- Lieutenant Paval Reethe (classic)
+		frFR = "Dans l'auberge brûlée de Shady Rest (vers 29,48), l'insigne est minuscule, sur une planche à part : prendre aussi le bouclier et les empreintes en passant.",
+		enUS = "In the burned Shady Rest Inn (near 29,48) the badge is tiny, on a single loose plank: also take the shield and the hoofprints while there.",
+	},
+	[1452] = { -- Rhapsody's Kalimdor Kocktail (classic)
+		frFR = "Les gésiers de roc tombent peu (environ 8 %) près de Gadgetzan ; les foies sur les ours de Féralas au sud de Hache-Tripes (vers 58,58).",
+		enUS = "The roc gizzards drop rarely (about 8%) near Gadgetzan; the livers from the Feralas bears south of Dire Maul (near 58,58).",
+	},
+	[93176] = { -- My Little Friends (wowhead forever)
+		frFR = "Trois zones à visiter : Arbor Tarantula vers 45.5,19.6, Hay Weevil vers 32.4,28.5, Flesh Picker vers 53.3,58.3 : beaucoup de trajet, la faire en passant.",
+		enUS = "Three zones to visit: Arbor Tarantula near 45.5,19.6, Hay Weevil near 32.4,28.5, Flesh Picker near 53.3,58.3: lots of travel, do it on the way.",
+	},
 }
