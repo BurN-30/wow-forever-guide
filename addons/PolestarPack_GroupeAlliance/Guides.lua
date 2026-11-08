@@ -8652,8 +8652,8 @@ do
 					title = "The Villards",
 					note = "{npc:5683} waits north of {object:376} by the {object:2673}; {npc:271322} a short walk further north-east.",
 					goals = {
-						{ t = "accept", quest = 87318, title = "Hearts of the Lost", npc = 5683, npcName = "Comar Villard", minLevel = 28, qlvl = 33, map = 1437, x = 49.93, y = 12.55, z = 79.3, f = "e" },
-						{ t = "turnin", quest = 87318, title = "Hearts of the Lost", npc = 271322, npcName = "Essene Villard", map = 1437, x = 51.54, y = 9.02, f = "e" },
+						{ t = "accept", quest = 87318, title = "Hearts of the Lost", npc = 5683, npcName = "Comar Villard", minLevel = 28, qlvl = 33, map = 1437, x = 49.93, y = 12.55, z = 79.3, f = "e", optional = true, note = "{npc:5683} (Groupe Alliance: optional, Forever players report he no longer offers it)" },
+						{ t = "turnin", quest = 87318, title = "Hearts of the Lost", npc = 271322, npcName = "Essene Villard", map = 1437, x = 51.54, y = 9.02, f = "e", optional = true },
 					},
 				},
 				{

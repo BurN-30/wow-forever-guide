@@ -80,8 +80,8 @@ step Waterlogged Envelope
 step The Villards
   zone Wetlands
   tip Comar Villard waits north of Dun Modr by the Thandol Span; Essene a short walk further north-east.
-  accept 87318                        -- Comar Villard
-  turnin 87318                        -- Essene Villard
+  accept 87318 optional               -- Comar Villard (Groupe Alliance: optional, Forever players report he no longer offers it)
+  turnin 87318 optional               -- Essene Villard
 
 step Dun Modr
   collect 280396 quest 98310.2        -- Heart of Modr

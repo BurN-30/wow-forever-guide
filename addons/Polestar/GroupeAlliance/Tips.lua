@@ -942,4 +942,325 @@ ns.GA.Tips = {
 		frFR = "Trois zones à visiter : Arbor Tarantula vers 45.5,19.6, Charançon des foins vers 32.4,28.5, Pique-chair vers 53.3,58.3 : beaucoup de trajet, la faire en passant.",
 		enUS = "Three zones to visit: Arbor Tarantula near 45.5,19.6, Hay Weevil near 32.4,28.5, Flesh Picker near 53.3,58.3: lots of travel, do it on the way.",
 	},
+	-- 0.6.0: levels 30-43, Wowhead comments read on 2026-11-08
+	[187] = { -- Tiger Mastery (classic)
+		frFR = "Les tigres sont à l'ouest de la route, entre le premier et le deuxième pont, entre les Ruines de Kal'ai et de Bal'lal (vers 31,16 à 35,20).",
+		enUS = "The tigers are west of the road between the first and second bridge, between the Kal'ai and Bal'lal Ruins (around 31,16 to 35,20).",
+	},
+	[191] = { -- Panther Mastery (classic)
+		frFR = "Les panthères sont au nord-nord-ouest des Ruines de Bal'lal, vers 29,16, avec une réapparition rapide ; les raptors de Strangleronce sont juste à côté.",
+		enUS = "The panthers are north-north-west of the Bal'lal Ruins, around 29,16, with fast respawns; the Stranglethorn Raptors are right next to them.",
+	},
+	[192] = { -- Panther Mastery (classic)
+		frFR = "Les panthères Ombregueule sont camouflées et éparpillées près des routes, par exemple vers 47,23 ; une macro /target Ombregueule aide à les repérer.",
+		enUS = "The Shadowmaw Panthers are stealthed and spread near the roads, for example around 47,23; a /target Shadowmaw macro helps spot them.",
+	},
+	[193] = { -- Panther Mastery (classic)
+		frFR = "Bhag'thera apparaît soit vers 48,20, soit vers 48,28 : vérifier les deux endroits, avec une macro /target Bhag'thera.",
+		enUS = "Bhag'thera spawns either around 48,20 or around 48,28: check both spots, with a /target Bhag'thera macro.",
+	},
+	[194] = { -- Raptor Mastery (classic)
+		frFR = "Les raptors sont sur le plateau au sud-est des Ruines de Zul'Kunda, vers 27,16 ; les petits attaquent avec leurs mères.",
+		enUS = "The raptors are on the plateau south-east of the Ruins of Zul'Kunda, around 27,16; the young ones attack along with their mothers.",
+	},
+	[198] = { -- Supplies to Private Thorsen (classic)
+		frFR = "Le Soldat Thorsen part en patrouille et ne prend la quête qu'une fois revenu au Camp rebelle (37,3) : l'attendre là.",
+		enUS = "Private Thorsen goes on patrol and only takes the quest once he is back at the Rebel Camp (37,3): wait for him there.",
+	},
+	[200] = { -- Bookie Herod (classic)
+		frFR = "Les registres sont à l'étage du seul bâtiment à deux niveaux de la Base de Kurzen (43,10) ; ils peuvent aussi se ramasser de dehors, sous les poutres à l'arrière.",
+		enUS = "The records are upstairs in the only two-storey building of Kurzen's Compound (43,10); they can also be looted from outside, under the beams at the back.",
+	},
+	[204] = { -- Bad Medicine (classic)
+		frFR = "Le Remède tropical tombe peu des guérisseurs de Kurzen, qui se soignent : les interrompre. Les réducteurs de tête de Kurzen dans la grotte du camp le lâchent bien plus souvent.",
+		enUS = "Jungle Remedy drops rarely from the Kurzen Medicine Men, who heal themselves: interrupt them. The Kurzen Headshrinkers in the camp's cave drop it far more often.",
+	},
+	[205] = { -- Troll Witchery (classic)
+		frFR = "Le Fétiche Skullsplitter ne tombe que des sorciers-docteurs et mystiques Skullsplitter ; guerriers et lanceurs de haches partagent leurs points de réapparition, les tuer aussi.",
+		enUS = "The Skullsplitter Fetish only drops from Skullsplitter Witch Doctors and Mystics; the warriors and axe throwers share their spawn points, so kill them too.",
+	},
+	[207] = { -- Kurzen's Mystery (classic)
+		frFR = "Les quatre tablettes sont au sol dans les ruines trolls : 29,19, 25,23, 22,13 et 24,8 ; celle de Zul'Kunda (22,13) est la plus entourée, y aller par le sud.",
+		enUS = "The four tablets lie on the ground in the troll ruins: 29,19, 25,23, 22,13 and 24,8; the Zul'Kunda one (22,13) is the most guarded, approach from the south.",
+	},
+	[321] = { -- Lightforge Iron (classic)
+		frFR = "Un lingot est dans le coffre de l'épave juste au sud de l'auberge de Menethil (12,64) ; les autres tombent des murlocs autour.",
+		enUS = "One ingot is in the chest on the wreck just south of the Menethil inn (12,64); the rest drop from the murlocs around it.",
+	},
+	[324] = { -- The Lost Ingots (classic)
+		frFR = "Butin très rare et murlocs qui lancent des filets et fuient pour ramener des renforts ; un autre camp plus au sud sur la côte est souvent moins fréquenté.",
+		enUS = "Very rare drop, and the murlocs throw nets and flee to bring friends; another camp further south along the coast is usually less crowded.",
+	},
+	[338] = { -- The Green Hills of Stranglethorn (classic)
+		frFR = "Seules existent les pages 1, 4, 6, 8, 10, 11, 14, 16, 18, 20, 21, 24, 25, 26 et 27 : inutile de chercher les autres. Elles tombent de tout monstre de la zone ou s'achètent.",
+		enUS = "Only pages 1, 4, 6, 8, 10, 11, 14, 16, 18, 20, 21, 24, 25, 26 and 27 exist: don't look for others. Any mob in the zone can drop them, or buy them.",
+	},
+	[339] = { -- Chapter I (classic)
+		frFR = "Chapitre I : pages 1, 4, 6 et 8. Elles tombent de tout monstre de Strangleronce ; les manquantes se trouvent souvent pas chères à l'hôtel des ventes.",
+		enUS = "Chapter I: pages 1, 4, 6 and 8. Any Stranglethorn mob can drop them; missing ones are often cheap at the Auction House.",
+	},
+	[340] = { -- Chapter II (classic)
+		frFR = "Chapitre II : pages 10, 11, 14 et 16. Elles tombent de tout monstre de Strangleronce ; les manquantes se trouvent souvent pas chères à l'hôtel des ventes.",
+		enUS = "Chapter II: pages 10, 11, 14 and 16. Any Stranglethorn mob can drop them; missing ones are often cheap at the Auction House.",
+	},
+	[341] = { -- Chapter III (classic)
+		frFR = "Chapitre III : pages 18, 20, 21 et 24. Elles tombent de tout monstre de Strangleronce ; les manquantes se trouvent souvent pas chères à l'hôtel des ventes.",
+		enUS = "Chapter III: pages 18, 20, 21 and 24. Any Stranglethorn mob can drop them; missing ones are often cheap at the Auction House.",
+	},
+	[342] = { -- Chapter IV (classic)
+		frFR = "Chapitre IV : pages 25, 26 et 27. Elles tombent de tout monstre de Strangleronce ; les manquantes se trouvent souvent pas chères à l'hôtel des ventes.",
+		enUS = "Chapter IV: pages 25, 26 and 27. Any Stranglethorn mob can drop them; missing ones are often cheap at the Auction House.",
+	},
+	[349] = { -- Stranglethorn Fever (classic)
+		frFR = "Le Coeur de Mokk tombe du gorille blanc de la troisième vague ; prendre Effrayer Philippe le Chancelant avant, ses abats viennent des gorilles du même vallon.",
+		enUS = "The Heart of Mokk drops from the white gorilla in the third wave; take Scaring Shaky first, its giblets come from the gorillas in the same valley.",
+	},
+	[465] = { -- Nek'rosh's Gambit (classic)
+		frFR = "La catapulte est vers 47,47, entourée de nombreux orcs : les attirer un par un, puis cliquer sur l'engrenage actif avec le bois en sac pour lancer la suite.",
+		enUS = "The catapult is around 47,47, surrounded by many orcs: pull them one at a time, then click the active cog with the timber in your bags to get the next step.",
+	},
+	[505] = { -- Syndicate Assassins (classic)
+		frFR = "Au centre du camp du Promontoire de Sofera, lire les documents posés sur la table : ils lancent Lettre codée et Documents d'annonce d'attaque.",
+		enUS = "In the middle of the Sofera's Naze camp, read the papers on the table: they start Encrypted Letter and Foreboding Plans.",
+	},
+	[522] = { -- Assassin's Contract (classic)
+		frFR = "Le contrat vient d'un événement : attendre au centre d'Austrivage, entre l'auberge et la mairie, que le crieur donne l'alerte ; deux Assassin des ténèbres attaquent alors.",
+		enUS = "The contract comes from an event: wait in the middle of Southshore, between the inn and the town hall, until the crier raises the alarm; two Shadowy Assassins then attack.",
+	},
+	[555] = { -- Soothing Turtle Bisque (classic)
+		frFR = "Les tortues longent la rivière à l'est d'Austrivage jusqu'au Moulin-de-Tarren, la viande tombe environ une fois sur trois ; les Épices apaisantes s'achètent à Austrivage (48,55).",
+		enUS = "The turtles line the river east of Southshore up to Tarren Mill, meat drops about one kill in three; the Soothing Spices are sold in Southshore (48,55).",
+	},
+	[559] = { -- Farren's Proof (classic)
+		frFR = "La Tête de murloc tombe peu souvent ; les marche-boue et cours-la-côte plus à l'ouest (vers 33,70) la lâchent mieux et sont de plus bas niveau que les oracles.",
+		enUS = "Murloc Heads drop rarely; the muckdwellers and coastrunners further west (around 33,70) drop them more often and are lower level than the oracles.",
+	},
+	[564] = { -- Costly Menace (classic)
+		frFR = "Les deux sortes de lions sont nombreuses sur L'Avancée (Alterac 38,90) avec une réapparition rapide ; prendre Syndicat d'assassins avant, ses cibles sont tout près.",
+		enUS = "Both lion types are plentiful on The Headland (Alterac 38,90) and respawn fast; grab Syndicate Assassins first, its targets are close by.",
+	},
+	[565] = { -- Bartolo's Yeti Fur Cloak (classic)
+		frFR = "Il faut aussi un Rouleau d'étoffe de laine et une Cape d'homme des collines (artisans ou hôtel des ventes) ; tout garder dans les sacs, pas en banque, sinon le rendu reste grisé.",
+		enUS = "You also need a Bolt of Woolen Cloth and a Hillman's Cloak (crafters or Auction House); keep everything in your bags, not the bank, or the hand-in stays greyed out.",
+	},
+	[574] = { -- Special Forces (classic)
+		frFR = "Demande Mauvaise médecine et La seconde rébellion rendues ; les commandos sont dans la grotte du camp et autour de son entrée (45,8).",
+		enUS = "Requires Bad Medicine and The Second Rebellion turned in; the commandos are in the camp's cave and around its entrance (45,8).",
+	},
+	[575] = { -- Supply and Demand (classic)
+		frFR = "La grande peau tombe des crocilisques des rivières ordinaires, le long de la rivière près de l'Expédition de Nesingwary (35,10) : inutile de chercher des « grands » crocilisques.",
+		enUS = "The large skin drops from ordinary River Crocolisks along the river by Nesingwary's Expedition (35,10): no need to hunt for \"large\" ones.",
+	},
+	[577] = { -- Some Assembly Required (classic)
+		frFR = "Les Crocilisque Gueule d'acier de la rive sud-est du Lac Nazfériti (vers 40,29) lâchent bien les peaux, contrairement à ceux près de Grom'gol ; les bêtes autour sont plus fortes.",
+		enUS = "The Snapjaw Crocolisks on the south-east shore of Lake Nazferiti (around 40,29) drop the skins well, unlike those near Grom'gol; the beasts around them are tougher.",
+	},
+	[578] = { -- The Stone of the Tides (classic)
+		frFR = "L'île est en face de la côte, directement à l'ouest de l'Expédition de Nesingwary (21,21) ; le passage à la bibliothèque de Hurlevent est facultatif.",
+		enUS = "The island is offshore, due west of Nesingwary's Expedition (21,21); the Stormwind library visit is optional.",
+	},
+	[587] = { -- Up to Snuff (classic)
+		frFR = "Tous les pirates de la Voile sanglante lâchent le tabac, souvent : à faire en même temps que Les boucaniers de la Voile sanglante sur Le Rivage cruel, au sud de Baie-du-Butin.",
+		enUS = "Every Bloodsail pirate drops snuff, often: do it alongside The Bloodsail Buccaneers on the Wild Shore south of Booty Bay.",
+	},
+	[595] = { -- The Bloodsail Buccaneers (classic)
+		frFR = "Le papier n'est pas dans la barque : il est posé sur un tonneau du camp juste avant, à gauche en sortant de Baie-du-Butin (vers 27,69).",
+		enUS = "The paper is not in the boat: it lies on a barrel in the camp just before it, left out of Booty Bay (around 27,69).",
+	},
+	[600] = { -- Venture Company Mining (classic)
+		frFR = "Les gobelins visés sont au sud des Ruines de Balia'mah, vers 40,44, pas au nord de la vallée ; ils réapparaissent vite et des contremaîtres patrouillent, éviter la grotte du fond.",
+		enUS = "The goblins you want are south of the Balia'mah Ruins, around 40,44, not in the north of the zone; they respawn fast and foremen patrol, so avoid the back cave.",
+	},
+	[604] = { -- The Bloodsail Buccaneers (classic)
+		frFR = "Les ordres et les cartes apparaissent au hasard en trois endroits : grand camp (26,82), petite tente (29,80) et barque (27,83) ; faire le tour, et Faire un tabac au passage.",
+		enUS = "The orders and charts spawn at random in three spots: the big camp (26,82), the small tent (29,80) and the rowboat (27,83); check them all and do Up to Snuff along the way.",
+	},
+	[605] = { -- Singing Blue Shards (classic)
+		frFR = "Les Basilic de cristal sont sur les falaises de la côte ouest, au sud de Zul'Kunda (vers 24,16 à 26,18), avec un bon taux de butin.",
+		enUS = "The Crystal Spine Basilisks are on the west coast cliffs south of Zul'Kunda (around 24,16 to 26,18), with a good drop rate.",
+	},
+	[627] = { -- Favor for Krazek (classic)
+		frFR = "Il faut miner le minerai dans la grotte (85,34, montée à partir de 80,40, derrière un rocher) ou l'acheter à l'hôtel des ventes ; kobolds serrés qui fuient à mi-vie.",
+		enUS = "You must mine the ore in the cave (85,34, climb from 80,40, hidden behind a rock) or buy it at the Auction House; the kobolds stand close and flee at low health.",
+	},
+	[631] = { -- The Thandol Span (classic)
+		frFR = "Au milieu du pont vers Arathi, prendre la porte côté est et descendre trois niveaux : le corps est au sol. Des nains Sombrefer apparaissent dès qu'on le fouille, filer aussitôt.",
+		enUS = "Halfway across the bridge to Arathi, take the east door and go down three levels: the body lies on the floor. Dark Iron dwarves spawn as soon as you loot it, so leave right away.",
+	},
+	[637] = { -- Sully Balloo's Letter (classic)
+		frFR = "La Lettre détrempée est dans la main d'un nain mort, sous l'eau au pied du pont effondré (Arathi 44,93), à côté d'une catapulte ; le chemin pour sortir de l'eau est vers 53,91.",
+		enUS = "The Waterlogged Letter is in a dead dwarf's hand, underwater below the broken bridge (Arathi 44,93) by a catapult; the way out of the water is near 53,91.",
+	},
+	[647] = { -- MacKreel's Moonshine (classic)
+		frFR = "Le donneur est sur un pan isolé du pont effondré : sauter depuis la pointe côté nord-ouest du grand pont (Arathi 42,90). Nager jusqu'à Dun Garok évite la route de la Horde.",
+		enUS = "The quest giver stands on a cut-off piece of the broken bridge: jump from the jagged tip on the north-west side of the main bridge (Arathi 42,90). Swimming to Dun Garok avoids the Horde road.",
+	},
+	[657] = { -- Hints of a New Plague? (classic)
+		frFR = "Tuer d'avance les péons de la grange, qui ne réapparaissent pas ; les grunts près des silos réapparaissent au passage de Kinelory, inutile de les nettoyer.",
+		enUS = "Kill the peons in the barn beforehand, they don't respawn; the grunts by the silos respawn as Kinelory arrives, so don't bother clearing them.",
+	},
+	[658] = { -- Hints of a New Plague? (classic)
+		frFR = "Le courrier part de la Ferme de Go'Shek avec quatre gardes et suit la route vers Moulin-de-Tarren ; des gardes montés de l'Alliance l'attaquent en chemin, les suivre aide.",
+		enUS = "The courier leaves Go'shek Farm with four guards and follows the road toward Tarren Mill; mounted Alliance guards attack him on the way, following them helps.",
+	},
+	[659] = { -- Hints of a New Plague? (classic)
+		frFR = "Quae est dans les Hautes-terres Arathies (60,54), près du moulin qui domine la ferme, et non dans les Contreforts de Hautebrande.",
+		enUS = "Quae is in the Arathi Highlands (60,54), by the windmill overlooking the farm, not in Hillsbrad Foothills.",
+	},
+	[693] = { -- Wand over Fist (classic)
+		frFR = "Demande Valoir son poids en or ; grotte de droite à 54,77, puis la branche gauche : Kor'gresh Coldrage attend au bout (55,82).",
+		enUS = "Requires Worth Its Weight in Gold; take the right-hand cave at 54,77, then the left fork: Kor'gresh Coldrage waits at the end (55,82).",
+	},
+	[705] = { -- Pearl Diving (classic)
+		frFR = "Les Perle bleue se ramassent dans les palourdes de Strangleronce même sans la quête : en prendre neuf avant de quitter la vallée.",
+		enUS = "Blue Pearls can be looted from Stranglethorn clams even without the quest: grab nine before leaving the zone.",
+	},
+	[709] = { -- Solution to Doom (classic)
+		frFR = "Dans Uldaman, ne pas sauter vers l'entrée du donjon : rester sur le chemin haut et prendre à droite à la fourche ; la tablette est au centre de la salle scellée, au sud.",
+		enUS = "In Uldaman, don't drop down to the dungeon entrance: stay on the upper path and keep right at the fork; the tablet is in the middle of the sealed hall to the south.",
+	},
+	[711] = { -- Study of the Elements: Rock (classic)
+		frFR = "Seuls les élémentaires de roche simples lâchent les plaques, pas les inférieurs, supérieurs ou enragés ; ils sont nombreux au sud de Lotwil, vers 44,80.",
+		enUS = "Only plain Rock Elementals drop the slabs, not the lesser, greater or enraged ones; there are many south of Lotwil, around 44,80.",
+	},
+	[720] = { -- A Sign of Hope (classic)
+		frFR = "La Carte chiffonnée est au sol près d'une table du camp nain sur la crête (53,34), à l'ouest de la fosse ; les nains ont des attaques à distance et viennent en groupe.",
+		enUS = "The Crumpled Map lies on the ground by a table in the dwarf camp on the ridge (53,34), west of the pit; the dwarves have ranged attacks and come in groups.",
+	},
+	[1026] = { -- Raene's Cleansing (classic)
+		frFR = "La clé tombe des Anciens fous et Anciens flétris autour du coffre, posé sur une petite colonne de marbre (54,35) ; Shael'dryn attend ensuite au puits de lune (53,46).",
+		enUS = "The key drops from the Crazed and Withered Ancients around the chest, which sits on a short marble column (54,35); Shael'dryn then waits at the moonwell (53,46).",
+	},
+	[1035] = { -- Fallen Sky Lake (classic)
+		frFR = "La pierre tombe de l'unique oracle (niveau 30), sur le petit îlot du Lac Tombeciel (66,82) ; l'attirer à l'écart des autres monstres.",
+		enUS = "The stone drops from the lone oracle (level 30) on the small islet of Fallen Sky Lake (66,82); pull him away from the other mobs.",
+	},
+	[1045] = { -- Raene's Cleansing (classic)
+		frFR = "Ran Dent-rouge est vers 55,80, au sud du sentier de Krolg, avec un garde collé ; nettoyer d'abord les gardes de Dent-rouge et les bêtes autour, qui réapparaissent vite.",
+		enUS = "Ran Bloodtooth is near 55,80, south of the path to Krolg, with one guard attached; clear the Bloodtooth Guards and nearby beasts first, they respawn fast.",
+	},
+	[1046] = { -- Raene's Cleansing (wowhead forever)
+		frFR = "Sur Forever, le bâton de transformation en furbolg reste après le rendu : inutile de sauter la fin de la chaîne pour le garder.",
+		enUS = "On Forever the furbolg disguise rod stays after the hand-in: no need to skip the end of the chain to keep it.",
+	},
+	[1055] = { -- Raene's Cleansing (classic)
+		frFR = "L'Autel caché est une grosse pierre lumineuse au nord-ouest de la Retraite de Raynebois, vers 56,49 ; le sentier qui y monte part de 55,51.",
+		enUS = "The Hidden Shrine is a large glowing stone north-west of Raynewood Retreat, near 56,49; the path up starts at 55,51.",
+	},
+	[1078] = { -- Retrieval for Mauren (classic)
+		frFR = "Les Ecailles de cristal tombent rarement de tous les basilics du Val calciné : tuer aussi harpies et élémentaires du coin, ils partagent les points de réapparition.",
+		enUS = "Crystalized Scales drop rarely from any basilisk in The Charred Vale: kill the local harpies and elementals too, they share the spawn points.",
+	},
+	[1246] = { -- The Missing Diplomat (classic)
+		frFR = "Dashel attend dans une ruelle cachée de la Vieille ville (70,45), dont l'entrée fait face à la Taverne du Cochon siffleur.",
+		enUS = "Dashel waits in a hidden alley in Old Town (70,45), whose entrance faces the Pig and Whistle Tavern.",
+	},
+	[1249] = { -- The Missing Diplomat (classic)
+		frFR = "Une fois la quête acceptée, Slim se camoufle et file vers la sortie : courir à la porte de l'auberge pour l'intercepter, il n'est attaquable qu'une fois un peu dehors.",
+		enUS = "Once you accept, Slim stealths and heads for the exit: run to the inn door to catch him, he can only be attacked once he is a little outside.",
+	},
+	[1265] = { -- The Missing Diplomat (classic)
+		frFR = "Entrer dans la tour de la Halte de la Vigie suffit à valider ; si l'Archimage Tervosh n'y est pas, ressortir et revenir, ou attendre qu'un autre joueur ait fini.",
+		enUS = "Walking into the Sentry Point tower completes it; if Archmage Tervosh isn't there, step out and come back, or wait for another player to finish.",
+	},
+	[1302] = { -- James Hyal (classic)
+		frFR = "À l'Auberge du Repos ombragé (29,48), l'insigne est sur la planche seule (pas les deux croisées) au milieu de l'auberge ; le Bouclier noir et les traces de sabots lancent d'autres quêtes.",
+		enUS = "At Shady Rest Inn (29,48) the badge is on the single plank (not the two crossed ones) inside; the Black Shield and the hoofprints start other quests.",
+	},
+	[1392] = { -- Noboru the Cudgel (classic)
+		frFR = "Le Gourdin de Noboru est gris et ne tombe qu'une fois : ne pas le vendre (attention aux addons de vente auto) et faire un clic droit dessus pour lancer la quête.",
+		enUS = "Noboru's Cudgel is grey and drops only once: don't sell it (beware of auto-sell addons) and right-click it to start the quest.",
+	},
+	[1439] = { -- Search for Tyranis (classic)
+		frFR = "Tyranis (niveau 36) est dans le bâtiment à gauche du principal (52,28), à la même place que Dalinda dans le sien ; après lui, retourner voir Dalinda pour l'escorter.",
+		enUS = "Tyranis (level 36) is in the building left of the main one (52,28), in the same spot as Dalinda in hers; afterwards go back to Dalinda to escort her out.",
+	},
+	[1440] = { -- Return to Vahlarriel (classic)
+		frFR = "Les monstres devant le bâtiment réapparaissent vite : lancer l'escorte dès le bâtiment nettoyé et sortir sans traîner.",
+		enUS = "The mobs outside the building respawn quickly: start the escort as soon as the building is cleared and get out without lingering.",
+	},
+	[1447] = { -- The Missing Diplomat (classic)
+		frFR = "Dashel arrive avec deux acolytes : frapper Dashel lui-même, il rappelle ses hommes et redevient amical vers la moitié de sa vie ; lui reparler ensuite.",
+		enUS = "Dashel brings two helpers: hit Dashel himself, he calls them off and turns friendly around half health; talk to him again afterwards.",
+	},
+	[1454] = { -- The Karnitol Shipwreck (classic)
+		frFR = "Le Coffre de Karnitol est sur la plage à l'ouest de Hache-Tonnerre (36,30), près de débris flottants ; ramasser aussi le journal posé à côté, il lance une autre quête.",
+		enUS = "Karnitol's Chest is on the beach west of Thunder Axe (36,30) near floating debris; also pick up the journal beside it, it starts another quest.",
+	},
+	[1458] = { -- Reagents for Reclaimers Inc. (classic)
+		frFR = "Proposée seulement après Les affaires de Récupérateurs SA en Désolace ; les satyres sont autour de Sargeron (vers 75,21).",
+		enUS = "Only offered after Reclaimers' Business in Desolace; the satyrs are around Sargeron (near 75,21).",
+	},
+	[1459] = { -- Reagents for Reclaimers Inc. (classic)
+		frFR = "Scorpions, basilics, vautours et élémentaires partagent les points de réapparition : rester au même endroit (41,51 ou 72,32) et tout tuer fait revenir des scorpions.",
+		enUS = "Scorpions, basilisks, vultures and elementals share spawn points: stay in one spot (41,51 or 72,32) and kill everything so scorpions come back.",
+	},
+	[1465] = { -- Vahlarriel's Search (classic)
+		frFR = "Dalinda Malem est au centre du grand bâtiment de la Forteresse de Hache-Tonnerre (54,26) ; avancer en tirant les gardes un par un.",
+		enUS = "Dalinda Malem is in the middle of the main building of Thunder Axe Fortress (54,26); work in by pulling the guards one at a time.",
+	},
+	[1466] = { -- Reagents for Reclaimers Inc. (classic)
+		frFR = "Tout tombe presque à coup sûr au Convent de Mannoroc : chasseurs de mages et seigneur vers 56,75, sœurs vers 54,76, capitaines et ensorceleuses vers 51,82.",
+		enUS = "Everything drops almost every time at Mannoroc Coven: mage hunters and the lord near 56,75, sisters near 54,76, captains and sorceresses near 51,82.",
+	},
+	[1718] = { -- The Islander (classic)
+		frFR = "L'île est vers 68,48 : suivre le haut-fond qui part de 66,48 pour l'atteindre sans tomber dans la zone de fatigue.",
+		enUS = "The island is near 68,48: follow the shallows starting at 66,48 to reach it without hitting the fatigue zone.",
+	},
+	[2279] = { -- The Platinum Discs (classic)
+		frFR = "Après avoir parlé au PNJ qui apparaît, réutiliser les disques pour obtenir les Disques de platine miniature avant de quitter Uldaman.",
+		enUS = "After talking to the NPC that appears, use the discs again to get the Miniature Platinum Discs before leaving Uldaman.",
+	},
+	[2398] = { -- The Lost Dwarves (classic)
+		frFR = "Quête d'introduction : elle ne peut plus être rendue si La Chambre secrète a déjà été acceptée ou rendue.",
+		enUS = "Breadcrumb quest: it can no longer be turned in once The Hidden Chamber has been accepted or completed.",
+	},
+	[5501] = { -- Bone Collector (classic)
+		frFR = "Ne pas tuer de kodos : faire un clic droit sur les crânes isolés au sol du Cimetière des kodos. Une apparition de kodo surgit souvent, être prêt à combattre.",
+		enUS = "Don't kill kodos: right-click the lone skulls on the ground of the Kodo Graveyard. A kodo apparition often appears, so be ready to fight.",
+	},
+	[5561] = { -- Kodo Roundup (classic)
+		frFR = "Après avoir apprivoisé un kodo au Cimetière des kodos, l'amener près de Smeed puis faire un clic droit sur le kodo pour qu'il compte ; répéter pour chacun.",
+		enUS = "After taming a kodo at the Kodo Graveyard, bring it next to Smeed, then right-click the kodo itself to get credit; repeat for each one.",
+	},
+	[5741] = { -- Sceptre of Light (classic)
+		frFR = "Le Prophète de la Lame ardente est en haut de la tour de guet juste à gauche en passant la porte de la Forteresse de Hache-Tonnerre (55,30) ; attendre sa réapparition s'il manque.",
+		enUS = "The Burning Blade Seer is at the top of the watchtower just left of Thunder Axe Fortress's gate (55,30); wait for his respawn if he is missing.",
+	},
+	[65602] = { -- What Is Love? (wowhead forever)
+		frFR = "La figurine est à l'étage de la maison (26,22) ; prendre la Torche éteinte sur la table dehors et l'allumer à un feu de camp, à poser avec la cuisine ou près d'un PNJ voisin.",
+		enUS = "The figurine is upstairs in the house (26,22); take the Unlit Torch from the table outside and light it at a campfire, placed with Cooking or found by a nearby NPC.",
+	},
+	[79536] = { -- Greater Friend of the Library (wowhead forever)
+		frFR = "Les livres se ramassent dans le monde (souvent aux emplacements de la rune Barrage des arcanes de SoD), par personnage ; rendu au sommet de la tour des mages de Hurlevent.",
+		enUS = "The books are picked up around the world (often at the Season of Discovery Arcane Barrage rune spots), per character; turn in at the top of the Stormwind mage tower.",
+	},
+	[87318] = { -- Hearts of the Lost (wowhead forever)
+		frFR = "Sur Forever, le donneur ne propose plus cette quête, même avec toute la zone faite : ne pas perdre de temps à la chercher.",
+		enUS = "On Forever the quest giver no longer offers this quest, even with the whole zone done: don't waste time looking for it.",
+	},
+	[87491] = { -- Spark of Freedom (wowhead forever)
+		frFR = "À mi-chemin de la sortie du camp, une embuscade attaque ; le PNJ escorté se défend bien, mais garder ses soins et ses temps de recharge pour ce moment.",
+		enUS = "About halfway out of the camp an ambush attacks; the escorted NPC holds up well, but save heals and cooldowns for that moment.",
+	},
+	[98027] = { -- Gleaming Crescent Necklace (wowhead forever)
+		frFR = "Petit objet blanc dans la rivière vers 63,71, signalé par un point d'exclamation sur la mini-carte ; il faut un niveau minimum (refusé au 19, accepté au 23).",
+		enUS = "Small white object in the river around 63,71, marked by an exclamation point on the minimap; it has a minimum level (refused at 19, accepted at 23).",
+	},
+	[98059] = { -- Hillsbrad's Hoard (wowhead forever)
+		frFR = "Le PNJ qui se tient près de la table doit être vivant pour que l'objet fonctionne : s'il a été tué, attendre qu'il réapparaisse. Un gnome peut devoir monter sur la chaise.",
+		enUS = "The NPC standing by the table must be alive for it to work: if he was killed, wait for his respawn. A gnome may need to stand on the chair.",
+	},
+	[98245] = { -- Razormaw Needling (wowhead forever)
+		frFR = "Prise sans les quêtes préalables indiquées. Les œufs se ramassent facilement à l'ouest de la zone ; pour les raptors, mieux vaut aller à l'est vers 69,31.",
+		enUS = "Can be taken without the listed prerequisites. Eggs are easy to loot in the west of the zone; for the raptors, head east around 69,31.",
+	},
+	[98283] = { -- Carnage (wowhead forever)
+		frFR = "La Chair de griffe pourrie malveillante tombe rarement des monstres Griffe pourrie affolée ; la poser à l'entrée de la grotte (69,35) fait venir Carnage.",
+		enUS = "The Malignant Rotclaw Flesh is a rare drop from Maddened Rotclaws; placing it at the cave entrance (69,35) brings out Carnage.",
+	},
+	[98310] = { -- Gleaning Our Future (wowhead forever)
+		frFR = "Le golem proche des orcs élites a aussi un voleur élite camouflé à côté : dégager un chemin jusqu'à lui avant d'utiliser la Pierre de Goaz, ce qui laisse aussi une sortie.",
+		enUS = "The golem near the elite orcs also has a stealthed elite rogue beside it: clear a path to it before using the Goaz Stone, which also leaves you a way out.",
+	},
 }
