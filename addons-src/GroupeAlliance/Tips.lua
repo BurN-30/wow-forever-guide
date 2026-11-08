@@ -1263,4 +1263,25 @@ ns.GA.Tips = {
 		frFR = "Le golem proche des orcs élites a aussi un voleur élite camouflé à côté : dégager un chemin jusqu'à lui avant d'utiliser la Pierre de Goaz, ce qui laisse aussi une sortie.",
 		enUS = "The golem near the elite orcs also has a stealthed elite rogue beside it: clear a path to it before using the Goaz Stone, which also leaves you a way out.",
 	},
+	-- 0.6.0: levels 40-50, Wowhead comments read on 2026-11-08 (most pages blocked)
+	[17] = { -- Uldaman Reagent Run (classic)
+		frFR = "Les champignons magenta poussent dans la grotte devant Uldaman, hors de l'instance, surtout près des feux et dans les coins à l'écart des monstres.",
+		enUS = "The Magenta Fungus Caps grow in the cave in front of Uldaman, outside the instance, mostly by the fires and in corners away from the mobs.",
+	},
+	[704] = { -- Agmond's Fate (classic)
+		frFR = "Les urnes sont dans le tunnel qui mène à Uldaman, hors de l'instance : près des tentes et de part et d'autre du portail, une seule gardée.",
+		enUS = "The urns are in the tunnel leading to Uldaman, outside the instance: by the tents and on both sides of the portal, only one guarded.",
+	},
+	[1052] = { -- Down the Scarlet Path (classic)
+		frFR = "Raleigh le Dévot attend à l'étage de l'auberge d'Austrivage (vers 51,59).",
+		enUS = "Raleigh the Devout waits upstairs in the Southshore inn (near 51,59).",
+	},
+	[1108] = { -- Indurium (classic)
+		frFR = "Les flocons d'Indurium tombent très rarement des troggs Cavepierre de Fin d'Agmond (vers 51,66) : la faire en même temps que les autres quêtes de troggs, ou la passer.",
+		enUS = "The Indurium Flakes drop very rarely from the Stonevault troggs at Agmond's End (near 51,66): do it alongside the other trogg quests, or skip it.",
+	},
+	[1451] = { -- Rhapsody Shindigger (classic)
+		frFR = "Le camp de Rhapsody est en haut d'une colline : le sentier part vers 20,48, près d'un griffon dressé amical.",
+		enUS = "Rhapsody's camp sits on a hilltop: the path starts near 20,48, by a friendly trained gryphon.",
+	},
 }

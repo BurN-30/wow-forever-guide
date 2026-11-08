@@ -105,6 +105,14 @@ ns.GA.Reliability = {
 		frFR = "Coffre vers 56,17 au nord de la Forteresse de Hache-Tonnerre ; en 2021 sur Classic il restait grisé (quête impossible), aucun retour de Forever encore.",
 		enUS = "Chest near 56,17 north of Thunder Axe Fortress; in 2021 on Classic it stayed greyed out (quest impossible), no Forever report yet.",
 	} },
+	[98219] = { "?", {
+		frFR = "Un commentaire Forever dit qu'un humain ne peut pas la prendre ; Wowhead retire les humains de toutes les quêtes propres à Forever, sans doute une erreur d'affichage : à vérifier en jeu avec un humain.",
+		enUS = "One Forever comment says a human cannot take it; Wowhead leaves humans out of every Forever-only quest, likely a display error: to check in game with a human.",
+	} },
+	[87318] = { "?", {
+		frFR = "Plusieurs commentaires Forever disent que Comar Villard ne la propose plus : rendue facultative.",
+		enUS = "Several Forever comments say Comar Villard no longer offers it: made optional.",
+	} },
 	-- 0.6.0: Zul'Farrak (23-tanaris).
 	[2865] = { "?", ZULFARRAK }, [3042] = { "?", ZULFARRAK }, [2768] = { "?", ZULFARRAK },
 }
