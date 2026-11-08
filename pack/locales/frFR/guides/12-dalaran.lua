@@ -7,7 +7,7 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 11 · City of Dalaran (dungeon 30-33)"] = "Groupe 11 · Cité de Dalaran (donjon 30-33)",
+	["Group 11 · City of Dalaran (dungeon 30-33, optional)"] = "Groupe 11 · Cité de Dalaran (donjon 30-33, facultatif)",
 
 	-- Step 1: Stormwind: the end of the Defias story
 	-- {zone:1453} Stormwind
@@ -31,8 +31,8 @@ return {
 	-- Step 5: Stormwind: two dungeon quests
 	-- {zone:1453} Stormwind
 	["{zone:1453}: two dungeon quests"] = "{zone:1453} : deux quêtes du donjon",
-	-- {npc:5502} Shylamiir · {object:2096} Trade District · {npc:5694} High Sorcerer Andromath · {object:2101} Mage Quarter
-	["{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower."] = "{npc:5502} est dans {object:2096}, {npc:5694} dans la tour de {object:2101}.",
+	-- {zone:1416} Alterac Mountains · {zone:1437} Wetlands · {npc:5502} Shylamiir · {object:2096} Trade District · {npc:5694} High Sorcerer Andromath · {object:2101} Mage Quarter
+	["City of Dalaran: a 5-player Forever dungeon in the {zone:1416}, best at 30 to 33. This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the {zone:1437}.\n{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower."] = "Cité de Dalaran : un donjon Forever pour 5 joueurs dans les {zone:1416}, idéal de 30 à 33. Ce chapitre prend ses quatre quêtes, fait le donjon, puis les rend. Seul ? La passer : le guide continue vers les {zone:1437}.\n{npc:5502} est dans {object:2096}, {npc:5694} dans la tour de {object:2101}.",
 	-- {quest:92432} An Alarming Request
 	["Group: level 30 required for {quest:92432}, the quest that opens the way to Dalaran. Below 30? Level up first."] = "Groupe : niveau 30 requis pour {quest:92432}, la quête qui ouvre la route de Dalaran. En dessous de 30 ? Monter de niveau d'abord.",
 
@@ -61,8 +61,17 @@ return {
 	-- {object:1162} Menethil Harbor · {npc:5502} Shylamiir · {npc:5694} High Sorcerer Andromath · {zone:1453} Stormwind
 	["Next: {object:1162}, where your hearthstone is still bound (Deepwater Tavern). {npc:5502} and {npc:5694} take their quests at the next guide's {zone:1453} stop."] = "Ensuite : {object:1162}, où votre pierre de foyer est toujours liée (taverne de l'Eau-profonde). {npc:5502} et {npc:5694} attendent leurs quêtes à l'étape de {zone:1453} du guide suivant.",
 
+	-- Step 11: Dalaran skipped: back to Menethil Harbor
+	-- {object:1162} Menethil Harbor
+	["Dalaran skipped: back to {object:1162}"] = "Dalaran passé : retour à {object:1162}",
+	-- {object:1162} Menethil Harbor · {zone:1453} Stormwind
+	["Use your hearthstone (Deepwater Tavern, {object:1162}), or fly from {zone:1453} to {object:1162} if it is on cooldown."] = "Utilisez votre pierre de foyer (taverne de l'Eau-profonde, {object:1162}), ou prenez le griffon de {zone:1453} vers {object:1162} si elle est en recharge.",
+	["Deepwater Tavern"] = "Taverne de l'Eau-profonde",
+
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Group 11 · City of Dalaran (dungeon 28-33)"] = "Groupe 11 · Cité de Dalaran (donjon 28-33)",
+	-- ["Group 11 · City of Dalaran (dungeon 30-33)"] = "Groupe 11 · Cité de Dalaran (donjon 30-33)",
 	-- ["His quest needs level 30: the whole group should wait for it."] = "Sa quête demande le niveau 30 : tout le groupe doit l'attendre.",
+	-- ["{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower."] = "{npc:5502} est dans {object:2096}, {npc:5694} dans la tour de {object:2101}.",
 	-- ["{zone:1453} rewards"] = "Récompenses à {zone:1453}",
 }

@@ -3,7 +3,7 @@
 # choice, shorter tips. Ids cross-checked against Polestar 0.3.2's reference data and Dungeons
 # codex and the MittenQuest Forever pack (Stormwind 31-35). Untested in game (Aurum: past 20).
 guide groupe-alliance/12-dalaran
-title Group 11 · City of Dalaran (dungeon 30-33)
+title Group 11 · City of Dalaran (dungeon 30-33, optional)
 folder Group Alliance
 category Dungeons
 faction Alliance
@@ -51,13 +51,24 @@ step Brotherhood's End
   accept 396
   turnin 396                              -- Lady Katrana Prestor, in the throne room of Stormwind Keep: Seal of Wrynn
 
+# Groupe Alliance 0.7.0: the dungeon is optional, like the other chapters: asked once at the
+# first dungeon pickup (`when group 92456`, Polestar's "Skip it / Do it with a group" banner),
+# every later dungeon step needs it done (`when done dal-start`). Skipped: the end of the Defias
+# story above stays, then the guide sends the player back to Menethil Harbor. An Alarming
+# Request (92432) is still taken in Southshore and handed in near Dalaran by the next guides
+# (14-paluns-hautebrande, 18-arathi): it is a plain errand, not the dungeon.
+
 step Stormwind: two dungeon quests
+  label dal-start
+  when group 92456
+  tip City of Dalaran: a 5-player Forever dungeon in the Alterac Mountains, best at 30 to 33. This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the Wetlands.
   note Group: level 30 required for An Alarming Request, the quest that opens the way to Dalaran. Below 30? Level up first.
   tip Shylamiir is in the Trade District, High Sorcerer Andromath in the Mage Quarter tower.
   accept 92456
   accept 92489
 
 step Southshore: Emissary Jacques
+  when done dal-start
   zone Hillsbrad Foothills
   tip His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own.
   level 30
@@ -65,6 +76,7 @@ step Southshore: Emissary Jacques
   accept 92432
 
 step Image of Archmage Modera
+  when done dal-start
   zone Silverpine Forest
   tip North-west past Hillsbrad Fields, by Dalaran's outer sewer. Avoid Tarren Mill.
   turnin 92432
@@ -72,11 +84,13 @@ step Image of Archmage Modera
   accept 92458
 
 step City of Dalaran entrance
+  when done dal-start
   zone Alterac Mountains
   tip Group of 5. Open the sewer gate with the key from Modera and follow the large pipe.
   goto 14.7,63 "City of Dalaran" r 25
 
 step Inside the dungeon
+  when done dal-start
   tip Blossom in the central garden, remnants everywhere, the Arcane Mote at the Violet Citadel end.
   note Share each quest with your group: click it in the quest log, then Share.
   complete 92456
@@ -89,7 +103,14 @@ step Inside the dungeon
 # later on (14-paluns-hautebrande): A Green Sample and Power Overwhelming are handed in there.
 
 step Modera's rewards
+  when done dal-start
   zone Silverpine Forest
   turnin 92457
   turnin 92458
   note Next: Menethil Harbor, where your hearthstone is still bound (Deepwater Tavern). Shylamiir and High Sorcerer Andromath take their quests at the next guide's Stormwind stop.
+
+step Dalaran skipped: back to Menethil Harbor
+  when !group 92456
+  zone Wetlands
+  tip Use your hearthstone (Deepwater Tavern, Menethil Harbor), or fly from Stormwind to Menethil Harbor if it is on cooldown.
+  goto 10.7,61.0 "Deepwater Tavern"

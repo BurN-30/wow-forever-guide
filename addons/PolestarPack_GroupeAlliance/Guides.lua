@@ -8184,7 +8184,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/12-dalaran",
 			pack = "groupe-alliance",
-			title = "Group 11 · City of Dalaran (dungeon 30-33)",
+			title = "Group 11 · City of Dalaran (dungeon 30-33, optional)",
 			faction = "Alliance",
 			minLevel = 30,
 			maxLevel = 33,
@@ -8195,7 +8195,7 @@ do
 			next = "groupe-alliance/14-paluns-hautebrande",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:251961"] = "Arcane Mote", ["item:2933"] = "Seal of Wrynn", ["item:4306"] = "Silk Cloth", ["npc:1646"] = "Baros Alexston", ["npc:1749"] = "Lady Katrana Prestor", ["npc:1755"] = "Marzon the Silent Blade", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:482"] = "Elling Trias", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["npc:7766"] = "Tyrion", ["object:1162"] = "Menethil Harbor", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2159"] = "City Hall", ["quest:395"] = "Brotherhood's End", ["quest:434"] = "The Attack!", ["quest:92432"] = "An Alarming Request", ["zone:1453"] = "Stormwind" },
+			names = { ["item:251961"] = "Arcane Mote", ["item:2933"] = "Seal of Wrynn", ["item:4306"] = "Silk Cloth", ["npc:1646"] = "Baros Alexston", ["npc:1749"] = "Lady Katrana Prestor", ["npc:1755"] = "Marzon the Silent Blade", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:482"] = "Elling Trias", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["npc:7766"] = "Tyrion", ["object:1162"] = "Menethil Harbor", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2159"] = "City Hall", ["quest:395"] = "Brotherhood's End", ["quest:434"] = "The Attack!", ["quest:92432"] = "An Alarming Request", ["zone:1416"] = "Alterac Mountains", ["zone:1437"] = "Wetlands", ["zone:1453"] = "Stormwind" },
 			written = { ["Overhear Lescovar and {npc:1755} in the garden, then kill both"] = "Overhear Lescovar and Marzon in the garden, then kill both" },
 			steps = {
 				{
@@ -8245,7 +8245,9 @@ do
 				},
 				{
 					title = "{zone:1453}: two dungeon quests",
-					note = "{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower.",
+					note = "City of Dalaran: a 5-player Forever dungeon in the {zone:1416}, best at 30 to 33. This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the {zone:1437}.\n{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower.",
+					label = "dal-start",
+					when = { { k = "group", q = 92456 } },
 					goals = {
 						{ t = "note", text = "Group: level 30 required for {quest:92432}, the quest that opens the way to Dalaran. Below 30? Level up first." },
 						{ t = "accept", quest = 92456, title = "A Green Sample", npc = 5502, npcName = "Shylamiir", minLevel = 24, qlvl = 33, map = 1453, x = 31.5, y = 62.61, z = 98.3 },
@@ -8255,6 +8257,7 @@ do
 				{
 					title = "Southshore: {npc:247264}",
 					note = "His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own.",
+					when = { { k = "done", label = "dal-start" } },
 					goals = {
 						{ t = "level", level = 30 },
 						{ t = "getfp", npc = 2432, npcName = "Darla Harris", location = "Southshore", node = 14, map = 1424, x = 49.34, y = 52.27, z = 26.7, f = "e" },
@@ -8264,6 +8267,7 @@ do
 				{
 					title = "{npc:269127}",
 					note = "North-west past Hillsbrad Fields, by Dalaran's outer sewer. Avoid {object:1772}.",
+					when = { { k = "done", label = "dal-start" } },
 					goals = {
 						{ t = "turnin", quest = 92432, title = "An Alarming Request", npc = 269127, npcName = "Image of Archmage Modera", map = 1421, x = 68.62, y = 45.13, f = "e" },
 						{ t = "accept", quest = 92457, title = "Starving Arcane", npc = 269127, npcName = "Image of Archmage Modera", minLevel = 24, qlvl = 33, map = 1421, x = 68.62, y = 45.13, f = "e" },
@@ -8273,6 +8277,7 @@ do
 				{
 					title = "City of Dalaran entrance",
 					note = "Group of 5. Open the sewer gate with the key from Modera and follow the large pipe.",
+					when = { { k = "done", label = "dal-start" } },
 					goals = {
 						{ t = "goto", text = "City of Dalaran", map = 1416, x = 14.7, y = 63, f = "e", r = 25 },
 					},
@@ -8280,6 +8285,7 @@ do
 				{
 					title = "Inside the dungeon",
 					note = "Blossom in the central garden, remnants everywhere, the {item:251961} at the Violet Citadel end.",
+					when = { { k = "done", label = "dal-start" } },
 					goals = {
 						{ t = "note", text = "Share each quest with your group: click it in the quest log, then Share." },
 						{ t = "complete", quest = 92456, title = "A Green Sample" },
@@ -8290,10 +8296,19 @@ do
 				},
 				{
 					title = "Modera's rewards",
+					when = { { k = "done", label = "dal-start" } },
 					goals = {
 						{ t = "turnin", quest = 92457, title = "Starving Arcane", npc = 269127, npcName = "Image of Archmage Modera", map = 1421, x = 68.62, y = 45.13, f = "e" },
 						{ t = "turnin", quest = 92458, title = "Heart of Disruption", npc = 269127, npcName = "Image of Archmage Modera", map = 1421, x = 68.62, y = 45.13, f = "e" },
 						{ t = "note", text = "Next: {object:1162}, where your hearthstone is still bound (Deepwater Tavern). {npc:5502} and {npc:5694} take their quests at the next guide's {zone:1453} stop." },
+					},
+				},
+				{
+					title = "Dalaran skipped: back to {object:1162}",
+					note = "Use your hearthstone (Deepwater Tavern, {object:1162}), or fly from {zone:1453} to {object:1162} if it is on cooldown.",
+					when = { { k = "group", neg = true, q = 92456 } },
+					goals = {
+						{ t = "goto", text = "Deepwater Tavern", map = 1437, x = 10.7, y = 61, f = "e" },
 					},
 				},
 			},
