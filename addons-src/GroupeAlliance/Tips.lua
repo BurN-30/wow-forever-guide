@@ -1,6 +1,7 @@
--- Quest tips shown in the guide's tooltips (GroupeAlliance.lua): one short sentence per
--- quest. "wowhead": what several Wowhead Forever comments agree on ("classic": Wowhead
--- Classic, "?": not confirmed), "route": a pitfall the free RestedXP Forever guides point
+-- Quest tips shown in the guide's tooltips (GroupeAlliance.lua, GA.TipOf): one short sentence per
+-- quest, or per objective (goals["item:<id>"], ["npc:<id>"], ["object:<id>"], the line's item,
+-- creature or world object) when it speaks of one objective only. "wowhead": what several
+-- Wowhead Forever comments agree on ("classic": Wowhead Classic, "?": not confirmed), "route": a pitfall the free RestedXP Forever guides point
 -- out (their method only). Every tip is rewritten in our own words: no text is copied.
 local _, ns = ...
 ns.GA = ns.GA or {}
@@ -82,9 +83,13 @@ ns.GA.Tips = {
 		frFR = "Princesse est une truie de niveau 9 dans le Champ de potirons des Brackwell, escortée de deux gardes : la tirer seule ou venir en groupe.",
 		enUS = "Princess is a level 9 sow in the Brackwell Pumpkin Patch with two bodyguards; pull carefully or bring a group.",
 	},
-	[92] = { -- Redridge Goulash (wowhead forever)
-		frFR = "La viande de condor tombe très rarement : commencer cette quête tôt et la finir au fil des autres combats de la zone.",
-		enUS = "Condor meat drops very rarely, so start this early and finish it while doing the zone's other quests.",
+	[92] = { -- Redridge Goulash (wowhead forever), per objective since 0.7.0
+		goals = {
+			["item:1080"] = {
+				frFR = "La viande de condor tombe très rarement : commencer cette quête tôt et la finir au fil des autres combats de la zone.",
+				enUS = "Condor meat drops very rarely, so start this early and finish it while doing the zone's other quests.",
+			},
+		},
 	},
 	[93] = { -- Dusky Crab Cakes (wowhead forever)
 		frFR = "Les pattes tombent sur toutes les araignées, le plus souvent sur les jeunes veuves noires à l'est de la Colline-aux-Corbeaux : les faire en même temps que les autres quêtes d'araignées.",
@@ -94,9 +99,13 @@ ns.GA.Tips = {
 		frFR = "La terre meuble est à la ferme des Yorgen au sud-est, pas à la ferme isolée du sud-ouest : chercher entre les deux bâtiments.",
 		enUS = "The loose dirt is at the Yorgen Farmstead to the south-east, not the far south-west farm; look between its two buildings.",
 	},
-	[101] = { -- The Totem of Infliction (wowhead forever)
-		frFR = "Les crocs de goule tombent mal : les goules du cimetière à l'ouest de la zone sont de plus bas niveau que celles de l'est.",
-		enUS = "Ghoul fangs drop poorly; the ghouls in the western cemetery are lower level than the ones in the east.",
+	[101] = { -- The Totem of Infliction (wowhead forever), per objective since 0.7.0
+		goals = {
+			["item:1129"] = {
+				frFR = "Les crocs de goule tombent mal : les goules du cimetière à l'ouest de la zone sont de plus bas niveau que celles de l'est.",
+				enUS = "Ghoul fangs drop poorly; the ghouls in the western cemetery are lower level than the ones in the east.",
+			},
+		},
 	},
 	[102] = { -- Patrolling Westfall (wowhead forever)
 		frFR = "Les pattes tombent environ une fois sur quatre ; bon coin de gnolls au nord de la Mine Veine-de-Jango (43,14), ils viennent souvent à plusieurs.",
@@ -230,9 +239,13 @@ ns.GA.Tips = {
 		frFR = "Vagash vit dans une grotte sur la colline derrière la ferme ; le sentier part à l'ouest du ranch, il frappe fort pour son niveau.",
 		enUS = "Vagash lives in a cave on the hill behind the farm; the trail starts west of the ranch, and he hits hard.",
 	},
-	[317] = { -- Stocking Jetsteam (route)
-		frFR = "Les ours Griffeglace donnent aussi la fourrure d'ours épaisse, pas seulement les jeunes ours noirs.",
-		enUS = "Ice Claw Bears drop the Thick Bear Fur too, not only the Young Black Bears.",
+	[317] = { -- Stocking Jetsteam (route), per objective since 0.7.0
+		goals = {
+			["item:6952"] = {
+				frFR = "Les ours Griffeglace donnent aussi la fourrure d'ours épaisse, pas seulement les jeunes ours noirs.",
+				enUS = "Ice Claw Bears drop the Thick Bear Fur too, not only the Young Black Bears.",
+			},
+		},
 	},
 	[337] = { -- An Old History Book (wowhead forever)
 		frFR = "Le livre qui lance la quête tombe au hasard de n'importe quel monstre du Bois de la Pénombre, et pour un seul membre du groupe.",
@@ -334,9 +347,13 @@ ns.GA.Tips = {
 		frFR = "Therylune se camoufle et peut avoir besoin de réapparaître ; pendant l'escorte elle attire tout sur son passage, garder de quoi la soigner.",
 		enUS = "Therylune is stealthed and may need time to respawn; during the escort she pulls everything nearby, so keep heals or crowd control ready.",
 	},
-	[947] = { -- Cave Mushrooms (wowhead forever)
-		frFR = "En solo, prendre à droite juste après l'entrée de la grotte des nagas : deux amanites phalloïdes s'y trouvent avec peu de gardes.",
-		enUS = "Solo players should go right just inside the naga cave: two Death Caps wait there with only a couple of guards.",
+	[947] = { -- Cave Mushrooms (wowhead forever), per objective since 0.7.0
+		goals = {
+			["item:5270"] = {
+				frFR = "En solo, prendre à droite juste après l'entrée de la grotte des nagas : deux amanites phalloïdes s'y trouvent avec peu de gardes.",
+				enUS = "Solo players should go right just inside the naga cave: two Death Caps wait there with only a couple of guards.",
+			},
+		},
 	},
 	[951] = { -- Mathystra Relics (wowhead forever)
 		frFR = "Les reliques sont des objets au sol en forme de coupe ou de sphère de pierre, pas un butin ; éviter de mourir, le cimetière est loin.",
@@ -474,9 +491,13 @@ ns.GA.Tips = {
 		frFR = "L'objet est rangé dans une commode de la dernière maison du village, toujours au même endroit : survoler les meubles à la souris.",
 		enUS = "The dreamcatcher is in a dresser in the last house of the village, always the same spot; hover the furniture to find it.",
 	},
-	[2459] = { -- Ferocitas the Dream Eater (wowhead forever)
-		frFR = "Le joyau demandé est caché dans le collier que laisse Ferocitas : clic droit sur le collier dans les sacs pour l'ouvrir.",
-		enUS = "The jewel is inside the necklace Ferocitas drops: right-click the necklace in your bags to open it and get the jewel.",
+	[2459] = { -- Ferocitas the Dream Eater (wowhead forever), per objective since 0.7.0
+		goals = {
+			["item:8050"] = {
+				frFR = "Le joyau demandé est caché dans le collier que laisse Ferocitas : clic droit sur le collier dans les sacs pour l'ouvrir.",
+				enUS = "The jewel is inside the necklace Ferocitas drops: right-click the necklace in your bags to open it and get the jewel.",
+			},
+		},
 	},
 	[2541] = { -- The Sleeping Druid (wowhead forever)
 		frFR = "Le charme tombe rarement des chamans furbolgs du repaire ; il est lootable par tout le groupe, donc mieux vaut venir à plusieurs.",
@@ -558,9 +579,17 @@ ns.GA.Tips = {
 		frFR = "Baisser la densité de l'herbe dans les options graphiques rend les fagots bien plus visibles ; à faire en même temps que la quête des loups et ours voisine.",
 		enUS = "Turning ground clutter down in graphics settings makes the bundles much easier to spot; combine with the nearby wolves and bears quest.",
 	},
-	[6123] = { -- Gathering the Cure (wowhead forever)
-		frFR = "Les champignons lunaires sont de tout petits champignons tachetés dans les grottes des sélénides à l'est d'Auberdine (cinq grottes) : passer la souris dessus.",
-		enUS = "The Lunar Fungi are tiny spotted mushrooms in the moonkin caves east of Auberdine (five caves): sweep the mouse over them.",
+	[6123] = { -- Gathering the Cure (wowhead forever), per objective since 0.7.0
+		goals = {
+			["item:2449"] = { -- Earthroot (classic: herb nodes need Herbalism)
+				frFR = "La Terrestrine est une plante d'Herboristerie, partout dans la zone : il faut le métier pour la cueillir (Découverte d'herbes la montre sur la minicarte). Sans Herboristerie : hôtel des ventes ou un ami herboriste.",
+				enUS = "Earthroot is a Herbalism plant found all over the zone: you need the profession to pick it (Find Herbs shows it on the minimap). No Herbalism? Auction House or a herbalist friend.",
+			},
+			["item:15851"] = {
+				frFR = "Les champignons lunaires sont de tout petits champignons tachetés dans les grottes des sélénides à l'est d'Auberdine (cinq grottes) : passer la souris dessus.",
+				enUS = "The Lunar Fungi are tiny spotted mushrooms in the moonkin caves east of Auberdine (five caves): sweep the mouse over them.",
+			},
+		},
 	},
 	[86614] = { -- Silver of the Waves (route)
 		frFR = "La boîte à outils n'est pas toujours au même endroit : nager au fond du lac en surveillant la minicarte, loin des jeunes battrodons de niveau 19-20.",
@@ -866,9 +895,13 @@ ns.GA.Tips = {
 		frFR = "Avant de lancer Kinelory (vers 60,55), nettoyer les orcs en contrebas : elle fonce dans les groupes.",
 		enUS = "Before starting Kinelory (near 60,55), clear the orcs below: she runs straight into packs.",
 	},
-	[662] = { -- Deep Sea Salvage (classic)
-		frFR = "Le journal du Maiden's Folly (épave est, vers 23,85, près du chaudron d'angle) est le plus dur ; les nagas passent à travers les cloisons.",
-		enUS = "The Maiden's Folly log (east wreck, near 23,85, by the corner cauldron) is the hardest; the naga come through the walls.",
+	[662] = { -- Deep Sea Salvage (classic), per objective since 0.7.0
+		goals = {
+			["item:4489"] = {
+				frFR = "Le journal du Maiden's Folly (épave est, vers 23,85, près du chaudron d'angle) est le plus dur ; les nagas passent à travers les cloisons.",
+				enUS = "The Maiden's Folly log (east wreck, near 23,85, by the corner cauldron) is the hardest; the naga come through the walls.",
+			},
+		},
 	},
 	[665] = { -- Sunken Treasure (classic)
 		frFR = "Rester à l'entrée de la grotte pendant que le gnome travaille : se battre au fond fait réapparaître sans fin. Deux élémentaires d'eau (40) insensibles au Givre.",
@@ -886,9 +919,13 @@ ns.GA.Tips = {
 		frFR = "Le squelette de nain est vers 51,62, facile à manquer : clic droit dessus.",
 		enUS = "The dwarven skeleton lies near 51,62, easy to miss: right-click it.",
 	},
-	[739] = { -- Murdaloc (classic)
-		frFR = "Murdaloc apparaît vers 49,66 derrière le camp, toutes les 3 à 4 minutes : /cible Murdaloc pour le repérer, tirer ses gardes un par un.",
-		enUS = "Murdaloc appears near 49,66 behind the camp, every 3 to 4 minutes: /target Murdaloc to spot him, pull his guards one at a time.",
+	[739] = { -- Murdaloc (classic), per objective since 0.7.0
+		goals = {
+			["npc:2945"] = {
+				frFR = "Murdaloc apparaît vers 49,66 derrière le camp, toutes les 3 à 4 minutes : /cible Murdaloc pour le repérer, tirer ses gardes un par un.",
+				enUS = "Murdaloc appears near 49,66 behind the camp, every 3 to 4 minutes: /target Murdaloc to spot him, pull his guards one at a time.",
+			},
+		},
 	},
 	[1389] = { -- Draenethyst Crystals (classic)
 		frFR = "Ce ne sont pas des butins : des cristaux à ramasser au sol, vers 53,29 et 55,27 près du Sanctuaire des Friches.",
@@ -975,9 +1012,13 @@ ns.GA.Tips = {
 		frFR = "Les registres sont à l'étage du seul bâtiment à deux niveaux de la Base de Kurzen (43,10) ; ils peuvent aussi se ramasser de dehors, sous les poutres à l'arrière.",
 		enUS = "The records are upstairs in the only two-storey building of Kurzen's Compound (43,10); they can also be looted from outside, under the beams at the back.",
 	},
-	[204] = { -- Bad Medicine (classic)
-		frFR = "Le Remède tropical tombe peu des guérisseurs de Kurzen, qui se soignent : les interrompre. Les réducteurs de tête de Kurzen dans la grotte du camp le lâchent bien plus souvent.",
-		enUS = "Jungle Remedy drops rarely from the Kurzen Medicine Men, who heal themselves: interrupt them. The Kurzen Headshrinkers in the camp's cave drop it far more often.",
+	[204] = { -- Bad Medicine (classic), per objective since 0.7.0
+		goals = {
+			["item:2633"] = {
+				frFR = "Le Remède tropical tombe peu des guérisseurs de Kurzen, qui se soignent : les interrompre. Les réducteurs de tête de Kurzen dans la grotte du camp le lâchent bien plus souvent.",
+				enUS = "Jungle Remedy drops rarely from the Kurzen Medicine Men, who heal themselves: interrupt them. The Kurzen Headshrinkers in the camp's cave drop it far more often.",
+			},
+		},
 	},
 	[205] = { -- Troll Witchery (classic)
 		frFR = "Le Fétiche Skullsplitter ne tombe que des sorciers-docteurs et mystiques Skullsplitter ; guerriers et lanceurs de haches partagent leurs points de réapparition, les tuer aussi.",
@@ -1075,9 +1116,17 @@ ns.GA.Tips = {
 		frFR = "Les gobelins visés sont au sud des Ruines de Balia'mah, vers 40,44, pas au nord de la vallée ; ils réapparaissent vite et des contremaîtres patrouillent, éviter la grotte du fond.",
 		enUS = "The goblins you want are south of the Balia'mah Ruins, around 40,44, not in the north of the zone; they respawn fast and foremen patrol, so avoid the back cave.",
 	},
-	[604] = { -- The Bloodsail Buccaneers (classic)
-		frFR = "Les ordres et les cartes apparaissent au hasard en trois endroits : grand camp (26,82), petite tente (29,80) et barque (27,83) ; faire le tour, et Faire un tabac au passage.",
-		enUS = "The orders and charts spawn at random in three spots: the big camp (26,82), the small tent (29,80) and the rowboat (27,83); check them all and do Up to Snuff along the way.",
+	[604] = { -- The Bloodsail Buccaneers (classic), per objective since 0.7.0
+		goals = {
+			["item:3920"] = {
+				frFR = "Les ordres et les cartes apparaissent au hasard en trois endroits : grand camp (26,82), petite tente (29,80) et barque (27,83) ; faire le tour, et Faire un tabac au passage.",
+				enUS = "The orders and charts spawn at random in three spots: the big camp (26,82), the small tent (29,80) and the rowboat (27,83); check them all and do Up to Snuff along the way.",
+			},
+			["item:3921"] = {
+				frFR = "Les ordres et les cartes apparaissent au hasard en trois endroits : grand camp (26,82), petite tente (29,80) et barque (27,83) ; faire le tour, et Faire un tabac au passage.",
+				enUS = "The orders and charts spawn at random in three spots: the big camp (26,82), the small tent (29,80) and the rowboat (27,83); check them all and do Up to Snuff along the way.",
+			},
+		},
 	},
 	[605] = { -- Singing Blue Shards (classic)
 		frFR = "Les Basilic de cristal sont sur les falaises de la côte ouest, au sud de Zul'Kunda (vers 24,16 à 26,18), avec un bon taux de butin.",

@@ -7,6 +7,8 @@
 2. Smoke test: Reliability.lua, Tips.lua and GroupeAlliance.lua run against small stubs of
    Polestar (ns) and of the game: the calm defaults are registered, the tip mark is added to a
    line whose quest has a tip (and only then), the tooltip gets the tip line, /ga answers.
+3. Per-objective tips: each goals["item:<id>"] (npc, object) key of Tips.lua is an objective line
+   of that quest in the built guides.
 It cannot replace a test in game: it only catches typos and broken calls.
 """
 import pathlib, sys
@@ -75,7 +77,7 @@ check(DEFAULTS.behavior.skipGrey == true, "skipGrey default")
 check(DEFAULTS.behavior.groupQuests == "ask", "group quests asked")
 check(DEFAULTS.qol.mapObjectives == true and DEFAULTS.qol.guideDim == true, "quest marks defaults")
 local tipQuest
-for q in pairs(NS.GA.Tips) do tipQuest = q break end
+for q, t in pairs(NS.GA.Tips) do if t.enUS then tipQuest = q break end end
 local withTip = NS.UI.GoalLine({ quest = tipQuest, status = "active" })
 check(withTip:find("star", 1, true) ~= nil, "tip mark on a quest with a tip")
 check(NS.UI.GoalLine({ quest = tipQuest, status = "done" }):find("star", 1, true) == nil, "no tip mark once done")
@@ -127,9 +129,40 @@ check(SET["qol.objectiveAreas"] == true and boxes[3][1]() == true, "areas box ti
 NS.Get, NS.Engine, NS.QuestDB = getStub, nil, nil
 for q, r in pairs(NS.GA.Reliability) do check(type(r[2].frFR) == "string" and type(r[2].enUS) == "string", "reliability " .. q .. " in both languages") end
 local n = 0 for _ in pairs(NS.GA.Tips) do n = n + 1 end
-for q, t in pairs(NS.GA.Tips) do check(type(t.frFR) == "string" and type(t.enUS) == "string", "tip " .. q .. " in both languages") end
+for q, t in pairs(NS.GA.Tips) do
+  check(t.goals ~= nil or (type(t.frFR) == "string" and type(t.enUS) == "string"), "tip " .. q .. " in both languages")
+  for k, g in pairs(t.goals or {}) do
+    check(type(g.frFR) == "string" and type(g.enUS) == "string" and k:match("^%a+:%d+$"), "tip " .. q .. " " .. tostring(k) .. " in both languages")
+  end
+end
+-- Per objective (Gathering the Cure, 6123): each line its own tip, none on the accept line.
+local root = NS.GA.TipOf({ t = "collect", quest = 6123, item = 2449, status = "active" })
+local fungus = NS.GA.TipOf({ t = "collect", quest = 6123, item = 15851, status = "active" })
+check(root and fungus and root ~= fungus and root.enUS:find("Earthroot", 1, true) and fungus.enUS:find("Lunar", 1, true), "tips per objective")
+check(NS.GA.TipOf({ t = "accept", quest = 6123, npc = 3702 }) == nil, "no objective tip on the accept line")
+check(NS.UI.GoalLine({ t = "collect", quest = 6123, item = 2449, status = "active" }):find("star", 1, true) ~= nil, "tip mark on an objective line")
 return table.concat(out, ", "), n
 ''')
 failed, ntips = result
 print(f"smoke test: {ntips} tips, " + ("ok" if not failed else "FAILED: " + failed))
-sys.exit(1 if bad or failed else 0)
+
+# 3. Per-objective tips: every goals["kind:id"] key of Tips.lua is an objective line (collect,
+# kill, use, interact) of that quest in the built pack's guides.
+import re
+guides = (repo / "addons" / "PolestarPack_GroupeAlliance" / "Guides.lua").read_text(encoding="utf-8")
+objectives = set()
+for m in re.finditer(r'\{ t = "(?:collect|kill|use|interact)", quest = (\d+),([^{}]*)', guides):
+    for kind in ("item", "npc", "object"):
+        k = re.search(rf"\b{kind} = (\d+)", m.group(2))
+        if k:
+            objectives.add(f"{m.group(1)}:{kind}:{k.group(1)}")
+            break
+tips_src = (repo / "addons-src" / "GroupeAlliance" / "Tips.lua").read_text(encoding="utf-8")
+missing, nkeys = [], 0
+for m in re.finditer(r"^\t\[(\d+)\] = \{[^\n]*\n\t\tgoals = \{\n(.*?)\n\t\t\},", tips_src, re.M | re.S):
+    for key in re.findall(r'^\t\t\t\["(\w+:\d+)"\]', m.group(2), re.M):
+        nkeys += 1
+        if f"{m.group(1)}:{key}" not in objectives:
+            missing.append(f"{m.group(1)} {key}")
+print(f"objective tips: {nkeys} keys, " + ("ok" if not missing else "NOT IN THE GUIDES: " + ", ".join(missing)))
+sys.exit(1 if bad or failed or missing else 0)

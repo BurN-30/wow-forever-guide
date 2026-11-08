@@ -297,6 +297,27 @@ end
 -- a goal row carries its goal as owner.psGoal.
 -- The tip mark: Polestar's own star (Media/UI/star.tga, 32x32), tinted the
 -- tooltip's tip green, after the line's text.
+-- The tip of a guide line (Tips.lua). An entry gives a tip for the whole quest (frFR, enUS)
+-- and/or one per objective (goals["item:2449"], ["npc:2945"], ["object:17188"]): an
+-- objective line (collect, kill, use, interact) shows its own objective's tip, else the
+-- quest's; the other lines (accept, turn-in, complete) show the quest's only.
+local OBJECTIVE_VERBS = { collect = true, kill = true, use = true, interact = true }
+function GA.ObjectiveKey(goal)
+	if type(goal) ~= "table" or not OBJECTIVE_VERBS[goal.t] then return nil end
+	if goal.item then return "item:" .. goal.item end
+	if goal.npc then return "npc:" .. goal.npc end
+	if goal.object then return "object:" .. goal.object end
+end
+function GA.TipOf(goal)
+	local q = type(goal) == "table" and goal.quest
+	local e = q and GA.Tips and GA.Tips[q]
+	if type(e) ~= "table" then return nil end
+	local key = GA.ObjectiveKey(goal)
+	if key and type(e.goals) == "table" and e.goals[key] then return e.goals[key] end
+	if e.enUS then return e end
+	return nil
+end
+
 local TIP_MARK = "  |TInterface\\AddOns\\Polestar\\Media\\UI\\star:12:12:0:0:32:32:0:32:0:32:140:255:140|t"
 -- Difficulty (Danger.lua): the advised level and group for goal's quest at the
 -- player's real level (UnitLevel), or nil when it is fine. -> rec, grp, text, gap
@@ -356,8 +377,7 @@ local function markTips()
 	local line = UI.GoalLine
 	UI.GoalLine = function(goal, ...)
 		local text = line(goal, ...)
-		local q = type(goal) == "table" and goal.quest
-		if q and GA.Tips and GA.Tips[q] and goal.status ~= "done" and goal.status ~= "skipped" and type(text) == "string" then
+		if GA.TipOf(goal) and goal.status ~= "done" and goal.status ~= "skipped" and type(text) == "string" then
 			text = text .. TIP_MARK
 		end
 		if type(text) == "string" then
@@ -391,7 +411,7 @@ local function afterTooltip(owner)
 	if goal.escort and goal.status ~= "done" and goal.status ~= "skipped" then
 		GameTooltip:AddLine(tr("escortGroup"), 1, 0.82, 0.6, true)
 	end
-	local tip = q and GA.Tips and GA.Tips[q]
+	local tip = GA.TipOf(goal)
 	if tip then
 		GameTooltip:AddLine(tr("tip") .. (locale() == "frFR" and " : " or ": ") .. (tip[locale()] or tip.enUS), 0.55, 1, 0.55, true)
 	end
