@@ -2,6 +2,26 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.7.0 (2026-11-08)
+
+### Français
+- Programme d'installation : il dit « Première installation » ou « Mise à jour de X vers Y », et à la fin un bandeau en gros dit quoi faire : `/reload` en jeu, ou relancer le jeu quand la version l'exige.
+- Plus besoin de fermer le jeu pour une simple mise à jour : un `/reload` suffit.
+- Cité de Dalaran devient facultatif, avec la question de groupe à Hurlevent ; passé, le guide renvoie à Menethil.
+- Uldaman se fait après les quêtes des Terres ingrates, avec les rendus à Forgefer sur le vol vers Austrivage (environ 7 minutes gagnées).
+- Nouveau donjon facultatif : le Temple englouti, question chez Brohann à Hurlevent.
+- Pierre de foyer : notes « utilisez votre pierre de foyer » sur les longs retours, avec le chemin à prendre si elle recharge ; deux notes de lien fausses corrigées.
+- Astuces par objectif : la Terrestrine et les champignons lunaires ont chacun la leur, et dix astuces sont rattachées à la bonne ligne.
+
+### English
+- Installer: it says "First install" or "Update from X to Y", and a large banner at the end says what to do: `/reload` in game, or restart the game when the version needs it.
+- No need to close the game for a plain update any more: a `/reload` is enough.
+- City of Dalaran is now optional, with the group question in Stormwind; skipped, the guide sends you back to Menethil.
+- Uldaman now comes after the Badlands quests, with the Ironforge hand-ins on the flight to Southshore (about 7 minutes saved).
+- New optional dungeon: the Sunken Temple, asked at Brohann in Stormwind.
+- Hearthstone: "use your hearthstone" notes on the long trips back, with the way to go when it is on cooldown; two wrong bind notes fixed.
+- Tips per objective: Earthroot and the Lunar Fungi each get their own, and ten tips now sit on the right line.
+
 ## v0.6.2 (2026-11-08)
 
 ### Français

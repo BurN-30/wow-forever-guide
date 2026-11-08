@@ -2,7 +2,7 @@
 
 local t = { guides = {} }
 t.pack = {
-	["Alliance route to 60 for friends who play alone or together: start guides, Stormwind meeting point, zones, Forever dungeons, Deadmines, Stockade, Scarlet Monastery, Uldaman, Zul'Farrak, group quests."] = "Parcours Alliance jusqu'à 60, seul ou à plusieurs : départs, rendez-vous à Hurlevent, zones, donjons de Forever, Mortemines, Prison, Monastère écarlate, Uldaman, Zul'Farrak, quêtes de groupe.",
+	["Alliance route to 60 for friends who play alone or together: start guides, Stormwind meeting point, zones, optional Forever and classic dungeons, group quests."] = "Parcours Alliance jusqu'à 60, seul ou à plusieurs : départs, rendez-vous à Hurlevent, zones, donjons facultatifs (Forever et classiques), quêtes de groupe.",
 	["Group Alliance"] = "Groupe Alliance",
 	["Group Alliance 1-60"] = "Groupe Alliance 1-60",
 }

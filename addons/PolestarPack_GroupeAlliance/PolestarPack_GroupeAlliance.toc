@@ -1,8 +1,8 @@
 ## Interface: 16001
 ## Title: Polestar Community: Group Alliance 1-60
-## Notes: Alliance route to 60 for friends who play alone or together: start guides, Stormwind meeting point, zones, Forever dungeons, Deadmines, Stockade, Scarlet Monastery, Uldaman, Zul'Farrak, group quests.
+## Notes: Alliance route to 60 for friends who play alone or together: start guides, Stormwind meeting point, zones, optional Forever and classic dungeons, group quests.
 ## Author: BurN-30
-## Version: 0.6.2
+## Version: 0.7.0
 ## Category: Polestar
 ## Group: Polestar
 ## Dependencies: Polestar
