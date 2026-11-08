@@ -134,7 +134,7 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
   ```
-- Modifications et ajouts par **BurN-30** : enchaînement des guides, rendez-vous de Hurlevent, notes de groupe, textes français ajoutés, module Groupe Alliance (liens Wowhead, astuces de quête, marques de difficulté, réglages calmes, aide), chapitres Mortemines et Prison, installateur.
+- Modifications et ajouts par **BurN-30** : enchaînement des guides, rendez-vous de Hurlevent, notes de groupe, textes français ajoutés, module Groupe Alliance (liens Wowhead, astuces de quête, marques de difficulté, réglages calmes, aide), chapitres Mortemines, Prison, Monastère écarlate et Uldaman, guides Polestar 30-50 repris avec notes de groupe, installateur.
 - L'ensemble est sous **GPL-3.0** (fichier `LICENSE`). Les données du jeu appartiennent à Blizzard Entertainment.
 
 Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/2026 :
@@ -145,7 +145,7 @@ Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/202
 | [Données Forever de Polestar](https://github.com/fitzforge/polestar/releases/tag/data-v2026.11.1) | 02/11/2026 | Forever | vérification des quêtes |
 | [QuestieDB Forever](https://github.com/Questie/Questie/releases) 1.0.11 | 06/11/2026 | Forever | vérification |
 | [wago.tools](https://wago.tools), client 1.60.1.70532 | 06/11/2026 | Forever | cartes et zones |
-| [Wowhead Forever](https://www.wowhead.com/forever) | 08/11/2026 | Forever | liens, vérifications, astuces des commentaires reformulées, guides de donjon (Ruines de Lordaeron, Mortemines, Prison, Site de fouilles), niveaux des marques de difficulté |
+| [Wowhead Forever](https://www.wowhead.com/forever) | 08/11/2026 | Forever | liens, vérifications, astuces des commentaires reformulées, guides de donjon (Ruines de Lordaeron, Mortemines, Prison, Site de fouilles), pages du Monastère écarlate et d'Uldaman, niveaux des marques de difficulté |
 | [Aurums Night Elf Druid Guide](https://github.com/AurumTitanos/Aurums-Night-Elf-Druid-Guide) 0.4.37 | 22/10/2026 | Forever (bêta) | chapitres de donjon |
 | [RestedXP, guides gratuits](https://github.com/RestedXP/RXPGuides) | 06/11/2026 | Forever | méthode et conseils reformulés, aucun texte repris (licence CC BY-NC-SA) |
 | [Lodestar](https://github.com/petllama/lodestar-guides) (MIT) | 21/10/2026 | Forever (bêta) | guide Solo · Loch Modan adapté, recoupement |
