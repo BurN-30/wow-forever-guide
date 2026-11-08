@@ -101,6 +101,30 @@ end
 TIPLINES = {}
 HOOKS.Tooltip({ psGoal = elite, HookScript = function() end })
 check(TIPLINES[1] and TIPLINES[1]:find("Difficile au niveau 10", 1, true) ~= nil, "tooltip danger line")
+-- Quest markers: calm defaults, the current step's objectives only while a guide runs,
+-- the tracking submenu ticks the settings.
+check(DEFAULTS.qol.objectiveAreas == false and DEFAULTS.qol.availableQuests == false and DEFAULTS.qol.turnInMarkers == true
+  and DEFAULTS.qol.minimapObjectives == false and DEFAULTS.qol.gaStepObjectives == true, "calm quest marker defaults")
+local SET = { ["qol.gaStepObjectives"] = true, ["qol.questDB"] = true }
+local getStub = NS.Get
+NS.Get = function(k) return SET[k] end
+NS.Set = function(k, v) SET[k] = v end
+NS.QuestDB = { IsGuideQuest = function(q) return q == 983 end }
+local pins = { { refs = { { q = 983 } } }, { refs = { { q = 1001 } } }, { refs = { { q = 1001 }, { q = 983 } } } }
+check(#NS.GA.StepObjectives(pins) == 3, "every objective without a guide")
+NS.Engine = { GetGuide = function() return { steps = { {} } } end, GetStepIndex = function() return 1 end }
+check(#NS.GA.StepObjectives(pins) == 2, "only the step's objectives while a guide runs")
+SET["qol.gaStepObjectives"] = false
+check(#NS.GA.StepObjectives(pins) == 3, "every objective with the setting off")
+local boxes, labels = {}, {}
+local menu = { CreateDivider = function() end, CreateCheckbox = function(_, label, get, set)
+  labels[#labels + 1] = label; boxes[#boxes + 1] = { get, set } end }
+NS.GA.AddMarksMenu(nil, { CreateButton = function(_, label) labels[#labels + 1] = label return menu end })
+check(#boxes == 6 and labels[1] == "Polestar : repères de quête", "tracking submenu")
+check(boxes[3][1]() == false, "areas box unticked")
+boxes[3][2]()
+check(SET["qol.objectiveAreas"] == true and boxes[3][1]() == true, "areas box ticks the setting")
+NS.Get, NS.Engine, NS.QuestDB = getStub, nil, nil
 for q, r in pairs(NS.GA.Reliability) do check(type(r[2].frFR) == "string" and type(r[2].enUS) == "string", "reliability " .. q .. " in both languages") end
 local n = 0 for _ in pairs(NS.GA.Tips) do n = n + 1 end
 for q, t in pairs(NS.GA.Tips) do check(type(t.frFR) == "string" and type(t.enUS) == "string", "tip " .. q .. " in both languages") end

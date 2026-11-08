@@ -378,6 +378,10 @@ ns.GA.Tips = {
 		frFR = "Chaque coffre est à l'arrière de son épave, côté large, et s'ouvre depuis l'extérieur ; attention aux murlocs qui traversent la coque.",
 		enUS = "Each lockbox sits at the stern end of its wreck, seaward side, and opens from outside; watch for murlocs clipping through the hull.",
 	},
+	[983] = { -- Buzzbox 827 (guide)
+		frFR = "« Bigobox 827 » est le vrai nom de la quête : une Bigobox est une petite boîte-robot posée dans la nature. On y rend la quête et elle donne la suivante, jusqu'à Bigobox 525.",
+		enUS = "\"Buzzbox 827\" is the quest's real name: a buzzbox is a small robot box standing out in the wild. You hand the quest in to it and it gives the next one, up to Buzzbox 525.",
+	},
 	[986] = { -- A Lost Master (wowhead forever)
 		frFR = "Seuls les mâles et les matriarches comptent et ils lâchent peu ; tuer aussi les grands oiseaux du coin, qui partagent leurs points d'apparition, en fait revenir.",
 		enUS = "Only sires and matriarchs count and drops are poor; killing the local foreststriders, which share their spawns, brings more of them.",

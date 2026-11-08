@@ -15,9 +15,10 @@
 --    fill in where it has none), no welcome window, Polestar's minimap button on,
 --    grey quests left out (friends play at different times: whoever is ahead
 --    is not sent back to quests that no longer give XP), and Polestar's quest
---    map marks on (objectives and their areas, turn-ins, quest givers up to 3
---    levels above, the guide's quests lit, the others dimmed; not on the
---    minimap): what Questie would add, from Polestar's own quest data.
+--    map marks on, kept calm (0.6.2): turn-ins, and the objectives of the
+--    guide's current step only; no shaded areas, no quest givers, nothing on
+--    the minimap. Each one is a tick in the "Polestar: quest markers" submenu
+--    of the world map's and the minimap's tracking menus ("Quest markers").
 --  * A small green mark at the end of a guide line whose quest has a tip:
 --    hover it to read the tip.
 --  * A small orange or red warning mark on a line that is hard at the player's
@@ -40,12 +41,18 @@ ns.RegisterDefaults("behavior", {
 	suggestFrom = "groupe-alliance", -- this pack first, Polestar fills in
 	skipGrey = true, -- whoever went ahead alone is not sent back to grey quests
 })
--- Polestar's quest marks (Quests/QuestDB.lua), off by default there.
+-- Polestar's quest marks (Quests/QuestDB.lua), off by default there. Settings
+-- equal to their default are not stored (Core/Init.lua), so these reach every
+-- player who did not change them. 0.6.2: areas and quest givers off (every
+-- spawn of every objective in the log, shaded, made the map unreadable), and
+-- gaStepObjectives (ours) keeps only the objectives of the guide's current step.
 ns.RegisterDefaults("qol", {
 	mapObjectives = true,
-	objectiveAreas = true,
+	gaStepObjectives = true,
+	objectiveAreas = false,
 	turnInMarkers = true,
-	availableQuests = true,
+	availableQuests = false,
+	minimapObjectives = false,
 	questLevelWindow = 3,
 	guideDim = true,
 })
@@ -104,6 +111,14 @@ local T = {
 		miniRight = "Clic droit : icône ou bannière",
 		miniDrag = "Glisser : déplacer",
 		report = "Un souci dans un guide Groupe Alliance : le dire au groupe ou ouvrir une issue sur github.com/BurN-30/wow-forever-guide, pas sur le Discord de Polestar.",
+		marks = "Polestar : repères de quête",
+		marksObjectives = "Objectifs sur la carte",
+		marksStep = "Seulement ceux de l'étape en cours",
+		marksStepHelp = "Pendant un guide, les cartes ne montrent que les objectifs des quêtes de l'étape en cours ; sans guide, tous les objectifs restent affichés.",
+		marksAreas = "Zones d'objectif ombrées",
+		marksTurnin = "Quêtes à rendre",
+		marksAvailable = "Quêtes disponibles",
+		marksMinimap = "Repères sur la minicarte",
 	},
 	enUS = {
 		hint = "Ctrl-click: Wowhead link (useful comments)",
@@ -141,9 +156,118 @@ local T = {
 		miniRight = "Right-click: icon or banner",
 		miniDrag = "Drag: move",
 		report = "A problem in a Group Alliance guide: tell the group or open an issue on github.com/BurN-30/wow-forever-guide, not on Polestar's Discord.",
+		marks = "Polestar: quest markers",
+		marksObjectives = "Objectives on the map",
+		marksStep = "Only the current step's",
+		marksStepHelp = "While a guide runs, the maps show only the objectives of the current step's quests; without a guide, every objective stays shown.",
+		marksAreas = "Shaded objective areas",
+		marksTurnin = "Turn-ins",
+		marksAvailable = "Available quests",
+		marksMinimap = "Markers on the minimap",
 	},
 }
 local function tr(key) return T[locale()][key] end
+
+---------------------------------------------------------------------------
+-- Quest markers. Polestar's quest tracker (Quests/Tracker.lua) publishes one
+-- marker per spawn cluster of every objective of every quest in the log, on
+-- the "quests.objectives" Pins layer. With qol.gaStepObjectives on and a guide
+-- running, that layer keeps only the markers of the current step's quests
+-- (Polestar's own set, QuestDB.IsGuideQuest). Turn-ins and quest givers are
+-- other layers, left whole. The "Polestar: quest markers" submenu in the world
+-- map's and the minimap's tracking menus ticks the same settings as the Map
+-- options page; each tick fires SETTING_CHANGED, so the maps redraw at once.
+---------------------------------------------------------------------------
+
+local OBJECTIVES = "quests.objectives"
+
+local function guideRunning()
+	local E = ns.Engine
+	local guide = E and E.GetGuide and E.GetGuide()
+	local i = guide and E.GetStepIndex and E.GetStepIndex()
+	return i ~= nil and type(guide.steps) == "table" and type(guide.steps[i]) == "table"
+end
+
+-- The objective markers to show: all of them, or the current step's only.
+function GA.StepObjectives(pins)
+	local Q = ns.QuestDB
+	if type(pins) ~= "table" or not ns.Get("qol.gaStepObjectives") or not (Q and Q.IsGuideQuest) or not guideRunning() then
+		return pins
+	end
+	local out = {}
+	for i = 1, #pins do
+		local pin, keep = pins[i], false
+		local refs = pin.refs
+		if type(refs) ~= "table" then
+			keep = true
+		else
+			for k = 1, #refs do
+				local r = refs[k]
+				local q = type(r) == "number" and r or (type(r) == "table" and r.q)
+				if q and Q.IsGuideQuest(q) then
+					keep = true
+					break
+				end
+			end
+		end
+		if keep then out[#out + 1] = pin end
+	end
+	return out
+end
+
+local function hookPins()
+	local Pins = ns.Pins
+	if not (Pins and Pins.SetLayer) or Pins.gaSetLayer then return end
+	local setLayer = Pins.SetLayer
+	Pins.gaSetLayer = setLayer
+	Pins.SetLayer = function(name, pins, opts)
+		if name == OBJECTIVES then pins = GA.StepObjectives(pins) end
+		return setLayer(name, pins, opts)
+	end
+end
+
+-- The tracker does not listen to our setting: setting qol.objectiveAreas to
+-- its own value fires the SETTING_CHANGED it republishes its layers on.
+ns.On("SETTING_CHANGED", function(path)
+	if path == "qol.gaStepObjectives" then ns.Set("qol.objectiveAreas", ns.Get("qol.objectiveAreas")) end
+end)
+
+local MARKS = {
+	{ "marksObjectives", "qol.mapObjectives" },
+	{ "marksStep", "qol.gaStepObjectives" },
+	{ "marksAreas", "qol.objectiveAreas" },
+	{ "marksTurnin", "qol.turnInMarkers" },
+	{ "marksAvailable", "qol.availableQuests" },
+	false, -- a divider
+	{ "marksMinimap", "qol.minimapObjectives" },
+}
+-- The tracker loads its quest data only while qol.questDB is on.
+local NEEDS_DB = { ["qol.mapObjectives"] = true, ["qol.turnInMarkers"] = true, ["qol.availableQuests"] = true, ["qol.minimapObjectives"] = true }
+
+function GA.AddMarksMenu(_, root)
+	local menu = root:CreateButton(tr("marks"))
+	for _, m in ipairs(MARKS) do
+		if not m then
+			menu:CreateDivider()
+		else
+			local key = m[2]
+			menu:CreateCheckbox(tr(m[1]), function() return ns.Get(key) == true end, function()
+				local on = not ns.Get(key)
+				if on and NEEDS_DB[key] and not ns.Get("qol.questDB") then ns.Set("qol.questDB", true) end
+				ns.Set(key, on)
+				return MenuResponse and MenuResponse.Refresh
+			end)
+		end
+	end
+end
+
+-- As Polestar's own entries (Maps/Services.lua, Nav/Nearby.lua): not with
+-- the gamepad interface, whose focus the game's menus join as they open.
+ns.OnLogin(function()
+	if (ns.GamepadUI and ns.GamepadUI()) or not (Menu and Menu.ModifyMenu) then return end
+	Menu.ModifyMenu("MENU_WORLD_MAP_TRACKING", GA.AddMarksMenu)
+	Menu.ModifyMenu("MENU_MINIMAP_TRACKING", GA.AddMarksMenu)
+end)
 
 -- https://www.wowhead.com/forever/quest=96394 (English) and
 -- https://www.wowhead.com/forever/fr/quest=96394 (French), checked on 2026-11-06.
@@ -504,6 +628,13 @@ ns.OnInit(function()
 	local W = ns.Widgets
 	if W and W.Tooltip then hooksecurefunc(W, "Tooltip", afterTooltip) end
 	markTips()
+	hookPins()
+	if ns.RegisterOptions and ns.L then
+		ns.RegisterOptions({ page = ns.L["Map"], tab = ns.L["Guide & quests"], section = "Groupe Alliance", controls = {
+			{ kind = "toggle", key = "qol.gaStepObjectives", label = tr("marksStep"), help = tr("marksStepHelp"),
+				search = "map pins, markers, objectives, guide step, crowded" },
+		} })
+	end
 	-- The bug button sends reports to Polestar's Discord: say where ours go.
 	local GF = ns.UI and ns.UI.GuideFrame
 	local nav = GF and GF.menuButton and GF.menuButton:GetParent()

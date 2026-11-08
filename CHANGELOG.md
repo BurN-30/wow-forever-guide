@@ -2,6 +2,18 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.6.2 (2026-11-08)
+
+### Français
+- Carte du monde allégée : seulement les quêtes à rendre et les objectifs de l'étape en cours ; plus de zones ombrées ni de donneurs de quêtes par défaut.
+- Nouveau sous-menu « Polestar : repères de quête » dans le menu de suivi de la carte du monde et de la minicarte : chaque repère s'active ou se coupe d'un clic.
+- Astuce sur « Bigobox 827 » : c'est le vrai nom de la quête, une Bigobox est une boîte-robot qui donne la suivante.
+
+### English
+- Lighter world map: only turn-ins and the current step's objectives; no shaded areas or quest givers by default.
+- New "Polestar: quest markers" submenu in the world map's and the minimap's tracking menu: each marker type is switched on or off in one click.
+- Tip on "Buzzbox 827": it is the quest's real name, a buzzbox is a robot box that gives the next one.
+
 ## v0.6.1 (2026-11-08)
 
 ### Français
