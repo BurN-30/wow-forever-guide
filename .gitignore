@@ -9,3 +9,8 @@ __pycache__/
 *.log
 Thumbs.db
 desktop.ini
+# Build of the installer exe and release files
+installer-exe/bin/
+installer-exe/obj/
+dist/
+build/

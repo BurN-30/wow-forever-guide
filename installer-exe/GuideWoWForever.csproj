@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Programme d'installation et de mise à jour du guide (GuideWoWForever.exe).
+    .NET Framework 4.8 : présent d'office sur Windows 10 (1903 et plus) et 11,
+    donc un seul petit fichier, sans rien installer à côté.
+    Compiler : dotnet build installer-exe/GuideWoWForever.csproj -c Release -p:Version=0.5.0
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>GuideWoWForever</AssemblyName>
+    <RootNamespace>GuideWoWForever</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Version>0.0.0</Version>
+    <Product>Guide WoW Forever</Product>
+    <Company>BurN-30</Company>
+    <Copyright>GPL-3.0</Copyright>
+    <Description>Installe et met à jour le guide WoW Forever (Polestar + Groupe Alliance)</Description>
+    <!-- Exe reproductible, sans chemin local ni fichier .pdb. -->
+    <Deterministic>true</Deterministic>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <PathMap>$(MSBuildProjectDirectory)=.</PathMap>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web.Extensions" />
+    <!-- Permet la compilation sans le pack de développement .NET Framework. -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

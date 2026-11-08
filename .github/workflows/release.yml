@@ -1,0 +1,58 @@
+# Construit le paquet des addons et GuideWoWForever.exe.
+# Sur un tag vX.Y.Z : publie la release GitHub (ZIP, exe, SHA256SUMS.txt, notes de CHANGELOG.md).
+# Sur une pull request ou à la main (Actions > Release > Run workflow) : construit seulement,
+# les fichiers sont téléchargeables dans l'onglet du run (Artifacts).
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Version
+        shell: pwsh
+        run: |
+          $toc = python tools/release.py version
+          if ($env:GITHUB_REF_TYPE -eq 'tag') { $v = $env:GITHUB_REF_NAME.TrimStart('v') } else { $v = $toc }
+          if ($v -notmatch '^\d+\.\d+\.\d+$') { throw "Version inattendue : $v" }
+          "VERSION=$v" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          python --version
+          dotnet --version
+
+      - name: Paquet des addons
+        run: python tools/release.py package --version $env:VERSION --out dist
+
+      - name: Programme d'installation
+        run: |
+          dotnet build installer-exe/GuideWoWForever.csproj -c Release -p:Version=$env:VERSION -o build/exe
+          Copy-Item build/exe/GuideWoWForever.exe dist/
+
+      - name: Empreintes et notes
+        run: |
+          python tools/release.py sums dist
+          python tools/release.py notes --version $env:VERSION --out build/notes.md
+
+      - name: Fichiers construits
+        uses: actions/upload-artifact@v7
+        with:
+          name: guide-wow-forever-${{ env.VERSION }}
+          path: |
+            dist/
+            build/notes.md
+
+      - name: Publier la release
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$env:GITHUB_REF_NAME" dist/GuideWoWForever.exe dist/GuideWoWForever-addons.zip dist/SHA256SUMS.txt `
+            --verify-tag --latest --title "Guide WoW Forever $env:GITHUB_REF_NAME" --notes-file build/notes.md

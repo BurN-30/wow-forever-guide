@@ -3,16 +3,70 @@
 > Basé sur l'addon gratuit [Polestar](https://github.com/fitzforge/polestar) et des guides de la communauté, recoupés avec Wowhead Forever. Des erreurs restent possibles, vérifiez sur Wowhead en cas de doute.
 > *Based on the free [Polestar](https://github.com/fitzforge/polestar) addon and community guides, cross-checked with Wowhead Forever. Prepared with AI help: mistakes are possible, check Wowhead when in doubt.*
 
-## Installer
+## Installer / mettre à jour en 1 clic
 
-1. Bouton vert **Code** → **Download ZIP**, puis dézipper.
-2. Fermer WoW, double-cliquer sur **`Installer.bat`**.
-3. Relancer WoW (un `/reload` ne suffit pas pour un premier ajout) : rien à cocher, le guide s'ouvre tout seul.
+Deux manières, au choix : le programme (recommandé, 1 clic) ou le ZIP avec `Installer.bat` (repli). *English below.*
+
+### Manière 1 (recommandée) : le programme
+
+1. Télécharger **[GuideWoWForever.exe](https://github.com/BurN-30/wow-forever-guide/releases/latest/download/GuideWoWForever.exe)** (toujours la dernière version).
+2. Double-cliquer dessus. Au premier lancement, Windows affiche « Windows a protégé votre ordinateur » : cliquer sur **Informations complémentaires**, puis **Exécuter quand même** (pourquoi : voir « Avertissement de Windows » plus bas).
+3. Le programme trouve WoW Forever tout seul (sinon il demande le dossier `World of Warcraft`), télécharge la dernière version du guide, la vérifie, l'installe et dit en clair ce qu'il a fait. Si WoW est ouvert, il demande de le fermer.
+4. Relancer WoW (un `/reload` ne suffit pas pour un premier ajout) : rien à cocher, le guide s'ouvre tout seul.
+
+**Mettre à jour** : double-clic sur le raccourci **Mettre à jour le guide WoW** du Bureau (créé au premier lancement, aussi dans le menu Démarrer). S'il n'y a rien de neuf, il le dit. Le programme se met aussi à jour lui-même.
 
 Le guide ne s'ouvre pas ? Écran de sélection des personnages → bouton **AddOns** en bas à gauche → cocher **Polestar** (avec tout ce qu'il regroupe) et, si besoin, **Charger les addons périmés**.
 
-Mise à jour : retélécharger le ZIP et relancer `Installer.bat`.
-Windows bloque le fichier ? Clic droit sur `Installer.bat` → **Propriétés** → cocher **Débloquer** → **OK**.
+<details>
+<summary>Ce que fait le programme, ce qu'il ne touche pas</summary>
+
+- Il lit la dernière version publiée sur GitHub (page [Releases](https://github.com/BurN-30/wow-forever-guide/releases/latest)), télécharge `GuideWoWForever-addons.zip` et refuse le fichier si sa taille ou son empreinte SHA-256 diffère de celle publiée (`SHA256SUMS.txt`).
+- Dossier du jeu : celui retenu la fois d'avant, le jeu ouvert, le registre et la configuration de Battle.net, les emplacements habituels sur chaque disque, sinon une fenêtre de choix (le choix est retenu).
+- Il remplace seulement les dossiers du guide dans `World of Warcraft\_forever_\Interface\AddOns` (`Polestar` et `Polestar...`) et retire ceux d'une ancienne version du guide. Les autres addons et le dossier `WTF` (réglages, progression du guide) ne sont pas touchés.
+- L'ancienne version est mise de côté dans `_forever_\Interface\_guide-sauvegarde` (seulement la dernière). En cas de problème pendant le remplacement, elle est remise en place toute seule.
+- Aucun droit administrateur. Ses fichiers sont dans `%LOCALAPPDATA%\GuideWoWForever` : la copie du programme visée par le raccourci, `journal.txt` (le détail de chaque lancement, à joindre en cas de problème) et `etat.txt` (dossier du jeu et version installée).
+- Désinstaller : supprimer le raccourci, ce dossier, et les dossiers `Polestar...` de `AddOns`.
+</details>
+
+### Manière 2 (repli) : le ZIP et `Installer.bat`
+
+1. Bouton vert **Code** → **Download ZIP** (ou `Source code (zip)` sur la page [Releases](https://github.com/BurN-30/wow-forever-guide/releases/latest)), puis dézipper.
+2. Fermer WoW, double-cliquer sur **`Installer.bat`** (il trouve le dossier du jeu et remplace les dossiers du guide). Windows bloque le fichier ? Clic droit sur `Installer.bat` → **Propriétés** → cocher **Débloquer** → **OK**.
+3. Relancer WoW.
+
+Mettre à jour : retélécharger le ZIP et relancer `Installer.bat`. Encore plus à la main : télécharger `GuideWoWForever-addons.zip` sur la page [Releases](https://github.com/BurN-30/wow-forever-guide/releases/latest) et le dézipper dans `World of Warcraft\_forever_\Interface\AddOns` en remplaçant les dossiers existants.
+
+### Install / update in 1 click (English)
+
+Two ways: the program (recommended, 1 click) or the ZIP with `Installer.bat` (fallback).
+
+**Way 1 (recommended): the program**
+
+1. Download **[GuideWoWForever.exe](https://github.com/BurN-30/wow-forever-guide/releases/latest/download/GuideWoWForever.exe)** (always the latest version).
+2. Double-click it. On the first run, Windows shows "Windows protected your PC": click **More info**, then **Run anyway** (why: see "Windows warning" below).
+3. The program finds WoW Forever by itself (otherwise it asks for the `World of Warcraft` folder), downloads the latest guide, checks it, installs it and tells you what it did, in English if Windows is in English. If WoW is running, it asks you to close it.
+4. Restart WoW (a `/reload` is not enough the first time): nothing to tick, the guide opens by itself.
+
+**Update**: double-click the **Update the WoW guide** shortcut on the desktop (created on the first run, also in the Start menu). If there is nothing new, it says so. The program also updates itself.
+
+It only replaces the guide folders (`Polestar...`) in `World of Warcraft\_forever_\Interface\AddOns`. Other addons and the `WTF` folder (settings, guide progress) are left alone. The previous version is kept in `_forever_\Interface\_guide-sauvegarde`. Log in case of trouble: `%LOCALAPPDATA%\GuideWoWForever\journal.txt`. No admin rights needed.
+
+**Way 2 (fallback): the ZIP and `Installer.bat`**
+
+1. Green **Code** button → **Download ZIP** (or `Source code (zip)` on the [Releases](https://github.com/BurN-30/wow-forever-guide/releases/latest) page), then unzip.
+2. Close WoW, double-click **`Installer.bat`** (it finds the game folder and replaces the guide folders). Windows blocks the file? Right-click `Installer.bat` → **Properties** → tick **Unblock** → **OK**.
+3. Restart WoW.
+
+Update: download the ZIP again and run `Installer.bat` again. Fully manual: download `GuideWoWForever-addons.zip` from the [Releases](https://github.com/BurN-30/wow-forever-guide/releases/latest) page and unzip it into `World of Warcraft\_forever_\Interface\AddOns`, replacing existing folders.
+
+### Avertissement de Windows (SmartScreen) / Windows warning
+
+`GuideWoWForever.exe` n'est pas signé avec un certificat payant, et Windows se méfie de tout programme nouveau et peu téléchargé : il affiche « Windows a protégé votre ordinateur ». Ce n'est pas un virus détecté. Passer outre : **Informations complémentaires** → **Exécuter quand même** (une seule fois : le raccourci créé ensuite ne redemande rien). Le programme est construit par GitHub à partir du code de ce dépôt (dossier `installer-exe`, fichier `.github/workflows/release.yml`). Vérifier le fichier téléchargé : dans PowerShell, `Get-FileHash "$env:USERPROFILE\Downloads\GuideWoWForever.exe"` doit donner l'empreinte écrite dans `SHA256SUMS.txt` de la release.
+
+*The exe is not signed with a paid certificate, so Windows warns about any new, rarely downloaded program. It is not a virus alert: **More info** → **Run anyway**. GitHub builds it from this repository's code; compare `Get-FileHash` with `SHA256SUMS.txt` to check it.*
+
+Un antivirus bloque le programme à tort ? Utiliser la manière 2, et signaler le faux positif à l'éditeur de l'antivirus (pour Microsoft Defender : [wdsi/filesubmission](https://www.microsoft.com/wdsi/filesubmission)). *An antivirus wrongly blocks the program? Use way 2 and report the false positive to the antivirus vendor.*
 
 ## Utiliser
 
@@ -101,7 +155,7 @@ Changer de guide à tout moment : `/polestar guides`.
 
 ## Un problème ?
 
-Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou envoie-le au groupe).
+Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou envoie-le au groupe). Souci d'installation : joindre `%LOCALAPPDATA%\GuideWoWForever\journal.txt` (bouton **Ouvrir le journal** du programme).
 
 ---
 
@@ -167,6 +221,8 @@ python tools/fill-fr.py tools/fr-texts-polestar.json tools/fr-texts.json
 python tools/build.py <forge.exe> <clone de polestar> <Polestar-0.3.4 dézippé>
 python tools/check-lua.py
 ```
+
+**Publier une version** : mettre le numéro dans `## Version:` de `addons/PolestarPack_GroupeAlliance/PolestarPack_GroupeAlliance.toc`, ajouter la section `## vX.Y.Z` (Français et English) dans `CHANGELOG.md`, committer, puis pousser un tag `vX.Y.Z` : le workflow `.github/workflows/release.yml` construit `GuideWoWForever-addons.zip` (`tools/release.py`) et `GuideWoWForever.exe` (`installer-exe`, .NET Framework 4.8), calcule `SHA256SUMS.txt` et publie la release. Il refuse un tag différent de la version du `.toc`. Sur une pull request, il construit seulement (fichiers dans l'onglet Actions).
 
 `check-lua.py` (Python et `pip install lupa`) vérifie la syntaxe Lua 5.1 du module et du paquet, et fait tourner le module Groupe Alliance contre de petites imitations du jeu : il attrape les fautes de frappe, pas les bugs visibles en jeu.
 </details>
