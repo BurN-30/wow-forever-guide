@@ -14,8 +14,11 @@ next groupe-alliance/26-un-goro
 # into this file.
 # Added here: WANTED: Overseer Maltorius (7701), The Flame's Casing (3452), The Horn of the Beast (3181).
 
+# Groupe Alliance 0.7.0: hearthstone note (where the stone is bound at this point of the pack, and the way
+# without it when it is still on cooldown). Text only, the step is Polestar's.
 step To Stoutlager Inn
   zone Loch Modan
+  tip Use your hearthstone: it is bound at the Stoutlager Inn, Thelsamar (Hinterlands guide). On cooldown? Fly from Booty Bay to Thelsamar.
   note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
   goto 35.5,48.4 "Stoutlager Inn"
 

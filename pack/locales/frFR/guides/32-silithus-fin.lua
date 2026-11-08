@@ -12,6 +12,8 @@ return {
 
 	-- Step 1: To Ratchet
 	["To Ratchet"] = "Vers Cabestan",
+	-- {object:1162} Menethil Harbor
+	["Use your hearthstone: it is bound in Ratchet. On cooldown? Fly to {object:1162}, take the boat to Theramore, then fly to Ratchet."] = "Utilisez votre pierre de foyer : elle est liée à Cabestan. En recharge ? Griffon pour {object:1162}, bateau pour Theramore, puis griffon pour Cabestan.",
 	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
 	["Ratchet"] = "Cabestan",
 

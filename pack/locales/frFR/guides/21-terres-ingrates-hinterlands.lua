@@ -128,7 +128,7 @@ return {
 	-- {npc:7884} Fraggar Thundermantle
 	["{npc:7884}, inside"] = "{npc:7884}, à l'intérieur",
 	-- {npc:7744} Innkeeper Thulfram
-	["{npc:7744}: the last guide binds here, so this usually ticks at once; below ground"] = "{npc:7744} : le guide précédent vous fait lier votre pierre de foyer ici, donc ceci se coche généralement tout de suite ; sous terre",
+	["{npc:7744}, below ground: bind your hearthstone here"] = "{npc:7744}, sous terre : liez votre pierre de foyer ici",
 
 	-- Step 21: Rhapsody Shindigger
 	-- {npc:5634} Rhapsody Shindigger
@@ -178,4 +178,5 @@ return {
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Raleigh's next errand is in the Scarlet Monastery: skip it."] = "La prochaine mission de Raleigh se trouve au Monastère écarlate : ignorez-la.",
+	-- ["{npc:7744}: the last guide binds here, so this usually ticks at once; below ground"] = "{npc:7744} : le guide précédent vous fait lier votre pierre de foyer ici, donc ceci se coche généralement tout de suite ; sous terre",
 }

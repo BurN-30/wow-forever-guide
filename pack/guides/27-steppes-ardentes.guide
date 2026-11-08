@@ -122,8 +122,11 @@ step Level 50.89
   goto 48.8,43.4 map 1447 "Spitelash Myrmidon"
   level 50.89                          -- grind on Spitelash Myrmidon
 
+# Groupe Alliance 0.7.0: hearthstone note (where the stone is bound at this point of the pack, and the way
+# without it when it is still on cooldown). Text only, the step is Polestar's.
 step To Stoutlager Inn
   zone Loch Modan
+  tip Use your hearthstone: it is bound at the Stoutlager Inn, Thelsamar. On cooldown? Fly from Talrendis Point to Auberdine, take the boat to Menethil Harbor, then fly to Thelsamar.
   goto 35.5,48.4 "Stoutlager Inn"
 
 step Fly to Ironforge
@@ -267,8 +270,11 @@ step Kum'isha the Collector
   collect 10593 quest 3501.1
   turnin 3501
 
+# Groupe Alliance 0.7.0: hearthstone note (where the stone is bound at this point of the pack, and the way
+# without it when it is still on cooldown). Text only, the step is Polestar's.
 step To Stoutlager Inn
   zone Loch Modan
+  tip Use your hearthstone (Stoutlager Inn, Thelsamar) if it is ready again. On cooldown? Fly from Nethergarde Keep to Thelsamar.
   goto 35.5,48.4 "Stoutlager Inn"
 
 step Loch Modan

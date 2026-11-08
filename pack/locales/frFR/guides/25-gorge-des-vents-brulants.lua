@@ -12,6 +12,8 @@ return {
 
 	-- Step 1: To Stoutlager Inn
 	["To Stoutlager Inn"] = "Vers l'Auberge de la Fortebière",
+	-- {zone:1425} Hinterlands · {object:3204} Booty Bay
+	["Use your hearthstone: it is bound at the Stoutlager Inn, Thelsamar ({zone:1425} guide). On cooldown? Fly from {object:3204} to Thelsamar."] = "Utilisez votre pierre de foyer : elle est liée à l'auberge de la Fortebière, à Thelsamar (guide des {zone:1425}). En recharge ? Prenez le griffon de {object:3204} à Thelsamar.",
 	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
 	["Stoutlager Inn"] = "Auberge de la Fortebière",
 

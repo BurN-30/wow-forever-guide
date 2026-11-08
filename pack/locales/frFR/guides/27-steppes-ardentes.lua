@@ -68,6 +68,8 @@ return {
 
 	-- Step 19: To Stoutlager Inn
 	["To Stoutlager Inn"] = "Vers l'Auberge de la Fortebière",
+	-- {object:1162} Menethil Harbor
+	["Use your hearthstone: it is bound at the Stoutlager Inn, Thelsamar. On cooldown? Fly from Talrendis Point to Auberdine, take the boat to {object:1162}, then fly to Thelsamar."] = "Utilisez votre pierre de foyer : elle est liée à l'auberge de la Fortebière, à Thelsamar. En recharge ? Griffon de la Halte de Talrendis à Auberdine, bateau pour {object:1162}, puis griffon pour Thelsamar.",
 	["Stoutlager Inn"] = "Auberge de la Fortebière",
 
 	-- Step 20: Fly to Ironforge
@@ -162,6 +164,9 @@ return {
 	["{npc:7363} waits at the Rise of the Defiler, the hill south-west of the keep. The {zone:1419} mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, {npc:7664} and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds {object:141891}, Flames of Chaos and then Enrage at 15%."] = "{npc:7363} attend à la Cime du Souilleur, la colline au sud-ouest du rempart. Les monstres de {zone:1419} en chemin laissent tomber les fragments de draenéthyste imparfaits ; apportez-lui ce que vous avez.\nAttention : Gangrénaire, {npc:7664} et Ilifar sont tous des élites de niveau 60. Razelikh lance Brûlure de mana, Strong Cleave et Decimate, et à mesure que sa vie baisse il ajoute {object:141891}, Flames of Chaos, puis s'enrage à 15 %.",
 	-- {npc:7363} Kum'isha the Collector
 	["{npc:7363} walks around here: look inside the circle on the map"] = "{npc:7363} se promène par ici : cherchez dans le cercle sur la carte",
+
+	-- Step 43: To Stoutlager Inn
+	["Use your hearthstone (Stoutlager Inn, Thelsamar) if it is ready again. On cooldown? Fly from Nethergarde Keep to Thelsamar."] = "Utilisez votre pierre de foyer (auberge de la Fortebière, Thelsamar) si elle est de nouveau prête. En recharge ? Prenez le griffon du Rempart-du-Néant à Thelsamar.",
 
 	-- Step 50: Fly to Aerie Peak
 	["Fly to Aerie Peak"] = "Envolez-vous vers Nid-de-l'Aigle",

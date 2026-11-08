@@ -134,6 +134,8 @@ return {
 
 	-- Step 29: To Stoutlager Inn
 	["To Stoutlager Inn"] = "Vers l'Auberge de la Fortebière",
+	-- {object:1162} Menethil Harbor
+	["Use your hearthstone: it is bound at the Stoutlager Inn, Thelsamar. On cooldown? Fly to Theramore, take the boat to {object:1162}, then fly to Thelsamar."] = "Utilisez votre pierre de foyer : elle est liée à l'auberge de la Fortebière, à Thelsamar. En recharge ? Griffon jusqu'à Theramore, bateau pour {object:1162}, puis griffon pour Thelsamar.",
 	["Stoutlager Inn"] = "Auberge de la Fortebière",
 
 	-- Step 30: Fly to Ironforge

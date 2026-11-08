@@ -7598,7 +7598,7 @@ do
 			steps = {
 				{
 					title = "Back to {object:1162}",
-					note = "From {zone:1441}: use your hearthstone, bound in Menethil's Deepwater Tavern.",
+					note = "From {zone:1441}: use your hearthstone, bound in Menethil's Deepwater Tavern. On cooldown? Fly to Theramore and take the boat to {object:1162}.",
 					when = { { k = "zone", neg = true, name = "Wetlands", area = 11 } },
 					goals = {
 						{ t = "goto", text = "Deepwater Tavern", map = 1437, x = 10.7, y = 61, f = "e" },
@@ -8256,7 +8256,7 @@ do
 				},
 				{
 					title = "Southshore: {npc:247264}",
-					note = "His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own.",
+					note = "From {zone:1453}: use your hearthstone (Deepwater Tavern, {object:1162}) or fly to {object:1162}, then take the boat to Southshore. His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own.",
 					when = { { k = "done", label = "dal-start" } },
 					goals = {
 						{ t = "level", level = 30 },
@@ -12256,7 +12256,7 @@ do
 						{ t = "accept", quest = 1451, title = "Rhapsody Shindigger", npc = 5636, npcName = "Gryphon Master Talonaxe", minLevel = 38, qlvl = 43, pre = { 1450 }, preTitles = { [1450] = "Gryphon Master Talonaxe" }, map = 1425, x = 9.75, y = 44.47, z = 197.7, f = "e" },
 						{ t = "accept", quest = 2988, title = "Witherbark Cages", npc = 5636, npcName = "Gryphon Master Talonaxe", minLevel = 40, qlvl = 45, map = 1425, x = 9.75, y = 44.47, z = 197.7, f = "e" },
 						{ t = "accept", quest = 2880, title = "Troll Necklace Bounty", npc = 7884, npcName = "Fraggar Thundermantle", minLevel = 40, qlvl = 45, map = 1425, x = 14.83, y = 44.57, z = 123.3, f = "e", note = "{npc:7884}, inside" },
-						{ t = "sethome", npc = 7744, npcName = "Innkeeper Thulfram", location = "Aerie Peak", map = 1425, x = 14.15, y = 41.57, z = 131.6, f = "e", note = "{npc:7744}: the last guide binds here, so this usually ticks at once; below ground" },
+						{ t = "sethome", npc = 7744, npcName = "Innkeeper Thulfram", location = "Aerie Peak", map = 1425, x = 14.15, y = 41.57, z = 131.6, f = "e", note = "{npc:7744}, below ground: bind your hearthstone here" },
 						{ t = "accept", quest = 2877, title = "Skulk Rock Clean-up", npc = 7884, npcName = "Fraggar Thundermantle", minLevel = 40, qlvl = 48, map = 1425, x = 14.83, y = 44.57, z = 123.3, f = "e" },
 					},
 				},
@@ -13409,10 +13409,11 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:10000"] = "Margol's Horn", ["item:10551"] = "Thorium Plated Dagger", ["item:11818"] = "Grimesilt Outhouse Key", ["item:18922"] = "Secret Plans: Fiery Flux", ["item:18959"] = "Smithing Tuyere", ["item:3985"] = "Monogrammed Sash", ["item:4306"] = "Silk Cloth", ["npc:14621"] = "Overseer Maltorius", ["npc:14634"] = "Lookout Captain Lolo Longstriker", ["npc:5839"] = "Dark Iron Geologist", ["npc:5844"] = "Dark Iron Slaver", ["npc:5846"] = "Dark Iron Taskmaster", ["npc:5854"] = "Heavy War Golem", ["npc:5855"] = "Magma Elemental", ["npc:5858"] = "Greater Lava Spider", ["npc:5860"] = "Twilight Dark Shaman", ["npc:8256"] = "Curator Thorius", ["npc:8436"] = "Zamael Lunthistle", ["npc:8479"] = "Kalaran Windblade", ["npc:9318"] = "Incendosaur", ["object:147516"] = "Dark Iron", ["object:175704"] = "Singed Letter", ["object:179827"] = "Wanted/Missing/Lost & Found", ["quest:3181"] = "The Horn of the Beast", ["quest:3377"] = "Prayer to Elune", ["quest:3441"] = "Divine Retribution", ["quest:3452"] = "The Flame's Casing", ["quest:7701"] = "WANTED: Overseer Maltorius", ["zone:1418"] = "Badlands", ["zone:1427"] = "Searing Gorge", ["zone:1435"] = "Swamp of Sorrows", ["zone:1445"] = "Dustwallow Marsh", ["zone:1446"] = "Tanaris", ["zone:1455"] = "Ironforge" },
+			names = { ["item:10000"] = "Margol's Horn", ["item:10551"] = "Thorium Plated Dagger", ["item:11818"] = "Grimesilt Outhouse Key", ["item:18922"] = "Secret Plans: Fiery Flux", ["item:18959"] = "Smithing Tuyere", ["item:3985"] = "Monogrammed Sash", ["item:4306"] = "Silk Cloth", ["npc:14621"] = "Overseer Maltorius", ["npc:14634"] = "Lookout Captain Lolo Longstriker", ["npc:5839"] = "Dark Iron Geologist", ["npc:5844"] = "Dark Iron Slaver", ["npc:5846"] = "Dark Iron Taskmaster", ["npc:5854"] = "Heavy War Golem", ["npc:5855"] = "Magma Elemental", ["npc:5858"] = "Greater Lava Spider", ["npc:5860"] = "Twilight Dark Shaman", ["npc:8256"] = "Curator Thorius", ["npc:8436"] = "Zamael Lunthistle", ["npc:8479"] = "Kalaran Windblade", ["npc:9318"] = "Incendosaur", ["object:147516"] = "Dark Iron", ["object:175704"] = "Singed Letter", ["object:179827"] = "Wanted/Missing/Lost & Found", ["object:3204"] = "Booty Bay", ["quest:3181"] = "The Horn of the Beast", ["quest:3377"] = "Prayer to Elune", ["quest:3441"] = "Divine Retribution", ["quest:3452"] = "The Flame's Casing", ["quest:7701"] = "WANTED: Overseer Maltorius", ["zone:1418"] = "Badlands", ["zone:1425"] = "Hinterlands", ["zone:1427"] = "Searing Gorge", ["zone:1435"] = "Swamp of Sorrows", ["zone:1445"] = "Dustwallow Marsh", ["zone:1446"] = "Tanaris", ["zone:1455"] = "Ironforge" },
 			steps = {
 				{
 					title = "To Stoutlager Inn",
+					note = "Use your hearthstone: it is bound at the Stoutlager Inn, Thelsamar ({zone:1425} guide). On cooldown? Fly from {object:3204} to Thelsamar.",
 					goals = {
 						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
 						{ t = "goto", text = "Stoutlager Inn", map = 1432, x = 35.5, y = 48.4, f = "e" },
@@ -13969,6 +13970,7 @@ do
 				},
 				{
 					title = "To Stoutlager Inn",
+					note = "Use your hearthstone: it is bound at the Stoutlager Inn, Thelsamar. On cooldown? Fly to Theramore, take the boat to {object:1162}, then fly to Thelsamar.",
 					goals = {
 						{ t = "goto", text = "Stoutlager Inn", map = 1432, x = 35.5, y = 48.4, f = "e" },
 					},
@@ -14076,7 +14078,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:10445"] = "Drawing Kit", ["item:10450"] = "Undamaged Hippogryph Feather", ["item:10566"] = "Rubbing: Rune of Sael'hai", ["item:10593"] = "Imperfect Draenethyst Fragment", ["item:10819"] = "Wildkin Feather", ["item:11467"] = "Blackrock Medallion", ["item:12284"] = "Draco-Incarcinatrix 900", ["item:13815"] = "Some Rune", ["item:7972"] = "Ichor of Undeath", ["npc:3836"] = "Mountaineer Pebblebitty", ["npc:6196"] = "Spitelash Myrmidon", ["npc:6375"] = "Thunderhead Hippogryph", ["npc:7034"] = "Firegut Ogre Mage", ["npc:7047"] = "Black Broodling", ["npc:7363"] = "Kum'isha the Collector", ["npc:7664"] = "Razelikh the Defiler", ["npc:7864"] = "Lingering Highborne", ["npc:7907"] = "Daryn Lightwind", ["npc:7916"] = "Erelas Ambersky", ["npc:7977"] = "Gammerita", ["npc:8256"] = "Curator Thorius", ["npc:8392"] = "Pilot Xiggs Fuselighter", ["npc:8395"] = "Sanath Lim-yo", ["npc:8405"] = "Ogtinc", ["npc:8420"] = "Kim'jael", ["npc:8507"] = "Tymor", ["npc:8761"] = "Mosshoof Courser", ["npc:9176"] = "Gor'tesh", ["npc:9177"] = "Oralius", ["npc:9459"] = "Cyrus Therepentous", ["npc:9461"] = "Frenzied Black Drake", ["npc:9690"] = "Ember Worg", ["object:141891"] = "Razelikh's Tear", ["object:147516"] = "Dark Iron", ["object:153556"] = "Thaurissan Relic", ["object:176370"] = "Boat to Auberdine", ["object:32362"] = "Mystic Ward", ["quest:2944"] = "The Super Snapper FX", ["quest:4022"] = "A Taste of Flame", ["quest:4023"] = "A Taste of Flame", ["quest:4808"] = "Felnok Steelspring", ["zone:1419"] = "Blasted Lands", ["zone:1425"] = "Hinterlands", ["zone:1426"] = "Dun Morogh", ["zone:1428"] = "Burning Steppes", ["zone:1432"] = "Loch Modan", ["zone:1438"] = "Teldrassil", ["zone:1447"] = "Azshara", ["zone:1452"] = "Winterspring", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			names = { ["item:10445"] = "Drawing Kit", ["item:10450"] = "Undamaged Hippogryph Feather", ["item:10566"] = "Rubbing: Rune of Sael'hai", ["item:10593"] = "Imperfect Draenethyst Fragment", ["item:10819"] = "Wildkin Feather", ["item:11467"] = "Blackrock Medallion", ["item:12284"] = "Draco-Incarcinatrix 900", ["item:13815"] = "Some Rune", ["item:7972"] = "Ichor of Undeath", ["npc:3836"] = "Mountaineer Pebblebitty", ["npc:6196"] = "Spitelash Myrmidon", ["npc:6375"] = "Thunderhead Hippogryph", ["npc:7034"] = "Firegut Ogre Mage", ["npc:7047"] = "Black Broodling", ["npc:7363"] = "Kum'isha the Collector", ["npc:7664"] = "Razelikh the Defiler", ["npc:7864"] = "Lingering Highborne", ["npc:7907"] = "Daryn Lightwind", ["npc:7916"] = "Erelas Ambersky", ["npc:7977"] = "Gammerita", ["npc:8256"] = "Curator Thorius", ["npc:8392"] = "Pilot Xiggs Fuselighter", ["npc:8395"] = "Sanath Lim-yo", ["npc:8405"] = "Ogtinc", ["npc:8420"] = "Kim'jael", ["npc:8507"] = "Tymor", ["npc:8761"] = "Mosshoof Courser", ["npc:9176"] = "Gor'tesh", ["npc:9177"] = "Oralius", ["npc:9459"] = "Cyrus Therepentous", ["npc:9461"] = "Frenzied Black Drake", ["npc:9690"] = "Ember Worg", ["object:1162"] = "Menethil Harbor", ["object:141891"] = "Razelikh's Tear", ["object:147516"] = "Dark Iron", ["object:153556"] = "Thaurissan Relic", ["object:176370"] = "Boat to Auberdine", ["object:32362"] = "Mystic Ward", ["quest:2944"] = "The Super Snapper FX", ["quest:4022"] = "A Taste of Flame", ["quest:4023"] = "A Taste of Flame", ["quest:4808"] = "Felnok Steelspring", ["zone:1419"] = "Blasted Lands", ["zone:1425"] = "Hinterlands", ["zone:1426"] = "Dun Morogh", ["zone:1428"] = "Burning Steppes", ["zone:1432"] = "Loch Modan", ["zone:1438"] = "Teldrassil", ["zone:1447"] = "Azshara", ["zone:1452"] = "Winterspring", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
 			written = { ["{npc:7363} waits at the Rise of the Defiler, the hill south-west of the keep. The {zone:1419} mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, {npc:7664} and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds {object:141891}, Flames of Chaos and then Enrage at 15%."] = "Kum'isha waits at the Rise of the Defiler, the hill south-west of the keep. The Blasted Lands mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, Razelikh the Defiler and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds Razelikh's Tear, Flames of Chaos and then Enrage at 15%.", ["{zone:1425}"] = "The Hinterlands" },
 			steps = {
 				{
@@ -14232,6 +14234,7 @@ do
 				},
 				{
 					title = "To Stoutlager Inn",
+					note = "Use your hearthstone: it is bound at the Stoutlager Inn, Thelsamar. On cooldown? Fly from Talrendis Point to Auberdine, take the boat to {object:1162}, then fly to Thelsamar.",
 					goals = {
 						{ t = "goto", text = "Stoutlager Inn", map = 1432, x = 35.5, y = 48.4, f = "e" },
 					},
@@ -14421,6 +14424,7 @@ do
 				},
 				{
 					title = "To Stoutlager Inn",
+					note = "Use your hearthstone (Stoutlager Inn, Thelsamar) if it is ready again. On cooldown? Fly from Nethergarde Keep to Thelsamar.",
 					goals = {
 						{ t = "goto", text = "Stoutlager Inn", map = 1432, x = 35.5, y = 48.4, f = "e" },
 					},
@@ -14868,7 +14872,7 @@ do
 					title = "Everlook",
 					goals = {
 						{ t = "getfp", npc = 11138, npcName = "Maethrya", location = "Everlook", node = 52, map = 1452, x = 62.33, y = 36.61, z = 701.6, f = "e" },
-						{ t = "sethome", npc = 11118, npcName = "Innkeeper Vizzie", location = "Everlook", map = 1452, x = 61.36, y = 38.83, z = 721.7, f = "e", note = "{npc:11118}: the last guide binds here, so this usually ticks at once" },
+						{ t = "sethome", npc = 11118, npcName = "Innkeeper Vizzie", location = "Everlook", map = 1452, x = 61.36, y = 38.83, z = 721.7, f = "e", note = "{npc:11118}: bind your hearthstone here" },
 						{ t = "accept", quest = 5601, title = "Sister Pamela", npc = 11629, npcName = "Jessica Redpath", minLevel = 50, qlvl = 55, closedBy = { 5149, 5142 }, preTitles = { [5142] = "Little Pamela", [5149] = "Pamela's Doll" }, map = 1452, x = 61.28, y = 38.98, z = 721.7, f = "e", note = "{npc:11629}: keep it for Darrowshire; inside" },
 						{ t = "accept", quest = 6028, title = "The Everlook Report", npc = 10431, npcName = "Gregor Greystone", minLevel = 50, qlvl = 52, map = 1452, x = 61.35, y = 38.97, z = 721.7, f = "e", note = "{npc:10431}: keep both for the Plaguelands; inside" },
 						{ t = "accept", quest = 6030, title = "Duke Nicholas Zverenhoff", npc = 10431, npcName = "Gregor Greystone", minLevel = 50, qlvl = 52, map = 1452, x = 61.35, y = 38.97, z = 721.7, f = "e" },
@@ -16334,6 +16338,7 @@ do
 			steps = {
 				{
 					title = "To Ratchet",
+					note = "Use your hearthstone: it is bound in Ratchet. On cooldown? Fly to {object:1162}, take the boat to Theramore, then fly to Ratchet.",
 					goals = {
 						{ t = "note", text = "Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels." },
 						{ t = "goto", text = "Ratchet", map = 1413, x = 62, y = 39.4, f = "e" },

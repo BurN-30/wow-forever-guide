@@ -18,7 +18,7 @@ return {
 	-- Step 3: Everlook
 	["Everlook"] = "Long-Guet",
 	-- {npc:11118} Innkeeper Vizzie
-	["{npc:11118}: the last guide binds here, so this usually ticks at once"] = "{npc:11118} : le guide précédent vous lie ici, cette étape se coche donc généralement aussitôt",
+	["{npc:11118}: bind your hearthstone here"] = "{npc:11118} : liez votre pierre de foyer ici",
 	-- {npc:11629} Jessica Redpath
 	["{npc:11629}: keep it for Darrowshire; inside"] = "{npc:11629} : gardez-la pour Comté-de-Darrow ; à l'intérieur",
 	-- {npc:10431} Gregor Greystone
@@ -189,4 +189,7 @@ return {
 
 	-- Step 40: Light's Hope Chapel
 	["The next guide starts here and flies to Chillwind Camp."] = "Le guide suivant commence ici et s'envole vers le Camp du Noroît.",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["{npc:11118}: the last guide binds here, so this usually ticks at once"] = "{npc:11118} : le guide précédent vous lie ici, cette étape se coche donc généralement aussitôt",
 }

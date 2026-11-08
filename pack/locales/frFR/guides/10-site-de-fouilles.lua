@@ -13,8 +13,8 @@ return {
 	-- Step 1: Back to Menethil Harbor
 	-- {object:1162} Menethil Harbor
 	["Back to {object:1162}"] = "Retour à {object:1162}",
-	-- {zone:1441} Thousand Needles
-	["From {zone:1441}: use your hearthstone, bound in Menethil's Deepwater Tavern."] = "Depuis {zone:1441} : utiliser la pierre de foyer, liée à la taverne de l'Eau-profonde de Menethil.",
+	-- {zone:1441} Thousand Needles · {object:1162} Menethil Harbor
+	["From {zone:1441}: use your hearthstone, bound in Menethil's Deepwater Tavern. On cooldown? Fly to Theramore and take the boat to {object:1162}."] = "Depuis {zone:1441} : utilisez votre pierre de foyer, liée à la taverne de l'Eau-profonde de Menethil. En recharge ? Prenez le griffon jusqu'à Theramore, puis le bateau pour {object:1162}.",
 	["Deepwater Tavern"] = "Taverne de l'Eau-profonde",
 
 	-- Step 2: Menethil Harbor: dungeon quests
@@ -94,6 +94,7 @@ return {
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["From the meeting stone near Thelgen Rock, follow the mountain path up to the portal."] = "Depuis la pierre de rencontre près du rocher de Thelgen, suivre le sentier de montagne jusqu'au portail.",
+	-- ["From {zone:1441}: use your hearthstone, bound in Menethil's Deepwater Tavern."] = "Depuis {zone:1441} : utiliser la pierre de foyer, liée à la taverne de l'Eau-profonde de Menethil.",
 	-- ["Group 9 · Excavation Site: {zone:1437} (dungeon 26-29)"] = "Groupe 9 · Site de fouilles : {zone:1437} (donjon 26-29)",
 	-- ["Group 9 · Excavation Site: {zone:1437} (dungeon 26-31)"] = "Groupe 9 · Site de fouilles : {zone:1437} (donjon 26-31)",
 	-- ["Inside the dungeon"] = "Dans le donjon",

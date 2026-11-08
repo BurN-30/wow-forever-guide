@@ -39,7 +39,8 @@ return {
 	-- Step 6: Southshore: Emissary Jacques
 	-- {npc:247264} Emissary Jacques
 	["Southshore: {npc:247264}"] = "Austrivage : {npc:247264}",
-	["His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own."] = "Sa quête demande le niveau 30 : en dessous, le guide attend ici. En avance sur les autres ? Prenez-la, ils la prendront plus tard auprès de lui de leur côté.",
+	-- {zone:1453} Stormwind · {object:1162} Menethil Harbor
+	["From {zone:1453}: use your hearthstone (Deepwater Tavern, {object:1162}) or fly to {object:1162}, then take the boat to Southshore. His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own."] = "Depuis {zone:1453} : utilisez votre pierre de foyer (taverne de l'Eau-profonde, {object:1162}) ou prenez le griffon pour {object:1162}, puis le bateau pour Austrivage. Sa quête demande le niveau 30 : en dessous, le guide attend ici. En avance sur les autres ? Prenez-la, ils la prendront plus tard auprès de lui de leur côté.",
 
 	-- Step 7: Image of Archmage Modera
 	-- {object:1772} Tarren Mill
@@ -71,6 +72,7 @@ return {
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Group 11 · City of Dalaran (dungeon 28-33)"] = "Groupe 11 · Cité de Dalaran (donjon 28-33)",
 	-- ["Group 11 · City of Dalaran (dungeon 30-33)"] = "Groupe 11 · Cité de Dalaran (donjon 30-33)",
+	-- ["His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own."] = "Sa quête demande le niveau 30 : en dessous, le guide attend ici. En avance sur les autres ? Prenez-la, ils la prendront plus tard auprès de lui de leur côté.",
 	-- ["His quest needs level 30: the whole group should wait for it."] = "Sa quête demande le niveau 30 : tout le groupe doit l'attendre.",
 	-- ["{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower."] = "{npc:5502} est dans {object:2096}, {npc:5694} dans la tour de {object:2101}.",
 	-- ["{zone:1453} rewards"] = "Récompenses à {zone:1453}",

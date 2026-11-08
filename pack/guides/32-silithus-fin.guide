@@ -14,7 +14,10 @@ zone Silithus
 # Added here: Toxic Horrors (5086), Of Lost Honor (5845).
 # Left out: Taking Back Silithus (8275).
 
+# Groupe Alliance 0.7.0: hearthstone note (where the stone is bound at this point of the pack, and the way
+# without it when it is still on cooldown). Text only, the step is Polestar's.
 step To Ratchet
+  tip Use your hearthstone: it is bound in Ratchet. On cooldown? Fly to Menethil Harbor, take the boat to Theramore, then fly to Ratchet.
   note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
   zone The Barrens
   goto 62.0,39.4 "Ratchet"

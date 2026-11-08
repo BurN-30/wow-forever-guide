@@ -19,7 +19,7 @@ next groupe-alliance/12-dalaran
 step Back to Menethil Harbor
   zone Wetlands
   when !zone "Wetlands"
-  tip From Thousand Needles: use your hearthstone, bound in Menethil's Deepwater Tavern.
+  tip From Thousand Needles: use your hearthstone, bound in Menethil's Deepwater Tavern. On cooldown? Fly to Theramore and take the boat to Menethil Harbor.
   goto 10.7,61.0 "Deepwater Tavern"
 
 step Menethil Harbor: dungeon quests
