@@ -2,6 +2,18 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.8.0 (2026-11-09)
+
+### Français
+- Auctionator (version 343, par plusmouse) installé avec le guide : prix de l'hôtel des ventes dans l'infobulle des objets et des ressources.
+- Mettre les prix à jour : à l'hôtel des ventes, onglet **Auctionator**, bouton **Analyse complète** (Full Scan). Les prix restent ensuite affichés partout, même loin de l'HdV.
+- Un Auctionator déjà installé est remplacé par cette version (l'ancien est mis de côté dans `_guide-sauvegarde`) ; ses réglages et ses prix (dossier WTF) sont gardés.
+
+### English
+- Auctionator (version 343, by plusmouse) installed with the guide: auction house prices in item and reagent tooltips.
+- Update prices: at the auction house, **Auctionator** tab, **Full Scan** button. Prices then show everywhere, even away from the AH.
+- An Auctionator already installed is replaced by this version (the old one is kept in `_guide-sauvegarde`); its settings and prices (WTF folder) are kept.
+
 ## v0.7.4 (2026-11-08)
 
 ### Français
