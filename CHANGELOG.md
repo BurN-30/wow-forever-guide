@@ -8,11 +8,15 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 - BuffAlerts : les grandes icônes d'alerte quittent le milieu de l'écran. Elles s'affichent en haut à droite, sous les améliorations (buffs) du jeu, à gauche de la fenêtre du guide, en taille moyenne (40 au lieu de 64). Le son du Cri de guerre reste.
 - Elles suivent les améliorations si le Mode édition du jeu les déplace. Pour les mettre ailleurs : `/balert`, « Move icons », glisser, puis « Lock icons ».
 - BuffAlerts : « Reset to defaults » (et `/balert reset`) s'arrêtait sur une erreur à mi-chemin ; il remet maintenant tous les réglages du guide.
+- PrettyTooltip : sur le cadavre d'une bête que l'on peut dépecer, le badge de dépeçage s'affiche aussi pour les créatures propres à Forever (avant : l'information disparaissait).
+- PrettyTooltip : dans le journal de quêtes de la carte, un objectif rempli sans compteur (parler à quelqu'un, explorer, escorte) est coché, comme le jeu le grise (avant : il restait décoché).
 
 ### English
 - BuffAlerts: the large alert icons leave the middle of the screen. They now show top right, under the game's buffs, left of the guide window, at medium size (40 instead of 64). The Battle Shout sound stays.
 - They follow the buffs if the game's Edit Mode moves them. To put them elsewhere: `/balert`, "Move icons", drag, then "Lock icons".
 - BuffAlerts: "Reset to defaults" (and `/balert reset`) stopped halfway on an error; it now restores every guide setting.
+- PrettyTooltip: on a skinnable beast's corpse, the skinning badge now also shows for Forever-only creatures (before: the information disappeared).
+- PrettyTooltip: in the world map's quest log, a done objective without a count (talk to someone, explore, escort) is ticked, as the game greys it (before: it stayed unticked).
 
 ## v0.9.3 (2026-11-10)
 

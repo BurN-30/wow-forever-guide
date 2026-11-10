@@ -70,6 +70,18 @@ local function isRed(color)
     return type(color) == "table" and color[1] > .9 and color[2] < .4 and color[3] < .4
 end
 
+-- [pack patch] The world map's quest log writes a finished objective, with or
+-- without a count, in GRAY_FONT_COLOR (white while unfinished).
+local function isGrey(color)
+    local grey = GRAY_FONT_COLOR
+    if type(color) ~= "table" or type(grey) ~= "table" or type(color[1]) ~= "number"
+        or type(color[2]) ~= "number" or type(color[3]) ~= "number" then
+        return false
+    end
+    return math.abs(color[1] - grey.r) < .03 and math.abs(color[2] - grey.g) < .03
+        and math.abs(color[3] - grey.b) < .03
+end
+
 -- Questie colors its lines with codes on white text.
 local function codeColor(text)
     local r, g, b = text:match("^%s*|c%x%x(%x%x)(%x%x)(%x%x)")
@@ -151,6 +163,11 @@ local function readRow(model, row, state)
         -- A quest not in the log names how many: "15 x Dark Iron Dwarf".
         if not goal then progress, goal = name:match("^(%d+) x (.+)$") end
         local objective = { left = goal or name, right = progress or right, completed = row.completed }
+        -- [pack patch] A line read from the tooltip keeps its font's own color in textColor
+        -- (typed lines reuse the dimmed one): grey there means done, as the game draws it.
+        if objective.completed == nil and row.textColor ~= row.color and isGrey(row.textColor) then
+            objective.completed = true
+        end
         objective.completed = objectiveDone(objective)
         model.objectives[#model.objectives + 1] = objective
     elseif label then

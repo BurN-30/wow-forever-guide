@@ -3,8 +3,8 @@
 # Appliquer depuis le dossier qui contient PrettyTooltip : git apply -p1 prettytooltip-1.3.8.patch
 # (les fichiers de l'addon sont en CRLF, le patch les garde tels quels).
 diff -ruN a/PrettyTooltip/Locale/frFR.lua b/PrettyTooltip/Locale/frFR.lua
---- a/PrettyTooltip/Locale/frFR.lua	2026-11-10 19:32:57.350381600 +0100
-+++ b/PrettyTooltip/Locale/frFR.lua	2026-11-10 19:32:57.713120600 +0100
+--- a/PrettyTooltip/Locale/frFR.lua	2026-11-07 07:56:30.000000000 +0100
++++ b/PrettyTooltip/Locale/frFR.lua	2026-11-10 16:43:31.697251600 +0100
 @@ -93,7 +93,7 @@
  L["Recipe"] = "Recette"
  L["Made by %s"] = "Fabriqué par %s"
@@ -24,19 +24,19 @@ diff -ruN a/PrettyTooltip/Locale/frFR.lua b/PrettyTooltip/Locale/frFR.lua
  -- The spell power rows.
  L["Healing per Second"] = "Soins par seconde"
 diff -ruN a/PrettyTooltip/PrettyTooltip.toc b/PrettyTooltip/PrettyTooltip.toc
---- a/PrettyTooltip/PrettyTooltip.toc	2026-11-10 19:32:57.503552000 +0100
-+++ b/PrettyTooltip/PrettyTooltip.toc	2026-11-10 19:32:57.683977600 +0100
+--- a/PrettyTooltip/PrettyTooltip.toc	2026-11-07 07:56:32.000000000 +0100
++++ b/PrettyTooltip/PrettyTooltip.toc	2026-11-10 20:01:23.214688600 +0100
 @@ -5,6 +5,7 @@
  ## X-License: MIT
  ## X-Curse-Project-ID: 1720719
  ## Version: 1.3.8
-+## X-Pack-Patches: wow-forever-guide (BurN-30) - #47 #49 frFR party-names, see docs/prettytooltip-correctifs.md
++## X-Pack-Patches: wow-forever-guide (BurN-30) - #47 #49 frFR party-names skinnable quest-log-done, see docs/prettytooltip-correctifs.md
  ## IconTexture: Interface\AddOns\PrettyTooltip\art\logo
  ## SavedVariables: PrettyTooltipDB, PrettyTooltipCaptures
  ## OptionalDeps: Questie, Auctionator, DialogueUI, EllesmereUI, LibSharedMedia-3.0
 diff -ruN a/PrettyTooltip/Tooltips/Aura.lua b/PrettyTooltip/Tooltips/Aura.lua
---- a/PrettyTooltip/Tooltips/Aura.lua	2026-11-10 19:32:57.491502800 +0100
-+++ b/PrettyTooltip/Tooltips/Aura.lua	2026-11-10 19:32:57.673463500 +0100
+--- a/PrettyTooltip/Tooltips/Aura.lua	2026-11-07 07:56:28.000000000 +0100
++++ b/PrettyTooltip/Tooltips/Aura.lua	2026-11-10 16:43:31.696250700 +0100
 @@ -43,6 +43,13 @@
      end
      return false
@@ -61,8 +61,8 @@ diff -ruN a/PrettyTooltip/Tooltips/Aura.lua b/PrettyTooltip/Tooltips/Aura.lua
                  else
                      tooltipData.add(model.extras, left, right)
 diff -ruN a/PrettyTooltip/Tooltips/Item.lua b/PrettyTooltip/Tooltips/Item.lua
---- a/PrettyTooltip/Tooltips/Item.lua	2026-11-10 19:32:57.498002000 +0100
-+++ b/PrettyTooltip/Tooltips/Item.lua	2026-11-10 19:32:57.665942700 +0100
+--- a/PrettyTooltip/Tooltips/Item.lua	2026-11-07 07:56:28.000000000 +0100
++++ b/PrettyTooltip/Tooltips/Item.lua	2026-11-10 16:43:31.696751100 +0100
 @@ -496,7 +496,9 @@
                  if isRed(line.leftColor) then
                      m.footerLeft[#m.footerLeft].color = UNUSABLE_COLOR
@@ -74,10 +74,54 @@ diff -ruN a/PrettyTooltip/Tooltips/Item.lua b/PrettyTooltip/Tooltips/Item.lua
                  add(m.setBonuses, left, right)
                  m.setBonuses[#m.setBonuses].active = isActive(line.leftColor)
              -- Set pieces are names alone: letters (of any alphabet), spaces,
+diff -ruN a/PrettyTooltip/Tooltips/Quest.lua b/PrettyTooltip/Tooltips/Quest.lua
+--- a/PrettyTooltip/Tooltips/Quest.lua	2026-11-07 07:56:28.000000000 +0100
++++ b/PrettyTooltip/Tooltips/Quest.lua	2026-11-10 20:00:02.822100100 +0100
+@@ -70,6 +70,18 @@
+     return type(color) == "table" and color[1] > .9 and color[2] < .4 and color[3] < .4
+ end
+ 
++-- [pack patch] The world map's quest log writes a finished objective, with or
++-- without a count, in GRAY_FONT_COLOR (white while unfinished).
++local function isGrey(color)
++    local grey = GRAY_FONT_COLOR
++    if type(color) ~= "table" or type(grey) ~= "table" or type(color[1]) ~= "number"
++        or type(color[2]) ~= "number" or type(color[3]) ~= "number" then
++        return false
++    end
++    return math.abs(color[1] - grey.r) < .03 and math.abs(color[2] - grey.g) < .03
++        and math.abs(color[3] - grey.b) < .03
++end
++
+ -- Questie colors its lines with codes on white text.
+ local function codeColor(text)
+     local r, g, b = text:match("^%s*|c%x%x(%x%x)(%x%x)(%x%x)")
+@@ -151,6 +163,11 @@
+         -- A quest not in the log names how many: "15 x Dark Iron Dwarf".
+         if not goal then progress, goal = name:match("^(%d+) x (.+)$") end
+         local objective = { left = goal or name, right = progress or right, completed = row.completed }
++        -- [pack patch] A line read from the tooltip keeps its font's own color in textColor
++        -- (typed lines reuse the dimmed one): grey there means done, as the game draws it.
++        if objective.completed == nil and row.textColor ~= row.color and isGrey(row.textColor) then
++            objective.completed = true
++        end
+         objective.completed = objectiveDone(objective)
+         model.objectives[#model.objectives + 1] = objective
+     elseif label then
 diff -ruN a/PrettyTooltip/Tooltips/Unit.lua b/PrettyTooltip/Tooltips/Unit.lua
---- a/PrettyTooltip/Tooltips/Unit.lua	2026-11-10 19:32:57.478927300 +0100
-+++ b/PrettyTooltip/Tooltips/Unit.lua	2026-11-10 19:32:57.667951800 +0100
-@@ -273,6 +273,15 @@
+--- a/PrettyTooltip/Tooltips/Unit.lua	2026-11-07 07:56:28.000000000 +0100
++++ b/PrettyTooltip/Tooltips/Unit.lua	2026-11-10 20:00:02.821596100 +0100
+@@ -262,6 +262,9 @@
+                     model.tag = text
+                 elseif SHOWN_ELSEWHERE[text] then
+                     -- Shown as badges.
++                    -- [pack patch] The game's "Skinnable" line also gives the badge when
++                    -- Data/Skinning.lua does not know the creature.
++                    if text == UNIT_SKINNABLE_LEATHER then model.skinnable = true end
+                 elseif LINE.UnitOwner and line.type == LINE.UnitOwner then
+                     model.owner = text
+                 elseif LINE.QuestTitle and line.type == LINE.QuestTitle then
+@@ -273,6 +276,15 @@
                      if not isSecret(line.completed) then
                          model.quests[#model.quests].completed = line.completed == true
                      end
@@ -93,7 +137,16 @@ diff -ruN a/PrettyTooltip/Tooltips/Unit.lua b/PrettyTooltip/Tooltips/Unit.lua
                  else
                      tooltipData.add(model.extras, left, right)
                      local row = model.extras[#model.extras]
-@@ -442,11 +451,19 @@
+@@ -326,7 +338,7 @@
+     if model.afk then list[#list + 1] = { L["AFK"], MUTED } end
+     if model.dnd then list[#list + 1] = { L["DND"], MUTED } end
+     if model.dead then list[#list + 1] = { DEAD, TAPPED } end
+-    if model.skinning then list[#list + 1] = { UNIT_SKINNABLE_LEATHER, SKINNABLE_COLOR } end
++    if model.skinning or model.skinnable then list[#list + 1] = { UNIT_SKINNABLE_LEATHER, SKINNABLE_COLOR } end -- [pack patch]
+     return list
+ end
+ 
+@@ -442,11 +454,19 @@
              rows = skinningRows(skin), style = styles.unitSkinning, color = DETAIL_COLOR, gap = 2 }
      end
      if #model.quests > 0 then

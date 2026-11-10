@@ -262,6 +262,9 @@ local function readUnit(tooltip, data, game)
                     model.tag = text
                 elseif SHOWN_ELSEWHERE[text] then
                     -- Shown as badges.
+                    -- [pack patch] The game's "Skinnable" line also gives the badge when
+                    -- Data/Skinning.lua does not know the creature.
+                    if text == UNIT_SKINNABLE_LEATHER then model.skinnable = true end
                 elseif LINE.UnitOwner and line.type == LINE.UnitOwner then
                     model.owner = text
                 elseif LINE.QuestTitle and line.type == LINE.QuestTitle then
@@ -335,7 +338,7 @@ local function badges(model)
     if model.afk then list[#list + 1] = { L["AFK"], MUTED } end
     if model.dnd then list[#list + 1] = { L["DND"], MUTED } end
     if model.dead then list[#list + 1] = { DEAD, TAPPED } end
-    if model.skinning then list[#list + 1] = { UNIT_SKINNABLE_LEATHER, SKINNABLE_COLOR } end
+    if model.skinning or model.skinnable then list[#list + 1] = { UNIT_SKINNABLE_LEATHER, SKINNABLE_COLOR } end -- [pack patch]
     return list
 end
 

@@ -63,6 +63,59 @@ Vérifié et laissé tel quel :
 - Correction : une ligne `QuestPlayer` garde la couleur que lui donne le jeu (or de quête si elle est illisible) avec un retrait de 8 ; les objectifs qui la suivent passent à un retrait de 16, sous le nom. Sans membre du groupe sur la quête, rien ne change.
 - Réappliquer : dans la boucle de lecture, marquer `row.player` et `row.playerColor` pour `LINE.QuestPlayer` ; dans la construction de la section des quêtes, couleur et retrait selon `row.player`, retrait 16 pour les objectifs qui suivent un nom. À retirer si l'amont distingue un jour ces lignes.
 
+### Correctif 5 : badge de dépeçage perdu pour les créatures absentes des données (audit du 10/11)
+
+- Ticket : aucun, trouvé à l'audit des distinctions (plus bas).
+- Clients : les deux (chaîne du jeu `UNIT_SKINNABLE_LEATHER`, « Skinnable » sur le client anglais, dans la langue du client sur le français ; aucun texte écrit en dur).
+- Fichier : `Tooltips/Unit.lua`, lecture des lignes (`readUnit`, ligne `SHOWN_ELSEWHERE`) et badges (`badges`) ; repères `[pack patch]`.
+- Cause : sur le cadavre d'une créature que l'on peut dépecer, le jeu ajoute la ligne `UNIT_SKINNABLE_LEATHER`. PrettyTooltip la retire toujours (liste `SHOWN_ELSEWHERE`, ligne 46 : « montrée par les badges »), mais n'affiche le badge qu'avec les données de `Data/Skinning.lua` (tables de butin de CMaNGOS, Classic 1.12, par numéro de créature). Pour une créature absente de ces tables, propre à Forever par exemple, l'information disparaît : ni ligne ni badge. La page CurseForge annonce au contraire que ce qui n'est pas lu reste en bas, « pour garder le plus d'information possible ».
+- Correction : la ligne du jeu, quand elle est là, donne aussi le badge. Les détails (Dépeçage requis, cuirs et peaux, sous **Maj**) restent réservés aux créatures connues des données. Aucun changement pour une créature connue.
+- Banc : lecteur `readUnit` réel, cadavre d'une créature inconnue avec la ligne du jeu, en anglais et en français : la release perd l'information, la copie du pack marque le badge.
+- Réappliquer : dans `readUnit`, sous `elseif SHOWN_ELSEWHERE[text] then`, poser `model.skinnable = true` quand `text == UNIT_SKINNABLE_LEATHER` ; dans `badges`, `if model.skinning or model.skinnable then`. À retirer si l'amont garde la ligne ou le badge sans données.
+
+### Correctif 6 : objectifs remplis non cochés dans le journal de la carte (audit du 10/11)
+
+- Ticket : aucun, trouvé à l'audit.
+- Clients : les deux (couleur du jeu `GRAY_FONT_COLOR`, aucun texte lu).
+- Fichier : `Tooltips/Quest.lua`, nouvelle fonction `isGrey` (après `isRed`) et lecture d'un objectif dans `readRow` ; repères `[pack patch]`.
+- Cause : l'infobulle d'une quête survolée dans le journal de la carte du monde est écrite ligne par ligne par le jeu (`QuestMapLogTitleButton_OnEnter`, `Blizzard_UIPanels_Game/Mainline/QuestMapFrame.lua` 2257 à 2279, chargé sur Forever) : chaque objectif en blanc (`HIGHLIGHT_FONT_COLOR`), en gris (`GRAY_FONT_COLOR`) une fois rempli ; de même pour l'argent demandé. PrettyTooltip lit ces lignes sans type ni drapeau « terminé » et ne coche un objectif que s'il finit par un compte « 3/8 » atteint. Un objectif sans compte (« Parler à… », escorte, lieu à explorer, argent demandé) restait décoché et beige même rempli, à côté d'objectifs comptés correctement cochés.
+- Correction : sur une ligne lue dans l'infobulle (pas une ligne typée), une couleur de police égale à `GRAY_FONT_COLOR` (à 0,03 près) coche l'objectif, comme le jeu le grise. Les lignes typées réutilisent la couleur atténuée de PrettyTooltip et ne sont jamais lues ainsi (un gris clair 0,6 atténué à 0,51 ne doit pas passer pour du gris). Sans `GRAY_FONT_COLOR` dans le client, rien ne change.
+- Banc : lecteur `readQuest` réel sur les lignes du journal (un objectif sans compte gris, un blanc, un compté en cours, un compté rempli) et sur une ligne typée gris clair, en anglais et en français : la release laisse l'objectif gris décoché, la copie du pack le coche, le reste ne bouge pas.
+- Réappliquer : ajouter `isGrey` après `isRed`, et avant `objective.completed = objectiveDone(objective)` : `if objective.completed == nil and row.textColor ~= row.color and isGrey(row.textColor) then objective.completed = true end`. À retirer si l'amont lit la couleur de ces lignes.
+
+### Audit des distinctions (demande de Nathan, 10/11)
+
+Après le correctif 4, Nathan a demandé de chercher les autres endroits où l'infobulle d'origine distingue une information (couleur, retrait, ordre, séparateur) et où PrettyTooltip la rend indistincte ou trompeuse. Méthode : chaque type d'infobulle (objet, unité joueur, PNJ et familier, aura, quête, sort, objet du monde, recette, courrier, trajets) et chaque type de ligne (`Enum.TooltipDataLineType`, `TooltipInfoSharedDocumentation.lua` 34 à 85) comparés au code de l'interface de Forever (dépôt Gethe/wow-ui-source, branche `forever`, build 1.60.1.70888, famille Mainline). `TooltipDataRules.lua` n'ajoute que trois choses aux lignes : la couleur du nom d'unité (lignes 7 à 16), l'icône d'objectif terminé ou non (100 à 113) et le retrait de `GemSocketEnchantment` (122 à 128) ; le reste vient des champs `leftColor`, `usable` et `completed` donnés par le client, que PrettyTooltip lit.
+
+| Endroit (PrettyTooltip) | Ce que le jeu distingue | Ce que fait PrettyTooltip | Verdict |
+|---|---|---|---|
+| `Tooltips/Unit.lua`, nom d'un membre du groupe sous une quête | Ligne `QuestPlayer` en jaune, objectifs dessous | Même beige, même retrait | Corrigé en 0.9.3 (correctif 4) |
+| `Tooltips/Unit.lua` 46, 263, 338 : cadavre dépeçable | Ligne `UNIT_SKINNABLE_LEATHER` | Ligne retirée, badge seulement si la créature est dans les données | Vrai problème, corrigé (correctif 5) |
+| `Tooltips/Quest.lua` 63 à 67, 146 à 155 : journal de la carte | Objectif rempli en gris, en cours en blanc, avec ou sans compte | Seul un compte « n/m » coche l'objectif | Vrai problème, corrigé (correctif 6) |
+| Objets : niveau requis, classes, races, métier, réputation | Rouge si non rempli | Rouge (`Item.lua` 456 à 498, 619 à 631, drapeau `usable`) | Conservé |
+| Objets : type d'arme ou d'armure inutilisable, lien, « Unique » | Rouge pour l'inutilisable | Rouge gardé dans l'en-tête | Conservé |
+| Objets : pièces d'ensemble possédées ou non, bonus actifs ou non | Blanc ou gris, vert ou gris | Mêmes distinctions (correctif 1 pour le bonus actif) | Conservé |
+| Objets : « Déjà connu », objet de quête, objet qui commence une quête, effets verts, durabilité, composants manquants, changements de stats verts et rouges | Couleurs du jeu | Gardées (lignes du bas ou barre de durabilité colorée) | Conservé |
+| Unités : couleur de réaction, mob déjà tapé, niveau en couleur de difficulté, cible de la cible, guilde, propriétaire d'un familier, objectif `completed` | Couleurs du jeu | Gardées (« Vous » en rouge pour la cible) | Conservé |
+| Sorts : prérequis et talents non remplis, temps de recharge restant | Rouge | Rouge, recharge en orange | Conservé |
+| Auras, objets du monde (prérequis, couleur de chance de gain, serrure), courrier (contre remboursement en rouge si l'argent manque), trajets (coût non coloré par le jeu) | Couleurs du jeu | Gardées | Conservé |
+| Lignes des autres addons (`quietColor`, `Game/TooltipData.lua` 14 à 21 : couleurs atténuées à 85 %, blanc passé en gris) | Couleurs de l'addon | Atténuées, toutes à part | Conservé : Polestar « Quête : 3/8 » beige contre vert une fois fait, amélioration d'équipement verte, rouge, orange ou grise toujours distinctes, « Marqué camelote » rouge contre « Marqué à garder » vert ; Auctionator colore ses prix dans le texte, non touché ; seuls le blanc pur et le gris clair se rapprochent, et aucune paire de ce genre ne porte d'information. BuffAlerts n'ajoute aucune ligne. |
+
+Choix de style annoncés par l'auteur (page CurseForge), laissés :
+- Nom des joueurs à la couleur de leur classe au lieu de la couleur de réaction : l'hostilité ne se lit plus dans le nom, mais le blason de faction et le badge JcJ la donnent ; rien d'utile caché hors JcJ.
+- Lignes d'équipement réécrites en caractéristiques, « Utiliser : », « Équipé : », « Chances quand vous touchez : » remplacés par des icônes : avec les icônes (réglage par défaut), enchantements et effets restent distincts ; sans elles, les enchantements (beiges au lieu du vert du jeu, `Item.lua` 1050) se confondent avec les caractéristiques.
+- Lignes non lues et lignes des autres addons regroupées en bas, sous un filet, couleurs atténuées : voir la dernière ligne du tableau, aucune distinction utile perdue.
+- Bande coût, incantation, recharge et portée des sorts, quête en liste à cocher, durabilité en barre : plus d'information que l'original.
+
+Cas douteux, non touchés (à regarder en jeu, **Alt** affiche l'infobulle d'origine pour comparer) :
+1. Quête survolée dans le journal de la carte en groupe : le jeu appelle `SetQuestPartyProgress` (`QuestMapFrame.lua` 2295 à 2302), qui vide l'infobulle (`TooltipDataHandler.lua` 272 à 274) avant d'y écrire la progression du groupe. PrettyTooltip relirait les lignes et pourrait prendre le nom d'un membre pour le titre. Rien ne montre ici ce que Forever affiche vraiment.
+2. Membres du groupe sur un objet de quête (`Tooltips/Object.lua` 203 à 215) : la ligne `QuestPlayer` n'y est pas lue. Si le jeu l'envoie pour un objet, le nom tomberait en bas et les objectifs du membre se mêleraient à ceux du joueur. Le code de l'interface ne dit pas si elle arrive.
+3. Coût d'un sort en rouge quand la ressource manque : `readStat` (`Tooltips/Spell.lua` 81 à 90) ignore la couleur. La couleur est posée par le client, invérifiable ici ; à comparer avec peu de mana.
+4. Lignes JcJ, Mort et Cadavre retirées (`Unit.lua` 46 et 263) alors que leurs badges demandent que l'unité soit retrouvée (`unitFor`) ; rare, l'unité survolée est presque toujours trouvée.
+5. Badge de dépeçage affiché d'après les données même quand le jeu ne montre plus la ligne (cadavre déjà dépecé) : à observer en jeu avant de toucher, le correctif 5 n'y change rien.
+6. PNJ dont la faction s'appelle exactement « Alliance » ou « Horde » : ligne retirée, alors que le blason ne s'affiche que pour les joueurs ; mineur.
+7. Noms de quêtes de la minicarte tous de la même couleur (ticket amont #15, `Tooltips/Minimap.lua` 23 retire les codes couleur) : déjà classé comme cause incertaine.
+
 ### Tickets ouverts non corrigés
 
 | Ticket | Sujet | Verdict |
@@ -85,6 +138,8 @@ Aucun ticket ne cite Polestar, Auctionator ou le client français ; les rapports
 2. **#49** (clients FR et EN) : taper `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 1)`, survoler une amélioration (par exemple une armure de démoniste, une bénédiction). Attendu : la description sous le nom, puis la durée et la barre, et « Identifiant de sort : … » (« Spell ID: … » en anglais) en petit en bas. Ensuite `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 0)` : cadre identique à avant, sans la ligne du numéro.
 3. **Traduction** (client FR seulement) : survoler une pièce d'équipement (plaque « NivO 25 » sous l'icône, texte entier, non coupé) ; survoler un joueur en mode Ne pas déranger (`/dnd` tapé par un second personnage) : plaque « Occupé(e) ». Sur le client anglais, rien ne change (« iLvl 25 », « DND »).
 4. **Noms du groupe** (clients FR et EN) : en groupe, avec la même quête que d'autres membres, survoler un monstre de cette quête. Attendu : sous le titre de la quête, chaque nom en jaune, et ses objectifs décalés en dessous, en beige.
+5. **Badge de dépeçage** (clients FR et EN, un personnage qui a le Dépeçage ou non) : tuer une bête dépeçable, survoler le cadavre. Attendu : le badge de dépeçage (texte du jeu, « Skinnable » en anglais) en haut du cadre, comme avant pour une bête de Classic ; il apparaît maintenant aussi pour une bête propre à Forever. Comparer avec **Alt** (infobulle d'origine) : badge présent quand la ligne y est. Noter aussi si le badge reste après le dépeçage (cas douteux 5).
+6. **Journal de la carte** (clients FR et EN) : ouvrir la carte (M), survoler dans la liste une quête dont un objectif sans compte est rempli (parler à un PNJ, explorer un lieu, escorte) et un autre pas. Attendu : l'objectif rempli coché en vert, l'autre décoché ; un objectif « 3/10 » reste décoché. **Alt** pour comparer : l'objectif rempli y est gris.
 
 ## English
 
@@ -133,6 +188,42 @@ Checked and left alone: the "unconfirmed" reading strings (`formats.rare` and `f
 - Fix: a `QuestPlayer` line keeps the game's color (quest gold if unreadable) with an 8 indent; the objectives after it get a 16 indent, under the name. Nothing changes without party members on the quest.
 - Re-apply: in the reading loop, set `row.player` and `row.playerColor` for `LINE.QuestPlayer`; when building the quest section, color and indent by `row.player`, indent 16 for objectives following a name. Drop it if upstream ever tells these lines apart.
 
+### Patch 5: skinning badge lost for creatures missing from the data (audit, 11/10)
+
+- Issue: none, found by the distinction audit below. Clients: both (the game's `UNIT_SKINNABLE_LEATHER`, "Skinnable" in English, the client's own word in French; no hard-coded text).
+- File: `Tooltips/Unit.lua`, line reading (`readUnit`, the `SHOWN_ELSEWHERE` branch) and `badges`; `[pack patch]` markers.
+- Cause: on a skinnable corpse the game adds the `UNIT_SKINNABLE_LEATHER` line. PrettyTooltip always drops it (`SHOWN_ELSEWHERE`, line 46, "shown as badges") but only shows the badge with `Data/Skinning.lua` data (CMaNGOS Classic 1.12 loot tables, by creature ID). For a creature missing from those tables, a Forever-only one for instance, the information is gone: no line, no badge. The CurseForge page says the opposite: what is not parsed stays at the bottom, "to preserve as much information as possible".
+- Fix: the game's line, when present, also gives the badge. The details (Skinning required, leathers and hides, under **Shift**) stay limited to creatures in the data. Nothing changes for a known creature.
+- Bench: the real `readUnit` on an unknown creature's corpse with the game's line, English and French: the release loses it, the pack's copy flags the badge.
+- Re-apply: under `elseif SHOWN_ELSEWHERE[text] then` in `readUnit`, set `model.skinnable = true` when `text == UNIT_SKINNABLE_LEATHER`; in `badges`, `if model.skinning or model.skinnable then`. Drop it if upstream keeps the line or the badge without data.
+
+### Patch 6: done objectives not ticked in the world map quest log (audit, 11/10)
+
+- Issue: none, found by the audit. Clients: both (the game's `GRAY_FONT_COLOR`, no text read).
+- File: `Tooltips/Quest.lua`, new `isGrey` (after `isRed`) and objective reading in `readRow`; `[pack patch]` markers.
+- Cause: the tooltip of a quest hovered in the world map's quest log is written line by line by the game (`QuestMapLogTitleButton_OnEnter`, `Blizzard_UIPanels_Game/Mainline/QuestMapFrame.lua` 2257-2279, loaded on Forever): each objective white (`HIGHLIGHT_FONT_COLOR`), grey (`GRAY_FONT_COLOR`) once done; the same for required money. PrettyTooltip reads those lines without a type or a done flag and only ticks an objective ending in a reached "3/8" count. An objective without a count ("Speak to...", escort, area to explore, required money) stayed unticked and beige even when done, next to counted ones ticked correctly.
+- Fix: on a line read from the tooltip (not a typed line), a font color equal to `GRAY_FONT_COLOR` (within 0.03) ticks the objective, as the game greys it. Typed lines reuse PrettyTooltip's dimmed color and are never read this way (a light grey 0.6 dimmed to 0.51 must not pass for grey). Without `GRAY_FONT_COLOR` in the client nothing changes.
+- Bench: the real `readQuest` on the quest log's lines (a grey objective without a count, a white one, a counted one in progress, a counted one done) and on a typed light grey line, English and French: the release leaves the grey objective unticked, the pack's copy ticks it, nothing else moves.
+- Re-apply: add `isGrey` after `isRed`, and before `objective.completed = objectiveDone(objective)`: `if objective.completed == nil and row.textColor ~= row.color and isGrey(row.textColor) then objective.completed = true end`. Drop it if upstream reads these lines' color.
+
+### Distinction audit (Nathan's request, 11/10)
+
+After patch 4, Nathan asked to look for other places where the default tooltip tells information apart (color, indent, order, separator) and PrettyTooltip renders it indistinct or misleading. Every tooltip type and every `Enum.TooltipDataLineType` was compared with Forever's UI code (Gethe/wow-ui-source, `forever` branch, build 1.60.1.70888). `TooltipDataRules.lua` only adds the unit name color, the objective done icon and the `GemSocketEnchantment` indent; everything else comes from the client's `leftColor`, `usable` and `completed` fields, which PrettyTooltip reads.
+
+| Place (PrettyTooltip) | What the game tells apart | What PrettyTooltip does | Verdict |
+|---|---|---|---|
+| `Tooltips/Unit.lua`, party member name under a quest | `QuestPlayer` line in yellow, objectives below | Same beige, same indent | Fixed in 0.9.3 (patch 4) |
+| `Tooltips/Unit.lua` 46, 263, 338: skinnable corpse | `UNIT_SKINNABLE_LEATHER` line | Line dropped, badge only for creatures in the data | Real problem, fixed (patch 5) |
+| `Tooltips/Quest.lua` 63-67, 146-155: world map quest log | Done objective grey, open one white, with or without a count | Only an "n/m" count ticks it | Real problem, fixed (patch 6) |
+| Items: required level, classes, races, profession, reputation; unusable weapon or armor type; binding, Unique; set pieces owned or not, set bonuses active or not; Already known, quest items, green effects, durability, missing reagents, green and red stat changes | Game colors | Kept (red for what is not met, `usable` flag, correction 1 for active bonuses) | Kept |
+| Units: reaction color, tapped mob, level in difficulty color, target of target, guild, pet owner, `completed` objectives | Game colors | Kept ("You" in red as target) | Kept |
+| Spells (unmet requirements, cooldown left), auras, world objects (requirements, skill-up color, lock), mail (COD in red without the money), flight paths (cost not colored by the game) | Game colors | Kept | Kept |
+| Other addons' rows (`quietColor`, `Game/TooltipData.lua` 14-21: colors dimmed to 85 %, white to grey) | The addon's colors | Dimmed, set apart | Kept: Polestar's "Quest: 3/8" beige vs green when done, gear upgrade green, red, orange or grey still distinct, "Marked junk" red vs "Marked to keep" green; Auctionator colors its prices inside the text, untouched; only pure white and light grey come closer, and no such pair carries information. BuffAlerts adds no line. |
+
+Author's announced style choices (CurseForge page), left alone: player names in class color rather than reaction color (faction crest and PvP badge still give hostility); gear lines rewritten as stats with icons instead of "Use:", "Equip:", "Chance on hit:" (with icons, the default, enchants and effects stay distinct; without them, enchants, beige instead of the game's green, `Item.lua` 1050, blend with stats); unparsed and other addons' rows grouped at the bottom, dimmed (see the last table row); spell cost, cast, cooldown and range strip, quest checklist, durability bar (more than the original).
+
+Doubtful cases, untouched (check in game, **Alt** shows the default tooltip): a quest hovered in the map's quest log while in a group (`SetQuestPartyProgress` clears the tooltip, `TooltipDataHandler.lua` 272-274, so a member's name might be read as the title); party members on a quest object (`Tooltips/Object.lua` 203-215 does not read `QuestPlayer`, unknown whether the game sends it); a spell's cost in red without enough resource (`readStat`, `Spell.lua` 81-90, ignores the color); PvP, Dead and Corpse lines dropped while their badges need the unit (rare); the skinning badge shown from the data after the corpse is skinned (observe first); an NPC whose faction is literally "Alliance" or "Horde" (line dropped, crest only for players); minimap quest names all one color (upstream #15).
+
 ### Open issues not patched
 
 | Issue | Topic | Verdict |
@@ -153,3 +244,5 @@ Checked and left alone: the "unconfirmed" reading strings (`formats.rare` and `f
 2. **#49** (FR and EN clients): `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 1)`, hover a buff. Expected: description under the name, then time and bar, "Spell ID: ..." small at the bottom. Then `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 0)`: panel as before, without the ID line.
 3. **Translation** (FR client only): item plate "NivO 25" under the icon, not cut; a player in Do Not Disturb (`/dnd` on a second character) shows "Occupé(e)". The English client is unchanged ("iLvl 25", "DND").
 4. **Party names** (FR and EN clients): in a group sharing a quest, hover one of its mobs. Expected: under the quest title, each name in yellow, its objectives indented below in beige.
+5. **Skinning badge** (FR and EN clients): kill a skinnable beast, hover the corpse. Expected: the skinning badge ("Skinnable") at the top, as before for a Classic beast, and now also for a Forever-only one. **Alt** for the default tooltip: badge present whenever the line is. Also note whether the badge stays after skinning (doubtful case).
+6. **World map quest log** (FR and EN clients): open the map (M), hover a quest with one done objective without a count (talk to an NPC, explore, escort) and one not done. Expected: the done one ticked green, the other unticked; a "3/10" objective stays unticked. **Alt** to compare: the done one is grey there.
