@@ -190,7 +190,7 @@ step The Emerald Sanctuary
   accept 5249
 
 step The Emerald Sanctuary
-  turnin 939 optional
+  turnin 939
   accept 4441                         -- The vial is filled in Darnassus: keep it; inside
   turnin 4906                         -- Eridan Bluewind
   turnin 5385 optional                -- Jessir Moonbow

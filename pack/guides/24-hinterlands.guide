@@ -285,7 +285,7 @@ step Captain Hecklebury Smotts
 
 step Sprogger
   when group 8552
-  turnin 8553 optional
+  turnin 8553
 
 step Sprogger
   when group 8554

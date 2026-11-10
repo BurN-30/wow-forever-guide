@@ -113,7 +113,7 @@ step Auberdine
   accept 97914                                -- Thundris Windweaver: for Baros Alexston in Stormwind
   vendor nearest
   accept 958
-  turnin 97894 optional                       -- Gorbold Steelhand: Business in Auberdine, if you took it in Stormwind
+  turnin 97894                       -- Gorbold Steelhand: Business in Auberdine, if you took it in Stormwind
   accept 982                                  -- Gorbold Steelhand
   accept 984 -- Terenthis
   accept 965                                  -- Sentinel Elissa Starbreeze

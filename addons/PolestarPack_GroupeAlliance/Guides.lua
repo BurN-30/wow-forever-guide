@@ -4626,7 +4626,7 @@ do
 						{ t = "accept", quest = 97914, title = "Expanding Horizons", npc = 3649, npcName = "Thundris Windweaver", minLevel = 13, qlvl = 17, map = 1439, x = 37.4, y = 40.13, z = 8.3, f = "e", note = "{npc:3649}: for {npc:1646} in {zone:1453}" },
 						{ t = "vendor", candidates = { { npc = 4183, npcName = "Naram Longclaw", map = 1439, x = 37.57, y = 40.35, z = 8.3, f = "e", faction = "A" }, candidateRecords[1], candidateRecords[2], candidateRecords[3], candidateRecords[4], candidateRecords[5], candidateRecords[6], candidateRecords[7], candidateRecords[8], candidateRecords[9], candidateRecords[10], candidateRecords[11], candidateRecords[12], candidateRecords[13], candidateRecords[14], candidateRecords[15], candidateRecords[16], candidateRecords[17], candidateRecords[18], candidateRecords[19], candidateRecords[20], candidateRecords[21], candidateRecords[22], candidateRecords[23], candidateRecords[24], candidateRecords[25], candidateRecords[26], candidateRecords[27], candidateRecords[28], candidateRecords[29], candidateRecords[30], candidateRecords[31], candidateRecords[32], candidateRecords[33], candidateRecords[34], candidateRecords[35], candidateRecords[36], candidateRecords[37], candidateRecords[38], candidateRecords[39], candidateRecords[40], candidateRecords[41], candidateRecords[42], candidateRecords[43], candidateRecords[44], candidateRecords[45], candidateRecords[46], candidateRecords[47], candidateRecords[48], candidateRecords[49], candidateRecords[50], candidateRecords[51], candidateRecords[52], candidateRecords[53], candidateRecords[54], candidateRecords[55], candidateRecords[56], candidateRecords[57], candidateRecords[58], candidateRecords[59], candidateRecords[60], candidateRecords[61], candidateRecords[62], candidateRecords[63], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68], candidateRecords[69], candidateRecords[70], candidateRecords[71], candidateRecords[72], candidateRecords[73], candidateRecords[74], candidateRecords[75], candidateRecords[76], candidateRecords[77], candidateRecords[78], candidateRecords[79], candidateRecords[80], candidateRecords[81], candidateRecords[82], candidateRecords[83], candidateRecords[84], candidateRecords[85], candidateRecords[86], candidateRecords[87], candidateRecords[88], candidateRecords[89], candidateRecords[90], candidateRecords[91], candidateRecords[92] } },
 						{ t = "accept", quest = 958, title = "Tools of the Highborne", npc = 3649, npcName = "Thundris Windweaver", minLevel = 9, qlvl = 12, map = 1439, x = 37.4, y = 40.13, z = 8.3, f = "e" },
-						{ t = "turnin", quest = 97894, title = "Business in Auberdine", npc = 6301, npcName = "Gorbold Steelhand", map = 1439, x = 38.11, y = 41.17, z = 7.1, f = "e", optional = true, note = "{npc:6301}: {quest:97894}, if you took it in {zone:1453}" },
+						{ t = "turnin", quest = 97894, title = "Business in Auberdine", npc = 6301, npcName = "Gorbold Steelhand", map = 1439, x = 38.11, y = 41.17, z = 7.1, f = "e", note = "{npc:6301}: {quest:97894}, if you took it in {zone:1453}" },
 						{ t = "accept", quest = 982, title = "Deep Ocean, Vast Sea", npc = 6301, npcName = "Gorbold Steelhand", minLevel = 13, qlvl = 17, map = 1439, x = 38.11, y = 41.17, z = 7.1, f = "e" },
 						{ t = "accept", quest = 984, title = "How Big a Threat?", npc = 3693, npcName = "Terenthis", minLevel = 10, qlvl = 14, map = 1439, x = 39.37, y = 43.48, z = 14, f = "e" },
 						{ t = "accept", quest = 965, title = "The Tower of Althalaxx", npc = 3657, npcName = "Sentinel Elissa Starbreeze", minLevel = 13, qlvl = 18, map = 1439, x = 39.05, y = 43.55, z = 23.4, f = "e" },
@@ -5907,10 +5907,10 @@ do
 					title = "Lakeshire rewards",
 					when = { { k = "level", op = "<", n = 27 } },
 					goals = {
-						{ t = "turnin", quest = 19, title = "Tharil'zun", npc = 382, npcName = "Marshal Marris", map = 1433, x = 28.41, y = 48.97, z = 67.6, optional = true },
-						{ t = "turnin", quest = 115, title = "Shadow Magic", npc = 382, npcName = "Marshal Marris", map = 1433, x = 28.41, y = 48.97, z = 67.6, optional = true },
-						{ t = "turnin", quest = 169, title = "WANTED: Gath'Ilzogg", npc = 344, npcName = "Magistrate Solomon", map = 1433, x = 24.9, y = 44.45, z = 67.6, optional = true, note = "{npc:344}, in the town hall" },
-						{ t = "turnin", quest = 95999, title = "WANTED: Incinerator Gar'im", npc = 344, npcName = "Magistrate Solomon", map = 1433, x = 24.9, y = 44.45, z = 67.6, optional = true, note = "{npc:344}: hand it in even if the log does not show it complete" },
+						{ t = "turnin", quest = 19, title = "Tharil'zun", npc = 382, npcName = "Marshal Marris", map = 1433, x = 28.41, y = 48.97, z = 67.6 },
+						{ t = "turnin", quest = 115, title = "Shadow Magic", npc = 382, npcName = "Marshal Marris", map = 1433, x = 28.41, y = 48.97, z = 67.6 },
+						{ t = "turnin", quest = 169, title = "WANTED: Gath'Ilzogg", npc = 344, npcName = "Magistrate Solomon", map = 1433, x = 24.9, y = 44.45, z = 67.6, note = "{npc:344}, in the town hall" },
+						{ t = "turnin", quest = 95999, title = "WANTED: Incinerator Gar'im", npc = 344, npcName = "Magistrate Solomon", map = 1433, x = 24.9, y = 44.45, z = 67.6, note = "{npc:344}: hand it in even if the log does not show it complete" },
 					},
 				},
 			},
@@ -10091,7 +10091,7 @@ do
 				{
 					title = "The Harborage",
 					goals = {
-						{ t = "turnin", quest = 1392, title = "Noboru the Cudgel", npc = 1776, npcName = "Magtoor", map = 1435, x = 25.98, y = 31.4, z = 22.1, f = "e", optional = true },
+						{ t = "turnin", quest = 1392, title = "Noboru the Cudgel", npc = 1776, npcName = "Magtoor", map = 1435, x = 25.98, y = 31.4, z = 22.1, f = "e" },
 						{ t = "turnin", quest = 1389, title = "Draenethyst Crystals", npc = 1776, npcName = "Magtoor", map = 1435, x = 25.98, y = 31.4, z = 22.1, f = "e" },
 					},
 				},
@@ -10482,13 +10482,13 @@ do
 						{ t = "turnin", quest = 537, title = "Dark Council", npc = 2276, npcName = "Magistrate Henry Maleb", map = 1424, x = 48.14, y = 59.11, z = 13.4, f = "e", note = "{npc:2276}, inside" },
 						{ t = "buy", npc = 2381, npcName = "Micha Yance", item = 2321, itemName = "Fine Thread", count = 1, map = 1424, x = 48.94, y = 55.03, z = 18.9, f = "e", optional = true, note = "{item:2321} for {npc:2438}'s cloak, from {npc:2381}, if you have none" },
 						{ t = "turnin", quest = 512, title = "Noble Deaths", npc = 2276, npcName = "Magistrate Henry Maleb", map = 1424, x = 48.14, y = 59.11, z = 13.4, f = "e" },
-						{ t = "turnin", quest = 523, title = "Baron's Demise", npc = 2276, npcName = "Magistrate Henry Maleb", map = 1424, x = 48.14, y = 59.11, z = 13.4, f = "e", optional = true },
+						{ t = "turnin", quest = 523, title = "Baron's Demise", npc = 2276, npcName = "Magistrate Henry Maleb", map = 1424, x = 48.14, y = 59.11, z = 13.4, f = "e" },
 						{ t = "turnin", quest = 500, title = "Crushridge Bounty", npc = 2263, npcName = "Marshal Redpath", map = 1424, x = 49.47, y = 58.73, z = 12.1, f = "e" },
 						{ t = "turnin", quest = 661, title = "Hints of a New Plague?", npc = 2711, npcName = "Phin Odelic", map = 1424, x = 50.35, y = 59.05, z = 10.1, f = "e" },
 						{ t = "turnin", quest = 565, title = "Bartolo's Yeti Fur Cloak", npc = 2438, npcName = "Bartolo Ginsetti", map = 1424, x = 49.43, y = 55.53, z = 17.7, f = "e" },
 						{ t = "turnin", quest = 540, title = "Preserving Knowledge", npc = 2277, npcName = "Loremaster Dibbs", map = 1424, x = 50.57, y = 57.09, z = 15.4, f = "e", optional = true },
 						{ t = "accept", quest = 542, title = "Return to Milton", npc = 2277, npcName = "Loremaster Dibbs", minLevel = 20, qlvl = 38, pre = { 540 }, preTitles = { [540] = "Preserving Knowledge" }, map = 1424, x = 50.57, y = 57.09, z = 15.4, f = "e", optional = true, note = "For {npc:1440} in {zone:1453}: keep it" },
-						{ t = "turnin", quest = 551, title = "The Ensorcelled Parchment", npc = 2277, npcName = "Loremaster Dibbs", map = 1424, x = 50.57, y = 57.09, z = 15.4, f = "e", optional = true },
+						{ t = "turnin", quest = 551, title = "The Ensorcelled Parchment", npc = 2277, npcName = "Loremaster Dibbs", map = 1424, x = 50.57, y = 57.09, z = 15.4, f = "e" },
 						{ t = "accept", quest = 554, title = "Stormpike's Deciphering", npc = 2277, npcName = "Loremaster Dibbs", minLevel = 28, qlvl = 40, pre = { 551 }, preTitles = { [551] = "The Ensorcelled Parchment" }, map = 1424, x = 50.57, y = 57.09, z = 15.4, f = "e" },
 						{ t = "turnin", quest = 564, title = "Costly Menace", npc = 2382, npcName = "Darren Malvew", map = 1424, x = 52.42, y = 55.96, z = 15.2, f = "e" },
 					},
@@ -13343,7 +13343,7 @@ do
 					title = "{npc:2594}",
 					when = { { k = "group", q = 8552 } },
 					goals = {
-						{ t = "turnin", quest = 8553, title = "The Captain's Cutlass", npc = 2594, npcName = "Sprogger", map = 1434, x = 26.66, y = 73.64, z = 8.9, f = "e", optional = true },
+						{ t = "turnin", quest = 8553, title = "The Captain's Cutlass", npc = 2594, npcName = "Sprogger", map = 1434, x = 26.66, y = 73.64, z = 8.9, f = "e" },
 					},
 				},
 				{
@@ -14837,7 +14837,7 @@ do
 				{
 					title = "The Emerald Sanctuary",
 					goals = {
-						{ t = "turnin", quest = 939, title = "Flute of Xavaric", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", optional = true },
+						{ t = "turnin", quest = 939, title = "Flute of Xavaric", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e" },
 						{ t = "accept", quest = 4441, title = "Felbound Ancients", npc = 9116, npcName = "Eridan Bluewind", minLevel = 49, qlvl = 54, pre = { 939 }, preTitles = { [939] = "Flute of Xavaric" }, map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e", note = "The vial is filled in {zone:1457}: keep it; inside" },
 						{ t = "turnin", quest = 4906, title = "Further Corruption", npc = 9116, npcName = "Eridan Bluewind", map = 1448, x = 51.35, y = 81.51, z = 254.6, f = "e" },
 						{ t = "turnin", quest = 5385, title = "The Remains of Trey Lightforge", npc = 11019, npcName = "Jessir Moonbow", map = 1448, x = 51.35, y = 82.01, z = 253.6, f = "e", optional = true },
@@ -16739,7 +16739,7 @@ do
 				{
 					title = "{npc:9298}",
 					goals = {
-						{ t = "turnin", quest = 5086, title = "Toxic Horrors", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e", optional = true },
+						{ t = "turnin", quest = 5086, title = "Toxic Horrors", npc = 9298, npcName = "Donova Snowden", map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
 						{ t = "accept", quest = 5087, title = "Winterfall Runners", npc = 9298, npcName = "Donova Snowden", minLevel = 52, qlvl = 57, pre = { 5086 }, preTitles = { [5086] = "Toxic Horrors" }, map = 1452, x = 31.27, y = 45.16, z = 541.5, f = "e" },
 					},
 				},
@@ -17014,7 +17014,7 @@ do
 				{
 					title = "{npc:1855}",
 					goals = {
-						{ t = "turnin", quest = 5845, title = "Of Lost Honor", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7, optional = true },
+						{ t = "turnin", quest = 5845, title = "Of Lost Honor", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7 },
 						{ t = "accept", quest = 5846, title = "Of Love and Family", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 58, pre = { 5845 }, preTitles = { [5845] = "Of Lost Honor" }, map = 1423, x = 5.16, y = 35.57, z = 72.7 },
 					},
 				},

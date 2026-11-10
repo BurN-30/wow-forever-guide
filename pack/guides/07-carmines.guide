@@ -359,7 +359,7 @@ step Stonewatch Keep
 
 step Lakeshire rewards
   when level<27
-  turnin 19 optional
-  turnin 115 optional
-  turnin 169 optional                         -- Magistrate Solomon, in the town hall
-  turnin 95999 optional                       -- Magistrate Solomon: hand it in even if the log does not show it complete
+  turnin 19
+  turnin 115
+  turnin 169                         -- Magistrate Solomon, in the town hall
+  turnin 95999                       -- Magistrate Solomon: hand it in even if the log does not show it complete

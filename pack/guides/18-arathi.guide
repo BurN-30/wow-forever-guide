@@ -68,7 +68,7 @@ step Watcher Biggs
   turnin 1421
 
 step The Harborage
-  turnin 1392 optional -- Magtoor
+  turnin 1392 -- Magtoor
   turnin 1389
 
 step Duskwood
@@ -361,13 +361,13 @@ step Southshore
   turnin 537                          -- Magistrate Henry Maleb, inside
   buy 2321 x1 npc 2381 optional       -- Fine Thread for Bartolo's cloak, from Micha Yance, if you have none
   turnin 512
-  turnin 523 optional
+  turnin 523
   turnin 500                          -- Marshal Redpath
   turnin 661                          -- Phin Odelic
   turnin 565                          -- Bartolo Ginsetti
   turnin 540 optional -- Loremaster Dibbs
   accept 542 optional -- For Milton Sheaf in Stormwind: keep it
-  turnin 551 optional
+  turnin 551
   accept 554
   turnin 564                          -- Darren Malvew
 

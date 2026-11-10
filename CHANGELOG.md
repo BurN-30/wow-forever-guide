@@ -2,6 +2,16 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.9.6 (2026-11-10)
+
+### Français
+- Guide : les rendus des quêtes que le guide fait prendre ne se valident plus tout seuls. Aux Carmines, les avis de recherche (Tharil'zun, Magie des Ténèbres, Gath'Ilzogg, Gar'im) terminaient le chapitre avant d'être rendus au Comté-du-Lac : l'étape attend maintenant leur rendu (pour ceux qui ont pris les quêtes ; les autres n'ont rien à faire).
+- Même correction pour 8 autres rendus : à Auberdine (Sombrivage), dans les Contreforts de Hautebrande et les Hautes-terres d'Arathi (Austrivage et le Havre), dans les Hinterlands, en Gangrebois, au Berceau-de-l'Hiver et dans les Maleterres de l'Est.
+
+### English
+- Guide: hand-ins of quests the guide has you take no longer tick themselves. In Redridge, the wanted posters (Tharil'zun, Shadow Magic, Gath'Ilzogg, Gar'im) ended the chapter before being handed in at Lakeshire: the step now waits for the hand-ins (for those who took the quests; nothing to do for the others).
+- Same fix for 8 other hand-ins: Business in Auberdine (Darkshore), Hillsbrad and Arathi (Magtoor, Marshal Redpath, Southshore), Hinterlands (Sprogger), Felwood (Emerald Sanctuary), Winterspring (Donova Snowden), Eastern Plaguelands (Tirion Fordring).
+
 ## v0.9.5 (2026-11-10)
 
 ### Français

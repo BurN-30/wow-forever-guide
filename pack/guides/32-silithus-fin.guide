@@ -293,7 +293,7 @@ step Winterspring
   goto 31.3,45.2 "Winterspring"
 
 step Donova Snowden
-  turnin 5086 optional
+  turnin 5086
   accept 5087
 
 step Salfa
@@ -505,7 +505,7 @@ step Of Lost Honor
 
 step Tirion Fordring
   zone Eastern Plaguelands
-  turnin 5845 optional
+  turnin 5845
   accept 5846
 
 step Artist Renfray
