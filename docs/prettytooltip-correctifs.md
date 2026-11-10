@@ -54,6 +54,15 @@ Vérifié et laissé tel quel :
 - Client anglais : `Locale/English.lua` colle au client enUS là où un ticket le touche (noms de métiers identiques à SkillLine enUS, « Rare » et « Rare Elite » de `MAP_LEGEND_*`, « iLvl » est l'abréviation du client, `ITEM_LEVEL_ABBR`). Rien à changer.
 - Les noms de quêtes, PNJ et lieux des exemples de l'éditeur de style n'ont pas été vérifiés : ils ne servent qu'aux aperçus.
 
+### Correctif 4 : noms des membres du groupe sous une quête (demande de Nathan, 10/11)
+
+- Ticket : aucun, vu en jeu par le groupe (infobulle d'un monstre de quête quand plusieurs membres ont la quête).
+- Clients : les deux (lignes typées par le jeu, aucune chaîne lue).
+- Fichier : `Tooltips/Unit.lua`, lecture des lignes de quête (`QuestPlayer`) et affichage de la section des quêtes ; repères `[pack patch]`.
+- Cause : le jeu écrit, sous le titre de la quête, le nom de chaque membre du groupe (ligne `QuestPlayer`, en jaune dans l'infobulle d'origine) puis ses objectifs. PrettyTooltip traitait le nom comme un objectif : même couleur beige, même retrait. Les noms ne se distinguaient plus des lignes « Orbe de minuit : 1/3 ».
+- Correction : une ligne `QuestPlayer` garde la couleur que lui donne le jeu (or de quête si elle est illisible) avec un retrait de 8 ; les objectifs qui la suivent passent à un retrait de 16, sous le nom. Sans membre du groupe sur la quête, rien ne change.
+- Réappliquer : dans la boucle de lecture, marquer `row.player` et `row.playerColor` pour `LINE.QuestPlayer` ; dans la construction de la section des quêtes, couleur et retrait selon `row.player`, retrait 16 pour les objectifs qui suivent un nom. À retirer si l'amont distingue un jour ces lignes.
+
 ### Tickets ouverts non corrigés
 
 | Ticket | Sujet | Verdict |
@@ -75,6 +84,7 @@ Aucun ticket ne cite Polestar, Auctionator ou le client français ; les rapports
 1. **#47** (clients FR et EN) : avec un ensemble dont un bonus est actif (par exemple 2 pièces d'un ensemble à bonus « (2) »), survoler une pièce. Attendu : le bonus actif reste dans la liste des bonus, en tête, en vert, écrit « Complet : … » (« Set: … » en anglais) ; les bonus inactifs suivent en gris ; plus de ligne de bonus isolée en bas du cadre. Vérifier aussi un ensemble sans aucun bonus actif (rien ne change) et la comparaison avec l'objet équipé (Maj).
 2. **#49** (clients FR et EN) : taper `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 1)`, survoler une amélioration (par exemple une armure de démoniste, une bénédiction). Attendu : la description sous le nom, puis la durée et la barre, et « Identifiant de sort : … » (« Spell ID: … » en anglais) en petit en bas. Ensuite `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 0)` : cadre identique à avant, sans la ligne du numéro.
 3. **Traduction** (client FR seulement) : survoler une pièce d'équipement (plaque « NivO 25 » sous l'icône, texte entier, non coupé) ; survoler un joueur en mode Ne pas déranger (`/dnd` tapé par un second personnage) : plaque « Occupé(e) ». Sur le client anglais, rien ne change (« iLvl 25 », « DND »).
+4. **Noms du groupe** (clients FR et EN) : en groupe, avec la même quête que d'autres membres, survoler un monstre de cette quête. Attendu : sous le titre de la quête, chaque nom en jaune, et ses objectifs décalés en dessous, en beige.
 
 ## English
 
@@ -114,6 +124,15 @@ French client only (the file does not load on the English client). Display label
 
 Checked and left alone: the "unconfirmed" reading strings (`formats.rare` and `formats.rareElite` match the client's `MAP_LEGEND_RARE` and `MAP_LEGEND_RAREELITE` in both languages; `formats.baseManaCost` has no GlobalStrings counterpart and Classic spells cost flat mana), skill names (match SkillLine in frFR and enUS), dispel types (match SpellDispelType frFR), quest tags (QuestInfo frFR). `Locale/English.lua` matches the enUS client wherever a ticket touches it; its "iLvl" is the client's own `ITEM_LEVEL_ABBR`.
 
+### Patch 4: party member names under a quest (Nathan's request, 11/10)
+
+- Issue: none, seen in game by the group (tooltip of a quest mob when several members have the quest).
+- Clients: both (lines typed by the game, no string parsed).
+- File: `Tooltips/Unit.lua`, quest line reading (`QuestPlayer`) and the quest section; `[pack patch]` markers.
+- Cause: under the quest title the game writes each party member's name (`QuestPlayer` line, yellow in the default tooltip), then their objectives. PrettyTooltip drew the name like an objective: same beige, same indent, so names no longer stood out from "Midnight Orb: 1/3".
+- Fix: a `QuestPlayer` line keeps the game's color (quest gold if unreadable) with an 8 indent; the objectives after it get a 16 indent, under the name. Nothing changes without party members on the quest.
+- Re-apply: in the reading loop, set `row.player` and `row.playerColor` for `LINE.QuestPlayer`; when building the quest section, color and indent by `row.player`, indent 16 for objectives following a name. Drop it if upstream ever tells these lines apart.
+
 ### Open issues not patched
 
 | Issue | Topic | Verdict |
@@ -133,3 +152,4 @@ Checked and left alone: the "unconfirmed" reading strings (`formats.rare` and `f
 1. **#47** (FR and EN clients): with a set that has one active bonus, hover a piece. Expected: the active bonus stays first in the bonus list, green ("Set: ..." / "Complet : ..."), inactive bonuses follow in grey, no stray bonus line at the bottom. Also check a set with no active bonus (unchanged) and the comparison with the equipped item (Shift).
 2. **#49** (FR and EN clients): `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 1)`, hover a buff. Expected: description under the name, then time and bar, "Spell ID: ..." small at the bottom. Then `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 0)`: panel as before, without the ID line.
 3. **Translation** (FR client only): item plate "NivO 25" under the icon, not cut; a player in Do Not Disturb (`/dnd` on a second character) shows "Occupé(e)". The English client is unchanged ("iLvl 25", "DND").
+4. **Party names** (FR and EN clients): in a group sharing a quest, hover one of its mobs. Expected: under the quest title, each name in yellow, its objectives indented below in beige.

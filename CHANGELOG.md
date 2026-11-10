@@ -11,6 +11,7 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 - « < Précédent » et « Suivant > » (*< Previous*, *Next >*) : erreur par erreur. Onglet « Session précédente » (*Previous session*) : celles de la connexion d'avant.
 - Couper le son : clic droit sur l'icône, Options, « Muet » (*Mute*). Maj + clic sur l'icône recharge l'interface.
 - Réglages du guide : icône placée à l'écart du bouton Polestar de la minicarte (les deux étaient l'un sur l'autre), infobulle française de l'icône corrigée.
+- PrettyTooltip : dans l'infobulle d'un monstre de quête, le nom de chaque membre du groupe ressort en jaune, ses objectifs en dessous, comme dans l'infobulle d'origine (avant : noms et objectifs dans la même couleur).
 - Programme d'installation : accepte le dossier `!BugGrabber` (le « ! » le fait charger avant les autres addons). Un ancien programme se met à jour tout seul avant d'installer.
 
 ### English
@@ -20,6 +21,7 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 - "< Previous" and "Next >": one error after another. "Previous session" tab: errors from the last login.
 - Mute: right-click the icon, Options, "Mute". Shift+click on the icon reloads the UI.
 - Guide defaults: icon placed away from Polestar's minimap button (they sat on top of each other), French icon tooltip fixed.
+- PrettyTooltip: in a quest mob's tooltip, each party member's name stands out in yellow with their objectives below, as in the default tooltip (before: names and objectives in the same color).
 - Install program: accepts the `!BugGrabber` folder (the "!" makes it load before the other addons). An older program updates itself before installing.
 
 ## v0.9.2 (2026-11-10)

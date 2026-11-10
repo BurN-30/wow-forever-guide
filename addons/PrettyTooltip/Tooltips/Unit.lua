@@ -273,6 +273,15 @@ local function readUnit(tooltip, data, game)
                     if not isSecret(line.completed) then
                         model.quests[#model.quests].completed = line.completed == true
                     end
+                    -- [pack patch] A party member's name (QuestPlayer) keeps the game's own color
+                    -- and stands above that player's objectives, as in the default tooltip.
+                    if LINE.QuestPlayer and line.type == LINE.QuestPlayer then
+                        local c, row = line.leftColor, model.quests[#model.quests]
+                        row.player = true
+                        if not isSecret(c) and type(c) == "table" and type(c.r) == "number" and not isSecret(c.r) then
+                            row.playerColor = { c.r, c.g, c.b }
+                        end
+                    end
                 else
                     tooltipData.add(model.extras, left, right)
                     local row = model.extras[#model.extras]
@@ -442,11 +451,19 @@ local function unitView(panel, model, healthBar)
             rows = skinningRows(skin), style = styles.unitSkinning, color = DETAIL_COLOR, gap = 2 }
     end
     if #model.quests > 0 then
-        local quests = {}
+        local quests, underPlayer = {}, false
         for index, row in ipairs(model.quests) do
-            quests[index] = row.title and { left = row.left, right = row.right, color = colors.quest }
-                or { left = row.left, right = row.right, color = row.completed and colors.done or colors.objective,
-                    indent = 8 }
+            if row.title then
+                underPlayer = false
+                quests[index] = { left = row.left, right = row.right, color = colors.quest }
+            elseif row.player then
+                -- [pack patch] party member name: the game's color (gold by default), under the title
+                underPlayer = true
+                quests[index] = { left = row.left, right = row.right, color = row.playerColor or colors.quest, indent = 8 }
+            else
+                quests[index] = { left = row.left, right = row.right, color = row.completed and colors.done or colors.objective,
+                    indent = underPlayer and 16 or 8 }
+            end
         end
         sections[#sections + 1] = { separator = { divider = ui.GOLD_RULE },
             kind = "rows", rows = quests, style = styles.unitQuests, gap = 2 }
