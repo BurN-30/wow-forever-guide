@@ -107,6 +107,7 @@ Le guide installe aussi [PrettyTooltip](https://www.curseforge.com/wow/addons/pr
 - `/ptip` : éditeur de style (polices, couleurs, tailles ; un clic sur une partie de l'exemple la règle). `/ptip options` : ce qui est redessiné, type par type (**Restyler**), et ce qui suit le curseur (**Suivre le curseur**, allumé pour les herbes, minerais et coffres).
 - Revenir aux infobulles du jeu : `/ptip options` et décocher les types voulus, ou décocher PrettyTooltip dans la liste des addons (écran des personnages, bouton **AddOns**).
 - Réglages : ceux de PrettyTooltip, le guide n'en impose aucun (rien à changer pour Polestar ni Auctionator). Un PrettyTooltip déjà installé est remplacé par la version du guide ; ses réglages (dossier `WTF`) sont gardés.
+- Version 1.3.8 avec correctifs du pack, pour les clients français et anglais : bonus d'ensemble actif gardé dans la liste, numéro de sort qui ne remplace plus la description d'une amélioration, deux libellés français. Détail, tickets amont et diff : [`docs/prettytooltip-correctifs.md`](docs/prettytooltip-correctifs.md).
 
 ## Confort en jeu
 
@@ -252,7 +253,7 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
   ```
 - Modifications et ajouts par **BurN-30** : enchaînement des guides, rendez-vous de Hurlevent, notes de groupe, textes français ajoutés, module Groupe Alliance (liens Wowhead, astuces de quête, marques de difficulté, réglages calmes, aide), chapitres Mortemines, Prison, Monastère écarlate et Uldaman, guides Polestar 30-60 repris avec notes de groupe, chapitre Zul'Farrak, installateur.
 - **Auctionator** © 2020-2025 plusmouse, borjamacare, tous droits réservés : dossier `addons/Auctionator`, version 343 telle que publiée sur [CurseForge](https://www.curseforge.com/wow/addons/auctionator), non modifiée, incluse pour notre groupe avec ce crédit.
-- **PrettyTooltip** © 2026 FallenShard, licence MIT : dossier `addons/PrettyTooltip`, version 1.3.8 (édition Forever) telle que publiée sur [GitHub](https://github.com/FallenShard/PrettyTooltip/releases/tag/v1.3.8), non modifiée ; la notice de la licence MIT est dans `addons/PrettyTooltip/LICENSE`.
+- **PrettyTooltip** © 2026 FallenShard, licence MIT : dossier `addons/PrettyTooltip`, version 1.3.8 (édition Forever) publiée sur [GitHub](https://github.com/FallenShard/PrettyTooltip/releases/tag/v1.3.8), avec correctifs du pack (liste dans `docs/prettytooltip-correctifs.md`, diff dans `docs/prettytooltip-1.3.8.patch`) ; la notice de la licence MIT est dans `addons/PrettyTooltip/LICENSE`.
 - L'ensemble, hors Auctionator, est sous **GPL-3.0** (fichier `LICENSE`) ; PrettyTooltip garde sa licence MIT, compatible avec la GPL-3.0. Les données du jeu appartiennent à Blizzard Entertainment.
 
 Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/2026 :

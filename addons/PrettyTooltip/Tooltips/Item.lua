@@ -496,7 +496,9 @@ local function readModel(tooltip, data, game)
                 if isRed(line.leftColor) then
                     m.footerLeft[#m.footerLeft].color = UNUSABLE_COLOR
                 end
-            elseif inSet and unformat(trimmed, ITEM_SET_BONUS_GRAY) then
+            -- [pack patch #47] An active bonus loses its count: "Set: ..."
+            -- (ITEM_SET_BONUS), an inactive one is "(3) Set: ..." (ITEM_SET_BONUS_GRAY).
+            elseif inSet and (unformat(trimmed, ITEM_SET_BONUS_GRAY) or unformat(trimmed, ITEM_SET_BONUS)) then
                 add(m.setBonuses, left, right)
                 m.setBonuses[#m.setBonuses].active = isActive(line.leftColor)
             -- Set pieces are names alone: letters (of any alphabet), spaces,

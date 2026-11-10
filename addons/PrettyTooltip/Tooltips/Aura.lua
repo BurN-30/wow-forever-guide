@@ -43,6 +43,13 @@ local function isRemaining(text)
     end
     return false
 end
+-- [pack patch #49] The game's own "Spell ID: 706" line, which the
+-- tooltipShowAuraSpellIDs CVar adds under the name: it goes with the other
+-- rows, as the style editor's sample shows it, not in place of the description.
+local function isSpellIDLine(text, spellID)
+    if type(spellID) ~= "number" or type(SPELL_ID) ~= "string" then return false end
+    return tonumber((util.unformat(text, SPELL_ID))) == spellID
+end
 
 -- The tooltip's lines lack the duration and stacks; the aura it shows has them.
 -- The getter is known only while the game fills the tooltip, so the aura is
@@ -112,7 +119,7 @@ local function readAura(tooltip, data, game)
             elseif text ~= "" or right ~= "" then
                 if isRemaining(text) then
                     model.remaining = text
-                elseif text ~= "" and not model.text then
+                elseif text ~= "" and not model.text and not isSpellIDLine(text, spellID) then
                     model.text = text
                 else
                     tooltipData.add(model.extras, left, right)

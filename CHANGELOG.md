@@ -6,12 +6,14 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 
 ### Français
 - PrettyTooltip (version 1.3.8, par FallenShard) installé avec le guide : infobulles redessinées pour les objets, les sorts, les personnages et PNJ, les améliorations et affaiblissements, les herbes, minerais et coffres, les quêtes.
+- PrettyTooltip avec correctifs du pack (détail dans `docs/prettytooltip-correctifs.md`) : un bonus d'ensemble actif reste dans la liste des bonus, en vert, au lieu de partir en bas ; le numéro d'un sort n'est plus pris pour la description d'une amélioration ; en français, « NivO » pour le niveau d'objet et « Occupé(e) » pour Ne pas déranger.
 - Les lignes de Polestar (objectifs de quête, amélioration d'équipement, provenance d'un objet) et les prix d'Auctionator restent dans l'infobulle, en bas, à part.
 - **Alt** maintenue : l'infobulle d'origine du jeu. **Maj** maintenue : les détails (désenchantement, contenu des herbes et minerais, numéros). `/ptip` : éditeur de style ; `/ptip options` : ce qui est redessiné.
 - Un PrettyTooltip déjà installé est remplacé par cette version (l'ancien est mis de côté dans `_guide-sauvegarde`) ; ses réglages (dossier WTF) sont gardés.
 
 ### English
 - PrettyTooltip (version 1.3.8, by FallenShard) installed with the guide: redrawn tooltips for items, spells, players and NPCs, buffs and debuffs, herbs, ore and chests, quests.
+- PrettyTooltip with the pack's patches (details in `docs/prettytooltip-correctifs.md`): an active set bonus stays in the bonus list, green, instead of moving to the bottom; a spell ID is no longer taken for a buff's description; in French, "NivO" for item level and "Occupé(e)" for Do Not Disturb.
 - Polestar's lines (quest objectives, gear upgrade, where an item comes from) and Auctionator prices stay in the tooltip, at the bottom, set apart.
 - Hold **Alt**: the game's original tooltip. Hold **Shift**: the details (disenchanting, herb and ore contents, IDs). `/ptip`: style editor; `/ptip options`: what gets redrawn.
 - A PrettyTooltip already installed is replaced by this version (the old one is kept in `_guide-sauvegarde`); its settings (WTF folder) are kept.
