@@ -29,10 +29,10 @@ Le guide ne s'ouvre pas ? Écran de sélection des personnages → bouton **AddO
 - Il lit la dernière version publiée sur GitHub (page [Releases](https://github.com/BurN-30/wow-forever-guide/releases/latest)), télécharge `GuideWoWForever-addons.zip` et refuse le fichier si sa taille ou son empreinte SHA-256 diffère de celle publiée (`SHA256SUMS.txt`).
 - Dossier du jeu : celui retenu la fois d'avant, le jeu ouvert, le registre et la configuration de Battle.net, les emplacements habituels sur chaque disque, sinon une fenêtre de choix (le choix est retenu).
 - Il repère une installation existante (version écrite dans le `.toc` du paquet, ou Polestar seul déjà présent) et l'annonce avant de commencer.
-- Il remplace seulement les dossiers du guide dans `World of Warcraft\_forever_\Interface\AddOns` (`Polestar`, `Polestar...` et `Auctionator`) et retire ceux d'une ancienne version du guide. Les autres addons et le dossier `WTF` (réglages, progression du guide) ne sont pas touchés.
+- Il remplace seulement les dossiers du guide dans `World of Warcraft\_forever_\Interface\AddOns` (`Polestar`, `Polestar...`, `Auctionator` et `PrettyTooltip`) et retire ceux d'une ancienne version du guide. Les autres addons et le dossier `WTF` (réglages, progression du guide) ne sont pas touchés.
 - L'ancienne version est mise de côté dans `_forever_\Interface\_guide-sauvegarde` (seulement la dernière). En cas de problème pendant le remplacement, elle est remise en place toute seule.
 - Aucun droit administrateur. Ses fichiers sont dans `%LOCALAPPDATA%\GuideWoWForever` : la copie du programme visée par le raccourci, `journal.txt` (le détail de chaque lancement, à joindre en cas de problème) et `etat.txt` (dossier du jeu et version installée).
-- Désinstaller : supprimer le raccourci, ce dossier, et les dossiers `Polestar...` et `Auctionator` de `AddOns`.
+- Désinstaller : supprimer le raccourci, ce dossier, et les dossiers `Polestar...`, `Auctionator` et `PrettyTooltip` de `AddOns`.
 </details>
 
 ### Manière 2 (repli) : le ZIP et `Installer.bat`
@@ -56,7 +56,7 @@ Two ways: the program (recommended, 1 click) or the ZIP with `Installer.bat` (fa
 
 **Update**: double-click the **Update the WoW guide** shortcut on the desktop (created on the first run, also in the Start menu). If there is nothing new, it says so. The game can usually stay open (otherwise the program says so): at the end, a large banner says what to do. Green "**Update done. In game, type /reload in the chat**": `/reload` is enough. Orange "**Quit the game completely, then start it again**": this version adds or removes addon files, which the game only reads at startup. The program also updates itself (downloads the new one, checks its checksum, replaces itself and restarts), so an old `GuideWoWForever.exe` switches to the new one on its next run.
 
-It only replaces the guide folders (`Polestar...` and `Auctionator`) in `World of Warcraft\_forever_\Interface\AddOns`. Other addons and the `WTF` folder (settings, guide progress) are left alone. The previous version is kept in `_forever_\Interface\_guide-sauvegarde`. Log in case of trouble: `%LOCALAPPDATA%\GuideWoWForever\journal.txt`. No admin rights needed.
+It only replaces the guide folders (`Polestar...`, `Auctionator` and `PrettyTooltip`) in `World of Warcraft\_forever_\Interface\AddOns`. Other addons and the `WTF` folder (settings, guide progress) are left alone. The previous version is kept in `_forever_\Interface\_guide-sauvegarde`. Log in case of trouble: `%LOCALAPPDATA%\GuideWoWForever\journal.txt`. No admin rights needed.
 
 **Way 2 (fallback): the ZIP and `Installer.bat`**
 
@@ -96,6 +96,17 @@ Le guide installe aussi [Auctionator](https://www.curseforge.com/wow/addons/auct
 - Mettre les prix à jour : à l'hôtel des ventes, onglet **Auctionator**, bouton **Analyse complète** (*Full Scan*). À refaire de temps en temps, les prix gardés sont ceux de la dernière analyse.
 - Vendre : onglet **Ventes** d'Auctionator, il propose un prix juste sous le moins cher. Acheter : onglet **Achats** et listes de courses.
 - Un Auctionator déjà installé est remplacé par la version du guide ; ses réglages et ses prix (dossier `WTF`) sont gardés.
+
+## Infobulles redessinées (PrettyTooltip)
+
+Le guide installe aussi [PrettyTooltip](https://www.curseforge.com/wow/addons/prettytooltip) (édition Forever) : les infobulles des objets, des sorts, des personnages et PNJ, des améliorations et affaiblissements (*buffs*, *debuffs*), des herbes, minerais et coffres et des quêtes sont redessinées, plus lisibles (caractéristiques en couleur, niveau d'objet, barre de vie, ce que donne une herbe ou un minerai).
+
+- Les lignes ajoutées par les autres addons restent, en bas de l'infobulle et à part : objectifs de quête, « amélioration » d'équipement, provenance et « Alt-clic : me guider » de Polestar, prix d'Auctionator. Les infobulles du guide lui-même (lignes du guide, flèche, boutons) gardent l'aspect du jeu.
+- **Alt** maintenue : l'infobulle d'origine du jeu, le temps de l'appui. L'Alt-clic de Polestar sur un objet marche toujours.
+- **Maj** maintenue : les détails (résultats de désenchantement, contenu des herbes et minerais, numéro de l'objet ou du PNJ). Maj garde aussi son rôle habituel : comparer avec l'objet équipé.
+- `/ptip` : éditeur de style (polices, couleurs, tailles ; un clic sur une partie de l'exemple la règle). `/ptip options` : ce qui est redessiné, type par type (**Restyler**), et ce qui suit le curseur (**Suivre le curseur**, allumé pour les herbes, minerais et coffres).
+- Revenir aux infobulles du jeu : `/ptip options` et décocher les types voulus, ou décocher PrettyTooltip dans la liste des addons (écran des personnages, bouton **AddOns**).
+- Réglages : ceux de PrettyTooltip, le guide n'en impose aucun (rien à changer pour Polestar ni Auctionator). Un PrettyTooltip déjà installé est remplacé par la version du guide ; ses réglages (dossier `WTF`) sont gardés.
 
 ## Confort en jeu
 
@@ -241,7 +252,8 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
   ```
 - Modifications et ajouts par **BurN-30** : enchaînement des guides, rendez-vous de Hurlevent, notes de groupe, textes français ajoutés, module Groupe Alliance (liens Wowhead, astuces de quête, marques de difficulté, réglages calmes, aide), chapitres Mortemines, Prison, Monastère écarlate et Uldaman, guides Polestar 30-60 repris avec notes de groupe, chapitre Zul'Farrak, installateur.
 - **Auctionator** © 2020-2025 plusmouse, borjamacare, tous droits réservés : dossier `addons/Auctionator`, version 343 telle que publiée sur [CurseForge](https://www.curseforge.com/wow/addons/auctionator), non modifiée, incluse pour notre groupe avec ce crédit.
-- L'ensemble, hors Auctionator, est sous **GPL-3.0** (fichier `LICENSE`). Les données du jeu appartiennent à Blizzard Entertainment.
+- **PrettyTooltip** © 2026 FallenShard, licence MIT : dossier `addons/PrettyTooltip`, version 1.3.8 (édition Forever) telle que publiée sur [GitHub](https://github.com/FallenShard/PrettyTooltip/releases/tag/v1.3.8), non modifiée ; la notice de la licence MIT est dans `addons/PrettyTooltip/LICENSE`.
+- L'ensemble, hors Auctionator, est sous **GPL-3.0** (fichier `LICENSE`) ; PrettyTooltip garde sa licence MIT, compatible avec la GPL-3.0. Les données du jeu appartiennent à Blizzard Entertainment.
 
 Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/2026 :
 

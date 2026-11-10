@@ -3,8 +3,9 @@
   python tools/build.py <forge.exe> <polestar checkout with data/forever> <Polestar release folder>
 
 1. forge guide lint, then forge guide compile of pack/ (Polestar's guides as context);
-2. addons/ = the Polestar release (unzipped Polestar-<version>.zip) and the compiled
-   pack (PolestarPack_GroupeAlliance and its _frFR texts addon);
+2. the Polestar* folders of addons/ = the Polestar release (unzipped Polestar-<version>.zip)
+   and the compiled pack (PolestarPack_GroupeAlliance and its _frFR texts addon); the other
+   folders (Auctionator, PrettyTooltip, committed as released) are left alone;
 3. the Groupe Alliance module (addons-src/GroupeAlliance) goes inside Polestar's own
    folder, so there is no extra addon to tick: its files are added to Polestar.toc,
    UI/GuideFrame.lua gets the gear, "?" help and "_" reduce buttons at the tab strip's
@@ -82,9 +83,12 @@ def run(*args):
 
 run("guide", "lint")
 run("guide", "compile")
-if addons.exists():
-    shutil.rmtree(addons)
-addons.mkdir()
+# Only the Polestar folders are rebuilt; the other addons shipped with the guide
+# (Auctionator, PrettyTooltip) are committed as released and stay as they are.
+addons.mkdir(exist_ok=True)
+for d in sorted(addons.iterdir()):
+    if d.is_dir() and d.name.startswith("Polestar"):
+        shutil.rmtree(d)
 for d in sorted(release.iterdir()):
     if d.is_dir() and d.name.startswith("Polestar"):
         shutil.copytree(d, addons / d.name)
