@@ -29,10 +29,10 @@ Le guide ne s'ouvre pas ? Écran de sélection des personnages → bouton **AddO
 - Il lit la dernière version publiée sur GitHub (page [Releases](https://github.com/BurN-30/wow-forever-guide/releases/latest)), télécharge `GuideWoWForever-addons.zip` et refuse le fichier si sa taille ou son empreinte SHA-256 diffère de celle publiée (`SHA256SUMS.txt`).
 - Dossier du jeu : celui retenu la fois d'avant, le jeu ouvert, le registre et la configuration de Battle.net, les emplacements habituels sur chaque disque, sinon une fenêtre de choix (le choix est retenu).
 - Il repère une installation existante (version écrite dans le `.toc` du paquet, ou Polestar seul déjà présent) et l'annonce avant de commencer.
-- Il remplace seulement les dossiers du guide dans `World of Warcraft\_forever_\Interface\AddOns` (`Polestar`, `Polestar...`, `Auctionator` et `PrettyTooltip`) et retire ceux d'une ancienne version du guide. Les autres addons et le dossier `WTF` (réglages, progression du guide) ne sont pas touchés.
+- Il remplace seulement les dossiers du guide dans `World of Warcraft\_forever_\Interface\AddOns` (`Polestar`, `Polestar...`, `Auctionator`, `PrettyTooltip` et `BuffAlertsForever`) et retire ceux d'une ancienne version du guide. Les autres addons et le dossier `WTF` (réglages, progression du guide) ne sont pas touchés.
 - L'ancienne version est mise de côté dans `_forever_\Interface\_guide-sauvegarde` (seulement la dernière). En cas de problème pendant le remplacement, elle est remise en place toute seule.
 - Aucun droit administrateur. Ses fichiers sont dans `%LOCALAPPDATA%\GuideWoWForever` : la copie du programme visée par le raccourci, `journal.txt` (le détail de chaque lancement, à joindre en cas de problème) et `etat.txt` (dossier du jeu et version installée).
-- Désinstaller : supprimer le raccourci, ce dossier, et les dossiers `Polestar...`, `Auctionator` et `PrettyTooltip` de `AddOns`.
+- Désinstaller : supprimer le raccourci, ce dossier, et les dossiers `Polestar...`, `Auctionator`, `PrettyTooltip` et `BuffAlertsForever` de `AddOns`.
 </details>
 
 ### Manière 2 (repli) : le ZIP et `Installer.bat`
@@ -56,7 +56,7 @@ Two ways: the program (recommended, 1 click) or the ZIP with `Installer.bat` (fa
 
 **Update**: double-click the **Update the WoW guide** shortcut on the desktop (created on the first run, also in the Start menu). If there is nothing new, it says so. The game can usually stay open (otherwise the program says so): at the end, a large banner says what to do. Green "**Update done. In game, type /reload in the chat**": `/reload` is enough. Orange "**Quit the game completely, then start it again**": this version adds or removes addon files, which the game only reads at startup. The program also updates itself (downloads the new one, checks its checksum, replaces itself and restarts), so an old `GuideWoWForever.exe` switches to the new one on its next run.
 
-It only replaces the guide folders (`Polestar...`, `Auctionator` and `PrettyTooltip`) in `World of Warcraft\_forever_\Interface\AddOns`. Other addons and the `WTF` folder (settings, guide progress) are left alone. The previous version is kept in `_forever_\Interface\_guide-sauvegarde`. Log in case of trouble: `%LOCALAPPDATA%\GuideWoWForever\journal.txt`. No admin rights needed.
+It only replaces the guide folders (`Polestar...`, `Auctionator`, `PrettyTooltip` and `BuffAlertsForever`) in `World of Warcraft\_forever_\Interface\AddOns`. Other addons and the `WTF` folder (settings, guide progress) are left alone. The previous version is kept in `_forever_\Interface\_guide-sauvegarde`. Log in case of trouble: `%LOCALAPPDATA%\GuideWoWForever\journal.txt`. No admin rights needed.
 
 **Way 2 (fallback): the ZIP and `Installer.bat`**
 
@@ -108,6 +108,22 @@ Le guide installe aussi [PrettyTooltip](https://www.curseforge.com/wow/addons/pr
 - Revenir aux infobulles du jeu : `/ptip options` et décocher les types voulus, ou décocher PrettyTooltip dans la liste des addons (écran des personnages, bouton **AddOns**).
 - Réglages : ceux de PrettyTooltip, le guide n'en impose aucun (rien à changer pour Polestar ni Auctionator). Un PrettyTooltip déjà installé est remplacé par la version du guide ; ses réglages (dossier `WTF`) sont gardés.
 - Version 1.3.8 avec correctifs du pack, pour les clients français et anglais : bonus d'ensemble actif gardé dans la liste, numéro de sort qui ne remplace plus la description d'une amélioration, deux libellés français. Détail, tickets amont et diff : [`docs/prettytooltip-correctifs.md`](docs/prettytooltip-correctifs.md).
+
+## Rappels d'améliorations (BuffAlerts Forever)
+
+Le guide installe aussi [BuffAlerts Forever](https://www.curseforge.com/wow/addons/buffalerts) : une icône apparaît au milieu de l'écran quand une amélioration de classe (*buff*) manque, et une rangée de petites icônes en haut de l'écran rappelle le reste. Seules les alertes de la classe jouée se chargent.
+
+- **Guerrier** : Cri de guerre (*Battle Shout*), en combat, avec un son (réglage du guide) et un compte à rebours 5 s avant la fin ; Fulgurance (*Overpower*), Vengeance (*Revenge*) et Exécution (*Execute*) quand le jeu les rend utilisables.
+- **Druide** : Marque du fauve (*Mark of the Wild*, le Don du fauve compte aussi), avec une petite icône à côté du cadre de chaque membre du groupe qui ne l'a pas ; Épines (*Thorns*) ; Augure de clarté (*Omen of Clarity*) si le talent est pris.
+- **Démoniste** : Peau de démon ou Armure démoniaque (*Demon Skin*, *Demon Armor*), démon absent, moins de 5 Fragments d'âme (*Soul Shard*).
+- **Mage** : armure (n'importe laquelle éteint l'alerte ; l'icône propose celle de la spécialisation), Intelligence des arcanes (*Arcane Intellect*, l'Illumination des arcanes compte aussi), avec la petite icône à côté des membres du groupe qui utilisent du mana.
+- **Toutes les classes**, hors combat : nourriture (« Bien nourri », *Well Fed*), feu de camp (« Avantages du camp », *Camp Benefits*), durabilité sous 20 %, arme absente. Les autres classes (prêtre, paladin, chasseur, voleur, chaman) ont aussi leurs alertes.
+- `/balert` (ou `/buffalerts`) : fenêtre des options, en anglais (activer chaque alerte, *Only in combat*, *Play sound*, taille, position ; bouton **Move icons** pour déplacer les icônes à la souris). `/balert toggle` : masquer ou réafficher toutes les alertes. `/balert buffs` : liste des améliorations en cours avec leur numéro, à joindre si une alerte ne s'éteint pas.
+- Limites du jeu : en combat, le jeu cache les améliorations aux addons. BuffAlerts part de la dernière lecture d'avant le combat et des sorts lancés par le personnage ; une amélioration dissipée en combat n'est vue qu'après. Les réglages reviennent à leurs valeurs par défaut à chaque connexion (bogue du client bêta selon l'auteur) : un changement dans `/balert` dure jusqu'à la déconnexion.
+- Temps restant du Cri de guerre (ou d'un autre sort) en barre : le jeu a son **gestionnaire de temps de recharge** (*Cooldown Manager*). L'activer dans Échap › Options › Options avancées › Gestionnaire de temps de recharge, le placer en **Mode édition** (*Edit Mode*), choisir les sorts suivis avec `/cdm`. Les deux se complètent : la barre montre le temps restant, BuffAlerts signale l'oubli.
+- Si une icône recouvre la flèche de Polestar (selon l'échelle de l'interface) : glisser la flèche ailleurs, Polestar retient sa place.
+- Réglages du guide : le son de l'alerte du Cri de guerre, rien d'autre. Version 3.11.4 avec correctifs du pack, pour les clients français et anglais : en français, les rappels de nourriture et de feu de camp ne s'éteignaient jamais (noms anglais seulement) ; touches de la fenêtre d'options en combat. Les fichiers de l'auteur ne sont pas modifiés, tout tient dans `PackPatches.lua`. Détail, vérifications et diff : [`docs/buffalerts-correctifs.md`](docs/buffalerts-correctifs.md).
+- Couper les alertes : `/balert toggle` (jusqu'à la déconnexion), ou décocher BuffAlerts Forever dans la liste des addons (écran des personnages, bouton **AddOns**). Un BuffAlerts Forever déjà installé est remplacé par la version du guide.
 
 ## Confort en jeu
 
@@ -254,7 +270,8 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
 - Modifications et ajouts par **BurN-30** : enchaînement des guides, rendez-vous de Hurlevent, notes de groupe, textes français ajoutés, module Groupe Alliance (liens Wowhead, astuces de quête, marques de difficulté, réglages calmes, aide), chapitres Mortemines, Prison, Monastère écarlate et Uldaman, guides Polestar 30-60 repris avec notes de groupe, chapitre Zul'Farrak, installateur.
 - **Auctionator** © 2020-2025 plusmouse, borjamacare, tous droits réservés : dossier `addons/Auctionator`, version 343 telle que publiée sur [CurseForge](https://www.curseforge.com/wow/addons/auctionator), non modifiée, incluse pour notre groupe avec ce crédit.
 - **PrettyTooltip** © 2026 FallenShard, licence MIT : dossier `addons/PrettyTooltip`, version 1.3.8 (édition Forever) publiée sur [GitHub](https://github.com/FallenShard/PrettyTooltip/releases/tag/v1.3.8), avec correctifs du pack (liste dans `docs/prettytooltip-correctifs.md`, diff dans `docs/prettytooltip-1.3.8.patch`) ; la notice de la licence MIT est dans `addons/PrettyTooltip/LICENSE`.
-- L'ensemble, hors Auctionator, est sous **GPL-3.0** (fichier `LICENSE`) ; PrettyTooltip garde sa licence MIT, compatible avec la GPL-3.0. Les données du jeu appartiennent à Blizzard Entertainment.
+- **BuffAlerts Forever** © 2026 Thork, licence MIT : dossier `addons/BuffAlertsForever`, version 3.11.4 publiée sur [CurseForge](https://www.curseforge.com/wow/addons/buffalerts), fichiers de l'auteur non modifiés, plus `PackPatches.lua` (correctifs et réglage du pack, même licence ; liste dans `docs/buffalerts-correctifs.md`, diff dans `docs/buffalerts-3.11.4.patch`) ; la notice de la licence MIT est dans `addons/BuffAlertsForever/LICENSE`.
+- L'ensemble, hors Auctionator, est sous **GPL-3.0** (fichier `LICENSE`) ; PrettyTooltip et BuffAlerts Forever gardent leur licence MIT, compatible avec la GPL-3.0. Les données du jeu appartiennent à Blizzard Entertainment.
 
 Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/2026 :
 

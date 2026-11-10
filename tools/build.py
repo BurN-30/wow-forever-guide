@@ -6,7 +6,8 @@
 2. the Polestar* folders of addons/ = the Polestar release (unzipped Polestar-<version>.zip)
    and the compiled pack (PolestarPack_GroupeAlliance and its _frFR texts addon); the other
    folders (Auctionator as released, PrettyTooltip as released plus the pack patches of
-   docs/prettytooltip-1.3.8.patch) are committed and left alone;
+   docs/prettytooltip-1.3.8.patch, BuffAlertsForever as released plus PackPatches.lua, see
+   docs/buffalerts-3.11.4.patch) are committed and left alone;
 3. the Groupe Alliance module (addons-src/GroupeAlliance) goes inside Polestar's own
    folder, so there is no extra addon to tick: its files are added to Polestar.toc,
    UI/GuideFrame.lua gets the gear, "?" help and "_" reduce buttons at the tab strip's
@@ -85,8 +86,8 @@ def run(*args):
 run("guide", "lint")
 run("guide", "compile")
 # Only the Polestar folders are rebuilt; the other addons shipped with the guide
-# (Auctionator as released, PrettyTooltip with docs/prettytooltip-1.3.8.patch) are
-# committed and stay as they are.
+# (Auctionator as released, PrettyTooltip with docs/prettytooltip-1.3.8.patch,
+# BuffAlertsForever with docs/buffalerts-3.11.4.patch) are committed and stay as they are.
 addons.mkdir(exist_ok=True)
 for d in sorted(addons.iterdir()):
     if d.is_dir() and d.name.startswith("Polestar"):

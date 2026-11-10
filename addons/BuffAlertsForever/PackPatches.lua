@@ -1,0 +1,80 @@
+-- BuffAlerts Forever: patches of the wow-forever-guide pack (BurN-30, https://github.com/BurN-30/wow-forever-guide).
+-- MIT, like the rest of the addon. The release files are left untouched; this file is listed last in
+-- BuffAlertsForever.toc, so it runs after Data.lua, Core.lua, Party.lua and Options.lua but before
+-- ADDON_LOADED and PLAYER_LOGIN. Reasons and in-game checks: docs/buffalerts-correctifs.md
+local ADDON, ns = ...
+
+------------------------------------------------------------
+-- [pack patch #1] Food and campfire buffs in the client's language
+-- Data.lua matches them by English name only (wellFed, campfire: no spell ID), so on a French
+-- client "Bien nourri" and "Avantages du camp" are never recognized and both alerts stay up.
+-- Each English name of those lists gets its twin in the client's language, read from a spell
+-- that has exactly that English name on build 1.60.1.70862 (wago.tools, SpellName enUS/frFR).
+------------------------------------------------------------
+local NAME_SOURCES = {
+    wellFed  = { 19705, 1283082 },               -- "Well Fed" (frFR "Bien nourri", "Personnage bien nourri")
+    campfire = { 1229741, 7353, 18191, 18193 },  -- "Camp Benefits", "Cozy Fire", "Increased Stamina", "Increased Spirit"
+}
+
+local function AddLocalizedNames()
+    local getName = C_Spell and C_Spell.GetSpellName
+    if not (getName and ns.FAMILIES) then return end
+    for fk, ids in pairs(NAME_SOURCES) do
+        local fam = ns.FAMILIES[fk]
+        if fam then
+            fam.names = fam.names or {}
+            for _, id in ipairs(ids) do
+                local ok, name = pcall(getName, id)
+                if ok and name and not (ns.IsSecret and ns.IsSecret(name)) and type(name) == "string" and name ~= "" then
+                    local known = false
+                    for _, n in ipairs(fam.names) do
+                        if n == name then known = true; break end
+                    end
+                    if not known then fam.names[#fam.names + 1] = name end
+                end
+            end
+        end
+    end
+end
+
+AddLocalizedNames()
+-- Again at login, in case spell names were not ready yet (Core rebuilds its name table every 5 s out of combat)
+local loginFrame = CreateFrame("Frame")
+loginFrame:RegisterEvent("PLAYER_LOGIN")
+loginFrame:SetScript("OnEvent", function(self)
+    self:UnregisterEvent("PLAYER_LOGIN")
+    AddLocalizedNames()
+end)
+
+------------------------------------------------------------
+-- [pack patch #2] Battle Shout alert plays a sound by default
+-- The option exists ("Play sound", off for every alert), but this client does not load the addon's
+-- settings back at login, so only defaults last. A saved choice still wins (CopyDefaults fills nil only).
+------------------------------------------------------------
+if ns.DEFAULTS and ns.DEFAULTS.battleShout then
+    ns.DEFAULTS.battleShout.sound = true
+end
+
+------------------------------------------------------------
+-- [pack patch #3] Options window keys in combat
+-- Options.lua calls SetPropagateKeyboardInput on every key press; the client refuses that call in
+-- combat (blocked action). Same handler, with the call made out of combat only.
+------------------------------------------------------------
+local CreateOptions = ns.CreateOptions
+if CreateOptions then
+    ns.CreateOptions = function(...)
+        CreateOptions(...)
+        local panel = _G.BuffAlertsForeverOptions
+        if panel and panel.SetPropagateKeyboardInput then
+            panel:SetScript("OnKeyDown", function(self, key)
+                local fight = InCombatLockdown and InCombatLockdown()
+                if key == "ESCAPE" then
+                    if not fight then self:SetPropagateKeyboardInput(false) end
+                    self:Hide()
+                elseif not fight then
+                    self:SetPropagateKeyboardInput(true)
+                end
+            end)
+        end
+    end
+end

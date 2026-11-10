@@ -2,6 +2,28 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.9.2 (2026-11-10)
+
+### Français
+- BuffAlerts Forever (version 3.11.4, par Thork) installé avec le guide : une icône au milieu de l'écran quand une amélioration de classe manque, de petites icônes en haut pour le reste.
+- Guerrier : Cri de guerre (Battle Shout) en combat, avec un son ; Fulgurance, Vengeance et Exécution quand elles sont utilisables.
+- Druide : Marque du fauve (aussi à côté des cadres du groupe), Épines, Augure de clarté. Démoniste : armure, démon absent, moins de 5 fragments d'âme. Mage : armure, Intelligence des arcanes (aussi à côté des cadres du groupe).
+- Toutes les classes, hors combat : nourriture, feu de camp, durabilité sous 20 %, arme absente.
+- `/balert` : options (en anglais) ; `/balert toggle` : masquer ou réafficher toutes les alertes.
+- Limites : en combat, le jeu cache les améliorations (l'addon se fie à la lecture d'avant le combat et aux sorts lancés par le personnage) ; les réglages reviennent à ceux du guide à chaque connexion.
+- Correctif du guide : sur le client français, les rappels de nourriture et de feu de camp s'éteignent quand l'amélioration est là.
+- Temps restant du Cri de guerre en barre : gestionnaire de temps de recharge du jeu (Échap › Options › Options avancées), placé en Mode édition, sorts choisis avec `/cdm`.
+
+### English
+- BuffAlerts Forever (version 3.11.4, by Thork) installed with the guide: an icon in the middle of the screen when a class buff is missing, small icons at the top for the rest.
+- Warrior: Battle Shout in combat, with a sound; Overpower, Revenge and Execute when usable.
+- Druid: Mark of the Wild (also beside the party frames), Thorns, Omen of Clarity. Warlock: armor, missing demon, fewer than 5 soul shards. Mage: armor, Arcane Intellect (also beside the party frames).
+- Every class, out of combat: food, campfire, durability under 20%, missing weapon.
+- `/balert`: options; `/balert toggle`: hide or show every alert.
+- Limits: in combat the game hides buffs (the addon trusts the reading taken before the pull and the character's own casts); settings go back to the guide's at every login.
+- Guide fix: on the French client, the food and campfire reminders turn off once the buff is up.
+- Battle Shout's time left as a bar: the game's Cooldown Manager (Esc › Options › Advanced Options), placed in Edit Mode, spells chosen with `/cdm`.
+
 ## v0.9.1 (2026-11-10)
 
 ### Français
