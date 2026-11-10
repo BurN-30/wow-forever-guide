@@ -22,6 +22,10 @@ namespace GuideWoWForever
 		RunningChoice AskWowRunning();
 		/// <summary>Le message de fin, en gros et bien visible.</summary>
 		void Banner(string text, Kind kind);
+		/// <summary>La fenêtre du programme est au premier plan.</summary>
+		bool InFront { get; }
+		/// <summary>La nouvelle version vient d'être lancée : lui passer le premier plan.</summary>
+		void HandOver(Process child, bool front);
 	}
 
 	sealed class HeadlessUi : IUi
@@ -39,6 +43,8 @@ namespace GuideWoWForever
 		{
 			try { Console.WriteLine("\n==== " + text + " ====\n"); } catch { }
 		}
+		public bool InFront { get { return false; } }
+		public void HandOver(Process child, bool front) { }
 	}
 
 	sealed class Updater
@@ -496,10 +502,16 @@ namespace GuideWoWForever
 				File.Move(self, old); // Windows permet de renommer un exe en cours d'exécution.
 				swapped = true;
 				File.Move(fresh, self);
-				var args = new List<string>(o.Raw) { "--apres-maj" };
-				Process.Start(new ProcessStartInfo(self, Options.Quote(args)) { UseShellExecute = false, WorkingDirectory = Path.GetDirectoryName(self) });
+				// --relance-devant ou --relance-derriere : dit à la nouvelle version si cette fenêtre
+				// était au premier plan (une version plus ancienne que la 0.9.5 ne comprendrait pas
+				// l'option, mais on ne relance jamais qu'une version plus récente).
+				bool front = ui.InFront;
+				var args = new List<string>(o.Raw) { "--apres-maj", front ? "--relance-devant" : "--relance-derriere" };
+				var child = Process.Start(new ProcessStartInfo(self, Options.Quote(args)) { UseShellExecute = false, WorkingDirectory = Path.GetDirectoryName(self) });
 				Journal.Write("Programme remplacé par la v" + r.Version + ", relancé.");
 				Relaunched = true;
+				try { if (child != null) ui.HandOver(child, front); }
+				catch (Exception e) { Journal.Write("Passage du premier plan : " + e.Message); }
 				return true;
 			}
 			catch (Exception e)

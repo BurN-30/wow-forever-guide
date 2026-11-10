@@ -25,9 +25,13 @@ namespace GuideWoWForever
 		[DllImport("kernel32.dll")]
 		static extern bool AttachConsole(int pid);
 
+		/// <summary>Environment.TickCount au lancement.</summary>
+		public static int StartTick;
+
 		[STAThread]
 		static int Main(string[] args)
 		{
+			StartTick = Environment.TickCount;
 			Options o;
 			try { o = Options.Parse(args); }
 			catch (ArgumentException e) { MessageBox.Show(e.Message, "GuideWoWForever"); return 64; }
@@ -94,6 +98,9 @@ namespace GuideWoWForever
 	{
 		public string Wow, Api, DataDir, Lang;
 		public bool Headless, Detect, NoSelfUpdate, NoShortcut, IgnoreRunning, Force, AfterSelfUpdate;
+		/// <summary>Après la mise à jour du programme : l'ancienne fenêtre était au premier plan et l'a
+		/// cédé (true), ne l'était pas (false), ou relance par une version qui ne le dit pas (null).</summary>
+		public bool? ForegroundHandoff;
 		public List<string> Raw = new List<string>();
 
 		public static Options Parse(string[] args)
@@ -120,6 +127,8 @@ namespace GuideWoWForever
 					case "--ignore-running": o.IgnoreRunning = true; o.Raw.Add(a); break;
 					case "--force": o.Force = true; o.Raw.Add(a); break;
 					case "--apres-maj": o.AfterSelfUpdate = true; break;
+					case "--relance-devant": o.ForegroundHandoff = true; break;
+					case "--relance-derriere": o.ForegroundHandoff = false; break;
 					case "--help": case "-h": case "/?":
 						throw new ArgumentException(
 							"GuideWoWForever.exe [--wow <dossier>] [--force] [--lang fr|en]\n" +

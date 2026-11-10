@@ -2,6 +2,16 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.9.5 (2026-11-10)
+
+### Français
+- Programme d'installation : quand il se met à jour lui-même, la nouvelle fenêtre s'ouvre au premier plan (avant : elle passait derrière les autres fenêtres, comme réduite).
+- Programme d'installation : thème sombre (fenêtre, barre de titre, journal, barre de progression, boutons, questions). Bandeaux de fin vert et orange gardés, plus sombres.
+
+### English
+- Installer: when it updates itself, the new window opens in front (before: it went behind the other windows, as if minimised).
+- Installer: dark theme (window, title bar, log, progress bar, buttons, questions). Green and orange end banners kept, darker.
+
 ## v0.9.4 (2026-11-10)
 
 ### Français
