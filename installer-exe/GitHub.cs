@@ -88,6 +88,27 @@ namespace GuideWoWForever
 			return r;
 		}
 
+		/// <summary>Numéro et notes des releases publiées (sans les fichiers), la plus récente
+		/// d'abord : de quoi montrer les nouveautés de toutes les versions sautées. Déduit de
+		/// l'adresse de la dernière release (…/releases/latest → …/releases?per_page=30).</summary>
+		public static List<Release> Recent(string latestApiUrl)
+		{
+			const string tail = "/releases/latest";
+			var list = new List<Release>();
+			if (latestApiUrl == null || !latestApiUrl.EndsWith(tail, StringComparison.OrdinalIgnoreCase)) return list;
+			string url = latestApiUrl.Substring(0, latestApiUrl.Length - tail.Length) + "/releases?per_page=30";
+			var all = new JavaScriptSerializer { MaxJsonLength = 16 * 1024 * 1024 }.Deserialize<object[]>(GetString(url, "application/vnd.github+json"));
+			foreach (var o in all ?? new object[0])
+			{
+				var d = o as Dictionary<string, object>;
+				if (d == null || (d.ContainsKey("draft") && d["draft"] is bool && (bool)d["draft"])) continue;
+				var r = new Release { Tag = Str(d, "tag_name"), Body = Str(d, "body") ?? "" };
+				r.Version = Program.ParseVersion(r.Tag);
+				if (r.Version != null) list.Add(r);
+			}
+			return list.OrderByDescending(r => r.Version).ToList();
+		}
+
 		static string Str(Dictionary<string, object> d, string k)
 		{
 			object v;

@@ -127,7 +127,10 @@ namespace GuideWoWForever
 			Directory.CreateDirectory(addons);
 			Version installed = TocVersion(addons, PackFolder);
 			Version polestar = TocVersion(addons, "Polestar");
-			bool restartMarked = RestartMarked(release.Body);
+			// Toutes les versions sautées depuis celle installée : leurs nouveautés s'affichent à la
+			// fin, et une seule d'entre elles qui demande de relancer le jeu suffit.
+			List<Release> skipped = Skipped(o.Api, installed, release);
+			bool restartMarked = skipped.Any(r => RestartMarked(r.Body));
 			if (installed != null)
 			{
 				if (installed == release.Version)
@@ -189,7 +192,7 @@ namespace GuideWoWForever
 			}
 
 			InstallCopyAndShortcut();
-			ShowNotes(release);
+			ShowNotes(skipped);
 			string end;
 			if (installed == null)
 				end = L.T("Relancez WoW : le guide s'ouvre tout seul, rien à cocher.", "Restart WoW: the guide opens by itself, nothing to tick.");
@@ -587,13 +590,46 @@ namespace GuideWoWForever
 
 		// ---- Notes de version ------------------------------------------------------------
 
-		void ShowNotes(Release r)
+		const int NotesMaxVersions = 6;
+
+		/// <summary>Les releases entre la version installée (exclue) et la dernière (incluse), la plus
+		/// récente d'abord. Première installation, réinstallation ou liste illisible : la dernière seule.</summary>
+		static List<Release> Skipped(string api, Version installed, Release latest)
 		{
-			string notes = Notes(r.Body, L.Fr ? "Français" : "English");
-			if (string.IsNullOrWhiteSpace(notes)) return;
+			var only = new List<Release> { latest };
+			if (installed == null || installed >= latest.Version) return only;
+			try
+			{
+				var list = GitHub.Recent(api).Where(r => r.Version > installed && r.Version < latest.Version).ToList();
+				list.Insert(0, latest);
+				if (list.Count > 1) Journal.Write("Versions sautées : " + string.Join(", ", list.Select(r => "v" + r.Version)));
+				return list;
+			}
+			catch (Exception e)
+			{
+				Journal.Write("Liste des releases illisible, nouveautés de la dernière seulement : " + e.Message);
+				return only;
+			}
+		}
+
+		/// <summary>Les nouveautés de chaque version sautée, la plus récente d'abord, sous son numéro
+		/// quand il y en a plusieurs.</summary>
+		void ShowNotes(List<Release> releases)
+		{
+			string heading = L.Fr ? "Français" : "English";
+			var withNotes = releases.Select(r => new { r.Version, Text = Notes(r.Body, heading) })
+				.Where(x => !string.IsNullOrWhiteSpace(x.Text)).ToList();
+			if (withNotes.Count == 0) return;
 			Say(L.T("Nouveautés :", "What's new:"));
-			foreach (string line in notes.Split('\n').Select(l => l.TrimEnd()).Where(l => l.Length > 0).Take(15))
-				Say("  " + line.Replace("**", "").Replace("`", ""));
+			foreach (var x in withNotes.Take(NotesMaxVersions))
+			{
+				if (withNotes.Count > 1) Say("v" + x.Version + " :");
+				foreach (string line in x.Text.Split('\n').Select(l => l.TrimEnd()).Where(l => l.Length > 0).Take(15))
+					Say("  " + line.Replace("**", "").Replace("`", ""));
+			}
+			if (withNotes.Count > NotesMaxVersions)
+				Say(L.T("  … et ", "  … and ") + (withNotes.Count - NotesMaxVersions)
+					+ L.T(" versions plus anciennes (journal complet sur la page GitHub du guide).", " older versions (full changelog on the guide's GitHub page)."));
 		}
 
 		/// <summary>La section « ### Français » ou « ### English » des notes, sans titre.</summary>

@@ -2,6 +2,18 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.9.1 (2026-11-10)
+
+### Français
+- Programme d'installation : une mise à jour qui saute plusieurs versions affiche les nouveautés de chacune, de la plus récente à la plus ancienne (avant : seulement la dernière).
+- Il demande aussi de relancer le jeu si une seule des versions sautées l'exige (avant : seulement si la dernière le demandait).
+- Guide recompilé : textes devenus inutiles retirés, rien ne change en jeu.
+
+### English
+- Installer: an update that skips several versions shows what's new in each of them, newest first (before: only the latest).
+- It also asks to restart the game if any skipped version needs it (before: only if the latest did).
+- Guide rebuilt: unused texts removed, nothing changes in game.
+
 ## v0.9.0 (2026-11-10)
 
 ### Français
