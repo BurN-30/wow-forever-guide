@@ -291,5 +291,7 @@ python tools/check-lua.py
 
 **Publier une version** : mettre le numéro dans `## Version:` de `addons/PolestarPack_GroupeAlliance/PolestarPack_GroupeAlliance.toc`, ajouter la section `## vX.Y.Z` (Français et English) dans `CHANGELOG.md`, committer, puis pousser un tag `vX.Y.Z` : le workflow `.github/workflows/release.yml` construit `GuideWoWForever-addons.zip` (`tools/release.py`) et `GuideWoWForever.exe` (`installer-exe`, .NET Framework 4.8), calcule `SHA256SUMS.txt` et publie la release. Il refuse un tag différent de la version du `.toc`. Sur une pull request, il construit seulement (fichiers dans l'onglet Actions).
 
+`check-prereqs.py` suit le parcours de chaque race dans l'ordre des guides et signale une quête prise avant ses prérequis (données du guide compilé, `pre` : l'un d'eux suffit, `preAll` : tous, comme Polestar), une quête exclue par une autre déjà prise, prise deux fois ou rendue sans avoir été prise ; les quêtes facultatives, de classe ou d'une branche (`when`) donnent des alertes à vérifier à la main.
+
 `check-lua.py` (Python et `pip install lupa`) vérifie la syntaxe Lua 5.1 du module et du paquet, et fait tourner le module Groupe Alliance contre de petites imitations du jeu : il attrape les fautes de frappe, pas les bugs visibles en jeu.
 </details>

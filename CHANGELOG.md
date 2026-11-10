@@ -10,6 +10,7 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 - Les lignes de Polestar (objectifs de quête, amélioration d'équipement, provenance d'un objet) et les prix d'Auctionator restent dans l'infobulle, en bas, à part.
 - **Alt** maintenue : l'infobulle d'origine du jeu. **Maj** maintenue : les détails (désenchantement, contenu des herbes et minerais, numéros). `/ptip` : éditeur de style ; `/ptip options` : ce qui est redessiné.
 - Un PrettyTooltip déjà installé est remplacé par cette version (l'ancien est mis de côté dans `_guide-sauvegarde`) ; ses réglages (dossier WTF) sont gardés.
+- Guide : « Les lingots de sancteforge » (Lightforge Ingots) n'est plus prise aux Paluns vers le niveau 20, où elle n'est pas encore proposée (il faut d'abord « Le fer de sancteforge ») ; les lingots se font plus tard avec « La Flotte perdue », « Le fer de sancteforge » et « Les lingots perdus ». « Le mystère de Kurzen » (Kurzen's Mystery) est prise après les deux quêtes du Sergent Yohwa, qui l'ouvrent.
 
 ### English
 - PrettyTooltip (version 1.3.8, by FallenShard) installed with the guide: redrawn tooltips for items, spells, players and NPCs, buffs and debuffs, herbs, ore and chests, quests.
@@ -17,6 +18,7 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 - Polestar's lines (quest objectives, gear upgrade, where an item comes from) and Auctionator prices stay in the tooltip, at the bottom, set apart.
 - Hold **Alt**: the game's original tooltip. Hold **Shift**: the details (disenchanting, herb and ore contents, IDs). `/ptip`: style editor; `/ptip options`: what gets redrawn.
 - A PrettyTooltip already installed is replaced by this version (the old one is kept in `_guide-sauvegarde`); its settings (WTF folder) are kept.
+- Guide: Lightforge Ingots is no longer taken in the Wetlands around level 20, where it is not offered yet (Lightforge Iron comes first); the ingots come later with The Doomed Fleet, Lightforge Iron and The Lost Ingots. Kurzen's Mystery is taken after Sergeant Yohwa's two quests, which open it.
 
 ## v0.8.0 (2026-11-09)
 

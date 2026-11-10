@@ -7266,7 +7266,6 @@ do
 						{ t = "accept", quest = 279, title = "Claws from the Deep", npc = 1242, npcName = "Karl Boran", minLevel = 20, qlvl = 22, map = 1437, x = 8.32, y = 58.57, z = 8, f = "e", note = "{npc:1242}, on the pier north of the inn" },
 						{ t = "accept", quest = 98189, title = "Return the Statuette", npc = 1242, npcName = "Karl Boran", minLevel = 20, qlvl = 25, map = 1437, x = 8.32, y = 58.57, z = 8, f = "e", note = "{npc:1242}: for {npc:2104} in the keep" },
 						{ t = "vendor", candidates = { { npc = 1454, npcName = "Jennabink Powerseam", map = 1437, x = 8.12, y = 55.84, z = 16.1, f = "e", faction = "A" }, candidateRecords[72], candidateRecords[73], candidateRecords[61], candidateRecords[74], candidateRecords[75], candidateRecords[43], candidateRecords[42], candidateRecords[41], candidateRecords[54], candidateRecords[40], candidateRecords[51], candidateRecords[50], candidateRecords[45], candidateRecords[38], candidateRecords[26], candidateRecords[36], candidateRecords[37], candidateRecords[22], candidateRecords[44], candidateRecords[53], candidateRecords[30], candidateRecords[23], candidateRecords[27], candidateRecords[28], candidateRecords[76], candidateRecords[77], candidateRecords[78], candidateRecords[25], candidateRecords[24], candidateRecords[39], candidateRecords[34], candidateRecords[32], candidateRecords[62], candidateRecords[46], candidateRecords[79], candidateRecords[80], candidateRecords[33], candidateRecords[81], candidateRecords[31], candidateRecords[82], candidateRecords[49], candidateRecords[83], candidateRecords[48], candidateRecords[56], candidateRecords[47], candidateRecords[55], candidateRecords[69], candidateRecords[71], candidateRecords[84], candidateRecords[70], candidateRecords[59], candidateRecords[60], candidateRecords[35], candidateRecords[29], candidateRecords[57], candidateRecords[58], candidateRecords[85], candidateRecords[12], candidateRecords[86], candidateRecords[14], candidateRecords[87], candidateRecords[88], candidateRecords[89], candidateRecords[1], candidateRecords[90], candidateRecords[5], candidateRecords[9], candidateRecords[15], candidateRecords[20], candidateRecords[2], candidateRecords[3], candidateRecords[4], candidateRecords[8], candidateRecords[18], candidateRecords[91], candidateRecords[92], candidateRecords[10], candidateRecords[11], candidateRecords[19], candidateRecords[93], candidateRecords[21], candidateRecords[13], candidateRecords[17], candidateRecords[16], candidateRecords[63], candidateRecords[94], candidateRecords[7], candidateRecords[6], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68] } },
-						{ t = "accept", quest = 526, title = "Lightforge Ingots", npc = 1217, npcName = "Glorin Steelbrow", minLevel = 20, qlvl = 29, pre = { 321 }, closedBy = { 324 }, preTitles = { [321] = "Lightforge Iron", [324] = "The Lost Ingots" }, map = 1437, x = 10.58, y = 60.59, z = 9.7, f = "e", note = "{npc:1217}, upstairs in the inn" },
 						{ t = "sethome", npc = 1464, npcName = "Innkeeper Helbrek", location = "Deepwater Tavern", map = 1437, x = 10.7, y = 60.95, z = 10.1, f = "e" },
 						{ t = "accept", quest = 463, title = "The Greenwarden", npc = 1239, npcName = "First Mate Fitzsimmons", minLevel = 20, qlvl = 21, closedBy = { 276 }, preTitles = { [276] = "Tramping Paws" }, map = 1437, x = 10.9, y = 59.64, z = 10, f = "e", note = "{npc:1239}, in the inn" },
 						{ t = "turnin", quest = 95737, title = "Seeking Caitlin", npc = 1480, npcName = "Caitlin Grassman", map = 1437, x = 11.88, y = 58.82, z = 11, f = "e", note = "{npc:1480}, inside" },
@@ -8013,18 +8012,10 @@ do
 					},
 				},
 				{
-					title = "Menethil Bay",
-					note = "Follow the coast north-east past the wreck: the Bluegill Raiders hold the marsh beyond the Giant Crocolisks.",
-					goals = {
-						{ t = "collect", quest = 526, title = "Lightforge Ingots", item = 2702, itemName = "Lightforge Ingot", count = 5, oi = 1, map = 1437, x = 12.7, y = 65.3, f = "e", spots = { { x = 12.7, y = 65.3, r = 138, n = 13 }, { x = 9, y = 69.4, r = 56, n = 7, alt = true }, { x = 10.1, y = 71.5, r = 40, n = 5, alt = true }, { x = 19.9, y = 18.2, r = 48, n = 3, alt = true }, { x = 22.6, y = 18.2, r = 40, n = 2, alt = true }, { x = 25.4, y = 17.4, r = 55, n = 5, alt = true }, { x = 27.6, y = 16.5, r = 40, n = 2, alt = true }, { x = 29, y = 13.4, r = 42, n = 4, alt = true }, { x = 31.4, y = 12.2, r = 40, n = 1, alt = true } }, from = "Bluegill Raider", fromKind = "npc", fromId = 1418, fromNpcs = { { npc = 1418, npcName = "Bluegill Raider" } } },
-					},
-				},
-				{
 					title = "{object:1162}",
 					goals = {
 						{ t = "accept", quest = 288, title = "The Third Fleet", npc = 1239, npcName = "First Mate Fitzsimmons", minLevel = 22, qlvl = 27, map = 1437, x = 10.9, y = 59.64, z = 10, f = "e", note = "{npc:1239}, in the inn" },
 						{ t = "sethome", npc = 1464, npcName = "Innkeeper Helbrek", location = "Deepwater Tavern", map = 1437, x = 10.7, y = 60.95, z = 10.1, f = "e" },
-						{ t = "turnin", quest = 526, title = "Lightforge Ingots", npc = 1217, npcName = "Glorin Steelbrow", map = 1437, x = 10.58, y = 60.59, z = 9.7, f = "e", note = "{npc:1217}, inside" },
 						{ t = "buy", npc = 1464, npcName = "Innkeeper Helbrek", item = 2594, itemName = "Flagon of Mead", count = 1, map = 1437, x = 10.7, y = 60.95, z = 10.1, f = "e", note = "{item:2594}, from {npc:1464}" },
 						{ t = "buy", npc = 1464, npcName = "Innkeeper Helbrek", item = 2594, itemName = "Flagon of Mead", count = 1, map = 1437, x = 10.7, y = 60.95, z = 10.1, f = "e", note = "{item:2594}, from {npc:1464}" },
 						{ t = "turnin", quest = 288, title = "The Third Fleet", npc = 1239, npcName = "First Mate Fitzsimmons", map = 1437, x = 10.9, y = 59.64, z = 10, f = "e" },
@@ -9621,7 +9612,6 @@ do
 					note = "Take the road north; {npc:738} patrols it, the camp sits in the hills to the west.",
 					goals = {
 						{ t = "accept", quest = 215, title = "Jungle Secrets", npc = 738, npcName = "Private Thorsen", minLevel = 30, qlvl = 33, map = 1434, x = 40.34, y = 8.44, f = "e" },
-						{ t = "accept", quest = 207, title = "Kurzen's Mystery", npc = 739, npcName = "Brother Nimetz", minLevel = 30, qlvl = 38, preAll = { 204, 203 }, preTitles = { [203] = "The Second Rebellion", [204] = "Bad Medicine" }, map = 1434, x = 37.83, y = 3.56, z = 76.2, f = "e" },
 						{ t = "turnin", quest = 215, title = "Jungle Secrets", npc = 469, npcName = "Lieutenant Doren", map = 1434, x = 38.04, y = 3.01, z = 75.9, f = "e", note = "{npc:469}, in the hut" },
 						{ t = "accept", quest = 200, title = "Bookie Herod", npc = 469, npcName = "Lieutenant Doren", minLevel = 30, qlvl = 35, pre = { 215 }, preTitles = { [215] = "Jungle Secrets" }, map = 1434, x = 38.04, y = 3.01, z = 75.9, f = "e" },
 						{ t = "accept", quest = 203, title = "The Second Rebellion", npc = 733, npcName = "Sergeant Yohwa", minLevel = 30, qlvl = 33, map = 1434, x = 38.02, y = 3.33, z = 75.4, f = "e" },
@@ -9663,6 +9653,7 @@ do
 						{ t = "turnin", quest = 203, title = "The Second Rebellion", npc = 733, npcName = "Sergeant Yohwa", map = 1434, x = 38.02, y = 3.33, z = 75.4, f = "e" },
 						{ t = "turnin", quest = 204, title = "Bad Medicine", npc = 733, npcName = "Sergeant Yohwa", map = 1434, x = 38.02, y = 3.33, z = 75.4, f = "e" },
 						{ t = "accept", quest = 574, title = "Special Forces", npc = 733, npcName = "Sergeant Yohwa", minLevel = 30, qlvl = 38, preAll = { 203, 204 }, preTitles = { [203] = "The Second Rebellion", [204] = "Bad Medicine" }, map = 1434, x = 38.02, y = 3.33, z = 75.4, f = "e" },
+						{ t = "accept", quest = 207, title = "Kurzen's Mystery", npc = 739, npcName = "Brother Nimetz", minLevel = 30, qlvl = 38, preAll = { 204, 203 }, preTitles = { [203] = "The Second Rebellion", [204] = "Bad Medicine" }, map = 1434, x = 37.83, y = 3.56, z = 76.2, f = "e" },
 					},
 				},
 				{
