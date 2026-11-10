@@ -29,10 +29,10 @@ Le guide ne s'ouvre pas ? Écran de sélection des personnages → bouton **AddO
 - Il lit la dernière version publiée sur GitHub (page [Releases](https://github.com/BurN-30/wow-forever-guide/releases/latest)), télécharge `GuideWoWForever-addons.zip` et refuse le fichier si sa taille ou son empreinte SHA-256 diffère de celle publiée (`SHA256SUMS.txt`).
 - Dossier du jeu : celui retenu la fois d'avant, le jeu ouvert, le registre et la configuration de Battle.net, les emplacements habituels sur chaque disque, sinon une fenêtre de choix (le choix est retenu).
 - Il repère une installation existante (version écrite dans le `.toc` du paquet, ou Polestar seul déjà présent) et l'annonce avant de commencer.
-- Il remplace seulement les dossiers du guide dans `World of Warcraft\_forever_\Interface\AddOns` (`Polestar`, `Polestar...`, `Auctionator`, `PrettyTooltip` et `BuffAlertsForever`) et retire ceux d'une ancienne version du guide. Les autres addons et le dossier `WTF` (réglages, progression du guide) ne sont pas touchés.
+- Il remplace seulement les dossiers du guide dans `World of Warcraft\_forever_\Interface\AddOns` (`Polestar`, `Polestar...`, `Auctionator`, `PrettyTooltip`, `BuffAlertsForever`, `BugSack` et `!BugGrabber`) et retire ceux d'une ancienne version du guide. Les autres addons et le dossier `WTF` (réglages, progression du guide) ne sont pas touchés.
 - L'ancienne version est mise de côté dans `_forever_\Interface\_guide-sauvegarde` (seulement la dernière). En cas de problème pendant le remplacement, elle est remise en place toute seule.
 - Aucun droit administrateur. Ses fichiers sont dans `%LOCALAPPDATA%\GuideWoWForever` : la copie du programme visée par le raccourci, `journal.txt` (le détail de chaque lancement, à joindre en cas de problème) et `etat.txt` (dossier du jeu et version installée).
-- Désinstaller : supprimer le raccourci, ce dossier, et les dossiers `Polestar...`, `Auctionator`, `PrettyTooltip` et `BuffAlertsForever` de `AddOns`.
+- Désinstaller : supprimer le raccourci, ce dossier, et les dossiers `Polestar...`, `Auctionator`, `PrettyTooltip`, `BuffAlertsForever`, `BugSack` et `!BugGrabber` de `AddOns`.
 </details>
 
 ### Manière 2 (repli) : le ZIP et `Installer.bat`
@@ -56,7 +56,7 @@ Two ways: the program (recommended, 1 click) or the ZIP with `Installer.bat` (fa
 
 **Update**: double-click the **Update the WoW guide** shortcut on the desktop (created on the first run, also in the Start menu). If there is nothing new, it says so. The game can usually stay open (otherwise the program says so): at the end, a large banner says what to do. Green "**Update done. In game, type /reload in the chat**": `/reload` is enough. Orange "**Quit the game completely, then start it again**": this version adds or removes addon files, which the game only reads at startup. The program also updates itself (downloads the new one, checks its checksum, replaces itself and restarts), so an old `GuideWoWForever.exe` switches to the new one on its next run.
 
-It only replaces the guide folders (`Polestar...`, `Auctionator`, `PrettyTooltip` and `BuffAlertsForever`) in `World of Warcraft\_forever_\Interface\AddOns`. Other addons and the `WTF` folder (settings, guide progress) are left alone. The previous version is kept in `_forever_\Interface\_guide-sauvegarde`. Log in case of trouble: `%LOCALAPPDATA%\GuideWoWForever\journal.txt`. No admin rights needed.
+It only replaces the guide folders (`Polestar...`, `Auctionator`, `PrettyTooltip`, `BuffAlertsForever`, `BugSack` and `!BugGrabber`) in `World of Warcraft\_forever_\Interface\AddOns`. Other addons and the `WTF` folder (settings, guide progress) are left alone. The previous version is kept in `_forever_\Interface\_guide-sauvegarde`. Log in case of trouble: `%LOCALAPPDATA%\GuideWoWForever\journal.txt`. No admin rights needed.
 
 **Way 2 (fallback): the ZIP and `Installer.bat`**
 
@@ -124,6 +124,37 @@ Le guide installe aussi [BuffAlerts Forever](https://www.curseforge.com/wow/addo
 - Si une icône recouvre la flèche de Polestar (selon l'échelle de l'interface) : glisser la flèche ailleurs, Polestar retient sa place.
 - Réglages du guide : le son de l'alerte du Cri de guerre, rien d'autre. Version 3.11.4 avec correctifs du pack, pour les clients français et anglais : en français, les rappels de nourriture et de feu de camp ne s'éteignaient jamais (noms anglais seulement) ; touches de la fenêtre d'options en combat. Les fichiers de l'auteur ne sont pas modifiés, tout tient dans `PackPatches.lua`. Détail, vérifications et diff : [`docs/buffalerts-correctifs.md`](docs/buffalerts-correctifs.md).
 - Couper les alertes : `/balert toggle` (jusqu'à la déconnexion), ou décocher BuffAlerts Forever dans la liste des addons (écran des personnages, bouton **AddOns**). Un BuffAlerts Forever déjà installé est remplacé par la version du guide.
+
+## Erreurs d'addon à envoyer (BugSack)
+
+Le guide installe aussi [BugSack](https://github.com/funkydude/BugSack) et [BugGrabber](https://www.curseforge.com/wow/addons/bug-grabber) (dossier `!BugGrabber`). Quand un addon du guide plante (Polestar, Auctionator, PrettyTooltip, BuffAlerts…), le jeu n'affiche rien et l'erreur est perdue. Avec BugSack, elle est gardée avec tout ce qu'il faut pour la corriger (fichier, ligne, enchaînement des appels), prête à copier pour BurN-30. BugSack ne corrige rien et n'envoie rien tout seul.
+
+**Repérer une erreur** : un son (« Fatality ») et l'icône BugSack, un petit sac à gauche de la minicarte, passe au rouge. Son infobulle donne le nombre d'erreurs de la session. Aucune fenêtre ne s'ouvre toute seule, jamais en combat.
+
+**Copier une erreur et l'envoyer, pas à pas** :
+
+1. Ouvrir BugSack : **clic gauche** sur l'icône du sac, ou taper `/bugsack` dans le chat. La fenêtre montre la dernière erreur.
+2. Plusieurs erreurs : boutons **< Précédent** et **Suivant >** (*< Previous*, *Next >*) ; en haut à droite, « 2/3 » veut dire erreur 2 sur 3. Onglets en bas : **Tous les bugs** (*All bugs*), **Session actuelle** (*Current session*), **Session précédente** (*Previous session*, la connexion d'avant), **Options**.
+3. Cliquer dans le texte de l'erreur, puis **Ctrl+A** (tout sélectionner) et **Ctrl+C** (copier). Le jeu n'a pas de clic droit « Copier » : seul le raccourci marche.
+4. Coller (**Ctrl+V**) dans un message Discord à BurN-30 ou au groupe (ou dans un fichier texte). Une erreur par message s'il y en a plusieurs. Le « 3x » au début veut dire que l'erreur est arrivée 3 fois : c'est utile, le laisser.
+5. Ajouter en quelques mots :
+   - la **version du guide** : le numéro à côté de « Groupe Alliance 1-60 » dans `/polestar guides` (ligne de l'auteur d'un guide du groupe), ou celui que donne le programme d'installation (« Guide déjà installé : v0.9.3 ») ;
+   - la **langue du jeu** : français ou anglais ;
+   - **ce que faisait le personnage** : guide et étape, quête, PNJ, fenêtre ouverte, en combat ou non, et si l'erreur revient.
+6. Une fois envoyé, pour repartir de zéro (facultatif) : clic droit sur l'icône → onglet **Options** → **Effacer les bugs enregistrés** (*Wipe saved bugs*).
+
+Bon à savoir :
+
+- Les erreurs sont gardées d'une connexion à l'autre (500 au plus) : une erreur d'hier est dans **Session précédente** ou **Tous les bugs**. Copier avant de se déconnecter reste le plus sûr.
+- Les lignes « [ADDON_ACTION_BLOCKED] L'AddOn '…' a tenté d'appeler la fonction protégée '…' » sont aussi des erreurs à envoyer.
+- Fermer la fenêtre : la croix en haut à droite, ou un clic sur l'icône (Échap ne la ferme pas). **Maj + clic** sur l'icône recharge l'interface, comme `/reload`.
+- Couper le son : clic droit sur l'icône → **Options** → cocher **Muet** (*Mute*). Déplacer l'icône : la glisser autour de la minicarte. La masquer : décocher **Icône mini-carte** (*Minimap icon*) ; `/bugsack` marche toujours.
+- **Envoyer les bugs** (*Send bugs*), dans la fenêtre : envoie les erreurs de la session affichée à un autre joueur qui a BugSack, en jeu (à essayer entre nous).
+- Réglages : ceux de l'auteur (son, icône, pas de fenêtre automatique). Le guide change seulement la place de l'icône à la première installation, à l'écart du bouton Polestar de la minicarte (ils étaient l'un sur l'autre), et corrige l'infobulle française de l'icône. Les fichiers de l'auteur ne sont pas modifiés, tout tient dans `BugSack/PackPatches.lua`. Détail, vérifications et diff : [`docs/bugsack-correctifs.md`](docs/bugsack-correctifs.md).
+- Avec BugSack, la liste des polices de `/ptip` (PrettyTooltip) montre d'autres noms (« Friz Quadrata TT »…) : les infobulles ne changent pas.
+- Ne plus s'en servir : décocher BugSack et !BugGrabber dans la liste des addons (écran des personnages, bouton **AddOns**). Un BugSack ou un BugGrabber déjà installé est remplacé par la version du guide.
+
+*English client: when a guide addon breaks, a sound plays and the BugSack icon (a small sack on the left of the minimap) turns red. To send the error to BurN-30: left-click the icon (or type `/bugsack`), use **< Previous** / **Next >** to pick the error, click in its text, press **Ctrl+A** then **Ctrl+C**, and paste it (**Ctrl+V**) in a Discord message. Add the guide version (the number next to "Group Alliance 1-60" in `/polestar guides`), the game language (English or French) and what the character was doing (guide step, quest, NPC, window, combat). Errors are kept across logins (**Previous session** tab). Right-click the icon → **Options** → **Mute** turns the sound off; **Shift+click** on the icon reloads the UI.*
 
 ## Confort en jeu
 
@@ -234,7 +265,7 @@ Changer de guide à tout moment : `/polestar guides`.
 
 ## Un problème ?
 
-Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou envoie-le au groupe). Souci d'installation : joindre `%LOCALAPPDATA%\GuideWoWForever\journal.txt` (bouton **Ouvrir le journal** du programme).
+Noter le guide, l'étape et le niveau, et ouvrir une *issue* sur ce dépôt (ou l'envoyer au groupe). Erreur d'addon (son et icône BugSack rouge) : la copier comme dit dans « Erreurs d'addon à envoyer (BugSack) ». Souci d'installation : joindre `%LOCALAPPDATA%\GuideWoWForever\journal.txt` (bouton **Ouvrir le journal** du programme).
 
 ---
 
@@ -271,7 +302,9 @@ Note le guide, l'étape et ton niveau, et ouvre une *issue* sur ce dépôt (ou e
 - **Auctionator** © 2020-2025 plusmouse, borjamacare, tous droits réservés : dossier `addons/Auctionator`, version 343 telle que publiée sur [CurseForge](https://www.curseforge.com/wow/addons/auctionator), non modifiée, incluse pour notre groupe avec ce crédit.
 - **PrettyTooltip** © 2026 FallenShard, licence MIT : dossier `addons/PrettyTooltip`, version 1.3.8 (édition Forever) publiée sur [GitHub](https://github.com/FallenShard/PrettyTooltip/releases/tag/v1.3.8), avec correctifs du pack (liste dans `docs/prettytooltip-correctifs.md`, diff dans `docs/prettytooltip-1.3.8.patch`) ; la notice de la licence MIT est dans `addons/PrettyTooltip/LICENSE`.
 - **BuffAlerts Forever** © 2026 Thork, licence MIT : dossier `addons/BuffAlertsForever`, version 3.11.4 publiée sur [CurseForge](https://www.curseforge.com/wow/addons/buffalerts), fichiers de l'auteur non modifiés, plus `PackPatches.lua` (correctifs et réglage du pack, même licence ; liste dans `docs/buffalerts-correctifs.md`, diff dans `docs/buffalerts-3.11.4.patch`) ; la notice de la licence MIT est dans `addons/BuffAlertsForever/LICENSE`.
-- L'ensemble, hors Auctionator, est sous **GPL-3.0** (fichier `LICENSE`) ; PrettyTooltip et BuffAlerts Forever gardent leur licence MIT, compatible avec la GPL-3.0. Les données du jeu appartiennent à Blizzard Entertainment.
+- **BugSack** © funkydude (Funkeh), tous droits réservés (« You are free to fork and modify on GitHub, please ask us about anything else ») : dossier `addons/BugSack`, version v12.1.9 publiée sur [GitHub](https://github.com/funkydude/BugSack/releases/tag/v12.1.9), fichiers de l'auteur non modifiés, plus `PackPatches.lua` (réglage et correctif du pack ; liste dans `docs/bugsack-correctifs.md`, diff dans `docs/bugsack-12.1.9.patch`), incluse pour notre groupe avec ce crédit.
+- **BugGrabber** © funkydude (Funkeh), tous droits réservés : dossier `addons/!BugGrabber`, version v12.1.1 telle que publiée sur [CurseForge](https://www.curseforge.com/wow/addons/bug-grabber), non modifiée, incluse pour notre groupe avec ce crédit.
+- L'ensemble, hors Auctionator, BugSack et BugGrabber, est sous **GPL-3.0** (fichier `LICENSE`) ; PrettyTooltip et BuffAlerts Forever gardent leur licence MIT, compatible avec la GPL-3.0. Les données du jeu appartiennent à Blizzard Entertainment.
 
 Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/2026 :
 

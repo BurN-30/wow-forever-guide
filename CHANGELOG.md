@@ -2,6 +2,26 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.9.3 (2026-11-10)
+
+### Français
+- BugSack (version 12.1.9, par funkydude) et BugGrabber (12.1.1) installés avec le guide : quand un addon du guide plante, l'erreur est gardée, prête à copier, au lieu d'être perdue.
+- Signal : un son, et l'icône BugSack (petit sac à gauche de la minicarte) passe au rouge. Aucune fenêtre ne s'ouvre toute seule.
+- Envoyer une erreur à BurN-30 : clic gauche sur l'icône (ou `/bugsack`), cliquer dans le texte, Ctrl+A puis Ctrl+C, coller (Ctrl+V) dans Discord. Ajouter la version du guide, la langue du jeu et ce que faisait le personnage.
+- « < Précédent » et « Suivant > » (*< Previous*, *Next >*) : erreur par erreur. Onglet « Session précédente » (*Previous session*) : celles de la connexion d'avant.
+- Couper le son : clic droit sur l'icône, Options, « Muet » (*Mute*). Maj + clic sur l'icône recharge l'interface.
+- Réglages du guide : icône placée à l'écart du bouton Polestar de la minicarte (les deux étaient l'un sur l'autre), infobulle française de l'icône corrigée.
+- Programme d'installation : accepte le dossier `!BugGrabber` (le « ! » le fait charger avant les autres addons). Un ancien programme se met à jour tout seul avant d'installer.
+
+### English
+- BugSack (version 12.1.9, by funkydude) and BugGrabber (12.1.1) installed with the guide: when a guide addon breaks, the error is kept, ready to copy, instead of being lost.
+- Signal: a sound, and the BugSack icon (a small sack on the left of the minimap) turns red. No window opens by itself.
+- Send an error to BurN-30: left-click the icon (or `/bugsack`), click in the text, Ctrl+A then Ctrl+C, paste (Ctrl+V) in Discord. Add the guide version, the game language and what the character was doing.
+- "< Previous" and "Next >": one error after another. "Previous session" tab: errors from the last login.
+- Mute: right-click the icon, Options, "Mute". Shift+click on the icon reloads the UI.
+- Guide defaults: icon placed away from Polestar's minimap button (they sat on top of each other), French icon tooltip fixed.
+- Install program: accepts the `!BugGrabber` folder (the "!" makes it load before the other addons). An older program updates itself before installing.
+
 ## v0.9.2 (2026-11-10)
 
 ### Français

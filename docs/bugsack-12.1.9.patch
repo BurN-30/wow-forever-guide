@@ -1,0 +1,52 @@
+# BugSack v12.1.9 (funkydude, tous droits réservés) : correctifs du pack wow-forever-guide.
+# Base : BugSack-v12.1.9.zip de la release GitHub funkydude/BugSack (SHA-256 2b3a96d3...2ac1). Détail : docs/bugsack-correctifs.md
+# Appliquer depuis le dossier qui contient BugSack : git -c core.autocrlf=false apply -p1 bugsack-12.1.9.patch
+# (fichiers de l'addon en CRLF, gardés tels quels ; seuls le .toc et le nouveau PackPatches.lua diffèrent de la release).
+diff -ruN a/BugSack/BugSack.toc b/BugSack/BugSack.toc
+--- a/BugSack/BugSack.toc
++++ b/BugSack/BugSack.toc
+@@ -1,5 +1,6 @@
+ ## Interface: 11508, 11509, 16001, 20505, 20506, 30405, 38002, 40402, 50503, 50504, 120100, 120105, 120107
+ ## Version: v12.1.9
++## X-Pack-Patches: wow-forever-guide (BurN-30) - minimap icon away from Polestar's button, French minimap tooltip; see PackPatches.lua and docs/bugsack-correctifs.md
+ ## Title: BugSack
+ ## Notes: Toss those bugs inna sack.
+ ## Notes-deDE: Werft den Fehler in einen Sack.
+@@ -48,3 +49,4 @@
+ sack.lua
+ config.lua
+ ldb.lua
++PackPatches.lua
+diff -ruN a/BugSack/PackPatches.lua b/BugSack/PackPatches.lua
+--- /dev/null
++++ b/BugSack/PackPatches.lua
+@@ -0,0 +1,29 @@
++-- BugSack: patches of the wow-forever-guide pack (BurN-30, https://github.com/BurN-30/wow-forever-guide).
++-- The release files are left untouched; this file is listed last in BugSack.toc, so it runs after
++-- ldb.lua has registered the minimap icon, but before PLAYER_LOGIN, when LibDBIcon places it.
++-- Reasons and in-game checks: docs/bugsack-correctifs.md
++local addonName, addon = ...
++if not addon.healthCheck then return end -- !BugGrabber missing: core.lua already stopped BugSack
++
++------------------------------------------------------------
++-- [pack patch #1] Minimap icon away from Polestar's minimap button
++-- LibDBIcon puts an icon that was never dragged (minimapPos nil) at 225 degrees, 5 px past the
++-- minimap's edge. The guide turns Polestar's own minimap button on, and its default is 225 degrees,
++-- 5 px past the edge too (Polestar Maps/MinimapButton.lua, maps.minimapButtonAngle): the two buttons
++-- sit exactly on top of each other. First-time position: 160 degrees (left, a little above the
++-- middle). An icon the player dragged keeps its place (minimapPos is then saved).
++------------------------------------------------------------
++local iconDB = BugSackLDBIconDB
++if type(iconDB) == "table" and iconDB.minimapPos == nil then
++	iconDB.minimapPos = 160
++end
++
++------------------------------------------------------------
++-- [pack patch #2] French tooltip of the minimap icon
++-- locales.lua (frFR) says "Maj + Clic droit" reloads the interface, but ldb.lua (plugin.OnClick)
++-- reloads on Shift + left click and opens the options on any right click. Same text, that word
++-- fixed. ldb.lua reads L.minimapHint each time the tooltip opens, so setting it here is enough.
++------------------------------------------------------------
++if GetLocale() == "frFR" and addon.L then
++	addon.L.minimapHint = "|cffeda55fCliquez|r pour ouvrir BugSack avec le dernier bug\n|cffeda55fMaj + Clic|r pour recharger l’interface\n|cffeda55fClic droit|r pour ouvrir les options"
++end

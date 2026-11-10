@@ -342,7 +342,9 @@ namespace GuideWoWForever
 						if (name.StartsWith("/") || name.Contains(":") || parts.Any(p => p == ".." || p == "."))
 							throw BadZip(name);
 						if (parts.Length < 2) throw BadZip(name); // fichier à la racine du paquet
-						if (!Regex.IsMatch(parts[0], "^[A-Za-z0-9_]+$")) throw BadZip(name);
+						// Nom d'addon : lettres, chiffres, _ ; un « ! » en tête est permis (!BugGrabber,
+						// que le jeu charge ainsi avant les autres addons pour attraper leurs erreurs).
+						if (!Regex.IsMatch(parts[0], "^!?[A-Za-z0-9_]+$")) throw BadZip(name);
 						roots.Add(parts[0]);
 						string dest = Path.GetFullPath(Path.Combine(staging, name.Replace('/', '\\')));
 						if (!dest.StartsWith(stagingFull, StringComparison.OrdinalIgnoreCase)) throw BadZip(name);
