@@ -264,7 +264,7 @@ return {
 
 	-- Step 67: Karl Boran
 	-- {npc:1242} Karl Boran · {npc:2104} Captain Stoutfist
-	["{npc:1242}: for {npc:2104} in the keep. Offered after this hand-in, not before (seen in game); not offered? Carry on"] = "{npc:1242} : pour {npc:2104}, dans le donjon. Proposée après ce rendu, pas avant (constaté en jeu) ; pas proposée ? Continuer",
+	["{npc:1242}: for {npc:2104} in the keep. He offers it only after this hand-in"] = "{npc:1242} : pour {npc:2104}, dans le donjon. Il ne la propose qu'après ce rendu",
 
 	-- Step 68: Captain Stoutfist
 	-- {npc:2104} Captain Stoutfist · {npc:1242} Karl Boran
@@ -429,6 +429,7 @@ return {
 	-- ["{item:3349} on the way"] = "{item:3349} en chemin",
 	-- ["{npc:1217}, upstairs in the inn"] = "{npc:1217}, à l'étage de l'auberge",
 	-- ["{npc:1242}: for {npc:2104} in the keep"] = "{npc:1242} : pour {npc:2104}, dans le donjon",
+	-- ["{npc:1242}: for {npc:2104} in the keep. Offered after this hand-in, not before (seen in game); not offered? Carry on"] = "{npc:1242} : pour {npc:2104}, dans le donjon. Proposée après ce rendu, pas avant (constaté en jeu) ; pas proposée ? Continuer",
 	-- ["{npc:2086}, by the keep"] = "{npc:2086}, près du donjon",
 	-- ["{npc:2092}'s quest in {zone:1455} needs level 28. If you are short of it after these hand-ins, grind the Dragonmaw orcs at the camps along the road east to {area:836} before you go on."] = "La quête de {npc:2092} à {zone:1455} demande le niveau 28. S'il vous manque après ces rendus, tuez des orcs Dragonmaw dans les camps le long de la route vers l'est jusqu'à {area:836} avant de continuer.",
 	-- ["{npc:2104} stands in {area:2103}, a short walk from {npc:1242}."] = "{npc:2104} se tient dans le {area:2103}, à quelques pas de {npc:1242}.",

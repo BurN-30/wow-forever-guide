@@ -7440,7 +7440,7 @@ do
 					title = "{npc:1242}",
 					goals = {
 						{ t = "turnin", quest = 286, title = "Return the Statuette", npc = 1242, npcName = "Karl Boran", map = 1437, x = 8.32, y = 58.57, z = 8, f = "e" },
-						{ t = "accept", quest = 98189, title = "Return the Statuette", npc = 1242, npcName = "Karl Boran", minLevel = 20, qlvl = 25, map = 1437, x = 8.32, y = 58.57, z = 8, f = "e", optional = true, note = "{npc:1242}: for {npc:2104} in the keep. Offered after this hand-in, not before (seen in game); not offered? Carry on" },
+						{ t = "accept", quest = 98189, title = "Return the Statuette", npc = 1242, npcName = "Karl Boran", minLevel = 20, qlvl = 25, map = 1437, x = 8.32, y = 58.57, z = 8, f = "e", note = "{npc:1242}: for {npc:2104} in the keep. He offers it only after this hand-in" },
 					},
 				},
 				{
@@ -7448,7 +7448,7 @@ do
 					note = "{npc:2104} stands in Menethil Keep, a short walk from {npc:1242}.",
 					goals = {
 						{ t = "turnin", quest = 98189, title = "Return the Statuette", npc = 2104, npcName = "Captain Stoutfist", map = 1437, x = 9.86, y = 57.49, z = 26.8, f = "e", note = "{npc:2104}, on the top floor" },
-						{ t = "accept", quest = 98190, title = "A Friend of the Family", npc = 2104, npcName = "Captain Stoutfist", minLevel = 20, qlvl = 25, map = 1437, x = 9.86, y = 57.49, z = 26.8, f = "e", optional = true, note = "For Bolvar Fordragon in {object:2117}: keep it" },
+						{ t = "accept", quest = 98190, title = "A Friend of the Family", npc = 2104, npcName = "Captain Stoutfist", minLevel = 20, qlvl = 25, map = 1437, x = 9.86, y = 57.49, z = 26.8, f = "e", note = "For Bolvar Fordragon in {object:2117}: keep it" },
 					},
 				},
 				{
@@ -7555,14 +7555,14 @@ do
 						{ t = "turnin", quest = 343, title = "Speaking of Fortitude", npc = 1440, npcName = "Milton Sheaf", map = 1453, x = 77.07, y = 30.21, z = 122.4, note = "{npc:1440}, in the Royal Library" },
 						{ t = "turnin", quest = 337, title = "An Old History Book", npc = 1440, npcName = "Milton Sheaf", map = 1453, x = 77.07, y = 30.21, z = 122.4, optional = true, note = "Only if you looted {quest:337} in {zone:1431}" },
 						{ t = "turnin", quest = 98190, title = "A Friend of the Family", npc = 1748, npcName = "Highlord Bolvar Fordragon", map = 1453, x = 80.21, y = 38.35, z = 122.6 },
-						{ t = "accept", quest = 98191, title = "A Friend of the Family", npc = 1748, npcName = "Highlord Bolvar Fordragon", minLevel = 20, qlvl = 25, map = 1453, x = 80.21, y = 38.35, z = 122.6, optional = true },
+						{ t = "accept", quest = 98191, title = "A Friend of the Family", npc = 1748, npcName = "Highlord Bolvar Fordragon", minLevel = 20, qlvl = 25, map = 1453, x = 80.21, y = 38.35, z = 122.6 },
 					},
 				},
 				{
 					title = "{npc:928}",
 					goals = {
 						{ t = "turnin", quest = 98191, title = "A Friend of the Family", npc = 928, npcName = "Lord Grayson Shadowbreaker", map = 1453, x = 48.43, y = 50.22, z = 106.6 },
-						{ t = "accept", quest = 98219, title = "The Shamed Lieutenant", npc = 928, npcName = "Lord Grayson Shadowbreaker", minLevel = 20, qlvl = 30, map = 1453, x = 48.43, y = 50.22, z = 106.6, optional = true, note = "For {npc:2228} in Southshore: keep it" },
+						{ t = "accept", quest = 98219, title = "The Shamed Lieutenant", npc = 928, npcName = "Lord Grayson Shadowbreaker", minLevel = 20, qlvl = 30, map = 1453, x = 48.43, y = 50.22, z = 106.6, note = "For {npc:2228} in Southshore: keep it" },
 					},
 				},
 				{
