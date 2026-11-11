@@ -2,7 +2,7 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
-## v0.9.9 (en préparation)
+## v0.9.9 (2026-11-11)
 
 ### Français
 - Orneval (Groupe 8) : c'est une zone contestée. Deux notes à l'arrivée : les postes de la Horde (Zoram'gar sur la côte ouest, Bois-brisé à l'est) et les endroits où les quêtes de la Horde du même niveau croisent celles du guide (nagas de la grève de Zoram, camp Crin-de-Chardon, Vile-sylve, lac Mystral). Endroit occupé : passer l'étape (bouton Passer) et y revenir plus tard. Les Paluns, plus loin dans le guide, n'ont aucune quête de la Horde.
