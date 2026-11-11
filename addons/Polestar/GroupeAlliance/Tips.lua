@@ -443,6 +443,10 @@ ns.GA.Tips = {
 		frFR = "Le sentier monte à l'ouest de la route vers Gangrebois jusqu'à une grotte ; le livre est sur une table de l'autre côté.",
 		enUS = "The trail climbs west of the road toward Felwood up to a cave; the book is on a table on the far side.",
 	},
+	[1054] = { -- Culling the Threat (?: one player's sighting in game on Forever, not cross-checked)
+		frFR = "Vu en jeu par un joueur, non vérifié : il arrive que Dal Griffesang s'éloigne de son camp et se retrouve seul. Plutôt que de tuer ses gardes un par un, attendre à couvert à l'écart du camp et l'attaquer quand il est seul.",
+		enUS = "Seen in game by one player, not confirmed: Dal Bloodclaw sometimes wanders away from his camp and ends up alone. Instead of clearing his guards one at a time, wait out of sight away from the camp and pull him once he is alone.",
+	},
 	[1104] = { -- Salt Flat Venom (wowhead forever)
 		frFR = "Le venin tombe surtout des scorpides ravageurs, regroupés autour d'un chariot cassé et d'une tente au bord des plaines.",
 		enUS = "Venom drops best from the scorpid reavers grouped around a broken wagon and tent at the edge of the flats.",
