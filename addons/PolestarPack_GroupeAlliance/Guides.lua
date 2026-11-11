@@ -7266,10 +7266,9 @@ do
 				},
 				{
 					title = "{object:1162}",
-					note = "{npc:5082}, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. {npc:1480} stands a short walk north-east of the inn.\n{npc:2104} stands in Menethil Keep, a short walk from {npc:1242}.\n{npc:2104} stands in Menethil Keep.",
+					note = "{npc:5082}, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. {npc:1480} stands a short walk north-east of the inn.\n{npc:2104} stands in Menethil Keep.",
 					goals = {
 						{ t = "accept", quest = 279, title = "Claws from the Deep", npc = 1242, npcName = "Karl Boran", minLevel = 20, qlvl = 22, map = 1437, x = 8.32, y = 58.57, z = 8, f = "e", note = "{npc:1242}, on the pier north of the inn" },
-						{ t = "accept", quest = 98189, title = "Return the Statuette", npc = 1242, npcName = "Karl Boran", minLevel = 20, qlvl = 25, map = 1437, x = 8.32, y = 58.57, z = 8, f = "e", note = "{npc:1242}: for {npc:2104} in the keep" },
 						{ t = "vendor", candidates = { { npc = 1454, npcName = "Jennabink Powerseam", map = 1437, x = 8.12, y = 55.84, z = 16.1, f = "e", faction = "A" }, candidateRecords[72], candidateRecords[73], candidateRecords[61], candidateRecords[74], candidateRecords[75], candidateRecords[43], candidateRecords[42], candidateRecords[41], candidateRecords[54], candidateRecords[40], candidateRecords[51], candidateRecords[50], candidateRecords[45], candidateRecords[38], candidateRecords[26], candidateRecords[36], candidateRecords[37], candidateRecords[22], candidateRecords[44], candidateRecords[53], candidateRecords[30], candidateRecords[23], candidateRecords[27], candidateRecords[28], candidateRecords[76], candidateRecords[77], candidateRecords[78], candidateRecords[25], candidateRecords[24], candidateRecords[39], candidateRecords[34], candidateRecords[32], candidateRecords[62], candidateRecords[46], candidateRecords[79], candidateRecords[80], candidateRecords[33], candidateRecords[81], candidateRecords[31], candidateRecords[82], candidateRecords[49], candidateRecords[83], candidateRecords[48], candidateRecords[56], candidateRecords[47], candidateRecords[55], candidateRecords[69], candidateRecords[71], candidateRecords[84], candidateRecords[70], candidateRecords[59], candidateRecords[60], candidateRecords[35], candidateRecords[29], candidateRecords[57], candidateRecords[58], candidateRecords[85], candidateRecords[12], candidateRecords[86], candidateRecords[14], candidateRecords[87], candidateRecords[88], candidateRecords[89], candidateRecords[1], candidateRecords[90], candidateRecords[5], candidateRecords[9], candidateRecords[15], candidateRecords[20], candidateRecords[2], candidateRecords[3], candidateRecords[4], candidateRecords[8], candidateRecords[18], candidateRecords[91], candidateRecords[92], candidateRecords[10], candidateRecords[11], candidateRecords[19], candidateRecords[93], candidateRecords[21], candidateRecords[13], candidateRecords[17], candidateRecords[16], candidateRecords[63], candidateRecords[94], candidateRecords[7], candidateRecords[6], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68] } },
 						{ t = "sethome", npc = 1464, npcName = "Innkeeper Helbrek", location = "Deepwater Tavern", map = 1437, x = 10.7, y = 60.95, z = 10.1, f = "e" },
 						{ t = "accept", quest = 463, title = "The Greenwarden", npc = 1239, npcName = "First Mate Fitzsimmons", minLevel = 20, qlvl = 21, closedBy = { 276 }, preTitles = { [276] = "Tramping Paws" }, map = 1437, x = 10.9, y = 59.64, z = 10, f = "e", note = "{npc:1239}, in the inn" },
@@ -7278,8 +7277,6 @@ do
 						{ t = "accept", quest = 470, title = "Digging Through the Ooze", npc = 2111, npcName = "Sida", minLevel = 19, qlvl = 24, map = 1437, x = 11.8, y = 57.99, z = 10.1, f = "e" },
 						{ t = "accept", quest = 472, title = "Fall of Dun Modr", npc = 2097, npcName = "Harlo Barnaby", minLevel = 25, qlvl = 25, map = 1437, x = 10.85, y = 55.9, z = 11.2, f = "e", note = "{npc:2097}, by the north gate" },
 						{ t = "accept", quest = 98197, title = "Spoils of War", npc = 2086, npcName = "Valstag Ironjaw", minLevel = 18, qlvl = 22, map = 1437, x = 10.1, y = 56.9, z = 10.1, f = "e", note = "{npc:2086}, by the keep; inside" },
-						{ t = "turnin", quest = 98189, title = "Return the Statuette", npc = 2104, npcName = "Captain Stoutfist", map = 1437, x = 9.86, y = 57.49, z = 26.8, f = "e", note = "{npc:2104}, on the top floor" },
-						{ t = "accept", quest = 98190, title = "A Friend of the Family", npc = 2104, npcName = "Captain Stoutfist", minLevel = 20, qlvl = 25, map = 1437, x = 9.86, y = 57.49, z = 26.8, f = "e", note = "For Bolvar Fordragon in {object:2117}: keep it" },
 						{ t = "accept", quest = 464, title = "War Banners", npc = 2104, npcName = "Captain Stoutfist", minLevel = 23, qlvl = 28, map = 1437, x = 9.86, y = 57.49, z = 26.8, f = "e", note = "{npc:2104}, by the keep" },
 						{ t = "turnin", quest = 98461, title = "Unrequited Love", npc = 2096, npcName = "Tarrel Rockweaver", map = 1437, x = 11.5, y = 52.17, z = 12.9, f = "e", optional = true, note = "{npc:2096}: he won't offer 305 while you carry it" },
 						{ t = "accept", quest = 305, title = "In Search of The Excavation Team", npc = 2096, npcName = "Tarrel Rockweaver", minLevel = 21, qlvl = 24, map = 1437, x = 11.5, y = 52.17, z = 12.9, f = "e", note = "{npc:2096}, by the north gate" },
@@ -7443,6 +7440,15 @@ do
 					title = "{npc:1242}",
 					goals = {
 						{ t = "turnin", quest = 286, title = "Return the Statuette", npc = 1242, npcName = "Karl Boran", map = 1437, x = 8.32, y = 58.57, z = 8, f = "e" },
+						{ t = "accept", quest = 98189, title = "Return the Statuette", npc = 1242, npcName = "Karl Boran", minLevel = 20, qlvl = 25, map = 1437, x = 8.32, y = 58.57, z = 8, f = "e", optional = true, note = "{npc:1242}: for {npc:2104} in the keep. Offered after this hand-in, not before (seen in game); not offered? Carry on" },
+					},
+				},
+				{
+					title = "{npc:2104}",
+					note = "{npc:2104} stands in Menethil Keep, a short walk from {npc:1242}.",
+					goals = {
+						{ t = "turnin", quest = 98189, title = "Return the Statuette", npc = 2104, npcName = "Captain Stoutfist", map = 1437, x = 9.86, y = 57.49, z = 26.8, f = "e", note = "{npc:2104}, on the top floor" },
+						{ t = "accept", quest = 98190, title = "A Friend of the Family", npc = 2104, npcName = "Captain Stoutfist", minLevel = 20, qlvl = 25, map = 1437, x = 9.86, y = 57.49, z = 26.8, f = "e", optional = true, note = "For Bolvar Fordragon in {object:2117}: keep it" },
 					},
 				},
 				{
@@ -7549,14 +7555,14 @@ do
 						{ t = "turnin", quest = 343, title = "Speaking of Fortitude", npc = 1440, npcName = "Milton Sheaf", map = 1453, x = 77.07, y = 30.21, z = 122.4, note = "{npc:1440}, in the Royal Library" },
 						{ t = "turnin", quest = 337, title = "An Old History Book", npc = 1440, npcName = "Milton Sheaf", map = 1453, x = 77.07, y = 30.21, z = 122.4, optional = true, note = "Only if you looted {quest:337} in {zone:1431}" },
 						{ t = "turnin", quest = 98190, title = "A Friend of the Family", npc = 1748, npcName = "Highlord Bolvar Fordragon", map = 1453, x = 80.21, y = 38.35, z = 122.6 },
-						{ t = "accept", quest = 98191, title = "A Friend of the Family", npc = 1748, npcName = "Highlord Bolvar Fordragon", minLevel = 20, qlvl = 25, map = 1453, x = 80.21, y = 38.35, z = 122.6 },
+						{ t = "accept", quest = 98191, title = "A Friend of the Family", npc = 1748, npcName = "Highlord Bolvar Fordragon", minLevel = 20, qlvl = 25, map = 1453, x = 80.21, y = 38.35, z = 122.6, optional = true },
 					},
 				},
 				{
 					title = "{npc:928}",
 					goals = {
 						{ t = "turnin", quest = 98191, title = "A Friend of the Family", npc = 928, npcName = "Lord Grayson Shadowbreaker", map = 1453, x = 48.43, y = 50.22, z = 106.6 },
-						{ t = "accept", quest = 98219, title = "The Shamed Lieutenant", npc = 928, npcName = "Lord Grayson Shadowbreaker", minLevel = 20, qlvl = 30, map = 1453, x = 48.43, y = 50.22, z = 106.6, note = "For {npc:2228} in Southshore: keep it" },
+						{ t = "accept", quest = 98219, title = "The Shamed Lieutenant", npc = 928, npcName = "Lord Grayson Shadowbreaker", minLevel = 20, qlvl = 30, map = 1453, x = 48.43, y = 50.22, z = 106.6, optional = true, note = "For {npc:2228} in Southshore: keep it" },
 					},
 				},
 				{

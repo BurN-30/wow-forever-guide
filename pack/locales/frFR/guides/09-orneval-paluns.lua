@@ -168,12 +168,10 @@ return {
 	["To {object:1162}"] = "Vers {object:1162}",
 
 	-- Step 47: Menethil Harbor
-	-- {npc:5082} Vincent Hyal · {npc:1480} Caitlin Grassman · {npc:2104} Captain Stoutfist · {npc:1242} Karl Boran
-	["{npc:5082}, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. {npc:1480} stands a short walk north-east of the inn.\n{npc:2104} stands in Menethil Keep, a short walk from {npc:1242}.\n{npc:2104} stands in Menethil Keep."] = "{npc:5082}, Mikhail et Tapoke Jahn sont tous à l'auberge de Menethil ; Tapoke vous attaque quand vous parlez à Mikhail, mais se rend une fois vaincu. {npc:1480} se tient à quelques pas au nord-est de l'auberge.\n{npc:2104} se trouve au Donjon de Menethil, à quelques pas de {npc:1242}.\n{npc:2104} se trouve au Donjon de Menethil.",
+	-- {npc:5082} Vincent Hyal · {npc:1480} Caitlin Grassman · {npc:2104} Captain Stoutfist
+	["{npc:5082}, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. {npc:1480} stands a short walk north-east of the inn.\n{npc:2104} stands in Menethil Keep."] = "{npc:5082}, Mikhail et Tapoke Jahn sont tous à l'auberge de Menethil ; Tapoke vous attaque quand vous parlez à Mikhail, mais se rend une fois vaincu. {npc:1480} se tient à quelques pas au nord-est de l'auberge.\n{npc:2104} se trouve au Donjon de Menethil.",
 	-- {npc:1242} Karl Boran
 	["{npc:1242}, on the pier north of the inn"] = "{npc:1242}, sur la jetée au nord de l'auberge",
-	-- {npc:1242} Karl Boran · {npc:2104} Captain Stoutfist
-	["{npc:1242}: for {npc:2104} in the keep"] = "{npc:1242} : pour {npc:2104}, dans le donjon",
 	-- {npc:1239} First Mate Fitzsimmons
 	["{npc:1239}, in the inn"] = "{npc:1239}, à l'auberge",
 	-- {npc:1480} Caitlin Grassman
@@ -182,10 +180,6 @@ return {
 	["{npc:2097}, by the north gate"] = "{npc:2097}, près de la porte nord",
 	-- {npc:2086} Valstag Ironjaw
 	["{npc:2086}, by the keep; inside"] = "{npc:2086}, près du donjon ; à l'intérieur",
-	-- {npc:2104} Captain Stoutfist
-	["{npc:2104}, on the top floor"] = "{npc:2104}, au dernier étage",
-	-- {object:2117} Stormwind Keep
-	["For Bolvar Fordragon in {object:2117}: keep it"] = "Pour Bolvar Fordragon, dans le {object:2117} : gardez-la",
 	-- {npc:2104} Captain Stoutfist
 	["{npc:2104}, by the keep"] = "{npc:2104}, près du donjon",
 	-- {npc:2096} Tarrel Rockweaver
@@ -268,25 +262,37 @@ return {
 	-- plural, as words: Maddened Rotclaws = {npc:271334} Maddened Rotclaw · Fen Creepers = {npc:1040} Fen Creeper
 	["Red whelps fill the hills west of the gates, Maddened Rotclaws the Green Belt, Razormaws the northern slopes; Neru stands in the north-east (use the {item:279996}).\n{quest:98283} is elite: grouping up is advised.\nFen Creepers hide in the marsh pools north-west of the Green Belt.\nCareful: When out of combat, Fen Creepers cast Sneak from time to time, so they are stealthed and hard to see."] = "Des dragonnets rouges infestent les collines à l'ouest des portes, des griffes pourries affolées la Ceinture verte, des tranchegueules les pentes nord ; Neru se tient au nord-est (utilisez le {item:279996}).\n{quest:98283} est élite : former un groupe est conseillé.\nDes rampants des tourbières se cachent dans les mares au nord-ouest de la Ceinture verte.\nAttention : Hors combat, les rampants des tourbières lancent Camouflage par moments, ils sont donc camouflés et difficiles à voir.",
 
-	-- Step 68: Menethil
+	-- Step 67: Karl Boran
+	-- {npc:1242} Karl Boran · {npc:2104} Captain Stoutfist
+	["{npc:1242}: for {npc:2104} in the keep. Offered after this hand-in, not before (seen in game); not offered? Carry on"] = "{npc:1242} : pour {npc:2104}, dans le donjon. Proposée après ce rendu, pas avant (constaté en jeu) ; pas proposée ? Continuer",
+
+	-- Step 68: Captain Stoutfist
+	-- {npc:2104} Captain Stoutfist · {npc:1242} Karl Boran
+	["{npc:2104} stands in Menethil Keep, a short walk from {npc:1242}."] = "{npc:2104} se trouve au Donjon de Menethil, à quelques pas de {npc:1242}.",
+	-- {npc:2104} Captain Stoutfist
+	["{npc:2104}, on the top floor"] = "{npc:2104}, au dernier étage",
+	-- {object:2117} Stormwind Keep
+	["For Bolvar Fordragon in {object:2117}: keep it"] = "Pour Bolvar Fordragon, dans le {object:2117} : gardez-la",
+
+	-- Step 69: Menethil
 	["Menethil"] = "Menethil",
 	-- {npc:2092} Pilot Longbeard · {zone:1455} Ironforge · {object:1668} Dun Algaz
 	["{npc:2092}'s quest in {zone:1455} needs level 28. If you are short of it after these hand-ins, grind the Dragonmaw orcs at the camps along the road east to {object:1668} before you go on."] = "La quête de {npc:2092} en {zone:1455} requiert le niveau 28. S'il vous manque après ces remises, farmez les orcs Gueule-de-dragon aux camps le long de la route à l'est vers {object:1668} avant de continuer.",
 	["For the giant crocolisks of the north coast, on your next visit"] = "Pour les crocilisques géants de la côte nord, lors de votre prochaine visite",
 
-	-- Step 69: Into Loch Modan
+	-- Step 70: Into Loch Modan
 	-- {zone:1432} Loch Modan
 	["Into {zone:1432}"] = "Dans les {zone:1432}",
 
-	-- Step 70: Into Dun Morogh
+	-- Step 71: Into Dun Morogh
 	-- {zone:1426} Dun Morogh
 	["Into {zone:1426}"] = "Vers {zone:1426}",
 
-	-- Step 71: Into Ironforge
+	-- Step 72: Into Ironforge
 	-- {zone:1455} Ironforge
 	["Into {zone:1455}"] = "Vers {zone:1455}",
 
-	-- Step 73: Ironforge
+	-- Step 74: Ironforge
 	-- {zone:1437} Wetlands · {object:1668} Dun Algaz · {zone:1432} Loch Modan · {zone:1426} Dun Morogh · {zone:1455} Ironforge
 	["Head east along the {zone:1437} road, south through {object:1668} into {zone:1432} and west through the tunnel into {zone:1426} to {zone:1455}."] = "Prenez la route de {zone:1437} vers l'est, au sud par {object:1668} vers {zone:1432} et à l'ouest par le tunnel vers {zone:1426} jusqu'à {zone:1455}.",
 	-- {npc:1573} Gryth Thurden · {object:32372} Great Forge
@@ -294,19 +300,19 @@ return {
 	-- {item:5352} Book: The Powers Below · {zone:1439} Darkshore · {npc:2786} Gerrig Bonegrip · {object:32383} Forlorn Cavern
 	["Only with {item:5352} from {zone:1439}: {npc:2786}, the {object:32383}"] = "Seulement avec {item:5352} de {zone:1439} : {npc:2786}, {object:32383}",
 
-	-- Step 74: Buliwyf Stonehand
+	-- Step 75: Buliwyf Stonehand
 	-- {npc:11865} Buliwyf Stonehand · {object:32359} Military Ward
 	["While you're here: learn Two-Handed Axes from {npc:11865} ({object:32359}, 10 silver); two-handers level a Warrior fastest."] = "Pendant que vous êtes ici : apprenez Haches à deux mains auprès de {npc:11865} ({object:32359}, 10 pièces d'argent) ; les armes à deux mains font monter un guerrier le plus vite.",
 
-	-- Step 75: Buliwyf Stonehand
+	-- Step 76: Buliwyf Stonehand
 	-- {npc:11865} Buliwyf Stonehand · {object:32359} Military Ward
 	["While you're here: learn Two-Handed Maces from {npc:11865} ({object:32359}, 10 silver); two-handers level a Warrior fastest."] = "Pendant que vous êtes ici : apprenez Masses à deux mains auprès de {npc:11865} ({object:32359}, 10 pièces d'argent) ; les armes à deux mains font monter un guerrier le plus vite.",
 
-	-- Step 76: Buliwyf Stonehand
+	-- Step 77: Buliwyf Stonehand
 	-- {npc:11865} Buliwyf Stonehand · {object:32359} Military Ward
 	["While you're here: learn Two-Handed Axes from {npc:11865} ({object:32359}, 10 silver); two-handers level a Paladin fastest."] = "Pendant que vous êtes ici : apprenez Haches à deux mains auprès de {npc:11865} ({object:32359}, 10 pièces d'argent) ; les armes à deux mains font monter un paladin le plus vite.",
 
-	-- Step 77: Ironforge priests
+	-- Step 78: Ironforge priests
 	-- {zone:1455} Ironforge
 	["{zone:1455} priests"] = "Prêtres d'{zone:1455}",
 	-- {npc:11406} High Priest Rohan · {npc:258785} High Priestess Mims · {object:32386} Hall of Mysteries · {object:32362} Mystic Ward
@@ -314,32 +320,32 @@ return {
 	-- {npc:11406} High Priest Rohan
 	["{npc:11406}: Chastise"] = "{npc:11406} : Châtier",
 
-	-- Step 78: Tram to Stormwind
+	-- Step 79: Tram to Stormwind
 	-- {zone:1453} Stormwind
 	["Tram to {zone:1453}"] = "Tram pour {zone:1453}",
 
-	-- Step 79: Cathedral of Light
+	-- Step 80: Cathedral of Light
 	["Cathedral of Light"] = "Cathédrale de la Lumière",
 	-- {object:171524} Tinker Town · {zone:1453} Stormwind · {object:28027} Dwarven District · {object:2098} Cathedral Square
 	["Take the Deeprun Tram from {object:171524} to {zone:1453}'s {object:28027}, then walk to the {object:2098}."] = "Prenez le Tram des profondeurs de {object:171524} vers {object:28027} de {zone:1453}, puis marchez jusqu'au {object:2098}.",
 	-- {npc:1444} Brother Kristoff · {object:2098} Cathedral Square
 	["{npc:1444}, in the {object:2098}"] = "{npc:1444}, sur la {object:2098}",
 
-	-- Step 80: Stormwind Keep
+	-- Step 81: Stormwind Keep
 	-- {npc:1440} Milton Sheaf
 	["{npc:1440}, in the Royal Library"] = "{npc:1440}, dans la Bibliothèque royale",
 	-- {quest:337} An Old History Book · {zone:1431} Duskwood
 	["Only if you looted {quest:337} in {zone:1431}"] = "Seulement si vous avez ramassé {quest:337} à {zone:1431}",
 
-	-- Step 81: Lord Grayson Shadowbreaker
+	-- Step 82: Lord Grayson Shadowbreaker
 	-- {npc:2228} Lieutenant Farren Orinelle
 	["For {npc:2228} in Southshore: keep it"] = "Pour {npc:2228} à Austrivage : gardez-le",
 
-	-- Step 82: Collin Mauren
+	-- Step 83: Collin Mauren
 	-- {object:2164} The Slaughtered Lamb · {object:2101} Mage Quarter
 	["{object:2164} is in the {object:2101}."] = "{object:2164} se trouve dans le {object:2101}.",
 
-	-- Step 83: Trade District
+	-- Step 84: Trade District
 	["Next: fly to Darkshire."] = "Ensuite : volez vers Sombre-Comté.",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
@@ -422,6 +428,7 @@ return {
 	-- ["{area:461}: kill these as you meet them"] = "{area:461} : tuez-les au passage",
 	-- ["{item:3349} on the way"] = "{item:3349} en chemin",
 	-- ["{npc:1217}, upstairs in the inn"] = "{npc:1217}, à l'étage de l'auberge",
+	-- ["{npc:1242}: for {npc:2104} in the keep"] = "{npc:1242} : pour {npc:2104}, dans le donjon",
 	-- ["{npc:2086}, by the keep"] = "{npc:2086}, près du donjon",
 	-- ["{npc:2092}'s quest in {zone:1455} needs level 28. If you are short of it after these hand-ins, grind the Dragonmaw orcs at the camps along the road east to {area:836} before you go on."] = "La quête de {npc:2092} à {zone:1455} demande le niveau 28. S'il vous manque après ces rendus, tuez des orcs Dragonmaw dans les camps le long de la route vers l'est jusqu'à {area:836} avant de continuer.",
 	-- ["{npc:2104} stands in {area:2103}, a short walk from {npc:1242}."] = "{npc:2104} se tient dans le {area:2103}, à quelques pas de {npc:1242}.",
@@ -438,6 +445,7 @@ return {
 	-- ["{npc:482}, the cheese shop in the {object:2096}"] = "{npc:482}, la fromagerie du {object:2096}",
 	-- ["{npc:4959} and {npc:482}"] = "{npc:4959} et {npc:482}",
 	-- ["{npc:4982}, in the Cathedral of Light"] = "{npc:4982}, dans la Cathédrale de la Lumière",
+	-- ["{npc:5082}, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. {npc:1480} stands a short walk north-east of the inn.\n{npc:2104} stands in Menethil Keep, a short walk from {npc:1242}.\n{npc:2104} stands in Menethil Keep."] = "{npc:5082}, Mikhail et Tapoke Jahn sont tous à l'auberge de Menethil ; Tapoke vous attaque quand vous parlez à Mikhail, mais se rend une fois vaincu. {npc:1480} se tient à quelques pas au nord-est de l'auberge.\n{npc:2104} se trouve au Donjon de Menethil, à quelques pas de {npc:1242}.\n{npc:2104} se trouve au Donjon de Menethil.",
 	-- ["{npc:5082}, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. {npc:1480} stands a short walk north-east of the inn.\n{npc:2104} stands in {area:2103}, a short walk from {npc:1242}.\n{npc:2104} stands in {area:2103}."] = "{npc:5082}, Mikhail et Tapoke Jahn sont tous à l'auberge de Menethil ; Tapoke vous attaque quand vous parlez à Mikhail, mais abandonne une fois battu. {npc:1480} se tient à quelques pas au nord-est de l'auberge.\n{npc:2104} se tient dans {area:2103}, à quelques pas de {npc:1242}.\n{npc:2104} se tient dans {area:2103}.",
 	-- ["{object:176364} Harbor"] = "{object:176364}",
 	-- ["{quest:1009} walks the northern tip of the {area:414} with Wrathtail guards."] = "{quest:1009} arpente la pointe nord de la {area:414} avec des gardes Irequeue.",
