@@ -20,8 +20,6 @@ return {
 	["{npc:2104}: for {npc:270637}; on the top floor"] = "{npc:2104} : pour {npc:270637} ; au dernier étage",
 
 	-- Step 3: Howin Kindfeather
-	-- {quest:98240} Crimson Crate Delivery
-	["Only after {quest:98240}: not offered? Carry on"] = "Seulement après {quest:98240} : pas proposée ? Continuer",
 	-- {zone:1455} Ironforge
 	["For King Magni in {zone:1455}, at the end of this guide"] = "Pour le roi Magni à {zone:1455}, à la fin de ce guide",
 
@@ -58,6 +56,9 @@ return {
 	-- Step 11: Dun Modr
 	-- {object:376} Dun Modr · {npc:271460} Modr · {item:279996} Goaz Stone · {npc:271481} Captive Fire Elemental · {npc:1072} Roggo Harlbarrow
 	["North along the road to {object:376}. {npc:271460} stands in the ruins (use the {item:279996}); the {npc:271481} is held on the west side: lead it out to {npc:1072}."] = "Au nord le long de la route vers {object:376}. {npc:271460} se trouve dans les ruines (utiliser le {item:279996}) ; le {npc:271481} est retenu du côté ouest : ramenez-le à {npc:1072}.",
+
+	-- Step 12: Foggy MacKreel
+	["Timed, 15 minutes to Southshore: only with your hearthstone set at Southshore's inn"] = "Chronométrée, 15 minutes jusqu'à Austrivage : seulement avec la pierre de foyer liée à l'auberge d'Austrivage",
 
 	-- Step 13: Waterlogged Envelope
 	["Underwater"] = "Sous l'eau",
@@ -143,74 +144,87 @@ return {
 	-- {npc:251493} Captain McManus
 	["Off the boat, {npc:251493} is the first you meet, north-west of the flight master."] = "En descendant du bateau, {npc:251493} est le premier que vous rencontrez, au nord-ouest du maître de vol.",
 
-	-- Step 34: Yeti cave
+	-- Step 34: Hillsbrad town hall
+	["Hillsbrad town hall"] = "Hôtel de ville de Hautebrande",
+	-- {item:279386} Sealed Company Request
+	["West of Southshore, in the town hall of Hillsbrad Fields: use the {item:279386} from the bags beside the lectern in front of the magistrate's place. Players report it must be the lectern, not the table."] = "À l'ouest d'Austrivage, dans l'hôtel de ville des champs de Hautebrande : utiliser {item:279386} depuis les sacs à côté du lutrin, devant la place du magistrat. Des joueurs signalent que c'est le lutrin qui compte, pas la table.",
+	["Hillsbrad Fields town hall"] = "Hôtel de ville des champs de Hautebrande",
+
+	-- Step 35: Yeti cave
 	["Yeti cave"] = "Grotte des yétis",
 	["The yetis live in the cave in the hills north of Southshore, on your way back south."] = "Les yetis vivent dans la grotte dans les collines au nord d'Austrivage, sur votre chemin du retour vers le sud.",
 	-- {npc:2438} Bartolo Ginsetti · {item:3719} Hillman's Cloak · {item:2997} Bolt of Woolen Cloth · {item:2321} Fine Thread
 	["{npc:2438} also wants a {item:3719}, a {item:2997} and {item:2321}: crafted or bought; the cloak is turned in when you are back in Southshore later."] = "{npc:2438} veut aussi un {item:3719}, un {item:2997} et {item:2321} : fabriqués ou achetés ; la cape est à rendre quand vous revenez à Austrivage plus tard.",
 
-	-- Step 35: On the way
+	-- Step 36: On the way
 	["On the way"] = "En chemin",
 
-	-- Step 37: Syndicate camp
+	-- Step 38: Syndicate camp
 	["Syndicate camp"] = "Camp du Syndicat",
 	-- {object:1772} Tarren Mill
 	["The Syndicate camp sits on the Alterac border in northern Hillsbrad, west of {object:1772} (Horde); the documents lie in the camp."] = "Le camp du Syndicat se trouve à la frontière d'Alterac dans le nord de Hautebrande, à l'ouest de {object:1772} (Horde) ; les documents se trouvent dans le camp.",
 
-	-- Step 39: Snapjaws
+	-- Step 40: Snapjaws
 	["Snapjaws"] = "Gueules d'acier",
 	-- {object:1772} Tarren Mill
 	["The Snapjaw turtles bask along the river east of Southshore, south of {object:1772} (Horde)."] = "Les tortues Gueule d'acier se prélassent le long de la rivière à l'est d'Austrivage, au sud de {object:1772} (Horde).",
 
-	-- Step 43: Fly to Ironforge
+	-- Step 43: Southshore
+	-- {npc:251493} Captain McManus
+	["{npc:251493}, north-west of the flight master"] = "{npc:251493}, au nord-ouest du maître de vol",
+
+	-- Step 44: Fly to Ironforge
 	-- {zone:1455} Ironforge
 	["Fly to {zone:1455}"] = "Envolez-vous vers {zone:1455}",
 	["Southshore flight master"] = "Maître de vol d'Austrivage",
 
-	-- Step 44: Deeprun Tram
+	-- Step 45: Deeprun Tram
 	["Deeprun Tram"] = "Tram des profondeurs",
 	-- {object:28027} Dwarven District · {zone:1455} Ironforge
 	["Take the Deeprun Tram from the {object:28027} to {zone:1455}."] = "Prenez le Tram des profondeurs depuis le {object:28027} jusqu'à {zone:1455}.",
 	["Level 30 and 32 spells"] = "Sorts des niveaux 30 et 32",
 
-	-- Step 47: Deeprun Tram
+	-- Step 48: Deeprun Tram
 	-- {npc:2784} King Magni Bronzebeard · {object:171709} High Seat
 	["{npc:2784}, the {object:171709}"] = "{npc:2784}, {object:171709}",
 
-	-- Step 49: Fly to Stormwind
+	-- Step 50: Fly to Stormwind
 	-- {zone:1453} Stormwind
 	["Fly to {zone:1453}"] = "Volez jusqu'à {zone:1453}",
 	-- {zone:1455} Ironforge
 	["{zone:1455} flight master"] = "Maître de vol de {zone:1455}",
 
-	-- Step 50: The Islander
+	-- Step 51: The Islander
 	-- {npc:5479} Wu Shen · {object:2100} Old Town · {npc:6236} Klannoc Macleod · {zone:1413} Barrens
 	["{npc:5479} trains warriors in {object:2100}, beside the Pig and Whistle. {npc:6236} waits on Fray Island in the {zone:1413}, on the way to Ratchet much later (40-50/01)."] = "{npc:5479} forme les guerriers dans {object:2100}, à côté de la taverne du Cochon siffleur. {npc:6236} attend sur l'île de la Dispute dans {zone:1413}, sur la route de Cabestan, bien plus tard (40-50/01).",
 
-	-- Step 51: Elling Trias
+	-- Step 52: Elling Trias
 	-- {object:2096} Trade District
 	["The cheese shop in the {object:2096}."] = "La fromagerie dans {object:2096}.",
 
-	-- Step 52: Druid training
+	-- Step 53: Druid training
 	["Druid training"] = "Entraînement de druide",
 	-- {zone:1455} Ironforge · {npc:5504} Sheldras Moontree · {zone:1453} Stormwind
 	["{zone:1455} has no druid trainer: train with {npc:5504} in {zone:1453} before the tram."] = "{zone:1455} n'a pas de maître des druides : entraînez-vous auprès de {npc:5504} à {zone:1453} avant le tram.",
 
-	-- Step 54: Dashel Stonefist
+	-- Step 55: Dashel Stonefist
 	-- {npc:4961} Dashel Stonefist · {object:2100} Old Town
 	["{npc:4961} waits in the Pig and Whistle tavern in {object:2100}; he and his two thugs fight you, but stop once beaten."] = "{npc:4961} attend à la Taverne du Cochon siffleur, dans {object:2100} ; lui et ses deux voyous vous attaquent, mais s'arrêtent une fois vaincus.",
 
-	-- Step 56: Cathedral of Light
+	-- Step 57: Cathedral of Light
 	["Cathedral of Light"] = "Cathédrale de la Lumière",
 
-	-- Step 57: Mage Quarter
+	-- Step 58: Mage Quarter
 	-- {npc:2708} Archmage Malin · {object:2164} Slaughtered Lamb · {npc:211033} Garion Wendell · {npc:5081} Connor Rivers · {object:2101} Mage Quarter
 	["{npc:2708} is in the {object:2164}; {npc:211033} near the canal; {npc:5081} south of the {object:2101}."] = "{npc:2708} est dans {object:2164} ; {npc:211033} près du canal ; {npc:5081} au sud de {object:2101}.",
 	-- {npc:211033} Garion Wendell
 	-- plural, as words: Library Books = {object:386691} Library Book
 	["{npc:211033}: only offered once you have handed in library books (the Library Books guide)"] = "{npc:211033} : proposée seulement une fois que vous avez rendu des livres de la bibliothèque (le guide Livres de la bibliothèque)",
 
-	-- Step 62: Fly to Astranaar
+	-- Step 63: Fly to Astranaar
 	["Fly to Astranaar"] = "Envolez-vous vers Astranaar",
 	["Auberdine flight master"] = "Maître de vol d'Auberdine",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Only after {quest:98240}: not offered? Carry on"] = "Seulement après {quest:98240} : pas proposée ? Continuer",
 }

@@ -8569,7 +8569,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:2321"] = "Fine Thread", ["item:279996"] = "Goaz Stone", ["item:280331"] = "Malignant Rotclaw Flesh", ["item:2997"] = "Bolt of Woolen Cloth", ["item:3713"] = "Soothing Spices", ["item:3719"] = "Hillman's Cloak", ["item:4433"] = "Waterlogged Envelope", ["npc:1071"] = "Longbraid the Grim", ["npc:1072"] = "Roggo Harlbarrow", ["npc:1075"] = "Rhag Garmason", ["npc:1077"] = "Prospector Whelgar", ["npc:1356"] = "Prospector Stormpike", ["npc:1418"] = "Bluegill Raider", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:211033"] = "Garion Wendell", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:2276"] = "Magistrate Henry Maleb", ["npc:2366"] = "Barkeep Kelly", ["npc:2381"] = "Micha Yance", ["npc:2382"] = "Darren Malvew", ["npc:2430"] = "Chef Jessen", ["npc:2438"] = "Bartolo Ginsetti", ["npc:251493"] = "Captain McManus", ["npc:2695"] = "Sara Balloo", ["npc:2696"] = "Foggy MacKreel", ["npc:270637"] = "Howin Kindfeather", ["npc:2708"] = "Archmage Malin", ["npc:2711"] = "Phin Odelic", ["npc:271322"] = "Essene Villard", ["npc:271334"] = "Maddened Rotclaw", ["npc:271338"] = "Ados", ["npc:271460"] = "Modr", ["npc:271462"] = "Golm", ["npc:271481"] = "Captive Fire Elemental", ["npc:2784"] = "King Magni Bronzebeard", ["npc:2916"] = "Historian Karnik", ["npc:482"] = "Elling Trias", ["npc:4961"] = "Dashel Stonefist", ["npc:5081"] = "Connor Rivers", ["npc:5479"] = "Wu Shen", ["npc:5502"] = "Shylamiir", ["npc:5504"] = "Sheldras Moontree", ["npc:5683"] = "Comar Villard", ["npc:5694"] = "High Sorcerer Andromath", ["npc:6236"] = "Klannoc Macleod", ["object:1162"] = "Menethil Harbor", ["object:171709"] = "High Seat", ["object:176370"] = "Boat to Auberdine", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "Slaughtered Lamb", ["object:2673"] = "Thandol Span", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["object:376"] = "Dun Modr", ["object:386691"] = "Library Book", ["object:671518"] = "Tattered Spellbook", ["quest:1078"] = "Retrieval for Mauren", ["quest:1718"] = "The Islander", ["quest:474"] = "Defeat Nek'rosh", ["quest:559"] = "Farren's Proof", ["quest:98240"] = "Crimson Crate Delivery", ["quest:98283"] = "Carnage", ["zone:1413"] = "Barrens", ["zone:1416"] = "Alterac Mountains", ["zone:1424"] = "Hillsbrad Foothills", ["zone:1437"] = "Wetlands", ["zone:1442"] = "Stonetalon Mountains", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			names = { ["item:2321"] = "Fine Thread", ["item:279386"] = "Sealed Company Request", ["item:279996"] = "Goaz Stone", ["item:280331"] = "Malignant Rotclaw Flesh", ["item:2997"] = "Bolt of Woolen Cloth", ["item:3713"] = "Soothing Spices", ["item:3719"] = "Hillman's Cloak", ["item:4433"] = "Waterlogged Envelope", ["npc:1071"] = "Longbraid the Grim", ["npc:1072"] = "Roggo Harlbarrow", ["npc:1075"] = "Rhag Garmason", ["npc:1077"] = "Prospector Whelgar", ["npc:1356"] = "Prospector Stormpike", ["npc:1418"] = "Bluegill Raider", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:211033"] = "Garion Wendell", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:2276"] = "Magistrate Henry Maleb", ["npc:2366"] = "Barkeep Kelly", ["npc:2381"] = "Micha Yance", ["npc:2382"] = "Darren Malvew", ["npc:2430"] = "Chef Jessen", ["npc:2438"] = "Bartolo Ginsetti", ["npc:251493"] = "Captain McManus", ["npc:2695"] = "Sara Balloo", ["npc:2696"] = "Foggy MacKreel", ["npc:270637"] = "Howin Kindfeather", ["npc:2708"] = "Archmage Malin", ["npc:2711"] = "Phin Odelic", ["npc:271322"] = "Essene Villard", ["npc:271334"] = "Maddened Rotclaw", ["npc:271338"] = "Ados", ["npc:271460"] = "Modr", ["npc:271462"] = "Golm", ["npc:271481"] = "Captive Fire Elemental", ["npc:2784"] = "King Magni Bronzebeard", ["npc:2916"] = "Historian Karnik", ["npc:482"] = "Elling Trias", ["npc:4961"] = "Dashel Stonefist", ["npc:5081"] = "Connor Rivers", ["npc:5479"] = "Wu Shen", ["npc:5502"] = "Shylamiir", ["npc:5504"] = "Sheldras Moontree", ["npc:5683"] = "Comar Villard", ["npc:5694"] = "High Sorcerer Andromath", ["npc:6236"] = "Klannoc Macleod", ["object:1162"] = "Menethil Harbor", ["object:171709"] = "High Seat", ["object:176370"] = "Boat to Auberdine", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "Slaughtered Lamb", ["object:2673"] = "Thandol Span", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["object:376"] = "Dun Modr", ["object:386691"] = "Library Book", ["object:671518"] = "Tattered Spellbook", ["quest:1078"] = "Retrieval for Mauren", ["quest:1718"] = "The Islander", ["quest:474"] = "Defeat Nek'rosh", ["quest:559"] = "Farren's Proof", ["quest:98283"] = "Carnage", ["zone:1413"] = "Barrens", ["zone:1416"] = "Alterac Mountains", ["zone:1424"] = "Hillsbrad Foothills", ["zone:1437"] = "Wetlands", ["zone:1442"] = "Stonetalon Mountains", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
 			written = { ["{npc:2438} also wants a {item:3719}, a {item:2997} and {item:2321}: crafted or bought; the cloak is turned in when you are back in Southshore later."] = "Bartolo also wants a Hillman's Cloak, a Bolt of Woolen Cloth and Fine Thread: crafted or bought; the cloak is turned in when you are back in Southshore later.", ["{npc:4961} waits in the Pig and Whistle tavern in {object:2100}; he and his two thugs fight you, but stop once beaten."] = "Dashel waits in the Pig and Whistle tavern in Old Town; he and his two thugs fight you, but stop once beaten.", ["{npc:5683} waits north of {object:376} by the {object:2673}; {npc:271322} a short walk further north-east."] = "Comar Villard waits north of Dun Modr by the Thandol Span; Essene a short walk further north-east." },
 			steps = {
 				{
@@ -8590,7 +8590,7 @@ do
 					goals = {
 						{ t = "turnin", quest = 98240, title = "Crimson Crate Delivery", npc = 270637, npcName = "Howin Kindfeather", map = 1437, x = 49.36, y = 42.13, f = "e" },
 						{ t = "turnin", quest = 98230, title = "This Land Was Their Land", npc = 270637, npcName = "Howin Kindfeather", map = 1437, x = 49.36, y = 42.13, f = "e" },
-						{ t = "accept", quest = 98245, title = "Razormaw Needling", npc = 270637, npcName = "Howin Kindfeather", minLevel = 21, qlvl = 29, map = 1437, x = 49.36, y = 42.13, f = "e", optional = true, note = "Only after {quest:98240}: not offered? Carry on" },
+						{ t = "accept", quest = 98245, title = "Razormaw Needling", npc = 270637, npcName = "Howin Kindfeather", minLevel = 21, qlvl = 29, map = 1437, x = 49.36, y = 42.13, f = "e" },
 						{ t = "accept", quest = 98300, title = "Word to Ironforge", npc = 270637, npcName = "Howin Kindfeather", minLevel = 24, qlvl = 34, map = 1437, x = 49.36, y = 42.13, f = "e", optional = true, note = "For King Magni in {zone:1455}, at the end of this guide" },
 					},
 				},
@@ -8659,7 +8659,7 @@ do
 				{
 					title = "{npc:2696}",
 					goals = {
-						{ t = "accept", quest = 647, title = "MacKreel's Moonshine", npc = 2696, npcName = "Foggy MacKreel", minLevel = 28, qlvl = 30, map = 1417, x = 43.24, y = 92.64, z = 74.9, f = "e", only = { races = { "Dwarf", "Gnome", "NightElf", "Skyborne" } } },
+						{ t = "accept", quest = 647, title = "MacKreel's Moonshine", npc = 2696, npcName = "Foggy MacKreel", minLevel = 28, qlvl = 30, map = 1417, x = 43.24, y = 92.64, z = 74.9, f = "e", optional = true, only = { races = { "Dwarf", "Gnome", "NightElf", "Skyborne" } }, note = "Timed, 15 minutes to Southshore: only with your hearthstone set at Southshore's inn" },
 					},
 				},
 				{
@@ -8753,7 +8753,7 @@ do
 						{ t = "accept", quest = 555, title = "Soothing Turtle Bisque", npc = 2430, npcName = "Chef Jessen", minLevel = 28, qlvl = 31, map = 1424, x = 51.89, y = 58.68, z = 11.7, f = "e", note = "{npc:2430}, upstairs" },
 						{ t = "accept", quest = 98463, title = "Talk of the Town", npc = 2366, npcName = "Barkeep Kelly", minLevel = 28, qlvl = 33, map = 1424, x = 51.57, y = 58.57, z = 11.7, f = "e", note = "{npc:2366}, in the inn: for {object:3204} (04-stranglethorn-vale)" },
 						{ t = "sethome", npc = 2352, npcName = "Innkeeper Anderson", location = "Southshore", map = 1424, x = 51.17, y = 58.93, z = 11.3, f = "e" },
-						{ t = "turnin", quest = 647, title = "MacKreel's Moonshine", npc = 2705, npcName = "Brewmeister Bilger", map = 1424, x = 52.13, y = 58.74, z = 4.5, f = "e", only = { races = { "Dwarf", "Gnome", "NightElf", "Skyborne" } }, note = "Below ground" },
+						{ t = "turnin", quest = 647, title = "MacKreel's Moonshine", npc = 2705, npcName = "Brewmeister Bilger", map = 1424, x = 52.13, y = 58.74, z = 4.5, f = "e", optional = true, only = { races = { "Dwarf", "Gnome", "NightElf", "Skyborne" } }, note = "Below ground" },
 						{ t = "turnin", quest = 98219, title = "The Shamed Lieutenant", npc = 2228, npcName = "Lieutenant Farren Orinelle", map = 1424, x = 51.46, y = 58.39, z = 11.7, f = "e", note = "{npc:2228}, inside" },
 						{ t = "accept", quest = 536, title = "Down the Coast", npc = 2228, npcName = "Lieutenant Farren Orinelle", minLevel = 25, qlvl = 30, map = 1424, x = 51.46, y = 58.39, z = 11.7, f = "e" },
 						{ t = "accept", quest = 659, title = "Hints of a New Plague?", npc = 2711, npcName = "Phin Odelic", minLevel = 30, qlvl = 33, map = 1424, x = 50.35, y = 59.05, z = 10.1, f = "e", note = "{npc:2711}: his trail leads to Arathi" },
@@ -8825,14 +8825,21 @@ do
 					note = "Off the boat, {npc:251493} is the first you meet, north-west of the flight master.",
 					goals = {
 						{ t = "accept", quest = 98059, title = "Hillsbrad's Hoard", npc = 251493, npcName = "Captain McManus", minLevel = 23, qlvl = 27, map = 1424, x = 46.43, y = 50.2, f = "e" },
-						{ t = "turnin", quest = 98059, title = "Hillsbrad's Hoard", npc = 251493, npcName = "Captain McManus", map = 1424, x = 46.43, y = 50.2, f = "e" },
+					},
+				},
+				{
+					title = "Hillsbrad town hall",
+					note = "West of Southshore, in the town hall of Hillsbrad Fields: use the {item:279386} from the bags beside the lectern in front of the magistrate's place. Players report it must be the lectern, not the table.",
+					goals = {
+						{ t = "goto", text = "Hillsbrad Fields town hall", map = 1424, x = 29.7, y = 41.6, f = "e" },
+						{ t = "use", item = 279386, itemName = "Sealed Company Request", map = 1424, x = 29.7, y = 41.6, f = "e", optional = true },
 					},
 				},
 				{
 					title = "Yeti cave",
 					note = "The yetis live in the cave in the hills north of Southshore, on your way back south.",
 					goals = {
-						{ t = "collect", quest = 565, title = "Bartolo's Yeti Fur Cloak", item = 3720, itemName = "Yeti Fur", count = 10, oi = 4, map = 1424, x = 46.37, y = 34.01, f = "e", spots = { { x = 46.2, y = 32.3, r = 49, n = 8 }, { x = 43.5, y = 31.1, r = 65, n = 14 }, { x = 44.3, y = 26.9, r = 44, n = 11 }, { x = 43.6, y = 12, r = 49, n = 4 }, { x = 45.2, y = 7.7, r = 40, n = 3 }, { x = 45.3, y = 3.8, r = 40, n = 5 }, { x = 47.4, y = 5.4, r = 40, n = 1 }, { x = 42.6, y = 6.6, r = 41, n = 7 }, { x = 39.9, y = 9.1, r = 64, n = 6 }, { x = 40.1, y = 12.1, r = 40, n = 3 }, { x = 37.1, y = 6.7, r = 40, n = 3 } }, spread = true, fromNpcs = { { npc = 2248, npcName = "Cave Yeti" }, { npc = 2249, npcName = "Ferocious Yeti" }, { npc = 2251, npcName = "Giant Yeti" }, { npc = 2250, npcName = "Mountain Yeti" } } },
+						{ t = "collect", quest = 565, title = "Bartolo's Yeti Fur Cloak", item = 3720, itemName = "Yeti Fur", count = 10, oi = 4, map = 1424, x = 42.06, y = 33.18, f = "e", spots = { { x = 43.5, y = 31.1, r = 65, n = 14 }, { x = 46.2, y = 32.3, r = 49, n = 8 }, { x = 44.3, y = 26.9, r = 44, n = 11 }, { x = 43.6, y = 12, r = 49, n = 4 }, { x = 45.2, y = 7.7, r = 40, n = 3 }, { x = 45.3, y = 3.8, r = 40, n = 5 }, { x = 47.4, y = 5.4, r = 40, n = 1 }, { x = 42.6, y = 6.6, r = 41, n = 7 }, { x = 39.9, y = 9.1, r = 64, n = 6 }, { x = 40.1, y = 12.1, r = 40, n = 3 }, { x = 37.1, y = 6.7, r = 40, n = 3 } }, spread = true, fromNpcs = { { npc = 2248, npcName = "Cave Yeti" }, { npc = 2249, npcName = "Ferocious Yeti" }, { npc = 2251, npcName = "Giant Yeti" }, { npc = 2250, npcName = "Mountain Yeti" } } },
 						{ t = "note", text = "{npc:2438} also wants a {item:3719}, a {item:2997} and {item:2321}: crafted or bought; the cloak is turned in when you are back in Southshore later." },
 					},
 				},
@@ -8895,6 +8902,7 @@ do
 						{ t = "turnin", quest = 511, title = "Encrypted Letter", npc = 2277, npcName = "Loremaster Dibbs", map = 1424, x = 50.57, y = 57.09, z = 15.4, f = "e" },
 						{ t = "accept", quest = 514, title = "Letter to Stormpike", npc = 2277, npcName = "Loremaster Dibbs", minLevel = 30, qlvl = 34, pre = { 511 }, preTitles = { [511] = "Encrypted Letter" }, map = 1424, x = 50.57, y = 57.09, z = 15.4, f = "e" },
 						{ t = "turnin", quest = 555, title = "Soothing Turtle Bisque", npc = 2430, npcName = "Chef Jessen", map = 1424, x = 51.89, y = 58.68, z = 11.7, f = "e", note = "{npc:2430}, upstairs" },
+						{ t = "turnin", quest = 98059, title = "Hillsbrad's Hoard", npc = 251493, npcName = "Captain McManus", map = 1424, x = 46.43, y = 50.2, f = "e", note = "{npc:251493}, north-west of the flight master" },
 					},
 				},
 				{

@@ -22,12 +22,13 @@ step To Deepwater Tavern
 step Menethil Harbor
   accept 98230                        -- Captain Stoutfist: for Howin Kindfeather; on the top floor
 
-# Groupe Alliance (0.9.9): Razormaw Needling (98245) follows Crimson Crate Delivery (98240), which
-# follows Crocs of the Sky (98072, handed in below): optional until the chain is reordered.
+# Groupe Alliance (0.9.9): Crimson Crate Delivery (98240) follows Crocs of the Sky (98072, handed in
+# below), so only whoever got it early hands it in here. Razormaw Needling (98245) is offered
+# without it on Forever (Wowhead Forever comments), so it stays a plain accept.
 step Howin Kindfeather
   turnin 98240
   turnin 98230                        -- Howin Kindfeather
-  accept 98245 optional                   -- Only after Crimson Crate Delivery: not offered? Carry on
+  accept 98245
   accept 98300 optional               -- For King Magni in Ironforge, at the end of this guide
 
 step Angerfang Encampment
@@ -72,9 +73,13 @@ step Dun Modr
   tip North along the road to Dun Modr. Modr stands in the ruins (use the Goaz Stone); the Captive Fire Elemental is held on the west side: lead it out to Roggo Harlbarrow.
   accept 87491                        -- Captive Fire Elemental
 
+# Groupe Alliance (0.9.9): MacKreel's Moonshine (647) gives 15 minutes to reach Brewmeister
+# Bilger in Southshore (Wowhead Forever: Timer 15 minutes); this route reaches Southshore much
+# later, so the quest would fail and hold the Southshore step. Optional: the guide no longer sends
+# anyone onto the broken bridge, and the hand-in applies only to whoever took it on their own.
 step Foggy MacKreel
   zone Arathi Highlands
-  accept 647 only Dwarf,Gnome,NightElf,Skyborne
+  accept 647 optional only Dwarf,Gnome,NightElf,Skyborne -- Timed, 15 minutes to Southshore: only with your hearthstone set at Southshore's inn
 
 step Waterlogged Envelope
   collect 4433 x1 optional @44.3,92.9 map 1417 -- Underwater
@@ -141,7 +146,7 @@ step Southshore
   accept 555                          -- Chef Jessen, upstairs
   accept 98463                        -- Barkeep Kelly, in the inn: for Booty Bay (04-stranglethorn-vale)
   sethome "Southshore" npc 2352       -- Innkeeper Anderson
-  turnin 647 only Dwarf,Gnome,NightElf,Skyborne -- Below ground
+  turnin 647 optional only Dwarf,Gnome,NightElf,Skyborne -- Below ground
   turnin 98219 npc 2228               -- Lieutenant Farren Orinelle, inside
   accept 536                          -- Lieutenant Farren Orinelle
   accept 659                          -- Phin Odelic: his trail leads to Arathi
@@ -190,7 +195,15 @@ step Southshore
   zone Hillsbrad Foothills
   tip Off the boat, Captain McManus is the first you meet, north-west of the flight master.
   accept 98059                        -- Captain McManus
-  turnin 98059                        -- Captain McManus
+
+# Groupe Alliance (0.9.9): Hillsbrad's Hoard (98059) had its hand-in right after the accept and no
+# step for its objective (placing the Sealed Company Request in Hillsbrad's town hall, Wowhead
+# Forever quest text); the hand-in now waits for the return to Southshore.
+step Hillsbrad town hall
+  zone Hillsbrad Foothills
+  tip West of Southshore, in the town hall of Hillsbrad Fields: use the Sealed Company Request from the bags beside the lectern in front of the magistrate's place. Players report it must be the lectern, not the table.
+  goto 29.7,41.6 "Hillsbrad Fields town hall"
+  use 279386 optional @29.7,41.6
 
 step Yeti cave
   zone Hillsbrad Foothills
@@ -243,6 +256,7 @@ step Southshore
   turnin 511                          -- Loremaster Dibbs
   accept 514
   turnin 555                          -- Chef Jessen, upstairs
+  turnin 98059                        -- Captain McManus, north-west of the flight master
 
 step Fly to Ironforge
   zone Hillsbrad Foothills
