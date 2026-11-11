@@ -95,6 +95,7 @@ step Light's Hope Chapel
   turnin 5168                         -- Carlin Redpath
   accept 5206
 
+# Groupe Alliance (0.9.9): second tip, the Fetid Skulls are no quest objective.
 step Scourge Champions
   tip Scourge Champions (59) roam the Noxious Glade, north of Light's Hope Chapel. Pass Carlin's Mystic Crystal over each one you kill: the skulls that resonate are the ones he wants. Pull them one at a time.
   tip The Champions drop Fetid Skulls, which the game does not count: their tooltip shows nothing. Right-click the Mystic Crystal in the bags with a skull there: the skull becomes a Resonating Skull or crumbles to Bone Dust. The skull line of this step counts the Resonating Skulls.

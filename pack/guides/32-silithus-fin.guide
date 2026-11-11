@@ -477,6 +477,7 @@ step Andorhal
   collect 14610 quest 5803.1 optional -- Araj is elite: grouping up is advised.
   turnin 5941                         -- Chromie, upstairs
 
+# Groupe Alliance (0.9.9): second tip, the half-charm is no quest objective.
 step Felstone Field
   tip Janice's ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves.
   turnin 5050                         -- Upstairs

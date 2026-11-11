@@ -1,5 +1,6 @@
 # Adapted from Polestar's guide forever/alliance/06-ashenvale (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3, with the fixes of the same guide up to tag v0.3.4).
-# Changes: guide id, title, next guide, group notes, notes on the Horde in contested zones (0.9.9). Quest steps kept as Polestar wrote them.
+# Changes: guide id, title, next guide, group notes, notes on the Horde in contested zones (0.9.9). Quest steps kept as Polestar wrote them,
+# except where a comment marked "Groupe Alliance" says otherwise.
 guide groupe-alliance/09-orneval-paluns
 title Group 8 · Ashenvale, Wetlands & Stonetalon
 folder Group Alliance
@@ -207,6 +208,9 @@ step The Foulweald
   kill 3750 quest 1025                    -- Foulweald Totemic
   kill 3743 quest 1025                    -- Foulweald Warrior
 
+# Groupe Alliance (0.9.9): the bracers are no quest objective, so the second tip, the kill,
+# use and bracer notes explain the count; the use line puts the Divining Scroll on the quest
+# item button.
 step Mystral Lake
   tip Sentinel Velene Starstrike stands at the Silverwind Refuge on the east shore of Mystral Lake; Alonso camps on its west shore. Befouled Water Elementals wade in the lake between them.
   tip The game counts only the Divined Scroll, not the bracers: the elementals' tooltip shows no count, so follow the bracer line of this step. Only Intact Elemental Bracers count, other bracers are junk. With 5 in the bags, right-click the Divining Scroll: it turns them into the Divined Scroll, then hand it in.
