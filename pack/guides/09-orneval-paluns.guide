@@ -92,6 +92,8 @@ step Kerlonian Evershade
 
 step Ashenvale
   zone Ashenvale
+  note Contested zone: Horde players quest here too, from Zoram'gar Outpost (west coast) and Splintertree Post (east). Their quests use the same spots as this guide: the Zoram Strand nagas, the Thistlefur camp north of Astranaar, the Foulweald, Mystral Lake. Stay grouped there.
+  note A spot taken by the Horde? Skip the step (Skip button) and come back later. On the Normal ruleset, only players flagged for PvP can be attacked (PvP icon on the portrait). The Wetlands, later in this guide, have no Horde quests.
   goto 26.2,38.7 "Ashenvale"
 
 # ---------------------------------------------------------------- Maestra's Post
@@ -232,6 +234,7 @@ step Astranaar
 
 step Stonetalon Mountains
   zone Stonetalon Mountains
+  note Contested zone too: Sun Rock Retreat (Horde) lies west of Windshear Crag, and more Horde quest givers stand in the far south-east. Stay grouped.
   goto 71.9,60.0 "Stonetalon Mountains"
 
 step Piznik

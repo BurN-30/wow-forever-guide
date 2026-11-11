@@ -120,29 +120,22 @@ return {
 	-- {zone:1453} Stormwind
 	["{zone:1453} flight master"] = "Maître de vol de {zone:1453}",
 
-	-- Step 24: Menethil Bay
-	["Menethil Bay"] = "Baie de Menethil",
-	-- plural, as words: Bluegill Raiders = {npc:1418} Bluegill Raider
-	["Follow the coast north-east past the wreck: the Bluegill Raiders hold the marsh beyond the Giant Crocolisks."] = "Suivez la côte vers le nord-est après l'épave : les Écumeurs Branchie-bleue tiennent le marais au-delà des Crocilisques géants.",
-
-	-- Step 25: Menethil Harbor
+	-- Step 24: Menethil Harbor
 	-- {npc:1239} First Mate Fitzsimmons
 	["{npc:1239}, in the inn"] = "{npc:1239}, à l'auberge",
-	-- {npc:1217} Glorin Steelbrow
-	["{npc:1217}, inside"] = "{npc:1217}, à l'intérieur",
 	-- {item:2594} Flagon of Mead · {npc:1464} Innkeeper Helbrek
 	["{item:2594}, from {npc:1464}"] = "{item:2594}, chez {npc:1464}",
 
-	-- Step 26: The Lost Fleet: kill these as you meet them
+	-- Step 25: The Lost Fleet: kill these as you meet them
 	["The Lost Fleet: kill these as you meet them"] = "La Flotte perdue : tuez-les au fur et à mesure",
 	-- {npc:1159} First Mate Snellig
 	-- plural, as words: Cursed Sailors = {npc:1157} Cursed Sailor · Cursed Marines = {npc:1158} Cursed Marine · Giant Wetlands Crocolisks = {npc:2089} Giant Wetlands Crocolisk · Fen Creepers = {npc:1040} Fen Creeper
 	["Follow the coast north to the wrecked ship. Cursed Sailors walk the beach, Cursed Marines the deck; {npc:1159} stands on the beach by the bow. Giant Wetlands Crocolisks lurk on the coast just north of it.\nCareful: Fen Creepers hide in stealth where the river splits close to the ghost ship, and they can join a fight."] = "Suivez la côte vers le nord jusqu'à l'épave. Des Marins maudits arpentent la plage, des Soldats de marine maudits le pont ; {npc:1159} se tient sur la plage près de la proue. Des Crocilisques géants des Paluns rôdent sur la côte juste au nord.\nAttention : des Rampants des tourbières se cachent, camouflés, là où la rivière se divise près du navire fantôme, et peuvent se joindre au combat.",
 
-	-- Step 28: Captain Halyndor
+	-- Step 27: Captain Halyndor
 	["The captain walks the deck of the wrecked ship; his strongbox sits in the hold."] = "Le capitaine arpente le pont du navire échoué ; son coffre est dans la cale.",
 
-	-- Step 29: On the way
+	-- Step 28: On the way
 	["On the way"] = "En chemin",
 	-- {item:2658} Ados Fragment · {npc:1078} Ormer Ironbraid
 	["{item:2658} along the way to {npc:1078} and Whelgar"] = "{item:2658} en chemin vers {npc:1078} et Whelgar",
@@ -153,29 +146,29 @@ return {
 	-- {item:2661} Neru Fragment · {npc:1078} Ormer Ironbraid
 	["{item:2661} along the way to {npc:1078} and Whelgar"] = "{item:2661} en chemin vers {npc:1078} et Whelgar",
 
-	-- Step 30: Whelgar's Excavation Site: kill these as you meet them
+	-- Step 29: Whelgar's Excavation Site: kill these as you meet them
 	["Whelgar's Excavation Site: kill these as you meet them"] = "Excavations de Whelgar : tuez-les au fur et à mesure",
 	-- {item:279996} Goaz Stone · {npc:1353} Sarltooth
 	-- plural, as words: Goaz Warders = {npc:270892} Goaz Warder
 	["The Goaz Warders stand just west of Whelgar's camp: use the {item:279996} he gave you beside one.\nThe relics lie in the dig itself. {npc:1353}, a big Razormaw, prowls the raptor valley just west of it.\nThe Dragonmaw orcs camp east of the excavation site. Raiders and Swamprunners carry the war banners."] = "Les Goaz Warders se tiennent juste à l'ouest du camp de Whelgar : utilisez à côté de l'un d'eux le {item:279996} qu'il vous a donné.\nLes reliques se trouvent dans les fouilles elles-mêmes. {npc:1353}, un gros tranchegueule, rôde dans la vallée des raptors juste à l'ouest.\nLes orcs Dragonmaw campent à l'est du site de fouilles. Les écumeurs et les arpenteurs portent les bannières de guerre.",
 
-	-- Step 31: Ormer Ironbraid and Whelgar
+	-- Step 30: Ormer Ironbraid and Whelgar
 	-- {npc:1078} Ormer Ironbraid
 	["{npc:1078} and Whelgar"] = "{npc:1078} et Whelgar",
 
-	-- Step 32: Glorin Steelbrow
+	-- Step 31: Glorin Steelbrow
 	-- {npc:1284} Archbishop Benedictus · {zone:1453} Stormwind
 	["For {npc:1284} in {zone:1453}, in the next guide"] = "Pour {npc:1284} à {zone:1453}, dans le guide suivant",
 	["On the top floor"] = "Au dernier étage",
 	-- {quest:98221} From the Ashes · {quest:465} Nek'rosh's Gambit
 	["{quest:98221}: {quest:465} comes after it on Forever"] = "{quest:98221} : sur Forever, {quest:465} vient après",
 
-	-- Step 33: Angerfang Encampment
+	-- Step 32: Angerfang Encampment
 	["Angerfang Encampment"] = "Campement de Hargnecroc",
 	-- {npc:2091} Chieftain Nek'rosh
 	["Head east again to the Dragonmaw camp. The four sets of Attack Plans lie in the Angerfang Encampment; {npc:2091}, an elite, stands in the camp too."] = "Reprenez la direction de l'est vers le camp Dragonmaw. Les quatre plans d'attaque se trouvent au campement de Hargnecroc ; {npc:2091}, un élite, s'y tient également.",
 
-	-- Step 34: To Theramore
+	-- Step 33: To Theramore
 	["To Theramore"] = "Vers Theramore",
 	-- {npc:2104} Captain Stoutfist
 	["{npc:2104}, in Menethil Keep; on the top floor"] = "{npc:2104}, au Donjon de Menethil ; au dernier étage",
@@ -184,11 +177,11 @@ return {
 	-- {object:21056} Theramore Isle · {zone:1445} Dustwallow Marsh
 	["Take the boat from Menethil's pier to {object:21056} in {zone:1445}."] = "Prenez le bateau depuis le quai de Menethil jusqu'à {object:21056} en {zone:1445}.",
 
-	-- Step 36: Into The Barrens
+	-- Step 35: Into The Barrens
 	-- {zone:1413} The Barrens
 	["Into {zone:1413}"] = "Dans les {zone:1413}",
 
-	-- Step 37: Takar the Seer
+	-- Step 36: Takar the Seer
 	-- {zone:1413} The Barrens · {npc:6244} Takar the Seer
 	["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "Sur la route vers le sud à travers {zone:1413}, {npc:6244} campe à l'est de la route, au nord-est du Camp Taurajo ; arrivez par l'est et évitez les gardes de la Horde.",
 	-- {quest:1738} Heartswood · {zone:1440} Ashenvale · {zone:1443} Desolace
@@ -196,19 +189,19 @@ return {
 	-- {quest:65602} What Is Love? · {item:190309} Wooden Figurine · {quest:1738} Heartswood
 	["{quest:65602}: the incubus, beside the succubus; the {item:190309} is near the {quest:1738}"] = "{quest:65602} : l'incube, à côté de la succube ; la {item:190309} est près de {quest:1738}",
 
-	-- Step 40: Mirage Raceway
+	-- Step 39: Mirage Raceway
 	["Mirage Raceway"] = "Piste des mirages",
 	["Follow the canyons east to the salt flats. The goblins and gnomes of the Mirage Raceway are neutral and give quests to both factions."] = "Suivez les canyons vers l'est jusqu'aux plaines de sel. Les gobelins et gnomes de la Piste des mirages sont neutres et donnent des quêtes aux deux factions.",
 	-- {quest:5762} Hemet Nesingwary
 	["For {quest:5762} in Stranglethorn, later"] = "Pour {quest:5762} à Strangleronce, plus tard",
 
-	-- Step 41: Mirage Raceway: kill these as you meet them
+	-- Step 40: Mirage Raceway: kill these as you meet them
 	["Mirage Raceway: kill these as you meet them"] = "Piste des mirages : tuez-les au fur et à mesure",
 	-- {object:19868} Rocket Car Rubble
 	-- plural, as words: Scorpid Reavers = {npc:4140} Scorpid Reaver · Saltstone Basilisks = {npc:4147} Saltstone Basilisk
 	["{object:19868} lies all over the flats. Scorpid Reavers roam the north half; keep to it, away from the Saltstone Basilisks, Crystalhides and Gazers (32-35) of the middle and the far south."] = "{object:19868} jonchent les Salines. Les Scorpides ravageurs parcourent la moitié nord : restez-y, loin des Basilics du sel gemme, Peaux de cristal et Contemplateurs (32-35) du centre et de l'extrême sud.",
 
-	-- Step 42: Mirage Raceway
+	-- Step 41: Mirage Raceway
 	-- {npc:4454} Fizzle Brassbolts · {zone:1418} Badlands
 	["{npc:4454}: for Martek in the {zone:1418}, at 39; not offered? Go on"] = "{npc:4454} : pour Martek dans {zone:1418}, à 39 ; non proposé ? Continuer",
 
@@ -221,6 +214,7 @@ return {
 	-- ["Fly to {area:150}"] = "Prendre un vol pour {area:150}",
 	-- ["Follow the canyons east to the salt flats. The goblins and gnomes of the {area:2240} are neutral and give quests to both factions."] = "Suivez les canyons vers l'est jusqu'aux Salines. Les gobelins et les gnomes de {area:2240} sont neutres et donnent des quêtes aux deux factions.",
 	-- ["Follow the coast north to the wrecked ship. Cursed Sailors walk the beach, Cursed Marines the deck; {npc:1159} stands on the beach by the bow. Giant Wetlands Crocolisks lurk on the coast just north of it."] = "Suivez la côte vers le nord jusqu'à l'épave. Des Marins maudits ({npc:1157}) arpentent la plage, des Soldats de marine maudits ({npc:1158}) le pont ; {npc:1159} se tient sur la plage près de la proue. Des Crocilisques géants des Paluns ({npc:2089}) rôdent sur la côte juste au nord.",
+	-- ["Follow the coast north-east past the wreck: the Bluegill Raiders hold the marsh beyond the Giant Crocolisks."] = "Suivez la côte vers le nord-est après l'épave : les Écumeurs Branchie-bleue tiennent le marais au-delà des Crocilisques géants.",
 	-- ["Follow the road east to the excavation site."] = "Suivez la route vers l'est jusqu'aux Excavations de Whelgar.",
 	-- ["For the Dragonmaw catapult, on the {zone:1437} loop of the next guide"] = "Pour la catapulte des Dragonmaw, lors de la boucle des {zone:1437} du guide suivant",
 	-- ["For {npc:4048} in {zone:1444}, much later"] = "Pour {npc:4048} en {zone:1444}, bien plus tard",
@@ -233,6 +227,7 @@ return {
 	-- ["Hearth to Darkshire"] = "Pierre de foyer pour Sombre-Comté",
 	-- ["Hearth to {area:42}"] = "Pierre de foyer vers {area:42}",
 	-- ["Her house stands on the hill south-east of {area:42}."] = "Sa maison se trouve sur la colline au sud-est de {area:42}.",
+	-- ["Menethil Bay"] = "Baie de Menethil",
 	-- ["Nightbane Shadow Weavers"] = "Tisseurs d'ombre Plaie-de-nuit",
 	-- ["No {item:4371} for {quest:174}? {npc:3133} sells it in the house beside {npc:276}, in limited stock; {npc:1448} in {area:150} sells it too."] = "Pas de {item:4371} pour {quest:174} ? {npc:3133} en vend dans la maison voisine de celle de {npc:276}, en stock limité ; {npc:1448} à {area:150} en vend aussi.",
 	-- ["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of {area:378}; come in from the east and keep clear of the Horde guards."] = "Sur la route vers le sud à travers les {zone:1413}, {npc:6244} campe à l'est de la route, au nord-est du {area:378} ; arrivez par l'est et évitez les gardes de la Horde.",
@@ -267,6 +262,7 @@ return {
 	-- ["{area:492}: kill these as you meet them"] = "{area:492} : tuez-les au passage",
 	-- ["{area:93}: kill these as you meet them"] = "{area:93} : tuez-les au passage",
 	-- ["{item:2661}: the {object:331}"] = "{item:2661} : le {object:331}",
+	-- ["{npc:1217}, inside"] = "{npc:1217}, à l'intérieur",
 	-- ["{npc:1217}, upstairs in the inn"] = "{npc:1217}, à l'étage de l'auberge",
 	-- ["{npc:2104}, by the keep"] = "{npc:2104}, près du donjon",
 	-- ["{npc:2104}, in {area:2103}"] = "{npc:2104}, dans {area:2103}",

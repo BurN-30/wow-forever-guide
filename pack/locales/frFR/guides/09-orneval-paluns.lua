@@ -46,6 +46,11 @@ return {
 	-- {npc:11218} Kerlonian Evershade · {object:19863} Maestra's Post · {zone:1440} Ashenvale
 	["Escort {npc:11218} to {object:19863} in {zone:1440}."] = "Escortez {npc:11218} jusqu'au {object:19863} en {zone:1440}.",
 
+	-- Step 13: Ashenvale
+	["Contested zone: Horde players quest here too, from Zoram'gar Outpost (west coast) and Splintertree Post (east). Their quests use the same spots as this guide: the Zoram Strand nagas, the Thistlefur camp north of Astranaar, the Foulweald, Mystral Lake. Stay grouped there."] = "Zone contestée : des joueurs de la Horde y font aussi leurs quêtes, depuis l'avant-poste de Zoram'gar (côte ouest) et le poste de Bois-brisé (à l'est). Leurs quêtes passent par les mêmes endroits que ce guide : les nagas de la grève de Zoram, le camp Crin-de-Chardon au nord d'Astranaar, les Vile-sylve, le lac Mystral. Y rester groupés.",
+	-- {zone:1437} Wetlands
+	["A spot taken by the Horde? Skip the step (Skip button) and come back later. On the Normal ruleset, only players flagged for PvP can be attacked (PvP icon on the portrait). The {zone:1437}, later in this guide, have no Horde quests."] = "Un endroit occupé par la Horde ? Passer l'étape (bouton Passer) et y revenir plus tard. Avec les règles Normal, seuls les joueurs marqués JcJ peuvent être attaqués (icône JcJ sur le portrait). Plus loin dans ce guide, {zone:1437} : aucune quête de la Horde.",
+
 	-- Step 15: Bathran's Haunt: kill these as you meet them
 	["Bathran's Haunt: kill these as you meet them"] = "Repaire de Bathran : tuez-les au fur et à mesure",
 	-- {item:5366} Glowing Soul Gem
@@ -119,6 +124,10 @@ return {
 	-- Step 34: The Ruins of Stardust
 	["West of Mystral Lake, the stardust bushes grow among the ruins."] = "À l'ouest du Lac Mystral, les buissons couverts de poussière d'étoile poussent parmi les ruines.",
 
+	-- Step 36: Stonetalon Mountains
+	-- {object:19559} Sun Rock Retreat · {object:19555} Windshear Crag
+	["Contested zone too: {object:19559} (Horde) lies west of {object:19555}, and more Horde quest givers stand in the far south-east. Stay grouped."] = "Zone contestée elle aussi : {object:19559} (Horde) est à l'ouest de {object:19555}, et d'autres donneurs de quêtes de la Horde se tiennent tout au sud-est. Rester groupés.",
+
 	-- Step 37: Piznik
 	-- {npc:4276} Piznik
 	["{npc:4276} mines in the Windshear Mine at the east end of the crag. Talk to him and fend off the Venture Co. raiders while he mines.\nCareful: The kobolds arrive in waves. The first wave is melee fighters, and the second adds casters to the mix. Regular mobs in the mine respawn quickly and can join the fight while the waves are coming. A group is recommended."] = "{npc:4276} mine dans la mine des Cisailles, à l'extrémité est de la combe. Parlez-lui et repoussez les assaillants de la KapitalRisk pendant qu'il mine.\nAttention : Les kobolds arrivent par vagues. La première vague est composée de combattants au corps à corps, et la seconde ajoute des lanceurs de sorts. Les mobs normaux de la mine réapparaissent rapidement et peuvent se joindre au combat pendant l'arrivée des vagues. Un groupe est recommandé.",
@@ -165,8 +174,6 @@ return {
 	["{npc:1242}, on the pier north of the inn"] = "{npc:1242}, sur la jetée au nord de l'auberge",
 	-- {npc:1242} Karl Boran · {npc:2104} Captain Stoutfist
 	["{npc:1242}: for {npc:2104} in the keep"] = "{npc:1242} : pour {npc:2104}, dans le donjon",
-	-- {npc:1217} Glorin Steelbrow
-	["{npc:1217}, upstairs in the inn"] = "{npc:1217}, à l'étage de l'auberge",
 	-- {npc:1239} First Mate Fitzsimmons
 	["{npc:1239}, in the inn"] = "{npc:1239}, à l'auberge",
 	-- {npc:1480} Caitlin Grassman
@@ -412,6 +419,7 @@ return {
 	-- ["{area:442} flight master"] = "Maître de vol d'{area:442}",
 	-- ["{area:461}: kill these as you meet them"] = "{area:461} : tuez-les au passage",
 	-- ["{item:3349} on the way"] = "{item:3349} en chemin",
+	-- ["{npc:1217}, upstairs in the inn"] = "{npc:1217}, à l'étage de l'auberge",
 	-- ["{npc:2086}, by the keep"] = "{npc:2086}, près du donjon",
 	-- ["{npc:2092}'s quest in {zone:1455} needs level 28. If you are short of it after these hand-ins, grind the Dragonmaw orcs at the camps along the road east to {area:836} before you go on."] = "La quête de {npc:2092} à {zone:1455} demande le niveau 28. S'il vous manque après ces rendus, tuez des orcs Dragonmaw dans les camps le long de la route vers l'est jusqu'à {area:836} avant de continuer.",
 	-- ["{npc:2104} stands in {area:2103}, a short walk from {npc:1242}."] = "{npc:2104} se tient dans le {area:2103}, à quelques pas de {npc:1242}.",

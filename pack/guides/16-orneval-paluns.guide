@@ -16,6 +16,7 @@ next groupe-alliance/17-strangleronce
 
 step Astranaar
   note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
+  note Contested zone: the camps in the east (Xavian, the Forsaken camp south of Forest Song) lie around Splintertree Post (Horde) and the road the Horde takes from the Barrens. Stay grouped there.
   sethome "Astranaar"
   accept 1035                         -- Pelturas Whitemoon, inside
 

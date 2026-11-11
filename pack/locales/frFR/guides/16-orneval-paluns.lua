@@ -13,6 +13,8 @@ return {
 	-- Step 1: Astranaar
 	["Astranaar"] = "Astranaar",
 	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
+	-- {zone:1413} Barrens
+	["Contested zone: the camps in the east (Xavian, the Forsaken camp south of Forest Song) lie around Splintertree Post (Horde) and the road the Horde takes from the {zone:1413}. Stay grouped there."] = "Zone contestée : les camps de l'est (Xavian, le camp des Réprouvés au sud de Chant des forêts) entourent le poste de Bois-brisé (Horde) et la route que prend la Horde depuis {zone:1413}. Y rester groupés.",
 	-- {npc:3894} Pelturas Whitemoon
 	["{npc:3894}, inside"] = "{npc:3894}, à l'intérieur",
 
