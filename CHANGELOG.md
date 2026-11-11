@@ -2,6 +2,18 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.9.9 (en préparation)
+
+### Français
+- Orneval (Groupe 8) : c'est une zone contestée. Deux notes à l'arrivée : les postes de la Horde (Zoram'gar sur la côte ouest, Bois-brisé à l'est) et les endroits où les quêtes de la Horde du même niveau croisent celles du guide (nagas de la grève de Zoram, camp Crin-de-Chardon, Vile-sylve, lac Mystral). Endroit occupé : passer l'étape (bouton Passer) et y revenir plus tard. Les Paluns, plus loin dans le guide, n'ont aucune quête de la Horde.
+- Même rappel à l'entrée des Serres-Rocheuses (Retraite de Roche-Soleil, Horde) et au début du Groupe 14 (camps de l'est autour du poste de Bois-brisé).
+- Diminution de la menace (Dal Griffesang) : astuce tirée d'une observation en jeu, pas encore vérifiée. Il lui arrive de quitter son camp et de se retrouver seul : attendre à couvert et l'attaquer à ce moment, sans tuer ses gardes un par un.
+
+### English
+- Ashenvale (Group 8): it is a contested zone. Two notes on arrival: the Horde's posts (Zoram'gar on the west coast, Splintertree in the east) and the spots where same-level Horde quests meet the guide's (Zoram Strand nagas, Thistlefur camp, Foulweald, Mystral Lake). Spot taken: skip the step (Skip button) and come back later. The Wetlands, later in the guide, have no Horde quests.
+- Same reminder when entering Stonetalon (Sun Rock Retreat, Horde) and at the start of Group 14 (the eastern camps around Splintertree Post).
+- Culling the Threat (Dal Bloodclaw): a tip from one player's sighting in game, not confirmed yet. He sometimes leaves his camp and ends up alone: wait out of sight and pull him then, instead of clearing his guards one at a time.
+
 ## v0.9.8 (2026-11-11)
 
 ### Français
