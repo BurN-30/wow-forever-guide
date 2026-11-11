@@ -4,7 +4,8 @@ Leveling guides for World of Warcraft: Forever.
 Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide): the GroupeAlliance folder (Wowhead links,
 quest tips, calm defaults, quest automation exceptions) is loaded by Polestar.toc,
 UI/GuideFrame.lua has gear, "?" help and "_" reduce buttons and a line menu entry,
-and Core/Automation.lua asks the module before it accepts or turns in a quest.
+Core/Automation.lua asks the module before it accepts or turns in a quest,
+and Quests/PartyChat.lua says only an objective's plain words in party chat.
 Everything else is Polestar 0.3.4 as released.
 
 Install

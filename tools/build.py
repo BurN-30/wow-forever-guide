@@ -13,7 +13,8 @@
    folder, so there is no extra addon to tick: its files are added to Polestar.toc,
    UI/GuideFrame.lua gets the gear, "?" help and "_" reduce buttons at the tab strip's
    right end and the module's entry in a guide line's right-click menu, and
-   Core/Automation.lua asks the module before it accepts or turns in a quest
+   Core/Automation.lua asks the module before it accepts or turns in a quest, and
+   Quests/PartyChat.lua says only an objective's plain words in party chat (0.9.7)
    (POLESTAR_CHANGES below, each applied exactly once or the build stops). Polestar is GPL-3.0: the changed files say so.
 """
 import pathlib, shutil, subprocess, sys
@@ -67,12 +68,32 @@ POLESTAR_CHANGES = [
      "\tif ns.Compat.IsOnQuest(q) then return not held(q) and ns.Engine.WantsQuest(\"turnin\", q) end\n"),
     ("Core/Automation.lua", "\tif not wantsAccept(q) then return false end\n",
      "\tif not wantsAccept(q, ns.GA and ns.GA.AcceptSpan and ns.GA.AcceptSpan() or 0) then return false end\n"),
+    # 0.9.7: party chat refuses a line with an escape code it does not know ("Invalid
+    # escape code in chat message"): only the objective's plain words are said, and a
+    # line chat still refuses is dropped instead of raising an error.
+    ("Quests/PartyChat.lua", "\t\tsend(line.text, chatType())\n",
+     "\t\tpcall(send, line.text, chatType()) -- a line chat refuses is dropped, never an error\n"),
+    ("Quests/PartyChat.lua", "-- \"Plagued Hide 5/5\": ",
+     "-- " + NOTICE + ": chat refuses a line with an escape code\n"
+     "-- it does not know (\"Invalid escape code in chat message\"): an objective's text can\n"
+     "-- carry colours, textures or grammar codes, so only its plain words are said.\n"
+     "local function plain(text)\n"
+     "\tif type(text) ~= \"string\" then return \"\" end\n"
+     "\ttext = text:gsub(\"|c%x%x%x%x%x%x%x%x\", \"\"):gsub(\"|[rR]\", \"\")\n"
+     "\ttext = text:gsub(\"|T.-|t\", \"\"):gsub(\"|A.-|a\", \"\"):gsub(\"|H.-|h(.-)|h\", \"%1\")\n"
+     "\ttext = text:gsub(\"|%d+\", \"\"):gsub(\"|\", \"\")\n"
+     "\treturn (text:gsub(\"%s+\", \" \"):gsub(\"^ \", \"\"):gsub(\" $\", \"\"))\n"
+     "end\n\n"
+     "-- \"Plagued Hide 5/5\": "),
+    ("Quests/PartyChat.lua", "\tlocal label = ns.Compat.ObjectiveLabel(o.text)\n",
+     "\tlocal label = plain(ns.Compat.ObjectiveLabel(o.text))\n"),
     ("README.txt", "Leveling guides for World of Warcraft: Forever.\r\n",
      "Leveling guides for World of Warcraft: Forever.\r\n\r\n"
      + NOTICE + ": the GroupeAlliance folder (Wowhead links,\r\n"
      "quest tips, calm defaults, quest automation exceptions) is loaded by Polestar.toc,\r\n"
      "UI/GuideFrame.lua has gear, \"?\" help and \"_\" reduce buttons and a line menu entry,\r\n"
-     "and Core/Automation.lua asks the module before it accepts or turns in a quest.\r\n"
+     "Core/Automation.lua asks the module before it accepts or turns in a quest,\r\n"
+     "and Quests/PartyChat.lua says only an objective's plain words in party chat.\r\n"
      "Everything else is Polestar 0.3.4 as released.\r\n"),
 ]
 

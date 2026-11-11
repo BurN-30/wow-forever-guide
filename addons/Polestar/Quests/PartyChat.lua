@@ -108,9 +108,9 @@ local function say(text)
 	if not pumpPending then pump() end
 end
 
--- Chat refuses a line with an escape code it does not know ("Invalid escape
--- code in chat message"): an objective's text can carry colours, textures or
--- grammar codes, so only its plain words are said.
+-- Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide): chat refuses a line with an escape code
+-- it does not know ("Invalid escape code in chat message"): an objective's text can
+-- carry colours, textures or grammar codes, so only its plain words are said.
 local function plain(text)
 	if type(text) ~= "string" then return "" end
 	text = text:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|[rR]", "")
