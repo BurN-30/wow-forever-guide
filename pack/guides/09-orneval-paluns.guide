@@ -82,15 +82,19 @@ step Boat to Auberdine
   tip From Stormwind Harbor take the boat to Auberdine; Thundris Windweaver stands at the north end of the village. Then head south along the road through Darkshore.
   turnin 97926 optional                       -- Thundris Windweaver: Alexston's reply, if you took it in Stormwind
 
+# Groupe Alliance (0.9.9): on Forever the escort ends at Kerlonian's bag, at the southern edge of
+# Darkshore, and fails if he crosses into Ashenvale (Wowhead Forever quest text "on the road south
+# to his bag" and several Forever comments); the hand-in at Maestra's Post stays, within the
+# 25-minute timer.
 step Kerlonian Evershade
-  tip Kerlonian sleeps at the Grove of the Ancients in southern Darkshore. Use the Horn of Awakening to wake him and lead him south along the road into Ashenvale to Liladris Moonriver at Maestra's Post; blow the horn again whenever he falls asleep.
-  tip Careful: Scripted ambushes of three mobs each attack along the road: furbolgs on the Darkshore stretch and undead nearer Maestra's Post.
-  tip Timed quest: 25 minutes, hand-in to Liladris included. Wake him only when ready to walk straight to Maestra's Post.
+  tip Kerlonian sleeps at the Grove of the Ancients in southern Darkshore. Use the Horn of Awakening to wake him and lead him south along the road to his bag, by the three-way fork at the southern edge of Darkshore; blow the horn again whenever he falls asleep. Do not cross into Ashenvale with him: on Forever the escort fails there.
+  tip Careful: Two scripted ambushes of three mobs each attack along the road.
+  tip Timed quest: 25 minutes, hand-in to Liladris at Maestra's Post included. Wake him only when ready to go straight on.
   goto 44.4,76.4 "Grove of the Ancients"
   accept 5321                                 -- Kerlonian Evershade
   collect 13536 quest 5321.1                  -- Kerlonian's Chest, beside him
   goto 44.4,76.4 "Kerlonian Evershade"
-  note Escort Kerlonian to Maestra's Post in Ashenvale.
+  note Escort Kerlonian to his bag at the southern edge of Darkshore, then hand the quest in at Maestra's Post.
 
 step Ashenvale
   zone Ashenvale
