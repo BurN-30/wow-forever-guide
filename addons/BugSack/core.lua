@@ -300,10 +300,17 @@ do
 			hasEditBox = true,
 			OnAccept = function(self, data)
 				local recipient = self:GetEditBox():GetText()
+				-- Guide WoW Forever: remember who the bugs go to, so the name is typed once.
+				if type(BugSackDB) == "table" then BugSackDB.sendTo = recipient end
 				addon:SendBugsToUser(recipient, data)
 			end,
 			OnShow = function(self)
 				self:GetButton1():Disable()
+				local last = type(BugSackDB) == "table" and BugSackDB.sendTo
+				if type(last) == "string" and last ~= "" then
+					self:GetEditBox():SetText(last) -- EditBoxOnTextChanged enables the button
+					self:GetEditBox():HighlightText()
+				end
 			end,
 			EditBoxOnTextChanged = function(self)
 				local t = self:GetText()

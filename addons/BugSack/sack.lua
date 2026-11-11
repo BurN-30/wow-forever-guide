@@ -231,6 +231,8 @@ local function createBugSack()
 		window:SetPortraitTextureSizeAndOffset(38, -5, 0)
 		window:SetPortraitTextureRaw(133642)
 		window.CloseButton:UnregisterAllEvents() -- Remove events registered by the template
+		-- Forever: the template's own click does not hide this window, so close it ourselves.
+		window.CloseButton:SetScript("OnClick", function() addon:CloseSack() end)
 	end
 	window:SetScript("OnDragStart", window.StartMoving)
 	window:SetScript("OnDragStop", window.StopMovingOrSizing)

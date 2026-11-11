@@ -2,6 +2,16 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.9.8 (2026-11-11)
+
+### Français
+- BugSack : la croix de la fenêtre la ferme bien (avant : il fallait recliquer sur l'icône).
+- BugSack : « Envoyer les bugs » retient le nom du joueur à qui les envoyer. Taper une fois le nom du personnage (comme pour un message privé), il est proposé les fois suivantes. Le destinataire doit être connecté et avoir BugSack.
+
+### English
+- BugSack: the window's close button closes it (before: only the icon did).
+- BugSack: "Send bugs" remembers the player to send them to. Type the character name once (as for a whisper), it is offered the next times. The recipient must be online and have BugSack.
+
 ## v0.9.7 (2026-11-11)
 
 ### Français
