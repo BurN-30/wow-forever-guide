@@ -336,7 +336,7 @@ return {
 	["Felstone Field"] = "Champ de Felstone",
 	-- {npc:10778} Janice Felstone
 	-- plural, as words: Jabbering Ghouls = {npc:10801} Jabbering Ghoul
-	["{npc:10778}'s ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves."] = "Le fantôme de {npc:10778} erre près de la ferme du Champ de Felstone, à l'ouest d'Andorhal. Les goules jacassantes du champ portent l'autre moitié du porte-bonheur : assemblez les deux moitiés.",
+	["{npc:10778}'s ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves.\nThe game does not count the half-charm, so the ghoul's tooltip shows nothing; it drops only while you carry the quest. With both halves in the bags, right-click one of them to put the charm back together."] = "Le fantôme de {npc:10778} erre près de la ferme du Champ de Felstone, à l'ouest d'Andorhal. Les goules jacassantes du champ portent l'autre moitié du porte-bonheur : assemblez les deux moitiés.\nLe jeu ne compte pas le demi-charme : l'infobulle de la goule n'affiche rien, et elle ne le laisse tomber que si la quête est dans le journal. Avec les deux moitiés dans les sacs, clic droit sur l'une d'elles pour reconstituer le porte-bonheur.",
 	["Upstairs"] = "À l'étage",
 
 	-- Step 80: Northridge Lumber Camp
@@ -369,4 +369,7 @@ return {
 
 	-- Step 89: Chillwind Camp
 	["Ride back south-west to Chillwind Camp."] = "Retournez au sud-ouest jusqu'au Camp du Noroît.",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["{npc:10778}'s ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves."] = "Le fantôme de {npc:10778} erre près de la ferme du Champ de Felstone, à l'ouest d'Andorhal. Les goules jacassantes du champ portent l'autre moitié du porte-bonheur : assemblez les deux moitiés.",
 }

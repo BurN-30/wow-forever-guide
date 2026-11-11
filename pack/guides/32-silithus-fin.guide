@@ -480,6 +480,7 @@ step Andorhal
 step Felstone Field
   tip Janice's ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves.
   turnin 5050                         -- Upstairs
+  tip The game does not count the half-charm, so the ghoul's tooltip shows nothing; it drops only while you carry the quest. With both halves in the bags, right-click one of them to put the charm back together.
   kill 10801 optional                 -- Jabbering Ghoul
   accept 5051
   complete 5051

@@ -68,9 +68,9 @@ return {
 	-- Step 12: Scourge Champions
 	-- plural, as words: Scourge Champions = {npc:8529} Scourge Champion
 	["Scourge Champions"] = "Champions du Fléau",
-	-- {npc:11063} Carlin Redpath · {item:13156} Mystic Crystal
-	-- plural, as words: Scourge Champions = {npc:8529} Scourge Champion
-	["Scourge Champions (59) roam the Noxious Glade, north of Light's Hope Chapel. Pass {npc:11063}'s {item:13156} over each one you kill: the skulls that resonate are the ones he wants. Pull them one at a time."] = "Des champions du Fléau (59) errent dans la Clairière nocive, au nord de la chapelle de l'Espoir de Lumière. Passez le {item:13156} de {npc:11063} au-dessus de chacun de ceux que vous tuez : les crânes qui résonnent sont ceux qu'il veut. Attirez-les un par un.",
+	-- {npc:11063} Carlin Redpath · {item:13156} Mystic Crystal · {item:13155} Resonating Skull · {item:13159} Bone Dust
+	-- plural, as words: Scourge Champions = {npc:8529} Scourge Champion · Fetid Skulls = {item:13157} Fetid Skull · Resonating Skulls = {item:13155} Resonating Skull
+	["Scourge Champions (59) roam the Noxious Glade, north of Light's Hope Chapel. Pass {npc:11063}'s {item:13156} over each one you kill: the skulls that resonate are the ones he wants. Pull them one at a time.\nThe Champions drop Fetid Skulls, which the game does not count: their tooltip shows nothing. Right-click the {item:13156} in the bags with a skull there: the skull becomes a {item:13155} or crumbles to {item:13159}. The skull line of this step counts the Resonating Skulls."] = "Des champions du Fléau (59) errent dans la Clairière nocive, au nord de la chapelle de l'Espoir de Lumière. Passez le {item:13156} de {npc:11063} au-dessus de chacun de ceux que vous tuez : les crânes qui résonnent sont ceux qu'il veut. Attirez-les un par un.\nLes champions laissent des Crânes fétides, que le jeu ne compte pas : leur infobulle n'affiche rien. Clic droit sur {item:13156} dans les sacs, avec un crâne fétide dedans : le crâne devient {item:13155} ou tombe en {item:13159}. La ligne des crânes de cette étape compte les crânes résonants.",
 	-- {item:13155} Resonating Skull
 	-- plural, as words: Scourge Champions = {npc:8529} Scourge Champion
 	["{item:13155}, from the Scourge Champions"] = "{item:13155}, sur les Champions du Fléau",
@@ -87,4 +87,7 @@ return {
 	["Ride south-west to the Undercroft. The mound of dirt lies inside. {npc:11886} is elite: grouping up is advised.\nCareful: About four non-elite adds come with Mercutio. They walk to the grave instead of appearing on the spot."] = "Partez au sud-ouest jusqu'au caveau de Zaeldarr. Le tas de terre se trouve à l'intérieur. {npc:11886} est un élite : il est conseillé de vous grouper.\nAttention : environ quatre renforts non élites accompagnent Mercutio. Ils marchent jusqu'à la tombe au lieu d'apparaître sur place.",
 	-- {item:14613} Taelan's Hammer · {npc:11886} Mercutio Filthgorger
 	["{item:14613}, from {npc:11886}"] = "{item:14613}, sur {npc:11886}",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Scourge Champions (59) roam the Noxious Glade, north of Light's Hope Chapel. Pass {npc:11063}'s {item:13156} over each one you kill: the skulls that resonate are the ones he wants. Pull them one at a time."] = "Des champions du Fléau (59) errent dans la Clairière nocive, au nord de la chapelle de l'Espoir de Lumière. Passez le {item:13156} de {npc:11063} au-dessus de chacun de ceux que vous tuez : les crânes qui résonnent sont ceux qu'il veut. Attirez-les un par un.",
 }
