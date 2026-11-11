@@ -92,7 +92,7 @@ local function pump()
 	end
 	if not wait then
 		local line = table.remove(queue, 1)
-		send(line.text, chatType())
+		pcall(send, line.text, chatType()) -- a line chat refuses is dropped, never an error
 		lastSentAt = now
 		tellOnce()
 		if not queue[1] then return end
@@ -108,10 +108,21 @@ local function say(text)
 	if not pumpPending then pump() end
 end
 
+-- Chat refuses a line with an escape code it does not know ("Invalid escape
+-- code in chat message"): an objective's text can carry colours, textures or
+-- grammar codes, so only its plain words are said.
+local function plain(text)
+	if type(text) ~= "string" then return "" end
+	text = text:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|[rR]", "")
+	text = text:gsub("|T.-|t", ""):gsub("|A.-|a", ""):gsub("|H.-|h(.-)|h", "%1")
+	text = text:gsub("|%d+", ""):gsub("|", "")
+	return (text:gsub("%s+", " "):gsub("^ ", ""):gsub(" $", ""))
+end
+
 -- "Plagued Hide 5/5": the objective's name as the log words it, and its counts.
 local function objectiveText(o)
 	if ns.Compat.IsSecret(o.text) then return nil end
-	local label = ns.Compat.ObjectiveLabel(o.text)
+	local label = plain(ns.Compat.ObjectiveLabel(o.text))
 	local counts = o.numFulfilled .. "/" .. o.numRequired
 	if label == "" then return counts end
 	return label .. " " .. counts

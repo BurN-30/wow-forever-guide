@@ -2,6 +2,14 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.9.7 (2026-11-11)
+
+### Français
+- Polestar : plus d'erreur « Invalid escape code in chat message » en groupe. L'annonce d'un objectif terminé dans le chat du groupe ne reprend plus que les mots de l'objectif (sans les codes de couleur, d'icône ou d'accord du jeu), et une ligne que le chat refuse est abandonnée sans erreur.
+
+### English
+- Polestar: no more "Invalid escape code in chat message" error in a party. The party chat line for a finished objective now carries only the objective's plain words (no colour, icon or grammar codes), and a line chat refuses is dropped without an error.
+
 ## v0.9.6 (2026-11-10)
 
 ### Français
