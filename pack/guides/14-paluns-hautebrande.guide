@@ -22,10 +22,12 @@ step To Deepwater Tavern
 step Menethil Harbor
   accept 98230                        -- Captain Stoutfist: for Howin Kindfeather; on the top floor
 
+# Groupe Alliance (0.9.9): Razormaw Needling (98245) follows Crimson Crate Delivery (98240), which
+# follows Crocs of the Sky (98072, handed in below): optional until the chain is reordered.
 step Howin Kindfeather
   turnin 98240
   turnin 98230                        -- Howin Kindfeather
-  accept 98245
+  accept 98245 optional                   -- Only after Crimson Crate Delivery: not offered? Carry on
   accept 98300 optional               -- For King Magni in Ironforge, at the end of this guide
 
 step Angerfang Encampment
@@ -55,6 +57,7 @@ step Dragonmaw Gates: kill these as you meet them
   tip North-east to the Dragonmaw Gates: Ados stands at the gates (use the Goaz Stone).
   collect 280395 quest 98310.1        -- Heart of Ados
   collect 280103 quest 98245.1        -- Razormaw Incisor
+  collect 280331 quest 98283.1 optional   -- Malignant Rotclaw Flesh, from the Maddened Rotclaws: leave it in Carnage's cave (69.5,34.7) to call it
   collect 280330 quest 98283.2 optional -- Carnage's Head
   collect 279385 quest 98072.1        -- Pristine Crimson Scale
   collect 280398 quest 98310.4        -- Heart of Neru
@@ -97,8 +100,10 @@ step Thandol Span
 step The Green Belt
   turnin 98245                        -- Howin Kindfeather
 
+# Groupe Alliance (0.9.9): For Further Study (98313) follows Gleaning Our Future (98310).
 step Prospector Whelgar
   turnin 98310                        -- Below ground
+  accept 98313                            -- For Historian Karnik in Ironforge, at the end of this guide
 
 step Menethil Harbor
   tip West along the road to Menethil.

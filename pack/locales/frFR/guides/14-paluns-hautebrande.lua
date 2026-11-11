@@ -20,6 +20,8 @@ return {
 	["{npc:2104}: for {npc:270637}; on the top floor"] = "{npc:2104} : pour {npc:270637} ; au dernier étage",
 
 	-- Step 3: Howin Kindfeather
+	-- {quest:98240} Crimson Crate Delivery
+	["Only after {quest:98240}: not offered? Carry on"] = "Seulement après {quest:98240} : pas proposée ? Continuer",
 	-- {zone:1455} Ironforge
 	["For King Magni in {zone:1455}, at the end of this guide"] = "Pour le roi Magni à {zone:1455}, à la fin de ce guide",
 
@@ -46,6 +48,9 @@ return {
 	["Dragonmaw Gates: kill these as you meet them"] = "Portes des Dragonmaw : tuez-les au fur et à mesure",
 	-- {npc:271338} Ados · {item:279996} Goaz Stone
 	["North-east to the Dragonmaw Gates: {npc:271338} stands at the gates (use the {item:279996})."] = "Au nord-est vers les Portes des Dragonmaw : {npc:271338} se trouve aux portes (utiliser le {item:279996}).",
+	-- {item:280331} Malignant Rotclaw Flesh · {quest:98283} Carnage
+	-- plural, as words: Maddened Rotclaws = {npc:271334} Maddened Rotclaw
+	["{item:280331}, from the Maddened Rotclaws: leave it in {quest:98283}'s cave (69.5,34.7) to call it"] = "{item:280331}, sur les griffes pourries affolées : la déposer dans la grotte de {quest:98283} (69,5 ; 34,7) pour l'attirer",
 
 	-- Step 10: The Green Belt
 	["The Green Belt"] = "La Ceinture Verte",
@@ -74,6 +79,8 @@ return {
 
 	-- Step 18: Prospector Whelgar
 	["Below ground"] = "Sous terre",
+	-- {npc:2916} Historian Karnik · {zone:1455} Ironforge
+	["For {npc:2916} in {zone:1455}, at the end of this guide"] = "Pour {npc:2916} à {zone:1455}, à la fin de ce guide",
 
 	-- Step 19: Menethil Harbor
 	["West along the road to Menethil."] = "À l'ouest par la route jusqu'au Port de Menethil.",

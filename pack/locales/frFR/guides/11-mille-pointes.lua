@@ -148,27 +148,37 @@ return {
 
 	-- Step 29: Whelgar's Excavation Site: kill these as you meet them
 	["Whelgar's Excavation Site: kill these as you meet them"] = "Excavations de Whelgar : tuez-les au fur et à mesure",
-	-- {item:279996} Goaz Stone · {npc:1353} Sarltooth
-	-- plural, as words: Goaz Warders = {npc:270892} Goaz Warder
-	["The Goaz Warders stand just west of Whelgar's camp: use the {item:279996} he gave you beside one.\nThe relics lie in the dig itself. {npc:1353}, a big Razormaw, prowls the raptor valley just west of it.\nThe Dragonmaw orcs camp east of the excavation site. Raiders and Swamprunners carry the war banners."] = "Les Goaz Warders se tiennent juste à l'ouest du camp de Whelgar : utilisez à côté de l'un d'eux le {item:279996} qu'il vous a donné.\nLes reliques se trouvent dans les fouilles elles-mêmes. {npc:1353}, un gros tranchegueule, rôde dans la vallée des raptors juste à l'ouest.\nLes orcs Dragonmaw campent à l'est du site de fouilles. Les écumeurs et les arpenteurs portent les bannières de guerre.",
+	-- {npc:1353} Sarltooth
+	["The relics lie in the dig itself. {npc:1353}, a big Razormaw, prowls the raptor valley just west of it.\nThe Dragonmaw orcs camp east of the excavation site. Raiders and Swamprunners carry the war banners."] = "Les reliques se trouvent dans les fouilles elles-mêmes. {npc:1353}, un gros tranchegueule, rôde dans la vallée des raptors juste à l'ouest.\nLes orcs Dragonmaw campent à l'est du site de fouilles. Les écumeurs et les arpenteurs portent les bannières de guerre.",
 
 	-- Step 30: Ormer Ironbraid and Whelgar
 	-- {npc:1078} Ormer Ironbraid
 	["{npc:1078} and Whelgar"] = "{npc:1078} et Whelgar",
+	-- {npc:1077} Prospector Whelgar
+	["{npc:1077}, below ground"] = "{npc:1077}, sous terre",
 
-	-- Step 31: Glorin Steelbrow
+	-- Step 31: Goaz Warder
+	-- {item:279996} Goaz Stone
+	-- plural, as words: Goaz Warders = {npc:270892} Goaz Warder
+	["The Goaz Warders stand just west of Whelgar's camp: use the {item:279996} he gave you beside one."] = "Les Goaz Warders se tiennent juste à l'ouest du camp de Whelgar : utiliser à côté de l'un d'eux {item:279996} qu'il a remise.",
+
+	-- Step 32: Prospector Whelgar
+	-- {item:279996} Goaz Stone · {zone:1437} Wetlands
+	["A new {item:279996}, for the four titan watchers around the {zone:1437}, in Group 12; below ground"] = "Une nouvelle {item:279996}, pour les quatre gardiens titans des {zone:1437}, au Groupe 12 ; sous terre",
+
+	-- Step 33: Glorin Steelbrow
 	-- {npc:1284} Archbishop Benedictus · {zone:1453} Stormwind
 	["For {npc:1284} in {zone:1453}, in the next guide"] = "Pour {npc:1284} à {zone:1453}, dans le guide suivant",
 	["On the top floor"] = "Au dernier étage",
 	-- {quest:98221} From the Ashes · {quest:465} Nek'rosh's Gambit
 	["{quest:98221}: {quest:465} comes after it on Forever"] = "{quest:98221} : sur Forever, {quest:465} vient après",
 
-	-- Step 32: Angerfang Encampment
+	-- Step 34: Angerfang Encampment
 	["Angerfang Encampment"] = "Campement de Hargnecroc",
 	-- {npc:2091} Chieftain Nek'rosh
 	["Head east again to the Dragonmaw camp. The four sets of Attack Plans lie in the Angerfang Encampment; {npc:2091}, an elite, stands in the camp too."] = "Reprenez la direction de l'est vers le camp Dragonmaw. Les quatre plans d'attaque se trouvent au campement de Hargnecroc ; {npc:2091}, un élite, s'y tient également.",
 
-	-- Step 33: To Theramore
+	-- Step 35: To Theramore
 	["To Theramore"] = "Vers Theramore",
 	-- {npc:2104} Captain Stoutfist
 	["{npc:2104}, in Menethil Keep; on the top floor"] = "{npc:2104}, au Donjon de Menethil ; au dernier étage",
@@ -177,11 +187,11 @@ return {
 	-- {object:21056} Theramore Isle · {zone:1445} Dustwallow Marsh
 	["Take the boat from Menethil's pier to {object:21056} in {zone:1445}."] = "Prenez le bateau depuis le quai de Menethil jusqu'à {object:21056} en {zone:1445}.",
 
-	-- Step 35: Into The Barrens
+	-- Step 37: Into The Barrens
 	-- {zone:1413} The Barrens
 	["Into {zone:1413}"] = "Dans les {zone:1413}",
 
-	-- Step 36: Takar the Seer
+	-- Step 38: Takar the Seer
 	-- {zone:1413} The Barrens · {npc:6244} Takar the Seer
 	["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "Sur la route vers le sud à travers {zone:1413}, {npc:6244} campe à l'est de la route, au nord-est du Camp Taurajo ; arrivez par l'est et évitez les gardes de la Horde.",
 	-- {quest:1738} Heartswood · {zone:1440} Ashenvale · {zone:1443} Desolace
@@ -189,19 +199,19 @@ return {
 	-- {quest:65602} What Is Love? · {item:190309} Wooden Figurine · {quest:1738} Heartswood
 	["{quest:65602}: the incubus, beside the succubus; the {item:190309} is near the {quest:1738}"] = "{quest:65602} : l'incube, à côté de la succube ; la {item:190309} est près de {quest:1738}",
 
-	-- Step 39: Mirage Raceway
+	-- Step 41: Mirage Raceway
 	["Mirage Raceway"] = "Piste des mirages",
 	["Follow the canyons east to the salt flats. The goblins and gnomes of the Mirage Raceway are neutral and give quests to both factions."] = "Suivez les canyons vers l'est jusqu'aux plaines de sel. Les gobelins et gnomes de la Piste des mirages sont neutres et donnent des quêtes aux deux factions.",
 	-- {quest:5762} Hemet Nesingwary
 	["For {quest:5762} in Stranglethorn, later"] = "Pour {quest:5762} à Strangleronce, plus tard",
 
-	-- Step 40: Mirage Raceway: kill these as you meet them
+	-- Step 42: Mirage Raceway: kill these as you meet them
 	["Mirage Raceway: kill these as you meet them"] = "Piste des mirages : tuez-les au fur et à mesure",
 	-- {object:19868} Rocket Car Rubble
 	-- plural, as words: Scorpid Reavers = {npc:4140} Scorpid Reaver · Saltstone Basilisks = {npc:4147} Saltstone Basilisk
 	["{object:19868} lies all over the flats. Scorpid Reavers roam the north half; keep to it, away from the Saltstone Basilisks, Crystalhides and Gazers (32-35) of the middle and the far south."] = "{object:19868} jonchent les Salines. Les Scorpides ravageurs parcourent la moitié nord : restez-y, loin des Basilics du sel gemme, Peaux de cristal et Contemplateurs (32-35) du centre et de l'extrême sud.",
 
-	-- Step 41: Mirage Raceway
+	-- Step 43: Mirage Raceway
 	-- {npc:4454} Fizzle Brassbolts · {zone:1418} Badlands
 	["{npc:4454}: for Martek in the {zone:1418}, at 39; not offered? Go on"] = "{npc:4454} : pour Martek dans {zone:1418}, à 39 ; non proposé ? Continuer",
 
@@ -244,6 +254,7 @@ return {
 	-- ["The Defias camp lies in the south-west of {area:10}, south of {area:94} near the {zone:1436} border. The strongbox stands among the tents."] = "Le camp des Défias se trouve dans le sud-ouest du {area:10}, au sud de {area:94}, près de la frontière avec {zone:1436}. Le coffre se trouve parmi les tentes.",
 	-- ["The Defias camp lies in the south-west of {zone:1431}, south of {area:94} near the {zone:1436} border. The strongbox stands among the tents."] = "Le camp défias se trouve dans le sud-ouest de {zone:1431}, au sud de {area:94}, près de la frontière de {zone:1436}. Le coffre se trouve parmi les tentes.",
 	-- ["The Dragonmaw orcs camp east of the excavation site. Raiders and Swamprunners carry the war banners."] = "Les orcs Dragonmaw campent à l'est des Excavations de Whelgar. Les Écumeurs et les Arpenteurs portent les bannières de guerre.",
+	-- ["The Goaz Warders stand just west of Whelgar's camp: use the {item:279996} he gave you beside one.\nThe relics lie in the dig itself. {npc:1353}, a big Razormaw, prowls the raptor valley just west of it.\nThe Dragonmaw orcs camp east of the excavation site. Raiders and Swamprunners carry the war banners."] = "Les Goaz Warders se tiennent juste à l'ouest du camp de Whelgar : utilisez à côté de l'un d'eux le {item:279996} qu'il vous a donné.\nLes reliques se trouvent dans les fouilles elles-mêmes. {npc:1353}, un gros tranchegueule, rôde dans la vallée des raptors juste à l'ouest.\nLes orcs Dragonmaw campent à l'est du site de fouilles. Les écumeurs et les arpenteurs portent les bannières de guerre.",
 	-- ["The Plague Spreaders walk the northern half of the {area:492}. {npc:522}, an elite, wanders the graves: keep away from him."] = "Les Répandeurs de peste errent dans la moitié nord de {area:492}. {npc:522}, un élite, rôde parmi les tombes : tenez-vous à l'écart.",
 	-- ["The Plague Spreaders walk the northern half of the {area:492}. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "Les Répandeurs de peste errent dans la moitié nord du {area:492}. {npc:522}, un élite, rôde parmi les tombes : tenez-vous à l'écart.\nDes Écumeurs squelettes, des Soigneurs squelettes et des Gardiens squelettes tiennent la partie ouest du cimetière, juste à l'est du camp de {npc:311}.\nAttention : les squelettes des catacombes sont serrés les uns contre les autres : vous pouvez facilement attirer des monstres en plus.",
 	-- ["The dig and {npc:1353}"] = "Les fouilles et {npc:1353}",

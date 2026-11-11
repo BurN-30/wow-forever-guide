@@ -1,5 +1,6 @@
 # Adapted from Polestar's guide forever/alliance/07-thousand-needles (GPL-3.0, github.com/fitzforge/polestar, revision 08536e3, with the fixes of the same guide up to tag v0.3.4).
-# Changes: guide id, title, next guide, group notes. Quest steps kept as Polestar wrote them.
+# Changes: guide id, title, next guide, group notes. Quest steps kept as Polestar wrote them,
+# except where a comment marked "Groupe Alliance" says otherwise.
 guide groupe-alliance/11-mille-pointes
 title Group 9 · Thousand Needles, Duskwood & Wetlands
 folder Group Alliance
@@ -197,18 +198,27 @@ step On the way
 
 step Whelgar's Excavation Site: kill these as you meet them
   zone Wetlands
-  tip The Goaz Warders stand just west of Whelgar's camp: use the Goaz Stone he gave you beside one.
   tip The relics lie in the dig itself. Sarltooth, a big Razormaw, prowls the raptor valley just west of it.
   tip The Dragonmaw orcs camp east of the excavation site. Raiders and Swamprunners carry the war banners.
-  collect 279993 quest 98216.1        -- Titanic Keystone
   collect 3337 quest 464                  -- Dragonmaw War Banner
   collect 3638 quest 296                  -- Sarltooth's Talon
 
+# Groupe Alliance (0.9.9): Understanding Our Present (98216) is offered only once Uncovering the
+# Past (299) is handed in, and Gleaning Our Future (98310) only after 98216 (Wowhead Forever
+# series, MetaForge chain); they were taken in Group 8.
 step Ormer and Whelgar
   label q299
   turnin 296                              -- Ormer Ironbraid
-  turnin 98216                        -- Below ground
   turnin 299                              -- Prospector Whelgar
+  accept 98216                            -- Prospector Whelgar, below ground
+
+step Goaz Warder
+  tip The Goaz Warders stand just west of Whelgar's camp: use the Goaz Stone he gave you beside one.
+  collect 279993 quest 98216.1            -- Titanic Keystone
+
+step Prospector Whelgar
+  turnin 98216                            -- Below ground
+  accept 98310                            -- A new Goaz Stone, for the four titan watchers around the Wetlands, in Group 12; below ground
 
 step Glorin Steelbrow
   turnin 292                          -- Inside

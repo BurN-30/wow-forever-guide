@@ -195,6 +195,7 @@ return {
 	-- Step 49: James Halloran
 	-- {npc:2094} James Halloran
 	["{npc:2094} stands by the north gate."] = "{npc:2094} se tient près de la porte nord.",
+	["Only after Crocs of the Sky, a later quest of his: not offered? Carry on"] = "Seulement après Crocs of the Sky, une de ses quêtes suivantes : pas proposée ? Continuer",
 
 	-- Step 50: Bluegill Marsh
 	["Bluegill Marsh"] = "Marais des Branchies-bleues",
@@ -217,10 +218,6 @@ return {
 	["The excavation site sits on the hill south of the road."] = "Le site de fouilles se trouve sur la colline au sud de la route.",
 	-- {npc:1076} Merrin Rockweaver
 	["{npc:1076}, below ground"] = "{npc:1076}, sous terre",
-	-- {item:279996} Goaz Stone · {zone:1437} Wetlands
-	["A new {item:279996}, for the four titan watchers around the {zone:1437}; below ground"] = "Une nouvelle {item:279996}, pour les quatre gardiens titans autour des {zone:1437} ; sous terre",
-	-- {npc:2916} Historian Karnik · {zone:1455} Ironforge
-	["For {npc:2916} in {zone:1455}, at the end of this guide"] = "Pour {npc:2916} à {zone:1455}, à la fin de ce guide",
 
 	-- Step 55: The raptor hills
 	["The raptor hills"] = "Les collines des raptors",
@@ -236,8 +233,6 @@ return {
 	["The Green Belt"] = "La Ceinture Verte",
 	-- {npc:2093} Einar Stonegrip · {npc:1244} Rethiel the Greenwarden
 	["{npc:2093} camps by the road; {npc:1244} stands farther east, by the river."] = "{npc:2093} campe au bord de la route ; {npc:1244} se tient plus à l'est, près de la rivière.",
-	-- {npc:1244} Rethiel the Greenwarden · {quest:98283} Carnage
-	["{npc:1244}: {quest:98283}, an elite raptor"] = "{npc:1244} : {quest:98283}, un raptor élite",
 
 	-- Step 60: Thelgen Rock
 	["Thelgen Rock"] = "Rocher de Thelgen",
@@ -258,9 +253,12 @@ return {
 
 	-- Step 65: The Green Belt: kill these as you meet them
 	["The Green Belt: kill these as you meet them"] = "La Ceinture verte : tuez-les au fur et à mesure",
-	-- {item:279996} Goaz Stone · {quest:98283} Carnage
-	-- plural, as words: Maddened Rotclaws = {npc:271334} Maddened Rotclaw · Fen Creepers = {npc:1040} Fen Creeper
-	["Red whelps fill the hills west of the gates, Maddened Rotclaws the Green Belt, Razormaws the northern slopes; Neru stands in the north-east (use the {item:279996}).\n{quest:98283} is elite: grouping up is advised.\nFen Creepers hide in the marsh pools north-west of the Green Belt.\nCareful: When out of combat, Fen Creepers cast Sneak from time to time, so they are stealthed and hard to see."] = "Des dragonnets rouges infestent les collines à l'ouest des portes, des griffes pourries affolées la Ceinture verte, des tranchegueules les pentes nord ; Neru se tient au nord-est (utilisez le {item:279996}).\n{quest:98283} est élite : former un groupe est conseillé.\nDes rampants des tourbières se cachent dans les mares au nord-ouest de la Ceinture verte.\nAttention : Hors combat, les rampants des tourbières lancent Camouflage par moments, ils sont donc camouflés et difficiles à voir.",
+	-- plural, as words: Fen Creepers = {npc:1040} Fen Creeper
+	["Fen Creepers hide in the marsh pools north-west of the Green Belt.\nCareful: When out of combat, Fen Creepers cast Sneak from time to time, so they are stealthed and hard to see."] = "Des rampants des tourbières se cachent dans les mares au nord-ouest de la Ceinture verte.\nAttention : Hors combat, les rampants des tourbières lancent Camouflage par moments, ils sont donc camouflés et difficiles à voir.",
+
+	-- Step 66: Rethiel the Greenwarden
+	-- {npc:1244} Rethiel the Greenwarden · {quest:98283} Carnage
+	["{npc:1244}: {quest:98283}, an elite raptor, done in Group 12"] = "{npc:1244} : {quest:98283}, un raptor élite, à faire au Groupe 12",
 
 	-- Step 67: Karl Boran
 	-- {npc:1242} Karl Boran · {npc:2104} Captain Stoutfist
@@ -349,6 +347,7 @@ return {
 	["Next: fly to Darkshire."] = "Ensuite : volez vers Sombre-Comté.",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["A new {item:279996}, for the four titan watchers around the {zone:1437}; below ground"] = "Une nouvelle {item:279996}, pour les quatre gardiens titans autour des {zone:1437} ; sous terre",
 	-- ["Back to the Cathedral of Light: {npc:928} stands inside."] = "Retournez à la Cathédrale de la Lumière : {npc:928} se tient à l'intérieur.",
 	-- ["Black Oozes"] = "Limons noirs",
 	-- ["Black Oozes creep through the marsh north of the {area:1025} road, west of {npc:2093}'s camp. Any ooze may hold {npc:2111}'s bag."] = "Les Limons noirs rampent dans le marais au nord de la route de {area:1025}, à l'ouest du camp d'{npc:2093}. N'importe quel limon peut détenir le sac de {npc:2111}.",
@@ -370,6 +369,7 @@ return {
 	-- ["Follow the road north to {area:205}, at the foot of the {area:881}. {npc:1071} stands in the dwarves' camp."] = "Suivez la route vers le nord jusqu'à {area:205}, au pied du {area:881}. {npc:1071} se tient dans le camp des nains.",
 	-- ["Follow the road south-east to {area:415}, on the island in the lake."] = "Suivez la route vers le sud-est jusqu'à {area:415}, sur l'île au milieu du lac.",
 	-- ["For {npc:2228} in {area:271}: keep it"] = "Pour {npc:2228} à {area:271} : gardez-la",
+	-- ["For {npc:2916} in {zone:1455}, at the end of this guide"] = "Pour {npc:2916} à {zone:1455}, à la fin de ce guide",
 	-- ["From {area:17203} take the boat to {area:442}; {npc:3649} stands at the north end of the village. Then head south along the road through {zone:1439}."] = "Au {area:17203}, prenez le bateau pour {area:442} ; {npc:3649} se tient au nord du village. Suivez ensuite la route vers le sud à travers {zone:1439}.",
 	-- ["From {area:17203} take the boat to {area:442}; {npc:3649} stands at the north end of the village. Then ride south along the road through {zone:1439}."] = "À {area:17203}, prenez le bateau pour {area:442} ; {npc:3649} se tient à l'extrémité nord du village. Suivez ensuite la route vers le sud à travers {zone:1439}.",
 	-- ["Group: highest player at most 4 levels above the lowest. Above 27? Wait for the others."] = "Groupe : le plus haut au maximum 4 niveaux au-dessus du plus bas. Au-delà de 27 ? Attendre les autres.",
@@ -393,6 +393,7 @@ return {
 	-- ["Mottled Raptors and Screechers roam the hills west of the excavation site."] = "Les Raptors tachetés et les Hurleurs tachetés parcourent les collines à l'ouest des excavations.",
 	-- ["Next: fly to {area:42}."] = "Ensuite : volez jusqu'à {area:42}.",
 	-- ["North of Maestra's Post, plant bundles lie around the ruins of {area:411}. Dark Strand cultists hold the ruins just south of them: any of them can drop the {item:5366}."] = "Au nord du Poste de Maestra, des bottes de plantes jonchent les ruines du {area:411}. Des Sectateurs de la Rive noire occupent les ruines juste au sud : n'importe lequel peut laisser tomber {item:5366}.",
+	-- ["Red whelps fill the hills west of the gates, Maddened Rotclaws the Green Belt, Razormaws the northern slopes; Neru stands in the north-east (use the {item:279996}).\n{quest:98283} is elite: grouping up is advised.\nFen Creepers hide in the marsh pools north-west of the Green Belt.\nCareful: When out of combat, Fen Creepers cast Sneak from time to time, so they are stealthed and hard to see."] = "Des dragonnets rouges infestent les collines à l'ouest des portes, des griffes pourries affolées la Ceinture verte, des tranchegueules les pentes nord ; Neru se tient au nord-est (utilisez le {item:279996}).\n{quest:98283} est élite : former un groupe est conseillé.\nDes rampants des tourbières se cachent dans les mares au nord-ouest de la Ceinture verte.\nAttention : Hors combat, les rampants des tourbières lancent Camouflage par moments, ils sont donc camouflés et difficiles à voir.",
 	-- ["Red whelps fill the hills west of the gates, Maddened Rotclaws the {area:1025}, Razormaws the northern slopes; Neru stands in the north-east (use the {item:279996}).\n{quest:98283} is elite: grouping up is advised.\nFen Creepers hide in the marsh pools north-west of the {area:1025}.\nCareful: When out of combat, Fen Creepers cast Sneak from time to time, so they are stealthed and hard to see."] = "Des dragonnets rouges remplissent les collines à l'ouest des portes, des Griffes pourries affolées occupent {area:1025}, des Tranchegueules les pentes nord ; Neru se tient au nord-est (utilisez la {item:279996}).\n{quest:98283} est élite : il est conseillé de se grouper.\nDes Rampants des tourbières se cachent dans les mares du marais au nord-ouest de {area:1025}.\nAttention : hors combat, les Rampants des tourbières lancent Camouflage de temps en temps : ils sont furtifs et difficiles à voir.",
 	-- ["Ride east along the {zone:1437} road, south through {area:836} into {zone:1432} and west through the tunnel into {zone:1426} to {area:1537}."] = "Suivez vers l'est la route qui traverse {zone:1437}, puis vers le sud par {area:836} jusqu'au {zone:1432}, et vers l'ouest par le tunnel jusqu'à {zone:1426} et {area:1537}.",
 	-- ["Ride south past {area:421} into the {area:1276} tunnel; it comes out in Stonetalon's {area:461}. {npc:4080} and {npc:4077} camp on the {area:1076} south-west of the crag."] = "Allez vers le sud après le {area:421} et entrez dans le tunnel de {area:1276} ; il débouche sur la {area:461}, dans les Serres-Rocheuses. {npc:4080} et {npc:4077} campent sur le {area:1076}, au sud-ouest de la combe.",
@@ -430,6 +431,7 @@ return {
 	-- ["{npc:1217}, upstairs in the inn"] = "{npc:1217}, à l'étage de l'auberge",
 	-- ["{npc:1242}: for {npc:2104} in the keep"] = "{npc:1242} : pour {npc:2104}, dans le donjon",
 	-- ["{npc:1242}: for {npc:2104} in the keep. Offered after this hand-in, not before (seen in game); not offered? Carry on"] = "{npc:1242} : pour {npc:2104}, dans le donjon. Proposée après ce rendu, pas avant (constaté en jeu) ; pas proposée ? Continuer",
+	-- ["{npc:1244}: {quest:98283}, an elite raptor"] = "{npc:1244} : {quest:98283}, un raptor élite",
 	-- ["{npc:2086}, by the keep"] = "{npc:2086}, près du donjon",
 	-- ["{npc:2092}'s quest in {zone:1455} needs level 28. If you are short of it after these hand-ins, grind the Dragonmaw orcs at the camps along the road east to {area:836} before you go on."] = "La quête de {npc:2092} à {zone:1455} demande le niveau 28. S'il vous manque après ces rendus, tuez des orcs Dragonmaw dans les camps le long de la route vers l'est jusqu'à {area:836} avant de continuer.",
 	-- ["{npc:2104} stands in {area:2103}, a short walk from {npc:1242}."] = "{npc:2104} se tient dans le {area:2103}, à quelques pas de {npc:1242}.",

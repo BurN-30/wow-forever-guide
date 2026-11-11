@@ -325,8 +325,12 @@ step Spoils of War
   collect 279821 quest 98197              -- Khaz Modan Timber
   collect 279822 quest 98197              -- Khaz Modan Iron
 
+# Groupe Alliance (0.9.9): Crimson Crate Delivery (98240) comes after Crocs of the Sky (98072),
+# which the pack takes only in Group 9 and hands in in Group 12 (Wowhead Forever series and
+# MetaForge chain): optional here, so the step no longer waits for a quest James Halloran
+# does not offer yet.
 step James Halloran
-  accept 98240
+  accept 98240 optional                   -- Only after Crocs of the Sky, a later quest of his: not offered? Carry on
   tip James Halloran stands by the north gate.
   turnin 98197                        -- Inside
 # ---------------------------------------------------------------- Menethil Harbor
@@ -360,10 +364,7 @@ step The Bluegill hovels
 step Whelgar's Excavation Site
   tip The excavation site sits on the hill south of the road.
   turnin 305                              -- Merrin Rockweaver, below ground
-  accept 98310                        -- A new Goaz Stone, for the four titan watchers around the Wetlands; below ground
-  accept 98313                        -- For Historian Karnik in Ironforge, at the end of this guide
   accept 299                              -- Prospector Whelgar
-  accept 98216
   accept 306
   accept 294                              -- Ormer Ironbraid
 
@@ -393,7 +394,6 @@ step Ormer Ironbraid
 step The Green Belt
   tip Einar Stonegrip camps by the road; Rethiel the Greenwarden stands farther east, by the river.
   turnin 463                              -- Rethiel the Greenwarden
-  accept 98283 optional               -- Rethiel the Greenwarden: Carnage, an elite raptor
   accept 276
 
 # ---------------------------------------------------------------- The Green Belt
@@ -424,15 +424,17 @@ step Rethiel the Greenwarden
 
 step The Green Belt: kill these as you meet them
   zone Wetlands
-  tip Red whelps fill the hills west of the gates, Maddened Rotclaws the Green Belt, Razormaws the northern slopes; Neru stands in the north-east (use the Goaz Stone).
-  tip Carnage is elite: grouping up is advised.
   tip Fen Creepers hide in the marsh pools north-west of the Green Belt.
   tip Careful: When out of combat, Fen Creepers cast Sneak from time to time, so they are stealthed and hard to see.
-  collect 280331 quest 98283.1 optional -- Malignant Rotclaw Flesh
   kill 1040 quest 275 @24.46,33.18 map 1437 era
 
+# Groupe Alliance (0.9.9): the Goaz Stone chain (299, 98216, 98310, 98313) and Carnage (98283,
+# after Blisters on the Land 275) were taken before what comes ahead of them (Wowhead Forever
+# series, MetaForge chains): Carnage is offered here, after 275, and the Goaz quests follow
+# 299 in Group 9 and Group 12.
 step Rethiel the Greenwarden
   turnin 275
+  accept 98283 optional                   -- Rethiel the Greenwarden: Carnage, an elite raptor, done in Group 12
 
 # Groupe Alliance (0.9.9): Return the Statuette (98189) moved here from the first visit to
 # Menethil. The quest data give it no prerequisite, but Wowhead Forever lists it 6th of an
