@@ -40,7 +40,7 @@ return {
 
 	-- Step 12: Kerlonian Evershade
 	-- {npc:11218} Kerlonian Evershade · {object:12893} Grove of the Ancients · {zone:1439} Darkshore · {item:13536} Horn of Awakening · {zone:1440} Ashenvale · {npc:11219} Liladris Moonriver · {object:19863} Maestra's Post
-	["{npc:11218} sleeps at the {object:12893} in southern {zone:1439}. Use the {item:13536} to wake him and lead him south along the road into {zone:1440} to {npc:11219} at {object:19863}; blow the horn again whenever he falls asleep.\nCareful: Scripted ambushes of three mobs each attack along the road: furbolgs on the {zone:1439} stretch and undead nearer {object:19863}."] = "{npc:11218} dort près du {object:12893} au sud de {zone:1439}. Utilisez le {item:13536} pour le réveiller et conduisez-le vers le sud le long de la route jusqu'en {zone:1440} auprès de {npc:11219} au {object:19863} ; sonnez du cor à nouveau chaque fois qu'il s'endort.\nAttention : des embuscades scriptées de trois monstres chacune attaquent le long de la route : des furbolgs sur la portion de {zone:1439} et des morts-vivants plus près du {object:19863}.",
+	["{npc:11218} sleeps at the {object:12893} in southern {zone:1439}. Use the {item:13536} to wake him and lead him south along the road into {zone:1440} to {npc:11219} at {object:19863}; blow the horn again whenever he falls asleep.\nCareful: Scripted ambushes of three mobs each attack along the road: furbolgs on the {zone:1439} stretch and undead nearer {object:19863}.\nTimed quest: 25 minutes, hand-in to {npc:11219} included. Wake him only when ready to walk straight to {object:19863}."] = "{npc:11218} dort près du {object:12893} au sud de {zone:1439}. Utilisez le {item:13536} pour le réveiller et conduisez-le vers le sud le long de la route jusqu'en {zone:1440} auprès de {npc:11219} au {object:19863} ; sonnez du cor à nouveau chaque fois qu'il s'endort.\nAttention : des embuscades scriptées de trois monstres chacune attaquent le long de la route : des furbolgs sur la portion de {zone:1439} et des morts-vivants plus près du {object:19863}.\nQuête chronométrée : 25 minutes, rendu à {npc:11219} compris. Ne le réveiller qu'une fois prêt à marcher droit vers {object:19863}.",
 	-- {object:176634} Kerlonian's Chest
 	["{object:176634}, beside him"] = "{object:176634}, à côté de lui",
 	-- {npc:11218} Kerlonian Evershade · {object:19863} Maestra's Post · {zone:1440} Ashenvale
@@ -190,7 +190,8 @@ return {
 	["{npc:2094}, by the north gate"] = "{npc:2094}, près de la porte nord",
 
 	-- Step 48: Spoils of War
-	["Timber and iron piles lie around the keep and along the harbor's walls."] = "Des piles de bois et de fer sont éparpillées autour du donjon et le long des murs du port.",
+	-- {object:1162} Menethil Harbor
+	["The timber planks and iron pallets lie in the water all around {object:1162}, west, north and east of the town, on the bottom or floating: swim for them. Giant crocolisks guard some of the iron. Lowering ground clutter makes them easier to see."] = "Les planches de bois et les palettes de fer sont dans l'eau tout autour de {object:1162}, à l'ouest, au nord et à l'est de la ville, au fond ou flottantes : y aller à la nage. Des crocilisques géants gardent une partie du fer. Baisser la densité de l'herbe (détails du sol) les rend plus visibles.",
 
 	-- Step 49: James Halloran
 	-- {npc:2094} James Halloran
@@ -415,6 +416,7 @@ return {
 	-- ["The tears glow on the small isle east of {area:415}."] = "Les larmes brillent sur le petit îlot à l'est d'{area:415}.",
 	-- ["The two stand together at the western end of the road.\nSouth of the murlocs, {npc:3585} waits at the {area:416}."] = "Les deux se tiennent ensemble à l'extrémité ouest de la route.\nAu sud des murlocs, {npc:3585} attend au {area:416}.",
 	-- ["The {area:1025}"] = "{area:1025}",
+	-- ["Timber and iron piles lie around the keep and along the harbor's walls."] = "Des piles de bois et de fer sont éparpillées autour du donjon et le long des murs du port.",
 	-- ["To {area:150}"] = "Vers {area:150}",
 	-- ["Underwater"] = "Sous l'eau",
 	-- ["Venture Co. loggers"] = "Déboiseurs de la KapitalRisk",
@@ -428,6 +430,7 @@ return {
 	-- ["{area:442} flight master"] = "Maître de vol d'{area:442}",
 	-- ["{area:461}: kill these as you meet them"] = "{area:461} : tuez-les au passage",
 	-- ["{item:3349} on the way"] = "{item:3349} en chemin",
+	-- ["{npc:11218} sleeps at the {object:12893} in southern {zone:1439}. Use the {item:13536} to wake him and lead him south along the road into {zone:1440} to {npc:11219} at {object:19863}; blow the horn again whenever he falls asleep.\nCareful: Scripted ambushes of three mobs each attack along the road: furbolgs on the {zone:1439} stretch and undead nearer {object:19863}."] = "{npc:11218} dort près du {object:12893} au sud de {zone:1439}. Utilisez le {item:13536} pour le réveiller et conduisez-le vers le sud le long de la route jusqu'en {zone:1440} auprès de {npc:11219} au {object:19863} ; sonnez du cor à nouveau chaque fois qu'il s'endort.\nAttention : des embuscades scriptées de trois monstres chacune attaquent le long de la route : des furbolgs sur la portion de {zone:1439} et des morts-vivants plus près du {object:19863}.",
 	-- ["{npc:1217}, upstairs in the inn"] = "{npc:1217}, à l'étage de l'auberge",
 	-- ["{npc:1242}: for {npc:2104} in the keep"] = "{npc:1242} : pour {npc:2104}, dans le donjon",
 	-- ["{npc:1242}: for {npc:2104} in the keep. Offered after this hand-in, not before (seen in game); not offered? Carry on"] = "{npc:1242} : pour {npc:2104}, dans le donjon. Proposée après ce rendu, pas avant (constaté en jeu) ; pas proposée ? Continuer",

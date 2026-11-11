@@ -85,6 +85,7 @@ step Boat to Auberdine
 step Kerlonian Evershade
   tip Kerlonian sleeps at the Grove of the Ancients in southern Darkshore. Use the Horn of Awakening to wake him and lead him south along the road into Ashenvale to Liladris Moonriver at Maestra's Post; blow the horn again whenever he falls asleep.
   tip Careful: Scripted ambushes of three mobs each attack along the road: furbolgs on the Darkshore stretch and undead nearer Maestra's Post.
+  tip Timed quest: 25 minutes, hand-in to Liladris included. Wake him only when ready to walk straight to Maestra's Post.
   goto 44.4,76.4 "Grove of the Ancients"
   accept 5321                                 -- Kerlonian Evershade
   collect 13536 quest 5321.1                  -- Kerlonian's Chest, beside him
@@ -321,7 +322,7 @@ step Menethil Harbor
 # ---------------------------------------------------------------- Menethil Harbor
 
 step Spoils of War
-  tip Timber and iron piles lie around the keep and along the harbor's walls.
+  tip The timber planks and iron pallets lie in the water all around Menethil Harbor, west, north and east of the town, on the bottom or floating: swim for them. Giant crocolisks guard some of the iron. Lowering ground clutter makes them easier to see.
   collect 279821 quest 98197              -- Khaz Modan Timber
   collect 279822 quest 98197              -- Khaz Modan Iron
 

@@ -391,6 +391,14 @@ ns.GA.Tips = {
 		frFR = "Le livre qui lance la quête tombe très rarement des cultistes du Crépuscule : compter des dizaines de victimes, la faire seulement si elle tombe en passant.",
 		enUS = "The book that starts the quest drops very rarely from Twilight cultists; expect dozens of kills, so only do it if it drops along the way.",
 	},
+	[970] = { -- The Tower of Althalaxx (wowhead forever), per objective since 0.9.9
+		goals = {
+			["item:5366"] = {
+				frFR = "La Gemme d'âme luminescente tombe très rarement sur Forever : plusieurs joueurs parlent de 50 à 100 cultistes de la Rive noire, ou plus d'une heure en groupe. Faire les autres quêtes du coin en même temps, et la laisser de côté si elle traîne.",
+				enUS = "The Glowing Soul Gem drops very rarely on Forever: several players report 50 to 100 Dark Strand kills, or over an hour in a group. Do the other quests around meanwhile, and leave it if it drags on.",
+			},
+		},
+	},
 	[982] = { -- Deep Ocean, Vast Sea (wowhead forever)
 		frFR = "Chaque coffre est à l'arrière de son épave, côté large, et s'ouvre depuis l'extérieur ; attention aux murlocs qui traversent la coque.",
 		enUS = "Each lockbox sits at the stern end of its wreck, seaward side, and opens from outside; watch for murlocs clipping through the hull.",
