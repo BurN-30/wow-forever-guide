@@ -78,8 +78,9 @@ step Elune's Grace
 # Quest ids, givers, levels, prerequisites, drops and rewards from Polestar's Forever data
 # (data-v2026.11.1) and Dungeons codex, cross-checked with the TrinityCore Forever world base
 # (2026-10-14: same prerequisites, 1200 after 1198, no prerequisite for 971, 1199, 1275, 3765).
-# Wowhead Forever could not be read on 12/11/2026 (robot check): the places inside the dungeon
-# come from the original game and are marked "to check in game". Darnassus is a detour
+# Wowhead Forever could not be read on 12/11/2026 (robot check). Places inside and the In Search
+# of Thaelrid question from two WoW Forever quest guides read on 12/11/2026 and rewritten: Warcraft
+# Tavern (quests 11/11/2026, dungeon guide) and Icy Veins (05/10/2026). Darnassus is a detour
 # (1198, 1199 and their hand-ins): its own question (`when group 1198`). Not played in game.
 step Stormwind: Argos Nightwhisper (Blackfathom Deeps, optional)
   only !Druid
@@ -226,8 +227,7 @@ step Talen
 # Gelihast, Lorgus Jett, Old Serra'kis, Twilight Lord Kelris, Aku'mai); drops from Polestar's
 # Forever data: Corrupted Brain Stem (Fallenroot satyrs and Blackfathom naga, 80 %), Twilight
 # Pendant (Twilight cultists, 80 %), Head of Kelris (100 %), Lorgalis Manuscript (the Pitted Iron
-# Chest, 13949, the one container Polestar keeps). Rooms and NPC places inside: the original
-# game's, to check in game.
+# Chest, 13949, the one container Polestar keeps). Places: Warcraft Tavern and Icy Veins (Forever).
 step Blackfathom Deeps: before going in
   when group 1275
   when done bfd-start
@@ -241,7 +241,7 @@ step Blackfathom Deeps: along the way
   when group 1275
   when done bfd-start
   along until bfd-kelris
-  tip Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs, the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own.
+  tip Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs (those outside the portal drop them too), the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own; with a full group on them, a second run may be needed.
   note Share the quests with your group: click each in the quest log, then Share.
   collect 5952 x8 quest 1275                  -- Corrupted Brain Stem: Blackfathom nagas, Fallenroot satyrs
   collect 5879 x10 quest 1199 optional        -- Twilight Pendant: Twilight's Hammer cultists
@@ -249,14 +249,14 @@ step Blackfathom Deeps: along the way
 step Blackfathom Deeps: Ghamoo-ra's pool
   when group 1275
   when done bfd-start
-  tip The great turtle Ghamoo-ra lives in the first big pool. In the original game the Lorgalis Manuscript lies in a chest at the bottom of that pool (to check in game): swim down for it, every player with the quest opens the chest.
+  tip The great turtle Ghamoo-ra lives in the first big pool. The Lorgalis Manuscript lies in a chest underwater, in an alcove north of that pool: swim down for it, every player with the quest opens the chest. Argent Guard Thaelrid waits in another underwater cave, its entrance south-east of the same pool (next step).
   collect 5359 quest 971 optional             -- Lorgalis Manuscript, in the Pitted Iron Chest
   kill 4887                                   -- Ghamoo-ra
 
 step Blackfathom Deeps: Lady Sarevess and Gelihast
   when group 1275
   when done bfd-start
-  tip Lady Sarevess and her naga guards, then Gelihast in the murloc cave (order of the original game, to check in game). The Twilight's Hammer cultists come after them.
+  tip Lady Sarevess, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). Gelihast, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.
   kill 4831                                   -- Lady Sarevess
   kill 6243 optional                          -- Gelihast
 
@@ -264,19 +264,19 @@ step Blackfathom Deeps: Argent Guard Thaelrid
   when group 1275
   when done bfd-start
   when onquest 1198
-  tip Thaelrid of the Argent Dawn waits inside, before Twilight Lord Kelris (his exact spot: to check in game). Talk to him BEFORE killing Kelris: Kelris's head drops only for players who already hold Blackfathom Villainy.
+  tip Thaelrid of the Argent Dawn waits in an underwater cave whose entrance is south-east of Ghamoo-ra's pool. Talk to him BEFORE killing Kelris: Kelris's head drops only for players who already hold Blackfathom Villainy.
   turnin 1198                                 -- Argent Guard Thaelrid
   accept 1200
 
-# Groupe Alliance 0.11.0: whether Blackfathom Villainy needs In Search of Thaelrid handed in is
-# disputed: required in the TrinityCore Forever world base (PrevQuestID 1198), only an errand in
-# Polestar's Forever data. Without it, the player asks Thaelrid; the accept stays optional.
+# Groupe Alliance 0.11.0: Blackfathom Villainy does not need In Search of Thaelrid (Polestar's
+# Forever data and Icy Veins' Forever guide: "not required to start it"; the TrinityCore base says
+# otherwise, without Forever proof). Without it, the player asks Thaelrid; the accept stays optional.
 step Blackfathom Deeps: Argent Guard Thaelrid (without the Darnassus quest)
   when group 1275
   when done bfd-start
   when !onquest 1198
   when !turnedin 1198
-  tip Thaelrid of the Argent Dawn waits inside, before Twilight Lord Kelris (his exact spot: to check in game). Without In Search of Thaelrid he may still offer Blackfathom Villainy: the sources disagree, to check in game. Talk to him BEFORE killing Kelris; not offered? Carry on.
+  tip Thaelrid of the Argent Dawn waits in an underwater cave whose entrance is south-east of Ghamoo-ra's pool. He offers Blackfathom Villainy without In Search of Thaelrid too. Talk to him BEFORE killing Kelris; not offered? Carry on.
   talk 4787                                   -- Argent Guard Thaelrid
   accept 1200 optional
 
@@ -284,7 +284,7 @@ step Blackfathom Deeps: Twilight Lord Kelris
   label bfd-kelris
   when group 1275
   when done bfd-start
-  tip In the original game Kelris waits in the Moonshrine, past Old Serra'kis's flooded tunnel (to check in game). Interrupt his Sleep and kill his adds first. Every player on Blackfathom Villainy loots their own head. Aku'mai, behind him, is optional: no quest, good loot.
+  tip Kelris waits in the ceremonial chamber before the last room. Interrupt his Sleep and kill his adds first. Every player on Blackfathom Villainy loots their own head. Aku'mai, behind him, is optional: no quest, good loot.
   collect 5881 quest 1200 optional            -- Head of Kelris
   kill 4832                                   -- Twilight Lord Kelris
   kill 4829 optional                          -- Aku'mai

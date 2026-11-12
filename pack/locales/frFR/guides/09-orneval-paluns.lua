@@ -132,7 +132,7 @@ return {
 	-- Step 30: Blackfathom Deeps: along the way
 	["Blackfathom Deeps: along the way"] = "Profondeurs de Brassenoire : en chemin",
 	-- plural, as words: Twilight Pendants = {item:5879} Twilight Pendant
-	["Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs, the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own."] = "À ramasser dans tout le donjon : les troncs cérébraux sur les nagas et les satyres, les pendentifs du Crépuscule sur les cultistes du Marteau du crépuscule, environ 4 fois sur 5 pour chacun. Chaque joueur qui a la quête ramasse les siens.",
+	["Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs (those outside the portal drop them too), the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own; with a full group on them, a second run may be needed."] = "À ramasser dans tout le donjon : les troncs cérébraux sur les nagas et les satyres (ceux d'avant le portail en lâchent aussi), les pendentifs du Crépuscule sur les cultistes du Marteau du crépuscule, environ 4 fois sur 5 pour chacun. Chaque joueur qui a la quête ramasse les siens ; avec tout le groupe dessus, un second passage peut être nécessaire.",
 	["Share the quests with your group: click each in the quest log, then Share."] = "Partager les quêtes avec le groupe : clic sur chacune dans le journal, puis Partager.",
 	-- {item:5952} Corrupted Brain Stem
 	["{item:5952}: Blackfathom nagas, Fallenroot satyrs"] = "{item:5952} : nagas et satyres du donjon",
@@ -142,8 +142,8 @@ return {
 	-- Step 31: Blackfathom Deeps: Ghamoo-ra's pool
 	-- {npc:4887} Ghamoo-ra
 	["Blackfathom Deeps: {npc:4887}'s pool"] = "Profondeurs de Brassenoire : le bassin de {npc:4887}",
-	-- {npc:4887} Ghamoo-ra · {item:5359} Lorgalis Manuscript
-	["The great turtle {npc:4887} lives in the first big pool. In the original game the {item:5359} lies in a chest at the bottom of that pool (to check in game): swim down for it, every player with the quest opens the chest."] = "La grande tortue {npc:4887} vit dans le premier grand bassin. Dans le jeu d'origine, {item:5359} est dans un coffre au fond de ce bassin (à vérifier en jeu) : plonger le chercher, chaque joueur qui a la quête ouvre le coffre.",
+	-- {npc:4887} Ghamoo-ra · {item:5359} Lorgalis Manuscript · {npc:4787} Argent Guard Thaelrid
+	["The great turtle {npc:4887} lives in the first big pool. The {item:5359} lies in a chest underwater, in an alcove north of that pool: swim down for it, every player with the quest opens the chest. {npc:4787} waits in another underwater cave, its entrance south-east of the same pool (next step)."] = "La grande tortue {npc:4887} vit dans le premier grand bassin. {item:5359} est dans un coffre sous l'eau, dans une alcôve au nord de ce bassin : plonger le chercher, chaque joueur qui a la quête ouvre le coffre. {npc:4787} attend dans une autre grotte sous l'eau, dont l'entrée est au sud-est du même bassin (étape suivante).",
 	-- {item:5359} Lorgalis Manuscript · {object:13949} Pitted Iron Chest
 	["{item:5359}, in the {object:13949}"] = "{item:5359}, dans {object:13949}",
 
@@ -151,25 +151,25 @@ return {
 	-- {npc:4831} Lady Sarevess · {npc:6243} Gelihast
 	["Blackfathom Deeps: {npc:4831} and {npc:6243}"] = "Profondeurs de Brassenoire : {npc:4831} et {npc:6243}",
 	-- {npc:4831} Lady Sarevess · {npc:6243} Gelihast
-	["{npc:4831} and her naga guards, then {npc:6243} in the murloc cave (order of the original game, to check in game). The Twilight's Hammer cultists come after them."] = "{npc:4831} et ses gardes nagas, puis {npc:6243} dans la grotte des murlocs (ordre du jeu d'origine, à vérifier en jeu). Les cultistes du Marteau du crépuscule viennent ensuite.",
+	["{npc:4831}, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). {npc:6243}, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them."] = "{npc:4831}, le deuxième boss, vient avec deux gardes : interrompre son Éclair fourchu, qui rebondit entre les joueurs proches (s'écarter). {npc:6243}, le murloc de la grotte latérale, est facultatif : tirer ses murlocs un par un ; la pierre derrière lui donne la Bénédiction de Brassenoire. Les cultistes du Marteau du crépuscule viennent ensuite.",
 
 	-- Step 33: Blackfathom Deeps: Argent Guard Thaelrid
 	-- {npc:4787} Argent Guard Thaelrid
 	["Blackfathom Deeps: {npc:4787}"] = "Profondeurs de Brassenoire : {npc:4787}",
-	-- {object:92525} Argent Dawn · {npc:4832} Twilight Lord Kelris · {quest:1200} Blackfathom Villainy
-	["Thaelrid of the {object:92525} waits inside, before {npc:4832} (his exact spot: to check in game). Talk to him BEFORE killing Kelris: Kelris's head drops only for players who already hold {quest:1200}."] = "Thaelrid, de {object:92525}, attend à l'intérieur, avant {npc:4832} (sa place exacte : à vérifier en jeu). Lui parler AVANT de tuer Kelris : la tête de Kelris ne tombe que pour les joueurs qui ont déjà {quest:1200}.",
+	-- {object:92525} Argent Dawn · {npc:4887} Ghamoo-ra · {quest:1200} Blackfathom Villainy
+	["Thaelrid of the {object:92525} waits in an underwater cave whose entrance is south-east of {npc:4887}'s pool. Talk to him BEFORE killing Kelris: Kelris's head drops only for players who already hold {quest:1200}."] = "Thaelrid, de {object:92525}, attend dans une grotte sous l'eau dont l'entrée est au sud-est du bassin de {npc:4887}. Lui parler AVANT de tuer Kelris : la tête de Kelris ne tombe que pour les joueurs qui ont déjà {quest:1200}.",
 
 	-- Step 34: Blackfathom Deeps: Argent Guard Thaelrid (without the Darnassus quest)
 	-- {npc:4787} Argent Guard Thaelrid · {zone:1457} Darnassus
 	["Blackfathom Deeps: {npc:4787} (without the {zone:1457} quest)"] = "Profondeurs de Brassenoire : {npc:4787} (sans la quête de {zone:1457})",
-	-- {object:92525} Argent Dawn · {npc:4832} Twilight Lord Kelris · {quest:1198} In Search of Thaelrid · {quest:1200} Blackfathom Villainy
-	["Thaelrid of the {object:92525} waits inside, before {npc:4832} (his exact spot: to check in game). Without {quest:1198} he may still offer {quest:1200}: the sources disagree, to check in game. Talk to him BEFORE killing Kelris; not offered? Carry on."] = "Thaelrid, de {object:92525}, attend à l'intérieur, avant {npc:4832} (sa place exacte : à vérifier en jeu). Sans {quest:1198}, il propose peut-être quand même {quest:1200} : les sources ne sont pas d'accord, à vérifier en jeu. Lui parler AVANT de tuer Kelris ; pas proposée ? Continuer.",
+	-- {object:92525} Argent Dawn · {npc:4887} Ghamoo-ra · {quest:1200} Blackfathom Villainy · {quest:1198} In Search of Thaelrid
+	["Thaelrid of the {object:92525} waits in an underwater cave whose entrance is south-east of {npc:4887}'s pool. He offers {quest:1200} without {quest:1198} too. Talk to him BEFORE killing Kelris; not offered? Carry on."] = "Thaelrid, de {object:92525}, attend dans une grotte sous l'eau dont l'entrée est au sud-est du bassin de {npc:4887}. Il propose {quest:1200} même sans {quest:1198}. Lui parler AVANT de tuer Kelris ; pas proposée ? Continuer.",
 
 	-- Step 35: Blackfathom Deeps: Twilight Lord Kelris
 	-- {npc:4832} Twilight Lord Kelris
 	["Blackfathom Deeps: {npc:4832}"] = "Profondeurs de Brassenoire : {npc:4832}",
-	-- {npc:4830} Old Serra'kis · {quest:1200} Blackfathom Villainy · {npc:4829} Aku'mai
-	["In the original game Kelris waits in the Moonshrine, past {npc:4830}'s flooded tunnel (to check in game). Interrupt his Sleep and kill his adds first. Every player on {quest:1200} loots their own head. {npc:4829}, behind him, is optional: no quest, good loot."] = "Dans le jeu d'origine, Kelris attend dans le sanctuaire, après le tunnel inondé de {npc:4830} (à vérifier en jeu). Interrompre son Sommeil et tuer ses aides d'abord. Chaque joueur qui a {quest:1200} ramasse sa propre tête. {npc:4829}, derrière lui, est facultatif : pas de quête, du bon butin.",
+	-- {quest:1200} Blackfathom Villainy · {npc:4829} Aku'mai
+	["Kelris waits in the ceremonial chamber before the last room. Interrupt his Sleep and kill his adds first. Every player on {quest:1200} loots their own head. {npc:4829}, behind him, is optional: no quest, good loot."] = "Kelris attend dans la salle de cérémonie avant la dernière salle. Interrompre son Sommeil et tuer ses aides d'abord. Chaque joueur qui a {quest:1200} ramasse sa propre tête. {npc:4829}, derrière lui, est facultatif : pas de quête, du bon butin.",
 
 	-- Step 36: Blackfathom Deeps: leave
 	["Blackfathom Deeps: leave"] = "Profondeurs de Brassenoire : sortir",

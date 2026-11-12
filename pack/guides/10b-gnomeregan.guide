@@ -1,28 +1,36 @@
-# Written for this pack by BurN-30 (GPL-3.0). Quest ids, givers, places, levels, prerequisites,
-# drops and rewards from Polestar's Forever data (data-v2026.11.1: QuestieDB Forever, the 1.60.1
-# client, and Polestar's corrections, whose Gnomeregan XP comes from players' Forever caches) and
-# its Dungeons codex (boss order: Grubbis, Viscous Fallout, Electrocutioner 6000, Crowd Pummeler
-# 9-60, Mekgineer Thermaplugg); prerequisites cross-checked with the TrinityCore Forever world base
-# (2026-10-14). Wowhead Forever could not be read on 12/11/2026 (robot check): the rooms and the
-# places inside are the original game's, marked "to check in game". Not played in game yet.
+# Written for this pack by BurN-30 (GPL-3.0). Quest ids, givers, levels, prerequisites, drops
+# and rewards from Polestar's Forever data (data-v2026.11.1: QuestieDB Forever, the 1.60.1 client,
+# and Polestar's corrections, whose Gnomeregan XP comes from players' Forever caches) and its
+# Dungeons codex (boss order: Grubbis, Viscous Fallout, Electrocutioner 6000, Crowd Pummeler 9-60,
+# Mekgineer Thermaplugg); prerequisites cross-checked with the TrinityCore Forever world base
+# (2026-10-14). Places and how-to from two WoW Forever quest guides, read on 12/11/2026 and
+# rewritten: Warcraft Tavern (warcrafttavern.com/forever/guides/gnomeregan-quests, 11/11/2026) and
+# Icy Veins (icy-veins.com/wow-forever/gnomeregan-quests, 05/10/2026). They agree: Techbot and
+# Matrix Punchograph 3005-A stand outside the portal, B in the Dormitory south of the Clean Room
+# (Viscous Fallout), C on the Launch Bay (Electrocutioner 6000), D on the lower level of the
+# Engineering Labs (Crowd Pummeler 9-60); Kernobee waits in the Dormitory, before Viscous Fallout;
+# the Sparklematic machines stand in the room before the Dormitory; the Gnogaine phial fills on the
+# corpse of an irradiated trogg; the High Potency Radioactive Fallout lasts two hours. Wowhead
+# Forever could not be read (robot check). Not played in game yet.
 #
 # Optional chapter: asked once at Shoni the Shilent in Stormwind, at the start of Group 9
 # (`when group 2928`, 11-mille-pointes); every later step needs `when done gno-start`. Skipped:
-# the whole chapter is left out and Dalaran follows.
+# the whole chapter is left out and Dalaran follows. The Only Cure is More Green Glow (2962) has
+# its own question (`when group 2962`): a return to Kharanos before the run.
 #
 # Prerequisites (Polestar's compiled guide, TrinityCore base): Gnogaine (2926) after The Day After
-# (2927), taken here first; Save Techbot's Brain (2922), Essential Artificials (2924) and Data
-# Rescue (2930) have only errands before them (Brother Sarno 2923, Mathiel 2925, Gaxim 2931),
-# which the compiler drops and this chapter does not need. Return of the Ring (2947) after
-# Grime-Encrusted Ring (2945), a drop.
-# Left out: The Only Cure is More Green Glow (2962, after Gnogaine: a second trip inside with a
-# fallout that decays fast), the Sparklematic 5200 boxes (2951 and its variants: three silver per
-# Grime-Encrusted Object, a random box, no XP for most), Gnome Improvement (2948, after Return of
-# the Ring: a Silver Bar and a Moss Agate).
+# (2927); The Only Cure is More Green Glow (2962) after Gnogaine; Save Techbot's Brain (2922),
+# Essential Artificials (2924) and Data Rescue (2930) have only errands before them (Brother Sarno
+# 2923, Mathiel 2925, Gaxim 2931), which the compiler drops and this chapter does not need. Return
+# of the Ring (2947) after Grime-Encrusted Ring (2945), a drop.
+# Left out: the Sparklematic 5200 boxes (2951 and its variants: three silver per Grime-Encrusted
+# Object, a random box), Gnome Improvement (2948, after Return of the Ring: a Silver Bar, a Moss
+# Agate and 30 silver).
 #
 # Flow: Ironforge (Tinker Town) -> Kharanos (Ozzie) -> the Gnomeregan outskirts (Gnogaine,
-# Techbot) -> the dungeon -> Kharanos (Ozzie) -> Ironforge rewards -> Stormwind (Shoni), where
-# Group 11 (Dalaran) starts. A Fine Mess (2904) is handed in at Booty Bay in Group 15.
+# Techbot, the white card and Punchograph A) -> [Kharanos and back, Green Glow] -> the dungeon ->
+# Kharanos (Ozzie) -> Ironforge rewards -> Stormwind (Shoni), where Group 11 (Dalaran) starts. A
+# Fine Mess (2904) is handed in at Booty Bay in Group 15.
 guide groupe-alliance/10b-gnomeregan
 title Group 10b · Gnomeregan (dungeon 29-33, optional)
 folder Group Alliance
@@ -38,7 +46,7 @@ step Ironforge: Gnomeregan quests
   when level<36
   zone Ironforge
   tip Gnomeregan: a 5-player dungeon under Dun Morogh, best at 29 to 33; Mekgineer Thermaplugg, the last boss, is 34. Every quest giver stands in Tinker Town. From the Wetlands: fly from Menethil Harbor to Ironforge. Alone? Skip it: the guide goes on to Dalaran.
-  note Keep 8 free quest log slots. Every player takes the quests from the givers; sharing works too.
+  note Keep 9 free quest log slots. Every quest can be shared except Gnogaine and its follow-up: each player takes those from Ozzie.
   accept 2929                                 -- High Tinker Mekkatorque
   accept 2930                                 -- Master Mechanic Castpipe
   accept 2922                                 -- Tinkmaster Overspark
@@ -48,50 +56,79 @@ step Ironforge: Gnomeregan quests
 step Kharanos: Ozzie Togglevolt
   when done gno-start
   zone Dun Morogh
-  tip Ride out of Ironforge down to Kharanos. Ozzie hands you an empty lead phial for the fallout.
+  tip Ride out of Ironforge down to Kharanos. Ozzie hands you an Empty Leaden Collection Phial.
   turnin 2927                                 -- Ozzie Togglevolt
   accept 2926
 
 step The Gnomeregan outskirts
   when done gno-start
   zone Dun Morogh
-  tip West of Kharanos, before the dungeon's door. Irradiated Invaders (elite 24) roam the outskirts: target one and use the Empty Leaden Collection Phial from your bags to fill it.
-  note White Punch Cards, for Data Rescue, drop from the Irradiated Invaders too (about 1 in 10): keep one.
-  collect 9284 quest 2926 @19.5,37.8          -- Full Leaden Collection Phial: use the empty phial on an Irradiated Invader
+  tip West of Kharanos, the paths down to the dungeon's portal, outside the instance. Kill an Irradiated Invader (green glow, elite 24) and use the Empty Leaden Collection Phial on its corpse. Techbot (elite 26) has his own room off the northern part of these paths: his Memory Core drops for every player on the quest.
+  tip Data Rescue starts out here too: the White Punch Card drops from the troggs and lepers of the outskirts (about 1 kill in 10), and Matrix Punchograph 3005-A, a machine also outside the portal, turns it into a Yellow Punch Card.
+  collect 9284 quest 2926 @19.5,37.8          -- Full Leaden Collection Phial: the empty phial, on an Irradiated Invader's corpse
+  collect 9277 quest 2922 @19.78,31.93        -- Techbot's Memory Core: Techbot, elite 26
+  collect 9279 optional                       -- White Punch Card: troggs and lepers
+  collect 9280 optional                       -- Yellow Punch Card: the White one, at Matrix Punchograph 3005-A
+
+step Kharanos: The Only Cure is More Green Glow (optional detour)
+  when done gno-start
+  when group 2962
+  zone Dun Morogh
+  tip Gnogaine is done outside the dungeon, so it can be handed in now: back to Kharanos, then back to the portal, about two rides of a couple of minutes. Ozzie's next quest is done inside: use his Heavy Leaden Collection Phial on a LIVING irradiated slime or horror, and the fallout lasts two hours, enough for the run and the ride back. Not each player's cup of tea? Skip it: Gnogaine is handed in after the run.
+  turnin 2926                                 -- Ozzie Togglevolt
+
+step Kharanos: Ozzie's next quest
+  when done gno-start
+  when group 2962
+  when turnedin 2926
+  zone Dun Morogh
+  accept 2962                                 -- Ozzie Togglevolt: then back to the portal
 
 step Gnomeregan: before going in
   when done gno-start
   zone Dun Morogh
   tip Group of 5 at 29 to 33. Everything inside is elite and the mechanical foes hit hard.
-  note In the quest log before going in: The Grand Betrayal, Data Rescue and Save Techbot's Brain! (Tinker Town). If you took them: Gyrodrillmatic Excavationators (Shoni the Shilent, Stormwind, Group 9) and Essential Artificials (Klockmort Spannerspan, Tinker Town). Bring a White Punch Card if you have one, and 3 silver per Grime-Encrusted Object you want to put in the Sparklematic 5200.
+  note In the quest log before going in: The Grand Betrayal, Data Rescue and Save Techbot's Brain! (Tinker Town). If you took them: Gyrodrillmatic Excavationators (Shoni the Shilent, Stormwind, Group 9), Essential Artificials (Klockmort Spannerspan, Tinker Town), The Only Cure is More Green Glow (Ozzie, Kharanos). Bring the Yellow Punch Card (or the White one), and 3 silver per Grime-Encrusted Object you want to put in the Sparklematic 5200.
   goto 24.3,39.8 "Gnomeregan" r 25
 
-# Groupe Alliance 0.11.0: everything collected in the dungeon sits in one along step (it never
-# holds the route), up to Thermaplugg; Techbot too, since the sources disagree on his place
-# (Polestar's data: the outskirts, Dun Morogh 19.78,31.93; the original game: inside).
+# Groupe Alliance 0.11.0: what drops all through the dungeon sits in one along step (it never
+# holds the route), up to Thermaplugg; the machines and NPCs come in the order of the rooms.
 step Gnomeregan: along the way
   when done gno-start
   along until gno-thermaplugg
-  tip Collected all through the dungeon. Robo-mechanical Guts: the Caverndeep troggs, the Irradiated Invaders and the Dark Iron Agents, about 4 kills in 5. White Punch Card: the Caverndeep troggs and the Addled Lepers, about 1 kill in 10. Essential Artificials: from the Artificial Extrapolators, machines on the floor (where: to check in game).
-  tip Techbot (elite 26): Polestar's data place him in the outskirts, the original game inside, near the start (to check in game). His Memory Core drops for every player on the quest.
-  tip Each Matrix Punchograph 3005 turns one card into the next: A the White card into a Yellow one, B the Yellow into a Blue one, C the Blue into a Red one, D the Red into the Prismatic Punch Card. They stand along the way, D last, near the end (places and order of the original game: to check in game).
-  tip The Clean Zone, where the gnomes who stayed sheltered, holds the Sparklematic 5200: put the Grime-Encrusted Ring in it to clean it (the Sparklematic's own quests for the other grimy objects cost 3 silver each and give a random box: optional, not in the guide). Kernobee, a gnome to rescue, is inside too (where: to check in game): escort him to the Clockwerk Run exit, his reward waits at Booty Bay, on the route of Group 15.
-  note Every player with the quest loots their own. Share the quests with your group: click each in the quest log, then Share.
-  collect 9277 quest 2922                     -- Techbot's Memory Core: Techbot, elite 26
-  collect 9316 quest 2930                     -- Prismatic Punch Card: from the Matrix Punchograph 3005-D
-  collect 9309 quest 2928 optional            -- Robo-mechanical Guts: the quest log gives the count
-  collect 9279 optional                       -- White Punch Card: Caverndeep troggs, Addled Lepers
+  tip Collected all through the dungeon. Robo-mechanical Guts (24 for Shoni): the troggs, slimes, leper gnomes and machines. Essential Artificials: the Artificial Extrapolators, rectangular boxes on the floor all around the dungeon; each one vanishes once used, so a full group on the quest may have to search the whole dungeon. Every player with the quest loots their own.
+  note Share the quests with your group: click each in the quest log, then Share.
+  collect 9309 quest 2928 optional            -- Robo-mechanical Guts
   collect 9278 x12 quest 2924 optional        -- Essential Artificial: Artificial Extrapolators
+  collect 9365 quest 2962 optional            -- High Potency Radioactive Fallout: the heavy phial, on a living irradiated slime or horror
   accept 2945 item 9326 optional              -- Grime-Encrusted Ring, a drop from the Dark Iron Agents: right-click it
+
+step Gnomeregan: the Sparklematic, the Dormitory and the Clean Room
+  when done gno-start
+  tip The Sparklematic 5200 machines stand in the room before the Dormitory: put the Grime-Encrusted Ring in one to clean it. In the Dormitory, Kernobee waits before the Viscous Fallout room: his escort runs all the way back to the dungeon's entrance; near the end a countdown starts, get him out before it reaches zero. His reward waits at Booty Bay, on the route of Group 15. Matrix Punchograph 3005-B, in the Dormitory south of the Clean Room, turns the Yellow card into a Blue one.
+  kill 7079                                   -- Viscous Fallout, in the Clean Room
+  collect 9282 optional                       -- Blue Punch Card: the Yellow one, at Matrix Punchograph 3005-B
   turnin 2945 object 142487 optional          -- The Sparklematic 5200
   accept 2947 object 142487 optional          -- Return of the Ring: for Talvash del Kissel in Ironforge
   accept 2904 optional                        -- Kernobee
-  complete 2904 optional                      -- Escort Kernobee to the Clockwerk Run exit
+  complete 2904 optional                      -- Escort Kernobee back to the entrance
+
+step Gnomeregan: the Launch Bay
+  when done gno-start
+  tip Electrocutioner 6000 stands on the Launch Bay platform; Matrix Punchograph 3005-C, on the same platform, turns the Blue card into a Red one.
+  kill 6235                                   -- Electrocutioner 6000
+  collect 9281 optional                       -- Red Punch Card: the Blue one, at Matrix Punchograph 3005-C
+
+step Gnomeregan: the Engineering Labs
+  when done gno-start
+  tip The Crowd Pummeler 9-60 fights in the Engineering Labs; Matrix Punchograph 3005-D, on the lower level of that room, turns the Red card into the Prismatic Punch Card.
+  kill 6229                                   -- Crowd Pummeler 9-60
+  collect 9316 quest 2930                     -- Prismatic Punch Card: the Red one, at Matrix Punchograph 3005-D
 
 step Gnomeregan: Mekgineer Thermaplugg
   label gno-thermaplugg
   when done gno-start
-  tip The Electrocutioner 6000 and the Crowd Pummeler 9-60 come before him (the codex's order). Thermaplugg (elite 34) calls bombs out of the walls: in the original game someone stops each new one by clicking the button below it while the others fight (to check in game).
+  tip The last boss. Tank Thermaplugg (elite 34) in the middle of the room: his Walking Bombs then take longer to reach the group; ranged players kill them. They come faster at half health and faster still at 20 %. Overwhelmed? A button on the pillars around the room stops them for a while: give that job to one ranged player. After each knock-back his threat resets: let the tank take him back.
   kill 7800 quest 2929                        -- Mekgineer Thermaplugg
 
 # Groupe Alliance 0.11.0: each hand-in has its own step, for whoever holds the quest ready to
@@ -99,8 +136,14 @@ step Gnomeregan: Mekgineer Thermaplugg
 step Kharanos: Ozzie Togglevolt
   when complete 2926
   zone Dun Morogh
-  tip Out of Gnomeregan and east to Kharanos, on the way back to Ironforge. His next quest, The Only Cure is More Green Glow, would need another trip inside: not in the guide.
+  tip Out of Gnomeregan and east to Kharanos, on the way back to Ironforge.
   turnin 2926                                 -- Ozzie Togglevolt
+
+step Kharanos: Ozzie Togglevolt (Green Glow)
+  when complete 2962
+  zone Dun Morogh
+  tip Out of Gnomeregan and east to Kharanos, within the two hours of the fallout.
+  turnin 2962                                 -- Ozzie Togglevolt
 
 step Tinker Town: High Tinker Mekkatorque
   when complete 2929

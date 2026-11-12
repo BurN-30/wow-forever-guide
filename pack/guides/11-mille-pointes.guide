@@ -272,7 +272,9 @@ step Takar the Seer
 # either (Polestar's Forever data and the TrinityCore Forever world base). Left out: Blueleaf
 # Tubers (Ratchet, off the route), The Crone of the Kraul (after Lonebrow's Journal, Feralas,
 # level 29), class quests (Fire Hardened Mail, Warrior; Elemental Aid, Shaman, Forever).
-# Boss order from the codex; places inside from the original game, to check in game.
+# Boss order from the codex; places inside from Warcraft Tavern's and Icy Veins' Forever guides
+# (12/11/2026): Heralath and Willix by a tent below Charlga's area, so both quests are taken at the
+# end and the escort walks back to the entrance.
 step Razorfen Kraul (dungeon, optional)
   label rfk-start
   when group 1144
@@ -282,29 +284,23 @@ step Razorfen Kraul (dungeon, optional)
   note Horde land: keep clear of Camp Taurajo and its guards. Keep 2 free quest log slots.
   goto 42.9,90.2 "Razorfen Kraul" r 25
 
+step Razorfen Kraul: Charlga Razorflank
+  when group 1144
+  when done rfk-start
+  tip Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her.
+  kill 4421                               -- Charlga Razorflank
+
 step Razorfen Kraul: Heralath Fallowbrook
   when group 1144
   when done rfk-start
-  tip Heralath Fallowbrook, a night elf who died in the Kraul, lies inside (his spot: to check in game). Mortality Wanes asks for Treshala's Pendant: it drops from the quilboars of the Kraul, about 1 kill in 10, for each player on the quest.
+  tip Jump down from Charlga's area and kill a few quilboars: Heralath Fallowbrook, a night elf who died in the Kraul, lies by a tent in the north of that area. Mortality Wanes asks for Treshala's Pendant, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run.
   accept 1142                             -- Heralath Fallowbrook
-
-step Razorfen Kraul: along the way
-  when group 1144
-  when done rfk-start
-  along until rfk-charlga
-  collect 5825 quest 1142                 -- Treshala's Pendant: quilboars of the Kraul, about 1 in 10
-
-step Razorfen Kraul: Charlga Razorflank
-  label rfk-charlga
-  when group 1144
-  when done rfk-start
-  tip Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga heals and calls her guards: interrupt her and kill the guards first.
-  kill 4421                               -- Charlga Razorflank
+  collect 5825 quest 1142 optional        -- Treshala's Pendant: quilboars of the Kraul, about 1 in 10
 
 step Razorfen Kraul: Willix the Importer
   when group 1144
   when done rfk-start
-  tip Willix the Importer, a goblin, is held prisoner inside (his spot: to check in game). Everyone takes his quest before he starts walking; he walks all the way back to the entrance and quilboars attack on the way. He gives the reward himself at the end.
+  tip Willix the Importer, a goblin, is held in the same tent as Heralath. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end.
   note Not there? Another group is escorting him: wait for him to come back, or join them.
   accept 1144                             -- Willix the Importer
   complete 1144                           -- Escort him out of the Kraul

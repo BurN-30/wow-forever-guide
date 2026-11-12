@@ -214,46 +214,43 @@ return {
 	["Horde land: keep clear of Camp Taurajo and its guards. Keep 2 free quest log slots."] = "Terre de la Horde : se tenir loin du Camp Taurajo et de ses gardes. Garder 2 places libres dans le journal.",
 	["Razorfen Kraul"] = "Kraal de Tranchebauge",
 
-	-- Step 41: Razorfen Kraul: Heralath Fallowbrook
-	-- {npc:4510} Heralath Fallowbrook
-	["Razorfen Kraul: {npc:4510}"] = "Kraal de Tranchebauge : {npc:4510}",
-	-- {npc:4510} Heralath Fallowbrook · {quest:1142} Mortality Wanes · {item:5825} Treshala's Pendant
-	["{npc:4510}, a night elf who died in the Kraul, lies inside (his spot: to check in game). {quest:1142} asks for {item:5825}: it drops from the quilboars of the Kraul, about 1 kill in 10, for each player on the quest."] = "{npc:4510}, un elfe de la nuit mort dans le kraal, gît à l'intérieur (sa place : à vérifier en jeu). {quest:1142} demande {item:5825} : il tombe sur les huttes-épines du kraal, environ 1 fois sur 10, pour chaque joueur qui a la quête.",
-
-	-- Step 42: Razorfen Kraul: along the way
-	["Razorfen Kraul: along the way"] = "Kraal de Tranchebauge : en chemin",
-	-- {item:5825} Treshala's Pendant
-	["{item:5825}: quilboars of the Kraul, about 1 in 10"] = "{item:5825} : huttes-épines du kraal, environ 1 fois sur 10",
-
-	-- Step 43: Razorfen Kraul: Charlga Razorflank
+	-- Step 41: Razorfen Kraul: Charlga Razorflank
 	-- {npc:4421} Charlga Razorflank
 	["Razorfen Kraul: {npc:4421}"] = "Kraal de Tranchebauge : {npc:4421}",
 	-- {npc:4424} Aggem Thorncurse · {npc:4428} Death Speaker Jargba · {npc:4420} Overlord Ramtusk · {npc:4422} Agathelos the Raging · {npc:4421} Charlga Razorflank
-	["Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421} heals and calls her guards: interrupt her and kill the guards first."] = "Roogug, {npc:4424}, {npc:4428}, {npc:4420} et {npc:4422} viennent avant elle (ordre du codex). {npc:4421} soigne et appelle ses gardes : l'interrompre et tuer les gardes d'abord.",
+	["Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421}, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her."] = "Roogug, {npc:4424}, {npc:4428}, {npc:4420} et {npc:4422} viennent avant elle (ordre du codex). {npc:4421}, le dernier boss, se combat sur la rampe devant sa hutte et s'y téléporte de temps en temps : le tank la reprend. Sa Pureté dissipe tous les affaiblissements et la rend insensible un moment : pas de dégâts sur la durée sur elle.",
 
-	-- Step 44: Razorfen Kraul: Willix the Importer
+	-- Step 42: Razorfen Kraul: Heralath Fallowbrook
+	-- {npc:4510} Heralath Fallowbrook
+	["Razorfen Kraul: {npc:4510}"] = "Kraal de Tranchebauge : {npc:4510}",
+	-- {npc:4421} Charlga Razorflank · {npc:4510} Heralath Fallowbrook · {quest:1142} Mortality Wanes · {item:5825} Treshala's Pendant
+	["Jump down from {npc:4421}'s area and kill a few quilboars: {npc:4510}, a night elf who died in the Kraul, lies by a tent in the north of that area. {quest:1142} asks for {item:5825}, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run."] = "Sauter en contrebas de la zone de {npc:4421} et tuer quelques huttes-épines : {npc:4510}, un elfe de la nuit mort dans le kraal, gît près d'une tente au nord de cette zone. {quest:1142} demande {item:5825}, environ 1 hutte-épine sur 10, pour chaque joueur qui a la quête : à ce stade le kraal est presque vidé, il faut souvent le chemin du retour ou un second passage.",
+	-- {item:5825} Treshala's Pendant
+	["{item:5825}: quilboars of the Kraul, about 1 in 10"] = "{item:5825} : huttes-épines du kraal, environ 1 fois sur 10",
+
+	-- Step 43: Razorfen Kraul: Willix the Importer
 	-- {quest:1144} Willix the Importer
 	["Razorfen Kraul: {quest:1144}"] = "Kraal de Tranchebauge : {quest:1144}",
-	-- {quest:1144} Willix the Importer
-	["{quest:1144}, a goblin, is held prisoner inside (his spot: to check in game). Everyone takes his quest before he starts walking; he walks all the way back to the entrance and quilboars attack on the way. He gives the reward himself at the end."] = "{quest:1144}, un gobelin, est retenu prisonnier à l'intérieur (sa place : à vérifier en jeu). Chacun prend sa quête avant qu'il se mette en marche ; il marche jusqu'à l'entrée et des huttes-épines attaquent en chemin. Il donne lui-même la récompense à la fin.",
+	-- {quest:1144} Willix the Importer · {npc:4510} Heralath Fallowbrook
+	["{quest:1144}, a goblin, is held in the same tent as {npc:4510}. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end."] = "{quest:1144}, un gobelin, est retenu dans la même tente que {npc:4510}. Chacun prend sa quête avant qu'il se mette en marche ; il retourne à l'entrée par le côté sud, devant de nombreux sangliers cuirassés. Il donne lui-même la récompense à la fin.",
 	["Not there? Another group is escorting him: wait for him to come back, or join them."] = "Pas là ? Un autre groupe l'escorte : attendre son retour, ou se joindre à eux.",
 	["Escort him out of the Kraul"] = "L'escorter hors du kraal",
 	-- {quest:1144} Willix the Importer
 	["{quest:1144}, at the entrance"] = "{quest:1144}, à l'entrée",
 
-	-- Step 47: Mirage Raceway
+	-- Step 46: Mirage Raceway
 	["Mirage Raceway"] = "Piste des mirages",
 	["Follow the canyons east to the salt flats. The goblins and gnomes of the Mirage Raceway are neutral and give quests to both factions."] = "Suivez les canyons vers l'est jusqu'aux plaines de sel. Les gobelins et gnomes de la Piste des mirages sont neutres et donnent des quêtes aux deux factions.",
 	-- {quest:5762} Hemet Nesingwary
 	["For {quest:5762} in Stranglethorn, later"] = "Pour {quest:5762} à Strangleronce, plus tard",
 
-	-- Step 48: Mirage Raceway: kill these as you meet them
+	-- Step 47: Mirage Raceway: kill these as you meet them
 	["Mirage Raceway: kill these as you meet them"] = "Piste des mirages : tuez-les au fur et à mesure",
 	-- {object:19868} Rocket Car Rubble
 	-- plural, as words: Scorpid Reavers = {npc:4140} Scorpid Reaver · Saltstone Basilisks = {npc:4147} Saltstone Basilisk
 	["{object:19868} lies all over the flats. Scorpid Reavers roam the north half; keep to it, away from the Saltstone Basilisks, Crystalhides and Gazers (32-35) of the middle and the far south."] = "{object:19868} jonchent les Salines. Les Scorpides ravageurs parcourent la moitié nord : restez-y, loin des Basilics du sel gemme, Peaux de cristal et Contemplateurs (32-35) du centre et de l'extrême sud.",
 
-	-- Step 49: Mirage Raceway
+	-- Step 48: Mirage Raceway
 	-- {npc:4454} Fizzle Brassbolts · {zone:1418} Badlands
 	["{npc:4454}: for Martek in the {zone:1418}, at 39; not offered? Go on"] = "{npc:4454} : pour Martek dans {zone:1418}, à 39 ; non proposé ? Continuer",
 
