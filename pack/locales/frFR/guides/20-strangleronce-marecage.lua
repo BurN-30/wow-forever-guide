@@ -414,22 +414,30 @@ return {
 	-- {zone:1432} Loch Modan · {zone:1418} Badlands · {npc:2860} Sigrun Ironhew
 	["Ride south out of {zone:1432} through the pass into the {zone:1418}; {npc:2860} camps at the dig."] = "Allez vers le sud depuis {zone:1432} par le col jusqu'à {zone:1418} ; {npc:2860} campe sur le site de fouilles.",
 
-	-- Step 127: Garek
+	-- Step 127: Uldaman (optional): Prospector Ryedol
+	-- {npc:2910} Prospector Ryedol
+	["Uldaman (optional): {npc:2910}"] = "Uldaman (facultatif) : {npc:2910}",
+	-- {quest:720} A Sign of Hope · {npc:2909} Hammertoe Grez
+	["Ryedol's errand left in Group 17, {quest:720}, now serves Uldaman: it sends you to {npc:2909}, just outside the dungeon, in the next guide."] = "La course de Ryedol laissée au Groupe 17, {quest:720}, sert maintenant pour Uldaman : elle envoie chez {npc:2909}, juste devant le donjon, au guide suivant.",
+	-- {npc:2910} Prospector Ryedol · {npc:2909} Hammertoe Grez
+	["{npc:2910}: for {npc:2909}, outside Uldaman"] = "{npc:2910} : pour {npc:2909}, devant Uldaman",
+
+	-- Step 128: Garek
 	-- {npc:2888} Garek
 	["{npc:2888} camps by himself in Dustwind Gulch, south-east of the digsite."] = "{npc:2888} campe seul dans le Goulet de la Bourrasque, au sud-est du site de fouilles.",
 
-	-- Step 129: Riding at 40
+	-- Step 130: Riding at 40
 	-- {npc:4772} Ultham Ironhorn · {zone:1432} Loch Modan · {npc:1261} Veron Amberstill
 	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. {npc:4772} teaches Dwarves at Amberstill Ranch, east of Kharanos on the road to {zone:1432}, beside {npc:1261}'s rams. Forever may let any race learn from any riding trainer (unconfirmed). Collectibles, Mounts · Level 40 lists every colour."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. {npc:4772} enseigne aux nains à la Ferme des Amberstill, à l'est de Kharanos sur la route vers {zone:1432}, à côté des béliers de {npc:1261}. Forever pourrait permettre à n'importe quelle race d'apprendre auprès de n'importe quel maître de monte (non confirmé). Collectibles, Montures · Niveau 40 liste toutes les couleurs.",
 	-- {npc:1261} Veron Amberstill
 	["{npc:1261}: other colours, 20g"] = "{npc:1261} : autres couleurs, 20 po",
 
-	-- Step 130: Fly to Ironforge
+	-- Step 131: Fly to Ironforge
 	-- {zone:1455} Ironforge
 	["Fly to {zone:1455}"] = "Envolez-vous vers {zone:1455}",
 	["Thelsamar flight master"] = "Maître de vol de Thelsamar",
 
-	-- Step 131: Riding at 40
+	-- Step 132: Riding at 40
 	-- {npc:7954} Binjy Featherwhistle · {npc:7955} Milli Featherwhistle
 	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. {npc:7954} teaches Gnomes at Steelgrill's Depot, just east of Kharanos, beside {npc:7955}'s mechanostriders. Forever may let any race learn from any riding trainer (unconfirmed). Collectibles, Mounts · Level 40 lists every colour."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. {npc:7954} enseigne aux gnomes au dépôt de Steelgrill, juste à l'est de Kharanos, à côté des méchanostrucs de {npc:7955}. Forever pourrait permettre à n'importe quelle race d'apprendre auprès de n'importe quel maître de monte (non confirmé). Collectibles, Montures · Niveau 40 liste toutes les couleurs.",
 	-- {npc:7955} Milli Featherwhistle

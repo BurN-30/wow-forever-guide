@@ -755,6 +755,18 @@ step Hammertoe's Digsite
   tip Ride south out of Loch Modan through the pass into the Badlands; Sigrun Ironhew camps at the dig.
   accept 706                          -- Sigrun Ironhew
 
+# Groupe Alliance 0.11.0: the A Sign of Hope chain, for Uldaman (asked in Ironforge just before,
+# `when group 2240`). Its first quest (720, the Crumpled Map) is already done in Group 17
+# (19-terres-ingrates), whose note says to skip Ryedol's next errand: for an Uldaman group, it is
+# taken here. Polestar's Forever data and the TrinityCore base agree: 721 (Ryedol) -> 722 and 723
+# (Hammertoe Grez, outside Uldaman, next guide) -> 724 to 726 (Ironforge, on the way back).
+# Places: the data, and Warcraft Tavern's Forever Uldaman quest guide (12/11/2026).
+step Uldaman (optional): Prospector Ryedol
+  when group 2240
+  zone Badlands
+  tip Ryedol's errand left in Group 17, A Sign of Hope, now serves Uldaman: it sends you to Hammertoe Grez, just outside the dungeon, in the next guide.
+  accept 721                                  -- Prospector Ryedol: for Hammertoe Grez, outside Uldaman
+
 step Garek
   tip Garek camps by himself in Dustwind Gulch, south-east of the digsite.
   accept 732

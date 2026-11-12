@@ -76,6 +76,23 @@ step Hammertoe's Digsite
 
 # ---------------------------------------------------------------- Uldaman (optional)
 
+# Groupe Alliance 0.11.0: the A Sign of Hope chain goes on outside Uldaman (Hammertoe Grez,
+# Magregan Deepshadow, elite 38, Badlands 38.99,19.73 in Polestar's data), then with Ryedol on the
+# way out and in Ironforge. An Ambassador of Evil (762, Angor Fortress, Badlands) and The Lost
+# Tablets of Will (1139, inside Uldaman by Galgann Firehammer) come after the Ironforge visit:
+# left out, the route does not come back.
+step Uldaman: Hammertoe Grez
+  when group 2240
+  when done uld-start
+  when onquest 721
+  zone Badlands
+  tip Hammertoe Grez waits just outside Uldaman, west of the cave. His amulet is on Magregan Deepshadow, a Shadowforge dwarf (elite 38) outside the dungeon portal, south of Hammertoe.
+  turnin 721                                  -- Hammertoe Grez
+  accept 722
+  collect 4635 quest 722 @38.99,19.73         -- Hammertoe's Amulet: Magregan Deepshadow, elite 38
+  turnin 722                                  -- Hammertoe Grez
+  accept 723                                  -- For Prospector Ryedol, on the way out of the Badlands
+
 step The digsite and the outer cave
   when done uld-start
   zone Badlands
@@ -107,6 +124,13 @@ step Rigglefuzz
   tip Leave by the front, south to the Valley of Fangs.
   turnin 2418 optional                    -- Rigglefuzz
 
+step Prospector Ryedol
+  when onquest 723
+  zone Badlands
+  tip At the digsite by the road north to Loch Modan, on the way to the Thelsamar flight.
+  turnin 723                                  -- Prospector Ryedol
+  accept 724                                  -- For Historian Karnik in Ironforge
+
 step Ironforge rewards
   when done uld-start
   zone Ironforge
@@ -115,6 +139,23 @@ step Ironforge rewards
   turnin 1360                             -- Krom Stoutarm
   turnin 2279 optional                    -- High Explorer Magellas
   turnin 2198 optional                    -- Talvash del Kissel: his follow-ups need another Uldaman run, not in this guide
+
+step Hall of Explorers: Historian Karnik and Advisor Belgrum
+  when onquest 724
+  zone Ironforge
+  tip Both stand in the Hall of Explorers. Karnik's last task, An Ambassador of Evil, is in Angor Fortress in the Badlands, which the route has left: do not take it.
+  turnin 724                                  -- Historian Karnik
+  accept 725
+  turnin 725                                  -- Advisor Belgrum
+  accept 726
+  turnin 726                                  -- Historian Karnik
+
+step The Vault of Ironforge: the Platinum Discs reward
+  when turnedin 2279
+  zone Ironforge
+  tip High Explorer Magellas hands a voucher for the Discs of Norgannon: Dinita Stonemantle pays it in the Vault of Ironforge.
+  accept 2439                                 -- High Explorer Magellas
+  turnin 2439                                 -- Dinita Stonemantle, in the Vault
 
 step Fly to Southshore
   when done uld-start
