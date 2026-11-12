@@ -61,6 +61,8 @@ return {
 
 	-- Step 10: Light's Hope Chapel
 	["Light's Hope Chapel"] = "Chapelle de l'Espoir de Lumière",
+	-- {npc:11035} Betina Bigglezink · {npc:11036} Leonid Barthalomew the Revered · {npc:11033} Smokey LaRue · {npc:11039} Duke Nicholas Zverenhoff
+	["{npc:11035}, {npc:11036}, {npc:11033} and {npc:11039}, in and around the chapel, give Stratholme and Scholomance quests: the guide takes them in its end-of-route chapter (after Group 30)."] = "{npc:11035}, {npc:11036}, {npc:11033} et {npc:11039}, dans la chapelle et autour, donnent des quêtes de Stratholme et de Scholomance : le guide les prend dans son chapitre de fin de parcours (après le Groupe 30).",
 
 	-- Step 11: Light's Hope Chapel
 	["Ride on north to Chillwind Camp and fly to Light's Hope Chapel."] = "Continuez au nord jusqu'au Camp du Noroît et envolez-vous vers la chapelle de l'Espoir de Lumière.",

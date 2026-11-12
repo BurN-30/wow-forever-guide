@@ -543,10 +543,23 @@ step Artist Renfray
   goto 65.8,75.4 "Western Plaguelands"
   turnin 5846                         -- Inside
 
+# Groupe Alliance 0.12.0: Of Love and Family (5848), Renfray's next quest: the painting is in
+# Stratholme's Scarlet Bastion, which the end-of-route chapter (33-donjons-fin) runs, and it goes back
+# to Tirion Fordring. Asked here (`when group 5848`): Renfray stands on Caer Darrow, which the chapter
+# does not pass before Stratholme. Level 60, required 52, after 5846 (Polestar's Forever data,
+# TrinityCore). Dropped after Stratholme when not done.
+step Artist Renfray: Of Love and Family (optional)
+  when group 5848
+  zone Western Plaguelands
+  tip Renfray's next quest, Of Love and Family, is a painting hidden in Stratholme's Scarlet Bastion, for Tirion Fordring: the guide's end-of-route chapter (after Group 30) runs Stratholme and brings it back to him. Take it only if your group means to run Stratholme then: it stays in the quest log until that. It cannot be shared. Alone? Skip it.
+  accept 5848                         -- Artist Renfray
+
+# Groupe Alliance 0.12.0: the note on Stratholme and Scholomance, run in the end-of-route chapter.
 step Scholomance (optional)
   zone Eastern Plaguelands
   tip Running Scholomance (Caer Darrow, south-east Western Plaguelands) or Stratholme instead of grinding gets you there faster in a group. Skip this step to grind solo.
   note Scholomance fits levels 58 to 60; The Key to Scholomance is handed in at Chillwind Camp below.
+  note The guide's end-of-route chapter (after Group 30) runs Stratholme and Scholomance with their quests: Light's Hope Chapel, Egan, Weldon Barov at Chillwind Camp and Eva Sarkhoff at the door of Scholomance give them there.
 
 step Grind to 60
   zone Eastern Plaguelands

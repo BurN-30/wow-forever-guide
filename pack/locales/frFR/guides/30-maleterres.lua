@@ -186,6 +186,8 @@ return {
 	-- Step 46: Augustus the Touched
 	-- {npc:12384} Augustus the Touched · {npc:11140} Egan
 	["Ride north to Terrordale. {npc:12384} lives in the ruined hut, and his receipt book lies in the ruined inn nearby.\n{npc:11140} stands by {npc:12384}' hut in Terrordale."] = "Partez au nord jusqu'à Val-Terreur. {npc:12384} vit dans la cabane en ruine, et son carnet de reçus se trouve dans l'auberge en ruine voisine.\n{npc:11140} se tient près de la cabane de {npc:12384} à Val-Terreur.",
+	-- {npc:11140} Egan · {quest:5281} The Restless Souls
+	["{npc:11140}'s next quest, {quest:5281}, is done in Stratholme: the guide takes it in its end-of-route chapter (after Group 30)."] = "La quête suivante de {npc:11140}, {quest:5281}, se fait à Stratholme : le guide la prend dans son chapitre de fin de parcours (après le Groupe 30).",
 
 	-- Step 47: Augustus the Touched
 	-- {npc:8598} Frenzied Plaguehound

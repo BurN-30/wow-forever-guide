@@ -81,8 +81,10 @@ step Fly to Light's Hope Chapel
   fly "Light's Hope Chapel"
   zone Eastern Plaguelands
 
+# Groupe Alliance 0.12.0: the Stratholme and Scholomance givers of the chapel pointed out.
 step Light's Hope Chapel
   turnin 5181                         -- Carlin Redpath
+  note Betina Bigglezink, Leonid Barthalomew the Revered, Smokey LaRue and Duke Nicholas Zverenhoff, in and around the chapel, give Stratholme and Scholomance quests: the guide takes them in its end-of-route chapter (after Group 30).
 
 step Light's Hope Chapel
   zone Eastern Plaguelands

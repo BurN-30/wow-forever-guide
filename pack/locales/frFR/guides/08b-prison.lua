@@ -27,9 +27,8 @@ return {
 	["The gate is by {npc:1719}, at the top of the stairs on the canal. Group of 5 at 24 to 28, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits."] = "La porte est près de {npc:1719}, en haut des marches sur le canal. Groupe de 5 de 24 à 28, ou de 3 de 26 à 29. Tous les prisonniers sont élites (23 à 26) ; les prisonniers défias désarment, le tank prend la menace avant que les autres frappent.",
 	["The Stockade"] = "La Prison",
 
-	-- Step 3: The entry corridor and Targorr the Dread
-	-- {npc:1696} Targorr the Dread
-	["The entry corridor and {npc:1696}"] = "Le couloir d'entrée et {npc:1696}",
+	-- Step 3: The entry corridor and Targorr
+	["The entry corridor and Targorr"] = "Le couloir d'entrée et Targorr",
 	-- {npc:1696} Targorr the Dread
 	["Cells line both sides, 3 or 4 elites each, and runners flee into the next cell for help: stop them or clear each cell as you pass. {npc:1696} hides in a side cell of this corridor (often first on the right or second on the left); a patrol walks between the two wings."] = "Des cellules des deux côtés, 3 ou 4 élites chacune, et les fuyards courent chercher de l'aide dans la cellule voisine : les arrêter ou vider chaque cellule au passage. {npc:1696} se cache dans une cellule de ce couloir (souvent la 1re à droite ou la 2e à gauche) ; une patrouille circule entre les deux ailes.",
 	-- plural, as words: Red Wool Bandanas = {item:2909} Red Wool Bandana

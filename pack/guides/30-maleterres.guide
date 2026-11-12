@@ -275,11 +275,13 @@ step Eastern Plaguelands: kill these as you meet them
   kill 8600 quest 5543.1              -- Plaguebat
   kill 8596 quest 5542.1              -- Plaguehound Runt
 
+# Groupe Alliance 0.12.0: note on Egan's next quest (Stratholme, end-of-route chapter).
 step Augustus the Touched
   tip Ride north to Terrordale. Augustus lives in the ruined hut, and his receipt book lies in the ruined inn nearby.
   accept 6164                         -- Inside
   tip Egan stands by Augustus' hut in Terrordale.
   turnin 5281                         -- Inside
+  note Egan's next quest, The Restless Souls, is done in Stratholme: the guide takes it in its end-of-route chapter (after Group 30).
 
 step Augustus the Touched
   collect 15884 quest 6164.1 @14.0,24.2 map 1423 live -- Upstairs

@@ -366,14 +366,22 @@ return {
 	-- Step 84: Of Lost Honor
 	["Underwater"] = "Sous l'eau",
 
-	-- Step 87: Scholomance (optional)
+	-- Step 87: Artist Renfray: Of Love and Family (optional)
+	-- {npc:11936} Artist Renfray · {quest:5846} Of Love and Family
+	["{npc:11936}: {quest:5846} (optional)"] = "{npc:11936} : {quest:5846} (facultatif)",
+	-- {quest:5846} Of Love and Family · {npc:1855} Tirion Fordring
+	["Renfray's next quest, {quest:5846}, is a painting hidden in Stratholme's Scarlet Bastion, for {npc:1855}: the guide's end-of-route chapter (after Group 30) runs Stratholme and brings it back to him. Take it only if your group means to run Stratholme then: it stays in the quest log until that. It cannot be shared. Alone? Skip it."] = "La quête suivante de Renfray, {quest:5846}, est un tableau caché dans le Bastion écarlate (Scarlet Bastion) de Stratholme, pour {npc:1855} : le chapitre de fin de parcours du guide (après le Groupe 30) fait Stratholme et le lui rapporte. La prendre seulement si le groupe compte faire Stratholme à ce moment-là : elle reste dans le journal jusque-là. Elle ne se partage pas. Seul ? La passer.",
+
+	-- Step 88: Scholomance (optional)
 	["Scholomance (optional)"] = "Scholomance (facultatif)",
 	-- {zone:1422} Western Plaguelands
 	["Running Scholomance (Caer Darrow, south-east {zone:1422}) or Stratholme instead of grinding gets you there faster in a group. Skip this step to grind solo."] = "En groupe, faire la Scholomance (Caer Darrow, au sud-est des {zone:1422}) ou Stratholme au lieu de tuer des monstres en boucle vous y amène plus vite. Sautez cette étape pour monter en solo.",
 	-- {quest:5505} The Key to Scholomance
 	["Scholomance fits levels 58 to 60; {quest:5505} is handed in at Chillwind Camp below."] = "La Scholomance convient aux niveaux 58 à 60 ; {quest:5505} se rend au Camp du Noroît ci-dessous.",
+	-- {npc:11023} Weldon Barov · {npc:11216} Eva Sarkhoff
+	["The guide's end-of-route chapter (after Group 30) runs Stratholme and Scholomance with their quests: Light's Hope Chapel, Egan, {npc:11023} at Chillwind Camp and {npc:11216} at the door of Scholomance give them there."] = "Le chapitre de fin de parcours du guide (après le Groupe 30) fait Stratholme et la Scholomance avec leurs quêtes : la chapelle de l'Espoir de Lumière, Egan, {npc:11023} au Camp du Noroît et {npc:11216} à la porte de la Scholomance les donnent à ce moment-là.",
 
-	-- Step 88: Grind to 60
+	-- Step 89: Grind to 60
 	["Grind to 60"] = "Monter au niveau 60",
 	-- {npc:1855} Tirion Fordring
 	-- plural, as words: Terrordale Spirits = {npc:14564} Terrordale Spirit
@@ -381,7 +389,7 @@ return {
 	-- {npc:14564} Terrordale Spirit · {zone:1423} Eastern Plaguelands
 	["grind on {npc:14564} at Terrordale, {zone:1423}"] = "tuer des {npc:14564} en boucle à Val-Terreur, {zone:1423}",
 
-	-- Step 90: Chillwind Camp
+	-- Step 91: Chillwind Camp
 	["Ride back south-west to Chillwind Camp."] = "Retournez au sud-ouest jusqu'au Camp du Noroît.",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.

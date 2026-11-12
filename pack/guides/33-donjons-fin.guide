@@ -718,3 +718,236 @@ step Shards of the Felvine: not done
   when !complete 5526
   tip Shards of the Felvine is not done and the guide does not go back to Dire Maul: abandon it, or keep it for a run of your own.
   abandon 5526
+
+# ================================================================ Stratholme
+# Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
+# Dungeons codex; prerequisites cross-checked with the TrinityCore base: no disagreement (The Active
+# Agent after The Flesh Does Not Lie; The Truth Comes Crashing Down, started by the Head of Balnazzar,
+# after The Archivist; Above and Beyond after it, then Lord Maxwell Tyrosus and The Argent Hold;
+# The Restless Souls 5282 after 5281, handed to Egan in Group 28; Of Love and Family 5848 after 5846,
+# handed to Renfray in Group 30). Polestar's data and
+# Warcraft Tavern name the tobacco merchant Ezra Grimm (The Great Ezra Grimm); TrinityCore keeps
+# the old title, The Great Fras Siabi. Rooms, bosses and how-to: Warcraft Tavern's Forever
+# Stratholme (living and undead) dungeon and quest guides (warcrafttavern.com/forever/
+# guides/stratholme-living, stratholme-undead, stratholme-living-quests, stratholme-undead-quests,
+# read on 12/11/2026), written from Classic (closed in the Forever beta): places inside are to
+# check in game.
+# Asked at Light's Hope Chapel (`when group 5212`, The Flesh Does Not Lie: level 55); every later
+# step needs `when done strat-start`.
+# Stratholme, three visits in one instance, as its quest chains ask (Warcraft Tavern: The Archivist
+# must be handed in before Balnazzar dies, The Truth Comes Crashing Down before the Baron does):
+#   1. the living side, by the main gate: Ezra Grimm, the Scarlet Bastion (Malor's strongbox,
+#      Archivist Galford and the painting), Elders' Square (Barthilas: the Key to the City);
+#   2. Balnazzar, then a ride to Light's Hope and back;
+#   3. the dead side, by the Service Entrance: Aurius, the three ziggurats, Ramstein, the Baron.
+# Left out: Menethil's Gift and the rest of Ras Frostwhisper's chain (The Human, Ras Frostwhisper:
+# Stromgarde in the Arathi Highlands, Light's Hope, Stratholme before the Baron, Scholomance again;
+# the TrinityCore base also asks Friendly standing with Caer Darrow, faction 574, for its first
+# quest, which Polestar's data does not); Sweet Serenity and Corruption (Winterspring,
+# the Crimson Hammersmith and the Black Guard Swordsmith); Dead Man's Plea, Deliana's and Anthion
+# Harmon's dungeon set quests; Scholomance (next).
+step Stratholme (dungeon, optional)
+  label strat-start
+  when group 5212
+  tip Stratholme: the dead city in the north-west of the Eastern Plaguelands, levels 58 to 60, bosses 57 to 62: a group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Light's Hope Chapel, from Egan in Terrordale and, if taken in Group 30, from Artist Renfray. Its quest chains ask for three visits to the same instance: the living side, then Balnazzar, then the dead side, with rides back to Light's Hope in between. Alone? Skip it.
+  note Keep 8 free quest log slots.
+  goto 71.7,49.9 map 1423 live "Light's Hope Chapel" r 40
+
+step Light's Hope Chapel: Stratholme
+  when done strat-start
+  zone Eastern Plaguelands
+  tip Leonid Barthalomew the Revered stands inside the chapel; Betina Bigglezink, Duke Nicholas Zverenhoff and Smokey LaRue stand around it.
+  accept 5212                         -- Betina Bigglezink
+  accept 5251                         -- Duke Nicholas Zverenhoff
+  accept 5214                         -- Smokey LaRue
+  accept 5243                         -- Leonid Barthalomew the Revered
+
+step Terrordale: Egan
+  when done strat-start
+  zone Eastern Plaguelands
+  tip Ride west across the zone to Terrordale: Egan waits in the westernmost of its three houses, where Group 28 found him. His blaster frees the ghosts of Stratholme.
+  accept 5282                         -- Egan
+
+step Stratholme: along the way
+  when done strat-start
+  along until strat-end
+  tip Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); Stratholme Holy Water in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; target one and use the blaster Egan gave you on it, then again on the soul that breaks free.
+  note Share The Flesh Does Not Lie, The Archivist, The Great Ezra Grimm and Houses of the Holy with your group: click each in the quest log, then Share. The Restless Souls and Of Love and Family cannot be shared.
+  collect 13174 quest 5212            -- Plagued Flesh Sample
+  collect 13180 quest 5243            -- Stratholme Holy Water: supply crates
+  kill 11122 quest 5282               -- Restless Soul, freed with the blaster
+
+step Stratholme, first visit: before going in
+  when done strat-start
+  zone Eastern Plaguelands
+  tip First visit, the living side, by the main gate across the bridge: King's Square, Market Row, Crusaders' Square and the Scarlet Bastion, then Festival Lane and Elders' Square. Leave Balnazzar alive this time: The Archivist must be handed in before he dies, or his head starts nothing. Warcraft Tavern (written from Classic) says the doors of the Scarlet Bastion open with The Scarlet Key, from Arcanist Doan's chest in the Scarlet Monastery Library: to check in game.
+  note In the quest log: The Flesh Does Not Lie (Betina), The Archivist (Duke Nicholas), The Great Ezra Grimm (Smokey LaRue), Houses of the Holy (Leonid), The Restless Souls (Egan); if taken in Group 30, Of Love and Family (Renfray). Not on this route: Sweet Serenity and Corruption (Winterspring), the dungeon set quests (Deliana, Anthion Harmon), Ras Frostwhisper's chain (Menethil's Gift).
+  goto 26.5,10.4 map 1423 "Stratholme" r 25
+
+step King's Square: Ezra Grimm
+  when done strat-start
+  tip Past the main gate, King's Square: follow the road round to the left to its dead end, under the sign of Ezra Grimm's Premium Tobacco. Ezra Grimm, undead (elite 61), stands in front of his shop.
+  collect 13172 quest 5214            -- Grimm's Premium Tobacco: Ezra Grimm
+
+step Market Row and Crusaders' Square
+  when done strat-start
+  tip Back through King's Square, then Market Row (Hearthsinger Forresten, rare, may walk there) to Crusaders' Square: Timmy the Cruel runs out once the square is cleared. Never click a pattern on the ground during a fight: it calls the Crimson Hammersmith. The Scarlet Bastion opens on the square.
+  kill 10808 optional                 -- Timmy the Cruel
+
+step The Scarlet Bastion: Malor's Strongbox
+  when done strat-start
+  tip In the Bastion, Malor the Zealous (elite 60) guards the Hoard: his strongbox, on the ground beside him, holds the Medallion of Faith. One medallion per run: whoever loots it keeps it for Aurius, in the third visit. Cannon Master Willey (elite 60) holds the armoury and calls riflemen: the cannons of his room fire on them.
+  kill 11032 optional                 -- Malor the Zealous
+  collect 12845 optional              -- Medallion of Faith: Malor's Strongbox
+
+step The Scarlet Bastion: Archivist Galford
+  when done strat-start
+  tip Archivist Galford (elite 60) holds his library, across the hall from the last chamber, Balnazzar's: spread out against his fire. Once he is dead, use the Scarlet Archive, the book on the table behind him: the room burns. Leave Balnazzar for the second visit.
+  kill 10811 quest 5251               -- Archivist Galford
+  interact 176245 quest 5251          -- Scarlet Archive: set it on fire
+
+step The Scarlet Bastion: the painting
+  when done strat-start
+  when onquest 5848
+  tip Of Love and Family: an Unfinished Painting hangs on the wall of Galford's library, the twin moons on it; Renfray's painting is hidden behind it.
+  collect 14679 quest 5848            -- Of Love and Family: behind the Unfinished Painting
+
+step Festival Lane and Elders' Square
+  label strat-v1-end
+  when done strat-start
+  tip Out of the Bastion, Festival Lane: The Unforgiven (elite 57) calls spirits, kill them first. Then Elders' Square: Magistrate Barthilas (elite 58) stands before Alonsus Chapel and drops the Key to the City. It opens the Service Entrance, the gate on this square, and the gate of the Gauntlet: one key in the group is enough. Leave the dungeon by the Service Entrance, or the way you came; keep the group together, without resetting the instance: the next two visits come back into it.
+  kill 10435 optional                 -- Magistrate Barthilas
+  collect 12382 optional              -- Key to the City: Magistrate Barthilas
+
+step Light's Hope Chapel: Betina Bigglezink
+  when complete 5212
+  zone Eastern Plaguelands
+  tip Ride back east to Light's Hope Chapel, a good ten minutes. Betina's next quest is for the third visit.
+  turnin 5212                         -- Betina Bigglezink
+  accept 5213                         -- The Scourge Data: a ziggurat of the dead side
+
+step Light's Hope Chapel: Duke Nicholas Zverenhoff
+  when complete 5251
+  zone Eastern Plaguelands
+  tip The Archivist handed in: Balnazzar's head now starts the next quest (second visit).
+  turnin 5251                         -- Duke Nicholas Zverenhoff
+
+step Light's Hope Chapel: Smokey LaRue
+  when complete 5214
+  zone Eastern Plaguelands
+  turnin 5214                         -- Smokey LaRue
+
+step Light's Hope Chapel: Leonid Barthalomew the Revered
+  when complete 5243
+  zone Eastern Plaguelands
+  turnin 5243                         -- Leonid Barthalomew the Revered
+
+step Stratholme, second visit: Balnazzar
+  when done strat-start
+  tip Second visit: back into the same instance by the main gate, through the cleared streets to the Scarlet Bastion's last chamber. Grand Crusader Dathrohan (elite 62) turns into Balnazzar, a dread lord, during the fight: dispel his Deep Sleep, stand at range from his Psychic Scream. His head starts The Truth Comes Crashing Down for those who handed in The Archivist: right-click it.
+  goto 26.5,10.4 map 1423 "Stratholme" r 25
+  kill 10813 optional                 -- Balnazzar
+  accept 5262                         -- Head of Balnazzar: Balnazzar
+
+step Light's Hope Chapel: The Truth Comes Crashing Down
+  label strat-v2-end
+  when onquest 5262
+  zone Eastern Plaguelands
+  tip Out by the Service Entrance in Elders' Square (or the way you came) and back to Light's Hope Chapel. Duke Nicholas takes the head and sends you after Baron Rivendare, the last boss of the dead side: the third visit, in the same instance. Rather not ride again? Skip this step: Above and Beyond then waits for another run.
+  turnin 5262                         -- Duke Nicholas Zverenhoff
+  accept 5263
+
+step Stratholme, third visit: before going in
+  when done strat-start
+  zone Eastern Plaguelands
+  tip Third visit, the dead side: the Service Entrance, the gate east of the main one, opens with the Key to the City onto Elders' Square. Bosses 59 to 62: 60 advised. Opening the gate of the Gauntlet starts Baron Rivendare's 45-minute countdown: it only matters for Ysida Harmon (Dead Man's Plea, a dungeon set quest), no quest of this guide depends on it.
+  note In the quest log: The Active Agent (Betina), Above and Beyond (Duke Nicholas). Whoever carries the Medallion of Faith: Aurius, just inside.
+  enter "Stratholme" @26.5,10.4 map 1423
+
+step Elders' Square: Aurius
+  when done strat-start
+  tip Aurius waits in Alonsus Chapel, on Elders' Square: the player with the Medallion of Faith hands it in, then takes Aurius' Reckoning. With the medallion handed in during this instance, Aurius joins the fight against Baron Rivendare. Whether he offers Aurius' Reckoning to the others of the group too: to check in game.
+  accept 5122 optional                -- Aurius: with the Medallion of Faith
+  turnin 5122 optional
+  accept 5125 optional                -- Aurius
+
+step The Gauntlet and the ziggurats
+  when done strat-start
+  tip The Key to the City opens the gate of the Gauntlet. Three ziggurats stand on the dead side, each with a guardian at its door: Nerub'enkan (the first, on the left), Baroness Anastari (the second: she possesses a player, bring them to half health), Maleki the Pallid (the third). Kill each guardian, then every Thuzadin Acolyte inside: the Scourge Data for Betina lies in a small box in one of the three. Stonespine (rare) may walk between the first two.
+  kill 10437 optional                 -- Nerub'enkan
+  kill 10436 optional                 -- Baroness Anastari
+  kill 10438 optional                 -- Maleki the Pallid
+  collect 13176 quest 5213            -- Scourge Data: a small box in one of the ziggurats
+
+step Slaughter Square: Ramstein the Gorger
+  when done strat-start
+  tip With the three ziggurats cleared, the gates of Slaughter Square open. Kill every Bile Spewer and Venom Belcher in the square: Ramstein the Gorger (elite 61) comes out; he hits hard and knocks his target away. Then a horde of Mindless Undead, then three Black Guard Sentries at the door of the Slaughterhouse.
+  kill 10439 optional                 -- Ramstein the Gorger
+
+step The Slaughterhouse: Baron Rivendare
+  label strat-v3-end
+  when done strat-start
+  tip Baron Rivendare (elite 62) raises skeletons and his Unholy Aura hurts everyone near him; his Mortal Strike cuts the tank's healing. His head is for Duke Nicholas. Then speak with Aurius for Aurius' Reckoning. The glowing symbol in front of the Baron, Menethil's Gift, belongs to Ras Frostwhisper's chain: not in this guide.
+  collect 13251 quest 5263            -- Head of Baron Rivendare
+  turnin 5125 optional                -- Aurius, after the fight
+
+step Light's Hope Chapel: Betina Bigglezink
+  when complete 5213
+  zone Eastern Plaguelands
+  tip Out of Stratholme, back east to Light's Hope Chapel.
+  turnin 5213                         -- Betina Bigglezink
+
+step Light's Hope Chapel: Duke Nicholas Zverenhoff
+  when complete 5263
+  zone Eastern Plaguelands
+  tip Above and Beyond: Duke Nicholas sends you to Lord Maxwell Tyrosus, inside the chapel, who opens the Argent Hold, the chest beside him, for your reward.
+  turnin 5263                         -- Duke Nicholas Zverenhoff
+  accept 5264
+  turnin 5264                         -- Lord Maxwell Tyrosus
+  accept 5265
+  turnin 5265                         -- The Argent Hold
+
+step Light's Hope Chapel: what is left to hand in
+  when onquest 5212,5214,5243,5251,5262
+  zone Eastern Plaguelands
+  tip Finished in the second or third visit only, or Balnazzar's head kept without the ride: hand them in now.
+  turnin 5212 optional                -- Betina Bigglezink
+  turnin 5214 optional                -- Smokey LaRue
+  turnin 5243 optional                -- Leonid Barthalomew the Revered
+  turnin 5251 optional                -- Duke Nicholas Zverenhoff
+  turnin 5262 optional                -- Duke Nicholas Zverenhoff: the head of Balnazzar
+
+step Terrordale: Egan
+  when complete 5282
+  zone Eastern Plaguelands
+  tip Ride west across the zone to Egan's house in Terrordale.
+  turnin 5282                         -- Egan
+
+step Tirion Fordring: Of Love and Family
+  when complete 5848
+  zone Eastern Plaguelands
+  tip West of Terrordale, Tirion's hut on the bank of the border river. His next quest, Find Myranda, leads to Hearthglen: not in this guide.
+  turnin 5848                         -- Tirion Fordring
+
+step Stratholme: quests not done
+  label strat-end
+  when done strat-start
+  tip What is left of Stratholme in the quest log is for another run: keep it for one, or drop it to free the log.
+  abandon 5212 optional
+  abandon 5213 optional
+  abandon 5214 optional
+  abandon 5243 optional
+  abandon 5251 optional
+  abandon 5262 optional
+  abandon 5263 optional
+  abandon 5282 optional
+  abandon 5125 optional
+  abandon 5848 optional
+
+# Groupe Alliance 0.12.0: Of Love and Family (5848), taken in Group 30 with its own question, when
+# Stratholme was skipped: nothing brings the guide back to Tirion.
+step Of Love and Family: not done
+  when onquest 5848
+  when !complete 5848
+  tip Of Love and Family is not done and the guide does not go back to Stratholme: abandon it, or keep it for a run of your own.
+  abandon 5848
