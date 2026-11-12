@@ -32,7 +32,7 @@ Le guide ne s'ouvre pas ? Écran de sélection des personnages → bouton **AddO
 - Il remplace seulement les dossiers du guide dans `World of Warcraft\_forever_\Interface\AddOns` (`Polestar`, `Polestar...`, `Auctionator`, `PrettyTooltip`, `BuffAlertsForever`, `BugSack` et `!BugGrabber`) et retire ceux d'une ancienne version du guide. Les autres addons et le dossier `WTF` (réglages, progression du guide) ne sont pas touchés.
 - L'ancienne version est mise de côté dans `_forever_\Interface\_guide-sauvegarde` (seulement la dernière). En cas de problème pendant le remplacement, elle est remise en place toute seule.
 - Aucun droit administrateur. Ses fichiers sont dans `%LOCALAPPDATA%\GuideWoWForever` : la copie du programme visée par le raccourci, `journal.txt` (le détail de chaque lancement, à joindre en cas de problème) et `etat.txt` (dossier du jeu et version installée).
-- Désinstaller : supprimer le raccourci, ce dossier, et les dossiers `Polestar...`, `Auctionator`, `PrettyTooltip`, `BuffAlertsForever`, `BugSack` et `!BugGrabber` de `AddOns`.
+- Désinstaller : supprimer le raccourci, ce dossier, et les dossiers `Polestar...`, `Auctionator`, `PrettyTooltip`, `BuffAlertsForever`, `BugSack` et `!BugGrabber` de `AddOns`. Un seul réglage du jeu reste changé : le texte de quête instantané, que Polestar allume (roue dentée, Quêtes plus rapides) et ne rend qu'en décochant l'option. Le décocher avant de supprimer les dossiers, ou plus tard dans les options d'interface du jeu.
 </details>
 
 ### Manière 2 (repli) : le ZIP et `Installer.bat`
