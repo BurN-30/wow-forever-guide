@@ -4400,7 +4400,7 @@ do
 			next = "groupe-alliance/05-sombrivage",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:274268"] = "Dark Iron Map", ["npc:264936"] = "Earthseer Farsen", ["npc:265002"] = "Ghostly Attendant", ["object:149024"] = "Gol'Bolar Quarry", ["object:171709"] = "High Seat", ["zone:1455"] = "Ironforge" },
+			names = { ["item:274268"] = "Dark Iron Map", ["npc:264936"] = "Earthseer Farsen", ["npc:265002"] = "Ghostly Attendant", ["npc:2786"] = "Gerrig Bonegrip", ["object:149024"] = "Gol'Bolar Quarry", ["object:171709"] = "High Seat", ["object:32383"] = "Forlorn Cavern", ["quest:971"] = "Knowledge in the Deeps", ["zone:1440"] = "Ashenvale", ["zone:1455"] = "Ironforge" },
 			steps = {
 				{
 					title = "Deeprun Tram to {zone:1455}",
@@ -4448,6 +4448,14 @@ do
 					goals = {
 						{ t = "accept", quest = 96394, title = "The Restless Dead", npc = 264943, npcName = "Afadra Dunwall", minLevel = 10, qlvl = 15, map = 1455, x = 33.2, y = 47.93, f = "e" },
 						{ t = "accept", quest = 96403, title = "Important Heirlooms", npc = 265003, npcName = "Thom Filch", minLevel = 10, qlvl = 15, map = 1455, x = 32.18, y = 44.5, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1455}: {npc:2786} (Blackfathom Deeps, for later)",
+					note = "{quest:971} belongs to Blackfathom Deeps, a dungeon the guide offers in Group 8 ({zone:1440}, levels 24 to 28). The route passes no other time in {zone:1455} before it. Planning that dungeon? Take it now: it waits in the quest log. Not sure, or playing alone? Skip it: Group 8 offers the dungeon without it.",
+					when = { { k = "group", q = 971 } },
+					goals = {
+						{ t = "accept", quest = 971, title = "Knowledge in the Deeps", npc = 2786, npcName = "Gerrig Bonegrip", minLevel = 10, qlvl = 23, map = 1455, x = 50.83, y = 5.62, z = 505, f = "e", note = "{npc:2786}, in the {object:32383}" },
 					},
 				},
 				{
@@ -6885,8 +6893,9 @@ do
 			next = "groupe-alliance/11-mille-pointes",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:12220"] = "Intact Elemental Bracer", ["item:13536"] = "Horn of Awakening", ["item:15885"] = "Pendant of the Sea Lion", ["item:5352"] = "Book: The Powers Below", ["item:5366"] = "Glowing Soul Gem", ["item:5424"] = "Ancient Statuette", ["item:5455"] = "Divined Scroll", ["item:5456"] = "Divining Scroll", ["item:5463"] = "Glowing Gem", ["npc:1007"] = "Mosshide Gnoll", ["npc:1010"] = "Mosshide Fenrunner", ["npc:1020"] = "Mottled Raptor", ["npc:1021"] = "Mottled Screecher", ["npc:1024"] = "Bluegill Murloc", ["npc:1033"] = "Monstrous Ooze", ["npc:1040"] = "Fen Creeper", ["npc:1076"] = "Merrin Rockweaver", ["npc:1078"] = "Ormer Ironbraid", ["npc:1111"] = "Leech Stalker", ["npc:11218"] = "Kerlonian Evershade", ["npc:11219"] = "Liladris Moonriver", ["npc:11401"] = "Priestess Alathea", ["npc:11406"] = "High Priest Rohan", ["npc:11800"] = "Silva Fil'naveth", ["npc:11802"] = "Dendrite Starblaze", ["npc:11865"] = "Buliwyf Stonehand", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1242"] = "Karl Boran", ["npc:1244"] = "Rethiel the Greenwarden", ["npc:1259"] = "Gobbler", ["npc:1417"] = "Young Wetlands Crocolisk", ["npc:1440"] = "Milton Sheaf", ["npc:1444"] = "Brother Kristoff", ["npc:1480"] = "Caitlin Grassman", ["npc:1573"] = "Gryth Thurden", ["npc:2086"] = "Valstag Ironjaw", ["npc:2092"] = "Pilot Longbeard", ["npc:2093"] = "Einar Stonegrip", ["npc:2094"] = "James Halloran", ["npc:2096"] = "Tarrel Rockweaver", ["npc:2097"] = "Harlo Barnaby", ["npc:2104"] = "Captain Stoutfist", ["npc:210995"] = "Alonso", ["npc:2111"] = "Sida", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:258785"] = "High Priestess Mims", ["npc:2786"] = "Gerrig Bonegrip", ["npc:3585"] = "Therysil", ["npc:3649"] = "Thundris Windweaver", ["npc:3664"] = "Ilkrud Magthrull", ["npc:3691"] = "Raene Wolfrunner", ["npc:3846"] = "Talen", ["npc:3885"] = "Sentinel Velene Starstrike", ["npc:3891"] = "Teronis' Corpse", ["npc:3894"] = "Pelturas Whitemoon", ["npc:3901"] = "Illiyana", ["npc:3916"] = "Shael'dryn", ["npc:3917"] = "Befouled Water Elemental", ["npc:3970"] = "Llana", ["npc:3987"] = "Dal Bloodclaw", ["npc:4040"] = "Cave Stalker", ["npc:4077"] = "Gaxim Rustfizzle", ["npc:4078"] = "Collin Mauren", ["npc:4080"] = "Kaela Shadowspear", ["npc:4081"] = "Lomac Gearstrip", ["npc:4201"] = "Ziz Fizziks", ["npc:4217"] = "Mathrengyl Bearwalker", ["npc:4276"] = "Piznik", ["npc:5082"] = "Vincent Hyal", ["npc:928"] = "Lord Grayson Shadowbreaker", ["object:1162"] = "Menethil Harbor", ["object:12893"] = "Grove of the Ancients", ["object:13352"] = "Shrine of Aessina", ["object:142151"] = "Sealed Barrel", ["object:1668"] = "Dun Algaz", ["object:171524"] = "Tinker Town", ["object:176370"] = "Boat to Auberdine", ["object:176634"] = "Kerlonian's Chest", ["object:19555"] = "Windshear Crag", ["object:19559"] = "Sun Rock Retreat", ["object:19863"] = "Maestra's Post", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "The Slaughtered Lamb", ["object:259"] = "Half-buried Barrel", ["object:261"] = "Damaged Crate", ["object:28027"] = "Dwarven District", ["object:32359"] = "Military Ward", ["object:32362"] = "Mystic Ward", ["object:32372"] = "Great Forge", ["object:32383"] = "Forlorn Cavern", ["object:32386"] = "Hall of Mysteries", ["object:376"] = "Dun Modr", ["quest:1009"] = "Ruuzel", ["quest:1010"] = "Bathran's Hair", ["quest:1033"] = "Elune's Tear", ["quest:1034"] = "The Ruins of Stardust", ["quest:337"] = "An Old History Book", ["quest:5061"] = "Aquatic Form", ["quest:5673"] = "Elune's Grace", ["quest:94819"] = "Contingency Plan", ["quest:98197"] = "Spoils of War", ["quest:98283"] = "Carnage", ["zone:1426"] = "Dun Morogh", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1437"] = "Wetlands", ["zone:1439"] = "Darkshore", ["zone:1440"] = "Ashenvale", ["zone:1442"] = "Stonetalon Mountains", ["zone:1450"] = "Moonglade", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
-			written = { ["Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to {object:376} and north of Einar's camp. Any ooze there may hold {npc:2111}'s bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of {npc:1244}; almost every one drops flint."] = "Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to Dun Modr and north of Einar's camp. Any ooze there may hold Sida's bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of Rethiel; almost every one drops flint.", ["Escort {npc:11218} to his bag at the southern edge of {zone:1439}, then hand the quest in at {object:19863}."] = "Escort Kerlonian to his bag at the southern edge of Darkshore, then hand the quest in at Maestra's Post.", ["Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's {object:19555}. {npc:4080} and {npc:4077} camp on the Webwinder Path south-west of the crag."] = "Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's Windshear Crag. Kaela and Gaxim camp on the Webwinder Path south-west of the crag.", ["Take the boat from Stormwind Harbor to Auberdine. Join the two half pendants into the {item:15885} and cast Teleport: {zone:1450}: {npc:11802} is in Nighthaven. Then {npc:11800} in Nighthaven flies Druids straight to Rut'theran Village. {npc:11802} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart."] = "Take the boat from Stormwind Harbor to Auberdine. Join the two half pendants into the Pendant of the Sea Lion and cast Teleport: Moonglade: Dendrite Starblaze is in Nighthaven. Then Silva Fil'naveth in Nighthaven flies Druids straight to Rut'theran Village. Dendrite stands upstairs in his building: go up inside, the arrow cannot tell the floors apart.", ["{npc:11218} sleeps at the {object:12893} in southern {zone:1439}. Use the {item:13536} to wake him and lead him south along the road to his bag, by the three-way fork at the southern edge of {zone:1439}; blow the horn again whenever he falls asleep. Do not cross into {zone:1440} with him: on Forever the escort fails there.\nCareful: Two scripted ambushes of three mobs each attack along the road.\nTimed quest: 25 minutes, hand-in to {npc:11219} at {object:19863} included. Wake him only when ready to go straight on."] = "Kerlonian sleeps at the Grove of the Ancients in southern Darkshore. Use the Horn of Awakening to wake him and lead him south along the road to his bag, by the three-way fork at the southern edge of Darkshore; blow the horn again whenever he falls asleep. Do not cross into Ashenvale with him: on Forever the escort fails there.\nCareful: Two scripted ambushes of three mobs each attack along the road.\nTimed quest: 25 minutes, hand-in to Liladris at Maestra's Post included. Wake him only when ready to go straight on.", ["{npc:3664} and his voidwalkers hold the Ruins of Ordil'Aran south of the shrine. Pull his guards first."] = "Ilkrud and his voidwalkers hold the Ruins of Ordil'Aran south of the shrine. Pull his guards first." },
+			group = true,
+			names = { ["item:12220"] = "Intact Elemental Bracer", ["item:13536"] = "Horn of Awakening", ["item:15885"] = "Pendant of the Sea Lion", ["item:5352"] = "Book: The Powers Below", ["item:5359"] = "Lorgalis Manuscript", ["item:5366"] = "Glowing Soul Gem", ["item:5424"] = "Ancient Statuette", ["item:5455"] = "Divined Scroll", ["item:5456"] = "Divining Scroll", ["item:5463"] = "Glowing Gem", ["item:5879"] = "Twilight Pendant", ["item:5952"] = "Corrupted Brain Stem", ["item:6898"] = "Orb of Soran'ruk", ["npc:1007"] = "Mosshide Gnoll", ["npc:1010"] = "Mosshide Fenrunner", ["npc:1020"] = "Mottled Raptor", ["npc:1021"] = "Mottled Screecher", ["npc:1024"] = "Bluegill Murloc", ["npc:1033"] = "Monstrous Ooze", ["npc:1040"] = "Fen Creeper", ["npc:1076"] = "Merrin Rockweaver", ["npc:1078"] = "Ormer Ironbraid", ["npc:1111"] = "Leech Stalker", ["npc:11218"] = "Kerlonian Evershade", ["npc:11219"] = "Liladris Moonriver", ["npc:11401"] = "Priestess Alathea", ["npc:11406"] = "High Priest Rohan", ["npc:11800"] = "Silva Fil'naveth", ["npc:11802"] = "Dendrite Starblaze", ["npc:11865"] = "Buliwyf Stonehand", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1242"] = "Karl Boran", ["npc:1244"] = "Rethiel the Greenwarden", ["npc:1259"] = "Gobbler", ["npc:1417"] = "Young Wetlands Crocolisk", ["npc:1440"] = "Milton Sheaf", ["npc:1444"] = "Brother Kristoff", ["npc:1480"] = "Caitlin Grassman", ["npc:1573"] = "Gryth Thurden", ["npc:2086"] = "Valstag Ironjaw", ["npc:2092"] = "Pilot Longbeard", ["npc:2093"] = "Einar Stonegrip", ["npc:2094"] = "James Halloran", ["npc:2096"] = "Tarrel Rockweaver", ["npc:2097"] = "Harlo Barnaby", ["npc:2104"] = "Captain Stoutfist", ["npc:210995"] = "Alonso", ["npc:2111"] = "Sida", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:258785"] = "High Priestess Mims", ["npc:2786"] = "Gerrig Bonegrip", ["npc:3585"] = "Therysil", ["npc:3649"] = "Thundris Windweaver", ["npc:3664"] = "Ilkrud Magthrull", ["npc:3691"] = "Raene Wolfrunner", ["npc:3846"] = "Talen", ["npc:3885"] = "Sentinel Velene Starstrike", ["npc:3891"] = "Teronis' Corpse", ["npc:3894"] = "Pelturas Whitemoon", ["npc:3901"] = "Illiyana", ["npc:3916"] = "Shael'dryn", ["npc:3917"] = "Befouled Water Elemental", ["npc:3970"] = "Llana", ["npc:3987"] = "Dal Bloodclaw", ["npc:4040"] = "Cave Stalker", ["npc:4077"] = "Gaxim Rustfizzle", ["npc:4078"] = "Collin Mauren", ["npc:4080"] = "Kaela Shadowspear", ["npc:4081"] = "Lomac Gearstrip", ["npc:4201"] = "Ziz Fizziks", ["npc:4217"] = "Mathrengyl Bearwalker", ["npc:4276"] = "Piznik", ["npc:4783"] = "Dawnwatcher Selgorm", ["npc:4784"] = "Argent Guard Manados", ["npc:4787"] = "Argent Guard Thaelrid", ["npc:4809"] = "Twilight Acolyte", ["npc:4829"] = "Aku'mai", ["npc:4830"] = "Old Serra'kis", ["npc:4831"] = "Lady Sarevess", ["npc:4832"] = "Twilight Lord Kelris", ["npc:4887"] = "Ghamoo-ra", ["npc:4984"] = "Argos Nightwhisper", ["npc:5082"] = "Vincent Hyal", ["npc:6243"] = "Gelihast", ["npc:6247"] = "Doan Karhan", ["npc:8997"] = "Gershala Nightwhisper", ["npc:928"] = "Lord Grayson Shadowbreaker", ["object:1162"] = "Menethil Harbor", ["object:12893"] = "Grove of the Ancients", ["object:13352"] = "Shrine of Aessina", ["object:13949"] = "Pitted Iron Chest", ["object:142151"] = "Sealed Barrel", ["object:1668"] = "Dun Algaz", ["object:1680"] = "Shadowfang Keep", ["object:171524"] = "Tinker Town", ["object:176370"] = "Boat to Auberdine", ["object:176634"] = "Kerlonian's Chest", ["object:19555"] = "Windshear Crag", ["object:19559"] = "Sun Rock Retreat", ["object:19863"] = "Maestra's Post", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "The Slaughtered Lamb", ["object:259"] = "Half-buried Barrel", ["object:261"] = "Damaged Crate", ["object:28027"] = "Dwarven District", ["object:32359"] = "Military Ward", ["object:32362"] = "Mystic Ward", ["object:32372"] = "Great Forge", ["object:32383"] = "Forlorn Cavern", ["object:32386"] = "Hall of Mysteries", ["object:376"] = "Dun Modr", ["object:92525"] = "Argent Dawn", ["quest:1009"] = "Ruuzel", ["quest:1010"] = "Bathran's Hair", ["quest:1033"] = "Elune's Tear", ["quest:1034"] = "The Ruins of Stardust", ["quest:1198"] = "In Search of Thaelrid", ["quest:1199"] = "Twilight Falls", ["quest:1200"] = "Blackfathom Villainy", ["quest:1275"] = "Researching the Corruption", ["quest:337"] = "An Old History Book", ["quest:5061"] = "Aquatic Form", ["quest:5673"] = "Elune's Grace", ["quest:94819"] = "Contingency Plan", ["quest:971"] = "Knowledge in the Deeps", ["quest:98197"] = "Spoils of War", ["quest:98283"] = "Carnage", ["zone:1413"] = "Barrens", ["zone:1426"] = "Dun Morogh", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1437"] = "Wetlands", ["zone:1439"] = "Darkshore", ["zone:1440"] = "Ashenvale", ["zone:1442"] = "Stonetalon Mountains", ["zone:1450"] = "Moonglade", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			written = { ["Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to {object:376} and north of Einar's camp. Any ooze there may hold {npc:2111}'s bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of {npc:1244}; almost every one drops flint."] = "Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to Dun Modr and north of Einar's camp. Any ooze there may hold Sida's bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of Rethiel; almost every one drops flint.", ["Escort {npc:11218} to his bag at the southern edge of {zone:1439}, then hand the quest in at {object:19863}."] = "Escort Kerlonian to his bag at the southern edge of Darkshore, then hand the quest in at Maestra's Post.", ["Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's {object:19555}. {npc:4080} and {npc:4077} camp on the Webwinder Path south-west of the crag."] = "Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's Windshear Crag. Kaela and Gaxim camp on the Webwinder Path south-west of the crag.", ["Leave by the portal and go on along the coast: {npc:8997}'s and the {zone:1457} hand-ins wait for the end of {zone:1440}, at Auberdine."] = "Leave by the portal and go on along the coast: Gershala's and the Darnassus hand-ins wait for the end of Ashenvale, at Auberdine.", ["Take the boat from Stormwind Harbor to Auberdine. Join the two half pendants into the {item:15885} and cast Teleport: {zone:1450}: {npc:11802} is in Nighthaven. Then {npc:11800} in Nighthaven flies Druids straight to Rut'theran Village. {npc:11802} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart."] = "Take the boat from Stormwind Harbor to Auberdine. Join the two half pendants into the Pendant of the Sea Lion and cast Teleport: Moonglade: Dendrite Starblaze is in Nighthaven. Then Silva Fil'naveth in Nighthaven flies Druids straight to Rut'theran Village. Dendrite stands upstairs in his building: go up inside, the arrow cannot tell the floors apart.", ["{npc:11218} sleeps at the {object:12893} in southern {zone:1439}. Use the {item:13536} to wake him and lead him south along the road to his bag, by the three-way fork at the southern edge of {zone:1439}; blow the horn again whenever he falls asleep. Do not cross into {zone:1440} with him: on Forever the escort fails there.\nCareful: Two scripted ambushes of three mobs each attack along the road.\nTimed quest: 25 minutes, hand-in to {npc:11219} at {object:19863} included. Wake him only when ready to go straight on."] = "Kerlonian sleeps at the Grove of the Ancients in southern Darkshore. Use the Horn of Awakening to wake him and lead him south along the road to his bag, by the three-way fork at the southern edge of Darkshore; blow the horn again whenever he falls asleep. Do not cross into Ashenvale with him: on Forever the escort fails there.\nCareful: Two scripted ambushes of three mobs each attack along the road.\nTimed quest: 25 minutes, hand-in to Liladris at Maestra's Post included. Wake him only when ready to go straight on.", ["{npc:3664} and his voidwalkers hold the Ruins of Ordil'Aran south of the shrine. Pull his guards first."] = "Ilkrud and his voidwalkers hold the Ruins of Ordil'Aran south of the shrine. Pull his guards first." },
 			steps = {
 				{
 					title = "{zone:1450}",
@@ -6961,6 +6970,16 @@ do
 					},
 				},
 				{
+					title = "{zone:1453}: {npc:4984} (Blackfathom Deeps, optional)",
+					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, best at 24 to 28. This guide takes its quests on the way, runs it from the Zoram Strand, then hands them in at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
+					only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } },
+					when = { { k = "group", q = 1275 }, { k = "level", op = "<", n = 30 } },
+					goals = {
+						{ t = "note", text = "{npc:4984} only sends you to {npc:8997} in Auberdine, who gives the dungeon quest: a few hundred XP for a trip you make anyway." },
+						{ t = "accept", quest = 3765, title = "The Corruption Abroad", npc = 4984, npcName = "Argos Nightwhisper", minLevel = 18, qlvl = 24, closedBy = { 1275 }, preTitles = { [1275] = "Researching the Corruption" }, map = 1453, x = 36.24, y = 67.61, z = 92.6 },
+					},
+				},
+				{
 					title = "{object:176370}",
 					goals = {
 						{ t = "goto", text = "{object:176370}", map = 1453, x = 21.8, y = 56.9, only = { races = { "Dwarf", "Gnome", "Human", "Skyborne" } } },
@@ -6973,6 +6992,36 @@ do
 					when = { { k = "onquest", q = { 97926 } } },
 					goals = {
 						{ t = "turnin", quest = 97926, title = "Making Do", npc = 3649, npcName = "Thundris Windweaver", map = 1439, x = 37.4, y = 40.13, z = 8.3, f = "e", optional = true, note = "{npc:3649}: Alexston's reply, if you took it in {zone:1453}" },
+					},
+				},
+				{
+					title = "Auberdine: {npc:8997} (Blackfathom Deeps, optional)",
+					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, best at 24 to 28. Its quests are taken here and on the way, the dungeon is run from the Zoram Strand, and they are handed in back at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
+					label = "bfd-start",
+					when = { { k = "group", q = 1275 }, { k = "level", op = "<", n = 30 } },
+					goals = {
+						{ t = "note", text = "Keep 5 free quest log slots. Every player takes the quests from the givers; sharing works too (click the quest in the log, then Share)." },
+						{ t = "turnin", quest = 3765, title = "The Corruption Abroad", npc = 8997, npcName = "Gershala Nightwhisper", map = 1439, x = 38.33, y = 43.04, z = 13.7, f = "e", optional = true, note = "{npc:4984}'s errand, if you took it in {zone:1453}" },
+						{ t = "accept", quest = 1275, title = "Researching the Corruption", npc = 8997, npcName = "Gershala Nightwhisper", minLevel = 18, qlvl = 24, map = 1439, x = 38.33, y = 43.04, z = 13.7, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1457}: the {object:92525} (Blackfathom Deeps, optional detour)",
+					note = "Two more Blackfathom quests wait in {zone:1457}, with the {object:92525}: {quest:1198}, then {quest:1200} from Thaelrid inside the dungeon, and {quest:1199}. About 19,600 XP with the hand-ins, and a blue reward. The detour: the boat from the Auberdine dock to Rut'theran Village (Night Elves fly), the portal up to {zone:1457}, then back; the hand-ins need the same trip after {zone:1440}. Short on time? Skip it.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" }, { k = "group", q = 1198 } },
+					goals = {
+						{ t = "getfp", npc = 3838, npcName = "Vesprystus", location = "Rut'theran Village", node = 27, map = 1438, x = 58.4, y = 94.02, z = 23.3, f = "e", only = { races = { "Human", "Dwarf", "Gnome", "Skyborne" } } },
+						{ t = "fly", location = "Rut'theran Village", node = 27, only = { races = { "NightElf" } } },
+						{ t = "accept", quest = 1198, title = "In Search of Thaelrid", npc = 4786, npcName = "Dawnwatcher Shaedlass", minLevel = 18, qlvl = 24, closedBy = { 1200 }, preTitles = { [1200] = "Blackfathom Villainy" }, map = 1457, x = 55.36, y = 25.03, z = 1332, f = "e" },
+						{ t = "accept", quest = 1199, title = "Twilight Falls", npc = 4784, npcName = "Argent Guard Manados", minLevel = 20, qlvl = 25, map = 1457, x = 55.24, y = 23.99, z = 1332, f = "e" },
+					},
+				},
+				{
+					title = "Back to Auberdine",
+					note = "Back down the portal to Rut'theran Village, then the flight to Auberdine.",
+					when = { { k = "onquest", q = { 1198 } } },
+					goals = {
+						{ t = "fly", location = "Auberdine", node = 26 },
 					},
 				},
 				{
@@ -7086,6 +7135,82 @@ do
 					title = "{npc:3846}",
 					goals = {
 						{ t = "turnin", quest = 1009, title = "Ruuzel", npc = 3846, npcName = "Talen", map = 1440, x = 14.79, y = 31.29, z = 5.5, f = "e" },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: before going in",
+					note = "The portal is in the half-sunken temple at the north end of the Zoram Strand: swim down to it. Group of 5 at 24 to 28; every enemy inside is elite.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
+					goals = {
+						{ t = "note", text = "In the quest log before going in: {quest:1275} ({npc:8997}, Auberdine). If you took them: {quest:1198} and {quest:1199} ({zone:1457}, a detour), {quest:971} ({npc:2786}, {zone:1455}, offered in Group 3: too far to fetch now). Nothing to bring." },
+						{ t = "note", text = "Warlocks: The {item:6898} ({npc:6247}, in the {zone:1413}) takes three fragments from the Twilight Acolytes here and one from {object:1680}; it is not on this route." },
+						{ t = "goto", text = "Blackfathom Deeps", map = 1440, x = 14.5, y = 14.2, f = "e", r = 25 },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: along the way",
+					note = "Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs, the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
+					along = "bfd-kelris",
+					goals = {
+						{ t = "note", text = "Share the quests with your group: click each in the quest log, then Share." },
+						{ t = "collect", quest = 1275, title = "Researching the Corruption", item = 5952, itemName = "Corrupted Brain Stem", count = 8, oi = 1, map = 1440, x = 13.28, y = 12.62, f = "e", spots = { { x = 13.5, y = 12.1, r = 24, n = 4 }, { x = 13.8, y = 9.4, r = 79, n = 12 }, { x = 15.3, y = 10.9, r = 54, n = 6 }, { x = 17, y = 11.4, r = 42, n = 5 } }, note = "{item:5952}: Blackfathom nagas, Fallenroot satyrs", from = "Fallenroot Satyr", fromKind = "npc", fromRank = 1, fromAlso = "Fallenroot Rogue", fromId = 4788, fromAlsoId = 4789, fromNpcs = { { npc = 4788, npcName = "Fallenroot Satyr" }, { npc = 4789, npcName = "Fallenroot Rogue" }, { npc = 4802, npcName = "Blackfathom Tide Priestess" }, { npc = 4803, npcName = "Blackfathom Oracle" } }, group = { kind = "elite", rank = 1 } },
+						{ t = "collect", quest = 1199, title = "Twilight Falls", item = 5879, itemName = "Twilight Pendant", count = 10, oi = 1, optional = true, note = "{item:5879}: Twilight's Hammer cultists", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: {npc:4887}'s pool",
+					note = "The great turtle {npc:4887} lives in the first big pool. In the original game the {item:5359} lies in a chest at the bottom of that pool (to check in game): swim down for it, every player with the quest opens the chest.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
+					goals = {
+						{ t = "collect", quest = 971, title = "Knowledge in the Deeps", item = 5359, itemName = "Lorgalis Manuscript", count = 1, oi = 1, optional = true, note = "{item:5359}, in the {object:13949}" },
+						{ t = "kill", target = "Ghamoo-ra", npc = 4887, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: {npc:4831} and {npc:6243}",
+					note = "{npc:4831} and her naga guards, then {npc:6243} in the murloc cave (order of the original game, to check in game). The Twilight's Hammer cultists come after them.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
+					goals = {
+						{ t = "kill", target = "Lady Sarevess", npc = 4831, group = { kind = "elite", rank = 1 } },
+						{ t = "kill", target = "Gelihast", npc = 6243, optional = true, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: {npc:4787}",
+					note = "Thaelrid of the {object:92525} waits inside, before {npc:4832} (his exact spot: to check in game). Talk to him BEFORE killing Kelris: Kelris's head drops only for players who already hold {quest:1200}.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" }, { k = "onquest", q = { 1198 } } },
+					goals = {
+						{ t = "turnin", quest = 1198, title = "In Search of Thaelrid", npc = 4787, npcName = "Argent Guard Thaelrid" },
+						{ t = "accept", quest = 1200, title = "Blackfathom Villainy", npc = 4787, npcName = "Argent Guard Thaelrid", minLevel = 18, qlvl = 27 },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: {npc:4787} (without the {zone:1457} quest)",
+					note = "Thaelrid of the {object:92525} waits inside, before {npc:4832} (his exact spot: to check in game). Without {quest:1198} he may still offer {quest:1200}: the sources disagree, to check in game. Talk to him BEFORE killing Kelris; not offered? Carry on.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" }, { k = "onquest", neg = true, q = { 1198 } }, { k = "turnedin", neg = true, q = 1198 } },
+					goals = {
+						{ t = "talk", npc = 4787, npcName = "Argent Guard Thaelrid" },
+						{ t = "accept", quest = 1200, title = "Blackfathom Villainy", npc = 4787, npcName = "Argent Guard Thaelrid", minLevel = 18, qlvl = 27, optional = true },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: {npc:4832}",
+					note = "In the original game Kelris waits in the Moonshrine, past {npc:4830}'s flooded tunnel (to check in game). Interrupt his Sleep and kill his adds first. Every player on {quest:1200} loots their own head. {npc:4829}, behind him, is optional: no quest, good loot.",
+					label = "bfd-kelris",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
+					goals = {
+						{ t = "collect", quest = 1200, title = "Blackfathom Villainy", item = 5881, itemName = "Head of Kelris", count = 1, oi = 1, optional = true, group = { kind = "elite", rank = 1 } },
+						{ t = "kill", target = "Twilight Lord Kelris", npc = 4832, group = { kind = "elite", rank = 1 } },
+						{ t = "kill", target = "Aku'mai", npc = 4829, optional = true, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: leave",
+					note = "Leave by the portal and go on along the coast: {npc:8997}'s and the {zone:1457} hand-ins wait for the end of {zone:1440}, at Auberdine.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
+					goals = {
+						{ t = "enter", location = "Ashenvale" },
 					},
 				},
 				{
@@ -7249,6 +7374,48 @@ do
 					title = "Fly to Auberdine",
 					goals = {
 						{ t = "goto", text = "Astranaar flight master", map = 1440, x = 34.5, y = 48, f = "e" },
+						{ t = "fly", location = "Auberdine", node = 26 },
+					},
+				},
+				{
+					title = "Auberdine: {npc:8997}",
+					when = { { k = "complete", q = 1275 } },
+					goals = {
+						{ t = "turnin", quest = 1275, title = "Researching the Corruption", npc = 8997, npcName = "Gershala Nightwhisper", map = 1439, x = 38.33, y = 43.04, z = 13.7, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1457}: Blackfathom hand-ins (detour)",
+					note = "From Auberdine to Rut'theran Village: the flight, or the boat from the Auberdine dock for whoever never learned that flight path; then the portal up to {zone:1457}. {npc:4783} and {npc:4784} stand with the {object:92525}.",
+					when = { { k = "complete", q = 1200 } },
+					goals = {
+						{ t = "getfp", npc = 3838, npcName = "Vesprystus", location = "Rut'theran Village", node = 27, map = 1438, x = 58.4, y = 94.02, z = 23.3, f = "e", only = { races = { "Human", "Dwarf", "Gnome", "Skyborne" } } },
+						{ t = "fly", location = "Rut'theran Village", node = 27, only = { races = { "NightElf" } } },
+						{ t = "turnin", quest = 1200, title = "Blackfathom Villainy", npc = 4783, npcName = "Dawnwatcher Selgorm", map = 1457, x = 56.16, y = 24.39, z = 1332, f = "e" },
+						{ t = "turnin", quest = 1199, title = "Twilight Falls", npc = 4784, npcName = "Argent Guard Manados", map = 1457, x = 55.24, y = 23.99, z = 1332, f = "e", optional = true, note = "{npc:4784}, with the 10 pendants" },
+					},
+				},
+				{
+					title = "{zone:1457}: {quest:1199} (detour)",
+					note = "From Auberdine to Rut'theran Village: the flight, or the boat from the Auberdine dock for whoever never learned that flight path; then the portal up to {zone:1457}. {npc:4784} stands with the {object:92525}.",
+					when = { { k = "complete", q = 1199 } },
+					goals = {
+						{ t = "getfp", npc = 3838, npcName = "Vesprystus", location = "Rut'theran Village", node = 27, map = 1438, x = 58.4, y = 94.02, z = 23.3, f = "e", only = { races = { "Human", "Dwarf", "Gnome", "Skyborne" } } },
+						{ t = "fly", location = "Rut'theran Village", node = 27, only = { races = { "NightElf" } } },
+						{ t = "turnin", quest = 1199, title = "Twilight Falls", npc = 4784, npcName = "Argent Guard Manados", map = 1457, x = 55.24, y = 23.99, z = 1332, f = "e" },
+					},
+				},
+				{
+					title = "Back to Auberdine",
+					when = { { k = "turnedin", q = 1200 } },
+					goals = {
+						{ t = "fly", location = "Auberdine", node = 26 },
+					},
+				},
+				{
+					title = "Back to Auberdine",
+					when = { { k = "turnedin", q = 1199 }, { k = "turnedin", neg = true, q = 1200 } },
+					goals = {
 						{ t = "fly", location = "Auberdine", node = 26 },
 					},
 				},
@@ -7494,6 +7661,14 @@ do
 						{ t = "train", class = true, only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } }, candidates = { { npc = 5172, npcName = "Briarthorn", map = 1455, x = 50.35, y = 5.66, z = 505, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 5165, npcName = "Hulfdan Blackbeard", map = 1455, x = 51.96, y = 14.84, z = 502, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 258098, npcName = "Eldrun Stormbreaker", map = 1455, x = 47.1, y = 13.79, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 5144, npcName = "Bink", map = 1455, x = 27.25, y = 8.3, z = 501.2, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 5143, npcName = "Toldren Deepiron", map = 1455, x = 25.21, y = 10.76, z = 501.2, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 5148, npcName = "Beldruk Doombrow", map = 1455, x = 24.55, y = 4.47, z = 502.9, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 5117, npcName = "Regnus Thundergranite", map = 1455, x = 69.87, y = 82.9, z = 507.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 11865, npcName = "Buliwyf Stonehand", map = 1455, x = 61.17, y = 89.52, z = 509, f = "e", faction = "A", classes = { "WARRIOR", "PALADIN" } }, { npc = 5114, npcName = "Bilban Tosslespanner", map = 1455, x = 65.9, y = 88.41, z = 507.8, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 258113, npcName = "Ingrid Dunwald", map = 1426, x = 47.58, y = 51.95, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 1232, npcName = "Azar Stronghammer", map = 1426, x = 47.6, y = 52.07, z = 403.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 1228, npcName = "Magis Sparkmantle", map = 1426, x = 47.5, y = 52.08, z = 403.6, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 1226, npcName = "Maxan Anvol", map = 1426, x = 47.34, y = 52.19, z = 399.7, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 1234, npcName = "Hogral Bakkan", map = 1426, x = 47.56, y = 52.61, z = 399.2, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 1229, npcName = "Granis Swiftaxe", map = 1426, x = 47.36, y = 52.65, z = 399.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 5612, npcName = "Gimrizz Shadowcog", map = 1426, x = 47.33, y = 53.69, z = 404.4, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 1231, npcName = "Grif Wildheart", map = 1426, x = 45.81, y = 53.04, z = 407.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 257446, npcName = "Teo Hammerstorm", map = 1426, x = 28.79, y = 66.18, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 460, npcName = "Alamar Grimm", map = 1426, x = 28.65, y = 66.14, z = 399, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 944, npcName = "Marryk Nurribit", map = 1426, x = 28.71, y = 66.37, z = 392.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 837, npcName = "Branstock Khalder", map = 1426, x = 28.6, y = 66.39, z = 392.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 895, npcName = "Thorgas Grimson", map = 1426, x = 29.18, y = 67.45, z = 395.6, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 912, npcName = "Thran Khorman", map = 1426, x = 28.83, y = 67.24, z = 395.6, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 916, npcName = "Solm Hargrin", map = 1426, x = 28.37, y = 67.51, z = 395.6, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 926, npcName = "Bromos Grummner", map = 1426, x = 28.83, y = 68.33, z = 395.6, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 5517, npcName = "Thorfin Stoneshield", map = 1453, x = 68, y = 35.99, z = 102.6, faction = "A", classes = { "HUNTER" } }, { npc = 198, npcName = "Khelden Bremen", map = 1429, x = 49.66, y = 39.4, z = 89.5, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 375, npcName = "Priestess Anetta", map = 1429, x = 49.81, y = 39.49, z = 82.1, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 915, npcName = "Jorik Kerridan", map = 1429, x = 50.31, y = 39.92, z = 80.8, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 248415, npcName = "Tordrin Sternblade", map = 1429, x = 51.21, y = 40.8, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 925, npcName = "Brother Sammuel", map = 1429, x = 50.43, y = 42.12, z = 82.3, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 911, npcName = "Llane Beshere", map = 1429, x = 50.24, y = 42.29, z = 82.3, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 459, npcName = "Drusilla La Salle", map = 1429, x = 49.87, y = 42.65, z = 80.8, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 5479, npcName = "Wu Shen", map = 1453, x = 80.55, y = 59.87, z = 109.5, faction = "A", classes = { "WARRIOR" } }, { npc = 376, npcName = "High Priestess Laurena", map = 1453, x = 49.53, y = 44.6, z = 109.9, faction = "A", classes = { "PRIEST" } }, { npc = 918, npcName = "Osborne the Night Man", map = 1453, x = 77.43, y = 65.31, z = 101.1, faction = "A", classes = { "ROGUE" } }, { npc = 5491, npcName = "Arthur the Faithful", map = 1453, x = 49.61, y = 49.84, z = 106.6, faction = "A", classes = { "PALADIN" } }, { npc = 11867, npcName = "Woo Ping", map = 1453, x = 63.88, y = 69.09, z = 96.9, faction = "A", classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "WARLOCK" } }, { npc = 2485, npcName = "Larimaine Purdue", map = 1453, x = 50.39, y = 85.99, z = 29.7, faction = "A", classes = { "MAGE" } }, { npc = 5495, npcName = "Ursula Deline", map = 1453, x = 39.89, y = 84.19, z = 101.5, faction = "A", classes = { "WARLOCK" } }, { npc = 377, npcName = "Priestess Josetta", map = 1429, x = 43.28, y = 65.72, z = 63.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 917, npcName = "Keryn Sylvius", map = 1429, x = 43.87, y = 65.94, z = 63.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 906, npcName = "Maximillian Crowe", map = 1429, x = 44.39, y = 66.24, z = 49.9, f = "e", faction = "A", classes = { "WARLOCK" } }, { npc = 328, npcName = "Zaldimar Wefhellt", map = 1429, x = 43.25, y = 66.19, z = 63.9, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 913, npcName = "Lyria Du Lac", map = 1429, x = 41.09, y = 65.77, z = 57.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 927, npcName = "Brother Wilhelm", map = 1429, x = 41.1, y = 66.04, z = 57.7, f = "e", faction = "A", classes = { "PALADIN" } }, { npc = 251507, npcName = "Josephine Carson", map = 1429, x = 41.15, y = 66.23, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 6251, npcName = "Strahad Farsan", map = 1413, x = 62.63, y = 35.5, z = 40.5, f = "e", faction = "AH", classes = { "WARLOCK" } }, { npc = 3593, npcName = "Alyissia", map = 1438, x = 59.64, y = 38.44, z = 1329.7, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 3594, npcName = "Frahun Shadewhisper", map = 1438, x = 59.64, y = 38.66, z = 1329.7, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3595, npcName = "Shanda", map = 1438, x = 59.17, y = 40.44, z = 1346.8, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 3596, npcName = "Ayanna Everstride", map = 1438, x = 58.66, y = 40.45, z = 1381, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 3598, npcName = "Kyra Windblade", map = 1438, x = 56.22, y = 59.2, z = 1308.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 3599, npcName = "Jannok Breezesong", map = 1438, x = 56.38, y = 60.14, z = 1308.9, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 3600, npcName = "Laurna Morninglight", map = 1438, x = 55.56, y = 56.75, z = 1313.9, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 3601, npcName = "Dazalar", map = 1438, x = 56.68, y = 59.49, z = 1308.2, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 4087, npcName = "Arias'ta Bladesinger", map = 1457, x = 58.71, y = 34.9, z = 1330.9, f = "e", faction = "A", classes = { "WARRIOR" } }, { npc = 4090, npcName = "Astarii Starseeker", map = 1457, x = 38.33, y = 80.95, z = 1360.1, f = "e", faction = "A", classes = { "PRIEST" } }, { npc = 4138, npcName = "Jeen'ra Nightrunner", map = 1457, x = 39.72, y = 5.39, z = 1368.9, f = "e", faction = "A", classes = { "HUNTER" } }, { npc = 4163, npcName = "Syurna", map = 1457, x = 36.99, y = 21.91, z = 1295.1, f = "e", faction = "A", classes = { "ROGUE" } }, { npc = 4165, npcName = "Elissa Dumas", map = 1457, x = 40.6, y = 82.13, z = 1331.7, f = "e", faction = "A", classes = { "MAGE" } }, { npc = 11866, npcName = "Ilyenia Moonfire", map = 1457, x = 57.56, y = 46.73, z = 1330.9, f = "e", faction = "A", classes = { "HUNTER", "PRIEST" } }, { npc = 251376, npcName = "Tai'ree Farsight", map = 2521, x = 42.49, y = 23.79, faction = "AH", classes = { "HUNTER" } }, { npc = 251379, npcName = "Dorii Brightwhisper", map = 2521, x = 41.55, y = 23.68, faction = "A", classes = { "MAGE" } }, { npc = 251389, npcName = "Akeri Duskblade", map = 2521, x = 43.74, y = 24.36, faction = "AH", classes = { "ROGUE" } }, { npc = 251964, npcName = "Blademaster Ren", map = 2521, x = 43.65, y = 24.11, faction = "AH", classes = { "WARRIOR" } }, { npc = 252373, npcName = "Anathamaas Aetherwind", map = 2521, x = 65.91, y = 80.57, faction = "A", classes = { "MAGE" } }, { npc = 252377, npcName = "Seena Skybreaker", map = 2521, x = 59.89, y = 72.87, faction = "AH", classes = { "WARRIOR" } }, { npc = 252379, npcName = "Eltheen Nightbreeze", map = 2521, x = 59.9, y = 72.48, faction = "AH", classes = { "ROGUE" } }, { npc = 252389, npcName = "Quel'ana Quickgale", map = 2521, x = 59.56, y = 72.63, faction = "AH", classes = { "HUNTER" } }, { npc = 254084, npcName = "Elayaa Easewind", map = 2521, x = 45.26, y = 44.24, faction = "AH", classes = { "HUNTER" } }, { npc = 254086, npcName = "Shenaan Spellwind", map = 2521, x = 45.1, y = 45.87, faction = "AH", classes = { "MAGE" } }, { npc = 254087, npcName = "Miriaan Mistblade", map = 2521, x = 43.15, y = 43.26, faction = "AH", classes = { "ROGUE" } }, { npc = 254088, npcName = "Corsan Earthrazer", map = 2521, x = 44.95, y = 45.1, faction = "AH", classes = { "WARRIOR" } } } },
 						{ t = "vendor", candidates = { { npc = 5170, npcName = "Hjoldir Stoneblade", map = 1455, x = 44.99, y = 6.79, z = 503.7, f = "e", faction = "A" }, candidateRecords[73], candidateRecords[74], { npc = 1450, npcName = "Brahnmar", map = 1437, x = 11.54, y = 59.86, z = 11.6, f = "e", faction = "A" }, candidateRecords[43], candidateRecords[75], candidateRecords[41], candidateRecords[54], candidateRecords[42], candidateRecords[61], candidateRecords[45], candidateRecords[50], candidateRecords[51], candidateRecords[40], candidateRecords[44], candidateRecords[53], candidateRecords[27], candidateRecords[28], candidateRecords[52], candidateRecords[26], candidateRecords[38], candidateRecords[46], candidateRecords[37], candidateRecords[36], candidateRecords[22], candidateRecords[62], candidateRecords[80], candidateRecords[79], candidateRecords[81], candidateRecords[23], candidateRecords[30], candidateRecords[82], candidateRecords[49], candidateRecords[48], candidateRecords[77], candidateRecords[78], candidateRecords[83], candidateRecords[25], candidateRecords[39], candidateRecords[24], candidateRecords[56], candidateRecords[47], candidateRecords[55], candidateRecords[34], candidateRecords[32], candidateRecords[69], candidateRecords[71], candidateRecords[33], candidateRecords[84], candidateRecords[70], candidateRecords[31], candidateRecords[59], candidateRecords[29], candidateRecords[60], candidateRecords[57], candidateRecords[58], candidateRecords[35], candidateRecords[85], candidateRecords[12], candidateRecords[86], candidateRecords[14], candidateRecords[87], candidateRecords[88], candidateRecords[89], candidateRecords[1], candidateRecords[90], candidateRecords[5], candidateRecords[9], candidateRecords[15], candidateRecords[20], candidateRecords[2], candidateRecords[3], candidateRecords[4], candidateRecords[8], candidateRecords[18], candidateRecords[91], candidateRecords[92], candidateRecords[10], candidateRecords[11], candidateRecords[19], candidateRecords[93], candidateRecords[21], candidateRecords[13], candidateRecords[17], candidateRecords[16], candidateRecords[63], candidateRecords[94], candidateRecords[7], candidateRecords[6], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68] } },
 						{ t = "accept", quest = 1179, title = "The Brassbolts Brothers", npc = 2092, npcName = "Pilot Longbeard", minLevel = 28, qlvl = 30, map = 1455, x = 72.73, y = 94.01, z = 502, f = "e" },
+					},
+				},
+				{
+					title = "{zone:1455}: {npc:2786}",
+					note = "{quest:971}, from Blackfathom Deeps: {npc:2786} is in the {object:32383}.",
+					when = { { k = "complete", q = 971 } },
+					goals = {
+						{ t = "turnin", quest = 971, title = "Knowledge in the Deeps", npc = 2786, npcName = "Gerrig Bonegrip", map = 1455, x = 50.83, y = 5.62, z = 505, f = "e" },
 					},
 				},
 				{

@@ -45,6 +45,15 @@ step Ironforge: dungeon quests
   accept 96394
   accept 96403
 
+# Groupe Alliance 0.11.0: Knowledge in the Deeps (971) is for Blackfathom Deeps, run in Group 8
+# (09-orneval-paluns). Gerrig Bonegrip gives it from level 10 (Polestar's Forever data and the
+# TrinityCore Forever world base: no prerequisite), and the route has no other stop in Ironforge
+# before that dungeon: asked here, once (`when group 971`), never needed for the rest.
+step Ironforge: Gerrig Bonegrip (Blackfathom Deeps, for later)
+  when group 971
+  tip Knowledge in the Deeps belongs to Blackfathom Deeps, a dungeon the guide offers in Group 8 (Ashenvale, levels 24 to 28). The route passes no other time in Ironforge before it. Planning that dungeon? Take it now: it waits in the quest log. Not sure, or playing alone? Skip it: Group 8 offers the dungeon without it.
+  accept 971                                  -- Gerrig Bonegrip, in the Forlorn Cavern
+
 step Enter the Hall of Thanes
   tip Group of 5, level 13 or more. The portal is past the bridge and the meeting stone.
   goto 27.6,47.8 "The Hall of Thanes" r 25

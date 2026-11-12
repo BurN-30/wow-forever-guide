@@ -33,19 +33,27 @@ return {
 	-- {object:171709} High Seat
 	["In the {object:171709}, take the cobwebbed passage on the left and follow it down to the dungeon."] = "Dans {object:171709}, prendre le passage couvert de toiles à gauche et descendre jusqu'au donjon.",
 
-	-- Step 7: Enter the Hall of Thanes
+	-- Step 7: Ironforge: Gerrig Bonegrip (Blackfathom Deeps, for later)
+	-- {zone:1455} Ironforge · {npc:2786} Gerrig Bonegrip
+	["{zone:1455}: {npc:2786} (Blackfathom Deeps, for later)"] = "{zone:1455} : {npc:2786} (Profondeurs de Brassenoire, pour plus tard)",
+	-- {quest:971} Knowledge in the Deeps · {zone:1440} Ashenvale · {zone:1455} Ironforge
+	["{quest:971} belongs to Blackfathom Deeps, a dungeon the guide offers in Group 8 ({zone:1440}, levels 24 to 28). The route passes no other time in {zone:1455} before it. Planning that dungeon? Take it now: it waits in the quest log. Not sure, or playing alone? Skip it: Group 8 offers the dungeon without it."] = "{quest:971} sert aux Profondeurs de Brassenoire, un donjon que le guide propose au Groupe 8 ({zone:1440}, niveaux 24 à 28). Le parcours ne repasse pas par {zone:1455} avant. Le donjon est prévu ? La prendre maintenant : elle attend dans le journal. Pas sûr, ou seul ? La passer : le Groupe 8 propose le donjon sans elle.",
+	-- {npc:2786} Gerrig Bonegrip · {object:32383} Forlorn Cavern
+	["{npc:2786}, in the {object:32383}"] = "{npc:2786}, dans {object:32383}",
+
+	-- Step 8: Enter the Hall of Thanes
 	["Enter the Hall of Thanes"] = "Entrer dans la salle des Thanes",
 	["Group of 5, level 13 or more. The portal is past the bridge and the meeting stone."] = "Groupe de 5, niveau 13 ou plus. Le portail est après le pont et la pierre de rencontre.",
 	["The Hall of Thanes"] = "La salle des Thanes",
 
-	-- Step 8: Inside the dungeon
+	-- Step 9: Inside the dungeon
 	["Inside the dungeon"] = "Dans le donjon",
 	-- {npc:265002} Ghostly Attendant
 	["West wing first: the {npc:265002} gives a quest before Faldrim. Each player loots their own heirlooms."] = "Aile ouest d'abord : {npc:265002} donne une quête avant Faldrim. Chacun ramasse ses propres reliques.",
 	["Share each quest with your group: click it in the quest log, then Share."] = "Partagez chaque quête au groupe : clic sur la quête dans le journal, puis Partager.",
 	["Treaty tablet in the last boss room"] = "Tablette du traité dans la salle du dernier boss",
 
-	-- Step 9: Ironforge rewards
+	-- Step 10: Ironforge rewards
 	-- {zone:1455} Ironforge
 	["{zone:1455} rewards"] = "Récompenses à {zone:1455}",
 
