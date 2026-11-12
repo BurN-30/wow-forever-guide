@@ -38,7 +38,7 @@ step Stormwind: Shoni the Shilent (Gnomeregan, optional)
   when group 2928
   when level<33
   zone Stormwind City
-  tip Gnomeregan: the gnomes' fallen city under Dun Morogh, a 5-player dungeon best at 29 to 33. The guide runs it after Group 10 (Group 10b), from Ironforge, where the other quests are given. Shoni's quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.
+  tip Gnomeregan: the gnomes' fallen city under Dun Morogh, a 5-player dungeon, levels 25 to 34. The guide runs it after Group 10 (Group 10b), from Ironforge, where the other quests are given. Shoni's quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.
   note Shoni the Shilent stands in the Dwarven District, by the tram. The quest waits in the log until Gnomeregan.
   accept 2928                             -- Shoni the Shilent
 
@@ -291,7 +291,7 @@ step Razorfen Kraul (dungeon, optional)
   when group 1144
   when level<33
   zone The Barrens
-  tip Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.
+  tip Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, levels 25 to 33 (29 to 38 in the group finder; the last bosses are 33): at 29 or more here, it goes well. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.
   note Horde land: keep clear of Camp Taurajo and its guards. Keep 2 free quest log slots.
   goto 42.9,90.2 "Razorfen Kraul" r 25
 

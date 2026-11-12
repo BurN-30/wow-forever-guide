@@ -7,13 +7,13 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 10b · Gnomeregan (dungeon 29-33, optional)"] = "Groupe 10b · Gnomeregan (donjon 29-33, facultatif)",
+	["Group 10b · Gnomeregan (dungeon 25-34, optional)"] = "Groupe 10b · Gnomeregan (donjon 25-34, facultatif)",
 
 	-- Step 1: Ironforge: Gnomeregan quests
 	-- {zone:1455} Ironforge
 	["{zone:1455}: Gnomeregan quests"] = "{zone:1455} : quêtes de Gnomeregan",
 	-- {zone:1426} Dun Morogh · {npc:7800} Mekgineer Thermaplugg · {object:171524} Tinker Town · {zone:1437} Wetlands · {object:1162} Menethil Harbor · {zone:1455} Ironforge
-	["Gnomeregan: a 5-player dungeon under {zone:1426}, best at 29 to 33; {npc:7800}, the last boss, is 34. Every quest giver stands in {object:171524}. From the {zone:1437}: fly from {object:1162} to {zone:1455}. Alone? Skip it: the guide goes on to Dalaran."] = "Gnomeregan : un donjon pour 5 joueurs sous {zone:1426}, idéal de 29 à 33 ; {npc:7800}, le dernier boss, est niveau 34. Tous les donneurs sont à {object:171524}. Depuis {zone:1437} : vol de {object:1162} à {zone:1455}. Seul ? Le passer : le guide continue vers Dalaran.",
+	["Gnomeregan: a 5-player dungeon under {zone:1426}, levels 25 to 34 (29 to 38 in the group finder); {npc:7800}, the last boss, is 34. Every quest giver stands in {object:171524}. From the {zone:1437}: fly from {object:1162} to {zone:1455}. Alone? Skip it: the guide goes on to Dalaran."] = "Gnomeregan : un donjon pour 5 joueurs sous {zone:1426}, niveaux 25 à 34 (29 à 38 dans la recherche de groupe) ; {npc:7800}, le dernier boss, est niveau 34. Tous les donneurs de quêtes sont à {object:171524}. Depuis les {zone:1437} : vol de {object:1162} vers {zone:1455}. Seul ? Le passer : le guide continue vers Dalaran.",
 	-- {quest:2926} Gnogaine
 	["Keep 9 free quest log slots. Every quest can be shared except {quest:2926} and its follow-up: each player takes those from Ozzie."] = "Garder 9 places libres dans le journal. Toutes les quêtes se partagent sauf {quest:2926} et sa suite : chaque joueur les prend chez Ozzie.",
 	-- {quest:2923} Tinkmaster Overspark · {npc:7917} Brother Sarno · {zone:1453} Stormwind
@@ -55,7 +55,7 @@ return {
 
 	-- Step 6: Gnomeregan: before going in
 	["Gnomeregan: before going in"] = "Gnomeregan : avant d'entrer",
-	["Group of 5 at 29 to 33. Everything inside is elite and the mechanical foes hit hard."] = "Groupe de 5 de 29 à 33. Tout est élite à l'intérieur et les ennemis mécaniques frappent fort.",
+	["Group of 5, levels 25 to 34. Everything inside is elite and the mechanical foes hit hard."] = "Groupe de 5, niveaux 25 à 34. Tout est élite à l'intérieur et les ennemis mécaniques frappent fort.",
 	-- {quest:2929} The Grand Betrayal · {quest:2930} Data Rescue · {quest:2922} Save Techbot's Brain! · {object:171524} Tinker Town · {quest:2928} Gyrodrillmatic Excavationators · {npc:6579} Shoni the Shilent · {zone:1453} Stormwind · {quest:2924} Essential Artificials · {npc:6169} Klockmort Spannerspan · {quest:2962} The Only Cure is More Green Glow · {item:9280} Yellow Punch Card · {item:9308} Grime-Encrusted Object · {object:142487} Sparklematic 5200
 	["In the quest log before going in: {quest:2929}, {quest:2930} and {quest:2922} ({object:171524}). If you took them: {quest:2928} ({npc:6579}, {zone:1453}, Group 9), {quest:2924} ({npc:6169}, {object:171524}), {quest:2962} (Ozzie, Kharanos). Bring the {item:9280} (or the White one), and 3 silver per {item:9308} you want to put in the {object:142487}."] = "Dans le journal avant d'entrer : {quest:2929}, {quest:2930} et {quest:2922} ({object:171524}). Si elles ont été prises : {quest:2928} ({npc:6579}, {zone:1453}, Groupe 9), {quest:2924} ({npc:6169}, {object:171524}), {quest:2962} (Ozzie, Kharanos). Apporter {item:9280} (ou la blanche), et 3 pièces d'argent par {item:9308} à mettre dans {object:142487}.",
 	["Gnomeregan"] = "Gnomeregan",

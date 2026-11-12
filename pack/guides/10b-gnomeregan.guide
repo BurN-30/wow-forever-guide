@@ -32,7 +32,7 @@
 # Kharanos (Ozzie) -> Ironforge rewards -> Stormwind (Shoni), where Group 11 (Dalaran) starts. A
 # Fine Mess (2904) is handed in at Booty Bay in Group 15.
 guide groupe-alliance/10b-gnomeregan
-title Group 10b · Gnomeregan (dungeon 29-33, optional)
+title Group 10b · Gnomeregan (dungeon 25-34, optional)
 folder Group Alliance
 category Dungeons
 faction Alliance
@@ -45,7 +45,7 @@ step Ironforge: Gnomeregan quests
   when group 2928
   when level<36
   zone Ironforge
-  tip Gnomeregan: a 5-player dungeon under Dun Morogh, best at 29 to 33; Mekgineer Thermaplugg, the last boss, is 34. Every quest giver stands in Tinker Town. From the Wetlands: fly from Menethil Harbor to Ironforge. Alone? Skip it: the guide goes on to Dalaran.
+  tip Gnomeregan: a 5-player dungeon under Dun Morogh, levels 25 to 34 (29 to 38 in the group finder); Mekgineer Thermaplugg, the last boss, is 34. Every quest giver stands in Tinker Town. From the Wetlands: fly from Menethil Harbor to Ironforge. Alone? Skip it: the guide goes on to Dalaran.
   note Keep 9 free quest log slots. Every quest can be shared except Gnogaine and its follow-up: each player takes those from Ozzie.
   accept 2929                                 -- High Tinker Mekkatorque
   accept 2930                                 -- Master Mechanic Castpipe
@@ -88,7 +88,7 @@ step Kharanos: Ozzie's next quest
 step Gnomeregan: before going in
   when done gno-start
   zone Dun Morogh
-  tip Group of 5 at 29 to 33. Everything inside is elite and the mechanical foes hit hard.
+  tip Group of 5, levels 25 to 34. Everything inside is elite and the mechanical foes hit hard.
   note In the quest log before going in: The Grand Betrayal, Data Rescue and Save Techbot's Brain! (Tinker Town). If you took them: Gyrodrillmatic Excavationators (Shoni the Shilent, Stormwind, Group 9), Essential Artificials (Klockmort Spannerspan, Tinker Town), The Only Cure is More Green Glow (Ozzie, Kharanos). Bring the Yellow Punch Card (or the White one), and 3 silver per Grime-Encrusted Object you want to put in the Sparklematic 5200.
   goto 24.3,39.8 "Gnomeregan" r 25
 

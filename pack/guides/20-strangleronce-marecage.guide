@@ -758,12 +758,12 @@ step Ironforge
 
 step Scarlet Monastery (dungeon, optional): Librarian Mae Paledust
   when group 1053
-  tip The Scarlet Monastery: four wings in Tirisfal Glades, for a group of 5 at 38 to 44: the Library, the Armory and the Cathedral hold the quests. Group 19 sends you there from Southshore, after Raleigh. Alone? Skip it. Mae Paledust stands in the Hall of Explorers, by the bookshelves.
+  tip The Scarlet Monastery: four wings in Tirisfal Glades, levels 30 to 42 (group finder: Graveyard 30-38, Library 33-41, Armory 36-44, Cathedral 38-46): the Library, the Armory and the Cathedral hold the quests. Group 19 sends you there from Southshore, after Raleigh, at 43: the Library is then easy, the Armory and the Cathedral still fit. Alone? Skip it. Mae Paledust stands in the Hall of Explorers, by the bookshelves.
   accept 1050                         -- Librarian Mae Paledust: the book is in the Library wing
 
 step Uldaman (dungeon, optional): Hall of Explorers
   when group 2240
-  tip Uldaman: a dwarf and titan dungeon in the north of the Badlands, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next guide runs it once its Badlands quests are done. Alone? Skip it. Both stand in the Hall of Explorers.
+  tip Uldaman: a dwarf and titan dungeon in the north of the Badlands, for a group of 5, levels 35 to 47 (41 to 51 in the group finder): best at 43 or more. The next guide runs it once its Badlands quests are done. Alone? Skip it. Both stand in the Hall of Explorers.
   accept 2398                         -- Prospector Stormpike
   accept 1360                         -- Krom Stoutarm
 

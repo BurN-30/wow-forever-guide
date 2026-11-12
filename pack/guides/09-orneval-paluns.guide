@@ -87,7 +87,7 @@ step Stormwind: Argos Nightwhisper (Blackfathom Deeps, optional)
   when group 1275
   when level<30
   zone Stormwind City
-  tip Blackfathom Deeps: a 5-player dungeon on the north-west coast of Ashenvale, best at 24 to 28. This guide takes its quests on the way, runs it from the Zoram Strand, then hands them in at Auberdine. Alone? Skip it: the guide goes on in Ashenvale.
+  tip Blackfathom Deeps: a 5-player dungeon on the north-west coast of Ashenvale, levels 22 to 28 (24 to 32 in the group finder). This guide takes its quests on the way, runs it from the Zoram Strand, then hands them in at Auberdine. Alone? Skip it: the guide goes on in Ashenvale.
   note Argos Nightwhisper only sends you to Gershala Nightwhisper in Auberdine, who gives the dungeon quest: a few hundred XP for a trip you make anyway.
   accept 3765                                 -- Argos Nightwhisper
 
@@ -107,7 +107,7 @@ step Auberdine: Gershala Nightwhisper (Blackfathom Deeps, optional)
   when group 1275
   when level<30
   zone Darkshore
-  tip Blackfathom Deeps: a 5-player dungeon on the north-west coast of Ashenvale, best at 24 to 28. Its quests are taken here and on the way, the dungeon is run from the Zoram Strand, and they are handed in back at Auberdine. Alone? Skip it: the guide goes on in Ashenvale.
+  tip Blackfathom Deeps: a 5-player dungeon on the north-west coast of Ashenvale, levels 22 to 28 (24 to 32 in the group finder). Its quests are taken here and on the way, the dungeon is run from the Zoram Strand, and they are handed in back at Auberdine. Alone? Skip it: the guide goes on in Ashenvale.
   note Keep 5 free quest log slots. Every player takes the quests from the givers; sharing works too (click the quest in the log, then Share).
   turnin 3765 optional                        -- Argos Nightwhisper's errand, if you took it in Stormwind
   accept 1275                                 -- Gershala Nightwhisper
@@ -232,7 +232,7 @@ step Blackfathom Deeps: before going in
   when group 1275
   when done bfd-start
   zone Ashenvale
-  tip The portal is in the half-sunken temple at the north end of the Zoram Strand: swim down to it. Group of 5 at 24 to 28; every enemy inside is elite.
+  tip The portal is in the half-sunken temple at the north end of the Zoram Strand: swim down to it. Group of 5, levels 22 to 28; every enemy inside is elite.
   note In the quest log before going in: Researching the Corruption (Gershala Nightwhisper, Auberdine). If you took them: In Search of Thaelrid and Twilight Falls (Darnassus, a detour), Knowledge in the Deeps (Gerrig Bonegrip, Ironforge, offered in Group 3: too far to fetch now). Nothing to bring.
   note Warlocks: The Orb of Soran'ruk (Doan Karhan, in the Barrens) takes three fragments from the Twilight Acolytes here and one from Shadowfang Keep; it is not on this route.
   goto 14.5,14.2 "Blackfathom Deeps" r 25

@@ -5933,7 +5933,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/07b-mortemines",
 			pack = "groupe-alliance",
-			title = "Group 6b · The Deadmines (dungeon 18-23, optional)",
+			title = "Group 6b · The Deadmines (dungeon 16-21, optional)",
 			faction = "Alliance",
 			minLevel = 20,
 			maxLevel = 23,
@@ -5950,7 +5950,7 @@ do
 			steps = {
 				{
 					title = "Lakeshire: {npc:266}",
-					note = "The Deadmines: a 5-player dungeon under Moonbrook, in {zone:1436}, best at 18 to 23. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to {zone:1431}.",
+					note = "The Deadmines: a 5-player dungeon under Moonbrook, in {zone:1436}, levels 16 to 21 (17 to 26 in the group finder): here, at 20 or more, it goes well. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to {zone:1431}.",
 					label = "dm-start",
 					when = { { k = "group", q = 132 }, { k = "turnedin", q = 65 }, { k = "level", op = "<", n = 25 } },
 					goals = {
@@ -6669,7 +6669,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/08b-prison",
 			pack = "groupe-alliance",
-			title = "Group 7b · The Stockade (dungeon 24-28, optional)",
+			title = "Group 7b · The Stockade (dungeon 23-29, optional)",
 			faction = "Alliance",
 			minLevel = 24,
 			maxLevel = 27,
@@ -6686,7 +6686,7 @@ do
 			steps = {
 				{
 					title = "{zone:1453}: Stockade quests",
-					note = "The Stockade, {zone:1453}'s prison taken over by rioting Defias, is a group dungeon in the canals between the {object:2101} and {object:2100}, best at 24 to 28. Alone? Skip it: the guide goes on to {zone:1440}.",
+					note = "The Stockade, {zone:1453}'s prison taken over by rioting Defias, is a group dungeon in the canals between the {object:2101} and {object:2100}, levels 23 to 29. Alone? Skip it: the guide goes on to {zone:1440}.",
 					when = { { k = "group", q = 387 }, { k = "level", op = "<", n = 30 } },
 					goals = {
 						{ t = "note", text = "Keep 6 free quest log slots. Every player takes the quests on their own; meet at the prison gate for the run." },
@@ -6698,7 +6698,7 @@ do
 				},
 				{
 					title = "Enter the Stockade",
-					note = "The gate is by {npc:1719}, at the top of the stairs on the canal. Group of 5 at 24 to 28, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.",
+					note = "The gate is by {npc:1719}, at the top of the stairs on the canal. Group of 5 at 23 to 29, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.",
 					when = { { k = "group", q = 387 }, { k = "level", op = "<", n = 30 } },
 					goals = {
 						{ t = "goto", text = "The Stockade", map = 1453, x = 52.4, y = 70, r = 20 },
@@ -6982,7 +6982,7 @@ do
 				},
 				{
 					title = "{zone:1453}: {npc:4984} (Blackfathom Deeps, optional)",
-					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, best at 24 to 28. This guide takes its quests on the way, runs it from the Zoram Strand, then hands them in at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
+					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, levels 22 to 28 (24 to 32 in the group finder). This guide takes its quests on the way, runs it from the Zoram Strand, then hands them in at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
 					only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } },
 					when = { { k = "group", q = 1275 }, { k = "level", op = "<", n = 30 } },
 					goals = {
@@ -7007,7 +7007,7 @@ do
 				},
 				{
 					title = "Auberdine: {npc:8997} (Blackfathom Deeps, optional)",
-					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, best at 24 to 28. Its quests are taken here and on the way, the dungeon is run from the Zoram Strand, and they are handed in back at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
+					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, levels 22 to 28 (24 to 32 in the group finder). Its quests are taken here and on the way, the dungeon is run from the Zoram Strand, and they are handed in back at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
 					label = "bfd-start",
 					when = { { k = "group", q = 1275 }, { k = "level", op = "<", n = 30 } },
 					goals = {
@@ -7150,7 +7150,7 @@ do
 				},
 				{
 					title = "Blackfathom Deeps: before going in",
-					note = "The portal is in the half-sunken temple at the north end of the Zoram Strand: swim down to it. Group of 5 at 24 to 28; every enemy inside is elite.",
+					note = "The portal is in the half-sunken temple at the north end of the Zoram Strand: swim down to it. Group of 5, levels 22 to 28; every enemy inside is elite.",
 					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
 					goals = {
 						{ t = "note", text = "In the quest log before going in: {quest:1275} ({npc:8997}, Auberdine). If you took them: {quest:1198} and {quest:1199} ({zone:1457}, a detour), {quest:971} ({npc:2786}, {zone:1455}, offered in Group 3: too far to fetch now). Nothing to bring." },
@@ -7794,7 +7794,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/10-site-de-fouilles",
 			pack = "groupe-alliance",
-			title = "Group 10 · Excavation Site: {zone:1437} (dungeon 28-32)",
+			title = "Group 10 · Excavation Site: {zone:1437} (dungeon 26-28)",
 			faction = "Alliance",
 			minLevel = 29,
 			maxLevel = 32,
@@ -7818,7 +7818,7 @@ do
 				},
 				{
 					title = "{object:1162}: dungeon quests",
-					note = "Excavation Site: a 5-player Forever dungeon up the hill in the middle of the {zone:1437}, best at 28 to 31, with 5 players (4 with a real tank or healer). Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards. Alone? Skip it: the guide goes on to Dalaran.",
+					note = "Excavation Site: a 5-player Forever dungeon up the hill in the middle of the {zone:1437}, levels 26 to 28 (26 to 33 in the group finder): a little above, as here, it goes faster; with 5 players (4 with a real tank or healer). Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards. Alone? Skip it: the guide goes on to Dalaran.",
 					label = "xs-start",
 					when = { { k = "group", q = 95647 } },
 					goals = {
@@ -7935,7 +7935,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/10b-gnomeregan",
 			pack = "groupe-alliance",
-			title = "Group 10b · Gnomeregan (dungeon 29-33, optional)",
+			title = "Group 10b · Gnomeregan (dungeon 25-34, optional)",
 			faction = "Alliance",
 			minLevel = 30,
 			maxLevel = 33,
@@ -7952,7 +7952,7 @@ do
 			steps = {
 				{
 					title = "{zone:1455}: Gnomeregan quests",
-					note = "Gnomeregan: a 5-player dungeon under {zone:1426}, best at 29 to 33; {npc:7800}, the last boss, is 34. Every quest giver stands in {object:171524}. From the {zone:1437}: fly from {object:1162} to {zone:1455}. Alone? Skip it: the guide goes on to Dalaran.",
+					note = "Gnomeregan: a 5-player dungeon under {zone:1426}, levels 25 to 34 (29 to 38 in the group finder); {npc:7800}, the last boss, is 34. Every quest giver stands in {object:171524}. From the {zone:1437}: fly from {object:1162} to {zone:1455}. Alone? Skip it: the guide goes on to Dalaran.",
 					label = "gno-start",
 					when = { { k = "group", q = 2928 }, { k = "level", op = "<", n = 36 } },
 					goals = {
@@ -8002,7 +8002,7 @@ do
 				},
 				{
 					title = "Gnomeregan: before going in",
-					note = "Group of 5 at 29 to 33. Everything inside is elite and the mechanical foes hit hard.",
+					note = "Group of 5, levels 25 to 34. Everything inside is elite and the mechanical foes hit hard.",
 					when = { { k = "done", label = "gno-start" } },
 					goals = {
 						{ t = "note", text = "In the quest log before going in: {quest:2929}, {quest:2930} and {quest:2922} ({object:171524}). If you took them: {quest:2928} ({npc:6579}, {zone:1453}, Group 9), {quest:2924} ({npc:6169}, {object:171524}), {quest:2962} (Ozzie, Kharanos). Bring the {item:9280} (or the White one), and 3 silver per {item:9308} you want to put in the {object:142487}." },
@@ -8226,7 +8226,7 @@ do
 			version = 1,
 			group = true,
 			names = { ["item:190309"] = "Wooden Figurine", ["item:1946"] = "Mary's Looking Glass", ["item:2594"] = "Flagon of Mead", ["item:2658"] = "Ados Fragment", ["item:2659"] = "Modr Fragment", ["item:2660"] = "Golm Fragment", ["item:2661"] = "Neru Fragment", ["item:274463"] = "Tattered Note", ["item:279996"] = "Goaz Stone", ["item:3619"] = "Snellig's Snuffbox", ["item:4371"] = "Bronze Tube", ["item:5825"] = "Treshala's Pendant", ["item:5947"] = "Defias Docket", ["item:6841"] = "Vial of Phlogiston", ["npc:1040"] = "Fen Creeper", ["npc:1077"] = "Prospector Whelgar", ["npc:1078"] = "Ormer Ironbraid", ["npc:1110"] = "Skeletal Raider", ["npc:1157"] = "Cursed Sailor", ["npc:1158"] = "Cursed Marine", ["npc:1159"] = "First Mate Snellig", ["npc:1160"] = "Captain Halyndor", ["npc:1212"] = "Bishop Farthing", ["npc:1217"] = "Glorin Steelbrow", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1284"] = "Archbishop Benedictus", ["npc:1353"] = "Sarltooth", ["npc:1464"] = "Innkeeper Helbrek", ["npc:205"] = "Nightbane Dark Runner", ["npc:206"] = "Nightbane Vile Fang", ["npc:2089"] = "Giant Wetlands Crocolisk", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:259023"] = "Veyric Thunderhame", ["npc:263"] = "Lord Ello Ebonlocke", ["npc:268"] = "Sirra Von'Indi", ["npc:270892"] = "Goaz Warder", ["npc:272273"] = "Lost Watcher", ["npc:276"] = "Viktori Prism'Antras", ["npc:289"] = "Abercrombie", ["npc:302"] = "Blind Mary", ["npc:311"] = "Sven Yorgen", ["npc:3133"] = "Herble Baubbletump", ["npc:4140"] = "Scorpid Reaver", ["npc:4147"] = "Saltstone Basilisk", ["npc:4420"] = "Overlord Ramtusk", ["npc:4421"] = "Charlga Razorflank", ["npc:4422"] = "Agathelos the Raging", ["npc:4424"] = "Aggem Thorncurse", ["npc:4428"] = "Death Speaker Jargba", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4510"] = "Heralath Fallowbrook", ["npc:482"] = "Elling Trias", ["npc:4959"] = "Jorgen", ["npc:4982"] = "Thomas", ["npc:511"] = "Insane Ghoul", ["npc:522"] = "Mor'Ladim", ["npc:533"] = "Nightbane Shadow Weaver", ["npc:604"] = "Plague Spreader", ["npc:6244"] = "Takar the Seer", ["npc:633"] = "Elaine Carevin", ["npc:6579"] = "Shoni the Shilent", ["npc:661"] = "Jonathan Carevin", ["npc:663"] = "Calor", ["npc:6790"] = "Innkeeper Trelayne", ["npc:7917"] = "Brother Sarno", ["npc:840"] = "Watcher Backus", ["object:102"] = "Raven Hill", ["object:1162"] = "Menethil Harbor", ["object:119"] = "Abercrombie's Crate", ["object:171524"] = "Tinker Town", ["object:176369"] = "Boat to Theramore", ["object:19868"] = "Rocket Car Rubble", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:21052"] = "Defias Strongbox", ["object:21056"] = "Theramore Isle", ["object:28027"] = "Dwarven District", ["quest:1142"] = "Mortality Wanes", ["quest:1144"] = "Willix the Importer", ["quest:1241"] = "The Missing Diplomat", ["quest:1701"] = "Fire Hardened Mail", ["quest:1738"] = "Heartswood", ["quest:225"] = "The Weathered Grave", ["quest:2922"] = "Save Techbot's Brain!", ["quest:2923"] = "Tinkmaster Overspark", ["quest:465"] = "Nek'rosh's Gambit", ["quest:5762"] = "Hemet Nesingwary", ["quest:65602"] = "What Is Love?", ["quest:96138"] = "Merrick's Bow", ["quest:96264"] = "Elemental Aid", ["quest:98221"] = "From the Ashes", ["zone:1413"] = "The Barrens", ["zone:1417"] = "Arathi Highlands", ["zone:1418"] = "Badlands", ["zone:1426"] = "Dun Morogh", ["zone:1431"] = "Duskwood", ["zone:1436"] = "Westfall", ["zone:1437"] = "Wetlands", ["zone:1440"] = "Ashenvale", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1445"] = "Dustwallow Marsh", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
-			written = { ["Gnomeregan: the gnomes' fallen city under {zone:1426}, a 5-player dungeon best at 29 to 33. The guide runs it after Group 10 (Group 10b), from {zone:1455}, where the other quests are given. {npc:6579}'s quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too."] = "Gnomeregan: the gnomes' fallen city under Dun Morogh, a 5-player dungeon best at 29 to 33. The guide runs it after Group 10 (Group 10b), from Ironforge, where the other quests are given. Shoni's quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.", ["Jump down from {npc:4421}'s area and kill a few quilboars: {npc:4510}, a night elf who died in the Kraul, lies by a tent in the north of that area. {quest:1142} asks for {item:5825}, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run."] = "Jump down from Charlga's area and kill a few quilboars: Heralath Fallowbrook, a night elf who died in the Kraul, lies by a tent in the north of that area. Mortality Wanes asks for Treshala's Pendant, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run.", ["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "On the road south through the Barrens, Takar the Seer camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards.", ["Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}."] = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.", ["Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421}, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her."] = "Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her.", ["The Plague Spreaders walk the northern half of the Raven Hill Cemetery. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "The Plague Spreaders walk the northern half of the Raven Hill Cemetery. Mor'Ladim, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of Sven's camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs.", ["{item:2658} along the way to {npc:1078} and Whelgar"] = "Ados Fragment along the way to Ormer and Whelgar", ["{item:2659} along the way to {npc:1078} and Whelgar"] = "Modr Fragment along the way to Ormer and Whelgar", ["{item:2660} along the way to {npc:1078} and Whelgar"] = "Golm Fragment along the way to Ormer and Whelgar", ["{item:2661} along the way to {npc:1078} and Whelgar"] = "Neru Fragment along the way to Ormer and Whelgar", ["{npc:1078} and Whelgar"] = "Ormer and Whelgar", ["{npc:311}'s Camp"] = "Sven's Camp", ["{quest:1144}, a goblin, is held in the same tent as {npc:4510}. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end."] = "Willix the Importer, a goblin, is held in the same tent as Heralath. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end." },
+			written = { ["Gnomeregan: the gnomes' fallen city under {zone:1426}, a 5-player dungeon, levels 25 to 34. The guide runs it after Group 10 (Group 10b), from {zone:1455}, where the other quests are given. {npc:6579}'s quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too."] = "Gnomeregan: the gnomes' fallen city under Dun Morogh, a 5-player dungeon, levels 25 to 34. The guide runs it after Group 10 (Group 10b), from Ironforge, where the other quests are given. Shoni's quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.", ["Jump down from {npc:4421}'s area and kill a few quilboars: {npc:4510}, a night elf who died in the Kraul, lies by a tent in the north of that area. {quest:1142} asks for {item:5825}, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run."] = "Jump down from Charlga's area and kill a few quilboars: Heralath Fallowbrook, a night elf who died in the Kraul, lies by a tent in the north of that area. Mortality Wanes asks for Treshala's Pendant, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run.", ["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "On the road south through the Barrens, Takar the Seer camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards.", ["Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, levels 25 to 33 (29 to 38 in the group finder; the last bosses are 33): at 29 or more here, it goes well. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}."] = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, levels 25 to 33 (29 to 38 in the group finder; the last bosses are 33): at 29 or more here, it goes well. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.", ["Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421}, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her."] = "Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her.", ["The Plague Spreaders walk the northern half of the Raven Hill Cemetery. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "The Plague Spreaders walk the northern half of the Raven Hill Cemetery. Mor'Ladim, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of Sven's camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs.", ["{item:2658} along the way to {npc:1078} and Whelgar"] = "Ados Fragment along the way to Ormer and Whelgar", ["{item:2659} along the way to {npc:1078} and Whelgar"] = "Modr Fragment along the way to Ormer and Whelgar", ["{item:2660} along the way to {npc:1078} and Whelgar"] = "Golm Fragment along the way to Ormer and Whelgar", ["{item:2661} along the way to {npc:1078} and Whelgar"] = "Neru Fragment along the way to Ormer and Whelgar", ["{npc:1078} and Whelgar"] = "Ormer and Whelgar", ["{npc:311}'s Camp"] = "Sven's Camp", ["{quest:1144}, a goblin, is held in the same tent as {npc:4510}. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end."] = "Willix the Importer, a goblin, is held in the same tent as Heralath. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end." },
 			steps = {
 				{
 					title = "{quest:1241}",
@@ -8250,7 +8250,7 @@ do
 				},
 				{
 					title = "{zone:1453}: {npc:6579} (Gnomeregan, optional)",
-					note = "Gnomeregan: the gnomes' fallen city under {zone:1426}, a 5-player dungeon best at 29 to 33. The guide runs it after Group 10 (Group 10b), from {zone:1455}, where the other quests are given. {npc:6579}'s quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.",
+					note = "Gnomeregan: the gnomes' fallen city under {zone:1426}, a 5-player dungeon, levels 25 to 34. The guide runs it after Group 10 (Group 10b), from {zone:1455}, where the other quests are given. {npc:6579}'s quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.",
 					when = { { k = "group", q = 2928 }, { k = "level", op = "<", n = 33 } },
 					goals = {
 						{ t = "note", text = "{npc:6579} stands in the {object:28027}, by the tram. The quest waits in the log until Gnomeregan." },
@@ -8569,7 +8569,7 @@ do
 				},
 				{
 					title = "Razorfen Kraul (dungeon, optional)",
-					note = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}.",
+					note = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, levels 25 to 33 (29 to 38 in the group finder; the last bosses are 33): at 29 or more here, it goes well. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}.",
 					label = "rfk-start",
 					when = { { k = "group", q = 1144 }, { k = "level", op = "<", n = 33 } },
 					goals = {
@@ -8675,7 +8675,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/12-dalaran",
 			pack = "groupe-alliance",
-			title = "Group 11 · City of Dalaran (dungeon 30-33, optional)",
+			title = "Group 11 · City of Dalaran (dungeon 28-35, optional)",
 			faction = "Alliance",
 			minLevel = 30,
 			maxLevel = 33,
@@ -8686,7 +8686,7 @@ do
 			next = "groupe-alliance/14-paluns-hautebrande",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:251961"] = "Arcane Mote", ["item:2933"] = "Seal of Wrynn", ["item:4306"] = "Silk Cloth", ["npc:1646"] = "Baros Alexston", ["npc:1749"] = "Lady Katrana Prestor", ["npc:1755"] = "Marzon the Silent Blade", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:482"] = "Elling Trias", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["npc:7766"] = "Tyrion", ["object:1162"] = "Menethil Harbor", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2159"] = "City Hall", ["quest:395"] = "Brotherhood's End", ["quest:434"] = "The Attack!", ["quest:92432"] = "An Alarming Request", ["zone:1416"] = "Alterac Mountains", ["zone:1437"] = "Wetlands", ["zone:1453"] = "Stormwind" },
+			names = { ["item:251961"] = "Arcane Mote", ["item:251983"] = "Fel Infused Blossom", ["item:2933"] = "Seal of Wrynn", ["item:4306"] = "Silk Cloth", ["npc:1646"] = "Baros Alexston", ["npc:1749"] = "Lady Katrana Prestor", ["npc:1755"] = "Marzon the Silent Blade", ["npc:246003"] = "Fel Ancient", ["npc:246016"] = "Arcanic Enigma", ["npc:246020"] = "Shade of the Archmage", ["npc:246683"] = "Mana Phantom", ["npc:246708"] = "Magus Fansy Goodbringer", ["npc:246748"] = "Archmage Modera", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:482"] = "Elling Trias", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["npc:7766"] = "Tyrion", ["object:1162"] = "Menethil Harbor", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2159"] = "City Hall", ["quest:395"] = "Brotherhood's End", ["quest:434"] = "The Attack!", ["quest:92432"] = "An Alarming Request", ["quest:92489"] = "Power Overwhelming", ["zone:1416"] = "Alterac Mountains", ["zone:1437"] = "Wetlands", ["zone:1453"] = "Stormwind" },
 			written = { ["Overhear Lescovar and {npc:1755} in the garden, then kill both"] = "Overhear Lescovar and Marzon in the garden, then kill both" },
 			steps = {
 				{
@@ -8736,7 +8736,7 @@ do
 				},
 				{
 					title = "{zone:1453}: two dungeon quests",
-					note = "City of Dalaran: a 5-player Forever dungeon in the {zone:1416}, best at 30 to 33. This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the {zone:1437}.\n{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower.",
+					note = "City of Dalaran: a 5-player Forever dungeon in the {zone:1416}, from level 28 (28 to 35 in the group finder). This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the {zone:1437}.\n{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower.",
 					label = "dal-start",
 					when = { { k = "group", q = 92456 } },
 					goals = {
@@ -8775,7 +8775,7 @@ do
 				},
 				{
 					title = "Inside the dungeon",
-					note = "Blossom in the central garden, remnants everywhere, the {item:251961} at the Violet Citadel end.",
+					note = "Out of the sewers, the remnants and mana echoes are all over the streets. The {npc:246003} guards Runeweaver Square, in the middle, behind a magic shield: talk to {npc:246708}, on its east side, to lower it; the {item:251983} is one of the big green bulbs of the square. The {npc:246016}, the mana elemental for {quest:92489}, roams the north-east of the town, by Antonidas's statue: kill its two Mana Phantoms first. Last, {npc:246748} waits on the steps of the Violet Citadel: talk to her for the portal to the {npc:246020}, who drops the {item:251961}.",
 					when = { { k = "done", label = "dal-start" } },
 					goals = {
 						{ t = "note", text = "Share each quest with your group: click it in the quest log, then Share." },
@@ -12444,7 +12444,7 @@ do
 				},
 				{
 					title = "Scarlet Monastery (dungeon, optional): {npc:3979}",
-					note = "The Scarlet Monastery: four wings in {zone:1420}, for a group of 5 at 38 to 44: the Library, the Armory and the Cathedral hold the quests. Group 19 sends you there from Southshore, after Raleigh. Alone? Skip it. Mae Paledust stands in the {object:32356}, by the bookshelves.",
+					note = "The Scarlet Monastery: four wings in {zone:1420}, levels 30 to 42 (group finder: Graveyard 30-38, Library 33-41, Armory 36-44, Cathedral 38-46): the Library, the Armory and the Cathedral hold the quests. Group 19 sends you there from Southshore, after Raleigh, at 43: the Library is then easy, the Armory and the Cathedral still fit. Alone? Skip it. Mae Paledust stands in the {object:32356}, by the bookshelves.",
 					when = { { k = "group", q = 1053 } },
 					goals = {
 						{ t = "accept", quest = 1050, title = "Mythology of the Titans", npc = 3979, npcName = "Librarian Mae Paledust", minLevel = 28, qlvl = 38, map = 1455, x = 74.97, y = 12.48, z = 503.5, f = "e", note = "{npc:3979}: the book is in the Library wing" },
@@ -12452,7 +12452,7 @@ do
 				},
 				{
 					title = "Uldaman (dungeon, optional): {object:32356}",
-					note = "Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next guide runs it once its {zone:1418} quests are done. Alone? Skip it. Both stand in the {object:32356}.",
+					note = "Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 35 to 47 (41 to 51 in the group finder): best at 43 or more. The next guide runs it once its {zone:1418} quests are done. Alone? Skip it. Both stand in the {object:32356}.",
 					when = { { k = "group", q = 2240 } },
 					goals = {
 						{ t = "accept", quest = 2398, title = "The Lost Dwarves", npc = 1356, npcName = "Prospector Stormpike", minLevel = 35, qlvl = 40, closedBy = { 2240 }, preTitles = { [2240] = "The Hidden Chamber" }, map = 1455, x = 74.64, y = 11.74, z = 503.5, f = "e" },
@@ -12601,7 +12601,7 @@ do
 				},
 				{
 					title = "Uldaman (dungeon, optional): {npc:2817}",
-					note = "Uldaman: a 5-player dungeon at the north end of the {zone:1418}, levels 42 to 52 on Forever: best at 43 or more. The {zone:1418} quests come first, then the dungeon, then the rewards in {zone:1455} on the way to Southshore. Alone? Skip it: the guide goes on in the {zone:1418}.",
+					note = "Uldaman: a 5-player dungeon at the north end of the {zone:1418}, levels 35 to 47 (41 to 51 in the group finder): best at 43 or more. The {zone:1418} quests come first, then the dungeon, then the rewards in {zone:1455} on the way to Southshore. Alone? Skip it: the guide goes on in the {zone:1418}.",
 					label = "uld-start",
 					when = { { k = "group", q = 2240 } },
 					goals = {
@@ -12784,7 +12784,7 @@ do
 				},
 				{
 					title = "{object:171531}: {npc:3974} and {npc:6487}",
-					note = "Loksey and his dogs wait in a small alcove near the start. {quest:1050} lies on a bench or the floor of the narrow corridors, to the left as you enter the room. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for {npc:264265} is on a table on the right of Doan's room; the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him.",
+					note = "Loksey and his dogs wait in a small alcove near the start. {quest:1050} lies on the floor of one of the Library's corridors, under a window; once taken it comes back after a short while. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for {npc:264265} is on a table on the right of Doan's room (not there? Look on Doan's body: one Forever guide says he carries it); the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him.",
 					when = { { k = "done", label = "sm-start" } },
 					goals = {
 						{ t = "kill", quest = 1053, title = "In the Name of the Light", target = "Houndmaster Loksey", npc = 3974, count = 1, oi = 4, optional = true, note = "{npc:3974}, elite 34", group = { kind = "elite", rank = 1 } },

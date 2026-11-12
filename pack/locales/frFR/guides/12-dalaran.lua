@@ -7,7 +7,7 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 11 · City of Dalaran (dungeon 30-33, optional)"] = "Groupe 11 · Cité de Dalaran (donjon 30-33, facultatif)",
+	["Group 11 · City of Dalaran (dungeon 28-35, optional)"] = "Groupe 11 · Cité de Dalaran (donjon 28-35, facultatif)",
 
 	-- Step 1: Stormwind: the end of the Defias story
 	-- {zone:1453} Stormwind
@@ -32,7 +32,7 @@ return {
 	-- {zone:1453} Stormwind
 	["{zone:1453}: two dungeon quests"] = "{zone:1453} : deux quêtes du donjon",
 	-- {zone:1416} Alterac Mountains · {zone:1437} Wetlands · {npc:5502} Shylamiir · {object:2096} Trade District · {npc:5694} High Sorcerer Andromath · {object:2101} Mage Quarter
-	["City of Dalaran: a 5-player Forever dungeon in the {zone:1416}, best at 30 to 33. This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the {zone:1437}.\n{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower."] = "Cité de Dalaran : un donjon Forever pour 5 joueurs dans les {zone:1416}, idéal de 30 à 33. Ce chapitre prend ses quatre quêtes, fait le donjon, puis les rend. Seul ? La passer : le guide continue vers les {zone:1437}.\n{npc:5502} est dans {object:2096}, {npc:5694} dans la tour de {object:2101}.",
+	["City of Dalaran: a 5-player Forever dungeon in the {zone:1416}, from level 28 (28 to 35 in the group finder). This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the {zone:1437}.\n{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower."] = "Cité de Dalaran : un donjon de Forever pour 5 joueurs dans les {zone:1416}, dès le niveau 28 (28 à 35 dans la recherche de groupe). Ce chapitre prend ses quatre quêtes, fait le donjon, puis les rend. Seul ? Le passer : le guide continue vers les {zone:1437}.\n{npc:5502} est dans {object:2096}, {npc:5694} dans la tour de {object:2101}.",
 	-- {quest:92432} An Alarming Request
 	["Group: level 30 required for {quest:92432}, the quest that opens the way to Dalaran. Below 30? Level up first."] = "Groupe : niveau 30 requis pour {quest:92432}, la quête qui ouvre la route de Dalaran. En dessous de 30 ? Monter de niveau d'abord.",
 
@@ -53,8 +53,9 @@ return {
 
 	-- Step 9: Inside the dungeon
 	["Inside the dungeon"] = "Dans le donjon",
-	-- {item:251961} Arcane Mote
-	["Blossom in the central garden, remnants everywhere, the {item:251961} at the Violet Citadel end."] = "Fleur dans le jardin central, rémanents partout, {item:251961} au bout, côté Citadelle pourpre.",
+	-- {npc:246003} Fel Ancient · {npc:246708} Magus Fansy Goodbringer · {item:251983} Fel Infused Blossom · {npc:246016} Arcanic Enigma · {quest:92489} Power Overwhelming · {npc:246748} Archmage Modera · {npc:246020} Shade of the Archmage · {item:251961} Arcane Mote
+	-- plural, as words: Mana Phantoms = {npc:246683} Mana Phantom
+	["Out of the sewers, the remnants and mana echoes are all over the streets. The {npc:246003} guards Runeweaver Square, in the middle, behind a magic shield: talk to {npc:246708}, on its east side, to lower it; the {item:251983} is one of the big green bulbs of the square. The {npc:246016}, the mana elemental for {quest:92489}, roams the north-east of the town, by Antonidas's statue: kill its two Mana Phantoms first. Last, {npc:246748} waits on the steps of the Violet Citadel: talk to her for the portal to the {npc:246020}, who drops the {item:251961}."] = "Après les égouts, les rémanences et les échos de mana sont partout dans les rues. {npc:246003} garde la place centrale (Runeweaver Square) derrière un bouclier magique : parler à {npc:246708}, du côté est, pour le baisser ; {item:251983} est l'un des gros bulbes verts de la place. {npc:246016}, l'élémentaire de mana de {quest:92489}, rôde au nord-est de la ville, près de la statue d'Antonidas : tuer d'abord ses deux fantômes de mana (Mana Phantoms). Enfin, {npc:246748} attend sur les marches de la Citadelle pourpre (Violet Citadel) : lui parler pour le portail vers {npc:246020}, qui lâche {item:251961}.",
 	["Share each quest with your group: click it in the quest log, then Share."] = "Partagez chaque quête au groupe : clic sur la quête dans le journal, puis Partager.",
 
 	-- Step 10: Modera's rewards

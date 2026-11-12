@@ -7,13 +7,13 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 6b · The Deadmines (dungeon 18-23, optional)"] = "Groupe 6b · Les Mortemines (donjon 18-23, facultatif)",
+	["Group 6b · The Deadmines (dungeon 16-21, optional)"] = "Groupe 6b · Les Mortemines (donjon 16-21, facultatif)",
 
 	-- Step 1: Lakeshire: Wiley the Black
 	-- {npc:266} Wiley the Black
 	["Lakeshire: {npc:266}"] = "Comté-du-Lac : {npc:266}",
 	-- {zone:1436} Westfall · {zone:1431} Duskwood
-	["The Deadmines: a 5-player dungeon under Moonbrook, in {zone:1436}, best at 18 to 23. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to {zone:1431}."] = "Les Mortemines : un donjon pour 5 joueurs sous Ruisselune, en {zone:1436}, idéal de 18 à 23. Ce chapitre prend ses quêtes en chemin, puis fait le donjon boss par boss. Seul ? Le passer : le guide continue au {zone:1431}.",
+	["The Deadmines: a 5-player dungeon under Moonbrook, in {zone:1436}, levels 16 to 21 (17 to 26 in the group finder): here, at 20 or more, it goes well. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to {zone:1431}."] = "Les Mortemines : un donjon pour 5 joueurs sous Ruisselune, en {zone:1436}, niveaux 16 à 21 (17 à 26 dans la recherche de groupe) : ici, à 20 ou plus, il passe bien. Ce chapitre prend ses quêtes en chemin, puis fait le donjon boss par boss. Seul ? Le passer : le guide continue au {zone:1431}.",
 	["Keep 8 free quest log slots. Everyone takes the quests at their own pace; meet at the Moonbrook entrance for the run."] = "Garder 8 places libres dans le journal. Chacun prend les quêtes à son rythme ; rendez-vous à l'entrée de Ruisselune pour le donjon.",
 	-- {npc:266} Wiley the Black
 	["{npc:266}, upstairs in the inn"] = "{npc:266}, à l'étage de l'auberge",

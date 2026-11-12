@@ -412,7 +412,7 @@ return {
 	-- {npc:3979} Librarian Mae Paledust
 	["Scarlet Monastery (dungeon, optional): {npc:3979}"] = "Monastère écarlate (donjon, optionnel) : {npc:3979}",
 	-- {zone:1420} Tirisfal Glades · {object:32356} Hall of Explorers
-	["The Scarlet Monastery: four wings in {zone:1420}, for a group of 5 at 38 to 44: the Library, the Armory and the Cathedral hold the quests. Group 19 sends you there from Southshore, after Raleigh. Alone? Skip it. Mae Paledust stands in the {object:32356}, by the bookshelves."] = "Le Monastère écarlate : quatre ailes dans {zone:1420}, pour un groupe de 5 niveau 38 à 44 : la Bibliothèque, l'Armurerie et la Cathédrale contiennent les quêtes. Le groupe 19 vous y envoie depuis Austrivage, après Raleigh. Seul ? Passez. Mae Paledust se tient dans l'{object:32356}, près des étagères.",
+	["The Scarlet Monastery: four wings in {zone:1420}, levels 30 to 42 (group finder: Graveyard 30-38, Library 33-41, Armory 36-44, Cathedral 38-46): the Library, the Armory and the Cathedral hold the quests. Group 19 sends you there from Southshore, after Raleigh, at 43: the Library is then easy, the Armory and the Cathedral still fit. Alone? Skip it. Mae Paledust stands in the {object:32356}, by the bookshelves."] = "Le Monastère écarlate : quatre ailes dans les {zone:1420}, niveaux 30 à 42 (recherche de groupe : Cimetière 30-38, Bibliothèque 33-41, Armurerie 36-44, Cathédrale 38-46) : la Bibliothèque, l'Armurerie et la Cathédrale portent les quêtes. Le Groupe 19 y envoie depuis Austrivage, après Raleigh, au niveau 43 : la Bibliothèque est alors facile, l'Armurerie et la Cathédrale restent à niveau. Seul ? La passer. Mae Paledust est dans {object:32356}, près des étagères.",
 	-- {npc:3979} Librarian Mae Paledust
 	["{npc:3979}: the book is in the Library wing"] = "{npc:3979} : le livre se trouve dans l'aile Bibliothèque",
 
@@ -420,7 +420,7 @@ return {
 	-- {object:32356} Hall of Explorers
 	["Uldaman (dungeon, optional): {object:32356}"] = "Uldaman (donjon, optionnel) : {object:32356}",
 	-- {zone:1418} Badlands · {object:32356} Hall of Explorers
-	["Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next guide runs it once its {zone:1418} quests are done. Alone? Skip it. Both stand in the {object:32356}."] = "Uldaman : un donjon nain et titan au nord des {zone:1418}, pour un groupe de 5, niveaux 42 à 52 sur Forever : optimal à 43 ou plus. Le guide suivant le fait une fois ses quêtes des {zone:1418} finies. Seul ? Passez. Tous deux se tiennent dans l'{object:32356}.",
+	["Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 35 to 47 (41 to 51 in the group finder): best at 43 or more. The next guide runs it once its {zone:1418} quests are done. Alone? Skip it. Both stand in the {object:32356}."] = "Uldaman : un donjon nain et titan au nord des {zone:1418}, pour un groupe de 5, niveaux 35 à 47 (41 à 51 dans la recherche de groupe) : idéal à 43 ou plus. Le guide suivant le fait une fois ses quêtes des {zone:1418} finies. Seul ? Le passer. Les deux sont dans {object:32356}.",
 
 	-- Step 126: Fly to Thelsamar
 	["Fly to Thelsamar"] = "Volez vers Thelsamar",

@@ -8,7 +8,7 @@
 # quests for whoever took Dorin's in Lakeshire (08b-prison), facts and tips from Wowhead Forever
 # (pages and comments read on 2026-11-08), rewritten.
 guide groupe-alliance/10-site-de-fouilles
-title Group 10 · Excavation Site: Wetlands (dungeon 28-32)
+title Group 10 · Excavation Site: Wetlands (dungeon 26-28)
 folder Group Alliance
 category Dungeons
 faction Alliance
@@ -25,7 +25,7 @@ step Back to Menethil Harbor
 step Menethil Harbor: dungeon quests
   label xs-start
   when group 95647
-  tip Excavation Site: a 5-player Forever dungeon up the hill in the middle of the Wetlands, best at 28 to 31, with 5 players (4 with a real tank or healer). Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards. Alone? Skip it: the guide goes on to Dalaran.
+  tip Excavation Site: a 5-player Forever dungeon up the hill in the middle of the Wetlands, levels 26 to 28 (26 to 33 in the group finder): a little above, as here, it goes faster; with 5 players (4 with a real tank or healer). Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards. Alone? Skip it: the guide goes on to Dalaran.
   note Keep 6 free quest log slots. Caitlin Grassman is in her house, James Halloran by the north gate. Seeking Caitlin, from Llana in Astranaar, can no longer be taken once you hold Caitlin's quest.
   level 28
   turnin 95737 optional                       -- Caitlin Grassman: Seeking Caitlin, if you took it in Astranaar

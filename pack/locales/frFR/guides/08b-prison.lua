@@ -7,13 +7,13 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 7b · The Stockade (dungeon 24-28, optional)"] = "Groupe 7b · La Prison (donjon 24-28, facultatif)",
+	["Group 7b · The Stockade (dungeon 23-29, optional)"] = "Groupe 7b · La Prison (donjon 23-29, facultatif)",
 
 	-- Step 1: Stormwind: Stockade quests
 	-- {zone:1453} Stormwind
 	["{zone:1453}: Stockade quests"] = "{zone:1453} : quêtes de la Prison",
 	-- {zone:1453} Stormwind · {object:2101} Mage Quarter · {object:2100} Old Town · {zone:1440} Ashenvale
-	["The Stockade, {zone:1453}'s prison taken over by rioting Defias, is a group dungeon in the canals between the {object:2101} and {object:2100}, best at 24 to 28. Alone? Skip it: the guide goes on to {zone:1440}."] = "La Prison, la geôle de {zone:1453} prise par des Défias en révolte, est un donjon de groupe dans les canaux entre {object:2101} et {object:2100}, idéal de 24 à 28. Seul ? La passer : le guide continue en {zone:1440}.",
+	["The Stockade, {zone:1453}'s prison taken over by rioting Defias, is a group dungeon in the canals between the {object:2101} and {object:2100}, levels 23 to 29. Alone? Skip it: the guide goes on to {zone:1440}."] = "La Prison, la geôle de {zone:1453} prise par des Défias en révolte, est un donjon de groupe dans les canaux entre {object:2101} et {object:2100}, niveaux 23 à 29. Seul ? La passer : le guide continue en {zone:1440}.",
 	["Keep 6 free quest log slots. Every player takes the quests on their own; meet at the prison gate for the run."] = "Garder 6 places libres dans le journal. Chacun prend les quêtes de son côté ; rendez-vous à la porte de la prison pour le donjon.",
 	-- {npc:1719} Warden Thelwater
 	["{npc:1719}, at the prison gate"] = "{npc:1719}, à la porte de la prison",
@@ -24,7 +24,7 @@ return {
 	["Enter the Stockade"] = "Entrer dans la Prison",
 	-- {npc:1719} Warden Thelwater
 	-- plural, as words: Defias Prisoners = {npc:1706} Defias Prisoner
-	["The gate is by {npc:1719}, at the top of the stairs on the canal. Group of 5 at 24 to 28, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits."] = "La porte est près de {npc:1719}, en haut des marches sur le canal. Groupe de 5 de 24 à 28, ou de 3 de 26 à 29. Tous les prisonniers sont élites (23 à 26) ; les prisonniers défias désarment, le tank prend la menace avant que les autres frappent.",
+	["The gate is by {npc:1719}, at the top of the stairs on the canal. Group of 5 at 23 to 29, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits."] = "La porte est près de {npc:1719}, en haut des marches sur le canal. Groupe de 5 de 23 à 29, ou de 3 de 26 à 29. Tous les prisonniers sont élites (23 à 26) ; les prisonniers défias désarment, le tank prend la menace avant que les autres frappent.",
 	["The Stockade"] = "La Prison",
 
 	-- Step 3: The entry corridor and Targorr the Dread

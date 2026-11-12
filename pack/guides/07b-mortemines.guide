@@ -14,7 +14,7 @@
 # Fairmoon) -> Moonbrook: the undead outside, then the Deadmines boss by boss -> the cove exit
 # (Alba) -> Sentinel Hill -> Stormwind rewards.
 guide groupe-alliance/07b-mortemines
-title Group 6b · The Deadmines (dungeon 18-23, optional)
+title Group 6b · The Deadmines (dungeon 16-21, optional)
 folder Group Alliance
 category Dungeons
 faction Alliance
@@ -27,7 +27,7 @@ step Lakeshire: Wiley the Black
   when group 132
   when turnedin 65
   when level<25
-  tip The Deadmines: a 5-player dungeon under Moonbrook, in Westfall, best at 18 to 23. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to Duskwood.
+  tip The Deadmines: a 5-player dungeon under Moonbrook, in Westfall, levels 16 to 21 (17 to 26 in the group finder): here, at 20 or more, it goes well. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to Duskwood.
   note Keep 8 free quest log slots. Everyone takes the quests at their own pace; meet at the Moonbrook entrance for the run.
   accept 132                                  -- Wiley the Black, upstairs in the inn
 

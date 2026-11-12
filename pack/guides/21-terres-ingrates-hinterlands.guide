@@ -54,7 +54,7 @@ step Valley of Fangs
 step Uldaman (dungeon, optional): Rigglefuzz
   label uld-start
   when group 2240
-  tip Uldaman: a 5-player dungeon at the north end of the Badlands, levels 42 to 52 on Forever: best at 43 or more. The Badlands quests come first, then the dungeon, then the rewards in Ironforge on the way to Southshore. Alone? Skip it: the guide goes on in the Badlands.
+  tip Uldaman: a 5-player dungeon at the north end of the Badlands, levels 35 to 47 (41 to 51 in the group finder): best at 43 or more. The Badlands quests come first, then the dungeon, then the rewards in Ironforge on the way to Southshore. Alone? Skip it: the guide goes on in the Badlands.
   note Keep 5 free quest log slots. Everyone takes the quests at their own pace; meet at the entrance for the run.
   accept 2418 optional                    -- Rigglefuzz, Valley of Fangs
 
@@ -208,9 +208,13 @@ step To the Scarlet Monastery
   note Share each quest with your group: click it in the quest log, then Share.
   goto 82.6,33.8 "Scarlet Monastery" r 25
 
+# Groupe Alliance 0.11.0 (review): Mythology of the Titans under a window of a Library corridor
+# (Warcraft Tavern, Scarlet Monastery quests, 11/11/2026). The Lost Magic of the Runemasters: an object
+# for the Icy Veins Forever database (item 273169, looted from an object), a drop from Doan for
+# Warcraft Tavern: both told, to check in game.
 step The Library: Houndmaster Loksey and Arcanist Doan
   when done sm-start
-  tip Loksey and his dogs wait in a small alcove near the start. Mythology of the Titans lies on a bench or the floor of the narrow corridors, to the left as you enter the room. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for Magus Olvek is on a table on the right of Doan's room; the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him.
+  tip Loksey and his dogs wait in a small alcove near the start. Mythology of the Titans lies on the floor of one of the Library's corridors, under a window; once taken it comes back after a short while. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for Magus Olvek is on a table on the right of Doan's room (not there? Look on Doan's body: one Forever guide says he carries it); the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him.
   kill 3974 quest 1053 optional       -- Houndmaster Loksey, elite 34
   collect 5536 quest 1050             -- Mythology of the Titans, on the floor of the Library
   kill 6487 optional                  -- Arcanist Doan, elite 37
