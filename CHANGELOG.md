@@ -6,10 +6,12 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 
 ### Français
 - BuffAlerts Forever est éteint à la première installation : rien ne s'affiche tant qu'il n'est pas coché. L'allumer : écran des personnages, bouton AddOns, cocher BuffAlerts Forever. Qui l'avait déjà le garde tel qu'il était (coché ou non).
+- Nouveau : **À quoi sert cet objet**. Sous l'infobulle d'un objet, une ligne bleue dit à quoi il sert encore, seulement quand c'est sûr : quête que le personnage peut encore faire (ou déjà rendue, pour un objet de quête), nourriture ou boisson adaptée au niveau ou dépassée, boisson inutile à un guerrier ou un voleur, composant de sort de classe, composant de métier et dès quel niveau de métier quand il est connu, outil, objet gris seulement à vendre avec son prix. Rien pour l'équipement (Polestar le compare déjà). Données tirées des tables du jeu. Couper : `/ga objets`, ou Échap › Options › AddOns › Groupe Alliance.
 - Lisez-moi : nouvelle partie « Autres addons, non inclus » : OpenMap (carte du monde d'un seul tenant, trop lourd pour le paquet, mais Polestar affiche ses repères dessus), Keep or Toss et Node Sight (licence qui interdit de les redistribuer), avec ce qu'il faut savoir pour les installer à part.
 
 ### English
 - BuffAlerts Forever is off on a first install: nothing shows until it is ticked. Turn it on: character screen, AddOns button, tick BuffAlerts Forever. Whoever already had it keeps it as it was (ticked or not).
+- New: **What is this item for**. A blue line under an item's tooltip says what it is still for, only when certain: a quest the character can still do (or already did, for a quest item), food or drink right for the level or outgrown, a drink a warrior or rogue has no use for, a class spell reagent, a profession reagent and from which skill rank when known, a tool, a grey item only worth selling with its price. Nothing for gear (Polestar already compares it). Data from the game's own tables. Off: `/ga items`, or Esc › Options › AddOns › Groupe Alliance.
 - Readme: new "Other addons, not included" part: OpenMap (seamless world map, too heavy for the pack, but Polestar draws its markers on it), Keep or Toss and Node Sight (licences that forbid redistribution), with what to know to install them separately.
 
 ## v0.9.9 (2026-11-11)

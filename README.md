@@ -101,13 +101,23 @@ Le guide installe aussi [Auctionator](https://www.curseforge.com/wow/addons/auct
 
 Le guide installe aussi [PrettyTooltip](https://www.curseforge.com/wow/addons/prettytooltip) (édition Forever) : les infobulles des objets, des sorts, des personnages et PNJ, des améliorations et affaiblissements (*buffs*, *debuffs*), des herbes, minerais et coffres et des quêtes sont redessinées, plus lisibles (caractéristiques en couleur, niveau d'objet, barre de vie, ce que donne une herbe ou un minerai).
 
-- Les lignes ajoutées par les autres addons restent, en bas de l'infobulle et à part : objectifs de quête, « amélioration » d'équipement, provenance et « Alt-clic : me guider » de Polestar, prix d'Auctionator. Les infobulles du guide lui-même (lignes du guide, flèche, boutons) gardent l'aspect du jeu.
+- Les lignes ajoutées par les autres addons restent, en bas de l'infobulle et à part : objectifs de quête, « amélioration » d'équipement, provenance et « Alt-clic : me guider » de Polestar, prix d'Auctionator, ligne « À quoi sert cet objet ». Les infobulles du guide lui-même (lignes du guide, flèche, boutons) gardent l'aspect du jeu.
 - **Alt** maintenue : l'infobulle d'origine du jeu, le temps de l'appui. L'Alt-clic de Polestar sur un objet marche toujours.
 - **Maj** maintenue : les détails (résultats de désenchantement, contenu des herbes et minerais, numéro de l'objet ou du PNJ). Maj garde aussi son rôle habituel : comparer avec l'objet équipé.
 - `/ptip` : éditeur de style (polices, couleurs, tailles ; un clic sur une partie de l'exemple la règle). `/ptip options` : ce qui est redessiné, type par type (**Restyler**), et ce qui suit le curseur (**Suivre le curseur**, allumé pour les herbes, minerais et coffres).
 - Revenir aux infobulles du jeu : `/ptip options` et décocher les types voulus, ou décocher PrettyTooltip dans la liste des addons (écran des personnages, bouton **AddOns**).
 - Réglages : ceux de PrettyTooltip, le guide n'en impose aucun (rien à changer pour Polestar ni Auctionator). Un PrettyTooltip déjà installé est remplacé par la version du guide ; ses réglages (dossier `WTF`) sont gardés.
 - Version 1.3.8 avec correctifs du pack, pour les clients français et anglais : bonus d'ensemble actif gardé dans la liste, numéro de sort qui ne remplace plus la description d'une amélioration, deux libellés français. Détail, tickets amont et diff : [`docs/prettytooltip-correctifs.md`](docs/prettytooltip-correctifs.md).
+
+## À quoi sert cet objet
+
+Sous l'infobulle d'un objet, une ligne bleue dit à quoi il sert encore, seulement quand c'est sûr : quête que le personnage peut encore faire (ou déjà rendue, pour un objet de quête), nourriture ou boisson adaptée à son niveau ou dépassée, composant d'un sort de classe, composant d'un métier (et dès quel niveau de métier, quand il est connu), outil, objet gris seulement à vendre (avec le prix du marchand). Rien pour l'équipement (Polestar le compare déjà à celui porté), rien quand on ne sait pas.
+
+- Exemples : « Composant : Couture (dès 55), Secourisme (dès 80), Ingénierie », « Quête : Les écailles de dragonnet (pas encore prise) », « Nourriture dépassée : celle du niveau 15 rend plus », « Seulement à vendre : 5 pc ».
+- Couper : `/ga objets` (rallumer : la même commande), ou la case **À quoi sert cet objet** dans Échap › Options › AddOns › **Groupe Alliance**, ou roue dentée › Confort de jeu › Quêtes.
+- Données tirées des tables du jeu (client 1.60.1), vérifiées sur un échantillon de 68 objets. Détail, sources et limites : [`docs/a-quoi-sert-cet-objet.md`](docs/a-quoi-sert-cet-objet.md).
+
+*English: a blue line under item tooltips says what the item is still for, only when certain (quest, food or drink for your level, spell reagent, profession reagent and from which rank, tool, grey item only worth selling). Off: `/ga items`, or Esc › Options › AddOns › Groupe Alliance.*
 
 ## Rappels d'améliorations (BuffAlerts Forever)
 
@@ -195,7 +205,7 @@ Leatrix Plus reste installable à part (depuis sa page officielle), mais son opt
 | Addon | Ce qu'il fait | Pourquoi il n'est pas dans le paquet | Avec le guide |
 |---|---|---|---|
 | [OpenMap](https://github.com/openmap-world/openmap/releases) (licence MIT) | carte du monde d'un seul tenant, zoom d'une zone à l'autre | 126 Mo à lui seul (plus du double du paquet), une version par jour depuis sa sortie, défauts encore ouverts (baisse d'images par seconde, action bloquée à l'ouverture de la carte que BugSack signalerait) | Polestar le reconnaît : ses repères, sa trace et ses trajets s'affichent sur la carte d'OpenMap. Couper les autres addons de carte |
-| [Keep or Toss: Forever](https://www.curseforge.com/wow/addons/keep-or-toss-forever) (tous droits réservés) | dit dans l'infobulle à quoi sert encore un objet (quête, métier, composant, secret de Forever) | licence : pas de redistribution | sans Questie, il ne connaît pas les quêtes pas encore prises (il le dit) ; ses marques dans les sacs s'ajoutent à celles de Polestar |
+| [Keep or Toss: Forever](https://www.curseforge.com/wow/addons/keep-or-toss-forever) (tous droits réservés) | dit dans l'infobulle à quoi sert encore un objet (quête, métier, composant, secret de Forever) | licence : pas de redistribution | le paquet a sa propre ligne, écrite à partir des tables du jeu (« À quoi sert cet objet », plus haut) : inutile de l'ajouter ; sinon, sans Questie, il ne connaît pas les quêtes pas encore prises (il le dit) et ses marques dans les sacs s'ajoutent à celles de Polestar |
 | [Node Sight](https://www.curseforge.com/wow/addons/node-sight) (tous droits réservés) | image de chaque herbe et minerai sur la minicarte, flèche et étincelles en option | licence : pas de redistribution ; balaie la minicarte en la déplaçant sous la souris | utile seulement aux herboristes et mineurs ; ses étincelles changent des réglages du jeu (touche d'interaction), à couper avant de le retirer |
 
 *Other addons studied and left out of the pack (install them yourself from their official page): OpenMap (MIT, but 126 MB, daily releases, open issues; Polestar draws its markers on it), Keep or Toss: Forever and Node Sight (all rights reserved: not redistributable).*
@@ -318,10 +328,11 @@ Noter le guide, l'étape et le niveau, et ouvrir une *issue* sur ce dépôt (ou 
 - **BuffAlerts Forever** © 2026 Thork, licence MIT : dossier `addons/BuffAlertsForever`, version 3.11.4 publiée sur [CurseForge](https://www.curseforge.com/wow/addons/buffalerts), fichiers de l'auteur non modifiés, plus `PackPatches.lua` (correctifs et réglage du pack, même licence ; liste dans `docs/buffalerts-correctifs.md`, diff dans `docs/buffalerts-3.11.4.patch`) ; la notice de la licence MIT est dans `addons/BuffAlertsForever/LICENSE`.
 - **BugSack** © funkydude (Funkeh), tous droits réservés (« You are free to fork and modify on GitHub, please ask us about anything else ») : dossier `addons/BugSack`, version v12.1.9 publiée sur [GitHub](https://github.com/funkydude/BugSack/releases/tag/v12.1.9), fichiers de l'auteur non modifiés, plus `PackPatches.lua` (réglage et correctif du pack ; liste dans `docs/bugsack-correctifs.md`, diff dans `docs/bugsack-12.1.9.patch`), incluse pour notre groupe avec ce crédit.
 - **BugGrabber** © funkydude (Funkeh), tous droits réservés : dossier `addons/!BugGrabber`, version v12.1.1 telle que publiée sur [CurseForge](https://www.curseforge.com/wow/addons/bug-grabber), non modifiée, incluse pour notre groupe avec ce crédit.
+- **À quoi sert cet objet** (module Groupe Alliance, `Polestar/GroupeAlliance/ItemUse.lua`) : données refaites par `tools/item-uses.py` à partir des tables du client WoW Forever 1.60.1.70888 (wago.tools : `ItemSparse`, `Item`, `ItemEffect`, `ItemXItemEffect`, `SpellEffect`, `SpellMisc`, `SpellDuration`, `SpellReagents`, `SpellTotems`, `SpellLevels`, `SkillLine`, `SkillLineAbility`, `SkillRaceClassInfo`, `ChrClasses` ; liste des objets de Classic Era 1.15.9), des niveaux demandés par les maîtres de métier relevés sur les serveurs Forever ([base du monde TrinityCore Forever](https://github.com/Karrz1/TrinityCore/releases/tag/forever-tdb-2026-10-14), GPL-2.0, faits seulement) et de la base de quêtes de Polestar. Merci à [Keep or Toss: Forever](https://www.curseforge.com/wow/addons/keep-or-toss-forever) d'Aquary, dont l'idée a inspiré ce module ; il n'est pas inclus et rien n'en est repris. *Thanks to Keep or Toss: Forever by Aquary, whose idea inspired this module; it is not included and nothing is taken from it.*
 - Le paquet (guides, module Groupe Alliance, correctifs, outils, installateur) a été écrit avec l'aide d'outils d'IA puis relu ; c'est aussi le cas d'une partie des addons qu'il rassemble (Polestar, d'après son dépôt). Les erreurs restent possibles, les signaler aide. *The pack was written with the help of AI tools and reviewed, as part of the addons it gathers were (Polestar, by its repository).*
 - L'ensemble, hors Auctionator, BugSack et BugGrabber, est sous **GPL-3.0** (fichier `LICENSE`) ; PrettyTooltip et BuffAlerts Forever gardent leur licence MIT, compatible avec la GPL-3.0. Les données du jeu appartiennent à Blizzard Entertainment.
 
-Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/2026 :
+Jeu visé : WoW Forever (client 1.60.1). Sources consultées du 06 au 12/11/2026 :
 
 | Source | Mise à jour | Jeu | Usage |
 |---|---|---|---|
@@ -336,6 +347,8 @@ Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/202
 | [RestedXP, guides gratuits](https://github.com/RestedXP/RXPGuides) | 06/11/2026 | Forever | méthode et conseils reformulés, aucun texte repris (licence CC BY-NC-SA) |
 | [Lodestar](https://github.com/petllama/lodestar-guides) (MIT) | 21/10/2026 | Forever (bêta) | guide Solo · Loch Modan adapté, recoupement |
 | [MittenQuest](https://github.com/petllama/mittenquest-guides) (GPL-3.0) | 21/10/2026 | Forever (bêta) | recoupement |
+| [wago.tools](https://wago.tools), tables d'objets, de sorts et de métiers, client 1.60.1.70888 | 12/11/2026 | Forever | données « À quoi sert cet objet » |
+| [TrinityCore Forever](https://github.com/Karrz1/TrinityCore/releases/tag/forever-tdb-2026-10-14), base du monde (GPL-2.0) | 14/10/2026 | Forever | niveaux demandés par les maîtres de métier |
 
 Textes français : ceux de Polestar, complétés par traduction pour le paquet. Depuis la 0.6.0, les noms écrits en toutes lettres (lieux, PNJ, monstres, objets, quêtes) sont ceux du client français : tables du client 1.60.1 (wago.tools, `AreaTable` en frFR), noms français de Polestar (`Polestar_frFR`), et Wowhead en français pour les PNJ qui manquaient. Un nom absent de ces sources reste en anglais. Noms affichés par Polestar dans les lignes du guide : ceux du jeu, dans la langue de chaque joueur.
 </details>
@@ -358,9 +371,11 @@ python tools/check-lua.py
 
 `check-prereqs.py` suit le parcours de chaque race dans l'ordre des guides et signale une quête prise avant ses prérequis (données du guide compilé, `pre` : l'un d'eux suffit, `preAll` : tous, comme Polestar), une quête exclue par une autre déjà prise, prise deux fois ou rendue sans avoir été prise ; les quêtes facultatives, de classe ou d'une branche (`when`) donnent des alertes à vérifier à la main.
 
+`item-uses.py` refait les données de la ligne « À quoi sert cet objet » à partir des tables du client (commandes dans [`docs/a-quoi-sert-cet-objet.md`](docs/a-quoi-sert-cet-objet.md)).
+
 `check-lua.py` (Python et `pip install lupa`) vérifie la syntaxe Lua 5.1 du module et du paquet, et fait tourner le module Groupe Alliance contre de petites imitations du jeu : il attrape les fautes de frappe, pas les bugs visibles en jeu. Il vérifie aussi que seuls les addons prévus sont éteints à la première installation (`## DefaultState: disabled`).
 
-`check-pack.py` charge **tout le paquet ensemble** dans un faux jeu (`tools/fakegame.lua`), dans l'ordre du jeu, client français puis anglais, puis rejoue la connexion, un combat, une infobulle d'objet et l'ouverture de la carte. Il liste par addon les erreurs, les globals écrits par plusieurs addons, les commandes slash, les variables de console écrites, les fonctions et cadres du jeu accrochés ou réécrits, les infobulles, les événements et les bibliothèques LibStub. `--extra <dossier>` ajoute des addons candidats (jamais livrés) pour juger leur cohabitation. Il lui faut une copie de l'interface du client Forever et ses textes :
+`check-pack.py` charge **tout le paquet ensemble** dans un faux jeu (`tools/fakegame.lua`), dans l'ordre du jeu, client français puis anglais, puis rejoue la connexion, un combat, une infobulle d'objet et l'ouverture de la carte. Il survole aussi des objets pour la ligne « À quoi sert cet objet » (sacs, marchand, hôtel des ventes, combat, quête rendue) : elle doit sortir une seule fois, sous les lignes du jeu, sans erreur ; il donne la mémoire des données et le temps d'une infobulle. Il liste par addon les erreurs, les globals écrits par plusieurs addons, les commandes slash, les variables de console écrites, les fonctions et cadres du jeu accrochés ou réécrits, les infobulles, les événements et les bibliothèques LibStub. `--extra <dossier>` ajoute des addons candidats (jamais livrés) pour juger leur cohabitation. Il lui faut une copie de l'interface du client Forever et ses textes :
 
 ```
 git clone --depth 1 --filter=blob:none --sparse -b forever https://github.com/Gethe/wow-ui-source.git <ui>
