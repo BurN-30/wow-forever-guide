@@ -719,38 +719,51 @@ step Shards of the Felvine: not done
   tip Shards of the Felvine is not done and the guide does not go back to Dire Maul: abandon it, or keep it for a run of your own.
   abandon 5526
 
-# ================================================================ Stratholme
+# ================================================================ Stratholme and Scholomance
 # Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
 # Dungeons codex; prerequisites cross-checked with the TrinityCore base: no disagreement (The Active
 # Agent after The Flesh Does Not Lie; The Truth Comes Crashing Down, started by the Head of Balnazzar,
 # after The Archivist; Above and Beyond after it, then Lord Maxwell Tyrosus and The Argent Hold;
 # The Restless Souls 5282 after 5281, handed to Egan in Group 28; Of Love and Family 5848 after 5846,
-# handed to Renfray in Group 30). Polestar's data and
+# handed to Renfray in Group 30; Krastinov's Bag of Horrors after Doctor Theolen Krastinov, Kirtonos
+# the Herald after the bag; Healthy Dragon Scale after Plagued Hatchlings). Polestar's data and
 # Warcraft Tavern name the tobacco merchant Ezra Grimm (The Great Ezra Grimm); TrinityCore keeps
 # the old title, The Great Fras Siabi. Rooms, bosses and how-to: Warcraft Tavern's Forever
-# Stratholme (living and undead) dungeon and quest guides (warcrafttavern.com/forever/
-# guides/stratholme-living, stratholme-undead, stratholme-living-quests, stratholme-undead-quests,
-# read on 12/11/2026), written from Classic (closed in the Forever beta): places inside are to
-# check in game.
-# Asked at Light's Hope Chapel (`when group 5212`, The Flesh Does Not Lie: level 55); every later
-# step needs `when done strat-start`.
+# Stratholme (living and undead) and Scholomance dungeon and quest guides (warcrafttavern.com/
+# forever/guides/stratholme-living, stratholme-undead, stratholme-living-quests,
+# stratholme-undead-quests, scholomance, scholomance-quests, read on 12/11/2026), written from
+# Classic (both closed in the Forever beta): places inside are to check in game.
+# Both questions are asked at Light's Hope Chapel (`when group 5212`, The Flesh Does Not Lie;
+# `when group 5382`, Doctor Theolen Krastinov, the Butcher), where Betina Bigglezink gives a quest of
+# each dungeon; later steps need `when done strat-start` or `when done scholo-start`.
 # Stratholme, three visits in one instance, as its quest chains ask (Warcraft Tavern: The Archivist
 # must be handed in before Balnazzar dies, The Truth Comes Crashing Down before the Baron does):
 #   1. the living side, by the main gate: Ezra Grimm, the Scarlet Bastion (Malor's strongbox,
 #      Archivist Galford and the painting), Elders' Square (Barthilas: the Key to the City);
 #   2. Balnazzar, then a ride to Light's Hope and back;
 #   3. the dead side, by the Service Entrance: Aurius, the three ziggurats, Ramstein, the Baron.
+# Scholomance, one instance: the deeds, the hatchlings, Rattlegore, Ras Frostwhisper, the six
+# chambers and Krastinov, then two trips out to Eva Sarkhoff at the door and back in (Jandice
+# Barov, then Kirtonos, both near the entrance), as Warcraft Tavern advises.
 # Left out: Menethil's Gift and the rest of Ras Frostwhisper's chain (The Human, Ras Frostwhisper:
 # Stromgarde in the Arathi Highlands, Light's Hope, Stratholme before the Baron, Scholomance again;
 # the TrinityCore base also asks Friendly standing with Caer Darrow, faction 574, for its first
-# quest, which Polestar's data does not); Sweet Serenity and Corruption (Winterspring,
+# quest, which Polestar's data does not); Dawn's Gambit (after Tinkee Steamboil's chain, through
+# Upper Blackrock Spire); The Last Barov (Horde lands); Sweet Serenity and Corruption (Winterspring,
 # the Crimson Hammersmith and the Black Guard Swordsmith); Dead Man's Plea, Deliana's and Anthion
-# Harmon's dungeon set quests; Scholomance (next).
+# Harmon's dungeon set quests; the class quests (Judgment and Redemption, Imp Delivery).
 step Stratholme (dungeon, optional)
   label strat-start
   when group 5212
   tip Stratholme: the dead city in the north-west of the Eastern Plaguelands, levels 58 to 60, bosses 57 to 62: a group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Light's Hope Chapel, from Egan in Terrordale and, if taken in Group 30, from Artist Renfray. Its quest chains ask for three visits to the same instance: the living side, then Balnazzar, then the dead side, with rides back to Light's Hope in between. Alone? Skip it.
-  note Keep 8 free quest log slots.
+  note Keep 8 free quest log slots. Scholomance is asked next, here too: one of its quests is given in this chapel.
+  goto 71.7,49.9 map 1423 live "Light's Hope Chapel" r 40
+
+step Scholomance (dungeon, optional)
+  label scholo-start
+  when group 5382
+  tip Scholomance: the school of necromancy under Caer Darrow, the island of the lake in the south-east of the Western Plaguelands. Levels 58 to 60, bosses 58 to 62: a group of 5 at 59 or 60. Its door opens only with the Skeleton Key, the reward of The Key to Scholomance (Group 30, Chillwind Camp): one key in the group is enough; nobody has it? Skip it. The guide runs it after Stratholme; Betina Bigglezink, in this chapel, gives one of its quests, the others come from Chillwind Camp and from Eva Sarkhoff at its door. Alone? Skip it.
+  note Keep 4 free quest log slots.
   goto 71.7,49.9 map 1423 live "Light's Hope Chapel" r 40
 
 step Light's Hope Chapel: Stratholme
@@ -761,6 +774,12 @@ step Light's Hope Chapel: Stratholme
   accept 5251                         -- Duke Nicholas Zverenhoff
   accept 5214                         -- Smokey LaRue
   accept 5243                         -- Leonid Barthalomew the Revered
+
+step Light's Hope Chapel: Scholomance
+  when done scholo-start
+  zone Eastern Plaguelands
+  tip Plagued Hatchlings: the dragon whelps of Scholomance. Betina's other Scholomance quest, Dawn's Gambit, comes only after Tinkee Steamboil's chain through Upper Blackrock Spire: not in this guide.
+  accept 5529                         -- Betina Bigglezink
 
 step Terrordale: Egan
   when done strat-start
@@ -951,3 +970,106 @@ step Of Love and Family: not done
   when !complete 5848
   tip Of Love and Family is not done and the guide does not go back to Stratholme: abandon it, or keep it for a run of your own.
   abandon 5848
+
+step Chillwind Camp: Weldon Barov
+  when done scholo-start
+  zone Western Plaguelands
+  tip To Chillwind Camp: the flight from Light's Hope Chapel, or the road south from Tirion's hut. Weldon Barov stands in the camp: his family's fortune is four deeds, all in Scholomance.
+  accept 5343                         -- Weldon Barov
+
+step Caer Darrow: Eva Sarkhoff
+  when done scholo-start
+  zone Western Plaguelands
+  tip Ride east to the lake and onto Caer Darrow. Eva Sarkhoff, a ghost, stands with Lucien before the door of Scholomance.
+  accept 5382                         -- Eva Sarkhoff
+
+step Scholomance: before going in
+  when done scholo-start
+  zone Western Plaguelands
+  tip The Skeleton Key opens the door: the player who has it goes first. Inside: the Reliquary, the Chamber of Summoning, the Great Ossuary (Rattlegore and the Viewing Room Key), the Viewing Room, the Laboratory (Ras Frostwhisper), then the six chambers round the Barov Family Vault and Darkmaster Gandling. Leave Jandice Barov and the Brazier of the Herald alone: Eva's chain sends you to them once Krastinov is dead, in the same instance.
+  note In the quest log: Barov Family Fortune (Weldon Barov), Doctor Theolen Krastinov, the Butcher (Eva Sarkhoff), Plagued Hatchlings (Betina). Share the three with your group: click each in the quest log, then Share. Not on this route: Dawn's Gambit, the dungeon set quests, the class quests.
+  goto 69.7,73.2 map 1422 "Scholomance" r 25
+
+step The Reliquary and the Chamber of Summoning
+  when done scholo-start
+  tip The Reliquary, the first great hall: the Deed to Southshore lies on a table in its back left corner, seen from the entrance. Then the Chamber of Summoning, and the great room after it: the Deed to Tarren Mill lies on a table in its far corner, opposite the way in. Each player clicks the deeds for their own quest (to check in game).
+  collect 13450 quest 5343            -- The Deed to Southshore: the Reliquary
+  collect 13451 quest 5343            -- The Deed to Tarren Mill: past the Chamber of Summoning
+
+step The Great Ossuary: the hatchlings and Rattlegore
+  when done scholo-start
+  tip The plagued hatchlings, dragon whelps, fill a room of the Great Ossuary: a little more than twenty. A rare one drops a Healthy Dragon Scale: keep it for Betina. Jandice Barov waits below their room, behind a torch on the south wall: leave her for now. Rattlegore (elite 61), in the basement of the Ossuary, drops the Viewing Room Key, which opens the rest of the school.
+  kill 10678 quest 5529               -- Plagued Hatchling
+  collect 13920 optional              -- Healthy Dragon Scale: keep it
+  kill 11622 optional                 -- Rattlegore
+  collect 13873 optional              -- Viewing Room Key: Rattlegore
+
+step The Viewing Room and the Laboratory
+  when done scholo-start
+  tip The Viewing Room: Vectus and Marduk Blackpool stand among neutral students and fight only for Dawn's Gambit: leave them. Then the Laboratory: Ras Frostwhisper (elite 62), a lich who fears and knocks back. The Deed to Brill lies by the west wall of the Laboratory, at the back, past the alchemy lab.
+  kill 10508 optional                 -- Ras Frostwhisper
+  collect 13471 quest 5343            -- The Deed to Brill: the Laboratory
+
+step The Barov Family Vault: the six chambers
+  when done scholo-start
+  tip The last hall: six chambers round the Barov Family Vault. Below, from the left: Lady Illucia Barov, Lord Alexei Barov (the Deed to Caer Darrow lies on a slab beside him), The Ravenian. Above, from the left: Lorekeeper Polkelt, Doctor Theolen Krastinov (he enrages at half health: burn him fast), Instructor Malicia. In Krastinov's chamber, burn the Remains of Eva Sarkhoff and of Lucien Sarkhoff, one on each side. Darkmaster Gandling comes into the vault once the six are dead; he sends players into the side chambers.
+  collect 13448 quest 5343            -- The Deed to Caer Darrow: beside Lord Alexei Barov
+  kill 11261 quest 5382               -- Doctor Theolen Krastinov
+  interact 176544 quest 5382          -- Remains of Eva Sarkhoff
+  interact 176545 quest 5382          -- Remains of Lucien Sarkhoff
+  kill 1853 optional                  -- Darkmaster Gandling
+
+step Caer Darrow: Eva Sarkhoff
+  label scholo-v1-end
+  when complete 5382
+  zone Western Plaguelands
+  tip Walk back out of Scholomance, without resetting the instance: Eva stands at the door. Her next quest is Jandice Barov's, near the entrance.
+  turnin 5382                         -- Eva Sarkhoff
+  accept 5515
+
+step Scholomance: Jandice Barov
+  when onquest 5515
+  tip Back into the same instance, through the cleared halls to the hatchlings' room: the torch on its south wall opens the way down to Jandice Barov (elite 61). She splits into illusions: mark her. Her corpse holds Krastinov's Bag of Horrors.
+  collect 13725 quest 5515            -- Krastinov's Bag of Horrors: Jandice Barov
+
+step Caer Darrow: Eva Sarkhoff
+  when complete 5515
+  zone Western Plaguelands
+  tip Out to Eva again. Kirtonos the Herald: she hands over the Blood of Innocents (Warcraft Tavern also has the Blood Steward of Kirtonos drop it: to check in game).
+  turnin 5515                         -- Eva Sarkhoff
+  accept 5384
+
+step Scholomance: Kirtonos the Herald
+  when onquest 5384
+  tip Back in, to the balcony on the north side of the Chamber of Summoning: use the Brazier of the Herald by the railing, with the Blood of Innocents in your bags. Kirtonos the Herald (elite 60) flies in, and turns from gargoyle to man during the fight, cursing in that form.
+  kill 10506 quest 5384               -- Kirtonos the Herald
+
+step Caer Darrow: Eva Sarkhoff
+  when complete 5384
+  zone Western Plaguelands
+  tip The rewards include the Spectral Essence: worn, it shows Magistrate Marduke, beside Eva. His chain against Ras Frostwhisper goes to Stromgarde in the Arathi Highlands, then Light's Hope Chapel, Stratholme (Menethil's Gift, before the Baron) and back to Scholomance: not in this guide.
+  turnin 5384                         -- Eva Sarkhoff
+
+step Chillwind Camp: Weldon Barov
+  when complete 5343
+  zone Western Plaguelands
+  tip Ride back west to Chillwind Camp. Weldon's next quest, The Last Barov, is in Horde lands: not in this guide.
+  turnin 5343                         -- Weldon Barov
+
+step Light's Hope Chapel: Betina Bigglezink
+  when complete 5529
+  zone Eastern Plaguelands
+  tip Plagued Hatchlings: the flight from Chillwind Camp to Light's Hope Chapel. A Healthy Dragon Scale in the bags? Once Plagued Hatchlings is handed in, right-click it: its quest goes back to Betina at once.
+  turnin 5529                         -- Betina Bigglezink
+  accept 5582 optional                -- Healthy Dragon Scale, if one dropped
+  turnin 5582 optional
+
+step Scholomance: quests not done
+  label scholo-end
+  when done scholo-start
+  tip What is left of Scholomance in the quest log is for another run: keep it for one, or drop it to free the log.
+  abandon 5343 optional
+  abandon 5382 optional
+  abandon 5515 optional
+  abandon 5384 optional
+  abandon 5529 optional

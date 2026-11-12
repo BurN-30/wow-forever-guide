@@ -505,21 +505,32 @@ return {
 	["Stratholme (dungeon, optional)"] = "Stratholme (donjon, facultatif)",
 	-- {zone:1423} Eastern Plaguelands · {npc:11140} Egan · {npc:11936} Artist Renfray · {npc:10813} Balnazzar
 	["Stratholme: the dead city in the north-west of the {zone:1423}, levels 58 to 60, bosses 57 to 62: a group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Light's Hope Chapel, from {npc:11140} in Terrordale and, if taken in Group 30, from {npc:11936}. Its quest chains ask for three visits to the same instance: the living side, then {npc:10813}, then the dead side, with rides back to Light's Hope in between. Alone? Skip it."] = "Stratholme : la ville morte au nord-ouest des {zone:1423}, niveaux 58 à 60, boss de 57 à 62 : un groupe de 5 aux niveaux 58 à 60 ; possible vers 56, difficile. Les quêtes se prennent à la chapelle de l'Espoir de Lumière, chez {npc:11140} à Val-Terreur et, si elle a été prise au Groupe 30, chez {npc:11936}. Ses chaînes de quêtes demandent trois visites de la même instance : le côté vivant, puis {npc:10813}, puis le côté mort-vivant, avec des retours à l'Espoir de Lumière entre les visites. Seul ? Le passer.",
-	["Keep 8 free quest log slots."] = "Garder 8 places libres dans le journal de quêtes.",
+	["Keep 8 free quest log slots. Scholomance is asked next, here too: one of its quests is given in this chapel."] = "Garder 8 places libres dans le journal de quêtes. La Scholomance est demandée juste après, ici aussi : une de ses quêtes se prend dans cette chapelle.",
 	["Light's Hope Chapel"] = "Chapelle de l'Espoir de Lumière",
 
-	-- Step 97: Light's Hope Chapel: Stratholme
+	-- Step 97: Scholomance (dungeon, optional)
+	["Scholomance (dungeon, optional)"] = "Scholomance (donjon, facultatif)",
+	-- {zone:1422} Western Plaguelands · {item:13704} Skeleton Key · {npc:11035} Betina Bigglezink · {npc:11216} Eva Sarkhoff
+	["Scholomance: the school of necromancy under Caer Darrow, the island of the lake in the south-east of the {zone:1422}. Levels 58 to 60, bosses 58 to 62: a group of 5 at 59 or 60. Its door opens only with the {item:13704}, the reward of The Key to Scholomance (Group 30, Chillwind Camp): one key in the group is enough; nobody has it? Skip it. The guide runs it after Stratholme; {npc:11035}, in this chapel, gives one of its quests, the others come from Chillwind Camp and from {npc:11216} at its door. Alone? Skip it."] = "Scholomance : l'école de nécromancie sous Caer Darrow, l'île du lac au sud-est des {zone:1422}. Niveaux 58 à 60, boss de 58 à 62 : un groupe de 5 aux niveaux 59 ou 60. Sa porte ne s'ouvre qu'avec la {item:13704}, la récompense de The Key to Scholomance (Groupe 30, Camp du Noroît) : une clé dans le groupe suffit ; personne ne l'a ? La passer. Le guide la fait après Stratholme ; {npc:11035}, dans cette chapelle, donne une de ses quêtes, les autres se prennent au Camp du Noroît et chez {npc:11216}, à sa porte. Seul ? La passer.",
+	["Keep 4 free quest log slots."] = "Garder 4 places libres dans le journal de quêtes.",
+
+	-- Step 98: Light's Hope Chapel: Stratholme
 	["Light's Hope Chapel: Stratholme"] = "Chapelle de l'Espoir de Lumière : Stratholme",
 	-- {npc:11036} Leonid Barthalomew the Revered · {npc:11035} Betina Bigglezink · {npc:11039} Duke Nicholas Zverenhoff · {npc:11033} Smokey LaRue
 	["{npc:11036} stands inside the chapel; {npc:11035}, {npc:11039} and {npc:11033} stand around it."] = "{npc:11036} se tient dans la chapelle ; {npc:11035}, {npc:11039} et {npc:11033} se tiennent autour.",
 
-	-- Step 98: Terrordale: Egan
+	-- Step 99: Light's Hope Chapel: Scholomance
+	["Light's Hope Chapel: Scholomance"] = "Chapelle de l'Espoir de Lumière : Scholomance",
+	-- {quest:5529} Plagued Hatchlings · {npc:11035} Betina Bigglezink · {item:12368} Dawn's Gambit · {npc:10267} Tinkee Steamboil
+	["{quest:5529}: the dragon whelps of Scholomance. {npc:11035}'s other Scholomance quest, {item:12368}, comes only after {npc:10267}'s chain through Upper Blackrock Spire: not in this guide."] = "{quest:5529} : les dragonnets de la Scholomance. L'autre quête de {npc:11035} pour la Scholomance, {item:12368}, ne vient qu'après la chaîne de {npc:10267}, qui passe par le pic Rochenoire supérieur : pas dans ce guide.",
+
+	-- Step 100: Terrordale: Egan
 	-- {npc:11140} Egan
 	["Terrordale: {npc:11140}"] = "Val-Terreur : {npc:11140}",
 	-- {npc:11140} Egan
 	["Ride west across the zone to Terrordale: {npc:11140} waits in the westernmost of its three houses, where Group 28 found him. His blaster frees the ghosts of Stratholme."] = "Traverser la zone vers l'ouest jusqu'à Val-Terreur : {npc:11140} attend dans la plus à l'ouest de ses trois maisons, là où le Groupe 28 l'a trouvé. Son fusil libère les fantômes de Stratholme.",
 
-	-- Step 99: Stratholme: along the way
+	-- Step 101: Stratholme: along the way
 	["Stratholme: along the way"] = "Stratholme : en chemin",
 	-- {item:13180} Stratholme Holy Water · {npc:11140} Egan
 	-- plural, as words: Plagued Flesh Samples = {item:13174} Plagued Flesh Sample · Restless Souls = {npc:11122} Restless Soul · Spectral Citizens = {npc:10384} Spectral Citizen
@@ -531,7 +542,7 @@ return {
 	-- {npc:11122} Restless Soul
 	["{npc:11122}, freed with the blaster"] = "{npc:11122}, libérée avec le fusil",
 
-	-- Step 100: Stratholme, first visit: before going in
+	-- Step 102: Stratholme, first visit: before going in
 	["Stratholme, first visit: before going in"] = "Stratholme, première visite : avant d'entrer",
 	-- {object:175435} King's Square · {object:175438} Market Row · {object:175434} Crusaders' Square · {object:175433} Festival Lane · {object:175440} Elders' Square · {npc:10813} Balnazzar · {quest:5251} The Archivist · {item:7146} The Scarlet Key · {npc:6487} Arcanist Doan
 	["First visit, the living side, by the main gate across the bridge: {object:175435}, {object:175438}, {object:175434} and the Scarlet Bastion, then {object:175433} and {object:175440}. Leave {npc:10813} alive this time: {quest:5251} must be handed in before he dies, or his head starts nothing. Warcraft Tavern (written from Classic) says the doors of the Scarlet Bastion open with {item:7146}, from {npc:6487}'s chest in the Scarlet Monastery Library: to check in game."] = "Première visite, le côté vivant, par la grande porte au bout du pont : {object:175435}, {object:175438}, {object:175434} et le Bastion écarlate (Scarlet Bastion), puis {object:175433} et {object:175440}. Laisser {npc:10813} en vie cette fois : {quest:5251} doit être rendue avant sa mort, sinon sa tête ne lance rien. D'après Warcraft Tavern (écrit d'après Classic), les portes du Bastion écarlate s'ouvrent avec {item:7146}, du coffre d'{npc:6487} dans la Bibliothèque du Monastère écarlate : à vérifier en jeu.",
@@ -539,23 +550,23 @@ return {
 	["In the quest log: {quest:5212} ({npc:11035}), {quest:5251} (Duke Nicholas), {quest:5214} ({npc:11033}), {quest:5243} (Leonid), {quest:5281} ({npc:11140}); if taken in Group 30, {quest:5848} (Renfray). Not on this route: Sweet Serenity and Corruption ({zone:1452}), the dungeon set quests (Deliana, {npc:16016}), {npc:10508}'s chain ({object:176631})."] = "Dans le journal de quêtes : {quest:5212} ({npc:11035}), {quest:5251} (le duc Nicholas), {quest:5214} ({npc:11033}), {quest:5243} (Leonid), {quest:5281} ({npc:11140}) ; si prise au Groupe 30, {quest:5848} (Renfray). Pas sur ce parcours : Sweet Serenity et Corruption ({zone:1452}), les quêtes d'ensembles de donjon (Deliana, {npc:16016}), la chaîne de {npc:10508} ({object:176631}).",
 	["Stratholme"] = "Stratholme",
 
-	-- Step 101: King's Square: Ezra Grimm
+	-- Step 103: King's Square: Ezra Grimm
 	-- {object:175435} King's Square · {npc:11058} Ezra Grimm
 	["Past the main gate, {object:175435}: follow the road round to the left to its dead end, under the sign of {npc:11058}'s Premium Tobacco. {npc:11058}, undead (elite 61), stands in front of his shop."] = "Passé la grande porte, {object:175435} : suivre la route vers la gauche jusqu'au cul-de-sac, sous l'enseigne du tabac de {npc:11058} (Premium Tobacco). {npc:11058}, mort-vivant (élite 61), se tient devant sa boutique.",
 
-	-- Step 102: Market Row and Crusaders' Square
+	-- Step 104: Market Row and Crusaders' Square
 	-- {object:175438} Market Row · {object:175434} Crusaders' Square
 	["{object:175438} and {object:175434}"] = "{object:175438} et {object:175434}",
 	-- {object:175435} King's Square · {object:175438} Market Row · {npc:10558} Hearthsinger Forresten · {object:175434} Crusaders' Square · {npc:10808} Timmy the Cruel · {npc:11120} Crimson Hammersmith
 	["Back through {object:175435}, then {object:175438} ({npc:10558}, rare, may walk there) to {object:175434}: {npc:10808} runs out once the square is cleared. Never click a pattern on the ground during a fight: it calls the {npc:11120}. The Scarlet Bastion opens on the square."] = "Revenir par {object:175435}, puis {object:175438} ({npc:10558}, rare, peut y passer) jusqu'à {object:175434} : {npc:10808} accourt une fois la place nettoyée. Ne jamais cliquer sur un motif au sol pendant un combat : il appelle {npc:11120}. Le Bastion écarlate s'ouvre sur la place.",
 
-	-- Step 103: The Scarlet Bastion: Malor's Strongbox
+	-- Step 105: The Scarlet Bastion: Malor's Strongbox
 	-- {object:176112} Malor's Strongbox
 	["The Scarlet Bastion: {object:176112}"] = "Le Bastion écarlate : {object:176112}",
 	-- {npc:11032} Malor the Zealous · {item:12845} Medallion of Faith · {npc:10917} Aurius · {npc:10997} Cannon Master Willey
 	["In the Bastion, {npc:11032} (elite 60) guards the Hoard: his strongbox, on the ground beside him, holds the {item:12845}. One medallion per run: whoever loots it keeps it for {npc:10917}, in the third visit. {npc:10997} (elite 60) holds the armoury and calls riflemen: the cannons of his room fire on them."] = "Dans le Bastion, {npc:11032} (élite 60) garde le Trésor (Hoard) : son coffre, par terre à côté de lui, contient le {item:12845}. Un seul médaillon par visite : qui le ramasse le garde pour {npc:10917}, à la troisième visite. {npc:10997} (élite 60) tient l'armurerie et appelle des fusiliers : les canons de sa salle tirent sur eux.",
 
-	-- Step 104: The Scarlet Bastion: Archivist Galford
+	-- Step 106: The Scarlet Bastion: Archivist Galford
 	-- {npc:10811} Archivist Galford
 	["The Scarlet Bastion: {npc:10811}"] = "Le Bastion écarlate : {npc:10811}",
 	-- {npc:10811} Archivist Galford · {npc:10813} Balnazzar · {object:176245} Scarlet Archive
@@ -563,20 +574,20 @@ return {
 	-- {object:176245} Scarlet Archive
 	["{object:176245}: set it on fire"] = "{object:176245} : y mettre le feu",
 
-	-- Step 105: The Scarlet Bastion: the painting
+	-- Step 107: The Scarlet Bastion: the painting
 	["The Scarlet Bastion: the painting"] = "Le Bastion écarlate : le tableau",
 	-- {quest:5848} Of Love and Family · {object:177287} Unfinished Painting
 	["{quest:5848}: an {object:177287} hangs on the wall of Galford's library, the twin moons on it; Renfray's painting is hidden behind it."] = "{quest:5848} : un {object:177287} est accroché au mur de la bibliothèque de Galford, les deux lunes dessus ; le tableau de Renfray est caché derrière.",
 	-- {quest:5848} Of Love and Family · {object:177287} Unfinished Painting
 	["{quest:5848}: behind the {object:177287}"] = "{quest:5848} : derrière le {object:177287}",
 
-	-- Step 106: Festival Lane and Elders' Square
+	-- Step 108: Festival Lane and Elders' Square
 	-- {object:175433} Festival Lane · {object:175440} Elders' Square
 	["{object:175433} and {object:175440}"] = "{object:175433} et {object:175440}",
 	-- {object:175433} Festival Lane · {npc:10516} The Unforgiven · {object:175440} Elders' Square · {npc:10435} Magistrate Barthilas · {item:12382} Key to the City · {object:175461} Service Entrance
 	["Out of the Bastion, {object:175433}: {npc:10516} (elite 57) calls spirits, kill them first. Then {object:175440}: {npc:10435} (elite 58) stands before Alonsus Chapel and drops the {item:12382}. It opens the {object:175461}, the gate on this square, and the gate of the Gauntlet: one key in the group is enough. Leave the dungeon by the {object:175461}, or the way you came; keep the group together, without resetting the instance: the next two visits come back into it."] = "En sortant du Bastion, {object:175433} : {npc:10516} (élite 57) appelle des esprits, les tuer d'abord. Puis {object:175440} : {npc:10435} (élite 58) se tient devant la chapelle d'Alonsus (Alonsus Chapel) et donne la {item:12382}. Elle ouvre {object:175461}, la porte de cette place, et la porte du Défilé (Gauntlet) : une clé dans le groupe suffit. Sortir du donjon par {object:175461}, ou par où le groupe est venu ; rester groupés, sans réinitialiser l'instance : les deux visites suivantes y reviennent.",
 
-	-- Step 107: Light's Hope Chapel: Betina Bigglezink
+	-- Step 109: Light's Hope Chapel: Betina Bigglezink
 	-- {npc:11035} Betina Bigglezink
 	["Light's Hope Chapel: {npc:11035}"] = "Chapelle de l'Espoir de Lumière : {npc:11035}",
 	-- {npc:11035} Betina Bigglezink
@@ -584,46 +595,46 @@ return {
 	-- {item:13176} Scourge Data
 	["The {item:13176}: a ziggurat of the dead side"] = "Les {item:13176} : une ziggourat du côté mort-vivant",
 
-	-- Step 108: Light's Hope Chapel: Duke Nicholas Zverenhoff
+	-- Step 110: Light's Hope Chapel: Duke Nicholas Zverenhoff
 	-- {npc:11039} Duke Nicholas Zverenhoff
 	["Light's Hope Chapel: {npc:11039}"] = "Chapelle de l'Espoir de Lumière : {npc:11039}",
 	-- {quest:5251} The Archivist · {npc:10813} Balnazzar
 	["{quest:5251} handed in: {npc:10813}'s head now starts the next quest (second visit)."] = "{quest:5251} rendue : la tête de {npc:10813} lance maintenant la quête suivante (deuxième visite).",
 
-	-- Step 109: Light's Hope Chapel: Smokey LaRue
+	-- Step 111: Light's Hope Chapel: Smokey LaRue
 	-- {npc:11033} Smokey LaRue
 	["Light's Hope Chapel: {npc:11033}"] = "Chapelle de l'Espoir de Lumière : {npc:11033}",
 
-	-- Step 110: Light's Hope Chapel: Leonid Barthalomew the Revered
+	-- Step 112: Light's Hope Chapel: Leonid Barthalomew the Revered
 	-- {npc:11036} Leonid Barthalomew the Revered
 	["Light's Hope Chapel: {npc:11036}"] = "Chapelle de l'Espoir de Lumière : {npc:11036}",
 
-	-- Step 111: Stratholme, second visit: Balnazzar
+	-- Step 113: Stratholme, second visit: Balnazzar
 	-- {npc:10813} Balnazzar
 	["Stratholme, second visit: {npc:10813}"] = "Stratholme, deuxième visite : {npc:10813}",
 	-- {npc:10812} Grand Crusader Dathrohan · {npc:10813} Balnazzar · {quest:5262} The Truth Comes Crashing Down · {quest:5251} The Archivist
 	["Second visit: back into the same instance by the main gate, through the cleared streets to the Scarlet Bastion's last chamber. {npc:10812} (elite 62) turns into {npc:10813}, a dread lord, during the fight: dispel his Deep Sleep, stand at range from his Psychic Scream. His head starts {quest:5262} for those who handed in {quest:5251}: right-click it."] = "Deuxième visite : retour dans la même instance par la grande porte, à travers les rues déjà nettoyées, jusqu'à la dernière salle du Bastion écarlate. {npc:10812} (élite 62) se change en {npc:10813}, un seigneur de l'effroi, pendant le combat : dissiper son Sommeil profond, se tenir à distance de son Cri psychique. Sa tête lance {quest:5262} pour ceux qui ont rendu {quest:5251} : clic droit dessus.",
 
-	-- Step 112: Light's Hope Chapel: The Truth Comes Crashing Down
+	-- Step 114: Light's Hope Chapel: The Truth Comes Crashing Down
 	-- {quest:5262} The Truth Comes Crashing Down
 	["Light's Hope Chapel: {quest:5262}"] = "Chapelle de l'Espoir de Lumière : {quest:5262}",
 	-- {object:175461} Service Entrance · {object:175440} Elders' Square · {npc:10440} Baron Rivendare · {quest:5263} Above and Beyond
 	["Out by the {object:175461} in {object:175440} (or the way you came) and back to Light's Hope Chapel. Duke Nicholas takes the head and sends you after {npc:10440}, the last boss of the dead side: the third visit, in the same instance. Rather not ride again? Skip this step: {quest:5263} then waits for another run."] = "Sortir par {object:175461} sur {object:175440} (ou par où le groupe est venu) et revenir à la chapelle de l'Espoir de Lumière. Le duc Nicholas prend la tête et envoie tuer {npc:10440}, le dernier boss du côté mort-vivant : la troisième visite, dans la même instance. Pas envie de refaire la route ? Passer cette étape : {quest:5263} attend alors une autre visite.",
 
-	-- Step 113: Stratholme, third visit: before going in
+	-- Step 115: Stratholme, third visit: before going in
 	["Stratholme, third visit: before going in"] = "Stratholme, troisième visite : avant d'entrer",
 	-- {object:175461} Service Entrance · {item:12382} Key to the City · {object:175440} Elders' Square · {npc:10440} Baron Rivendare · {npc:16031} Ysida Harmon
 	["Third visit, the dead side: the {object:175461}, the gate east of the main one, opens with the {item:12382} onto {object:175440}. Bosses 59 to 62: 60 advised. Opening the gate of the Gauntlet starts {npc:10440}'s 45-minute countdown: it only matters for {npc:16031} (Dead Man's Plea, a dungeon set quest), no quest of this guide depends on it."] = "Troisième visite, le côté mort-vivant : {object:175461}, la porte à l'est de la grande porte, s'ouvre avec la {item:12382} sur {object:175440}. Boss de 59 à 62 : niveau 60 conseillé. Ouvrir la porte du Défilé (Gauntlet) lance le compte à rebours de 45 minutes de {npc:10440} : il ne compte que pour {npc:16031} (Dead Man's Plea, une quête d'ensemble de donjon), aucune quête de ce guide n'en dépend.",
 	-- {quest:5213} The Active Agent · {npc:11035} Betina Bigglezink · {quest:5263} Above and Beyond · {item:12845} Medallion of Faith · {npc:10917} Aurius
 	["In the quest log: {quest:5213} ({npc:11035}), {quest:5263} (Duke Nicholas). Whoever carries the {item:12845}: {npc:10917}, just inside."] = "Dans le journal de quêtes : {quest:5213} ({npc:11035}), {quest:5263} (le duc Nicholas). Qui porte le {item:12845} : {npc:10917}, juste après l'entrée.",
 
-	-- Step 114: Elders' Square: Aurius
+	-- Step 116: Elders' Square: Aurius
 	-- {npc:10917} Aurius · {object:175440} Elders' Square · {item:12845} Medallion of Faith · {quest:5125} Aurius' Reckoning · {npc:10440} Baron Rivendare
 	["{npc:10917} waits in Alonsus Chapel, on {object:175440}: the player with the {item:12845} hands it in, then takes {quest:5125}. With the medallion handed in during this instance, {npc:10917} joins the fight against {npc:10440}. Whether he offers {quest:5125} to the others of the group too: to check in game."] = "{npc:10917} attend dans la chapelle d'Alonsus, sur {object:175440} : le joueur qui a le {item:12845} le lui rend, puis prend {quest:5125}. Le médaillon rendu dans cette instance, {npc:10917} rejoint le combat contre {npc:10440}. Propose-t-il aussi {quest:5125} aux autres membres du groupe ? À vérifier en jeu.",
 	-- {npc:10917} Aurius · {item:12845} Medallion of Faith
 	["{npc:10917}: with the {item:12845}"] = "{npc:10917} : avec le {item:12845}",
 
-	-- Step 115: The Gauntlet and the ziggurats
+	-- Step 117: The Gauntlet and the ziggurats
 	-- {object:175462} The Gauntlet
 	["{object:175462} and the ziggurats"] = "{object:175462} et les ziggourats",
 	-- {item:12382} Key to the City · {npc:10437} Nerub'enkan · {npc:10436} Baroness Anastari · {npc:10438} Maleki the Pallid · {npc:10399} Thuzadin Acolyte · {item:13176} Scourge Data · {npc:11035} Betina Bigglezink
@@ -631,11 +642,11 @@ return {
 	-- {item:13176} Scourge Data
 	["{item:13176}: a small box in one of the ziggurats"] = "{item:13176} : une petite boîte dans l'une des ziggourats",
 
-	-- Step 116: Slaughter Square: Ramstein the Gorger
+	-- Step 118: Slaughter Square: Ramstein the Gorger
 	-- {object:175449} Slaughter Square · {npc:10416} Bile Spewer · {npc:10417} Venom Belcher · {npc:10439} Ramstein the Gorger · {npc:11030} Mindless Undead
 	["With the three ziggurats cleared, the gates of {object:175449} open. Kill every {npc:10416} and {npc:10417} in the square: {npc:10439} (elite 61) comes out; he hits hard and knocks his target away. Then a horde of {npc:11030}, then three Black Guard Sentries at the door of the Slaughterhouse."] = "Les trois ziggourats nettoyées, les grilles de {object:175449} s'ouvrent. Tuer chaque {npc:10416} et chaque {npc:10417} de la place : {npc:10439} (élite 61) sort ; il frappe fort et repousse sa cible. Puis une horde de {npc:11030}, puis trois sentinelles de la Garde noire (Black Guard Sentry) à la porte de l'Abattoir (Slaughterhouse).",
 
-	-- Step 117: The Slaughterhouse: Baron Rivendare
+	-- Step 119: The Slaughterhouse: Baron Rivendare
 	-- {npc:10440} Baron Rivendare
 	["The Slaughterhouse: {npc:10440}"] = "L'Abattoir : {npc:10440}",
 	-- {npc:10440} Baron Rivendare · {npc:10917} Aurius · {quest:5125} Aurius' Reckoning · {object:176631} Menethil's Gift · {npc:10508} Ras Frostwhisper
@@ -643,35 +654,124 @@ return {
 	-- {npc:10917} Aurius
 	["{npc:10917}, after the fight"] = "{npc:10917}, après le combat",
 
-	-- Step 118: Light's Hope Chapel: Betina Bigglezink
+	-- Step 120: Light's Hope Chapel: Betina Bigglezink
 	["Out of Stratholme, back east to Light's Hope Chapel."] = "Sortir de Stratholme et revenir vers l'est jusqu'à la chapelle de l'Espoir de Lumière.",
 
-	-- Step 119: Light's Hope Chapel: Duke Nicholas Zverenhoff
+	-- Step 121: Light's Hope Chapel: Duke Nicholas Zverenhoff
 	-- {quest:5263} Above and Beyond · {quest:5264} Lord Maxwell Tyrosus · {object:176317} Argent Hold
 	["{quest:5263}: Duke Nicholas sends you to {quest:5264}, inside the chapel, who opens the {object:176317}, the chest beside him, for your reward."] = "{quest:5263} : le duc Nicholas envoie voir {quest:5264}, dans la chapelle, qui ouvre {object:176317}, le coffre à côté de lui, pour la récompense.",
 
-	-- Step 120: Light's Hope Chapel: what is left to hand in
+	-- Step 122: Light's Hope Chapel: what is left to hand in
 	["Light's Hope Chapel: what is left to hand in"] = "Chapelle de l'Espoir de Lumière : ce qui reste à rendre",
 	-- {npc:10813} Balnazzar
 	["Finished in the second or third visit only, or {npc:10813}'s head kept without the ride: hand them in now."] = "Finies seulement à la deuxième ou à la troisième visite, ou la tête de {npc:10813} gardée sans faire la route : les rendre maintenant.",
 	-- {npc:11039} Duke Nicholas Zverenhoff · {npc:10813} Balnazzar
 	["{npc:11039}: the head of {npc:10813}"] = "{npc:11039} : la tête de {npc:10813}",
 
-	-- Step 121: Terrordale: Egan
+	-- Step 123: Terrordale: Egan
 	-- {npc:11140} Egan
 	["Ride west across the zone to {npc:11140}'s house in Terrordale."] = "Traverser la zone vers l'ouest jusqu'à la maison de {npc:11140}, à Val-Terreur.",
 
-	-- Step 122: Tirion Fordring: Of Love and Family
+	-- Step 124: Tirion Fordring: Of Love and Family
 	-- {npc:1855} Tirion Fordring
 	["West of Terrordale, {npc:1855}'s hut on the bank of the border river. His next quest, Find Myranda, leads to Hearthglen: not in this guide."] = "À l'ouest de Val-Terreur, la cabane de {npc:1855} sur la rive de la rivière frontière. Sa quête suivante, Find Myranda, mène à Âtreval : pas dans ce guide.",
 
-	-- Step 123: Stratholme: quests not done
+	-- Step 125: Stratholme: quests not done
 	["Stratholme: quests not done"] = "Stratholme : quêtes non finies",
 	["What is left of Stratholme in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste de Stratholme dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
 
-	-- Step 124: Of Love and Family: not done
+	-- Step 126: Of Love and Family: not done
 	-- {quest:5848} Of Love and Family
 	["{quest:5848}: not done"] = "{quest:5848} : pas finie",
 	-- {quest:5848} Of Love and Family
 	["{quest:5848} is not done and the guide does not go back to Stratholme: abandon it, or keep it for a run of your own."] = "{quest:5848} n'est pas finie et le guide ne retourne pas à Stratholme : l'abandonner, ou la garder pour une visite à part.",
+
+	-- Step 127: Chillwind Camp: Weldon Barov
+	-- {npc:11023} Weldon Barov
+	["Chillwind Camp: {npc:11023}"] = "Camp du Noroît : {npc:11023}",
+	-- {npc:1855} Tirion Fordring · {npc:11023} Weldon Barov
+	["To Chillwind Camp: the flight from Light's Hope Chapel, or the road south from {npc:1855}'s hut. {npc:11023} stands in the camp: his family's fortune is four deeds, all in Scholomance."] = "Jusqu'au Camp du Noroît : le vol depuis la chapelle de l'Espoir de Lumière, ou la route vers le sud depuis la cabane de {npc:1855}. {npc:11023} se tient dans le camp : la fortune de sa famille, ce sont quatre titres de propriété, tous dans la Scholomance.",
+
+	-- Step 128: Caer Darrow: Eva Sarkhoff
+	-- {npc:11216} Eva Sarkhoff
+	["Caer Darrow: {npc:11216}"] = "Caer Darrow : {npc:11216}",
+	-- {npc:11216} Eva Sarkhoff
+	["Ride east to the lake and onto Caer Darrow. {npc:11216}, a ghost, stands with Lucien before the door of Scholomance."] = "Partir vers l'est jusqu'au lac et à Caer Darrow. {npc:11216}, un fantôme, se tient avec Lucien devant la porte de la Scholomance.",
+
+	-- Step 129: Scholomance: before going in
+	["Scholomance: before going in"] = "Scholomance : avant d'entrer",
+	-- {item:13704} Skeleton Key · {object:179746} Great Ossuary · {npc:11622} Rattlegore · {item:13873} Viewing Room Key · {npc:10508} Ras Frostwhisper · {npc:1853} Darkmaster Gandling · {npc:10503} Jandice Barov · {object:175564} Brazier of the Herald
+	["The {item:13704} opens the door: the player who has it goes first. Inside: the Reliquary, the Chamber of Summoning, the {object:179746} ({npc:11622} and the {item:13873}), the Viewing Room, the Laboratory ({npc:10508}), then the six chambers round the Barov Family Vault and {npc:1853}. Leave {npc:10503} and the {object:175564} alone: Eva's chain sends you to them once Krastinov is dead, in the same instance."] = "La {item:13704} ouvre la porte : le joueur qui l'a passe le premier. À l'intérieur : le Reliquaire (Reliquary), la Chambre d'invocation (Chamber of Summoning), {object:179746} ({npc:11622} et la {item:13873}), la Salle d'observation (Viewing Room), le Laboratoire ({npc:10508}), puis les six salles autour du caveau de la famille Barov (Barov Family Vault) et {npc:1853}. Laisser {npc:10503} et {object:175564} de côté : la chaîne d'Eva y envoie une fois Krastinov mort, dans la même instance.",
+	-- {quest:5343} Barov Family Fortune · {npc:11023} Weldon Barov · {quest:5382} Doctor Theolen Krastinov, the Butcher · {npc:11216} Eva Sarkhoff · {quest:5529} Plagued Hatchlings · {npc:11035} Betina Bigglezink · {item:12368} Dawn's Gambit
+	["In the quest log: {quest:5343} ({npc:11023}), {quest:5382} ({npc:11216}), {quest:5529} ({npc:11035}). Share the three with your group: click each in the quest log, then Share. Not on this route: {item:12368}, the dungeon set quests, the class quests."] = "Dans le journal de quêtes : {quest:5343} ({npc:11023}), {quest:5382} ({npc:11216}), {quest:5529} ({npc:11035}). Partager les trois avec le groupe : cliquer sur chacune dans le journal de quêtes, puis sur Partager. Pas sur ce parcours : {item:12368}, les quêtes d'ensembles de donjon, les quêtes de classe.",
+	["Scholomance"] = "Scholomance",
+
+	-- Step 130: The Reliquary and the Chamber of Summoning
+	["The Reliquary and the Chamber of Summoning"] = "Le Reliquaire et la Chambre d'invocation",
+	-- {object:176486} Deed to Southshore · {object:176487} Deed to Tarren Mill
+	["The Reliquary, the first great hall: the {object:176486} lies on a table in its back left corner, seen from the entrance. Then the Chamber of Summoning, and the great room after it: the {object:176487} lies on a table in its far corner, opposite the way in. Each player clicks the deeds for their own quest (to check in game)."] = "Le Reliquaire (Reliquary), la première grande salle : {object:176486} est posé sur une table dans son coin du fond à gauche, vu de l'entrée. Puis la Chambre d'invocation (Chamber of Summoning) et la grande salle qui la suit : {object:176487} est posé sur une table dans son coin opposé à l'entrée. Chaque joueur clique sur les titres pour sa propre quête (à vérifier en jeu).",
+	-- {item:13450} The Deed to Southshore
+	["{item:13450}: the Reliquary"] = "{item:13450} : le Reliquaire",
+	-- {item:13451} The Deed to Tarren Mill
+	["{item:13451}: past the Chamber of Summoning"] = "{item:13451} : après la Chambre d'invocation",
+
+	-- Step 131: Great Ossuary: the hatchlings and Rattlegore
+	-- {object:179746} Great Ossuary · {npc:11622} Rattlegore
+	["{object:179746}: the hatchlings and {npc:11622}"] = "{object:179746} : les dragonnets et {npc:11622}",
+	-- {object:179746} Great Ossuary · {item:13920} Healthy Dragon Scale · {npc:11035} Betina Bigglezink · {npc:10503} Jandice Barov · {npc:11622} Rattlegore · {item:13873} Viewing Room Key
+	["The plagued hatchlings, dragon whelps, fill a room of the {object:179746}: a little more than twenty. A rare one drops a {item:13920}: keep it for {npc:11035}. {npc:10503} waits below their room, behind a torch on the south wall: leave her for now. {npc:11622} (elite 61), in the basement of the Ossuary, drops the {item:13873}, which opens the rest of the school."] = "Les dragonnets pestiférés (Plagued Hatchling) remplissent une salle de {object:179746} : un peu plus de vingt. Un rare donne une {item:13920} : la garder pour {npc:11035}. {npc:10503} attend sous leur salle, derrière une torche du mur sud : la laisser pour l'instant. {npc:11622} (élite 61), au sous-sol de l'ossuaire, donne la {item:13873}, qui ouvre le reste de l'école.",
+	-- {item:13920} Healthy Dragon Scale
+	["{item:13920}: keep it"] = "{item:13920} : la garder",
+
+	-- Step 132: The Viewing Room and the Laboratory
+	["The Viewing Room and the Laboratory"] = "La Salle d'observation et le Laboratoire",
+	-- {npc:10433} Marduk Blackpool · {item:12368} Dawn's Gambit · {npc:10508} Ras Frostwhisper · {item:13471} The Deed to Brill
+	["The Viewing Room: Vectus and {npc:10433} stand among neutral students and fight only for {item:12368}: leave them. Then the Laboratory: {npc:10508} (elite 62), a lich who fears and knocks back. {item:13471} lies by the west wall of the Laboratory, at the back, past the alchemy lab."] = "La Salle d'observation (Viewing Room) : Vectus et {npc:10433} se tiennent parmi des élèves neutres et ne se battent que pour {item:12368} : les laisser. Puis le Laboratoire (Laboratory) : {npc:10508} (élite 62), une liche qui effraie et repousse. {item:13471} est près du mur ouest du Laboratoire, au fond, après le laboratoire d'alchimie.",
+	-- {item:13471} The Deed to Brill
+	["{item:13471}: the Laboratory"] = "{item:13471} : le Laboratoire",
+
+	-- Step 133: The Barov Family Vault: the six chambers
+	["The Barov Family Vault: the six chambers"] = "Le caveau des Barov : les six salles",
+	-- {npc:10502} Lady Illucia Barov · {npc:10504} Lord Alexei Barov · {object:176485} Deed to Caer Darrow · {npc:10507} The Ravenian · {npc:10901} Lorekeeper Polkelt · {npc:11261} Doctor Theolen Krastinov · {npc:10505} Instructor Malicia · {object:176544} Remains of Eva Sarkhoff · {npc:11217} Lucien Sarkhoff · {npc:1853} Darkmaster Gandling
+	["The last hall: six chambers round the Barov Family Vault. Below, from the left: {npc:10502}, {npc:10504} (the {object:176485} lies on a slab beside him), {npc:10507}. Above, from the left: {npc:10901}, {npc:11261} (he enrages at half health: burn him fast), {npc:10505}. In Krastinov's chamber, burn the {object:176544} and of {npc:11217}, one on each side. {npc:1853} comes into the vault once the six are dead; he sends players into the side chambers."] = "La dernière salle : six chambres autour du caveau de la famille Barov (Barov Family Vault). En bas, depuis la gauche : {npc:10502}, {npc:10504} ({object:176485} est posé sur une dalle à côté de lui), {npc:10507}. En haut, depuis la gauche : {npc:10901}, {npc:11261} (il s'enrage à la moitié de sa vie : le tuer vite), {npc:10505}. Dans la salle de Krastinov, brûler {object:176544} et les restes de {npc:11217}, un de chaque côté. {npc:1853} entre dans le caveau une fois les six morts ; il envoie des joueurs dans les salles du tour.",
+	-- {item:13448} The Deed to Caer Darrow · {npc:10504} Lord Alexei Barov
+	["{item:13448}: beside {npc:10504}"] = "{item:13448} : à côté de {npc:10504}",
+
+	-- Step 134: Caer Darrow: Eva Sarkhoff
+	-- {npc:10503} Jandice Barov
+	["Walk back out of Scholomance, without resetting the instance: Eva stands at the door. Her next quest is {npc:10503}'s, near the entrance."] = "Ressortir de la Scholomance à pied, sans réinitialiser l'instance : Eva se tient à la porte. Sa quête suivante est celle de {npc:10503}, près de l'entrée.",
+
+	-- Step 135: Scholomance: Jandice Barov
+	-- {npc:10503} Jandice Barov
+	["Scholomance: {npc:10503}"] = "Scholomance : {npc:10503}",
+	-- {npc:10503} Jandice Barov · {quest:5515} Krastinov's Bag of Horrors
+	["Back into the same instance, through the cleared halls to the hatchlings' room: the torch on its south wall opens the way down to {npc:10503} (elite 61). She splits into illusions: mark her. Her corpse holds {quest:5515}."] = "Retour dans la même instance, par les salles déjà nettoyées, jusqu'à la salle des dragonnets : la torche de son mur sud ouvre le passage vers {npc:10503} (élite 61). Elle se dédouble en illusions : la marquer. Son corps porte {quest:5515}.",
+
+	-- Step 136: Caer Darrow: Eva Sarkhoff
+	-- {quest:5384} Kirtonos the Herald · {item:13523} Blood of Innocents · {npc:14861} Blood Steward of Kirtonos
+	["Out to Eva again. {quest:5384}: she hands over the {item:13523} (Warcraft Tavern also has the {npc:14861} drop it: to check in game)."] = "Ressortir voir Eva. {quest:5384} : elle donne le {item:13523} (d'après Warcraft Tavern, le {npc:14861} le donne aussi : à vérifier en jeu).",
+
+	-- Step 137: Scholomance: Kirtonos the Herald
+	-- {quest:5384} Kirtonos the Herald
+	["Scholomance: {quest:5384}"] = "Scholomance : {quest:5384}",
+	-- {object:175564} Brazier of the Herald · {item:13523} Blood of Innocents · {quest:5384} Kirtonos the Herald
+	["Back in, to the balcony on the north side of the Chamber of Summoning: use the {object:175564} by the railing, with the {item:13523} in your bags. {quest:5384} (elite 60) flies in, and turns from gargoyle to man during the fight, cursing in that form."] = "Retour à l'intérieur, jusqu'au balcon du côté nord de la Chambre d'invocation : utiliser {object:175564}, près de la rambarde, avec le {item:13523} dans les sacs. {quest:5384} (élite 60) arrive en volant, et passe de gargouille à homme pendant le combat, avec des malédictions sous cette forme.",
+
+	-- Step 138: Caer Darrow: Eva Sarkhoff
+	-- {item:13544} Spectral Essence · {npc:11286} Magistrate Marduke · {npc:10508} Ras Frostwhisper · {zone:1417} Arathi Highlands · {object:176631} Menethil's Gift
+	["The rewards include the {item:13544}: worn, it shows {npc:11286}, beside Eva. His chain against {npc:10508} goes to Stromgarde in the {zone:1417}, then Light's Hope Chapel, Stratholme ({object:176631}, before the Baron) and back to Scholomance: not in this guide."] = "Les récompenses comprennent l'{item:13544} : portée, elle fait voir {npc:11286}, à côté d'Eva. Sa chaîne contre {npc:10508} passe par Stromgarde dans les {zone:1417}, puis la chapelle de l'Espoir de Lumière, Stratholme ({object:176631}, devant le baron) et revient à la Scholomance : pas dans ce guide.",
+
+	-- Step 139: Chillwind Camp: Weldon Barov
+	-- {npc:11023} Weldon Barov
+	["Ride back west to Chillwind Camp. {npc:11023}'s next quest, The Last Barov, is in Horde lands: not in this guide."] = "Revenir vers l'ouest jusqu'au Camp du Noroît. La quête suivante de {npc:11023}, The Last Barov, est en terres de la Horde : pas dans ce guide.",
+
+	-- Step 140: Light's Hope Chapel: Betina Bigglezink
+	-- {quest:5529} Plagued Hatchlings · {quest:5582} Healthy Dragon Scale · {npc:11035} Betina Bigglezink
+	["{quest:5529}: the flight from Chillwind Camp to Light's Hope Chapel. A {quest:5582} in the bags? Once {quest:5529} is handed in, right-click it: its quest goes back to {npc:11035} at once."] = "{quest:5529} : le vol du Camp du Noroît jusqu'à la chapelle de l'Espoir de Lumière. Une {quest:5582} dans les sacs ? Une fois {quest:5529} rendue, clic droit dessus : sa quête se rend à {npc:11035} tout de suite.",
+	-- {quest:5582} Healthy Dragon Scale
+	["{quest:5582}, if one dropped"] = "{quest:5582}, si elle est tombée",
+
+	-- Step 141: Scholomance: quests not done
+	["Scholomance: quests not done"] = "Scholomance : quêtes non finies",
+	["What is left of Scholomance in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste de la Scholomance dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
 }
