@@ -16,13 +16,21 @@ return {
 	["Ride south-east to the Altar of Zul, the stepped Vilebranch temple in the south of the {zone:1425}, and climb to the top. Qiaga and {npc:8636} (elite, 50) stand up there: touch the top and come straight back down.\nCareful: Elite trolls guard the top platform, including {npc:7996} and {npc:8636}, along with several Vilebranch Soothsayers. The soothsayers cast spells and are linked to the rest of the group."] = "Allez au sud-est jusqu'à l'Autel de Zul, le temple à degrés des Vilebranche au sud des {zone:1425}, et grimpez au sommet. Qiaga et {npc:8636} (élite, 50) s'y tiennent : touchez le sommet et redescendez directement.\nAttention : Des trolls élites gardent la plateforme supérieure, dont {npc:7996} et {npc:8636}, ainsi que plusieurs Devin Vilebranche. Les devins lancent des sorts et sont liés au reste du groupe.",
 	["Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels."] = "Chacun à son rythme : ce qui est déjà fait se coche tout seul, le guide reprend où vous en êtes. En groupe ? L'XP de groupe est meilleure à 4 niveaux d'écart ou moins.",
 
-	-- Step 2: Skulk Rock
+	-- Step 2: Atal'ai Exile (Sunken Temple, optional)
+	-- {npc:5598} Atal'ai Exile
+	["{npc:5598} (Sunken Temple, optional)"] = "{npc:5598} (Temple englouti, facultatif)",
+	-- {npc:5598} Atal'ai Exile · {zone:1453} Stormwind
+	["Shadra'Alor, the troll ruins west of the Altar of Zul: the {npc:5598} waits on a ledge beside the steps of one of the pyramids, not at the top. His quest is for the Sunken Temple, which the guide offers in Group 25 (levels 50 to 55; the question comes in {zone:1453}, further on): take it only if your group means to run it. It stays in the quest log until then. Alone? Skip it."] = "Shadra'Alor, les ruines trolls à l'ouest de l'autel de Zul : l'{npc:5598} attend sur une corniche, à côté des marches d'une des pyramides, pas au sommet. Sa quête est pour le Temple englouti, que le guide propose au Groupe 25 (niveaux 50 à 55 ; la question vient plus loin, à {zone:1453}) : ne la prendre que si le groupe compte le faire. Elle reste dans le journal jusque-là. Seul ? La passer.",
+	-- {npc:5598} Atal'ai Exile · {quest:1446} Jammal'an the Prophet
+	["{npc:5598}: {quest:1446}, in the Sunken Temple"] = "{npc:5598} : {quest:1446}, dans le Temple englouti",
+
+	-- Step 3: Skulk Rock
 	["Skulk Rock"] = "Rocher de l'Affût",
 	-- {zone:1425} The Hinterlands
 	-- plural, as words: Green Sludges = {npc:2655} Green Sludge · Jade Oozes = {npc:2656} Jade Ooze
 	["Ride north to Skulk Rock in the middle of the {zone:1425}. Green Sludges and Jade Oozes crawl all around it.\nCareful: Panthers move around the area in stealth."] = "Allez au nord jusqu'au Rocher de l'Affût au milieu des {zone:1425}. Des limaces vertes et des limons de jade rampent tout autour.\nAttention : des panthères se déplacent camouflées dans la zone.",
 
-	-- Step 3: Aerie Peak
+	-- Step 4: Aerie Peak
 	["Aerie Peak"] = "Nid-de-l'Aigle",
 	["Inside"] = "À l'intérieur",
 	-- {npc:5636} Gryphon Master Talonaxe
@@ -30,61 +38,61 @@ return {
 	-- {quest:2990} Thadius Grimshade
 	["for {quest:2990} at Nethergarde Keep, later"] = "pour {quest:2990} à Rempart-du-Néant, plus tard",
 
-	-- Step 4: Fly to Ironforge
+	-- Step 5: Fly to Ironforge
 	-- {zone:1455} Ironforge
 	["Fly to {zone:1455}"] = "Envolez-vous vers {zone:1455}",
 	["Aerie Peak flight master"] = "Maître de vol de Nid-de-l'Aigle",
 
-	-- Step 5: Librarian Mae Paledust
+	-- Step 6: Librarian Mae Paledust
 	-- {object:32356} Hall of Explorers
 	["In the {object:32356}, by the bookshelves."] = "Dans le {object:32356}, près des étagères.",
 
-	-- Step 6: Class trainer
+	-- Step 7: Class trainer
 	["Class trainer"] = "Maître de classe",
 
-	-- Step 7: Tram to Stormwind
+	-- Step 8: Tram to Stormwind
 	-- {zone:1453} Stormwind
 	["Tram to {zone:1453}"] = "Tram pour {zone:1453}",
 
-	-- Step 9: Cathedral of Light: Archbishop Benedictus
+	-- Step 10: Cathedral of Light: Archbishop Benedictus
 	-- {npc:1284} Archbishop Benedictus
 	["Cathedral of Light: {npc:1284}"] = "Cathédrale de la Lumière : {npc:1284}",
 	-- {quest:3636} Bring the Light · {npc:1284} Archbishop Benedictus
 	["{quest:3636}, from Razorfen Downs: {npc:1284} is in the Cathedral of Light."] = "{quest:3636}, des Souilles de Tranchebauge : {npc:1284} est dans la cathédrale de la Lumière.",
 
-	-- Step 10: Sunken Temple (dungeon, optional): Brohann Caskbelly
+	-- Step 11: Sunken Temple (dungeon, optional): Brohann Caskbelly
 	-- {npc:5384} Brohann Caskbelly
 	["Sunken Temple (dungeon, optional): {npc:5384}"] = "Temple englouti (donjon, facultatif) : {npc:5384}",
 	-- {zone:1435} Swamp of Sorrows · {zone:1419} Blasted Lands
 	["The Sunken Temple: a troll and dragon dungeon under the Pool of Tears in the {zone:1435}, best at 50 to 55 with a group of 5. This guide runs it later, from the {zone:1419} (Group 25). Alone? Skip it."] = "Le Temple englouti : un donjon de trolls et de dragons sous le Bassin des larmes, dans le {zone:1435}, idéal de 50 à 55 à 5 joueurs. Le guide le fait plus tard, depuis les {zone:1419} (Groupe 25). Seul ? La passer.",
 
-	-- Step 12: Darkshire
+	-- Step 13: Darkshire
 	["Darkshire"] = "Sombre-Comté",
 
-	-- Step 13: Fly to Lakeshire
+	-- Step 14: Fly to Lakeshire
 	["Fly to Lakeshire"] = "Envolez-vous vers Comté-du-Lac",
 	["Darkshire flight master"] = "Maître de vol de Sombre-Comté",
 
-	-- Step 14: Morgan's Vigil flight master
+	-- Step 15: Morgan's Vigil flight master
 	["Morgan's Vigil flight master"] = "Maître de vol de la Veille de Morgan",
 
-	-- Step 15: Fly to Thelsamar
+	-- Step 16: Fly to Thelsamar
 	["Fly to Thelsamar"] = "Volez vers Thelsamar",
 
-	-- Step 17: Ironband's Excavation Site
+	-- Step 18: Ironband's Excavation Site
 	["Ironband's Excavation Site"] = "Excavations de Baguefer",
 	["Ride east along the south shore of the loch to Ironband's camp."] = "Chevauchez vers l'est le long de la rive sud du Loch jusqu'aux Excavations de Baguefer.",
 
-	-- Step 18: Thelsamar
+	-- Step 19: Thelsamar
 	["Thelsamar"] = "Thelsamar",
 	-- {npc:1470} Ghak Healtouch
 	["{npc:1470}, below ground"] = "{npc:1470}, sous terre",
 
-	-- Step 19: Into Badlands
+	-- Step 20: Into Badlands
 	-- {zone:1418} Badlands
 	["Into {zone:1418}"] = "Dans {zone:1418}",
 
-	-- Step 21: The Uldaman dig
+	-- Step 22: The Uldaman dig
 	["The Uldaman dig"] = "La fouille d'Uldaman",
 	-- {zone:1418} Badlands
 	["Ride south through the pass into the {zone:1418}' northern edge: the Stonevault troggs dig outside Uldaman there. The carved urns and the magenta mushroom clusters sit in their caves and tunnels, outside the dungeon itself."] = "Allez au sud à travers le col jusqu'au bord nord des {zone:1418} : les troggs de Coffrepierre fouillent à l'extérieur d'Uldaman. Les urnes sculptées et les grappes de champignons magenta se trouvent dans leurs grottes et tunnels, à l'extérieur du donjon lui-même.",
@@ -93,19 +101,19 @@ return {
 	-- {object:2743} Carved Stone Urn
 	["{object:2743}; below ground"] = "{object:2743} ; sous terre",
 
-	-- Step 22: Into Loch Modan
+	-- Step 23: Into Loch Modan
 	-- {zone:1432} Loch Modan
 	["Into {zone:1432}"] = "Dans les {zone:1432}",
 
-	-- Step 25: Ironband's Excavation Site
+	-- Step 26: Ironband's Excavation Site
 	["Ride back north to Ironband's camp."] = "Revenez vers le nord jusqu'aux Excavations de Baguefer.",
 
-	-- Step 26: Fly to Menethil Harbor
+	-- Step 27: Fly to Menethil Harbor
 	-- {object:1162} Menethil Harbor
 	["Fly to {object:1162}"] = "Envolez-vous vers {object:1162}",
 	["Thelsamar flight master"] = "Maître de vol de Thelsamar",
 
-	-- Step 29: Rut'theran Village
+	-- Step 30: Rut'theran Village
 	["Rut'theran Village"] = "Village de Rut'theran",
 	-- {npc:7907} Daryn Lightwind · {npc:7916} Erelas Ambersky
 	["{npc:7907} stands upstairs, above {npc:7916}: go up inside, the arrow cannot tell the floors apart."] = "{npc:7907} se tient à l'étage, au-dessus de {npc:7916} : montez à l'intérieur, la flèche ne distingue pas les étages.",
@@ -115,42 +123,42 @@ return {
 	["{npc:7916}: keep it, the feathers come at the end of the {zone:1428} guide"] = "{npc:7916} : gardez-la, les plumes viennent à la fin du guide des {zone:1428}",
 	["the book on her table"] = "le livre sur sa table",
 
-	-- Step 31: Temple of the Moon
+	-- Step 32: Temple of the Moon
 	["Temple of the Moon"] = "Temple de la Lune",
 	-- {zone:1457} Darnassus
 	["Step through the portal into {zone:1457}. The Temple of the Moon is in the south of the city."] = "Franchissez le portail vers {zone:1457}. Le Temple de la Lune se trouve au sud de la cité.",
 	-- {npc:7740} Gracina Spiritmight
 	["{npc:7740}, beside her"] = "{npc:7740}, à côté d'elle",
 
-	-- Step 33: Craftsmen's Terrace
+	-- Step 34: Craftsmen's Terrace
 	["Craftsmen's Terrace"] = "Terrasse des Artisans",
 
-	-- Step 34: Cenarion Enclave
+	-- Step 35: Cenarion Enclave
 	["Cenarion Enclave"] = "Enclave cénarienne",
 	-- {npc:3516} Arch Druid Fandral Staghelm
 	["{npc:3516}, at the top of the tree"] = "{npc:3516}, au sommet de l'arbre",
 
-	-- Step 36: Cenarion Enclave
+	-- Step 37: Cenarion Enclave
 	-- {zone:1449} Un'Goro Crater
 	["the soil comes from {zone:1449}, later"] = "la terre vient du {zone:1449}, plus tard",
 
-	-- Step 37: Portal to Teldrassil
+	-- Step 38: Portal to Teldrassil
 	-- {zone:1438} Teldrassil
 	["Portal to {zone:1438}"] = "Portail vers {zone:1438}",
 
-	-- Step 38: Fly to Auberdine
+	-- Step 39: Fly to Auberdine
 	["Fly to Auberdine"] = "Envolez-vous pour Auberdine",
 	["Rut'theran Village flight master"] = "Maître de vol du village de Rut'theran",
 
-	-- Step 39: Boat to Stormwind Harbor
+	-- Step 40: Boat to Stormwind Harbor
 	["Boat to Stormwind Harbor"] = "Bateau pour le port de Hurlevent",
 
-	-- Step 42: The bloodmages
+	-- Step 43: The bloodmages
 	["The bloodmages"] = "Les mages de sang",
 	-- {zone:1419} Blasted Lands
 	["The bloodmages' camp is the first stop beside the road into the {zone:1419}, north-west of Nethergarde Keep."] = "Le camp des mages de sang est le premier arrêt au bord de la route menant aux {zone:1419}, au nord-ouest de Rempart-du-Néant.",
 
-	-- Step 43: Nethergarde Keep
+	-- Step 44: Nethergarde Keep
 	["Nethergarde Keep"] = "Rempart-du-Néant",
 	-- {item:6091} Crate of Power Stones
 	["Ride on east along the road to the keep first: the {item:6091} expires an hour after Darkshire, and the bloodmages' beasts take longer than that."] = "Continuez vers l'est le long de la route jusqu'au donjon d'abord : le {item:6091} expire une heure après Sombre-Comté, et les bêtes des mages de sang mettent plus de temps que cela.",
@@ -161,26 +169,26 @@ return {
 	-- {npc:5385} Watcher Mahar Ba
 	["{npc:5385}, upstairs"] = "{npc:5385}, à l'étage",
 
-	-- Step 44: Blasted Lands: kill these as you meet them
+	-- Step 45: Blasted Lands: kill these as you meet them
 	-- {zone:1419} Blasted Lands
 	["{zone:1419}: kill these as you meet them"] = "{zone:1419} : tuez-les au fur et à mesure que vous les rencontrez",
 	-- {npc:5982} Black Slayer · {npc:8301} Clack the Reaver
 	-- plural, as words: Starving Snickerfangs = {npc:5984} Starving Snickerfang · Scorpok Stingers = {npc:5988} Scorpok Stinger · Ashmane Boars = {npc:5992} Ashmane Boar · Redstone Basilisks = {npc:5990} Redstone Basilisk
 	["Ride west: Starving Snickerfangs roam the dry hills just south of the bloodmages' camp; Scorpok Stingers (level 50) scuttle across the middle of the north. {npc:5982} vultures circle over all of it. Pull one at a time.\nAshmane Boars and Redstone Basilisks share the slopes south-west of the keep. Keep clear of the Helboars further south: they are level 52.\nCareful: Scorpok Stingers use Venom Sting; {npc:8301} adds Knockdown."] = "Allez à l'ouest : des raillecrocs affamées rôdent sur les collines sèches juste au sud du camp des mages de sang ; des aiguillonneurs scorpok (niveau 50) traversent le milieu du nord. Des vautours {npc:5982} tournent au-dessus de tout cela. Attirez-en un à la fois.\nDes sangliers cendrés et des basilics Rougepierre partagent les pentes au sud-ouest du donjon. Éloignez-vous des sangliers infernaux plus au sud : ils sont de niveau 52.\nAttention : les aiguillonneurs scorpok utilisent Piqûre venimeuse ; {npc:8301} ajoute Renversement.",
 
-	-- Step 45: The bloodmages
+	-- Step 46: The bloodmages
 	["The bloodmages' second tier pays for the same parts with a buff item and no experience: skip it."] = "Le second palier des mages de sang paie les mêmes morceaux avec un objet d'amélioration et sans expérience : passez-le.",
 
-	-- Step 46: Fly to Booty Bay
+	-- Step 47: Fly to Booty Bay
 	-- {object:3204} Booty Bay
 	["Fly to {object:3204}"] = "Envolez-vous pour {object:3204}",
 	["Nethergarde Keep flight master"] = "Maître de vol de Rempart-du-Néant",
 
-	-- Step 47: Monogrammed Sash
+	-- Step 48: Monogrammed Sash
 	-- {quest:8552} The Monogrammed Sash
 	["These are elite mobs: grouping up is encouraged, look for people to do it with. {quest:8552} needs a group of 2. Skip it if you are alone: the route has you grind the XP back."] = "Ce sont des monstres élites : il est conseillé de se grouper, cherchez des joueurs avec qui le faire. {quest:8552} demande un groupe de 2. Passez-la si vous êtes seul : l'itinéraire vous fait regagner l'expérience en tuant des monstres.",
 
-	-- Step 51: Facing Negolash
+	-- Step 52: Facing Negolash
 	-- {npc:1494} Negolash
 	["These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:1494} (level 52 elite) needs a group of 2. Skip it if you are alone: the route has you grind the XP back."] = "Ce sont des monstres élites : il est conseillé de se grouper, cherchez des joueurs avec qui le faire. {npc:1494} (élite de niveau 52) demande un groupe de 2. Passez-le si vous êtes seul : l'itinéraire vous fait regagner l'expérience en tuant des monstres.",
 }

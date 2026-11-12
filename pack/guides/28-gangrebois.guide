@@ -31,6 +31,13 @@ step The Emerald Sanctuary
   accept 5156                         -- Taronn Redfeather
   accept 5155                         -- Greta Mosshoof
 
+# Groupe Alliance 0.11.0: Blood of Morphaz (8257, priests, Ogtinc, Group 25) handed in to Greta Mosshoof.
+step The Emerald Sanctuary: Greta Mosshoof (priests)
+  only Priest
+  when complete 8257
+  tip Blood of Morphaz, from the Sunken Temple: Greta Mosshoof gives the priests' reward.
+  turnin 8257                         -- Greta Mosshoof
+
 # ---------------------------------------------------------------- Getting there
 
 step Grazle

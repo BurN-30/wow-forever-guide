@@ -277,6 +277,8 @@ return {
 	-- Step 71: Gregan Brewspewer
 	-- {npc:7775} Gregan Brewspewer · {object:152574} Twin Colossals · {item:11243} Videre Elixir
 	["{npc:7775}'s camp lies north of the {object:152574}. He sells the {item:11243} once he has his bait."] = "Le camp de {npc:7775} se trouve au nord de {object:152574}. Il vend le {item:11243} une fois qu'il a son appât.",
+	-- {npc:7775} Gregan Brewspewer
+	["{npc:7775}'s next task, Haze of Evil, is in the Sunken Temple, which the guide ran in Group 25: skip it."] = "La tâche suivante de {npc:7775}, Brouillard maléfique, se fait dans le Temple englouti, que le guide a fait au Groupe 25 : la passer.",
 
 	-- Step 73: Fly to Theramore
 	["Fly to Theramore"] = "Volez jusqu'à Theramore",

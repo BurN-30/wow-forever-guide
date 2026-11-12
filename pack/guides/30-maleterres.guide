@@ -421,6 +421,7 @@ step Zorbin Fandazzle
 step Gregan Brewspewer
   tip Gregan's camp lies north of the Twin Colossals. He sells the Videre Elixir once he has his bait.
   turnin 4142
+  note Gregan's next task, Haze of Evil, is in the Sunken Temple, which the guide ran in Group 25: skip it.
   collect 11243 quest 3909.1          -- Videre Elixir
 
 step Feralas

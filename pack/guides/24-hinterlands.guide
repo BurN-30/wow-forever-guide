@@ -22,6 +22,19 @@ step The Altar of Zul
   goto 49.0,68.7
   complete 2989 @49.0,68.7
 
+# Groupe Alliance 0.11.0: Jammal'an the Prophet (1446), for the Sunken Temple (run in Group 25,
+# 27-steppes-ardentes), asked here (`when group 1446`), before the Sunken Temple question itself
+# (Brohann, Stormwind, below). The Atal'ai Exile (Hinterlands 33.75,75.21, Polestar's Forever data)
+# stands at Shadra'Alor, west of the Altar of Zul; on a ledge beside a pyramid's steps (Warcraft
+# Tavern's Forever Sunken Temple quest guide, 12/11/2026, itself from Classic). Level 53, required
+# 38, shareable, no prerequisite (Polestar and TrinityCore agree). Handed in on Group 25's way
+# through the Hinterlands; abandoned after the run when not done.
+step Atal'ai Exile (Sunken Temple, optional)
+  when group 1446
+  zone The Hinterlands
+  tip Shadra'Alor, the troll ruins west of the Altar of Zul: the Atal'ai Exile waits on a ledge beside the steps of one of the pyramids, not at the top. His quest is for the Sunken Temple, which the guide offers in Group 25 (levels 50 to 55; the question comes in Stormwind, further on): take it only if your group means to run it. It stays in the quest log until then. Alone? Skip it.
+  accept 1446                         -- Atal'ai Exile: Jammal'an the Prophet, in the Sunken Temple
+
 step Skulk Rock
   tip Ride north to Skulk Rock in the middle of the Hinterlands. Green Sludges and Jade Oozes crawl all around it.
   tip Careful: Panthers move around the area in stealth.

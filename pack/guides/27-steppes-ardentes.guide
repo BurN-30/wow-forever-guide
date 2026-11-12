@@ -111,6 +111,16 @@ step Ogtinc
   only Priest
   turnin 8256 only Priest -- Ogtinc
 
+# Groupe Alliance 0.11.0: the priests' last errand from Ogtinc, Blood of Morphaz (8257, after 8256 in
+# Polestar's Forever data and the TrinityCore base; priests only, level 52, required 50), for whoever
+# chose the Sunken Temple (`when group 1475`, asked in Group 22): Morphaz is fought in this guide's
+# run, and Greta Mosshoof (Felwood 51.2,82.1) is at the Emerald Sanctuary, the first stop of Group 26.
+step Ogtinc: Blood of Morphaz (Sunken Temple)
+  only Priest
+  when group 1475
+  tip Ogtinc's last task for priests, Blood of Morphaz, is done in the Sunken Temple later in this guide; Greta Mosshoof, in Felwood, gives the reward at the start of the next guide. Each priest takes it here.
+  accept 8257                         -- Ogtinc
+
 step Ravencrest Monument
   tip Swim to the small island off the southern tip of Azshara: Pilot Xiggs Fuselighter waits by the monument.
   turnin 3449
@@ -281,18 +291,46 @@ step Sunken Temple (dungeon, optional): the Pool of Tears
   zone Swamp of Sorrows
   tip Ride north out of the Blasted Lands into the Swamp of Sorrows, then east past Stonard (Horde) to the Pool of Tears. The temple lies under the water: swim down into it and find the dungeon's entrance inside.
   note Group of 5, levels 50 to 55. Keep 3 free quest log slots. Share each quest with your group: click it in the quest log, then Share.
+  note In the quest log before going in: Into The Temple of Atal'Hakkar (Brohann Caskbelly, Stormwind, Group 22). If you took them: Jammal'an the Prophet (Atal'ai Exile, Hinterlands, Group 22), and for priests Blood of Morphaz (Ogtinc, Azshara, earlier in this guide). Not on this route: Marvon Rivetseeker's two quests and The God Hakkar, which open only after this run, and the other classes' quests.
   goto 69.9,53.5 "Sunken Temple" r 25
 
+# Groupe Alliance 0.11.0: Jammal'an's head (1446, taken in Group 22) added to this step; the tip
+# said it was not on the route. Jammal'an waits behind the six troll champions of the balconies of
+# the upper level (Warcraft Tavern's Forever Sunken Temple quest guide, written from Classic: to
+# check in game).
 step Sunken Temple: the tablets and Jammal'an
   when group 1475
-  tip The Atal'ai Tablets lie in the temple's halls: pick them up as you clear. Jammal'an the Prophet drops his head for the Atal'ai Exile's quest (Hinterlands, west of the Altar of Zul): not on this route, take it there on your own if you pass by.
+  tip The Atal'ai Tablets lie in the temple's halls: pick them up as you clear. Jammal'an the Prophet waits on the upper level, once the six troll champions of the balconies around the central pit are dead: his head is for the Atal'ai Exile's quest (Group 22), and every player who has it loots one.
   collect 6288 x10 quest 1475         -- Atal'ai Tablet
+  collect 6212 quest 1446 optional    -- Head of Jammal'an: Jammal'an the Prophet
+
+step Sunken Temple: Morphaz (priests)
+  when group 1475
+  when onquest 8257
+  only Priest
+  tip Morphaz, one of the green dragons on the way to the Shade of Eranikus, drops the Blood of Morphaz for the priest's quest.
+  collect 20025 quest 8257            -- Blood of Morphaz: Morphaz
 
 step Sunken Temple: the Shade of Eranikus
   when group 1475
   tip The Shade of Eranikus waits at the very end, past the green dragons. He drops the Essence of Eranikus: right-click it, then hand it in at the Essence Font in his room before you leave.
   accept 3373 item 10454 optional     -- Essence of Eranikus, a drop
   turnin 3373 object 148512 optional  -- Essence Font
+
+# Groupe Alliance 0.11.0: a temple quest taken but not done (no run, or the boss missed) is dropped
+# here: the route never comes back to the Sunken Temple.
+step Jammal'an the Prophet: not done
+  when onquest 1446
+  when !complete 1446
+  tip Jammal'an the Prophet needs the Sunken Temple, and the guide does not come back to it: abandon it.
+  abandon 1446
+
+step Blood of Morphaz: not done
+  only Priest
+  when onquest 8257
+  when !complete 8257
+  tip Blood of Morphaz needs the Sunken Temple, and the guide does not come back to it: abandon it.
+  abandon 8257
 
 # Groupe Alliance 0.7.0: hearthstone note (where the stone is bound at this point of the pack, and the way
 # without it when it is still on cooldown). Text only, the step is Polestar's.
@@ -347,6 +385,14 @@ step Wildkin feathers
   zone The Hinterlands
   tip The Wildkin Feathers lie on the ground across the Hinterlands, south and east of Aerie Peak, where the owlbeasts roam; the mobs here are well below you now.
   collect 10819 quest 3661                    -- Wildkin Feather
+
+# Groupe Alliance 0.11.0: Jammal'an the Prophet (1446, Group 22) handed in at Shadra'Alor, a detour
+# south from the feathers' hills (Atal'ai Exile 33.75,75.21).
+step Atal'ai Exile
+  when complete 1446
+  zone The Hinterlands
+  tip Jammal'an's head: ride south to Shadra'Alor, the troll ruins in the south-west of the Hinterlands, west of the Altar of Zul. The Atal'ai Exile waits on a ledge beside the steps of one of the pyramids. A detour of about 10 minutes there and back.
+  turnin 1446                                 -- Atal'ai Exile
 
 step The Super Snapper FX
   when group 2944

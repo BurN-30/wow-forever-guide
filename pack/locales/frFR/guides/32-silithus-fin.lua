@@ -99,6 +99,8 @@ return {
 	["Broken Pillar"] = "Pilier brisé",
 	-- {npc:7771} Marvon Rivetseeker
 	["Ride south-west to {npc:7771}'s camp at the Broken Pillar."] = "Partez au sud-ouest jusqu'au camp de {npc:7771}, au Pilier brisé.",
+	-- {npc:7771} Marvon Rivetseeker
+	["{npc:7771}'s next two quests, Into the Depths and Secret of the Circle, are in the Sunken Temple, which the guide ran in Group 25: skip them."] = "Les deux quêtes suivantes de {npc:7771}, Dans les profondeurs et Le secret du cercle, se font dans le Temple englouti, que le guide a fait au Groupe 25 : les passer.",
 
 	-- Step 18: The Slithering Scar
 	["The Slithering Scar"] = "La Balafre sinueuse",

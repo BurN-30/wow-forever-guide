@@ -111,6 +111,7 @@ step Aquementas
 step Broken Pillar
   tip Ride south-west to Marvon Rivetseeker's camp at the Broken Pillar.
   turnin 3444
+  note Marvon's next two quests, Into the Depths and Secret of the Circle, are in the Sunken Temple, which the guide ran in Group 25: skip them.
 
 step Un'Goro Crater
   zone Un'Goro Crater

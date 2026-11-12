@@ -22,35 +22,41 @@ return {
 	-- {npc:9116} Eridan Bluewind
 	["{npc:9116}, inside"] = "{npc:9116}, à l'intérieur",
 
-	-- Step 4: Grazle
+	-- Step 4: The Emerald Sanctuary: Greta Mosshoof (priests)
+	-- {npc:10922} Greta Mosshoof
+	["The Emerald Sanctuary: {npc:10922} (priests)"] = "Le Sanctuaire d'Émeraude : {npc:10922} (prêtres)",
+	-- {quest:8257} Blood of Morphaz · {npc:10922} Greta Mosshoof
+	["{quest:8257}, from the Sunken Temple: {npc:10922} gives the priests' reward."] = "{quest:8257}, du Temple englouti : {npc:10922} donne la récompense des prêtres.",
+
+	-- Step 5: Grazle
 	-- {zone:1448} Felwood · {npc:11554} Grazle
 	["Ride north out of Astranaar into {zone:1448}. {npc:11554} the furbolg stands by the road just south of the Emerald Sanctuary."] = "Partez vers le nord depuis Astranaar pour entrer dans {zone:1448}. {npc:11554} le furbolg se tient au bord de la route, juste au sud du Sanctuaire d'émeraude.",
 
-	-- Step 5: Deadwood Village
+	-- Step 6: Deadwood Village
 	["Deadwood Village"] = "Village des Mort-bois",
 	-- {npc:11554} Grazle
 	-- plural, as words: Deadwood Headdress Feathers = {item:21377} Deadwood Headdress Feather
 	["The Deadwood furbolgs live in the village just south-west of {npc:11554}; keep the Deadwood Headdress Feathers they drop."] = "Les furbolgs Mort-bois vivent dans le village juste au sud-ouest de {npc:11554} ; gardez les Coiffures de plumes mort-bois qu'ils laissent tomber.",
 
-	-- Step 6: Level 52.58
+	-- Step 7: Level 52.58
 	["Level 52.58"] = "Niveau 52.58",
 	-- {item:9328} Super Snapper FX
 	["If you skipped The Horn of the Beast or The {item:9328}, grind here to level 52.58 to stay on the route's plan."] = "Si vous avez passé La corne de la bête ou {item:9328}, tuez des monstres ici jusqu'au niveau 52.58 pour suivre le plan de l'itinéraire.",
 	-- {npc:7153} Deadwood Warrior
 	["grind on {npc:7153}"] = "tuez en boucle : {npc:7153}",
 
-	-- Step 7: Grazle
+	-- Step 8: Grazle
 	-- {npc:15395} Nafien · {zone:1448} Felwood
 	["{npc:15395} waits at the north end of {zone:1448}"] = "{npc:15395} attend à l'extrémité nord de {zone:1448}",
 	["Five feathers buy a little Timbermaw reputation"] = "Cinq plumes rapportent un peu de réputation Grumegueule",
 
-	-- Step 8: Level 52.69
+	-- Step 9: Level 52.69
 	["Level 52.69"] = "Niveau 52.69",
 	["Top up here to level 52.69 before the hand-ins at Jaedenar: they take you to level 53."] = "Montez ici jusqu'au niveau 52.69 avant les rendus de Jaedenar : ils vous amènent au niveau 53.",
 	-- {npc:7155} Deadwood Pathfinder
 	["grind on {npc:7155}"] = "tuez en boucle : {npc:7155}",
 
-	-- Step 9: Jadefire Glen
+	-- Step 10: Jadefire Glen
 	["Jadefire Glen"] = "Vallon des Jadefeu",
 	-- {npc:9454} Xavathras
 	-- plural, as words: Jadefire Shadowstalkers = {npc:7110} Jadefire Shadowstalker
@@ -58,10 +64,10 @@ return {
 	-- {npc:7109} Jadefire Felsworn
 	["grind on {npc:7109}"] = "tuez en boucle : {npc:7109}",
 
-	-- Step 10: Ruins of Constellas
+	-- Step 11: Ruins of Constellas
 	["Ruins of Constellas"] = "Ruines de Constellas",
 
-	-- Step 11: Jaedenar
+	-- Step 12: Jaedenar
 	["Jaedenar"] = "Jaedenar",
 	-- {item:13140} Blood Red Key · {npc:11018} Arko'narin
 	["Jaedenar is the ruined temple north of the glen. Some of its cultists drop a {item:13140}, about one kill in thirty: it opens {npc:11018}'s cell in Shadow Hold, the cave at the back. If it drops, clear the way out before you free her; if not, skip her quests."] = "Jaedenar est le temple en ruine au nord du vallon. Certains de ses cultistes laissent tomber {item:13140}, environ une fois sur trente : il ouvre la cellule de {npc:11018} dans le Fort des ombres, la grotte du fond. S'il tombe, dégagez la sortie avant de la libérer ; sinon, passez ses quêtes.",
@@ -72,14 +78,14 @@ return {
 	-- {npc:7125} Jaedenar Hound
 	["grind on {npc:7125}"] = "tuez en boucle : {npc:7125}",
 
-	-- Step 12: Jaedenar
+	-- Step 13: Jaedenar
 	["Keep her alive until she is out of the cave"] = "Gardez-la en vie jusqu'à sa sortie de la grotte",
 
-	-- Step 13: Level 52.9
+	-- Step 14: Level 52.9
 	["Level 52.9"] = "Niveau 52.9",
 	["Top up here to level 52.9 before the hand-ins at Emerald Sanctuary: they take you to level 53."] = "Montez ici jusqu'au niveau 52.9 avant les rendus au Sanctuaire d'émeraude : ils vous amènent au niveau 53.",
 
-	-- Step 15: Shatter Scar Vale
+	-- Step 16: Shatter Scar Vale
 	["Shatter Scar Vale"] = "Val Grêlé",
 	-- plural, as words: Entropic Beasts = {npc:9878} Entropic Beast
 	["Follow the road north to the cratered vale and walk to each crater, killing the Entropic Beasts and Horrors between them."] = "Suivez la route vers le nord jusqu'au val criblé de cratères et rendez-vous à chaque cratère, en tuant les Bêtes d'entropie et les Horreurs entre eux.",
@@ -87,30 +93,30 @@ return {
 	["Second crater"] = "Deuxième cratère",
 	["Third crater"] = "Troisième cratère",
 
-	-- Step 16: Irontree Woods
+	-- Step 17: Irontree Woods
 	["Irontree Woods"] = "Bois d'Arbrefer",
 	-- {item:11503} Blood Amber
 	["The Warpwood treants of Irontree Woods, east of Jadefire Run, carry the {item:11503}."] = "Les tréants Crochebois du Bois d'Arbrefer, à l'est du Défilé des Jadefeu, portent {item:11503}.",
 	["Below ground"] = "Sous terre",
 
-	-- Step 17: Nafien
+	-- Step 18: Nafien
 	-- {npc:15395} Nafien
 	["Follow the road north to the cave mouth of Timbermaw Hold; {npc:15395} guards it."] = "Suivez la route vers le nord jusqu'à l'entrée de la grotte du Repaire des Grumegueules ; {npc:15395} la garde.",
 
-	-- Step 18: Felpaw Village
+	-- Step 19: Felpaw Village
 	["Felpaw Village"] = "Village de Gangrepatte",
 	-- {quest:8470} Deadwood Ritual Totem
 	["The Deadwood furbolgs of Felpaw Village fill the hills west of the cave. The Avengers can drop a {quest:8470}.\nCareful: Den Watchers are level 53-54; they call nearby allies within 25 yd once below 50% health and run off for help below 15%."] = "Les furbolgs Mort-bois du Village de Gangrepatte occupent les collines à l'ouest de la grotte. Les vengeurs peuvent laisser tomber {quest:8470}.\nAttention : les protecteurs sont de niveau 53-54 ; sous 50 % de vie, ils appellent les alliés à moins de 25 mètres, et sous 15 % ils s'enfuient chercher de l'aide.",
 
-	-- Step 19: Nafien
+	-- Step 20: Nafien
 	-- {zone:1452} Winterspring
 	["Salfa stands at the {zone:1452} end of the tunnel: keep it"] = "Salfa se tient à l'extrémité du tunnel côté {zone:1452} : gardez-la",
 
-	-- Step 20: Felpaw Village
+	-- Step 21: Felpaw Village
 	-- {quest:8470} Deadwood Ritual Totem
 	["{quest:8470}, a rare drop"] = "{quest:8470}, butin rare",
 
-	-- Step 22: Timbermaw Hold
+	-- Step 23: Timbermaw Hold
 	["Timbermaw Hold"] = "Repaire des Grumegueules",
 	-- {npc:11558} Kernda · {npc:11557} Meilosh
 	["Step into the cave: {npc:11558} and {npc:11557} stand just inside."] = "Entrez dans la grotte : {npc:11558} et {npc:11557} se tiennent juste à l'intérieur.",
@@ -119,33 +125,33 @@ return {
 	-- {npc:11557} Meilosh · {quest:6031} Runecloth
 	["{npc:11557}: thirty {quest:6031}, handed in when you pass through again at 57; below ground"] = "{npc:11557} : trente {quest:6031}, à rendre quand vous repasserez au niveau 57 ; sous terre",
 
-	-- Step 23: Jadefire Run: kill these as you meet them
+	-- Step 24: Jadefire Run: kill these as you meet them
 	["Jadefire Run: kill these as you meet them"] = "Défilé des Jadefeu : tuez-les au fur et à mesure",
 	-- {npc:10648} Xavaric · {quest:939} Flute of Xavaric · {item:11674} Jadefire Felbind
 	["Jadefire Run is the satyr valley in the north-west, with {npc:10648} at its far end. He drops the {quest:939}; every Jadefire satyr can drop {item:11674}."] = "Le Défilé des Jadefeu est la vallée des satyres au nord-ouest, avec {npc:10648} tout au fond. Il laisse tomber {quest:939} ; chaque satyre Jadefeu peut laisser tomber {item:11674}.",
 
-	-- Step 24: Jaedenar again
+	-- Step 25: Jaedenar again
 	["Jaedenar again"] = "Retour à Jaedenar",
 	-- {item:12922} Empty Canteen · {npc:11018} Arko'narin · {npc:9518} Rakaiah
 	["Use the {item:12922} at the corrupted moonwell in the middle of Jaedenar. If you freed {npc:11018}, go back into Shadow Hold for the succubus {npc:9518}."] = "Utilisez {item:12922} au puits de lune corrompu au centre de Jaedenar. Si vous avez libéré {npc:11018}, retournez dans le Fort des ombres pour la succube {npc:9518}.",
 
-	-- Step 25: Oozes
+	-- Step 26: Oozes
 	["Oozes"] = "Limons",
 	-- plural, as words: Tainted Oozes = {npc:7092} Tainted Ooze
 	["The Cursed and Tainted Oozes slide about the streams and fel pools around Jaedenar and Bloodvenom Falls: kill them and use Laris's Empty Ooze Jars on their remains."] = "Les limons maudits et les limons corrompus glissent le long des ruisseaux et des bassins gangrenés autour de Jaedenar et des Chutes de la Vénéneuse : tuez-les et utilisez les pots vides de Laris sur leurs restes.",
 
-	-- Step 26: Jaedenar again
+	-- Step 27: Jaedenar again
 	["Trey Lightforge's remains lie beside her."] = "Les restes de Trey Lightforge gisent à côté d'elle.",
 	-- {npc:9518} Rakaiah
 	["{npc:9518}, below ground"] = "{npc:9518}, sous terre",
 	-- {npc:11020} Remains of Trey Lightforge
 	["{npc:11020}, below ground"] = "{npc:11020}, sous terre",
 
-	-- Step 28: The Emerald Sanctuary
+	-- Step 29: The Emerald Sanctuary
 	-- {zone:1448} Felwood
 	["Ride south-east from Jaedenar to the Emerald Sanctuary, the druids' camp by the road in southern {zone:1448}."] = "Partez vers le sud-est depuis Jaedenar jusqu'au Sanctuaire d'émeraude, le camp des druides au bord de la route, dans le sud de {zone:1448}.",
 
-	-- Step 29: The Emerald Sanctuary
+	-- Step 30: The Emerald Sanctuary
 	-- {zone:1457} Darnassus
 	["The vial is filled in {zone:1457}: keep it; inside"] = "La fiole se remplit à {zone:1457} : gardez-la ; à l'intérieur",
 	-- {zone:1413} Barrens
