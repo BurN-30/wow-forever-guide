@@ -115,7 +115,19 @@ step Baelog and the hidden chamber
   complete 2240                           -- Explore the hidden chamber
   accept 2198 item 7666 optional          -- Shattered Necklace, a drop: for Talvash del Kissel in Ironforge
 
+# Groupe Alliance 0.11.0 (review): the Mage class quest of the codex (Power in Uldaman, 1956, from
+# Tabetha in Dustwallow Marsh after The Exorcism), only for Mages who hold it. Obsidian Power
+# Source: Obsidian Sentinel (Polestar's Forever data, 100 %).
+step Mages: Power in Uldaman
+  only Mage
+  when done uld-start
+  when onquest 1956
+  along until uld-archaedas
+  tip The Obsidian Sentinel, one of the bosses on the way to Archaedas, drops the Obsidian Power Source for Tabetha in Dustwallow Marsh.
+  collect 8053 quest 1956                 -- Obsidian Power Source: Obsidian Sentinel
+
 step Archaedas and the Discs of Norgannon
+  label uld-archaedas
   when done uld-start
   tip Archaedas, the last boss, wakes the stone guardians around his room during the fight. Behind him, the Discs of Norgannon: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave.
   accept 2278 object 131474 optional      -- The Discs of Norgannon
