@@ -127,7 +127,7 @@ Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces 
 
 ### Réglage 6 : éteint à la première installation (0.10.0)
 
-- Clients : les deux. Demande de Nathan : BuffAlerts ne doit pas s'imposer ; qui en veut l'allume.
+- Clients : les deux. Choix du groupe : BuffAlerts ne doit pas s'imposer (jugé trop voyant) ; qui en veut l'allume.
 - Avant la 0.10.0, l'addon était chargé et actif dès l'installation : toutes les alertes de la classe jouée (tableau plus haut), réglages de l'auteur, plus les réglages 2 et 4.
 - Valeur : `## DefaultState: disabled` dans `BuffAlertsForever.toc`. Aucun fichier Lua ne change.
 - Fonctionnement : le jeu garde, pour chaque personnage, la liste des addons cochés ou décochés (`WTF\Account\<compte>\<royaume>\<personnage>\AddOns.txt`). `DefaultState` ne sert qu'à un addon dont le jeu n'a encore aucun état enregistré sur le compte : il apparaît alors décoché dans la liste des addons et ne se charge pas (aucune mémoire, aucun événement). Un addon déjà vu garde l'état enregistré. Sources : [Warcraft Wiki, TOC format](https://warcraft.wiki.gg/wiki/TOC_format) (« Set to disabled to require the user to explicitly enable the addon in the AddOn List », lu le 12/11/2026) ; l'interface du client Forever 1.60.1.70888 lit cet état par défaut (`C_AddOns.IsAddOnDefaultEnabled`, `Blizzard_AddOnList/AddonList.lua` 961 et 969 à 978 : entrée `ADDON_LIST_RESET_TO_DEFAULT` du clic droit dans la liste des addons ; dépôt Gethe/wow-ui-source, branche `forever`) ; la règle « aucun état enregistré sur le compte » vient d'un code décompilé du client 3.3.5 (`UIUtil/AddOns.cpp`, `ComputeAddOnEnableState`) : supposée identique sur Forever, à vérifier en jeu.
@@ -229,7 +229,7 @@ Class spells are matched by spell ID (`FamilyOf`, `Core.lua` 99-110), each ID va
 
 ### Default 6: off on a first install (0.10.0)
 
-- Both clients. Nathan's request: BuffAlerts should not push itself on anyone; whoever wants it turns it on. Before 0.10.0 the addon loaded and ran from the install: every alert of the played class, the author's settings plus defaults 2 and 4.
+- Both clients. The group's choice: BuffAlerts should not push itself on anyone (found too intrusive); whoever wants it turns it on. Before 0.10.0 the addon loaded and ran from the install: every alert of the played class, the author's settings plus defaults 2 and 4.
 - Value: `## DefaultState: disabled` in `BuffAlertsForever.toc`; no Lua file changes.
 - How it works: the game keeps, per character, which addons are ticked (`WTF\Account\<account>\<realm>\<character>\AddOns.txt`). `DefaultState` only applies to an addon the game has no saved state for on the account: it shows unticked in the AddOn list and does not load (no memory, no events). An addon already seen keeps its saved state. Sources: [Warcraft Wiki, TOC format](https://warcraft.wiki.gg/wiki/TOC_format) (read 2026-11-12); the Forever 1.60.1.70888 interface reads that default (`C_AddOns.IsAddOnDefaultEnabled`, `Blizzard_AddOnList/AddonList.lua` 961 and 969-978, the AddOn list's `ADDON_LIST_RESET_TO_DEFAULT` right-click entry; Gethe/wow-ui-source, `forever` branch); the "no saved state on the account" rule comes from decompiled 3.3.5 client code (`UIUtil/AddOns.cpp`, `ComputeAddOnEnableState`): assumed the same on Forever, to check in game.
 - Effect: a first install of the pack shows BuffAlerts unticked; a friend who already has the pack (0.4.0 to 0.9.9) keeps it as it was (ticked, or unticked if they unticked it); a new character of such a friend gets the state of their other characters.
