@@ -26,7 +26,7 @@ step Mirage Raceway
   tip The Mirage Raceway lies on the Shimmering Flats in south-east Thousand Needles. Fizzle Brassbolts and Pozzik are in the camps beside the track.
   turnin 1137 optional                -- Fizzle Brassbolts
   turnin 2769
-  note Wizzle's next task, Gahz'rilla, is a Zul'Farrak boss summoned with the Mallet of Zul'Farrak, made at Jintha'Alor in the Hinterlands, where the route only goes after Zul'Farrak: skip it.
+  note Wizzle's next task, Gahz'rilla, is a Zul'Farrak boss summoned with the Mallet of Zul'Farrak, made at Jintha'Alor in the Hinterlands, where the route only goes after Zul'Farrak: it is for a second run, asked at the end of this stop.
   tip Zamek stands by the goblin camp.
   accept 1190 optional                -- Pozzik: only after News for Fizzle
   accept 1191                         -- Zamek
@@ -35,6 +35,22 @@ step Mirage Raceway
   turnin 1190 optional                -- Rizzle's Unguarded Plans, inside
   accept 1194 optional
   turnin 1194 optional
+
+# Groupe Alliance 0.11.0: the second Zul'Farrak run, optional, asked here (`when group 2770`), the
+# first place where its quests can be gathered: Gahz'rilla (2770, Wizzle Brassbolts, required 40,
+# shareable) is taken now; the Mallet of Zul'Farrak is made at the start of Group 22 (Sacred Mallet
+# from Qiaga the Keeper at the Altar of Zul, used at the Jintha'Alor altar, 59.7,77.8); Nekrum's
+# Medallion (2991, after 2990, not shareable) is taken from Thadius Grimshade in Group 22; the run
+# is in Group 24 from Gadgetzan (49-50), Gahz'rilla handed in at the Mirage Raceway on the way,
+# Nekrum's chain at Nethergarde Keep and Aerie Peak in Group 25. The Prophecy of Mosh'aru is not in
+# it: Screecher Spirits needs Feralas between two visits to Tanaris, which only Group 28 offers.
+# Data: Polestar's Forever data (prerequisites as TrinityCore); places: Warcraft Tavern's Forever
+# Zul'Farrak guides (12/11/2026, written from Classic).
+step Zul'Farrak, second run (optional): Wizzle Brassbolts
+  when group 2770
+  zone Thousand Needles
+  tip A second Zul'Farrak run, in Group 24 (levels 49 to 50, from Gadgetzan), for two bosses this first run cannot give: Gahz'rilla (taken here: 7,100 XP and the Carrot on a Stick, a trinket that speeds up your mount) and Nekrum Gutchewer (Nekrum's Medallion, taken from Thadius Grimshade in Group 22: about 8,000 XP with its two follow-ups). Gahz'rilla is called with the Mallet of Zul'Farrak, made at the start of Group 22 at two elite troll temples of the Hinterlands. Worth it for a group that enjoys the dungeon; alone, skip it.
+  accept 2770                         -- Wizzle Brassbolts
 
 step Tanaris
   zone Tanaris
@@ -220,7 +236,7 @@ step Zul'Farrak
   tip Ride north-west from Gadgetzan to the walled city, at the edge of the dunes. Inside, every troll can drop Troll Temper; the scarabs by the graveyard of Theka the Martyr drop the shells.
   tip The pyramid event: free Sergeant Bly and his crew from the cage at the top of the stairs, then hold the stairs against the troll waves. Once the trolls are dead, Bly turns on you: he drops the Divino-matic Rod.
   note Group of 5: share each quest (quest log, Share) before going in. Chief Ukorz Sandscalp, the last boss, waits behind the door Weegli blows open after the pyramid event.
-  note In the quest log before going in: Scarab Shells, Troll Temper and Divino-matic Rod (Gadgetzan). If you took it: Tiara of the Deep (Tabetha, Dustwallow Marsh, Group 18; she is on the way to the boat later). Not on this route: Nekrum's Medallion, Gahz'rilla and The Prophecy of Mosh'aru, whose quests open only after this run.
+  note In the quest log before going in: Scarab Shells, Troll Temper and Divino-matic Rod (Gadgetzan). If you took it: Tiara of the Deep (Tabetha, Dustwallow Marsh, Group 18; she is on the way to the boat later). Not in this run: Nekrum's Medallion and Gahz'rilla, whose quests open only after it (a second run in Group 24, if your group chose it at the Mirage Raceway), and The Prophecy of Mosh'aru, not on this route.
   goto 38.7,20.1 "Zul'Farrak"
   collect 9238 x5 quest 2865          -- Uncracked Scarab Shell
   collect 9523 x20 quest 3042         -- Troll Temper

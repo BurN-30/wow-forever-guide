@@ -47,6 +47,53 @@ step Gadgetzan
   when group 2944
   accept 2944
 
+# Groupe Alliance 0.11.0: the second Zul'Farrak run (`when group 2770`, asked at the Mirage Raceway in
+# Group 21). Nekrum Gutchewer comes in the pyramid event's last wave; Gahz'rilla is called with the
+# Mallet of Zul'Farrak at the gong of the pool, by Hydromancer Velratha's courtyard (Warcraft
+# Tavern's Forever Zul'Farrak guides, written from Classic: to check in game). Gahz'rilla handed in
+# at the Mirage Raceway, 3 minutes north of Gadgetzan; Nekrum's Medallion at Nethergarde Keep in
+# Group 25 (27-steppes-ardentes). Not done: dropped here, the route does not come back.
+step Zul'Farrak, second run (optional)
+  label zf2-start
+  when group 2770
+  when onquest 2770,2991
+  zone Tanaris
+  tip The second Zul'Farrak run: ride north-west from Gadgetzan to the walled city, as in Group 21. About an hour with a group of 5; the trolls are below you now.
+  note In the quest log before going in: Gahz'rilla (Wizzle Brassbolts, Group 21) and Nekrum's Medallion (Thadius Grimshade, Group 22: each player takes their own). In the bags of one player: the Mallet of Zul'Farrak (start of Group 22). Without the mallet, Gahz'rilla cannot be called: Nekrum alone is still worth the trip.
+  goto 38.7,20.1 "Zul'Farrak" r 25
+
+step Zul'Farrak: Nekrum Gutchewer
+  when group 2770
+  when done zf2-start
+  tip Free Sergeant Bly's crew at the top of the pyramid stairs and hold the stairs: Nekrum Gutchewer and Shadowpriest Sezz'ziz come with the last wave, at the bottom of the stairs. Each player with the quest loots their own medallion.
+  collect 9471 quest 2991 optional    -- Nekrum's Medallion: Nekrum Gutchewer
+
+step Zul'Farrak: Gahz'rilla
+  when group 2770
+  when done zf2-start
+  tip Gahz'rilla's pool is in Hydromancer Velratha's courtyard, round the corner from the entrance. The player with the Mallet of Zul'Farrak uses it on the gong by the pool; Gahz'rilla rises from the water and throws players into the air: fight him in the pool, or under the ruin left of the archway, to soften the falls.
+  use 9240 optional                   -- Mallet of Zul'Farrak, at the gong
+  collect 8707 quest 2770 optional    -- Gahz'rilla's Electrified Scale: Gahz'rilla
+
+step Mirage Raceway: Wizzle Brassbolts
+  when complete 2770
+  zone Thousand Needles
+  tip Gahz'rilla: ride north out of Tanaris to the Mirage Raceway on the Shimmering Flats, about 3 minutes each way from Gadgetzan; the guide then goes on to Un'Goro Crater.
+  turnin 2770                         -- Wizzle Brassbolts
+
+step Gahz'rilla: not done
+  when onquest 2770
+  when !complete 2770
+  zone Tanaris
+  tip Gahz'rilla needs Zul'Farrak and the Mallet of Zul'Farrak, and the guide does not come back to them: abandon it. A finished Nekrum's Medallion stays, for Thadius Grimshade in Group 25.
+  abandon 2770
+
+step Nekrum's Medallion: not done
+  when onquest 2991
+  when !complete 2991
+  tip Nekrum's Medallion needs Zul'Farrak, and the guide does not come back to it: abandon it.
+  abandon 2991
+
 step Un'Goro Crater
   zone Un'Goro Crater
   goto 71.6,76.0 "Un'Goro Crater"

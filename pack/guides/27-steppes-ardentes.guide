@@ -271,6 +271,19 @@ step Fly to Nethergarde Keep
   fly "Nethergarde Keep"
   zone Blasted Lands
 
+# Groupe Alliance 0.11.0: Nekrum's Medallion (2991, second Zul'Farrak run, Group 24) and its two
+# follow-ups: The Divination (2992, Thadius's ritual, here) and Return to the Hinterlands (2993,
+# Gryphon Master Talonaxe, Aerie Peak, later in this guide). Polestar's Forever data and TrinityCore.
+step Nethergarde Keep: Thadius Grimshade
+  when complete 2991
+  zone Blasted Lands
+  tip Nekrum's Medallion: Thadius waits at the top of the keep. He then reads the medallion: wait for his ritual, and his next errand goes to Aerie Peak, where this guide passes later.
+  turnin 2991                         -- Thadius Grimshade
+  accept 2992
+  complete 2992                       -- Wait for the ritual
+  turnin 2992
+  accept 2993                         -- For Gryphon Master Talonaxe, Aerie Peak: keep it
+
 # ---------------------------------------------------------------- Blasted Lands
 
 step Kum'isha the Collector
@@ -378,6 +391,12 @@ step Fly to Aerie Peak
   goto 55.9,47.9 "Ironforge flight master"
   fly "Aerie Peak"
   zone The Hinterlands
+
+step Aerie Peak: Gryphon Master Talonaxe
+  when onquest 2993
+  zone The Hinterlands
+  tip Return to the Hinterlands: Talonaxe is in the aviary at the top of Aerie Peak. His next task, Saving Sharpbeak, sends you to the top of Jintha'Alor among elite trolls: not on this route, skip it.
+  turnin 2993                         -- Gryphon Master Talonaxe
 
 # ---------------------------------------------------------------- The Hinterlands, Ironforge and Rut'theran
 

@@ -164,14 +164,23 @@ return {
 	["Fly to Nethergarde Keep"] = "Voler jusqu'au Rempart-du-Néant",
 	["Morgan's Vigil flight master"] = "Maître de vol de la Veille de Morgan",
 
-	-- Step 43: Kum'isha the Collector
+	-- Step 43: Nethergarde Keep: Thadius Grimshade
+	-- {npc:8022} Thadius Grimshade
+	["Nethergarde Keep: {npc:8022}"] = "Rempart-du-Néant : {npc:8022}",
+	-- {quest:2991} Nekrum's Medallion · {npc:8022} Thadius Grimshade
+	["{quest:2991}: {npc:8022} waits at the top of the keep. He then reads the medallion: wait for his ritual, and his next errand goes to Aerie Peak, where this guide passes later."] = "{quest:2991} : {npc:8022} attend en haut du donjon. Il lit ensuite le médaillon : attendre la fin de son rituel ; sa tâche suivante mène au Nid-de-l'Aigle, où ce guide passe plus tard.",
+	["Wait for the ritual"] = "Attendre la fin du rituel",
+	-- {npc:5636} Gryphon Master Talonaxe
+	["For {npc:5636}, Aerie Peak: keep it"] = "Pour {npc:5636}, au Nid-de-l'Aigle : la garder",
+
+	-- Step 44: Kum'isha the Collector
 	-- {npc:7363} Kum'isha the Collector · {zone:1419} Blasted Lands · {npc:7664} Razelikh the Defiler · {object:141891} Razelikh's Tear
 	-- plural, as words: Imperfect Draenethyst Fragments = {item:10593} Imperfect Draenethyst Fragment
 	["{npc:7363} waits at the Rise of the Defiler, the hill south-west of the keep. The {zone:1419} mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, {npc:7664} and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds {object:141891}, Flames of Chaos and then Enrage at 15%."] = "{npc:7363} attend à la Cime du Souilleur, la colline au sud-ouest du rempart. Les monstres de {zone:1419} en chemin laissent tomber les fragments de draenéthyste imparfaits ; apportez-lui ce que vous avez.\nAttention : Gangrénaire, {npc:7664} et Ilifar sont tous des élites de niveau 60. Razelikh lance Brûlure de mana, Strong Cleave et Decimate, et à mesure que sa vie baisse il ajoute {object:141891}, Flames of Chaos, puis s'enrage à 15 %.",
 	-- {npc:7363} Kum'isha the Collector
 	["{npc:7363} walks around here: look inside the circle on the map"] = "{npc:7363} se promène par ici : cherchez dans le cercle sur la carte",
 
-	-- Step 44: Sunken Temple (dungeon, optional): the Pool of Tears
+	-- Step 45: Sunken Temple (dungeon, optional): the Pool of Tears
 	["Sunken Temple (dungeon, optional): the Pool of Tears"] = "Temple englouti (donjon, facultatif) : le Bassin des larmes",
 	-- {zone:1419} Blasted Lands · {zone:1435} Swamp of Sorrows
 	["Ride north out of the {zone:1419} into the {zone:1435}, then east past Stonard (Horde) to the Pool of Tears. The temple lies under the water: swim down into it and find the dungeon's entrance inside."] = "Sortir des {zone:1419} par le nord vers le {zone:1435}, puis aller à l'est après Pierrêche (Horde) jusqu'au Bassin des larmes. Le temple est sous l'eau : plonger, entrer et trouver l'entrée du donjon à l'intérieur.",
@@ -180,20 +189,20 @@ return {
 	["In the quest log before going in: {quest:1475} ({npc:5384}, {zone:1453}, Group 22). If you took them: {quest:1446} ({npc:5598}, {zone:1425}, Group 22), and for priests {quest:8257} ({npc:8405}, {zone:1447}, earlier in this guide). Not on this route: {npc:7771}'s two quests and The God Hakkar, which open only after this run, and the other classes' quests."] = "Dans le journal avant d'entrer : {quest:1475} ({npc:5384}, {zone:1453}, Groupe 22). Si elles ont été prises : {quest:1446} ({npc:5598}, {zone:1425}, Groupe 22) et, pour les prêtres, {quest:8257} ({npc:8405}, {zone:1447}, plus tôt dans ce guide). Pas sur ce parcours : les deux quêtes de {npc:7771} et Le dieu Hakkar, qui ne s'ouvrent qu'après ce passage, ni les quêtes des autres classes.",
 	["Sunken Temple"] = "Temple englouti",
 
-	-- Step 45: Sunken Temple: the tablets and Jammal'an
+	-- Step 46: Sunken Temple: the tablets and Jammal'an
 	["Sunken Temple: the tablets and Jammal'an"] = "Temple englouti : les tablettes et Jammal'an",
 	-- {quest:1446} Jammal'an the Prophet · {npc:5598} Atal'ai Exile
 	-- plural, as words: Atal'ai Tablets = {item:6288} Atal'ai Tablet
 	["The Atal'ai Tablets lie in the temple's halls: pick them up as you clear. {quest:1446} waits on the upper level, once the six troll champions of the balconies around the central pit are dead: his head is for the {npc:5598}'s quest (Group 22), and every player who has it loots one."] = "Les tablettes atal'ai sont dans les salles du temple : les ramasser en avançant. {quest:1446} attend au niveau supérieur, une fois tués les six champions trolls des balcons qui entourent la fosse centrale : sa tête est pour la quête de l'{npc:5598} (Groupe 22), et chaque joueur qui l'a en ramasse une.",
 
-	-- Step 46: Sunken Temple: Morphaz (priests)
+	-- Step 47: Sunken Temple: Morphaz (priests)
 	["Sunken Temple: Morphaz (priests)"] = "Temple englouti : Morphaz (prêtres)",
 	-- {npc:5709} Shade of Eranikus · {quest:8257} Blood of Morphaz
 	["Morphaz, one of the green dragons on the way to the {npc:5709}, drops the {quest:8257} for the priest's quest."] = "Morphaz, l'un des dragons verts avant l'{npc:5709}, lâche le sang demandé par {quest:8257}, la quête des prêtres.",
 	-- {quest:8257} Blood of Morphaz
 	["{quest:8257}: Morphaz"] = "{quest:8257} : Morphaz",
 
-	-- Step 47: Sunken Temple: the Shade of Eranikus
+	-- Step 48: Sunken Temple: the Shade of Eranikus
 	-- {npc:5709} Shade of Eranikus
 	["Sunken Temple: the {npc:5709}"] = "Temple englouti : {npc:5709}",
 	-- {npc:5709} Shade of Eranikus · {item:10454} Essence of Eranikus · {object:148512} Essence Font
@@ -201,65 +210,71 @@ return {
 	-- {item:10454} Essence of Eranikus
 	["{item:10454}, a drop"] = "{item:10454}, un butin",
 
-	-- Step 48: Jammal'an the Prophet: not done
+	-- Step 49: Jammal'an the Prophet: not done
 	-- {quest:1446} Jammal'an the Prophet
 	["{quest:1446}: not done"] = "{quest:1446} : pas faite",
 	-- {quest:1446} Jammal'an the Prophet
 	["{quest:1446} needs the Sunken Temple, and the guide does not come back to it: abandon it."] = "{quest:1446} demande le Temple englouti, et le guide n'y revient pas : l'abandonner.",
 
-	-- Step 49: Blood of Morphaz: not done
+	-- Step 50: Blood of Morphaz: not done
 	-- {quest:8257} Blood of Morphaz
 	["{quest:8257}: not done"] = "{quest:8257} : pas faite",
 	-- {quest:8257} Blood of Morphaz
 	["{quest:8257} needs the Sunken Temple, and the guide does not come back to it: abandon it."] = "{quest:8257} demande le Temple englouti, et le guide n'y revient pas : l'abandonner.",
 
-	-- Step 50: To Stoutlager Inn
+	-- Step 51: To Stoutlager Inn
 	["Use your hearthstone (Stoutlager Inn, Thelsamar) if it is ready again. On cooldown? Fly from Nethergarde Keep to Thelsamar."] = "Utilisez votre pierre de foyer (auberge de la Fortebière, Thelsamar) si elle est de nouveau prête. En recharge ? Prenez le griffon du Rempart-du-Néant à Thelsamar.",
 
-	-- Step 57: Stormwind: Brohann Caskbelly
+	-- Step 58: Stormwind: Brohann Caskbelly
 	-- {zone:1455} Ironforge · {zone:1453} Stormwind · {npc:5384} Brohann Caskbelly · {object:28027} Dwarven District
 	["Take the Deeprun Tram from {zone:1455} to {zone:1453} and back: {npc:5384} waits in the {object:28027}."] = "Prendre le Tram des profondeurs de {zone:1455} à {zone:1453}, aller et retour : {npc:5384} attend dans le {object:28027}.",
 
-	-- Step 58: Fly to Aerie Peak
+	-- Step 59: Fly to Aerie Peak
 	["Fly to Aerie Peak"] = "Envolez-vous vers Nid-de-l'Aigle",
 
-	-- Step 59: Wildkin feathers
+	-- Step 60: Aerie Peak: Gryphon Master Talonaxe
+	-- {npc:5636} Gryphon Master Talonaxe
+	["Aerie Peak: {npc:5636}"] = "Nid-de-l'Aigle : {npc:5636}",
+	-- {quest:2993} Return to the Hinterlands
+	["{quest:2993}: Talonaxe is in the aviary at the top of Aerie Peak. His next task, Saving Sharpbeak, sends you to the top of Jintha'Alor among elite trolls: not on this route, skip it."] = "{quest:2993} : Talonaxe est dans la volière en haut du Nid-de-l'Aigle. Sa tâche suivante, Sauver Bec-tranchant, envoie au sommet de Jintha'Alor parmi des trolls élites : hors parcours, la passer.",
+
+	-- Step 61: Wildkin feathers
 	["Wildkin feathers"] = "Plumes d'Indomptable",
 	-- {zone:1425} Hinterlands
 	-- plural, as words: Wildkin Feathers = {item:10819} Wildkin Feather
 	["The Wildkin Feathers lie on the ground across the {zone:1425}, south and east of Aerie Peak, where the owlbeasts roam; the mobs here are well below you now."] = "Les plumes d'Indomptable jonchent le sol dans {zone:1425}, au sud et à l'est du Nid-de-l'Aigle, là où rôdent les chouettards ; les monstres du coin sont désormais bien en dessous de votre niveau.",
 
-	-- Step 60: Atal'ai Exile
+	-- Step 62: Atal'ai Exile
 	-- {zone:1425} Hinterlands · {npc:5598} Atal'ai Exile
 	["Jammal'an's head: ride south to Shadra'Alor, the troll ruins in the south-west of the {zone:1425}, west of the Altar of Zul. The {npc:5598} waits on a ledge beside the steps of one of the pyramids. A detour of about 10 minutes there and back."] = "La tête de Jammal'an : descendre au sud jusqu'à Shadra'Alor, les ruines trolls au sud-ouest des {zone:1425}, à l'ouest de l'autel de Zul. L'{npc:5598} attend sur une corniche, à côté des marches d'une des pyramides. Un détour d'environ 10 minutes aller-retour.",
 
-	-- Step 61: The Super Snapper FX
+	-- Step 63: The Super Snapper FX
 	-- {npc:7977} Gammerita
 	["These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:7977} (level 48 elite) needs a group of 2. Skip it if you are alone: the route has you grind the XP back."] = "Ce sont des monstres élites : il est conseillé de se grouper, cherchez des joueurs avec qui le faire. {npc:7977} (élite de niveau 48) demande un groupe de 2. Passez-la si vous êtes seul : l'itinéraire vous fait regagner l'expérience en tuant des monstres.",
 
-	-- Step 63: Fly to Southshore
+	-- Step 65: Fly to Southshore
 	["Fly to Southshore"] = "Envolez-vous pour Austrivage",
 	["Aerie Peak flight master"] = "Maître de vol de Nid-de-l'Aigle",
 
-	-- Step 65: Fly to Rut'theran Village
+	-- Step 67: Fly to Rut'theran Village
 	["Fly to Rut'theran Village"] = "Envolez-vous vers le village de Rut'theran",
 	["Auberdine flight master"] = "Maître de vol d'Auberdine",
 
-	-- Step 66: Rut'theran Village
+	-- Step 68: Rut'theran Village
 	["Rut'theran Village"] = "Village de Rut'theran",
 	-- {zone:1452} Winterspring
 	["The wildkin are in {zone:1452}: keep it"] = "Les Indomptables sont au {zone:1452} : gardez-la",
 
-	-- Step 67: Druid training
+	-- Step 69: Druid training
 	["Druid training"] = "Entraînement de druide",
 	-- {zone:1455} Ironforge · {zone:1457} Darnassus
 	["{zone:1455} has no druid trainer: take the portal up to {zone:1457} and train in the Cenarion Enclave, then come back down to Rut'theran Village."] = "{zone:1455} n'a pas de maître des druides : prenez le portail vers {zone:1457}, entraînez-vous dans l'Enclave cénarienne, puis redescendez à Rut'theran.",
 
-	-- Step 68: Back to Teldrassil
+	-- Step 70: Back to Teldrassil
 	-- {zone:1438} Teldrassil
 	["Back to {zone:1438}"] = "Retour vers {zone:1438}",
 
-	-- Step 69: Daryn Lightwind
+	-- Step 71: Daryn Lightwind
 	-- {npc:7907} Daryn Lightwind · {npc:7916} Erelas Ambersky
 	["{npc:7907} stands upstairs, above {npc:7916}: go up inside, the arrow cannot tell the floors apart."] = "{npc:7907} se tient à l'étage, au-dessus de {npc:7916} : montez à l'intérieur, la flèche ne distingue pas les étages.",
 }

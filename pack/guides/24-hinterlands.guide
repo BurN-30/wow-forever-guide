@@ -22,6 +22,19 @@ step The Altar of Zul
   goto 49.0,68.7
   complete 2989 @49.0,68.7
 
+# Groupe Alliance 0.11.0: the Mallet of Zul'Farrak for the second Zul'Farrak run (`when group 2770`,
+# Group 24). Sacred Mallet (9241): Qiaga the Keeper, elite 50, at the top of the Altar of Zul
+# (48.6,68.2), 100%; used at the Jintha'Alor altar (59.7,77.8) it becomes the Mallet of Zul'Farrak
+# (9240). Polestar's Forever data; the use, Warcraft Tavern's Forever guide (from Classic).
+step The Mallet of Zul'Farrak (second Zul'Farrak run)
+  when group 2770
+  when onquest 2770
+  zone The Hinterlands
+  tip For Gahz'rilla, one player of the group needs the Mallet of Zul'Farrak. Kill Qiaga the Keeper (elite 50) at the top of the Altar of Zul for the Sacred Mallet, then ride east to Jintha'Alor and fight up to the altar at its very top: use the Sacred Mallet there. Both temples are full of elite trolls of 46 to 50: the whole group goes. Keep the mallet in the bags until Group 24.
+  collect 9241 x1 optional @48.6,68.2 -- Sacred Mallet: Qiaga the Keeper
+  use 9241 optional @59.7,77.8        -- At the Jintha'Alor altar, the very top
+  collect 9240 x1 optional            -- Mallet of Zul'Farrak
+
 # Groupe Alliance 0.11.0: Jammal'an the Prophet (1446), for the Sunken Temple (run in Group 25,
 # 27-steppes-ardentes), asked here (`when group 1446`), before the Sunken Temple question itself
 # (Brohann, Stormwind, below). The Atal'ai Exile (Hinterlands 33.75,75.21, Polestar's Forever data)
@@ -252,11 +265,18 @@ step The bloodmages
 step Nethergarde Keep
   tip Ride on east along the road to the keep first: the Crate of Power Stones expires an hour after Darkshire, and the bloodmages' beasts take longer than that.
   turnin 2990                         -- Thadius Grimshade, at the top of the keep
-  note Thadius' next task, Nekrum's Medallion, is a Zul'Farrak quest: skip it.
+  note Thadius' next task, Nekrum's Medallion, is a Zul'Farrak quest: only for the second run (Group 24), taken in the next step; otherwise skip it.
   turnin 1364                         -- Watcher Mahar Ba, upstairs
   getfp "Nethergarde Keep" npc 8609   -- Alexandra Constantine
   turnin 1395                         -- Quartermaster Lungertz
   turnin 1425
+
+# Groupe Alliance 0.11.0: Nekrum's Medallion (2991, after 2990, not shareable) for the second
+# Zul'Farrak run (`when group 2770`, Group 24); handed in here in Group 25.
+step Thadius Grimshade: Nekrum's Medallion (second Zul'Farrak run)
+  when group 2770
+  tip Back up to the top of the keep: each player takes Nekrum's Medallion from Thadius (it cannot be shared). Nekrum Gutchewer is fought in Zul'Farrak in Group 24, and Thadius takes the medallion back in Group 25.
+  accept 2991                         -- Thadius Grimshade
 
 step Blasted Lands: kill these as you meet them
   zone Blasted Lands
