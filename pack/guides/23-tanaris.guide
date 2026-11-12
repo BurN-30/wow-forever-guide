@@ -26,6 +26,7 @@ step Mirage Raceway
   tip The Mirage Raceway lies on the Shimmering Flats in south-east Thousand Needles. Fizzle Brassbolts and Pozzik are in the camps beside the track.
   turnin 1137 optional                -- Fizzle Brassbolts
   turnin 2769
+  note Wizzle's next task, Gahz'rilla, is a Zul'Farrak boss summoned with the Mallet of Zul'Farrak, made at Jintha'Alor in the Hinterlands, where the route only goes after Zul'Farrak: skip it.
   tip Zamek stands by the goblin camp.
   accept 1190 optional                -- Pozzik: only after News for Fizzle
   accept 1191                         -- Zamek
@@ -65,6 +66,7 @@ step Steamwheedle Port
   accept 8366                         -- Security Chief Bilgewhizzle, inside
   turnin 2872                         -- Stoley, in the port's tavern; inside
   accept 2873
+  note Yeh'kinya, the troll by the harbour, offers Screecher Spirits: her chain goes to Feralas, then into Zul'Farrak and on to the Sunken Temple, in an order the route does not follow: skip it.
 
 step Noonshade Ruins: kill these as you meet them
   zone Tanaris
@@ -206,16 +208,26 @@ step Zul'Farrak (dungeon, optional): Gadgetzan
   accept 3042                         -- Trenton Lighthammer: Troll Temper
   accept 2768                         -- Chief Engineer Bilgewhizzle: Divino-matic Rod
 
+# Groupe Alliance 0.11.0: the quest log note, Tiara of the Deep (Tabetha, Group 18) and the beacon.
+# Velratha in the courtyard of Gahz'rilla's pool, round the corner from the entrance, and the pool on
+# the way out: Warcraft Tavern's Forever Zul'Farrak guide (11/11/2026), itself written from Classic
+# (the dungeon was closed in the Forever beta): to check in game. Nekrum's Medallion (Thadius
+# Grimshade, Group 22), Gahz'rilla (the mallet, Group 22) and The Prophecy of Mosh'aru (Feralas
+# between two visits to Tanaris) open only after this run: a second run, not offered.
 step Zul'Farrak
   when done zf-start
   zone Tanaris
   tip Ride north-west from Gadgetzan to the walled city, at the edge of the dunes. Inside, every troll can drop Troll Temper; the scarabs by the graveyard of Theka the Martyr drop the shells.
   tip The pyramid event: free Sergeant Bly and his crew from the cage at the top of the stairs, then hold the stairs against the troll waves. Once the trolls are dead, Bly turns on you: he drops the Divino-matic Rod.
   note Group of 5: share each quest (quest log, Share) before going in. Chief Ukorz Sandscalp, the last boss, waits behind the door Weegli blows open after the pyramid event.
+  note In the quest log before going in: Scarab Shells, Troll Temper and Divino-matic Rod (Gadgetzan). If you took it: Tiara of the Deep (Tabetha, Dustwallow Marsh, Group 18; she is on the way to the boat later). Not on this route: Nekrum's Medallion, Gahz'rilla and The Prophecy of Mosh'aru, whose quests open only after this run.
   goto 38.7,20.1 "Zul'Farrak"
   collect 9238 x5 quest 2865          -- Uncracked Scarab Shell
   collect 9523 x20 quest 3042         -- Troll Temper
   collect 8548 quest 2768             -- Divino-matic Rod: Sergeant Bly
+  note Hydromancer Velratha holds the courtyard of the great pool, round the corner from the entrance: kill her on the way out. The tiara drops for every player who has the quest.
+  collect 9234 quest 2846 optional    -- Tiara of the Deep: Hydromancer Velratha
+  note A rare OOX-17/TN Distress Beacon can drop here, as from most of the creatures of Tanaris: its quest leads to a robot in the south of Tanaris, then to a goblin of Stranglethorn Vale. The guide does not follow it.
 
 step Gadgetzan: Zul'Farrak rewards
   when done zf-start
@@ -224,11 +236,27 @@ step Gadgetzan: Zul'Farrak rewards
   turnin 3042                         -- Trenton Lighthammer
   turnin 2768                         -- Chief Engineer Bilgewhizzle
 
+# Groupe Alliance 0.11.0: Tiara of the Deep (2846, Tabetha, Group 18, `when group 2846`). Without the
+# tiara (no run, or Velratha not killed), the quest is dropped here: the route never comes back to
+# Zul'Farrak. With it, Tabetha's hut is a short ride from Theramore, before the boat.
+step Tiara of the Deep: not done
+  when onquest 2846
+  when !complete 2846
+  zone Tanaris
+  tip Tiara of the Deep needs Hydromancer Velratha, in Zul'Farrak, and the guide does not come back here: abandon it.
+  abandon 2846
+
 step Fly to Theramore
   zone Tanaris
   goto 51.0,29.3 "Gadgetzan flight master"
   fly "Theramore"
   zone Dustwallow Marsh
+
+step Tabetha
+  when complete 2846
+  zone Dustwallow Marsh
+  tip Tiara of the Deep: Tabetha's hut stands alone in the middle of the marsh. Ride west out of Theramore along the road, then south (5 minutes there and back), and come back to the docks for the boat.
+  turnin 2846                         -- Tabetha
 
 step Boat to Menethil Harbor
   zone Dustwallow Marsh

@@ -120,6 +120,18 @@ step Balos Jacken
   turnin 1286
   accept 1287
 
+# Groupe Alliance 0.11.0: Tiara of the Deep (2846) for Zul'Farrak (Group 21, 23-tanaris), asked
+# here (`when group 2846`): Tabetha's hut (Dustwallow 46.1,57.1, Polestar's Forever data) is on the
+# way from Balos Jacken (36.1,54.3) east to Theramore (Humans' boat), a few minutes off the road west
+# to the Barrens (the other races). Level 46, required 40; shareable
+# (Warcraft Tavern's Forever quest guide, 12/11/2026). Its breadcrumb (2861, mage trainers) is not
+# needed. Handed in on Group 21's way through Theramore, or abandoned there without the run.
+step Tabetha (Zul'Farrak, optional)
+  when group 2846
+  zone Dustwallow Marsh
+  tip Tabetha's hut stands alone in the middle of the marsh, south of the road, a short walk east of Balos Jacken's camp (on the way to Theramore; a detour of a few minutes for those heading west to the Barrens). Her quest is for Zul'Farrak, the troll dungeon of Tanaris that the guide offers in Group 21 (levels 44 to 54): take it only if your group means to run it. It stays in the quest log until then. Alone? Skip it.
+  accept 2846                         -- Tabetha: Hydromancer Velratha, in Zul'Farrak
+
 step The Barrens
   only Warrior
   zone The Barrens

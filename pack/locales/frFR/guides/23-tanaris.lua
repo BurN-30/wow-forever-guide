@@ -17,6 +17,8 @@ return {
 	["Mirage Raceway"] = "Piste des mirages",
 	-- {object:151976} Shimmering Flats · {zone:1441} Thousand Needles · {npc:4454} Fizzle Brassbolts · {npc:4630} Pozzik · {npc:4709} Zamek
 	["The Mirage Raceway lies on the {object:151976} in south-east {zone:1441}. {npc:4454} and {npc:4630} are in the camps beside the track.\n{npc:4709} stands by the goblin camp.\nWhile {npc:4709} keeps Rizzle talking, his plans lie unguarded in the gnome camp across the track."] = "La Piste des mirages se trouve sur les {object:151976} au sud-est des {zone:1441}. {npc:4454} et {npc:4630} sont dans les camps près de la piste.\n{npc:4709} se tient près du camp gobelin.\nPendant que {npc:4709} occupe Rizzle, ses plans sont sans surveillance dans le camp gnome de l'autre côté de la piste.",
+	-- {npc:4453} Wizzle Brassbolts · {npc:7273} Gahz'rilla · {item:9239} Mallet of Zul'Farrak · {zone:1425} Hinterlands
+	["{npc:4453}'s next task, {npc:7273}, is a Zul'Farrak boss summoned with the {item:9239}, made at Jintha'Alor in the {zone:1425}, where the route only goes after Zul'Farrak: skip it."] = "La tâche suivante de {npc:4453}, {npc:7273}, est un boss de Zul'Farrak qu'on appelle avec le {item:9239}, fabriqué à Jintha'Alor dans les {zone:1425}, où le parcours ne va qu'après Zul'Farrak : la passer.",
 	-- {npc:4630} Pozzik · {quest:1137} News for Fizzle
 	["{npc:4630}: only after {quest:1137}"] = "{npc:4630} : seulement après {quest:1137}",
 	["He runs off to keep Rizzle busy"] = "Il s'éloigne pour occuper Rizzle Brassbolts",
@@ -45,6 +47,9 @@ return {
 	["{npc:7882}, inside"] = "{npc:7882}, à l'intérieur",
 	-- {npc:7881} Stoley
 	["{npc:7881}, in the port's tavern; inside"] = "{npc:7881}, dans la taverne du port ; à l'intérieur",
+	-- {npc:8579} Yeh'kinya · {zone:1444} Feralas
+	-- plural, as words: Screecher Spirits = {npc:8612} Screecher Spirit
+	["{npc:8579}, the troll by the harbour, offers Screecher Spirits: her chain goes to {zone:1444}, then into Zul'Farrak and on to the Sunken Temple, in an order the route does not follow: skip it."] = "{npc:8579}, la trollesse près du port, propose Esprits de Hurleurs : sa suite passe par {zone:1444}, puis Zul'Farrak et le Temple englouti, dans un ordre que le parcours ne suit pas : la passer.",
 
 	-- Step 6: Noonshade Ruins: kill these as you meet them
 	["Noonshade Ruins: kill these as you meet them"] = "Ruines d'Ombre-du-Zénith : tuez-les au fur et à mesure",
@@ -152,23 +157,39 @@ return {
 	["Ride north-west from Gadgetzan to the walled city, at the edge of the dunes. Inside, every troll can drop {quest:3042}; the scarabs by the graveyard of {npc:7272} drop the shells.\nThe pyramid event: free {npc:7604} and his crew from the cage at the top of the stairs, then hold the stairs against the troll waves. Once the trolls are dead, Bly turns on you: he drops the {quest:2768}."] = "Partez vers le nord-ouest depuis Gadgetzan jusqu'à la cité fortifiée, au bord des dunes. À l'intérieur, chaque troll peut laisser tomber {quest:3042} ; les scarabées près du cimetière de {npc:7272} laissent tomber les carapaces.\nL'événement de la pyramide : libérez {npc:7604} et son équipe de la cage en haut des marches, puis tenez les marches contre les vagues de trolls. Une fois les trolls morts, Bly se retourne contre vous : il laisse tomber {quest:2768}.",
 	-- {npc:7267} Chief Ukorz Sandscalp
 	["Group of 5: share each quest (quest log, Share) before going in. {npc:7267}, the last boss, waits behind the door Weegli blows open after the pyramid event."] = "Groupe de 5 : partagez chaque quête (journal de quêtes, Partager) avant d'entrer. {npc:7267}, le dernier boss, attend derrière la porte que Weegli fait sauter après l'événement de la pyramide.",
+	-- {quest:2865} Scarab Shells · {quest:3042} Troll Temper · {quest:2768} Divino-matic Rod · {quest:2846} Tiara of the Deep · {npc:6546} Tabetha · {zone:1445} Dustwallow Marsh · {item:9471} Nekrum's Medallion · {npc:7273} Gahz'rilla
+	["In the quest log before going in: {quest:2865}, {quest:3042} and {quest:2768} (Gadgetzan). If you took it: {quest:2846} ({npc:6546}, {zone:1445}, Group 18; she is on the way to the boat later). Not on this route: {item:9471}, {npc:7273} and The Prophecy of Mosh'aru, whose quests open only after this run."] = "Dans le journal avant d'entrer : {quest:2865}, {quest:3042} et {quest:2768} (Gadgetzan). Si elle a été prise : {quest:2846} ({npc:6546}, {zone:1445}, Groupe 18 ; elle est sur le chemin du bateau, plus tard). Pas sur ce parcours : {item:9471}, {npc:7273} et La prophétie de Mosh'aru, dont les quêtes ne s'ouvrent qu'après ce passage.",
+	-- {npc:7795} Hydromancer Velratha
+	["{npc:7795} holds the courtyard of the great pool, round the corner from the entrance: kill her on the way out. The tiara drops for every player who has the quest."] = "{npc:7795} tient la cour du grand bassin, juste après l'angle de l'entrée : la tuer en ressortant. La tiare tombe pour chaque joueur qui a la quête.",
+	-- {item:8623} OOX-17/TN Distress Beacon · {zone:1446} Tanaris · {zone:1434} Stranglethorn Vale
+	["A rare {item:8623} can drop here, as from most of the creatures of {zone:1446}: its quest leads to a robot in the south of {zone:1446}, then to a goblin of {zone:1434}. The guide does not follow it."] = "Une {item:8623}, rare, peut tomber ici, comme sur la plupart des créatures de {zone:1446} : sa quête mène à un robot au sud de {zone:1446}, puis à un gobelin de la {zone:1434}. Le guide ne la suit pas.",
 
 	-- Step 27: Gadgetzan: Zul'Farrak rewards
 	["Gadgetzan: Zul'Farrak rewards"] = "Gadgetzan : récompenses de Zul'Farrak",
 
-	-- Step 28: Fly to Theramore
+	-- Step 28: Tiara of the Deep: not done
+	-- {quest:2846} Tiara of the Deep
+	["{quest:2846}: not done"] = "{quest:2846} : pas faite",
+	-- {quest:2846} Tiara of the Deep · {npc:7795} Hydromancer Velratha
+	["{quest:2846} needs {npc:7795}, in Zul'Farrak, and the guide does not come back here: abandon it."] = "{quest:2846} demande {npc:7795}, dans Zul'Farrak, et le guide ne revient pas ici : l'abandonner.",
+
+	-- Step 29: Fly to Theramore
 	["Fly to Theramore"] = "Volez jusqu'à Theramore",
 	["Gadgetzan flight master"] = "Maître de vol de Gadgetzan",
 
-	-- Step 29: Boat to Menethil Harbor
+	-- Step 30: Tabetha
+	-- {quest:2846} Tiara of the Deep · {npc:6546} Tabetha
+	["{quest:2846}: {npc:6546}'s hut stands alone in the middle of the marsh. Ride west out of Theramore along the road, then south (5 minutes there and back), and come back to the docks for the boat."] = "{quest:2846} : la cabane de {npc:6546} est isolée au milieu du marais. Sortir de Theramore vers l'ouest par la route, puis descendre au sud (5 minutes aller-retour), et revenir aux quais pour le bateau.",
+
+	-- Step 31: Boat to Menethil Harbor
 	-- {object:1162} Menethil Harbor
 	["Boat to {object:1162}"] = "Bateau pour {object:1162}",
 
-	-- Step 30: Fly to Aerie Peak
+	-- Step 32: Fly to Aerie Peak
 	["Fly to Aerie Peak"] = "Envolez-vous vers Nid-de-l'Aigle",
 	-- {object:1162} Menethil Harbor
 	["{object:1162} flight master"] = "Maître de vol de {object:1162}",
 
-	-- Step 33: Sprinkle's Secret Ingredient
+	-- Step 35: Sprinkle's Secret Ingredient
 	["Underwater"] = "Sous l'eau",
 }
