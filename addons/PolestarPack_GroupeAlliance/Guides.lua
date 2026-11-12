@@ -18979,7 +18979,7 @@ do
 				},
 				{
 					title = "Stratholme: along the way",
-					note = "Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); {item:13180} in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; target one and use the blaster {npc:11140} gave you on it, then again on the soul that breaks free.",
+					note = "Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); {item:13180} in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; equip the blaster {npc:11140} gave you, target one and use the blaster on it, then again on the soul that breaks free.",
 					when = { { k = "done", label = "strat-start" } },
 					along = "strat-end",
 					goals = {

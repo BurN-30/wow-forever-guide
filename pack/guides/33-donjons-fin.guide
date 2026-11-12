@@ -791,7 +791,7 @@ step Terrordale: Egan
 step Stratholme: along the way
   when done strat-start
   along until strat-end
-  tip Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); Stratholme Holy Water in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; target one and use the blaster Egan gave you on it, then again on the soul that breaks free.
+  tip Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); Stratholme Holy Water in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; equip the blaster Egan gave you, target one and use the blaster on it, then again on the soul that breaks free.
   note Share The Flesh Does Not Lie, The Archivist, The Great Ezra Grimm and Houses of the Holy with your group: click each in the quest log, then Share. The Restless Souls and Of Love and Family cannot be shared.
   collect 13174 quest 5212            -- Plagued Flesh Sample
   collect 13180 quest 5243            -- Stratholme Holy Water: supply crates
