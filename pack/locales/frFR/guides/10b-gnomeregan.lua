@@ -16,6 +16,8 @@ return {
 	["Gnomeregan: a 5-player dungeon under {zone:1426}, best at 29 to 33; {npc:7800}, the last boss, is 34. Every quest giver stands in {object:171524}. From the {zone:1437}: fly from {object:1162} to {zone:1455}. Alone? Skip it: the guide goes on to Dalaran."] = "Gnomeregan : un donjon pour 5 joueurs sous {zone:1426}, idéal de 29 à 33 ; {npc:7800}, le dernier boss, est niveau 34. Tous les donneurs sont à {object:171524}. Depuis {zone:1437} : vol de {object:1162} à {zone:1455}. Seul ? Le passer : le guide continue vers Dalaran.",
 	-- {quest:2926} Gnogaine
 	["Keep 9 free quest log slots. Every quest can be shared except {quest:2926} and its follow-up: each player takes those from Ozzie."] = "Garder 9 places libres dans le journal. Toutes les quêtes se partagent sauf {quest:2926} et sa suite : chaque joueur les prend chez Ozzie.",
+	-- {quest:2923} Tinkmaster Overspark · {npc:7917} Brother Sarno · {zone:1453} Stormwind
+	["{quest:2923}: {npc:7917}'s errand, if you took it in {zone:1453}"] = "{quest:2923} : la commission de {npc:7917}, si elle a été prise à {zone:1453}",
 	-- {npc:6569} Gnoarn · {npc:1268} Ozzie Togglevolt
 	["{npc:6569}: for {npc:1268} in Kharanos"] = "{npc:6569} : pour {npc:1268} à Kharanos",
 	-- {npc:6169} Klockmort Spannerspan · {zone:1457} Darnassus

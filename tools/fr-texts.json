@@ -1988,5 +1988,8 @@
   "Roogug, the first boss, drops the {item:6841}. The other items of the quest come from Stonetalon and the {zone:1437}: Polestar's class guides (Fire Hardened Armor) cover them.": "Roogug, le premier boss, lâche la {item:6841}. Les autres objets de la quête viennent des Serres-Rocheuses et des {zone:1437} : les guides de classe de Polestar (Fire Hardened Armor) les couvrent.",
   "{item:6841}: Roogug": "{item:6841} : Roogug",
   "Shamans: {quest:96264}": "Chamans : {quest:96264}",
-  "{quest:96264} ({npc:259023}, {zone:1417}): the {item:274463} comes from {npc:4421}. To check in game: the drop rate is not known.": "{quest:96264} ({npc:259023}, {zone:1417}) : la {item:274463} vient de {npc:4421}. À vérifier en jeu : le taux de butin n'est pas connu."
+  "{quest:96264} ({npc:259023}, {zone:1417}): the {item:274463} comes from {npc:4421}. To check in game: the drop rate is not known.": "{quest:96264} ({npc:259023}, {zone:1417}) : la {item:274463} vient de {npc:4421}. À vérifier en jeu : le taux de butin n'est pas connu.",
+  "{quest:2923}: {npc:7917}'s errand, if you took it in {zone:1453}": "{quest:2923} : la commission de {npc:7917}, si elle a été prise à {zone:1453}",
+  "{zone:1453}: {npc:7917} (Gnomeregan, optional)": "{zone:1453} : {npc:7917} (Gnomeregan, facultatif)",
+  "{npc:7917} stands in {object:2098}. His errand leads to {quest:2923} in {object:171524}, who gives {quest:2922}: a few hundred XP for a trip the guide makes anyway.": "{npc:7917} se tient sur {object:2098}. Sa commission mène à {quest:2923}, à {object:171524}, qui donne {quest:2922} : quelques centaines de points d'expérience pour un trajet que le guide fait de toute façon."
 }

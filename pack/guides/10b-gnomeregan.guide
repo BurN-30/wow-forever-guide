@@ -49,6 +49,7 @@ step Ironforge: Gnomeregan quests
   note Keep 9 free quest log slots. Every quest can be shared except Gnogaine and its follow-up: each player takes those from Ozzie.
   accept 2929                                 -- High Tinker Mekkatorque
   accept 2930                                 -- Master Mechanic Castpipe
+  turnin 2923 optional                        -- Tinkmaster Overspark: Brother Sarno's errand, if you took it in Stormwind
   accept 2922                                 -- Tinkmaster Overspark
   accept 2927                                 -- Gnoarn: for Ozzie Togglevolt in Kharanos
   accept 2924 optional                        -- Klockmort Spannerspan: not offered without Mathiel's errand from Darnassus? Carry on without it

@@ -42,6 +42,17 @@ step Stormwind: Shoni the Shilent (Gnomeregan, optional)
   note Shoni the Shilent stands in the Dwarven District, by the tram. The quest waits in the log until Gnomeregan.
   accept 2928                             -- Shoni the Shilent
 
+# Groupe Alliance 0.11.0 (review): Tinkmaster Overspark (2923), Brother Sarno's errand to the
+# Gnomeregan quest giver in Tinker Town (Polestar's Forever data; Warcraft Tavern's Forever quest
+# guide, 11/11/2026: "Chain Start: Brother Sarno"). Taken here, where the guide already is,
+# and handed in at the start of Group 10b.
+step Stormwind: Brother Sarno (Gnomeregan, optional)
+  when group 2928
+  when level<33
+  zone Stormwind City
+  tip Brother Sarno stands in Cathedral Square. His errand leads to Tinkmaster Overspark in Tinker Town, who gives Save Techbot's Brain!: a few hundred XP for a trip the guide makes anyway.
+  accept 2923                             -- Brother Sarno
+
 step Duskwood
   zone Duskwood
   note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
