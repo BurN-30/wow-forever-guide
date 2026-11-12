@@ -6,9 +6,11 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 
 ### Français
 - BuffAlerts Forever est éteint à la première installation : rien ne s'affiche tant qu'il n'est pas coché. L'allumer : écran des personnages, bouton AddOns, cocher BuffAlerts Forever. Qui l'avait déjà le garde tel qu'il était (coché ou non).
+- Lisez-moi : nouvelle partie « Autres addons, non inclus » : OpenMap (carte du monde d'un seul tenant, trop lourd pour le paquet, mais Polestar affiche ses repères dessus), Keep or Toss et Node Sight (licence qui interdit de les redistribuer), avec ce qu'il faut savoir pour les installer à part.
 
 ### English
 - BuffAlerts Forever is off on a first install: nothing shows until it is ticked. Turn it on: character screen, AddOns button, tick BuffAlerts Forever. Whoever already had it keeps it as it was (ticked or not).
+- Readme: new "Other addons, not included" part: OpenMap (seamless world map, too heavy for the pack, but Polestar draws its markers on it), Keep or Toss and Node Sight (licences that forbid redistribution), with what to know to install them separately.
 
 ## v0.9.9 (2026-11-11)
 

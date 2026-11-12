@@ -188,6 +188,18 @@ Polestar fait déjà, sans autre addon, la plupart des petits automatismes de co
 
 Leatrix Plus reste installable à part (depuis sa page officielle), mais son option « Automate quests » doit rester éteinte : sinon elle prend aussi les quêtes de groupe que le guide propose de passer (le guide prévient une fois s'il la voit allumée).
 
+## Autres addons, non inclus
+
+Étudiés en novembre 2026 et laissés hors du paquet. Chacun s'installe à part, depuis sa page officielle (fichier téléchargé sur le site, sans l'application CurseForge), en dézippant son dossier dans `World of Warcraft\_forever_\Interface\AddOns`. Le programme d'installation du guide ne touche pas à ces dossiers.
+
+| Addon | Ce qu'il fait | Pourquoi il n'est pas dans le paquet | Avec le guide |
+|---|---|---|---|
+| [OpenMap](https://github.com/openmap-world/openmap/releases) (licence MIT) | carte du monde d'un seul tenant, zoom d'une zone à l'autre | 126 Mo à lui seul (plus du double du paquet), une version par jour depuis sa sortie, défauts encore ouverts (baisse d'images par seconde, action bloquée à l'ouverture de la carte que BugSack signalerait) | Polestar le reconnaît : ses repères, sa trace et ses trajets s'affichent sur la carte d'OpenMap. Couper les autres addons de carte |
+| [Keep or Toss: Forever](https://www.curseforge.com/wow/addons/keep-or-toss-forever) (tous droits réservés) | dit dans l'infobulle à quoi sert encore un objet (quête, métier, composant, secret de Forever) | licence : pas de redistribution | sans Questie, il ne connaît pas les quêtes pas encore prises (il le dit) ; ses marques dans les sacs s'ajoutent à celles de Polestar |
+| [Node Sight](https://www.curseforge.com/wow/addons/node-sight) (tous droits réservés) | image de chaque herbe et minerai sur la minicarte, flèche et étincelles en option | licence : pas de redistribution ; balaie la minicarte en la déplaçant sous la souris | utile seulement aux herboristes et mineurs ; ses étincelles changent des réglages du jeu (touche d'interaction), à couper avant de le retirer |
+
+*Other addons studied and left out of the pack (install them yourself from their official page): OpenMap (MIT, but 126 MB, daily releases, open issues; Polestar draws its markers on it), Keep or Toss: Forever and Node Sight (all rights reserved: not redistributable).*
+
 ## Le parcours
 
 Chacun fait son départ seul, puis tout le monde se retrouve à Hurlevent. **Chacun joue à son rythme** : le guide relit le journal de quêtes à chaque connexion, coche tout seul ce qui est déjà rendu ou en cours, et reprend au bon endroit. Un joueur en avance n'est pas renvoyé vers les quêtes devenues grises (réglage « Passer les quêtes grises », activé par défaut). En groupe, avec Polestar chez tout le monde, le panneau de groupe s'ouvre seul et montre où en est chacun ; l'XP de groupe est meilleure à 4 niveaux d'écart ou moins.
@@ -306,6 +318,7 @@ Noter le guide, l'étape et le niveau, et ouvrir une *issue* sur ce dépôt (ou 
 - **BuffAlerts Forever** © 2026 Thork, licence MIT : dossier `addons/BuffAlertsForever`, version 3.11.4 publiée sur [CurseForge](https://www.curseforge.com/wow/addons/buffalerts), fichiers de l'auteur non modifiés, plus `PackPatches.lua` (correctifs et réglage du pack, même licence ; liste dans `docs/buffalerts-correctifs.md`, diff dans `docs/buffalerts-3.11.4.patch`) ; la notice de la licence MIT est dans `addons/BuffAlertsForever/LICENSE`.
 - **BugSack** © funkydude (Funkeh), tous droits réservés (« You are free to fork and modify on GitHub, please ask us about anything else ») : dossier `addons/BugSack`, version v12.1.9 publiée sur [GitHub](https://github.com/funkydude/BugSack/releases/tag/v12.1.9), fichiers de l'auteur non modifiés, plus `PackPatches.lua` (réglage et correctif du pack ; liste dans `docs/bugsack-correctifs.md`, diff dans `docs/bugsack-12.1.9.patch`), incluse pour notre groupe avec ce crédit.
 - **BugGrabber** © funkydude (Funkeh), tous droits réservés : dossier `addons/!BugGrabber`, version v12.1.1 telle que publiée sur [CurseForge](https://www.curseforge.com/wow/addons/bug-grabber), non modifiée, incluse pour notre groupe avec ce crédit.
+- Le paquet (guides, module Groupe Alliance, correctifs, outils, installateur) a été écrit avec l'aide d'outils d'IA puis relu ; c'est aussi le cas d'une partie des addons qu'il rassemble (Polestar, d'après son dépôt). Les erreurs restent possibles, les signaler aide. *The pack was written with the help of AI tools and reviewed, as part of the addons it gathers were (Polestar, by its repository).*
 - L'ensemble, hors Auctionator, BugSack et BugGrabber, est sous **GPL-3.0** (fichier `LICENSE`) ; PrettyTooltip et BuffAlerts Forever gardent leur licence MIT, compatible avec la GPL-3.0. Les données du jeu appartiennent à Blizzard Entertainment.
 
 Jeu visé : WoW Forever (client 1.60.1). Sources consultées les 06 et 08/11/2026 :
