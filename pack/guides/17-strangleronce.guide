@@ -163,6 +163,13 @@ step Down to Booty Bay
   turnin 616                          -- Baron Revilgaz, upstairs in the tavern
   accept 578
 
+# Groupe Alliance 0.11.0: A Fine Mess (2904), escorted out of Gnomeregan (Group 10b, optional),
+# is handed in to Scooty in Booty Bay (Polestar's Forever data): first visit since.
+step Booty Bay: Scooty
+  when complete 2904
+  tip A Fine Mess, from Gnomeregan: Chief Engineer Scooty runs the goblin transporter in Booty Bay (the map marks him).
+  turnin 2904                         -- Scooty
+
 step Fly to Sentinel Hill
   zone Stranglethorn Vale
   goto 27.5,77.7 "Booty Bay flight master"

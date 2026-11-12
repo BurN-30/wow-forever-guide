@@ -1,0 +1,135 @@
+# Written for this pack by BurN-30 (GPL-3.0). Quest ids, givers, places, levels, prerequisites,
+# drops and rewards from Polestar's Forever data (data-v2026.11.1: QuestieDB Forever, the 1.60.1
+# client, and Polestar's corrections, whose Gnomeregan XP comes from players' Forever caches) and
+# its Dungeons codex (boss order: Grubbis, Viscous Fallout, Electrocutioner 6000, Crowd Pummeler
+# 9-60, Mekgineer Thermaplugg); prerequisites cross-checked with the TrinityCore Forever world base
+# (2026-10-14). Wowhead Forever could not be read on 12/11/2026 (robot check): the rooms and the
+# places inside are the original game's, marked "to check in game". Not played in game yet.
+#
+# Optional chapter: asked once at Shoni the Shilent in Stormwind, at the start of Group 9
+# (`when group 2928`, 11-mille-pointes); every later step needs `when done gno-start`. Skipped:
+# the whole chapter is left out and Dalaran follows.
+#
+# Prerequisites (Polestar's compiled guide, TrinityCore base): Gnogaine (2926) after The Day After
+# (2927), taken here first; Save Techbot's Brain (2922), Essential Artificials (2924) and Data
+# Rescue (2930) have only errands before them (Brother Sarno 2923, Mathiel 2925, Gaxim 2931),
+# which the compiler drops and this chapter does not need. Return of the Ring (2947) after
+# Grime-Encrusted Ring (2945), a drop.
+# Left out: The Only Cure is More Green Glow (2962, after Gnogaine: a second trip inside with a
+# fallout that decays fast), the Sparklematic 5200 boxes (2951 and its variants: three silver per
+# Grime-Encrusted Object, a random box, no XP for most), Gnome Improvement (2948, after Return of
+# the Ring: a Silver Bar and a Moss Agate).
+#
+# Flow: Ironforge (Tinker Town) -> Kharanos (Ozzie) -> the Gnomeregan outskirts (Gnogaine,
+# Techbot) -> the dungeon -> Kharanos (Ozzie) -> Ironforge rewards -> Stormwind (Shoni), where
+# Group 11 (Dalaran) starts. A Fine Mess (2904) is handed in at Booty Bay in Group 15.
+guide groupe-alliance/10b-gnomeregan
+title Group 10b · Gnomeregan (dungeon 29-33, optional)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 30-33
+zone Ironforge
+next groupe-alliance/12-dalaran
+
+step Ironforge: Gnomeregan quests
+  label gno-start
+  when group 2928
+  when level<36
+  zone Ironforge
+  tip Gnomeregan: a 5-player dungeon under Dun Morogh, best at 29 to 33; Mekgineer Thermaplugg, the last boss, is 34. Every quest giver stands in Tinker Town. From the Wetlands: fly from Menethil Harbor to Ironforge. Alone? Skip it: the guide goes on to Dalaran.
+  note Keep 8 free quest log slots. Every player takes the quests from the givers; sharing works too.
+  accept 2929                                 -- High Tinker Mekkatorque
+  accept 2930                                 -- Master Mechanic Castpipe
+  accept 2922                                 -- Tinkmaster Overspark
+  accept 2927                                 -- Gnoarn: for Ozzie Togglevolt in Kharanos
+  accept 2924 optional                        -- Klockmort Spannerspan: not offered without Mathiel's errand from Darnassus? Carry on without it
+
+step Kharanos: Ozzie Togglevolt
+  when done gno-start
+  zone Dun Morogh
+  tip Ride out of Ironforge down to Kharanos. Ozzie hands you an empty lead phial for the fallout.
+  turnin 2927                                 -- Ozzie Togglevolt
+  accept 2926
+
+step The Gnomeregan outskirts
+  when done gno-start
+  zone Dun Morogh
+  tip West of Kharanos, before the dungeon's door. Irradiated Invaders (elite 24) roam the outskirts: target one and use the Empty Leaden Collection Phial from your bags to fill it.
+  note White Punch Cards, for Data Rescue, drop from the Irradiated Invaders too (about 1 in 10): keep one.
+  collect 9284 quest 2926 @19.5,37.8          -- Full Leaden Collection Phial: use the empty phial on an Irradiated Invader
+
+step Gnomeregan: before going in
+  when done gno-start
+  zone Dun Morogh
+  tip Group of 5 at 29 to 33. Everything inside is elite and the mechanical foes hit hard.
+  note In the quest log before going in: The Grand Betrayal, Data Rescue and Save Techbot's Brain! (Tinker Town). If you took them: Gyrodrillmatic Excavationators (Shoni the Shilent, Stormwind, Group 9) and Essential Artificials (Klockmort Spannerspan, Tinker Town). Bring a White Punch Card if you have one, and 3 silver per Grime-Encrusted Object you want to put in the Sparklematic 5200.
+  goto 24.3,39.8 "Gnomeregan" r 25
+
+# Groupe Alliance 0.11.0: everything collected in the dungeon sits in one along step (it never
+# holds the route), up to Thermaplugg; Techbot too, since the sources disagree on his place
+# (Polestar's data: the outskirts, Dun Morogh 19.78,31.93; the original game: inside).
+step Gnomeregan: along the way
+  when done gno-start
+  along until gno-thermaplugg
+  tip Collected all through the dungeon. Robo-mechanical Guts: the Caverndeep troggs, the Irradiated Invaders and the Dark Iron Agents, about 4 kills in 5. White Punch Card: the Caverndeep troggs and the Addled Lepers, about 1 kill in 10. Essential Artificials: from the Artificial Extrapolators, machines on the floor (where: to check in game).
+  tip Techbot (elite 26): Polestar's data place him in the outskirts, the original game inside, near the start (to check in game). His Memory Core drops for every player on the quest.
+  tip Each Matrix Punchograph 3005 turns one card into the next: A the White card into a Yellow one, B the Yellow into a Blue one, C the Blue into a Red one, D the Red into the Prismatic Punch Card. They stand along the way, D last, near the end (places and order of the original game: to check in game).
+  tip The Clean Zone, where the gnomes who stayed sheltered, holds the Sparklematic 5200: put the Grime-Encrusted Ring in it to clean it (the Sparklematic's own quests for the other grimy objects cost 3 silver each and give a random box: optional, not in the guide). Kernobee, a gnome to rescue, is inside too (where: to check in game): escort him to the Clockwerk Run exit, his reward waits at Booty Bay, on the route of Group 15.
+  note Every player with the quest loots their own. Share the quests with your group: click each in the quest log, then Share.
+  collect 9277 quest 2922                     -- Techbot's Memory Core: Techbot, elite 26
+  collect 9316 quest 2930                     -- Prismatic Punch Card: from the Matrix Punchograph 3005-D
+  collect 9309 quest 2928 optional            -- Robo-mechanical Guts: the quest log gives the count
+  collect 9279 optional                       -- White Punch Card: Caverndeep troggs, Addled Lepers
+  collect 9278 x12 quest 2924 optional        -- Essential Artificial: Artificial Extrapolators
+  accept 2945 item 9326 optional              -- Grime-Encrusted Ring, a drop from the Dark Iron Agents: right-click it
+  turnin 2945 object 142487 optional          -- The Sparklematic 5200
+  accept 2947 object 142487 optional          -- Return of the Ring: for Talvash del Kissel in Ironforge
+  accept 2904 optional                        -- Kernobee
+  complete 2904 optional                      -- Escort Kernobee to the Clockwerk Run exit
+
+step Gnomeregan: Mekgineer Thermaplugg
+  label gno-thermaplugg
+  when done gno-start
+  tip The Electrocutioner 6000 and the Crowd Pummeler 9-60 come before him (the codex's order). Thermaplugg (elite 34) calls bombs out of the walls: in the original game someone stops each new one by clicking the button below it while the others fight (to check in game).
+  kill 7800 quest 2929                        -- Mekgineer Thermaplugg
+
+# Groupe Alliance 0.11.0: each hand-in has its own step, for whoever holds the quest ready to
+# hand in (`when complete`): nothing waits for a quest a player could not finish.
+step Kharanos: Ozzie Togglevolt
+  when complete 2926
+  zone Dun Morogh
+  tip Out of Gnomeregan and east to Kharanos, on the way back to Ironforge. His next quest, The Only Cure is More Green Glow, would need another trip inside: not in the guide.
+  turnin 2926                                 -- Ozzie Togglevolt
+
+step Tinker Town: High Tinker Mekkatorque
+  when complete 2929
+  zone Ironforge
+  turnin 2929                                 -- High Tinker Mekkatorque
+
+step Tinker Town: Master Mechanic Castpipe
+  when complete 2930
+  zone Ironforge
+  turnin 2930                                 -- Master Mechanic Castpipe
+
+step Tinker Town: Tinkmaster Overspark
+  when complete 2922
+  zone Ironforge
+  turnin 2922                                 -- Tinkmaster Overspark
+
+step Tinker Town: Klockmort Spannerspan
+  when complete 2924
+  zone Ironforge
+  turnin 2924                                 -- Klockmort Spannerspan
+
+step Mystic Ward: Talvash del Kissel
+  when complete 2947
+  zone Ironforge
+  tip Return of the Ring: Talvash del Kissel is in the Mystic Ward. His next quest, Gnome Improvement, asks for a Silver Bar and a Moss Agate: not in the guide.
+  turnin 2947                                 -- Talvash del Kissel
+
+step Stormwind: Shoni the Shilent
+  when complete 2928
+  zone Stormwind City
+  tip Take the Deeprun Tram to Stormwind: Shoni is in the Dwarven District, by the tram. Group 11 (Dalaran) starts in Stormwind.
+  turnin 2928                                 -- Shoni the Shilent

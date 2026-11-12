@@ -115,102 +115,106 @@ return {
 	-- {npc:2496} Baron Revilgaz
 	["{npc:2496}, upstairs in the tavern"] = "{npc:2496}, à l'étage de la taverne",
 
-	-- Step 23: Fly to Sentinel Hill
+	-- Step 23: Booty Bay: Scooty
+	-- {quest:2904} A Fine Mess · {object:3204} Booty Bay
+	["{quest:2904}, from Gnomeregan: Chief Engineer Scooty runs the goblin transporter in {object:3204} (the map marks him)."] = "{quest:2904}, de Gnomeregan : l'ingénieur en chef Scooty tient le transporteur gobelin de {object:3204} (la carte le marque).",
+
+	-- Step 24: Fly to Sentinel Hill
 	-- {object:81} Sentinel Hill
 	["Fly to {object:81}"] = "Envolez-vous vers {object:81}",
 	-- {object:3204} Booty Bay
 	["{object:3204} flight master"] = "Maître de vol de {object:3204}",
 
-	-- Step 25: The Savage Coast: kill these as you meet them
+	-- Step 26: The Savage Coast: kill these as you meet them
 	["The Savage Coast: kill these as you meet them"] = "La Côte sauvage : tuez-les au fur et à mesure.",
 	-- plural, as words: Crystal Spine Basilisks = {npc:689} Crystal Spine Basilisk
 	["Walk back north; the Crystalvein Mine lies west of the road in the middle of the jungle. The Crystal Spine Basilisks there drop the shards.\nThe Bloodscalp trolls hold the ruins on the coast west of Nesingwary's camp."] = "Remontez vers le nord ; la Mine aux cristaux se trouve à l'ouest de la route au milieu de la jungle. Les basilics de cristal y laissent tomber les éclats.\nLes trolls Bloodscalp occupent les ruines sur la côte à l'ouest du camp de Nesingwary.",
 
-	-- Step 26: River crocolisks
+	-- Step 27: River crocolisks
 	["River crocolisks"] = "Crocilisques des rivières",
 	-- plural, as words: River Crocolisks = {npc:1150} River Crocolisk
 	["River Crocolisks swim the river by the Rebel Camp."] = "Des Crocilisques des rivières nagent dans la rivière près du Camp rebelle.",
 
-	-- Step 27: Private Thorsen
+	-- Step 28: Private Thorsen
 	["Thorsen patrols the road north of camp, toward the Rebel Camp."] = "Thorsen patrouille sur la route au nord du camp, en direction du Camp rebelle.",
 
-	-- Step 28: Nesingwary's Expedition
+	-- Step 29: Nesingwary's Expedition
 	-- {quest:201} Investigate the Camp
 	["{quest:201}: just look around the hunters' camp"] = "{quest:201} : faites simplement le tour du camp des chasseurs",
 
-	-- Step 29: Booty Bay
+	-- Step 30: Booty Bay
 	-- {npc:2495} Drizzlik
 	["{npc:2495}, inside"] = "{npc:2495}, à l'intérieur",
 	-- {npc:773} Krazek
 	["{npc:773}, upstairs"] = "{npc:773}, à l'étage",
 
-	-- Step 30: Snapjaw Crocolisks
+	-- Step 31: Snapjaw Crocolisks
 	-- plural, as words: Snapjaw Crocolisks = {npc:1152} Snapjaw Crocolisk
 	["Snapjaw Crocolisks"] = "Crocilisques Gueule d'acier",
 	-- {object:3204} Booty Bay
 	-- plural, as words: Snapjaw Crocolisks = {npc:1152} Snapjaw Crocolisk
 	["Snapjaw Crocolisks bask on the shore and islands along the coast north of {object:3204}."] = "Des crocilisques Gueule d'acier se prélassent sur le rivage et les îles le long de la côte au nord de {object:3204}.",
 
-	-- Step 32: Fly to Darkshire
+	-- Step 33: Fly to Darkshire
 	["Fly to Darkshire"] = "Envolez-vous pour Sombre-Comté.",
 
-	-- Step 33: Into Stranglethorn Vale
+	-- Step 34: Into Stranglethorn Vale
 	-- {zone:1434} Stranglethorn Vale
 	["Into {zone:1434}"] = "Vers {zone:1434}",
 
-	-- Step 35: Kurzen's Compound
+	-- Step 36: Kurzen's Compound
 	["Kurzen's Compound"] = "Base de Kurzen",
 	-- plural, as words: Kurzen Commandos = {npc:938} Kurzen Commando
 	["Headshrinkers stand deeper in the compound; the Commandos lurk stealthed around it and in the cave. Pick up Green Hills pages as they drop.\nCareful: Kurzen Commandos are level 34-35, not elite, and often spawn stealthed; near death they use Smoke Bomb."] = "Les Réducteurs de tête se tiennent plus loin dans le composé ; les Commandos rôdent camouflés autour et dans la grotte. Ramassez les pages des Collines verdoyantes au fur et à mesure.\nAttention : les Commandos de Kurzen sont de niveau 34-35, non élites, et apparaissent souvent camouflés ; près de la mort, ils utilisent Bombe fumigène.",
 	-- {npc:941} Kurzen Headshrinker
 	["{npc:941}, below ground"] = "{npc:941}, sous terre",
 
-	-- Step 36: The jungle ruins
+	-- Step 37: The jungle ruins
 	["The jungle ruins"] = "Les ruines de la jungle",
 	-- plural, as words: Shadowmaw Panthers = {npc:684} Shadowmaw Panther · Tumbled Crystals = {item:4106} Tumbled Crystal
 	["Loop through the troll ruins of the north and centre: each holds one stone tablet of the troll legends. Shadowmaw Panthers prowl stealthed in the jungle around them; the Venture Co. camp on Lake Nazferiti carries the Tumbled Crystals."] = "Faites le tour des ruines trolls du nord et du centre : chacune contient une tablette de pierre des légendes trolls. Des panthères Ombregueule rôdent camouflées dans la jungle alentour ; le camp de la KapitalRisk au Lac Nazfériti contient les cristaux réduits.",
 	-- {item:2006} The Second Troll Legend · {object:58} Gri'lek the Wanderer
 	["{item:2006}: {object:58}; underwater"] = "{item:2006} : {object:58} ; sous l'eau",
 
-	-- Step 37: The haunted island
+	-- Step 38: The haunted island
 	["The haunted island"] = "L'île hantée",
 	["Follow the west coast north; the haunted island lies off the shore west of Nesingwary's camp. Just reach it."] = "Suivez la côte ouest vers le nord ; l'île hantée se trouve au large, à l'ouest du camp de Nesingwary. Il suffit de l'atteindre.",
 
-	-- Step 38: Stranglethorn Vale: kill these as you meet them
+	-- Step 39: Stranglethorn Vale: kill these as you meet them
 	-- {npc:1096} Venture Co. Geologist
 	["grind on {npc:1096}"] = "tuez en boucle : {npc:1096}",
 
-	-- Step 39: Rebel Camp
+	-- Step 40: Rebel Camp
 	-- {npc:770} Corporal Kaleb · {npc:773} Krazek · {object:3204} Booty Bay
 	["{npc:770}: for {npc:773} in {object:3204}"] = "{npc:770} : pour {npc:773} à {object:3204}",
 
-	-- Step 42: Jungle Stalker on the way
+	-- Step 43: Jungle Stalker on the way
 	-- {npc:687} Jungle Stalker
 	["{npc:687} on the way"] = "{npc:687} en chemin",
 
-	-- Step 43: Skullsplitter trolls
+	-- Step 44: Skullsplitter trolls
 	["Skullsplitter trolls"] = "Trolls Skullsplitter",
 	-- {object:3202} Grom'gol
 	["The Skullsplitter trolls hold the ruins east of the road between Nesingwary and {object:3202}."] = "Les trolls Skullsplitter tiennent les ruines à l'est de la route entre Nesingwary et {object:3202}.",
 
-	-- Step 45: Booty Bay
+	-- Step 46: Booty Bay
 	-- {object:56910} The Salty Sailor Tavern
 	["{object:56910} is the tall building over the harbour; most of the quest givers are on its floors or the docks below."] = "{object:56910} est le grand bâtiment qui domine le port ; la plupart des donneurs de quêtes se trouvent à ses étages ou sur les quais en contrebas.",
 	-- {zone:1417} Arathi Highlands
 	["The ore drops from Drywhisker kobolds in {zone:1417}"] = "Le minerai tombe des kobolds Sèche-moustache des {zone:1417}",
 	["\"Sea Wolf\" MacKinley, on the top floor"] = "« Loup de mer » MacKinley, au dernier étage",
 
-	-- Step 47: Into Westfall
+	-- Step 48: Into Westfall
 	-- {zone:1436} Westfall
 	["Into {zone:1436}"] = "Vers {zone:1436}",
 
-	-- Step 49: Fly to Booty Bay
+	-- Step 50: Fly to Booty Bay
 	-- {object:3204} Booty Bay
 	["Fly to {object:3204}"] = "Envolez-vous pour {object:3204}",
 	-- {object:81} Sentinel Hill
 	["{object:81} flight master"] = "{object:81} maître de vol",
 
-	-- Step 50: Baron Revilgaz
+	-- Step 51: Baron Revilgaz
 	-- {zone:1416} Alterac Mountains
 	["For Archmage Ansirem in {zone:1416}"] = "Pour l'archimage Ansirem dans {zone:1416}",
 }

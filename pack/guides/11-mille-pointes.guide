@@ -31,6 +31,17 @@ step Jorgen and Elling Trias
   turnin 1242                             -- Elling Trias, the cheese shop in the Trade District
   accept 1243
 
+# Groupe Alliance 0.11.0: Gnomeregan (Group 10b, 10b-gnomeregan) is asked here, once (`when group
+# 2928`), at its only quest giver outside Ironforge and Dun Morogh: Shoni the Shilent's quest has
+# to be in the log before the run (its Robo-mechanical Guts drop only for players on it).
+step Stormwind: Shoni the Shilent (Gnomeregan, optional)
+  when group 2928
+  when level<33
+  zone Stormwind City
+  tip Gnomeregan: the gnomes' fallen city under Dun Morogh, a 5-player dungeon best at 29 to 33. The guide runs it after Group 10 (Group 10b), from Ironforge, where the other quests are given. Shoni's quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.
+  note Shoni the Shilent stands in the Dwarven District, by the tram. The quest waits in the log until Gnomeregan.
+  accept 2928                             -- Shoni the Shilent
+
 step Duskwood
   zone Duskwood
   note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
