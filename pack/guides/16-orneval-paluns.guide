@@ -150,6 +150,23 @@ step Fly to Auberdine
   fly "Auberdine"
   zone Darkshore
 
+# Groupe Alliance 0.11.0: Mortality Wanes (1142), from Razorfen Kraul (Group 9, optional), goes to
+# Treshala Fallowbrook in Darnassus: this Auberdine stop is the route's first one since.
+step Darnassus: Mortality Wanes (detour)
+  when complete 1142
+  zone Darnassus
+  tip From Auberdine to Rut'theran Village: the flight for Night Elves and whoever learned it in Group 8, else the boat from the Auberdine dock; then the portal up to Darnassus. Treshala Fallowbrook lives in the city (the map marks her).
+  zone Teldrassil
+  getfp "Rut'theran Village" only Human,Dwarf,Gnome,Skyborne
+  fly "Rut'theran Village" only NightElf
+  zone Darnassus
+  turnin 1142 map 1457 @69.54,67.75     -- Treshala Fallowbrook
+
+step Back to Auberdine
+  when turnedin 1142
+  zone Darkshore
+  fly "Auberdine"
+
 # ---------------------------------------------------------------- Menethil Harbor
 
 step Boat to Menethil Harbor

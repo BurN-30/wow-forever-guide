@@ -253,6 +253,52 @@ step Takar the Seer
   accept 1738                             -- Heartswood: in Ashenvale, on the way to Desolace
   accept 65602 optional                   -- What Is Love?: the incubus, beside the succubus; the Wooden Figurine is near the Heartswood
 
+# Groupe Alliance 0.11.0: Razorfen Kraul, optional, asked once (`when group 1144`). Its entrance
+# (the Barrens 42.9,90.2, Dungeons codex) lies by the road down to Thousand Needles that this
+# guide takes. Its two Alliance quests start inside: Willix the Importer (1144, escort, given
+# and handed in by Willix) and Mortality Wanes (1142, from Heralath Fallowbrook, for Treshala
+# Fallowbrook in Darnassus: handed in on the Darnassus detour of Group 14). No prerequisite for
+# either (Polestar's Forever data and the TrinityCore Forever world base). Left out: Blueleaf
+# Tubers (Ratchet, off the route), The Crone of the Kraul (after Lonebrow's Journal, Feralas,
+# level 29), class quests (Fire Hardened Mail, Warrior; Elemental Aid, Shaman, Forever).
+# Boss order from the codex; places inside from the original game, to check in game.
+step Razorfen Kraul (dungeon, optional)
+  label rfk-start
+  when group 1144
+  when level<33
+  zone The Barrens
+  tip Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.
+  note Horde land: keep clear of Camp Taurajo and its guards. Keep 2 free quest log slots.
+  goto 42.9,90.2 "Razorfen Kraul" r 25
+
+step Razorfen Kraul: Heralath Fallowbrook
+  when group 1144
+  when done rfk-start
+  tip Heralath Fallowbrook, a night elf who died in the Kraul, lies inside (his spot: to check in game). Mortality Wanes asks for Treshala's Pendant: it drops from the quilboars of the Kraul, about 1 kill in 10, for each player on the quest.
+  accept 1142                             -- Heralath Fallowbrook
+
+step Razorfen Kraul: along the way
+  when group 1144
+  when done rfk-start
+  along until rfk-charlga
+  collect 5825 quest 1142                 -- Treshala's Pendant: quilboars of the Kraul, about 1 in 10
+
+step Razorfen Kraul: Charlga Razorflank
+  label rfk-charlga
+  when group 1144
+  when done rfk-start
+  tip Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga heals and calls her guards: interrupt her and kill the guards first.
+  kill 4421                               -- Charlga Razorflank
+
+step Razorfen Kraul: Willix the Importer
+  when group 1144
+  when done rfk-start
+  tip Willix the Importer, a goblin, is held prisoner inside (his spot: to check in game). Everyone takes his quest before he starts walking; he walks all the way back to the entrance and quilboars attack on the way. He gives the reward himself at the end.
+  note Not there? Another group is escorting him: wait for him to come back, or join them.
+  accept 1144                             -- Willix the Importer
+  complete 1144                           -- Escort him out of the Kraul
+  turnin 1144                             -- Willix the Importer, at the entrance
+
 step Thousand Needles
   zone Thousand Needles
   goto 46.9,48.5 "Thousand Needles"

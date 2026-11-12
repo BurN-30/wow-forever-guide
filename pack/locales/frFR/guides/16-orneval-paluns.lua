@@ -90,22 +90,31 @@ return {
 	["Fly to Auberdine"] = "Envolez-vous pour Auberdine",
 	["Astranaar flight master"] = "Maître de vol d'Astranaar",
 
-	-- Step 27: Boat to Menethil Harbor
+	-- Step 27: Darnassus: Mortality Wanes (detour)
+	-- {zone:1457} Darnassus · {quest:1142} Mortality Wanes
+	["{zone:1457}: {quest:1142} (detour)"] = "{zone:1457} : {quest:1142} (détour)",
+	-- {zone:1457} Darnassus · {npc:4521} Treshala Fallowbrook
+	["From Auberdine to Rut'theran Village: the flight for Night Elves and whoever learned it in Group 8, else the boat from the Auberdine dock; then the portal up to {zone:1457}. {npc:4521} lives in the city (the map marks her)."] = "D'Auberdine au village de Rut'theran : le vol pour les Elfes de la nuit et ceux qui l'ont appris au Groupe 8, sinon le bateau du quai d'Auberdine ; puis le portail qui monte à {zone:1457}. {npc:4521} vit dans la ville (la carte la marque).",
+
+	-- Step 28: Back to Auberdine
+	["Back to Auberdine"] = "Retour à Auberdine",
+
+	-- Step 29: Boat to Menethil Harbor
 	-- {object:1162} Menethil Harbor
 	["Boat to {object:1162}"] = "Bateau pour {object:1162}",
 
-	-- Step 28: Glorin Steelbrow
+	-- Step 30: Glorin Steelbrow
 	-- {npc:1217} Glorin Steelbrow
 	["{npc:1217} stands on the upper floor of Menethil's keep."] = "{npc:1217} se tient à l'étage supérieur du donjon de Menethil.",
 	["Inside"] = "À l'intérieur",
 
-	-- Step 29: Deepwater Tavern
+	-- Step 31: Deepwater Tavern
 	["Deepwater Tavern"] = "Taverne de l'Eau-profonde",
 
-	-- Step 30: Waterlogged Chest
+	-- Step 32: Waterlogged Chest
 	["The wreck of the Flying Osprey lies in the shallows south of the keep."] = "L'épave du Flying Osprey repose dans les hauts-fonds au sud du donjon.",
 
-	-- Step 31: Lightforge Ingots
+	-- Step 33: Lightforge Ingots
 	["The Bluegill murlocs on the beach south-west of Menethil carry the ingots."] = "Les murlocs Branchie-bleue sur la plage au sud-ouest du Port de Menethil portent les lingots.",
 	-- {item:2702} Lightforge Ingot
 	["{item:2702}; underwater"] = "{item:2702} ; sous l'eau",

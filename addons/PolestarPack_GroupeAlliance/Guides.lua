@@ -7995,8 +7995,8 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:190309"] = "Wooden Figurine", ["item:1946"] = "Mary's Looking Glass", ["item:2594"] = "Flagon of Mead", ["item:2658"] = "Ados Fragment", ["item:2659"] = "Modr Fragment", ["item:2660"] = "Golm Fragment", ["item:2661"] = "Neru Fragment", ["item:279996"] = "Goaz Stone", ["item:3619"] = "Snellig's Snuffbox", ["item:4371"] = "Bronze Tube", ["item:5947"] = "Defias Docket", ["npc:1040"] = "Fen Creeper", ["npc:1077"] = "Prospector Whelgar", ["npc:1078"] = "Ormer Ironbraid", ["npc:1110"] = "Skeletal Raider", ["npc:1157"] = "Cursed Sailor", ["npc:1158"] = "Cursed Marine", ["npc:1159"] = "First Mate Snellig", ["npc:1160"] = "Captain Halyndor", ["npc:1212"] = "Bishop Farthing", ["npc:1217"] = "Glorin Steelbrow", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1284"] = "Archbishop Benedictus", ["npc:1353"] = "Sarltooth", ["npc:1464"] = "Innkeeper Helbrek", ["npc:205"] = "Nightbane Dark Runner", ["npc:206"] = "Nightbane Vile Fang", ["npc:2089"] = "Giant Wetlands Crocolisk", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:263"] = "Lord Ello Ebonlocke", ["npc:268"] = "Sirra Von'Indi", ["npc:270892"] = "Goaz Warder", ["npc:272273"] = "Lost Watcher", ["npc:276"] = "Viktori Prism'Antras", ["npc:289"] = "Abercrombie", ["npc:302"] = "Blind Mary", ["npc:311"] = "Sven Yorgen", ["npc:3133"] = "Herble Baubbletump", ["npc:4140"] = "Scorpid Reaver", ["npc:4147"] = "Saltstone Basilisk", ["npc:4454"] = "Fizzle Brassbolts", ["npc:482"] = "Elling Trias", ["npc:4959"] = "Jorgen", ["npc:4982"] = "Thomas", ["npc:511"] = "Insane Ghoul", ["npc:522"] = "Mor'Ladim", ["npc:533"] = "Nightbane Shadow Weaver", ["npc:604"] = "Plague Spreader", ["npc:6244"] = "Takar the Seer", ["npc:633"] = "Elaine Carevin", ["npc:661"] = "Jonathan Carevin", ["npc:663"] = "Calor", ["npc:6790"] = "Innkeeper Trelayne", ["npc:840"] = "Watcher Backus", ["object:102"] = "Raven Hill", ["object:1162"] = "Menethil Harbor", ["object:119"] = "Abercrombie's Crate", ["object:176369"] = "Boat to Theramore", ["object:19868"] = "Rocket Car Rubble", ["object:2096"] = "Trade District", ["object:21052"] = "Defias Strongbox", ["object:21056"] = "Theramore Isle", ["quest:1241"] = "The Missing Diplomat", ["quest:1738"] = "Heartswood", ["quest:225"] = "The Weathered Grave", ["quest:465"] = "Nek'rosh's Gambit", ["quest:5762"] = "Hemet Nesingwary", ["quest:65602"] = "What Is Love?", ["quest:96138"] = "Merrick's Bow", ["quest:98221"] = "From the Ashes", ["zone:1413"] = "The Barrens", ["zone:1418"] = "Badlands", ["zone:1431"] = "Duskwood", ["zone:1436"] = "Westfall", ["zone:1437"] = "Wetlands", ["zone:1440"] = "Ashenvale", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1445"] = "Dustwallow Marsh", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
-			written = { ["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "On the road south through the Barrens, Takar the Seer camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards.", ["The Plague Spreaders walk the northern half of the Raven Hill Cemetery. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "The Plague Spreaders walk the northern half of the Raven Hill Cemetery. Mor'Ladim, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of Sven's camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs.", ["{item:2658} along the way to {npc:1078} and Whelgar"] = "Ados Fragment along the way to Ormer and Whelgar", ["{item:2659} along the way to {npc:1078} and Whelgar"] = "Modr Fragment along the way to Ormer and Whelgar", ["{item:2660} along the way to {npc:1078} and Whelgar"] = "Golm Fragment along the way to Ormer and Whelgar", ["{item:2661} along the way to {npc:1078} and Whelgar"] = "Neru Fragment along the way to Ormer and Whelgar", ["{npc:1078} and Whelgar"] = "Ormer and Whelgar", ["{npc:311}'s Camp"] = "Sven's Camp" },
+			names = { ["item:190309"] = "Wooden Figurine", ["item:1946"] = "Mary's Looking Glass", ["item:2594"] = "Flagon of Mead", ["item:2658"] = "Ados Fragment", ["item:2659"] = "Modr Fragment", ["item:2660"] = "Golm Fragment", ["item:2661"] = "Neru Fragment", ["item:279996"] = "Goaz Stone", ["item:3619"] = "Snellig's Snuffbox", ["item:4371"] = "Bronze Tube", ["item:5825"] = "Treshala's Pendant", ["item:5947"] = "Defias Docket", ["npc:1040"] = "Fen Creeper", ["npc:1077"] = "Prospector Whelgar", ["npc:1078"] = "Ormer Ironbraid", ["npc:1110"] = "Skeletal Raider", ["npc:1157"] = "Cursed Sailor", ["npc:1158"] = "Cursed Marine", ["npc:1159"] = "First Mate Snellig", ["npc:1160"] = "Captain Halyndor", ["npc:1212"] = "Bishop Farthing", ["npc:1217"] = "Glorin Steelbrow", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1284"] = "Archbishop Benedictus", ["npc:1353"] = "Sarltooth", ["npc:1464"] = "Innkeeper Helbrek", ["npc:205"] = "Nightbane Dark Runner", ["npc:206"] = "Nightbane Vile Fang", ["npc:2089"] = "Giant Wetlands Crocolisk", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:263"] = "Lord Ello Ebonlocke", ["npc:268"] = "Sirra Von'Indi", ["npc:270892"] = "Goaz Warder", ["npc:272273"] = "Lost Watcher", ["npc:276"] = "Viktori Prism'Antras", ["npc:289"] = "Abercrombie", ["npc:302"] = "Blind Mary", ["npc:311"] = "Sven Yorgen", ["npc:3133"] = "Herble Baubbletump", ["npc:4140"] = "Scorpid Reaver", ["npc:4147"] = "Saltstone Basilisk", ["npc:4420"] = "Overlord Ramtusk", ["npc:4421"] = "Charlga Razorflank", ["npc:4422"] = "Agathelos the Raging", ["npc:4424"] = "Aggem Thorncurse", ["npc:4428"] = "Death Speaker Jargba", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4510"] = "Heralath Fallowbrook", ["npc:482"] = "Elling Trias", ["npc:4959"] = "Jorgen", ["npc:4982"] = "Thomas", ["npc:511"] = "Insane Ghoul", ["npc:522"] = "Mor'Ladim", ["npc:533"] = "Nightbane Shadow Weaver", ["npc:604"] = "Plague Spreader", ["npc:6244"] = "Takar the Seer", ["npc:633"] = "Elaine Carevin", ["npc:661"] = "Jonathan Carevin", ["npc:663"] = "Calor", ["npc:6790"] = "Innkeeper Trelayne", ["npc:840"] = "Watcher Backus", ["object:102"] = "Raven Hill", ["object:1162"] = "Menethil Harbor", ["object:119"] = "Abercrombie's Crate", ["object:176369"] = "Boat to Theramore", ["object:19868"] = "Rocket Car Rubble", ["object:2096"] = "Trade District", ["object:21052"] = "Defias Strongbox", ["object:21056"] = "Theramore Isle", ["quest:1142"] = "Mortality Wanes", ["quest:1144"] = "Willix the Importer", ["quest:1241"] = "The Missing Diplomat", ["quest:1738"] = "Heartswood", ["quest:225"] = "The Weathered Grave", ["quest:465"] = "Nek'rosh's Gambit", ["quest:5762"] = "Hemet Nesingwary", ["quest:65602"] = "What Is Love?", ["quest:96138"] = "Merrick's Bow", ["quest:98221"] = "From the Ashes", ["zone:1413"] = "The Barrens", ["zone:1418"] = "Badlands", ["zone:1431"] = "Duskwood", ["zone:1436"] = "Westfall", ["zone:1437"] = "Wetlands", ["zone:1440"] = "Ashenvale", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1445"] = "Dustwallow Marsh", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			written = { ["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "On the road south through the Barrens, Takar the Seer camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards.", ["Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}."] = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.", ["Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421} heals and calls her guards: interrupt her and kill the guards first."] = "Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga heals and calls her guards: interrupt her and kill the guards first.", ["The Plague Spreaders walk the northern half of the Raven Hill Cemetery. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "The Plague Spreaders walk the northern half of the Raven Hill Cemetery. Mor'Ladim, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of Sven's camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs.", ["{item:2658} along the way to {npc:1078} and Whelgar"] = "Ados Fragment along the way to Ormer and Whelgar", ["{item:2659} along the way to {npc:1078} and Whelgar"] = "Modr Fragment along the way to Ormer and Whelgar", ["{item:2660} along the way to {npc:1078} and Whelgar"] = "Golm Fragment along the way to Ormer and Whelgar", ["{item:2661} along the way to {npc:1078} and Whelgar"] = "Neru Fragment along the way to Ormer and Whelgar", ["{npc:1078} and Whelgar"] = "Ormer and Whelgar", ["{npc:311}'s Camp"] = "Sven's Camp" },
 			steps = {
 				{
 					title = "{quest:1241}",
@@ -8318,6 +8318,52 @@ do
 						{ t = "turnin", quest = 1716, title = "Devourer of Souls", npc = 6244, npcName = "Takar the Seer", map = 1413, x = 49.31, y = 57.1, z = 91.8, f = "e" },
 						{ t = "accept", quest = 1738, title = "Heartswood", npc = 6244, npcName = "Takar the Seer", minLevel = 20, qlvl = 20, pre = { 1716 }, preTitles = { [1716] = "Devourer of Souls" }, map = 1413, x = 49.31, y = 57.1, z = 91.8, f = "e", note = "{quest:1738}: in {zone:1440}, on the way to {zone:1443}" },
 						{ t = "accept", quest = 65602, title = "What Is Love?", npc = 6244, npcName = "Takar the Seer", minLevel = 20, qlvl = 20, pre = { 1716 }, preTitles = { [1716] = "Devourer of Souls" }, map = 1413, x = 49.31, y = 57.1, z = 91.8, f = "e", optional = true, note = "{quest:65602}: the incubus, beside the succubus; the {item:190309} is near the {quest:1738}" },
+					},
+				},
+				{
+					title = "Razorfen Kraul (dungeon, optional)",
+					note = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}.",
+					label = "rfk-start",
+					when = { { k = "group", q = 1144 }, { k = "level", op = "<", n = 33 } },
+					goals = {
+						{ t = "note", text = "Horde land: keep clear of Camp Taurajo and its guards. Keep 2 free quest log slots." },
+						{ t = "goto", text = "Razorfen Kraul", map = 1413, x = 42.9, y = 90.2, f = "e", r = 25 },
+					},
+				},
+				{
+					title = "Razorfen Kraul: {npc:4510}",
+					note = "{npc:4510}, a night elf who died in the Kraul, lies inside (his spot: to check in game). {quest:1142} asks for {item:5825}: it drops from the quilboars of the Kraul, about 1 kill in 10, for each player on the quest.",
+					when = { { k = "group", q = 1144 }, { k = "done", label = "rfk-start" } },
+					goals = {
+						{ t = "accept", quest = 1142, title = "Mortality Wanes", npc = 4510, npcName = "Heralath Fallowbrook", minLevel = 25, qlvl = 30 },
+					},
+				},
+				{
+					title = "Razorfen Kraul: along the way",
+					when = { { k = "group", q = 1144 }, { k = "done", label = "rfk-start" } },
+					along = "rfk-charlga",
+					goals = {
+						{ t = "collect", quest = 1142, title = "Mortality Wanes", item = 5825, itemName = "Treshala's Pendant", count = 1, oi = 1, note = "{item:5825}: quilboars of the Kraul, about 1 in 10", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Razorfen Kraul: {npc:4421}",
+					note = "Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421} heals and calls her guards: interrupt her and kill the guards first.",
+					label = "rfk-charlga",
+					when = { { k = "group", q = 1144 }, { k = "done", label = "rfk-start" } },
+					goals = {
+						{ t = "kill", target = "Charlga Razorflank", npc = 4421, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Razorfen Kraul: {quest:1144}",
+					note = "{quest:1144}, a goblin, is held prisoner inside (his spot: to check in game). Everyone takes his quest before he starts walking; he walks all the way back to the entrance and quilboars attack on the way. He gives the reward himself at the end.",
+					when = { { k = "group", q = 1144 }, { k = "done", label = "rfk-start" } },
+					goals = {
+						{ t = "note", text = "Not there? Another group is escorting him: wait for him to come back, or join them." },
+						{ t = "accept", quest = 1144, title = "Willix the Importer", npc = 4508, npcName = "Willix the Importer", minLevel = 23, qlvl = 30, escort = true },
+						{ t = "complete", quest = 1144, title = "Willix the Importer", note = "Escort him out of the Kraul", escort = true },
+						{ t = "turnin", quest = 1144, title = "Willix the Importer", npc = 4508, npcName = "Willix the Importer", note = "{quest:1144}, at the entrance" },
 					},
 				},
 				{
@@ -9442,7 +9488,7 @@ do
 			next = "groupe-alliance/17-strangleronce",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:2702"] = "Lightforge Ingot", ["item:5475"] = "Wooden Key", ["npc:1217"] = "Glorin Steelbrow", ["npc:3663"] = "Delgren the Purifier", ["npc:3691"] = "Raene Wolfrunner", ["npc:3696"] = "Ran Bloodtooth", ["npc:3759"] = "Felmusk Rogue", ["npc:3848"] = "Kayneth Stillwind", ["npc:3894"] = "Pelturas Whitemoon", ["npc:3897"] = "Krolg", ["npc:3901"] = "Illiyana", ["npc:3916"] = "Shael'dryn", ["npc:3919"] = "Withered Ancient", ["npc:3920"] = "Anilia", ["npc:3931"] = "Shadethicket Oracle", ["npc:3940"] = "Taneel Darkwood", ["npc:3941"] = "Uthil Mooncall", ["npc:3942"] = "Mavoris Cloudsbreak", ["npc:3961"] = "Maliynn", ["npc:4619"] = "Geltharis", ["object:1162"] = "Menethil Harbor", ["object:19024"] = "Hidden Shrine", ["object:19901"] = "Circle of Imprisonment", ["object:2734"] = "Waterlogged Chest", ["object:669176"] = "Gleaming Crescent Pendant", ["quest:1022"] = "The Howling Vale", ["quest:1035"] = "Fallen Sky Lake", ["quest:526"] = "Lightforge Ingots", ["zone:1413"] = "Barrens", ["zone:1437"] = "Wetlands", ["zone:1440"] = "Ashenvale" },
+			names = { ["item:2702"] = "Lightforge Ingot", ["item:5475"] = "Wooden Key", ["npc:1217"] = "Glorin Steelbrow", ["npc:3663"] = "Delgren the Purifier", ["npc:3691"] = "Raene Wolfrunner", ["npc:3696"] = "Ran Bloodtooth", ["npc:3759"] = "Felmusk Rogue", ["npc:3848"] = "Kayneth Stillwind", ["npc:3894"] = "Pelturas Whitemoon", ["npc:3897"] = "Krolg", ["npc:3901"] = "Illiyana", ["npc:3916"] = "Shael'dryn", ["npc:3919"] = "Withered Ancient", ["npc:3920"] = "Anilia", ["npc:3931"] = "Shadethicket Oracle", ["npc:3940"] = "Taneel Darkwood", ["npc:3941"] = "Uthil Mooncall", ["npc:3942"] = "Mavoris Cloudsbreak", ["npc:3961"] = "Maliynn", ["npc:4521"] = "Treshala Fallowbrook", ["npc:4619"] = "Geltharis", ["object:1162"] = "Menethil Harbor", ["object:19024"] = "Hidden Shrine", ["object:19901"] = "Circle of Imprisonment", ["object:2734"] = "Waterlogged Chest", ["object:669176"] = "Gleaming Crescent Pendant", ["quest:1022"] = "The Howling Vale", ["quest:1035"] = "Fallen Sky Lake", ["quest:1142"] = "Mortality Wanes", ["quest:526"] = "Lightforge Ingots", ["zone:1413"] = "Barrens", ["zone:1437"] = "Wetlands", ["zone:1440"] = "Ashenvale", ["zone:1457"] = "Darnassus" },
 			written = { ["{npc:1217} stands on the upper floor of Menethil's keep."] = "Glorin stands on the upper floor of Menethil's keep." },
 			steps = {
 				{
@@ -9636,6 +9682,23 @@ do
 					title = "Fly to Auberdine",
 					goals = {
 						{ t = "goto", text = "Astranaar flight master", map = 1440, x = 34.5, y = 48, f = "e" },
+						{ t = "fly", location = "Auberdine", node = 26 },
+					},
+				},
+				{
+					title = "{zone:1457}: {quest:1142} (detour)",
+					note = "From Auberdine to Rut'theran Village: the flight for Night Elves and whoever learned it in Group 8, else the boat from the Auberdine dock; then the portal up to {zone:1457}. {npc:4521} lives in the city (the map marks her).",
+					when = { { k = "complete", q = 1142 } },
+					goals = {
+						{ t = "getfp", npc = 3838, npcName = "Vesprystus", location = "Rut'theran Village", node = 27, map = 1438, x = 58.4, y = 94.02, z = 23.3, f = "e", only = { races = { "Human", "Dwarf", "Gnome", "Skyborne" } } },
+						{ t = "fly", location = "Rut'theran Village", node = 27, only = { races = { "NightElf" } } },
+						{ t = "turnin", quest = 1142, title = "Mortality Wanes", npc = 4521, npcName = "Treshala Fallowbrook", map = 1457, x = 69.54, y = 67.75, z = 1346.7, f = "e" },
+					},
+				},
+				{
+					title = "Back to Auberdine",
+					when = { { k = "turnedin", q = 1142 } },
+					goals = {
 						{ t = "fly", location = "Auberdine", node = 26 },
 					},
 				},
