@@ -291,4 +291,108 @@ return {
 	-- Step 56: Blackrock Depths: quests not done
 	["Blackrock Depths: quests not done"] = "Profondeurs de Rochenoire : quêtes non finies",
 	["What is left of Blackrock Depths in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste des Profondeurs de Rochenoire dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
+
+	-- Step 57: Lower Blackrock Spire (dungeon, optional)
+	["Lower Blackrock Spire (dungeon, optional)"] = "Pic Rochenoire inférieur (donjon, facultatif)",
+	["Lower Blackrock Spire: the orc city in the upper part of Blackrock Mountain, above Blackrock Depths. Levels 55 to 60, bosses 58 to 60: a group of 5 at 58 to 60 (possible from about 56, difficult). The quests come from Morgan's Vigil and Flame Crest, one more from a goblin hidden inside; the run has one short trip out to Morgan's Vigil and back. Alone? Skip it."] = "Pic Rochenoire inférieur : la cité des orcs dans le haut du Mont Rochenoire, au-dessus des Profondeurs de Rochenoire. Niveaux 55 à 60, boss 58 à 60 : un groupe de 5 aux niveaux 58 à 60 (possible vers 56, difficile). Les quêtes se prennent à la Veille de Morgan et à la Corniche des flammes, une de plus auprès d'une gobeline cachée dedans ; le passage compte un court aller-retour jusqu'à la Veille de Morgan. Seul ? Le passer.",
+	["Keep 9 free quest log slots."] = "Garder 9 places libres dans le journal de quêtes.",
+
+	-- Step 58: Morgan's Vigil: Helendis Riverhorn
+	-- {quest:4701} Put Her Down · {npc:10220} Halycon · {npc:9560} Marshal Maxwell · {npc:10257} Bijou
+	["{quest:4701}: {npc:10220}, the great worg of the Spire. {npc:9560}'s own quest comes later, through {npc:10257}, a goblin hidden in the dungeon."] = "{quest:4701} : {npc:10220}, la grande worg du Pic. La quête de {npc:9560} vient plus tard, par {npc:10257}, une gobeline cachée dans le donjon.",
+
+	-- Step 59: Flame Crest: Kibler and Ragged John
+	-- {npc:10260} Kibler · {npc:9563} Ragged John
+	["Flame Crest: {npc:10260} and {npc:9563}"] = "Corniche des flammes : {npc:10260} et {npc:9563}",
+	-- {npc:10260} Kibler · {item:12264} Worg Carrier · {item:12529} Smolderweb Carrier · {item:12262} Empty Worg Pup Cage · {npc:9563} Ragged John · {quest:4866} Mother's Milk
+	["Ride north to Flame Crest. {npc:10260} stands inside the cave: his two quests give two pets, the {item:12264} and the {item:12529}, and he hands over an {item:12262}. {npc:9563}, in the camp: {quest:4866}, a rare reward."] = "Monter au nord jusqu'à la Corniche des flammes. {npc:10260} se tient dans la grotte : ses deux quêtes donnent deux mascottes, le {item:12264} et le {item:12529}, et il remet une {item:12262}. {npc:9563}, dans le camp : {quest:4866}, une récompense rare.",
+
+	-- Step 60: Lower Blackrock Spire: before going in
+	["Lower Blackrock Spire: before going in"] = "Pic Rochenoire inférieur : avant d'entrer",
+	-- {zone:1428} Burning Steppes
+	["Into Blackrock Mountain on the {zone:1428} side. Two ways to the portal: the door beside the Blackrock Spire meeting stone and the path up (elites on it), or along the great chain and the wall to the balcony where Bodley stands, then a jump down onto it, with no fight. Inside, the stairs up on the left lead to Upper Blackrock Spire: not this time."] = "Entrer dans le Mont Rochenoire du côté de {zone:1428}. Deux chemins jusqu'au portail : la porte à côté de la pierre de rencontre du pic Rochenoire et le chemin qui monte (des élites dessus), ou le long de la grande chaîne et du mur jusqu'au balcon où se tient Bodley, puis un saut dessus, sans combat. Dedans, l'escalier qui monte à gauche mène au pic Rochenoire supérieur : pas cette fois.",
+	-- {quest:4701} Put Her Down · {npc:9562} Helendis Riverhorn · {quest:4729} Kibler's Exotic Pets · {quest:4862} En-Ay-Es-Tee-Why · {npc:10260} Kibler · {quest:4866} Mother's Milk · {npc:9563} Ragged John · {quest:4867} Urok Doomhowl · {npc:10799} Warosh · {quest:5001} Bijou's Belongings · {npc:10257} Bijou · {item:12344} Seal of Ascension · {zone:1452} Winterspring · {zone:1455} Ironforge
+	["In the quest log: {quest:4701} ({npc:9562}), {quest:4729} and {quest:4862} ({npc:10260}), {quest:4866} ({npc:9563}). Given inside: {quest:4867} ({npc:10799}) and {quest:5001} ({npc:10257}). Not on this route: {item:12344} (Vaelan, inside: the key of Upper Blackrock Spire, a 10-player dungeon), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, {zone:1452}), Deliana's dungeon set quests ({zone:1455})."] = "Dans le journal de quêtes : {quest:4701} ({npc:9562}), {quest:4729} et {quest:4862} ({npc:10260}), {quest:4866} ({npc:9563}). Données dedans : {quest:4867} ({npc:10799}) et {quest:5001} ({npc:10257}). Pas sur ce parcours : {item:12344} (Vaelan, dedans : la clé du pic Rochenoire supérieur, un donjon à 10 joueurs), The Final Tablets (les tablettes de Mosh'aru), Snakestone of the Shadow Huntress (Kilram, {zone:1452}), les quêtes d'ensembles de donjon de Deliana ({zone:1455}).",
+	["Blackrock Spire"] = "Pic Rochenoire",
+
+	-- Step 61: Hordemar City: Warosh and Bijou
+	-- {npc:10799} Warosh · {npc:10257} Bijou
+	["Hordemar City: {npc:10799} and {npc:10257}"] = "Cité de Hordemar : {npc:10799} et {npc:10257}",
+	-- {npc:10799} Warosh · {npc:10257} Bijou · {npc:9196} Highlord Omokk · {npc:9237} War Master Voone · {npc:9568} Overlord Wyrmthalak · {npc:9560} Marshal Maxwell
+	["Past the entrance door, Hordemar City. {npc:10799} walks around its first part. {npc:10257} waits on a ledge overlooking the city: one of the ramps down to Tazz'Alaor, the trolls' hall with the purple light, climbs to her. Her belongings are in a small chest tucked in a corner at the bottom of Hordemar City (it has several places). Leave {npc:9196}, {npc:9237} and {npc:9568} alive for now: {npc:9560}'s quest, given for {npc:10257}'s message, asks for them."] = "Passé la porte d'entrée, la cité de Hordemar (Hordemar City). {npc:10799} se promène dans sa première partie. {npc:10257} attend sur une corniche qui domine la cité : l'une des rampes qui descendent vers Tazz'Alaor, la salle des trolls à la lumière violette, monte jusqu'à elle. Ses affaires sont dans un petit coffre, dans un coin au fond de la cité de Hordemar (il a plusieurs emplacements). Laisser {npc:9196}, {npc:9237} et {npc:9568} en vie pour l'instant : la quête de {npc:9560}, donnée pour le message de {npc:10257}, les demande.",
+	-- {quest:5001} Bijou's Belongings
+	["{quest:5001}: a small chest at the bottom of Hordemar City"] = "{quest:5001} : un petit coffre au fond de la cité de Hordemar",
+
+	-- Step 62: Message to Maxwell: out and back
+	-- {quest:5002} Message to Maxwell
+	["{quest:5002}: out and back"] = "{quest:5002} : aller-retour",
+	["Leave the dungeon without resetting it: as long as the group stays together, the same instance waits, bosses alive (to check in game). Ride to Morgan's Vigil and back, a good quarter of an hour; a hearthstone bound at the Vigil shortens the way there."] = "Sortir du donjon sans le réinitialiser : tant que le groupe reste ensemble, la même instance attend, boss en vie (à vérifier en jeu). Aller jusqu'à la Veille de Morgan et revenir, un bon quart d'heure ; une pierre de foyer liée à la Veille raccourcit l'aller.",
+
+	-- Step 63: Lower Blackrock Spire: along the way
+	["Lower Blackrock Spire: along the way"] = "Pic Rochenoire inférieur : en chemin",
+	-- {npc:10220} Halycon · {item:12262} Empty Worg Pup Cage · {npc:10596} Mother Smolderweb
+	-- plural, as words: Bloodaxe Worg Pups = {npc:10221} Bloodaxe Worg Pup · Spire Spider Eggs = {item:12530} Spire Spider Egg
+	["The Bloodaxe Worg Pups play in Hordemar City and in {npc:10220}'s lair: target one and use the {item:12262}. The Spire Spider Eggs lie in the Skitterweb Tunnels, {npc:10596}'s halls: each egg sac gives 1 to 3, and spiderlings may hatch from them."] = "Les louveteaux worgs Bloodaxe (Bloodaxe Worg Pups) jouent dans la cité de Hordemar et dans l'antre de {npc:10220} : en cibler un et utiliser la {item:12262}. Les œufs d'araignée du Pic (Spire Spider Eggs) sont dans les tunnels des araignées (Skitterweb Tunnels), le domaine de {npc:10596} : chaque cocon en donne 1 à 3, et des araignées peuvent en éclore.",
+
+	-- Step 64: Highlord Omokk
+	-- {quest:4867} Urok Doomhowl · {item:12533} Roughshod Pike · {npc:9196} Highlord Omokk
+	["{quest:4867} needs a {item:12533}: they lean against the wall behind the Scarshield orcs, past the bridge out of Hordemar City. Then the Spirestone ogres: {npc:9196} (elite 59) and his two guards. His head is for the Urok event: one player with the quest carries the pike and the head."] = "{quest:4867} demande une {item:12533} : elles sont appuyées contre le mur derrière les orcs Scarshield, après le pont qui sort de la cité de Hordemar. Puis les ogres Spirestone : {npc:9196} (élite 59) et ses deux gardes. Sa tête sert pour l'événement d'Urok : un joueur qui a la quête porte la pique et la tête.",
+
+	-- Step 65: Tazz'Alaor: War Master Voone
+	-- {npc:9237} War Master Voone
+	["Tazz'Alaor: {npc:9237}"] = "Tazz'Alaor : {npc:9237}",
+	-- {npc:9236} Shadow Hunter Vosh'gajin · {npc:9237} War Master Voone
+	["Down into Tazz'Alaor, the trolls' hall: {npc:9236} (elite 59, two priests at her side), then down the great ramp and along the hall to {npc:9237} (elite 59, no adds, hits very hard)."] = "Descendre dans Tazz'Alaor, la salle des trolls : {npc:9236} (élite 59, deux prêtres à ses côtés), puis la grande rampe et la salle jusqu'à {npc:9237} (élite 59, sans renforts, frappe très fort).",
+
+	-- Step 66: Skitterweb Tunnels: Mother Smolderweb
+	-- {npc:10596} Mother Smolderweb
+	["Skitterweb Tunnels: {npc:10596}"] = "Tunnels des araignées : {npc:10596}",
+	-- {npc:10260} Kibler · {npc:10596} Mother Smolderweb · {quest:4866} Mother's Milk · {npc:9563} Ragged John
+	["The spiders' tunnels: the eggs for {npc:10260}. {npc:10596} (elite 59) waits at the top. Whoever has {quest:4866} lets her poison them, and nobody removes that poison; then kill her. The poison must still be there at {npc:9563}'s: if it would wear off before the end of the run (to check in game), that player goes out right after her and comes back."] = "Les tunnels des araignées : les œufs pour {npc:10260}. {npc:10596} (élite 59) attend au sommet. Celui qui a {quest:4866} se laisse empoisonner par elle, et personne ne retire ce poison ; puis la tuer. Le poison doit être encore là chez {npc:9563} : s'il risque de s'arrêter avant la fin du donjon (à vérifier en jeu), ce joueur sort juste après elle et revient.",
+
+	-- Step 67: Urok's Tribute Pile
+	-- {object:175621} Urok's Tribute Pile · {item:12533} Roughshod Pike · {item:12534} Omokk's Head · {quest:4867} Urok Doomhowl
+	["Up the ramp past the tunnels, on the corner of the landing, behind two Spirestone orcs: {object:175621}, a heap of skulls. The player with the {item:12533} and {item:12534} stands by it and uses the head: waves of ogres come, then {quest:4867} (elite 60). Every 30 seconds, the pike used on the pile kills one ogre outright."] = "En haut de la rampe après les tunnels, au coin du palier, derrière deux orcs Spirestone : {object:175621}, un tas de crânes. Le joueur qui a la {item:12533} et {item:12534} se place à côté et utilise la tête : des vagues d'ogres arrivent, puis {quest:4867} (élite 60). Toutes les 30 secondes, la pique utilisée sur le tas tue un ogre d'un coup.",
+
+	-- Step 68: Halycon and Gizrul
+	-- {npc:10220} Halycon
+	["{npc:10220} and Gizrul"] = "{npc:10220} et Gizrul",
+	-- {npc:9736} Quartermaster Zigris · {npc:10220} Halycon · {npc:10268} Gizrul the Slavener
+	["Past {npc:9736}, {npc:10220}'s lair: the great worg (elite 59) and her pups. {npc:10268} runs in right after her death: no time to rest in between."] = "Après {npc:9736}, l'antre de {npc:10220} : la grande worg (élite 59) et ses petits. {npc:10268} arrive aussitôt après sa mort : pas de repos entre les deux.",
+
+	-- Step 69: Overlord Wyrmthalak
+	-- {npc:9568} Overlord Wyrmthalak · {quest:5089} General Drakkisath's Command
+	["The last boss, {npc:9568} (elite 60), calls two adds at half health. He drops {quest:5089} for each player: right-click it."] = "Le dernier boss, {npc:9568} (élite 60), appelle deux renforts à la moitié de sa vie. Il donne {quest:5089} à chaque joueur : clic droit dessus.",
+
+	-- Step 70: Hordemar City: Warosh
+	-- {npc:10799} Warosh
+	["Hordemar City: {npc:10799}"] = "Cité de Hordemar : {npc:10799}",
+	-- {npc:10799} Warosh
+	["Back to the entrance: {npc:10799} walks around the first part of Hordemar City."] = "Retour à l'entrée : {npc:10799} se promène dans la première partie de la cité de Hordemar.",
+
+	-- Step 71: Flame Crest: Ragged John
+	-- {npc:9563} Ragged John
+	["Flame Crest: {npc:9563}"] = "Corniche des flammes : {npc:9563}",
+	-- {npc:9563} Ragged John · {quest:4866} Mother's Milk
+	["Out of the Spire, north-east to Flame Crest. {npc:9563}: his talk option, while the poison is still on you. Poison gone? {quest:4866} cannot be done this time: skip this step."] = "Sortir du Pic, puis aller au nord-est jusqu'à la Corniche des flammes. {npc:9563} : son option de dialogue, tant que le poison est encore là. Le poison est parti ? {quest:4866} ne peut pas se faire cette fois : passer cette étape.",
+	-- {npc:9563} Ragged John
+	["{npc:9563}: let him milk you"] = "{npc:9563} : se laisser traire",
+
+	-- Step 72: Flame Crest: Kibler's worg pup
+	-- {npc:10260} Kibler
+	["Flame Crest: {npc:10260}'s worg pup"] = "Corniche des flammes : le louveteau de {npc:10260}",
+
+	-- Step 73: Flame Crest: Kibler's spider eggs
+	-- {npc:10260} Kibler
+	["Flame Crest: {npc:10260}'s spider eggs"] = "Corniche des flammes : les œufs de {npc:10260}",
+
+	-- Step 76: Morgan's Vigil: General Drakkisath's Command
+	-- {quest:5089} General Drakkisath's Command
+	["Morgan's Vigil: {quest:5089}"] = "Veille de Morgan : {quest:5089}",
+	-- {npc:10363} General Drakkisath · {item:12344} Seal of Ascension
+	["Maxwell's next quest, {npc:10363}'s Demise, is for Upper Blackrock Spire (10 players, the {item:12344} to open it): not in this guide."] = "La quête suivante de Maxwell, qui envoie tuer {npc:10363}, est pour le pic Rochenoire supérieur (10 joueurs, {item:12344} pour l'ouvrir) : pas dans ce guide.",
+
+	-- Step 77: Lower Blackrock Spire: quests not done
+	["Lower Blackrock Spire: quests not done"] = "Pic Rochenoire inférieur : quêtes non finies",
+	["What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste du pic Rochenoire inférieur dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
 }

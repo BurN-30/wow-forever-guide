@@ -18066,8 +18066,8 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:10999"] = "Ironfel", ["item:11000"] = "Shadowforge Key", ["item:11078"] = "Relic Coffer Key", ["item:11140"] = "Prison Cell Key", ["item:11230"] = "Encased Fiery Essence", ["item:11231"] = "Altered Black Dragonflight Molt", ["item:11312"] = "Lost Thunderbrew Recipe", ["item:11313"] = "Ribbly's Head", ["item:11325"] = "Dark Iron Ale Mug", ["item:11464"] = "Marshal Windsor's Lost Information", ["item:11468"] = "Dark Iron Fanny Pack", ["npc:1267"] = "Ragnar Thunderbrew", ["npc:14387"] = "Lothos Riftwaker", ["npc:1748"] = "Highlord Bolvar Fordragon", ["npc:1749"] = "Lady Katrana Prestor", ["npc:2784"] = "King Magni Bronzebeard", ["npc:344"] = "Magistrate Solomon", ["npc:7044"] = "Black Drake", ["npc:8879"] = "Royal Historian Archesonus", ["npc:8888"] = "Franclorn Forgewright", ["npc:8905"] = "Warbringer Construct", ["npc:8916"] = "Arena Spectator", ["npc:8929"] = "Princess Moira Bronzebeard", ["npc:8983"] = "Golem Lord Argelmach", ["npc:9016"] = "Bael'Gar", ["npc:9017"] = "Lord Incendius", ["npc:9018"] = "High Interrogator Gerstahn", ["npc:9019"] = "Emperor Dagran Thaurissan", ["npc:9021"] = "Kharan Mighthammer", ["npc:9023"] = "Marshal Windsor", ["npc:9024"] = "Pyromancer Loregrain", ["npc:9025"] = "Lord Roccor", ["npc:9033"] = "General Angerforge", ["npc:9039"] = "Doom'rel", ["npc:9041"] = "Warder Stilgiss", ["npc:9056"] = "Fineous Darkvire", ["npc:9156"] = "Ambassador Flamelash", ["npc:9177"] = "Oralius", ["npc:9319"] = "Houndmaster Grebmar", ["npc:9459"] = "Cyrus Therepentous", ["npc:9461"] = "Frenzied Black Drake", ["npc:9476"] = "Watchman Doomgrip", ["npc:9499"] = "Plugger Spazzring", ["npc:9500"] = "Mistress Nagmara", ["npc:9503"] = "Private Rocknot", ["npc:9536"] = "Maxwort Uberglint", ["npc:9544"] = "Yuka Screwspigot", ["npc:9560"] = "Marshal Maxwell", ["npc:9561"] = "Jalinda Sprig", ["npc:9562"] = "Helendis Riverhorn", ["npc:9563"] = "Ragged John", ["npc:9938"] = "Magmus", ["npc:9956"] = "Shadowforge Flame Keeper", ["object:147516"] = "Dark Iron", ["object:160836"] = "Relic Coffer", ["object:160845"] = "Dark Coffer", ["object:161460"] = "Shadowforge Lock", ["object:161495"] = "Secret Safe", ["object:164689"] = "Monument of Franclorn Forgewright", ["object:164869"] = "Spectral Chalice", ["object:164911"] = "Thunderbrew Lager Keg", ["object:165554"] = "Heart of the Mountain", ["object:170558"] = "The Lyceum", ["object:170559"] = "Shadowforge Gate", ["object:170570"] = "East Garrison Door", ["object:170571"] = "Bar Door", ["object:171709"] = "High Seat", ["object:174825"] = "Black Anvil", ["object:2117"] = "Stormwind Keep", ["quest:3701"] = "The Smoldering Ruins of Thaurissan", ["quest:3801"] = "Dark Iron Legacy", ["quest:3802"] = "Dark Iron Legacy", ["quest:4022"] = "A Taste of Flame", ["quest:4123"] = "The Heart of the Mountain", ["quest:4126"] = "Hurley Blackbreath", ["quest:4136"] = "Ribbly Screwspigot", ["quest:4182"] = "Dragonkin Menace", ["quest:4241"] = "Marshal Windsor", ["quest:4242"] = "Abandoned Hope", ["quest:4262"] = "Overmaster Pyron", ["quest:4263"] = "Incendius!", ["quest:4264"] = "A Crumpled Up Note", ["quest:4282"] = "A Shred of Hope", ["quest:4286"] = "The Good Stuff", ["quest:4322"] = "Jail Break!", ["quest:4341"] = "Kharan Mighthammer", ["quest:4361"] = "The Bearer of Bad News", ["quest:4362"] = "The Fate of the Kingdom", ["zone:1427"] = "Searing Gorge", ["zone:1428"] = "Burning Steppes", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
-			written = { ["Detention Block: {npc:9021} and Windsor"] = "Detention Block: Kharan and Windsor", ["East along the hills to {npc:9459}'s cave."] = "East along the hills to Cyrus's cave.", ["In the quest log: {quest:4022} ({npc:9459}), {quest:4263} ({npc:9561}). Keep one free quest log slot for {quest:4322}. For the third visit: {quest:4362} (Magni), {quest:4136}, {quest:4126}."] = "In the quest log: A Taste of Flame (Cyrus), Incendius! (Jalinda Sprig). Keep one free quest log slot for Jail Break!. For the third visit: The Fate of the Kingdom (Magni), Ribbly Screwspigot, Hurley Blackbreath.", ["In the quest log: {quest:4341} (King Magni), {quest:4241} (Maxwell), {quest:4286} ({npc:9177}), {quest:4123} ({npc:9536}), {quest:3801} ({npc:8888}, if taken). For the next visits: {quest:4022} ({npc:9459}), {quest:4136} ({npc:9544}), {quest:4126} ({npc:1267}). Not on this route: {npc:9500}'s quest in the tavern (its herbs and silver are gathered outside), the {object:164869}'s (miners), {npc:14387}'s Attunement to the Core (raid)."] = "In the quest log: Kharan Mighthammer (King Magni), Marshal Windsor (Maxwell), The Good Stuff (Oralius), The Heart of the Mountain (Maxwort), Dark Iron Legacy (Franclorn, if taken). For the next visits: A Taste of Flame (Cyrus), Ribbly Screwspigot (Yuka), Hurley Blackbreath (Ragnar). Not on this route: Mistress Nagmara's quest in the tavern (its herbs and silver are gathered outside), the Spectral Chalice's (miners), Lothos Riftwaker's Attunement to the Core (raid).", ["Magni stands in the {object:171709}, beside {npc:8879}, who took {quest:3701} in Group 29. {npc:9021} is a prisoner in Blackrock Depths."] = "Magni stands in the High Seat, beside Royal Historian Archesonus, who took The Smoldering Ruins of Thaurissan in Group 29. Kharan is a prisoner in Blackrock Depths.", ["Ride out of {zone:1455} down to Kharanos: {npc:1267} is in the Thunderbrew Distillery. His lost recipe is in the Grim Guzzler, the tavern of Blackrock Depths (third visit)."] = "Ride out of Ironforge down to Kharanos: Ragnar is in the Thunderbrew Distillery. His lost recipe is in the Grim Guzzler, the tavern of Blackrock Depths (third visit).", ["The Detention Block opens past the entrance. {npc:9018}, in the southernmost room, drops the {item:11140}, which opens the cells (a rogue can pick them instead). {quest:4341} and {quest:4241} are locked in the cells of the south-east corridor: listen to {npc:9021}'s whole story; Windsor has given up, and his news goes back to Maxwell. {npc:9025} patrols the northern ring, {npc:9319} waits at its lowest point. To check in game: which cell holds whom."] = "The Detention Block opens past the entrance. High Interrogator Gerstahn, in the southernmost room, drops the Prison Cell Key, which opens the cells (a rogue can pick them instead). Kharan Mighthammer and Marshal Windsor are locked in the cells of the south-east corridor: listen to Kharan's whole story; Windsor has given up, and his news goes back to Maxwell. Lord Roccor patrols the northern ring, Houndmaster Grebmar waits at its lowest point. To check in game: which cell holds whom.", ["The {item:11000} opens the doors of the second and third visits (the Shadowforge Gates of the prison and the {object:161460}): one key in the group is enough. {npc:8888}'s ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with {npc:8888}, then come back to life at your body or by a group mate's spell. To check in game."] = "The Shadowforge Key opens the doors of the second and third visits (the Shadowforge Gates of the prison and the Shadowforge Lock): one key in the group is enough. Franclorn's ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with Franclorn, then come back to life at your body or by a group mate's spell. To check in game.", ["{npc:9459} hands over an {item:11231} with the quest: it goes on {npc:9016}'s remains, in the dungeon (second visit)."] = "Cyrus hands over an Altered Black Dragonflight Molt with the quest: it goes on Bael'Gar's remains, in the dungeon (second visit).", ["{npc:9562}'s chain ({quest:4182} done in Group 25) leads to {quest:4241}, a prisoner in Blackrock Depths: first a round trip to Lakeshire and {zone:1453}, by flight."] = "Helendis's chain (Dragonkin Menace done in Group 25) leads to Marshal Windsor, a prisoner in Blackrock Depths: first a round trip to Lakeshire and Stormwind, by flight.", ["{quest:4022}, first part (offered in Group 25): {npc:9459} hides in a cave in the far east of the Steppes. The {npc:9461} (elite 54) appears outside it and drops the molt."] = "A Taste of Flame, first part (offered in Group 25): Cyrus hides in a cave in the far east of the Steppes. The Frenzied Black Drake (elite 54) appears outside it and drops the molt.", ["{quest:4241}'s chain starts with {npc:9562}'s {quest:4182} (offered in Group 25): the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52."] = "Marshal Windsor's chain starts with Helendis's Dragonkin Menace (offered in Group 25): the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52." },
+			names = { ["item:10999"] = "Ironfel", ["item:11000"] = "Shadowforge Key", ["item:11078"] = "Relic Coffer Key", ["item:11140"] = "Prison Cell Key", ["item:11230"] = "Encased Fiery Essence", ["item:11231"] = "Altered Black Dragonflight Molt", ["item:11312"] = "Lost Thunderbrew Recipe", ["item:11313"] = "Ribbly's Head", ["item:11325"] = "Dark Iron Ale Mug", ["item:11464"] = "Marshal Windsor's Lost Information", ["item:11468"] = "Dark Iron Fanny Pack", ["item:12262"] = "Empty Worg Pup Cage", ["item:12264"] = "Worg Carrier", ["item:12344"] = "Seal of Ascension", ["item:12529"] = "Smolderweb Carrier", ["item:12530"] = "Spire Spider Egg", ["item:12533"] = "Roughshod Pike", ["item:12534"] = "Omokk's Head", ["item:12712"] = "Warosh's Mojo", ["npc:10220"] = "Halycon", ["npc:10221"] = "Bloodaxe Worg Pup", ["npc:10257"] = "Bijou", ["npc:10260"] = "Kibler", ["npc:10268"] = "Gizrul the Slavener", ["npc:10363"] = "General Drakkisath", ["npc:10596"] = "Mother Smolderweb", ["npc:10799"] = "Warosh", ["npc:1267"] = "Ragnar Thunderbrew", ["npc:14387"] = "Lothos Riftwaker", ["npc:1748"] = "Highlord Bolvar Fordragon", ["npc:1749"] = "Lady Katrana Prestor", ["npc:2784"] = "King Magni Bronzebeard", ["npc:344"] = "Magistrate Solomon", ["npc:7044"] = "Black Drake", ["npc:8879"] = "Royal Historian Archesonus", ["npc:8888"] = "Franclorn Forgewright", ["npc:8905"] = "Warbringer Construct", ["npc:8916"] = "Arena Spectator", ["npc:8929"] = "Princess Moira Bronzebeard", ["npc:8983"] = "Golem Lord Argelmach", ["npc:9016"] = "Bael'Gar", ["npc:9017"] = "Lord Incendius", ["npc:9018"] = "High Interrogator Gerstahn", ["npc:9019"] = "Emperor Dagran Thaurissan", ["npc:9021"] = "Kharan Mighthammer", ["npc:9023"] = "Marshal Windsor", ["npc:9024"] = "Pyromancer Loregrain", ["npc:9025"] = "Lord Roccor", ["npc:9033"] = "General Angerforge", ["npc:9039"] = "Doom'rel", ["npc:9041"] = "Warder Stilgiss", ["npc:9056"] = "Fineous Darkvire", ["npc:9156"] = "Ambassador Flamelash", ["npc:9177"] = "Oralius", ["npc:9196"] = "Highlord Omokk", ["npc:9236"] = "Shadow Hunter Vosh'gajin", ["npc:9237"] = "War Master Voone", ["npc:9319"] = "Houndmaster Grebmar", ["npc:9459"] = "Cyrus Therepentous", ["npc:9461"] = "Frenzied Black Drake", ["npc:9476"] = "Watchman Doomgrip", ["npc:9499"] = "Plugger Spazzring", ["npc:9500"] = "Mistress Nagmara", ["npc:9503"] = "Private Rocknot", ["npc:9536"] = "Maxwort Uberglint", ["npc:9544"] = "Yuka Screwspigot", ["npc:9560"] = "Marshal Maxwell", ["npc:9561"] = "Jalinda Sprig", ["npc:9562"] = "Helendis Riverhorn", ["npc:9563"] = "Ragged John", ["npc:9568"] = "Overlord Wyrmthalak", ["npc:9736"] = "Quartermaster Zigris", ["npc:9938"] = "Magmus", ["npc:9956"] = "Shadowforge Flame Keeper", ["object:147516"] = "Dark Iron", ["object:160836"] = "Relic Coffer", ["object:160845"] = "Dark Coffer", ["object:161460"] = "Shadowforge Lock", ["object:161495"] = "Secret Safe", ["object:164689"] = "Monument of Franclorn Forgewright", ["object:164869"] = "Spectral Chalice", ["object:164911"] = "Thunderbrew Lager Keg", ["object:165554"] = "Heart of the Mountain", ["object:170558"] = "The Lyceum", ["object:170559"] = "Shadowforge Gate", ["object:170570"] = "East Garrison Door", ["object:170571"] = "Bar Door", ["object:171709"] = "High Seat", ["object:174825"] = "Black Anvil", ["object:175621"] = "Urok's Tribute Pile", ["object:2117"] = "Stormwind Keep", ["quest:3701"] = "The Smoldering Ruins of Thaurissan", ["quest:3801"] = "Dark Iron Legacy", ["quest:3802"] = "Dark Iron Legacy", ["quest:4022"] = "A Taste of Flame", ["quest:4123"] = "The Heart of the Mountain", ["quest:4126"] = "Hurley Blackbreath", ["quest:4136"] = "Ribbly Screwspigot", ["quest:4182"] = "Dragonkin Menace", ["quest:4241"] = "Marshal Windsor", ["quest:4242"] = "Abandoned Hope", ["quest:4262"] = "Overmaster Pyron", ["quest:4263"] = "Incendius!", ["quest:4264"] = "A Crumpled Up Note", ["quest:4282"] = "A Shred of Hope", ["quest:4286"] = "The Good Stuff", ["quest:4322"] = "Jail Break!", ["quest:4341"] = "Kharan Mighthammer", ["quest:4361"] = "The Bearer of Bad News", ["quest:4362"] = "The Fate of the Kingdom", ["quest:4701"] = "Put Her Down", ["quest:4729"] = "Kibler's Exotic Pets", ["quest:4862"] = "En-Ay-Es-Tee-Why", ["quest:4866"] = "Mother's Milk", ["quest:4867"] = "Urok Doomhowl", ["quest:5001"] = "Bijou's Belongings", ["quest:5002"] = "Message to Maxwell", ["quest:5089"] = "General Drakkisath's Command", ["zone:1427"] = "Searing Gorge", ["zone:1428"] = "Burning Steppes", ["zone:1452"] = "Winterspring", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			written = { ["Detention Block: {npc:9021} and Windsor"] = "Detention Block: Kharan and Windsor", ["East along the hills to {npc:9459}'s cave."] = "East along the hills to Cyrus's cave.", ["In the quest log: {quest:4022} ({npc:9459}), {quest:4263} ({npc:9561}). Keep one free quest log slot for {quest:4322}. For the third visit: {quest:4362} (Magni), {quest:4136}, {quest:4126}."] = "In the quest log: A Taste of Flame (Cyrus), Incendius! (Jalinda Sprig). Keep one free quest log slot for Jail Break!. For the third visit: The Fate of the Kingdom (Magni), Ribbly Screwspigot, Hurley Blackbreath.", ["In the quest log: {quest:4341} (King Magni), {quest:4241} (Maxwell), {quest:4286} ({npc:9177}), {quest:4123} ({npc:9536}), {quest:3801} ({npc:8888}, if taken). For the next visits: {quest:4022} ({npc:9459}), {quest:4136} ({npc:9544}), {quest:4126} ({npc:1267}). Not on this route: {npc:9500}'s quest in the tavern (its herbs and silver are gathered outside), the {object:164869}'s (miners), {npc:14387}'s Attunement to the Core (raid)."] = "In the quest log: Kharan Mighthammer (King Magni), Marshal Windsor (Maxwell), The Good Stuff (Oralius), The Heart of the Mountain (Maxwort), Dark Iron Legacy (Franclorn, if taken). For the next visits: A Taste of Flame (Cyrus), Ribbly Screwspigot (Yuka), Hurley Blackbreath (Ragnar). Not on this route: Mistress Nagmara's quest in the tavern (its herbs and silver are gathered outside), the Spectral Chalice's (miners), Lothos Riftwaker's Attunement to the Core (raid).", ["In the quest log: {quest:4701} ({npc:9562}), {quest:4729} and {quest:4862} ({npc:10260}), {quest:4866} ({npc:9563}). Given inside: {quest:4867} ({npc:10799}) and {quest:5001} ({npc:10257}). Not on this route: {item:12344} (Vaelan, inside: the key of Upper Blackrock Spire, a 10-player dungeon), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, {zone:1452}), Deliana's dungeon set quests ({zone:1455})."] = "In the quest log: Put Her Down (Helendis), Kibler's Exotic Pets and En-Ay-Es-Tee-Why (Kibler), Mother's Milk (Ragged John). Given inside: Urok Doomhowl (Warosh) and Bijou's Belongings (Bijou). Not on this route: Seal of Ascension (Vaelan, inside: the key of Upper Blackrock Spire, a 10-player dungeon), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, Winterspring), Deliana's dungeon set quests (Ironforge).", ["Magni stands in the {object:171709}, beside {npc:8879}, who took {quest:3701} in Group 29. {npc:9021} is a prisoner in Blackrock Depths."] = "Magni stands in the High Seat, beside Royal Historian Archesonus, who took The Smoldering Ruins of Thaurissan in Group 29. Kharan is a prisoner in Blackrock Depths.", ["Ride out of {zone:1455} down to Kharanos: {npc:1267} is in the Thunderbrew Distillery. His lost recipe is in the Grim Guzzler, the tavern of Blackrock Depths (third visit)."] = "Ride out of Ironforge down to Kharanos: Ragnar is in the Thunderbrew Distillery. His lost recipe is in the Grim Guzzler, the tavern of Blackrock Depths (third visit).", ["The Detention Block opens past the entrance. {npc:9018}, in the southernmost room, drops the {item:11140}, which opens the cells (a rogue can pick them instead). {quest:4341} and {quest:4241} are locked in the cells of the south-east corridor: listen to {npc:9021}'s whole story; Windsor has given up, and his news goes back to Maxwell. {npc:9025} patrols the northern ring, {npc:9319} waits at its lowest point. To check in game: which cell holds whom."] = "The Detention Block opens past the entrance. High Interrogator Gerstahn, in the southernmost room, drops the Prison Cell Key, which opens the cells (a rogue can pick them instead). Kharan Mighthammer and Marshal Windsor are locked in the cells of the south-east corridor: listen to Kharan's whole story; Windsor has given up, and his news goes back to Maxwell. Lord Roccor patrols the northern ring, Houndmaster Grebmar waits at its lowest point. To check in game: which cell holds whom.", ["The {item:11000} opens the doors of the second and third visits (the Shadowforge Gates of the prison and the {object:161460}): one key in the group is enough. {npc:8888}'s ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with {npc:8888}, then come back to life at your body or by a group mate's spell. To check in game."] = "The Shadowforge Key opens the doors of the second and third visits (the Shadowforge Gates of the prison and the Shadowforge Lock): one key in the group is enough. Franclorn's ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with Franclorn, then come back to life at your body or by a group mate's spell. To check in game.", ["{npc:9459} hands over an {item:11231} with the quest: it goes on {npc:9016}'s remains, in the dungeon (second visit)."] = "Cyrus hands over an Altered Black Dragonflight Molt with the quest: it goes on Bael'Gar's remains, in the dungeon (second visit).", ["{npc:9562}'s chain ({quest:4182} done in Group 25) leads to {quest:4241}, a prisoner in Blackrock Depths: first a round trip to Lakeshire and {zone:1453}, by flight."] = "Helendis's chain (Dragonkin Menace done in Group 25) leads to Marshal Windsor, a prisoner in Blackrock Depths: first a round trip to Lakeshire and Stormwind, by flight.", ["{quest:4022}, first part (offered in Group 25): {npc:9459} hides in a cave in the far east of the Steppes. The {npc:9461} (elite 54) appears outside it and drops the molt."] = "A Taste of Flame, first part (offered in Group 25): Cyrus hides in a cave in the far east of the Steppes. The Frenzied Black Drake (elite 54) appears outside it and drops the molt.", ["{quest:4241}'s chain starts with {npc:9562}'s {quest:4182} (offered in Group 25): the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52."] = "Marshal Windsor's chain starts with Helendis's Dragonkin Menace (offered in Group 25): the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52." },
 			steps = {
 				{
 					title = "Blackrock Depths (dungeon, optional)",
@@ -18566,6 +18566,192 @@ do
 						{ t = "abandon", quest = 4126, title = "Hurley Blackbreath", optional = true },
 						{ t = "abandon", quest = 4286, title = "The Good Stuff", optional = true },
 						{ t = "abandon", quest = 3802, title = "Dark Iron Legacy", optional = true },
+					},
+				},
+				{
+					title = "Lower Blackrock Spire (dungeon, optional)",
+					note = "Lower Blackrock Spire: the orc city in the upper part of Blackrock Mountain, above Blackrock Depths. Levels 55 to 60, bosses 58 to 60: a group of 5 at 58 to 60 (possible from about 56, difficult). The quests come from Morgan's Vigil and Flame Crest, one more from a goblin hidden inside; the run has one short trip out to Morgan's Vigil and back. Alone? Skip it.",
+					label = "lbrs-start",
+					when = { { k = "group", q = 4701 } },
+					goals = {
+						{ t = "note", text = "Keep 9 free quest log slots." },
+						{ t = "goto", text = "Morgan's Vigil", map = 1428, x = 85, y = 68.8, f = "e", r = 40 },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9562}",
+					note = "{quest:4701}: {npc:10220}, the great worg of the Spire. {npc:9560}'s own quest comes later, through {npc:10257}, a goblin hidden in the dungeon.",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "accept", quest = 4701, title = "Put Her Down", npc = 9562, npcName = "Helendis Riverhorn", minLevel = 55, qlvl = 59, map = 1428, x = 85.82, y = 68.95, z = 193.7, f = "e" },
+					},
+				},
+				{
+					title = "Flame Crest: {npc:10260} and {npc:9563}",
+					note = "Ride north to Flame Crest. {npc:10260} stands inside the cave: his two quests give two pets, the {item:12264} and the {item:12529}, and he hands over an {item:12262}. {npc:9563}, in the camp: {quest:4866}, a rare reward.",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "accept", quest = 4729, title = "Kibler's Exotic Pets", npc = 10260, npcName = "Kibler", minLevel = 55, qlvl = 59, map = 1428, x = 65.89, y = 21.92, z = 165.1, f = "e" },
+						{ t = "accept", quest = 4862, title = "En-Ay-Es-Tee-Why", npc = 10260, npcName = "Kibler", minLevel = 55, qlvl = 59, map = 1428, x = 65.89, y = 21.92, z = 165.1, f = "e" },
+						{ t = "accept", quest = 4866, title = "Mother's Milk", npc = 9563, npcName = "Ragged John", minLevel = 55, qlvl = 60, map = 1428, x = 65.01, y = 23.76, z = 165.5, f = "e" },
+					},
+				},
+				{
+					title = "Lower Blackrock Spire: before going in",
+					note = "Into Blackrock Mountain on the {zone:1428} side. Two ways to the portal: the door beside the Blackrock Spire meeting stone and the path up (elites on it), or along the great chain and the wall to the balcony where Bodley stands, then a jump down onto it, with no fight. Inside, the stairs up on the left lead to Upper Blackrock Spire: not this time.",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "note", text = "In the quest log: {quest:4701} ({npc:9562}), {quest:4729} and {quest:4862} ({npc:10260}), {quest:4866} ({npc:9563}). Given inside: {quest:4867} ({npc:10799}) and {quest:5001} ({npc:10257}). Not on this route: {item:12344} (Vaelan, inside: the key of Upper Blackrock Spire, a 10-player dungeon), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, {zone:1452}), Deliana's dungeon set quests ({zone:1455})." },
+						{ t = "goto", text = "Blackrock Spire", map = 1428, x = 33.2, y = 24.9, f = "e", r = 25 },
+					},
+				},
+				{
+					title = "Hordemar City: {npc:10799} and {npc:10257}",
+					note = "Past the entrance door, Hordemar City. {npc:10799} walks around its first part. {npc:10257} waits on a ledge overlooking the city: one of the ramps down to Tazz'Alaor, the trolls' hall with the purple light, climbs to her. Her belongings are in a small chest tucked in a corner at the bottom of Hordemar City (it has several places). Leave {npc:9196}, {npc:9237} and {npc:9568} alive for now: {npc:9560}'s quest, given for {npc:10257}'s message, asks for them.",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "accept", quest = 4867, title = "Urok Doomhowl", npc = 10799, npcName = "Warosh", minLevel = 55, qlvl = 60 },
+						{ t = "accept", quest = 5001, title = "Bijou's Belongings", npc = 10257, npcName = "Bijou", minLevel = 55, qlvl = 59 },
+						{ t = "collect", quest = 5001, title = "Bijou's Belongings", item = 12345, itemName = "Bijou's Belongings", count = 1, oi = 1, note = "{quest:5001}: a small chest at the bottom of Hordemar City" },
+						{ t = "turnin", quest = 5001, title = "Bijou's Belongings", npc = 10257, npcName = "Bijou" },
+						{ t = "accept", quest = 5002, title = "Message to Maxwell", npc = 10257, npcName = "Bijou", minLevel = 55, qlvl = 59, pre = { 5001 }, preTitles = { [5001] = "Bijou's Belongings" } },
+					},
+				},
+				{
+					title = "{quest:5002}: out and back",
+					note = "Leave the dungeon without resetting it: as long as the group stays together, the same instance waits, bosses alive (to check in game). Ride to Morgan's Vigil and back, a good quarter of an hour; a hearthstone bound at the Vigil shortens the way there.",
+					when = { { k = "onquest", q = { 5002 } } },
+					goals = {
+						{ t = "turnin", quest = 5002, title = "Message to Maxwell", npc = 9560, npcName = "Marshal Maxwell", map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+						{ t = "accept", quest = 5081, title = "Maxwell's Mission", npc = 9560, npcName = "Marshal Maxwell", minLevel = 55, qlvl = 60, pre = { 5002 }, preTitles = { [5002] = "Message to Maxwell" }, map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+					},
+				},
+				{
+					title = "Lower Blackrock Spire: along the way",
+					note = "The Bloodaxe Worg Pups play in Hordemar City and in {npc:10220}'s lair: target one and use the {item:12262}. The Spire Spider Eggs lie in the Skitterweb Tunnels, {npc:10596}'s halls: each egg sac gives 1 to 3, and spiderlings may hatch from them.",
+					when = { { k = "done", label = "lbrs-start" } },
+					along = "lbrs-end",
+					goals = {
+						{ t = "collect", quest = 4729, title = "Kibler's Exotic Pets", item = 12263, itemName = "Caged Worg Pup", count = 1, oi = 1 },
+						{ t = "collect", quest = 4862, title = "En-Ay-Es-Tee-Why", item = 12530, itemName = "Spire Spider Egg", count = 15, oi = 1 },
+					},
+				},
+				{
+					title = "{npc:9196}",
+					note = "{quest:4867} needs a {item:12533}: they lean against the wall behind the Scarshield orcs, past the bridge out of Hordemar City. Then the Spirestone ogres: {npc:9196} (elite 59) and his two guards. His head is for the Urok event: one player with the quest carries the pike and the head.",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "collect", item = 12533, itemName = "Roughshod Pike", optional = true },
+						{ t = "kill", quest = 5081, title = "Maxwell's Mission", target = "Highlord Omokk", npc = 9196, count = 1, oi = 2, group = { kind = "elite", rank = 1 } },
+						{ t = "collect", item = 12534, itemName = "Omokk's Head", optional = true, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Tazz'Alaor: {npc:9237}",
+					note = "Down into Tazz'Alaor, the trolls' hall: {npc:9236} (elite 59, two priests at her side), then down the great ramp and along the hall to {npc:9237} (elite 59, no adds, hits very hard).",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "kill", quest = 5081, title = "Maxwell's Mission", target = "War Master Voone", npc = 9237, count = 1, oi = 1, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Skitterweb Tunnels: {npc:10596}",
+					note = "The spiders' tunnels: the eggs for {npc:10260}. {npc:10596} (elite 59) waits at the top. Whoever has {quest:4866} lets her poison them, and nobody removes that poison; then kill her. The poison must still be there at {npc:9563}'s: if it would wear off before the end of the run (to check in game), that player goes out right after her and comes back.",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "kill", target = "Mother Smolderweb", npc = 10596, optional = true, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{object:175621}",
+					note = "Up the ramp past the tunnels, on the corner of the landing, behind two Spirestone orcs: {object:175621}, a heap of skulls. The player with the {item:12533} and {item:12534} stands by it and uses the head: waves of ogres come, then {quest:4867} (elite 60). Every 30 seconds, the pike used on the pile kills one ogre outright.",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "collect", quest = 4867, title = "Urok Doomhowl", item = 12712, itemName = "Warosh's Mojo", count = 1, oi = 1, note = "{item:12712}: {quest:4867}", group = { kind = "elite", rank = 2 } },
+					},
+				},
+				{
+					title = "{npc:10220} and Gizrul",
+					note = "Past {npc:9736}, {npc:10220}'s lair: the great worg (elite 59) and her pups. {npc:10268} runs in right after her death: no time to rest in between.",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "kill", quest = 4701, title = "Put Her Down", target = "Halycon", npc = 10220, count = 1, oi = 1, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{npc:9568}",
+					note = "The last boss, {npc:9568} (elite 60), calls two adds at half health. He drops {quest:5089} for each player: right-click it.",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "kill", quest = 5081, title = "Maxwell's Mission", target = "Overlord Wyrmthalak", npc = 9568, count = 1, oi = 3, group = { kind = "elite", rank = 1 } },
+						{ t = "accept", quest = 5089, title = "General Drakkisath's Command", item = 12780, itemName = "General Drakkisath's Command", minLevel = 55, qlvl = 60, note = "{quest:5089}: {npc:9568}" },
+					},
+				},
+				{
+					title = "Hordemar City: {npc:10799}",
+					note = "Back to the entrance: {npc:10799} walks around the first part of Hordemar City.",
+					when = { { k = "complete", q = 4867 } },
+					goals = {
+						{ t = "turnin", quest = 4867, title = "Urok Doomhowl", npc = 10799, npcName = "Warosh" },
+					},
+				},
+				{
+					title = "Flame Crest: {npc:9563}",
+					note = "Out of the Spire, north-east to Flame Crest. {npc:9563}: his talk option, while the poison is still on you. Poison gone? {quest:4866} cannot be done this time: skip this step.",
+					when = { { k = "onquest", q = { 4866 } } },
+					goals = {
+						{ t = "kill", quest = 4866, title = "Mother's Milk", target = "Ragged John", npc = 9563, oi = 1, map = 1428, x = 65.01, y = 23.76, z = 165.5, f = "e", note = "{npc:9563}: let him milk you" },
+						{ t = "turnin", quest = 4866, title = "Mother's Milk", npc = 9563, npcName = "Ragged John", map = 1428, x = 65.01, y = 23.76, z = 165.5, f = "e" },
+					},
+				},
+				{
+					title = "Flame Crest: {npc:10260}'s worg pup",
+					when = { { k = "complete", q = 4729 } },
+					goals = {
+						{ t = "turnin", quest = 4729, title = "Kibler's Exotic Pets", npc = 10260, npcName = "Kibler", map = 1428, x = 65.89, y = 21.92, z = 165.1, f = "e" },
+					},
+				},
+				{
+					title = "Flame Crest: {npc:10260}'s spider eggs",
+					when = { { k = "complete", q = 4862 } },
+					goals = {
+						{ t = "turnin", quest = 4862, title = "En-Ay-Es-Tee-Why", npc = 10260, npcName = "Kibler", map = 1428, x = 65.89, y = 21.92, z = 165.1, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9562}",
+					when = { { k = "complete", q = 4701 } },
+					goals = {
+						{ t = "turnin", quest = 4701, title = "Put Her Down", npc = 9562, npcName = "Helendis Riverhorn", map = 1428, x = 85.82, y = 68.95, z = 193.7, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9560}",
+					when = { { k = "complete", q = 5081 } },
+					goals = {
+						{ t = "turnin", quest = 5081, title = "Maxwell's Mission", npc = 9560, npcName = "Marshal Maxwell", map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {quest:5089}",
+					note = "Maxwell's next quest, {npc:10363}'s Demise, is for Upper Blackrock Spire (10 players, the {item:12344} to open it): not in this guide.",
+					when = { { k = "onquest", q = { 5089 } } },
+					goals = {
+						{ t = "turnin", quest = 5089, title = "General Drakkisath's Command", npc = 9560, npcName = "Marshal Maxwell", map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+					},
+				},
+				{
+					title = "Lower Blackrock Spire: quests not done",
+					note = "What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or drop it to free the log.",
+					label = "lbrs-end",
+					when = { { k = "done", label = "lbrs-start" } },
+					goals = {
+						{ t = "abandon", quest = 4701, title = "Put Her Down", optional = true },
+						{ t = "abandon", quest = 4729, title = "Kibler's Exotic Pets", optional = true },
+						{ t = "abandon", quest = 4862, title = "En-Ay-Es-Tee-Why", optional = true },
+						{ t = "abandon", quest = 4866, title = "Mother's Milk", optional = true },
+						{ t = "abandon", quest = 4867, title = "Urok Doomhowl", optional = true },
+						{ t = "abandon", quest = 5081, title = "Maxwell's Mission", optional = true },
 					},
 				},
 			},

@@ -430,3 +430,154 @@ step Blackrock Depths: quests not done
   abandon 4126 optional
   abandon 4286 optional
   abandon 3802 optional
+
+# ================================================================ Lower Blackrock Spire
+# Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
+# Dungeons codex (Blackrock Spire, lower and upper together); prerequisites cross-checked with the
+# TrinityCore base: no disagreement (Message to Maxwell 5002 after Bijou's Belongings 5001, Maxwell's
+# Mission 5081 after 5002; the others need nothing). Rooms, bosses and how-to: Warcraft Tavern's
+# Forever Lower Blackrock Spire dungeon and quest guides (warcrafttavern.com/forever/guides/
+# lower-blackrock-spire and .../lower-blackrock-spire-quests, read on 12/11/2026), written from
+# Classic (closed in the Forever beta): places inside are to check in game.
+# Asked once (`when group 4701`, Put Her Down: no prerequisite, level 55); every later step needs
+# `when done lbrs-start`. Flow: Morgan's Vigil (Helendis) -> Flame Crest (Kibler, Ragged John) ->
+# the Spire: Hordemar City (Warosh, Bijou and her belongings) -> out to Maxwell and back, the bosses
+# left alive (Warcraft Tavern's advice) -> Omokk, Tazz'Alaor (Voone), the Skitterweb Tunnels
+# (Smolderweb, the eggs), Urok's Tribute Pile, Halycon, Wyrmthalak -> Warosh -> Flame Crest ->
+# Morgan's Vigil.
+# Left out: Seal of Ascension (Vaelan: the key of Upper Blackrock Spire, a 10-player dungeon, then
+# Emberstrife in Dustwallow Marsh), The Final Tablets (Mosh'aru's chain), Snakestone of the Shadow
+# Huntress (Kilram, Winterspring), Deliana's dungeon set quests, General Drakkisath's Demise (Upper
+# Blackrock Spire).
+step Lower Blackrock Spire (dungeon, optional)
+  label lbrs-start
+  when group 4701
+  tip Lower Blackrock Spire: the orc city in the upper part of Blackrock Mountain, above Blackrock Depths. Levels 55 to 60, bosses 58 to 60: a group of 5 at 58 to 60 (possible from about 56, difficult). The quests come from Morgan's Vigil and Flame Crest, one more from a goblin hidden inside; the run has one short trip out to Morgan's Vigil and back. Alone? Skip it.
+  note Keep 9 free quest log slots.
+  goto 85.0,68.8 map 1428 "Morgan's Vigil" r 40
+
+step Morgan's Vigil: Helendis Riverhorn
+  when done lbrs-start
+  zone Burning Steppes
+  tip Put Her Down: Halycon, the great worg of the Spire. Marshal Maxwell's own quest comes later, through Bijou, a goblin hidden in the dungeon.
+  accept 4701                         -- Helendis Riverhorn
+
+step Flame Crest: Kibler and Ragged John
+  when done lbrs-start
+  zone Burning Steppes
+  tip Ride north to Flame Crest. Kibler stands inside the cave: his two quests give two pets, the Worg Carrier and the Smolderweb Carrier, and he hands over an Empty Worg Pup Cage. Ragged John, in the camp: Mother's Milk, a rare reward.
+  accept 4729                         -- Kibler
+  accept 4862                         -- Kibler
+  accept 4866                         -- Ragged John
+
+step Lower Blackrock Spire: before going in
+  when done lbrs-start
+  zone Burning Steppes
+  tip Into Blackrock Mountain on the Burning Steppes side. Two ways to the portal: the door beside the Blackrock Spire meeting stone and the path up (elites on it), or along the great chain and the wall to the balcony where Bodley stands, then a jump down onto it, with no fight. Inside, the stairs up on the left lead to Upper Blackrock Spire: not this time.
+  note In the quest log: Put Her Down (Helendis), Kibler's Exotic Pets and En-Ay-Es-Tee-Why (Kibler), Mother's Milk (Ragged John). Given inside: Urok Doomhowl (Warosh) and Bijou's Belongings (Bijou). Not on this route: Seal of Ascension (Vaelan, inside: the key of Upper Blackrock Spire, a 10-player dungeon), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, Winterspring), Deliana's dungeon set quests (Ironforge).
+  goto 33.2,24.9 map 1428 "Blackrock Spire" r 25
+
+step Hordemar City: Warosh and Bijou
+  when done lbrs-start
+  tip Past the entrance door, Hordemar City. Warosh walks around its first part. Bijou waits on a ledge overlooking the city: one of the ramps down to Tazz'Alaor, the trolls' hall with the purple light, climbs to her. Her belongings are in a small chest tucked in a corner at the bottom of Hordemar City (it has several places). Leave Highlord Omokk, War Master Voone and Overlord Wyrmthalak alive for now: Marshal Maxwell's quest, given for Bijou's message, asks for them.
+  accept 4867                         -- Warosh
+  accept 5001                         -- Bijou
+  collect 12345 quest 5001            -- Bijou's Belongings: a small chest at the bottom of Hordemar City
+  turnin 5001                         -- Bijou
+  accept 5002
+
+step Message to Maxwell: out and back
+  when onquest 5002
+  zone Burning Steppes
+  tip Leave the dungeon without resetting it: as long as the group stays together, the same instance waits, bosses alive (to check in game). Ride to Morgan's Vigil and back, a good quarter of an hour; a hearthstone bound at the Vigil shortens the way there.
+  turnin 5002                         -- Marshal Maxwell
+  accept 5081
+
+step Lower Blackrock Spire: along the way
+  when done lbrs-start
+  along until lbrs-end
+  tip The Bloodaxe Worg Pups play in Hordemar City and in Halycon's lair: target one and use the Empty Worg Pup Cage. The Spire Spider Eggs lie in the Skitterweb Tunnels, Mother Smolderweb's halls: each egg sac gives 1 to 3, and spiderlings may hatch from them.
+  collect 12263 quest 4729            -- Caged Worg Pup
+  collect 12530 quest 4862            -- Spire Spider Egg
+
+step Highlord Omokk
+  when done lbrs-start
+  tip Urok Doomhowl needs a Roughshod Pike: they lean against the wall behind the Scarshield orcs, past the bridge out of Hordemar City. Then the Spirestone ogres: Highlord Omokk (elite 59) and his two guards. His head is for the Urok event: one player with the quest carries the pike and the head.
+  collect 12533 optional              -- Roughshod Pike
+  kill 9196 quest 5081                -- Highlord Omokk
+  collect 12534 optional              -- Omokk's Head
+
+step Tazz'Alaor: War Master Voone
+  when done lbrs-start
+  tip Down into Tazz'Alaor, the trolls' hall: Shadow Hunter Vosh'gajin (elite 59, two priests at her side), then down the great ramp and along the hall to War Master Voone (elite 59, no adds, hits very hard).
+  kill 9237 quest 5081                -- War Master Voone
+
+step Skitterweb Tunnels: Mother Smolderweb
+  when done lbrs-start
+  tip The spiders' tunnels: the eggs for Kibler. Mother Smolderweb (elite 59) waits at the top. Whoever has Mother's Milk lets her poison them, and nobody removes that poison; then kill her. The poison must still be there at Ragged John's: if it would wear off before the end of the run (to check in game), that player goes out right after her and comes back.
+  kill 10596 optional                 -- Mother Smolderweb
+
+step Urok's Tribute Pile
+  when done lbrs-start
+  tip Up the ramp past the tunnels, on the corner of the landing, behind two Spirestone orcs: Urok's Tribute Pile, a heap of skulls. The player with the Roughshod Pike and Omokk's Head stands by it and uses the head: waves of ogres come, then Urok Doomhowl (elite 60). Every 30 seconds, the pike used on the pile kills one ogre outright.
+  collect 12712 quest 4867            -- Warosh's Mojo: Urok Doomhowl
+
+step Halycon and Gizrul
+  when done lbrs-start
+  tip Past Quartermaster Zigris, Halycon's lair: the great worg (elite 59) and her pups. Gizrul the Slavener runs in right after her death: no time to rest in between.
+  kill 10220 quest 4701               -- Halycon
+
+step Overlord Wyrmthalak
+  when done lbrs-start
+  tip The last boss, Overlord Wyrmthalak (elite 60), calls two adds at half health. He drops General Drakkisath's Command for each player: right-click it.
+  kill 9568 quest 5081                -- Overlord Wyrmthalak
+  accept 5089                         -- General Drakkisath's Command: Overlord Wyrmthalak
+
+step Hordemar City: Warosh
+  when complete 4867
+  tip Back to the entrance: Warosh walks around the first part of Hordemar City.
+  turnin 4867                         -- Warosh
+
+step Flame Crest: Ragged John
+  when onquest 4866
+  zone Burning Steppes
+  tip Out of the Spire, north-east to Flame Crest. Ragged John: his talk option, while the poison is still on you. Poison gone? Mother's Milk cannot be done this time: skip this step.
+  kill 9563 quest 4866                -- Ragged John: let him milk you
+  turnin 4866                         -- Ragged John
+
+step Flame Crest: Kibler's worg pup
+  when complete 4729
+  zone Burning Steppes
+  turnin 4729                         -- Kibler
+
+step Flame Crest: Kibler's spider eggs
+  when complete 4862
+  zone Burning Steppes
+  turnin 4862                         -- Kibler
+
+step Morgan's Vigil: Helendis Riverhorn
+  when complete 4701
+  zone Burning Steppes
+  turnin 4701                         -- Helendis Riverhorn
+
+step Morgan's Vigil: Marshal Maxwell
+  when complete 5081
+  zone Burning Steppes
+  turnin 5081                         -- Marshal Maxwell
+
+step Morgan's Vigil: General Drakkisath's Command
+  when onquest 5089
+  zone Burning Steppes
+  tip Maxwell's next quest, General Drakkisath's Demise, is for Upper Blackrock Spire (10 players, the Seal of Ascension to open it): not in this guide.
+  turnin 5089                         -- Marshal Maxwell
+
+step Lower Blackrock Spire: quests not done
+  label lbrs-end
+  when done lbrs-start
+  tip What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or drop it to free the log.
+  abandon 4701 optional
+  abandon 4729 optional
+  abandon 4862 optional
+  abandon 4866 optional
+  abandon 4867 optional
+  abandon 5081 optional
