@@ -17027,7 +17027,7 @@ do
 					note = "{npc:1855} lives in a small hut on the border river, north-east of the lumber camp. Hand in {quest:5781} if you finished it.",
 					goals = {
 						{ t = "turnin", quest = 5781, title = "Of Forgotten Memories", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7, optional = true },
-						{ t = "accept", quest = 5845, title = "Of Lost Honor", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 58, pre = { 5781 }, preTitles = { [5781] = "Of Forgotten Memories" }, map = 1423, x = 5.16, y = 35.57, z = 72.7 },
+						{ t = "accept", quest = 5845, title = "Of Lost Honor", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 58, pre = { 5781 }, preTitles = { [5781] = "Of Forgotten Memories" }, map = 1423, x = 5.16, y = 35.57, z = 72.7, optional = true, note = "Only after {quest:5781}: not offered? Carry on" },
 					},
 				},
 				{
@@ -17038,12 +17038,14 @@ do
 				},
 				{
 					title = "{quest:5845}",
+					when = { { k = "onquest", q = { 5845 } } },
 					goals = {
 						{ t = "collect", quest = 5845, title = "Of Lost Honor", item = 14625, itemName = "Symbol of Lost Honor", count = 1, oi = 1, map = 1423, x = 62.5, y = 26.8, note = "Underwater", from = "Symbol of Lost Honor", fromKind = "object", fromId = 177264 },
 					},
 				},
 				{
 					title = "{npc:1855}",
+					when = { { k = "onquest", q = { 5845 } } },
 					goals = {
 						{ t = "turnin", quest = 5845, title = "Of Lost Honor", npc = 1855, npcName = "Tirion Fordring", map = 1423, x = 5.16, y = 35.57, z = 72.7 },
 						{ t = "accept", quest = 5846, title = "Of Love and Family", npc = 1855, npcName = "Tirion Fordring", minLevel = 52, qlvl = 58, pre = { 5845 }, preTitles = { [5845] = "Of Lost Honor" }, map = 1423, x = 5.16, y = 35.57, z = 72.7 },

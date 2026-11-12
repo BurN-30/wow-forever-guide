@@ -2967,6 +2967,7 @@ t.guides["groupe-alliance/32-silithus-fin"] = (function() return {
 		["Marshal's Refuge flight master"] = "Maître de vol du Refuge des Marshal",
 		["Nighthaven"] = "Havrenuit",
 		["Northridge Lumber Camp"] = "Camp de bûcherons de la Crête du nord",
+		["Only after {quest:5781}: not offered? Carry on"] = "Seulement après {quest:5781} : pas proposée ? Continuer",
 		["Portal to {zone:1438}"] = "Portail vers {zone:1438}",
 		["Ratchet"] = "Cabestan",
 		["Ratchet flight master"] = "Maître de vol de Cabestan",

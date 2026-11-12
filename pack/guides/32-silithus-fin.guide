@@ -496,16 +496,21 @@ step Tirion Fordring (optional)
   zone Eastern Plaguelands
   tip Tirion lives in a small hut on the border river, north-east of the lumber camp. Hand in Of Forgotten Memories if you finished it.
   turnin 5781 optional
-  accept 5845
+  accept 5845 optional                -- Only after Of Forgotten Memories: not offered? Carry on
 
+# Groupe Alliance 0.11.0: Of Lost Honor (5845) needs Of Forgotten Memories (5781) handed in
+# (Polestar's Forever data and the TrinityCore Forever world base), itself optional (an elite):
+# its accept is optional and its two steps wait for it in the log.
 step Eastern Plaguelands
   zone Eastern Plaguelands
   goto 71.3,34.0 "Eastern Plaguelands"
 
 step Of Lost Honor
+  when onquest 5845
   collect 14625 quest 5845.1 @62.5,26.8 map 1423 live -- Underwater
 
 step Tirion Fordring
+  when onquest 5845
   zone Eastern Plaguelands
   turnin 5845
   accept 5846

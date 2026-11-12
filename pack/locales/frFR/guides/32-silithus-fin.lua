@@ -348,6 +348,8 @@ return {
 	["{npc:1855} (optional)"] = "{npc:1855} (facultatif)",
 	-- {npc:1855} Tirion Fordring · {quest:5781} Of Forgotten Memories
 	["{npc:1855} lives in a small hut on the border river, north-east of the lumber camp. Hand in {quest:5781} if you finished it."] = "{npc:1855} vit dans une petite hutte au bord de la rivière frontalière, au nord-est du camp de bûcherons. Rendez {quest:5781} si vous l'avez terminée.",
+	-- {quest:5781} Of Forgotten Memories
+	["Only after {quest:5781}: not offered? Carry on"] = "Seulement après {quest:5781} : pas proposée ? Continuer",
 
 	-- Step 83: Of Lost Honor
 	["Underwater"] = "Sous l'eau",
