@@ -1871,6 +1871,8 @@
   "The last boss (elite 41), at the far end.": "Le dernier boss (élite 41), tout au fond.",
   "Cathedral of Light: {npc:1284}": "Cathédrale de la Lumière : {npc:1284}",
   "{quest:3636}, from Razorfen Downs: {npc:1284} is in the Cathedral of Light.": "{quest:3636}, des Souilles de Tranchebauge : {npc:1284} est dans la cathédrale de la Lumière.",
+  "{npc:14722}: taken here and handed in with the cloth (0.11.0)": "{npc:14722} : prise ici et rendue avec l'étoffe (0.11.0)",
+  "{npc:14724}, by the tram: taken here and handed in with the cloth (0.11.0)": "{npc:14724}, près du tram : prise ici et rendue avec l'étoffe (0.11.0)",
   "Uldaman (optional): {npc:2910}": "Uldaman (facultatif) : {npc:2910}",
   "Ryedol's errand left in Group 17, {quest:720}, now serves Uldaman: it sends you to {npc:2909}, just outside the dungeon, in the next guide.": "La course de Ryedol laissée au Groupe 17, {quest:720}, sert maintenant pour Uldaman : elle envoie chez {npc:2909}, juste devant le donjon, au guide suivant.",
   "{npc:2910}: for {npc:2909}, outside Uldaman": "{npc:2910} : pour {npc:2909}, devant Uldaman",

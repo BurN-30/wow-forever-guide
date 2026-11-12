@@ -45,6 +45,9 @@ step Ironforge
 
 # ---------------------------------------------------------------- Stormwind
 
+# Groupe Alliance 0.11.0: the nine cloth donation quests (Clavicus Knavingham, Bubulo Acerbus,
+# Mistina Steelshield) are no longer taken here but on Group 30's visit to the same NPCs, where they
+# are handed in: they held nine log slots for a whole guide (39 of 40 in a group taking everything).
 step Stormwind City
   zone Stormwind City
   tip Take the boat from Ratchet to Booty Bay and fly to Stormwind.
@@ -52,9 +55,6 @@ step Stormwind City
   accept 5048
   turnin 5048                         -- Ol' Emma, who walks the canals
   accept 5050                         -- For Janice Felstone: keep it
-  accept 7791 optional                -- Clavicus Knavingham
-  accept 7793 optional
-  accept 7794 optional
 
 step Stormwind Keep
   accept 6182                         -- Highlord Bolvar Fordragon
@@ -71,13 +71,7 @@ step Ironforge
   zone Ironforge
   turnin 4512                         -- Laris Geardawdle
   accept 4513                         -- Its jars are filled on the next Un'Goro visit
-  accept 7807 optional                -- Bubulo Acerbus, by the tram
-  accept 7808 optional
-  accept 7809 optional
   turnin 3701                         -- Royal Historian Archesonus
-  accept 7802 optional                -- Mistina Steelshield
-  accept 7803 optional
-  accept 7804 optional
   accept 7261                         -- Lieutenant Rotimer
 
 step Fly to Light's Hope Chapel

@@ -291,6 +291,8 @@ return {
 	-- Step 68: Stormwind
 	-- {npc:14722} Clavicus Knavingham · {quest:6031} Runecloth
 	["{npc:14722} takes sixty Silk, sixty Mageweave and sixty {quest:6031}: hand in what you carry (or buy at the Auction House), skip the rest."] = "{npc:14722} prend soixante Étoffes de soie, soixante Étoffes de tisse-mage et soixante {quest:6031} : rendez ce que vous portez (ou achetez à l'hôtel des ventes), laissez le reste.",
+	-- {npc:14722} Clavicus Knavingham
+	["{npc:14722}: taken here and handed in with the cloth (0.11.0)"] = "{npc:14722} : prise ici et rendue avec l'étoffe (0.11.0)",
 	-- {item:4306} Silk Cloth
 	["{item:4306}, from your bags"] = "{item:4306}, depuis vos sacs",
 	-- {item:4338} Mageweave Cloth
@@ -302,6 +304,8 @@ return {
 	-- {zone:1455} Ironforge · {npc:14724} Bubulo Acerbus · {npc:14723} Mistina Steelshield · {item:14047} Runecloth
 	-- plural, as words: Jadefire Shadowstalkers = {npc:7110} Jadefire Shadowstalker
 	["Take the Deeprun Tram to {zone:1455}. {npc:14724} and {npc:14723} each take sixty Wool, sixty Silk and sixty Mageweave, then sixty {item:14047}: hand in what you carry (or buy at the Auction House), skip the rest.\nCareful: Jadefire Shadowstalkers are level 51-52 and move stealthed. They use Slowing Poison and are found about 550 yd south of Bloodvenom Post.\nCareful: Jadefire Shadowstalkers sneak around and use Slowing Poison."] = "Prenez le Tram des profondeurs jusqu'à {zone:1455}. {npc:14724} et {npc:14723} prennent chacun soixante étoffes de laine, soixante étoffes de soie et soixante étoffes de tisse-mage, puis soixante {item:14047} : rendez ce que vous avez sur vous (ou achetez-le à l'Hôtel des ventes), laissez tomber le reste.\nAttention : les traqueurs des ombres Jadefeu sont de niveau 51-52 et se déplacent camouflés. Ils utilisent un poison ralentissant et se trouvent à environ 550 m au sud du Poste de la Vénéneuse.\nAttention : les traqueurs des ombres Jadefeu rôdent camouflés et utilisent un poison ralentissant.",
+	-- {npc:14724} Bubulo Acerbus
+	["{npc:14724}, by the tram: taken here and handed in with the cloth (0.11.0)"] = "{npc:14724}, près du tram : prise ici et rendue avec l'étoffe (0.11.0)",
 	-- {item:2592} Wool Cloth
 	["{item:2592}, from your bags"] = "{item:2592}, depuis vos sacs",
 	-- {item:14047} Runecloth

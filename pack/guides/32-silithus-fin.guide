@@ -396,6 +396,9 @@ step Stormwind
   zone Stormwind City
   tip Clavicus takes sixty Silk, sixty Mageweave and sixty Runecloth: hand in what you carry (or buy at the Auction House), skip the rest.
   train class only Warrior,Paladin,Hunter,Rogue,Priest,Mage,Warlock,Druid
+  accept 7791 optional                -- Clavicus Knavingham: taken here and handed in with the cloth (0.11.0)
+  accept 7793 optional
+  accept 7794 optional
   collect 4306 x60 quest 7793.1 optional @61.2,71.3 map 1453 live -- Silk Cloth, from your bags
   collect 4338 x60 quest 7794.1 optional @61.2,71.3 map 1453 live -- Mageweave Cloth, from your bags
   turnin 7793 optional                -- Clavicus Knavingham, in the Trade District
@@ -407,6 +410,9 @@ step Ironforge
   tip Careful: Jadefire Shadowstalkers are level 51-52 and move stealthed. They use Slowing Poison and are found about 550 yd south of Bloodvenom Post.
   tip Careful: Jadefire Shadowstalkers sneak around and use Slowing Poison.
   turnin 4513                         -- Laris Geardawdle
+  accept 7807 optional                -- Bubulo Acerbus, by the tram: taken here and handed in with the cloth (0.11.0)
+  accept 7808 optional
+  accept 7809 optional
   collect 2592 x60 quest 7807.1 optional @24.2,74.7 map 1455 -- Wool Cloth, from your bags
   collect 4306 x60 quest 7808.1 optional @24.2,74.7 map 1455 -- Silk Cloth, from your bags
   collect 4338 x60 quest 7809.1 optional @24.2,74.7 map 1455 -- Mageweave Cloth, from your bags
@@ -416,6 +422,9 @@ step Ironforge
   accept 7811 optional
   collect 14047 x60 quest 7811.1 optional @24.2,74.7 map 1455 -- Runecloth, from your bags
   turnin 7811 optional
+  accept 7802 optional                -- Mistina Steelshield
+  accept 7803 optional
+  accept 7804 optional
   collect 2592 x60 quest 7802.1 optional @24.2,74.7 map 1455 -- Wool Cloth, from your bags
   collect 4306 x60 quest 7803.1 optional @24.2,74.7 map 1455 -- Silk Cloth, from your bags
   collect 4338 x60 quest 7804.1 optional @24.2,74.7 map 1455 -- Mageweave Cloth, from your bags

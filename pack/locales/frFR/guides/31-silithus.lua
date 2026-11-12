@@ -51,8 +51,6 @@ return {
 
 	-- Step 8: Ironforge
 	["Its jars are filled on the next Un'Goro visit"] = "Ses pots se remplissent lors de la prochaine visite à Un'Goro",
-	-- {npc:14724} Bubulo Acerbus
-	["{npc:14724}, by the tram"] = "{npc:14724}, près du tram",
 
 	-- Step 9: Fly to Light's Hope Chapel
 	["Fly to Light's Hope Chapel"] = "Envolez-vous vers la chapelle de l'Espoir de Lumière",
