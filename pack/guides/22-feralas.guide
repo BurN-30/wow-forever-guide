@@ -20,6 +20,47 @@ step Into The Barrens
   note Everyone at their own pace: what you already did ticks itself, the guide picks up where you are. Playing together? Group XP is best within 4 levels.
   goto 49.5,78.4 "Into The Barrens"
 
+# Groupe Alliance 0.11.0: Razorfen Downs, optional (asked in Stormwind in Group 18, `when group
+# 3636`): its entrance (Barrens 49,93.9, Dungeons codex) sits east of the road to the Great Lift.
+# Quests, givers, objectives and prerequisites from Polestar's Forever data, cross-checked with
+# the TrinityCore base (3525 after 3523) and Warcraft Tavern's Forever quest guide (12/11/2026:
+# Myriam on a hill outside, her three targets outside the portal, Belnistrasz in a prison cell
+# inside, neither of his quests shareable, Bring the Light not shareable). The dungeon's own XP is
+# low at 43-44; its four quests pay about 12,000 XP. Not played in game.
+step Razorfen Downs (dungeon, optional)
+  label rfd-start
+  when group 3636
+  when level<46
+  zone The Barrens
+  tip Razorfen Downs: a 5-player dungeon at the southern edge of the Barrens, levels 35 to 41, east of the road down to the Great Lift. At 43 or so it goes fast. Myriam Moonsinger waits on a hill outside it. Alone? Skip it: the guide goes on to Feralas.
+  note In the quest log before going in: Bring the Light (Archbishop Benedictus, Stormwind, Group 18). Myriam's quest is taken here; Belnistrasz's two inside. Keep 3 free quest log slots.
+  accept 6626                         -- Myriam Moonsinger, on a hill outside
+
+step Razorfen Downs: outside the portal
+  when group 3636
+  when done rfd-start
+  tip The three targets of A Host of Evil live outside the portal, among the barrows and thorns (elites, 33).
+  kill 7873 x8 quest 6626 @47.2,89.6  -- Razorfen Battleguard
+  kill 7874 x8 quest 6626 @47.2,91.5  -- Razorfen Thornweaver
+  kill 7872 x8 quest 6626 @47.3,90.3  -- Death's Head Cultist
+  turnin 6626                         -- Myriam Moonsinger
+
+step Razorfen Downs: Belnistrasz
+  when group 3636
+  when done rfd-start
+  tip Belnistrasz waits in a prison cell inside. His quests cannot be shared: every player takes Scourge of the Downs and hands it in to him (he wants his Oathstone back) BEFORE anyone starts Extinguishing the Idol. Then he walks to the idol and casts while waves of enemies come: stay close and keep them off him; it ends at his brazier.
+  accept 3523                         -- Belnistrasz
+  turnin 3523
+  accept 3525
+  complete 3525                       -- Protect him at the idol
+  turnin 3525 object 152097           -- Belnistrasz's Brazier
+
+step Razorfen Downs: Amnennar the Coldbringer
+  when group 3636
+  when done rfd-start
+  tip The last boss (elite 41), at the far end.
+  kill 7358 quest 3636                -- Amnennar the Coldbringer
+
 step The Barrens
   zone The Barrens
   goto 44.0,93.0 "The Barrens"

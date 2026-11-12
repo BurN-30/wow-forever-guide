@@ -282,113 +282,119 @@ return {
 	-- {npc:5694} High Sorcerer Andromath
 	["{npc:5694}: for Nethergarde Keep, keep it"] = "{npc:5694} : pour Rempart-du-Néant, gardez-le",
 
-	-- Step 84: Stormwind
+	-- Step 84: Razorfen Downs (dungeon, optional): Archbishop Benedictus
+	-- {npc:1284} Archbishop Benedictus
+	["Razorfen Downs (dungeon, optional): {npc:1284}"] = "Souilles de Tranchebauge (donjon, facultatif) : {npc:1284}",
+	-- {zone:1413} Barrens · {zone:1444} Feralas · {quest:3636} Bring the Light
+	["Razorfen Downs: the quilboar and Scourge barrows at the southern edge of the {zone:1413}, levels 35 to 41, run in Group 20 on the road from Theramore to {zone:1444} (by then a little above its level: a quick run). {quest:3636} cannot be shared: every player takes it here, in the Cathedral of Light. Alone? Skip it."] = "Souilles de Tranchebauge : les tertres des huttes-épines et du Fléau au sud de {zone:1413}, niveaux 35 à 41, faits au Groupe 20 sur la route de Theramore à {zone:1444} (un peu au-dessus du niveau du donjon à ce moment : un passage rapide). {quest:3636} ne se partage pas : chaque joueur la prend ici, dans la cathédrale de la Lumière. Seul ? La passer.",
+
+	-- Step 85: Stormwind
 	-- {npc:1440} Milton Sheaf · {object:2117} Stormwind Keep
 	["{npc:1440}, the Royal Library in {object:2117}"] = "{npc:1440}, la bibliothèque royale de {object:2117}",
 
-	-- Step 86: Paladin: The Tome of Nobility
+	-- Step 87: Paladin: The Tome of Nobility
 	-- {quest:1661} The Tome of Nobility
 	["Paladin: {quest:1661}"] = "Paladin : {quest:1661}",
 	-- {npc:6171} Duthorian Rall
 	["{npc:6171}, in the Cathedral of Light"] = "{npc:6171}, dans la cathédrale de la Lumière",
 
-	-- Step 87: Stormwind City
+	-- Step 88: Stormwind City
 	["Stormwind City"] = "Cité de Hurlevent",
 
-	-- Step 88: Warlock: Summon Felsteed
+	-- Step 89: Warlock: Summon Felsteed
 	-- {quest:3631} Summon Felsteed
 	["Warlock: {quest:3631}"] = "Démoniste : {quest:3631}",
 	-- {npc:461} Demisette Cloyce · {object:2164} Slaughtered Lamb · {npc:6251} Strahad Farsan
 	["{npc:461}, in the {object:2164}: {npc:6251} in Ratchet takes it at the end of the next guide"] = "{npc:461}, dans {object:2164} : {npc:6251} à Cabestan le prend à la fin du guide suivant",
 
-	-- Step 89: Fly to Darkshire
+	-- Step 90: Fly to Darkshire
 	-- {zone:1453} Stormwind
 	["{zone:1453} flight master"] = "Maître de vol de {zone:1453}",
 
-	-- Step 91: Misty Valley
+	-- Step 92: Misty Valley
 	["Misty Valley"] = "Vallée des brumes",
 	["The scroll lies in the marsh north of Biggs. The Swampwalkers north of it can drop Khadgar's essays."] = "Le parchemin se trouve dans le marais au nord de Biggs. Les Maraistreurs au nord peuvent laisser tomber les essais de Khadgar.",
 	["The riddle's next scroll lies in western Dustwallow: skip it."] = "Le parchemin suivant de l'énigme se trouve dans l'ouest d'Âprefange : passez-le.",
 
-	-- Step 93: Level 42.46
+	-- Step 94: Level 42.46
 	["Level 42.46"] = "Niveau 42.46",
 	-- {quest:543} The Perenolde Tiara
 	["If you skipped {quest:543}, grind here to level 42.46 to stay on the route's plan."] = "Si vous avez passé {quest:543}, tuez des monstres ici jusqu'au niveau 42.46 pour suivre le plan de l'itinéraire.",
 	-- {npc:766} Tangled Horror
 	["grind on {npc:766}"] = "tuez en boucle : {npc:766}",
 
-	-- Step 94: Cortello's Riddle
+	-- Step 95: Cortello's Riddle
 	-- {npc:217412} Amaryllis Webb · {quest:93176} My Little Friends
 	["{npc:217412}: {quest:93176}, from 30-40/05-arathi-highlands"] = "{npc:217412} : {quest:93176}, depuis 30-40/05-arathi-highlands",
 
-	-- Step 95: Watcher Biggs
+	-- Step 96: Watcher Biggs
 	-- {npc:5476} Watcher Biggs
 	["{npc:5476} stands by the road junction in the west of the swamp."] = "{npc:5476} se tient près du carrefour à l'ouest du marais.",
 
-	-- Step 96: Into Deadwind Pass
+	-- Step 97: Into Deadwind Pass
 	-- {zone:1430} Deadwind Pass
 	["Into {zone:1430}"] = "Vers le {zone:1430}",
 
-	-- Step 97: Into Duskwood
+	-- Step 98: Into Duskwood
 	-- {zone:1431} Duskwood
 	["Into {zone:1431}"] = "Vers {zone:1431}",
 
-	-- Step 98: Into Stormwind
+	-- Step 99: Into Stormwind
 	-- {zone:1453} Stormwind
 	["Into {zone:1453}"] = "Vers {zone:1453}",
 
-	-- Step 101: Fly to Rut'theran Village
+	-- Step 102: Fly to Rut'theran Village
 	["Fly to Rut'theran Village"] = "Envolez-vous vers le village de Rut'theran",
 	["Auberdine flight master"] = "Maître de vol d'Auberdine",
 
-	-- Step 103: Riding at 40
+	-- Step 104: Riding at 40
 	-- {npc:4753} Jartsam · {zone:1457} Darnassus · {npc:4730} Lelanai · {npc:4732} Randal Hunter · {object:95} Eastvale Logging Camp · {zone:1429} Elwynn Forest
 	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. {npc:4753} teaches Night Elves in {zone:1457}, beside {npc:4730}'s sabers: the boat from Stormwind Harbor to Auberdine, then the flight to Rut'theran Village. Forever may let any race learn from any riding trainer (unconfirmed), such as {npc:4732} at {object:95} in {zone:1429}. Collectibles, Mounts · Level 40 lists every colour."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. {npc:4753} enseigne aux elfes de la nuit à {zone:1457}, près des sabres de {npc:4730} : le bateau du port de Hurlevent à Auberdine, puis le vol vers le village de Rut'theran. Forever pourrait permettre à n'importe quelle race d'apprendre auprès de n'importe quel maître de monte (non confirmé), comme {npc:4732} à {object:95} dans {zone:1429}. Collectibles, Montures · Niveau 40 liste toutes les couleurs.",
 	-- {npc:4730} Lelanai
 	["{npc:4730}: other colours, 20g"] = "{npc:4730} : autres couleurs, 20 po",
 
-	-- Step 105: Fly to Auberdine
+	-- Step 106: Fly to Auberdine
 	["Fly to Auberdine"] = "Envolez-vous pour Auberdine",
 	["Rut'theran Village flight master"] = "Maître de vol du village de Rut'theran",
 
-	-- Step 106: Boat to Stormwind Harbor
+	-- Step 107: Boat to Stormwind Harbor
 	["Boat to Stormwind Harbor"] = "Bateau pour le port de Hurlevent",
 
-	-- Step 107: Into Elwynn Forest
+	-- Step 108: Into Elwynn Forest
 	-- {zone:1429} Elwynn Forest
 	["Into {zone:1429}"] = "Vers {zone:1429}",
 
-	-- Step 109: Into Swamp of Sorrows
+	-- Step 110: Into Swamp of Sorrows
 	-- {zone:1435} Swamp of Sorrows
 	["Into {zone:1435}"] = "Vers {zone:1435}",
 
-	-- Step 111: The sunken temple
+	-- Step 112: The sunken temple
 	["The sunken temple"] = "Le temple englouti",
 	-- plural, as words: Tangled Horrors = {npc:766} Tangled Horror
 	["Ride east; the Tangled Horrors along the way also drop the essays. Search the edge of the Pool of Tears, where the temple's ruins break the water."] = "Allez vers l'est ; les horreurs enchevêtrées sur le chemin laissent aussi tomber les essais. Fouillez le bord du Bassin des larmes, où les ruines du temple émergent de l'eau.",
 
-	-- Step 112: Misty Reed Strand
+	-- Step 113: Misty Reed Strand
 	["Misty Reed Strand"] = "Grève de Brumejonc",
 	["The driftwood washes up along the eastern shore."] = "Le bois flotté s'échoue le long de la rive est.",
 
-	-- Step 113: Watcher Biggs
+	-- Step 114: Watcher Biggs
 	["for Nethergarde Keep: keep it"] = "pour Rempart-du-Néant : gardez-le",
 
-	-- Step 116: Stormwind
+	-- Step 117: Stormwind
 	-- {npc:5635} Falstad Wildhammer
 	["for {npc:5635} at Aerie Peak: keep it"] = "pour {npc:5635} au nid-de-l'Aigle : gardez-le",
 
-	-- Step 117: Tram to Ironforge
+	-- Step 118: Tram to Ironforge
 	-- {zone:1455} Ironforge
 	["Tram to {zone:1455}"] = "Tram pour {zone:1455}",
 
-	-- Step 120: Ironforge
+	-- Step 121: Ironforge
 	-- {object:28027} Dwarven District · {npc:5637} Roetten Stonehammer · {object:32356} Hall of Explorers · {npc:1356} Prospector Stormpike · {npc:2786} Gerrig Bonegrip · {object:32383} Forlorn Cavern
 	["Take the Deeprun Tram from the {object:28027}. {npc:5637} is in the Reclaimers' hall by the {object:32356}, {npc:1356} in the hall itself, {npc:2786} in the {object:32383}. The next guide flies on to Thelsamar."] = "Prenez le tram des profondeurs depuis {object:28027}. {npc:5637} se trouve dans la salle des Récupérateurs près de {object:32356}, {npc:1356} dans la salle elle-même, {npc:2786} dans {object:32383}. Le guide suivant vole vers Thelsamar.",
 	-- {zone:1453} Stormwind
 	["{zone:1453} has no shaman trainer"] = "{zone:1453} n'a pas de maître des chamans",
 
-	-- Step 121: Scarlet Monastery (dungeon, optional): Librarian Mae Paledust
+	-- Step 122: Scarlet Monastery (dungeon, optional): Librarian Mae Paledust
 	-- {npc:3979} Librarian Mae Paledust
 	["Scarlet Monastery (dungeon, optional): {npc:3979}"] = "Monastère écarlate (donjon, optionnel) : {npc:3979}",
 	-- {zone:1420} Tirisfal Glades · {object:32356} Hall of Explorers
@@ -396,25 +402,25 @@ return {
 	-- {npc:3979} Librarian Mae Paledust
 	["{npc:3979}: the book is in the Library wing"] = "{npc:3979} : le livre se trouve dans l'aile Bibliothèque",
 
-	-- Step 122: Uldaman (dungeon, optional): Hall of Explorers
+	-- Step 123: Uldaman (dungeon, optional): Hall of Explorers
 	-- {object:32356} Hall of Explorers
 	["Uldaman (dungeon, optional): {object:32356}"] = "Uldaman (donjon, optionnel) : {object:32356}",
 	-- {zone:1418} Badlands · {object:32356} Hall of Explorers
 	["Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next guide runs it once its {zone:1418} quests are done. Alone? Skip it. Both stand in the {object:32356}."] = "Uldaman : un donjon nain et titan au nord des {zone:1418}, pour un groupe de 5, niveaux 42 à 52 sur Forever : optimal à 43 ou plus. Le guide suivant le fait une fois ses quêtes des {zone:1418} finies. Seul ? Passez. Tous deux se tiennent dans l'{object:32356}.",
 
-	-- Step 123: Fly to Thelsamar
+	-- Step 124: Fly to Thelsamar
 	["Fly to Thelsamar"] = "Volez vers Thelsamar",
 	-- {zone:1455} Ironforge
 	["{zone:1455} flight master"] = "Maître de vol de {zone:1455}",
 
-	-- Step 125: Hammertoe's Digsite
+	-- Step 126: Hammertoe's Digsite
 	["Hammertoe's Digsite"] = "Site de fouilles d'Hammertoe",
 
-	-- Step 126: Hammertoe's Digsite
+	-- Step 127: Hammertoe's Digsite
 	-- {zone:1432} Loch Modan · {zone:1418} Badlands · {npc:2860} Sigrun Ironhew
 	["Ride south out of {zone:1432} through the pass into the {zone:1418}; {npc:2860} camps at the dig."] = "Allez vers le sud depuis {zone:1432} par le col jusqu'à {zone:1418} ; {npc:2860} campe sur le site de fouilles.",
 
-	-- Step 127: Uldaman (optional): Prospector Ryedol
+	-- Step 128: Uldaman (optional): Prospector Ryedol
 	-- {npc:2910} Prospector Ryedol
 	["Uldaman (optional): {npc:2910}"] = "Uldaman (facultatif) : {npc:2910}",
 	-- {quest:720} A Sign of Hope · {npc:2909} Hammertoe Grez
@@ -422,22 +428,22 @@ return {
 	-- {npc:2910} Prospector Ryedol · {npc:2909} Hammertoe Grez
 	["{npc:2910}: for {npc:2909}, outside Uldaman"] = "{npc:2910} : pour {npc:2909}, devant Uldaman",
 
-	-- Step 128: Garek
+	-- Step 129: Garek
 	-- {npc:2888} Garek
 	["{npc:2888} camps by himself in Dustwind Gulch, south-east of the digsite."] = "{npc:2888} campe seul dans le Goulet de la Bourrasque, au sud-est du site de fouilles.",
 
-	-- Step 130: Riding at 40
+	-- Step 131: Riding at 40
 	-- {npc:4772} Ultham Ironhorn · {zone:1432} Loch Modan · {npc:1261} Veron Amberstill
 	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. {npc:4772} teaches Dwarves at Amberstill Ranch, east of Kharanos on the road to {zone:1432}, beside {npc:1261}'s rams. Forever may let any race learn from any riding trainer (unconfirmed). Collectibles, Mounts · Level 40 lists every colour."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. {npc:4772} enseigne aux nains à la Ferme des Amberstill, à l'est de Kharanos sur la route vers {zone:1432}, à côté des béliers de {npc:1261}. Forever pourrait permettre à n'importe quelle race d'apprendre auprès de n'importe quel maître de monte (non confirmé). Collectibles, Montures · Niveau 40 liste toutes les couleurs.",
 	-- {npc:1261} Veron Amberstill
 	["{npc:1261}: other colours, 20g"] = "{npc:1261} : autres couleurs, 20 po",
 
-	-- Step 131: Fly to Ironforge
+	-- Step 132: Fly to Ironforge
 	-- {zone:1455} Ironforge
 	["Fly to {zone:1455}"] = "Envolez-vous vers {zone:1455}",
 	["Thelsamar flight master"] = "Maître de vol de Thelsamar",
 
-	-- Step 132: Riding at 40
+	-- Step 133: Riding at 40
 	-- {npc:7954} Binjy Featherwhistle · {npc:7955} Milli Featherwhistle
 	["At 40 with 100 gold you can learn to ride, and learning it gives you a mount. {npc:7954} teaches Gnomes at Steelgrill's Depot, just east of Kharanos, beside {npc:7955}'s mechanostriders. Forever may let any race learn from any riding trainer (unconfirmed). Collectibles, Mounts · Level 40 lists every colour."] = "Au niveau 40 avec 100 or, vous pouvez apprendre à monter, et l'apprentissage vous donne une monture. {npc:7954} enseigne aux gnomes au dépôt de Steelgrill, juste à l'est de Kharanos, à côté des méchanostrucs de {npc:7955}. Forever pourrait permettre à n'importe quelle race d'apprendre auprès de n'importe quel maître de monte (non confirmé). Collectibles, Montures · Niveau 40 liste toutes les couleurs.",
 	-- {npc:7955} Milli Featherwhistle

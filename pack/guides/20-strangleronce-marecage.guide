@@ -516,6 +516,15 @@ step Stormwind
   train class only Warrior,Paladin,Hunter,Rogue,Priest,Mage,Warlock,Druid
   accept 1448                         -- Brohann Caskbelly
 
+# Groupe Alliance 0.11.0: Razorfen Downs, optional, asked once here (`when group 3636`) at its only
+# giver away from the dungeon, Archbishop Benedictus; the run is in Group 20 (22-feralas), whose
+# road from Theramore to Feralas passes its entrance; the hand-in at Group 22's Stormwind stop.
+step Razorfen Downs (dungeon, optional): Archbishop Benedictus
+  when group 3636
+  zone Stormwind City
+  tip Razorfen Downs: the quilboar and Scourge barrows at the southern edge of the Barrens, levels 35 to 41, run in Group 20 on the road from Theramore to Feralas (by then a little above its level: a quick run). Bring the Light cannot be shared: every player takes it here, in the Cathedral of Light. Alone? Skip it.
+  accept 3636                         -- Archbishop Benedictus
+
 step Stormwind
   zone Stormwind City
   when onquest 542

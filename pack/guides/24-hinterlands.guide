@@ -58,6 +58,12 @@ step Brohann Caskbelly
   zone Stormwind City
   turnin 1469
 
+step Cathedral of Light: Archbishop Benedictus
+  when complete 3636
+  zone Stormwind City
+  tip Bring the Light, from Razorfen Downs: Archbishop Benedictus is in the Cathedral of Light.
+  turnin 3636                         -- Archbishop Benedictus
+
 # Groupe Alliance 0.7.0: the Sunken Temple, optional (asked once here, `when group 1475`; run in
 # 27-steppes-ardentes from the Blasted Lands, Brohann's reward at that guide's Ironforge stop).
 # Ids, givers, levels and the dungeon's place from Polestar's Forever data and Dungeons codex;

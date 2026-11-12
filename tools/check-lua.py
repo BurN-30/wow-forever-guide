@@ -329,7 +329,8 @@ print(f"objective tips: {nkeys} keys, " + ("ok" if not missing else "NOT IN THE 
 # exactly the pack's known escorts below; each quest of our list is in the guides.
 ESCORTS = {155, 219, 660, 665, 731, 945, 994, 995, 1222, 1393, 1440, 1560, 2078, 3367,
            4261, 4491, 4901, 5203, 5321, 6132, 87491, 99053,
-           1144, 2904}  # 0.11.0: Willix the Importer (Razorfen Kraul), A Fine Mess (Gnomeregan)
+           1144, 2904, 3525}  # 0.11.0: Willix the Importer (Razorfen Kraul), A Fine Mess (Gnomeregan),
+           # Extinguishing the Idol (Razorfen Downs)
 is_escort = L.eval("function(t, q, e) return NS.GA.IsEscort({ t = t, quest = q, escort = e or nil }) end")
 marked, quests = set(), set()
 for m in re.finditer(r'\{ t = "(\w+)", quest = (\d+),([^\n]*)', guides):
