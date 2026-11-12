@@ -214,13 +214,27 @@ return {
 	["Horde land: keep clear of Camp Taurajo and its guards. Keep 2 free quest log slots."] = "Terre de la Horde : se tenir loin du Camp Taurajo et de ses gardes. Garder 2 places libres dans le journal.",
 	["Razorfen Kraul"] = "Kraal de Tranchebauge",
 
-	-- Step 41: Razorfen Kraul: Charlga Razorflank
+	-- Step 41: Warriors: Fire Hardened Mail
+	-- {quest:1701} Fire Hardened Mail
+	["Warriors: {quest:1701}"] = "Guerriers : {quest:1701}",
+	-- {item:6841} Vial of Phlogiston · {zone:1437} Wetlands
+	["Roogug, the first boss, drops the {item:6841}. The other items of the quest come from Stonetalon and the {zone:1437}: Polestar's class guides (Fire Hardened Armor) cover them."] = "Roogug, le premier boss, lâche la {item:6841}. Les autres objets de la quête viennent des Serres-Rocheuses et des {zone:1437} : les guides de classe de Polestar (Fire Hardened Armor) les couvrent.",
+	-- {item:6841} Vial of Phlogiston
+	["{item:6841}: Roogug"] = "{item:6841} : Roogug",
+
+	-- Step 42: Razorfen Kraul: Charlga Razorflank
 	-- {npc:4421} Charlga Razorflank
 	["Razorfen Kraul: {npc:4421}"] = "Kraal de Tranchebauge : {npc:4421}",
 	-- {npc:4424} Aggem Thorncurse · {npc:4428} Death Speaker Jargba · {npc:4420} Overlord Ramtusk · {npc:4422} Agathelos the Raging · {npc:4421} Charlga Razorflank
 	["Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421}, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her."] = "Roogug, {npc:4424}, {npc:4428}, {npc:4420} et {npc:4422} viennent avant elle (ordre du codex). {npc:4421}, le dernier boss, se combat sur la rampe devant sa hutte et s'y téléporte de temps en temps : le tank la reprend. Sa Pureté dissipe tous les affaiblissements et la rend insensible un moment : pas de dégâts sur la durée sur elle.",
 
-	-- Step 42: Razorfen Kraul: Heralath Fallowbrook
+	-- Step 43: Shamans: Elemental Aid
+	-- {quest:96264} Elemental Aid
+	["Shamans: {quest:96264}"] = "Chamans : {quest:96264}",
+	-- {quest:96264} Elemental Aid · {npc:259023} Veyric Thunderhame · {zone:1417} Arathi Highlands · {item:274463} Tattered Note · {npc:4421} Charlga Razorflank
+	["{quest:96264} ({npc:259023}, {zone:1417}): the {item:274463} comes from {npc:4421}. To check in game: the drop rate is not known."] = "{quest:96264} ({npc:259023}, {zone:1417}) : la {item:274463} vient de {npc:4421}. À vérifier en jeu : le taux de butin n'est pas connu.",
+
+	-- Step 44: Razorfen Kraul: Heralath Fallowbrook
 	-- {npc:4510} Heralath Fallowbrook
 	["Razorfen Kraul: {npc:4510}"] = "Kraal de Tranchebauge : {npc:4510}",
 	-- {npc:4421} Charlga Razorflank · {npc:4510} Heralath Fallowbrook · {quest:1142} Mortality Wanes · {item:5825} Treshala's Pendant
@@ -228,7 +242,7 @@ return {
 	-- {item:5825} Treshala's Pendant
 	["{item:5825}: quilboars of the Kraul, about 1 in 10"] = "{item:5825} : huttes-épines du kraal, environ 1 fois sur 10",
 
-	-- Step 43: Razorfen Kraul: Willix the Importer
+	-- Step 45: Razorfen Kraul: Willix the Importer
 	-- {quest:1144} Willix the Importer
 	["Razorfen Kraul: {quest:1144}"] = "Kraal de Tranchebauge : {quest:1144}",
 	-- {quest:1144} Willix the Importer · {npc:4510} Heralath Fallowbrook
@@ -238,19 +252,19 @@ return {
 	-- {quest:1144} Willix the Importer
 	["{quest:1144}, at the entrance"] = "{quest:1144}, à l'entrée",
 
-	-- Step 46: Mirage Raceway
+	-- Step 48: Mirage Raceway
 	["Mirage Raceway"] = "Piste des mirages",
 	["Follow the canyons east to the salt flats. The goblins and gnomes of the Mirage Raceway are neutral and give quests to both factions."] = "Suivez les canyons vers l'est jusqu'aux plaines de sel. Les gobelins et gnomes de la Piste des mirages sont neutres et donnent des quêtes aux deux factions.",
 	-- {quest:5762} Hemet Nesingwary
 	["For {quest:5762} in Stranglethorn, later"] = "Pour {quest:5762} à Strangleronce, plus tard",
 
-	-- Step 47: Mirage Raceway: kill these as you meet them
+	-- Step 49: Mirage Raceway: kill these as you meet them
 	["Mirage Raceway: kill these as you meet them"] = "Piste des mirages : tuez-les au fur et à mesure",
 	-- {object:19868} Rocket Car Rubble
 	-- plural, as words: Scorpid Reavers = {npc:4140} Scorpid Reaver · Saltstone Basilisks = {npc:4147} Saltstone Basilisk
 	["{object:19868} lies all over the flats. Scorpid Reavers roam the north half; keep to it, away from the Saltstone Basilisks, Crystalhides and Gazers (32-35) of the middle and the far south."] = "{object:19868} jonchent les Salines. Les Scorpides ravageurs parcourent la moitié nord : restez-y, loin des Basilics du sel gemme, Peaux de cristal et Contemplateurs (32-35) du centre et de l'extrême sud.",
 
-	-- Step 48: Mirage Raceway
+	-- Step 50: Mirage Raceway
 	-- {npc:4454} Fizzle Brassbolts · {zone:1418} Badlands
 	["{npc:4454}: for Martek in the {zone:1418}, at 39; not offered? Go on"] = "{npc:4454} : pour Martek dans {zone:1418}, à 39 ; non proposé ? Continuer",
 

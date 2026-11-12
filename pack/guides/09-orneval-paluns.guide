@@ -246,6 +246,26 @@ step Blackfathom Deeps: along the way
   collect 5952 x8 quest 1275                  -- Corrupted Brain Stem: Blackfathom nagas, Fallenroot satyrs
   collect 5879 x10 quest 1199 optional        -- Twilight Pendant: Twilight's Hammer cultists
 
+# Groupe Alliance 0.11.0 (review): the two class quests of the codex for this dungeon, shown only
+# to the class and only to whoever holds the quest. Drops from Polestar's Forever data: Corrupted
+# Kor Gem (Blackfathom Tide Priestess, Oracle and Sea Witch, 50 %), Soran'ruk Fragment (Twilight
+# Acolyte, 100 %); Icy Veins' Forever quest guide (05/10/2026) says the same.
+step Paladins: Seeking the Kor Gem
+  only Paladin
+  when done bfd-start
+  when onquest 1442
+  along until bfd-kelris
+  tip The Blackfathom Tide Priestesses, Oracles and Sea Witches (the naga casters) drop the Corrupted Kor Gem, about 1 in 2. Thundris Windweaver in Auberdine cleanses it, on the way back.
+  collect 6995 quest 1442                     -- Corrupted Kor Gem: naga casters
+
+step Warlocks: The Orb of Soran'ruk
+  only Warlock
+  when done bfd-start
+  when onquest 1740
+  along until bfd-kelris
+  tip The Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from Shadowfang Keep, not on this route: Polestar's class guides (Orb of Soran'ruk) cover it.
+  collect 6914 x3 quest 1740                  -- Soran'ruk Fragment: Twilight Acolytes
+
 step Blackfathom Deeps: Ghamoo-ra's pool
   when group 1275
   when done bfd-start

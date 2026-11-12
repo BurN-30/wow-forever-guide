@@ -284,11 +284,31 @@ step Razorfen Kraul (dungeon, optional)
   note Horde land: keep clear of Camp Taurajo and its guards. Keep 2 free quest log slots.
   goto 42.9,90.2 "Razorfen Kraul" r 25
 
+# Groupe Alliance 0.11.0 (review): the two class quests of the codex for this dungeon, only for
+# the class and only for whoever holds the quest. Drops from Polestar's Forever data: Vial of
+# Phlogiston (Roogug, 100 %; Warcraft Tavern's Forever guide, 11/11/2026, says the same), Tattered
+# Note (Charlga Razorflank, rate unknown: to check in game).
+step Warriors: Fire Hardened Mail
+  only Warrior
+  when done rfk-start
+  when onquest 1701
+  along until rfk-charlga
+  tip Roogug, the first boss, drops the Vial of Phlogiston. The other items of the quest come from Stonetalon and the Wetlands: Polestar's class guides (Fire Hardened Armor) cover them.
+  collect 6841 quest 1701                 -- Vial of Phlogiston: Roogug
+
 step Razorfen Kraul: Charlga Razorflank
+  label rfk-charlga
   when group 1144
   when done rfk-start
   tip Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her.
   kill 4421                               -- Charlga Razorflank
+
+step Shamans: Elemental Aid
+  only Shaman
+  when done rfk-start
+  when onquest 96264
+  tip Elemental Aid (Veyric Thunderhame, Arathi Highlands): the Tattered Note comes from Charlga Razorflank. To check in game: the drop rate is not known.
+  collect 274463 quest 96264              -- Tattered Note: Charlga Razorflank
 
 step Razorfen Kraul: Heralath Fallowbrook
   when group 1144

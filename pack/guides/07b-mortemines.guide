@@ -103,7 +103,20 @@ step Rhahk'Zor
   kill 644                                    -- Rhahk'Zor
   collect 915 quest 214                       -- Red Silk Bandana: any Defias
 
+# Groupe Alliance 0.11.0 (review): the Paladin class quest of the codex (The Test of Righteousness,
+# 1654), only for Paladins who hold it. Whitestone Oak Lumber: Goblin Woodcarvers (Polestar's
+# Forever data, 100 %). The rest of the chain (Shadowfang Keep, Blackfathom Deeps) is in
+# Polestar's class guide forever/class/paladin/verigans-fist.
+step Paladins: The Test of Righteousness
+  only Paladin
+  when done dm-start
+  when onquest 1654
+  along until dm-sneed
+  tip The Goblin Woodcarvers of the lumber room, before Sneed's Shredder, drop the Whitestone Oak Lumber. The chain also needs Jordan's Smithing Hammer (Shadowfang Keep, not on this route) and the Kor Gem (Blackfathom Deeps): Polestar's class guides (Verigan's Fist) cover all of it.
+  collect 6994 quest 1654                     -- Whitestone Oak Lumber: Goblin Woodcarvers
+
 step Sneed's Shredder and Sneed
+  label dm-sneed
   when done dm-start
   tip Clear every Goblin Woodcarver of the lumber room first, pulling them back to the previous room: the Shredder's Terrify sends you running into them. Sneed jumps out when it breaks; he disarms.
   collect 7365 quest 2040 optional            -- Gnoam Sprecklesprocket: Sneed's Shredder
