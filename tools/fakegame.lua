@@ -175,6 +175,7 @@ UnitClass = function(u) if u == "player" then return BENCH_LOCALE == "frFR" and 
 UnitClassBase = function(u) return "WARRIOR", 1 end
 UnitRace = function(u) return BENCH_LOCALE == "frFR" and "Humain" or "Human", "Human", 1 end
 UnitLevel = function() return 20 end
+UnitQuestTrivialLevelRange = function() return 5 end
 UnitFactionGroup = function() return "Alliance", BENCH_LOCALE == "frFR" and "Alliance" or "Alliance" end
 UnitGUID = function(u) if u == "player" then return "Player-1-0000000A" end return nil end
 UnitExists = function(u) return u == "player" end
@@ -187,6 +188,9 @@ UnitSex = function() return 2 end
 GetRealmName = function() return "Forever" end
 GetNormalizedRealmName = function() return "Forever" end
 GetMoney = function() return 12345 end
+GetMoneyString = function(m) m = tonumber(m) or 0
+	local g, s, c = math.floor(m / 10000), math.floor(m / 100) % 100, m % 100
+	return (g > 0 and (g .. "g ") or "") .. (s > 0 and (s .. "s ") or "") .. c .. "c" end
 GetCVar = function(n) return B.cvars[n] end
 GetCVarBool = function(n) return B.cvars[n] == "1" end
 GetCVarDefault = function() return "0" end
@@ -312,12 +316,18 @@ function FrameMethods:SetAttribute(k, v) self.__attr[k] = v end
 function FrameMethods:IsMouseOver() return false end
 function FrameMethods:IsMouseEnabled() return false end
 function FrameMethods:GetNumLines() return #self.__lines end
+FrameMethods.NumLines = FrameMethods.GetNumLines
 function FrameMethods:IsOwned(o) return self.__tipOwner == o end
 function FrameMethods:GetOwner() return self.__tipOwner end
-function FrameMethods:SetOwner(o) self.__tipOwner = o self.__lines = {} end
+-- A tooltip given a new owner or cleared loses its lines and runs OnTooltipCleared, as the game's.
+local function clearTip(self)
+	self.__lines = {}
+	if self.__scripts.OnTooltipCleared then B.Run(self, "OnTooltipCleared") end
+end
+function FrameMethods:SetOwner(o) self.__tipOwner = o clearTip(self) end
 function FrameMethods:AddLine(t) self.__lines[#self.__lines + 1] = t end
 function FrameMethods:AddDoubleLine(a, b) self.__lines[#self.__lines + 1] = tostring(a) .. " | " .. tostring(b) end
-function FrameMethods:ClearLines() self.__lines = {} end
+function FrameMethods:ClearLines() clearTip(self) end
 function FrameMethods:GetItem() return nil, nil end
 function FrameMethods:GetSpell() return nil, nil end
 function FrameMethods:GetUnit() return nil, nil end
@@ -699,9 +709,44 @@ function BENCH.RunTimers(rounds)
 	B.timers = {}
 end
 
+-- Items the bench knows (check-pack.py fills it): id -> { name, quality, level, reqLevel,
+-- equipLoc, sellPrice, classID, subclassID }. C_Item answers from it like the game's cache.
+BENCH.items = {}
+function BENCH.InstallItems()
+	C_Item = C_Item or {}
+	local function info(id)
+		if type(id) == "string" then id = tonumber(id:match("item:(%d+)")) end
+		local it = B.items[id]
+		if not it then return nil end
+		return it.name, "|cffffffff|Hitem:" .. id .. "::::::::20:::::|h[" .. it.name .. "]|h|r", it.quality, it.level or 1,
+			it.reqLevel or 0, "", "", 20, it.equipLoc or "", 134400, it.sellPrice or 0, it.classID or 15, it.subclassID or 0
+	end
+	C_Item.GetItemInfo = info
+	GetItemInfo = info
+	C_Item.GetItemInfoInstant = function(id)
+		if type(id) == "string" then id = tonumber(id:match("item:(%d+)")) end
+		local it = B.items[id]
+		if not it then return nil end
+		return id, "", "", it.equipLoc or "", 134400, it.classID or 15, it.subclassID or 0
+	end
+	GetItemInfoInstant = C_Item.GetItemInfoInstant
+	-- Quests the scenario marks done (BENCH.completed[questID] = true).
+	C_QuestLog = C_QuestLog or {}
+	C_QuestLog.IsQuestFlaggedCompleted = function(q) return B.completed[q] == true end
+end
+BENCH.completed = {}
+
 -- An item tooltip shown: the post-calls of every addon, in the order they were added.
-function BENCH.Tooltip(tip, itemID)
-	tip:SetOwner(UIParent, "ANCHOR_NONE")
+-- keep: run the post-calls again on the tooltip as it is (the game refreshes a shown
+-- tooltip that way), without a new owner.
+function BENCH.Tooltip(tip, itemID, keep, owner)
+	if not keep then
+		tip:SetOwner(owner or UIParent, "ANCHOR_NONE")
+		-- The game's own lines come first: the name and one more.
+		local it = B.items[itemID]
+		tip:AddLine(it and it.name or ("Item " .. itemID))
+		tip:AddLine("(game line)")
+	end
 	local data = { type = 0, id = itemID, lines = {}, hyperlink = "item:" .. itemID }
 	tip.GetPrimaryTooltipData = function() return data end
 	tip.GetItem = function() return "Item " .. itemID, "|cffffffff|Hitem:" .. itemID .. "::::::::20:::::|h[Item]|h|r", itemID end

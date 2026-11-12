@@ -10,6 +10,11 @@ for WoW Forever: game type camelot, family mainline), XML <Script> and <Include>
 load-on-demand addons when an addon asks for them. Then ADDON_LOADED, PLAYER_LOGIN,
 PLAYER_ENTERING_WORLD, the timers, a combat (PLAYER_REGEN_DISABLED / ENABLED), an item
 tooltip and the world map opened. Twice: French client (frFR), then English (enUS).
+Then the "What is this item for" line (Polestar/GroupeAlliance/ItemUse.lua): the SCENARIOS
+items hovered in the bags, at a merchant, at the auction house, in combat and after their quest
+is done, the tooltip's post-calls run again as the game does on a refresh; the line must show
+exactly once, under the game's lines, without an error (else exit code 1). Also the data's
+memory (its own Lua state) and the time of a line and of a whole tooltip.
 
 The fake game is tools/fakegame.lua. From --ui (a checkout of Gethe/wow-ui-source, branch
 forever, its Lua and XML files: README.md says how), every documented function exists and
@@ -204,6 +209,10 @@ def run(a, locale):
             with open(csvp, encoding="utf-8", newline="") as fh:
                 for row in csv.DictReader(fh):
                     st[row["BaseTag"]] = row["TagText_lang"]
+    items = g.BENCH["items"]
+    for iid, it in ITEMS.items():
+        items[iid] = L.table_from(it)
+    L.execute("BENCH.InstallItems()")
     L.execute("BENCH.SealGlobals()")
 
     for name, t in addons.items():
@@ -338,7 +347,132 @@ def run(a, locale):
         if addons[n]["meta"].get("LoadOnDemand", "0").strip() != "1" and not B.loaded[n]:
             B.errors[len(B.errors) + 1] = L.table(n, "load", "not loaded")
 
-    return report(L, B, addons, order, extra_names, compile_errors, locale)
+    item_use = item_use_scenarios(L, B, namespaces.get("Polestar"))
+    lines, bad = report(L, B, addons, order, extra_names, compile_errors, locale)
+    return lines + item_use[0], bad + item_use[1]
+
+
+# Items of the "What is this item for" scenarios: facts of the client tables (ItemSparse, Item,
+# build 1.60.1.70888) as C_Item gives them: name, quality, required level, slot, sell price, class.
+ITEMS = {
+    2589: dict(name="Linen Cloth", quality=1, reqLevel=0, sellPrice=13, classID=7, subclassID=5),
+    2318: dict(name="Light Leather", quality=1, reqLevel=0, sellPrice=15, classID=7, subclassID=6),
+    182: dict(name="Garrick's Head", quality=1, reqLevel=0, sellPrice=0, classID=12, subclassID=0),
+    1221: dict(name="Underbelly Whelp Scale", quality=1, reqLevel=0, sellPrice=0, classID=12, subclassID=0),
+    2591: dict(name="Dirty Trogg Cloth", quality=0, reqLevel=0, sellPrice=5, classID=15, subclassID=0),
+    25: dict(name="Worn Shortsword", quality=1, reqLevel=1, sellPrice=7, classID=2, subclassID=7, equipLoc="INVTYPE_WEAPONMAINHAND"),
+    117: dict(name="Tough Jerky", quality=1, reqLevel=1, sellPrice=1, classID=0, subclassID=5),
+    159: dict(name="Refreshing Spring Water", quality=1, reqLevel=1, sellPrice=1, classID=0, subclassID=5),
+    17030: dict(name="Ankh", quality=1, reqLevel=0, sellPrice=0, classID=5, subclassID=0),
+}
+
+# (scenario, item, where the tooltip shows)
+SCENARIOS = [
+    ("composant, dans les sacs", 2589, "bags"),
+    ("composant, à l'hôtel des ventes", 2318, "auction"),
+    ("objet de quête, en combat", 1221, "combat"),
+    ("objet de quête, quête rendue", 182, "done"),
+    ("gris, chez un marchand", 2591, "merchant"),
+    ("équipement, dans les sacs", 25, "bags"),
+    ("nourriture, dans les sacs", 117, "bags"),
+    ("boisson, guerrier", 159, "bags"),
+    ("composant de sort", 17030, "bags"),
+]
+
+
+def item_use_scenarios(L, B, ns):
+    """Hovers the scenario items with the whole pack loaded; checks the line shows once, under
+    the game's lines, without an error; measures the data's memory and a tooltip's time."""
+    lines = ["### À quoi sert cet objet (GroupeAlliance/ItemUse.lua)", ""]
+    if ns is None or not ns.GA or not ns.GA.ItemUseLine:
+        return lines + ["- module absent", ""], 1
+    B.ns = ns
+    rows = L.eval("""function(list)
+        local B = BENCH
+        local GA = B.ns.GA
+        local out = {}
+        for i = 1, #list do
+            local s = list[i]
+            local label, id, where = s[1], s[2], s[3]
+            local before = #B.errors
+            B.current = "(bench: item use " .. where .. ")"
+            local owner = UIParent
+            if where == "bags" then owner = ContainerFrame1
+            elseif where == "merchant" then MerchantFrame:Show() B.Fire("MERCHANT_SHOW") owner = MerchantFrame
+            elseif where == "auction" then B.Fire("AUCTION_HOUSE_SHOW") owner = AuctionHouseFrame
+            elseif where == "combat" then B.combat = true B.Fire("PLAYER_REGEN_DISABLED")
+            elseif where == "done" then B.completed[6] = true end -- Bounty on Garrick Padfoot
+            B.Tooltip(GameTooltip, id, false, owner)
+            B.Tooltip(GameTooltip, id, true) -- the game refreshes a shown tooltip: post-calls again
+            B.current = "(bench: item use " .. where .. ")"
+            local ok, expected = pcall(GA.ItemUseLine, id)
+            if not ok then B.Error("ItemUseLine", expected) expected = nil end
+            local count, pos, n = 0, 0, #GameTooltip.__lines
+            for j = 1, n do
+                if expected and GameTooltip.__lines[j] == expected then
+                    count = count + 1
+                    if pos == 0 then pos = j end
+                end
+            end
+            if where == "merchant" then B.Fire("MERCHANT_CLOSED") MerchantFrame:Hide()
+            elseif where == "auction" then B.Fire("AUCTION_HOUSE_CLOSED")
+            elseif where == "combat" then B.combat = false B.Fire("PLAYER_REGEN_ENABLED")
+            elseif where == "done" then B.completed[6] = nil end
+            local errs = {}
+            for k = before + 1, #B.errors do errs[#errs + 1] = B.errors[k][1] .. " " .. B.errors[k][2] .. ": " .. tostring(B.errors[k][3]):sub(1, 160) end
+            out[i] = { label, id, expected or "", count, pos, n, table.concat(errs, " | "), table.concat(GameTooltip.__lines, " / ") }
+        end
+        B.current = "(bench)"
+        return out
+    end""")(L.table_from([L.table_from(list(s)) for s in SCENARIOS]))
+    bad = 0
+    lines.append("| Situation | Objet | Ligne ajoutée | Fois | Rang (lignes) | Erreurs |")
+    lines.append("|---|---|---|---|---|---|")
+    full = []
+    for r in lua_list(rows):
+        label, iid, text, count, pos, n, errs, tip = r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8]
+        # Shown once when there is one, and never above the game's two lines.
+        ok = (count == 1 and pos > 2) if text else count == 0
+        if errs or not ok:
+            bad += 1
+        lines.append(f"| {label} | {iid} {ITEMS[iid]['name']} | {text or '(rien)'} | {count} | {pos} ({n}) | {errs or 'aucune'}{'' if ok else ' **ÉCHEC**'} |")
+        full.append(f"- {iid} : {tip}")
+    lines.append("")
+    lines.append("Infobulles complètes (lignes séparées par « / », les deux premières tiennent lieu de celles du jeu) :")
+    lines += full
+    lines.append("")
+    # Memory of the data (its own Lua state) and time of one line, cold (record cut out) and warm.
+    M = lua51.LuaRuntime(unpack_returned_tuples=True, encoding="utf-8")
+    src = (REPO / "addons" / "Polestar" / "GroupeAlliance" / "ItemUseData.lua").read_text(encoding="utf-8")
+    kb = M.eval("""function(src)
+        collectgarbage("collect") collectgarbage("collect")
+        local before = collectgarbage("count")
+        local f = loadstring(src) local ns = {} f("Polestar", ns)
+        KEEP = ns
+        collectgarbage("collect") collectgarbage("collect")
+        return collectgarbage("count") - before
+    end""")(src)
+    t = L.eval("""function()
+        local GA = BENCH.ns.GA
+        local ids = {}
+        for id in GA.ItemUseData.prof:gmatch("\\n(%d+)\\t") do ids[#ids + 1] = tonumber(id) end
+        for id in GA.ItemUseData.quest:gmatch("\\n(%d+)\\t") do ids[#ids + 1] = tonumber(id) if #ids >= 2000 then break end end
+        local t0 = os.clock()
+        for i = 1, #ids do GA.ItemUseLine(ids[i]) end
+        local cold = (os.clock() - t0) / #ids * 1000
+        t0 = os.clock()
+        for _ = 1, 2000 do GA.ItemUseLine(2589) end
+        local warm = (os.clock() - t0) / 2000 * 1000
+        t0 = os.clock()
+        for _ = 1, 200 do BENCH.Tooltip(GameTooltip, 2589) end
+        local whole = (os.clock() - t0) / 200 * 1000
+        return cold, warm, whole, #ids
+    end""")()
+    lines.append(f"Mémoire des données : {kb:.0f} Kio (ItemUseData.lua chargé seul). Temps d'une ligne : {t[0]:.3f} ms à froid "
+                 f"(moyenne sur {t[3]} objets différents), {t[1]:.4f} ms pour la toile de lin (quêtes et quatre métiers, le cas le plus lourd) ; infobulle entière avec tout le paquet : "
+                 f"{t[2]:.3f} ms (faux jeu, Lua 5.1 de lupa, ordre de grandeur seulement).")
+    lines.append("")
+    return lines, bad
 
 
 def lua_list(t):
