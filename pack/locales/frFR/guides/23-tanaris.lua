@@ -177,19 +177,23 @@ return {
 	["Fly to Theramore"] = "Volez jusqu'à Theramore",
 	["Gadgetzan flight master"] = "Maître de vol de Gadgetzan",
 
-	-- Step 30: Tabetha
+	-- Step 30: Archmage Tervosh
+	-- {quest:7070} Shadowshard Fragments · {object:21057} Foothold Citadel
+	["{quest:7070}, from Maraudon: Tervosh is upstairs in the tower of {object:21057}."] = "{quest:7070}, de Maraudon : Tervosh est à l'étage, dans la tour de {object:21057}.",
+
+	-- Step 31: Tabetha
 	-- {quest:2846} Tiara of the Deep · {npc:6546} Tabetha
 	["{quest:2846}: {npc:6546}'s hut stands alone in the middle of the marsh. Ride west out of Theramore along the road, then south (5 minutes there and back), and come back to the docks for the boat."] = "{quest:2846} : la cabane de {npc:6546} est isolée au milieu du marais. Sortir de Theramore vers l'ouest par la route, puis descendre au sud (5 minutes aller-retour), et revenir aux quais pour le bateau.",
 
-	-- Step 31: Boat to Menethil Harbor
+	-- Step 32: Boat to Menethil Harbor
 	-- {object:1162} Menethil Harbor
 	["Boat to {object:1162}"] = "Bateau pour {object:1162}",
 
-	-- Step 32: Fly to Aerie Peak
+	-- Step 33: Fly to Aerie Peak
 	["Fly to Aerie Peak"] = "Envolez-vous vers Nid-de-l'Aigle",
 	-- {object:1162} Menethil Harbor
 	["{object:1162} flight master"] = "Maître de vol de {object:1162}",
 
-	-- Step 35: Sprinkle's Secret Ingredient
+	-- Step 36: Sprinkle's Secret Ingredient
 	["Underwater"] = "Sous l'eau",
 }

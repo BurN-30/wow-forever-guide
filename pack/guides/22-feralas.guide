@@ -255,6 +255,137 @@ step Zorbin Fandazzle
   note Zorbin's refills are level 55: skip them.
   note You end at the Forgotten Coast dock: the Tanaris guide starts with the trip east from here.
 
+# Groupe Alliance 0.11.0: Maraudon, optional, asked here (`when group 7065`) at level 45, the level
+# Corruption of Earth and Seed needs (Grind to 45 just before). The way: boat to Feathermoon, flight
+# to Nijel's Point (Talendria, Keeper Marandis), south to Kormek's Hut (Willow), south-west to the
+# caves of Maraudon (Cavindra), and back the same way; then the flight to Thalanaar, where this
+# guide ends. Givers, levels, objectives, drops and places outside the instance: Polestar's Forever
+# data and Dungeons codex (data-v2026.11.1); prerequisites: none but 7046 after 7044 (Polestar and
+# the TrinityCore base agree). Inside, the orange side (Noxxion, the vines), the purple side (Lord
+# Vyletongue), then the inner part (Celebras, Princess Theradras): Warcraft Tavern's Forever
+# Maraudon quest guide (12/11/2026), itself from Classic (closed in the Forever beta): to check in
+# game. Shareable: Willow's, Cavindra's, Marandis's and Tervosh's quests; not Talendria's, not
+# Celebras's. Left out: The Pariah's Instructions (five centaur khans all over Desolace).
+step Maraudon (dungeon, optional)
+  label mara-start
+  when group 7065
+  zone Feralas
+  tip Maraudon: the caves of the centaurs' sacred ground in western Desolace, levels 42 to 51, a long dungeon (two wings, then the inner part, whose last boss is 51). At 45 it takes a solid group of 5. From here: the boat to Feathermoon Stronghold, the flight to Nijel's Point, about ten minutes' ride to the dungeon, and the same way back; the guide then flies on to Thalanaar. Alone? Skip it.
+  note Three quests at Nijel's Point and Kormek's Hut on the way, one at the dungeon's door. Keep 6 free quest log slots.
+  goto 43.3,42.7 "Boat to Feathermoon Stronghold"
+
+step Maraudon: fly to Nijel's Point
+  when group 7065
+  when done mara-start
+  zone Feralas
+  goto 30.3,43.3 "Feathermoon flight master"
+  fly "Nijel's Point"
+  zone Desolace
+
+step Maraudon: Nijel's Point
+  when group 7065
+  when done mara-start
+  zone Desolace
+  tip Talendria and Keeper Marandis stand in the night elf outpost. Talendria's quest cannot be shared: each player takes it here, with its Coated Cerulean Vial.
+  accept 7041                         -- Talendria
+  accept 7065                         -- Keeper Marandis
+
+step Maraudon: Willow
+  when group 7065
+  when done mara-start
+  tip Ride south along the road to Kormek's Hut, by Thunder Axe Fortress: Willow waits there.
+  accept 7028                         -- Willow
+
+step Maraudon: before going in
+  when group 7065
+  when done mara-start
+  tip Ride south-west to the Valley of Spears: the caves of Maraudon open in the hills west of it. Cavindra waits in the first cave. Fill the Coated Cerulean Vial at an orange crystal pool, outside the orange portal (the right-hand path where the caves split); the blue water does not count.
+  note In the quest log before going in: Vyletongue Corruption and Corruption of Earth and Seed (Nijel's Point), Twisted Evils (Willow), Legends of Maraudon (Cavindra, here). If you took it: Shadowshard Fragments (Archmage Tervosh, Theramore, Group 18): the Shadowshard Rumblers and Smashers (elite) roam the slopes north of the caves. Not on this route: The Pariah's Instructions (the centaur pariah of southern Desolace sends you after five khans).
+  accept 7044                         -- Cavindra
+  collect 17696 quest 7041 @33.2,65.7 -- Filled Cerulean Vial: the orange crystal pool
+  collect 17756 x10 quest 7070 optional @27.6,56.2 -- Shadowshard Fragment: Shadowshard Rumblers and Smashers
+  goto 29.1,62.5 "Maraudon" r 25
+
+step Maraudon: along the way
+  when group 7065
+  when done mara-start
+  along until mara-end
+  tip Collected all through the dungeon: the Theradric Crystal Carvings, from the centaurs, satyrs and dryads and from most bosses. Every player with the quest loots their own.
+  note Share Twisted Evils, Corruption of Earth and Seed and Legends of Maraudon with your group: click each in the quest log, then Share.
+  collect 17684 x15 quest 7028        -- Theradric Crystal Carving
+
+step Maraudon: the orange side
+  when group 7065
+  when done mara-start
+  tip On the orange side, by the Vylestem Vines: use the Filled Cerulean Vial near one, a Noxxious Scion comes out (45, immune to Nature); kill it to heal the vine, 8 times. Noxxion, at the end of this side, drops the Celebrian Rod.
+  kill 13696 x8 quest 7041            -- Noxxious Scion: one per vine
+  collect 17702 quest 7044            -- Celebrian Rod: Noxxion
+
+step Maraudon: the purple side
+  when group 7065
+  when done mara-start
+  tip Back out and in through the purple portal: Lord Vyletongue, at the end of this side, drops the Celebrian Diamond.
+  collect 17703 quest 7044            -- Celebrian Diamond: Lord Vyletongue
+
+step Maraudon: Celebras
+  when group 7065
+  when done mara-start
+  tip In the inner part, Celebras the Cursed: once beaten, he comes back as Celebras the Redeemed. Hand him Legends of Maraudon; his next quest cannot be shared: each player takes it, then waits while he makes the scepter and speaks with him again.
+  turnin 7044                         -- Celebras the Redeemed
+  accept 7046
+  complete 7046
+  turnin 7046
+
+step Maraudon: Princess Theradras
+  label mara-end
+  when group 7065
+  when done mara-start
+  tip Princess Theradras, the last boss (51), at the far end of the inner part. Zaetar's Spirit then rises: its quest, Seed of Life, goes to Keeper Remulos in Moonglade, where the guide passes in Group 28; keep it until then.
+  kill 12201 quest 7065               -- Princess Theradras
+  accept 7066 optional                -- Zaetar's Spirit
+
+step Maraudon: Willow
+  when complete 7028
+  zone Desolace
+  tip Back north along the road: Willow at Kormek's Hut.
+  turnin 7028                         -- Willow
+
+step Maraudon: Keeper Marandis
+  when complete 7065
+  zone Desolace
+  turnin 7065                         -- Keeper Marandis, Nijel's Point
+
+step Maraudon: Talendria
+  when complete 7041
+  zone Desolace
+  turnin 7041                         -- Talendria, Nijel's Point
+
+step Maraudon: quests not done
+  when group 7065
+  when done mara-start
+  tip What is left of Maraudon in the quest log cannot be finished on this route (the guide does not come back): it is dropped here. Seed of Life stays, for Moonglade.
+  abandon 7028
+  abandon 7065
+  abandon 7041
+  abandon 7044
+  abandon 7046
+
+step Maraudon: fly to Thalanaar
+  when group 7065
+  when done mara-start
+  zone Desolace
+  goto 64.7,10.5 "Nijel's Point flight master"
+  fly "Thalanaar"
+  zone Feralas
+
+# Groupe Alliance 0.11.0: Shadowshard Fragments (7070, Archmage Tervosh, Group 18, `when group 7070`),
+# when not done (no Maraudon, or the fragments missed): the route does not come back.
+step Shadowshard Fragments: not done
+  when onquest 7070
+  when !complete 7070
+  tip Shadowshard Fragments needs the elementals outside Maraudon, and the guide does not come back to Desolace: abandon it.
+  abandon 7070
+
 step Thalanaar
   when onquest 4281
   tip Ride north-east to the night elf outpost on the Thousand Needles border.

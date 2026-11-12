@@ -252,6 +252,13 @@ step Fly to Theramore
   fly "Theramore"
   zone Dustwallow Marsh
 
+# Groupe Alliance 0.11.0: Shadowshard Fragments (7070, Group 18, run at the end of Group 20).
+step Archmage Tervosh
+  when complete 7070
+  zone Dustwallow Marsh
+  tip Shadowshard Fragments, from Maraudon: Tervosh is upstairs in the tower of Foothold Citadel.
+  turnin 7070                         -- Archmage Tervosh
+
 step Tabetha
   when complete 2846
   zone Dustwallow Marsh

@@ -159,7 +159,105 @@ return {
 	-- {zone:1446} Tanaris
 	["You end at the Forgotten Coast dock: the {zone:1446} guide starts with the trip east from here."] = "Vous terminez au quai de la Côte oubliée : le guide de {zone:1446} commence par le trajet vers l'est depuis ici.",
 
-	-- Step 40: Thalanaar
+	-- Step 40: Maraudon (dungeon, optional)
+	["Maraudon (dungeon, optional)"] = "Maraudon (donjon, facultatif)",
+	-- {zone:1443} Desolace · {object:152576} Feathermoon Stronghold · {object:176948} Nijel's Point
+	["Maraudon: the caves of the centaurs' sacred ground in western {zone:1443}, levels 42 to 51, a long dungeon (two wings, then the inner part, whose last boss is 51). At 45 it takes a solid group of 5. From here: the boat to {object:152576}, the flight to {object:176948}, about ten minutes' ride to the dungeon, and the same way back; the guide then flies on to Thalanaar. Alone? Skip it."] = "Maraudon : les grottes de la terre sacrée des centaures, à l'ouest de {zone:1443}, niveaux 42 à 51, un long donjon (deux ailes, puis la partie intérieure, dont le dernier boss est niveau 51). Au niveau 45, il faut un groupe de 5 solide. D'ici : le bateau pour {object:152576}, le vol jusqu'à {object:176948}, une dizaine de minutes à cheval jusqu'au donjon, et le même chemin au retour ; le guide continue ensuite par le vol vers Thalanaar. Seul ? Le passer.",
+	-- {object:176948} Nijel's Point
+	["Three quests at {object:176948} and Kormek's Hut on the way, one at the dungeon's door. Keep 6 free quest log slots."] = "Trois quêtes en chemin, à {object:176948} et à la hutte de Kormek, une à la porte du donjon. Garder 6 places libres dans le journal.",
+
+	-- Step 41: Maraudon: fly to Nijel's Point
+	-- {object:176948} Nijel's Point
+	["Maraudon: fly to {object:176948}"] = "Maraudon : vol vers {object:176948}",
+
+	-- Step 42: Maraudon: Nijel's Point
+	-- {object:176948} Nijel's Point
+	["Maraudon: {object:176948}"] = "Maraudon : {object:176948}",
+	-- {npc:11715} Talendria · {npc:13698} Keeper Marandis · {item:17693} Coated Cerulean Vial
+	["{npc:11715} and {npc:13698} stand in the night elf outpost. {npc:11715}'s quest cannot be shared: each player takes it here, with its {item:17693}."] = "{npc:11715} et {npc:13698} se tiennent dans l'avant-poste elfe de la nuit. La quête de {npc:11715} ne se partage pas : chaque joueur la prend ici, avec sa {item:17693}.",
+
+	-- Step 43: Maraudon: Willow
+	-- {npc:13656} Willow
+	["Maraudon: {npc:13656}"] = "Maraudon : {npc:13656}",
+	-- {npc:13656} Willow
+	["Ride south along the road to Kormek's Hut, by Thunder Axe Fortress: {npc:13656} waits there."] = "Descendre la route vers le sud jusqu'à la hutte de Kormek, près de la forteresse Hache-Tonnerre : {npc:13656} y attend.",
+
+	-- Step 44: Maraudon: before going in
+	["Maraudon: before going in"] = "Maraudon : avant d'entrer",
+	-- {npc:13697} Cavindra · {item:17693} Coated Cerulean Vial
+	["Ride south-west to the Valley of Spears: the caves of Maraudon open in the hills west of it. {npc:13697} waits in the first cave. Fill the {item:17693} at an orange crystal pool, outside the orange portal (the right-hand path where the caves split); the blue water does not count."] = "Partir au sud-ouest vers la vallée des Lances : les grottes de Maraudon s'ouvrent dans les collines à l'ouest. {npc:13697} attend dans la première grotte. Remplir la {item:17693} à un bassin aux cristaux orange, devant le portail orange (le chemin de droite là où les grottes se séparent) ; l'eau bleue ne compte pas.",
+	-- {quest:7041} Vyletongue Corruption · {quest:7065} Corruption of Earth and Seed · {object:176948} Nijel's Point · {quest:7028} Twisted Evils · {npc:13656} Willow · {quest:7044} Legends of Maraudon · {npc:13697} Cavindra · {quest:7070} Shadowshard Fragments · {npc:4967} Archmage Tervosh · {item:17781} The Pariah's Instructions · {zone:1443} Desolace
+	-- plural, as words: Shadowshard Rumblers = {npc:11777} Shadowshard Rumbler
+	["In the quest log before going in: {quest:7041} and {quest:7065} ({object:176948}), {quest:7028} ({npc:13656}), {quest:7044} ({npc:13697}, here). If you took it: {quest:7070} ({npc:4967}, Theramore, Group 18): the Shadowshard Rumblers and Smashers (elite) roam the slopes north of the caves. Not on this route: {item:17781} (the centaur pariah of southern {zone:1443} sends you after five khans)."] = "Dans le journal avant d'entrer : {quest:7041} et {quest:7065} ({object:176948}), {quest:7028} ({npc:13656}), {quest:7044} ({npc:13697}, ici). Si elle a été prise : {quest:7070} ({npc:4967}, Theramore, Groupe 18) : les grondeurs et fracasseurs Ombréclat (élites) parcourent les pentes au nord des grottes. Pas sur ce parcours : {item:17781} (le paria centaure du sud de {zone:1443} envoie chasser cinq khans).",
+	-- {item:17696} Filled Cerulean Vial
+	["{item:17696}: the orange crystal pool"] = "{item:17696} : le bassin aux cristaux orange",
+	-- {item:17756} Shadowshard Fragment
+	-- plural, as words: Shadowshard Rumblers = {npc:11777} Shadowshard Rumbler
+	["{item:17756}: Shadowshard Rumblers and Smashers"] = "{item:17756} : grondeurs et fracasseurs Ombréclat",
+	["Maraudon"] = "Maraudon",
+
+	-- Step 45: Maraudon: along the way
+	["Maraudon: along the way"] = "Maraudon : en chemin",
+	-- plural, as words: Theradric Crystal Carvings = {item:17684} Theradric Crystal Carving
+	["Collected all through the dungeon: the Theradric Crystal Carvings, from the centaurs, satyrs and dryads and from most bosses. Every player with the quest loots their own."] = "À ramasser dans tout le donjon : les gravures de cristal théradrique, sur les centaures, les satyres, les dryades et la plupart des boss. Chaque joueur qui a la quête ramasse les siennes.",
+	-- {quest:7028} Twisted Evils · {quest:7065} Corruption of Earth and Seed · {quest:7044} Legends of Maraudon
+	["Share {quest:7028}, {quest:7065} and {quest:7044} with your group: click each in the quest log, then Share."] = "Partager {quest:7028}, {quest:7065} et {quest:7044} avec le groupe : cliquer sur chacune dans le journal, puis Partager.",
+
+	-- Step 46: Maraudon: the orange side
+	["Maraudon: the orange side"] = "Maraudon : le côté orange",
+	-- {item:17696} Filled Cerulean Vial · {npc:13696} Noxxious Scion · {item:17702} Celebrian Rod
+	-- plural, as words: Vylestem Vines = {object:178905} Vylestem Vine
+	["On the orange side, by the Vylestem Vines: use the {item:17696} near one, a {npc:13696} comes out (45, immune to Nature); kill it to heal the vine, 8 times. Noxxion, at the end of this side, drops the {item:17702}."] = "Du côté orange, près des Vylestem Vines : utiliser la {item:17696} près de l'une d'elles, une {npc:13696} en sort (niveau 45, insensible à la Nature) ; la tuer guérit la vigne, 8 fois. Noxxion, au bout de ce côté, lâche le {item:17702}.",
+	-- {npc:13696} Noxxious Scion
+	["{npc:13696}: one per vine"] = "{npc:13696} : une par vigne",
+	-- {item:17702} Celebrian Rod
+	["{item:17702}: Noxxion"] = "{item:17702} : Noxxion",
+
+	-- Step 47: Maraudon: the purple side
+	["Maraudon: the purple side"] = "Maraudon : le côté violet",
+	-- {npc:12236} Lord Vyletongue · {item:17703} Celebrian Diamond
+	["Back out and in through the purple portal: {npc:12236}, at the end of this side, drops the {item:17703}."] = "Ressortir et entrer par le portail violet : {npc:12236}, au bout de ce côté, lâche le {item:17703}.",
+
+	-- Step 48: Maraudon: Celebras
+	["Maraudon: Celebras"] = "Maraudon : Celebras",
+	-- {npc:12225} Celebras the Cursed · {npc:13716} Celebras the Redeemed · {quest:7044} Legends of Maraudon
+	["In the inner part, {npc:12225}: once beaten, he comes back as {npc:13716}. Hand him {quest:7044}; his next quest cannot be shared: each player takes it, then waits while he makes the scepter and speaks with him again."] = "Dans la partie intérieure, {npc:12225} : une fois vaincu, il revient en {npc:13716}. Lui rendre {quest:7044} ; sa quête suivante ne se partage pas : chaque joueur la prend, attend qu'il ait fabriqué le sceptre et lui parle de nouveau.",
+
+	-- Step 49: Maraudon: Princess Theradras
+	-- {npc:12201} Princess Theradras
+	["Maraudon: {npc:12201}"] = "Maraudon : {npc:12201}",
+	-- {npc:12201} Princess Theradras · {npc:12238} Zaetar's Spirit · {quest:7066} Seed of Life · {npc:11832} Keeper Remulos · {zone:1450} Moonglade
+	["{npc:12201}, the last boss (51), at the far end of the inner part. {npc:12238} then rises: its quest, {quest:7066}, goes to {npc:11832} in {zone:1450}, where the guide passes in Group 28; keep it until then."] = "{npc:12201}, le dernier boss (niveau 51), tout au bout de la partie intérieure. {npc:12238} apparaît ensuite : sa quête, {quest:7066}, va à {npc:11832} en {zone:1450}, où le guide passe au Groupe 28 ; la garder jusque-là.",
+
+	-- Step 50: Maraudon: Willow
+	-- {npc:13656} Willow
+	["Back north along the road: {npc:13656} at Kormek's Hut."] = "Retour vers le nord par la route : {npc:13656} à la hutte de Kormek.",
+
+	-- Step 51: Maraudon: Keeper Marandis
+	-- {npc:13698} Keeper Marandis
+	["Maraudon: {npc:13698}"] = "Maraudon : {npc:13698}",
+
+	-- Step 52: Maraudon: Talendria
+	-- {npc:11715} Talendria
+	["Maraudon: {npc:11715}"] = "Maraudon : {npc:11715}",
+
+	-- Step 53: Maraudon: quests not done
+	["Maraudon: quests not done"] = "Maraudon : quêtes pas faites",
+	-- {quest:7066} Seed of Life · {zone:1450} Moonglade
+	["What is left of Maraudon in the quest log cannot be finished on this route (the guide does not come back): it is dropped here. {quest:7066} stays, for {zone:1450}."] = "Ce qui reste de Maraudon dans le journal ne peut plus se finir sur ce parcours (le guide ne revient pas) : on l'abandonne ici. {quest:7066} reste, pour {zone:1450}.",
+
+	-- Step 54: Maraudon: fly to Thalanaar
+	["Maraudon: fly to Thalanaar"] = "Maraudon : vol vers Thalanaar",
+	-- {object:176948} Nijel's Point
+	["{object:176948} flight master"] = "Maître de vol de {object:176948}",
+
+	-- Step 55: Shadowshard Fragments: not done
+	-- {quest:7070} Shadowshard Fragments
+	["{quest:7070}: not done"] = "{quest:7070} : pas faite",
+	-- {quest:7070} Shadowshard Fragments · {zone:1443} Desolace
+	["{quest:7070} needs the elementals outside Maraudon, and the guide does not come back to {zone:1443}: abandon it."] = "{quest:7070} demande les élémentaires devant Maraudon, et le guide ne revient pas en {zone:1443} : l'abandonner.",
+
+	-- Step 56: Thalanaar
 	["Thalanaar"] = "Thalanaar",
 	-- {zone:1441} Thousand Needles
 	["Ride north-east to the night elf outpost on the {zone:1441} border."] = "Chevauchez au nord-est jusqu'à l'avant-poste elfe de la nuit à la frontière de {zone:1441}.",

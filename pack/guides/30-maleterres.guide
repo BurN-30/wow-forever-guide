@@ -475,6 +475,14 @@ step Rabine Saturna
   accept 5527
   accept 1124                         -- For Silithus: keep it
 
+# Groupe Alliance 0.11.0: Seed of Life (7066), from Zaetar's Spirit after Maraudon (Group 20).
+# Keeper Remulos: Moonglade 36.2,41.8 (Polestar's Forever data).
+step Keeper Remulos
+  when onquest 7066
+  zone Moonglade
+  tip Seed of Life, from Maraudon: Keeper Remulos stands at his shrine, west of Nighthaven across the lake.
+  turnin 7066                         -- Keeper Remulos
+
 step Fly to Gadgetzan
   zone The Barrens
   goto 63.1,37.1 "Ratchet flight master"

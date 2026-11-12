@@ -41,6 +41,16 @@ step Theramore Isle
 step Archmage Tervosh
   accept 1266                         -- Upstairs
 
+# Groupe Alliance 0.11.0: Shadowshard Fragments (7070) for Maraudon (end of Group 20, 22-feralas),
+# asked here (`when group 7070`): Tervosh is the quest's only giver (Polestar's Forever data). Level
+# 42, required 39, shareable (Warcraft Tavern's Forever Maraudon quest guide, 12/11/2026). Handed in
+# on Group 21's way through Theramore; abandoned after Maraudon when not done.
+step Archmage Tervosh: Maraudon (optional)
+  when group 7070
+  zone Dustwallow Marsh
+  tip Tervosh's other quest, Shadowshard Fragments, is for Maraudon, the dungeon of western Desolace that the guide offers at the end of Group 20 (levels 42 to 51): its elementals stand outside the dungeon. Take it only if your group means to run it; it stays in the quest log until then, and Tervosh takes it back when the guide comes through Theramore again (Group 21). Alone? Skip it.
+  accept 7070                         -- Archmage Tervosh, upstairs
+
 step Theramore
   turnin 1204                         -- Morgan Stern, inside
 
