@@ -11035,7 +11035,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			names = { ["item:15848"] = "Crate of Ghost Magnets", ["item:2868"] = "Patterned Bronze Bracers", ["item:4631"] = "Tablet of Ryun'eh", ["item:5797"] = "Indurium Flake", ["npc:11438"] = "Bibbly F'utzbuckle", ["npc:11560"] = "Magrami Spectre", ["npc:11561"] = "Undead Ravager", ["npc:11863"] = "Azore Aldamort", ["npc:12277"] = "Melizza Brimbuzzle", ["npc:12369"] = "Lord Kragaru", ["npc:1470"] = "Ghak Healtouch", ["npc:217590"] = "Flesh Picker", ["npc:2719"] = "Dustbelcher Lord", ["npc:2727"] = "Crag Coyote", ["npc:2729"] = "Elder Crag Coyote", ["npc:2735"] = "Lesser Rock Elemental", ["npc:2745"] = "Ambassador Infernus", ["npc:2785"] = "Theldurin the Lost", ["npc:2786"] = "Gerrig Bonegrip", ["npc:2817"] = "Rigglefuzz", ["npc:2831"] = "Giant Buzzard", ["npc:2860"] = "Sigrun Ironhew", ["npc:2893"] = "Stonevault Bonesnapper", ["npc:2910"] = "Prospector Ryedol", ["npc:2920"] = "Lucien Tosselwrench", ["npc:2921"] = "Lotwil Veriatus", ["npc:3980"] = "Raleigh the Devout", ["npc:4618"] = "Martek the Exiled", ["npc:4678"] = "Mana Eater", ["npc:4679"] = "Nether Maiden", ["npc:4680"] = "Doomwarder Captain", ["npc:4685"] = "Ley Hunter", ["npc:4964"] = "Commander Samaul", ["npc:5083"] = "Clerk Lendry", ["npc:5637"] = "Roetten Stonehammer", ["npc:5638"] = "Kreldig Ungor", ["npc:6019"] = "Hornizz Brimbuzzle", ["npc:92"] = "Rock Elemental", ["object:1162"] = "Menethil Harbor", ["object:126260"] = "Ancient Chest", ["object:176369"] = "Boat to Theramore", ["object:176751"] = "Kodo Bones", ["object:176948"] = "Nijel's Point", ["object:21057"] = "Foothold Citadel", ["object:35251"] = "Karnitol's Chest", ["quest:1106"] = "Martek the Exiled", ["quest:6161"] = "Claim Rackmore's Treasure!", ["quest:739"] = "Murdaloc", ["zone:1418"] = "Badlands", ["zone:1432"] = "Loch Modan", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1455"] = "Ironforge" },
-			written = { ["Follow the road west across the north of {zone:1443} to the ruins of Ethel Rethor. {npc:11863}'s tower stands on the hill there, on the way to the wreck."] = "Follow the road west across the north of Desolace to the ruins of Ethel Rethor. Azore's tower stands on the hill there, on the way to the wreck.", ["Head west into the Dustbowl; {npc:2921} works by his machines in the middle of it."] = "Head west into the Dustbowl; Lotwil works by his machines in the middle of it.", ["The Dustbelcher ogres camp just south of the valley; any of them drops scrap. Buzzards circle the plain to the east.\nThe battered skeleton lies at the edge of the Stonevault trogg camp; {quest:739}, Agmond's killer, walks among the Bonesnappers.\nThe Lesser Rock Elementals wander the Dustbowl west of {npc:2921}.\nCareful: Dustbelcher Lords are level 44-45. They use Battle Shout and Demoralizing Shout, and below 50% health they call for help from allies within 15 yd. Seven of them stand about 750 yd south of Kargath."] = "The Dustbelcher ogres camp just south of the valley; any of them drops scrap. Buzzards circle the plain to the east.\nThe battered skeleton lies at the edge of the Stonevault trogg camp; Murdaloc, Agmond's killer, walks among the Bonesnappers.\nThe Lesser Rock Elementals wander the Dustbowl west of Lotwil.\nCareful: Dustbelcher Lords are level 44-45. They use Battle Shout and Demoralizing Shout, and below 50% health they call for help from allies within 15 yd. Seven of them stand about 750 yd south of Kargath.", ["The Rock Elementals roam south-east of {npc:2921}; Giant Buzzards and Elder Crag Coyotes share the plain to their west."] = "The Rock Elementals roam south-east of Lotwil; Giant Buzzards and Elder Crag Coyotes share the plain to their west.", ["The battered skeleton lies just east of the ogres, at the edge of the Stonevault trogg camp; the Bonesnappers and Shamans around it drop the flakes. {npc:2785} sits by the ruined camp further south."] = "The battered skeleton lies just east of the ogres, at the edge of the Stonevault trogg camp; the Bonesnappers and Shamans around it drop the flakes. Theldurin sits by the ruined camp further south.", ["The wrecked ship's chest lies on the shore just west of {npc:11863}'s tower."] = "The wrecked ship's chest lies on the shore just west of Azore's tower.", ["escort {npc:12277} back toward the graveyard"] = "escort Melizza back toward the graveyard", ["{npc:12277} is held in the centaur camp west of the graveyard. Free her and keep her alive on the walk out; she stops by the graveyard.\nCareful: The scripted groups are linked and only appear during the escort, so you cannot clear them in advance or pull them one at a time. Clearing the normal centaurs on the path before you start does help."] = "Melizza is held in the centaur camp west of the graveyard. Free her and keep her alive on the walk out; she stops by the graveyard.\nCareful: The scripted groups are linked and only appear during the escort, so you cannot clear them in advance or pull them one at a time. Clearing the normal centaurs on the path before you start does help.", ["{npc:12369}, a centaur chieftain, camps on the north-west coast, north of {npc:11863}'s tower."] = "Lord Kragaru, a centaur chieftain, camps on the north-west coast, north of Azore's tower.", ["{npc:2920}, beside {npc:2921}"] = "Lucien Tosselwrench, beside Lotwil", ["{npc:2921}'s next test needs crafted gear: skip it."] = "Lotwil's next test needs crafted gear: skip it.", ["{npc:4618} and {npc:2817} camp together in the Valley of Fangs, in the middle of the {zone:1418}."] = "Martek and Rigglefuzz camp together in the Valley of Fangs, in the middle of the Badlands.", ["{npc:6019} stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; {object:176751} lie among the skeletons. A {npc:217590} crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off."] = "Hornizz stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; Kodo Bones lie among the skeletons. A Flesh Picker crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off." },
+			written = { ["Follow the road west across the north of {zone:1443} to the ruins of Ethel Rethor. {npc:11863}'s tower stands on the hill there, on the way to the wreck."] = "Follow the road west across the north of Desolace to the ruins of Ethel Rethor. Azore's tower stands on the hill there, on the way to the wreck.", ["Head west into the Dustbowl; {npc:2921} works by his machines in the middle of it."] = "Head west into the Dustbowl; Lotwil works by his machines in the middle of it.", ["The Dustbelcher ogres camp just south of the valley; any of them drops scrap. Buzzards circle the plain to the east.\nThe battered skeleton lies at the edge of the Stonevault trogg camp; {quest:739}, Agmond's killer, walks among the Bonesnappers.\nThe Lesser Rock Elementals wander the Dustbowl west of {npc:2921}.\nCareful: Dustbelcher Lords are level 44-45. They use Battle Shout and Demoralizing Shout, and below 50% health they call for help from allies within 15 yd. Seven of them stand about 750 yd south of Kargath."] = "The Dustbelcher ogres camp just south of the valley; any of them drops scrap. Buzzards circle the plain to the east.\nThe battered skeleton lies at the edge of the Stonevault trogg camp; Murdaloc, Agmond's killer, walks among the Bonesnappers.\nThe Lesser Rock Elementals wander the Dustbowl west of Lotwil.\nCareful: Dustbelcher Lords are level 44-45. They use Battle Shout and Demoralizing Shout, and below 50% health they call for help from allies within 15 yd. Seven of them stand about 750 yd south of Kargath.", ["The Rock Elementals roam south-east of {npc:2921}; Giant Buzzards and Elder Crag Coyotes share the plain to their west."] = "The Rock Elementals roam south-east of Lotwil; Giant Buzzards and Elder Crag Coyotes share the plain to their west.", ["The wrecked ship's chest lies on the shore just west of {npc:11863}'s tower."] = "The wrecked ship's chest lies on the shore just west of Azore's tower.", ["escort {npc:12277} back toward the graveyard"] = "escort Melizza back toward the graveyard", ["{npc:12277} is held in the centaur camp west of the graveyard. Free her and keep her alive on the walk out; she stops by the graveyard.\nCareful: The scripted groups are linked and only appear during the escort, so you cannot clear them in advance or pull them one at a time. Clearing the normal centaurs on the path before you start does help."] = "Melizza is held in the centaur camp west of the graveyard. Free her and keep her alive on the walk out; she stops by the graveyard.\nCareful: The scripted groups are linked and only appear during the escort, so you cannot clear them in advance or pull them one at a time. Clearing the normal centaurs on the path before you start does help.", ["{npc:12369}, a centaur chieftain, camps on the north-west coast, north of {npc:11863}'s tower."] = "Lord Kragaru, a centaur chieftain, camps on the north-west coast, north of Azore's tower.", ["{npc:2920}, beside {npc:2921}"] = "Lucien Tosselwrench, beside Lotwil", ["{npc:2921}'s next test needs crafted gear: skip it."] = "Lotwil's next test needs crafted gear: skip it.", ["{npc:4618} and {npc:2817} camp together in the Valley of Fangs, in the middle of the {zone:1418}."] = "Martek and Rigglefuzz camp together in the Valley of Fangs, in the middle of the Badlands.", ["{npc:6019} stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; {object:176751} lie among the skeletons. A {npc:217590} crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off."] = "Hornizz stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; Kodo Bones lie among the skeletons. A Flesh Picker crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off." },
 			steps = {
 				{
 					title = "Into {zone:1418}",
@@ -11104,7 +11104,7 @@ do
 				},
 				{
 					title = "Agmond's End",
-					note = "The battered skeleton lies just east of the ogres, at the edge of the Stonevault trogg camp; the Bonesnappers and Shamans around it drop the flakes. {npc:2785} sits by the ruined camp further south.",
+					note = "The battered skeleton lies just east of the ogres, at the edge of the Stonevault trogg camp; the Bonesnappers and Shamans around it drop the flakes. Theldurin sits by the ruined camp further south.",
 					goals = {
 						{ t = "turnin", quest = 738, title = "Find Agmond", object = 2875, objName = "Battered Dwarven Skeleton", map = 1418, x = 50.89, y = 62.4, z = 243.5, f = "e" },
 					},
@@ -14922,8 +14922,8 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:10445"] = "Drawing Kit", ["item:10450"] = "Undamaged Hippogryph Feather", ["item:10454"] = "Essence of Eranikus", ["item:10566"] = "Rubbing: Rune of Sael'hai", ["item:10593"] = "Imperfect Draenethyst Fragment", ["item:10819"] = "Wildkin Feather", ["item:11467"] = "Blackrock Medallion", ["item:12284"] = "Draco-Incarcinatrix 900", ["item:13815"] = "Some Rune", ["item:6212"] = "Head of Jammal'an", ["item:6288"] = "Atal'ai Tablet", ["item:7972"] = "Ichor of Undeath", ["npc:10922"] = "Greta Mosshoof", ["npc:3836"] = "Mountaineer Pebblebitty", ["npc:5384"] = "Brohann Caskbelly", ["npc:5598"] = "Atal'ai Exile", ["npc:5636"] = "Gryphon Master Talonaxe", ["npc:5709"] = "Shade of Eranikus", ["npc:6196"] = "Spitelash Myrmidon", ["npc:6375"] = "Thunderhead Hippogryph", ["npc:7034"] = "Firegut Ogre Mage", ["npc:7047"] = "Black Broodling", ["npc:7363"] = "Kum'isha the Collector", ["npc:7664"] = "Razelikh the Defiler", ["npc:7771"] = "Marvon Rivetseeker", ["npc:7864"] = "Lingering Highborne", ["npc:7907"] = "Daryn Lightwind", ["npc:7916"] = "Erelas Ambersky", ["npc:7977"] = "Gammerita", ["npc:8022"] = "Thadius Grimshade", ["npc:8256"] = "Curator Thorius", ["npc:8392"] = "Pilot Xiggs Fuselighter", ["npc:8395"] = "Sanath Lim-yo", ["npc:8405"] = "Ogtinc", ["npc:8420"] = "Kim'jael", ["npc:8507"] = "Tymor", ["npc:8761"] = "Mosshoof Courser", ["npc:9176"] = "Gor'tesh", ["npc:9177"] = "Oralius", ["npc:9459"] = "Cyrus Therepentous", ["npc:9461"] = "Frenzied Black Drake", ["npc:9690"] = "Ember Worg", ["object:1162"] = "Menethil Harbor", ["object:141891"] = "Razelikh's Tear", ["object:147516"] = "Dark Iron", ["object:148512"] = "Essence Font", ["object:153556"] = "Thaurissan Relic", ["object:176370"] = "Boat to Auberdine", ["object:28027"] = "Dwarven District", ["object:32362"] = "Mystic Ward", ["quest:1446"] = "Jammal'an the Prophet", ["quest:1475"] = "Into The Temple of Atal'Hakkar", ["quest:2944"] = "The Super Snapper FX", ["quest:2991"] = "Nekrum's Medallion", ["quest:2993"] = "Return to the Hinterlands", ["quest:4022"] = "A Taste of Flame", ["quest:4023"] = "A Taste of Flame", ["quest:4808"] = "Felnok Steelspring", ["quest:8257"] = "Blood of Morphaz", ["zone:1419"] = "Blasted Lands", ["zone:1425"] = "Hinterlands", ["zone:1426"] = "Dun Morogh", ["zone:1428"] = "Burning Steppes", ["zone:1432"] = "Loch Modan", ["zone:1435"] = "Swamp of Sorrows", ["zone:1438"] = "Teldrassil", ["zone:1447"] = "Azshara", ["zone:1448"] = "Felwood", ["zone:1452"] = "Winterspring", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
-			written = { ["Take the Deeprun Tram from {zone:1455} to {zone:1453} and back: {npc:5384} waits in the {object:28027}."] = "Take the Deeprun Tram from Ironforge to Stormwind and back: Brohann waits in the Dwarven District.", ["{npc:7363} waits at the Rise of the Defiler, the hill south-west of the keep. The {zone:1419} mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, {npc:7664} and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds {object:141891}, Flames of Chaos and then Enrage at 15%."] = "Kum'isha waits at the Rise of the Defiler, the hill south-west of the keep. The Blasted Lands mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, Razelikh the Defiler and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds Razelikh's Tear, Flames of Chaos and then Enrage at 15%.", ["{quest:2991}: {npc:8022} waits at the top of the keep. He then reads the medallion: wait for his ritual, and his next errand goes to Aerie Peak, where this guide passes later."] = "Nekrum's Medallion: Thadius waits at the top of the keep. He then reads the medallion: wait for his ritual, and his next errand goes to Aerie Peak, where this guide passes later.", ["{zone:1425}"] = "The Hinterlands" },
+			names = { ["item:10445"] = "Drawing Kit", ["item:10450"] = "Undamaged Hippogryph Feather", ["item:10454"] = "Essence of Eranikus", ["item:10566"] = "Rubbing: Rune of Sael'hai", ["item:10593"] = "Imperfect Draenethyst Fragment", ["item:10819"] = "Wildkin Feather", ["item:11309"] = "The Heart of the Mountain", ["item:11467"] = "Blackrock Medallion", ["item:12284"] = "Draco-Incarcinatrix 900", ["item:13815"] = "Some Rune", ["item:6212"] = "Head of Jammal'an", ["item:6288"] = "Atal'ai Tablet", ["item:7972"] = "Ichor of Undeath", ["npc:10922"] = "Greta Mosshoof", ["npc:3836"] = "Mountaineer Pebblebitty", ["npc:5384"] = "Brohann Caskbelly", ["npc:5598"] = "Atal'ai Exile", ["npc:5636"] = "Gryphon Master Talonaxe", ["npc:5709"] = "Shade of Eranikus", ["npc:6196"] = "Spitelash Myrmidon", ["npc:6375"] = "Thunderhead Hippogryph", ["npc:7034"] = "Firegut Ogre Mage", ["npc:7044"] = "Black Drake", ["npc:7047"] = "Black Broodling", ["npc:7363"] = "Kum'isha the Collector", ["npc:7664"] = "Razelikh the Defiler", ["npc:7771"] = "Marvon Rivetseeker", ["npc:7864"] = "Lingering Highborne", ["npc:7907"] = "Daryn Lightwind", ["npc:7916"] = "Erelas Ambersky", ["npc:7977"] = "Gammerita", ["npc:8022"] = "Thadius Grimshade", ["npc:8256"] = "Curator Thorius", ["npc:8392"] = "Pilot Xiggs Fuselighter", ["npc:8395"] = "Sanath Lim-yo", ["npc:8405"] = "Ogtinc", ["npc:8420"] = "Kim'jael", ["npc:8507"] = "Tymor", ["npc:8761"] = "Mosshoof Courser", ["npc:9016"] = "Bael'Gar", ["npc:9023"] = "Marshal Windsor", ["npc:9026"] = "Overmaster Pyron", ["npc:9176"] = "Gor'tesh", ["npc:9177"] = "Oralius", ["npc:9459"] = "Cyrus Therepentous", ["npc:9461"] = "Frenzied Black Drake", ["npc:9536"] = "Maxwort Uberglint", ["npc:9543"] = "Ribbly Screwspigot", ["npc:9544"] = "Yuka Screwspigot", ["npc:9561"] = "Jalinda Sprig", ["npc:9562"] = "Helendis Riverhorn", ["npc:9690"] = "Ember Worg", ["object:1162"] = "Menethil Harbor", ["object:141891"] = "Razelikh's Tear", ["object:147516"] = "Dark Iron", ["object:148512"] = "Essence Font", ["object:153556"] = "Thaurissan Relic", ["object:176370"] = "Boat to Auberdine", ["object:28027"] = "Dwarven District", ["object:32362"] = "Mystic Ward", ["quest:1446"] = "Jammal'an the Prophet", ["quest:1475"] = "Into The Temple of Atal'Hakkar", ["quest:2944"] = "The Super Snapper FX", ["quest:2991"] = "Nekrum's Medallion", ["quest:2993"] = "Return to the Hinterlands", ["quest:4022"] = "A Taste of Flame", ["quest:4023"] = "A Taste of Flame", ["quest:4182"] = "Dragonkin Menace", ["quest:4808"] = "Felnok Steelspring", ["quest:8257"] = "Blood of Morphaz", ["zone:1419"] = "Blasted Lands", ["zone:1425"] = "Hinterlands", ["zone:1426"] = "Dun Morogh", ["zone:1428"] = "Burning Steppes", ["zone:1432"] = "Loch Modan", ["zone:1435"] = "Swamp of Sorrows", ["zone:1438"] = "Teldrassil", ["zone:1447"] = "Azshara", ["zone:1448"] = "Felwood", ["zone:1452"] = "Winterspring", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			written = { ["Take the Deeprun Tram from {zone:1455} to {zone:1453} and back: {npc:5384} waits in the {object:28027}."] = "Take the Deeprun Tram from Ironforge to Stormwind and back: Brohann waits in the Dwarven District.", ["The black dragonkin hold the hills east of Flame Crest, around {npc:9459}'s cave and down the eastern edge of the Steppes: Broodlings, then Dragonspawn and Wyrmkin (elite) in packs; the three Black Drakes (elite) stand apart, one in these hills and two further south. Pull one pack at a time."] = "The black dragonkin hold the hills east of Flame Crest, around Cyrus's cave and down the eastern edge of the Steppes: Broodlings, then Dragonspawn and Wyrmkin (elite) in packs; the three Black Drakes (elite) stand apart, one in these hills and two further south. Pull one pack at a time.", ["{npc:7363} waits at the Rise of the Defiler, the hill south-west of the keep. The {zone:1419} mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, {npc:7664} and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds {object:141891}, Flames of Chaos and then Enrage at 15%."] = "Kum'isha waits at the Rise of the Defiler, the hill south-west of the keep. The Blasted Lands mobs on the way drop the Imperfect Draenethyst Fragments; bring her what you have.\nCareful: Felcular, Razelikh the Defiler and Ilifar are all level 60 elites. Razelikh casts Mana Burn, Strong Cleave and Decimate, and as its health drops it adds Razelikh's Tear, Flames of Chaos and then Enrage at 15%.", ["{npc:9459}'s next quest, {quest:4023} ({npc:9016}, in Blackrock Depths), is taken in the guide's end-of-route chapter."] = "Cyrus's next quest, A Taste of Flame (Bael'Gar, in Blackrock Depths), is taken in the guide's end-of-route chapter.", ["{npc:9536}'s next quest, {item:11309}, and {npc:9544}'s {npc:9543}, both in this camp, are Blackrock Depths quests: the guide's end-of-route chapter takes them."] = "Maxwort's next quest, The Heart of the Mountain, and Yuka Screwspigot's Ribbly Screwspigot, both in this camp, are Blackrock Depths quests: the guide's end-of-route chapter takes them.", ["{quest:2991}: {npc:8022} waits at the top of the keep. He then reads the medallion: wait for his ritual, and his next errand goes to Aerie Peak, where this guide passes later."] = "Nekrum's Medallion: Thadius waits at the top of the keep. He then reads the medallion: wait for his ritual, and his next errand goes to Aerie Peak, where this guide passes later.", ["{quest:4182}: {npc:9562} takes it back. Her next quest, The True Masters, goes to Lakeshire, then {zone:1453}, and ends in Blackrock Depths: leave it, the guide's end-of-route chapter takes it."] = "Dragonkin Menace: Helendis takes it back. Her next quest, The True Masters, goes to Lakeshire, then Stormwind, and ends in Blackrock Depths: leave it, the guide's end-of-route chapter takes it.", ["{zone:1425}"] = "The Hinterlands" },
 			steps = {
 				{
 					title = "Shadowsong Shrine",
@@ -15134,6 +15134,15 @@ do
 						{ t = "accept", quest = 4283, title = "FIFTY! YEP!", npc = 9177, npcName = "Oralius", minLevel = 50, qlvl = 56, map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e", note = "{npc:9177}: the Blackrock orcs drop the medallions, keep it open all through the Steppes" },
 						{ t = "turnin", quest = 3823, title = "Extinguish the Firegut", npc = 9177, npcName = "Oralius", map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
 						{ t = "accept", quest = 3824, title = "Gor'tesh the Brute Lord", npc = 9177, npcName = "Oralius", minLevel = 48, qlvl = 53, pre = { 3823 }, preTitles = { [3823] = "Extinguish the Firegut" }, map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+						{ t = "note", text = "{npc:9561}'s {npc:9026} and {npc:9177}'s The Good Stuff are Blackrock Depths quests: the guide takes them in its end-of-route chapter (after Group 30), with the rest of that dungeon." },
+					},
+				},
+				{
+					title = "{npc:9562}: {quest:4182} (optional)",
+					note = "{npc:9562}'s {quest:4182}: the black dragonkin of the eastern slopes, where the guide goes for {quest:4022}. The Dragonspawn, the Wyrmkin and the Drakes are elite (around 52): a group of 3 or more. It opens {npc:9023}'s chain, which ends in Blackrock Depths: the guide takes the rest in its end-of-route chapter. Alone? Skip it.",
+					when = { { k = "group", q = 4182 } },
+					goals = {
+						{ t = "accept", quest = 4182, title = "Dragonkin Menace", npc = 9562, npcName = "Helendis Riverhorn", minLevel = 48, qlvl = 54, map = 1428, x = 85.82, y = 68.95, z = 193.7, f = "e" },
 					},
 				},
 				{
@@ -15195,6 +15204,7 @@ do
 						{ t = "turnin", quest = 4726, title = "Broodling Essence", npc = 10267, npcName = "Tinkee Steamboil", map = 1428, x = 65.24, y = 24, z = 165.8, f = "e" },
 						{ t = "accept", quest = 4808, title = "Felnok Steelspring", npc = 10267, npcName = "Tinkee Steamboil", minLevel = 50, qlvl = 54, pre = { 4726 }, preTitles = { [4726] = "Broodling Essence" }, map = 1428, x = 65.24, y = 24, z = 165.8, f = "e", note = "Ends with {quest:4808} in Everlook, {zone:1452}: keep it" },
 						{ t = "turnin", quest = 4296, title = "Tablet of the Seven", npc = 9536, npcName = "Maxwort Uberglint", map = 1428, x = 65.15, y = 23.91, z = 165.6, f = "e" },
+						{ t = "note", text = "{npc:9536}'s next quest, {item:11309}, and {npc:9544}'s {npc:9543}, both in this camp, are Blackrock Depths quests: the guide's end-of-route chapter takes them." },
 					},
 				},
 				{
@@ -15217,6 +15227,18 @@ do
 					when = { { k = "group", q = 4023 } },
 					goals = {
 						{ t = "turnin", quest = 4023, title = "A Taste of Flame", npc = 9459, npcName = "Cyrus Therepentous", map = 1428, x = 95.09, y = 31.56, z = 131.3, f = "e", note = "Below ground" },
+						{ t = "note", text = "{npc:9459}'s next quest, {quest:4023} ({npc:9016}, in Blackrock Depths), is taken in the guide's end-of-route chapter." },
+					},
+				},
+				{
+					title = "{quest:4182}",
+					note = "The black dragonkin hold the hills east of Flame Crest, around {npc:9459}'s cave and down the eastern edge of the Steppes: Broodlings, then Dragonspawn and Wyrmkin (elite) in packs; the three Black Drakes (elite) stand apart, one in these hills and two further south. Pull one pack at a time.",
+					when = { { k = "group", q = 4182 } },
+					goals = {
+						{ t = "kill", quest = 4182, title = "Dragonkin Menace", target = "Black Broodling", npc = 7047, count = 15, oi = 1, map = 1428, x = 91.59, y = 33.36, z = 132.4, f = "e", spots = { { x = 91.7, y = 35.8, z = 133.2, r = 53, n = 3 }, { x = 87, y = 31.4, r = 64, n = 4 }, { x = 81.2, y = 27.3, r = 44, n = 2 }, { x = 90.2, y = 45.5, z = 132, r = 44, n = 3 }, { x = 90.5, y = 50.9, z = 132.9, r = 44, n = 1 }, { x = 84.6, y = 62.1, z = 136.3, r = 44, n = 1 } }, spread = true },
+						{ t = "kill", quest = 4182, title = "Dragonkin Menace", target = "Black Dragonspawn", npc = 7040, count = 10, oi = 2, map = 1428, x = 90.47, y = 37.34, z = 131.7, f = "e", spots = { { x = 90.5, y = 37.9, z = 131.9, r = 45, n = 2 }, { x = 87.8, y = 35.8, r = 45, n = 2 }, { x = 87.2, y = 39.8, z = 133.6, r = 45, n = 1 }, { x = 86.4, y = 27.3, r = 45, n = 3 }, { x = 83, y = 27.6, r = 45, n = 2 }, { x = 92, y = 54.8, z = 135, r = 67, n = 5 }, { x = 56.9, y = 62.7, r = 54, n = 4 }, { x = 75.5, y = 62.5, z = 150.7, r = 45, n = 1, alt = true } }, spread = true, group = { kind = "elite", rank = 1 } },
+						{ t = "kill", quest = 4182, title = "Dragonkin Menace", target = "Black Wyrmkin", npc = 7041, count = 4, oi = 4, map = 1428, x = 88.93, y = 37.64, z = 133.5, f = "e", spots = { { x = 88.7, y = 37.6, z = 133.5, r = 48, n = 4 }, { x = 84.5, y = 27.5, z = 136, r = 40, n = 3 }, { x = 91.6, y = 50.4, z = 131.4, r = 40, n = 1 }, { x = 92, y = 54.3, r = 40, n = 3 }, { x = 77.3, y = 62.1, z = 140, r = 40, n = 4 }, { x = 57.8, y = 61.2, z = 142.6, r = 40, n = 3 } }, spread = true, group = { kind = "elite", rank = 1 } },
+						{ t = "kill", quest = 4182, title = "Dragonkin Menace", target = "Black Drake", npc = 7044, count = 1, oi = 3, map = 1428, x = 89.94, y = 43.86, f = "e", spots = { { x = 89.9, y = 43.9, r = 15, n = 1 }, { x = 89.5, y = 57, r = 15, n = 1 }, { x = 84.9, y = 28.5, r = 15, n = 1 } }, spread = true, group = { kind = "elite", rank = 1 } },
 					},
 				},
 				{
@@ -15243,6 +15265,22 @@ do
 						{ t = "turnin", quest = 4283, title = "FIFTY! YEP!", npc = 9177, npcName = "Oralius", map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
 						{ t = "turnin", quest = 3824, title = "Gor'tesh the Brute Lord", npc = 9177, npcName = "Oralius", map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
 						{ t = "accept", quest = 3825, title = "Ogre Head On A Stick = Party", npc = 9177, npcName = "Oralius", minLevel = 48, qlvl = 53, pre = { 3824 }, preTitles = { [3824] = "Gor'tesh the Brute Lord" }, map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9562}",
+					note = "{quest:4182}: {npc:9562} takes it back. Her next quest, The True Masters, goes to Lakeshire, then {zone:1453}, and ends in Blackrock Depths: leave it, the guide's end-of-route chapter takes it.",
+					when = { { k = "complete", q = 4182 } },
+					goals = {
+						{ t = "turnin", quest = 4182, title = "Dragonkin Menace", npc = 9562, npcName = "Helendis Riverhorn", map = 1428, x = 85.82, y = 68.95, z = 193.7, f = "e" },
+					},
+				},
+				{
+					title = "{quest:4182}: not done",
+					note = "{quest:4182} is not finished and the guide leaves the Steppes for good: abandon it. The end-of-route chapter (Blackrock Depths) offers it again.",
+					when = { { k = "onquest", q = { 4182 } }, { k = "complete", neg = true, q = 4182 } },
+					goals = {
+						{ t = "abandon", quest = 4182, title = "Dragonkin Menace" },
 					},
 				},
 				{
@@ -17142,7 +17180,7 @@ do
 			next = "groupe-alliance/32-silithus-fin",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:13155"] = "Resonating Skull", ["item:13156"] = "Mystic Crystal", ["item:13157"] = "Fetid Skull", ["item:13159"] = "Bone Dust", ["item:14613"] = "Taelan's Hammer", ["npc:10778"] = "Janice Felstone", ["npc:11063"] = "Carlin Redpath", ["npc:11886"] = "Mercutio Filthgorger", ["npc:12248"] = "Infiltrator Hameya", ["npc:332"] = "Master Mathias Shaw", ["npc:3520"] = "Ol' Emma", ["npc:8496"] = "Liv Rizzlefix", ["npc:8529"] = "Scourge Champion", ["object:2117"] = "Stormwind Keep", ["object:3204"] = "Booty Bay", ["quest:6184"] = "Flint Shadowmore", ["zone:1423"] = "Eastern Plaguelands", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			names = { ["item:13155"] = "Resonating Skull", ["item:13156"] = "Mystic Crystal", ["item:13157"] = "Fetid Skull", ["item:13159"] = "Bone Dust", ["item:14613"] = "Taelan's Hammer", ["npc:10778"] = "Janice Felstone", ["npc:11063"] = "Carlin Redpath", ["npc:11886"] = "Mercutio Filthgorger", ["npc:12248"] = "Infiltrator Hameya", ["npc:332"] = "Master Mathias Shaw", ["npc:3520"] = "Ol' Emma", ["npc:8496"] = "Liv Rizzlefix", ["npc:8529"] = "Scourge Champion", ["npc:9021"] = "Kharan Mighthammer", ["object:2117"] = "Stormwind Keep", ["object:3204"] = "Booty Bay", ["quest:6184"] = "Flint Shadowmore", ["zone:1423"] = "Eastern Plaguelands", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
 			written = { ["Scourge Champions (59) roam the Noxious Glade, north of Light's Hope Chapel. Pass {npc:11063}'s {item:13156} over each one you kill: the skulls that resonate are the ones he wants. Pull them one at a time.\nThe Champions drop Fetid Skulls, which the game does not count: their tooltip shows nothing. Right-click the {item:13156} in the bags with a skull there: the skull becomes a {item:13155} or crumbles to {item:13159}. The skull line of this step counts the Resonating Skulls."] = "Scourge Champions (59) roam the Noxious Glade, north of Light's Hope Chapel. Pass Carlin's Mystic Crystal over each one you kill: the skulls that resonate are the ones he wants. Pull them one at a time.\nThe Champions drop Fetid Skulls, which the game does not count: their tooltip shows nothing. Right-click the Mystic Crystal in the bags with a skull there: the skull becomes a Resonating Skull or crumbles to Bone Dust. The skull line of this step counts the Resonating Skulls.", ["{zone:1453}"] = "Stormwind City" },
 			steps = {
 				{
@@ -17209,6 +17247,7 @@ do
 						{ t = "turnin", quest = 4512, title = "A Little Slime Goes a Long Way", npc = 9616, npcName = "Laris Geardawdle", map = 1455, x = 75.77, y = 23.38, z = 503.4, f = "e" },
 						{ t = "accept", quest = 4513, title = "A Little Slime Goes a Long Way", npc = 9616, npcName = "Laris Geardawdle", minLevel = 48, qlvl = 54, pre = { 4512 }, preTitles = { [4512] = "A Little Slime Goes a Long Way" }, map = 1455, x = 75.77, y = 23.38, z = 503.4, f = "e", note = "Its jars are filled on the next Un'Goro visit" },
 						{ t = "turnin", quest = 3701, title = "The Smoldering Ruins of Thaurissan", npc = 8879, npcName = "Royal Historian Archesonus", map = 1455, x = 38.37, y = 55.31, z = 505.8, f = "e" },
+						{ t = "note", text = "King Magni, beside Archesonus, then offers {npc:9021}: a Blackrock Depths quest, taken in the guide's end-of-route chapter (after Group 30)." },
 						{ t = "accept", quest = 7261, title = "The Sovereign Imperative", npc = 13843, npcName = "Lieutenant Rotimer", minLevel = 51, qlvl = 60, closedBy = { 7162 }, preTitles = { [7162] = "Proving Grounds" }, map = 1455, x = 32.21, y = 63.26, z = 501.5, f = "e" },
 					},
 				},
@@ -17283,6 +17322,7 @@ do
 			folder = "Group Alliance",
 			zone = 1451,
 			zoneName = "Silithus",
+			next = "groupe-alliance/33-donjons-fin",
 			author = "BurN-30",
 			version = 1,
 			names = { ["item:11169"] = "Book of Aquor", ["item:11172"] = "Silvery Claws", ["item:11953"] = "Empty Pure Sample Jar", ["item:12359"] = "Thorium Bar", ["item:12906"] = "Purified Moonwell Water", ["item:14047"] = "Runecloth", ["item:14644"] = "Skeleton Key Mold", ["item:20378"] = "Twilight Tablet Fragment", ["item:20404"] = "Encrypted Twilight Text", ["item:2592"] = "Wool Cloth", ["item:4306"] = "Silk Cloth", ["item:4338"] = "Mageweave Cloth", ["npc:10041"] = "Gorishi Hive Queen", ["npc:10300"] = "Ranshalla", ["npc:10667"] = "Chromie", ["npc:10778"] = "Janice Felstone", ["npc:10801"] = "Jabbering Ghoul", ["npc:10977"] = "Quixxil", ["npc:10980"] = "Umi's Mechanical Yeti", ["npc:11556"] = "Salfa", ["npc:11557"] = "Meilosh", ["npc:11558"] = "Kernda", ["npc:11744"] = "Dust Stormer", ["npc:11746"] = "Desert Rumbler", ["npc:11801"] = "Rabine Saturna", ["npc:11803"] = "Twilight Keeper Exeter", ["npc:11804"] = "Twilight Keeper Havunth", ["npc:11936"] = "Artist Renfray", ["npc:11939"] = "Umber", ["npc:12179"] = "Tortured Sentinel", ["npc:13841"] = "Lieutenant Haggerdin", ["npc:14564"] = "Terrordale Spirit", ["npc:14722"] = "Clavicus Knavingham", ["npc:14723"] = "Mistina Steelshield", ["npc:14724"] = "Bubulo Acerbus", ["npc:15170"] = "Rutgar Glyphshaper", ["npc:15171"] = "Frankal Stonebridge", ["npc:15189"] = "Beetix Ficklespragg", ["npc:15190"] = "Noggle Ficklespragg", ["npc:15194"] = "Hermit Ortell", ["npc:15200"] = "Twilight Keeper Mayna", ["npc:15306"] = "Bor Wildmane", ["npc:17080"] = "Marshal Bluewall", ["npc:1852"] = "Araj the Summoner", ["npc:1855"] = "Tirion Fordring", ["npc:3516"] = "Arch Druid Fandral Staghelm", ["npc:4155"] = "Idriana", ["npc:5594"] = "Alchemist Pestlezugg", ["npc:6557"] = "Primal Ooze", ["npc:7110"] = "Jadefire Shadowstalker", ["npc:7139"] = "Irontree Stomper", ["npc:7446"] = "Rabid Shardtooth", ["npc:7740"] = "Gracina Spiritmight", ["npc:7771"] = "Marvon Rivetseeker", ["npc:7916"] = "Erelas Ambersky", ["npc:8737"] = "Linken", ["npc:8961"] = "Felpaw Ravager", ["npc:9116"] = "Eridan Bluewind", ["npc:9117"] = "J.D. Collie", ["npc:9298"] = "Donova Snowden", ["npc:9517"] = "Shadow Lord Fel'dan", ["npc:9598"] = "Arei", ["npc:9616"] = "Laris Geardawdle", ["npc:9860"] = "Salia", ["npc:9861"] = "Moora", ["object:1162"] = "Menethil Harbor", ["object:176091"] = "Deadwood Cauldron", ["object:176158"] = "Brazier of Pain", ["object:176159"] = "Brazier of Malice", ["object:176160"] = "Brazier of Suffering", ["object:176161"] = "Brazier of Hatred", ["object:176498"] = "Portal to Darnassus", ["object:177404"] = "Altar of Elune", ["object:179565"] = "Dusty Reliquary", ["object:2096"] = "Trade District", ["quest:4005"] = "Aquementas", ["quest:5085"] = "Mystery Goo", ["quest:5086"] = "Toxic Horrors", ["quest:5242"] = "A Final Blow", ["quest:5505"] = "The Key to Scholomance", ["quest:5781"] = "Of Forgotten Memories", ["quest:5801"] = "Fire Plume Forged", ["quest:5845"] = "Of Lost Honor", ["quest:6031"] = "Runecloth", ["quest:8323"] = "True Believers", ["zone:1416"] = "Alterac Mountains", ["zone:1422"] = "Western Plaguelands", ["zone:1423"] = "Eastern Plaguelands", ["zone:1438"] = "Teldrassil", ["zone:1440"] = "Ashenvale", ["zone:1444"] = "Feralas", ["zone:1447"] = "Azshara", ["zone:1448"] = "Felwood", ["zone:1449"] = "Un'Goro Crater", ["zone:1450"] = "Moonglade", ["zone:1451"] = "Silithus", ["zone:1452"] = "Winterspring", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
@@ -18001,6 +18041,531 @@ do
 						{ t = "turnin", quest = 5803, title = "Araj's Scarab", npc = 11056, npcName = "Alchemist Arbington", map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e", optional = true },
 						{ t = "accept", quest = 5505, title = "The Key to Scholomance", npc = 11056, npcName = "Alchemist Arbington", minLevel = 55, qlvl = 60, pre = { 5803 }, preTitles = { [5803] = "Araj's Scarab" }, map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e", optional = true },
 						{ t = "turnin", quest = 5505, title = "The Key to Scholomance", npc = 11056, npcName = "Alchemist Arbington", map = 1422, x = 42.66, y = 83.77, z = 66.6, f = "e", optional = true },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
+-- Source: guides/33-donjons-fin.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/33-donjons-fin",
+			pack = "groupe-alliance",
+			title = "End of route · Dungeons 52-60 (optional)",
+			faction = "Alliance",
+			minLevel = 52,
+			maxLevel = 60,
+			category = "Dungeons",
+			folder = "Group Alliance",
+			zone = 1422,
+			zoneName = "Western Plaguelands",
+			author = "BurN-30",
+			version = 1,
+			group = true,
+			names = { ["item:10999"] = "Ironfel", ["item:11000"] = "Shadowforge Key", ["item:11078"] = "Relic Coffer Key", ["item:11140"] = "Prison Cell Key", ["item:11230"] = "Encased Fiery Essence", ["item:11231"] = "Altered Black Dragonflight Molt", ["item:11312"] = "Lost Thunderbrew Recipe", ["item:11313"] = "Ribbly's Head", ["item:11325"] = "Dark Iron Ale Mug", ["item:11464"] = "Marshal Windsor's Lost Information", ["item:11468"] = "Dark Iron Fanny Pack", ["npc:1267"] = "Ragnar Thunderbrew", ["npc:14387"] = "Lothos Riftwaker", ["npc:1748"] = "Highlord Bolvar Fordragon", ["npc:1749"] = "Lady Katrana Prestor", ["npc:2784"] = "King Magni Bronzebeard", ["npc:344"] = "Magistrate Solomon", ["npc:7044"] = "Black Drake", ["npc:8879"] = "Royal Historian Archesonus", ["npc:8888"] = "Franclorn Forgewright", ["npc:8905"] = "Warbringer Construct", ["npc:8916"] = "Arena Spectator", ["npc:8929"] = "Princess Moira Bronzebeard", ["npc:8983"] = "Golem Lord Argelmach", ["npc:9016"] = "Bael'Gar", ["npc:9017"] = "Lord Incendius", ["npc:9018"] = "High Interrogator Gerstahn", ["npc:9019"] = "Emperor Dagran Thaurissan", ["npc:9021"] = "Kharan Mighthammer", ["npc:9023"] = "Marshal Windsor", ["npc:9024"] = "Pyromancer Loregrain", ["npc:9025"] = "Lord Roccor", ["npc:9033"] = "General Angerforge", ["npc:9039"] = "Doom'rel", ["npc:9041"] = "Warder Stilgiss", ["npc:9056"] = "Fineous Darkvire", ["npc:9156"] = "Ambassador Flamelash", ["npc:9177"] = "Oralius", ["npc:9319"] = "Houndmaster Grebmar", ["npc:9459"] = "Cyrus Therepentous", ["npc:9461"] = "Frenzied Black Drake", ["npc:9476"] = "Watchman Doomgrip", ["npc:9499"] = "Plugger Spazzring", ["npc:9500"] = "Mistress Nagmara", ["npc:9503"] = "Private Rocknot", ["npc:9536"] = "Maxwort Uberglint", ["npc:9544"] = "Yuka Screwspigot", ["npc:9560"] = "Marshal Maxwell", ["npc:9561"] = "Jalinda Sprig", ["npc:9562"] = "Helendis Riverhorn", ["npc:9563"] = "Ragged John", ["npc:9938"] = "Magmus", ["npc:9956"] = "Shadowforge Flame Keeper", ["object:147516"] = "Dark Iron", ["object:160836"] = "Relic Coffer", ["object:160845"] = "Dark Coffer", ["object:161460"] = "Shadowforge Lock", ["object:161495"] = "Secret Safe", ["object:164689"] = "Monument of Franclorn Forgewright", ["object:164869"] = "Spectral Chalice", ["object:164911"] = "Thunderbrew Lager Keg", ["object:165554"] = "Heart of the Mountain", ["object:170558"] = "The Lyceum", ["object:170559"] = "Shadowforge Gate", ["object:170570"] = "East Garrison Door", ["object:170571"] = "Bar Door", ["object:171709"] = "High Seat", ["object:174825"] = "Black Anvil", ["object:2117"] = "Stormwind Keep", ["quest:3701"] = "The Smoldering Ruins of Thaurissan", ["quest:3801"] = "Dark Iron Legacy", ["quest:3802"] = "Dark Iron Legacy", ["quest:4022"] = "A Taste of Flame", ["quest:4123"] = "The Heart of the Mountain", ["quest:4126"] = "Hurley Blackbreath", ["quest:4136"] = "Ribbly Screwspigot", ["quest:4182"] = "Dragonkin Menace", ["quest:4241"] = "Marshal Windsor", ["quest:4242"] = "Abandoned Hope", ["quest:4262"] = "Overmaster Pyron", ["quest:4263"] = "Incendius!", ["quest:4264"] = "A Crumpled Up Note", ["quest:4282"] = "A Shred of Hope", ["quest:4286"] = "The Good Stuff", ["quest:4322"] = "Jail Break!", ["quest:4341"] = "Kharan Mighthammer", ["quest:4361"] = "The Bearer of Bad News", ["quest:4362"] = "The Fate of the Kingdom", ["zone:1427"] = "Searing Gorge", ["zone:1428"] = "Burning Steppes", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			written = { ["Detention Block: {npc:9021} and Windsor"] = "Detention Block: Kharan and Windsor", ["East along the hills to {npc:9459}'s cave."] = "East along the hills to Cyrus's cave.", ["In the quest log: {quest:4022} ({npc:9459}), {quest:4263} ({npc:9561}). Keep one free quest log slot for {quest:4322}. For the third visit: {quest:4362} (Magni), {quest:4136}, {quest:4126}."] = "In the quest log: A Taste of Flame (Cyrus), Incendius! (Jalinda Sprig). Keep one free quest log slot for Jail Break!. For the third visit: The Fate of the Kingdom (Magni), Ribbly Screwspigot, Hurley Blackbreath.", ["In the quest log: {quest:4341} (King Magni), {quest:4241} (Maxwell), {quest:4286} ({npc:9177}), {quest:4123} ({npc:9536}), {quest:3801} ({npc:8888}, if taken). For the next visits: {quest:4022} ({npc:9459}), {quest:4136} ({npc:9544}), {quest:4126} ({npc:1267}). Not on this route: {npc:9500}'s quest in the tavern (its herbs and silver are gathered outside), the {object:164869}'s (miners), {npc:14387}'s Attunement to the Core (raid)."] = "In the quest log: Kharan Mighthammer (King Magni), Marshal Windsor (Maxwell), The Good Stuff (Oralius), The Heart of the Mountain (Maxwort), Dark Iron Legacy (Franclorn, if taken). For the next visits: A Taste of Flame (Cyrus), Ribbly Screwspigot (Yuka), Hurley Blackbreath (Ragnar). Not on this route: Mistress Nagmara's quest in the tavern (its herbs and silver are gathered outside), the Spectral Chalice's (miners), Lothos Riftwaker's Attunement to the Core (raid).", ["Magni stands in the {object:171709}, beside {npc:8879}, who took {quest:3701} in Group 29. {npc:9021} is a prisoner in Blackrock Depths."] = "Magni stands in the High Seat, beside Royal Historian Archesonus, who took The Smoldering Ruins of Thaurissan in Group 29. Kharan is a prisoner in Blackrock Depths.", ["Ride out of {zone:1455} down to Kharanos: {npc:1267} is in the Thunderbrew Distillery. His lost recipe is in the Grim Guzzler, the tavern of Blackrock Depths (third visit)."] = "Ride out of Ironforge down to Kharanos: Ragnar is in the Thunderbrew Distillery. His lost recipe is in the Grim Guzzler, the tavern of Blackrock Depths (third visit).", ["The Detention Block opens past the entrance. {npc:9018}, in the southernmost room, drops the {item:11140}, which opens the cells (a rogue can pick them instead). {quest:4341} and {quest:4241} are locked in the cells of the south-east corridor: listen to {npc:9021}'s whole story; Windsor has given up, and his news goes back to Maxwell. {npc:9025} patrols the northern ring, {npc:9319} waits at its lowest point. To check in game: which cell holds whom."] = "The Detention Block opens past the entrance. High Interrogator Gerstahn, in the southernmost room, drops the Prison Cell Key, which opens the cells (a rogue can pick them instead). Kharan Mighthammer and Marshal Windsor are locked in the cells of the south-east corridor: listen to Kharan's whole story; Windsor has given up, and his news goes back to Maxwell. Lord Roccor patrols the northern ring, Houndmaster Grebmar waits at its lowest point. To check in game: which cell holds whom.", ["The {item:11000} opens the doors of the second and third visits (the Shadowforge Gates of the prison and the {object:161460}): one key in the group is enough. {npc:8888}'s ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with {npc:8888}, then come back to life at your body or by a group mate's spell. To check in game."] = "The Shadowforge Key opens the doors of the second and third visits (the Shadowforge Gates of the prison and the Shadowforge Lock): one key in the group is enough. Franclorn's ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with Franclorn, then come back to life at your body or by a group mate's spell. To check in game.", ["{npc:9459} hands over an {item:11231} with the quest: it goes on {npc:9016}'s remains, in the dungeon (second visit)."] = "Cyrus hands over an Altered Black Dragonflight Molt with the quest: it goes on Bael'Gar's remains, in the dungeon (second visit).", ["{npc:9562}'s chain ({quest:4182} done in Group 25) leads to {quest:4241}, a prisoner in Blackrock Depths: first a round trip to Lakeshire and {zone:1453}, by flight."] = "Helendis's chain (Dragonkin Menace done in Group 25) leads to Marshal Windsor, a prisoner in Blackrock Depths: first a round trip to Lakeshire and Stormwind, by flight.", ["{quest:4022}, first part (offered in Group 25): {npc:9459} hides in a cave in the far east of the Steppes. The {npc:9461} (elite 54) appears outside it and drops the molt."] = "A Taste of Flame, first part (offered in Group 25): Cyrus hides in a cave in the far east of the Steppes. The Frenzied Black Drake (elite 54) appears outside it and drops the molt.", ["{quest:4241}'s chain starts with {npc:9562}'s {quest:4182} (offered in Group 25): the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52."] = "Marshal Windsor's chain starts with Helendis's Dragonkin Menace (offered in Group 25): the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52." },
+			steps = {
+				{
+					title = "Blackrock Depths (dungeon, optional)",
+					note = "Blackrock Depths: the {object:147516} dwarves' city under Blackrock Mountain, between the {zone:1427} and the {zone:1428}. Levels 52 to 60, bosses 51 to 59: easy for a group of 5 at 58 to 60; possible earlier at five (from about 54), difficult. The dungeon is huge: the guide splits it into three visits of one to two hours, with the quests given in {zone:1455}, Kharanos, the {zone:1428}, Lakeshire and {zone:1453}. Alone? Skip it.",
+					label = "brd-start",
+					when = { { k = "group", q = 4286 } },
+					goals = {
+						{ t = "note", text = "Keep 12 free quest log slots. Most of these quests cannot be shared: each player takes their own." },
+						{ t = "goto", text = "Chillwind Camp flight master", map = 1422, x = 42.9, y = 85, f = "e" },
+						{ t = "fly", location = "Ironforge", node = 6 },
+					},
+				},
+				{
+					title = "{zone:1455}: {npc:2784}",
+					note = "Magni stands in the {object:171709}, beside {npc:8879}, who took {quest:3701} in Group 29. {npc:9021} is a prisoner in Blackrock Depths.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "accept", quest = 4341, title = "Kharan Mighthammer", npc = 2784, npcName = "King Magni Bronzebeard", minLevel = 50, qlvl = 59, pre = { 3701 }, preTitles = { [3701] = "The Smoldering Ruins of Thaurissan" }, map = 1455, x = 39.09, y = 56.2, z = 505.8, f = "e" },
+					},
+				},
+				{
+					title = "Kharanos: {npc:1267}",
+					note = "Ride out of {zone:1455} down to Kharanos: {npc:1267} is in the Thunderbrew Distillery. His lost recipe is in the Grim Guzzler, the tavern of Blackrock Depths (third visit).",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "accept", quest = 4126, title = "Hurley Blackbreath", npc = 1267, npcName = "Ragnar Thunderbrew", minLevel = 50, qlvl = 55, map = 1426, x = 46.83, y = 52.36, z = 400.7, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Morgan's Vigil",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
+						{ t = "fly", location = "Morgan's Vigil", node = 71 },
+					},
+				},
+				{
+					title = "Morgan's Vigil",
+					note = "{npc:9177}, {npc:9561}, {npc:9562} and {npc:9560} stand in the camp. {quest:4262} is outside the dungeon, on the way in; Incendius, inside, comes after him.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "accept", quest = 4286, title = "The Good Stuff", npc = 9177, npcName = "Oralius", minLevel = 50, qlvl = 56, map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e", note = "{npc:9177}: the fanny packs drop all through the dungeon" },
+						{ t = "accept", quest = 4262, title = "Overmaster Pyron", npc = 9561, npcName = "Jalinda Sprig", minLevel = 48, qlvl = 52, map = 1428, x = 85.41, y = 70.06, z = 194.9, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9562}",
+					note = "{npc:9562}'s chain ({quest:4182} done in Group 25) leads to {quest:4241}, a prisoner in Blackrock Depths: first a round trip to Lakeshire and {zone:1453}, by flight.",
+					when = { { k = "done", label = "brd-start" }, { k = "turnedin", q = 4182 } },
+					goals = {
+						{ t = "accept", quest = 4183, title = "The True Masters", npc = 9562, npcName = "Helendis Riverhorn", minLevel = 48, qlvl = 54, pre = { 4182 }, preTitles = { [4182] = "Dragonkin Menace" }, map = 1428, x = 85.82, y = 68.95, z = 193.7, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {quest:4182}",
+					note = "{quest:4241}'s chain starts with {npc:9562}'s {quest:4182} (offered in Group 25): the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52.",
+					when = { { k = "done", label = "brd-start" }, { k = "turnedin", neg = true, q = 4182 } },
+					goals = {
+						{ t = "accept", quest = 4182, title = "Dragonkin Menace", npc = 9562, npcName = "Helendis Riverhorn", minLevel = 48, qlvl = 54, map = 1428, x = 85.82, y = 68.95, z = 193.7, f = "e" },
+					},
+				},
+				{
+					title = "The black dragonkin",
+					note = "Ride north-east from the Vigil into the hills: Broodlings, Dragonspawn and Wyrmkin in packs, the three Black Drakes apart, one in the northern hills and two further south.",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4182 } } },
+					goals = {
+						{ t = "kill", quest = 4182, title = "Dragonkin Menace", target = "Black Broodling", npc = 7047, count = 15, oi = 1, map = 1428, x = 84.59, y = 62.1, z = 136.3, f = "e", spots = { { x = 84.6, y = 62.1, z = 136.3, r = 44, n = 1 }, { x = 90.5, y = 50.9, z = 132.9, r = 44, n = 1 }, { x = 90.2, y = 45.5, z = 132, r = 44, n = 3 }, { x = 91.7, y = 35.8, z = 133.2, r = 53, n = 3 }, { x = 87, y = 31.4, r = 64, n = 4 }, { x = 81.2, y = 27.3, r = 44, n = 2 } }, spread = true },
+						{ t = "kill", quest = 4182, title = "Dragonkin Menace", target = "Black Dragonspawn", npc = 7040, count = 10, oi = 2, map = 1428, x = 90.5, y = 54.29, z = 134.3, f = "e", spots = { { x = 92, y = 54.8, z = 135, r = 67, n = 5 }, { x = 87.2, y = 39.8, z = 133.6, r = 45, n = 1 }, { x = 87.8, y = 35.8, r = 45, n = 2 }, { x = 90.5, y = 37.9, z = 131.9, r = 45, n = 2 }, { x = 86.4, y = 27.3, r = 45, n = 3 }, { x = 83, y = 27.6, r = 45, n = 2 }, { x = 56.9, y = 62.7, r = 54, n = 4 }, { x = 75.5, y = 62.5, z = 150.7, r = 45, n = 1, alt = true } }, spread = true, group = { kind = "elite", rank = 1 } },
+						{ t = "kill", quest = 4182, title = "Dragonkin Menace", target = "Black Wyrmkin", npc = 7041, count = 4, oi = 4, map = 1428, x = 91.38, y = 55.93, z = 133.6, f = "e", spots = { { x = 92, y = 54.3, r = 40, n = 3 }, { x = 91.6, y = 50.4, z = 131.4, r = 40, n = 1 }, { x = 88.7, y = 37.6, z = 133.5, r = 48, n = 4 }, { x = 84.5, y = 27.5, z = 136, r = 40, n = 3 }, { x = 77.3, y = 62.1, z = 140, r = 40, n = 4 }, { x = 57.8, y = 61.2, z = 142.6, r = 40, n = 3 } }, spread = true, group = { kind = "elite", rank = 1 } },
+						{ t = "kill", quest = 4182, title = "Dragonkin Menace", target = "Black Drake", npc = 7044, count = 1, oi = 3, map = 1428, x = 89.5, y = 56.96, f = "e", spots = { { x = 89.5, y = 57, r = 15, n = 1 }, { x = 89.9, y = 43.9, r = 15, n = 1 }, { x = 84.9, y = 28.5, r = 15, n = 1 } }, spread = true, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9562}",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4182 } } },
+					goals = {
+						{ t = "turnin", quest = 4182, title = "Dragonkin Menace", npc = 9562, npcName = "Helendis Riverhorn", map = 1428, x = 85.82, y = 68.95, z = 193.7, f = "e" },
+						{ t = "accept", quest = 4183, title = "The True Masters", npc = 9562, npcName = "Helendis Riverhorn", minLevel = 48, qlvl = 54, pre = { 4182 }, preTitles = { [4182] = "Dragonkin Menace" }, map = 1428, x = 85.82, y = 68.95, z = 193.7, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Lakeshire",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4183 } } },
+					goals = {
+						{ t = "goto", text = "Morgan's Vigil flight master", map = 1428, x = 84.4, y = 68.3, f = "e" },
+						{ t = "fly", location = "Lakeshire", node = 5 },
+					},
+				},
+				{
+					title = "Lakeshire: {npc:344}",
+					note = "Solomon is in the town hall of Lakeshire.",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4183 } } },
+					goals = {
+						{ t = "turnin", quest = 4183, title = "The True Masters", npc = 344, npcName = "Magistrate Solomon", map = 1433, x = 24.9, y = 44.45, z = 67.6 },
+						{ t = "accept", quest = 4184, title = "The True Masters", npc = 344, npcName = "Magistrate Solomon", minLevel = 48, qlvl = 54, pre = { 4183 }, preTitles = { [4183] = "The True Masters" }, map = 1433, x = 24.9, y = 44.45, z = 67.6 },
+					},
+				},
+				{
+					title = "Fly to {zone:1453}",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4184 } } },
+					goals = {
+						{ t = "goto", text = "Lakeshire flight master", map = 1433, x = 30.4, y = 59, f = "e" },
+						{ t = "fly", location = "Stormwind", node = 2 },
+					},
+				},
+				{
+					title = "{object:2117}: Bolvar and Lady Prestor",
+					note = "{npc:1748} is in the throne room at the back of {object:2117}, {npc:1749} at his side: speak with her, then with him again.",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4184 } } },
+					goals = {
+						{ t = "turnin", quest = 4184, title = "The True Masters", npc = 1748, npcName = "Highlord Bolvar Fordragon", map = 1453, x = 80.21, y = 38.35, z = 122.6 },
+						{ t = "accept", quest = 4185, title = "The True Masters", npc = 1748, npcName = "Highlord Bolvar Fordragon", minLevel = 48, qlvl = 54, pre = { 4184 }, preTitles = { [4184] = "The True Masters" }, map = 1453, x = 80.21, y = 38.35, z = 122.6 },
+						{ t = "kill", quest = 4185, title = "The True Masters", target = "Lady Katrana Prestor", npc = 1749, oi = 1, map = 1453, x = 80.1, y = 38.17, z = 122.8, note = "{npc:1749}: speak with her" },
+						{ t = "turnin", quest = 4185, title = "The True Masters", npc = 1748, npcName = "Highlord Bolvar Fordragon", map = 1453, x = 80.21, y = 38.35, z = 122.6 },
+						{ t = "accept", quest = 4186, title = "The True Masters", npc = 1748, npcName = "Highlord Bolvar Fordragon", minLevel = 48, qlvl = 54, pre = { 4185 }, preTitles = { [4185] = "The True Masters" }, map = 1453, x = 80.21, y = 38.35, z = 122.6 },
+					},
+				},
+				{
+					title = "Fly to Lakeshire",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4186 } } },
+					goals = {
+						{ t = "goto", text = "{zone:1453} flight master", map = 1453, x = 66.3, y = 62.7, f = "e" },
+						{ t = "fly", location = "Lakeshire", node = 5 },
+					},
+				},
+				{
+					title = "Lakeshire: {npc:344}",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4186 } } },
+					goals = {
+						{ t = "turnin", quest = 4186, title = "The True Masters", npc = 344, npcName = "Magistrate Solomon", map = 1433, x = 24.9, y = 44.45, z = 67.6 },
+						{ t = "accept", quest = 4223, title = "The True Masters", npc = 344, npcName = "Magistrate Solomon", minLevel = 48, qlvl = 54, pre = { 4186 }, preTitles = { [4186] = "The True Masters" }, map = 1433, x = 24.9, y = 44.45, z = 67.6 },
+					},
+				},
+				{
+					title = "Fly to Morgan's Vigil",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4223 } } },
+					goals = {
+						{ t = "goto", text = "Lakeshire flight master", map = 1433, x = 30.4, y = 59, f = "e" },
+						{ t = "fly", location = "Morgan's Vigil", node = 71 },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9560}",
+					note = "Maxwell sends you to {npc:9563}, at Flame Crest: the guide goes there next.",
+					when = { { k = "done", label = "brd-start" }, { k = "onquest", q = { 4223 } } },
+					goals = {
+						{ t = "turnin", quest = 4223, title = "The True Masters", npc = 9560, npcName = "Marshal Maxwell", map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+						{ t = "accept", quest = 4224, title = "The True Masters", npc = 9560, npcName = "Marshal Maxwell", minLevel = 48, qlvl = 54, pre = { 4223 }, preTitles = { [4223] = "The True Masters" }, map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+					},
+				},
+				{
+					title = "Flame Crest",
+					note = "Ride north along the road, then climb to the goblin camp on Flame Crest. {npc:9563} tells his story in the camp; {npc:9536} and {npc:9544} give one quest each for the dungeon.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "kill", quest = 4224, title = "The True Masters", target = "Ragged John", npc = 9563, oi = 1, map = 1428, x = 65.01, y = 23.76, z = 165.5, f = "e", note = "{npc:9563}: speak with him, to the end of his story" },
+						{ t = "accept", quest = 4123, title = "The Heart of the Mountain", npc = 9536, npcName = "Maxwort Uberglint", minLevel = 50, qlvl = 55, map = 1428, x = 65.15, y = 23.91, z = 165.6, f = "e" },
+						{ t = "accept", quest = 4136, title = "Ribbly Screwspigot", npc = 9544, npcName = "Yuka Screwspigot", minLevel = 48, qlvl = 53, map = 1428, x = 66.06, y = 21.95, z = 165.4, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9459}: the {npc:9461}",
+					note = "{quest:4022}, first part (offered in Group 25): {npc:9459} hides in a cave in the far east of the Steppes. The {npc:9461} (elite 54) appears outside it and drops the molt.",
+					when = { { k = "done", label = "brd-start" }, { k = "turnedin", neg = true, q = 4023 }, { k = "turnedin", neg = true, q = 4022 } },
+					goals = {
+						{ t = "accept", quest = 4023, title = "A Taste of Flame", npc = 9459, npcName = "Cyrus Therepentous", minLevel = 52, qlvl = 54, closedBy = { 4022 }, preTitles = { [4022] = "A Taste of Flame" }, map = 1428, x = 95.09, y = 31.56, z = 131.3, f = "e" },
+						{ t = "collect", quest = 4023, title = "A Taste of Flame", item = 10575, itemName = "Black Dragonflight Molt", count = 1, oi = 1, map = 1428, x = 94.4, y = 31.8, f = "e", from = "Frenzied Black Drake", fromKind = "npc", fromRank = 1, fromId = 9461, fromNpcs = { { npc = 9461, npcName = "Frenzied Black Drake" } } },
+						{ t = "turnin", quest = 4023, title = "A Taste of Flame", npc = 9459, npcName = "Cyrus Therepentous", map = 1428, x = 95.09, y = 31.56, z = 131.3, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9459}",
+					note = "{npc:9459} hands over an {item:11231} with the quest: it goes on {npc:9016}'s remains, in the dungeon (second visit).",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "accept", quest = 4024, title = "A Taste of Flame", npc = 9459, npcName = "Cyrus Therepentous", minLevel = 52, qlvl = 58, pre = { 4022, 4023 }, preTitles = { [4022] = "A Taste of Flame", [4023] = "A Taste of Flame" }, map = 1428, x = 95.09, y = 31.56, z = 131.3, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9560}",
+					note = "Ride back south to the Vigil: Maxwell now sends you after {quest:4241}, in the dungeon's prison.",
+					when = { { k = "done", label = "brd-start" }, { k = "complete", q = 4224 } },
+					goals = {
+						{ t = "turnin", quest = 4224, title = "The True Masters", npc = 9560, npcName = "Marshal Maxwell", map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+						{ t = "accept", quest = 4241, title = "Marshal Windsor", npc = 9560, npcName = "Marshal Maxwell", minLevel = 48, qlvl = 54, pre = { 4224 }, preTitles = { [4224] = "The True Masters" }, map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+					},
+				},
+				{
+					title = "Blackrock Mountain: {quest:4262}",
+					note = "Ride west along the road, past Blackrock Stronghold, into Blackrock Mountain. Inside, cross the great chain to the hanging building in the middle (Forgewright's Tomb), go down through it, then down the next chain to the Grinding Quarry: {quest:4262} (elite 52) walks there. The dungeon's door is past the quarry, on the left, at the far end of the Masonry.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "goto", text = "Blackrock Mountain", map = 1428, x = 29.9, y = 31.8, f = "e" },
+						{ t = "kill", quest = 4262, title = "Overmaster Pyron", target = "Overmaster Pyron", npc = 9026, count = 1, oi = 1, map = 1427, x = 34.8, y = 85.3, f = "e", note = "{quest:4262}: the Grinding Quarry, before the dungeon's door", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{npc:8888} (one player is enough)",
+					note = "The {item:11000} opens the doors of the second and third visits (the Shadowforge Gates of the prison and the {object:161460}): one key in the group is enough. {npc:8888}'s ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with {npc:8888}, then come back to life at your body or by a group mate's spell. To check in game.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "accept", quest = 3801, title = "Dark Iron Legacy", npc = 8888, npcName = "Franclorn Forgewright", minLevel = 48, qlvl = 52, map = 1428, x = 28.96, y = 28.93, z = 252.8, f = "e", optional = true, note = "{npc:8888}, as a ghost" },
+						{ t = "turnin", quest = 3801, title = "Dark Iron Legacy", npc = 8888, npcName = "Franclorn Forgewright", map = 1428, x = 28.96, y = 28.93, z = 252.8, f = "e", optional = true },
+						{ t = "accept", quest = 3802, title = "Dark Iron Legacy", npc = 8888, npcName = "Franclorn Forgewright", minLevel = 48, qlvl = 52, pre = { 3801 }, preTitles = { [3801] = "Dark Iron Legacy" }, map = 1428, x = 28.96, y = 28.93, z = 252.8, f = "e", optional = true },
+					},
+				},
+				{
+					title = "Blackrock Depths: along the way",
+					note = "Collected all through the dungeon: the Dark Iron Fanny Packs, on the Anvilrage and Shadowforge dwarves (most of them carry one). The Relic Coffer Keys drop from the same dwarves, about one in eight, only for those on {quest:4123}: 12 keys open the 12 doors of the Black Vault (first visit), whoever carries them.",
+					when = { { k = "done", label = "brd-start" } },
+					along = "brd-end",
+					goals = {
+						{ t = "note", text = "Share {quest:4286}, {quest:4123} and {quest:4126} with your group: click each in the quest log, then Share. The others cannot be shared." },
+						{ t = "collect", quest = 4286, title = "The Good Stuff", item = 11468, itemName = "Dark Iron Fanny Pack", count = 20, oi = 1, map = 1428, x = 25.6, y = 21.6, f = "e", spots = { { x = 25.1, y = 21.2, r = 18, n = 2 } }, from = "Anvilrage Overseer", fromKind = "npc", fromRank = 1, fromAlso = "Anvilrage Warden", fromId = 8889, fromAlsoId = 8890, fromNpcs = { { npc = 8889, npcName = "Anvilrage Overseer" } }, group = { kind = "elite", rank = 1 } },
+						{ t = "collect", item = 11078, itemName = "Relic Coffer Key", count = 12, map = 1428, x = 25.6, y = 21.6, f = "e", spots = { { x = 25.1, y = 21.2, r = 18, n = 2 } }, optional = true, fromNpcs = { { npc = 8889, npcName = "Anvilrage Overseer" } }, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Blackrock Depths, first visit: before going in",
+					note = "First visit, no key needed: the Detention Block (the prison), the Ring of the Law, the Shrine of Thaurissan, the Black Vault and the Hall of Crafting. Bosses 51 to 56: 54 or more advised.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "note", text = "In the quest log: {quest:4341} (King Magni), {quest:4241} (Maxwell), {quest:4286} ({npc:9177}), {quest:4123} ({npc:9536}), {quest:3801} ({npc:8888}, if taken). For the next visits: {quest:4022} ({npc:9459}), {quest:4136} ({npc:9544}), {quest:4126} ({npc:1267}). Not on this route: {npc:9500}'s quest in the tavern (its herbs and silver are gathered outside), the {object:164869}'s (miners), {npc:14387}'s Attunement to the Core (raid)." },
+						{ t = "goto", text = "Blackrock Depths", map = 1427, x = 34.8, y = 85.3, f = "e", r = 25 },
+					},
+				},
+				{
+					title = "Detention Block: {npc:9021} and Windsor",
+					note = "The Detention Block opens past the entrance. {npc:9018}, in the southernmost room, drops the {item:11140}, which opens the cells (a rogue can pick them instead). {quest:4341} and {quest:4241} are locked in the cells of the south-east corridor: listen to {npc:9021}'s whole story; Windsor has given up, and his news goes back to Maxwell. {npc:9025} patrols the northern ring, {npc:9319} waits at its lowest point. To check in game: which cell holds whom.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "collect", item = 11140, itemName = "Prison Cell Key", optional = true, note = "{item:11140}: {npc:9018}", group = { kind = "elite", rank = 1 } },
+						{ t = "turnin", quest = 4341, title = "Kharan Mighthammer", npc = 9021, npcName = "Kharan Mighthammer" },
+						{ t = "accept", quest = 4342, title = "Kharan's Tale", npc = 9021, npcName = "Kharan Mighthammer", minLevel = 50, qlvl = 59, pre = { 4341 }, preTitles = { [4341] = "Kharan Mighthammer" } },
+						{ t = "kill", quest = 4342, title = "Kharan's Tale", target = "Kharan Mighthammer", npc = 9021, oi = 1, note = "{quest:4341}: listen to his whole story" },
+						{ t = "turnin", quest = 4342, title = "Kharan's Tale", npc = 9021, npcName = "Kharan Mighthammer" },
+						{ t = "accept", quest = 4361, title = "The Bearer of Bad News", npc = 9021, npcName = "Kharan Mighthammer", minLevel = 50, qlvl = 59, pre = { 4342 }, preTitles = { [4342] = "Kharan's Tale" }, note = "For King Magni" },
+						{ t = "turnin", quest = 4241, title = "Marshal Windsor", npc = 9023, npcName = "Marshal Windsor" },
+						{ t = "accept", quest = 4242, title = "Abandoned Hope", npc = 9023, npcName = "Marshal Windsor", minLevel = 48, qlvl = 54, pre = { 4241 }, preTitles = { [4241] = "Marshal Windsor" }, note = "For {npc:9560}" },
+					},
+				},
+				{
+					title = "Ring of the Law and the Shrine of Thaurissan",
+					note = "The open gate on the east side of the Detention Block leads into the Ring of the Law: the gate closes behind you, two waves of beasts come, then a random boss. Once it is down, a second gate opens into the East Garrison. From there, climb the stairs beside the arena gate and walk round the stands, close to the inner railing (the Arena Spectators come at you when you pass too near), to the Shrine of Thaurissan: {npc:9024} kneels before the {object:164689}.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "kill", target = "Pyromancer Loregrain", npc = 9024, optional = true, group = { kind = "elite", rank = 2 } },
+					},
+				},
+				{
+					title = "The Domicile and the Black Vault",
+					note = "From the Shrine, the bridge leads into the Domicile, then to the upper balcony of the Hall of Crafting, which opens on the Black Vault: {npc:9041} and Verek (elite 56 and 55). With 12 Relic Coffer Keys, open the 12 {object:160836} doors; after the last one, the Warbringer Constructs wake, then {npc:9476} comes. The {object:161495} under the {object:160845} then holds the {object:165554}. Fewer than 12 keys? Leave it: the guide does not come back to the vault.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "kill", target = "Warder Stilgiss", npc = 9041, optional = true, group = { kind = "elite", rank = 2 } },
+						{ t = "collect", quest = 4123, title = "The Heart of the Mountain", item = 11309, itemName = "The Heart of the Mountain", count = 1, oi = 1, optional = true, note = "{quest:4123}: the {object:161495}" },
+					},
+				},
+				{
+					title = "Hall of Crafting: {npc:9056}",
+					note = "{npc:9056} (elite 54) walks up and down the winding ramp of the Hall of Crafting: clear the ramp first, interrupt his Holy Light. He drops {item:10999} for every player on {quest:3802}.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "collect", quest = 3802, title = "Dark Iron Legacy", item = 10999, itemName = "Ironfel", count = 1, oi = 1, note = "{item:10999}: {npc:9056}", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Shrine of Thaurissan: the monument",
+					note = "Back up through the Domicile to the Shrine: place {item:10999} on the {object:164689}. The {item:11000} is the reward. Then walk out the way you came: round the stands, through the Ring of the Law (its gates stay open) and the Detention Block.",
+					label = "brd-v1-end",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "turnin", quest = 3802, title = "Dark Iron Legacy", object = 164689, objName = "Monument of Franclorn Forgewright" },
+					},
+				},
+				{
+					title = "Flame Crest: {npc:9536}",
+					note = "Out of Blackrock Mountain on the {zone:1428} side, then north-east to Flame Crest.",
+					when = { { k = "complete", q = 4123 } },
+					goals = {
+						{ t = "turnin", quest = 4123, title = "The Heart of the Mountain", npc = 9536, npcName = "Maxwort Uberglint", map = 1428, x = 65.15, y = 23.91, z = 165.6, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9560}",
+					note = "Ride back to Morgan's Vigil. {quest:4242}: Maxwell takes the bad news; pick your reward. From now on, the Anvilrage dwarves of the Detention Block drop {quest:4264} for you (second visit).",
+					when = { { k = "onquest", q = { 4242 } } },
+					goals = {
+						{ t = "turnin", quest = 4242, title = "Abandoned Hope", npc = 9560, npcName = "Marshal Maxwell", map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9561}",
+					when = { { k = "complete", q = 4262 } },
+					goals = {
+						{ t = "turnin", quest = 4262, title = "Overmaster Pyron", npc = 9561, npcName = "Jalinda Sprig", map = 1428, x = 85.41, y = 70.06, z = 194.9, f = "e" },
+						{ t = "accept", quest = 4263, title = "Incendius!", npc = 9561, npcName = "Jalinda Sprig", minLevel = 48, qlvl = 56, pre = { 4262 }, preTitles = { [4262] = "Overmaster Pyron" }, map = 1428, x = 85.41, y = 70.06, z = 194.9, f = "e", note = "{npc:9017}, in the dungeon: second visit" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9177}",
+					when = { { k = "complete", q = 4286 } },
+					goals = {
+						{ t = "turnin", quest = 4286, title = "The Good Stuff", npc = 9177, npcName = "Oralius", map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+					},
+				},
+				{
+					title = "Fly to {zone:1455}",
+					when = { { k = "onquest", q = { 4361 } } },
+					goals = {
+						{ t = "goto", text = "Morgan's Vigil flight master", map = 1428, x = 84.4, y = 68.3, f = "e" },
+						{ t = "fly", location = "Ironforge", node = 6 },
+					},
+				},
+				{
+					title = "{zone:1455}: {npc:2784}",
+					note = "{quest:4361}: Magni then asks you to save Princess Moira, the Emperor's prisoner at the bottom of the dungeon (third visit).",
+					when = { { k = "onquest", q = { 4361 } } },
+					goals = {
+						{ t = "turnin", quest = 4361, title = "The Bearer of Bad News", npc = 2784, npcName = "King Magni Bronzebeard", map = 1455, x = 39.09, y = 56.2, z = 505.8, f = "e" },
+						{ t = "accept", quest = 4362, title = "The Fate of the Kingdom", npc = 2784, npcName = "King Magni Bronzebeard", minLevel = 50, qlvl = 59, pre = { 4361 }, preTitles = { [4361] = "The Bearer of Bad News" }, map = 1455, x = 39.09, y = 56.2, z = 505.8, f = "e" },
+					},
+				},
+				{
+					title = "Fly to Thorium Point",
+					when = { { k = "onquest", q = { 4362 } } },
+					goals = {
+						{ t = "goto", text = "{zone:1455} flight master", map = 1455, x = 55.9, y = 47.9, f = "e" },
+						{ t = "fly", location = "Thorium Point", node = 74 },
+					},
+				},
+				{
+					title = "Blackrock Depths, second visit: before going in",
+					note = "Second visit, with the {item:11000}: Windsor's note, the Dark Iron Highway ({npc:9016}), Shadowforge City (Incendius), the West Garrison (Angerforge), the Manufactory (Argelmach), then {quest:4322} from Windsor's cell. Bosses 52 to 57: 56 or more advised. From Thorium Point, ride south across the {zone:1427} into Blackrock Mountain.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "note", text = "In the quest log: {quest:4022} ({npc:9459}), {quest:4263} ({npc:9561}). Keep one free quest log slot for {quest:4322}. For the third visit: {quest:4362} (Magni), {quest:4136}, {quest:4126}." },
+						{ t = "goto", text = "Blackrock Depths", map = 1427, x = 34.8, y = 85.3, f = "e", r = 25 },
+					},
+				},
+				{
+					title = "Detention Block: {quest:4264}",
+					note = "The Anvilrage dwarves of the Detention Block drop {quest:4264} (about one in four) to those who handed in {quest:4242}: right-click it. Kill Gerstahn again for the {item:11140} and bring the note to Windsor.",
+					when = { { k = "done", label = "brd-start" }, { k = "turnedin", q = 4242 } },
+					goals = {
+						{ t = "accept", quest = 4264, title = "A Crumpled Up Note", item = 11446, itemName = "A Crumpled Up Note", minLevel = 50, qlvl = 58, pre = { 4242 }, preTitles = { [4242] = "Abandoned Hope" }, note = "{quest:4264}: Anvilrage dwarves" },
+						{ t = "turnin", quest = 4264, title = "A Crumpled Up Note", npc = 9023, npcName = "Marshal Windsor" },
+						{ t = "accept", quest = 4282, title = "A Shred of Hope", npc = 9023, npcName = "Marshal Windsor", minLevel = 50, qlvl = 58, pre = { 4264 }, preTitles = { [4264] = "A Crumpled Up Note" } },
+					},
+				},
+				{
+					title = "Dark Iron Highway: {npc:9016}",
+					note = "The {object:170559} on the north side of the Detention Block opens with the key onto the Dark Iron Highway: large packs of dwarves. {npc:9016} (elite 54) stands at its west end; once he is down, use the {item:11231} on his remains.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "collect", quest = 4024, title = "A Taste of Flame", item = 11230, itemName = "Encased Fiery Essence", count = 1, oi = 1, note = "{item:11230}: the molt on {npc:9016}'s remains", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Shadowforge City: {npc:9017}",
+					note = "The great doors at the east end of the Highway open on Shadowforge City, above a lava lake. {npc:9017} (elite 55) guards the {object:174825} on the central bridge: tank him in the middle, his Mighty Blow knocks you into the lava, with no way back up.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "kill", quest = 4263, title = "Incendius!", target = "Lord Incendius", npc = 9017, count = 1, oi = 1, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "West Garrison and the Manufactory",
+					note = "Back along the Highway to the Detention Block, then through the {object:170570} (the key) into the East Garrison. Go down the stairs to the {object:161460}, the great wheel, and open it with the key: the giant door over the Highway turns, and its passage leads across to the West Garrison. Down the left-hand stairs: {npc:9033} (elite 57, calls adds at low health). Down the right-hand stairs, across the Manufactory: {npc:8983} and his two golems (kill the golems first). Each drops part of {item:11464}.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "collect", quest = 4282, title = "A Shred of Hope", item = 11464, itemName = "Marshal Windsor's Lost Information", count = 1, oi = 1, note = "{item:11464}: {npc:9033}", group = { kind = "elite", rank = 1 } },
+						{ t = "collect", quest = 4282, title = "A Shred of Hope", item = 11465, itemName = "Marshal Windsor's Lost Information", count = 1, oi = 2, note = "{item:11464}: {npc:8983}", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Detention Block: {quest:4322}",
+					note = "Back to Windsor's cell. Everyone hands in {quest:4282} before anyone starts {quest:4322}, with a free quest log slot. Windsor gets his gear back in the supply room clockwise from his cell, then frees his friends from the cells of the corridor round the Ring of the Law: open each cell when he asks, not before. Stay near him; he must not die. At the end he runs to the entrance and the quest is done. Failed? Abandon it, leave and reset the dungeon, then try again.",
+					label = "brd-v2-end",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "turnin", quest = 4282, title = "A Shred of Hope", npc = 9023, npcName = "Marshal Windsor" },
+						{ t = "accept", quest = 4322, title = "Jail Break!", npc = 9023, npcName = "Marshal Windsor", minLevel = 50, qlvl = 58, pre = { 4282 }, preTitles = { [4282] = "A Shred of Hope" } },
+						{ t = "complete", quest = 4322, title = "Jail Break!", note = "Escort {npc:9023}" },
+					},
+				},
+				{
+					title = "Blackrock Depths, third visit: the Grim Guzzler",
+					note = "Third visit: the bottom of the dungeon, bosses 55 to 59, 58 or more advised. With the time, go on in the same run; or come back later: through the {object:170570}, the {object:161460} and the West Garrison again. Past Argelmach, the bridge leads to the Grim Guzzler: its patrons are neutral, so no area spells. {quest:4136} is friendly until threatened (his talk option): he fights with his cronies. Smash the three Thunderbrew Lager Kegs of the storage room near him: {quest:4126} comes with his cronies. To open the {object:170571}, buy Dark Iron Ale Mugs from {npc:9499} and give them to {npc:9503} until he loses his temper: Phalanx then breaks the door and attacks.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "collect", quest = 4136, title = "Ribbly Screwspigot", item = 11313, itemName = "Ribbly's Head", count = 1, oi = 1, note = "{item:11313}: {quest:4136}" },
+						{ t = "collect", quest = 4126, title = "Hurley Blackbreath", item = 11312, itemName = "Lost Thunderbrew Recipe", count = 1, oi = 1, note = "{item:11312}: {quest:4126}", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{npc:9156} and the Seven",
+					note = "Through the {object:170571}, left into the Chamber of Enchantment: {npc:9156} (elite 57) calls adds from the corners, kill them before they reach him. Then the Mold Foundry and the Summoners' Tomb: speak with {npc:9039} to start the Seven, who come one after the other; the door opens after the last. To the right on the way out: the Molten Bridge and the Molten Core's portal (raid).",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "kill", target = "Ambassador Flamelash", npc = 9156, optional = true, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{object:170558} and {npc:9938}",
+					note = "In the Lyceum, the Shadowforge Flame Keepers (red armour) drop two Shadowforge Torches: light the two braziers at the back, the doors open on the Iron Hall. {npc:9938} (elite 57) waits at the far end: keep out of the fire jets of the side alcoves.",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "kill", target = "Magmus", npc = 9938, optional = true, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "The Imperial Seat: {npc:9019}",
+					note = "{npc:9019} (elite 59) and {npc:8929}. {quest:4362}: kill the Emperor WITHOUT killing Moira, who heals him: one player keeps her busy and interrupts her, everyone else on the Emperor. She then stops fighting: speak with her.",
+					label = "brd-v3-end",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "kill", quest = 4362, title = "The Fate of the Kingdom", target = "Emperor Dagran Thaurissan", npc = 9019, count = 1, oi = 1, group = { kind = "elite", rank = 1 } },
+						{ t = "turnin", quest = 4362, title = "The Fate of the Kingdom", npc = 8929, npcName = "Princess Moira Bronzebeard" },
+						{ t = "accept", quest = 4363, title = "The Princess's Surprise", npc = 8929, npcName = "Princess Moira Bronzebeard", minLevel = 50, qlvl = 59, pre = { 4362 }, preTitles = { [4362] = "The Fate of the Kingdom" } },
+					},
+				},
+				{
+					title = "Flame Crest: {npc:9544}",
+					note = "Out of the dungeon (the way back or your hearthstone), then out of Blackrock Mountain on the {zone:1428} side, north-east to Flame Crest.",
+					when = { { k = "complete", q = 4136 } },
+					goals = {
+						{ t = "turnin", quest = 4136, title = "Ribbly Screwspigot", npc = 9544, npcName = "Yuka Screwspigot", map = 1428, x = 66.06, y = 21.95, z = 165.4, f = "e" },
+					},
+				},
+				{
+					title = "{npc:9459}",
+					note = "East along the hills to {npc:9459}'s cave.",
+					when = { { k = "complete", q = 4024 } },
+					goals = {
+						{ t = "turnin", quest = 4024, title = "A Taste of Flame", npc = 9459, npcName = "Cyrus Therepentous", map = 1428, x = 95.09, y = 31.56, z = 131.3, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9560}",
+					note = "Ride back south to Morgan's Vigil. Maxwell's next quest, Stormwind Rendezvous, starts the long chain to Onyxia's Lair, through Upper Blackrock Spire: not in this guide.",
+					when = { { k = "complete", q = 4322 } },
+					goals = {
+						{ t = "turnin", quest = 4322, title = "Jail Break!", npc = 9560, npcName = "Marshal Maxwell", map = 1428, x = 84.74, y = 69.02, z = 186.7, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9561}",
+					when = { { k = "complete", q = 4263 } },
+					goals = {
+						{ t = "turnin", quest = 4263, title = "Incendius!", npc = 9561, npcName = "Jalinda Sprig", map = 1428, x = 85.41, y = 70.06, z = 194.9, f = "e" },
+					},
+				},
+				{
+					title = "Morgan's Vigil: {npc:9177}",
+					when = { { k = "complete", q = 4286 } },
+					goals = {
+						{ t = "turnin", quest = 4286, title = "The Good Stuff", npc = 9177, npcName = "Oralius", map = 1428, x = 84.56, y = 68.68, z = 186.2, f = "e" },
+					},
+				},
+				{
+					title = "Fly to {zone:1455}",
+					when = { { k = "onquest", q = { 4363 } } },
+					goals = {
+						{ t = "goto", text = "Morgan's Vigil flight master", map = 1428, x = 84.4, y = 68.3, f = "e" },
+						{ t = "fly", location = "Ironforge", node = 6 },
+					},
+				},
+				{
+					title = "{zone:1455}: {npc:2784}",
+					when = { { k = "onquest", q = { 4363 } } },
+					goals = {
+						{ t = "turnin", quest = 4363, title = "The Princess's Surprise", npc = 2784, npcName = "King Magni Bronzebeard", map = 1455, x = 39.09, y = 56.2, z = 505.8, f = "e" },
+					},
+				},
+				{
+					title = "Kharanos: {npc:1267}",
+					when = { { k = "complete", q = 4126 } },
+					goals = {
+						{ t = "turnin", quest = 4126, title = "Hurley Blackbreath", npc = 1267, npcName = "Ragnar Thunderbrew", map = 1426, x = 46.83, y = 52.36, z = 400.7, f = "e" },
+					},
+				},
+				{
+					title = "Blackrock Depths: quests not done",
+					note = "What is left of Blackrock Depths in the quest log is for another run: keep it for one, or drop it to free the log.",
+					label = "brd-end",
+					when = { { k = "done", label = "brd-start" } },
+					goals = {
+						{ t = "abandon", quest = 4123, title = "The Heart of the Mountain", optional = true },
+						{ t = "abandon", quest = 4282, title = "A Shred of Hope", optional = true },
+						{ t = "abandon", quest = 4322, title = "Jail Break!", optional = true },
+						{ t = "abandon", quest = 4362, title = "The Fate of the Kingdom", optional = true },
+						{ t = "abandon", quest = 4263, title = "Incendius!", optional = true },
+						{ t = "abandon", quest = 4024, title = "A Taste of Flame", optional = true },
+						{ t = "abandon", quest = 4136, title = "Ribbly Screwspigot", optional = true },
+						{ t = "abandon", quest = 4126, title = "Hurley Blackbreath", optional = true },
+						{ t = "abandon", quest = 4286, title = "The Good Stuff", optional = true },
+						{ t = "abandon", quest = 3802, title = "Dark Iron Legacy", optional = true },
 					},
 				},
 			},

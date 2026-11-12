@@ -51,6 +51,8 @@ return {
 
 	-- Step 8: Ironforge
 	["Its jars are filled on the next Un'Goro visit"] = "Ses pots se remplissent lors de la prochaine visite à Un'Goro",
+	-- {npc:9021} Kharan Mighthammer
+	["King Magni, beside Archesonus, then offers {npc:9021}: a Blackrock Depths quest, taken in the guide's end-of-route chapter (after Group 30)."] = "Le roi Magni, à côté d'Archesonus, propose ensuite {npc:9021} : une quête des Profondeurs de Rochenoire, prise dans le chapitre de fin de parcours du guide (après le Groupe 30).",
 
 	-- Step 9: Fly to Light's Hope Chapel
 	["Fly to Light's Hope Chapel"] = "Envolez-vous vers la chapelle de l'Espoir de Lumière",

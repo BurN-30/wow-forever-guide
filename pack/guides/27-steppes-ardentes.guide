@@ -14,6 +14,10 @@ next groupe-alliance/28-gangrebois
 # into this file.
 # Added here: A Taste of Flame (4023).
 # Left out: Dark Iron Legacy (3801).
+# Groupe Alliance 0.12.0: Dragonkin Menace (4182) added, with its own question. Dark Iron Legacy and
+# the other Blackrock Depths quests of the Steppes (Overmaster Pyron, The Good Stuff, The Heart of
+# the Mountain, Ribbly Screwspigot, A Taste of Flame 4024, The True Masters): end-of-route chapter
+# (33-donjons-fin), pointed out here where their givers stand.
 
 # ---------------------------------------------------------------- Azshara
 
@@ -175,6 +179,21 @@ step Morgan's Vigil
   accept 4283                         -- Oralius: the Blackrock orcs drop the medallions, keep it open all through the Steppes
   turnin 3823                         -- Oralius
   accept 3824
+  note Jalinda Sprig's Overmaster Pyron and Oralius's The Good Stuff are Blackrock Depths quests: the guide takes them in its end-of-route chapter (after Group 30), with the rest of that dungeon.
+
+# Groupe Alliance 0.12.0: Dragonkin Menace (4182), the first quest of Marshal Windsor's chain (The
+# True Masters, then Blackrock Depths), asked here (`when group 4182`): Helendis Riverhorn stands in
+# this camp, the dragonkin hold the eastern slopes where the route goes for A Taste of Flame, and
+# she takes it back when the route comes back to the Vigil, so nothing of it stays in the quest log
+# after this guide. Level 54, required 48; Black Dragonspawn, Black Wyrmkin and Black Drakes are
+# elite (Polestar's Forever data; the TrinityCore base files the quest as a group quest). The next
+# quests go through Lakeshire and Stormwind and end in Blackrock Depths: the end-of-route chapter
+# (33-donjons-fin) takes them, and offers Dragonkin Menace again to whoever skipped it here.
+step Helendis Riverhorn: Dragonkin Menace (optional)
+  when group 4182
+  zone Burning Steppes
+  tip Helendis Riverhorn's Dragonkin Menace: the black dragonkin of the eastern slopes, where the guide goes for A Taste of Flame. The Dragonspawn, the Wyrmkin and the Drakes are elite (around 52): a group of 3 or more. It opens Marshal Windsor's chain, which ends in Blackrock Depths: the guide takes the rest in its end-of-route chapter. Alone? Skip it.
+  accept 4182                         -- Helendis Riverhorn
 
 step Blackrock Medallion on the way
   along until q3701
@@ -220,6 +239,7 @@ step Flame Crest
   turnin 4726                         -- Tinkee Steamboil
   accept 4808                         -- Ends with Felnok Steelspring in Everlook, Winterspring: keep it
   turnin 4296                         -- Maxwort Uberglint
+  note Maxwort's next quest, The Heart of the Mountain, and Yuka Screwspigot's Ribbly Screwspigot, both in this camp, are Blackrock Depths quests: the guide's end-of-route chapter takes them.
 
 step Cyrus Therepentous
   when group 4023
@@ -233,6 +253,15 @@ step A Taste of Flame
 step Cyrus Therepentous
   when group 4023
   turnin 4023                         -- Below ground
+  note Cyrus's next quest, A Taste of Flame (Bael'Gar, in Blackrock Depths), is taken in the guide's end-of-route chapter.
+
+step Dragonkin Menace
+  when group 4182
+  tip The black dragonkin hold the hills east of Flame Crest, around Cyrus's cave and down the eastern edge of the Steppes: Broodlings, then Dragonspawn and Wyrmkin (elite) in packs; the three Black Drakes (elite) stand apart, one in these hills and two further south. Pull one pack at a time.
+  kill 7047 quest 4182                -- Black Broodling
+  kill 7040 quest 4182                -- Black Dragonspawn
+  kill 7041 quest 4182                -- Black Wyrmkin
+  kill 7044 quest 4182                -- Black Drake
 
 step Level 52.08
   when !group 4023
@@ -256,6 +285,18 @@ step Morgan's Vigil
   turnin 4283                         -- Oralius
   turnin 3824
   accept 3825
+
+step Helendis Riverhorn
+  when complete 4182
+  zone Burning Steppes
+  tip Dragonkin Menace: Helendis takes it back. Her next quest, The True Masters, goes to Lakeshire, then Stormwind, and ends in Blackrock Depths: leave it, the guide's end-of-route chapter takes it.
+  turnin 4182                         -- Helendis Riverhorn
+
+step Dragonkin Menace: not done
+  when onquest 4182
+  when !complete 4182
+  tip Dragonkin Menace is not finished and the guide leaves the Steppes for good: abandon it. The end-of-route chapter (Blackrock Depths) offers it again.
+  abandon 4182
 
 step Dreadmaul Rock
   tip Climb to the top of Dreadmaul Rock and plant the head in the soft dirt mound.

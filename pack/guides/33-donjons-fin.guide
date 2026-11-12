@@ -1,0 +1,432 @@
+# Written for this pack by BurN-30 (GPL-3.0). The end-of-route dungeons: chained after Group 30,
+# every chapter optional with its own question. A dungeon whose level the route never reaches near
+# its door goes here, with the chains that lead into it when they could not be finished on the way.
+#
+# ================================================================ Blackrock Depths
+# Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
+# Dungeons codex (data-v2026.11.1); prerequisites cross-checked with the TrinityCore Forever world
+# base (2026-10-14): no disagreement. Rooms, bosses and how-to: Warcraft Tavern's Forever Blackrock
+# Depths dungeon and quest guides (warcrafttavern.com/forever/guides/blackrock-depths and
+# .../blackrock-depths-quests, 11/11/2026), written from Classic (the dungeon was closed in the
+# Forever beta), and warcraft.wiki.gg (Shadowforge Key, East Garrison, Dark Iron Legacy, Marshal
+# Windsor, A Shred of Hope, Jail Break!), read on 12/11/2026. Wowhead Forever could not be read
+# (robot check). Not played in game yet: places inside are to check in game.
+#
+# Asked once (`when group 4286`, The Good Stuff: no prerequisite, level 50); every later step needs
+# `when done brd-start`. Three visits, in the order of the rooms:
+#   1. no key: the Detention Block (Kharan, Windsor), the Ring of the Law, the Shrine of
+#      Thaurissan, the Black Vault, the Hall of Crafting (Fineous: Ironfel), back to the Shrine's
+#      monument (Dark Iron Legacy: the Shadowforge Key);
+#   2. the key: the note for Windsor, the Dark Iron Highway (Bael'Gar), Shadowforge City
+#      (Incendius), the Shadowforge Lock, the West Garrison (Angerforge), the Manufactory
+#      (Argelmach), Jail Break! from Windsor's cell;
+#   3. the same instance or a new one: the Grim Guzzler (Ribbly, Hurley, Phalanx), Flamelash, the
+#      Seven, the Lyceum, Magmus, the Emperor (Moira kept alive).
+# The Shadowforge Lock needed the key until patch 4.0.3a (warcraft.wiki.gg, East Garrison), and the
+# game's own data keeps Forever on 1.x rules: so the second visit starts with the key.
+#
+# Prerequisites (Polestar's compiled guide, TrinityCore): Kharan Mighthammer (4341) after The
+# Smoldering Ruins of Thaurissan (3701, Group 29); Incendius! (4263) after Overmaster Pyron (4262);
+# A Taste of Flame (4024) after 4023 (Group 25) or 4022; Dark Iron Legacy 3802 after 3801; The True
+# Masters 4183 to 4224, Marshal Windsor (4241), Abandoned Hope (4242), A Crumpled Up Note (4264, an
+# item that drops only once 4242 is handed in), A Shred of Hope (4282), Jail Break! (4322), one after
+# the other from Dragonkin Menace (4182, Group 25, offered again here). Ribbly Screwspigot (4136) and
+# Hurley Blackbreath (4126) need nothing: their errands (Yorba Screwspigot in Tanaris, Enohar
+# Thunderbrew at Nethergarde Keep) are left out, as the compiler drops them.
+# Left out: The Love Potion (Mistress Nagmara, in the Grim Guzzler: Gromsblood, the Azshara giants'
+# Giant Silver Veins and a vial filled in Un'Goro), The Spectral Chalice (miners), Rocknot's Ale
+# (only what opens the Bar Door), Attunement to the Core (raid), the level 58-60 dungeon set chains.
+guide groupe-alliance/33-donjons-fin
+title End of route · Dungeons 52-60 (optional)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 52-60
+zone Western Plaguelands
+
+step Blackrock Depths (dungeon, optional)
+  label brd-start
+  when group 4286
+  zone Western Plaguelands
+  tip Blackrock Depths: the Dark Iron dwarves' city under Blackrock Mountain, between the Searing Gorge and the Burning Steppes. Levels 52 to 60, bosses 51 to 59: easy for a group of 5 at 58 to 60; possible earlier at five (from about 54), difficult. The dungeon is huge: the guide splits it into three visits of one to two hours, with the quests given in Ironforge, Kharanos, the Burning Steppes, Lakeshire and Stormwind. Alone? Skip it.
+  note Keep 12 free quest log slots. Most of these quests cannot be shared: each player takes their own.
+  goto 42.9,85.0 "Chillwind Camp flight master"
+  fly "Ironforge"
+  zone Ironforge
+
+step Ironforge: King Magni Bronzebeard
+  when done brd-start
+  zone Ironforge
+  tip Magni stands in the High Seat, beside Royal Historian Archesonus, who took The Smoldering Ruins of Thaurissan in Group 29. Kharan is a prisoner in Blackrock Depths.
+  accept 4341                         -- King Magni Bronzebeard
+
+step Kharanos: Ragnar Thunderbrew
+  when done brd-start
+  zone Dun Morogh
+  tip Ride out of Ironforge down to Kharanos: Ragnar is in the Thunderbrew Distillery. His lost recipe is in the Grim Guzzler, the tavern of Blackrock Depths (third visit).
+  accept 4126                         -- Ragnar Thunderbrew
+
+step Fly to Morgan's Vigil
+  when done brd-start
+  zone Ironforge
+  goto 55.9,47.9 "Ironforge flight master"
+  fly "Morgan's Vigil"
+  zone Burning Steppes
+
+step Morgan's Vigil
+  when done brd-start
+  zone Burning Steppes
+  tip Oralius, Jalinda Sprig, Helendis Riverhorn and Marshal Maxwell stand in the camp. Overmaster Pyron is outside the dungeon, on the way in; Incendius, inside, comes after him.
+  accept 4286                         -- Oralius: the fanny packs drop all through the dungeon
+  accept 4262                         -- Jalinda Sprig
+
+step Morgan's Vigil: Helendis Riverhorn
+  when done brd-start
+  when turnedin 4182
+  tip Helendis's chain (Dragonkin Menace done in Group 25) leads to Marshal Windsor, a prisoner in Blackrock Depths: first a round trip to Lakeshire and Stormwind, by flight.
+  accept 4183                         -- Helendis Riverhorn
+
+step Morgan's Vigil: Dragonkin Menace
+  when done brd-start
+  when !turnedin 4182
+  tip Marshal Windsor's chain starts with Helendis's Dragonkin Menace (offered in Group 25): the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52.
+  accept 4182                         -- Helendis Riverhorn
+
+step The black dragonkin
+  when done brd-start
+  when onquest 4182
+  tip Ride north-east from the Vigil into the hills: Broodlings, Dragonspawn and Wyrmkin in packs, the three Black Drakes apart, one in the northern hills and two further south.
+  kill 7047 quest 4182                -- Black Broodling
+  kill 7040 quest 4182                -- Black Dragonspawn
+  kill 7041 quest 4182                -- Black Wyrmkin
+  kill 7044 quest 4182                -- Black Drake
+
+step Morgan's Vigil: Helendis Riverhorn
+  when done brd-start
+  when onquest 4182
+  turnin 4182                         -- Helendis Riverhorn
+  accept 4183
+
+step Fly to Lakeshire
+  when done brd-start
+  when onquest 4183
+  zone Burning Steppes
+  goto 84.4,68.3 "Morgan's Vigil flight master"
+  fly "Lakeshire"
+  zone Redridge Mountains
+
+step Lakeshire: Magistrate Solomon
+  when done brd-start
+  when onquest 4183
+  zone Redridge Mountains
+  tip Solomon is in the town hall of Lakeshire.
+  turnin 4183                         -- Magistrate Solomon
+  accept 4184
+
+step Fly to Stormwind
+  when done brd-start
+  when onquest 4184
+  zone Redridge Mountains
+  goto 30.4,59.0 "Lakeshire flight master"
+  fly "Stormwind"
+  zone Stormwind City
+
+step Stormwind Keep: Bolvar and Lady Prestor
+  when done brd-start
+  when onquest 4184
+  zone Stormwind City
+  tip Highlord Bolvar Fordragon is in the throne room at the back of Stormwind Keep, Lady Katrana Prestor at his side: speak with her, then with him again.
+  turnin 4184                         -- Highlord Bolvar Fordragon
+  accept 4185
+  kill 1749 quest 4185                -- Lady Katrana Prestor: speak with her
+  turnin 4185                         -- Highlord Bolvar Fordragon
+  accept 4186
+
+step Fly to Lakeshire
+  when done brd-start
+  when onquest 4186
+  zone Stormwind City
+  goto 66.3,62.7 "Stormwind flight master"
+  fly "Lakeshire"
+  zone Redridge Mountains
+
+step Lakeshire: Magistrate Solomon
+  when done brd-start
+  when onquest 4186
+  zone Redridge Mountains
+  turnin 4186                         -- Magistrate Solomon
+  accept 4223
+
+step Fly to Morgan's Vigil
+  when done brd-start
+  when onquest 4223
+  zone Redridge Mountains
+  goto 30.4,59.0 "Lakeshire flight master"
+  fly "Morgan's Vigil"
+  zone Burning Steppes
+
+step Morgan's Vigil: Marshal Maxwell
+  when done brd-start
+  when onquest 4223
+  zone Burning Steppes
+  tip Maxwell sends you to Ragged John, at Flame Crest: the guide goes there next.
+  turnin 4223                         -- Marshal Maxwell
+  accept 4224
+
+step Flame Crest
+  when done brd-start
+  zone Burning Steppes
+  tip Ride north along the road, then climb to the goblin camp on Flame Crest. Ragged John tells his story in the camp; Maxwort Uberglint and Yuka Screwspigot give one quest each for the dungeon.
+  kill 9563 quest 4224                -- Ragged John: speak with him, to the end of his story
+  accept 4123                         -- Maxwort Uberglint
+  accept 4136                         -- Yuka Screwspigot
+
+step Cyrus Therepentous: the Frenzied Black Drake
+  when done brd-start
+  when !turnedin 4023
+  when !turnedin 4022
+  tip A Taste of Flame, first part (offered in Group 25): Cyrus hides in a cave in the far east of the Steppes. The Frenzied Black Drake (elite 54) appears outside it and drops the molt.
+  accept 4023                         -- Cyrus Therepentous
+  collect 10575 quest 4023 @94.4,31.8 map 1428
+  turnin 4023
+
+step Cyrus Therepentous
+  when done brd-start
+  tip Cyrus hands over an Altered Black Dragonflight Molt with the quest: it goes on Bael'Gar's remains, in the dungeon (second visit).
+  accept 4024                         -- Cyrus Therepentous
+
+step Morgan's Vigil: Marshal Maxwell
+  when done brd-start
+  when complete 4224
+  tip Ride back south to the Vigil: Maxwell now sends you after Marshal Windsor, in the dungeon's prison.
+  turnin 4224                         -- Marshal Maxwell
+  accept 4241
+
+step Blackrock Mountain: Overmaster Pyron
+  when done brd-start
+  zone Burning Steppes
+  tip Ride west along the road, past Blackrock Stronghold, into Blackrock Mountain. Inside, cross the great chain to the hanging building in the middle (Forgewright's Tomb), go down through it, then down the next chain to the Grinding Quarry: Overmaster Pyron (elite 52) walks there. The dungeon's door is past the quarry, on the left, at the far end of the Masonry.
+  goto 29.9,31.8 "Blackrock Mountain"
+  kill 9026 quest 4262 @34.8,85.3 map 1427 -- Overmaster Pyron: the Grinding Quarry, before the dungeon's door
+
+step Franclorn Forgewright (one player is enough)
+  when done brd-start
+  tip The Shadowforge Key opens the doors of the second and third visits (the Shadowforge Gates of the prison and the Shadowforge Lock): one key in the group is enough. Franclorn's ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with Franclorn, then come back to life at your body or by a group mate's spell. To check in game.
+  accept 3801 optional                -- Franclorn Forgewright, as a ghost
+  turnin 3801 optional
+  accept 3802 optional
+
+step Blackrock Depths: along the way
+  when done brd-start
+  along until brd-end
+  tip Collected all through the dungeon: the Dark Iron Fanny Packs, on the Anvilrage and Shadowforge dwarves (most of them carry one). The Relic Coffer Keys drop from the same dwarves, about one in eight, only for those on The Heart of the Mountain: 12 keys open the 12 doors of the Black Vault (first visit), whoever carries them.
+  note Share The Good Stuff, The Heart of the Mountain and Hurley Blackbreath with your group: click each in the quest log, then Share. The others cannot be shared.
+  collect 11468 quest 4286            -- Dark Iron Fanny Pack
+  collect 11078 x12 optional          -- Relic Coffer Key
+
+step Blackrock Depths, first visit: before going in
+  when done brd-start
+  tip First visit, no key needed: the Detention Block (the prison), the Ring of the Law, the Shrine of Thaurissan, the Black Vault and the Hall of Crafting. Bosses 51 to 56: 54 or more advised.
+  note In the quest log: Kharan Mighthammer (King Magni), Marshal Windsor (Maxwell), The Good Stuff (Oralius), The Heart of the Mountain (Maxwort), Dark Iron Legacy (Franclorn, if taken). For the next visits: A Taste of Flame (Cyrus), Ribbly Screwspigot (Yuka), Hurley Blackbreath (Ragnar). Not on this route: Mistress Nagmara's quest in the tavern (its herbs and silver are gathered outside), the Spectral Chalice's (miners), Lothos Riftwaker's Attunement to the Core (raid).
+  goto 34.8,85.3 map 1427 "Blackrock Depths" r 25
+
+step Detention Block: Kharan and Windsor
+  when done brd-start
+  tip The Detention Block opens past the entrance. High Interrogator Gerstahn, in the southernmost room, drops the Prison Cell Key, which opens the cells (a rogue can pick them instead). Kharan Mighthammer and Marshal Windsor are locked in the cells of the south-east corridor: listen to Kharan's whole story; Windsor has given up, and his news goes back to Maxwell. Lord Roccor patrols the northern ring, Houndmaster Grebmar waits at its lowest point. To check in game: which cell holds whom.
+  collect 11140 optional              -- Prison Cell Key: High Interrogator Gerstahn
+  turnin 4341                         -- Kharan Mighthammer
+  accept 4342
+  kill 9021 quest 4342                -- Kharan Mighthammer: listen to his whole story
+  turnin 4342
+  accept 4361                         -- For King Magni
+  turnin 4241                         -- Marshal Windsor
+  accept 4242                         -- For Marshal Maxwell
+
+step Ring of the Law and the Shrine of Thaurissan
+  when done brd-start
+  tip The open gate on the east side of the Detention Block leads into the Ring of the Law: the gate closes behind you, two waves of beasts come, then a random boss. Once it is down, a second gate opens into the East Garrison. From there, climb the stairs beside the arena gate and walk round the stands, close to the inner railing (the Arena Spectators come at you when you pass too near), to the Shrine of Thaurissan: Pyromancer Loregrain kneels before the Monument of Franclorn Forgewright.
+  kill 9024 optional                  -- Pyromancer Loregrain
+
+step The Domicile and the Black Vault
+  when done brd-start
+  tip From the Shrine, the bridge leads into the Domicile, then to the upper balcony of the Hall of Crafting, which opens on the Black Vault: Warder Stilgiss and Verek (elite 56 and 55). With 12 Relic Coffer Keys, open the 12 Relic Coffer doors; after the last one, the Warbringer Constructs wake, then Watchman Doomgrip comes. The Secret Safe under the Dark Coffer then holds the Heart of the Mountain. Fewer than 12 keys? Leave it: the guide does not come back to the vault.
+  kill 9041 optional                  -- Warder Stilgiss
+  collect 11309 quest 4123 optional   -- The Heart of the Mountain: the Secret Safe
+
+step Hall of Crafting: Fineous Darkvire
+  when done brd-start
+  tip Fineous Darkvire (elite 54) walks up and down the winding ramp of the Hall of Crafting: clear the ramp first, interrupt his Holy Light. He drops Ironfel for every player on Dark Iron Legacy.
+  collect 10999 quest 3802            -- Ironfel: Fineous Darkvire
+
+step Shrine of Thaurissan: the monument
+  label brd-v1-end
+  when done brd-start
+  tip Back up through the Domicile to the Shrine: place Ironfel on the Monument of Franclorn Forgewright. The Shadowforge Key is the reward. Then walk out the way you came: round the stands, through the Ring of the Law (its gates stay open) and the Detention Block.
+  turnin 3802                         -- Monument of Franclorn Forgewright
+
+step Flame Crest: Maxwort Uberglint
+  when complete 4123
+  zone Burning Steppes
+  tip Out of Blackrock Mountain on the Burning Steppes side, then north-east to Flame Crest.
+  turnin 4123                         -- Maxwort Uberglint
+
+step Morgan's Vigil: Marshal Maxwell
+  when onquest 4242
+  zone Burning Steppes
+  tip Ride back to Morgan's Vigil. Abandoned Hope: Maxwell takes the bad news; pick your reward. From now on, the Anvilrage dwarves of the Detention Block drop A Crumpled Up Note for you (second visit).
+  turnin 4242                         -- Marshal Maxwell
+
+step Morgan's Vigil: Jalinda Sprig
+  when complete 4262
+  zone Burning Steppes
+  turnin 4262                         -- Jalinda Sprig
+  accept 4263                         -- Lord Incendius, in the dungeon: second visit
+
+step Morgan's Vigil: Oralius
+  when complete 4286
+  zone Burning Steppes
+  turnin 4286                         -- Oralius
+
+step Fly to Ironforge
+  when onquest 4361
+  zone Burning Steppes
+  goto 84.4,68.3 "Morgan's Vigil flight master"
+  fly "Ironforge"
+  zone Ironforge
+
+step Ironforge: King Magni Bronzebeard
+  when onquest 4361
+  zone Ironforge
+  tip The Bearer of Bad News: Magni then asks you to save Princess Moira, the Emperor's prisoner at the bottom of the dungeon (third visit).
+  turnin 4361                         -- King Magni Bronzebeard
+  accept 4362
+
+step Fly to Thorium Point
+  when onquest 4362
+  zone Ironforge
+  goto 55.9,47.9 "Ironforge flight master"
+  fly "Thorium Point"
+  zone Searing Gorge
+
+step Blackrock Depths, second visit: before going in
+  when done brd-start
+  zone Searing Gorge
+  tip Second visit, with the Shadowforge Key: Windsor's note, the Dark Iron Highway (Bael'Gar), Shadowforge City (Incendius), the West Garrison (Angerforge), the Manufactory (Argelmach), then Jail Break! from Windsor's cell. Bosses 52 to 57: 56 or more advised. From Thorium Point, ride south across the Searing Gorge into Blackrock Mountain.
+  note In the quest log: A Taste of Flame (Cyrus), Incendius! (Jalinda Sprig). Keep one free quest log slot for Jail Break!. For the third visit: The Fate of the Kingdom (Magni), Ribbly Screwspigot, Hurley Blackbreath.
+  goto 34.8,85.3 map 1427 "Blackrock Depths" r 25
+
+step Detention Block: A Crumpled Up Note
+  when done brd-start
+  when turnedin 4242
+  tip The Anvilrage dwarves of the Detention Block drop A Crumpled Up Note (about one in four) to those who handed in Abandoned Hope: right-click it. Kill Gerstahn again for the Prison Cell Key and bring the note to Windsor.
+  accept 4264                         -- A Crumpled Up Note: Anvilrage dwarves
+  turnin 4264                         -- Marshal Windsor
+  accept 4282
+
+step Dark Iron Highway: Bael'Gar
+  when done brd-start
+  tip The Shadowforge Gate on the north side of the Detention Block opens with the key onto the Dark Iron Highway: large packs of dwarves. Bael'Gar (elite 54) stands at its west end; once he is down, use the Altered Black Dragonflight Molt on his remains.
+  collect 11230 quest 4024            -- Encased Fiery Essence: the molt on Bael'Gar's remains
+
+step Shadowforge City: Lord Incendius
+  when done brd-start
+  tip The great doors at the east end of the Highway open on Shadowforge City, above a lava lake. Lord Incendius (elite 55) guards the Black Anvil on the central bridge: tank him in the middle, his Mighty Blow knocks you into the lava, with no way back up.
+  kill 9017 quest 4263                -- Lord Incendius
+
+step West Garrison and the Manufactory
+  when done brd-start
+  tip Back along the Highway to the Detention Block, then through the East Garrison Door (the key) into the East Garrison. Go down the stairs to the Shadowforge Lock, the great wheel, and open it with the key: the giant door over the Highway turns, and its passage leads across to the West Garrison. Down the left-hand stairs: General Angerforge (elite 57, calls adds at low health). Down the right-hand stairs, across the Manufactory: Golem Lord Argelmach and his two golems (kill the golems first). Each drops part of Marshal Windsor's Lost Information.
+  collect 11464 quest 4282            -- Marshal Windsor's Lost Information: General Angerforge
+  collect 11465 quest 4282            -- Marshal Windsor's Lost Information: Golem Lord Argelmach
+
+step Detention Block: Jail Break!
+  label brd-v2-end
+  when done brd-start
+  tip Back to Windsor's cell. Everyone hands in A Shred of Hope before anyone starts Jail Break!, with a free quest log slot. Windsor gets his gear back in the supply room clockwise from his cell, then frees his friends from the cells of the corridor round the Ring of the Law: open each cell when he asks, not before. Stay near him; he must not die. At the end he runs to the entrance and the quest is done. Failed? Abandon it, leave and reset the dungeon, then try again.
+  turnin 4282                         -- Marshal Windsor
+  accept 4322
+  complete 4322                       -- Escort Marshal Windsor
+
+step Blackrock Depths, third visit: the Grim Guzzler
+  when done brd-start
+  tip Third visit: the bottom of the dungeon, bosses 55 to 59, 58 or more advised. With the time, go on in the same run; or come back later: through the East Garrison Door, the Shadowforge Lock and the West Garrison again. Past Argelmach, the bridge leads to the Grim Guzzler: its patrons are neutral, so no area spells. Ribbly Screwspigot is friendly until threatened (his talk option): he fights with his cronies. Smash the three Thunderbrew Lager Kegs of the storage room near him: Hurley Blackbreath comes with his cronies. To open the Bar Door, buy Dark Iron Ale Mugs from Plugger Spazzring and give them to Private Rocknot until he loses his temper: Phalanx then breaks the door and attacks.
+  collect 11313 quest 4136            -- Ribbly's Head: Ribbly Screwspigot
+  collect 11312 quest 4126            -- Lost Thunderbrew Recipe: Hurley Blackbreath
+
+step Ambassador Flamelash and the Seven
+  when done brd-start
+  tip Through the Bar Door, left into the Chamber of Enchantment: Ambassador Flamelash (elite 57) calls adds from the corners, kill them before they reach him. Then the Mold Foundry and the Summoners' Tomb: speak with Doom'rel to start the Seven, who come one after the other; the door opens after the last. To the right on the way out: the Molten Bridge and the Molten Core's portal (raid).
+  kill 9156 optional                  -- Ambassador Flamelash
+
+step The Lyceum and Magmus
+  when done brd-start
+  tip In the Lyceum, the Shadowforge Flame Keepers (red armour) drop two Shadowforge Torches: light the two braziers at the back, the doors open on the Iron Hall. Magmus (elite 57) waits at the far end: keep out of the fire jets of the side alcoves.
+  kill 9938 optional                  -- Magmus
+
+step The Imperial Seat: Emperor Dagran Thaurissan
+  label brd-v3-end
+  when done brd-start
+  tip Emperor Dagran Thaurissan (elite 59) and Princess Moira Bronzebeard. The Fate of the Kingdom: kill the Emperor WITHOUT killing Moira, who heals him: one player keeps her busy and interrupts her, everyone else on the Emperor. She then stops fighting: speak with her.
+  kill 9019 quest 4362                -- Emperor Dagran Thaurissan
+  turnin 4362                         -- Princess Moira Bronzebeard
+  accept 4363
+
+step Flame Crest: Yuka Screwspigot
+  when complete 4136
+  zone Burning Steppes
+  tip Out of the dungeon (the way back or your hearthstone), then out of Blackrock Mountain on the Burning Steppes side, north-east to Flame Crest.
+  turnin 4136                         -- Yuka Screwspigot
+
+step Cyrus Therepentous
+  when complete 4024
+  zone Burning Steppes
+  tip East along the hills to Cyrus's cave.
+  turnin 4024                         -- Cyrus Therepentous
+
+step Morgan's Vigil: Marshal Maxwell
+  when complete 4322
+  zone Burning Steppes
+  tip Ride back south to Morgan's Vigil. Maxwell's next quest, Stormwind Rendezvous, starts the long chain to Onyxia's Lair, through Upper Blackrock Spire: not in this guide.
+  turnin 4322                         -- Marshal Maxwell
+
+step Morgan's Vigil: Jalinda Sprig
+  when complete 4263
+  zone Burning Steppes
+  turnin 4263                         -- Jalinda Sprig
+
+step Morgan's Vigil: Oralius
+  when complete 4286
+  zone Burning Steppes
+  turnin 4286                         -- Oralius
+
+step Fly to Ironforge
+  when onquest 4363
+  zone Burning Steppes
+  goto 84.4,68.3 "Morgan's Vigil flight master"
+  fly "Ironforge"
+  zone Ironforge
+
+step Ironforge: King Magni Bronzebeard
+  when onquest 4363
+  zone Ironforge
+  turnin 4363                         -- King Magni Bronzebeard
+
+step Kharanos: Ragnar Thunderbrew
+  when complete 4126
+  zone Dun Morogh
+  turnin 4126                         -- Ragnar Thunderbrew
+
+step Blackrock Depths: quests not done
+  label brd-end
+  when done brd-start
+  tip What is left of Blackrock Depths in the quest log is for another run: keep it for one, or drop it to free the log.
+  abandon 4123 optional
+  abandon 4282 optional
+  abandon 4322 optional
+  abandon 4362 optional
+  abandon 4263 optional
+  abandon 4024 optional
+  abandon 4136 optional
+  abandon 4126 optional
+  abandon 4286 optional
+  abandon 3802 optional

@@ -72,6 +72,7 @@ step Ironforge
   turnin 4512                         -- Laris Geardawdle
   accept 4513                         -- Its jars are filled on the next Un'Goro visit
   turnin 3701                         -- Royal Historian Archesonus
+  note King Magni, beside Archesonus, then offers Kharan Mighthammer: a Blackrock Depths quest, taken in the guide's end-of-route chapter (after Group 30).
   accept 7261                         -- Lieutenant Rotimer
 
 step Fly to Light's Hope Chapel

@@ -46,8 +46,7 @@ return {
 
 	-- Step 9: Agmond's End
 	["Agmond's End"] = "Fin d'Agmond",
-	-- {npc:2785} Theldurin the Lost
-	["The battered skeleton lies just east of the ogres, at the edge of the Stonevault trogg camp; the Bonesnappers and Shamans around it drop the flakes. {npc:2785} sits by the ruined camp further south."] = "Le squelette maltraité gît juste à l'est des ogres, au bord du camp des troggs Cavepierre ; les briseurs d'os et les chamans autour laissent tomber les écailles. {npc:2785} est assis près du camp en ruine plus au sud.",
+	["The battered skeleton lies just east of the ogres, at the edge of the Stonevault trogg camp; the Bonesnappers and Shamans around it drop the flakes. Theldurin sits by the ruined camp further south."] = "Le squelette abîmé se trouve juste à l'est des ogres, en bordure du camp des troggs Cavepierre ; les Briseurs d'os et les Chamans alentour lâchent les éclats. Theldurin est assis près du camp en ruine plus au sud.",
 
 	-- Step 10: Lotwil Veriatus
 	-- {npc:2921} Lotwil Veriatus
