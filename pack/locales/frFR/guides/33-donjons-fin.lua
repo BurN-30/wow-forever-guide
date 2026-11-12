@@ -395,4 +395,109 @@ return {
 	-- Step 77: Lower Blackrock Spire: quests not done
 	["Lower Blackrock Spire: quests not done"] = "Pic Rochenoire inférieur : quêtes non finies",
 	["What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste du pic Rochenoire inférieur dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
+
+	-- Step 78: Dire Maul (dungeon, optional)
+	["Dire Maul (dungeon, optional)"] = "Hache-Tripes (donjon, facultatif)",
+	-- {zone:1444} Feralas · {object:152576} Feathermoon Stronghold · {zone:1450} Moonglade
+	["Dire Maul: the ruined elf city in the middle of {zone:1444}, three wings. The guide does the eastern one (Warpwood Quarter, 55 to 58), whose imp carries the key of the others, then the western one (Capital Gardens, 58 to 60). A group of 5 at 58 to 60; possible from about 56, difficult. The quests come from {object:152576}, the Lariss Pavilion and, if taken in Group 30, {zone:1450}. Alone? Skip it."] = "Hache-Tripes : la cité elfe en ruine au milieu de {zone:1444}, en trois ailes. Le guide fait l'aile est (Warpwood Quarter, 55 à 58), dont le diablotin porte la clé des autres, puis l'aile ouest (Capital Gardens, 58 à 60). Un groupe de 5 aux niveaux 58 à 60 ; possible vers 56, difficile. Les quêtes se prennent à {object:152576}, au pavillon de Lariss et, si elle a été prise au Groupe 30, à {zone:1450}. Seul ? Le passer.",
+	["Keep 8 free quest log slots. The northern wing (the ogres' tribute) is not in the guide."] = "Garder 8 places libres dans le journal de quêtes. L'aile nord (le tribut des ogres) n'est pas dans le guide.",
+
+	-- Step 79: Feathermoon Stronghold
+	-- {npc:7877} Latronicus Moonspear · {npc:14374} Scholar Runethorn
+	["{npc:7877} stands in the fort; {npc:14374} walks the road through it."] = "{npc:7877} se tient dans le fort ; {npc:14374} parcourt la route qui le traverse.",
+
+	-- Step 80: Lariss Pavilion: Azj'Tordin
+	-- {npc:14355} Azj'Tordin
+	["Lariss Pavilion: {npc:14355}"] = "Pavillon de Lariss : {npc:14355}",
+	-- {object:176945} Camp Mojache · {npc:14355} Azj'Tordin
+	["The Lariss Pavilion stands north-east of {object:176945} (Horde), east of Dire Maul: from Feathermoon, the flight to Thalanaar and the road west is the quickest way. {npc:14355}'s book is with Pusillin, the imp at the eastern wing's entrance."] = "Le pavillon de Lariss se trouve au nord-est de {object:176945} (Horde), à l'est de Hache-Tripes : depuis Feathermoon, le vol jusqu'à Thalanaar puis la route vers l'ouest est le plus rapide. Le livre de {npc:14355} est chez Pusillin, le diablotin de l'entrée de l'aile est.",
+
+	-- Step 81: Dire Maul: before going in
+	["Dire Maul: before going in"] = "Hache-Tripes : avant d'entrer",
+	-- {zone:1444} Feralas
+	["Dire Maul stands on the plateau in the middle of {zone:1444}. The eastern wing opens on the east wall of the central courtyard, and from Eldreth Row at the city's gates; both lead to the upper level of the Warpwood Quarter."] = "Hache-Tripes se dresse sur le plateau au milieu de {zone:1444}. L'aile est s'ouvre sur le mur est de la cour centrale, et depuis l'allée d'Eldreth (Eldreth Row), aux portes de la cité ; les deux mènent au niveau supérieur de l'aile est (Warpwood Quarter).",
+	-- {quest:7488} Lethtendris's Web · {npc:7877} Latronicus Moonspear · {quest:7482} Elven Legends · {quest:7441} Pusillin and the Elder Azj'Tordin · {quest:5526} Shards of the Felvine · {npc:11801} Rabine Saturna · {npc:14368} Lorekeeper Lydros
+	["In the quest log: {quest:7488} ({npc:7877}), {quest:7482} (Runethorn), {quest:7441}. If taken in Group 30: {quest:5526} ({npc:11801}). A class book found in the dungeon starts a quest of its own: it goes to {npc:14368}, in the Athenaeum (western wing). Not on this route: the northern wing's quests, Lydros's libram quests."] = "Dans le journal de quêtes : {quest:7488} ({npc:7877}), {quest:7482} (Runethorn), {quest:7441}. Si prise au Groupe 30 : {quest:5526} ({npc:11801}). Un livre de classe trouvé dans le donjon lance une quête à part : il va à {npc:14368}, dans l'Athénée (Athenaeum, aile ouest). Pas sur ce parcours : les quêtes de l'aile nord, les quêtes de libram de Lydros.",
+	["Dire Maul"] = "Hache-Tripes",
+
+	-- Step 82: Warpwood Quarter: Pusillin
+	["Warpwood Quarter: Pusillin"] = "Aile est : Pusillin",
+	-- {npc:14355} Azj'Tordin · {item:18261} Book of Incantations · {item:18249} Crescent Key
+	["Pusillin the imp waits by the entrance: speak with him, then chase him through the first rooms, speaking with him each time he stops. He ends on a platform up a ramp near the back door, where he fights (elite 57). He drops {npc:14355}'s {item:18261} and the {item:18249}, which opens the western and northern wings: one key in the group is enough."] = "Pusillin le diablotin attend près de l'entrée : lui parler, puis le poursuivre à travers les premières salles, en lui reparlant à chaque arrêt. Il finit sur une plate-forme en haut d'une rampe près de la porte de derrière, où il se bat (élite 57). Il donne le {item:18261} de {npc:14355} et la {item:18249}, qui ouvre les ailes ouest et nord : une clé dans le groupe suffit.",
+	-- {item:18261} Book of Incantations
+	["{item:18261}: Pusillin"] = "{item:18261} : Pusillin",
+	-- {item:18249} Crescent Key
+	["{item:18249}: Pusillin"] = "{item:18249} : Pusillin",
+
+	-- Step 83: Warpwood Quarter: Lethtendris
+	["Warpwood Quarter: Lethtendris"] = "Aile est : Lethtendris",
+	-- {npc:7877} Latronicus Moonspear
+	["Lethtendris (elite 57), a blood elf warlock, fights with her imp Pimgib: interrupt her spells. Her web is for {npc:7877}."] = "Lethtendris (élite 57), une démoniste elfe de sang, se bat avec son diablotin Pimgib : interrompre ses sorts. Sa toile est pour {npc:7877}.",
+	-- {quest:7488} Lethtendris's Web
+	["{quest:7488}: Lethtendris"] = "{quest:7488} : Lethtendris",
+
+	-- Step 84: Warpwood Quarter: Alzzin the Wildshaper
+	-- {npc:11492} Alzzin the Wildshaper
+	["Warpwood Quarter: {npc:11492}"] = "Aile est : {npc:11492}",
+	-- {npc:11490} Zevrim Thornhoof · {npc:11491} Old Ironbark · {object:176907} Conservatory Door · {npc:11492} Alzzin the Wildshaper · {quest:5526} Shards of the Felvine · {item:18539} Reliquary of Purity
+	-- plural, as words: Warpwood Crushers = {npc:13021} Warpwood Crusher
+	["Hydrospawn patrols the pool on the next level down. {npc:11490} (elite 57) sacrifices players on his altar; after him, speak with {npc:11491}: he opens the {object:176907}. Clear the Warpwood Crushers on the ramp, then {npc:11492} (elite 58), who changes shape. {quest:5526}: once he is dead, the Felvine behind him drops its shards; loot one, then use the {item:18539}."] = "Hydrospawn patrouille autour du bassin, un niveau plus bas. {npc:11490} (élite 57) sacrifie des joueurs sur son autel ; après lui, parler à {npc:11491} : il ouvre {object:176907}. Nettoyer les Warpwood Crushers de la rampe, puis {npc:11492} (élite 58), qui change de forme. {quest:5526} : une fois qu'il est mort, la gangrevigne derrière lui lâche ses éclats ; en ramasser un, puis utiliser le {item:18539}.",
+	-- {item:18540} Sealed Reliquary of Purity · {item:18501} Felvine Shard · {item:18539} Reliquary of Purity
+	["{item:18540}: a {item:18501} in the {item:18539}"] = "{item:18540} : un {item:18501} dans le {item:18539}",
+
+	-- Step 85: Lariss Pavilion: Azj'Tordin
+	-- {npc:11492} Alzzin the Wildshaper · {item:18249} Crescent Key
+	["The door at the back of {npc:11492}'s room opens with the {item:18249} straight onto the Lariss Pavilion."] = "La porte au fond de la salle de {npc:11492} s'ouvre avec la {item:18249} directement sur le pavillon de Lariss.",
+
+	-- Step 86: Dire Maul West: before going in
+	["Dire Maul West: before going in"] = "Hache-Tripes ouest : avant d'entrer",
+	-- {item:18249} Crescent Key · {npc:11496} Immol'thar · {npc:11480} Arcane Aberration · {npc:11483} Mana Remnant
+	["Back to the central courtyard of Dire Maul: the western wing opens on its west wall, with the {item:18249}. Five pylons, great crystals, shield {npc:11496}'s prison: kill every {npc:11480} and {npc:11483} around a pylon to shut it down."] = "Retour à la cour centrale de Hache-Tripes : l'aile ouest s'ouvre sur son mur ouest, avec la {item:18249}. Cinq pylônes, de grands cristaux, protègent la prison de {npc:11496} : tuer toutes les {npc:11480} et tous les {npc:11483} autour d'un pylône pour l'éteindre.",
+
+	-- Step 87: Capital Gardens and the Court of the Highborne
+	["Capital Gardens and the Court of the Highborne"] = "Les jardins et la cour des Bien-nés",
+	-- {npc:11489} Tendris Warpwood · {npc:11488} Illyanna Ravenoak · {npc:11487} Magister Kalendris · {npc:14358} Shen'dralar Ancient
+	["The first pylon stands in the Capital Gardens, right in front of the entrance. Kill the wandering Ancients before {npc:11489} (elite 60), who calls them all. Upstairs, the Court of the Highborne: two more pylons, {npc:11488} and {npc:11487}. The {npc:14358} stands on the bridge of the upper level."] = "Le premier pylône se dresse dans les jardins de la capitale (Capital Gardens), juste devant l'entrée. Tuer les Anciens qui errent avant {npc:11489} (élite 60), qui les appelle tous. À l'étage, la cour des Bien-nés (Court of the Highborne) : deux autres pylônes, {npc:11488} et {npc:11487}. {npc:14358} se tient sur le pont du niveau supérieur.",
+
+	-- Step 88: Immol'thar and Prince Tortheldrin
+	-- {npc:11496} Immol'thar · {npc:11486} Prince Tortheldrin
+	["{npc:11496} and {npc:11486}"] = "{npc:11496} et {npc:11486}",
+	-- {npc:11496} Immol'thar · {npc:11486} Prince Tortheldrin
+	["The last two pylons stand either side of the door of the Prison of Immol'thar: with all five down, its force field is gone. {npc:11496} (elite 61) calls adds and moves players to the middle of the room; he enrages at half health. A small tunnel then leads to the Athenaeum: {npc:11486} (elite 60)."] = "Les deux derniers pylônes se dressent de chaque côté de la porte de la prison d'Immol'thar : une fois les cinq éteints, son champ de force disparaît. {npc:11496} (élite 61) appelle des renforts et déplace des joueurs au milieu de la salle ; il s'enrage à la moitié de sa vie. Un petit tunnel mène ensuite à l'Athénée (Athenaeum) : {npc:11486} (élite 60).",
+
+	-- Step 89: The Athenaeum: Elven Legends
+	-- {quest:7482} Elven Legends
+	["The Athenaeum: {quest:7482}"] = "L'Athénée : {quest:7482}",
+	-- {npc:14368} Lorekeeper Lydros
+	["The skeletal remains lie on the floor beside {npc:14368}, in the Athenaeum: choose to mourn the great loss."] = "Les restes du squelette gisent par terre à côté de {npc:14368}, dans l'Athénée : choisir de pleurer cette grande perte.",
+	-- {npc:14368} Lorekeeper Lydros
+	["Skeletal remains, beside {npc:14368}"] = "Restes du squelette, à côté de {npc:14368}",
+
+	-- Step 90: The Shen'dralar Ancient and his treasure
+	-- {npc:14358} Shen'dralar Ancient
+	["The {npc:14358} and his treasure"] = "{npc:14358} et son trésor",
+	-- {npc:14358} Shen'dralar Ancient · {object:179517} Treasure of the Shen'dralar
+	["Back to the {npc:14358} on the bridge of the Court of the Highborne. His next quest sends you to the {object:179517}, a chest under the ramp of the Athenaeum: take the one he offers."] = "Retour auprès de {npc:14358}, sur le pont de la cour des Bien-nés. Sa quête suivante envoie au {object:179517}, un coffre sous la rampe de l'Athénée : prendre celle qu'il propose.",
+	-- {npc:14358} Shen'dralar Ancient
+	["{npc:14358}: the same quest, the other version"] = "{npc:14358} : la même quête, l'autre version",
+	-- {object:179517} Treasure of the Shen'dralar
+	["{object:179517}, under the ramp of the Athenaeum"] = "{object:179517}, sous la rampe de l'Athénée",
+
+	-- Step 91: Feathermoon Stronghold: Latronicus Moonspear
+	-- {object:152576} Feathermoon Stronghold
+	["Out of Dire Maul, back to {object:152576} (the flight from Thalanaar, or the road west and the boat)."] = "Sortir de Hache-Tripes et revenir à {object:152576} (le vol depuis Thalanaar, ou la route vers l'ouest et le bateau).",
+
+	-- Step 93: Moonglade: Rabine Saturna
+	-- {quest:5526} Shards of the Felvine · {npc:11801} Rabine Saturna · {zone:1450} Moonglade
+	["{quest:5526}: {npc:11801}, in her house in Nighthaven. From Feathermoon, the flight to {zone:1450}."] = "{quest:5526} : {npc:11801}, dans sa maison de Havrenuit. Depuis Feathermoon, le vol jusqu'à {zone:1450}.",
+
+	-- Step 94: Dire Maul: quests not done
+	["Dire Maul: quests not done"] = "Hache-Tripes : quêtes non finies",
+	["What is left of Dire Maul in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste de Hache-Tripes dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
+
+	-- Step 95: Shards of the Felvine: not done
+	-- {quest:5526} Shards of the Felvine
+	["{quest:5526}: not done"] = "{quest:5526} : pas finie",
+	-- {quest:5526} Shards of the Felvine
+	["{quest:5526} is not done and the guide does not go back to Dire Maul: abandon it, or keep it for a run of your own."] = "{quest:5526} n'est pas finie et le guide ne retourne pas à Hache-Tripes : l'abandonner, ou la garder pour une visite à part.",
 }

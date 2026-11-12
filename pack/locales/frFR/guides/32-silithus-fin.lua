@@ -244,19 +244,25 @@ return {
 	-- {npc:11801} Rabine Saturna · {npc:11939} Umber
 	["{npc:11801}'s house stands in Nighthaven, east of {npc:11939}."] = "La maison de {npc:11801} se dresse à Havrenuit, à l'est de {npc:11939}.",
 
-	-- Step 58: Nighthaven
+	-- Step 57: Rabine Saturna: Shards of the Felvine (optional)
+	-- {npc:11801} Rabine Saturna · {quest:5526} Shards of the Felvine
+	["{npc:11801}: {quest:5526} (optional)"] = "{npc:11801} : {quest:5526} (facultatif)",
+	-- {npc:11801} Rabine Saturna · {quest:5526} Shards of the Felvine
+	["{npc:11801}'s next quest, {quest:5526}, is done in Dire Maul, in the guide's end-of-route chapter (after Group 30), behind the eastern wing's last boss; the chapter then brings it back here. Take it only if your group means to run Dire Maul then: it stays in the quest log until that. Alone? Skip it."] = "La quête suivante de {npc:11801}, {quest:5526}, se fait à Hache-Tripes, dans le chapitre de fin de parcours du guide (après le Groupe 30), derrière le dernier boss de l'aile est ; le chapitre la ramène ensuite ici. La prendre seulement si le groupe compte faire Hache-Tripes à ce moment-là : elle reste dans le journal jusque-là. Seul ? La passer.",
+
+	-- Step 59: Nighthaven
 	["Nighthaven"] = "Havrenuit",
 	["Learn the flight path in Nighthaven."] = "Apprenez le point de vol de Havrenuit.",
 
-	-- Step 59: Fly to Rut'theran Village
+	-- Step 60: Fly to Rut'theran Village
 	["Fly to Rut'theran Village"] = "Envolez-vous vers le village de Rut'theran",
 
-	-- Step 60: Rut'theran Village
+	-- Step 61: Rut'theran Village
 	["Rut'theran Village"] = "Village de Rut'theran",
 	-- {npc:7916} Erelas Ambersky
 	["The flight lands in Rut'theran Village. {npc:7916} stands a short walk north-west of the flight master."] = "Le vol atterrit à Rut'theran. {npc:7916} se tient à quelques pas au nord-ouest du maître de vol.",
 
-	-- Step 62: Darnassus
+	-- Step 63: Darnassus
 	-- {zone:1457} Darnassus
 	["Take the portal up to {zone:1457}."] = "Prenez le portail pour monter à {zone:1457}.",
 	-- {npc:7740} Gracina Spiritmight
@@ -266,31 +272,31 @@ return {
 	-- {npc:3516} Arch Druid Fandral Staghelm
 	["{npc:3516}, atop the Cenarion Enclave"] = "{npc:3516}, au sommet de l'Enclave cénarienne",
 
-	-- Step 63: Portal to Teldrassil
+	-- Step 64: Portal to Teldrassil
 	-- {zone:1438} Teldrassil
 	["Portal to {zone:1438}"] = "Portail vers {zone:1438}",
 
-	-- Step 64: Fly to Auberdine
+	-- Step 65: Fly to Auberdine
 	["Fly to Auberdine"] = "Envolez-vous pour Auberdine",
 	["Rut'theran Village flight master"] = "Maître de vol du village de Rut'theran",
 
-	-- Step 65: Boat to Menethil Harbor
+	-- Step 66: Boat to Menethil Harbor
 	-- {object:1162} Menethil Harbor
 	["Boat to {object:1162}"] = "Bateau pour {object:1162}",
 
-	-- Step 66: Fly to Ironforge
+	-- Step 67: Fly to Ironforge
 	-- {zone:1455} Ironforge
 	["Fly to {zone:1455}"] = "Envolez-vous vers {zone:1455}",
 	-- {object:1162} Menethil Harbor
 	["{object:1162} flight master"] = "Maître de vol de {object:1162}",
 
-	-- Step 67: Fly to Stormwind
+	-- Step 68: Fly to Stormwind
 	-- {zone:1453} Stormwind
 	["Fly to {zone:1453}"] = "Volez jusqu'à {zone:1453}",
 	-- {zone:1455} Ironforge
 	["{zone:1455} flight master"] = "Maître de vol de {zone:1455}",
 
-	-- Step 68: Stormwind
+	-- Step 69: Stormwind
 	-- {npc:14722} Clavicus Knavingham · {quest:6031} Runecloth
 	["{npc:14722} takes sixty Silk, sixty Mageweave and sixty {quest:6031}: hand in what you carry (or buy at the Auction House), skip the rest."] = "{npc:14722} prend soixante Étoffes de soie, soixante Étoffes de tisse-mage et soixante {quest:6031} : rendez ce que vous portez (ou achetez à l'hôtel des ventes), laissez le reste.",
 	-- {npc:14722} Clavicus Knavingham
@@ -302,7 +308,7 @@ return {
 	-- {npc:14722} Clavicus Knavingham · {object:2096} Trade District
 	["{npc:14722}, in the {object:2096}"] = "{npc:14722}, dans {object:2096}",
 
-	-- Step 69: Ironforge
+	-- Step 70: Ironforge
 	-- {zone:1455} Ironforge · {npc:14724} Bubulo Acerbus · {npc:14723} Mistina Steelshield · {item:14047} Runecloth
 	-- plural, as words: Jadefire Shadowstalkers = {npc:7110} Jadefire Shadowstalker
 	["Take the Deeprun Tram to {zone:1455}. {npc:14724} and {npc:14723} each take sixty Wool, sixty Silk and sixty Mageweave, then sixty {item:14047}: hand in what you carry (or buy at the Auction House), skip the rest.\nCareful: Jadefire Shadowstalkers are level 51-52 and move stealthed. They use Slowing Poison and are found about 550 yd south of Bloodvenom Post.\nCareful: Jadefire Shadowstalkers sneak around and use Slowing Poison."] = "Prenez le Tram des profondeurs jusqu'à {zone:1455}. {npc:14724} et {npc:14723} prennent chacun soixante étoffes de laine, soixante étoffes de soie et soixante étoffes de tisse-mage, puis soixante {item:14047} : rendez ce que vous avez sur vous (ou achetez-le à l'Hôtel des ventes), laissez tomber le reste.\nAttention : les traqueurs des ombres Jadefeu sont de niveau 51-52 et se déplacent camouflés. Ils utilisent un poison ralentissant et se trouvent à environ 550 m au sud du Poste de la Vénéneuse.\nAttention : les traqueurs des ombres Jadefeu rôdent camouflés et utilisent un poison ralentissant.",
@@ -315,22 +321,22 @@ return {
 	-- {zone:1453} Stormwind
 	["{zone:1453} has no shaman trainer"] = "{zone:1453} n'a pas de maître des chamans",
 
-	-- Step 71: Stormwind City
+	-- Step 72: Stormwind City
 	["Stormwind City"] = "Cité de Hurlevent",
 	-- {item:2592} Wool Cloth
 	["Sixty {item:2592}, if you carry them"] = "Soixante {item:2592}, si vous en avez",
 
-	-- Step 73: Fly to Southshore
+	-- Step 74: Fly to Southshore
 	["Fly to Southshore"] = "Envolez-vous pour Austrivage",
 	-- {zone:1453} Stormwind
 	["{zone:1453} flight master"] = "Maître de vol de {zone:1453}",
 
-	-- Step 77: Chillwind Camp
+	-- Step 78: Chillwind Camp
 	["Chillwind Camp"] = "Camp du Noroît",
 	-- {npc:1852} Araj the Summoner
 	["{npc:1852} is a level 61 elite"] = "{npc:1852} est un élite de niveau 61",
 
-	-- Step 78: Andorhal
+	-- Step 79: Andorhal
 	["Andorhal"] = "Ruines d'Andorhal",
 	-- {npc:10667} Chromie · {npc:1852} Araj the Summoner
 	["{npc:10667} waits in the ruined inn on the west side of Andorhal, the ruined city north of the camp. {npc:1852} guards his phylactery in the middle of the town."] = "{npc:10667} attend dans l'auberge en ruine du côté ouest des Ruines d'Andorhal, la ville en ruine au nord du camp. {npc:1852} garde son phylactère au milieu de la ville.",
@@ -338,18 +344,18 @@ return {
 	-- {npc:10667} Chromie
 	["{npc:10667}, upstairs"] = "{npc:10667}, à l'étage",
 
-	-- Step 79: Felstone Field
+	-- Step 80: Felstone Field
 	["Felstone Field"] = "Champ de Felstone",
 	-- {npc:10778} Janice Felstone
 	-- plural, as words: Jabbering Ghouls = {npc:10801} Jabbering Ghoul
 	["{npc:10778}'s ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves.\nThe game does not count the half-charm, so the ghoul's tooltip shows nothing; it drops only while you carry the quest. With both halves in the bags, right-click one of them to put the charm back together."] = "Le fantôme de {npc:10778} erre près de la ferme du Champ de Felstone, à l'ouest d'Andorhal. Les goules jacassantes du champ portent l'autre moitié du porte-bonheur : assemblez les deux moitiés.\nLe jeu ne compte pas le demi-charme : l'infobulle de la goule n'affiche rien, et elle ne le laisse tomber que si la quête est dans le journal. Avec les deux moitiés dans les sacs, clic droit sur l'une d'elles pour reconstituer le porte-bonheur.",
 	["Upstairs"] = "À l'étage",
 
-	-- Step 80: Northridge Lumber Camp
+	-- Step 81: Northridge Lumber Camp
 	["Northridge Lumber Camp"] = "Camp de bûcherons de la Crête du nord",
 	["Ride north up the road to the lumber mill and set the termite barrel down in the middle of it."] = "Remontez la route vers le nord jusqu'à la scierie et posez le tonneau de termites en son centre.",
 
-	-- Step 81: Tirion Fordring (optional)
+	-- Step 82: Tirion Fordring (optional)
 	-- {npc:1855} Tirion Fordring
 	["{npc:1855} (optional)"] = "{npc:1855} (facultatif)",
 	-- {npc:1855} Tirion Fordring · {quest:5781} Of Forgotten Memories
@@ -357,17 +363,17 @@ return {
 	-- {quest:5781} Of Forgotten Memories
 	["Only after {quest:5781}: not offered? Carry on"] = "Seulement après {quest:5781} : pas proposée ? Continuer",
 
-	-- Step 83: Of Lost Honor
+	-- Step 84: Of Lost Honor
 	["Underwater"] = "Sous l'eau",
 
-	-- Step 86: Scholomance (optional)
+	-- Step 87: Scholomance (optional)
 	["Scholomance (optional)"] = "Scholomance (facultatif)",
 	-- {zone:1422} Western Plaguelands
 	["Running Scholomance (Caer Darrow, south-east {zone:1422}) or Stratholme instead of grinding gets you there faster in a group. Skip this step to grind solo."] = "En groupe, faire la Scholomance (Caer Darrow, au sud-est des {zone:1422}) ou Stratholme au lieu de tuer des monstres en boucle vous y amène plus vite. Sautez cette étape pour monter en solo.",
 	-- {quest:5505} The Key to Scholomance
 	["Scholomance fits levels 58 to 60; {quest:5505} is handed in at Chillwind Camp below."] = "La Scholomance convient aux niveaux 58 à 60 ; {quest:5505} se rend au Camp du Noroît ci-dessous.",
 
-	-- Step 87: Grind to 60
+	-- Step 88: Grind to 60
 	["Grind to 60"] = "Monter au niveau 60",
 	-- {npc:1855} Tirion Fordring
 	-- plural, as words: Terrordale Spirits = {npc:14564} Terrordale Spirit
@@ -375,7 +381,7 @@ return {
 	-- {npc:14564} Terrordale Spirit · {zone:1423} Eastern Plaguelands
 	["grind on {npc:14564} at Terrordale, {zone:1423}"] = "tuer des {npc:14564} en boucle à Val-Terreur, {zone:1423}",
 
-	-- Step 89: Chillwind Camp
+	-- Step 90: Chillwind Camp
 	["Ride back south-west to Chillwind Camp."] = "Retournez au sud-ouest jusqu'au Camp du Noroît.",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.

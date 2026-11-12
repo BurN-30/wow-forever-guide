@@ -333,6 +333,17 @@ step Rabine Saturna
   turnin 5527
   turnin 6845
 
+# Groupe Alliance 0.12.0: Shards of the Felvine (5526), Rabine's next quest, done in Dire Maul (the
+# end-of-route chapter, behind Alzzin the Wildshaper), asked here (`when group 5526`): Rabine is its
+# only giver and the route never comes back to Moonglade before; the chapter brings it back to her.
+# Level 60, required 56, after A Reliquary of Purity (Polestar's Forever data, TrinityCore). Dropped
+# after Dire Maul when not done.
+step Rabine Saturna: Shards of the Felvine (optional)
+  when group 5526
+  zone Moonglade
+  tip Rabine's next quest, Shards of the Felvine, is done in Dire Maul, in the guide's end-of-route chapter (after Group 30), behind the eastern wing's last boss; the chapter then brings it back here. Take it only if your group means to run Dire Maul then: it stays in the quest log until that. Alone? Skip it.
+  accept 5526                         -- Rabine Saturna
+
 step Umber
   accept 1185                         -- Umber walks around Nighthaven: look inside the circle on the map
   turnin 1185

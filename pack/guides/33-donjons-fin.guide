@@ -581,3 +581,140 @@ step Lower Blackrock Spire: quests not done
   abandon 4866 optional
   abandon 4867 optional
   abandon 5081 optional
+
+# ================================================================ Dire Maul
+# Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
+# Dungeons codex; prerequisites cross-checked with the TrinityCore base: no disagreement (The
+# Treasure of the Shen'dralar after The Madness Within; Shards of the Felvine after A Reliquary of
+# Purity, handed in to Rabine Saturna in Group 30; Lethtendris's Web needs nothing, its errand from
+# Stormwind or Ironforge is dropped by the compiler). Rooms, bosses and how-to: Warcraft Tavern's
+# Forever Dire Maul East and West dungeon and quest guides (warcrafttavern.com/forever/guides/
+# dire-maul-east, dire-maul-west, dire-maul-east-quests, dire-maul-west-quests, read on 12/11/2026),
+# written from Classic (closed in the Forever beta): places inside are to check in game.
+# Asked once (`when group 7488`, Lethtendris's Web: level 54); every later step needs `when done
+# dm-start`. Flow: Feathermoon (Latronicus, Runethorn) -> Lariss Pavilion (Azj'Tordin) -> the eastern
+# wing (Pusillin and the Crescent Key, Lethtendris, Zevrim, Alzzin and the Felvine) -> out by its
+# back door to Azj'Tordin -> the western wing (the five pylons, the Shen'dralar Ancient, Immol'thar,
+# Tortheldrin, the Athenaeum) -> Feathermoon -> Moonglade (Rabine, Shards of the Felvine, if taken).
+# The Treasure of the Shen'dralar has two versions in the data (7462 for the Alliance, 7877 for
+# every race), both after The Madness Within: the guide offers both, optional, and the Ancient gives
+# the one Forever uses (to check in game).
+# Left out: the northern wing (The Gordok Ogre Suit, Free Knot!, Unfinished Gordok Business, A
+# Broken Trap, The Gordok Taste Test: the tribute run), Lorekeeper Lydros's libram quests (black
+# diamonds, enchanting shards and other materials), the class books that drop in the dungeon (a
+# player's own quest, handed to Lydros), the class quests (Arcane Refreshment, Quel'Serrar, the
+# warlock's and paladin's mounts), Isalien (dungeon set).
+step Dire Maul (dungeon, optional)
+  label dm-start
+  when group 7488
+  tip Dire Maul: the ruined elf city in the middle of Feralas, three wings. The guide does the eastern one (Warpwood Quarter, 55 to 58), whose imp carries the key of the others, then the western one (Capital Gardens, 58 to 60). A group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Feathermoon Stronghold, the Lariss Pavilion and, if taken in Group 30, Moonglade. Alone? Skip it.
+  note Keep 8 free quest log slots. The northern wing (the ogres' tribute) is not in the guide.
+  goto 30.3,43.3 map 1444 "Feathermoon Stronghold" r 40
+
+step Feathermoon Stronghold
+  when done dm-start
+  zone Feralas
+  tip Latronicus Moonspear stands in the fort; Scholar Runethorn walks the road through it.
+  accept 7488                         -- Latronicus Moonspear
+  accept 7482                         -- Scholar Runethorn
+
+step Lariss Pavilion: Azj'Tordin
+  when done dm-start
+  zone Feralas
+  tip The Lariss Pavilion stands north-east of Camp Mojache (Horde), east of Dire Maul: from Feathermoon, the flight to Thalanaar and the road west is the quickest way. Azj'Tordin's book is with Pusillin, the imp at the eastern wing's entrance.
+  accept 7441                         -- Azj'Tordin
+
+step Dire Maul: before going in
+  when done dm-start
+  zone Feralas
+  tip Dire Maul stands on the plateau in the middle of Feralas. The eastern wing opens on the east wall of the central courtyard, and from Eldreth Row at the city's gates; both lead to the upper level of the Warpwood Quarter.
+  note In the quest log: Lethtendris's Web (Latronicus), Elven Legends (Runethorn), Pusillin and the Elder Azj'Tordin. If taken in Group 30: Shards of the Felvine (Rabine Saturna). A class book found in the dungeon starts a quest of its own: it goes to Lorekeeper Lydros, in the Athenaeum (western wing). Not on this route: the northern wing's quests, Lydros's libram quests.
+  goto 59.2,45.1 map 1444 "Dire Maul" r 25
+
+step Warpwood Quarter: Pusillin
+  when done dm-start
+  tip Pusillin the imp waits by the entrance: speak with him, then chase him through the first rooms, speaking with him each time he stops. He ends on a platform up a ramp near the back door, where he fights (elite 57). He drops Azj'Tordin's Book of Incantations and the Crescent Key, which opens the western and northern wings: one key in the group is enough.
+  collect 18261 quest 7441            -- Book of Incantations: Pusillin
+  collect 18249 optional              -- Crescent Key: Pusillin
+
+step Warpwood Quarter: Lethtendris
+  when done dm-start
+  tip Lethtendris (elite 57), a blood elf warlock, fights with her imp Pimgib: interrupt her spells. Her web is for Latronicus.
+  collect 18426 quest 7488            -- Lethtendris's Web: Lethtendris
+
+step Warpwood Quarter: Alzzin the Wildshaper
+  when done dm-start
+  tip Hydrospawn patrols the pool on the next level down. Zevrim Thornhoof (elite 57) sacrifices players on his altar; after him, speak with Old Ironbark: he opens the Conservatory Door. Clear the Warpwood Crushers on the ramp, then Alzzin the Wildshaper (elite 58), who changes shape. Shards of the Felvine: once he is dead, the Felvine behind him drops its shards; loot one, then use the Reliquary of Purity.
+  kill 11492 optional                 -- Alzzin the Wildshaper
+  collect 18540 quest 5526            -- Sealed Reliquary of Purity: a Felvine Shard in the Reliquary of Purity
+
+step Lariss Pavilion: Azj'Tordin
+  when complete 7441
+  zone Feralas
+  tip The door at the back of Alzzin's room opens with the Crescent Key straight onto the Lariss Pavilion.
+  turnin 7441                         -- Azj'Tordin
+
+step Dire Maul West: before going in
+  when done dm-start
+  zone Feralas
+  tip Back to the central courtyard of Dire Maul: the western wing opens on its west wall, with the Crescent Key. Five pylons, great crystals, shield Immol'thar's prison: kill every Arcane Aberration and Mana Remnant around a pylon to shut it down.
+  goto 59.2,45.1 map 1444 "Dire Maul" r 25
+
+step Capital Gardens and the Court of the Highborne
+  when done dm-start
+  tip The first pylon stands in the Capital Gardens, right in front of the entrance. Kill the wandering Ancients before Tendris Warpwood (elite 60), who calls them all. Upstairs, the Court of the Highborne: two more pylons, Illyanna Ravenoak and Magister Kalendris. The Shen'dralar Ancient stands on the bridge of the upper level.
+  accept 7461                         -- Shen'dralar Ancient
+
+step Immol'thar and Prince Tortheldrin
+  when done dm-start
+  tip The last two pylons stand either side of the door of the Prison of Immol'thar: with all five down, its force field is gone. Immol'thar (elite 61) calls adds and moves players to the middle of the room; he enrages at half health. A small tunnel then leads to the Athenaeum: Prince Tortheldrin (elite 60).
+  kill 11496 quest 7461               -- Immol'thar
+  kill 11486 quest 7461               -- Prince Tortheldrin
+
+step The Athenaeum: Elven Legends
+  when done dm-start
+  tip The skeletal remains lie on the floor beside Lorekeeper Lydros, in the Athenaeum: choose to mourn the great loss.
+  interact 179544 quest 7482          -- Skeletal remains, beside Lorekeeper Lydros
+
+step The Shen'dralar Ancient and his treasure
+  when done dm-start
+  tip Back to the Shen'dralar Ancient on the bridge of the Court of the Highborne. His next quest sends you to the Treasure of the Shen'dralar, a chest under the ramp of the Athenaeum: take the one he offers.
+  turnin 7461                         -- Shen'dralar Ancient
+  accept 7462 optional                -- Shen'dralar Ancient
+  accept 7877 optional                -- Shen'dralar Ancient: the same quest, the other version
+  turnin 7462 optional                -- Treasure of the Shen'dralar, under the ramp of the Athenaeum
+  turnin 7877 optional
+
+step Feathermoon Stronghold: Latronicus Moonspear
+  when complete 7488
+  zone Feralas
+  tip Out of Dire Maul, back to Feathermoon Stronghold (the flight from Thalanaar, or the road west and the boat).
+  turnin 7488                         -- Latronicus Moonspear
+
+step Feathermoon Stronghold: Scholar Runethorn
+  when complete 7482
+  zone Feralas
+  turnin 7482                         -- Scholar Runethorn
+
+step Moonglade: Rabine Saturna
+  when complete 5526
+  zone Moonglade
+  tip Shards of the Felvine: Rabine Saturna, in her house in Nighthaven. From Feathermoon, the flight to Moonglade.
+  turnin 5526                         -- Rabine Saturna
+
+step Dire Maul: quests not done
+  label dm-end
+  when done dm-start
+  tip What is left of Dire Maul in the quest log is for another run: keep it for one, or drop it to free the log.
+  abandon 7488 optional
+  abandon 7482 optional
+  abandon 7441 optional
+  abandon 7461 optional
+
+# Groupe Alliance 0.12.0: Shards of the Felvine (5526), taken in Group 30 with its own question,
+# when Dire Maul was skipped or the shard not sealed: nothing brings the guide back to Moonglade.
+step Shards of the Felvine: not done
+  when onquest 5526
+  when !complete 5526
+  tip Shards of the Felvine is not done and the guide does not go back to Dire Maul: abandon it, or keep it for a run of your own.
+  abandon 5526
