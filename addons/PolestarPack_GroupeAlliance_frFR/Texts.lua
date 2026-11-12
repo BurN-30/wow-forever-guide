@@ -2293,7 +2293,6 @@ t.guides["groupe-alliance/21-terres-ingrates-hinterlands"] = (function() return 
 		["{npc:2817}, Valley of Fangs"] = "{npc:2817}, Vallée des Crocs",
 		["{npc:2888}'s next task is an elite hunt: skip it."] = "La tâche suivante de {npc:2888} est une chasse élite : passez-la.",
 		["{npc:2909} waits just outside Uldaman, west of the cave. His amulet is on {npc:2932}, a Shadowforge dwarf (elite 38) outside the dungeon portal, south of {npc:2909}."] = "{npc:2909} attend juste devant Uldaman, à l'ouest de la grotte. Son amulette est sur {npc:2932}, un nain Ombreforge (élite 38) devant le portail du donjon, au sud de {npc:2909}.",
-		["{npc:2909}'s Digsite"] = "Site de fouilles d'{npc:2909}",
 		["{npc:3974}, elite 34"] = "{npc:3974}, élite 34",
 		["{npc:3975} spins with Whirlwind: everyone but the tank steps away until it ends. When he dies, a wave of trainees runs in: fight them at the door."] = "{npc:3975} tourbillonne avec Tourbillon : tout le monde sauf le tank s'éloigne jusqu'à la fin. À sa mort, une vague de recrues arrive : combattez-les à la porte.",
 		["{npc:3975}, elite 40"] = "{npc:3975}, élite 40",

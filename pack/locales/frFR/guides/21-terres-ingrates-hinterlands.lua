@@ -52,10 +52,6 @@ return {
 	-- plural, as words: Scalding Whelps = {npc:2725} Scalding Whelp · Scorched Guardians = {npc:2726} Scorched Guardian
 	["The Scalding Whelps nest in the ravine east of {npc:2888}; leave the Scorched Guardians (elite) alone. The {item:4612} drops rarely: take it if it comes while you grind."] = "Les Dragonnets flamboyants nichent dans le ravin à l'est de {npc:2888} ; laissez tranquilles les Gardiens des terres brûlées (élites). Le {item:4612} tombe rarement : prenez-le s'il tombe pendant que vous tuez des monstres.",
 
-	-- Step 9: Hammertoe Grez's Digsite
-	-- {npc:2909} Hammertoe Grez
-	["{npc:2909}'s Digsite"] = "Site de fouilles d'{npc:2909}",
-
 	-- Step 10: Uldaman: Hammertoe Grez
 	-- {npc:2909} Hammertoe Grez
 	["Uldaman: {npc:2909}"] = "Uldaman : {npc:2909}",

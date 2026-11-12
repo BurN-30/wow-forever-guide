@@ -71,7 +71,11 @@ step Lethlor Ravine
   tip The Scalding Whelps nest in the ravine east of Garek; leave the Scorched Guardians (elite) alone. The Black Drake's Heart drops rarely: take it if it comes while you grind.
   collect 4612 quest 706 optional     -- Black Drake's Heart
 
-step Hammertoe's Digsite
+# Groupe Alliance 0.11.0: was "Hammertoe's Digsite". Once this guide's goals name Hammertoe Grez
+# (Uldaman), forge reads "Hammertoe" in the place name as his first name (GUIDE_FORMAT, "Names in
+# texts"), and Polestar's data has no area 346 to write the place as a token: the step is named
+# after its NPC instead.
+step Sigrun Ironhew
   turnin 706 optional                 -- Sigrun Ironhew
 
 # ---------------------------------------------------------------- Uldaman (optional)
