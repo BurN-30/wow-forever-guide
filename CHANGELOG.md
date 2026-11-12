@@ -2,6 +2,26 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.11.0 (en préparation)
+
+### Français
+- Trois donjons facultatifs de plus, chacun avec sa question « La passer / La faire en groupe » : les Profondeurs de Brassenoire (Groupe 8, Orneval, 24-28), le Kraal de Tranchebauge (Groupe 9, sur la route des Mille pointes, 27-32) et Gnomeregan (nouveau Groupe 10b, entre le Site de fouilles et Dalaran, 29-33). Le guide passe de 54 à 71 quêtes de donjon.
+- Les quêtes se prennent quand le groupe passe près du donneur : Knowledge in the Deeps à Forgefer dès le Groupe 3, The Corruption Abroad à Hurlevent et Researching the Corruption à Auberdine au début du Groupe 8, Gyrodrillmatic Excavationators chez Shoni au début du Groupe 9, le reste de Gnomeregan à Brikabrok et Kharanos. Le détour par Darnassus (Aube d'argent) a sa propre question et le dit.
+- Avant chaque donjon, une étape « avant d'entrer » liste les quêtes à avoir dans le journal et où les reprendre. Dedans, ce qui se ramasse tout du long reste affiché (étape « en chemin »), puis les boss dans l'ordre ; Thaelrid est à voir avant Kelris (sa tête ne tombe que pour qui a la quête).
+- Rendus sans aller-retour : Auberdine et Darnassus à la fin d'Orneval, Forgefer sur le passage du Groupe 8, Mortality Wanes à Darnassus au Groupe 14, A Fine Mess (Gnomeregan) à Baie-du-Butin au Groupe 15.
+- Les lieux à l'intérieur de ces trois donjons viennent du jeu d'origine : ils sont marqués « à vérifier en jeu » dans le guide.
+- Of Lost Honor (Maleterres, Groupe 30) n'est plus demandée à qui n'a pas fait Of Forgotten Memories, la quête élite qui l'ouvre.
+- Nouveau contrôle `tools/check-donjons.py` : il suit le vrai parcours de chaque race, en groupe et seul, et échoue sur une quête de donjon ou de groupe prise avant d'être disponible, un objectif demandé sans la quête, ou un journal de plus de 40 quêtes.
+
+### English
+- Three more optional dungeons, each with its "Skip it / Do it with a group" question: Blackfathom Deeps (Group 8, Ashenvale, 24-28), Razorfen Kraul (Group 9, on the road to Thousand Needles, 27-32) and Gnomeregan (new Group 10b, between the Excavation Site and Dalaran, 29-33). The guide goes from 54 to 71 dungeon quests.
+- Quests are taken as the group passes their giver: Knowledge in the Deeps in Ironforge from Group 3, The Corruption Abroad in Stormwind and Researching the Corruption in Auberdine at the start of Group 8, Gyrodrillmatic Excavationators at Shoni's at the start of Group 9, the rest of Gnomeregan in Tinker Town and Kharanos. The Darnassus detour (Argent Dawn) has its own question and says so.
+- Before each dungeon, a "before going in" step lists the quests to have in the log and where to get them back. Inside, what drops all along stays listed ("along the way" step), then the bosses in order; Thaelrid comes before Kelris (his head drops only for players on the quest).
+- Hand-ins without back-and-forth: Auberdine and Darnassus at the end of Ashenvale, Ironforge on Group 8's way, Mortality Wanes in Darnassus in Group 14, A Fine Mess (Gnomeregan) in Booty Bay in Group 15.
+- Places inside these three dungeons come from the original game: they are marked "to check in game" in the guide.
+- Of Lost Honor (Plaguelands, Group 30) is no longer asked of players who skipped Of Forgotten Memories, the elite quest that opens it.
+- New check `tools/check-donjons.py`: it follows each race's real route, in a group and alone, and fails on a dungeon or group quest taken before it is available, an objective asked without the quest, or a quest log over 40.
+
 ## v0.10.0 (2026-11-12)
 
 ### Français
