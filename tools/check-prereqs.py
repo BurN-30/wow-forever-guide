@@ -66,7 +66,18 @@ def main():
     info = donnees()
     tous = sorted(GUIDES.glob("*.guide"))
     departs = [f for f in tous if f.name.startswith("01-")]
-    suite = [f for f in tous if not f.name.startswith("01-")]
+    # Après les départs, l'ordre du jeu : la chaîne des `next` depuis le Groupe 1 (0.11.0 ;
+    # avant, l'ordre des noms de fichiers, qui mettait le 11 avant le 10 et le 10b).
+    par_id = {}
+    for f in tous:
+        m = re.search(r"^guide (\S+)", f.read_text(encoding="utf-8"), re.M)
+        n = re.search(r"^next (\S+)", f.read_text(encoding="utf-8"), re.M)
+        par_id[m.group(1)] = (f, n.group(1).rstrip(",") if n else None)
+    suite, gid = [], "groupe-alliance/02-rendez-vous-hurlevent"
+    while gid in par_id and par_id[gid][0] not in suite:
+        suite.append(par_id[gid][0])
+        gid = par_id[gid][1]
+    suite += [f for f in tous if not f.name.startswith("01-") and f not in suite]  # hors parcours (Solo)
     alertes = {}
     for depart in departs:
         pris, rendus = set(), set()
