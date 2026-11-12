@@ -345,5 +345,17 @@ python tools/check-lua.py
 
 `check-prereqs.py` suit le parcours de chaque race dans l'ordre des guides et signale une quête prise avant ses prérequis (données du guide compilé, `pre` : l'un d'eux suffit, `preAll` : tous, comme Polestar), une quête exclue par une autre déjà prise, prise deux fois ou rendue sans avoir été prise ; les quêtes facultatives, de classe ou d'une branche (`when`) donnent des alertes à vérifier à la main.
 
-`check-lua.py` (Python et `pip install lupa`) vérifie la syntaxe Lua 5.1 du module et du paquet, et fait tourner le module Groupe Alliance contre de petites imitations du jeu : il attrape les fautes de frappe, pas les bugs visibles en jeu.
+`check-lua.py` (Python et `pip install lupa`) vérifie la syntaxe Lua 5.1 du module et du paquet, et fait tourner le module Groupe Alliance contre de petites imitations du jeu : il attrape les fautes de frappe, pas les bugs visibles en jeu. Il vérifie aussi que seuls les addons prévus sont éteints à la première installation (`## DefaultState: disabled`).
+
+`check-pack.py` charge **tout le paquet ensemble** dans un faux jeu (`tools/fakegame.lua`), dans l'ordre du jeu, client français puis anglais, puis rejoue la connexion, un combat, une infobulle d'objet et l'ouverture de la carte. Il liste par addon les erreurs, les globals écrits par plusieurs addons, les commandes slash, les variables de console écrites, les fonctions et cadres du jeu accrochés ou réécrits, les infobulles, les événements et les bibliothèques LibStub. `--extra <dossier>` ajoute des addons candidats (jamais livrés) pour juger leur cohabitation. Il lui faut une copie de l'interface du client Forever et ses textes :
+
+```
+git clone --depth 1 --filter=blob:none --sparse -b forever https://github.com/Gethe/wow-ui-source.git <ui>
+git -C <ui> sparse-checkout set --no-cone "*.lua" "*.xml" "*.toc"
+curl -o <textes>/GlobalStrings_frFR.csv "https://wago.tools/db2/GlobalStrings/csv?build=1.60.1.70888&product=wowf&locale=frFR"
+curl -o <textes>/GlobalStrings_enUS.csv "https://wago.tools/db2/GlobalStrings/csv?build=1.60.1.70888&product=wowf&locale=enUS"
+python tools/check-pack.py --ui <ui> --strings <textes> [--extra <dossier d'addons>] [--report rapport.md]
+```
+
+Une erreur du banc est une piste à lire, pas la preuve d'un bug en jeu ; un banc propre veut seulement dire « se charge et démarre ».
 </details>
