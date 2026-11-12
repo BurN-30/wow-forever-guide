@@ -7168,15 +7168,6 @@ do
 					},
 				},
 				{
-					title = "Blackfathom Deeps: {npc:4831} and {npc:6243}",
-					note = "{npc:4831}, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). {npc:6243}, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.",
-					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
-					goals = {
-						{ t = "kill", target = "Lady Sarevess", npc = 4831, group = { kind = "elite", rank = 1 } },
-						{ t = "kill", target = "Gelihast", npc = 6243, optional = true, group = { kind = "elite", rank = 1 } },
-					},
-				},
-				{
 					title = "Blackfathom Deeps: {npc:4787}",
 					note = "Thaelrid of the {object:92525} waits in an underwater cave whose entrance is south-east of {npc:4887}'s pool. Talk to him BEFORE killing Kelris: Kelris's head drops only for players who already hold {quest:1200}.",
 					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" }, { k = "onquest", q = { 1198 } } },
@@ -7192,6 +7183,15 @@ do
 					goals = {
 						{ t = "talk", npc = 4787, npcName = "Argent Guard Thaelrid" },
 						{ t = "accept", quest = 1200, title = "Blackfathom Villainy", npc = 4787, npcName = "Argent Guard Thaelrid", minLevel = 18, qlvl = 27, optional = true },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: {npc:4831} and {npc:6243}",
+					note = "{npc:4831}, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). {npc:6243}, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
+					goals = {
+						{ t = "kill", target = "Lady Sarevess", npc = 4831, group = { kind = "elite", rank = 1 } },
+						{ t = "kill", target = "Gelihast", npc = 6243, optional = true, group = { kind = "elite", rank = 1 } },
 					},
 				},
 				{

@@ -147,23 +147,23 @@ return {
 	-- {item:5359} Lorgalis Manuscript · {object:13949} Pitted Iron Chest
 	["{item:5359}, in the {object:13949}"] = "{item:5359}, dans {object:13949}",
 
-	-- Step 32: Blackfathom Deeps: Lady Sarevess and Gelihast
-	-- {npc:4831} Lady Sarevess · {npc:6243} Gelihast
-	["Blackfathom Deeps: {npc:4831} and {npc:6243}"] = "Profondeurs de Brassenoire : {npc:4831} et {npc:6243}",
-	-- {npc:4831} Lady Sarevess · {npc:6243} Gelihast
-	["{npc:4831}, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). {npc:6243}, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them."] = "{npc:4831}, le deuxième boss, vient avec deux gardes : interrompre son Éclair fourchu, qui rebondit entre les joueurs proches (s'écarter). {npc:6243}, le murloc de la grotte latérale, est facultatif : tirer ses murlocs un par un ; la pierre derrière lui donne la Bénédiction de Brassenoire. Les cultistes du Marteau du crépuscule viennent ensuite.",
-
-	-- Step 33: Blackfathom Deeps: Argent Guard Thaelrid
+	-- Step 32: Blackfathom Deeps: Argent Guard Thaelrid
 	-- {npc:4787} Argent Guard Thaelrid
 	["Blackfathom Deeps: {npc:4787}"] = "Profondeurs de Brassenoire : {npc:4787}",
 	-- {object:92525} Argent Dawn · {npc:4887} Ghamoo-ra · {quest:1200} Blackfathom Villainy
 	["Thaelrid of the {object:92525} waits in an underwater cave whose entrance is south-east of {npc:4887}'s pool. Talk to him BEFORE killing Kelris: Kelris's head drops only for players who already hold {quest:1200}."] = "Thaelrid, de {object:92525}, attend dans une grotte sous l'eau dont l'entrée est au sud-est du bassin de {npc:4887}. Lui parler AVANT de tuer Kelris : la tête de Kelris ne tombe que pour les joueurs qui ont déjà {quest:1200}.",
 
-	-- Step 34: Blackfathom Deeps: Argent Guard Thaelrid (without the Darnassus quest)
+	-- Step 33: Blackfathom Deeps: Argent Guard Thaelrid (without the Darnassus quest)
 	-- {npc:4787} Argent Guard Thaelrid · {zone:1457} Darnassus
 	["Blackfathom Deeps: {npc:4787} (without the {zone:1457} quest)"] = "Profondeurs de Brassenoire : {npc:4787} (sans la quête de {zone:1457})",
 	-- {object:92525} Argent Dawn · {npc:4887} Ghamoo-ra · {quest:1200} Blackfathom Villainy · {quest:1198} In Search of Thaelrid
 	["Thaelrid of the {object:92525} waits in an underwater cave whose entrance is south-east of {npc:4887}'s pool. He offers {quest:1200} without {quest:1198} too. Talk to him BEFORE killing Kelris; not offered? Carry on."] = "Thaelrid, de {object:92525}, attend dans une grotte sous l'eau dont l'entrée est au sud-est du bassin de {npc:4887}. Il propose {quest:1200} même sans {quest:1198}. Lui parler AVANT de tuer Kelris ; pas proposée ? Continuer.",
+
+	-- Step 34: Blackfathom Deeps: Lady Sarevess and Gelihast
+	-- {npc:4831} Lady Sarevess · {npc:6243} Gelihast
+	["Blackfathom Deeps: {npc:4831} and {npc:6243}"] = "Profondeurs de Brassenoire : {npc:4831} et {npc:6243}",
+	-- {npc:4831} Lady Sarevess · {npc:6243} Gelihast
+	["{npc:4831}, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). {npc:6243}, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them."] = "{npc:4831}, le deuxième boss, vient avec deux gardes : interrompre son Éclair fourchu, qui rebondit entre les joueurs proches (s'écarter). {npc:6243}, le murloc de la grotte latérale, est facultatif : tirer ses murlocs un par un ; la pierre derrière lui donne la Bénédiction de Brassenoire. Les cultistes du Marteau du crépuscule viennent ensuite.",
 
 	-- Step 35: Blackfathom Deeps: Twilight Lord Kelris
 	-- {npc:4832} Twilight Lord Kelris

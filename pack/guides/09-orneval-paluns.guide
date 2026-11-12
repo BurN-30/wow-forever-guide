@@ -253,13 +253,10 @@ step Blackfathom Deeps: Ghamoo-ra's pool
   collect 5359 quest 971 optional             -- Lorgalis Manuscript, in the Pitted Iron Chest
   kill 4887                                   -- Ghamoo-ra
 
-step Blackfathom Deeps: Lady Sarevess and Gelihast
-  when group 1275
-  when done bfd-start
-  tip Lady Sarevess, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). Gelihast, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.
-  kill 4831                                   -- Lady Sarevess
-  kill 6243 optional                          -- Gelihast
-
+# Groupe Alliance 0.11.0 (review): Thaelrid comes right after Ghamoo-ra, before Lady Sarevess:
+# both WoW Forever quest guides put him by Ghamoo-ra's pool (Warcraft Tavern, 11/11/2026: "an
+# alcove of the room where you face Ghamoo-ra"; Icy Veins, 05/10/2026: "a cave hidden underwater,
+# its entrance on the southeast of the area where Ghamoo-ra is").
 step Blackfathom Deeps: Argent Guard Thaelrid
   when group 1275
   when done bfd-start
@@ -279,6 +276,13 @@ step Blackfathom Deeps: Argent Guard Thaelrid (without the Darnassus quest)
   tip Thaelrid of the Argent Dawn waits in an underwater cave whose entrance is south-east of Ghamoo-ra's pool. He offers Blackfathom Villainy without In Search of Thaelrid too. Talk to him BEFORE killing Kelris; not offered? Carry on.
   talk 4787                                   -- Argent Guard Thaelrid
   accept 1200 optional
+
+step Blackfathom Deeps: Lady Sarevess and Gelihast
+  when group 1275
+  when done bfd-start
+  tip Lady Sarevess, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). Gelihast, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.
+  kill 4831                                   -- Lady Sarevess
+  kill 6243 optional                          -- Gelihast
 
 step Blackfathom Deeps: Twilight Lord Kelris
   label bfd-kelris
