@@ -2,7 +2,7 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
-## v0.11.0 (en préparation)
+## v0.11.0 (2026-11-12)
 
 ### Français
 - Trois donjons facultatifs de plus, chacun avec sa question « La passer / La faire en groupe » : les Profondeurs de Brassenoire (Groupe 8, Orneval, 22-28), le Kraal de Tranchebauge (Groupe 9, sur la route des Mille pointes, 25-33) et Gnomeregan (nouveau Groupe 10b, entre le Site de fouilles et Dalaran, 25-34). Avec Maraudon et les compléments de Zul'Farrak et du Temple englouti (plus bas), le guide passe de 54 à 92 quêtes de donjon (plus 3 de la suite de A Sign of Hope).
