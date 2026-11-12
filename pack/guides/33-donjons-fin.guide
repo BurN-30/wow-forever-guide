@@ -575,6 +575,7 @@ step Lower Blackrock Spire: quests not done
   label lbrs-end
   when done lbrs-start
   tip What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or drop it to free the log.
+  tip Upper Blackrock Spire, up the stairs on the left past the Spire's entrance, is not in this guide: a dungeon made for a raid group of ten, behind a door that opens only with the Seal of Ascension. The seal takes Vaelan's two quests, given inside Lower Blackrock Spire: the gemstones of Highlord Omokk, War Master Voone and Overlord Wyrmthalak with an Unadorned Seal from the Spire's orcs, then Emberstrife, a drake of the Wyrmbog in Dustwallow Marsh, beaten down and bound with the Orb of Draconic Energy.
   abandon 4701 optional
   abandon 4729 optional
   abandon 4862 optional
