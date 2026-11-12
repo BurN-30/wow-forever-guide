@@ -1,19 +1,21 @@
 # BuffAlerts Forever 3.11.4 (Thork, MIT) : correctifs du pack wow-forever-guide.
 # Base : BuffAlertsForever 3.11.4.zip publié sur CurseForge (SHA-256 e94eb4ac...5b0). Détail : docs/buffalerts-correctifs.md
 # Appliquer depuis le dossier qui contient BuffAlertsForever : git -c core.autocrlf=false apply -p1 buffalerts-3.11.4.patch
-# (fichiers de l'addon en LF, gardés tels quels ; seuls le .toc et le nouveau PackPatches.lua diffèrent de la release).
+# (fichiers de l'addon en LF, gardés tels quels ; seuls le .toc et le nouveau PackPatches.lua diffèrent de la release ;
+# le .toc : la ligne X-Pack-Patches, « DefaultState: disabled » (éteint à la première installation) et PackPatches.lua).
 diff -ruN a/BuffAlertsForever/BuffAlertsForever.toc b/BuffAlertsForever/BuffAlertsForever.toc
 --- a/BuffAlertsForever/BuffAlertsForever.toc
 +++ b/BuffAlertsForever/BuffAlertsForever.toc
-@@ -3,6 +3,7 @@
+@@ -3,6 +3,8 @@
  ## Notes: Buff and ability alerts for Warrior, Warlock, Mage, Paladin, Druid, Shaman, Rogue, Priest and Hunter.
  ## Author: Thork
  ## Version: 3.11.4
-+## X-Pack-Patches: wow-forever-guide (BurN-30) - food/campfire names in every language, Battle Shout sound, options keys in combat, alerts under the buffs (medium size), Reset to defaults; see PackPatches.lua and docs/buffalerts-correctifs.md
++## X-Pack-Patches: wow-forever-guide (BurN-30) - food/campfire names in every language, Battle Shout sound, options keys in combat, alerts under the buffs (medium size), Reset to defaults, off on a first install; see PackPatches.lua and docs/buffalerts-correctifs.md
++## DefaultState: disabled
  ## IconTexture: Interface\AddOns\BuffAlertsForever\icon.png
  ## SavedVariables: BuffAlertsForeverDB
  
-@@ -10,3 +11,4 @@
+@@ -10,3 +12,4 @@
  Core.lua
  Party.lua
  Options.lua

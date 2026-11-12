@@ -2,6 +2,14 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.10.0 (en préparation)
+
+### Français
+- BuffAlerts Forever est éteint à la première installation : rien ne s'affiche tant qu'il n'est pas coché. L'allumer : écran des personnages, bouton AddOns, cocher BuffAlerts Forever. Qui l'avait déjà le garde tel qu'il était (coché ou non).
+
+### English
+- BuffAlerts Forever is off on a first install: nothing shows until it is ticked. Turn it on: character screen, AddOns button, tick BuffAlerts Forever. Whoever already had it keeps it as it was (ticked or not).
+
 ## v0.9.9 (2026-11-11)
 
 ### Français

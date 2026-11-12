@@ -3,7 +3,8 @@
 ## Notes: Buff and ability alerts for Warrior, Warlock, Mage, Paladin, Druid, Shaman, Rogue, Priest and Hunter.
 ## Author: Thork
 ## Version: 3.11.4
-## X-Pack-Patches: wow-forever-guide (BurN-30) - food/campfire names in every language, Battle Shout sound, options keys in combat, alerts under the buffs (medium size), Reset to defaults; see PackPatches.lua and docs/buffalerts-correctifs.md
+## X-Pack-Patches: wow-forever-guide (BurN-30) - food/campfire names in every language, Battle Shout sound, options keys in combat, alerts under the buffs (medium size), Reset to defaults, off on a first install; see PackPatches.lua and docs/buffalerts-correctifs.md
+## DefaultState: disabled
 ## IconTexture: Interface\AddOns\BuffAlertsForever\icon.png
 ## SavedVariables: BuffAlertsForeverDB
 

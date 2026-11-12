@@ -9,6 +9,8 @@
    line whose quest has a tip (and only then), the tooltip gets the tip line, /ga answers.
 3. Per-objective tips: each goals["item:<id>"] (npc, object) key of Tips.lua is an objective line
    of that quest in the built guides.
+4. Escort badge: the quests marked in the built guides are the pack's known escorts.
+5. Off by default: only the addons of OFF_BY_DEFAULT say `## DefaultState: disabled`.
 It cannot replace a test in game: it only catches typos and broken calls.
 """
 import pathlib, sys
@@ -341,4 +343,16 @@ if marked != ESCORTS:
 if extra - quests:
     escort_bad.append("listed but not in the guides " + str(sorted(extra - quests)))
 print(f"escort badge: {len(marked)} quests ({len(extra)} from our list), " + ("ok" if not escort_bad else "FAILED: " + "; ".join(escort_bad)))
-sys.exit(1 if bad or failed or missing or escort_bad else 0)
+
+# 5. Off by default (0.10.0): the addons below are unticked in the AddOn list on a first
+# install (`## DefaultState: disabled` in their .toc, read by the client only for an addon it
+# has no saved state for); every other folder of addons/ loads as the client's default.
+OFF_BY_DEFAULT = {"BuffAlertsForever"}
+state_bad = []
+for d in sorted(p for p in (repo / "addons").iterdir() if p.is_dir()):
+    toc = (d / f"{d.name}.toc").read_text(encoding="utf-8-sig")
+    states = [m.lower() for m in re.findall(r"^## DefaultState:\s*(\S+)", toc, re.M)]
+    if (states == ["disabled"]) != (d.name in OFF_BY_DEFAULT):
+        state_bad.append(f"{d.name} {states or 'none'}")
+print(f"off by default: {', '.join(sorted(OFF_BY_DEFAULT))}, " + ("ok" if not state_bad else "FAILED: " + "; ".join(state_bad)))
+sys.exit(1 if bad or failed or missing or escort_bad or state_bad else 0)

@@ -6,7 +6,7 @@ Français d'abord, [English below](#english).
 
 Le pack installe BuffAlerts Forever 3.11.4 (Thork, licence MIT), à partir du fichier publié sur [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlertsForever 3.11.4.zip`, SHA-256 `e94eb4ac638033fbd6b7b3e0e0d0df4a7cef89637108ad06c17f7fc28654c5b0`). Le numéro de version reste 3.11.4 dans `BuffAlertsForever.toc`, pour que l'auteur reconnaisse la base ; une ligne `## X-Pack-Patches:` signale les changements.
 
-Les fichiers de la release ne sont pas modifiés. Tout ce que le pack change tient dans un seul fichier ajouté, `PackPatches.lua`, chargé en dernier par le `.toc` : il passe après `Data.lua`, `Core.lua`, `Party.lua` et `Options.lua`, mais avant les événements `ADDON_LOADED` et `PLAYER_LOGIN`, donc avant que l'addon lise ses réglages. Pour reprendre une nouvelle version de l'addon : recopier la release, puis rajouter au `.toc` la ligne `## X-Pack-Patches:` et la ligne `PackPatches.lua`, et vérifier que chaque correctif sert encore (voir « À retirer quand »).
+Les fichiers de la release ne sont pas modifiés, sauf trois lignes du `.toc` : `## X-Pack-Patches:`, `## DefaultState: disabled` (éteint à la première installation, réglage 6) et `PackPatches.lua`. Tout le code que le pack change tient dans ce seul fichier ajouté, `PackPatches.lua`, chargé en dernier par le `.toc` : il passe après `Data.lua`, `Core.lua`, `Party.lua` et `Options.lua`, mais avant les événements `ADDON_LOADED` et `PLAYER_LOGIN`, donc avant que l'addon lise ses réglages. Pour reprendre une nouvelle version de l'addon : recopier la release, puis rajouter au `.toc` la ligne `## X-Pack-Patches:` et la ligne `PackPatches.lua`, et vérifier que chaque correctif sert encore (voir « À retirer quand »).
 
 Le diff complet est dans [`buffalerts-3.11.4.patch`](buffalerts-3.11.4.patch) : appliqué sur la release décompressée (`git -c core.autocrlf=false apply -p1 docs/buffalerts-3.11.4.patch` depuis le dossier qui contient `BuffAlertsForever`), il redonne le dossier `addons/BuffAlertsForever` du dépôt octet pour octet (vérifié le 10/11/2026). Les fichiers de l'addon sont en LF et le restent. Chaque correctif porte la marque `[pack patch #n]` dans `PackPatches.lua`.
 
@@ -125,6 +125,24 @@ Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces 
 - Correction (`PackPatches.lua`, `[pack patch #5]`) : `ns.ResetDefaults` est enveloppée ; les valeurs simples (`hideAll`) sont remises à zéro directement et retirées de `ns.DEFAULTS` le temps de l'appel d'origine, puis remises.
 - À retirer quand : l'amont saute les valeurs qui ne sont pas des tables.
 
+### Réglage 6 : éteint à la première installation (0.10.0)
+
+- Clients : les deux. Demande de Nathan : BuffAlerts ne doit pas s'imposer ; qui en veut l'allume.
+- Avant la 0.10.0, l'addon était chargé et actif dès l'installation : toutes les alertes de la classe jouée (tableau plus haut), réglages de l'auteur, plus les réglages 2 et 4.
+- Valeur : `## DefaultState: disabled` dans `BuffAlertsForever.toc`. Aucun fichier Lua ne change.
+- Fonctionnement : le jeu garde, pour chaque personnage, la liste des addons cochés ou décochés (`WTF\Account\<compte>\<royaume>\<personnage>\AddOns.txt`). `DefaultState` ne sert qu'à un addon dont le jeu n'a encore aucun état enregistré sur le compte : il apparaît alors décoché dans la liste des addons et ne se charge pas (aucune mémoire, aucun événement). Un addon déjà vu garde l'état enregistré. Sources : [Warcraft Wiki, TOC format](https://warcraft.wiki.gg/wiki/TOC_format) (« Set to disabled to require the user to explicitly enable the addon in the AddOn List », lu le 12/11/2026) ; l'interface du client Forever 1.60.1.70888 lit cet état par défaut (`C_AddOns.IsAddOnDefaultEnabled`, `Blizzard_AddOnList/AddonList.lua` 961 et 969 à 978 : entrée `ADDON_LIST_RESET_TO_DEFAULT` du clic droit dans la liste des addons ; dépôt Gethe/wow-ui-source, branche `forever`) ; la règle « aucun état enregistré sur le compte » vient d'un code décompilé du client 3.3.5 (`UIUtil/AddOns.cpp`, `ComputeAddOnEnableState`) : supposée identique sur Forever, à vérifier en jeu.
+- Ce que cela change :
+
+| Joueur | BuffAlerts après la mise à jour |
+|---|---|
+| Première installation du paquet | décoché, rien ne s'affiche |
+| Ami qui a déjà le paquet (0.4.0 à 0.9.9) | inchangé : coché s'il l'était, décoché s'il l'avait décoché |
+| Nouveau personnage d'un ami qui a déjà le paquet | même état que ses autres personnages (coché partout : coché) |
+
+- Pourquoi pas un réglage interne (« alertes cachées à la première installation », `hideAll = true` par défaut) : l'addon resterait chargé pour rien ; un ami qui a déjà le paquet garde aussi son `hideAll = false` enregistré, donc rien de mieux ; et si les réglages reviennent vraiment à zéro à chaque connexion (limite annoncée par l'auteur, voir « Laissé tel quel »), les alertes se recacheraient à chaque connexion, même allumées à la main. La case de la liste des addons est gardée par le jeu lui-même, pas par l'addon.
+- Allumer : écran des personnages, bouton **AddOns**, cocher **BuffAlerts Forever** (pour tous les personnages ou celui-ci), puis entrer en jeu. En jeu : menu Échap, **AddOns**, cocher, puis recharger l'interface. Éteindre chez un ami qui l'a déjà : décocher au même endroit.
+- Contrôle du banc (`tools/check-lua.py`, partie 5) : seul `BuffAlertsForever` porte `## DefaultState: disabled` parmi les dossiers de `addons/`.
+
 ### Conflits examinés
 
 - **Polestar** : commandes `/balert` et `/buffalerts` (BuffAlerts) distinctes de `/polestar`, `/pole`, `/way`, `/ga` et `/ptip`. Noms globaux propres (`BuffAlertsForeverDB`, `BuffAlertsForever_<alerte>`, `BuffAlertsForeverOptions`). Aucun crochet (`hooksecurefunc`), aucune infobulle, aucun cadre protégé touché : pas de corruption (*taint*) possible par ce chemin. Les icônes ne prennent pas la souris (`EnableMouse(false)`, `Core.lua` 467) : la flèche, ses boutons et le cadre de guide restent cliquables à travers.
@@ -155,12 +173,13 @@ Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces 
 9. **Réglages** (une classe, un client) : décocher une option dans `/balert`, se déconnecter puis se reconnecter : noter si l'option revient (bogue annoncé) ou reste.
 10. **Gestionnaire de temps de recharge** (guerrier) : la barre du Cri de guerre et l'icône de BuffAlerts ne se recouvrent pas.
 11. **Reset to defaults** (une classe, un client) : dans `/balert`, « Move icons », glisser une icône ailleurs, « Lock icons », puis « Reset to defaults ». Attendu : aucune erreur (BugSack reste muet), l'icône revient sous les améliorations, « Hide all alerts » décoché.
+12. **Éteint à la première installation** (réglage 6, un client) : sur un compte qui n'a jamais eu BuffAlerts (ou après avoir retiré la ligne `BuffAlertsForever` de chaque `AddOns.txt` du compte, jeu fermé), installer le paquet : BuffAlerts Forever décoché dans la liste des addons, aucune icône en jeu. Le cocher : les alertes reviennent. Sur le compte d'un ami qui l'avait déjà : toujours coché après la mise à jour.
 
 ## English
 
 BuffAlerts Forever 3.11.4 (Thork, MIT licence), installed from the file published on [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlertsForever 3.11.4.zip`, SHA-256 `e94eb4ac638033fbd6b7b3e0e0d0df4a7cef89637108ad06c17f7fc28654c5b0`). `BuffAlertsForever.toc` keeps version 3.11.4 so the author recognises the base; a `## X-Pack-Patches:` line flags the changes.
 
-The release files are not modified. Everything the pack changes lives in one added file, `PackPatches.lua`, listed last in the `.toc`: it runs after `Data.lua`, `Core.lua`, `Party.lua` and `Options.lua` but before `ADDON_LOADED` and `PLAYER_LOGIN`, so before the addon reads its settings. To take a new upstream version: copy the release, add the `## X-Pack-Patches:` and `PackPatches.lua` lines back to the `.toc`, and check each patch is still needed. The full diff is [`buffalerts-3.11.4.patch`](buffalerts-3.11.4.patch): `git -c core.autocrlf=false apply -p1 docs/buffalerts-3.11.4.patch`, run from the folder holding the unzipped `BuffAlertsForever`, rebuilds the repository's `addons/BuffAlertsForever` byte for byte (checked 2026-11-10; files stay LF). Each patch carries a `[pack patch #n]` mark.
+The release files are not modified, except three `.toc` lines: `## X-Pack-Patches:`, `## DefaultState: disabled` (off on a first install, default 6) and `PackPatches.lua`. All the code the pack changes lives in that one added file, `PackPatches.lua`, listed last in the `.toc`: it runs after `Data.lua`, `Core.lua`, `Party.lua` and `Options.lua` but before `ADDON_LOADED` and `PLAYER_LOGIN`, so before the addon reads its settings. To take a new upstream version: copy the release, add the `## X-Pack-Patches:` and `PackPatches.lua` lines back to the `.toc`, and check each patch is still needed. The full diff is [`buffalerts-3.11.4.patch`](buffalerts-3.11.4.patch): `git -c core.autocrlf=false apply -p1 docs/buffalerts-3.11.4.patch`, run from the folder holding the unzipped `BuffAlertsForever`, rebuilds the repository's `addons/BuffAlertsForever` byte for byte (checked 2026-11-10; files stay LF). Each patch carries a `[pack patch #n]` mark.
 
 ### Method
 
@@ -208,6 +227,15 @@ Class spells are matched by spell ID (`FamilyOf`, `Core.lua` 99-110), each ID va
 - `ns.ResetDefaults` (`Core.lua` 549-556) runs `pairs(def)` on every entry of `ns.DEFAULTS`, but `hideAll` (`Data.lua` 328) is `false`, not a table: Lua error "bad argument #1 to 'pairs' (table expected, got boolean)" when that entry comes up. `pairs` has no fixed order, so some alerts are reset and others not; `Resolve()` and `ns.Update()` never run, and BugSack catches the error. Hits the "Reset to defaults" button and `/balert reset`; reproduced on the bench with the release.
 - Fix (`[pack patch #5]`): `ns.ResetDefaults` is wrapped; plain values (`hideAll`) are reset directly and left out of `ns.DEFAULTS` for the original call, then put back. Drop it once upstream skips non-table entries.
 
+### Default 6: off on a first install (0.10.0)
+
+- Both clients. Nathan's request: BuffAlerts should not push itself on anyone; whoever wants it turns it on. Before 0.10.0 the addon loaded and ran from the install: every alert of the played class, the author's settings plus defaults 2 and 4.
+- Value: `## DefaultState: disabled` in `BuffAlertsForever.toc`; no Lua file changes.
+- How it works: the game keeps, per character, which addons are ticked (`WTF\Account\<account>\<realm>\<character>\AddOns.txt`). `DefaultState` only applies to an addon the game has no saved state for on the account: it shows unticked in the AddOn list and does not load (no memory, no events). An addon already seen keeps its saved state. Sources: [Warcraft Wiki, TOC format](https://warcraft.wiki.gg/wiki/TOC_format) (read 2026-11-12); the Forever 1.60.1.70888 interface reads that default (`C_AddOns.IsAddOnDefaultEnabled`, `Blizzard_AddOnList/AddonList.lua` 961 and 969-978, the AddOn list's `ADDON_LIST_RESET_TO_DEFAULT` right-click entry; Gethe/wow-ui-source, `forever` branch); the "no saved state on the account" rule comes from decompiled 3.3.5 client code (`UIUtil/AddOns.cpp`, `ComputeAddOnEnableState`): assumed the same on Forever, to check in game.
+- Effect: a first install of the pack shows BuffAlerts unticked; a friend who already has the pack (0.4.0 to 0.9.9) keeps it as it was (ticked, or unticked if they unticked it); a new character of such a friend gets the state of their other characters.
+- Why not an in-addon default (`hideAll = true`): the addon would still load for nothing, a friend who already has the pack keeps their saved `hideAll = false` anyway, and if the settings really reset at every login (the author's warning, see "Left as is") the alerts would hide again at every login even when turned on by hand. The AddOn list's tick box is kept by the game itself.
+- Turn it on: character screen, **AddOns** button, tick **BuffAlerts Forever**, then enter the world; in game: Escape menu, **AddOns**, tick, reload the UI. Bench check (`tools/check-lua.py`, part 5): only `BuffAlertsForever` says `## DefaultState: disabled` among the folders of `addons/`.
+
 ### Conflicts checked
 
 - Polestar: distinct slash commands and globals, no hooks, no tooltips, icons do not take the mouse. Layout: in the release the large icons (CENTER, y = +150, 64 px) covered the distance and label under Polestar's arrow at UI scale 1; since default 4 they sit top right, under the buffs, clear of the arrow, the guide window and the minimap. The small top row touches Polestar's transport banner by 4 px.
@@ -227,3 +255,4 @@ Settings reset at login (the author blames the beta client; Polestar's settings 
 6. Options window opened in combat: no blocked action message, Escape closes it.
 7. Settings: untick an option, log out and in, note whether it stays.
 8. Reset to defaults (one class, one client): `/balert`, "Move icons", drag an icon away, "Lock icons", then "Reset to defaults". Expected: no error (BugSack stays quiet), the icon goes back under the buffs, "Hide all alerts" unticked.
+9. Off on a first install (default 6, one client): on an account that never had BuffAlerts (or after removing the `BuffAlertsForever` line from every `AddOns.txt` of the account, game closed), install the pack: BuffAlerts Forever unticked in the AddOn list, no icon in game; tick it and the alerts come back. On a friend's account that already had it: still ticked after the update.
