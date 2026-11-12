@@ -50,3 +50,5 @@ GroupeAlliance\Reliability.lua
 GroupeAlliance\Tips.lua
 GroupeAlliance\Danger.lua
 GroupeAlliance\GroupeAlliance.lua
+GroupeAlliance\ItemUseData.lua
+GroupeAlliance\ItemUse.lua

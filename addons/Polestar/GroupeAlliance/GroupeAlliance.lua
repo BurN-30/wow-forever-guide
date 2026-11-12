@@ -121,6 +121,7 @@ local T = {
 			"Quêtes de l'étape en cours prises et rendues toutes seules. Maj enfoncée : pas cette fois. Clic droit sur une ligne : jamais pour cette quête.",
 			"Changer de guide : /polestar guides, ou le + des onglets.",
 			"/ga lang fr, en ou auto : langue des liens Wowhead.",
+			"/ga objets : allumer ou éteindre la ligne « À quoi sert cet objet » des infobulles d'objets.",
 			"Réduire : bouton _ ; masquer : /polestar hide, raccourci dans Options > Raccourcis > Polestar.",
 			"Roue dentée : réglages de Polestar (flèche, affichage, automatismes).",
 		},
@@ -188,6 +189,7 @@ local T = {
 			"The current step's quests are accepted and turned in for you. Hold Shift: not this time. Right-click a line: never for that quest.",
 			"Change guide: /polestar guides, or the tabs' +.",
 			"/ga lang fr, en or auto: Wowhead link language.",
+			"/ga items: turn the \"What is this item for\" line of item tooltips on or off.",
 			"Reduce: the _ button; hide: /polestar hide, key binding in Options > Keybindings > Polestar.",
 			"Gear: Polestar's settings (arrow, display, automation).",
 		},
@@ -1063,6 +1065,14 @@ end)
 
 SLASH_GROUPEALLIANCE1 = "/ga"
 SlashCmdList.GROUPEALLIANCE = function(msg)
+	-- /ga objets (or items) [on|off]: the "What is this item for" line (ItemUse.lua).
+	local word, state = (msg or ""):lower():match("^%s*(%a+)%s*(%a*)")
+	if (word == "objets" or word == "items") and GA.ItemUseToggle then
+		if state == "on" then GA.ItemUseToggle(true)
+		elseif state == "off" then GA.ItemUseToggle(false)
+		else GA.ItemUseToggle() end
+		return
+	end
 	local arg = (msg or ""):lower():match("lang%s+(%a+)")
 	local db = settings()
 	if arg == "fr" or arg == "en" then db.lang = arg

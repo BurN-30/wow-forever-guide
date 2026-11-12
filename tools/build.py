@@ -14,7 +14,8 @@
    UI/GuideFrame.lua gets the gear, "?" help and "_" reduce buttons at the tab strip's
    right end and the module's entry in a guide line's right-click menu, and
    Core/Automation.lua asks the module before it accepts or turns in a quest, and
-   Quests/PartyChat.lua says only an objective's plain words in party chat (0.9.7)
+   Quests/PartyChat.lua says only an objective's plain words in party chat (0.9.7);
+   ItemUseData.lua is made by tools/item-uses.py from the client's tables (0.10.0)
    (POLESTAR_CHANGES below, each applied exactly once or the build stops). Polestar is GPL-3.0: the changed files say so.
 """
 import pathlib, shutil, subprocess, sys
@@ -23,7 +24,7 @@ forge, root, release = sys.argv[1], sys.argv[2], pathlib.Path(sys.argv[3])
 repo = pathlib.Path(__file__).resolve().parent.parent
 pack = repo / "pack"
 addons = repo / "addons"
-MODULE = ["Reliability.lua", "Tips.lua", "Danger.lua", "GroupeAlliance.lua"]
+MODULE = ["Reliability.lua", "Tips.lua", "Danger.lua", "GroupeAlliance.lua", "ItemUseData.lua", "ItemUse.lua"]
 NOTICE = "Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide)"
 
 POLESTAR_CHANGES = [
