@@ -1,4 +1,4 @@
-# Construit le paquet des addons et GuideWoWForever.exe.
+# Construit le paquet des addons et GuideWoWForever.exe, puis teste une installation (tools/test-installeur.py).
 # Sur un tag vX.Y.Z : publie la release GitHub (ZIP, exe, SHA256SUMS.txt, notes de CHANGELOG.md).
 # Sur une pull request ou à la main (Actions > Release > Run workflow) : construit seulement,
 # les fichiers sont téléchargeables dans l'onglet du run (Artifacts).
@@ -50,6 +50,13 @@ jobs:
           path: |
             dist/
             build/notes.md
+
+      # Installe pour de vrai le paquet avec l'exe construit, dans un faux dossier de jeu et
+      # avec un faux GitHub local (première installation, relance, mise à jour d'une ancienne
+      # version). S'il échoue, le job s'arrête ici : rien n'est publié (les fichiers
+      # construits restent téléchargeables dans l'onglet du run pour comprendre).
+      - name: Test d'installation
+        run: python tools/test-installeur.py dist/GuideWoWForever.exe dist --version $env:VERSION
 
       - name: Publier la release
         if: github.ref_type == 'tag'

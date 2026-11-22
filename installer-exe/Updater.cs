@@ -294,12 +294,39 @@ namespace GuideWoWForever
 			}
 		}
 
-		static Version TocVersion(string addons, string folder)
+		/// <summary>Les .toc d'un dossier d'addon : &lt;nom&gt;.toc, ou un .toc par jeu
+		/// (&lt;nom&gt;_Camelot.toc pour WoW Forever, &lt;nom&gt;_Mainline.toc..., comme PrettyTooltip 1.4),
+		/// que le jeu accepte aussi (même règle que tools/release.py). Rangés pour lire la version :
+		/// &lt;nom&gt;_Camelot.toc, _Forever.toc, &lt;nom&gt;.toc, puis les autres.</summary>
+		static List<string> TocFiles(string dir, string folder)
 		{
-			string toc = Path.Combine(addons, folder, folder + ".toc");
+			var found = new List<string>();
 			try
 			{
-				if (!File.Exists(toc)) return null;
+				if (!Directory.Exists(dir)) return found;
+				var perGame = new Regex("^" + Regex.Escape(folder) + @"_[A-Za-z]+\.toc$", RegexOptions.IgnoreCase);
+				found = Directory.GetFiles(dir, "*.toc").Where(f =>
+				{
+					string n = Path.GetFileName(f);
+					return string.Equals(n, folder + ".toc", StringComparison.OrdinalIgnoreCase) || perGame.IsMatch(n);
+				}).ToList();
+			}
+			catch { }
+			string[] first = { "_Camelot.toc", "_Forever.toc", ".toc" };
+			return found.OrderBy(f =>
+			{
+				string n = Path.GetFileName(f);
+				int i = Array.FindIndex(first, s => string.Equals(n, folder + s, StringComparison.OrdinalIgnoreCase));
+				return i < 0 ? first.Length : i;
+			}).ThenBy(f => f, StringComparer.OrdinalIgnoreCase).ToList();
+		}
+
+		static Version TocVersion(string addons, string folder)
+		{
+			string toc = TocFiles(Path.Combine(addons, folder), folder).FirstOrDefault();
+			try
+			{
+				if (toc == null) return null;
 				foreach (string line in File.ReadLines(toc))
 				{
 					var m = Regex.Match(line, @"^##\s*Version\s*:\s*(\S+)");
@@ -358,8 +385,10 @@ namespace GuideWoWForever
 						Directory.CreateDirectory(Path.GetDirectoryName(dest));
 						e.ExtractToFile(dest, true);
 					}
+				// Chaque dossier doit avoir son .toc : <nom>.toc ou un .toc par jeu (<nom>_Camelot.toc).
 				foreach (string r in roots)
-					if (!File.Exists(Path.Combine(staging, r, r + ".toc"))) throw BadZip(r + "/" + r + ".toc");
+					if (TocFiles(Path.Combine(staging, r), r).Count == 0)
+						throw BadZip(L.T(r + " : ni " + r + ".toc ni " + r + "_<jeu>.toc", r + ": neither " + r + ".toc nor " + r + "_<game>.toc"));
 				if (!roots.Contains("Polestar") || !roots.Contains(PackFolder)) throw BadZip("Polestar, " + PackFolder);
 			}
 			catch (Failure) { DeleteDir(staging); throw; }
