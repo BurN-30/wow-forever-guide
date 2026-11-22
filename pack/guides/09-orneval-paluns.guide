@@ -470,8 +470,8 @@ step To Menethil Harbor
 step Menethil Harbor
   zone Wetlands
   accept 279                              -- Karl Boran, on the pier north of the inn
+  sethome "Deepwater Tavern" npc 1464     -- Innkeeper Helbrek; before the vendor: Polestar opens the goods for the step's first vendor or buy goal at this NPC, and the bind comes first
   vendor nearest
-  sethome "Deepwater Tavern" npc 1464     -- Innkeeper Helbrek
   accept 463                              -- First Mate Fitzsimmons, in the inn
   tip Vincent Hyal, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. Caitlin Grassman stands a short walk north-east of the inn.
   turnin 95737                        -- Caitlin Grassman, inside
