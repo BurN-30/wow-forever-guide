@@ -5933,7 +5933,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/07b-mortemines",
 			pack = "groupe-alliance",
-			title = "Group 6b · The Deadmines (dungeon 18-23, optional)",
+			title = "Group 6b · The Deadmines (dungeon 16-21, optional)",
 			faction = "Alliance",
 			minLevel = 20,
 			maxLevel = 23,
@@ -5945,12 +5945,12 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:1381"] = "A Mysterious Message", ["item:1875"] = "Thistlenettle's Badge", ["item:1894"] = "Miners' Union Card", ["item:2874"] = "An Unsent Letter", ["item:4358"] = "Rough Dynamite", ["item:5397"] = "Defias Gunpowder", ["item:7365"] = "Gnoam Sprecklesprocket", ["item:915"] = "Red Silk Bandana", ["npc:11026"] = "Sprite Jumpsprocket", ["npc:1325"] = "Jasper Fel", ["npc:1646"] = "Baros Alexston", ["npc:1719"] = "Warden Thelwater", ["npc:1763"] = "Gilnid", ["npc:253092"] = "Alba Fairmoon", ["npc:253279"] = "Alba Fairmoon", ["npc:266"] = "Wiley the Black", ["npc:3586"] = "Miner Johnson", ["npc:467"] = "The Defias Traitor", ["npc:550"] = "Defias Messenger", ["npc:622"] = "Goblin Engineer", ["npc:624"] = "Undead Excavator", ["npc:626"] = "Foreman Thistlenettle", ["npc:636"] = "Defias Blackguard", ["npc:639"] = "Edwin VanCleef", ["npc:641"] = "Goblin Woodcarver", ["npc:642"] = "Sneed's Shredder", ["npc:643"] = "Sneed", ["npc:644"] = "Rhahk'Zor", ["npc:646"] = "Mr. Smite", ["npc:647"] = "Captain Greenskin", ["npc:656"] = "Wilder Thistlenettle", ["npc:6579"] = "Shoni the Shilent", ["npc:820"] = "Scout Riell", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:28027"] = "Dwarven District", ["object:581792"] = "Detonator", ["object:81"] = "Sentinel Hill", ["object:83"] = "Jangolode Mine", ["quest:214"] = "Red Silk Bandanas", ["quest:92748"] = "Explosive Consultation", ["zone:1431"] = "Duskwood", ["zone:1436"] = "Westfall", ["zone:1453"] = "Stormwind" },
+			names = { ["item:1381"] = "A Mysterious Message", ["item:1875"] = "Thistlenettle's Badge", ["item:1894"] = "Miners' Union Card", ["item:2874"] = "An Unsent Letter", ["item:4358"] = "Rough Dynamite", ["item:5397"] = "Defias Gunpowder", ["item:6895"] = "Jordan's Smithing Hammer", ["item:6953"] = "Verigan's Fist", ["item:6994"] = "Whitestone Oak Lumber", ["item:7365"] = "Gnoam Sprecklesprocket", ["item:915"] = "Red Silk Bandana", ["npc:11026"] = "Sprite Jumpsprocket", ["npc:1325"] = "Jasper Fel", ["npc:1646"] = "Baros Alexston", ["npc:1719"] = "Warden Thelwater", ["npc:1763"] = "Gilnid", ["npc:253092"] = "Alba Fairmoon", ["npc:253279"] = "Alba Fairmoon", ["npc:266"] = "Wiley the Black", ["npc:3586"] = "Miner Johnson", ["npc:467"] = "The Defias Traitor", ["npc:550"] = "Defias Messenger", ["npc:622"] = "Goblin Engineer", ["npc:624"] = "Undead Excavator", ["npc:626"] = "Foreman Thistlenettle", ["npc:636"] = "Defias Blackguard", ["npc:639"] = "Edwin VanCleef", ["npc:641"] = "Goblin Woodcarver", ["npc:642"] = "Sneed's Shredder", ["npc:643"] = "Sneed", ["npc:644"] = "Rhahk'Zor", ["npc:646"] = "Mr. Smite", ["npc:647"] = "Captain Greenskin", ["npc:656"] = "Wilder Thistlenettle", ["npc:6579"] = "Shoni the Shilent", ["npc:820"] = "Scout Riell", ["object:1680"] = "Shadowfang Keep", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:28027"] = "Dwarven District", ["object:581792"] = "Detonator", ["object:81"] = "Sentinel Hill", ["object:83"] = "Jangolode Mine", ["quest:1654"] = "The Test of Righteousness", ["quest:214"] = "Red Silk Bandanas", ["quest:92748"] = "Explosive Consultation", ["zone:1431"] = "Duskwood", ["zone:1436"] = "Westfall", ["zone:1453"] = "Stormwind" },
 			written = { ["Escort the {npc:467}"] = "Escort the Defias Traitor", ["Out by the back of the cove; {npc:253279} waits right outside with the {object:581792}. No item reward on this chain: XP and reputation."] = "Out by the back of the cove; Alba waits right outside with the Detonator. No item reward on this chain: XP and reputation." },
 			steps = {
 				{
 					title = "Lakeshire: {npc:266}",
-					note = "The Deadmines: a 5-player dungeon under Moonbrook, in {zone:1436}, best at 18 to 23. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to {zone:1431}.",
+					note = "The Deadmines: a 5-player dungeon under Moonbrook, in {zone:1436}, levels 16 to 21 (17 to 26 in the group finder): here, at 20 or more, it goes well. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to {zone:1431}.",
 					label = "dm-start",
 					when = { { k = "group", q = 132 }, { k = "turnedin", q = 65 }, { k = "level", op = "<", n = 25 } },
 					goals = {
@@ -6055,8 +6055,19 @@ do
 					},
 				},
 				{
+					title = "Paladins: {quest:1654}",
+					note = "The Goblin Woodcarvers of the lumber room, before {npc:642}, drop the {item:6994}. The chain also needs {item:6895} ({object:1680}, not on this route) and the Kor Gem (Blackfathom Deeps): Polestar's class guides ({item:6953}) cover all of it.",
+					only = { classes = { "PALADIN" } },
+					when = { { k = "done", label = "dm-start" }, { k = "onquest", q = { 1654 } } },
+					along = "dm-sneed",
+					goals = {
+						{ t = "collect", quest = 1654, title = "The Test of Righteousness", item = 6994, itemName = "Whitestone Oak Lumber", count = 1, oi = 1, note = "{item:6994}: Goblin Woodcarvers", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
 					title = "{npc:642} and {npc:643}",
 					note = "Clear every {npc:641} of the lumber room first, pulling them back to the previous room: the Shredder's Terrify sends you running into them. {npc:643} jumps out when it breaks; he disarms.",
+					label = "dm-sneed",
 					when = { { k = "done", label = "dm-start" } },
 					goals = {
 						{ t = "collect", quest = 2040, title = "Underground Assault", item = 7365, itemName = "Gnoam Sprecklesprocket", count = 1, oi = 1, optional = true, note = "{item:7365}: {npc:642}", group = { kind = "elite", rank = 1 } },
@@ -6658,7 +6669,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/08b-prison",
 			pack = "groupe-alliance",
-			title = "Group 7b · The Stockade (dungeon 24-28, optional)",
+			title = "Group 7b · The Stockade (dungeon 23-29, optional)",
 			faction = "Alliance",
 			minLevel = 24,
 			maxLevel = 27,
@@ -6674,7 +6685,7 @@ do
 			steps = {
 				{
 					title = "{zone:1453}: Stockade quests",
-					note = "The Stockade, {zone:1453}'s prison taken over by rioting Defias, is a group dungeon in the canals between the {object:2101} and {object:2100}, best at 24 to 28. Alone? Skip it: the guide goes on to {zone:1440}.",
+					note = "The Stockade, {zone:1453}'s prison taken over by rioting Defias, is a group dungeon in the canals between the {object:2101} and {object:2100}, levels 23 to 29. Alone? Skip it: the guide goes on to {zone:1440}.",
 					when = { { k = "group", q = 387 }, { k = "level", op = "<", n = 30 } },
 					goals = {
 						{ t = "note", text = "Keep 6 free quest log slots. Every player takes the quests on their own; meet at the prison gate for the run." },
@@ -6686,7 +6697,7 @@ do
 				},
 				{
 					title = "Enter the Stockade",
-					note = "The gate is by {npc:1719}, at the top of the stairs on the canal. Group of 5 at 24 to 28, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.",
+					note = "The gate is by {npc:1719}, at the top of the stairs on the canal. Group of 5 at 23 to 29, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.",
 					when = { { k = "group", q = 387 }, { k = "level", op = "<", n = 30 } },
 					goals = {
 						{ t = "goto", text = "The Stockade", map = 1453, x = 52.4, y = 70, r = 20 },
@@ -6893,7 +6904,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:12220"] = "Intact Elemental Bracer", ["item:13536"] = "Horn of Awakening", ["item:15885"] = "Pendant of the Sea Lion", ["item:5352"] = "Book: The Powers Below", ["item:5359"] = "Lorgalis Manuscript", ["item:5366"] = "Glowing Soul Gem", ["item:5424"] = "Ancient Statuette", ["item:5455"] = "Divined Scroll", ["item:5456"] = "Divining Scroll", ["item:5463"] = "Glowing Gem", ["item:5879"] = "Twilight Pendant", ["item:5952"] = "Corrupted Brain Stem", ["item:6898"] = "Orb of Soran'ruk", ["npc:1007"] = "Mosshide Gnoll", ["npc:1010"] = "Mosshide Fenrunner", ["npc:1020"] = "Mottled Raptor", ["npc:1021"] = "Mottled Screecher", ["npc:1024"] = "Bluegill Murloc", ["npc:1033"] = "Monstrous Ooze", ["npc:1040"] = "Fen Creeper", ["npc:1076"] = "Merrin Rockweaver", ["npc:1078"] = "Ormer Ironbraid", ["npc:1111"] = "Leech Stalker", ["npc:11218"] = "Kerlonian Evershade", ["npc:11219"] = "Liladris Moonriver", ["npc:11401"] = "Priestess Alathea", ["npc:11406"] = "High Priest Rohan", ["npc:11800"] = "Silva Fil'naveth", ["npc:11802"] = "Dendrite Starblaze", ["npc:11865"] = "Buliwyf Stonehand", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1242"] = "Karl Boran", ["npc:1244"] = "Rethiel the Greenwarden", ["npc:1259"] = "Gobbler", ["npc:1417"] = "Young Wetlands Crocolisk", ["npc:1440"] = "Milton Sheaf", ["npc:1444"] = "Brother Kristoff", ["npc:1464"] = "Innkeeper Helbrek", ["npc:1480"] = "Caitlin Grassman", ["npc:1573"] = "Gryth Thurden", ["npc:2086"] = "Valstag Ironjaw", ["npc:2092"] = "Pilot Longbeard", ["npc:2093"] = "Einar Stonegrip", ["npc:2094"] = "James Halloran", ["npc:2096"] = "Tarrel Rockweaver", ["npc:2097"] = "Harlo Barnaby", ["npc:2104"] = "Captain Stoutfist", ["npc:210995"] = "Alonso", ["npc:2111"] = "Sida", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:258785"] = "High Priestess Mims", ["npc:2786"] = "Gerrig Bonegrip", ["npc:3585"] = "Therysil", ["npc:3649"] = "Thundris Windweaver", ["npc:3664"] = "Ilkrud Magthrull", ["npc:3691"] = "Raene Wolfrunner", ["npc:3846"] = "Talen", ["npc:3885"] = "Sentinel Velene Starstrike", ["npc:3891"] = "Teronis' Corpse", ["npc:3894"] = "Pelturas Whitemoon", ["npc:3901"] = "Illiyana", ["npc:3916"] = "Shael'dryn", ["npc:3917"] = "Befouled Water Elemental", ["npc:3970"] = "Llana", ["npc:3987"] = "Dal Bloodclaw", ["npc:4040"] = "Cave Stalker", ["npc:4077"] = "Gaxim Rustfizzle", ["npc:4078"] = "Collin Mauren", ["npc:4080"] = "Kaela Shadowspear", ["npc:4081"] = "Lomac Gearstrip", ["npc:4201"] = "Ziz Fizziks", ["npc:4217"] = "Mathrengyl Bearwalker", ["npc:4276"] = "Piznik", ["npc:4783"] = "Dawnwatcher Selgorm", ["npc:4784"] = "Argent Guard Manados", ["npc:4787"] = "Argent Guard Thaelrid", ["npc:4809"] = "Twilight Acolyte", ["npc:4829"] = "Aku'mai", ["npc:4831"] = "Lady Sarevess", ["npc:4832"] = "Twilight Lord Kelris", ["npc:4887"] = "Ghamoo-ra", ["npc:4984"] = "Argos Nightwhisper", ["npc:5082"] = "Vincent Hyal", ["npc:6243"] = "Gelihast", ["npc:6247"] = "Doan Karhan", ["npc:8997"] = "Gershala Nightwhisper", ["npc:928"] = "Lord Grayson Shadowbreaker", ["object:1162"] = "Menethil Harbor", ["object:12893"] = "Grove of the Ancients", ["object:13352"] = "Shrine of Aessina", ["object:13949"] = "Pitted Iron Chest", ["object:142151"] = "Sealed Barrel", ["object:1668"] = "Dun Algaz", ["object:1680"] = "Shadowfang Keep", ["object:171524"] = "Tinker Town", ["object:176370"] = "Boat to Auberdine", ["object:176634"] = "Kerlonian's Chest", ["object:19555"] = "Windshear Crag", ["object:19559"] = "Sun Rock Retreat", ["object:19863"] = "Maestra's Post", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "The Slaughtered Lamb", ["object:259"] = "Half-buried Barrel", ["object:261"] = "Damaged Crate", ["object:28027"] = "Dwarven District", ["object:32359"] = "Military Ward", ["object:32362"] = "Mystic Ward", ["object:32372"] = "Great Forge", ["object:32383"] = "Forlorn Cavern", ["object:32386"] = "Hall of Mysteries", ["object:376"] = "Dun Modr", ["object:92525"] = "Argent Dawn", ["quest:1009"] = "Ruuzel", ["quest:1010"] = "Bathran's Hair", ["quest:1033"] = "Elune's Tear", ["quest:1034"] = "The Ruins of Stardust", ["quest:1198"] = "In Search of Thaelrid", ["quest:1199"] = "Twilight Falls", ["quest:1200"] = "Blackfathom Villainy", ["quest:1275"] = "Researching the Corruption", ["quest:337"] = "An Old History Book", ["quest:5061"] = "Aquatic Form", ["quest:5673"] = "Elune's Grace", ["quest:94819"] = "Contingency Plan", ["quest:971"] = "Knowledge in the Deeps", ["quest:98197"] = "Spoils of War", ["quest:98283"] = "Carnage", ["zone:1413"] = "Barrens", ["zone:1426"] = "Dun Morogh", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1437"] = "Wetlands", ["zone:1439"] = "Darkshore", ["zone:1440"] = "Ashenvale", ["zone:1442"] = "Stonetalon Mountains", ["zone:1450"] = "Moonglade", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			names = { ["item:12220"] = "Intact Elemental Bracer", ["item:13536"] = "Horn of Awakening", ["item:15885"] = "Pendant of the Sea Lion", ["item:5352"] = "Book: The Powers Below", ["item:5359"] = "Lorgalis Manuscript", ["item:5366"] = "Glowing Soul Gem", ["item:5424"] = "Ancient Statuette", ["item:5455"] = "Divined Scroll", ["item:5456"] = "Divining Scroll", ["item:5463"] = "Glowing Gem", ["item:5879"] = "Twilight Pendant", ["item:5952"] = "Corrupted Brain Stem", ["item:6898"] = "Orb of Soran'ruk", ["item:6914"] = "Soran'ruk Fragment", ["item:6995"] = "Corrupted Kor Gem", ["npc:1007"] = "Mosshide Gnoll", ["npc:1010"] = "Mosshide Fenrunner", ["npc:1020"] = "Mottled Raptor", ["npc:1021"] = "Mottled Screecher", ["npc:1024"] = "Bluegill Murloc", ["npc:1033"] = "Monstrous Ooze", ["npc:1040"] = "Fen Creeper", ["npc:1076"] = "Merrin Rockweaver", ["npc:1078"] = "Ormer Ironbraid", ["npc:1111"] = "Leech Stalker", ["npc:11218"] = "Kerlonian Evershade", ["npc:11219"] = "Liladris Moonriver", ["npc:11401"] = "Priestess Alathea", ["npc:11406"] = "High Priest Rohan", ["npc:11800"] = "Silva Fil'naveth", ["npc:11802"] = "Dendrite Starblaze", ["npc:11865"] = "Buliwyf Stonehand", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1242"] = "Karl Boran", ["npc:1244"] = "Rethiel the Greenwarden", ["npc:1259"] = "Gobbler", ["npc:1417"] = "Young Wetlands Crocolisk", ["npc:1440"] = "Milton Sheaf", ["npc:1444"] = "Brother Kristoff", ["npc:1480"] = "Caitlin Grassman", ["npc:1573"] = "Gryth Thurden", ["npc:2086"] = "Valstag Ironjaw", ["npc:2092"] = "Pilot Longbeard", ["npc:2093"] = "Einar Stonegrip", ["npc:2094"] = "James Halloran", ["npc:2096"] = "Tarrel Rockweaver", ["npc:2097"] = "Harlo Barnaby", ["npc:2104"] = "Captain Stoutfist", ["npc:210995"] = "Alonso", ["npc:2111"] = "Sida", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:258785"] = "High Priestess Mims", ["npc:2786"] = "Gerrig Bonegrip", ["npc:3585"] = "Therysil", ["npc:3649"] = "Thundris Windweaver", ["npc:3664"] = "Ilkrud Magthrull", ["npc:3691"] = "Raene Wolfrunner", ["npc:3846"] = "Talen", ["npc:3885"] = "Sentinel Velene Starstrike", ["npc:3891"] = "Teronis' Corpse", ["npc:3894"] = "Pelturas Whitemoon", ["npc:3901"] = "Illiyana", ["npc:3916"] = "Shael'dryn", ["npc:3917"] = "Befouled Water Elemental", ["npc:3970"] = "Llana", ["npc:3987"] = "Dal Bloodclaw", ["npc:4040"] = "Cave Stalker", ["npc:4077"] = "Gaxim Rustfizzle", ["npc:4078"] = "Collin Mauren", ["npc:4080"] = "Kaela Shadowspear", ["npc:4081"] = "Lomac Gearstrip", ["npc:4201"] = "Ziz Fizziks", ["npc:4217"] = "Mathrengyl Bearwalker", ["npc:4276"] = "Piznik", ["npc:4783"] = "Dawnwatcher Selgorm", ["npc:4784"] = "Argent Guard Manados", ["npc:4787"] = "Argent Guard Thaelrid", ["npc:4809"] = "Twilight Acolyte", ["npc:4829"] = "Aku'mai", ["npc:4831"] = "Lady Sarevess", ["npc:4832"] = "Twilight Lord Kelris", ["npc:4887"] = "Ghamoo-ra", ["npc:4984"] = "Argos Nightwhisper", ["npc:5082"] = "Vincent Hyal", ["npc:6243"] = "Gelihast", ["npc:6247"] = "Doan Karhan", ["npc:8997"] = "Gershala Nightwhisper", ["npc:928"] = "Lord Grayson Shadowbreaker", ["object:1162"] = "Menethil Harbor", ["object:12893"] = "Grove of the Ancients", ["object:13352"] = "Shrine of Aessina", ["object:13949"] = "Pitted Iron Chest", ["object:142151"] = "Sealed Barrel", ["object:1668"] = "Dun Algaz", ["object:1680"] = "Shadowfang Keep", ["object:171524"] = "Tinker Town", ["object:176370"] = "Boat to Auberdine", ["object:176634"] = "Kerlonian's Chest", ["object:19555"] = "Windshear Crag", ["object:19559"] = "Sun Rock Retreat", ["object:19863"] = "Maestra's Post", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "The Slaughtered Lamb", ["object:259"] = "Half-buried Barrel", ["object:261"] = "Damaged Crate", ["object:28027"] = "Dwarven District", ["object:32359"] = "Military Ward", ["object:32362"] = "Mystic Ward", ["object:32372"] = "Great Forge", ["object:32383"] = "Forlorn Cavern", ["object:32386"] = "Hall of Mysteries", ["object:376"] = "Dun Modr", ["object:92525"] = "Argent Dawn", ["quest:1009"] = "Ruuzel", ["quest:1010"] = "Bathran's Hair", ["quest:1033"] = "Elune's Tear", ["quest:1034"] = "The Ruins of Stardust", ["quest:1198"] = "In Search of Thaelrid", ["quest:1199"] = "Twilight Falls", ["quest:1200"] = "Blackfathom Villainy", ["quest:1275"] = "Researching the Corruption", ["quest:1442"] = "Seeking the Kor Gem", ["quest:1740"] = "The Orb of Soran'ruk", ["quest:337"] = "An Old History Book", ["quest:5061"] = "Aquatic Form", ["quest:5673"] = "Elune's Grace", ["quest:94819"] = "Contingency Plan", ["quest:971"] = "Knowledge in the Deeps", ["quest:98197"] = "Spoils of War", ["quest:98283"] = "Carnage", ["zone:1413"] = "Barrens", ["zone:1426"] = "Dun Morogh", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1437"] = "Wetlands", ["zone:1439"] = "Darkshore", ["zone:1440"] = "Ashenvale", ["zone:1442"] = "Stonetalon Mountains", ["zone:1450"] = "Moonglade", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
 			written = { ["Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to {object:376} and north of Einar's camp. Any ooze there may hold {npc:2111}'s bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of {npc:1244}; almost every one drops flint."] = "Black, Crimson and Monstrous Oozes fill Ironbeard's Tomb, just west of the road to Dun Modr and north of Einar's camp. Any ooze there may hold Sida's bag.\nMosshide Fenrunners and Mistweavers roam the riverbanks just west and south of Rethiel; almost every one drops flint.", ["Escort {npc:11218} to his bag at the southern edge of {zone:1439}, then hand the quest in at {object:19863}."] = "Escort Kerlonian to his bag at the southern edge of Darkshore, then hand the quest in at Maestra's Post.", ["Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's {object:19555}. {npc:4080} and {npc:4077} camp on the Webwinder Path south-west of the crag."] = "Head south past Mystral Lake into the Talondeep Path tunnel; it comes out in Stonetalon's Windshear Crag. Kaela and Gaxim camp on the Webwinder Path south-west of the crag.", ["Leave by the portal and go on along the coast: {npc:8997}'s and the {zone:1457} hand-ins wait for the end of {zone:1440}, at Auberdine."] = "Leave by the portal and go on along the coast: Gershala's and the Darnassus hand-ins wait for the end of Ashenvale, at Auberdine.", ["Take the boat from Stormwind Harbor to Auberdine. Join the two half pendants into the {item:15885} and cast Teleport: {zone:1450}: {npc:11802} is in Nighthaven. Then {npc:11800} in Nighthaven flies Druids straight to Rut'theran Village. {npc:11802} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart."] = "Take the boat from Stormwind Harbor to Auberdine. Join the two half pendants into the Pendant of the Sea Lion and cast Teleport: Moonglade: Dendrite Starblaze is in Nighthaven. Then Silva Fil'naveth in Nighthaven flies Druids straight to Rut'theran Village. Dendrite stands upstairs in his building: go up inside, the arrow cannot tell the floors apart.", ["{npc:11218} sleeps at the {object:12893} in southern {zone:1439}. Use the {item:13536} to wake him and lead him south along the road to his bag, by the three-way fork at the southern edge of {zone:1439}; blow the horn again whenever he falls asleep. Do not cross into {zone:1440} with him: on Forever the escort fails there.\nCareful: Two scripted ambushes of three mobs each attack along the road.\nTimed quest: 25 minutes, hand-in to {npc:11219} at {object:19863} included. Wake him only when ready to go straight on."] = "Kerlonian sleeps at the Grove of the Ancients in southern Darkshore. Use the Horn of Awakening to wake him and lead him south along the road to his bag, by the three-way fork at the southern edge of Darkshore; blow the horn again whenever he falls asleep. Do not cross into Ashenvale with him: on Forever the escort fails there.\nCareful: Two scripted ambushes of three mobs each attack along the road.\nTimed quest: 25 minutes, hand-in to Liladris at Maestra's Post included. Wake him only when ready to go straight on.", ["{npc:3664} and his voidwalkers hold the Ruins of Ordil'Aran south of the shrine. Pull his guards first."] = "Ilkrud and his voidwalkers hold the Ruins of Ordil'Aran south of the shrine. Pull his guards first." },
 			steps = {
 				{
@@ -6970,7 +6981,7 @@ do
 				},
 				{
 					title = "{zone:1453}: {npc:4984} (Blackfathom Deeps, optional)",
-					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, best at 24 to 28. This guide takes its quests on the way, runs it from the Zoram Strand, then hands them in at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
+					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, levels 22 to 28 (24 to 32 in the group finder). This guide takes its quests on the way, runs it from the Zoram Strand, then hands them in at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
 					only = { classes = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK" } },
 					when = { { k = "group", q = 1275 }, { k = "level", op = "<", n = 30 } },
 					goals = {
@@ -6995,7 +7006,7 @@ do
 				},
 				{
 					title = "Auberdine: {npc:8997} (Blackfathom Deeps, optional)",
-					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, best at 24 to 28. Its quests are taken here and on the way, the dungeon is run from the Zoram Strand, and they are handed in back at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
+					note = "Blackfathom Deeps: a 5-player dungeon on the north-west coast of {zone:1440}, levels 22 to 28 (24 to 32 in the group finder). Its quests are taken here and on the way, the dungeon is run from the Zoram Strand, and they are handed in back at Auberdine. Alone? Skip it: the guide goes on in {zone:1440}.",
 					label = "bfd-start",
 					when = { { k = "group", q = 1275 }, { k = "level", op = "<", n = 30 } },
 					goals = {
@@ -7138,11 +7149,11 @@ do
 				},
 				{
 					title = "Blackfathom Deeps: before going in",
-					note = "The portal is in the half-sunken temple at the north end of the Zoram Strand: swim down to it. Group of 5 at 24 to 28; every enemy inside is elite.",
+					note = "The portal is in the half-sunken temple at the north end of the Zoram Strand: swim down to it. Group of 5, levels 22 to 28; every enemy inside is elite.",
 					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
 					goals = {
 						{ t = "note", text = "In the quest log before going in: {quest:1275} ({npc:8997}, Auberdine). If you took them: {quest:1198} and {quest:1199} ({zone:1457}, a detour), {quest:971} ({npc:2786}, {zone:1455}, offered in Group 3: too far to fetch now). Nothing to bring." },
-						{ t = "note", text = "Warlocks: The {item:6898} ({npc:6247}, in the {zone:1413}) takes three fragments from the Twilight Acolytes here and one from {object:1680}; it is not on this route." },
+						{ t = "note", text = "Warlocks: {quest:1740} ({npc:6247}, in the {zone:1413}) takes three fragments from the Twilight Acolytes here and one from {object:1680}; it is not on this route." },
 						{ t = "goto", text = "Blackfathom Deeps", map = 1440, x = 14.5, y = 14.2, f = "e", r = 25 },
 					},
 				},
@@ -7158,21 +7169,32 @@ do
 					},
 				},
 				{
+					title = "Paladins: {quest:1442}",
+					note = "The Blackfathom Tide Priestesses, Oracles and Sea Witches (the naga casters) drop the {item:6995}, about 1 in 2. {npc:3649} in Auberdine cleanses it, on the way back.",
+					only = { classes = { "PALADIN" } },
+					when = { { k = "done", label = "bfd-start" }, { k = "onquest", q = { 1442 } } },
+					along = "bfd-kelris",
+					goals = {
+						{ t = "collect", quest = 1442, title = "Seeking the Kor Gem", item = 6995, itemName = "Corrupted Kor Gem", count = 1, oi = 1, map = 1440, x = 13.55, y = 12.06, f = "e", spots = { { x = 13.8, y = 9.3, r = 80, n = 10 }, { x = 16.2, y = 11.3, r = 58, n = 5 }, { x = 13.6, y = 12.1, r = 15, n = 1, alt = true }, { x = 17.7, y = 11.1, r = 15, n = 1, alt = true } }, note = "{item:6995}: naga casters", from = "Blackfathom Tide Priestess", fromKind = "npc", fromRank = 1, fromAlso = "Blackfathom Oracle", fromId = 4802, fromAlsoId = 4803, fromNpcs = { { npc = 4802, npcName = "Blackfathom Tide Priestess" }, { npc = 4803, npcName = "Blackfathom Oracle" } }, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Warlocks: {quest:1740}",
+					note = "The Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from {object:1680}, not on this route: Polestar's class guides ({item:6898}) cover it.",
+					only = { classes = { "WARLOCK" } },
+					when = { { k = "done", label = "bfd-start" }, { k = "onquest", q = { 1740 } } },
+					along = "bfd-kelris",
+					goals = {
+						{ t = "collect", quest = 1740, title = "The Orb of Soran'ruk", item = 6914, itemName = "Soran'ruk Fragment", count = 3, oi = 1, note = "{item:6914}: Twilight Acolytes", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
 					title = "Blackfathom Deeps: {npc:4887}'s pool",
 					note = "The great turtle {npc:4887} lives in the first big pool. The {item:5359} lies in a chest underwater, in an alcove north of that pool: swim down for it, every player with the quest opens the chest. {npc:4787} waits in another underwater cave, its entrance south-east of the same pool (next step).",
 					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
 					goals = {
 						{ t = "collect", quest = 971, title = "Knowledge in the Deeps", item = 5359, itemName = "Lorgalis Manuscript", count = 1, oi = 1, optional = true, note = "{item:5359}, in the {object:13949}" },
 						{ t = "kill", target = "Ghamoo-ra", npc = 4887, group = { kind = "elite", rank = 1 } },
-					},
-				},
-				{
-					title = "Blackfathom Deeps: {npc:4831} and {npc:6243}",
-					note = "{npc:4831}, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). {npc:6243}, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.",
-					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
-					goals = {
-						{ t = "kill", target = "Lady Sarevess", npc = 4831, group = { kind = "elite", rank = 1 } },
-						{ t = "kill", target = "Gelihast", npc = 6243, optional = true, group = { kind = "elite", rank = 1 } },
 					},
 				},
 				{
@@ -7191,6 +7213,15 @@ do
 					goals = {
 						{ t = "talk", npc = 4787, npcName = "Argent Guard Thaelrid" },
 						{ t = "accept", quest = 1200, title = "Blackfathom Villainy", npc = 4787, npcName = "Argent Guard Thaelrid", minLevel = 18, qlvl = 27, optional = true },
+					},
+				},
+				{
+					title = "Blackfathom Deeps: {npc:4831} and {npc:6243}",
+					note = "{npc:4831}, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). {npc:6243}, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.",
+					when = { { k = "group", q = 1275 }, { k = "done", label = "bfd-start" } },
+					goals = {
+						{ t = "kill", target = "Lady Sarevess", npc = 4831, group = { kind = "elite", rank = 1 } },
+						{ t = "kill", target = "Gelihast", npc = 6243, optional = true, group = { kind = "elite", rank = 1 } },
 					},
 				},
 				{
@@ -7435,7 +7466,7 @@ do
 					note = "{npc:5082}, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. {npc:1480} stands a short walk north-east of the inn.\n{npc:2104} stands in Menethil Keep.",
 					goals = {
 						{ t = "accept", quest = 279, title = "Claws from the Deep", npc = 1242, npcName = "Karl Boran", minLevel = 20, qlvl = 22, map = 1437, x = 8.32, y = 58.57, z = 8, f = "e", note = "{npc:1242}, on the pier north of the inn" },
-						{ t = "sethome", npc = 1464, npcName = "Innkeeper Helbrek", location = "Deepwater Tavern", map = 1437, x = 10.7, y = 60.95, z = 10.1, f = "e", note = "{npc:1464}; before the vendor: Polestar opens the goods for the step's first vendor or buy goal at this NPC, and the bind comes first" },
+						{ t = "sethome", npc = 1464, npcName = "Innkeeper Helbrek", location = "Deepwater Tavern", map = 1437, x = 10.7, y = 60.95, z = 10.1, f = "e" },
 						{ t = "vendor", candidates = { { npc = 1461, npcName = "Murndan Derth", map = 1437, x = 11.33, y = 59.59, z = 11.6, f = "e", faction = "A" }, candidateRecords[72], candidateRecords[73], candidateRecords[61], candidateRecords[74], candidateRecords[43], candidateRecords[75], candidateRecords[42], candidateRecords[41], candidateRecords[54], candidateRecords[51], candidateRecords[40], candidateRecords[50], candidateRecords[45], candidateRecords[38], candidateRecords[26], candidateRecords[36], candidateRecords[44], candidateRecords[37], candidateRecords[22], candidateRecords[53], candidateRecords[27], candidateRecords[23], candidateRecords[30], candidateRecords[28], candidateRecords[76], candidateRecords[77], candidateRecords[78], candidateRecords[25], candidateRecords[24], candidateRecords[39], candidateRecords[34], candidateRecords[32], candidateRecords[46], candidateRecords[62], candidateRecords[79], candidateRecords[80], candidateRecords[33], candidateRecords[81], candidateRecords[82], candidateRecords[31], candidateRecords[49], candidateRecords[83], candidateRecords[48], candidateRecords[56], candidateRecords[47], candidateRecords[55], candidateRecords[69], candidateRecords[71], candidateRecords[84], candidateRecords[70], candidateRecords[59], candidateRecords[60], candidateRecords[35], candidateRecords[29], candidateRecords[57], candidateRecords[58], candidateRecords[85], candidateRecords[12], candidateRecords[86], candidateRecords[14], candidateRecords[87], candidateRecords[88], candidateRecords[89], candidateRecords[1], candidateRecords[90], candidateRecords[5], candidateRecords[9], candidateRecords[15], candidateRecords[20], candidateRecords[2], candidateRecords[3], candidateRecords[4], candidateRecords[8], candidateRecords[18], candidateRecords[91], candidateRecords[92], candidateRecords[10], candidateRecords[11], candidateRecords[19], candidateRecords[93], candidateRecords[21], candidateRecords[13], candidateRecords[17], candidateRecords[16], candidateRecords[63], candidateRecords[94], candidateRecords[7], candidateRecords[6], candidateRecords[64], candidateRecords[65], candidateRecords[66], candidateRecords[67], candidateRecords[68] } },
 						{ t = "accept", quest = 463, title = "The Greenwarden", npc = 1239, npcName = "First Mate Fitzsimmons", minLevel = 20, qlvl = 21, closedBy = { 276 }, preTitles = { [276] = "Tramping Paws" }, map = 1437, x = 10.9, y = 59.64, z = 10, f = "e", note = "{npc:1239}, in the inn" },
 						{ t = "turnin", quest = 95737, title = "Seeking Caitlin", npc = 1480, npcName = "Caitlin Grassman", map = 1437, x = 11.88, y = 58.82, z = 11, f = "e", note = "{npc:1480}, inside" },
@@ -7762,7 +7793,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/10-site-de-fouilles",
 			pack = "groupe-alliance",
-			title = "Group 10 · Excavation Site: {zone:1437} (dungeon 28-32)",
+			title = "Group 10 · Excavation Site: {zone:1437} (dungeon 26-28)",
 			faction = "Alliance",
 			minLevel = 29,
 			maxLevel = 32,
@@ -7786,7 +7817,7 @@ do
 				},
 				{
 					title = "{object:1162}: dungeon quests",
-					note = "Excavation Site: a 5-player Forever dungeon up the hill in the middle of the {zone:1437}, best at 28 to 31, with 5 players (4 with a real tank or healer). Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards. Alone? Skip it: the guide goes on to Dalaran.",
+					note = "Excavation Site: a 5-player Forever dungeon up the hill in the middle of the {zone:1437}, levels 26 to 28 (26 to 33 in the group finder): a little above, as here, it goes faster; with 5 players (4 with a real tank or healer). Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards. Alone? Skip it: the guide goes on to Dalaran.",
 					label = "xs-start",
 					when = { { k = "group", q = 95647 } },
 					goals = {
@@ -7903,7 +7934,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/10b-gnomeregan",
 			pack = "groupe-alliance",
-			title = "Group 10b · Gnomeregan (dungeon 29-33, optional)",
+			title = "Group 10b · Gnomeregan (dungeon 25-34, optional)",
 			faction = "Alliance",
 			minLevel = 30,
 			maxLevel = 33,
@@ -7915,18 +7946,19 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:1206"] = "Moss Agate", ["item:2842"] = "Silver Bar", ["item:9277"] = "Techbot's Memory Core", ["item:9278"] = "Essential Artificial", ["item:9279"] = "White Punch Card", ["item:9280"] = "Yellow Punch Card", ["item:9281"] = "Red Punch Card", ["item:9282"] = "Blue Punch Card", ["item:9283"] = "Empty Leaden Collection Phial", ["item:9284"] = "Full Leaden Collection Phial", ["item:9308"] = "Grime-Encrusted Object", ["item:9309"] = "Robo-mechanical Guts", ["item:9316"] = "Prismatic Punch Card", ["item:9364"] = "Heavy Leaden Collection Phial", ["item:9365"] = "High Potency Radioactive Fallout", ["npc:1268"] = "Ozzie Togglevolt", ["npc:6169"] = "Klockmort Spannerspan", ["npc:6212"] = "Dark Iron Agent", ["npc:6213"] = "Irradiated Invader", ["npc:6229"] = "Crowd Pummeler 9-60", ["npc:6231"] = "Techbot", ["npc:6235"] = "Electrocutioner 6000", ["npc:6569"] = "Gnoarn", ["npc:6579"] = "Shoni the Shilent", ["npc:6826"] = "Talvash del Kissel", ["npc:7079"] = "Viscous Fallout", ["npc:7800"] = "Mekgineer Thermaplugg", ["npc:7850"] = "Kernobee", ["npc:7915"] = "Walking Bomb", ["npc:7937"] = "High Tinker Mekkatorque", ["npc:7944"] = "Tinkmaster Overspark", ["npc:7950"] = "Master Mechanic Castpipe", ["object:1162"] = "Menethil Harbor", ["object:142344"] = "Artificial Extrapolator", ["object:142345"] = "Matrix Punchograph 3005-A", ["object:142475"] = "Matrix Punchograph 3005-B", ["object:142476"] = "Matrix Punchograph 3005-C", ["object:142487"] = "Sparklematic 5200", ["object:142696"] = "Matrix Punchograph 3005-D", ["object:171524"] = "Tinker Town", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32362"] = "Mystic Ward", ["quest:2922"] = "Save Techbot's Brain!", ["quest:2924"] = "Essential Artificials", ["quest:2926"] = "Gnogaine", ["quest:2928"] = "Gyrodrillmatic Excavationators", ["quest:2929"] = "The Grand Betrayal", ["quest:2930"] = "Data Rescue", ["quest:2945"] = "Grime-Encrusted Ring", ["quest:2947"] = "Return of the Ring", ["quest:2962"] = "The Only Cure is More Green Glow", ["zone:1426"] = "Dun Morogh", ["zone:1437"] = "Wetlands", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			names = { ["item:1206"] = "Moss Agate", ["item:2842"] = "Silver Bar", ["item:9277"] = "Techbot's Memory Core", ["item:9278"] = "Essential Artificial", ["item:9279"] = "White Punch Card", ["item:9280"] = "Yellow Punch Card", ["item:9281"] = "Red Punch Card", ["item:9282"] = "Blue Punch Card", ["item:9283"] = "Empty Leaden Collection Phial", ["item:9284"] = "Full Leaden Collection Phial", ["item:9308"] = "Grime-Encrusted Object", ["item:9309"] = "Robo-mechanical Guts", ["item:9316"] = "Prismatic Punch Card", ["item:9364"] = "Heavy Leaden Collection Phial", ["item:9365"] = "High Potency Radioactive Fallout", ["npc:1268"] = "Ozzie Togglevolt", ["npc:6169"] = "Klockmort Spannerspan", ["npc:6212"] = "Dark Iron Agent", ["npc:6213"] = "Irradiated Invader", ["npc:6229"] = "Crowd Pummeler 9-60", ["npc:6231"] = "Techbot", ["npc:6235"] = "Electrocutioner 6000", ["npc:6569"] = "Gnoarn", ["npc:6579"] = "Shoni the Shilent", ["npc:6826"] = "Talvash del Kissel", ["npc:7079"] = "Viscous Fallout", ["npc:7800"] = "Mekgineer Thermaplugg", ["npc:7850"] = "Kernobee", ["npc:7915"] = "Walking Bomb", ["npc:7917"] = "Brother Sarno", ["npc:7937"] = "High Tinker Mekkatorque", ["npc:7944"] = "Tinkmaster Overspark", ["npc:7950"] = "Master Mechanic Castpipe", ["object:1162"] = "Menethil Harbor", ["object:142344"] = "Artificial Extrapolator", ["object:142345"] = "Matrix Punchograph 3005-A", ["object:142475"] = "Matrix Punchograph 3005-B", ["object:142476"] = "Matrix Punchograph 3005-C", ["object:142487"] = "Sparklematic 5200", ["object:142696"] = "Matrix Punchograph 3005-D", ["object:171524"] = "Tinker Town", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32362"] = "Mystic Ward", ["quest:2922"] = "Save Techbot's Brain!", ["quest:2923"] = "Tinkmaster Overspark", ["quest:2924"] = "Essential Artificials", ["quest:2926"] = "Gnogaine", ["quest:2928"] = "Gyrodrillmatic Excavationators", ["quest:2929"] = "The Grand Betrayal", ["quest:2930"] = "Data Rescue", ["quest:2945"] = "Grime-Encrusted Ring", ["quest:2947"] = "Return of the Ring", ["quest:2962"] = "The Only Cure is More Green Glow", ["zone:1426"] = "Dun Morogh", ["zone:1437"] = "Wetlands", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
 			written = { ["Collected all through the dungeon. {item:9309} (24 for {npc:6579}): the troggs, slimes, leper gnomes and machines. {quest:2924}: the Artificial Extrapolators, rectangular boxes on the floor all around the dungeon; each one vanishes once used, so a full group on the quest may have to search the whole dungeon. Every player with the quest loots their own."] = "Collected all through the dungeon. Robo-mechanical Guts (24 for Shoni): the troggs, slimes, leper gnomes and machines. Essential Artificials: the Artificial Extrapolators, rectangular boxes on the floor all around the dungeon; each one vanishes once used, so a full group on the quest may have to search the whole dungeon. Every player with the quest loots their own.", ["Take the Deeprun Tram to {zone:1453}: {npc:6579} is in the {object:28027}, by the tram. Group 11 (Dalaran) starts in {zone:1453}."] = "Take the Deeprun Tram to Stormwind: Shoni is in the Dwarven District, by the tram. Group 11 (Dalaran) starts in Stormwind.", ["{object:142487} machines stand in the room before the Dormitory: put the {quest:2945} in one to clean it. In the Dormitory, {npc:7850} waits before the {npc:7079} room: his escort runs all the way back to the dungeon's entrance; near the end a countdown starts, get him out before it reaches zero. His reward waits at {object:3204}, on the route of Group 15. {object:142475}, in the Dormitory south of the Clean Room, turns the Yellow card into a Blue one."] = "The Sparklematic 5200 machines stand in the room before the Dormitory: put the Grime-Encrusted Ring in one to clean it. In the Dormitory, Kernobee waits before the Viscous Fallout room: his escort runs all the way back to the dungeon's entrance; near the end a countdown starts, get him out before it reaches zero. His reward waits at Booty Bay, on the route of Group 15. Matrix Punchograph 3005-B, in the Dormitory south of the Clean Room, turns the Yellow card into a Blue one." },
 			steps = {
 				{
 					title = "{zone:1455}: Gnomeregan quests",
-					note = "Gnomeregan: a 5-player dungeon under {zone:1426}, best at 29 to 33; {npc:7800}, the last boss, is 34. Every quest giver stands in {object:171524}. From the {zone:1437}: fly from {object:1162} to {zone:1455}. Alone? Skip it: the guide goes on to Dalaran.",
+					note = "Gnomeregan: a 5-player dungeon under {zone:1426}, levels 25 to 34 (29 to 38 in the group finder); {npc:7800}, the last boss, is 34. Every quest giver stands in {object:171524}. From the {zone:1437}: fly from {object:1162} to {zone:1455}. Alone? Skip it: the guide goes on to Dalaran.",
 					label = "gno-start",
 					when = { { k = "group", q = 2928 }, { k = "level", op = "<", n = 36 } },
 					goals = {
 						{ t = "note", text = "Keep 9 free quest log slots. Every quest can be shared except {quest:2926} and its follow-up: each player takes those from Ozzie." },
 						{ t = "accept", quest = 2929, title = "The Grand Betrayal", npc = 7937, npcName = "High Tinker Mekkatorque", minLevel = 25, qlvl = 35, map = 1455, x = 68.75, y = 48.97, z = 506.1, f = "e" },
 						{ t = "accept", quest = 2930, title = "Data Rescue", npc = 7950, npcName = "Master Mechanic Castpipe", minLevel = 25, qlvl = 30, map = 1455, x = 69.83, y = 48.1, z = 502, f = "e" },
+						{ t = "turnin", quest = 2923, title = "Tinkmaster Overspark", npc = 7944, npcName = "Tinkmaster Overspark", map = 1455, x = 69.55, y = 50.33, z = 502, f = "e", optional = true, note = "{quest:2923}: {npc:7917}'s errand, if you took it in {zone:1453}" },
 						{ t = "accept", quest = 2922, title = "Save Techbot's Brain!", npc = 7944, npcName = "Tinkmaster Overspark", minLevel = 20, qlvl = 26, map = 1455, x = 69.55, y = 50.33, z = 502, f = "e" },
 						{ t = "accept", quest = 2927, title = "The Day After", npc = 6569, npcName = "Gnoarn", minLevel = 20, qlvl = 27, closedBy = { 2926 }, preTitles = { [2926] = "Gnogaine" }, map = 1455, x = 69.18, y = 50.55, z = 502, f = "e", note = "{npc:6569}: for {npc:1268} in Kharanos" },
 						{ t = "accept", quest = 2924, title = "Essential Artificials", npc = 6169, npcName = "Klockmort Spannerspan", minLevel = 24, qlvl = 30, map = 1455, x = 67.92, y = 46.1, z = 502, f = "e", optional = true, note = "{npc:6169}: not offered without Mathiel's errand from {zone:1457}? Carry on without it" },
@@ -7969,7 +8001,7 @@ do
 				},
 				{
 					title = "Gnomeregan: before going in",
-					note = "Group of 5 at 29 to 33. Everything inside is elite and the mechanical foes hit hard.",
+					note = "Group of 5, levels 25 to 34. Everything inside is elite and the mechanical foes hit hard.",
 					when = { { k = "done", label = "gno-start" } },
 					goals = {
 						{ t = "note", text = "In the quest log before going in: {quest:2929}, {quest:2930} and {quest:2922} ({object:171524}). If you took them: {quest:2928} ({npc:6579}, {zone:1453}, Group 9), {quest:2924} ({npc:6169}, {object:171524}), {quest:2962} (Ozzie, Kharanos). Bring the {item:9280} (or the White one), and 3 silver per {item:9308} you want to put in the {object:142487}." },
@@ -8192,8 +8224,8 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:190309"] = "Wooden Figurine", ["item:1946"] = "Mary's Looking Glass", ["item:2594"] = "Flagon of Mead", ["item:2658"] = "Ados Fragment", ["item:2659"] = "Modr Fragment", ["item:2660"] = "Golm Fragment", ["item:2661"] = "Neru Fragment", ["item:279996"] = "Goaz Stone", ["item:3619"] = "Snellig's Snuffbox", ["item:4371"] = "Bronze Tube", ["item:5825"] = "Treshala's Pendant", ["item:5947"] = "Defias Docket", ["npc:1040"] = "Fen Creeper", ["npc:1077"] = "Prospector Whelgar", ["npc:1078"] = "Ormer Ironbraid", ["npc:1110"] = "Skeletal Raider", ["npc:1157"] = "Cursed Sailor", ["npc:1158"] = "Cursed Marine", ["npc:1159"] = "First Mate Snellig", ["npc:1160"] = "Captain Halyndor", ["npc:1212"] = "Bishop Farthing", ["npc:1217"] = "Glorin Steelbrow", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1284"] = "Archbishop Benedictus", ["npc:1353"] = "Sarltooth", ["npc:1464"] = "Innkeeper Helbrek", ["npc:205"] = "Nightbane Dark Runner", ["npc:206"] = "Nightbane Vile Fang", ["npc:2089"] = "Giant Wetlands Crocolisk", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:263"] = "Lord Ello Ebonlocke", ["npc:268"] = "Sirra Von'Indi", ["npc:270892"] = "Goaz Warder", ["npc:272273"] = "Lost Watcher", ["npc:276"] = "Viktori Prism'Antras", ["npc:289"] = "Abercrombie", ["npc:302"] = "Blind Mary", ["npc:311"] = "Sven Yorgen", ["npc:3133"] = "Herble Baubbletump", ["npc:4140"] = "Scorpid Reaver", ["npc:4147"] = "Saltstone Basilisk", ["npc:4420"] = "Overlord Ramtusk", ["npc:4421"] = "Charlga Razorflank", ["npc:4422"] = "Agathelos the Raging", ["npc:4424"] = "Aggem Thorncurse", ["npc:4428"] = "Death Speaker Jargba", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4510"] = "Heralath Fallowbrook", ["npc:482"] = "Elling Trias", ["npc:4959"] = "Jorgen", ["npc:4982"] = "Thomas", ["npc:511"] = "Insane Ghoul", ["npc:522"] = "Mor'Ladim", ["npc:533"] = "Nightbane Shadow Weaver", ["npc:604"] = "Plague Spreader", ["npc:6244"] = "Takar the Seer", ["npc:633"] = "Elaine Carevin", ["npc:6579"] = "Shoni the Shilent", ["npc:661"] = "Jonathan Carevin", ["npc:663"] = "Calor", ["npc:6790"] = "Innkeeper Trelayne", ["npc:840"] = "Watcher Backus", ["object:102"] = "Raven Hill", ["object:1162"] = "Menethil Harbor", ["object:119"] = "Abercrombie's Crate", ["object:176369"] = "Boat to Theramore", ["object:19868"] = "Rocket Car Rubble", ["object:2096"] = "Trade District", ["object:21052"] = "Defias Strongbox", ["object:21056"] = "Theramore Isle", ["object:28027"] = "Dwarven District", ["quest:1142"] = "Mortality Wanes", ["quest:1144"] = "Willix the Importer", ["quest:1241"] = "The Missing Diplomat", ["quest:1738"] = "Heartswood", ["quest:225"] = "The Weathered Grave", ["quest:465"] = "Nek'rosh's Gambit", ["quest:5762"] = "Hemet Nesingwary", ["quest:65602"] = "What Is Love?", ["quest:96138"] = "Merrick's Bow", ["quest:98221"] = "From the Ashes", ["zone:1413"] = "The Barrens", ["zone:1418"] = "Badlands", ["zone:1426"] = "Dun Morogh", ["zone:1431"] = "Duskwood", ["zone:1436"] = "Westfall", ["zone:1437"] = "Wetlands", ["zone:1440"] = "Ashenvale", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1445"] = "Dustwallow Marsh", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
-			written = { ["Gnomeregan: the gnomes' fallen city under {zone:1426}, a 5-player dungeon best at 29 to 33. The guide runs it after Group 10 (Group 10b), from {zone:1455}, where the other quests are given. {npc:6579}'s quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too."] = "Gnomeregan: the gnomes' fallen city under Dun Morogh, a 5-player dungeon best at 29 to 33. The guide runs it after Group 10 (Group 10b), from Ironforge, where the other quests are given. Shoni's quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.", ["Jump down from {npc:4421}'s area and kill a few quilboars: {npc:4510}, a night elf who died in the Kraul, lies by a tent in the north of that area. {quest:1142} asks for {item:5825}, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run."] = "Jump down from Charlga's area and kill a few quilboars: Heralath Fallowbrook, a night elf who died in the Kraul, lies by a tent in the north of that area. Mortality Wanes asks for Treshala's Pendant, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run.", ["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "On the road south through the Barrens, Takar the Seer camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards.", ["Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}."] = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.", ["Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421}, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her."] = "Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her.", ["The Plague Spreaders walk the northern half of the Raven Hill Cemetery. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "The Plague Spreaders walk the northern half of the Raven Hill Cemetery. Mor'Ladim, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of Sven's camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs.", ["{item:2658} along the way to {npc:1078} and Whelgar"] = "Ados Fragment along the way to Ormer and Whelgar", ["{item:2659} along the way to {npc:1078} and Whelgar"] = "Modr Fragment along the way to Ormer and Whelgar", ["{item:2660} along the way to {npc:1078} and Whelgar"] = "Golm Fragment along the way to Ormer and Whelgar", ["{item:2661} along the way to {npc:1078} and Whelgar"] = "Neru Fragment along the way to Ormer and Whelgar", ["{npc:1078} and Whelgar"] = "Ormer and Whelgar", ["{npc:311}'s Camp"] = "Sven's Camp", ["{quest:1144}, a goblin, is held in the same tent as {npc:4510}. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end."] = "Willix the Importer, a goblin, is held in the same tent as Heralath. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end." },
+			names = { ["item:190309"] = "Wooden Figurine", ["item:1946"] = "Mary's Looking Glass", ["item:2594"] = "Flagon of Mead", ["item:2658"] = "Ados Fragment", ["item:2659"] = "Modr Fragment", ["item:2660"] = "Golm Fragment", ["item:2661"] = "Neru Fragment", ["item:274463"] = "Tattered Note", ["item:279996"] = "Goaz Stone", ["item:3619"] = "Snellig's Snuffbox", ["item:4371"] = "Bronze Tube", ["item:5825"] = "Treshala's Pendant", ["item:5947"] = "Defias Docket", ["item:6841"] = "Vial of Phlogiston", ["npc:1040"] = "Fen Creeper", ["npc:1077"] = "Prospector Whelgar", ["npc:1078"] = "Ormer Ironbraid", ["npc:1110"] = "Skeletal Raider", ["npc:1157"] = "Cursed Sailor", ["npc:1158"] = "Cursed Marine", ["npc:1159"] = "First Mate Snellig", ["npc:1160"] = "Captain Halyndor", ["npc:1212"] = "Bishop Farthing", ["npc:1217"] = "Glorin Steelbrow", ["npc:1239"] = "First Mate Fitzsimmons", ["npc:1284"] = "Archbishop Benedictus", ["npc:1353"] = "Sarltooth", ["npc:1464"] = "Innkeeper Helbrek", ["npc:205"] = "Nightbane Dark Runner", ["npc:206"] = "Nightbane Vile Fang", ["npc:2089"] = "Giant Wetlands Crocolisk", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:259023"] = "Veyric Thunderhame", ["npc:263"] = "Lord Ello Ebonlocke", ["npc:268"] = "Sirra Von'Indi", ["npc:270892"] = "Goaz Warder", ["npc:272273"] = "Lost Watcher", ["npc:276"] = "Viktori Prism'Antras", ["npc:289"] = "Abercrombie", ["npc:302"] = "Blind Mary", ["npc:311"] = "Sven Yorgen", ["npc:3133"] = "Herble Baubbletump", ["npc:4140"] = "Scorpid Reaver", ["npc:4147"] = "Saltstone Basilisk", ["npc:4420"] = "Overlord Ramtusk", ["npc:4421"] = "Charlga Razorflank", ["npc:4422"] = "Agathelos the Raging", ["npc:4424"] = "Aggem Thorncurse", ["npc:4428"] = "Death Speaker Jargba", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4510"] = "Heralath Fallowbrook", ["npc:482"] = "Elling Trias", ["npc:4959"] = "Jorgen", ["npc:4982"] = "Thomas", ["npc:511"] = "Insane Ghoul", ["npc:522"] = "Mor'Ladim", ["npc:533"] = "Nightbane Shadow Weaver", ["npc:604"] = "Plague Spreader", ["npc:6244"] = "Takar the Seer", ["npc:633"] = "Elaine Carevin", ["npc:6579"] = "Shoni the Shilent", ["npc:661"] = "Jonathan Carevin", ["npc:663"] = "Calor", ["npc:6790"] = "Innkeeper Trelayne", ["npc:7917"] = "Brother Sarno", ["npc:840"] = "Watcher Backus", ["object:102"] = "Raven Hill", ["object:1162"] = "Menethil Harbor", ["object:119"] = "Abercrombie's Crate", ["object:171524"] = "Tinker Town", ["object:176369"] = "Boat to Theramore", ["object:19868"] = "Rocket Car Rubble", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:21052"] = "Defias Strongbox", ["object:21056"] = "Theramore Isle", ["object:28027"] = "Dwarven District", ["quest:1142"] = "Mortality Wanes", ["quest:1144"] = "Willix the Importer", ["quest:1241"] = "The Missing Diplomat", ["quest:1701"] = "Fire Hardened Mail", ["quest:1738"] = "Heartswood", ["quest:225"] = "The Weathered Grave", ["quest:2922"] = "Save Techbot's Brain!", ["quest:2923"] = "Tinkmaster Overspark", ["quest:465"] = "Nek'rosh's Gambit", ["quest:5762"] = "Hemet Nesingwary", ["quest:65602"] = "What Is Love?", ["quest:96138"] = "Merrick's Bow", ["quest:96264"] = "Elemental Aid", ["quest:98221"] = "From the Ashes", ["zone:1413"] = "The Barrens", ["zone:1417"] = "Arathi Highlands", ["zone:1418"] = "Badlands", ["zone:1426"] = "Dun Morogh", ["zone:1431"] = "Duskwood", ["zone:1436"] = "Westfall", ["zone:1437"] = "Wetlands", ["zone:1440"] = "Ashenvale", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1445"] = "Dustwallow Marsh", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			written = { ["Gnomeregan: the gnomes' fallen city under {zone:1426}, a 5-player dungeon, levels 25 to 34. The guide runs it after Group 10 (Group 10b), from {zone:1455}, where the other quests are given. {npc:6579}'s quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too."] = "Gnomeregan: the gnomes' fallen city under Dun Morogh, a 5-player dungeon, levels 25 to 34. The guide runs it after Group 10 (Group 10b), from Ironforge, where the other quests are given. Shoni's quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.", ["Jump down from {npc:4421}'s area and kill a few quilboars: {npc:4510}, a night elf who died in the Kraul, lies by a tent in the north of that area. {quest:1142} asks for {item:5825}, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run."] = "Jump down from Charlga's area and kill a few quilboars: Heralath Fallowbrook, a night elf who died in the Kraul, lies by a tent in the north of that area. Mortality Wanes asks for Treshala's Pendant, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run.", ["On the road south through the {zone:1413}, {npc:6244} camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards."] = "On the road south through the Barrens, Takar the Seer camps east of the road, north-east of Camp Taurajo; come in from the east and keep clear of the Horde guards.", ["Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, levels 25 to 33 (29 to 38 in the group finder; the last bosses are 33): at 29 or more here, it goes well. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}."] = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, levels 25 to 33 (29 to 38 in the group finder; the last bosses are 33): at 29 or more here, it goes well. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.", ["Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421}, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her."] = "Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her.", ["The Plague Spreaders walk the northern half of the Raven Hill Cemetery. {npc:522}, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of {npc:311}'s camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs."] = "The Plague Spreaders walk the northern half of the Raven Hill Cemetery. Mor'Ladim, an elite, wanders the graves: keep away from him.\nSkeletal Raiders, Healers and Warders hold the west part of the cemetery, just east of Sven's camp.\nCareful: The skeletons in the catacombs are packed close together, so you can easily pull extra mobs.", ["{item:2658} along the way to {npc:1078} and Whelgar"] = "Ados Fragment along the way to Ormer and Whelgar", ["{item:2659} along the way to {npc:1078} and Whelgar"] = "Modr Fragment along the way to Ormer and Whelgar", ["{item:2660} along the way to {npc:1078} and Whelgar"] = "Golm Fragment along the way to Ormer and Whelgar", ["{item:2661} along the way to {npc:1078} and Whelgar"] = "Neru Fragment along the way to Ormer and Whelgar", ["{npc:1078} and Whelgar"] = "Ormer and Whelgar", ["{npc:311}'s Camp"] = "Sven's Camp", ["{quest:1144}, a goblin, is held in the same tent as {npc:4510}. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end."] = "Willix the Importer, a goblin, is held in the same tent as Heralath. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end." },
 			steps = {
 				{
 					title = "{quest:1241}",
@@ -8217,11 +8249,19 @@ do
 				},
 				{
 					title = "{zone:1453}: {npc:6579} (Gnomeregan, optional)",
-					note = "Gnomeregan: the gnomes' fallen city under {zone:1426}, a 5-player dungeon best at 29 to 33. The guide runs it after Group 10 (Group 10b), from {zone:1455}, where the other quests are given. {npc:6579}'s quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.",
+					note = "Gnomeregan: the gnomes' fallen city under {zone:1426}, a 5-player dungeon, levels 25 to 34. The guide runs it after Group 10 (Group 10b), from {zone:1455}, where the other quests are given. {npc:6579}'s quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.",
 					when = { { k = "group", q = 2928 }, { k = "level", op = "<", n = 33 } },
 					goals = {
 						{ t = "note", text = "{npc:6579} stands in the {object:28027}, by the tram. The quest waits in the log until Gnomeregan." },
 						{ t = "accept", quest = 2928, title = "Gyrodrillmatic Excavationators", npc = 6579, npcName = "Shoni the Shilent", minLevel = 20, qlvl = 30, map = 1453, x = 62.63, y = 34.11, z = 94.9 },
+					},
+				},
+				{
+					title = "{zone:1453}: {npc:7917} (Gnomeregan, optional)",
+					note = "{npc:7917} stands in {object:2098}. His errand leads to {quest:2923} in {object:171524}, who gives {quest:2922}: a few hundred XP for a trip the guide makes anyway.",
+					when = { { k = "group", q = 2928 }, { k = "level", op = "<", n = 33 } },
+					goals = {
+						{ t = "accept", quest = 2923, title = "Tinkmaster Overspark", npc = 7917, npcName = "Brother Sarno", minLevel = 20, qlvl = 26, closedBy = { 2922 }, preTitles = { [2922] = "Save Techbot's Brain!" }, map = 1453, x = 51.05, y = 48.39, z = 106.6 },
 					},
 				},
 				{
@@ -8528,7 +8568,7 @@ do
 				},
 				{
 					title = "Razorfen Kraul (dungeon, optional)",
-					note = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}.",
+					note = "Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the {zone:1413}, west of the road down to {zone:1441}, levels 25 to 33 (29 to 38 in the group finder; the last bosses are 33): at 29 or more here, it goes well. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to {zone:1441}.",
 					label = "rfk-start",
 					when = { { k = "group", q = 1144 }, { k = "level", op = "<", n = 33 } },
 					goals = {
@@ -8537,11 +8577,31 @@ do
 					},
 				},
 				{
+					title = "Warriors: {quest:1701}",
+					note = "Roogug, the first boss, drops the {item:6841}. The other items of the quest come from Stonetalon and the {zone:1437}: Polestar's class guides (Fire Hardened Armor) cover them.",
+					only = { classes = { "WARRIOR" } },
+					when = { { k = "done", label = "rfk-start" }, { k = "onquest", q = { 1701 } } },
+					along = "rfk-charlga",
+					goals = {
+						{ t = "collect", quest = 1701, title = "Fire Hardened Mail", item = 6841, itemName = "Vial of Phlogiston", count = 1, oi = 4, note = "{item:6841}: Roogug", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
 					title = "Razorfen Kraul: {npc:4421}",
 					note = "Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421}, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her.",
+					label = "rfk-charlga",
 					when = { { k = "group", q = 1144 }, { k = "done", label = "rfk-start" } },
 					goals = {
 						{ t = "kill", target = "Charlga Razorflank", npc = 4421, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Shamans: {quest:96264}",
+					note = "{quest:96264} ({npc:259023}, {zone:1417}): the {item:274463} comes from {npc:4421}. To check in game: the drop rate is not known.",
+					only = { classes = { "SHAMAN" } },
+					when = { { k = "done", label = "rfk-start" }, { k = "onquest", q = { 96264 } } },
+					goals = {
+						{ t = "collect", quest = 96264, title = "Elemental Aid", item = 274463, itemName = "Tattered Note", oi = 1, note = "{item:274463}: {npc:4421}", group = { kind = "elite", rank = 1 } },
 					},
 				},
 				{
@@ -8614,7 +8674,7 @@ do
 		Polestar.RegisterGuide({
 			id = "groupe-alliance/12-dalaran",
 			pack = "groupe-alliance",
-			title = "Group 11 · City of Dalaran (dungeon 30-33, optional)",
+			title = "Group 11 · City of Dalaran (dungeon 28-35, optional)",
 			faction = "Alliance",
 			minLevel = 30,
 			maxLevel = 33,
@@ -8625,7 +8685,7 @@ do
 			next = "groupe-alliance/14-paluns-hautebrande",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:251961"] = "Arcane Mote", ["item:2933"] = "Seal of Wrynn", ["item:4306"] = "Silk Cloth", ["npc:1646"] = "Baros Alexston", ["npc:1749"] = "Lady Katrana Prestor", ["npc:1755"] = "Marzon the Silent Blade", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:482"] = "Elling Trias", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["npc:7766"] = "Tyrion", ["object:1162"] = "Menethil Harbor", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2159"] = "City Hall", ["quest:395"] = "Brotherhood's End", ["quest:434"] = "The Attack!", ["quest:92432"] = "An Alarming Request", ["zone:1416"] = "Alterac Mountains", ["zone:1437"] = "Wetlands", ["zone:1453"] = "Stormwind" },
+			names = { ["item:251961"] = "Arcane Mote", ["item:251983"] = "Fel Infused Blossom", ["item:2933"] = "Seal of Wrynn", ["item:4306"] = "Silk Cloth", ["npc:1646"] = "Baros Alexston", ["npc:1749"] = "Lady Katrana Prestor", ["npc:1755"] = "Marzon the Silent Blade", ["npc:246003"] = "Fel Ancient", ["npc:246016"] = "Arcanic Enigma", ["npc:246020"] = "Shade of the Archmage", ["npc:246683"] = "Mana Phantom", ["npc:246708"] = "Magus Fansy Goodbringer", ["npc:246748"] = "Archmage Modera", ["npc:247264"] = "Emissary Jacques", ["npc:269127"] = "Image of Archmage Modera", ["npc:482"] = "Elling Trias", ["npc:5502"] = "Shylamiir", ["npc:5694"] = "High Sorcerer Andromath", ["npc:7766"] = "Tyrion", ["object:1162"] = "Menethil Harbor", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2098"] = "Cathedral Square", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2159"] = "City Hall", ["quest:395"] = "Brotherhood's End", ["quest:434"] = "The Attack!", ["quest:92432"] = "An Alarming Request", ["quest:92489"] = "Power Overwhelming", ["zone:1416"] = "Alterac Mountains", ["zone:1437"] = "Wetlands", ["zone:1453"] = "Stormwind" },
 			written = { ["Overhear Lescovar and {npc:1755} in the garden, then kill both"] = "Overhear Lescovar and Marzon in the garden, then kill both" },
 			steps = {
 				{
@@ -8675,7 +8735,7 @@ do
 				},
 				{
 					title = "{zone:1453}: two dungeon quests",
-					note = "City of Dalaran: a 5-player Forever dungeon in the {zone:1416}, best at 30 to 33. This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the {zone:1437}.\n{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower.",
+					note = "City of Dalaran: a 5-player Forever dungeon in the {zone:1416}, from level 28 (28 to 35 in the group finder). This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the {zone:1437}.\n{npc:5502} is in the {object:2096}, {npc:5694} in the {object:2101} tower.",
 					label = "dal-start",
 					when = { { k = "group", q = 92456 } },
 					goals = {
@@ -8714,7 +8774,7 @@ do
 				},
 				{
 					title = "Inside the dungeon",
-					note = "Blossom in the central garden, remnants everywhere, the {item:251961} at the Violet Citadel end.",
+					note = "Out of the sewers, the remnants and mana echoes are all over the streets. The {npc:246003} guards Runeweaver Square, in the middle, behind a magic shield: talk to {npc:246708}, on its east side, to lower it; the {item:251983} is one of the big green bulbs of the square. The {npc:246016}, the mana elemental for {quest:92489}, roams the north-east of the town, by Antonidas's statue: kill its two Mana Phantoms first. Last, {npc:246748} waits on the steps of the Violet Citadel: talk to her for the portal to the {npc:246020}, who drops the {item:251961}.",
 					when = { { k = "done", label = "dal-start" } },
 					goals = {
 						{ t = "note", text = "Share each quest with your group: click it in the quest log, then Share." },
@@ -12383,7 +12443,7 @@ do
 				},
 				{
 					title = "Scarlet Monastery (dungeon, optional): {npc:3979}",
-					note = "The Scarlet Monastery: four wings in {zone:1420}, for a group of 5 at 38 to 44: the Library, the Armory and the Cathedral hold the quests. Group 19 sends you there from Southshore, after Raleigh. Alone? Skip it. Mae Paledust stands in the {object:32356}, by the bookshelves.",
+					note = "The Scarlet Monastery: four wings in {zone:1420}, levels 30 to 42 (group finder: Graveyard 30-38, Library 33-41, Armory 36-44, Cathedral 38-46): the Library, the Armory and the Cathedral hold the quests. Group 19 sends you there from Southshore, after Raleigh, at 43: the Library is then easy, the Armory and the Cathedral still fit. Alone? Skip it. Mae Paledust stands in the {object:32356}, by the bookshelves.",
 					when = { { k = "group", q = 1053 } },
 					goals = {
 						{ t = "accept", quest = 1050, title = "Mythology of the Titans", npc = 3979, npcName = "Librarian Mae Paledust", minLevel = 28, qlvl = 38, map = 1455, x = 74.97, y = 12.48, z = 503.5, f = "e", note = "{npc:3979}: the book is in the Library wing" },
@@ -12391,7 +12451,7 @@ do
 				},
 				{
 					title = "Uldaman (dungeon, optional): {object:32356}",
-					note = "Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 42 to 52 on Forever: best at 43 or more. The next guide runs it once its {zone:1418} quests are done. Alone? Skip it. Both stand in the {object:32356}.",
+					note = "Uldaman: a dwarf and titan dungeon in the north of the {zone:1418}, for a group of 5, levels 35 to 47 (41 to 51 in the group finder): best at 43 or more. The next guide runs it once its {zone:1418} quests are done. Alone? Skip it. Both stand in the {object:32356}.",
 					when = { { k = "group", q = 2240 } },
 					goals = {
 						{ t = "accept", quest = 2398, title = "The Lost Dwarves", npc = 1356, npcName = "Prospector Stormpike", minLevel = 35, qlvl = 40, closedBy = { 2240 }, preTitles = { [2240] = "The Hidden Chamber" }, map = 1455, x = 74.64, y = 11.74, z = 503.5, f = "e" },
@@ -12500,7 +12560,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:273169"] = "The Lost Magic of the Runemasters", ["item:4611"] = "Blue Pearl", ["item:4612"] = "Black Drake's Heart", ["item:4635"] = "Hammertoe's Amulet", ["item:7666"] = "Shattered Necklace", ["item:7733"] = "Staff of Prehistoria", ["item:7740"] = "Gni'kiv Medallion", ["item:8009"] = "Dentrium Power Stone", ["item:8027"] = "Krom Stoutarm's Treasure", ["item:8052"] = "An'Alleum Power Stone", ["npc:1182"] = "Brother Anton", ["npc:1356"] = "Prospector Stormpike", ["npc:2616"] = "Privateer Groy", ["npc:264265"] = "Magus Olvek", ["npc:2725"] = "Scalding Whelp", ["npc:2726"] = "Scorched Guardian", ["npc:2817"] = "Rigglefuzz", ["npc:2860"] = "Sigrun Ironhew", ["npc:2888"] = "Garek", ["npc:2909"] = "Hammertoe Grez", ["npc:2910"] = "Prospector Ryedol", ["npc:2916"] = "Historian Karnik", ["npc:2918"] = "Advisor Belgrum", ["npc:2932"] = "Magregan Deepshadow", ["npc:2944"] = "Boss Tho'grun", ["npc:3974"] = "Houndmaster Loksey", ["npc:3975"] = "Herod", ["npc:3976"] = "Scarlet Commander Mograine", ["npc:3977"] = "High Inquisitor Whitemane", ["npc:3980"] = "Raleigh the Devout", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4944"] = "Captain Garran Vimes", ["npc:4968"] = "Lady Jaina Proudmoore", ["npc:5387"] = "High Explorer Magellas", ["npc:5634"] = "Rhapsody Shindigger", ["npc:5635"] = "Falstad Wildhammer", ["npc:5636"] = "Gryphon Master Talonaxe", ["npc:6251"] = "Strahad Farsan", ["npc:6294"] = "Krom Stoutarm", ["npc:6487"] = "Arcanist Doan", ["npc:6826"] = "Talvash del Kissel", ["npc:6906"] = "Baelog", ["npc:7292"] = "Dinita Stonemantle", ["npc:7744"] = "Innkeeper Thulfram", ["npc:7884"] = "Fraggar Thundermantle", ["object:1162"] = "Menethil Harbor", ["object:131474"] = "Discs of Norgannon", ["object:151976"] = "Shimmering Flats", ["object:171531"] = "The Library", ["object:176369"] = "Boat to Theramore", ["object:32356"] = "Hall of Explorers", ["object:32362"] = "Mystic Ward", ["object:32377"] = "Vault of Ironforge", ["quest:1050"] = "Mythology of the Titans", ["quest:1052"] = "Down the Scarlet Path", ["quest:1053"] = "In the Name of the Light", ["quest:1450"] = "Gryphon Master Talonaxe", ["quest:1451"] = "Rhapsody Shindigger", ["quest:3631"] = "Summon Felsteed", ["quest:625"] = "Cortello's Riddle", ["quest:96800"] = "Past Due", ["zone:1413"] = "Barrens", ["zone:1418"] = "Badlands", ["zone:1420"] = "Tirisfal Glades", ["zone:1421"] = "Silverpine Forest", ["zone:1425"] = "The Hinterlands", ["zone:1432"] = "Loch Modan", ["zone:1443"] = "Desolace", ["zone:1446"] = "Tanaris", ["zone:1455"] = "Ironforge" },
+			names = { ["item:273169"] = "The Lost Magic of the Runemasters", ["item:4611"] = "Blue Pearl", ["item:4612"] = "Black Drake's Heart", ["item:4635"] = "Hammertoe's Amulet", ["item:7666"] = "Shattered Necklace", ["item:7733"] = "Staff of Prehistoria", ["item:7740"] = "Gni'kiv Medallion", ["item:8009"] = "Dentrium Power Stone", ["item:8027"] = "Krom Stoutarm's Treasure", ["item:8052"] = "An'Alleum Power Stone", ["item:8053"] = "Obsidian Power Source", ["npc:1182"] = "Brother Anton", ["npc:1356"] = "Prospector Stormpike", ["npc:2616"] = "Privateer Groy", ["npc:264265"] = "Magus Olvek", ["npc:2725"] = "Scalding Whelp", ["npc:2726"] = "Scorched Guardian", ["npc:2817"] = "Rigglefuzz", ["npc:2860"] = "Sigrun Ironhew", ["npc:2888"] = "Garek", ["npc:2909"] = "Hammertoe Grez", ["npc:2910"] = "Prospector Ryedol", ["npc:2916"] = "Historian Karnik", ["npc:2918"] = "Advisor Belgrum", ["npc:2932"] = "Magregan Deepshadow", ["npc:2944"] = "Boss Tho'grun", ["npc:3974"] = "Houndmaster Loksey", ["npc:3975"] = "Herod", ["npc:3976"] = "Scarlet Commander Mograine", ["npc:3977"] = "High Inquisitor Whitemane", ["npc:3980"] = "Raleigh the Devout", ["npc:4454"] = "Fizzle Brassbolts", ["npc:4944"] = "Captain Garran Vimes", ["npc:4968"] = "Lady Jaina Proudmoore", ["npc:5387"] = "High Explorer Magellas", ["npc:5634"] = "Rhapsody Shindigger", ["npc:5635"] = "Falstad Wildhammer", ["npc:5636"] = "Gryphon Master Talonaxe", ["npc:6251"] = "Strahad Farsan", ["npc:6294"] = "Krom Stoutarm", ["npc:6487"] = "Arcanist Doan", ["npc:6826"] = "Talvash del Kissel", ["npc:6906"] = "Baelog", ["npc:7023"] = "Obsidian Sentinel", ["npc:7292"] = "Dinita Stonemantle", ["npc:7744"] = "Innkeeper Thulfram", ["npc:7884"] = "Fraggar Thundermantle", ["object:1162"] = "Menethil Harbor", ["object:131474"] = "Discs of Norgannon", ["object:151976"] = "Shimmering Flats", ["object:171531"] = "The Library", ["object:176369"] = "Boat to Theramore", ["object:32356"] = "Hall of Explorers", ["object:32362"] = "Mystic Ward", ["object:32377"] = "Vault of Ironforge", ["quest:1050"] = "Mythology of the Titans", ["quest:1052"] = "Down the Scarlet Path", ["quest:1053"] = "In the Name of the Light", ["quest:1450"] = "Gryphon Master Talonaxe", ["quest:1451"] = "Rhapsody Shindigger", ["quest:1956"] = "Power in Uldaman", ["quest:3631"] = "Summon Felsteed", ["quest:625"] = "Cortello's Riddle", ["quest:96800"] = "Past Due", ["zone:1413"] = "Barrens", ["zone:1418"] = "Badlands", ["zone:1420"] = "Tirisfal Glades", ["zone:1421"] = "Silverpine Forest", ["zone:1425"] = "The Hinterlands", ["zone:1432"] = "Loch Modan", ["zone:1443"] = "Desolace", ["zone:1445"] = "Dustwallow Marsh", ["zone:1446"] = "Tanaris", ["zone:1455"] = "Ironforge" },
 			written = { ["Ride north-east out of Southshore on the road into the {zone:1425}; Aerie Peak sits just past the border. {npc:5635} holds court at the top, {quest:1450} tends the aviary and {npc:7884} stands by the inn."] = "Ride north-east out of Southshore on the road into the Hinterlands; Aerie Peak sits just past the border. Falstad holds court at the top, Gryphon Master Talonaxe tends the aviary and Fraggar Thundermantle stands by the inn.", ["Talonaxe's next task waits for a later {zone:1425} guide."] = "Talonaxe's next task waits for a later Hinterlands guide.", ["The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. {npc:6294}'s chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards."] = "The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. Krom's chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards.", ["The first two cages stand together in the Witherbark village south of {npc:5634}; the third is in the next village to the east. Every Witherbark troll can drop a necklace."] = "The first two cages stand together in the Witherbark village south of Rhapsody; the third is in the next village to the east. Every Witherbark troll can drop a necklace.", ["{npc:2909} waits just outside Uldaman, west of the cave. His amulet is on {npc:2932}, a Shadowforge dwarf (elite 38) outside the dungeon portal, south of {npc:2909}."] = "Hammertoe Grez waits just outside Uldaman, west of the cave. His amulet is on Magregan Deepshadow, a Shadowforge dwarf (elite 38) outside the dungeon portal, south of Hammertoe.", ["{npc:5634} camps on the road east of Aerie Peak."] = "Rhapsody camps on the road east of Aerie Peak.", ["{npc:7884} keeps paying for necklaces: hand in any extras"] = "Fraggar keeps paying for necklaces: hand in any extras", ["{quest:1050} goes back to Mae Paledust in {zone:1455}: the {zone:1425} guide (Group 22) passes there."] = "Mythology of the Titans goes back to Mae Paledust in Ironforge: the Hinterlands guide (Group 22) passes there." },
 			steps = {
 				{
@@ -12540,7 +12600,7 @@ do
 				},
 				{
 					title = "Uldaman (dungeon, optional): {npc:2817}",
-					note = "Uldaman: a 5-player dungeon at the north end of the {zone:1418}, levels 42 to 52 on Forever: best at 43 or more. The {zone:1418} quests come first, then the dungeon, then the rewards in {zone:1455} on the way to Southshore. Alone? Skip it: the guide goes on in the {zone:1418}.",
+					note = "Uldaman: a 5-player dungeon at the north end of the {zone:1418}, levels 35 to 47 (41 to 51 in the group finder): best at 43 or more. The {zone:1418} quests come first, then the dungeon, then the rewards in {zone:1455} on the way to Southshore. Alone? Skip it: the guide goes on in the {zone:1418}.",
 					label = "uld-start",
 					when = { { k = "group", q = 2240 } },
 					goals = {
@@ -12612,8 +12672,19 @@ do
 					},
 				},
 				{
+					title = "Mages: {quest:1956}",
+					note = "The {npc:7023}, one of the bosses on the way to Archaedas, drops the {item:8053} for Tabetha in {zone:1445}.",
+					only = { classes = { "MAGE" } },
+					when = { { k = "done", label = "uld-start" }, { k = "onquest", q = { 1956 } } },
+					along = "uld-archaedas",
+					goals = {
+						{ t = "collect", quest = 1956, title = "Power in Uldaman", item = 8053, itemName = "Obsidian Power Source", count = 1, oi = 1, note = "{item:8053}: {npc:7023}", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
 					title = "Archaedas and the {object:131474}",
 					note = "Archaedas, the last boss, wakes the stone guardians around his room during the fight. Behind him, the {object:131474}: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave.",
+					label = "uld-archaedas",
 					when = { { k = "done", label = "uld-start" } },
 					goals = {
 						{ t = "accept", quest = 2278, title = "The Platinum Discs", object = 131474, objName = "The Discs of Norgannon", minLevel = 40, qlvl = 47, optional = true },
@@ -12723,7 +12794,7 @@ do
 				},
 				{
 					title = "{object:171531}: {npc:3974} and {npc:6487}",
-					note = "Loksey and his dogs wait in a small alcove near the start. {quest:1050} lies on a bench or the floor of the narrow corridors, to the left as you enter the room. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for {npc:264265} is on a table on the right of Doan's room; the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him.",
+					note = "Loksey and his dogs wait in a small alcove near the start. {quest:1050} lies on the floor of one of the Library's corridors, under a window; once taken it comes back after a short while. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for {npc:264265} is on a table on the right of Doan's room (not there? Look on Doan's body: one Forever guide says he carries it); the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him.",
 					when = { { k = "done", label = "sm-start" } },
 					goals = {
 						{ t = "kill", quest = 1053, title = "In the Name of the Light", target = "Houndmaster Loksey", npc = 3974, count = 1, oi = 4, optional = true, note = "{npc:3974}, elite 34", group = { kind = "elite", rank = 1 } },

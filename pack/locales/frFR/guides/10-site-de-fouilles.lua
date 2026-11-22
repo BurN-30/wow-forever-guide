@@ -8,7 +8,7 @@
 return {
 	-- Guide
 	-- {zone:1437} Wetlands
-	["Group 10 · Excavation Site: {zone:1437} (dungeon 28-32)"] = "Groupe 10 · Site de fouilles : {zone:1437} (donjon 28-32)",
+	["Group 10 · Excavation Site: {zone:1437} (dungeon 26-28)"] = "Groupe 10 · Site de fouilles : {zone:1437} (donjon 26-28)",
 
 	-- Step 1: Back to Menethil Harbor
 	-- {object:1162} Menethil Harbor
@@ -21,7 +21,7 @@ return {
 	-- {object:1162} Menethil Harbor
 	["{object:1162}: dungeon quests"] = "{object:1162} : quêtes du donjon",
 	-- {zone:1437} Wetlands
-	["Excavation Site: a 5-player Forever dungeon up the hill in the middle of the {zone:1437}, best at 28 to 31, with 5 players (4 with a real tank or healer). Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards. Alone? Skip it: the guide goes on to Dalaran."] = "Site de fouilles : un donjon de Forever pour 5 joueurs en haut de la colline, au milieu des {zone:1437}, idéal de 28 à 31, à 5 (à 4 avec un vrai tank ou soigneur). Tout est élite à l'intérieur et le dernier boss est niveau 31 : environ 39 000 XP de quêtes et des récompenses bleues. Seul ? Le passer : le guide continue vers Dalaran.",
+	["Excavation Site: a 5-player Forever dungeon up the hill in the middle of the {zone:1437}, levels 26 to 28 (26 to 33 in the group finder): a little above, as here, it goes faster; with 5 players (4 with a real tank or healer). Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards. Alone? Skip it: the guide goes on to Dalaran."] = "Site de fouilles : un donjon de Forever pour 5 joueurs en haut de la colline, au milieu des {zone:1437}, niveaux 26 à 28 (26 à 33 dans la recherche de groupe) : un peu au-dessus, comme ici, il va plus vite ; à 5 (à 4 avec un vrai tank ou soigneur). Tout est élite à l'intérieur et le dernier boss est niveau 31 : environ 39 000 XP de quêtes et des récompenses bleues. Seul ? Le passer : le guide continue vers Dalaran.",
 	-- {npc:1480} Caitlin Grassman · {npc:2094} James Halloran · {quest:95737} Seeking Caitlin
 	["Keep 6 free quest log slots. {npc:1480} is in her house, {npc:2094} by the north gate. {quest:95737}, from Llana in Astranaar, can no longer be taken once you hold {npc:1480}'s quest."] = "Garder 6 places libres dans le journal. {npc:1480} est dans sa maison, {npc:2094} près de la porte nord. {quest:95737}, de Llana à Astranaar, ne se prend plus une fois la quête de {npc:1480} dans le journal.",
 	-- {npc:1480} Caitlin Grassman · {quest:95737} Seeking Caitlin

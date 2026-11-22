@@ -7,13 +7,13 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 6b · The Deadmines (dungeon 18-23, optional)"] = "Groupe 6b · Les Mortemines (donjon 18-23, facultatif)",
+	["Group 6b · The Deadmines (dungeon 16-21, optional)"] = "Groupe 6b · Les Mortemines (donjon 16-21, facultatif)",
 
 	-- Step 1: Lakeshire: Wiley the Black
 	-- {npc:266} Wiley the Black
 	["Lakeshire: {npc:266}"] = "Comté-du-Lac : {npc:266}",
 	-- {zone:1436} Westfall · {zone:1431} Duskwood
-	["The Deadmines: a 5-player dungeon under Moonbrook, in {zone:1436}, best at 18 to 23. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to {zone:1431}."] = "Les Mortemines : un donjon pour 5 joueurs sous Ruisselune, en {zone:1436}, idéal de 18 à 23. Ce chapitre prend ses quêtes en chemin, puis fait le donjon boss par boss. Seul ? Le passer : le guide continue au {zone:1431}.",
+	["The Deadmines: a 5-player dungeon under Moonbrook, in {zone:1436}, levels 16 to 21 (17 to 26 in the group finder): here, at 20 or more, it goes well. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to {zone:1431}."] = "Les Mortemines : un donjon pour 5 joueurs sous Ruisselune, en {zone:1436}, niveaux 16 à 21 (17 à 26 dans la recherche de groupe) : ici, à 20 ou plus, il passe bien. Ce chapitre prend ses quêtes en chemin, puis fait le donjon boss par boss. Seul ? Le passer : le guide continue au {zone:1431}.",
 	["Keep 8 free quest log slots. Everyone takes the quests at their own pace; meet at the Moonbrook entrance for the run."] = "Garder 8 places libres dans le journal. Chacun prend les quêtes à son rythme ; rendez-vous à l'entrée de Ruisselune pour le donjon.",
 	-- {npc:266} Wiley the Black
 	["{npc:266}, upstairs in the inn"] = "{npc:266}, à l'étage de l'auberge",
@@ -72,13 +72,23 @@ return {
 	-- {item:915} Red Silk Bandana
 	["{item:915}: any Defias"] = "{item:915} : n'importe quel Défias",
 
-	-- Step 11: Sneed's Shredder and Sneed
+	-- Step 11: Paladins: The Test of Righteousness
+	-- {quest:1654} The Test of Righteousness
+	["Paladins: {quest:1654}"] = "Paladins : {quest:1654}",
+	-- {npc:642} Sneed's Shredder · {item:6994} Whitestone Oak Lumber · {item:6895} Jordan's Smithing Hammer · {object:1680} Shadowfang Keep · {item:6953} Verigan's Fist
+	-- plural, as words: Goblin Woodcarvers = {npc:641} Goblin Woodcarver
+	["The Goblin Woodcarvers of the lumber room, before {npc:642}, drop the {item:6994}. The chain also needs {item:6895} ({object:1680}, not on this route) and the Kor Gem (Blackfathom Deeps): Polestar's class guides ({item:6953}) cover all of it."] = "Les sculpteurs gobelins de la salle des bûcherons, avant {npc:642}, lâchent le {item:6994}. La suite demande aussi {item:6895} ({object:1680}, hors de ce parcours) et la gemme de Kor (Profondeurs de Brassenoire) : les guides de classe de Polestar ({item:6953}) couvrent le tout.",
+	-- {item:6994} Whitestone Oak Lumber
+	-- plural, as words: Goblin Woodcarvers = {npc:641} Goblin Woodcarver
+	["{item:6994}: Goblin Woodcarvers"] = "{item:6994} : sculpteurs gobelins",
+
+	-- Step 12: Sneed's Shredder and Sneed
 	-- {npc:642} Sneed's Shredder · {npc:643} Sneed
 	["{npc:642} and {npc:643}"] = "{npc:642} et {npc:643}",
 	-- {npc:641} Goblin Woodcarver · {npc:643} Sneed
 	["Clear every {npc:641} of the lumber room first, pulling them back to the previous room: the Shredder's Terrify sends you running into them. {npc:643} jumps out when it breaks; he disarms."] = "Vider d'abord chaque {npc:641} de la scierie, en les tirant dans la salle précédente : la peur du broyeur vous jette sur eux. {npc:643} saute dehors quand la machine casse ; il désarme.",
 
-	-- Step 12: Gilnid's foundry
+	-- Step 13: Gilnid's foundry
 	-- {npc:1763} Gilnid
 	["{npc:1763}'s foundry"] = "La fonderie de {npc:1763}",
 	-- {npc:1763} Gilnid
@@ -86,26 +96,26 @@ return {
 	["Goblin Engineers and Craftsmen summon golems: kill or stun the goblin, the golem goes with it. {npc:1763} has an Engineer at his side. Plant the explosives near the middle of the room before pulling him."] = "Les ingénieurs et artisans gobelins invoquent des golems : tuer ou étourdir le gobelin, le golem disparaît avec lui. {npc:1763} a un ingénieur à ses côtés. Poser les explosifs vers le milieu de la salle avant de l'engager.",
 	["Place the explosives, near the middle of the foundry"] = "Poser les explosifs, vers le milieu de la fonderie",
 
-	-- Step 13: The cannon door
+	-- Step 14: The cannon door
 	["The cannon door"] = "La porte du canon",
 	-- {item:5397} Defias Gunpowder
 	["The {item:5397} barrel sits in the alcove on the right just before the cannon. Fire the cannon, then step back: a patrol of elites comes out through the broken door. A Rogue can pick the lock instead."] = "Le tonneau de {item:5397} est dans l'alcôve à droite juste avant le canon. Tirer, puis reculer : une patrouille d'élites sort par la porte brisée. Un voleur peut crocheter la serrure à la place.",
 	["The cannon door is open"] = "La porte du canon est ouverte",
 
-	-- Step 14: Mr. Smite
+	-- Step 15: Mr. Smite
 	-- plural, as words: Defias Blackguards = {npc:636} Defias Blackguard
 	["In the cove: two stealthed Defias Blackguards join him by the walkway, kill them before he reaches 66%. At 66% and 33% he stuns the whole group for a few seconds and changes weapons: keep the tank's health up before each."] = "Dans la crique : deux canailles défias camouflées le rejoignent près de la passerelle, les tuer avant qu'il arrive à 66 %. À 66 % et 33 %, il étourdit tout le groupe quelques secondes et change d'arme : garder le tank plein de vie avant chaque fois.",
 
-	-- Step 15: Captain Greenskin
+	-- Step 16: Captain Greenskin
 	["On the ship. Crowd-control the Squallshaper, kill the Companion, then the Pirate, then Greenskin facing away from the group (Cleave)."] = "Sur le bateau. Neutraliser le façonneur de grains, tuer le compagnon, puis le pirate, puis Peau-Verte tourné dos au groupe (Enchaînement).",
 
-	-- Step 16: Edwin VanCleef
+	-- Step 17: Edwin VanCleef
 	["Captain's cabin, top of the ship. Two Blackguards join at the pull, two more at half health: a stun at 51 to 55% skips the second pair. Everyone on the quest loots their own head and their own letter."] = "Cabine du capitaine, en haut du bateau. Deux canailles le rejoignent au début, deux autres à mi-vie : un étourdissement vers 51 à 55 % évite la seconde paire. Chaque joueur qui a la quête ramasse sa tête et sa lettre.",
 	-- {item:2874} An Unsent Letter
 	["{item:2874}, on VanCleef: right-click it, it opens the Stockade chain"] = "{item:2874}, sur VanCleef : clic droit dessus, elle ouvre la suite vers la Prison",
 	["Cookie, on the lower deck, is optional: interrupt his healing cast. Do not hearth: leave by the back, along the coast."] = "Macaron, sur le pont inférieur, est facultatif : interrompre son soin. Pas de pierre de foyer : sortir par l'arrière, le long de la côte.",
 
-	-- Step 17: The cove exit: Alba Fairmoon
+	-- Step 18: The cove exit: Alba Fairmoon
 	-- {npc:253279} Alba Fairmoon
 	["The cove exit: {npc:253279}"] = "La sortie de la crique : {npc:253279}",
 	-- {npc:253279} Alba Fairmoon · {object:581792} Detonator
@@ -113,13 +123,13 @@ return {
 	-- {object:581792} Detonator
 	["The {object:581792}, beside her"] = "{object:581792}, à côté d'elle",
 
-	-- Step 18: Sentinel Hill rewards
+	-- Step 19: Sentinel Hill rewards
 	-- {object:81} Sentinel Hill
 	["{object:81} rewards"] = "Récompenses à {object:81}",
 	-- {npc:820} Scout Riell
 	["{npc:820}, top of the tower"] = "{npc:820}, en haut de la tour",
 
-	-- Step 19: Stormwind rewards
+	-- Step 20: Stormwind rewards
 	-- {zone:1453} Stormwind
 	["{zone:1453} rewards"] = "Récompenses à {zone:1453}",
 	-- {npc:1719} Warden Thelwater · {zone:1431} Duskwood

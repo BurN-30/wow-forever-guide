@@ -10,7 +10,7 @@
 # carries them. The Stockade Riots (391) only after the Deadmines (VanCleef's letter, 373, 389).
 # The Fury Runs Deep (378) needs The Dark Iron War (303, level 30, Wetlands): left to later.
 guide groupe-alliance/08b-prison
-title Group 7b · The Stockade (dungeon 24-28, optional)
+title Group 7b · The Stockade (dungeon 23-29, optional)
 folder Group Alliance
 category Dungeons
 faction Alliance
@@ -22,7 +22,7 @@ step Stormwind: Stockade quests
   when group 387
   when level<30
   zone Stormwind City
-  tip The Stockade, Stormwind's prison taken over by rioting Defias, is a group dungeon in the canals between the Mage Quarter and Old Town, best at 24 to 28. Alone? Skip it: the guide goes on to Ashenvale.
+  tip The Stockade, Stormwind's prison taken over by rioting Defias, is a group dungeon in the canals between the Mage Quarter and Old Town, levels 23 to 29. Alone? Skip it: the guide goes on to Ashenvale.
   note Keep 6 free quest log slots. Every player takes the quests on their own; meet at the prison gate for the run.
   accept 387                                  -- Warden Thelwater, at the prison gate
   turnin 389 optional                         -- Warden Thelwater: Bazil Thredd, after the Deadmines
@@ -32,7 +32,7 @@ step Stormwind: Stockade quests
 step Enter the Stockade
   when group 387
   when level<30
-  tip The gate is by Warden Thelwater, at the top of the stairs on the canal. Group of 5 at 24 to 28, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.
+  tip The gate is by Warden Thelwater, at the top of the stairs on the canal. Group of 5 at 23 to 29, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.
   goto 52.4,70 "The Stockade" r 20 live
 
 step The entry corridor and Targorr

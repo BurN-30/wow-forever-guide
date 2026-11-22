@@ -87,7 +87,7 @@ step Stormwind: Argos Nightwhisper (Blackfathom Deeps, optional)
   when group 1275
   when level<30
   zone Stormwind City
-  tip Blackfathom Deeps: a 5-player dungeon on the north-west coast of Ashenvale, best at 24 to 28. This guide takes its quests on the way, runs it from the Zoram Strand, then hands them in at Auberdine. Alone? Skip it: the guide goes on in Ashenvale.
+  tip Blackfathom Deeps: a 5-player dungeon on the north-west coast of Ashenvale, levels 22 to 28 (24 to 32 in the group finder). This guide takes its quests on the way, runs it from the Zoram Strand, then hands them in at Auberdine. Alone? Skip it: the guide goes on in Ashenvale.
   note Argos Nightwhisper only sends you to Gershala Nightwhisper in Auberdine, who gives the dungeon quest: a few hundred XP for a trip you make anyway.
   accept 3765                                 -- Argos Nightwhisper
 
@@ -107,7 +107,7 @@ step Auberdine: Gershala Nightwhisper (Blackfathom Deeps, optional)
   when group 1275
   when level<30
   zone Darkshore
-  tip Blackfathom Deeps: a 5-player dungeon on the north-west coast of Ashenvale, best at 24 to 28. Its quests are taken here and on the way, the dungeon is run from the Zoram Strand, and they are handed in back at Auberdine. Alone? Skip it: the guide goes on in Ashenvale.
+  tip Blackfathom Deeps: a 5-player dungeon on the north-west coast of Ashenvale, levels 22 to 28 (24 to 32 in the group finder). Its quests are taken here and on the way, the dungeon is run from the Zoram Strand, and they are handed in back at Auberdine. Alone? Skip it: the guide goes on in Ashenvale.
   note Keep 5 free quest log slots. Every player takes the quests from the givers; sharing works too (click the quest in the log, then Share).
   turnin 3765 optional                        -- Argos Nightwhisper's errand, if you took it in Stormwind
   accept 1275                                 -- Gershala Nightwhisper
@@ -232,7 +232,7 @@ step Blackfathom Deeps: before going in
   when group 1275
   when done bfd-start
   zone Ashenvale
-  tip The portal is in the half-sunken temple at the north end of the Zoram Strand: swim down to it. Group of 5 at 24 to 28; every enemy inside is elite.
+  tip The portal is in the half-sunken temple at the north end of the Zoram Strand: swim down to it. Group of 5, levels 22 to 28; every enemy inside is elite.
   note In the quest log before going in: Researching the Corruption (Gershala Nightwhisper, Auberdine). If you took them: In Search of Thaelrid and Twilight Falls (Darnassus, a detour), Knowledge in the Deeps (Gerrig Bonegrip, Ironforge, offered in Group 3: too far to fetch now). Nothing to bring.
   note Warlocks: The Orb of Soran'ruk (Doan Karhan, in the Barrens) takes three fragments from the Twilight Acolytes here and one from Shadowfang Keep; it is not on this route.
   goto 14.5,14.2 "Blackfathom Deeps" r 25
@@ -246,6 +246,26 @@ step Blackfathom Deeps: along the way
   collect 5952 x8 quest 1275                  -- Corrupted Brain Stem: Blackfathom nagas, Fallenroot satyrs
   collect 5879 x10 quest 1199 optional        -- Twilight Pendant: Twilight's Hammer cultists
 
+# Groupe Alliance 0.11.0 (review): the two class quests of the codex for this dungeon, shown only
+# to the class and only to whoever holds the quest. Drops from Polestar's Forever data: Corrupted
+# Kor Gem (Blackfathom Tide Priestess, Oracle and Sea Witch, 50 %), Soran'ruk Fragment (Twilight
+# Acolyte, 100 %); Icy Veins' Forever quest guide (05/10/2026) says the same.
+step Paladins: Seeking the Kor Gem
+  only Paladin
+  when done bfd-start
+  when onquest 1442
+  along until bfd-kelris
+  tip The Blackfathom Tide Priestesses, Oracles and Sea Witches (the naga casters) drop the Corrupted Kor Gem, about 1 in 2. Thundris Windweaver in Auberdine cleanses it, on the way back.
+  collect 6995 quest 1442                     -- Corrupted Kor Gem: naga casters
+
+step Warlocks: The Orb of Soran'ruk
+  only Warlock
+  when done bfd-start
+  when onquest 1740
+  along until bfd-kelris
+  tip The Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from Shadowfang Keep, not on this route: Polestar's class guides (Orb of Soran'ruk) cover it.
+  collect 6914 x3 quest 1740                  -- Soran'ruk Fragment: Twilight Acolytes
+
 step Blackfathom Deeps: Ghamoo-ra's pool
   when group 1275
   when done bfd-start
@@ -253,13 +273,10 @@ step Blackfathom Deeps: Ghamoo-ra's pool
   collect 5359 quest 971 optional             -- Lorgalis Manuscript, in the Pitted Iron Chest
   kill 4887                                   -- Ghamoo-ra
 
-step Blackfathom Deeps: Lady Sarevess and Gelihast
-  when group 1275
-  when done bfd-start
-  tip Lady Sarevess, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). Gelihast, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.
-  kill 4831                                   -- Lady Sarevess
-  kill 6243 optional                          -- Gelihast
-
+# Groupe Alliance 0.11.0 (review): Thaelrid comes right after Ghamoo-ra, before Lady Sarevess:
+# both WoW Forever quest guides put him by Ghamoo-ra's pool (Warcraft Tavern, 11/11/2026: "an
+# alcove of the room where you face Ghamoo-ra"; Icy Veins, 05/10/2026: "a cave hidden underwater,
+# its entrance on the southeast of the area where Ghamoo-ra is").
 step Blackfathom Deeps: Argent Guard Thaelrid
   when group 1275
   when done bfd-start
@@ -279,6 +296,13 @@ step Blackfathom Deeps: Argent Guard Thaelrid (without the Darnassus quest)
   tip Thaelrid of the Argent Dawn waits in an underwater cave whose entrance is south-east of Ghamoo-ra's pool. He offers Blackfathom Villainy without In Search of Thaelrid too. Talk to him BEFORE killing Kelris; not offered? Carry on.
   talk 4787                                   -- Argent Guard Thaelrid
   accept 1200 optional
+
+step Blackfathom Deeps: Lady Sarevess and Gelihast
+  when group 1275
+  when done bfd-start
+  tip Lady Sarevess, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). Gelihast, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.
+  kill 4831                                   -- Lady Sarevess
+  kill 6243 optional                          -- Gelihast
 
 step Blackfathom Deeps: Twilight Lord Kelris
   label bfd-kelris
@@ -470,7 +494,8 @@ step To Menethil Harbor
 step Menethil Harbor
   zone Wetlands
   accept 279                              -- Karl Boran, on the pier north of the inn
-  sethome "Deepwater Tavern" npc 1464     -- Innkeeper Helbrek; before the vendor: Polestar opens the goods for the step's first vendor or buy goal at this NPC, and the bind comes first
+  # The bind before the vendor: Polestar opens the goods for the step's first vendor or buy goal at this NPC.
+  sethome "Deepwater Tavern" npc 1464     -- Innkeeper Helbrek
   vendor nearest
   accept 463                              -- First Mate Fitzsimmons, in the inn
   tip Vincent Hyal, Mikhail and Tapoke Jahn are all at Menethil's inn; Tapoke fights you when you talk to Mikhail, but gives up once beaten. Caitlin Grassman stands a short walk north-east of the inn.

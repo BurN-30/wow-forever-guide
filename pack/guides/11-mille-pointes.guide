@@ -38,9 +38,20 @@ step Stormwind: Shoni the Shilent (Gnomeregan, optional)
   when group 2928
   when level<33
   zone Stormwind City
-  tip Gnomeregan: the gnomes' fallen city under Dun Morogh, a 5-player dungeon best at 29 to 33. The guide runs it after Group 10 (Group 10b), from Ironforge, where the other quests are given. Shoni's quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.
+  tip Gnomeregan: the gnomes' fallen city under Dun Morogh, a 5-player dungeon, levels 25 to 34. The guide runs it after Group 10 (Group 10b), from Ironforge, where the other quests are given. Shoni's quest is the only one given elsewhere: take it now. Alone? Skip it: Group 10b is then skipped too.
   note Shoni the Shilent stands in the Dwarven District, by the tram. The quest waits in the log until Gnomeregan.
   accept 2928                             -- Shoni the Shilent
+
+# Groupe Alliance 0.11.0 (review): Tinkmaster Overspark (2923), Brother Sarno's errand to the
+# Gnomeregan quest giver in Tinker Town (Polestar's Forever data; Warcraft Tavern's Forever quest
+# guide, 11/11/2026: "Chain Start: Brother Sarno"). Taken here, where the guide already is,
+# and handed in at the start of Group 10b.
+step Stormwind: Brother Sarno (Gnomeregan, optional)
+  when group 2928
+  when level<33
+  zone Stormwind City
+  tip Brother Sarno stands in Cathedral Square. His errand leads to Tinkmaster Overspark in Tinker Town, who gives Save Techbot's Brain!: a few hundred XP for a trip the guide makes anyway.
+  accept 2923                             -- Brother Sarno
 
 step Duskwood
   zone Duskwood
@@ -280,15 +291,35 @@ step Razorfen Kraul (dungeon, optional)
   when group 1144
   when level<33
   zone The Barrens
-  tip Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, best at 27 to 32. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.
+  tip Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the road down to Thousand Needles, levels 25 to 33 (29 to 38 in the group finder; the last bosses are 33): at 29 or more here, it goes well. Its two Alliance quests are given inside: nothing to take beforehand. Alone? Skip it: the guide goes on to Thousand Needles.
   note Horde land: keep clear of Camp Taurajo and its guards. Keep 2 free quest log slots.
   goto 42.9,90.2 "Razorfen Kraul" r 25
 
+# Groupe Alliance 0.11.0 (review): the two class quests of the codex for this dungeon, only for
+# the class and only for whoever holds the quest. Drops from Polestar's Forever data: Vial of
+# Phlogiston (Roogug, 100 %; Warcraft Tavern's Forever guide, 11/11/2026, says the same), Tattered
+# Note (Charlga Razorflank, rate unknown: to check in game).
+step Warriors: Fire Hardened Mail
+  only Warrior
+  when done rfk-start
+  when onquest 1701
+  along until rfk-charlga
+  tip Roogug, the first boss, drops the Vial of Phlogiston. The other items of the quest come from Stonetalon and the Wetlands: Polestar's class guides (Fire Hardened Armor) cover them.
+  collect 6841 quest 1701                 -- Vial of Phlogiston: Roogug
+
 step Razorfen Kraul: Charlga Razorflank
+  label rfk-charlga
   when group 1144
   when done rfk-start
   tip Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her.
   kill 4421                               -- Charlga Razorflank
+
+step Shamans: Elemental Aid
+  only Shaman
+  when done rfk-start
+  when onquest 96264
+  tip Elemental Aid (Veyric Thunderhame, Arathi Highlands): the Tattered Note comes from Charlga Razorflank. To check in game: the drop rate is not known.
+  collect 274463 quest 96264              -- Tattered Note: Charlga Razorflank
 
 step Razorfen Kraul: Heralath Fallowbrook
   when group 1144
