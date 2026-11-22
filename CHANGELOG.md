@@ -2,7 +2,7 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
-## v0.12.0 (en préparation)
+## v0.12.0 (2026-11-22)
 
 ### Français
 - Nouveau guide « Fin de parcours · Donjons 52-60 (facultatifs) », qui suit le Groupe 30 : les donjons dont le parcours n'atteint jamais le niveau près de leur porte, chacun avec sa question « La passer / La faire en groupe ».
