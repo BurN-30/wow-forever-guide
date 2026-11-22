@@ -8,6 +8,9 @@ local DEFAULTS = {
     -- "pretty" draws panels for the types turned on below; "blizzard" keeps
     -- the game's own tooltips everywhere.
     layout = "pretty",
+    fadeTooltips = false,
+    hideDelay = 1,
+    fadeDuration = 1,
     itemPanels = true,
     -- The game's own item tooltip shortens Equip effects, in its colors but for magic.
     liteWording = true,
@@ -41,6 +44,8 @@ local DEFAULTS = {
     swapDamage = false,
     itemLevelBadge = true,
     unitLevelBadge = true,
+    -- A guild's realm beside its name, when it is another realm's.
+    unitRealm = true,
     separators = true,
     spellPanels = true,
     disenchant = true,
@@ -88,6 +93,15 @@ function ns.option(key)
     return DEFAULTS[key]
 end
 
+function ns.fadeTiming()
+    local function seconds(key)
+        local value = ns.util.number(ns.option(key))
+        if not value or value ~= value then return 1 end
+        return math.max(0, math.min(5, value))
+    end
+    return seconds("hideDelay"), seconds("fadeDuration")
+end
+
 function ns.tooltipScale()
     local scale = ns.util.number(ns.option("tooltipScale"))
     if not scale or scale ~= scale then return 1 end
@@ -124,12 +138,15 @@ local function setOption(key, value)
 end
 ns.setOption = setOption
 
--- 1.3's item lite mode was the game's item tooltip; it is now items not restyled.
 function ns.migrateOptions()
     local db = PrettyTooltipDB
-    if type(db) ~= "table" or db.itemLite == nil then return end
+    if type(db) ~= "table" then return end
+    -- 1.3's item lite mode was the game's item tooltip; it is now items not restyled.
     if db.itemLite == true then db.itemPanels = false end
     db.itemLite = nil
+    -- 1.4.1's custom timings were the only fade a player chose; its default mirrored the game's.
+    if db.customFade == true then db.fadeTooltips = true end
+    db.customFade = nil
 end
 
 function ns.resetOptions()
@@ -138,7 +155,8 @@ function ns.resetOptions()
 end
 
 -- tooltipType: "item" (default), "spell", "object", "unit", "aura", "quest", "macro", or "shared" by all. color is where the picker starts
--- while the color is automatic.
+-- while the color is automatic. needs: the data set the part is drawn from (ns.hasData), when only some clients
+-- load it; the editor offers the part where it is loaded. Retail's own parts are in Retail/Core/Settings.lua.
 ns.ELEMENTS = {
     { key = "mailTitle", label = "Mail title", size = 16, title = true, color = colors.title, tooltipType = "mail" },
     { key = "mailPrices", label = "Attachments and prices", size = 12, color = colors.detail, tooltipType = "mail" },
@@ -175,7 +193,7 @@ ns.ELEMENTS = {
         note = "On recipes; the count you carry red while short, unless set." },
     { key = "caption", label = "Section captions", size = 9, color = colors.caption, caps = true,
         note = "Creates and Reagents on recipes." },
-    { key = "disenchant", label = "Disenchant results", size = 11, color = colors.detail,
+    { key = "disenchant", label = "Disenchant results", size = 11, color = colors.detail, needs = "disenchant",
         note = "The Enchanting needed red while yours is too low, grey without Enchanting, unless set." },
     { key = "spellTitle", label = "Spell name", size = 17, title = true,
         color = colors.title, tooltipType = "spell" },
@@ -200,7 +218,7 @@ ns.ELEMENTS = {
         note = "The skill in its skill-up color, unmet requirements red, unless set." },
     { key = "objectQuests", label = "Quest lines", size = 12, color = colors.objective,
         tooltipType = "object", note = "Quest names gold, finished objectives green, unless set." },
-    { key = "objectLoot", label = "Contents", size = 11, color = colors.detail, tooltipType = "object",
+    { key = "objectLoot", label = "Contents", size = 11, color = colors.detail, tooltipType = "object", needs = "nodeLoot",
         note = "A herb or ore node's yield over its taps, then what else it may hold and the chance each tap. "
             .. "Turned off by Gathering contents in the options." },
     { key = "objectPrices", label = "Prices", size = 11, color = { .88, .78, .60 },
@@ -208,11 +226,13 @@ ns.ELEMENTS = {
     { key = "unitName", label = "Name", size = 17, title = true, color = { 1, 1, 1 },
         tooltipType = "unit", note = "Class color for players, reaction color for NPCs, unless set." },
     { key = "unitGuild", label = "Guild or role", size = 12, color = { .9, .9, .9 }, tooltipType = "unit" },
+    { key = "unitRealm", label = "Guild realm", size = 11, color = colors.detail, tooltipType = "unit",
+        note = "Beside the guild, for a guild from another realm. Turned off by Guild realm in the options." },
     { key = "unitInfo", label = "Level, race, and class", size = 12, color = colors.detail,
         tooltipType = "unit", note = "The level in its difficulty color, unless set." },
     { key = "unitBadges", label = "Badges", size = 12, color = { .9, .9, .9 }, tooltipType = "unit",
-        note = "Elite, rare, faction, PvP, AFK, and dead." },
-    { key = "unitSkinning", label = "Skinning", size = 11, color = colors.detail, tooltipType = "unit",
+        note = "Elite, rare, faction, PvP, AFK, dead, and Skinnable in its skill-up color." },
+    { key = "unitSkinning", label = "Skinning", size = 11, color = colors.detail, tooltipType = "unit", needs = "skinningLoot",
         note = "On a dead creature that can be skinned: the Skinning it needs, in its skill-up color, and what "
             .. "it may give. Turned off by Gathering contents in the options." },
     { key = "unitDetails", label = "Target and owner", size = 11, color = colors.detail,
@@ -268,6 +288,17 @@ ns.TOOLTIP_TYPES = {
     { label = "Totems", cursor = "cursorTotems", types = { "Totem" } },
     { label = "Flyout buttons", cursor = "cursorFlyouts", types = { "Flyout" } },
 }
+
+-- A client's own defaults and parts (retail's Retail/Core/Settings.lua), each
+-- part after the one it names, so the style editor lists it where it is drawn.
+-- A part naming none stops the load: left out, its style would be missing
+-- when its tooltip is drawn.
+for _, extra in ipairs(ns.contributions("settings")) do
+    for key, value in pairs(extra.defaults or {}) do DEFAULTS[key] = value end
+    for _, element in ipairs(extra.elements or {}) do
+        ns.util.insertAfter(ns.ELEMENTS, element.after, element, "style part")
+    end
+end
 
 local ELEMENT_BY_KEY = {}
 for _, element in ipairs(ns.ELEMENTS) do ELEMENT_BY_KEY[element.key] = element end

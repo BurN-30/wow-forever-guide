@@ -272,6 +272,10 @@ function QuestFlagsPVP() return false end
 NS.L = setmetatable({}, { __index = function(_, k) return k end })
 NS.Closes = { HoldsOffer = function() return false end }
 NS.RegisterEvent = function() end
+-- Polestar 0.4.x: the pause ("No quest automation while paused") and the debug log.
+NS.PauseHides = function() return false end
+NS.Debug = function() end
+NS.Engine.AcceptRefusal = function() return "test" end
 ''')
 run((repo / "addons" / "Polestar" / "Core" / "Automation.lua").read_text(encoding="utf-8"), "@Automation.lua")
 L.execute(r'''
@@ -352,7 +356,10 @@ print(f"escort badge: {len(marked)} quests ({len(extra)} from our list), " + ("o
 OFF_BY_DEFAULT = {"BuffAlertsForever"}
 state_bad = []
 for d in sorted(p for p in (repo / "addons").iterdir() if p.is_dir()):
-    toc = (d / f"{d.name}.toc").read_text(encoding="utf-8-sig")
+    # The .toc the WoW Forever client reads: <name>_Camelot.toc (or _Forever) when the addon ships
+    # one per game, as PrettyTooltip 1.4, else <name>.toc.
+    toc_file = next(p for p in (d / f"{d.name}{s}.toc" for s in ("_Forever", "_Camelot", "")) if p.is_file())
+    toc = toc_file.read_text(encoding="utf-8-sig")
     states = [m.lower() for m in re.findall(r"^## DefaultState:\s*(\S+)", toc, re.M)]
     if (states == ["disabled"]) != (d.name in OFF_BY_DEFAULT):
         state_bad.append(f"{d.name} {states or 'none'}")

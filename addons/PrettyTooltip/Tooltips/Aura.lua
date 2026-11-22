@@ -43,13 +43,6 @@ local function isRemaining(text)
     end
     return false
 end
--- [pack patch #49] The game's own "Spell ID: 706" line, which the
--- tooltipShowAuraSpellIDs CVar adds under the name: it goes with the other
--- rows, as the style editor's sample shows it, not in place of the description.
-local function isSpellIDLine(text, spellID)
-    if type(spellID) ~= "number" or type(SPELL_ID) ~= "string" then return false end
-    return tonumber((util.unformat(text, SPELL_ID))) == spellID
-end
 
 -- The tooltip's lines lack the duration and stacks; the aura it shows has them.
 -- The getter is known only while the game fills the tooltip, so the aura is
@@ -75,6 +68,14 @@ local function auraOf(tooltip, spellID, game)
     end
     keptAuras[tooltip] = { spellID = spellID, aura = aura }
     return aura
+end
+
+-- The game's "Spell ID: 706" line, with tooltipShowAuraSpellIDs on. The client
+-- builds it, so no format string names it: a short label, then the aura's ID.
+local function isIDLine(text, right, spellID)
+    if not spellID or trim(right) ~= "" then return false end
+    local label, number = text:match("^(%D+)(%d+)$")
+    return label ~= nil and #label <= 40 and tonumber(number) == spellID
 end
 
 local function auraKey(_, data)
@@ -105,7 +106,8 @@ local function readAura(tooltip, data, game)
     if not util.canModify(tooltip) then return end
     if isSecret(data) or not data or isSecret(data.lines) or not data.lines then return end
     local spellID = readable(data.id)
-    local model = { description = {}, extras = {}, lineIndices = {}, icon = game.spellIcon(spellID) }
+    local model = { description = {}, extras = {}, lineIndices = {}, icon = game.spellIcon(spellID),
+        spellID = type(spellID) == "number" and spellID or nil }
     for _, line in ipairs(data.lines) do
         if isSecret(line) or not line or isSecret(line.lineIndex) then return end
         if line.lineIndex then
@@ -119,7 +121,9 @@ local function readAura(tooltip, data, game)
             elseif text ~= "" or right ~= "" then
                 if isRemaining(text) then
                     model.remaining = text
-                elseif text ~= "" and not model.text and not isSpellIDLine(text, spellID) then
+                elseif isIDLine(text, right, model.spellID) then
+                    model.gameShowsID = true
+                elseif text ~= "" and not model.text then
                     model.text = text
                 else
                     tooltipData.add(model.extras, left, right)
@@ -209,7 +213,7 @@ local function timeSections(sections, model, color)
 end
 
 -- What the panel shows, for Panel/Render.lua to draw.
-local function auraView(model)
+local function auraView(panel, model)
     local styles = {}
     for _, key in ipairs(PARTS) do styles[key] = ui.styleOf(key) end
     local color = model.color or colors.neutral
@@ -220,9 +224,11 @@ local function auraView(model)
             style = styles.auraText, color = colors.description, numbers = ns.Palette.numberCode(color), gap = 5 }
     end
     timeSections(sections, model, color)
-    if #model.extras > 0 then
+    -- The game's own ID line means tooltipShowAuraSpellIDs is on: shown without the key.
+    local extras = ui.withID(panel, model.extras, L["Spell ID: %s"], model.spellID, model.gameShowsID)
+    if #extras > 0 then
         sections[#sections + 1] = { separator = #sections > 0 and { rule = EXTRAS_RULE } or { space = 4 },
-            kind = "rows", rows = model.extras, style = styles.extras, color = ui.EXTRA_COLOR, gap = 2, wrap = true }
+            kind = "rows", rows = extras, style = styles.extras, color = ui.EXTRA_COLOR, gap = 2, wrap = true }
     end
     return {
         tooltipType = "aura",
@@ -240,7 +246,7 @@ local function auraView(model)
 end
 
 local function renderAura(panel, tooltip, model)
-    ui.renderView(panel, tooltip, auraView(model))
+    ui.renderView(panel, tooltip, auraView(panel, model))
 end
 
 ui.timeSections = timeSections

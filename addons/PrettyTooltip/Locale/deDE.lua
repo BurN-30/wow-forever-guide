@@ -144,6 +144,12 @@ L["Spell Power Coefficient over time"] = "Zaubermachtkoeffizient über Zeit"
 L["Healing Power Coefficient"] = "Heilkraftkoeffizient"
 L["Healing Power Coefficient over time"] = "Heilkraftkoeffizient über Zeit"
 L["each"] = "je"
+L["Proc"] = "Auslösung"
+L["Judgement"] = "Richturteil"
+L["Judgement, stunned target"] = "Richturteil, betäubtes Ziel"
+L["Per swing, fast weapon"] = "Pro Schlag, schnelle Waffe"
+L["Per swing, slow weapon"] = "Pro Schlag, langsame Waffe"
+L["Extra to the first targets"] = "Zusätzlich für die ersten Ziele"
 
 -- Stats --------------------------------------------------------------------------
 
@@ -264,6 +270,13 @@ L["Separators"] = "Trennlinien"
 L["The gold dividers between sections and the thin rules above other addons' rows. Off, they are hidden along with the space around them."] =
     "Die goldenen Trenner zwischen den Abschnitten und die feinen Linien über den Zeilen anderer Addons. Aus: Sie werden mitsamt ihrem Abstand ausgeblendet."
 L["School colors"] = "Schulfarben"
+L["Tooltip fading"] = "Tooltips ausblenden"
+L["Enable tooltip fading"] = "Tooltips ausblenden lassen"
+L["Off, panels for units and world objects hide as soon as the cursor leaves them. On, they fade with the timings below; both at zero hides them at once."] =
+    "Aus: Tooltips von Einheiten und Weltobjekten verschwinden, sobald der Mauszeiger sie verlässt. An: Sie blenden mit den Zeiten unten aus; beide auf null blendet sie sofort aus."
+L["Fade delay"] = "Ausblendverzögerung"
+L["Fade duration"] = "Ausblenddauer"
+L[" sec"] = " Sek."
 L["%s Panel"] = "Rahmen: %s"
 L["Show icon"] = "Symbol zeigen"
 L["The icon or portrait in the header, for the kind of tooltip shown."] =
@@ -324,8 +337,8 @@ L["Class colors"] = "Klassenfarben"
 L["Reset all fonts and colors"] = "Alle Schriften und Farben zurücksetzen"
 L["More options"] = "Weitere Optionen"
 L["IDs"] = "IDs"
-L["The item's, spell's, or NPC's ID at the bottom of its panel, under other addons' rows."] =
-    "Die ID des Gegenstands, Zaubers oder NPCs unten im Rahmen, unter den Zeilen anderer Addons."
+L["The item's, spell's, aura's, or NPC's ID at the bottom of its panel, under other addons' rows."] =
+    "Die ID des Gegenstands, Zaubers, der Aura oder des NPCs unten im Rahmen, unter den Zeilen anderer Addons."
 L["Item ID: %s"] = "Gegenstands-ID: %s"
 L["NPC ID: %s"] = "NPC-ID: %s"
 
@@ -435,7 +448,7 @@ L["Guild or role"] = "Gilde oder Rolle"
 L["Level, race, and class"] = "Stufe, Volk und Klasse"
 L["The level in its difficulty color, unless set."] = "Die Stufe in ihrer Schwierigkeitsfarbe, wenn nicht gesetzt."
 L["Badges"] = "Schilder"
-L["Elite, rare, faction, PvP, AFK, and dead."] = "Elite, selten, Fraktion, PvP, AFK und tot."
+L["Elite, rare, faction, PvP, AFK, dead, and Skinnable in its skill-up color."] = "Elite, selten, Fraktion, PvP, AFK, tot und Kürschnerbar in seiner Steigerungsfarbe."
 L["Skinning"] = "Kürschnerei"
 L["On a dead creature that can be skinned: the Skinning it needs, in its skill-up color, and what it may give. Turned off by Gathering contents in the options."] =
     "Bei einer toten, häutbaren Kreatur: die nötige Kürschnerei in ihrer Steigerungsfarbe und was sie geben kann. Wird mit Sammeln in den Optionen abgeschaltet."

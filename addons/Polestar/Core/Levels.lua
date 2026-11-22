@@ -6,7 +6,9 @@
 --
 --   Levels.Run(entries[, p[, start]]) -> summary
 --     entries, in route order:
---       { kind = "quest" (or nil), id, level, xp (full reward | nil: not known), classes = { CLASS } | nil }
+--       { kind = "quest" (or nil), id, level, xp (full reward | nil: not known), classes = { CLASS } | nil,
+--         blocked = true | nil (this character may not take it, by class or race: left out like another class's),
+--         group = name | nil, minLevel }   -- group: what the quest's XP is summed under (summary.groups)
 --       { kind = "kill", n (kills), mob (level), elite }
 --       { kind = "kill" } with no n: a kill or loot goal that could not be estimated
 --     p: { level, xp, xpMax, class, faction } (default: this character)
@@ -18,23 +20,36 @@
 --       killsUnknown (goals not estimated), xp (questXP + killXP), maxed
 --       (level 60: none counts), below (the start level | nil), now = { level,
 --       xp, need } (the character), from (where the sums start: now, or the
---       start level), to = { level, xp, need }, levels (the gain, fractional) }
+--       start level), to = { level, xp, need }, levels (the gain, fractional),
+--       groups = { [group] = { n, xp, need (highest minLevel) } } | nil (only when entries name a group) }
 --   Levels.ForGuide(id[, p[, from[, to]]]) -> summary | nil   -- a guide for this character
 --       (its race, class and faction: the steps' and goals' `only`), from its
 --       minLevel when below it: each turn-in once, its XP from the Codex; each
 --       kill goal's kills, and each loot goal's from its drop chance
---       (count / chance, the goal's own mob else the item's likeliest), at the
---       mob's level; an objective split over steps once, nothing for quests
+--       (count / chance, the goal's own mob else the item's likeliest; a
+--       chance under 5% while another dropper's is not known counts as not
+--       known), at the mob's level, less what the step's `when has` already
+--       has in the bags (it shows only then: nothing to farm); an objective
+--       split over steps once, nothing for quests
 --       done. from/to: only steps from..to-1, from where the character is
 --       (no minLevel start). nil: no guide, or no Codex to read (the Codex is
 --       loaded for it only while lookup.enabled, as Lookup owns it)
---   Levels.Pace([p]) -> { target, step, reach, bars } | nil  -- the active
---       guide's next level target (Engine.LevelTarget) against what its steps
---       from the live step to that one give: reach, the level they leave you
---       at (fractional); bars, how many of the XP bar's 20 per level short
---       (0: on pace). nil without a target ahead or the Codex
+--   Levels.Pace([p]) -> pace | nil  -- where the character stands against the
+--       active guide, from the live step: its next level target
+--       (Engine.LevelTarget, kind "goal": the guide holds you at that step
+--       until you have it) or, with none ahead, a leveling guide's own end
+--       level (its `levels` top, kind "end", at its last step) against what
+--       the steps up to there give. pace = { target, step, reach (the level
+--       they leave you at, fractional), bars (the XP bar's 20 per level
+--       short; 0: on pace), short (levels short, 0 on pace), xp (XP short),
+--       kind, live }. nil at 60, without a live step or the Codex, and with
+--       no target (no `level` goal ahead in a guide that is not a leveling
+--       one). It never names a quest's level (Fitz: we don't tell players
+--       what level a quest is; #3438)
+--   Levels.QuestLevel(qid[, g]) -> level | nil  -- guide g's own (an accept's
+--       qlvl), else the Codex's while loaded, else the client's
 --   Levels.Player() -> p ; Levels.LEVEL_XP[L] -> XP from L to L + 1 ; Levels.MAX_LEVEL
---   Levels.Share(playerLevel, questLevel) -> 1, 0.8, 0.6, 0.4, 0.2 or 0.1
+--   Levels.Share(playerLevel, questLevel) -> 1, 0.8, 0.6 or 0.5
 --   Levels.MobXP(playerLevel, mobLevel, elite) -> XP for one kill
 --
 -- The rules are the tools' (tools/lib/game/xp.js; tests/levels.test.js keeps
@@ -63,12 +78,13 @@ local MAX_LEVEL = 60
 Levels.LEVEL_XP, Levels.MAX_LEVEL = LEVEL_XP, MAX_LEVEL
 
 -- Share of a quest's reward by player level - quest level: full up to 5
--- levels above it, then 80/60/40/20%, and 10% from 10 above.
-local SHARE = { 0.8, 0.6, 0.4, 0.2 }
+-- levels above it, 80% at 6, 60% at 7, and half from 8 above on (what
+-- Forever pays, from players' recordings).
+local SHARE = { 0.8, 0.6 }
 local function share(plevel, qlevel)
 	local d = plevel - (qlevel or plevel)
 	if d <= 5 then return 1 end
-	if d >= 10 then return 0.1 end
+	if d >= 8 then return 0.5 end
 	return SHARE[d - 5]
 end
 Levels.Share = share
@@ -160,7 +176,7 @@ function Levels.Run(entries, p, start)
 			end
 		elseif C and C.IsQuestCompleted and e.id and C.IsQuestCompleted(e.id) then
 			s.done = s.done + 1
-		elseif not hasClass(e.classes, p.class) then
+		elseif e.blocked or not hasClass(e.classes, p.class) then
 			s.other = s.other + 1
 		else
 			local full = e.xp
@@ -171,6 +187,16 @@ function Levels.Run(entries, p, start)
 				local one = floor(full * part + 0.5)
 				if part < 1 then s.reduced = s.reduced + 1 end
 				s.quests, s.questXP = s.quests + 1, s.questXP + one
+				if e.group then
+					s.groups = s.groups or {}
+					local g = s.groups[e.group]
+					if not g then
+						g = { n = 0, xp = 0 }
+						s.groups[e.group] = g
+					end
+					g.n, g.xp = g.n + 1, g.xp + one
+					if e.minLevel and (not g.need or e.minLevel > g.need) then g.need = e.minLevel end
+				end
 				gain(one)
 			end
 		end
@@ -188,31 +214,116 @@ local function mobOf(Cx, npc)
 	return floor((rec.level + (rec.levelMax or rec.level)) / 2), rec.elite
 end
 
--- The kills a loot goal takes: count over its drop chance from the goal's own
--- mob, else the item's likeliest dropper. -> n, mob level, elite | nil (no
--- drop to estimate from: an object, a vendor, a chance not known)
-local function lootKills(Cx, goal)
+-- A drop chance under STRAY % says nothing about where a loot goal's item
+-- comes from while another of its droppers has no chance known: a quest's
+-- loot counted over every kill of a mob, most of them by players without the
+-- quest, looks like a rare drop (#1697: Surgical Spidersilk, 1 in 16,605
+-- Giant Plains Creepers, so 12 of them were "120,000 kills", while the Plains
+-- Creepers beside them, no chance known, drop it on almost every kill).
+local STRAY = 5
+
+-- The kills a loot goal takes for count items: count over its drop chance
+-- from the goal's own mob, else the item's likeliest dropper. -> n, mob
+-- level, elite | nil (no drop to estimate from: an object, a vendor, a
+-- chance not known, or only a stray one beside a dropper whose chance is not
+-- known)
+local function lootKills(Cx, goal, count)
 	local item = goal.item and Cx.Item and Cx.Item(goal.item)
 	if not (item and type(item.sources) == "table") then return nil end
 	local own = goal.fromKind == "npc" and goal.fromId or nil
-	local best
+	local best, unknown
 	for _, src in pairs(item.sources) do
 		-- Also picked up from an object, and no mob named: gathered, no kills.
 		if src.type == "object" and not own then return nil end
 	end
 	for _, src in pairs(item.sources) do
-		if src.type == "drop" and src.npc and (src.chance or 0) > 0 then
-			if src.npc == own then
+		if src.type == "drop" and src.npc then
+			if (src.chance or 0) <= 0 then
+				unknown = true
+			elseif src.npc == own then
 				best = src
 				break
+			elseif not best or src.chance > best.chance then
+				best = src
 			end
-			if not best or src.chance > best.chance then best = src end
 		end
 	end
-	if not best then return nil end
+	if not best or (unknown and best.npc ~= own and best.chance < STRAY) then return nil end
 	local mob, elite = mobOf(Cx, best.npc)
 	if not mob then return nil end
-	return ceil((goal.count or 1) / (min(best.chance, 100) / 100)), mob, elite
+	return ceil(count / (min(best.chance, 100) / 100)), mob, elite
+end
+
+-- A span's entries depend on the guide (its table: an updated import is a new one), the span, who the character is (level, class, race, faction:
+-- the steps' `only`) and which quests are turned in; not on the XP inside a level, which moves on every
+-- kill. The guide window's pace line asks on every PLAYER_XP_UPDATE (GF.UpdateXP > Levels.Pace), and each
+-- scan walked every step left, building a table per goal: a
+-- 5-25 ms frame per kill on a long guide, then its garbage. Kept until one of those changes.
+-- Each step's own rows (what its goals give, read from the Codex) are kept per guide and who the
+-- character is (class, race, faction), until the guides or the data change: a step change moves
+-- every span's start (the pace line's, Engine Own.herePlanned's, one per hand-in), and
+-- each read the same steps' Codex records again (a 10-20 ms frame at a step change early in a long
+-- guide). Whether a quest is done is asked when a span is summed, so a hand-in or a level-up drops
+-- the spans only.
+local spans, spanCount = {}, 0
+local SPAN_MAX = 32
+local rows, rowsCount = {}, 0
+local ROWS_MAX = 8 -- guides (and characters) whose rows are kept
+function Levels.Invalidate()
+	spans, spanCount = {}, 0
+end
+local function dataChanged()
+	spans, spanCount, rows, rowsCount = {}, 0, {}, 0
+end
+for _, ev in ipairs({ "QUEST_TURNED_IN", "PLAYER_LEVEL_UP" }) do
+	if ns.RegisterEvent then ns.RegisterEvent(ev, Levels.Invalidate) end
+end
+if ns.On then
+	ns.On("GUIDE_CHANGED", Levels.Invalidate)
+	for _, msg in ipairs({ "GUIDES_REGISTERED", "PACKS_CHANGED", "CODEX_LOADED" }) do ns.On(msg, dataChanged) end
+end
+
+-- Step si's rows for a character `applies` fits: { turnin = qid, entry } per hand-in, { quest, key,
+-- entry | false } per kill or loot goal (key: the objective, counted once per span; no entry: loot
+-- with no drop behind it, gathered or bought, or already in the bags, needs no kills).
+local function stepRows(g, si, Cx, applies)
+	local out = {}
+	local step = g.steps[si]
+	if not (step and applies(step.only) and type(step.goals) == "table") then return out end
+	-- A step shown only while the bags hold an item (`when has`) asks no kills for those: the player
+	-- brings them (Badlands' Frost Oil for Lotwil, 1 in 5,000 kills as a drop).
+	local carried
+	if type(step.when) == "table" then
+		for _, p in ipairs(step.when) do
+			if p.k == "has" and not p.neg and p.item then
+				carried = carried or {}
+				carried[p.item] = max(carried[p.item] or 0, p.n or 1)
+			end
+		end
+	end
+	for _, goal in ipairs(step.goals) do
+		if applies(goal.only) then
+			local t, qid = goal.t, goal.quest
+			if t == "turnin" and qid then
+				local rec = Cx.Quest(qid)
+				out[#out + 1] = { turnin = qid, entry = { id = qid, level = rec and rec.level, xp = rec and rec.xp } }
+			elseif t == "kill" or (t == "collect" and goal.fromKind ~= "object") then
+				local row = { quest = qid, key = qid and (qid .. ":" .. (goal.oi or 0)) or nil, entry = false }
+				if t == "kill" then
+					local mob, elite = mobOf(Cx, goal.npc)
+					row.entry = { kind = "kill", n = mob and (goal.count or 1) or nil, mob = mob, elite = elite }
+				else
+					local count = (goal.count or 1) - (carried and carried[goal.item] or 0)
+					if count > 0 then
+						local n, mob, elite = lootKills(Cx, goal, count)
+						if n or goal.fromKind == "npc" then row.entry = { kind = "kill", n = n, mob = mob, elite = elite } end
+					end
+				end
+				out[#out + 1] = row
+			end
+		end
+	end
+	return out
 end
 
 function Levels.ForGuide(id, p, from, to)
@@ -224,6 +335,11 @@ function Levels.ForGuide(id, p, from, to)
 		if not (ns.Get("lookup.enabled") and Cx.Load and Cx.Load()) then return nil end
 	end
 	p = p or Levels.Player()
+	local who = table.concat({ tostring(g), tostring(p.class), tostring(p.race), tostring(p.faction) }, "|")
+	local key = table.concat({ who, tostring(from), tostring(to), tostring(p.level) }, "|")
+	local cached = spans[key]
+	local start = not from and G.Levels(g, p.faction) or nil
+	if cached then return Levels.Run(cached, p, start) end
 	local C = ns.Compat
 	local fits = G.Matches
 	local function applies(only)
@@ -232,52 +348,111 @@ function Levels.ForGuide(id, p, from, to)
 	local function done(qid)
 		return qid and C and C.IsQuestCompleted and C.IsQuestCompleted(qid) or false
 	end
+	local mine = rows[who]
+	if not mine then
+		if rowsCount >= ROWS_MAX then rows, rowsCount = {}, 0 end
+		mine = {}
+		rows[who], rowsCount = mine, rowsCount + 1
+	end
 	local entries, turnedIn, counted = {}, {}, {}
-	for si, step in ipairs(g.steps) do
-		if (not from or si >= from) and (not to or si < to) and applies(step.only) and type(step.goals) == "table" then
-			for _, goal in ipairs(step.goals) do
-				if applies(goal.only) then
-					local t, qid = goal.t, goal.quest
-					if t == "turnin" and qid and not turnedIn[qid] then
-						turnedIn[qid] = true
-						local rec = Cx.Quest(qid)
-						entries[#entries + 1] = { id = qid, level = rec and rec.level, xp = rec and rec.xp }
-					elseif (t == "kill" or (t == "collect" and goal.fromKind ~= "object")) and not done(qid) then
-						-- An objective split over steps is counted once.
-						local key = qid and (qid .. ":" .. (goal.oi or 0)) or nil
-						if not (key and counted[key]) then
-							if key then counted[key] = true end
-							if t == "kill" then
-								local mob, elite = mobOf(Cx, goal.npc)
-								entries[#entries + 1] = { kind = "kill", n = mob and (goal.count or 1) or nil, mob = mob, elite = elite }
-							else
-								local n, mob, elite = lootKills(Cx, goal)
-								-- Loot with no drop behind it (gathered, bought) needs no kills.
-								if n or goal.fromKind == "npc" then
-									entries[#entries + 1] = { kind = "kill", n = n, mob = mob, elite = elite }
-								end
-							end
-						end
-					end
+	for si = from or 1, to and math.min(to - 1, #g.steps) or #g.steps do
+		local list = mine[si]
+		if not list then
+			list = stepRows(g, si, Cx, applies)
+			mine[si] = list
+		end
+		for _, r in ipairs(list) do
+			if r.turnin then
+				if not turnedIn[r.turnin] then
+					turnedIn[r.turnin] = true
+					entries[#entries + 1] = r.entry
 				end
+			elseif not done(r.quest) and not (r.key and counted[r.key]) then
+				-- An objective split over steps is counted once.
+				if r.key then counted[r.key] = true end
+				if r.entry then entries[#entries + 1] = r.entry end
 			end
 		end
 	end
-	return Levels.Run(entries, p, not from and g.minLevel or nil)
+	if spanCount >= SPAN_MAX then spans, spanCount = {}, 0 end
+	spans[key], spanCount = entries, spanCount + 1
+	return Levels.Run(entries, p, start)
+end
+
+local function at(t) return t.level + (t.need > 0 and t.xp / t.need or 0) end
+
+-- XP from where t stands ({ level, xp, need }, as Levels.Run's `to`) to
+-- level `target` (12.4: 40% into level 12); 0 when there already.
+local function xpTo(t, target)
+	local n = floor(target)
+	local f = target - n
+	if t.level > n or (t.level == n and t.xp >= f * t.need) then return 0 end
+	if t.level == n then return ceil(f * t.need - t.xp) end
+	local sum = t.need - t.xp
+	for l = t.level + 1, n - 1 do sum = sum + (LEVEL_XP[l] or 0) end
+	return ceil(sum + f * (LEVEL_XP[n] or 0))
+end
+
+local qlvls = setmetatable({}, { __mode = "k" })
+function Levels.QuestLevel(qid, g)
+	if not qid then return nil end
+	if type(g) == "table" and type(g.steps) == "table" then
+		local map = qlvls[g]
+		if not map then
+			map = {}
+			for _, step in ipairs(g.steps) do
+				for _, goal in ipairs(type(step.goals) == "table" and step.goals or {}) do
+					local l = goal.quest and tonumber(goal.qlvl)
+					if l and l > 0 and not map[goal.quest] then map[goal.quest] = l end
+				end
+			end
+			qlvls[g] = map
+		end
+		if map[qid] then return map[qid] end
+	end
+	local Cx = ns.Codex
+	local rec = Cx and Cx.IsLoaded and Cx.IsLoaded() and Cx.Quest and Cx.Quest(qid)
+	if type(rec) == "table" and type(rec.level) == "number" and rec.level > 0 then return rec.level end
+	local C = ns.Compat
+	return C and C.GetQuestLevel and C.GetQuestLevel(qid) or nil
+end
+
+-- The last step of the active guide g at or after `live` the player gets to
+-- see (applies, not hidden).
+local function lastStep(E, g, live)
+	for s = #g.steps, live, -1 do
+		local hidden = E.StepNumber and select(2, E.StepNumber(s))
+		if not hidden and (not E.Applies or E.Applies(s)) then return s end
+	end
+	return nil
 end
 
 function Levels.Pace(p)
-	local E = ns.Engine
-	local g = E and E.GetGuide and E.GetGuide()
-	local live = g and E.GetLiveStep and E.GetLiveStep()
-	if not (live and E.LevelTarget) then return nil end
+	local E, G = ns.Engine, ns.Guides
+	local active = E and E.GetGuide and E.GetGuide()
+	local live = active and E.GetLiveStep and E.GetLiveStep()
+	local g = live and (G and G.Get and G.Get(active.id) or active)
+	if not (g and type(g.steps) == "table") then return nil end
 	p = p or Levels.Player()
-	local n, at, frac = E.LevelTarget(p.level)
-	if not (n and at and at >= live) then return nil end
+	if (p.level or 1) >= MAX_LEVEL then return nil end
+	local kind, n, step, frac = "goal", nil, nil, nil
+	if E.LevelTarget then n, step, frac = E.LevelTarget(p.level) end
+	if not (n and step and step >= live) then
+		-- No `level` goal ahead: a leveling guide's end, where the next one
+		-- starts (its `levels` top).
+		local top = G and G.Levels and select(2, G.Levels(g, p.faction)) or g.maxLevel
+		if (g.category or "Leveling") ~= "Leveling" or type(top) ~= "number" then return nil end
+		kind, n, frac, step = "end", top, nil, lastStep(E, g, live)
+		if not step then return nil end
+	end
 	local target = n + (frac or 0)
-	local s = Levels.ForGuide(g.id, p, live, at)
+	-- Up to a level goal's step (it holds you there); to the end, every step.
+	local s = Levels.ForGuide(g.id, p, live, kind == "goal" and step or nil)
 	if not s then return nil end
-	local reach = s.to.level + (s.to.need > 0 and s.to.xp / s.to.need or 0)
-	local short = target - reach
-	return { target = target, step = at, reach = reach, bars = short > 0 and ceil(short * 20) or 0 }
+	local reach = at(s.to)
+	local short = max(0, target - reach)
+	return {
+		target = target, step = step, reach = reach, bars = short > 0 and ceil(short * 20) or 0,
+		short = short, xp = xpTo(s.to, target), kind = kind, live = live,
+	}
 end

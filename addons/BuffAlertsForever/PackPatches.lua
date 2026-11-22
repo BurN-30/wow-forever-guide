@@ -11,9 +11,15 @@ local ADDON, ns = ...
 -- Each English name of those lists gets its twin in the client's language, read from a spell
 -- that has exactly that English name on build 1.60.1.70862 (wago.tools, SpellName enUS/frFR).
 ------------------------------------------------------------
+-- 3.13.0: the warrior's Victory Rush and Reckless Swings (3.12.0) have the same problem: no spell ID
+-- of WoW Forever in Data.lua (34428 does not exist on Forever, Reckless Swings has none), so Core finds
+-- them by their English name only (BestKnown) and never on a French client. Their Forever spells
+-- (SpellName, build 1.60.1.70888) give the name in the client's language.
 local NAME_SOURCES = {
     wellFed  = { 19705, 1283082 },               -- "Well Fed" (frFR "Bien nourri", "Personnage bien nourri")
     campfire = { 1229741, 7353, 18191, 18193 },  -- "Camp Benefits", "Cozy Fire", "Increased Stamina", "Increased Spirit"
+    victoryRush    = { 402927 },                 -- "Victory Rush" (frFR "Ivresse de la victoire")
+    recklessSwings = { 1329554 },                -- "Reckless Swings" (frFR "Frappes téméraires")
 }
 
 local function AddLocalizedNames()
@@ -88,7 +94,8 @@ end
 -- 11 per row: 3 rows), so the row stays clear of it whatever the number of buffs. Default Edit Mode
 -- layout, from the screen's top-right corner: buffs x -255 to -655, y -10 to -145; debuffs
 -- x -270 to -550, y -155 to -245; Polestar's guide window from x -64 to -404, from y -240 down.
--- Row 1 here: x -410 to -582, y -260 to -300; row 2 (hunter, unused Victory Rush) 44 px lower.
+-- Row 1 here: x -410 to -582, y -260 to -300; row 2 (hunter, warrior's Reckless Swings and
+-- Victory Rush) 44 px lower.
 -- Defaults only: dragging an icon ("Move icons") or a saved position still wins.
 ------------------------------------------------------------
 local PACK_ANCHOR = "PACK_BUFFS"
@@ -101,6 +108,7 @@ local BUFFS_RIGHT, BUFFS_BOTTOM = -255, -145      -- BuffFrame's default corner,
 -- alert key = { slot (0 = left), row }; same left-to-right order as the release
 local LAYOUT = {
     battleShout = { 0, 1 }, overpower = { 1, 1 }, revenge = { 2, 1 }, execute = { 3, 1 }, victoryRush = { 3, 2 },
+    recklessSwings = { 2, 2 },  -- 3.12.0, Fury talent
     roguePoison = { 2, 1 }, riposte = { 3, 1 },
     hunterAspect = { 0, 1 }, trueshotAura = { 1, 1 }, hunterPet = { 2, 1 }, hunterPack = { 3, 1 }, hunterCheetah = { 3, 1 },
     mongooseBite = { 1, 2 }, counterattack = { 2, 2 },
@@ -173,6 +181,45 @@ if ApplyLayout then
         end
     end
 end
+
+------------------------------------------------------------
+-- [pack patch #6] Clearcasting in combat, in every language (3.13.0)
+-- In combat the game hides buffs, so the Clearcasting alert watches five druid spells whose mana
+-- cost drops to 0 (PROC_ALERTS costSpells). Core finds them with C_Spell.GetSpellInfo(name) on
+-- their English names only: on a French client "Healing Touch" names no spell, the list stays
+-- empty and the alert never shows in combat. Each spell's name in the client's language is added,
+-- read from its rank 1 (SpellName, build 1.60.1.70888: 5185 Healing Touch / Toucher guérisseur,
+-- 5176 Wrath / Colère, 8936 Regrowth / Rétablissement, 8921 Moonfire / Eclat lunaire,
+-- 774 Rejuvenation / Récupération). Core reads the list again every 5 s out of combat.
+------------------------------------------------------------
+local COST_SPELL_IDS = { 5185, 5176, 8936, 8921, 774 }
+
+local function AddLocalizedCostSpells()
+    local getName = C_Spell and C_Spell.GetSpellName
+    if not (getName and ns.PROC_ALERTS) then return end
+    for _, alert in ipairs(ns.PROC_ALERTS) do
+        if alert.key == "omenOfClarity" and type(alert.costSpells) == "table" then
+            for _, id in ipairs(COST_SPELL_IDS) do
+                local ok, name = pcall(getName, id)
+                if ok and type(name) == "string" and name ~= "" and not (ns.IsSecret and ns.IsSecret(name)) then
+                    local known = false
+                    for _, n in ipairs(alert.costSpells) do
+                        if n == name then known = true; break end
+                    end
+                    if not known then alert.costSpells[#alert.costSpells + 1] = name end
+                end
+            end
+        end
+    end
+end
+
+AddLocalizedCostSpells()
+local costFrame = CreateFrame("Frame")
+costFrame:RegisterEvent("PLAYER_LOGIN")
+costFrame:SetScript("OnEvent", function(self)
+    self:UnregisterEvent("PLAYER_LOGIN")
+    AddLocalizedCostSpells()
+end)
 
 ------------------------------------------------------------
 -- [pack patch #5] "Reset to defaults" stopped halfway

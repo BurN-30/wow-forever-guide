@@ -82,6 +82,10 @@ local myPet = {}           -- missing pet alerts
 local myUtility = {}       -- small utility alerts (shards, ammo, durability...)
 local usableIds = {}       -- alertKey -> spellID of the best known rank
 local usableSince = {}     -- alertKey -> GetTime() when the ability became usable (proc countdown)
+local lastCast = {}        -- alertKey -> GetTime() of your last cast (cooldown-based alerts)
+local myProc = {}          -- proc alerts (Clearcasting)
+local procExp = {}         -- alertKey -> GetTime() when the proc runs out
+local procCostIds = {}     -- alertKey -> spellIDs used for the mana-cost check
 local weaponExp = {}       -- [16]/[17] = GetTime() when the temporary enchant ends
 local WeaponMissing        -- defined further below
 local trackers = {}        -- alertKey -> list of { sid, name, family, expires }
@@ -128,6 +132,7 @@ local function BestKnown(fk)
     local names = {}
     if #fam.ids > 0 then names[#names + 1] = SpellName(fam.ids[#fam.ids]) end
     for _, n in ipairs(fam.names or {}) do names[#names + 1] = n end
+    names[#names + 1] = fam.label   -- English name as last resort (Forever sometimes uses new spell IDs)
     for _, name in ipairs(names) do
         if C_Spell and C_Spell.GetSpellInfo then
             local ok, info = SafeCall(C_Spell.GetSpellInfo, name)
@@ -279,6 +284,18 @@ local function Resolve()
             frames[alert.key].icon:SetTexture(SpellIcon(BestKnown(alert.family)) or SpellIcon(fam.ids[#fam.ids]) or 134400)
         end
     end
+    for _, alert in ipairs(myProc) do
+        local fam = ns.FAMILIES[alert.aura]
+        if frames[alert.key] then frames[alert.key].icon:SetTexture(SpellIcon(fam.ids[1]) or 136085) end
+        local ids = {}
+        for _, name in ipairs(alert.costSpells or {}) do
+            if C_Spell and C_Spell.GetSpellInfo then
+                local ok, info = SafeCall(C_Spell.GetSpellInfo, name)
+                if ok and info and not IsSecret(info.spellID) and IsKnown(info.spellID) then ids[#ids + 1] = info.spellID end
+            end
+        end
+        procCostIds[alert.key] = ids
+    end
     for _, list in ipairs({ myUsable, myPet }) do
         for _, alert in ipairs(list) do
             local id = BestKnown(alert.family)
@@ -414,6 +431,8 @@ end
 
 local function OnPlayerCast(spellID)
     if spellID == nil or IsSecret(spellID) then return end
+    -- Any cast spends a Clearcasting-type proc
+    for _, alert in ipairs(myProc) do procExp[alert.key] = nil end
     -- Some casts consume a tracked buff (e.g. Judgement removes the active Seal)
     for _, alert in ipairs(myAlerts) do
         for _, id in ipairs(alert.consumedBy or {}) do
@@ -422,6 +441,9 @@ local function OnPlayerCast(spellID)
     end
     local fk = FamilyOf(spellID, SpellName(spellID))
     if not fk then return end
+    for _, alert in ipairs(myUsable) do
+        if alert.cooldown and alert.family == fk then lastCast[alert.key] = GetTime() end
+    end
     for _, alert in ipairs(myWeapon) do
         for _, wf in ipairs(alert.families or {}) do
             if wf == fk then
@@ -623,8 +645,20 @@ end
 local function UpdateUsable(alert)
     local f, id = frames[alert.key], usableIds[alert.key]
     if ns.unlocked then ShowPlain(f) return end
-    if not (db[alert.key].enabled and id) or PlayerDead() then
+    if not (db[alert.key].enabled and id) or (db[alert.key].combatOnly and not inCombat) or PlayerDead() then
         f:Hide() return
+    end
+    -- Cooldown-based abilities (Reckless Swings): hidden while on cooldown
+    if alert.cooldown then
+        local onCooldown = lastCast[alert.key] and GetTime() - lastCast[alert.key] < alert.cooldown
+        if not onCooldown and C_Spell and C_Spell.GetSpellCooldown then
+            local okC, cd = SafeCall(C_Spell.GetSpellCooldown, id)
+            if okC and type(cd) == "table" and not IsSecret(cd.duration) and not IsSecret(cd.startTime)
+               and cd.duration and cd.duration > 1.5 and cd.startTime and cd.startTime + cd.duration > GetTime() then
+                onCooldown = true
+            end
+        end
+        if onCooldown then f:Hide() return end
     end
     if not (C_Spell and C_Spell.IsSpellUsable) then f:Hide() return end
     local ok, usable, noPower = SafeCall(C_Spell.IsSpellUsable, id)
@@ -858,21 +892,99 @@ local function UpdateUtility(alert)
     if ok and show then ShowPlain(f) else f:Hide() end
 end
 
+------------------------------------------------------------
+-- Procs (Clearcasting): read the buff when allowed, otherwise watch for free spells
+------------------------------------------------------------
+local function ProcFromAuras(alert)
+    local list = ns.ScanAuras("player")
+    if not list then return nil end                  -- buffs hidden right now
+    for _, a in ipairs(list) do
+        if FamilyOf(a.sid, a.name) == alert.aura then
+            return (a.exp and a.exp > 0) and a.exp or (GetTime() + ns.FAMILIES[alert.aura].duration)
+        end
+    end
+    return false
+end
+
+-- true when a reference spell costs no mana (the proc is up), nil when the cost cannot be read
+local function ProcFromCost(alert)
+    if not (C_Spell and C_Spell.GetSpellPowerCost) then return nil end
+    for _, id in ipairs(procCostIds[alert.key] or {}) do
+        local ok, costs = SafeCall(C_Spell.GetSpellPowerCost, id)
+        if ok and type(costs) == "table" then
+            local total, readable = 0, true
+            for _, c in ipairs(costs) do
+                if IsSecret(c.cost) then readable = false break end
+                total = total + (c.cost or 0)
+            end
+            if readable and #costs > 0 then return total == 0 end
+        end
+    end
+    return nil
+end
+
+local function UpdateProc(alert)
+    local f = frames[alert.key]
+    if ns.unlocked then ShowPlain(f) return end
+    local cfg = db[alert.key]
+    if not cfg.enabled or (cfg.combatOnly and not inCombat) or PlayerDead() or not BestKnown(alert.requires) then
+        f:Hide() return
+    end
+    local now = GetTime()
+    local fromAura = ProcFromAuras(alert)
+    if fromAura ~= nil then
+        procExp[alert.key] = fromAura or nil
+    else
+        local free = ProcFromCost(alert)
+        if free == true and not (procExp[alert.key] and procExp[alert.key] > now) then
+            procExp[alert.key] = now + ns.FAMILIES[alert.aura].duration
+        elseif free == false then
+            procExp[alert.key] = nil
+        end
+    end
+    local exp = procExp[alert.key]
+    if exp and exp > now then
+        SetTimer(f, exp - now)
+        ShowPlain(f)
+    else
+        procExp[alert.key] = nil
+        f:Hide()
+    end
+end
+
+-- Sleep mode: resting in a city or inn (and out of combat) silences buff alerts
+function ns.IsSleeping()
+    if not db or not db.sleepMode or inCombat or ns.unlocked then return false end
+    local ok, resting = SafeCall(IsResting)
+    return ok and not IsSecret(resting) and resting and true or false
+end
+
 function ns.Update()
     if not db or not playerClass then return end
     if db.hideAll and not ns.unlocked then
         for _, f in pairs(frames) do f:Hide() end
         return
     end
+    local sleeping = ns.IsSleeping()
     if #myWeapon > 0 then ReadWeaponEnchants() end
     if selfDirty and not AurasLocked() then
         if RefreshSelfFromAuras() then selfDirty = false end
     end
-    for _, alert in ipairs(myAlerts) do UpdateSelfAlert(alert) end
+    -- While sleeping, buff, weapon and pet alerts stay hidden; the utility row (durability, ammo...)
+    -- keeps working, since a city is where those get fixed
+    for _, list in ipairs({ myAlerts, myWeapon, myPet }) do
+        for _, alert in ipairs(list) do
+            if sleeping then frames[alert.key]:Hide() end
+        end
+    end
+    if not sleeping then
+        for _, alert in ipairs(myAlerts) do UpdateSelfAlert(alert) end
+        for _, alert in ipairs(myPet) do UpdatePet(alert) end
+        for _, alert in ipairs(myWeapon) do UpdateWeaponAlert(alert) end
+    end
     for _, alert in ipairs(myUsable) do UpdateUsable(alert) end
-    for _, alert in ipairs(myPet) do UpdatePet(alert) end
+    for _, alert in ipairs(myProc) do UpdateProc(alert) end
     for _, alert in ipairs(myUtility) do UpdateUtility(alert) end
-    for _, alert in ipairs(myWeapon) do UpdateWeaponAlert(alert) end
     for _, alert in ipairs(myWarn) do UpdateWarnAlert(alert) end
 end
 
@@ -953,6 +1065,14 @@ driver:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5)
             end
         end
         ns.myUsable = myUsable
+        for _, alert in ipairs(ns.PROC_ALERTS) do
+            if alert.class == class then
+                myProc[#myProc + 1] = alert
+                CreateAlert(alert.key, alert.label)
+                ns.ApplyLayout(alert.key)
+            end
+        end
+        ns.myProc = myProc
         ns.myPet = myPet
         for _, alert in ipairs(ns.UTILITY_ALERTS) do
             if alert.class == class or alert.class == "ALL" then
@@ -1060,6 +1180,8 @@ SlashCmdList.BUFFALERTSFOREVER = function(msg)
     msg = (msg or ""):lower()
     if msg == "debug" then
         Print("Class: " .. tostring(playerClass) .. " | Detected spec: " .. tostring(spec))
+        local okR, resting = SafeCall(IsResting)
+        Print("Resting: " .. tostring(okR and resting) .. " | Sleep mode: " .. tostring(db.sleepMode) .. " | Sleeping now: " .. tostring(ns.IsSleeping()))
         Print("Auras locked now: " .. tostring(AurasLocked()) .. " | In combat: " .. tostring(inCombat))
         local bad = {}
         for id, ok in pairs(validId) do
@@ -1087,6 +1209,10 @@ SlashCmdList.BUFFALERTSFOREVER = function(msg)
                 state = not ok and "error" or IsSecret(u) and "secret value" or tostring(u)
             end
             Print(alert.label .. ": ID " .. tostring(id) .. " | usable: " .. state)
+        end
+        for _, alert in ipairs(myProc) do
+            Print(alert.label .. ": talent " .. tostring((BestKnown(alert.requires))) .. " | buff readable: "
+                .. tostring(ProcFromAuras(alert) ~= nil) .. " | free-spell check: " .. tostring(ProcFromCost(alert)))
         end
         for _, alert in ipairs(myPet) do
             local ok, exists = SafeCall(UnitExists, "pet")
@@ -1120,6 +1246,12 @@ SlashCmdList.BUFFALERTSFOREVER = function(msg)
             local fk = FamilyOf(a.sid, a.name)
             Print("  " .. tostring(a.name) .. " (ID " .. tostring(a.sid) .. ")" .. (fk and (" -> " .. fk) or ""))
         end
+    elseif msg == "sleep" then
+        db.sleepMode = not db.sleepMode
+        ns.Update()
+        if ns.UpdateParty then ns.UpdateParty() end
+        if ns.RefreshOptions then ns.RefreshOptions() end
+        Print(db.sleepMode and "Sleep mode on: buff alerts pause in cities and inns." or "Sleep mode off.")
     elseif msg == "toggle" then
         db.hideAll = not db.hideAll
         ns.Update()

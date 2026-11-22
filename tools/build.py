@@ -6,13 +6,14 @@
 2. the Polestar* folders of addons/ = the Polestar release (unzipped Polestar-<version>.zip)
    and the compiled pack (PolestarPack_GroupeAlliance and its _frFR texts addon); the other
    folders (Auctionator as released, PrettyTooltip as released plus the pack patches of
-   docs/prettytooltip-1.3.8.patch, BuffAlertsForever as released plus PackPatches.lua, see
-   docs/buffalerts-3.11.4.patch, !BugGrabber as released, BugSack as released plus
+   docs/prettytooltip-1.4.2.patch, BuffAlertsForever as released plus PackPatches.lua, see
+   docs/buffalerts-3.13.0.patch, !BugGrabber as released, BugSack as released plus
    PackPatches.lua, see docs/bugsack-12.1.9.patch) are committed and left alone;
 3. the Groupe Alliance module (addons-src/GroupeAlliance) goes inside Polestar's own
    folder, so there is no extra addon to tick: its files are added to Polestar.toc,
    UI/GuideFrame.lua gets the gear, "?" help and "_" reduce buttons at the tab strip's
-   right end and the module's entry in a guide line's right-click menu, and
+   right end (UI/GuideFrameTabs.lua leaves them the room, Polestar 0.4.x) and the
+   module's entry in a guide line's right-click menu, and
    Core/Automation.lua asks the module before it accepts or turns in a quest, and
    Quests/PartyChat.lua says only an objective's plain words in party chat (0.9.7);
    ItemUseData.lua is made by tools/item-uses.py from the client's tables (0.10.0)
@@ -31,9 +32,15 @@ POLESTAR_CHANGES = [
     ("Polestar.toc", "Alts\\Alts.xml\n",
      "Alts\\Alts.xml\n# " + NOTICE + ": the Groupe Alliance module.\n"
      + "".join(f"GroupeAlliance\\{f}\n" for f in MODULE)),
-    ("UI/GuideFrame.lua", "\tlocal avail = F:GetWidth() - 2 - 30\n",
-     "\tlocal avail = F:GetWidth() - 2 - 30 - (ns.GA and ns.GA.STRIP_W or 0) -- " + NOTICE
+    # Polestar 0.4.x lays the tabs out in UI/GuideFrameTabs.lua: the tabs leave STRIP_W
+    # free at the right end, and in the slim strip New tab (anchored to that end) moves
+    # left of the module's buttons.
+    ("UI/GuideFrameTabs.lua", "\t\tlocal avail = F:GetWidth() - 2 - addW - (thin and 4 or 6)\n",
+     "\t\tlocal avail = F:GetWidth() - 2 - addW - (thin and 4 or 6) - (ns.GA and ns.GA.STRIP_W or 0) -- " + NOTICE
      + ": room for the Groupe Alliance buttons\n"),
+    ("UI/GuideFrameTabs.lua", "\t\t\tstrip.Add:SetPoint(\"RIGHT\", strip, \"BOTTOMRIGHT\", -3, tabH / 2)\n",
+     "\t\t\tstrip.Add:SetPoint(\"RIGHT\", strip, \"BOTTOMRIGHT\", -3 - (ns.GA and ns.GA.STRIP_W or 0), tabH / 2) -- " + NOTICE
+     + ": left of the Groupe Alliance buttons\n"),
     ("UI/GuideFrame.lua", "\thoverable(strip.Add)\n",
      "\thoverable(strip.Add)\n"
      "\t-- " + NOTICE + ": the Groupe Alliance buttons (gear, \"?\" help,\n"
@@ -67,35 +74,37 @@ POLESTAR_CHANGES = [
      "\treturn q and q ~= 0 and not held(q) and ns.Engine.WantsQuest(\"direct\", q)\n"),
     ("Core/Automation.lua", "\tif ns.Compat.IsOnQuest(q) then return ns.Engine.WantsQuest(\"turnin\", q) end\n",
      "\tif ns.Compat.IsOnQuest(q) then return not held(q) and ns.Engine.WantsQuest(\"turnin\", q) end\n"),
-    ("Core/Automation.lua", "\tif not wantsAccept(q) then return false end\n",
-     "\tif not wantsAccept(q, ns.GA and ns.GA.AcceptSpan and ns.GA.AcceptSpan() or 0) then return false end\n"),
+    ("Core/Automation.lua", "\tif not (canAccept() and wantsAccept(q)) then\n",
+     "\tif not (canAccept() and wantsAccept(q, ns.GA and ns.GA.AcceptSpan and ns.GA.AcceptSpan() or 0)) then\n"),
     # 0.9.7: party chat refuses a line with an escape code it does not know ("Invalid
     # escape code in chat message"): only the objective's plain words are said, and a
     # line chat still refuses is dropped instead of raising an error.
     ("Quests/PartyChat.lua", "\t\tsend(line.text, chatType())\n",
      "\t\tpcall(send, line.text, chatType()) -- a line chat refuses is dropped, never an error\n"),
-    ("Quests/PartyChat.lua", "-- \"Plagued Hide 5/5\": ",
+    # Polestar 0.4.x cleans an objective's label itself (plain(), square brackets only);
+    # ours (0.9.7) also drops colours, textures, links and grammar codes. Both kept: the
+    # released function gets our cleaning before its own.
+    ("Quests/PartyChat.lua", "local function plain(s)\n\treturn (s:gsub(\"[%[%]]\", \"\"))\nend\n",
      "-- " + NOTICE + ": chat refuses a line with an escape code\n"
      "-- it does not know (\"Invalid escape code in chat message\"): an objective's text can\n"
      "-- carry colours, textures or grammar codes, so only its plain words are said.\n"
-     "local function plain(text)\n"
-     "\tif type(text) ~= \"string\" then return \"\" end\n"
-     "\ttext = text:gsub(\"|c%x%x%x%x%x%x%x%x\", \"\"):gsub(\"|[rR]\", \"\")\n"
-     "\ttext = text:gsub(\"|T.-|t\", \"\"):gsub(\"|A.-|a\", \"\"):gsub(\"|H.-|h(.-)|h\", \"%1\")\n"
-     "\ttext = text:gsub(\"|%d+\", \"\"):gsub(\"|\", \"\")\n"
-     "\treturn (text:gsub(\"%s+\", \" \"):gsub(\"^ \", \"\"):gsub(\" $\", \"\"))\n"
-     "end\n\n"
-     "-- \"Plagued Hide 5/5\": "),
-    ("Quests/PartyChat.lua", "\tlocal label = ns.Compat.ObjectiveLabel(o.text)\n",
-     "\tlocal label = plain(ns.Compat.ObjectiveLabel(o.text))\n"),
+     "local function plain(s)\n"
+     "\tif type(s) ~= \"string\" then return \"\" end\n"
+     "\ts = s:gsub(\"|c%x%x%x%x%x%x%x%x\", \"\"):gsub(\"|[rR]\", \"\")\n"
+     "\ts = s:gsub(\"|T.-|t\", \"\"):gsub(\"|A.-|a\", \"\"):gsub(\"|H.-|h(.-)|h\", \"%1\")\n"
+     "\ts = s:gsub(\"|%d+\", \"\"):gsub(\"|\", \"\")\n"
+     "\ts = s:gsub(\"%s+\", \" \"):gsub(\"^ \", \"\"):gsub(\" $\", \"\")\n"
+     "\treturn (s:gsub(\"[%[%]]\", \"\"))\n"
+     "end\n"),
     ("README.txt", "Leveling guides for World of Warcraft: Forever.\r\n",
      "Leveling guides for World of Warcraft: Forever.\r\n\r\n"
      + NOTICE + ": the GroupeAlliance folder (Wowhead links,\r\n"
      "quest tips, calm defaults, quest automation exceptions) is loaded by Polestar.toc,\r\n"
      "UI/GuideFrame.lua has gear, \"?\" help and \"_\" reduce buttons and a line menu entry,\r\n"
+     "UI/GuideFrameTabs.lua leaves room for those buttons,\r\n"
      "Core/Automation.lua asks the module before it accepts or turns in a quest,\r\n"
      "and Quests/PartyChat.lua says only an objective's plain words in party chat.\r\n"
-     "Everything else is Polestar 0.3.4 as released.\r\n"),
+     "Everything else is Polestar 0.4.2.2 as released.\r\n"),
 ]
 
 def run(*args):
@@ -109,8 +118,8 @@ def run(*args):
 run("guide", "lint")
 run("guide", "compile")
 # Only the Polestar folders are rebuilt; the other addons shipped with the guide
-# (Auctionator as released, PrettyTooltip with docs/prettytooltip-1.3.8.patch,
-# BuffAlertsForever with docs/buffalerts-3.11.4.patch, !BugGrabber as released, BugSack
+# (Auctionator as released, PrettyTooltip with docs/prettytooltip-1.4.2.patch,
+# BuffAlertsForever with docs/buffalerts-3.13.0.patch, !BugGrabber as released, BugSack
 # with docs/bugsack-12.1.9.patch) are committed and stay as they are.
 addons.mkdir(exist_ok=True)
 for d in sorted(addons.iterdir()):

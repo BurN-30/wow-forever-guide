@@ -14,6 +14,10 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 - Groupe 30 : chez Artist Renfray, une question pour Of Love and Family (le tableau du Bastion écarlate), rendue à Tirion après Stratholme. Groupes 28 et 29 : Egan et les donneurs de l'Espoir de Lumière signalés.
 - Pic Rochenoire supérieur : signalé à la fin du pic inférieur (donjon fait pour un groupe de raid de dix, porte ouverte par le sceau d'ascension : les deux quêtes de Vaelan, puis Emberstrife dans le Marécage d'Âprefange). Les donjons propres à Forever de ces niveaux (Alcaz Prison, Blackmaw Hold, Shaper's Terrace) n'ont aucune quête dans les données : rien d'écrit.
 - Groupe 25 : Dragonkin Menace, première quête de la chaîne de Marshal Windsor, avec sa propre question (draconiens de l'est des Steppes, là où le guide va pour A Taste of Flame), rendue à la Veille de Morgan. Les autres quêtes des Profondeurs de Rochenoire sont signalées là où leurs donneurs les proposent (Groupes 25 et 29) ; aucune ne reste dans le journal avant la fin du parcours.
+- Polestar 0.4.2.2, nouvelle version du moteur du guide : apparences au choix (*skins*), cartes de déplacement, flèche refaite, guides de Polestar corrigés, et un petit jeu « Arcade » pendant les vols. Les boutons du guide (roue dentée, aide, réduire) et la prise automatique des quêtes marchent comme avant.
+- PrettyTooltip 1.4.2 : deux correctifs du pack remplacés par ceux de l'auteur (numéro de sort dans une amélioration, badge de dépeçage, désormais dans la couleur de difficulté). Les infobulles de la minicarte sont plus simples : Blizzard ne laisse plus lire leurs données (plus de niveau de cueillette ni de couleur de classe).
+- BuffAlerts Forever 3.13.0, toujours éteint à la première installation : l'alerte Idées claires du druide s'affiche maintenant aussi en combat sur le client français, et les alertes Ivresse de la victoire et Frappes téméraires du guerrier marchent sur le client français. Nouveautés de l'auteur : pause en ville et à l'auberge, alerte Reckless Swings du guerrier, Bouclier d'eau du chaman.
+- Auctionator 351.
 
 ### English
 - New guide "End of route · Dungeons 52-60 (optional)", after Group 30: the dungeons whose level the route never reaches near their door, each with its "Skip it / Do it with a group" question.
@@ -25,6 +29,10 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 - Group 30: at Artist Renfray's, a question for Of Love and Family (the painting in the Scarlet Bastion), handed in to Tirion after Stratholme. Groups 28 and 29: Egan and the Light's Hope givers pointed out.
 - Upper Blackrock Spire: pointed out at the end of the lower Spire (a dungeon made for a raid group of ten, its door opened by the Seal of Ascension: Vaelan's two quests, then Emberstrife in Dustwallow Marsh). The Forever-only dungeons of these levels (Alcaz Prison, Blackmaw Hold, Shaper's Terrace) have no quest in the data: nothing written.
 - Group 25: Dragonkin Menace, the first quest of Marshal Windsor's chain, with its own question (the dragonkin of the eastern Steppes, where the guide goes for A Taste of Flame), handed in at Morgan's Vigil. The other Blackrock Depths quests are pointed out where their givers offer them (Groups 25 and 29); none stays in the quest log before the end of the route.
+- Polestar 0.4.2.2, a new version of the guide's engine: skins to choose from, travel maps, a redone arrow, fixed Polestar guides, and a small "Arcade" game during flights. The guide's buttons (gear, help, reduce) and automatic quest pick-up work as before.
+- PrettyTooltip 1.4.2: two pack fixes replaced by the author's own (spell ID in a buff, skinning badge, now in the difficulty color). Minimap tooltips are simpler: Blizzard no longer lets addons read their data (no gathering skill level or class color any more).
+- BuffAlerts Forever 3.13.0, still off on a first install: the druid's Clearcasting alert now also shows in combat on the French client, and the warrior's Victory Rush and Reckless Swings alerts work on the French client. New from the author: a pause in cities and inns, the warrior's Reckless Swings alert, the shaman's Water Shield.
+- Auctionator 351.
 
 ## v0.11.0 (en préparation)
 

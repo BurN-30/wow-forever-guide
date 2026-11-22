@@ -84,6 +84,9 @@ local function update(tooltip, data, model)
     if not ok or not model then restoreNative(tooltip); return end
     if not panel.nativeAlpha then panel.nativeAlpha = util.number((util.call(tooltip.GetAlpha, tooltip))) end
     if not panel.nativeAlpha then restoreNative(tooltip); return end
+    -- Content extension callbacks belong inside descriptor.read/render, under
+    -- their existing failure handling. Native alpha, fitting, input, and
+    -- comparison lifecycle remain owned by this integration and ns.Native.
     native.followParent(tooltip, panel)
     local rendered = pcall(tooltipType.render, panel, tooltip, model)
     if not rendered then restoreNative(tooltip); return end
@@ -95,7 +98,7 @@ local function update(tooltip, data, model)
     panel.key = key
     if panel.dataType == Enum.TooltipDataType.Item then
         panel.model, panel.modelDataType = model, panel.dataType
-        panel.modelVersion, panel.modelDetails = ns.settingsVersion or 0, ns.detailsKeyDown()
+        panel.modelVersion, panel.modelDetailsShown = ns.settingsVersion or 0, ns.detailsKeyDown()
     else
         panel.model = nil
     end
@@ -109,6 +112,7 @@ end
 update = probe("update", update)
 
 local function finishTooltip(tooltip, panel, data, token)
+    if panel.fade then return end
     if not util.canModify(tooltip) or panel.refreshToken ~= token or not util.call(tooltip.IsShown, tooltip)
         or not showsDataType(tooltip, panel) then return end
     local pending = panel.contentPending
@@ -245,6 +249,12 @@ end)
 local function scheduleRestore(tooltip)
     local panel = panels[tooltip]
     if not panel or panel.nativeOnly then return end
+    -- A clear during a fade is the tooltip's reuse, as by another addon's own
+    -- lines (Questie's map icons): the fading panel goes, the game's tooltip returns.
+    if panel.fade then
+        native.cancelFade(panel)
+        panel:Hide()
+    end
     if panel.data and panel.data.fromLines then panel.data = nil end
     panel.restorePending = true
     panel.contentPending = nil
@@ -320,9 +330,11 @@ local function onTooltipData(dataType, tooltip, data)
         tooltip:HookScript("OnHide", probe("hook OnHide", function(hidden)
             if panel.nativeOnly then return end
             if native.hiddenByParent(hidden) then
-                native.followParent(hidden, panel)
+                if panel.fade then restoreNative(hidden) else native.followParent(hidden, panel) end
                 return
             end
+            -- A Hide ends a fade at once, as it does the game's.
+            if panel.fade then native.cancelFade(panel) end
             -- Keep native cleanup deferred, but never draw the old panel at
             -- an anchor reset by an action button's hide/clear sequence.
             local wasShown = panel:IsShown()
@@ -332,11 +344,21 @@ local function onTooltipData(dataType, tooltip, data)
             placement.hidden(hidden)
         end))
         tooltip:HookScript("OnTooltipCleared", probe("hook OnTooltipCleared", scheduleRestore))
+        -- A panel sized by the game's tooltip, as the minimap's secret text, redraws as
+        -- it resizes: the game sizes it after the data arrives, and refreshes it too
+        -- often for the next frame's redraw to happen.
+        tooltip:HookScript("OnSizeChanged", probe("hook OnSizeChanged", function(resized)
+            local tooltipType = TooltipTypes[panel.dataType]
+            if panel.nativeOnly or not (tooltipType and tooltipType.followsNativeSize) or not panel:IsShown()
+                or not panel.data or not util.canModify(resized) or not showsDataType(resized, panel) then return end
+            update(resized, panel.data)
+        end))
         -- Every refresh re-shows the tooltip at its natural size and full
         -- opacity. Waiting for the next OnUpdate lets one frame of it draw.
         local function onNativeShown(shown)
             if panel.nativeOnly then return end
             if not util.canModify(shown) then return end
+            if panel.fade then native.unpark(shown) end
             native.followParent(shown, panel)
             if panel.restorePending or panel.comparisonPending or panel.contentPending then
                 if panel.nativeAlpha then shown:SetAlpha(0) end
@@ -396,11 +418,12 @@ local function onTooltipData(dataType, tooltip, data)
         -- A faded tooltip stays off the screen while hidden by its parent;
         -- EllesmereUI's modifier would otherwise reveal it at its old anchor.
         tooltip:HookScript("OnHide", probe("hook OnHide unpark", function(hidden)
-            if not native.hiddenByParent(hidden) then native.unpark(hidden) end
+            if not panel.fade and not native.hiddenByParent(hidden) then native.unpark(hidden) end
         end))
         panel.hooked = true
         panel:SetScript("OnUpdate", probe("panel update", function(self, elapsed)
-            if not util.canModify(tooltip) then self:Hide(); return end
+            if not util.canModify(tooltip) then native.cancelFade(self); self:Hide(); return end
+            if native.updateFade(tooltip, self, elapsed) then return end
             local alpha = util.number((util.call(tooltip.GetAlpha, tooltip)))
             if self.nativeAlpha and not alpha then
                 self.nativeAlpha = nil
@@ -496,6 +519,12 @@ function hooks.install()
             end)
         end
     end
+    -- A client's extension of a tooltip type can hook the game itself, as
+    -- retail's flight map pins do (descriptor.extension.install).
+    for _, tooltipType in pairs(TooltipTypes) do
+        local extension = tooltipType.extension
+        if extension and extension.install then extension.install() end
+    end
 
     -- The original-tooltip key swaps the panel for the game's tooltip; Shift
     -- shows or hides the details.
@@ -513,7 +542,7 @@ function hooks.install()
                     if ns.isOriginalKey(key) and panel.dataType == Enum.TooltipDataType.Item
                         and panel.model and panel.modelDataType == panel.dataType
                         and panel.modelVersion == (ns.settingsVersion or 0)
-                        and panel.modelDetails == ns.detailsKeyDown() then
+                        and panel.modelDetailsShown == ns.detailsKeyDown() then
                         local currentKey, valid = keyOf(TooltipTypes[panel.dataType], tooltip, panel.data)
                         if valid and currentKey and currentKey == panel.key
                             and util.call(fingerprint, tooltip, panel.data) then

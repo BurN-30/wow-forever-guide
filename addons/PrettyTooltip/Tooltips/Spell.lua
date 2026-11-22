@@ -8,6 +8,17 @@ if not (ui and SPELL and ui.renderView) then
     return
 end
 
+-- What this file registers as the spell tooltip type. A client's file loaded
+-- after this one can set descriptor.extension, with any of these callbacks
+-- (Retail/README.md; retail's is Retail/Tooltips/SpellExtension.lua):
+--   readStat(model, text) -> true when the client reads a strip line itself
+--   isCooldown(text) -> true for a line drawn as the time left on a cooldown
+--   leadRows(part) -> rows at the head of a spell's details, each with style,
+--     the name of its style part, and color
+--   isDetail(left, right) -> true for a row the game adds after the data that
+--     goes with the details rather than with other addons' rows
+local descriptor = {}
+
 local util = ns.util
 local tooltipData = ns.TooltipData
 local colors = ns.Palette.roles
@@ -19,8 +30,6 @@ local add = tooltipData.add
 local LINE = Enum.TooltipDataLineType or {}
 local styledAt, measureStyled = ui.styledAt, ui.measureStyled
 local pad = ui.pad
-local PARTS = { "spellTitle", "spellBadges", "spellValues", "spellCaptions", "spellDetails",
-    "spellText", "extras" }
 local TITLE_COLOR = colors.title
 local DETAIL_COLOR = colors.detail
 local CAPTION_OFFSET = 17
@@ -28,6 +37,8 @@ local RANK_BADGE = { .60, .56, .50 }
 local REMAINING_COLOR = { 1, .60, .25 }
 local UNMET_COLOR = colors.unmet
 local STRIP_HEIGHT = 34
+-- The smallest a strip value or caption shrinks to fit its cell.
+local MIN_STRIP_SIZE = 8
 -- Spells have one title line, so a smaller icon keeps the header short.
 local ICON_SIZE = 38
 -- Spells are tinted a little less than items; the school is only a hint.
@@ -42,6 +53,13 @@ local POWERS = {
     { key = "Focus", name = FOCUS, costs = { FOCUS_COST }, color = { 1, .55, .25 } },
     { key = "Runic Power", name = RUNIC_POWER, costs = { RUNIC_POWER_COST }, color = { 0, .82, 1 } },
 }
+-- A client's own resources, after these, as retail's Holy Power and Fury
+-- (ns.contribute "spellPowers"); one the client has no name for is left out.
+for _, extra in ipairs(ns.contributions("spellPowers")) do
+    for _, power in ipairs(extra) do
+        if type(power.name) == "string" then POWERS[#POWERS + 1] = power end
+    end
+end
 local POWER_COLORS = {}
 for _, power in ipairs(POWERS) do POWER_COLORS[power.key] = power.color end
 
@@ -55,6 +73,11 @@ local TIMES = {
     { "cooldown", L["Cooldown"], SPELL_RECAST_TIME_HOURS, SPELL_DURATION_HOURS },
     { "cooldown", L["Cooldown"], SPELL_RECAST_TIME_DAYS, SPELL_DURATION_DAYS },
 }
+-- A client's own times, after these, as retail's recharge of a charge
+-- (ns.contribute "spellTimes").
+for _, extra in ipairs(ns.contributions("spellTimes")) do
+    for _, time in ipairs(extra) do TIMES[#TIMES + 1] = time end
+end
 -- Casts the strip shows as the game words them.
 local CASTS = { SPELL_CAST_TIME_INSTANT, SPELL_CAST_TIME_INSTANT_NO_MANA, SPELL_CAST_CHANNELED, SPELL_ON_NEXT_SWING }
 
@@ -95,7 +118,9 @@ local function readStat(model, text)
     end
     for _, time in ipairs(TIMES) do
         local amount = unformat(text, time[3])
-        if isAmount(amount) then
+        -- One time of each kind: Russian words the time left on a charge as a
+        -- cooldown, below the recharge it is part of.
+        if isAmount(amount) and not model[time[1]] then
             model[time[1]] = { util.fill(time[4], amount), time[2] }
             return true
         end
@@ -110,6 +135,9 @@ local function readStat(model, text)
         model.passive = text
         return true
     end
+    -- A client's own strip lines, as retail's "Max 2 Charges".
+    local extension = descriptor.extension
+    if extension and extension.readStat and extension.readStat(model, text) == true then return true end
     local range = unformat(text, SPELL_RANGE)
     if range then
         model.range = { util.fill(L["%s yd"], range), L["Range"] }
@@ -254,7 +282,8 @@ local function readLine(model, line, left, right, game)
     end
     if text ~= "" and readStat(model, text) then
         if rightText ~= "" then add(model.details, rightText, "") end
-    elseif unformat(text, ITEM_COOLDOWN_TIME) then
+    elseif unformat(text, ITEM_COOLDOWN_TIME)
+        or (descriptor.extension and descriptor.extension.isCooldown and descriptor.extension.isCooldown(text)) then
         add(model.details, text, rightText)
         model.details[#model.details].color = REMAINING_COLOR
     elseif isRequirement(text) then
@@ -394,6 +423,23 @@ local function readSpell(tooltip, data, game)
     -- The game hides every line it draws once any is hidden, and other addons'
     -- rows with them; the panel goes without those.
     local appended = tooltipData.appendedRows(tooltip, model.lineIndices) or {}
+    -- A client's own lines the game adds after the data, as retail's "You
+    -- haven't added this to your action bars", go with the details rather
+    -- than other addons' rows.
+    local extension = descriptor.extension
+    if extension and extension.isDetail then
+        local kept = {}
+        for _, row in ipairs(appended) do
+            if extension.isDetail(row.left, row.right) then
+                -- In the game's color, muted as other added rows are.
+                add(model.details, trim(row.left), trim(row.right or ""))
+                model.details[#model.details].color = row.color
+            else
+                kept[#kept + 1] = row
+            end
+        end
+        appended = kept
+    end
     local rows = {}
     for _, row in ipairs(appended) do
         if not tooltipData.isBlank(row) then rows[#rows + 1] = row end
@@ -444,6 +490,13 @@ local function stripCells(part)
     return cells
 end
 
+-- A client's rows at the head of a spell's details, as retail's charges: each
+-- a row with style, the name of its style part, and color.
+local function leadRows(part)
+    local extension = descriptor.extension
+    return extension and extension.leadRows and extension.leadRows(part) or {}
+end
+
 -- The widest thing in one spell's body: its strip, rows, and sentences.
 local function bodyWidth(panel, part, body, styles)
     local need = 0
@@ -460,6 +513,7 @@ local function bodyWidth(panel, part, body, styles)
     for _, rows in ipairs({ part.details, part.requirements }) do
         for _, row in ipairs(rows) do consider(ui.rowWidth(panel, row, styles.spellDetails)) end
     end
+    for _, row in ipairs(leadRows(part)) do consider(ui.rowWidth(panel, row, styles[row.style])) end
     for _, sentence in ipairs(body.sentences) do
         consider(math.min(measureStyled(panel, sentence, styles.spellText), ui.PROSE_WIDTH))
     end
@@ -476,6 +530,19 @@ local function bodyWidth(panel, part, body, styles)
     return need
 end
 
+-- A cell's text in a size that keeps it on one line: the panel grows for its
+-- cells only up to its widest, so a long wording (Russian's "Instant", two
+-- words) would wrap onto the caption under it.
+local function fitted(panel, text, style, width)
+    if measureStyled(panel, text, style) <= width then return style end
+    local fit = {}
+    for key, value in pairs(style) do fit[key] = value end
+    repeat
+        fit.size = fit.size - 1
+    until fit.size <= MIN_STRIP_SIZE or measureStyled(panel, text, fit) <= width
+    return fit
+end
+
 local function drawStrip(panel, model, y, color, styles)
     local values, captions = styles.spellValues, styles.spellCaptions
     local cells = stripCells(model)
@@ -489,8 +556,9 @@ local function drawStrip(panel, model, y, color, styles)
         if power then
             valueColor = { power[1] * .45 + .55, power[2] * .45 + .55, power[3] * .45 + .55 }
         end
-        styledAt(panel, cell[1], x, y, cellWidth, values, valueColor, "CENTER")
-        styledAt(panel, util.upper(cell[2]), x, y + captionOffset, cellWidth, captions,
+        local caption = util.upper(cell[2])
+        styledAt(panel, cell[1], x, y, cellWidth, fitted(panel, cell[1], values, cellWidth - 4), valueColor, "CENTER")
+        styledAt(panel, caption, x, y + captionOffset, cellWidth, fitted(panel, caption, captions, cellWidth - 4),
             colors.caption, "CENTER")
         if index > 1 then
             local separator = ui.acquireTexture(panel)
@@ -505,7 +573,7 @@ local function drawStrip(panel, model, y, color, styles)
 end
 
 local function hasBody(part, body)
-    return #part.cells > 0 or #part.details > 0 or #part.requirements > 0 or #body.sentences > 0
+    return #part.cells > 0 or #part.details > 0 or #part.requirements > 0 or #body.sentences > 0 or #leadRows(part) > 0
         or (part.hidden and #part.hidden > 0)
         or body.powerRows ~= nil or (body.nextSentences and #body.nextSentences > 0)
 end
@@ -524,11 +592,13 @@ local function drawBody(panel, part, body, y, color, styles, numberCode)
         panel.rowTail = panel.rowTail + 2
     end
     local hidden = part.hidden or {}
-    local detailed = #part.details > 0 or #part.requirements > 0 or #hidden > 0
+    local lead = leadRows(part)
+    local detailed = #part.details > 0 or #part.requirements > 0 or #hidden > 0 or #lead > 0
     if detailed then
         -- Under the strip, a little apart from it; first, where anything would start.
-        y = ui.drawGroup(panel, part.requirements, #part.cells > 0 and y + 2 or y, styles.spellDetails,
-            DETAIL_COLOR, 0, 2)
+        if #part.cells > 0 then y = y + 2 end
+        for _, row in ipairs(lead) do y = ui.drawRow(panel, row, y, styles[row.style], row.color, 0, 2) end
+        y = ui.drawGroup(panel, part.requirements, y, styles.spellDetails, DETAIL_COLOR, 0, 2)
         y = ui.drawGroup(panel, part.details, y, styles.spellDetails, DETAIL_COLOR, 0, 2)
         -- Hidden lines are the cooldown left, in combat: in its color, as out of it.
         for _, text in ipairs(hidden) do
@@ -568,13 +638,30 @@ end
 -- The spell power breakdown and the rates under it, each by its option.
 local function powerRows(part, numberCode, panel)
     local showPower, showRates = ns.showsDetail("spellPower", panel), ns.showsDetail("spellRates", panel)
-    if not (showPower or showRates) or not ns.spellPowerRows or not ns.Locale.features.coefficients then
-        return
+    if not (showPower or showRates) or not ns.Locale.features.coefficients then return end
+    local rows, rates
+    if ns.hasData("coefficients") then
+        rows, rates = ns.spellPowerRows(part, numberCode, ns.Game)
+    elseif showRates and ns.SpellAmounts then
+        -- Without coefficients (Data/Coefficients.lua, which retail's .toc leaves
+        -- out), the rates come from the text alone.
+        rates = ns.SpellAmounts.rateRowsOf(part, ns.Game)
     end
-    local rows, rates = ns.spellPowerRows(part, numberCode, ns.Game)
     local list = showPower and rows or {}
     for _, row in ipairs(showRates and rates or {}) do list[#list + 1] = row end
     if #list > 0 then return list end
+end
+
+-- The style parts a spell draws with: every spell part, a client's too
+-- (Core/Settings.lua's ns.ELEMENTS), and the ones all tooltips share.
+local function spellStyles()
+    local styles = {}
+    for _, element in ipairs(ns.ELEMENTS) do
+        if element.tooltipType == "spell" or element.tooltipType == "shared" then
+            styles[element.key] = ui.styleOf(element.key)
+        end
+    end
+    return styles
 end
 
 -- What the panel shows, for Panel/Render.lua to draw. Each spell's body,
@@ -582,8 +669,7 @@ end
 -- when given, adds sections of another type's (sections, color) before the
 -- other addons' rows: an imbue's time left.
 local function spellView(panel, model, more)
-    local styles = {}
-    for _, key in ipairs(PARTS) do styles[key] = ui.styleOf(key) end
+    local styles = spellStyles()
     local school = ns.Palette.detectSchool(model.description, model.name, model.spellID)
     local numberCode = ns.Palette.numberCode(ns.Palette.school(school))
     local power = model.power and POWER_COLORS[model.power]
@@ -687,7 +773,10 @@ local function details(model, context)
     return rows
 end
 
-ui.defineTooltipType(SPELL, {
-    read = readSpell, render = renderSpell, key = spellKey, option = "spellPanels",
-    details = details, detailKeys = { "spellPower", "spellRates", "showIDs" },
-})
+descriptor.read = readSpell
+descriptor.render = renderSpell
+descriptor.key = spellKey
+descriptor.option = "spellPanels"
+descriptor.details = details
+descriptor.detailKeys = { "spellPower", "spellRates", "showIDs" }
+ui.defineTooltipType(SPELL, descriptor)

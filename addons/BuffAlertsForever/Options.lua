@@ -102,7 +102,7 @@ end
 local COL_W = 252      -- width of one section column
 local MAX_COLS = 4     -- number of columns; sections fill the shortest column
 local MAX_VIEW_H = 600 -- taller content scrolls with the mouse wheel
-local BOTTOM_H = 70    -- room for the buttons under the scroll area
+local BOTTOM_H = 100   -- room for the buttons and global checkboxes under the scroll area
 
 -- Element heights used to measure a section before it is laid out
 local H_HEADER, H_CHECK, H_CYCLE, H_SLIDER, H_GAP, H_MARGIN = 30, 26, 26, 48, 10, 20
@@ -294,6 +294,9 @@ function ns.CreateOptions()
             columns[#columns + 1] = function(p, x, y, m) if m then return MeasureAlertSection(alert.key, nil) end BuildAlertSection(p, alert.key, alert.label, x, y, nil) end
         end
     end
+    for _, alert in ipairs(ns.myProc or {}) do
+        columns[#columns + 1] = function(p, x, y, m) if m then return MeasureAlertSection(alert.key, nil) end BuildAlertSection(p, alert.key, alert.label .. " (proc)", x, y, nil) end
+    end
     for _, alert in ipairs(ns.myUtility or {}) do
         columns[#columns + 1] = function(p, x, y, m) if m then return MeasureAlertSection(alert.key, alert) end BuildAlertSection(p, alert.key, alert.label, x, y, alert) end
     end
@@ -406,6 +409,11 @@ function ns.CreateOptions()
         function() return ns.db.hideAll end,
         function(v) ns.db.hideAll = v; ns.Update(); ns.UpdateParty() end)
     hideAll:SetPoint("LEFT", move, "RIGHT", 12, 0)
+
+    local sleep = CreateCheck(panel, "Sleep mode: pause buff alerts in cities and inns",
+        function() return ns.db.sleepMode end,
+        function(v) ns.db.sleepMode = v; ns.Update(); ns.UpdateParty() end)
+    sleep:SetPoint("BOTTOMLEFT", move, "TOPLEFT", -2, 6)
 
     local reset = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
     reset:SetSize(150, 24)

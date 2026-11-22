@@ -303,6 +303,38 @@ function game.spellHealing()
     return number((call(GetSpellBonusHealing)))
 end
 
+function game.knowsSpell(spellID)
+    if not IsPlayerSpell then return false end
+    return call(IsPlayerSpell, spellID) == true
+end
+
+-- A stance, form, or set bonus is an aura on the player too.
+function game.hasAura(spellID)
+    local getter = C_UnitAuras and C_UnitAuras.GetPlayerAuraBySpellID
+    if not getter then return false end
+    return call(getter, spellID) ~= nil
+end
+
+-- The player's rank in a talent, by its trait node; 0 when not taken.
+function game.talentRank(nodeID)
+    if not (C_ClassTalents and C_ClassTalents.GetActiveConfigID and C_Traits and C_Traits.GetNodeInfo) then return 0 end
+    local configID = call(C_ClassTalents.GetActiveConfigID)
+    local info = configID and call(C_Traits.GetNodeInfo, configID, nodeID)
+    if type(info) ~= "table" then return 0 end
+    return number(info.activeRank) or number(info.currentRank) or 0
+end
+
+-- The mana a spell costs the player: none here, as Forever's tooltips give the
+-- mana itself. A client whose tooltips give a share of base mana replaces it
+-- (retail's Retail/Game/GameExtension.lua).
+function game.spellManaCost(_spellID) end
+
+-- The seconds an instant cast holds the player's other spells: Forever's is
+-- 1.5 sec. Retail's shrinks with haste, and it replaces this.
+function game.globalCooldown()
+    return 1.5
+end
+
 -- The player's rank in a skill or profession, by the addon's name for it
 -- ("Skinning"), which the client knows by its own (ns.Locale.skills). Older
 -- clients list skills; newer ones, like Forever's, only list professions.
@@ -351,27 +383,11 @@ function game.unitIsPVP(unit) return call(UnitIsPVP, unit) end
 function game.unitIsDead(unit) return call(UnitIsDeadOrGhost, unit) end
 function game.unitReaction(unit, other) return call(UnitReaction, unit, other) end
 function game.unitIsTapDenied(unit) return call(UnitIsTapDenied, unit) end
+-- The names of a class's specializations, by class ID: Forever has none.
+-- Retail's client does, and it replaces this.
+function game.classSpecs(_classID) end
 
 -- A class's color, by its file name, as { r, g, b }.
--- The units a nearby player may be: the group, target, focus, mouseover, and
--- everyone with a nameplate.
-local NEARBY = { "target", "focus", "mouseover" }
-for index = 1, 4 do NEARBY[#NEARBY + 1] = "party" .. index end
-for index = 1, 40 do NEARBY[#NEARBY + 1] = "raid" .. index end
-for index = 1, 40 do NEARBY[#NEARBY + 1] = "nameplate" .. index end
-game.NEARBY_UNITS = NEARBY
-
--- A player's class name and file, by the player's name, from those units.
-function game.playerClass(name)
-    if isSecret(name) or type(name) ~= "string" then return end
-    for _, unit in ipairs(NEARBY) do
-        if game.unitName(unit) == name and game.unitIsPlayer(unit) then
-            local className, classFile = game.unitClass(unit)
-            if type(classFile) == "string" then return className, classFile end
-        end
-    end
-end
-
 function game.classColor(classFile)
     if not isSecret(classFile) and classFile and RAID_CLASS_COLORS then return rgb(RAID_CLASS_COLORS[classFile]) end
 end

@@ -52,8 +52,9 @@ def package(version, out):
         fail(f"le tag annonce {version} mais {PACK_TOC.relative_to(ROOT)} dit {found} : aligner les deux")
     folders = sorted((p for p in ADDONS.iterdir() if p.is_dir()), key=lambda p: p.name.lower())
     for f in folders:
-        if not (f / f"{f.name}.toc").is_file():
-            fail(f"addons/{f.name} n'a pas de {f.name}.toc")
+        # <nom>.toc, ou un .toc par jeu (<nom>_Camelot.toc pour WoW Forever, comme PrettyTooltip 1.4)
+        if not any((f / f"{f.name}{s}.toc").is_file() for s in ("", "_Forever", "_Camelot")):
+            fail(f"addons/{f.name} n'a ni {f.name}.toc ni {f.name}_Camelot.toc")
     if any(p.is_file() for p in ADDONS.iterdir()):
         fail("fichier à la racine de addons/ : seuls des dossiers d'addon sont attendus")
     out.mkdir(parents=True, exist_ok=True)
@@ -101,10 +102,11 @@ def vkey(tag):
 
 
 def toc_lists(read):
-    """{dossier: fichiers listés dans son .toc} ; read(None) liste les chemins, read(chemin) lit un .toc."""
+    """{dossier/.toc: fichiers listés dans ce .toc} ; read(None) liste les chemins, read(chemin) lit un .toc.
+    Un addon peut avoir un .toc par jeu (<nom>_Camelot.toc, <nom>_Mainline.toc) : chacun compte."""
     out = {}
     for rel in read(None):
-        m = re.fullmatch(r"addons/([^/]+)/\1\.toc", rel)
+        m = re.fullmatch(r"addons/(([^/]+)/\2(?:_[A-Za-z]+)?\.toc)", rel)
         if m:
             text = read(rel) or ""
             out[m.group(1)] = sorted(l.strip().replace("/", "\\").lower() for l in text.splitlines()

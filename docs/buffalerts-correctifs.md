@@ -1,22 +1,32 @@
-# BuffAlerts Forever 3.11.4 : correctifs et réglages du pack / pack patches and defaults
+# BuffAlerts Forever 3.13.0 : correctifs et réglages du pack / pack patches and defaults
 
 Français d'abord, [English below](#english).
 
 ## Français
 
-Le pack installe BuffAlerts Forever 3.11.4 (Thork, licence MIT), à partir du fichier publié sur [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlertsForever 3.11.4.zip`, SHA-256 `e94eb4ac638033fbd6b7b3e0e0d0df4a7cef89637108ad06c17f7fc28654c5b0`). Le numéro de version reste 3.11.4 dans `BuffAlertsForever.toc`, pour que l'auteur reconnaisse la base ; une ligne `## X-Pack-Patches:` signale les changements.
+Le pack installe BuffAlerts Forever 3.13.0 (Thork, licence MIT), à partir du fichier publié sur [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlertsForever-3.13.0.zip`, SHA-256 `995513121663364b1269f2855d3d724760c49bba28defb7d5eec1665c2c8ea26`). Le numéro de version reste 3.13.0 dans `BuffAlertsForever.toc`, pour que l'auteur reconnaisse la base ; une ligne `## X-Pack-Patches:` signale les changements.
 
 Les fichiers de la release ne sont pas modifiés, sauf trois lignes du `.toc` : `## X-Pack-Patches:`, `## DefaultState: disabled` (éteint à la première installation, réglage 6) et `PackPatches.lua`. Tout le code que le pack change tient dans ce seul fichier ajouté, `PackPatches.lua`, chargé en dernier par le `.toc` : il passe après `Data.lua`, `Core.lua`, `Party.lua` et `Options.lua`, mais avant les événements `ADDON_LOADED` et `PLAYER_LOGIN`, donc avant que l'addon lise ses réglages. Pour reprendre une nouvelle version de l'addon : recopier la release, puis rajouter au `.toc` la ligne `## X-Pack-Patches:` et la ligne `PackPatches.lua`, et vérifier que chaque correctif sert encore (voir « À retirer quand »).
 
-Le diff complet est dans [`buffalerts-3.11.4.patch`](buffalerts-3.11.4.patch) : appliqué sur la release décompressée (`git -c core.autocrlf=false apply -p1 docs/buffalerts-3.11.4.patch` depuis le dossier qui contient `BuffAlertsForever`), il redonne le dossier `addons/BuffAlertsForever` du dépôt octet pour octet (vérifié le 10/11/2026). Les fichiers de l'addon sont en LF et le restent. Chaque correctif porte la marque `[pack patch #n]` dans `PackPatches.lua`.
+Le diff complet est dans [`buffalerts-3.13.0.patch`](buffalerts-3.13.0.patch) : appliqué sur la release décompressée (`git -c core.autocrlf=false apply -p1 docs/buffalerts-3.13.0.patch` depuis le dossier qui contient `BuffAlertsForever`), il redonne le dossier `addons/BuffAlertsForever` du dépôt octet pour octet (vérifié le 22/11/2026). Les fichiers de l'addon sont en LF et le restent. Chaque correctif porte la marque `[pack patch #n]` dans `PackPatches.lua`. Le réglage 6 (éteint à la première installation) tient dans le `.toc` et n'a pas de marque : le `[pack patch #6]` de `PackPatches.lua` est le correctif 6 (Idées claires en combat).
+
+### Passage à la 3.13.0 (22/11/2026)
+
+- Correctifs 1 à 5 : tous toujours nécessaires, leurs points d'accroche sont présents en 3.13.0. Les familles `wellFed` et `campfire` n'ont toujours ni numéro de sort ni nom traduit ; `Options.lua` appelle toujours `SetPropagateKeyboardInput` sans tester le combat ; `ns.ResetDefaults` parcourt toujours avec `pairs` le booléen `hideAll`, et aussi le nouveau booléen `sleepMode`.
+- Réglage 4 : la nouvelle alerte *Reckless Swings* (3.12.0) prend la rangée 2, case 2, à gauche de *Victory Rush*.
+- Nouveau correctif 6 : l'alerte Idées claires (*Clearcasting*) ne s'affichait jamais en combat sur le client français.
+- Nouveautés de l'auteur à connaître :
+  - 3.12.0 : mode sommeil, allumé par défaut (au repos en ville ou à l'auberge, les alertes d'améliorations, d'enchantement d'arme, de familier et du groupe se mettent en pause ; la petite rangée utilitaire, durabilité, munitions, fragments, continue ; `/balert sleep` pour l'éteindre ou le rallumer) ; alerte *Reckless Swings* (talent Fureur du guerrier, en combat quand la capacité est prête, cachée pendant ses 15 s de recharge) ; option *Only in combat* réparée pour les capacités réactives (Fulgurance, Vengeance, Exécution…).
+  - 3.13.0 : Bouclier d'eau (*Water Shield*) du chaman, accepté par l'alerte de bouclier et conseillé en Restauration ; l'Augure de clarté devient une alerte de déclenchement Idées claires (icône seulement pendant le déclenchement, avec compte à rebours, au lieu d'une icône permanente) ; *Victory Rush* cherché aussi par son nom, quand Forever utilise un autre numéro de sort.
 
 ### Méthode
 
-- Code lu en entier : `Data.lua`, `Core.lua`, `Party.lua`, `Options.lua`, le `.toc`, le `CHANGELOG.md` de l'addon (3.11.4 à 1.0.0) et la page CurseForge (description, limites annoncées).
+- Passage à la 3.13.0 : journal des versions de l'addon lu (3.12.0 et 3.13.0), points d'accroche des correctifs vérifiés dans le nouveau code, diff vérifié octet pour octet. Les numéros de ligne des correctifs 1, 3, 5 et 6 sont ceux de la 3.13.0 ; ceux du tableau de repérage (sauf mention) et des réglages 2 et 4 sont ceux de la 3.11.4.
+- Version 3.11.4 : code lu en entier (`Data.lua`, `Core.lua`, `Party.lua`, `Options.lua`, le `.toc`, le `CHANGELOG.md` de l'addon, 3.11.4 à 1.0.0) et la page CurseForge (description, limites annoncées).
 - Pas de suivi de bugs public. La page des commentaires CurseForge (15 commentaires annoncés) ne se lit pas sans navigateur (contenu chargé en JavaScript) : non lue, rien n'a été contourné.
 - Le pack sert avec le client français (frFR) et le client anglais (enUS) : chaque alerte et chaque correction doivent marcher sur les deux. Ne sont corrigés que les vrais bugs dont la cause est certaine dans le code, avec une correction petite et locale.
-- Numéros et noms des sorts vérifiés dans les tables SpellName (enUS et frFR), SpellMisc et SpellDuration du build 1.60.1.70862 (wago.tools, produit wowf).
-- Le jeu ne peut pas être lancé ici. Banc hors jeu : les cinq fichiers de l'addon chargés sous Lua 5.1 (la version du jeu) avec un faux jeu (sorts connus, améliorations en cours, combat, sorts lancés), noms des sorts en français puis en anglais tirés de SpellName. 46 contrôles (guerrier, druide, démoniste, mage, alertes communes, fenêtre d'options) : la release reproduit le bug du correctif 1 en français, la copie du pack non, et rien ne change en anglais. Reste à confirmer en jeu (voir plus bas).
+- Numéros et noms des sorts vérifiés dans les tables SpellName (enUS et frFR), SpellMisc et SpellDuration du build 1.60.1.70862 (wago.tools, produit wowf) ; pour le correctif 6, table SpellName du build 1.60.1.70888.
+- Le jeu ne peut pas être lancé ici. Banc hors jeu, sur la 3.11.4 : les cinq fichiers de l'addon chargés sous Lua 5.1 (la version du jeu) avec un faux jeu (sorts connus, améliorations en cours, combat, sorts lancés), noms des sorts en français puis en anglais tirés de SpellName. 46 contrôles (guerrier, druide, démoniste, mage, alertes communes, fenêtre d'options) : la release reproduit le bug du correctif 1 en français, la copie du pack non, et rien ne change en anglais. Reste à confirmer en jeu (voir plus bas).
 
 ### Comment l'addon repère les alertes du groupe
 
@@ -25,10 +35,10 @@ Règle générale : un sort de classe est reconnu par son numéro (`FamilyOf`, `
 | Alerte | Classe | Repérage | Fichier:ligne | frFR | enUS |
 |---|---|---|---|---|---|
 | Cri de guerre (*Battle Shout*), en combat | Guerrier | Numéros des rangs 6673, 5242, 6192, 11549, 11550, 11551, 25289 (« Cri de guerre » / « Battle Shout » sur le build) ; 2048 absent, écarté. En combat : lecture d'avant le combat, ou le sort lancé, durée lue sur l'amélioration, sinon 180 s (identique au build : SpellMisc 6673, durée n° 25 = 180 000 ms). Compte à rebours 5 s avant la fin. | `Data.lua` 6, 151-152, 338 ; `Core.lua` 586-620 | oui | oui |
-| Fulgurance (*Overpower*), Vengeance (*Revenge*), Exécution (*Execute*) | Guerrier | `C_Spell.IsSpellUsable` sur le numéro du meilleur rang connu ; Exécution aussi sous 20 % de vie quand seule la rage manque. *Victory Rush* (34428) n'existe pas sur Forever : pas d'icône. | `Data.lua` 50-53, 253-258 ; `Core.lua` 623-668 | oui | oui |
+| Fulgurance (*Overpower*), Vengeance (*Revenge*), Exécution (*Execute*) | Guerrier | `C_Spell.IsSpellUsable` sur le numéro du meilleur rang connu ; Exécution aussi sous 20 % de vie quand seule la rage manque. *Victory Rush* : le numéro 34428 n'existe pas sur Forever ; depuis la 3.13.0, l'addon le cherche aussi par son nom. | `Data.lua` 50-53, 253-258 ; `Core.lua` 623-668 | oui | oui |
 | Marque du fauve (*Mark of the Wild*), Don du fauve compte aussi | Druide | Numéros 1126 à 9885 (7 rangs), Don du fauve 21849 et 21850. Indicateur à côté des cadres du groupe pour chaque membre sans la Marque (hors combat, hors raid). | `Data.lua` 84, 228-229, 297-298 ; `Party.lua` 54-72 | oui | oui |
 | Épines (*Thorns*) | Druide | Numéros 467 à 9910 (6 rangs). Affichée en et hors combat. | `Data.lua` 26, 172-173, 378 | oui | oui |
-| Augure de clarté (*Omen of Clarity*) | Druide | Numéro 16864, seulement si le talent est appris. | `Data.lua` 27, 175-176 | oui | oui |
+| Idées claires (*Clearcasting*), déclenchement de l'Augure de clarté (*Omen of Clarity*) | Druide | Talent 16864 appris. Depuis la 3.13.0, icône seulement pendant Idées claires (16870), avec compte à rebours. En combat : cinq sorts dont le coût en mana tombe à 0, cherchés par leur nom anglais (`costSpells`). | `Data.lua` 29-30, 278-281 ; `Core.lua` 290-297, 910-920 (3.13.0) | hors combat oui ; en combat **non**, corrigé (correctif 6) | oui |
 | Armure (Peau de démon, Armure démoniaque) | Démoniste | Numéros 687, 696 et 706 à 11735 ; *Fel Armor* n'existe pas sur Forever, écartée. N'importe quelle armure éteint l'alerte. | `Data.lua` 76-78, 212-213 | oui | oui |
 | Démon absent | Démoniste | Sort 688 (Invocation d'un diablotin) connu, et `UnitExists("pet")` faux. En et hors combat. | `Data.lua` 269 ; `Core.lua` 671-682 | oui | oui |
 | Fragments d'âme (*Soul Shard*) | Démoniste | Nombre de l'objet 6265, alerte sous 5, hors combat. | `Data.lua` 283-284, 334 ; `Core.lua` 801-806 | oui | oui |
@@ -39,12 +49,12 @@ Règle générale : un sort de classe est reconnu par son numéro (`FamilyOf`, `
 | Arme absente | Toutes | Numéro de l'objet de la main droite (emplacement 16). | `Core.lua` 828-836 | oui | oui |
 | Durabilité | Toutes | `GetInventoryItemDurability`, alerte sous 20 %. | `Data.lua` 333 ; `Core.lua` 837-849 | oui | oui |
 
-Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces deux alertes est la ligne d'enchantement temporaire de l'infobulle d'arme (`TooltipHasTempEnchant`, `Core.lua` 700 à 711, « (5 min) », « (30 sec) ») : elle ne sert qu'au voleur et au chaman, en repli quand le jeu ne donne rien. Hors groupe, laissée telle quelle.
+En 3.11.4, le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces deux alertes était la ligne d'enchantement temporaire de l'infobulle d'arme (`TooltipHasTempEnchant`, `Core.lua` 700 à 711, « (5 min) », « (30 sec) ») : elle ne sert qu'au voleur et au chaman, en repli quand le jeu ne donne rien. Hors groupe, laissée telle quelle. En 3.13.0, l'alerte Idées claires cherche aussi ses sorts par leur nom anglais : voir le correctif 6.
 
 ### Correctif 1 : nourriture et feu de camp dans la langue du client
 
 - Clients : français (et toute autre langue que l'anglais). Sur le client anglais, rien ne change.
-- Fichiers : `Data.lua` lignes 63 à 68 (familles `wellFed` et `campfire`, listes `ids` vides), `Core.lua` 104 à 109 (repli par nom dans `FamilyOf`) et 239 à 252 (table des noms).
+- Fichiers : `Data.lua` lignes 68 à 73 (familles `wellFed` et `campfire`, listes `ids` vides), `Core.lua` 107 à 112 (repli par nom dans `FamilyOf`) et 245 à 253 (table des noms, dans `Resolve`).
 - Cause : ces deux améliorations n'ont pas de numéro de sort dans l'addon, seulement des noms anglais (« Well Fed » ; « Camp Benefits », « Cozy Fire », « Warm Fire », « Increased Stamina », « Increased Spirit » et les fragments « Camp Benefit », « Cozy », « Campfire », « Camp Fire », « Warm »). Le client français nomme l'amélioration « Bien nourri » et celle du camp « Avantages du camp » : aucune correspondance, donc l'icône de nourriture et celle du feu de camp restent affichées en permanence hors combat, même nourri et au camp. Reproduit au banc avec la release.
 - Correction (`PackPatches.lua`, `[pack patch #1]`) : chaque nom anglais exact de ces listes reçoit son équivalent dans la langue du client, lu par `C_Spell.GetSpellName` sur un sort qui porte exactement ce nom anglais dans le build 1.60.1.70862. Ajout fait au chargement, refait à la connexion ; le cœur de l'addon reconstruit sa table de noms toutes les 5 s hors combat. Sur le client anglais les noms obtenus sont ceux déjà présents : rien n'est ajouté.
 
@@ -59,7 +69,8 @@ Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces 
 
 - Vérifié sur tout SpellName : les 30 sorts nommés « Well Fed » en anglais s'appellent « Bien nourri » (27) ou « Personnage bien nourri » (3) en français, et ces deux noms français ne désignent que des « Well Fed ». Même correspondance exacte, dans les deux sens, pour les quatre noms du camp. Le français reconnaît donc exactement les mêmes améliorations que l'anglais. « Warm Fire » n'existe pas sur le build (aucun sort de ce nom) : rien à traduire.
 - Laissé : les fragments anglais (« Cozy », « Warm »…) restent valables en anglais seulement. Le français s'appuie sur les noms exacts, dont « Avantages du camp », l'amélioration de camp de Forever confirmée par l'auteur en 3.11.4.
-- À retirer quand : l'amont donne des numéros de sort à `wellFed` et `campfire`, ou traduit ces noms.
+- Étendu en 3.13.0 aux deux alertes du guerrier qui n'ont, elles aussi, que leur nom anglais : *Victory Rush* (le numéro 34428 de `Data.lua` n'existe pas sur Forever) et *Reckless Swings* (aucun numéro). L'addon les cherche par ce nom (`BestKnown`, `Core.lua` 126 à 140), ce qui échoue sur le client français. Leurs sorts de Forever donnent le nom traduit : 402927 « Victory Rush » / « Ivresse de la victoire », 1329554 « Reckless Swings » / « Frappes téméraires » (SpellName, build 1.60.1.70888).
+- À retirer quand : l'amont donne des numéros de sort à `wellFed` et `campfire` (et des numéros de Forever à `victoryRush` et `recklessSwings`), ou traduit ces noms.
 
 ### Réglage 2 : son sur l'alerte du Cri de guerre
 
@@ -73,7 +84,7 @@ Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces 
 ### Correctif 3 : touches de la fenêtre d'options en combat
 
 - Clients : les deux.
-- Fichier : `Options.lua` lignes 342 à 350 (script `OnKeyDown` de la fenêtre).
+- Fichier : `Options.lua` lignes 346 à 353 (script `OnKeyDown` de la fenêtre).
 - Cause : la fenêtre capte le clavier et appelle `SetPropagateKeyboardInput` à chaque touche pour laisser passer les touches au jeu. Le client refuse cet appel en combat (action bloquée) : Polestar le note sur le même client et s'en garde (`Theme/Widgets.lua` 2145, `UI/Gamepad.lua` 625 à 630, « the client refuses the change in a fight »). Fenêtre `/balert` ouverte en combat : message d'action bloquée à chaque touche.
 - Correction (`PackPatches.lua`, `[pack patch #3]`) : le même script, avec l'appel fait hors combat seulement ; Échap ferme toujours la fenêtre. La fonction `ns.CreateOptions` est enveloppée pour poser ce script après la création de la fenêtre.
 - Limite : en combat, les touches suivent le dernier choix fait hors combat ; une fenêtre ouverte pour la première fois en combat peut garder les touches jusqu'à Échap.
@@ -87,7 +98,7 @@ Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces 
 
 | Classe | Rangée 1, de gauche à droite | Rangée 2 |
 |---|---|---|
-| Guerrier | Cri de guerre, Fulgurance, Vengeance, Exécution | (*Victory Rush*, absente de Forever, jamais affichée) |
+| Guerrier | Cri de guerre, Fulgurance, Vengeance, Exécution | *Reckless Swings* (case 2, sous Vengeance), *Victory Rush* (case 3, sous Exécution) |
 | Chasseur | Aspect, Aura de précision, familier absent, aspect de la meute ou du guépard en combat | Morsure de la mangouste, Contre-attaque (sous les 2e et 3e) |
 | Prêtre | Feu intérieur, Robustesse, Esprit divin, Protection contre l'Ombre | |
 | Paladin | Bénédiction, aura, Fureur vertueuse, sceau | |
@@ -120,10 +131,27 @@ Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces 
 ### Correctif 5 : « Reset to defaults » s'arrête en cours de route
 
 - Clients : les deux.
-- Fichiers : `Core.lua` lignes 549 à 556 (`ns.ResetDefaults`), `Data.lua` 328 (`hideAll = false`).
-- Cause : `ns.ResetDefaults` parcourt chaque entrée de `ns.DEFAULTS` avec `pairs(def)`, or `hideAll` vaut `false`, pas une table : erreur Lua « bad argument #1 to 'pairs' (table expected, got boolean) » dès que cette entrée arrive. L'ordre de `pairs` n'étant pas fixe, une partie des alertes est remise à zéro et pas le reste ; `Resolve()` et `ns.Update()` ne sont jamais appelés, et BugSack attrape l'erreur. Touche le bouton « Reset to defaults » et `/balert reset`. Reproduit au banc avec la release.
-- Correction (`PackPatches.lua`, `[pack patch #5]`) : `ns.ResetDefaults` est enveloppée ; les valeurs simples (`hideAll`) sont remises à zéro directement et retirées de `ns.DEFAULTS` le temps de l'appel d'origine, puis remises.
+- Fichiers : `Core.lua` lignes 571 à 578 (`ns.ResetDefaults`), `Data.lua` 350 (`hideAll = false`) et 351 (`sleepMode = true`, depuis la 3.12.0).
+- Cause : `ns.ResetDefaults` parcourt chaque entrée de `ns.DEFAULTS` avec `pairs(def)`, or `hideAll` vaut `false` et `sleepMode` vaut `true`, pas des tables : erreur Lua « bad argument #1 to 'pairs' (table expected, got boolean) » dès que cette entrée arrive. L'ordre de `pairs` n'étant pas fixe, une partie des alertes est remise à zéro et pas le reste ; `Resolve()` et `ns.Update()` ne sont jamais appelés, et BugSack attrape l'erreur. Touche le bouton « Reset to defaults » et `/balert reset`. Reproduit au banc avec la release.
+- Correction (`PackPatches.lua`, `[pack patch #5]`) : `ns.ResetDefaults` est enveloppée ; les valeurs simples (`hideAll`, `sleepMode`) sont remises à zéro directement et retirées de `ns.DEFAULTS` le temps de l'appel d'origine, puis remises.
 - À retirer quand : l'amont saute les valeurs qui ne sont pas des tables.
+
+### Correctif 6 : Idées claires en combat dans la langue du client (3.13.0)
+
+- Clients : français (et toute autre langue que l'anglais). Sur le client anglais, rien ne change.
+- Fichiers : `Data.lua` lignes 278 à 281 (`ns.PROC_ALERTS`, alerte `omenOfClarity`, liste `costSpells`), `Core.lua` 290 à 297 (recherche des sorts dans `Resolve`) et 910 à 920 (`ProcFromCost`).
+- Cause : depuis la 3.13.0, l'alerte Idées claires (*Clearcasting*) est une alerte de déclenchement. En combat, le jeu cache les améliorations : l'addon regarde alors cinq sorts du druide dont le coût en mana tombe à 0 pendant Idées claires (`costSpells`). Il les cherche avec `C_Spell.GetSpellInfo` sur leur nom anglais seulement (« Healing Touch », « Wrath », « Regrowth », « Moonfire », « Rejuvenation ») : sur le client français, aucun de ces noms ne désigne un sort, la liste reste vide et l'alerte ne s'affiche jamais en combat. Hors combat, Idées claires est reconnue par son numéro (16870), dans toutes les langues.
+- Correction (`PackPatches.lua`, `[pack patch #6]`) : le nom de chaque sort dans la langue du client est ajouté à `costSpells`, lu par `C_Spell.GetSpellName` sur son rang 1 (table SpellName, build 1.60.1.70888, wago.tools). Ajout fait au chargement, refait à la connexion ; l'addon relit la liste toutes les 5 s hors combat. Sur le client anglais, les noms obtenus sont ceux déjà présents : rien n'est ajouté.
+
+| Sort (rang 1) | enUS | frFR |
+|---|---|---|
+| 5185 | Healing Touch | Toucher guérisseur |
+| 5176 | Wrath | Colère |
+| 8936 | Regrowth | Rétablissement |
+| 8921 | Moonfire | Eclat lunaire |
+| 774 | Rejuvenation | Récupération |
+
+- À retirer quand : l'amont cherche ces sorts par leur numéro, ou traduit ces noms.
 
 ### Réglage 6 : éteint à la première installation (0.10.0)
 
@@ -159,13 +187,14 @@ Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces 
 - Feu de camp : l'icône reste hors camp, c'est le principe de l'alerte (rappel de camper).
 - Seuils : fragments d'âme sous 5, durabilité sous 20 % : valeurs de l'auteur, raisonnables pour le groupe.
 - Interface de l'addon en anglais, noms des sorts dans la langue du client.
+- Mode sommeil (3.12.0, allumé par défaut) : choix de l'auteur, gardé ; `/balert sleep` l'éteint (jusqu'à la déconnexion, comme tout réglage).
 
 ### À vérifier en jeu
 
 1. **Cri de guerre** (guerrier, clients FR et EN) : sans Cri de guerre, engager un combat : icône en haut à droite, sous les améliorations, et son d'avertissement. Lancer le Cri : l'icône disparaît. Rester en combat jusqu'aux 5 dernières secondes : icône avec compte à rebours et son. Hors combat : jamais d'icône. Vérifier aussi qu'un Cri lancé avant le combat éteint bien l'alerte à l'engagement.
 2. **Fulgurance, Vengeance, Exécution** (guerrier, FR et EN) : icônes quand le jeu les rend utilisables, avec compte à rebours pour Fulgurance et Vengeance.
 3. **Nourriture et feu de camp** (toutes classes, client FR d'abord, puis EN) : manger un plat qui donne « Bien nourri » : l'icône de nourriture disparaît. S'installer à un feu de camp jusqu'à « Avantages du camp » : l'icône du feu de camp disparaît. Si une icône reste, taper `/balert buffs` et noter le nom et le numéro affichés.
-4. **Druide** (FR et EN) : Marque du fauve, Épines, Augure de clarté (si le talent est pris) s'éteignent une fois lancés, y compris en forme de félin ; en groupe, petite icône de la Marque à côté du cadre d'un membre qui ne l'a pas.
+4. **Druide** (FR et EN) : Marque du fauve et Épines s'éteignent une fois lancées, y compris en forme de félin ; avec le talent Augure de clarté, l'icône Idées claires n'apparaît que pendant le déclenchement, avec son compte à rebours ; en groupe, petite icône de la Marque à côté du cadre d'un membre qui ne l'a pas.
 5. **Démoniste** (FR et EN) : armure (Peau de démon ou Armure démoniaque), icône « démon absent » quand le démon est renvoyé ou mort, icône des fragments d'âme sous 5 (hors combat).
 6. **Mage** (FR et EN) : armure et Intelligence des arcanes ; en groupe, icône d'Intelligence à côté des membres à mana qui ne l'ont pas (pas à côté du guerrier).
 7. **Place des alertes** (une classe à quatre icônes, guerrier, paladin, prêtre ou chasseur, puis une autre ; clients FR et EN) : `/balert`, « Move icons » pour toutes les montrer. Attendu : une rangée de quatre icônes moyennes en haut à droite, sous les améliorations et les affaiblissements, à gauche de la fenêtre du guide ; rien sur la minicarte, ses boutons (Polestar, BugSack), le calendrier, l'horloge, la fenêtre du guide, la flèche de Polestar ni la petite rangée du haut. Refaire avec plusieurs améliorations (deux rangées si possible) et à deux échelles d'interface (réglage d'échelle de l'interface des options graphiques du jeu, *UI Scale*) : la rangée reste sous les améliorations. Déplacer les améliorations dans le Mode édition : les alertes suivent. « Lock icons » pour finir.
@@ -174,30 +203,43 @@ Le seul texte écrit en dur qui sert à repérer quelque chose en dehors de ces 
 10. **Gestionnaire de temps de recharge** (guerrier) : la barre du Cri de guerre et l'icône de BuffAlerts ne se recouvrent pas.
 11. **Reset to defaults** (une classe, un client) : dans `/balert`, « Move icons », glisser une icône ailleurs, « Lock icons », puis « Reset to defaults ». Attendu : aucune erreur (BugSack reste muet), l'icône revient sous les améliorations, « Hide all alerts » décoché.
 12. **Éteint à la première installation** (réglage 6, un client) : sur un compte qui n'a jamais eu BuffAlerts (ou après avoir retiré la ligne `BuffAlertsForever` de chaque `AddOns.txt` du compte, jeu fermé), installer le paquet : BuffAlerts Forever décoché dans la liste des addons, aucune icône en jeu. Le cocher : les alertes reviennent. Sur le compte d'un ami qui l'avait déjà : toujours coché après la mise à jour.
+13. **Idées claires en combat** (correctif 6, druide avec le talent Augure de clarté, client FR d'abord, puis EN) : en combat, frapper jusqu'au déclenchement d'Idées claires. Attendu : l'icône apparaît avec son compte à rebours, et disparaît quand Idées claires prend fin (sort suivant lancé, ou fin de la durée). Avant le correctif, elle n'apparaissait jamais en combat sur le client français.
 
 ## English
 
-BuffAlerts Forever 3.11.4 (Thork, MIT licence), installed from the file published on [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlertsForever 3.11.4.zip`, SHA-256 `e94eb4ac638033fbd6b7b3e0e0d0df4a7cef89637108ad06c17f7fc28654c5b0`). `BuffAlertsForever.toc` keeps version 3.11.4 so the author recognises the base; a `## X-Pack-Patches:` line flags the changes.
+BuffAlerts Forever 3.13.0 (Thork, MIT licence), installed from the file published on [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlertsForever-3.13.0.zip`, SHA-256 `995513121663364b1269f2855d3d724760c49bba28defb7d5eec1665c2c8ea26`). `BuffAlertsForever.toc` keeps version 3.13.0 so the author recognises the base; a `## X-Pack-Patches:` line flags the changes.
 
-The release files are not modified, except three `.toc` lines: `## X-Pack-Patches:`, `## DefaultState: disabled` (off on a first install, default 6) and `PackPatches.lua`. All the code the pack changes lives in that one added file, `PackPatches.lua`, listed last in the `.toc`: it runs after `Data.lua`, `Core.lua`, `Party.lua` and `Options.lua` but before `ADDON_LOADED` and `PLAYER_LOGIN`, so before the addon reads its settings. To take a new upstream version: copy the release, add the `## X-Pack-Patches:` and `PackPatches.lua` lines back to the `.toc`, and check each patch is still needed. The full diff is [`buffalerts-3.11.4.patch`](buffalerts-3.11.4.patch): `git -c core.autocrlf=false apply -p1 docs/buffalerts-3.11.4.patch`, run from the folder holding the unzipped `BuffAlertsForever`, rebuilds the repository's `addons/BuffAlertsForever` byte for byte (checked 2026-11-10; files stay LF). Each patch carries a `[pack patch #n]` mark.
+The release files are not modified, except three `.toc` lines: `## X-Pack-Patches:`, `## DefaultState: disabled` (off on a first install, default 6) and `PackPatches.lua`. All the code the pack changes lives in that one added file, `PackPatches.lua`, listed last in the `.toc`: it runs after `Data.lua`, `Core.lua`, `Party.lua` and `Options.lua` but before `ADDON_LOADED` and `PLAYER_LOGIN`, so before the addon reads its settings. To take a new upstream version: copy the release, add the `## X-Pack-Patches:` and `PackPatches.lua` lines back to the `.toc`, and check each patch is still needed. The full diff is [`buffalerts-3.13.0.patch`](buffalerts-3.13.0.patch): `git -c core.autocrlf=false apply -p1 docs/buffalerts-3.13.0.patch`, run from the folder holding the unzipped `BuffAlertsForever`, rebuilds the repository's `addons/BuffAlertsForever` byte for byte (checked 2026-11-22; files stay LF). Each patch carries a `[pack patch #n]` mark. Default 6 (off on a first install) lives in the `.toc` and has no mark: the `[pack patch #6]` in `PackPatches.lua` is patch 6 (Clearcasting in combat).
+
+### Moving to 3.13.0 (2026-11-22)
+
+- Patches 1 to 5: all still needed, their hooks are there in 3.13.0. The `wellFed` and `campfire` families still have no spell ID and no translated name; `Options.lua` still calls `SetPropagateKeyboardInput` without checking for combat; `ns.ResetDefaults` still runs `pairs` on the `hideAll` boolean, and on the new `sleepMode` boolean too.
+- Default 4: the new *Reckless Swings* alert (3.12.0) takes row 2, slot 2, left of *Victory Rush*.
+- New patch 6: the Clearcasting alert never showed in combat on the French client.
+- Upstream changes worth knowing:
+  - 3.12.0: sleep mode, on by default (while resting in a city or inn, buff, weapon enchant, pet and party buff alerts pause; the small utility row, durability, ammo, shards, keeps working; `/balert sleep` toggles it); *Reckless Swings* alert (warrior Fury talent, in combat when the ability is ready, hidden for its 15 s cooldown); the *Only in combat* option fixed for reactive abilities (Overpower, Revenge, Execute...).
+  - 3.13.0: the shaman's Water Shield, accepted by the shield alert and recommended for Restoration; Omen of Clarity becomes a Clearcasting proc alert (icon only while the proc is up, with a countdown, instead of a permanent icon); Victory Rush also looked up by name, when Forever uses a different spell ID.
 
 ### Method
 
-- Whole code read (`Data.lua`, `Core.lua`, `Party.lua`, `Options.lua`, `.toc`, the addon's changelog, the CurseForge page). No public bug tracker; the CurseForge comments page only renders with JavaScript and was not read (nothing was bypassed).
+- Moving to 3.13.0: the addon's changelog read (3.12.0 and 3.13.0), the patches' hooks checked in the new code, the diff checked byte for byte. Line numbers in patches 1, 3, 5 and 6 are 3.13.0's; those in the detection summary (unless stated) and in defaults 2 and 4 are 3.11.4's.
+- Version 3.11.4: whole code read (`Data.lua`, `Core.lua`, `Party.lua`, `Options.lua`, `.toc`, the addon's changelog, the CurseForge page). No public bug tracker; the CurseForge comments page only renders with JavaScript and was not read (nothing was bypassed).
 - The pack is played with both the French and the English client: every alert and fix must work on both. Only real bugs with a certain cause and a small, local fix are patched.
-- Spell IDs and names checked against SpellName (enUS and frFR), SpellMisc and SpellDuration of build 1.60.1.70862 (wago.tools, product wowf).
-- The game cannot be run here. Offline bench: the addon's five files loaded under Lua 5.1 with a fake game, French then English spell names from SpellName, 46 checks (warrior, druid, warlock, mage, shared alerts, options window). The release reproduces patch 1's bug in French, the pack's copy does not, and nothing changes in English.
+- Spell IDs and names checked against SpellName (enUS and frFR), SpellMisc and SpellDuration of build 1.60.1.70862 (wago.tools, product wowf); for patch 6, SpellName of build 1.60.1.70888.
+- The game cannot be run here. Offline bench, on 3.11.4: the addon's five files loaded under Lua 5.1 with a fake game, French then English spell names from SpellName, 46 checks (warrior, druid, warlock, mage, shared alerts, options window). The release reproduces patch 1's bug in French, the pack's copy does not, and nothing changes in English.
 
 ### How the group's alerts are detected
 
-Class spells are matched by spell ID (`FamilyOf`, `Core.lua` 99-110), each ID validated against its rank 1 name in the client's language (`ValidateIds`, 209-221; Burning Crusade ranks missing from Forever are dropped). In combat auras are hidden: the addon uses the last reading before the pull and its own casts (`Core.lua` 1008-1012, 1049-1050, 415-444). Battle Shout (6673 to 25289, 180 s like SpellDuration on the build), Overpower, Revenge, Execute (`IsSpellUsable` by ID), Mark of the Wild and Gift of the Wild, Thorns, Omen of Clarity, warlock and mage armors, Arcane Intellect and Arcane Brilliance, missing pet (`UnitExists("pet")`), soul shards (item 6265), missing weapon (item ID) and durability (API) all work on both clients. Victory Rush, Fel Armor and Molten Armor do not exist on Forever and are dropped. Only the food and campfire alerts relied on English names (`Data.lua` 63-68): fixed by patch 1.
+Class spells are matched by spell ID (`FamilyOf`, `Core.lua` 99-110), each ID validated against its rank 1 name in the client's language (`ValidateIds`, 209-221; Burning Crusade ranks missing from Forever are dropped). In combat auras are hidden: the addon uses the last reading before the pull and its own casts (`Core.lua` 1008-1012, 1049-1050, 415-444). Battle Shout (6673 to 25289, 180 s like SpellDuration on the build), Overpower, Revenge, Execute (`IsSpellUsable` by ID), Mark of the Wild and Gift of the Wild, Thorns, Clearcasting out of combat (16870), warlock and mage armors, Arcane Intellect and Arcane Brilliance, missing pet (`UnitExists("pet")`), soul shards (item 6265), missing weapon (item ID) and durability (API) all work on both clients. Victory Rush's ID 34428, Fel Armor and Molten Armor do not exist on Forever and are dropped (since 3.13.0 Victory Rush is also looked up by name). In 3.11.4 only the food and campfire alerts relied on English names (`Data.lua` 63-68 then, 68-73 in 3.13.0): fixed by patch 1. Since 3.13.0 the Clearcasting proc alert also finds its spells by English name in combat (`costSpells`, `Data.lua` 278-281): fixed by patch 6.
 
 ### Patch 1: food and campfire buffs in the client's language
 
 - Clients: French (and any non-English client); English unchanged.
 - Cause: `wellFed` and `campfire` have no spell ID, only English names ("Well Fed"; "Camp Benefits", "Cozy Fire", "Warm Fire", "Increased Stamina", "Increased Spirit", plus English fragments). The French client calls them "Bien nourri" and "Avantages du camp", so both icons stay up out of combat even when fed and camped.
+- Files (3.13.0): `Data.lua` 68-73, `Core.lua` 107-112 (name fallback in `FamilyOf`) and 245-253 (name table, in `Resolve`).
 - Fix: each exact English name gets its twin in the client's language through `C_Spell.GetSpellName` on a spell with exactly that English name (19705 and 1283082 for Well Fed, 1229741, 7353, 18191, 18193 for the camp names), at load and again at login. Checked over the whole SpellName table: the English and French names map one to one, so French matches exactly the buffs English does. The English-only fragments ("Cozy", "Warm"...) are left as they are.
-- Drop it once upstream gives these families spell IDs or translates the names.
+- Extended in 3.13.0 to the two warrior alerts that also have only their English name: Victory Rush (ID 34428 in `Data.lua` does not exist on Forever) and Reckless Swings (no ID). The addon looks them up by that name (`BestKnown`, `Core.lua` 126-140), which fails on the French client. Their Forever spells give the translated name: 402927 "Victory Rush" / "Ivresse de la victoire", 1329554 "Reckless Swings" / "Frappes téméraires" (SpellName, build 1.60.1.70888).
+- Drop it once upstream gives these families spell IDs (and Forever IDs to `victoryRush` and `recklessSwings`) or translates the names.
 
 ### Default 2: sound on the Battle Shout alert
 
@@ -205,13 +247,13 @@ Class spells are matched by spell ID (`FamilyOf`, `Core.lua` 99-110), each ID va
 
 ### Patch 3: options window keys in combat
 
-- `Options.lua` 342-350 calls `SetPropagateKeyboardInput` on every key; the client refuses that call in combat (Polestar notes it on the same client, `Theme/Widgets.lua` 2145, `UI/Gamepad.lua` 625-630). Fix: the same handler, with the call made out of combat only; Escape still closes the window.
+- `Options.lua` 346-353 calls `SetPropagateKeyboardInput` on every key; the client refuses that call in combat (Polestar notes it on the same client, `Theme/Widgets.lua` 2145, `UI/Gamepad.lua` 625-630). Fix: the same handler, with the call made out of combat only; Escape still closes the window.
 
 ### Default 4: large alerts under the buffs, medium size
 
 - Clients: both (positions only, no text read).
 - Nathan's request: no more large icons in the middle of the screen (release: `Data.lua` 337-382, centred, 64 px at y = +150, 118 to 182 px above the centre; the hunter's second row at y = +80). Chosen spot: near the buffs, top right, under the player's buff row, left of the minimap, medium size. The Battle Shout sound (default 2) is unchanged.
-- Values (`PackPatches.lua`, `[pack patch #4]`): size 40 instead of 64, anchor `PACK_BUFFS`: each icon's top-right corner sits at the bottom-right corner of the game's buff frame (`BuffFrame`), offset by `x` and `y`. Four slots, right to left x = -155, -199, -243, -287 (44 pitch: 40 px icon, 4 gap); row 1 at y = -115, row 2 at y = -159. The release's left-to-right order is kept, right-aligned: 4 icons for warrior, paladin, priest and hunter (the hunter's Mongoose Bite and Counterattack in row 2 under the 2nd and 3rd), 3 for druid, 2 for mage, warlock, rogue and shaman. Victory Rush (absent from Forever, never shown) goes to row 2.
+- Values (`PackPatches.lua`, `[pack patch #4]`): size 40 instead of 64, anchor `PACK_BUFFS`: each icon's top-right corner sits at the bottom-right corner of the game's buff frame (`BuffFrame`), offset by `x` and `y`. Four slots, right to left x = -155, -199, -243, -287 (44 pitch: 40 px icon, 4 gap); row 1 at y = -115, row 2 at y = -159. The release's left-to-right order is kept, right-aligned: 4 icons for warrior, paladin, priest and hunter (the hunter's Mongoose Bite and Counterattack in row 2 under the 2nd and 3rd), 3 for druid, 2 for mage, warlock, rogue and shaman. The warrior's Reckless Swings (slot 2, under Revenge) and Victory Rush (slot 3, under Execute) go to row 2.
 - Anchored to the buff frame, not the screen: Edit Mode moves that frame (default `TOPRIGHT` -255, -10, `Blizzard_EditMode/Mainline/EditModePresetLayouts.lua` 433-450, same in the Classic layout, line 1199) and the game lowers it while a GM ticket or survey tray shows (`Blizzard_StatusTrayManager/StatusTrayManager.lua` 36-43); the row follows. The frame always has the size of its full grid: `AuraFrameMixin:UpdateSize` (`Blizzard_BuffFrame/BuffFrame.lua` 289-309) counts all 32 slots (`BUFF_MAX_DISPLAY`) unless `ignoreDisabledAurasForSize` is set, which it is not for `BuffFrame`; 11 per row, so 3 rows of 45 units (135 tall). Its bottom edge is under the 3rd row even with a single buff, so the alerts never cover buffs, however many. Source: Gethe/wow-ui-source, `forever` branch, build 1.60.1.70888 (Forever loads the Mainline family, game type camelot).
 - No taint: no game frame is changed, called or hooked; only our own icons (plain frames, not protected, mouse off outside "Move icons") get an anchor to `BuffFrame`, as Polestar and BugSack anchor their buttons to `Minimap`. Without `BuffFrame`, the same spot is counted from the screen's top-right corner (`UIParent`, `TOPRIGHT`, x = -410, y = -260 for the right slot).
 - On screen with the default layout, in UI units from the top-right corner: row 1 from x -410 to -582, y -260 to -300; row 2 y -304 to -344. Clear of the buffs (-255 to -655; -10 to -145), the debuffs (2 rows of 8: -270 to -550; -155 to -245), the minimap cluster with its calendar, clock and the Polestar (225 degrees) and BugSack (160 degrees) buttons on its edge (0 to -256; 0 to -256), Polestar's guide window (from x -64 to -404, from y -240; 6 units gap), the objective tracker (-110 to -370, from y -275), Polestar's arrow (centre plus or minus 100; -140 to -270) and BuffAlerts' small top row (centre -84 to +172; -40 to -76). An icon's "Train" badge (18 units) and word reach about 38 units up (y -222), over the debuffs' second row only from the 13th debuff on. The hunter's red "Switch aspect" word overlaps the guide window's top-left corner by about 17 units while it shows.
@@ -224,8 +266,16 @@ Class spells are matched by spell ID (`FamilyOf`, `Core.lua` 99-110), each ID va
 
 ### Patch 5: "Reset to defaults" stops halfway
 
-- `ns.ResetDefaults` (`Core.lua` 549-556) runs `pairs(def)` on every entry of `ns.DEFAULTS`, but `hideAll` (`Data.lua` 328) is `false`, not a table: Lua error "bad argument #1 to 'pairs' (table expected, got boolean)" when that entry comes up. `pairs` has no fixed order, so some alerts are reset and others not; `Resolve()` and `ns.Update()` never run, and BugSack catches the error. Hits the "Reset to defaults" button and `/balert reset`; reproduced on the bench with the release.
-- Fix (`[pack patch #5]`): `ns.ResetDefaults` is wrapped; plain values (`hideAll`) are reset directly and left out of `ns.DEFAULTS` for the original call, then put back. Drop it once upstream skips non-table entries.
+- `ns.ResetDefaults` (`Core.lua` 571-578) runs `pairs(def)` on every entry of `ns.DEFAULTS`, but `hideAll` (`Data.lua` 350) is `false` and `sleepMode` (351, since 3.12.0) is `true`, not tables: Lua error "bad argument #1 to 'pairs' (table expected, got boolean)" when that entry comes up. `pairs` has no fixed order, so some alerts are reset and others not; `Resolve()` and `ns.Update()` never run, and BugSack catches the error. Hits the "Reset to defaults" button and `/balert reset`; reproduced on the bench with the release.
+- Fix (`[pack patch #5]`): `ns.ResetDefaults` is wrapped; plain values (`hideAll`, `sleepMode`) are reset directly and left out of `ns.DEFAULTS` for the original call, then put back. Drop it once upstream skips non-table entries.
+
+### Patch 6: Clearcasting in combat in the client's language (3.13.0)
+
+- Clients: French (and any non-English client); English unchanged.
+- Files: `Data.lua` 278-281 (`ns.PROC_ALERTS`, the `omenOfClarity` alert, its `costSpells` list), `Core.lua` 290-297 (spell lookup in `Resolve`) and 910-920 (`ProcFromCost`).
+- Cause: since 3.13.0 the Clearcasting alert is a proc alert. In combat the game hides buffs, so the addon watches five druid spells whose mana cost drops to 0 while Clearcasting is up (`costSpells`). It finds them with `C_Spell.GetSpellInfo` on their English names only ("Healing Touch", "Wrath", "Regrowth", "Moonfire", "Rejuvenation"): on the French client none of those names is a spell, the list stays empty and the alert never shows in combat. Out of combat Clearcasting is matched by its ID (16870), in every language.
+- Fix (`PackPatches.lua`, `[pack patch #6]`): each spell's name in the client's language is added to `costSpells`, read by `C_Spell.GetSpellName` on its rank 1 (SpellName table, build 1.60.1.70888, wago.tools): 5185 Healing Touch / Toucher guérisseur, 5176 Wrath / Colère, 8936 Regrowth / Rétablissement, 8921 Moonfire / Eclat lunaire, 774 Rejuvenation / Récupération. Added at load and again at login; the addon reads the list again every 5 s out of combat. On the English client the names found are already there: nothing is added.
+- Drop it once upstream looks these spells up by ID or translates the names.
 
 ### Default 6: off on a first install (0.10.0)
 
@@ -243,16 +293,17 @@ Class spells are matched by spell ID (`FamilyOf`, `Core.lua` 99-110), each ID va
 
 ### Left as is
 
-Settings reset at login (the author blames the beta client; Polestar's settings load fine on the same client, but no cause shows in BuffAlerts' code: to observe in game), Thorns shown for every druid, the campfire icon outside camps, the author's thresholds (5 soul shards, 20 % durability).
+Settings reset at login (the author blames the beta client; Polestar's settings load fine on the same client, but no cause shows in BuffAlerts' code: to observe in game), Thorns shown for every druid, the campfire icon outside camps, the author's thresholds (5 soul shards, 20 % durability), sleep mode on by default (3.12.0; `/balert sleep` turns it off until logout, like any setting).
 
 ### In-game checks
 
 1. Battle Shout (warrior, FR and EN): pull without it, icon top right under the buffs, and sound; cast it, icon gone; last 5 s in combat, countdown and sound; never out of combat.
 2. Overpower, Revenge, Execute (warrior, FR and EN): icons when usable.
 3. Food and campfire (any class, FR first, then EN): "Bien nourri" / "Well Fed" and "Avantages du camp" / "Camp Benefits" turn their icons off; if not, `/balert buffs` and note the name and ID.
-4. Druid, warlock, mage (FR and EN): their buffs turn their icons off, party indicators beside members who lack them.
+4. Druid, warlock, mage (FR and EN): their buffs turn their icons off, party indicators beside members who lack them; with the Omen of Clarity talent, the Clearcasting icon only shows while the proc is up, with its countdown.
 5. Alert spot (a four-icon class, warrior, paladin, priest or hunter, then another; FR and EN): `/balert`, "Move icons" to show them all. Expected: a row of four medium icons top right, under the buffs and debuffs, left of the guide window; nothing over the minimap, its buttons (Polestar, BugSack), calendar, clock, the guide window, Polestar's arrow or the small top row. Again with many buffs (two rows if possible) and at two UI scales (the game's *UI Scale* graphics setting): the row stays under the buffs. Move the buffs in Edit Mode: the alerts follow. "Lock icons" to finish.
 6. Options window opened in combat: no blocked action message, Escape closes it.
 7. Settings: untick an option, log out and in, note whether it stays.
 8. Reset to defaults (one class, one client): `/balert`, "Move icons", drag an icon away, "Lock icons", then "Reset to defaults". Expected: no error (BugSack stays quiet), the icon goes back under the buffs, "Hide all alerts" unticked.
 9. Off on a first install (default 6, one client): on an account that never had BuffAlerts (or after removing the `BuffAlertsForever` line from every `AddOns.txt` of the account, game closed), install the pack: BuffAlerts Forever unticked in the AddOn list, no icon in game; tick it and the alerts come back. On a friend's account that already had it: still ticked after the update.
+10. Clearcasting in combat (patch 6, a druid with the Omen of Clarity talent, FR client first, then EN): in combat, fight until Clearcasting procs. Expected: the icon shows with its countdown, and goes away when Clearcasting ends (next spell cast, or the duration runs out). Before the patch it never showed in combat on the French client.

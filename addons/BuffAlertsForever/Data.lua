@@ -7,6 +7,8 @@ ns.FAMILIES = {
 
     -- charges: buffs consumed by physical hits taken. The addon counts hits in combat, where auras cannot be read.
     lightningShield = { label = "Lightning Shield", duration = 600, charges = 3,  ids = { 25472, 25469, 10432, 10431, 8134, 945, 905, 325, 324 } },
+    -- Water Shield: Forever ID not confirmed, so it is also matched by name; no trainer level listed
+    waterShield     = { label = "Water Shield", duration = 600, charges = 3, ids = { 33736, 24398 }, names = { "Water Shield" } },
 
     innerFire       = { label = "Inner Fire", duration = 600, charges = 20, ids = { 25431, 10952, 10951, 1006, 602, 7128, 588 } },
     fortitude       = { label = "Power Word: Fortitude", duration = 1800, ids = { 25389, 10938, 10937, 2791, 1245, 1244, 1243 }, extra = { 25392, 21564, 21562 } },
@@ -25,6 +27,7 @@ ns.FAMILIES = {
     trueshot         = { label = "Trueshot Aura", duration = 1800, talent = true, ids = { 27066, 20906, 20905, 19506 } },
     thorns           = { label = "Thorns", duration = 600, ids = { 26992, 9910, 9756, 8914, 1075, 782, 467 } },
     omen             = { label = "Omen of Clarity", duration = 600, talent = true, ids = { 16864 } },
+    clearcasting     = { label = "Clearcasting", duration = 15, ids = { 16870 }, names = { "Clearcasting" } },
     righteousFury    = { label = "Righteous Fury", duration = 1800, ids = { 25780 } },
 
     -- Paladin seals (30 s, consumed by Judgement)
@@ -50,7 +53,9 @@ ns.FAMILIES = {
     overpower        = { label = "Overpower",     duration = 0, ids = { 11585, 11584, 7887, 7384 } },
     revenge          = { label = "Revenge",       duration = 0, ids = { 30357, 25269, 25288, 11601, 11600, 7379, 6574, 6572 } },
     execute          = { label = "Execute",       duration = 0, ids = { 25236, 25234, 20662, 20661, 20660, 20658, 5308 } },
-    victoryRush      = { label = "Victory Rush",  duration = 0, ids = { 34428 } },
+    victoryRush      = { label = "Victory Rush",  duration = 0, ids = { 34428 }, names = { "Victory Rush" } },
+    -- Fury talent new in WoW Forever: spell ID unknown, matched by name
+    recklessSwings   = { label = "Reckless Swings", duration = 0, ids = {}, names = { "Reckless Swings" } },
     riposte          = { label = "Riposte",       duration = 0, ids = { 14251 } },
     counterattack    = { label = "Counterattack", duration = 0, ids = { 27067, 20910, 20909, 19306 } },
     mongooseBite     = { label = "Mongoose Bite", duration = 0, ids = { 36916, 14271, 14270, 14269, 1495 } },
@@ -151,8 +156,13 @@ ns.SELF_ALERTS = {
     { key = "battleShout", class = "WARRIOR", label = "Battle Shout",
       families = { "battleShout" }, exclusive = true },
 
-    { key = "lightningShield", class = "SHAMAN", label = "Lightning Shield",
-      families = { "lightningShield" }, exclusive = true },
+    -- Any shield counts; Restoration is recommended Water Shield, other specs Lightning Shield
+    { key = "lightningShield", class = "SHAMAN", label = "Shield",
+      families = { "lightningShield", "waterShield" }, choices = { "lightningShield", "waterShield" }, exclusive = true,
+      specPriority = {
+          restoration = { "waterShield", "lightningShield" },
+          none        = { "lightningShield", "waterShield" },
+      } },
 
     { key = "innerFire", class = "PRIEST", label = "Inner Fire",
       families = { "innerFire" }, exclusive = true },
@@ -171,9 +181,6 @@ ns.SELF_ALERTS = {
 
     { key = "thorns", class = "DRUID", label = "Thorns",
       families = { "thorns" }, targeted = true },
-
-    { key = "omenOfClarity", class = "DRUID", label = "Omen of Clarity",
-      families = { "omen" }, exclusive = true },
 
     { key = "paladinAura", class = "PALADIN", label = "Aura",
       families = { "devotion", "retributionAura", "concentration", "sanctity", "shadowResAura", "frostResAura", "fireResAura", "crusaderAura" },
@@ -256,12 +263,22 @@ ns.USABLE_ALERTS = {
       trigger = { player = { DODGE = true, PARRY = true, BLOCK = true } } },
     { key = "execute",       class = "WARRIOR", label = "Execute",       family = "execute", showWithoutPower = true },
     { key = "victoryRush",   class = "WARRIOR", label = "Victory Rush",  family = "victoryRush", window = 20 },
+    -- cooldown: seconds the alert stays hidden after you cast it (tracked from your own casts)
+    { key = "recklessSwings", class = "WARRIOR", label = "Reckless Swings", family = "recklessSwings", cooldown = 15 },
     { key = "riposte",       class = "ROGUE",   label = "Riposte",       family = "riposte", window = 5,
       trigger = { player = { PARRY = true } } },
     { key = "counterattack", class = "HUNTER",  label = "Counterattack", family = "counterattack", window = 5,
       trigger = { player = { PARRY = true } } },
     { key = "mongooseBite",  class = "HUNTER",  label = "Mongoose Bite", family = "mongooseBite", window = 5,
       trigger = { player = { DODGE = true } } },
+}
+
+-- Procs: shown while the proc buff is active, with its remaining time.
+-- requires = talent family the player must know; aura = family of the proc buff;
+-- costSpells = spells whose mana cost drops to 0 while the proc is up (used in combat, where buffs are hidden)
+ns.PROC_ALERTS = {
+    { key = "omenOfClarity", class = "DRUID", label = "Clearcasting", requires = "omen", aura = "clearcasting",
+      costSpells = { "Healing Touch", "Wrath", "Regrowth", "Moonfire", "Rejuvenation" } },
 }
 
 -- Missing pet (shown in and out of combat)
@@ -315,6 +332,11 @@ ns.SPEC_SIGNATURES = {
         { "fire",   { 11366, 11113, 11129 } },   -- Pyroblast, Blast Wave, Combustion
         { "frost",  { 12472, 11958, 11426 } },   -- Cold Snap, Ice Block, Ice Barrier
     },
+    SHAMAN = {
+        { "restoration", { 16190, 16188 } },        -- Mana Tide Totem, Nature's Swiftness
+        { "enhancement", { 17364 } },               -- Stormstrike
+        { "elemental",   { 16166 } },               -- Elemental Mastery
+    },
     PALADIN = {
         { "holy",        { 20216, 20473 } },         -- Divine Favor, Holy Shock
         { "retribution", { 20066, 20375 } },         -- Repentance, Seal of Command
@@ -326,6 +348,7 @@ ns.SPEC_SIGNATURES = {
 ns.DEFAULTS = {
     -- Global
     hideAll          = false,
+    sleepMode        = true,    -- no buff alerts while resting in a city or inn
     -- All classes (anchored to the top of the screen)
     foodBuff         = { enabled = true, size = 36, x = -22, y = -40, anchor = "TOP" },
     campfireBuff     = { enabled = true, size = 36, x =  22, y = -40, anchor = "TOP" },
@@ -340,6 +363,7 @@ ns.DEFAULTS = {
     revenge          = { enabled = true, size = 64, x =   35, y = 150, combatOnly = false },
     execute          = { enabled = true, size = 64, x =  105, y = 150, combatOnly = false },
     victoryRush      = { enabled = true, size = 64, x =  175, y = 150, combatOnly = false },
+    recklessSwings   = { enabled = true, size = 64, x = -175, y = 150, combatOnly = true },
     -- Rogue
     roguePoison      = { enabled = true, size = 64, x =  -40, y = 150, combatOnly = false, expiryWarn = 0 },
     riposte          = { enabled = true, size = 64, x =   40, y = 150, combatOnly = false },
@@ -374,10 +398,10 @@ ns.DEFAULTS = {
     paladinParty     = { enabled = true, size = 20, side = "right" },
     -- Druid
     druidMark        = { enabled = true, size = 64, x =  -40, y = 150, strict = false, combatOnly = false, expiryWarn = 0 },
-    omenOfClarity    = { enabled = true, size = 64, x =   40, y = 150, strict = false, combatOnly = false, expiryWarn = 0 },
+    omenOfClarity    = { enabled = true, size = 64, x =   40, y = 150, combatOnly = false },
     thorns           = { enabled = true, size = 64, x =  120, y = 150, strict = false, combatOnly = false, expiryWarn = 0 },
     druidParty       = { enabled = true, size = 20, side = "right" },
     -- Shaman
-    lightningShield  = { enabled = true, size = 64, x =  -40, y = 150, strict = false, combatOnly = true, expiryWarn = 5 },
+    lightningShield  = { enabled = true, size = 64, x =  -40, y = 150, strict = false, combatOnly = true, expiryWarn = 5, choice = "auto" },
     shamanWeapon     = { enabled = true, size = 64, x =   40, y = 150, combatOnly = true, expiryWarn = 5 },
 }

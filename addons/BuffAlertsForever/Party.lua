@@ -76,7 +76,7 @@ function ns.UpdateParty()
     for index, alert in ipairs(myParty) do
         local cfg = ns.db[alert.key]
         -- Only check buffs the player can actually cast (e.g. Divine Spirit needs the talent)
-        local active = cfg.enabled and not ns.db.hideAll and ns.HasRecommendation(alert.iconFrom) and not ns.IsInCombat()
+        local active = cfg.enabled and not ns.db.hideAll and not ns.IsSleeping() and ns.HasRecommendation(alert.iconFrom) and not ns.IsInCombat()
             and SafeBool(IsInGroup) and not SafeBool(IsInRaid)
         if not active and not ns.unlocked then
             HideAll(alert.key)

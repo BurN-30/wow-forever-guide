@@ -64,8 +64,8 @@ local function hiddenByParent(tooltip)
 end
 
 -- A world unit's tooltip fades out once the mouse leaves the unit, the game
--- setting its alpha every frame, past the SetAlpha hook. Move it off screen
--- while it fades, and hide our panel immediately.
+-- setting its alpha every frame, past the SetAlpha hook. Keep it off screen
+-- while our panel hides or runs the player's fade timings.
 
 -- Off the screen, where a fading tooltip goes so its alpha no longer matters.
 local PARKED = -10000
@@ -92,6 +92,12 @@ local function isParkedPoint(point)
         and point[4] < PARKED / 2 and point[5] < PARKED / 2
 end
 
+-- Content and Show callbacks cancel a pending dismissal before reusing a panel.
+local function cancelFade(panel)
+    panel.fade = nil
+    panel:SetAlpha(1)
+end
+
 -- An owner or content refresh can reuse the parked anchor. Restore ours only
 -- while it is still parked; the game or another addon may already have moved it.
 -- A shown tooltip keeps its points through SetOwner, so the game's own anchor
@@ -99,6 +105,7 @@ end
 local function unpark(tooltip)
     local panel = panels[tooltip]
     local parked = panel and panel.parked
+    if panel then cancelFade(panel) end
     if not parked or not util.canModify(tooltip) then return end
     local points = util.framePoints(tooltip)
     if not points then return end
@@ -119,14 +126,28 @@ local function unpark(tooltip)
     pcall(ui.alignPanel, panel, tooltip)
 end
 
+-- Fade only replacement hover panels; sticky links and comparison windows
+-- must still close immediately. Never restart a running fade on repeated calls.
+-- Only where the game fades its own tooltip: units, world objects, unit
+-- frames. Others hide at once, as the game's do.
 local function fadeOut(tooltip)
     if not util.canModify(tooltip) then return end
     local panel = panels[tooltip]
     if not (panel and panel:IsShown() and panel.nativeAlpha and util.call(tooltip.IsShown, tooltip)) then return end
-    -- The game sets a fading tooltip's alpha itself, past the SetAlpha hook,
-    -- so it would show through the panel.
-    panel:Hide()
-    park(tooltip, panel)
+    if panel.fade then return end
+    local delay, duration = ns.fadeTiming()
+    -- Pin before parking: the panel must not follow the invisible native tip.
+    if tooltip ~= GameTooltip or ui.isComparison(tooltip) or not ns.option("fadeTooltips") or delay + duration == 0
+        or not ui.pinPanel(panel) or not park(tooltip, panel) then
+        panel:Hide()
+        park(tooltip, panel)
+        return
+    end
+    panel.fade = { elapsed = 0, delay = delay, duration = duration }
+    -- Invalidate content/restore timers queued before the mouse left.
+    panel.refreshToken = (panel.refreshToken or 0) + 1
+    panel.restorePending, panel.contentPending = false, nil
+    panel.comparisonPending, panel.comparisonFitPending = nil, nil
 end
 fadeOut = probe("fade out", fadeOut)
 
@@ -134,6 +155,7 @@ local function restoreNative(tooltip)
     if isSecret(tooltip) or not tooltip then return end
     local panel = panels[tooltip]
     if not panel then return end
+    cancelFade(panel)
     ns.Placement.release(tooltip, panel)
     panel.contentPending = nil
     panel.comparisonPending, panel.comparisonAnchorPending = nil, nil
@@ -148,6 +170,29 @@ local function restoreNative(tooltip)
     restoreChildMouse(panel)
 end
 
+-- Called before normal content checks, including after the native tooltip has
+-- hidden. The panel has its own UIParent host and never re-shows a native tip.
+local function updateFade(tooltip, panel, elapsed)
+    local fade = panel.fade
+    if not fade then return false end
+    followParent(tooltip, panel)
+    if not panel.host:IsShown() then
+        restoreNative(tooltip)
+        return true
+    end
+    fade.elapsed = fade.elapsed + elapsed
+    if fade.elapsed >= fade.delay + fade.duration then
+        restoreNative(tooltip)
+        return true
+    end
+    if fade.elapsed > fade.delay then
+        panel:SetAlpha(1 - (fade.elapsed - fade.delay) / fade.duration)
+    end
+    return true
+end
+
+native.cancelFade = cancelFade
+native.updateFade = updateFade
 native.suppressChildMouse = suppressChildMouse
 native.restoreNative = restoreNative
 native.fadeOut = fadeOut

@@ -1,3 +1,52 @@
+# PrettyTooltip 1.4.2
+
+## Tooltips
+
+- Tooltip fading is now off by default: panels for units, unit frames, and world objects hide as soon as the cursor leaves them, as they did before 1.4.1. **Enable tooltip fading** in the style editor turns it on, with the **Fade delay** and **Fade duration** below it. Fading with the game's own timing is gone; if you had turned on custom fade timings in 1.4.1, fading stays on.
+
+## Spells
+
+- A cast time, cost, or cooldown too long for its place in the spell strip, such as Russian's "Мгновенное действие", now shrinks to stay on one line instead of wrapping onto the caption under it. ([#58](https://github.com/FallenShard/PrettyTooltip/issues/58))
+
+# PrettyTooltip 1.4.1
+
+## Tooltips
+
+- Panels for units, unit frames, and world objects now fade out with the game's own fade when the cursor leaves them, instead of vanishing at once. **Custom fade timings** in the style editor sets a **Fade delay** and **Fade duration** of your own (0 to 5 seconds each); both at zero hides them at once. Other tooltips still hide at once, as the game's do. ([#64](https://github.com/FallenShard/PrettyTooltip/pull/64) by [@adambowles](https://github.com/adambowles), [#60](https://github.com/FallenShard/PrettyTooltip/issues/60))
+- Minimap: Blizzard recently removed nearly all data reading capabilities from minimap tooltips. The panel now shows the game's own text, in its font and color, inside the PrettyTooltip frame. Herb and ore skill levels and player class colors are no longer shown on the minimap, as the names cannot be read.
+- Skinnable creatures, herbs, and ore now show the game's own skill-up color, including creatures missing from Classic's loot tables. ([#50](https://github.com/FallenShard/PrettyTooltip/issues/50))
+- Other addons' tooltips placed beside a PrettyTooltip panel, such as ForeverDungeonJournal's item comparisons, now line up with the panel instead of overlapping it. ([#56](https://github.com/FallenShard/PrettyTooltip/issues/56))
+
+## Spells
+
+- Spell power now shows a row for each component of a spell: Holy Shock's damage or heal, a seal's strike, its Judgement, and Seal of Command's Judgement on a stunned target, Immolate's hit and its burn. Talents that change a coefficient are counted. Coefficients come from the live WoW Forever client (build 1.60.1.70938), including Wild Growth's doubled coefficient and Wrack's rework. Volley no longer shows a spell power estimate it does not have.
+- The High Order Skyborne racial Read Leyline now shows as Arcane; Skysight, Walk on Air, and the Gnome racial Eureka! show as Nature. ([#62](https://github.com/FallenShard/PrettyTooltip/issues/62))
+
+# PrettyTooltip 1.4.0
+
+## Retail
+
+- PrettyTooltip now runs on retail World of Warcraft as well as WoW Forever, from the same download: each game loads its own files. ([#54](https://github.com/FallenShard/PrettyTooltip/pull/54) by [@kayti-wow](https://github.com/kayti-wow))
+- Players show their specialization and realm, when the game's tooltip gives them. ([#54](https://github.com/FallenShard/PrettyTooltip/pull/54) by [@kayti-wow](https://github.com/kayti-wow))
+- Spells show their school, damage and healing per second and per mana read from their description, and the recharge and cooldown of spells with charges. ([#54](https://github.com/FallenShard/PrettyTooltip/pull/54) by [@kayti-wow](https://github.com/kayti-wow))
+- Items show their loot source, upgrade level, and transmog lines, retail's secondary stats, gems, sockets, and crafted quality, and grey out primary stats your specialization does not use. The "Shift click to socket" hint is hidden. ([#54](https://github.com/FallenShard/PrettyTooltip/pull/54) by [@kayti-wow](https://github.com/kayti-wow))
+- Fixed set bonuses and profession recipes showing incorrectly, and an error when opening some style editor pages. ([#54](https://github.com/FallenShard/PrettyTooltip/pull/54) by [@kayti-wow](https://github.com/kayti-wow))
+
+## Tooltips
+
+- Players from another realm show the realm beside their guild, in a style of its own (**Guild realm**, on by default). ([#54](https://github.com/FallenShard/PrettyTooltip/pull/54) by [@kayti-wow](https://github.com/kayti-wow))
+- Minimap: the arrow for a node above or below you now sits on the right, after its skill, and names the game greys (indoors, another floor) stay grey. ([#54](https://github.com/FallenShard/PrettyTooltip/pull/54) by [@kayti-wow](https://github.com/kayti-wow))
+- Item enchants now come before Equip effects, as in the game's own tooltip. ([#54](https://github.com/FallenShard/PrettyTooltip/pull/54) by [@kayti-wow](https://github.com/kayti-wow))
+- The game's own tooltip, when it follows the cursor, is placed reliably even when its height is hidden from addons. ([#54](https://github.com/FallenShard/PrettyTooltip/pull/54) by [@kayti-wow](https://github.com/kayti-wow))
+
+# PrettyTooltip 1.3.9
+
+## Tooltips
+
+- Buff and debuff panels no longer show the spell ID as their description when the game's `tooltipShowAuraSpellIDs` setting is on (other addons, such as Platynator, can turn it on). The ID now shows at the bottom of the panel, and the **IDs** detail option covers buffs and debuffs too. ([#49](https://github.com/FallenShard/PrettyTooltip/issues/49))
+- The **Skinnable** badge on a dead creature now shows in your Skinning skill-up color, so the difficulty shows without holding the details key. ([#50](https://github.com/FallenShard/PrettyTooltip/issues/50))
+- Spell power coefficients, spell schools, and weapon imbues now come from the live WoW Forever client instead of the beta, including its new and removed talents and changed spell ranks. NOTE: There are still spell coefficient issues and a new system will be in place for 1.4.0+.
+
 # PrettyTooltip 1.3.8
 
 ## Tooltips

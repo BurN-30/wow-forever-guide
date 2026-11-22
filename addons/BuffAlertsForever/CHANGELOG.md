@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.13.0
+- **Shaman:** Water Shield support. The Shield alert accepts Lightning Shield or Water Shield and recommends Water Shield for Restoration (Auto/Fixed choice available).
+- **Druid:** the Omen of Clarity alert is now a Clearcasting proc alert: it shows only while Clearcasting is active, with a countdown, instead of permanently.
+- **Warrior:** fixed Victory Rush not being detected ("ID nil"). Spells are now also looked up by name when WoW Forever uses a different spell ID.
+
+## 3.12.0
+- **Warrior:** Reckless Swings alert (Fury talent). Shows in combat when the ability is ready, hides for its 15 s cooldown after you use it.
+- **Sleep mode** (on by default): while resting in a city or inn, buff, weapon-enchant, pet and party-buff alerts pause. The small utility row (durability, ammo, shards...) keeps working. Alerts come back as soon as you leave or enter combat. Toggle in the options or with `/balert sleep`.
+- Fixed: the "Only in combat" option had no effect on reactive abilities (Overpower, Revenge, Execute...).
+
 ## 3.11.4
 - Campfire alert now recognizes the WoW Forever buff "Camp Benefits".
 

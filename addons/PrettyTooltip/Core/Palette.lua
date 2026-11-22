@@ -47,6 +47,13 @@ palette.CLASSES = {
     { key = "MAGE", label = "Mage" }, { key = "WARLOCK", label = "Warlock" },
     { key = "DRUID", label = "Druid" },
 }
+-- A client's own classes (retail's Retail/Core/Palette.lua), each after the
+-- one it names, so the style editor lists them in the game's order.
+for _, extra in ipairs(ns.contributions("classes")) do
+    for _, class in ipairs(extra) do
+        util.insertAfter(palette.CLASSES, class.after, { key = class.key, label = class.label }, "class")
+    end
+end
 
 -- subClass is the game's Enum.ItemArmorSubclass, the same in every language.
 palette.ARMOR = {
@@ -187,7 +194,7 @@ function palette.schoolIn(text, phrases, only)
     return found
 end
 
--- A class spell's school comes from Data/Schools.lua, by its ID or name. Otherwise
+-- A class or racial spell's school comes from Data/Schools.lua, by its ID or name. Otherwise
 -- the text must name damage or spells, as "40 Fire damage" or "your Fire
 -- spells", so "Fire Elementals" and "Rapid Fire" cannot change the color.
 -- Spell names may supply a leading school instead.

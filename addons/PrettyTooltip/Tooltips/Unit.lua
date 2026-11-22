@@ -6,6 +6,13 @@ if not (ui and UNIT and ui.renderView) then
     return
 end
 
+-- What this file registers as the unit tooltip type. A client's file loaded
+-- after this one can set descriptor.extension, with this callback
+-- (Retail/README.md; retail's is Retail/Tooltips/UnitExtension.lua):
+--   afterRead(model, context) reads more into the finished model; context has
+--     nativeTooltip, data, game, and rootModel
+local descriptor = {}
+
 local util = ns.util
 local tooltipData = ns.TooltipData
 local colors = ns.Palette.roles
@@ -86,7 +93,7 @@ local NO_TINT = { 1, 1, 1 }
 -- The game's health bar at the bottom of the panel: the space above it, and
 -- its height.
 local HEALTH_BEFORE, HEALTH_HEIGHT = 6, 6
-local PARTS = { "unitName", "unitInfo", "unitBadges", "unitGuild", "unitSkinning", "unitDetails",
+local PARTS = { "unitName", "unitInfo", "unitBadges", "unitGuild", "unitRealm", "unitSkinning", "unitDetails",
     "unitQuests", "extras" }
 
 -- The mouseover token can still be the previous unit; the data's GUID cannot.
@@ -139,14 +146,17 @@ local function npcID(guid)
         or guid:match("^Vehicle%-%d+%-%d+%-%d+%-%d+%-(%d+)%-"))
 end
 
+-- A creature missing from the loot tables that the game calls skinnable still
+-- gets the Skinning its level needs: the rule is Classic's, as the tables are.
 local function skinning(model, game)
-    if not (model.dead and ns.skinningLoot) then return end
+    if not (model.dead and ns.hasData("skinningLoot")) then return end
     local creatureID = npcID(model.guid)
     local drops = creatureID and ns.skinningLoot(creatureID)
-    if not drops then return end
+    if not (drops or model.skinnable) then return end
     local needed = type(model.level) == "number" and model.level > 0 and skinningNeeded(model.level) or nil
+    if not (drops or needed) then return end
     local rows = {}
-    for _, drop in ipairs(drops) do
+    for _, drop in ipairs(drops or {}) do
         local icon = game.itemIcon(drop[1])
         local count = drop[4] == drop[5] and "" or (" (" .. util.fill(L["%s to %s"], drop[4], drop[5]) .. ")")
         local name = game.itemName(drop[1]) or drop[2]
@@ -156,12 +166,49 @@ local function skinning(model, game)
     return { needed = needed, player = game.skill("Skinning"), rows = rows }
 end
 
-local function completeModel(model, unit, game)
+-- A guild from another realm is written "Guild-Realm", bracketed or not; the
+-- realm becomes a part of its own beside the guild, and the line goes.
+local function guildRealmIn(text, guild)
+    if isSecret(text) or type(text) ~= "string" then return end
+    local plain = trim(util.plainText(text))
+    local inner, after = plain:match("^<(.*)>%-(.+)$")
+    if inner then
+        plain = inner .. "-" .. after
+    else
+        plain = plain:match("^<(.*)>$") or plain
+    end
+    if plain:sub(1, #guild + 1) ~= guild .. "-" then return end
+    local realm = trim(plain:sub(#guild + 2))
+    return realm ~= "" and realm or nil
+end
+
+local function readGuildRealm(model)
+    local guild = model.guild
+    if isSecret(guild) or type(guild) ~= "string" or guild == "" then return end
+    if model.tag then
+        local realm = guildRealmIn(model.tag, guild)
+        if realm then
+            model.guildRealm, model.tag = realm, nil
+            return
+        end
+    end
+    for index, row in ipairs(model.extras) do
+        local realm = (row.right or "") == "" and guildRealmIn(row.left, guild)
+        if realm then
+            model.guildRealm = realm
+            table.remove(model.extras, index)
+            return
+        end
+    end
+end
+
+-- tooltip and data: the game's, when read from them rather than the editor's sample.
+local function completeModel(model, unit, game, tooltip, data)
     if unit then
         model.isPlayer = game.unitIsPlayer(unit)
         model.level = game.unitLevel(unit)
         if model.isPlayer then
-            model.className, model.classFile = game.unitClass(unit)
+            model.className, model.classFile, model.classID = game.unitClass(unit)
             model.race = game.unitRace(unit)
             model.guild, model.guildRank = game.unitGuild(unit)
             model.faction = game.unitFaction(unit)
@@ -181,6 +228,7 @@ local function completeModel(model, unit, game)
             model.targetColor = unitColor(target, game)
         end
     end
+    if model.isPlayer then readGuildRealm(model) end
     -- An NPC's title, as "Herbalism Supplier", is the untyped line between its
     -- name and its level; Forever leaves out the brackets around it.
     if not model.isPlayer and not model.tag and model.levelIndex then
@@ -227,6 +275,12 @@ local function completeModel(model, unit, game)
     else
         model.color = model.reaction and REACTION[model.reaction]
     end
+    -- A client file loaded after this one can read more into the finished
+    -- model (descriptor.extension.afterRead), as retail's player spec.
+    local extension = descriptor.extension
+    if extension and extension.afterRead then
+        extension.afterRead(model, { nativeTooltip = tooltip, data = data, game = game, rootModel = model })
+    end
     return model
 end
 
@@ -260,11 +314,13 @@ local function readUnit(tooltip, data, game)
                     end
                 elseif text:match("^<.+>$") and not model.tag then
                     model.tag = text
+                elseif text == UNIT_SKINNABLE_LEATHER then
+                    -- Forever's creatures are mostly missing from Classic's
+                    -- loot tables, so the game's line is what says a corpse
+                    -- can be skinned, in the game's skill-up color.
+                    model.skinnable, model.skinnableColor = true, util.rgb(line.leftColor)
                 elseif SHOWN_ELSEWHERE[text] then
                     -- Shown as badges.
-                    -- [pack patch] The game's "Skinnable" line also gives the badge when
-                    -- Data/Skinning.lua does not know the creature.
-                    if text == UNIT_SKINNABLE_LEATHER then model.skinnable = true end
                 elseif LINE.UnitOwner and line.type == LINE.UnitOwner then
                     model.owner = text
                 elseif LINE.QuestTitle and line.type == LINE.QuestTitle then
@@ -298,7 +354,7 @@ local function readUnit(tooltip, data, game)
     local appended = tooltipData.appendedRows(tooltip, model.lineIndices)
     if not appended then return end
     tooltipData.addExtras(model.extras, appended)
-    return completeModel(model, unit, game)
+    return completeModel(model, unit, game, tooltip, data)
 end
 
 -- The level on a plate under the portrait, as the game's target frame shows
@@ -311,8 +367,9 @@ end
 
 -- The level and kind, then an NPC's title after a dot: "Humanoid · Herbalism Supplier".
 local function infoText(model, plated)
-    local what = model.isPlayer and table.concat({ model.race or "", model.className or "" }, " ")
-        or (model.creature or "")
+    -- The spec and class as the client wrote them, else the spec before the class.
+    local class = model.specClass or trim(table.concat({ model.spec or "", model.className or "" }, " "))
+    local what = model.isPlayer and table.concat({ model.race or "", class }, " ") or (model.creature or "")
     local info
     if plated then
         info = trim(what)
@@ -338,7 +395,13 @@ local function badges(model)
     if model.afk then list[#list + 1] = { L["AFK"], MUTED } end
     if model.dnd then list[#list + 1] = { L["DND"], MUTED } end
     if model.dead then list[#list + 1] = { DEAD, TAPPED } end
-    if model.skinning or model.skinnable then list[#list + 1] = { UNIT_SKINNABLE_LEATHER, SKINNABLE_COLOR } end -- [pack patch]
+    local skin = model.skinning
+    if skin or model.skinnable then
+        -- The section with the skill needed waits for the details key; the
+        -- badge always shows, so it carries the skill-up color.
+        list[#list + 1] = { UNIT_SKINNABLE_LEATHER, model.skinnableColor
+            or (skin and ns.Palette.skillUpColor(skin.needed, skin.player)) or SKINNABLE_COLOR }
+    end
     return list
 end
 
@@ -432,8 +495,10 @@ local function unitView(panel, model, healthBar)
     local header = { { text = model.name, style = styles.unitName, color = color, gap = 2 } }
     local guild = guildText(model)
     if guild then
+        local realm = model.guild and model.guildRealm and ns.option("unitRealm")
+            and { text = model.guildRealm, style = styles.unitRealm, color = DETAIL_COLOR } or nil
         header[#header + 1] = { text = guild, style = styles.unitGuild,
-            color = { color[1] * .5 + .5, color[2] * .5 + .5, color[3] * .5 + .5 }, gap = 2 }
+            color = { color[1] * .5 + .5, color[2] * .5 + .5, color[3] * .5 + .5 }, after = realm, gap = 2 }
     end
     local info = infoText(model, plate ~= nil)
     if info then header[#header + 1] = { text = info, style = styles.unitInfo, color = DETAIL_COLOR, gap = 4 } end
@@ -644,5 +709,11 @@ local function details(model, context)
     return rows
 end
 
-ui.defineTooltipType(UNIT, { read = readUnit, render = renderUnit, key = unitKey, option = "unitPanels", alwaysRedraw = true,
-    details = details, detailKeys = { "gatheringLoot", "showIDs" } })
+descriptor.read = readUnit
+descriptor.render = renderUnit
+descriptor.key = unitKey
+descriptor.option = "unitPanels"
+descriptor.alwaysRedraw = true
+descriptor.details = details
+descriptor.detailKeys = { "gatheringLoot", "showIDs" }
+ui.defineTooltipType(UNIT, descriptor)

@@ -509,8 +509,7 @@ end
 -- Text the game hides (a secret value), shown but never read or measured: one
 -- line at the width given, its height left by the caller. It gets font strings
 -- of its own, as one that showed a secret can keep reporting its size hidden.
-local function hiddenTextAt(panel, content, x, y, width, style, color)
-    style = asStyle(style)
+local function hiddenFont(panel, x, y, width, lines)
     panel.hiddenPool = panel.hiddenPool or {}
     panel.hiddenUsed = (panel.hiddenUsed or 0) + 1
     local font = panel.hiddenPool[panel.hiddenUsed]
@@ -520,22 +519,43 @@ local function hiddenTextAt(panel, content, x, y, width, style, color)
         font:SetJustifyH("LEFT")
         font:SetShadowColor(0, 0, 0, 0)
         font:SetShadowOffset(0, 0)
-        if font.SetWordWrap then font:SetWordWrap(false) end
-        if font.SetMaxLines then font:SetMaxLines(1) end
         panel.hiddenPool[panel.hiddenUsed] = font
     end
-    color = style.color or (panel.parchment and inkColor(color)) or color
+    -- Without word wrap, a font string stops at its first line break.
+    if font.SetWordWrap then font:SetWordWrap(lines ~= 1) end
+    if font.SetMaxLines then font:SetMaxLines(lines) end
     font:ClearAllPoints()
     font:SetPoint("TOPLEFT", panel, "TOPLEFT", x, -y)
     font:SetWidth(width)
-    setFont(font, style.font or bodyFont(), style.size, style.flags)
+    return font
+end
+
+local function showHidden(font, content, color)
     font:SetTextColor(color[1], color[2], color[3])
     if not pcall(font.SetText, font, content) then
         font:Hide()
-        return 0
+        return false
     end
     font:Show()
-    return style.size + 2
+    return true
+end
+
+local function hiddenTextAt(panel, content, x, y, width, style, color)
+    style = asStyle(style)
+    local font = hiddenFont(panel, x, y, width, 1)
+    color = style.color or (panel.parchment and inkColor(color)) or color
+    setFont(font, style.font or bodyFont(), style.size, style.flags)
+    if font.SetSpacing then font:SetSpacing(0) end
+    return showHidden(font, content, color) and style.size + 2 or 0
+end
+
+-- Hidden text of any number of lines, in the font given, as the game's own
+-- tooltip shows it; its size is the caller's to know.
+local function hiddenBlockAt(panel, content, x, y, width, font, color)
+    local block = hiddenFont(panel, x, y, width, 0)
+    setFont(block, font.path, font.size, font.flags)
+    if block.SetSpacing then block:SetSpacing(font.spacing or 0) end
+    return showHidden(block, content, panel.parchment and inkColor(color) or color)
 end
 
 local function textWidth(font, text)
@@ -614,6 +634,7 @@ local function acquireTexture(panel, path, sublevel)
     tex:SetTexture(path or WHITE)
     tex:SetTexCoord(0, 1, 0, 1)
     tex:SetVertexColor(1, 1, 1, 1)
+    tex:SetDesaturated(false)
     tex:ClearAllPoints()
     tex:Show()
     return tex
@@ -919,6 +940,10 @@ end
 -- details(model, context), the detail rows the game's own tooltip gets in its
 -- place (context passed on to ns.showsDetail), with detailKeys, the settings
 -- that turn them on.
+-- extension, which a client's file can set after the type's own file loads,
+-- holds that client's callbacks (Retail/README.md). Each type's file lists the
+-- ones it calls; this registry calls none of them, and Integration/Hooks.lua
+-- calls only install, a client's own hooks into the game.
 local TooltipTypes = {}
 
 -- Records a tooltip type, its reader and renderer profiled; the entry file
@@ -974,6 +999,7 @@ ns.ui = {
     end,
     styledAt = styledAt,
     hiddenTextAt = hiddenTextAt,
+    hiddenBlockAt = hiddenBlockAt,
     measureStyled = measureStyled,
     enchantRows = enchantRows,
     formatMoney = formatMoney,
