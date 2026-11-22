@@ -2,6 +2,16 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.12.1 (2026-11-22)
+
+### Français
+- La 0.12.0 ne s'installait pas : le programme s'arrêtait sur « Paquet téléchargé inattendu (PrettyTooltip/PrettyTooltip.toc) », sans rien avoir modifié sur le PC. C'est corrigé : il suffit de relancer le programme ou le raccourci « Mettre à jour le guide WoW » du Bureau, il se met à jour tout seul puis installe le guide.
+- C'est cette version qui apporte en pratique les nouveautés de la 0.12.0 : le programme les affiche à la suite de celles-ci.
+
+### English
+- Version 0.12.0 did not install: the program stopped on "Unexpected downloaded package (PrettyTooltip/PrettyTooltip.toc)", without changing anything on the PC. This is fixed: just run the program or the "Update the WoW guide" desktop shortcut again, it updates itself and then installs the guide.
+- This is the version that actually brings the 0.12.0 news: the program shows them after these notes.
+
 ## v0.12.0 (2026-11-22)
 
 ### Français
