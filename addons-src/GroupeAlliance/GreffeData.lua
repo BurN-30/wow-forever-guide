@@ -43,6 +43,17 @@ GA.GREFFE = {
 		where = { frFR = "Clairières de Tirisfal · groupe de 5 · niveaux 30 à 42",
 			enUS = "Tirisfal Glades · group of 5 · levels 30 to 42" },
 	},
+	-- Lot B: the dungeons of 39 to 60 (pack/guides/greffe). Hooks read in Polestar 0.4.2.2's
+	-- route; levels: the dungeons' Forever ranges (Polestar's Dungeons codex). Razorfen Downs keeps
+	-- max 46, like the Scarlet Monastery: when both are due at Raleigh's, the Monastery comes first.
+	{
+		id = "groupe-alliance/greffe/souilles-de-tranchebauge", key = "souilles", dungeon = "razorfen-downs",
+		turnin = 1448, min = 39, max = 46, done = { 3636 },
+		route = "forever/alliance/40-50/01-stranglethorn-vale",
+		name = { frFR = "Les Souilles de Tranchebauge", enUS = "Razorfen Downs" },
+		where = { frFR = "Sud des Tarides, depuis Hurlevent · groupe de 5 · niveaux 37 à 46",
+			enUS = "Southern Barrens, from Stormwind · group of 5 · levels 37 to 46" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
