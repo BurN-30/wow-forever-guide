@@ -8,7 +8,7 @@
 return {
 	-- Guide
 	-- {zone:1436} Westfall
-	["Group · Meeting in {zone:1436}"] = "Groupe · Rendez-vous en {zone:1436}",
+	["Group · Meeting in {zone:1436}"] = "Groupe · Rendez-vous dans la {zone:1436}",
 
 	-- Step 1: Sentinel Hill: playing the route together
 	-- {object:81} Sentinel Hill

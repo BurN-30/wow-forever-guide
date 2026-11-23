@@ -288,7 +288,7 @@ do
 		["On into {zone:1453}: {npc:1212} stands in the Cathedral of Light, on the way to the gryphon master. His next quest is for {npc:1217} in {area:150}, where the flight lands."] = "Puis {zone:1453} : {npc:1212} se tient dans la cathédrale de la Lumière, sur le chemin du maître des griffons. Sa quête suivante est pour {npc:1217} à {area:150}, là où le vol arrive.",
 		["On into {zone:1453}: {npc:297} (the arrow shows him) takes the letter; the {object:1561} beside him holds the next clue."] = "Puis {zone:1453} : {npc:297} (la flèche le montre) prend la lettre ; la {object:1561} à côté de lui contient l'indice suivant.",
 		["On the way west to {npc:311}: Skeletal Fiends and Skeletal Horrors walk the cemetery's southern half, north of {area:94}. {npc:522}, an elite, wanders the graves: keep away from him."] = "En route vers l'ouest jusqu'à {npc:311} : des Démons squelettes et des Squelettes infernaux arpentent la moitié sud du cimetière, au nord de {area:94}. {npc:522}, un élite, erre entre les tombes : rester loin de lui.",
-		["Skeletal Raiders"] = "Pillards squelettes",
+		["Skeletal Raiders"] = "Écumeurs squelettes",
 		["The {npc:511} (26) hides in the small crypt by the {area:121}, south of {area:42}; the glass is inside."] = "{npc:511} (26) se cache dans la petite crypte près du {area:121}, au sud de {area:42} ; le miroir est à l'intérieur.",
 		["{item:1946}: the {npc:511}, in the crypt of the cemetery just below"] = "{item:1946} : {npc:511}, dans la crypte du cimetière juste en dessous",
 		["{item:910}, from the {object:1560} upstairs"] = "{item:910}, dans le {object:1560} à l'étage",
