@@ -62,6 +62,14 @@ GA.GREFFE = {
 		where = { frFR = "Nord des Terres ingrates, depuis Forgefer · groupe de 5 · niveaux 41 à 51",
 			enUS = "Northern Badlands, from Ironforge · group of 5 · levels 41 to 51" },
 	},
+	{
+		id = "groupe-alliance/greffe/maraudon", key = "maraudon", dungeon = "maraudon",
+		turnin = { 99257, 99258 }, min = 45, max = 51, done = { 7065, 7046 },
+		route = "forever/40-50/shendralas",
+		name = { frFR = "Maraudon", enUS = "Maraudon" },
+		where = { frFR = "Ouest de la Désolace · groupe de 5 · niveaux 46 à 55",
+			enUS = "Western Desolace · group of 5 · levels 46 to 55" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
