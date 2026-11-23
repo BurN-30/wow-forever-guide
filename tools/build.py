@@ -25,10 +25,14 @@
    has none) right before its RegisterGuideTexts call, with a warning when the release is another
    Polestar version than the one the complement was read from
    (POLESTAR_CHANGES below, each applied exactly once or the build stops). Polestar is GPL-3.0: the changed files say so.
-4. Polestar's inner functions the module calls (POLESTAR_USES: the dungeon heads-up's candidates,
-   its card, the tabs, the Codex, the retired guides) are still there, word for word, or the build
-   stops: another Polestar version that renamed one would leave a chapter unoffered, or two offers
-   for one dungeon, without any error in game.
+4. Polestar's inner functions, messages and fields the module calls (POLESTAR_USES: the dungeon
+   heads-up's candidates and the shape of what they return, its card, the tabs and their fields, the
+   live step and its goals, the messages the module listens to, the "What's new" window, the welcome,
+   the Codex, the retired guides, the quest log) are still there, word for word, or the build stops:
+   another Polestar version that renamed one would leave a chapter unoffered, or two offers for one
+   dungeon, without any error in game. Then every Polestar file this build changed, and the module's
+   Notes.lua it writes, go through Lua 5.1 (the game's) for their syntax (loadstring): a change that
+   breaks a file stops the build here, not at the player's login.
 5. The quick checks; the build stops on the first that fails: tools/check-lua.py (the module and the
    pack under Lua 5.1), tools/check-fr-polestar.py (our French for Polestar's guides),
    tools/check-accroches.py (each chapter's hook still on Polestar's route, in range) and
@@ -204,19 +208,47 @@ POLESTAR_USES = [
     ("UI/DungeonToast.lua", "UI.DungeonToast = DT\n"),
     ("UI/DungeonToast.lua", "function DT.Candidates(level, mode, questId)\n"),
     ("UI/DungeonToast.lua", "\tlocal c = DT.Candidates(level, mode, questId)[1]\n"),
+    # the candidates' shape the module reads (c.key)
+    ("UI/DungeonToast.lua", "\t\t\t\t\tout[#out + 1] = { key = d.key, name = d.name, zoneName = d.zoneName, minLevel = min, maxLevel = max, best = best, take = take, level = level,\n"),
     ("UI/ClassToast.lua", "function CT.ShowCard(m)\n"),
     ("UI/ClassToast.lua", "function CT.Hide()\n"),
+    ("UI/ClassToast.lua", "\tCT.current = m\n"),
     ("UI/ClassToast.lua", "\tif was and ns.Fire then ns.Fire(\"HEADS_UP_HIDDEN\", was) end\n"),
     ("Core/Engine.lua", "function Engine.OpenTab(id, activate, auto)\n"),
     ("Core/Engine.lua", "function Engine.SelectTab(index)\n"),
     ("Core/Engine.lua", "function Engine.CloseTab(index, quiet)\n"),
     ("Core/Engine.lua", "function Engine.GetTabs(counts)\n"),
+    # the tabs' fields the module reads (guideId, title)
+    ("Core/Engine.lua", "\t\t\tguideId = g.id, title = g.title, category = g.category or \"Leveling\",\n"),
     ("Core/Engine.lua", "function Engine.TabIds()\n"),
     ("Core/Engine.lua", "function Engine.StartGuide()\n"),
+    ("Core/Engine.lua", "function Engine.GetGuide() return guide end\n"),
+    ("Core/Engine.lua", "function Engine.GetLiveStep() return computed end\n"),
+    ("Core/Engine.lua", "function Engine.Applies(i, g)\n"),
+    ("Core/Engine.lua", "function Engine.GoalDone(stepIndex, goalIndex)\n"),
     ("Core/Engine.lua", "\tif not quiet then ns.Fire(\"TAB_CLOSED\", tab.guide.id) end\n"),
+    # the messages the module listens to
+    ("Core/Engine.lua", "\t\t\t\tns.Fire(\"GUIDE_COMPLETED\", id)\n"),
+    ("Core/Engine.lua", "\t\tif active and opened then ns.Fire(\"GUIDE_PLACED\", guide.id, computed, chain) end\n"),
+    ("Core/Engine.lua", "\t\tif active then ns.Fire(\"STEP_CHANGED\", current) end\n"),
+    ("Core/Engine.lua", "\tns.Fire(\"GUIDE_CHANGED\", guide and guide.id or nil)\n"),
+    # a guide played to its end, as the save keeps it (a chapter of 0.12.x finished: not offered again)
+    ("Core/Engine.lua", "\t\t\t\tns.CharState().guideDone[id] = true\n"),
+    ("Core/Compat.lua", "function Compat.GetPlayerInfo()\n"),
+    ("Core/Compat.lua", "function Compat.IsQuestCompleted(questID)\n"),
+    ("Core/Compat.lua", "function Compat.IsOnQuest(questID)\n"),
+    ("Core/Compat.lua", "function Compat.IsQuestReadyForTurnIn(questID)\n"),
     ("Core/Guides.lua", "Guides.GuideMatches = guideMatches\n"),
     ("Core/Guides.lua", "function ns.RetireGuides(packId, list)\n"),
     ("Lookup/Codex.lua", "function Codex.IsLoaded()\n"),
+    # the "What's new" window and the welcome
+    ("UI/WhatsNew.lua", "WN.LATEST = NOTES[1].version\n"),
+    ("UI/WhatsNew.lua", "\tWN.frame = F\n"),
+    ("UI/WhatsNew.lua", "function WN.Show()\n"),
+    ("UI/WhatsNew.lua", "function WN.IsShown()\n"),
+    ("UI/WhatsNew.lua", "function WN.Hide()\n"),
+    ("UI/Welcome.lua", "UI.Welcome = WEL\n"),
+    ("UI/Welcome.lua", "function WEL.Busy()\n"),
 ]
 
 
@@ -282,6 +314,22 @@ missing = [f"{name}: {line.strip()}" for name, line in POLESTAR_USES
 if missing:
     sys.exit("Polestar changed a function the Groupe Alliance module calls (tools/build.py, POLESTAR_USES): "
              + " | ".join(missing) + ". Read the new Polestar code, adapt GroupeAlliance/Greffe.lua, then this list.")
+# Lua 5.1 (the game's) on every file this build changed or wrote: a syntax error stops it here.
+from lupa import lua51
+lua = lua51.LuaRuntime()
+check = lua.eval("function(src, name) local f, err = loadstring(src, name) if f then return nil end return err end")
+changed = sorted({name for name, _, _ in POLESTAR_CHANGES} | {"Polestar_frFR_Texts", "GroupeAlliance/Notes.lua"})
+bad = []
+for name in changed:
+    path = addons / "Polestar_frFR" / "Texts.lua" if name == "Polestar_frFR_Texts" else polestar / name
+    if path.suffix != ".lua":
+        continue
+    err = check(path.read_bytes().decode("utf-8"), "@" + path.relative_to(addons).as_posix())
+    if err:
+        bad.append(str(err))
+if bad:
+    sys.exit("Lua 5.1 refuses a file the build changed: " + " | ".join(bad))
+print("Lua 5.1 syntax: " + ", ".join(n for n in changed if n.endswith(".lua") or n == "Polestar_frFR_Texts") + ": ok")
 print("addons:", ", ".join(sorted(p.name for p in addons.iterdir())))
 for check in ("check-lua.py", "check-fr-polestar.py", "check-accroches.py", "check-chapitres.py"):
     r = subprocess.run([sys.executable, str(repo / "tools" / check)], capture_output=True, text=True,

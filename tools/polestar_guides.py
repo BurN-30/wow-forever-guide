@@ -1,5 +1,5 @@
 """The guides as the game reads them, without the game: shared by tools/check-chapitres.py,
-tools/check-accroches.py and tools/check-lua.py (Lua 5.1 through lupa: pip install lupa).
+tools/check-accroches.py and tools/check-lua.py (Lua 5.1 through lupa, as the game: pip install lupa).
 
   guides = load()            every guide of addons/: Polestar's (pack "guides") and this pack's
   route = alliance_route(guides)   Polestar's Alliance route, step by step, from each race's start
@@ -8,8 +8,8 @@ tools/check-accroches.py and tools/check-lua.py (Lua 5.1 through lupa: pip insta
 load() runs the compiled Guides.lua of every Polestar_Guides* and PolestarPack_GroupeAlliance folder
 of addons/ (forge guide compile writes them: Polestar.RegisterGuide({...}) blocks) with a stand-in
 for Polestar's registration calls, and returns {id: guide} as plain Python (dicts and lists). A
-step's `when` predicates are kept as compiled ({k, neg, quest...}); a goal keeps t, quest, optional,
-pre (one of them is enough), preAll (all of them), closedBy, minLevel.
+step's `when` predicates are kept as compiled ({k, neg, quest...}), and its `along` and `label`; a goal
+keeps t, quest, optional, pre (one of them is enough), preAll (all of them), closedBy, minLevel.
 
 alliance_route() follows each Alliance start (Human, Dwarf, Gnome, Night Elf) by `next` (on the
 guides both factions share, `nextChoices` holds one per faction: the Alliance's is taken) to the
@@ -18,7 +18,7 @@ route's end, and gives the steps in order, each with its estimated level: the gu
 level per step; the estimate is good to about one level.
 """
 import pathlib
-import lupa
+from lupa import lua51
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 ADDONS = REPO / "addons"
@@ -39,7 +39,7 @@ Polestar = setmetatable({
 
 
 def to_py(v):
-    if lupa.lua_type(v) == "table":
+    if lua51.lua_type(v) == "table":
         keys = list(v.keys())
         if keys and all(isinstance(k, int) for k in keys) and sorted(keys) == list(range(1, len(keys) + 1)):
             return [to_py(v[k]) for k in range(1, len(keys) + 1)]
@@ -49,7 +49,7 @@ def to_py(v):
 
 def load(addons=ADDONS):
     """{guide id: guide} for every compiled guide of the Polestar_Guides* folders and this pack."""
-    L = lupa.LuaRuntime(unpack_returned_tuples=True)
+    L = lua51.LuaRuntime(unpack_returned_tuples=True)
     L.execute(STUB)
     folders = sorted(p for p in addons.iterdir() if p.is_dir() and (p.name.startswith("Polestar_Guides") or p.name == "PolestarPack_GroupeAlliance"))
     for folder in folders:
@@ -66,7 +66,8 @@ def load(addons=ADDONS):
             goals = []
             for x in (s.goals or {}).values():
                 goals.append({k: to_py(x[k]) for k in ("t", "quest", "optional", "pre", "preAll", "closedBy", "minLevel", "qlvl", "title", "item", "npc", "object", "only") if x[k] is not None})
-            steps.append({"title": s.title, "when": to_py(s.when) or [], "only": to_py(s.only), "goals": goals, "label": s.label})
+            steps.append({"title": s.title, "when": to_py(s.when) or [], "only": to_py(s.only), "goals": goals, "label": s.label,
+                          "along": s.along})
         out[g.id] = {
             "id": g.id, "pack": g.pack, "title": g.title, "category": g.category, "faction": g.faction,
             "minLevel": g.minLevel, "maxLevel": g.maxLevel, "factionLevels": to_py(g.factionLevels),
@@ -123,13 +124,13 @@ def is_dungeon_step(step):
 
 
 def greffe(path=REPO / "addons-src" / "GroupeAlliance" / "GreffeData.lua"):
-    """GreffeData.lua's GA.GREFFE (list of dicts, `turnin`, `accept`, `dungeon` always lists) and GA.RETIRED."""
-    L = lupa.LuaRuntime(unpack_returned_tuples=True)
+    """GreffeData.lua's GA.GREFFE (list of dicts, `turnin`, `accept`, `dungeon`, `done`, `fin` always lists) and GA.RETIRED."""
+    L = lua51.LuaRuntime(unpack_returned_tuples=True)
     ns = L.table()
     L.execute(path.read_text(encoding="utf-8"), "GroupeAlliance", ns)
     rows = []
     for h in to_py(ns.GA.GREFFE):
-        for key in ("turnin", "accept", "dungeon", "done"):
+        for key in ("turnin", "accept", "dungeon", "done", "fin"):
             v = h.get(key)
             h[key] = [] if v is None or v == {} else (v if isinstance(v, list) else [v])
         rows.append(h)

@@ -25,14 +25,24 @@ dans l'ordre de ses étapes.
 - le journal dépasse 40 quêtes (limite du client Forever, comme Polestar : Core/Compat.lua
   GetLogCap) : quêtes en cours à l'accroche, questions de groupe comprises, plus le plus haut
   atteint pendant le chapitre ;
-- la fin du chapitre ne peut pas se juger sur des rendus : aucun rendu non facultatif (sauf le
-  rendez-vous, kind "meeting", qui se finit par sa ligne cochée), ou un rendu non facultatif d'une
-  quête que ni le chapitre (prise non facultative) ni le parcours (journal à l'accroche) ne
-  donne : l'onglet ne se fermerait jamais tout seul.
+- une étape (hors étape `along`) sans aucun objectif qui retient (que des `note` ou des objectifs
+  `optional`) : Polestar la passe d'office (docs/GUIDE_FORMAT.md, « a step of optional goals only
+  is done at once »), sauf exception justifiée dans SANS_OBJECTIF ci-dessous ;
+- un rendu `optional` : un rendu ne l'est jamais (Polestar laisse de lui-même le rendu d'une quête
+  que le joueur n'a pas prise sur une prise facultative ou sous condition, et une quête qui peut ne
+  pas être finie a son étape `when complete`) ;
+- la fin du chapitre (GreffeData.lua, `fin`) n'est pas exactement la liste de ses rendus sans
+  condition : rendus non facultatifs d'étapes sans `when`, d'une quête que le chapitre prend dans
+  une étape sans `when` (prise non facultative) ou que le parcours donne sûrement avant
+  l'accroche. Un rendu conditionnel (étape avec `when`, quête prise sous condition ou en
+  facultatif) dans `fin` est un échec : un joueur qui ne le fait pas garderait l'onglet ouvert. Une
+  liste vide est permise (fin laissée à Polestar, GUIDE_COMPLETED) seulement quand le chapitre n'a
+  aucun rendu sans condition.
 Alertes (sans échec) : prérequis rendu seulement sur une réponse de groupe, ou manquant pour une
-prise facultative ou sous condition ; quête du chapitre peut-être rendue par le parcours ; rendus
-dans une partie à question de groupe (la fin passe alors par GUIDE_COMPLETED si la partie est
-passée).
+prise facultative ou sous condition ; quête du chapitre peut-être rendue par le parcours ; étape
+après le dernier rendu de `fin` qui n'est pas une étape de rendu à condition (l'onglet se ferme
+avant elle). Notes (--detail) : les rendus conditionnels, hors de la fin (prêts dans le journal, ils
+retiennent l'onglet jusqu'à leur rendu).
 """
 import sys
 
@@ -41,6 +51,10 @@ import polestar_guides as pg
 LOG_CAP = 40
 CLASS = "Warrior"
 COND = {"onquest", "turnedin", "complete", "available", "done", "has", "group", "level"}
+# Steps with no goal that holds, allowed: (chapter key, step title as compiled) -> why. None since
+# 0.13.0: each step either holds (a hand-in, a boss line, a task to tick) or is an `along` step.
+SANS_OBJECTIF = {}
+HOLDS_NOT = {"note"}
 
 
 def quests(v):
@@ -148,14 +162,92 @@ def check_chapter(guides, entry, race, out):
                 out.append(("warn", f"{race} : {where} : {t} {q}, peut-être rendue par le parcours (réponse de groupe)"))
     if peak > LOG_CAP:
         out.append(("fail", f"{race} : journal à {peak} quêtes pendant le chapitre ({len(log)} à l'accroche), au-delà de {LOG_CAP}"))
-    if not handins and entry.get("kind") != "meeting":
-        out.append(("fail", "aucun rendu non facultatif : la fin du chapitre ne peut pas se juger sur des rendus"))
-    for q, n, title, grp in handins:
-        if q not in accepted_firm and q not in log and q not in sure and q not in maybe:
-            out.append(("fail", f"{race} : étape {n} « {title} » : rendu de {q}, quête que ni le chapitre ni le parcours ne donne : l'onglet ne se fermerait pas tout seul"))
-    if any(grp for *_, grp in handins):
-        out.append(("info", "rendus dans des parties à question de groupe : une partie passée laisse la fin à GUIDE_COMPLETED"))
-    return {"hook": hook, "offer": offer, "log": len(log), "peak": peak, "handins": [q for q, *_ in handins]}
+    fin = check_end(g, entry, sure | set(log), out, race)
+    return {"hook": hook, "offer": offer, "log": len(log), "peak": peak, "handins": sorted(fin)}
+
+
+def holds(goal):
+    return goal.get("t") not in HOLDS_NOT and not goal.get("optional")
+
+
+def check_steps(g, entry, out):
+    """Steps that hold nothing, and optional hand-ins (the same for every race)."""
+    for n, step in enumerate(g["steps"], 1):
+        if step.get("along"):
+            continue
+        if not any(holds(x) for x in step["goals"]):
+            why = SANS_OBJECTIF.get((entry["key"], step["title"]))
+            if why:
+                out.append(("info", f"étape {n} « {step['title']} » sans objectif qui retient, permis : {why}"))
+            else:
+                out.append(("fail", f"étape {n} « {step['title']} » : aucun objectif qui retient (que des notes ou des objectifs facultatifs), Polestar la passe d'office"))
+        for x in step["goals"]:
+            if x.get("t") == "turnin" and x.get("optional"):
+                out.append(("fail", f"étape {n} « {step['title']} » : rendu de {x.get('quest')} facultatif (un rendu ne l'est jamais : étape `when complete`, ou prise facultative, à la place)"))
+
+
+def takes_if_missing(step, q):
+    """A step that takes quest q for whoever has not got it (`when !onquest q`, `when !turnedin q`):
+    past it, every player has q or has done it."""
+    preds = step.get("when") or []
+    def about(p):
+        qs = p.get("q")
+        qs = qs if isinstance(qs, list) else [qs]
+        return p.get("neg") and p.get("k") in ("onquest", "turnedin") and qs == [q]
+    return bool(preds) and all(about(p) for p in preds)
+
+
+def check_end(g, entry, given, out, race):
+    """The chapter's end: its hand-ins without a condition, against GreffeData.lua's `fin`.
+    given: quests the route surely hands over before the hook (in the log or done). -> the computed set"""
+    firm, unsure = set(given), set()
+    computed, conditional, last_fin = set(), {}, 0
+    for n, step in enumerate(g["steps"], 1):
+        cond = bool(kinds(step))
+        for x in step["goals"]:
+            q = x.get("quest")
+            if not isinstance(q, (int, float)):
+                continue
+            q, t = int(q), x.get("t")
+            if t == "accept":
+                if (cond and not takes_if_missing(step, q)) or x.get("optional"):
+                    if q not in firm:
+                        unsure.add(q)
+                else:
+                    firm.add(q)
+                    unsure.discard(q)
+            elif t == "turnin" and not x.get("optional"):
+                if not cond and q in firm:
+                    computed.add(q)
+                    last_fin = n
+                else:
+                    if cond:
+                        why = "étape à condition (" + ", ".join(sorted(str(k) for k in kinds(step))) + ")"
+                    else:
+                        why = "quête prise sous condition ou en facultatif"
+                    conditional.setdefault(q, (n, step["title"], why))
+    fin = set(entry.get("fin") or [])
+    for q in sorted(fin - computed):
+        if q in conditional:
+            n, title, why = conditional[q]
+            out.append(("fail", f"{race} : fin : rendu conditionnel {q} (étape {n} « {title} », {why}) : un joueur qui ne le fait pas garderait l'onglet ouvert"))
+        else:
+            out.append(("fail", f"{race} : fin : {q} n'est pas un rendu sans condition du chapitre"))
+    for q in sorted(computed - fin):
+        out.append(("fail", f"{race} : fin : rendu sans condition {q} absent de `fin` (GreffeData.lua)"))
+    for q, (n, title, why) in sorted(conditional.items()):
+        if q not in fin:
+            out.append(("info", f"rendu conditionnel {q} (étape {n} « {title} », {why}) : hors de la fin, retient l'onglet seulement prêt dans le journal"))
+    if not fin and entry.get("kind") != "meeting":
+        out.append(("info", "fin vide : le chapitre se ferme à la fin de son guide (GUIDE_COMPLETED) ou à la main"))
+    if last_fin:
+        for n, step in enumerate(g["steps"][last_fin:], last_fin + 1):
+            if step.get("along"):
+                continue
+            plain = all(x.get("t") in ("turnin", "accept", "note", "fly", "goto", "enter") for x in step["goals"])
+            if not (kinds(step) and plain):
+                out.append(("warn", f"étape {n} « {step['title']} » après le dernier rendu de la fin : l'onglet se ferme avant elle"))
+    return computed
 
 
 def main():
@@ -166,6 +258,8 @@ def main():
     fails = warns = 0
     for entry in table:
         out, facts = [], None
+        if entry["id"] in guides:
+            check_steps(guides[entry["id"]], entry, out)
         for race in pg.STARTS:
             f = check_chapter(guides, entry, race, out)
             if race == "Human":
@@ -188,7 +282,7 @@ def main():
                 gid, step, lv = facts["offer"]
                 head += f", proposé au niveau {entry['min']} ({gid.split('/', 2)[-1]} étape {step} sur le parcours)"
             head += (f", fourchette {entry['min']}-{entry['max']},"
-                     f" journal {facts['log']} à l'accroche, {facts['peak']} au plus, fin sur {len(facts['handins'])} rendus")
+                     f" journal {facts['log']} à l'accroche, {facts['peak']} au plus, fin sur {len(facts['handins'])} rendus sans condition")
         print(head + (" : OK" if not nf else f" : {nf} ÉCHEC(S)") + (f", {nw} alerte(s)" if nw else ""))
         for lvl, text in rows:
             if lvl == "fail" or detail:
