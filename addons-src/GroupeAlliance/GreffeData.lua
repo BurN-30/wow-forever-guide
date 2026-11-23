@@ -63,6 +63,14 @@ GA.GREFFE = {
 		where = { frFR = "Sous Forgefer · groupe de 5 · niveaux 13 à 20",
 			enUS = "Under Ironforge · group of 5 · levels 13 to 20" },
 	},
+	{
+		id = "groupe-alliance/greffe/ruines-de-lordaeron", key = "ruines", dungeon = "ruins-of-lordaeron",
+		turnin = { 947, 2139 }, accept = 948, min = 17, max = 22, done = { 95250 },
+		route = "forever/alliance/03-darkshore", switchId = "groupe-alliance/06-ruines-de-lordaeron",
+		name = { frFR = "Les Ruines de Lordaeron", enUS = "The Ruins of Lordaeron" },
+		where = { frFR = "Clairières de Tirisfal, par le bateau de Baie-du-Sud · groupe de 5 · niveaux 15 à 22",
+			enUS = "Tirisfal Glades, by the Southshore boat · group of 5 · levels 15 to 22" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
