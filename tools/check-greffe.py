@@ -37,7 +37,7 @@ spec.loader.exec_module(cp)
 # The fake quest log, set before the addons load. GREFFE.done mirrors BENCH.completed.
 # ---------------------------------------------------------------------------------------------
 PRELUDE = r'''
-GREFFE = { level = 20, log = {}, now = 1000 }
+GREFFE = { level = 20, log = {}, now = 1000, notReady = {} }
 GetTime = function() return GREFFE.now end
 GetTimePreciseSec = GetTime
 UnitLevel = function(u) if u == nil or u == "player" then return GREFFE.level end return 1 end
@@ -51,11 +51,14 @@ QL.GetLogIndexForQuestID = function(q) return idx(q) end
 QL.GetQuestObjectives = function(q)
 	if not idx(q) then return {} end
 	local out = {}
-	for i = 1, 4 do out[i] = { text = "Objective " .. i .. ": 1/1", type = "monster", finished = true, numFulfilled = 1, numRequired = 1 } end
+	local done = not GREFFE.notReady[q]
+	for i = 1, 4 do out[i] = { text = "Objective " .. i .. (done and ": 1/1" or ": 0/1"), type = "monster", finished = done, numFulfilled = done and 1 or 0, numRequired = 1 } end
 	return out
 end
-QL.ReadyForTurnIn = function(q) return idx(q) ~= nil end
-QL.IsComplete = function(q) return idx(q) ~= nil end
+-- A quest in the log is ready to hand in, unless the scenario says it is not (GREFFE.notReady: the
+-- group could not finish it).
+QL.ReadyForTurnIn = function(q) return idx(q) ~= nil and not GREFFE.notReady[q] end
+QL.IsComplete = function(q) return idx(q) ~= nil and not GREFFE.notReady[q] end
 QL.IsFailed = function() return false end
 QL.GetTitleForQuestID = function(q) return nil end
 QL.GetAllCompletedQuestIDs = function() local t = {} for q in pairs(BENCH.completed) do t[#t + 1] = q end return t end
@@ -114,11 +117,11 @@ function G.walk(guideId, turnin, kind)
 	if kind == "turnin" then G.addLog(turnin) end
 	return upto
 end
--- A chapter's hand-ins (GA.ChapterHandins: optional ones left out), each taken if needed and
--- handed in, as the player would. -> how many
+-- A chapter's end (GA.ChapterFin: its hand-ins without a condition, GreffeData.lua's `fin`), each
+-- taken if needed and handed in, as the player would. -> how many
 function G.finish(id)
 	local n = 0
-	for _, q in ipairs(G.ns.GA.ChapterHandins(id)) do
+	for _, q in ipairs(G.ns.GA.ChapterFin(id)) do
 		if not BENCH.completed[q] then
 			local inlog = false
 			for _, x in ipairs(GREFFE.log) do if x == q then inlog = true end end
@@ -129,6 +132,39 @@ function G.finish(id)
 	end
 	G.tick(6)
 	return n
+end
+-- The rest of the route's live step, as the player does it at the stop: its quests taken, those
+-- in the log handed in, its other errands (a flight path, the hearthstone, a purchase) ticked as the
+-- player's own tick; its travel (the flight out, a walk) left. -> how many quests
+local TRAVEL = { fly = true, ["goto"] = true, enter = true, hearth = true, vendor = true, note = true }
+function G.finishStop()
+	local E = G.ns.Engine
+	local g, i = E.GetGuide(), E.GetLiveStep()
+	if not (g and i and g.steps[i]) then return 0 end
+	local n = 0
+	for _, goal in ipairs(g.steps[i].goals) do
+		local q = goal.quest
+		if goal.t == "accept" and q and not goal.optional and not BENCH.completed[q] then
+			local inlog = false
+			for _, x in ipairs(GREFFE.log) do if x == q then inlog = true end end
+			if not inlog then G.accept(q) n = n + 1 end
+		elseif goal.t == "turnin" and q and not BENCH.completed[q] then
+			for _, x in ipairs(GREFFE.log) do if x == q then G.turnin(q) n = n + 1 break end end
+		end
+	end
+	if E.GetGuide() == g and E.GetLiveStep() == i then
+		for j, goal in ipairs(g.steps[i].goals) do
+			if not TRAVEL[goal.t] and not goal.optional and E.Applies(i, j) and not E.GoalDone(i, j) then E.ToggleGoal(i, j) end
+		end
+	end
+	G.tick(2)
+	return n
+end
+-- The live step's title and index in the active tab.
+function G.live()
+	local E = G.ns.Engine
+	local g, i = E.GetGuide(), E.GetLiveStep()
+	return i, G.title(g, i)
 end
 -- Whether Polestar's own heads-up (its candidates as DT.Check sees them, at `level`) still names
 -- dungeon `key`, and whether its rule opens it at all ("any", the released function).
@@ -806,6 +842,13 @@ CHAPTERS = {
 }
 
 
+sys.path.insert(0, str(REPO / "tools"))
+import polestar_guides as _pg  # noqa: E402
+
+# Each chapter's level range (GreffeData.lua), for the answers a scenario saves (others_answered).
+CHAPTER_RANGES = [(e["key"], (e["min"], e["max"])) for e in _pg.greffe()[0]]
+
+
 def at_route(route, q, kind, level, done=()):
     """Before login: the log as Polestar's guide `route` leaves it just before the step that hands in
     (or takes) q; `done`: more quests handed in (chapters already run)."""
@@ -827,11 +870,16 @@ def set_level(level):
 
 
 def hook(G, q, kind):
+    """The hook quest handed in (or taken), then the rest of that stop of the route (its other
+    hand-ins and errands): the card waits for the end of the stop (GA.GreffeAtHookStop)."""
     if kind == "accept":
         G.accept(q)
     else:
         G.turnin(q)
     G.tick(4)
+    G.clearOther()
+    G.finishStop()
+    G.tick(2)
     G.clearOther()
     G.tick(2)
 
@@ -859,36 +907,46 @@ def chapter_scenario(args, key):
         r.check(f"greffe:{key}" not in before_card, "rien avant l'accroche")
         hook(G, q, kind)
         card = G.card()
-        before_step = G.tabStep(route)
+        # The stop finished may end the route's guide: its tab then holds the next one.
+        route_now = G.active()[0]
+        before_step = G.tabStep(route_now)
         r.check(card.startswith(f"greffe:{key}"), f"accroche : la carte propose le chapitre (« {card} »)")
         held = [d for d in dungeons if G.polestarCard(d, level)[0]]
+        opens = [d for d in dungeons if G.polestarCard(d, level)[1]]
         shown = polestar_shown(G, dungeons)
-        r.check(not shown and not held, f"la carte de Polestar pour {', '.join(dungeons) or '(aucun donjon)'} ne sort pas (montrée : {shown or 'non'} ; dans ses candidates : {held or 'non'})")
+        r.check(not shown and not held, f"la carte de Polestar pour {', '.join(dungeons) or '(aucun donjon)'} ne sort pas (montrée : {shown or 'non'} ; dans ses candidates : {held or 'non'} ; "
+                f"sa règle l'ouvrirait à ce niveau : {', '.join(opens) if opens else 'non, contrôle sans objet ici (voir P1 et P2)'})")
         ns.UI.ClassToast.Act()
         G.tick(4)
         gid, step, title = G.active()
-        r.check(gid == cid and G.tabStep(route) == before_step, f"ouverture : le chapitre dans son onglet, actif, étape {step} « {title} » ; le guide de Polestar garde son étape ({before_step})")
-        if h.kind == "meeting":
+        r.check(gid == cid and G.tabStep(route_now) == before_step, f"ouverture : le chapitre dans son onglet, actif, étape {step} « {title} » ; le guide de Polestar (`{route_now}`) garde son étape ({before_step})")
+        by_end = len(cp.lua_list(ns.GA.ChapterFin(cid))) == 0
+        if by_end:
+            # No hand-in without a condition (the meeting point, the second Zul'Farrak run, the 55-60
+            # dungeons): the chapter ends with its guide, as its last line ticked (GUIDE_COMPLETED).
             n = 0
             ns.Fire("GUIDE_COMPLETED", cid)
             G.tick(4)
         else:
             n = G.finish(cid)
         gid, step, title = G.active()
-        r.say(f"Fin ({n} rendus{' ; ligne cochée : GUIDE_COMPLETED' if h.kind == 'meeting' else ''}) : onglets {G.tabs()} ; actif {gid}, étape {step} « {title} » ; réponses {G.answers()}.")
-        r.check(gid == route and cid not in G.tabs() and step is not None and step >= before_step,
+        r.say(f"Fin ({n} rendus{' ; fin du guide : GUIDE_COMPLETED' if by_end else ''}) : onglets {G.tabs()} ; actif {gid}, étape {step} « {title} » ; réponses {G.answers()}.")
+        r.check(gid == route_now and cid not in G.tabs() and step is not None and step >= before_step,
                 f"retour : l'onglet du chapitre se ferme, le guide de Polestar revient à son étape ou plus loin ({step}, avant : {before_step})")
         G.tick(4)
         r.check(f"greffe:{key}" not in G.card(), "le chapitre fini n'est plus proposé")
     return run(args, f"Scénario C ({key}) : {route.split('/')[-1]}, niveau {level}",
-               prelude=ACCOUNT + char_db([route], 1, others_answered(key)), before=at_route(route, q, kind, level, done), after=after)
+               prelude=ACCOUNT + char_db([route], 1, others_answered(key, level=level)), before=at_route(route, q, kind, level, done), after=after)
 
 
-def others_answered(*keys, later=None):
-    """Saved answers: every chapter but these already run ("done"), so a scenario sees its own cards;
+def others_answered(*keys, later=None, level=None):
+    """Saved answers: the other chapters already run ("done"), so a scenario sees its own cards; with
+    `level`, only those whose range holds that level (the others cannot be due there anyway);
     later: {key: level} answered "Later" at that level."""
     later = later or {}
-    rows = [f'["{k}"] = {{ a = "done", level = 1 }}' for k in CHAPTERS if k not in keys and k not in later]
+    rng = {e[0]: e[1] for e in CHAPTER_RANGES}
+    rows = [f'["{k}"] = {{ a = "done", level = 1 }}' for k in CHAPTERS if k not in keys and k not in later
+            and (level is None or rng[k][0] <= level <= rng[k][1])]
     rows += [f'["{k}"] = {{ a = "later", level = {lv} }}' for k, lv in later.items()]
     return f", gaGreffe = {{ answers = {{ {', '.join(rows)} }} }}"
 
@@ -925,13 +983,15 @@ def ruins_left_open(args):
         G.tick(4)
         for x in ruins[1]:
             G.accept(x)
-        idx = next(i for i, t in enumerate(cp.lua_list(E.GetTabs()[0]), 1) if t.guideId == route)
+        idx = next(i for i, t in enumerate(cp.lua_list(E.GetTabs()[0]), 1) if t.guideId != ruins[0])
         E.SelectTab(idx)
         G.tick(4)
         r.say(f"Ruines ouvertes, leurs quêtes prises, retour à la main sur l'onglet du parcours : {G.tabs()}.")
-        r.check(G.active()[0] == route and ruins[0] in G.tabs(), "l'onglet des Ruines reste ouvert pendant que le parcours reprend")
-        E.OpenTab(ROUTE_DM, True)
-        E.CloseTab(idx)
+        r.check(G.active()[0].startswith("forever/") and ruins[0] in G.tabs(), "l'onglet des Ruines reste ouvert pendant que le parcours reprend")
+        if G.active()[0] != ROUTE_DM:
+            # The Auberdine stop done ends Darkshore: its tab may hold Loch Modan already.
+            E.OpenTab(ROUTE_DM, True)
+            E.CloseTab(idx)
         G.levelUp(21)
         L.eval("function(G, id) G.walk(id, 155) end")(G, ROUTE_DM)
         G.tick(4)
@@ -959,6 +1019,8 @@ def two_due(args, label, route, q, level, first, second, done=(), later=None):
         G.tick(6)
         G.clearOther()
         G.turnin(q)
+        G.clearOther()
+        G.finishStop()
         G.clearOther()
         G.tick(2)
         c1 = G.card()
@@ -991,6 +1053,8 @@ def dalaran_second(args):
         if not login.startswith("greffe:dalaran"):
             G.turnin(92432)
             G.clearOther()
+            G.finishStop()
+            G.clearOther()
             G.tick(2)
         r.say(f"« Plus tard » répondu à 36 ; niveau 37 sur `{route}` : carte à la connexion « {login} », puis « {G.card()} ».")
         r.check(G.card().startswith("greffe:dalaran"), "Dalaran reproposé au niveau suivant, au plus tard au camp de Modera")
@@ -999,8 +1063,9 @@ def dalaran_second(args):
 
 
 def optional_handins(args):
-    """Optional hand-ins never hold a chapter: Maraudon ends without Theradras (7065) nor Rot and
-    Regret (93404), Gnomeregan without its uncertain hand-ins."""
+    """Conditional hand-ins never count for a chapter's end: Maraudon ends with Corruption of Earth
+    and Seed (7065, Theradras not beaten) and Rot and Regret (93404, no vial) left in the log, not
+    finished; Gnomeregan's end has none of its uncertain hand-ins."""
     route, q, kind, level, done = CHAPTERS["maraudon"]
 
     def after(L, G, ns, r):
@@ -1009,16 +1074,17 @@ def optional_handins(args):
         hook(G, q, kind)
         ns.UI.ClassToast.Act()
         G.tick(4)
-        handins = cp.lua_list(ns.GA.ChapterHandins("groupe-alliance/maraudon"))
-        gnome = cp.lua_list(ns.GA.ChapterHandins("groupe-alliance/10b-gnomeregan"))
+        handins = cp.lua_list(ns.GA.ChapterFin("groupe-alliance/maraudon"))
+        gnome = cp.lua_list(ns.GA.ChapterFin("groupe-alliance/10b-gnomeregan"))
         r.say(f"Rendus qui ferment Maraudon : {handins} ; Gnomeregan : {gnome}.")
-        r.check(7065 not in handins and 93404 not in handins, "Maraudon : Theradras (7065) et Rot and Regret (93404) ne retiennent pas l'onglet")
-        r.check(not ({2930, 2924, 2904} & set(gnome)), "Gnomeregan : Data Rescue, Essential Artificials, A Fine Mess ne retiennent pas l'onglet")
+        r.check(7065 not in handins and 93404 not in handins, "Maraudon : Theradras (7065) et Rot and Regret (93404) ne sont pas dans la fin")
+        r.check(not ({2930, 2924, 2904, 2926, 2962} & set(gnome)), "Gnomeregan : Data Rescue, Essential Artificials, A Fine Mess, Gnogaine, Green Glow ne sont pas dans la fin")
         for x in (7065, 93404):
             G.accept(x)
+            L.globals().GREFFE.notReady[x] = True
         G.finish("groupe-alliance/maraudon")
-        r.check(G.active()[0] == route, f"fin de Maraudon sans 7065 ni 93404 rendues : retour au parcours ({G.tabs()})")
-    return run(args, "Scénario C (rendus facultatifs) : Maraudon sans Theradras", prelude=ACCOUNT + char_db([route], 1, others_answered("maraudon")),
+        r.check(G.active()[0].startswith("forever/") and "groupe-alliance/maraudon" not in G.tabs(), f"fin de Maraudon avec 7065 et 93404 dans le journal, pas finies : retour au parcours ({G.tabs()})")
+    return run(args, "Scénario C (rendus conditionnels) : Maraudon sans Theradras", prelude=ACCOUNT + char_db([route], 1, others_answered("maraudon")),
                before=at_route(route, q, kind, level, done), after=after)
 
 
@@ -1323,6 +1389,358 @@ def notes(args):
     return rows, bad
 
 
+# ---------------------------------------------------------------------------------------------
+# Corrections of the two reviews (0.13.0): steps that hold, the chapter's end, the stop, the faction,
+# /ga donjon, the cases the bench did not cover
+# ---------------------------------------------------------------------------------------------
+CHAPTER_PRISON = "groupe-alliance/08b-prison"
+CHAPTER_GNOME = "groupe-alliance/10b-gnomeregan"
+
+
+def first(x):
+    """The first value of what a Lua function returned (lupa gives a tuple for several)."""
+    return x[0] if isinstance(x, tuple) else x
+
+
+def open_chapter(route, cid, extra_tabs=()):
+    """Before login: the chapter open in a tab beside the route's, the route's tab remembered."""
+    return char_db([route, *extra_tabs, cid], 2 + len(extra_tabs),
+                   f', gaGreffe = {{ answers = {{}}, from = {{ ["{cid}"] = "{route}" }} }}')
+
+
+def step_holds(args):
+    """B1: a step whose goals were all optional is now shown and holds: the Stockade's Warden Thelwater
+    step for Bazil Thredd (389 handed in, 391 taken; passed at once before), and Gnomeregan's group
+    question for the two Dalaran quests (never asked before)."""
+    route = "forever/alliance/06-wetlands"
+
+    def before(L, G, ns):
+        L.globals().GREFFE.level = 30
+        G.addLog(389)
+
+    def after(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        gid = G.active()[0]
+        G.accept(387)
+        G.tick(4)
+        i, title = G.live()
+        g = ns.Guides.Get(CHAPTER_PRISON)
+        want = next(s for s, st in enumerate(cp.lua_list(g.steps), 1) if any(x.t == "turnin" and x.quest == 389 for x in cp.lua_list(st.goals)))
+        r.say(f"La Prison ouverte avec 389 dans le journal, 387 prise : actif {gid}, étape vivante {i} « {title} » (l'étape qui rend 389 : {want}).")
+        r.check(gid == CHAPTER_PRISON and i == want, "l'étape du gardien Thelwater pour Bazil Thredd (rendu de 389, prise de 391) est affichée et retient le guide")
+        G.accept(388)
+        G.tick(2)
+        i2, title2 = G.live()
+        r.check(i2 == i, f"elle retient tant que 389 n'est pas rendue (toujours l'étape {i2} « {title2} »)")
+        G.turnin(389)
+        G.accept(391)
+        G.tick(4)
+        i3, title3 = G.live()
+        r.check(i3 is not None and i3 > i, f"389 rendue et 391 prise : le guide passe à la suite (étape {i3} « {title3} »)")
+    lines, bad = run(args, "Scénario B1a : une étape qui n'avait que des objectifs facultatifs est affichée (Prison)",
+                     prelude=ACCOUNT + open_chapter(route, CHAPTER_PRISON) , before=before, after=after)
+
+    def after2(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        G.accept(2928)
+        G.tick(4)
+        i, title = G.live()
+        q = first(ns.Engine.GroupQuestion())
+        r.say(f"Gnomeregan ouvert, 2928 prise : étape vivante {i} « {title} » ; question de groupe posée : {q}.")
+        r.check(q == 92456 and i == 2, "la question de groupe des deux quêtes de Dalaran est posée à l'étape 2 (elle était passée d'office)")
+        ns.Engine.AnswerGroup(92456, "do")
+        G.tick(4)
+        i2, _ = G.live()
+        r.check(i2 == 2, f"« La faire en groupe » : l'étape retient jusqu'aux deux prises (étape {i2})")
+        G.accept(92456)
+        G.accept(92489)
+        G.tick(4)
+        i3, title3 = G.live()
+        r.check(i3 is not None and i3 > 2, f"les deux quêtes prises : la suite ({i3} « {title3} »)")
+    lines2, bad2 = run(args, "Scénario B1b : la question de groupe de Gnomeregan est posée",
+                       prelude=ACCOUNT + open_chapter(route, CHAPTER_GNOME), before=set_level(31), after=after2)
+    return lines + lines2, bad + bad2
+
+
+def group_skipped_end(args):
+    """B1 and A2: Gnomeregan with its two group questions answered "Skip it" (Dalaran's quests, the
+    Green Glow detour), Gnogaine in the log but not finished, then its end hand-ins: the tab closes. A
+    conditional hand-in ready in the log (Essential Artificials) holds it until handed in."""
+    route = "forever/alliance/06-wetlands"
+
+    def after(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        fin = cp.lua_list(ns.GA.ChapterFin(CHAPTER_GNOME))
+        r.say(f"Fin de Gnomeregan (GreffeData.lua) : {fin} ; autres rendus : {cp.lua_list(ns.GA.ChapterOthers(CHAPTER_GNOME))}.")
+        r.check(not ({2926, 2962, 2930, 2924, 2947} & set(fin)), "la fin ne compte aucun rendu conditionnel (Gnogaine, Green Glow, Data Rescue, Essential Artificials, Return of the Ring)")
+        G.accept(2928)
+        G.tick(2)
+        asked = []
+        q = first(ns.Engine.GroupQuestion())
+        if q:
+            asked.append(q)
+            ns.Engine.AnswerGroup(q, "skip")
+            G.tick(2)
+        for x in (2929, 2930, 2922, 2927, 2924):
+            G.accept(x)
+        G.turnin(2927)
+        G.accept(2926)
+        # Gnogaine and Data Rescue taken but not finished (no phial filled, a punch card missed)
+        L.globals().GREFFE.notReady[2926] = True
+        L.globals().GREFFE.notReady[2930] = True
+        G.tick(2)
+        r.say(f"Questions de groupe passées : {asked} ; journal : {cp.lua_list(L.globals().GREFFE.log)}.")
+        r.check(92456 in asked and 92489 not in cp.lua_list(L.globals().GREFFE.log), "« La passer » à la question de Dalaran : ses quêtes ne sont pas prises")
+        for x in (2929, 2922, 2928):
+            G.turnin(x)
+        G.tick(6)
+        r.check(CHAPTER_GNOME in G.tabs(), f"rendus de la fin faits, Essential Artificials (conditionnelle) prête dans le journal : l'onglet attend son rendu ({G.tabs()})")
+        G.turnin(2924)
+        G.tick(6)
+        r.say(f"2924 rendue, 2926 (Gnogaine) toujours dans le journal, pas finie : onglets {G.tabs()} ; actif {G.active()[0]} ; réponses {G.answers()}.")
+        r.check(CHAPTER_GNOME not in G.tabs() and G.active()[0] == route, "l'onglet se ferme : ce que le joueur pouvait faire est fait, le parcours revient")
+    return run(args, "Scénario B1c : quête de groupe passée, l'onglet se ferme quand même (Gnomeregan)",
+               prelude=ACCOUNT + open_chapter(route, CHAPTER_GNOME), before=set_level(31), after=after)
+
+
+def no_key_end(args):
+    """No key: the second Zul'Farrak run answered "Skip it" (nobody has the mallet) closes its tab; the
+    55-60 dungeons with their five questions skipped close theirs."""
+    rows, bad = [], 0
+    for cid, route, level, label in (("groupe-alliance/zul-farrak-2", "forever/alliance/40-50/07-un-goro-crater", 49, "Zul'Farrak, second passage, sans le marteau"),
+                                     ("groupe-alliance/33-donjons-fin", "forever/alliance/50-60/03-winterspring", 55, "donjons 55-60, les cinq questions passées")):
+        def after(L, G, ns, r, cid=cid, route=route):
+            L.execute('BENCH_COMPLETED = ""')
+            ns.On("GUIDE_COMPLETED", L.eval('function(id) BENCH_COMPLETED = BENCH_COMPLETED .. " " .. tostring(id) end'))
+            G.tick(6)
+            G.clearOther()
+            asked = []
+            for _ in range(8):
+                q = first(ns.Engine.GroupQuestion())
+                if not q or G.active()[0] != cid:
+                    break
+                asked.append(q)
+                ns.Engine.AnswerGroup(q, "skip")
+                G.tick(4)
+            G.tick(6)
+            fired = str(L.globals().BENCH_COMPLETED).split()
+            r.check(asked and cid in fired, f"tout passé ({asked}) : Polestar déclare le guide du chapitre fini (GUIDE_COMPLETED : {fired or 'non'})")
+            if cid in G.tabs():
+                # The fake game drops a timer set by a timer (BENCH.RunTimers): Polestar sends the
+                # message from its own timed evaluation, and the module closes the tab a frame later.
+                # Handed on again here, as that next frame.
+                ns.Fire("GUIDE_COMPLETED", cid)
+                G.tick(4)
+            r.say(f"Questions passées : {asked} ; onglets {G.tabs()} ; actif {G.active()[0]} ; réponses {G.answers()}.")
+            r.check(cid not in G.tabs() and G.active()[0] == route, "l'onglet du chapitre se ferme, le parcours revient")
+        lines, b = run(args, f"Scénario B1d : {label}", prelude=ACCOUNT + open_chapter(route, cid), before=set_level(level), after=after)
+        rows += lines
+        bad += b
+    return rows, bad
+
+
+def stop_first(args):
+    """B2: the card waits for the end of the route's stop: the Ruins at Auberdine (Tharnariun's Hope
+    is the first of seven goals there), offered once the stop's last hand-in is done."""
+    route, q, kind, level, done = CHAPTERS["ruines"]
+
+    def after(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        G.turnin(q)
+        G.tick(4)
+        G.clearOther()
+        mid = G.card()
+        why = ns.GA.GreffeWhy(G.entry("ruines"))
+        r.say(f"{q} rendue, le reste de l'arrêt d'Auberdine encore à faire : carte « {mid} » ; raison : {why} ({ns.GA.GreffeReason(G.entry('ruines'))}).")
+        r.check("greffe:ruines" not in mid and why == "stop", "la carte attend la fin de l'arrêt")
+        G.finishStop()
+        G.clearOther()
+        G.tick(2)
+        r.check(G.card().startswith("greffe:ruines"), f"l'arrêt fini, la carte vient (« {G.card()} » ; étape vivante {G.live()[0]} « {G.live()[1]} »)")
+    return run(args, "Scénario B2 : la carte attend la fin de l'arrêt du parcours (Ruines à Auberdine)",
+               prelude=ACCOUNT + char_db([route], 1, others_answered("ruines", level=level)), before=at_route(route, q, kind, level, done), after=after)
+
+
+def horde(args):
+    """A1: a Horde character on the same account, in the Deadmines' range: never offered a chapter,
+    Polestar's own dungeon cards left whole."""
+    prelude = 'UnitRace = function() return "Orc", "Orc", 2 end\nUnitFactionGroup = function() return "Horde", "Horde" end\n'
+
+    def after(L, G, ns, r):
+        G.tick(6)
+        for lv in (21, 22):
+            G.levelUp(lv)
+            G.tick(2)
+        due = [h.key for h in cp.lua_list(ns.GA.GreffeDue(22))]
+        why = ns.GA.GreffeWhy(G.entry("mortemines"), 22)
+        held = [k for k in ("deadmines", "blackfathom-deeps", "stormwind-stockade") if ns.GA.GreffeHolds(k, 22)]
+        seen = (G.dismissed or "") + " " + G.card()
+        r.say(f"Personnage orc niveau 22 : chapitres dus {due or 'aucun'} ; raison (Mortemines) : {why} ; cartes vues : {seen.strip() or 'aucune'} ; cartes de Polestar retenues : {held or 'aucune'}.")
+        r.check(not due and why == "faction" and "greffe:" not in seen, "aucun chapitre de l'Alliance proposé")
+        r.check(not held, "aucune carte de donjon de Polestar retenue par le module")
+    return run(args, "Scénario A1 : personnage de la Horde", prelude=prelude + ACCOUNT + char_db(["forever/horde/orc/01-durotar"]), before=set_level(20), after=after)
+
+
+def busy_and_tabs(args):
+    """A10 and A5: never in combat nor in an instance; six tabs open: the card stays, a clear line in
+    the chat; the Codex not loaded at login (only a level-up loads it): the hook offers all the same."""
+    rows, bad = [], 0
+
+    def after(L, G, ns, r):
+        g = L.globals()
+        G.tick(6)
+        G.clearOther()
+        loaded = ns.Codex.IsLoaded()
+        g.BENCH.combat = True
+        G.turnin(155)
+        G.tick(4)
+        in_combat = G.card()
+        g.BENCH.combat = False
+        L.execute('IsInInstance = function() return true, "party" end')
+        g.BENCH.Fire("PLAYER_REGEN_ENABLED")
+        G.tick(4)
+        in_instance = G.card()
+        L.execute('IsInInstance = function() return false, "none" end')
+        g.BENCH.Fire("PLAYER_REGEN_ENABLED")
+        G.tick(4)
+        G.clearOther()
+        G.tick(2)
+        out = G.card()
+        r.say(f"Codex chargé à la connexion : {bool(loaded)} ; 155 rendue en combat : carte « {in_combat} » ; fin du combat dans une instance : « {in_instance} » ; dehors : « {out} ».")
+        r.check(not loaded, "le Codex n'est pas chargé à la connexion (seul un passage de niveau le charge, comme en jeu)")
+        r.check("greffe:" not in in_combat and "greffe:" not in in_instance, "jamais en combat, jamais en instance")
+        r.check(out.startswith("greffe:mortemines"), "hors combat et hors instance, la carte vient, sans le Codex")
+    lines, b = run(args, "Scénario A10a : combat, instance, Codex non chargé", prelude=ACCOUNT + char_db([ROUTE_DM]), before=at_hook(ROUTE_DM, 155, 20), after=after,
+                   exclude=("Polestar_Codex",))
+    rows += lines
+    bad += b
+
+    six = [ROUTE_DM, "forever/alliance/02-westfall", "forever/alliance/03-darkshore", "forever/alliance/04-redridge-mountains",
+           "forever/alliance/05-duskwood", "forever/alliance/06-wetlands"]
+
+    def after6(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        G.turnin(155)
+        G.clearOther()
+        G.tick(2)
+        n0 = len(cp.lua_list(L.globals().BENCH.printed))
+        ok = ns.UI.ClassToast.Act()
+        G.tick(2)
+        said = cp.lua_list(G.printed(n0 + 1))
+        r.say(f"Six onglets : {G.tabs()} ; « Ouvrir le chapitre » : {ok} ; carte « {G.card()} » ; chat : {' / '.join(str(x) for x in said) or '(rien)'}.")
+        r.check(not ok and G.card().startswith("greffe:mortemines"), "six onglets : le chapitre ne s'ouvre pas, la carte reste")
+        r.check(any("six onglets" in str(x) and "Fermer un onglet" in str(x) for x in said), "une ligne claire dans le chat dit quoi faire")
+        E = ns.Engine
+        E.CloseTab(6)
+        G.tick(2)
+        ok2 = ns.UI.ClassToast.Act()
+        G.tick(4)
+        r.check(ok2 and G.active()[0] == CHAPTER_DM, f"un onglet fermé, la même carte ouvre le chapitre ({G.tabs()})")
+    lines, b = run(args, "Scénario A5 : six onglets ouverts", prelude=ACCOUNT + char_db(six, 1), before=at_hook(ROUTE_DM, 155, 20), after=after6)
+    rows += lines
+    bad += b
+    return rows, bad
+
+
+def background_close(args):
+    """A4: a chapter's tab closed while another tab is on screen: the player's tab stays."""
+    route = ROUTE_DM
+    other = "forever/alliance/04-redridge-mountains"
+
+    def after(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        E = ns.Engine
+        tabs = cp.lua_list(E.GetTabs()[0])
+        idx_other = next(i for i, t in enumerate(tabs, 1) if t.guideId == other)
+        E.SelectTab(idx_other)
+        G.tick(2)
+        idx = next(i for i, t in enumerate(cp.lua_list(E.GetTabs()[0]), 1) if t.guideId == CHAPTER_DM)
+        E.CloseTab(idx)
+        G.tick(4)
+        r.say(f"Onglet du chapitre fermé pendant que `{other}` est affiché : onglets {G.tabs()} ; actif {G.active()[0]}.")
+        r.check(G.active()[0] == other and CHAPTER_DM not in G.tabs(), "l'onglet affiché reste affiché (le parcours n'est pas sélectionné à sa place)")
+    return run(args, "Scénario A4 : onglet de chapitre fermé en arrière-plan",
+               prelude=ACCOUNT + char_db([route, other, CHAPTER_DM], 3, f', gaGreffe = {{ answers = {{ mortemines = {{ a = "open", level = 20 }} }}, from = {{ ["{CHAPTER_DM}"] = "{route}" }} }}'),
+               before=at_hook(ROUTE_DM, 155, 20), after=after)
+
+
+def slash_again(args):
+    """B6: /ga donjon brings back a chapter declined with "Not for me", says why none is due in the
+    client's language; a "Later" given at the top of the range lets Polestar's card through above it."""
+    rows, bad = [], 0
+
+    def after(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        G.turnin(155)
+        G.clearOther()
+        G.tick(2)
+        ns.UI.ClassToast.Off()
+        G.tick(2)
+        ns.GA.GreffeSlash()
+        G.tick(2)
+        r.check(G.card().startswith("greffe:mortemines"), f"« Pas pour moi », puis /ga donjon : la carte revient (« {G.card()} »)")
+        ns.UI.ClassToast.Later()
+        G.tick(2)
+        L.globals().GREFFE.level = 30
+        n0 = len(cp.lua_list(L.globals().BENCH.printed))
+        ns.GA.GreffeSlash()
+        said = [str(x) for x in cp.lua_list(G.printed(n0 + 1))]
+        r.say("/ga donjon au niveau 30 : " + " / ".join(said[:5]) + " …")
+        r.check(any("dépassé (proposé jusqu'au niveau 24)" in x for x in said) and any("/polestar guides" in x for x in said),
+                "les raisons sont lisibles en français (« dépassé… ») et la ligne dit où retrouver un chapitre")
+        r.check(not any(x.endswith(": above") or x.endswith(": hook") or x.endswith(": no") for x in said), "plus aucun code brut (above, hook, no)")
+    lines, b = run(args, "Scénario B6a : /ga donjon après « Pas pour moi », raisons en français", prelude=ACCOUNT + char_db([ROUTE_DM]),
+                   before=at_hook(ROUTE_DM, 155, 20), after=after)
+    rows += lines
+    bad += b
+
+    def after_en(L, G, ns, r):
+        G.tick(6)
+        n0 = len(cp.lua_list(L.globals().BENCH.printed))
+        ns.GA.GreffeSlash()
+        said = [str(x) for x in cp.lua_list(G.printed(n0 + 1))]
+        r.say("/ga dungeon, client anglais : " + " / ".join(said[:4]) + " …")
+        r.check(any("not at its stop of the route yet" in x or "from level" in x for x in said) and any("/polestar guides" in x for x in said), "les raisons en anglais sur un client anglais")
+    lines, b = run(args, "Scénario B6b : /ga dungeon, client anglais", locale="enUS", prelude=ACCOUNT + char_db([ROUTE_DM]), before=at_hook(ROUTE_DM, 155, 20), after=after_en)
+    rows += lines
+    bad += b
+
+    def after_max(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        held24 = ns.GA.GreffeHolds("deadmines", 24)
+        held25 = ns.GA.GreffeHolds("deadmines", 25)
+        r.say(f"« Plus tard » au niveau 24 (maximum des Mortemines) : carte de Polestar retenue à 24 : {held24} ; à 25 : {held25} ; raison à 25 : {ns.GA.GreffeWhy(G.entry('mortemines'), 25)}.")
+        r.check(held24 and not held25, "au-dessus du maximum, la carte de Polestar n'est plus retenue après « Plus tard »")
+    lines, b = run(args, "Scénario B6c : « Plus tard » au dernier niveau de la fourchette",
+                   prelude=ACCOUNT + char_db([ROUTE_DM], 1, ', gaGreffe = { answers = { mortemines = { a = "later", level = 24 } } }'), before=set_level(24), after=after_max)
+    rows += lines
+    bad += b
+    return rows, bad
+
+
+def finished_before(args):
+    """A3: a chapter of 0.12.x finished to its end under the same id (Polestar's saved guideDone):
+    not offered again."""
+    def after(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        G.turnin(155)
+        G.clearOther()
+        G.tick(2)
+        why = ns.GA.GreffeWhy(G.entry("mortemines"))
+        r.check("greffe:mortemines" not in G.card() and why == "done", f"chapitre fini en 0.12 (guideDone) : pas reproposé (raison : {why}, carte : {G.card()})")
+    return run(args, "Scénario A3 : chapitre fini avant la 0.13", prelude=ACCOUNT + char_db([ROUTE_DM], 1, f', guideDone = {{ ["{CHAPTER_DM}"] = true }}'),
+               before=at_hook(ROUTE_DM, 155, 20), after=after)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--ui", type=pathlib.Path, required=True)
@@ -1349,7 +1767,10 @@ def main():
              ("p-levels", polestar_levels), ("p-passed", hook_passed), ("p-ahead", hook_ahead), ("p-outlevelled", outlevelled),
              ("mig29", lambda a: migration(a, "mig29", hooks=MIG_HOOKS)), ("mig34", lambda a: migration(a, "mig34")),
              ("mig46", lambda a: migration(a, "mig46")), ("mig55", lambda a: migration(a, "mig55")),
-             ("mig-chapter", migration_chapter), ("notes", notes)]
+             ("mig-chapter", migration_chapter), ("notes", notes),
+             ("b1-steps", step_holds), ("b1-skip", group_skipped_end), ("b1-nokey", no_key_end), ("b2-stop", stop_first),
+             ("a1-horde", horde), ("a10-busy", busy_and_tabs), ("a4-background", background_close), ("b6-slash", slash_again),
+             ("a3-before", finished_before)]
     for key, fn in todo:
         if args.only and key not in args.only.split(","):
             continue
