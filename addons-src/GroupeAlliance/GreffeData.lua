@@ -4,8 +4,11 @@
 -- One entry per chapter, in route order:
 --   id       the chapter's guide id (a guide of this pack, category Dungeons, no `next`)
 --   key      a short name, the key of the player's answer (PolestarCharDB.gaGreffe)
---   turnin   the hook: the chapter is offered once this quest is handed in
---   accept   (instead of turnin) once this quest is in the log or handed in
+--   turnin   the hook: the chapter is offered once this quest is handed in (or one of a
+--            list: a second hook for a race whose start does it, or for a character who came
+--            from this pack's own route by another way)
+--   accept   (instead of, or with, turnin) once this quest (or one of a list) is in the log
+--            or handed in
 --   min, max the player's level to offer it: below min it waits, above max it is
 --            never offered (the chapter is behind the player)
 --   done     quests of the chapter: one of them handed in, the chapter counts as done

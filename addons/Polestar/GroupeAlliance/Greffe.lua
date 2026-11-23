@@ -150,7 +150,9 @@ function GA.GreffeWhy(h, level)
 	if level > h.max then return "above" end
 	if level < h.min then return "below" end
 	if a == "later" and at and level <= at then return "later" end
-	local hooked = (h.turnin and done(h.turnin)) or (h.accept and (inLog(h.accept) or done(h.accept)))
+	local hooked = false
+	for _, q in ipairs(type(h.turnin) == "table" and h.turnin or { h.turnin }) do hooked = hooked or done(q) end
+	for _, q in ipairs(type(h.accept) == "table" and h.accept or { h.accept }) do hooked = hooked or inLog(q) or done(q) end
 	if not hooked then return "hook" end
 	local g = E.GetGuide and E.GetGuide()
 	if not isLeveling(g) or g.pack == PACK then return "route" end
