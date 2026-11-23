@@ -1300,10 +1300,6 @@ ns.GA.Tips = {
 		frFR = "Les livres se ramassent dans le monde (souvent aux emplacements de la rune Barrage des arcanes de SoD), par personnage ; rendu au sommet de la tour des mages de Hurlevent.",
 		enUS = "The books are picked up around the world (often at the Season of Discovery Arcane Barrage rune spots), per character; turn in at the top of the Stormwind mage tower.",
 	},
-	[87318] = { -- Hearts of the Lost (wowhead forever)
-		frFR = "Sur Forever, le donneur ne propose plus cette quête, même avec toute la zone faite : ne pas perdre de temps à la chercher.",
-		enUS = "On Forever the quest giver no longer offers this quest, even with the whole zone done: don't waste time looking for it.",
-	},
 	[87491] = { -- Spark of Freedom (wowhead forever)
 		frFR = "À mi-chemin de la sortie du camp, une embuscade attaque ; le PNJ escorté se défend bien, mais garder ses soins et ses temps de recharge pour ce moment.",
 		enUS = "About halfway out of the camp an ambush attacks; the escorted NPC holds up well, but save heals and cooldowns for that moment.",

@@ -85,13 +85,10 @@ step Waterlogged Envelope
   collect 4433 x1 optional @44.3,92.9 map 1417 -- Underwater
   accept 637 optional only Dwarf,Gnome,NightElf,Skyborne
 
-step The Villards
-  zone Wetlands
-  tip Comar Villard waits north of Dun Modr by the Thandol Span; Essene a short walk further north-east.
-  accept 87318 optional               -- Comar Villard (Groupe Alliance: optional, Forever players report he no longer offers it)
-  turnin 87318 optional               -- Essene Villard
-
+# Groupe Alliance 0.12.2: Hearts of the Lost (87318) left out: Forever players report that Comar
+# Villard no longer offers it (Wowhead Forever comments), and Polestar 0.4.2.2 leaves it out too.
 step Dun Modr
+  zone Wetlands
   collect 280396 quest 98310.2        -- Heart of Modr
   tip Longbraid the Grim stands in the dwarves' camp.
   turnin 472                              -- Longbraid the Grim
