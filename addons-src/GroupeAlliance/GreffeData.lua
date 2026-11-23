@@ -55,6 +55,14 @@ GA.GREFFE = {
 		where = { frFR = "Colline des sentinelles · jouer le parcours à plusieurs",
 			enUS = "Sentinel Hill · playing the route together" },
 	},
+	{
+		id = "groupe-alliance/greffe/salle-des-thanes", key = "thanes", dungeon = "the-hall-of-thanes",
+		turnin = 13, min = 13, max = 19, done = { 96403, 96394 },
+		route = "forever/alliance/02-westfall", switchId = "groupe-alliance/04-salle-des-thanes",
+		name = { frFR = "La Salle des Thanes", enUS = "The Hall of Thanes" },
+		where = { frFR = "Sous Forgefer · groupe de 5 · niveaux 13 à 20",
+			enUS = "Under Ironforge · group of 5 · levels 13 to 20" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
