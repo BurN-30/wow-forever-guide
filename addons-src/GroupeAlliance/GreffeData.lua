@@ -103,6 +103,14 @@ GA.GREFFE = {
 		where = { frFR = "Dun Morogh · groupe de 5 · niveaux 29 à 38",
 			enUS = "Dun Morogh · group of 5 · levels 29 to 38" },
 	},
+	{
+		id = "groupe-alliance/greffe/kraal-de-tranchebauge", key = "kraal", dungeon = "razorfen-kraul",
+		turnin = 1100, min = 29, max = 37, done = { 1101, 1144 },
+		route = "forever/alliance/30-40/03-ashenvale",
+		name = { frFR = "Le Kraal de Tranchebauge", enUS = "Razorfen Kraul" },
+		where = { frFR = "Sud des Tarides · groupe de 5 · niveaux 29 à 38",
+			enUS = "Southern Barrens · group of 5 · levels 29 to 38" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
