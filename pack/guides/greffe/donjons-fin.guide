@@ -2,12 +2,16 @@
 # own question. A dungeon whose level the route never reaches near its door goes here, with the
 # chains that lead into it when they could not be finished on the way.
 #
-# Self-contained chapter for Polestar's own route (copy of 33-donjons-fin.guide, which takes this id
-# back when the pack drops its own route: groupe-alliance/33-donjons-fin). The Groupe Alliance module
-# offers it once the last hand-ins at Cenarion Hold are done, at the end of
-# forever/alliance/50-60/06-silithus (level 58 to 60), and opens it in a tab of its own: Polestar's
-# route ends there. Its five dungeons keep their own questions (`when group`): opening the chapter
-# is not a yes to all of them.
+# Self-contained chapter for Polestar's own route. The Groupe Alliance module offers it at level 55
+# once Extinguish the Firegut (3823) is handed in at Morgan's Vigil (Polestar's route, 50-60/01, at
+# about 50), wherever the player stands then: that is when Polestar's own Blackrock Depths card would
+# come (its other four dungeons come at 58-59). For whoever answered "Later", again at each level
+# and at the end of forever/alliance/50-60/06-silithus (the last hand-ins at Cenarion Hold, 58 to 60),
+# where Polestar's route ends. It opens in a tab of its own; Polestar's guide keeps its place in its
+# tab. The dungeons come in the order of their levels (Blackrock Depths 52-60, Lower Blackrock Spire
+# 55-60, Dire Maul 54-60, Stratholme and Scholomance 58-60), each with its own question (`when
+# group`): opening the chapter is not a yes to all of them, and a group that stops after one dungeon
+# closes the tab (the chapter stays in the guide list).
 #
 # Compared with Polestar 0.4.2.2 (its Dungeons codex pages "blackrock-depths", "blackrock-spire",
 # "dire-maul", "stratholme" and "scholomance", Polestar_Codex, GPL-3.0; no run of these in its route,
@@ -60,20 +64,19 @@
 # Giant Silver Veins and a vial filled in Un'Goro), The Spectral Chalice (miners), Rocknot's Ale
 # (only what opens the Bar Door), Attunement to the Core (raid), the level 58-60 dungeon set chains.
 guide groupe-alliance/greffe/donjons-fin
-title End of route · Dungeons 52-60 (optional)
+title Dungeons 55-60 · Blackrock, Dire Maul, Stratholme, Scholomance
 folder Group Alliance
 category Dungeons
 faction Alliance
-levels 52-60
-zone Silithus
+levels 55-60
+zone Burning Steppes
 
 step Blackrock Depths (dungeon, optional)
   label brd-start
   when group 4286
-  zone Silithus
   tip Blackrock Depths: the Dark Iron dwarves' city under Blackrock Mountain, between the Searing Gorge and the Burning Steppes. Levels 52 to 60, bosses 51 to 59: easy for a group of 5 at 58 to 60; possible earlier at five (from about 54), difficult. The dungeon is huge: the guide splits it into three visits of one to two hours, with the quests given in Ironforge, Kharanos, the Burning Steppes, Lakeshire and Stormwind. Alone? Skip it.
   note Keep 12 free quest log slots. Most of these quests cannot be shared: each player takes their own.
-  note From Cenarion Hold: a hearthstone bound in Ironforge, or the flight to Theramore, the boat to Menethil Harbor and the flight to Ironforge.
+  note To Ironforge: the hearthstone when it is bound there; from Kalimdor, the flight to Theramore or Auberdine, the boat to Menethil Harbor and the flight to Ironforge.
   fly "Ironforge"
   zone Ironforge
 

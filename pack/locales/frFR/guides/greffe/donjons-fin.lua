@@ -7,7 +7,7 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["End of route · Dungeons 52-60 (optional)"] = "Fin de parcours · Donjons 52-60 (facultatifs)",
+	["Dungeons 55-60 · Blackrock, Dire Maul, Stratholme, Scholomance"] = "Donjons 55-60 · Rochenoire, Hache-Tripes, Stratholme, Scholomance",
 
 	-- Step 1: Blackrock Depths (dungeon, optional)
 	["Blackrock Depths (dungeon, optional)"] = "Profondeurs de Rochenoire (donjon, facultatif)",
@@ -15,7 +15,7 @@ return {
 	["Blackrock Depths: the {object:147516} dwarves' city under Blackrock Mountain, between the {zone:1427} and the {zone:1428}. Levels 52 to 60, bosses 51 to 59: easy for a group of 5 at 58 to 60; possible earlier at five (from about 54), difficult. The dungeon is huge: the guide splits it into three visits of one to two hours, with the quests given in {zone:1455}, Kharanos, the {zone:1428}, Lakeshire and {zone:1453}. Alone? Skip it."] = "Profondeurs de Rochenoire : la cité des nains {object:147516} sous le Mont Rochenoire, entre {zone:1427} et {zone:1428}. Niveaux 52 à 60, boss 51 à 59 : facile pour un groupe de 5 aux niveaux 58 à 60 ; possible plus tôt à cinq (vers 54), difficile. Le donjon est immense : le guide le découpe en trois visites d'une à deux heures, avec les quêtes données à {zone:1455}, Kharanos, dans {zone:1428}, à Comté-du-Lac et à {zone:1453}. Seul ? Le passer.",
 	["Keep 12 free quest log slots. Most of these quests cannot be shared: each player takes their own."] = "Garder 12 places libres dans le journal de quêtes. La plupart de ces quêtes ne se partagent pas : chaque joueur prend la sienne.",
 	-- {zone:1455} Ironforge · {object:1162} Menethil Harbor
-	["From Cenarion Hold: a hearthstone bound in {zone:1455}, or the flight to Theramore, the boat to {object:1162} and the flight to {zone:1455}."] = "Depuis le Fort cénarien : une pierre de foyer liée à {zone:1455}, ou le vol pour Theramore, le bateau pour {object:1162} et le vol pour {zone:1455}.",
+	["To {zone:1455}: the hearthstone when it is bound there; from Kalimdor, the flight to Theramore or Auberdine, the boat to {object:1162} and the flight to {zone:1455}."] = "Vers {zone:1455} : la pierre de foyer si elle y est liée ; depuis Kalimdor, le vol pour Theramore ou Auberdine, le bateau pour {object:1162} et le vol pour {zone:1455}.",
 
 	-- Step 2: Ironforge: Royal Historian Archesonus
 	-- {object:171709} High Seat · {quest:3701} The Smoldering Ruins of Thaurissan · {zone:1428} Burning Steppes · {zone:1453} Stormwind
@@ -875,4 +875,8 @@ return {
 	-- Step 158: Scholomance: quests not done
 	["Scholomance: quests not done"] = "Scholomance : quêtes non finies",
 	["What is left of Scholomance in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste de la Scholomance dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["End of route · Dungeons 52-60 (optional)"] = "Fin de parcours · Donjons 52-60 (facultatifs)",
+	-- ["From Cenarion Hold: a hearthstone bound in {zone:1455}, or the flight to Theramore, the boat to {object:1162} and the flight to {zone:1455}."] = "Depuis le Fort cénarien : une pierre de foyer liée à {zone:1455}, ou le vol pour Theramore, le bateau pour {object:1162} et le vol pour {zone:1455}.",
 }

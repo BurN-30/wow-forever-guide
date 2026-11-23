@@ -19,8 +19,8 @@ return {
 	["Tram to {zone:1455}"] = "Tram pour {zone:1455}",
 
 	-- Step 2: Ironforge: Hall of Explorers
-	-- {npc:1356} Prospector Stormpike · {npc:6294} Krom Stoutarm · {npc:3979} Librarian Mae Paledust · {object:32356} Hall of Explorers
-	["{npc:1356}, {npc:6294} and {npc:3979} all stand in the {object:32356}. Mae Paledust's quest is for the Scarlet Monastery, the next chapter, offered at Southshore: take it if your group plans that run too."] = "{npc:1356}, {npc:6294} et {npc:3979} se tiennent tous dans {object:32356}. La quête de Mae Paledust est pour le Monastère écarlate, le chapitre suivant, proposé à Austrivage : la prendre si le groupe prévoit aussi ce donjon.",
+	-- {npc:1356} Prospector Stormpike · {npc:6294} Krom Stoutarm · {npc:3979} Librarian Mae Paledust · {object:32356} Hall of Explorers · {npc:3980} Raleigh the Devout
+	["{npc:1356}, {npc:6294} and {npc:3979} all stand in the {object:32356}. Mae Paledust's quest is for the Scarlet Monastery ({npc:3980}, Southshore): take it only if your group has not run it yet and still plans to."] = "{npc:1356}, {npc:6294} et {npc:3979} se tiennent tous dans {object:32356}. La quête de Mae Paledust est pour le Monastère écarlate ({npc:3980}, Austrivage) : la prendre seulement si le groupe ne l'a pas encore fait et compte le faire.",
 	-- {npc:3979} Librarian Mae Paledust
 	["{npc:3979}: for the Scarlet Monastery"] = "{npc:3979} : pour le Monastère écarlate",
 
@@ -128,4 +128,5 @@ return {
 	-- ["Both stand in the {object:32356}. Karnik's last task, An Ambassador of Evil, is in Angor Fortress in the {zone:1418}, which the route has left: do not take it. Last stop of the chapter: the route's own guide comes back, with its flight to Southshore."] = "Tous deux se tiennent dans {object:32356}. La dernière tâche de Karnik, An Ambassador of Evil, est dans la forteresse d'Angor, dans les {zone:1418}, que le parcours a quittées : ne pas la prendre. Dernier arrêt du chapitre : le guide du parcours revient, avec son vol pour Austrivage.",
 	-- ["Thelsamar: the Uldaman chapter"] = "Thelsamar : le chapitre d'Uldaman",
 	-- ["Uldaman: a dwarf and titan dungeon at the north end of the {zone:1418}, for a group of 5, levels 41 to 51 in the group finder: best at 43 or more. Its quests start in {zone:1455}: fly there, then back to Thelsamar and south into the {zone:1418}. The rewards are handed in in {zone:1455} at the end, where the flight to Southshore goes on with the route."] = "Uldaman : un donjon nain et titan au nord des {zone:1418}, pour un groupe de 5, niveaux 41 à 51 dans la recherche de groupe : idéal à 43 ou plus. Ses quêtes commencent à {zone:1455} : y voler, puis revenir à Thelsamar et descendre au sud dans les {zone:1418}. Les récompenses se rendent à {zone:1455} à la fin, d'où le vol pour Austrivage reprend le parcours.",
+	-- ["{npc:1356}, {npc:6294} and {npc:3979} all stand in the {object:32356}. Mae Paledust's quest is for the Scarlet Monastery, the next chapter, offered at Southshore: take it if your group plans that run too."] = "{npc:1356}, {npc:6294} et {npc:3979} se tiennent tous dans {object:32356}. La quête de Mae Paledust est pour le Monastère écarlate, le chapitre suivant, proposé à Austrivage : la prendre si le groupe prévoit aussi ce donjon.",
 }

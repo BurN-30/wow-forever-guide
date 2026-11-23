@@ -27,7 +27,8 @@
 # Prerequisites (Polestar's data): 721 after 720 (the route, 30-40/06), 722 to 726 one after the
 # other, 2240 after 2398, 2279 after 2278, 2439 after 2279, 1956 after 1955 (Mages).
 # Mythology of the Titans (1050) is offered on the Ironforge stop: it is for the Scarlet Monastery
-# chapter, offered at Southshore right after this one (greffe/monastere-ecarlate.guide).
+# chapter (monastere-ecarlate.guide), offered at about 39 and again at Southshore right after this
+# one for whoever answered "Later".
 guide groupe-alliance/greffe/uldaman
 title Dungeon · Uldaman (42-48)
 folder Group Alliance
@@ -45,7 +46,7 @@ step Stormwind: the Uldaman chapter
 
 step Ironforge: Hall of Explorers
   zone Ironforge
-  tip Prospector Stormpike, Krom Stoutarm and Librarian Mae Paledust all stand in the Hall of Explorers. Mae Paledust's quest is for the Scarlet Monastery, the next chapter, offered at Southshore: take it if your group plans that run too.
+  tip Prospector Stormpike, Krom Stoutarm and Librarian Mae Paledust all stand in the Hall of Explorers. Mae Paledust's quest is for the Scarlet Monastery (Raleigh the Devout, Southshore): take it only if your group has not run it yet and still plans to.
   accept 2398                                 -- Prospector Stormpike
   accept 1360                                 -- Krom Stoutarm
   accept 1050 optional                        -- Librarian Mae Paledust: for the Scarlet Monastery
