@@ -95,6 +95,14 @@ GA.GREFFE = {
 		where = { frFR = "Les Paluns · groupe de 5 · niveaux 26 à 33",
 			enUS = "Wetlands · group of 5 · levels 26 to 33" },
 	},
+	{
+		id = "groupe-alliance/greffe/gnomeregan", key = "gnomeregan", dungeon = "gnomeregan",
+		turnin = 293, min = 29, max = 35, done = { 2929 },
+		route = "forever/alliance/06-wetlands", switchId = "groupe-alliance/10b-gnomeregan",
+		name = { frFR = "Gnomeregan", enUS = "Gnomeregan" },
+		where = { frFR = "Dun Morogh · groupe de 5 · niveaux 29 à 38",
+			enUS = "Dun Morogh · group of 5 · levels 29 to 38" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
