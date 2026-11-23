@@ -36,36 +36,27 @@ return {
 
 	-- Step 5: Blackfathom Deeps: along the way
 	["Blackfathom Deeps: along the way"] = "Profondeurs de Brassenoire : en chemin",
-	-- plural, as words: Twilight Pendants = {item:5879} Twilight Pendant
-	["Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs (those outside the portal drop them too), the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own; with a full group on them, a second run may be needed."] = "À ramasser dans tout le donjon : les troncs cérébraux sur les nagas et les satyres (ceux d'avant le portail en lâchent aussi), les pendentifs du Crépuscule sur les cultistes du Marteau du crépuscule, environ 4 fois sur 5 pour chacun. Chaque joueur qui a la quête ramasse les siens ; avec tout le groupe dessus, un second passage peut être nécessaire.",
-	-- {item:5952} Corrupted Brain Stem
-	["{item:5952}: Blackfathom nagas, Fallenroot satyrs"] = "{item:5952} : nagas et satyres du donjon",
-	-- {item:5879} Twilight Pendant
-	["{item:5879}: Twilight's Hammer cultists"] = "{item:5879} : cultistes du Marteau du crépuscule",
 
 	-- Step 6: Paladins: Seeking the Kor Gem
 	-- {quest:1442} Seeking the Kor Gem
 	["Paladins: {quest:1442}"] = "Paladins : {quest:1442}",
-	-- {item:6995} Corrupted Kor Gem · {npc:3649} Thundris Windweaver
-	["The Blackfathom Tide Priestesses, Oracles and Sea Witches (the naga casters) drop the {item:6995}, about 1 in 2. {npc:3649} in Auberdine cleanses it, on the way back."] = "Les prêtresses des marées, oracles et sorcières des mers de Brassenoire (les nagas lanceuses de sorts) lâchent la {item:6995}, environ 1 fois sur 2. {npc:3649}, à Auberdine, la purifie au retour.",
-	-- {item:6995} Corrupted Kor Gem
-	["{item:6995}: naga casters"] = "{item:6995} : nagas lanceuses de sorts",
 
 	-- Step 7: Warlocks: The Orb of Soran'ruk
 	-- {quest:1740} The Orb of Soran'ruk
 	["Warlocks: {quest:1740}"] = "Démonistes : {quest:1740}",
-	-- {object:1680} Shadowfang Keep · {item:6898} Orb of Soran'ruk
-	-- plural, as words: Twilight Acolytes = {npc:4809} Twilight Acolyte · Soran'ruk Fragments = {item:6914} Soran'ruk Fragment
-	["The Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from {object:1680}, a Horde dungeon: Polestar's class guides ({item:6898}) cover it."] = "Les acolytes du Crépuscule du quartier du Marteau du crépuscule lâchent les fragments de Soran'ruk. Le grand fragment vient du donjon d'Ombrecroc, un donjon de la Horde : les guides de classe de Polestar ({item:6898}) s'en chargent.",
-	-- {item:6914} Soran'ruk Fragment
-	-- plural, as words: Twilight Acolytes = {npc:4809} Twilight Acolyte
-	["{item:6914}: Twilight Acolytes"] = "{item:6914} : acolytes du Crépuscule",
 
 	-- Step 8: Blackfathom Deeps: Ghamoo-ra's pool
 	-- {npc:4887} Ghamoo-ra
 	["Blackfathom Deeps: {npc:4887}'s pool"] = "Profondeurs de Brassenoire : le bassin de {npc:4887}",
 	-- {npc:4887} Ghamoo-ra · {npc:4787} Argent Guard Thaelrid
 	["The great turtle {npc:4887} lives in the first big pool. {npc:4787} waits by a campfire in an underwater side cave, its entrance south-east of the same pool (next step)."] = "La grande tortue {npc:4887} vit dans le premier grand bassin. {npc:4787} attend près d'un feu de camp dans une grotte sous-marine voisine, dont l'entrée est au sud-est du même bassin (étape suivante).",
+	-- plural, as words: Twilight Pendants = {item:5879} Twilight Pendant
+	["Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs (those outside the portal drop them too), the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own; with a full group on them, a second run may be needed."] = "À ramasser dans tout le donjon : les troncs cérébraux sur les nagas et les satyres (ceux d'avant le portail en lâchent aussi), les pendentifs du Crépuscule sur les cultistes du Marteau du crépuscule, environ 4 fois sur 5 pour chacun. Chaque joueur qui a la quête ramasse les siens ; avec tout le groupe dessus, un second passage peut être nécessaire.",
+	-- {quest:1442} Seeking the Kor Gem · {item:6995} Corrupted Kor Gem · {npc:3649} Thundris Windweaver
+	["{quest:1442}, for Paladins: the Blackfathom Tide Priestesses, Oracles and Sea Witches (the naga casters) drop the {item:6995}, about 1 in 2. {npc:3649} in Auberdine cleanses it, on the way back."] = "{quest:1442}, pour les paladins : les prêtresses des marées, oracles et sorcières des mers de Brassenoire (les nagas lanceuses de sorts) lâchent la {item:6995}, environ 1 fois sur 2. {npc:3649}, à Auberdine, la purifie au retour.",
+	-- {quest:1740} The Orb of Soran'ruk · {object:1680} Shadowfang Keep · {item:6898} Orb of Soran'ruk
+	-- plural, as words: Twilight Acolytes = {npc:4809} Twilight Acolyte · Soran'ruk Fragments = {item:6914} Soran'ruk Fragment
+	["{quest:1740}, for Warlocks: the Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from {object:1680}, a Horde dungeon: Polestar's class guides ({item:6898}) cover it."] = "{quest:1740}, pour les démonistes : les acolytes du Crépuscule du quartier du Marteau du crépuscule lâchent les fragments de Soran'ruk. Le grand fragment vient du donjon d'Ombrecroc, un donjon de la Horde : les guides de classe de Polestar ({item:6898}) s'en chargent.",
 
 	-- Step 9: Blackfathom Deeps: Argent Guard Thaelrid
 	-- {npc:4787} Argent Guard Thaelrid

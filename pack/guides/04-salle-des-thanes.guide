@@ -57,12 +57,12 @@ step Before entering the Hall of Thanes
 
 step The Hall of Thanes: along the way
   along until hot-durgen
-  tip The ghosts of the first chambers are Afadra's: Enraged Apparitions and Tormented Souls. The Dwarven Heirlooms lie all over the dungeon, many on candle-lit ledges of the corridors; the vaults of the last room hold enough for everyone, so nobody needs to race for them.
-  complete 96394                              -- The Restless Dead: the ghosts of the first chambers
-  collect 274289 x8 quest 96403               -- Dwarven Heirloom
+  complete 96394
+  collect 274289 x8 quest 96403
 
 step Anvilmar's Rest: Faldrim Anvilmar
   tip The Ghostly Attendant waits in the chamber west of the entrance: her quest is the first boss. Faldrim walks round the great tomb of the next room: clear the ghosts around it first. His Anvilmar's Curse slows the tank's attacks and spells for a long time: a Mage or a Druid can remove it. His Mind Blast can be interrupted.
+  note The ghosts of the first chambers are Afadra's: Enraged Apparitions and Tormented Souls. The Dwarven Heirlooms lie all over the dungeon, many on candle-lit ledges of the corridors; the vaults of the last room hold enough for everyone, so nobody needs to race for them.
   accept 96395                                -- Ghostly Attendant: An Ancient Grudge
   kill 261306 quest 96395                     -- Faldrim Anvilmar
   turnin 96395                                -- Ghostly Attendant, on the way back too
@@ -81,7 +81,7 @@ step The Reliquary of Kings: Durgen Dirgehammer
   tip North over the bridge of the Lesser Stone Golems to the round last room. Clear it before the pull: Durgen fears the whole group and whatever is left joins in. Kill his two Lesser Stone Golems first. Each player on Old Ironforge Incursion loots the head. Behind one of the vault doors of the room, the Treaty of Understanding: each player clicks it for their own quest.
   kill 261319                                 -- Durgen Dirgehammer
   collect 274286 quest 96393                  -- Durgen Dirgehammer's Head
-  accept 98423 item 281030                    -- Treaty of Understanding, behind a vault door of the room
+  accept 98423 item 281030 optional           -- Treaty of Understanding, behind a vault door of the room
 
 step King Magni: Old Ironforge Incursion
   when complete 96393

@@ -269,20 +269,20 @@ step Franclorn Forgewright (one player is enough)
 step Blackrock Depths: along the way
   when done brd-start
   along until brd-end
-  tip Collected all through the dungeon: the Dark Iron Fanny Packs, on the Anvilrage and Shadowforge dwarves (most of them carry one). The Relic Coffer Keys drop from the same dwarves, about one in eight, only for those on The Heart of the Mountain: 12 keys open the 12 doors of the Black Vault (first visit), whoever carries them.
-  note Share The Good Stuff, The Heart of the Mountain and Hurley Blackbreath with your group: click each in the quest log, then Share. The others cannot be shared.
-  collect 11468 quest 4286            -- Dark Iron Fanny Pack
-  collect 11078 x12 optional          -- Relic Coffer Key
+  collect 11468 quest 4286
+  collect 11078 x12 optional
 
 step Blackrock Depths, first visit: before going in
   when done brd-start
   tip First visit, no key needed: the Detention Block (the prison), the Ring of the Law, the Shrine of Thaurissan, the Black Vault and the Hall of Crafting. Bosses 51 to 56: 54 or more advised.
   note In the quest log: Kharan Mighthammer (King Magni), Marshal Windsor (Maxwell), The Good Stuff (Oralius), The Heart of the Mountain (Maxwort), Dark Iron Legacy (Franclorn, if taken). For the next visits: A Taste of Flame (Cyrus), Ribbly Screwspigot (Yuka), Hurley Blackbreath (Ragnar). Not on this route: Mistress Nagmara's quest in the tavern (its herbs and silver are gathered outside), the Spectral Chalice's (miners), Lothos Riftwaker's Attunement to the Core (raid).
+  note Share The Good Stuff, The Heart of the Mountain and Hurley Blackbreath with your group: click each in the quest log, then Share. The others cannot be shared.
   goto 34.8,85.3 map 1427 "Blackrock Depths" r 25
 
 step Detention Block: Kharan and Windsor
   when done brd-start
   tip The Detention Block opens past the entrance. High Interrogator Gerstahn, in the southernmost room, drops the Prison Cell Key, which opens the cells (a rogue can pick them instead). Kharan Mighthammer and Marshal Windsor are locked in the cells of the south-east corridor: listen to Kharan's whole story; Windsor has given up, and his news goes back to Maxwell. Lord Roccor patrols the northern ring, Houndmaster Grebmar waits at its lowest point. To check in game: which cell holds whom.
+  note Collected all through the dungeon: the Dark Iron Fanny Packs, on the Anvilrage and Shadowforge dwarves (most of them carry one). The Relic Coffer Keys drop from the same dwarves, about one in eight, only for those on The Heart of the Mountain: 12 keys open the 12 doors of the Black Vault (first visit), whoever carries them.
   collect 11140 optional              -- Prison Cell Key: High Interrogator Gerstahn
   turnin 4341                         -- Kharan Mighthammer
   accept 4342
@@ -559,13 +559,13 @@ step Message to Maxwell: out and back
 step Lower Blackrock Spire: along the way
   when done lbrs-start
   along until lbrs-end
-  tip The Bloodaxe Worg Pups play in Hordemar City and in Halycon's lair: target one and use the Empty Worg Pup Cage. The Spire Spider Eggs lie in the Skitterweb Tunnels, Mother Smolderweb's halls: each egg sac gives 1 to 3, and spiderlings may hatch from them.
-  collect 12263 quest 4729            -- Caged Worg Pup
-  collect 12530 quest 4862            -- Spire Spider Egg
+  collect 12263 quest 4729
+  collect 12530 quest 4862
 
 step Highlord Omokk
   when done lbrs-start
   tip Urok Doomhowl needs a Roughshod Pike: they lean against the wall behind the Scarshield orcs, past the bridge out of Hordemar City. Then the Spirestone ogres: Highlord Omokk (elite 59) and his two guards. His head is for the Urok event: one player with the quest carries the pike and the head.
+  note The Bloodaxe Worg Pups play in Hordemar City and in Halycon's lair: target one and use the Empty Worg Pup Cage. The Spire Spider Eggs lie in the Skitterweb Tunnels, Mother Smolderweb's halls: each egg sac gives 1 to 3, and spiderlings may hatch from them.
   collect 12533 optional              -- Roughshod Pike
   kill 9196                           -- Highlord Omokk
   kill 9196 quest 5081                -- Highlord Omokk, for Maxwell's Mission
@@ -841,8 +841,9 @@ step Moonglade: Rabine Saturna
 step Shards of the Felvine: not done
   when onquest 5526
   when !complete 5526
-  tip Shards of the Felvine is not done and the guide does not go back to Dire Maul: abandon it, or keep it for a run of your own.
-  abandon 5526
+  tip Shards of the Felvine is not done and the guide does not go back to Dire Maul: keep it for a run of your own, or abandon it to free the log (right-click it in the quest log).
+  task "Kept for another run, or abandoned"
+  abandon 5526 optional
 
 # ================================================================ Stratholme and Scholomance
 # Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
@@ -930,22 +931,22 @@ step Caer Darrow: Artist Renfray
 step Stratholme: along the way
   when done strat-start
   along until strat-end
-  tip Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); Stratholme Holy Water in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; equip the blaster Egan gave you, target one and use the blaster on it, then again on the soul that breaks free.
-  note Share The Flesh Does Not Lie, The Archivist, The Great Ezra Grimm and Houses of the Holy with your group: click each in the quest log, then Share. The Restless Souls and Renfray's painting quest cannot be shared.
-  collect 13174 quest 5212            -- Plagued Flesh Sample
-  collect 13180 quest 5243            -- Stratholme Holy Water: supply crates
-  kill 11122 quest 5282               -- Restless Soul, freed with the blaster
+  collect 13174 quest 5212
+  collect 13180 quest 5243
+  kill 11122 quest 5282
 
 step Stratholme, first visit: before going in
   when done strat-start
   zone Eastern Plaguelands
   tip First visit, the living side, by the main gate across the bridge: King's Square, Market Row, Crusaders' Square and the Scarlet Bastion, then Festival Lane and Elders' Square. Leave Balnazzar alive this time: The Archivist must be handed in before he dies, or his head starts nothing. Warcraft Tavern (written from Classic) says the doors of the Scarlet Bastion open with The Scarlet Key, from Arcanist Doan's chest in the Scarlet Monastery Library: to check in game.
   note In the quest log: The Flesh Does Not Lie (Betina), The Archivist (Duke Nicholas), The Great Ezra Grimm (Smokey LaRue), Houses of the Holy (Leonid), The Restless Souls (Egan); Renfray's painting quest, for whoever took it. Not on this route: Sweet Serenity and Corruption (Winterspring), the dungeon set quests (Deliana, Anthion Harmon), Ras Frostwhisper's chain (Menethil's Gift).
+  note Share The Flesh Does Not Lie, The Archivist, The Great Ezra Grimm and Houses of the Holy with your group: click each in the quest log, then Share. The Restless Souls and Renfray's painting quest cannot be shared.
   goto 26.5,10.4 map 1423 "Stratholme" r 25
 
 step King's Square: Ezra Grimm
   when done strat-start
   tip Past the main gate, King's Square: follow the road round to the left to its dead end, under the sign of Ezra Grimm's Premium Tobacco. Ezra Grimm, undead (elite 61), stands in front of his shop.
+  note Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); Stratholme Holy Water in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; equip the blaster Egan gave you, target one and use the blaster on it, then again on the soul that breaks free.
   collect 13172 quest 5214            -- Grimm's Premium Tobacco: Ezra Grimm
 
 step Market Row and Crusaders' Square
@@ -1138,8 +1139,9 @@ step Stratholme: quests not done
 step Of Love and Family: not done
   when onquest 5848
   when !complete 5848
-  tip Of Love and Family is not done and the guide does not go back to Stratholme: abandon it, or keep it for a run of your own.
-  abandon 5848
+  tip Of Love and Family is not done and the guide does not go back to Stratholme: keep it for a run of your own, or abandon it to free the log (right-click it in the quest log).
+  task "Kept for another run, or abandoned"
+  abandon 5848 optional
 
 step The Skeleton Key (optional)
   label key-start

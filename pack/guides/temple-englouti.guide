@@ -48,21 +48,11 @@ step Sunken Temple: the Pool of Tears
   note Group of 5. Keep 4 free quest log slots. In the quest log before going in: Into The Temple of Atal'Hakkar (Brohann Caskbelly, Stormwind); for whoever took them at the Broken Pillar in Tanaris, Into the Depths and Secret of the Circle (Marvon Rivetseeker). Share each one with the group: click it in the quest log, then Share.
   goto 69.9,53.5 "Sunken Temple" r 25
 
-step Marvon Rivetseeker: Into the Depths
-  when onquest 3446
-  tip Taken from Marvon Rivetseeker at the Broken Pillar in Tanaris: it is handed in at the Altar of Hakkar, in the temple's lowest hall.
-  accept 3446                         -- Marvon Rivetseeker
-
-step Marvon Rivetseeker: Secret of the Circle
-  when onquest 3447
-  tip Taken from Marvon Rivetseeker too: the six statues of the circle around the upper ring, lit in the right order, raise the Idol of Hakkar.
-  accept 3447                         -- Marvon Rivetseeker
-
 step Sunken Temple: the circle and the Altar of Hakkar
   when onquest 3446,3447
   tip On the upper ring, six Atal'ai statues stand around the central pit: click them in this order, south, north, south-west, south-east, north-west, north-east (the original game's order, to check in game); the Idol of Hakkar rises, with a chest. The Altar of Hakkar is at the bottom of the central pit, where Atal'alarion waits.
-  turnin 3447 object 148838           -- Idol of Hakkar
-  turnin 3446 object 148836           -- Altar of Hakkar
+  turnin 3447 object 148838           -- Idol of Hakkar: Secret of the Circle, from Marvon Rivetseeker at the Broken Pillar in Tanaris
+  turnin 3446 object 148836           -- Altar of Hakkar, in the temple's lowest hall: Into the Depths, from Marvon Rivetseeker
 
 step Sunken Temple: the tablets and Jammal'an
   tip The Atal'ai Tablets lie in the temple's halls: pick them up as you clear. Jammal'an the Prophet waits on the upper level, once the six troll champions of the balconies around the central pit are dead.

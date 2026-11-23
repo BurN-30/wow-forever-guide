@@ -41,17 +41,15 @@ return {
 
 	-- Step 5: The Hall of Thanes: along the way
 	["The Hall of Thanes: along the way"] = "La Salle des Thanes : en chemin",
-	-- {npc:264943} Afadra Dunwall
-	-- plural, as words: Enraged Apparitions = {npc:263389} Enraged Apparition · Tormented Souls = {npc:263390} Tormented Soul · Dwarven Heirlooms = {item:274289} Dwarven Heirloom
-	["The ghosts of the first chambers are {npc:264943}'s: Enraged Apparitions and Tormented Souls. The Dwarven Heirlooms lie all over the dungeon, many on candle-lit ledges of the corridors; the vaults of the last room hold enough for everyone, so nobody needs to race for them."] = "Les fantômes des premières salles sont pour {npc:264943} : apparitions enragées et âmes tourmentées. Les héritages nains sont partout dans le donjon, beaucoup sur des corniches éclairées de bougies dans les couloirs ; les caveaux de la dernière salle en contiennent assez pour tout le monde, inutile de se les disputer.",
-	-- {quest:96394} The Restless Dead
-	["{quest:96394}: the ghosts of the first chambers"] = "{quest:96394} : les fantômes des premières salles",
 
 	-- Step 6: Anvilmar's Rest: Faldrim Anvilmar
 	-- {npc:261306} Faldrim Anvilmar
 	["Anvilmar's Rest: {npc:261306}"] = "Le Repos d'Anvilmar : {npc:261306}",
 	-- {npc:265002} Ghostly Attendant · {npc:261306} Faldrim Anvilmar
 	["The {npc:265002} waits in the chamber west of the entrance: her quest is the first boss. {npc:261306} walks round the great tomb of the next room: clear the ghosts around it first. His Anvilmar's Curse slows the tank's attacks and spells for a long time: a Mage or a Druid can remove it. His Mind Blast can be interrupted."] = "{npc:265002} attend dans la salle à l'ouest de l'entrée : sa quête est le premier boss. {npc:261306} fait le tour du grand tombeau de la salle suivante : nettoyer d'abord les fantômes autour. Sa Malédiction d'Anvilmar ralentit longtemps les attaques et les sorts du tank : un mage ou un druide peut la retirer. Son Attaque mentale peut être interrompue.",
+	-- {npc:264943} Afadra Dunwall
+	-- plural, as words: Enraged Apparitions = {npc:263389} Enraged Apparition · Tormented Souls = {npc:263390} Tormented Soul · Dwarven Heirlooms = {item:274289} Dwarven Heirloom
+	["The ghosts of the first chambers are {npc:264943}'s: Enraged Apparitions and Tormented Souls. The Dwarven Heirlooms lie all over the dungeon, many on candle-lit ledges of the corridors; the vaults of the last room hold enough for everyone, so nobody needs to race for them."] = "Les fantômes des premières salles sont pour {npc:264943} : apparitions enragées et âmes tourmentées. Les héritages nains sont partout dans le donjon, beaucoup sur des corniches éclairées de bougies dans les couloirs ; les caveaux de la dernière salle en contiennent assez pour tout le monde, inutile de se les disputer.",
 	-- {npc:265002} Ghostly Attendant
 	["{npc:265002}, on the way back too"] = "{npc:265002}, aussi au retour",
 

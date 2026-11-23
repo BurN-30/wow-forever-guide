@@ -65,26 +65,26 @@ step Blackfathom Deeps: before going in
 
 step Blackfathom Deeps: along the way
   along until bfd-kelris
-  tip Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs (those outside the portal drop them too), the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own; with a full group on them, a second run may be needed.
-  collect 5952 x8 quest 1275                  -- Corrupted Brain Stem: Blackfathom nagas, Fallenroot satyrs
-  collect 5879 x10 quest 1199 optional        -- Twilight Pendant: Twilight's Hammer cultists
+  collect 5952 x8 quest 1275
+  collect 5879 x10 quest 1199 optional
 
 step Paladins: Seeking the Kor Gem
   only Paladin
   when onquest 1442
   along until bfd-kelris
-  tip The Blackfathom Tide Priestesses, Oracles and Sea Witches (the naga casters) drop the Corrupted Kor Gem, about 1 in 2. Thundris Windweaver in Auberdine cleanses it, on the way back.
-  collect 6995 quest 1442                     -- Corrupted Kor Gem: naga casters
+  collect 6995 quest 1442
 
 step Warlocks: The Orb of Soran'ruk
   only Warlock
   when onquest 1740
   along until bfd-kelris
-  tip The Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from Shadowfang Keep, a Horde dungeon: Polestar's class guides (Orb of Soran'ruk) cover it.
-  collect 6914 x3 quest 1740                  -- Soran'ruk Fragment: Twilight Acolytes
+  collect 6914 x3 quest 1740
 
 step Blackfathom Deeps: Ghamoo-ra's pool
   tip The great turtle Ghamoo-ra lives in the first big pool. Argent Guard Thaelrid waits by a campfire in an underwater side cave, its entrance south-east of the same pool (next step).
+  note Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs (those outside the portal drop them too), the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own; with a full group on them, a second run may be needed.
+  note "Seeking the Kor Gem, for Paladins: the Blackfathom Tide Priestesses, Oracles and Sea Witches (the naga casters) drop the Corrupted Kor Gem, about 1 in 2. Thundris Windweaver in Auberdine cleanses it, on the way back." only Paladin
+  note "The Orb of Soran'ruk, for Warlocks: the Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from Shadowfang Keep, a Horde dungeon: Polestar's class guides (Orb of Soran'ruk) cover it." only Warlock
   kill 4887                                   -- Ghamoo-ra
 
 step Blackfathom Deeps: Argent Guard Thaelrid

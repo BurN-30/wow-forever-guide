@@ -61,6 +61,7 @@ return {
 	["The {quest:95189}"] = "{quest:95189}",
 	-- {npc:250660} The Baron · {npc:256097} Bjork
 	["One crest per run, at a random spot with no mark on the minimap: the top of the east tower (left of the top floor doors), the banshee crypt door before {npc:250660}, the top of the west tower, the foot of the north-west tower by the double stairs, or the wall of {npc:256097}'s gazebo (nearly invisible: hover the wall)."] = "Un seul écusson par passage, à une place au hasard, sans marque sur la minicarte : le haut de la tour est (à gauche des portes du dernier étage), la porte de crypte à banshee devant {npc:250660}, le haut de la tour ouest, le pied de la tour nord-ouest près du double escalier, ou le mur du kiosque de {npc:256097} (presque invisible : passer la souris sur le mur).",
+	["The Crest: clicked, or not found"] = "L'écusson : cliqué, ou pas trouvé",
 	-- {quest:95189} Crest of Lordaeron
 	["{quest:95189}: each player clicks it"] = "{quest:95189} : chaque joueur clique dessus",
 
@@ -98,5 +99,4 @@ return {
 	["{npc:466} stands at the city gate, {npc:14450} in the orphanage, {npc:15991} in the keep. The Matron gives the next letter, for Darkshire in {zone:1431}: the route stops there at about 25."] = "{npc:466} se tient à la porte de la ville, {npc:14450} à l'orphelinat, {npc:15991} dans le donjon. La matrone donne la lettre suivante, pour Sombre-Comté dans le {zone:1431} : le parcours s'y arrête vers 25.",
 	-- {npc:228} Avette Fellwood
 	["For {npc:228} in Darkshire"] = "Pour {npc:228}, à Sombre-Comté",
-
 }

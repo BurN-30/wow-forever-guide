@@ -25,8 +25,6 @@ return {
 	-- Step 3: Stormwind's two quests, for whoever took them
 	-- {zone:1453} Stormwind
 	["{zone:1453}'s two quests, for whoever took them"] = "Les deux quêtes de {zone:1453}, pour qui les a prises",
-	-- {quest:92456} A Green Sample · {npc:5502} Shylamiir · {quest:92489} Power Overwhelming · {npc:5694} High Sorcerer Andromath · {zone:1453} Stormwind
-	["{quest:92456} ({npc:5502}) and {quest:92489} ({npc:5694}), offered in {zone:1453} by the Gnomeregan chapter: both are done inside."] = "{quest:92456} ({npc:5502}) et {quest:92489} ({npc:5694}), proposées à {zone:1453} par le chapitre de Gnomeregan : les deux se font dans le donjon.",
 
 	-- Step 4: Power Overwhelming, for whoever took it
 	-- {quest:92489} Power Overwhelming
@@ -50,14 +48,14 @@ return {
 
 	-- Step 7: The streets of Dalaran: along the way
 	["The streets of Dalaran: along the way"] = "Les rues de Dalaran : en chemin",
-	-- {npc:247001} Saturated Remnant
-	-- plural, as words: Saturated Remnants = {npc:247001} Saturated Remnant · Mana Fiends = {npc:15527} Mana Fiend · Mana Phantoms = {npc:246683} Mana Phantom
-	["Out of the sewers, the arcane remnants are all over the streets: Seeking and Saturated Remnants for Modera. A {npc:247001} leaves a Mana Leak field when it dies (casters stand in it), Mana Fiends explode when they die (spread out), Mana Phantoms cast Mana Burn (interrupt it)."] = "Sortis des égouts, les résidus arcaniques sont partout dans les rues : les résidus chercheurs et saturés pour Modera. Un {npc:247001} laisse une zone de fuite de mana en mourant (les lanceurs de sorts s'y placent), les démons de mana explosent en mourant (s'écarter), les fantômes de mana lancent Brûlure de mana (l'interrompre).",
 
 	-- Step 8: The Violet Hold: Mana Devourer
 	-- {npc:246297} Violet Hold · {npc:246008} Mana Devourer
 	["The {npc:246297}: {npc:246008}"] = "{npc:246297} : {npc:246008}",
 	["Left from the sewers' exit. Clear every enemy of the hold first: they join the fight. The mana serpent drains the tank and hits the whole group now and then: heal through it."] = "À gauche en sortant des égouts. Nettoyer d'abord tous les ennemis du fort : ils rejoignent le combat. Le serpent de mana draine le tank et frappe tout le groupe de temps en temps : soigner sans relâche pendant ce temps.",
+	-- {npc:247001} Saturated Remnant
+	-- plural, as words: Saturated Remnants = {npc:247001} Saturated Remnant · Mana Fiends = {npc:15527} Mana Fiend · Mana Phantoms = {npc:246683} Mana Phantom
+	["Out of the sewers, the arcane remnants are all over the streets: Seeking and Saturated Remnants for Modera. A {npc:247001} leaves a Mana Leak field when it dies (casters stand in it), Mana Fiends explode when they die (spread out), Mana Phantoms cast Mana Burn (interrupt it)."] = "Sortis des égouts, les résidus arcaniques sont partout dans les rues : les résidus chercheurs et saturés pour Modera. Un {npc:247001} laisse une zone de fuite de mana en mourant (les lanceurs de sorts s'y placent), les démons de mana explosent en mourant (s'écarter), les fantômes de mana lancent Brûlure de mana (l'interrompre).",
 
 	-- Step 9: Krasus' Landing: Arcane Anomaly
 	-- {npc:245999} Arcane Anomaly
@@ -69,16 +67,16 @@ return {
 	["Runeweaver Square: {npc:246003}"] = "Place Tisserune : {npc:246003}",
 	-- {npc:246708} Magus Fansy Goodbringer · {npc:246003} Fel Ancient · {item:251983} Fel Infused Blossom · {quest:92456} A Green Sample
 	["Into the middle of the city from the east: {npc:246708}, by the magic shield, lowers it. The {npc:246003} roots two players and drops burning fel timber under them: a Druid's shapeshift or a Paladin's Blessing of Freedom frees them. The {item:251983} for {quest:92456} is one of the big green bulbs of the square."] = "Vers le centre de la ville par l'est : {npc:246708}, près du bouclier magique, le baisse. L'{npc:246003} immobilise deux joueurs et fait tomber du bois gangrené en feu sous eux : un changement de forme de druide ou la Bénédiction de liberté d'un paladin les libère. La {item:251983} de {quest:92456} est l'un des gros bulbes verts de la place.",
-	-- {item:251983} Fel Infused Blossom
-	["{item:251983}: a green bulb of the square"] = "{item:251983} : un bulbe vert de la place",
+	-- {item:251983} Fel Infused Blossom · {quest:92456} A Green Sample · {npc:5502} Shylamiir · {zone:1453} Stormwind
+	["{item:251983}: a green bulb of the square, for {quest:92456} ({npc:5502}, {zone:1453}, offered by the Gnomeregan chapter)"] = "{item:251983} : un bulbe vert de la place, pour {quest:92456} ({npc:5502}, {zone:1453}, proposée par le chapitre de Gnomeregan)",
 
 	-- Step 11: Path of Renewal: Arcanic Enigma
 	-- {npc:246016} Arcanic Enigma
 	["Path of Renewal: {npc:246016}"] = "Chemin du Renouveau : {npc:246016}",
 	-- plural, as words: Mana Phantoms = {npc:246683} Mana Phantom
 	["Counter-clockwise to the north-east, by Antonidas's statue. Kill its two Mana Phantoms first. The Enigma polymorphs players and silences everyone close to it: ranged players keep away."] = "Dans le sens inverse des aiguilles d'une montre, vers le nord-est, près de la statue d'Antonidas. Tuer d'abord ses deux fantômes de mana. L'Énigme métamorphose des joueurs et réduit au silence tous ceux qui l'approchent : les joueurs à distance restent loin.",
-	-- {npc:246016} Arcanic Enigma · {quest:92489} Power Overwhelming
-	["{npc:246016}, for {quest:92489}"] = "{npc:246016}, pour {quest:92489}",
+	-- {npc:246016} Arcanic Enigma · {quest:92489} Power Overwhelming · {npc:5694} High Sorcerer Andromath · {zone:1453} Stormwind
+	["{npc:246016}, for {quest:92489} ({npc:5694}, {zone:1453}, offered by the Gnomeregan chapter)"] = "{npc:246016}, pour {quest:92489} ({npc:5694}, {zone:1453}, proposée par le chapitre de Gnomeregan)",
 
 	-- Step 12: Magus Commerce Exchange: Unstable Sentry
 	["Magus Commerce Exchange: Unstable Sentry"] = "Comptoir des mages : la Sentinelle instable",

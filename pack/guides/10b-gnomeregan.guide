@@ -100,22 +100,24 @@ step Gnomeregan: before going in
   zone Dun Morogh
   tip Group of 5, levels 29 to 38 in the group finder. Everything inside is elite and the mechanical foes hit hard.
   note In the quest log before going in: Gyrodrillmatic Excavationators (Shoni the Shilent, Stormwind), The Grand Betrayal, Data Rescue and Save Techbot's Brain! (Tinker Town), Gnogaine (Ozzie, Kharanos). If you took them: Essential Artificials (Klockmort Spannerspan, Tinker Town), The Only Cure is More Green Glow (Ozzie, Kharanos). Bring the Yellow Punch Card (or the White one), and 3 silver per Grime-Encrusted Object you want to put in the Sparklematic 5200.
+  note Share the quests with your group: click each in the quest log, then Share.
   goto 24.3,39.8 "Gnomeregan" r 25
 
 # Groupe Alliance 0.11.0: what drops all through the dungeon sits in one along step (it never
-# holds the route), up to Thermaplugg; the machines and NPCs come in the order of the rooms.
+# holds the route), up to Thermaplugg; the machines and NPCs come in the order of the rooms. An
+# along step shows only its goals: its advice is on the next step.
 step Gnomeregan: along the way
   along until gno-thermaplugg
-  tip Collected all through the dungeon. Robo-mechanical Guts (24 for Shoni): the troggs, slimes, leper gnomes and machines. Essential Artificials: the Artificial Extrapolators, rectangular boxes on the floor all around the dungeon; each one vanishes once used, so a full group on the quest may have to search the whole dungeon. Every player with the quest loots their own.
-  note Share the quests with your group: click each in the quest log, then Share.
-  collect 9309 quest 2928 optional            -- Robo-mechanical Guts
-  collect 9278 x12 quest 2924 optional        -- Essential Artificial: Artificial Extrapolators
-  collect 9365 quest 2962 optional            -- High Potency Radioactive Fallout: the heavy phial, on a living irradiated slime or horror
-  accept 2945 item 9326 optional              -- Grime-Encrusted Ring, a drop from the Dark Iron Agents: right-click it
+  collect 9309 quest 2928 optional
+  collect 9278 x12 quest 2924 optional
+  collect 9365 quest 2962 optional
+  accept 2945 item 9326 optional
 
 step Gnomeregan: the Sparklematic, the Dormitory and the Clean Room
   tip The Sparklematic 5200 machines stand in the room before the Dormitory: put the Grime-Encrusted Ring in one to clean it. In the Dormitory, Kernobee waits before the Viscous Fallout room: his escort runs all the way back to the dungeon's entrance; near the end a countdown starts, get him out before it reaches zero. His reward waits at Booty Bay, where the route goes at about 33. Matrix Punchograph 3005-B, in the Dormitory south of the Clean Room, turns the Yellow card into a Blue one.
-  kill 7079                                   -- Viscous Fallout, in the Clean Room
+  note Collected all through the dungeon. Robo-mechanical Guts (24 for Shoni): the troggs, slimes, leper gnomes and machines. Essential Artificials: the Artificial Extrapolators, rectangular boxes on the floor all around the dungeon; each one vanishes once used, so a full group on the quest may have to search the whole dungeon. Every player with the quest loots their own.
+  note The High Potency Radioactive Fallout, for The Only Cure is More Green Glow: the heavy phial, on a living irradiated slime or horror. The Grime-Encrusted Ring drops from the Dark Iron Agents: right-click it.
+  kill 7079                                  -- Viscous Fallout, in the Clean Room
   collect 9282 optional                       -- Blue Punch Card: the Yellow one, at Matrix Punchograph 3005-B
   turnin 2945 object 142487                   -- The Sparklematic 5200
   accept 2947 object 142487 optional          -- Return of the Ring: for Talvash del Kissel in Ironforge

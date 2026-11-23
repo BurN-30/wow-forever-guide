@@ -51,10 +51,12 @@ step Magus Olvek
   tip On the way north: he stands on the western edge of the Dalaran crater, by the road from Hillsbrad to Silverpine.
   accept 96800                                -- Magus Olvek: Past Due, Arcanist Doan's book
 
+# The accept of Mae Paledust's quest, taken in Ironforge on the Uldaman chapter's way, for its line in
+# the Library (the compiler wants an accept before it). Done at once for whoever took it: no text of
+# its own, the advice is on the book's line.
 step Mythology of the Titans
   when onquest 1050
-  tip Taken from Librarian Mae Paledust in Ironforge, on the Uldaman chapter's way: its book lies in the Library.
-  accept 1050                                 -- Librarian Mae Paledust, Ironforge
+  accept 1050
 
 step Before entering the Scarlet Monastery
   zone Tirisfal Glades
@@ -68,7 +70,7 @@ step The Library: Houndmaster Loksey and Arcanist Doan
   kill 3974 quest 1053                        -- Houndmaster Loksey, elite 34
   kill 6487                                   -- Arcanist Doan, elite 37
   collect 273169 quest 96800                  -- The Lost Magic of the Runemasters, red book on a table in Doan's room
-  collect 5536 quest 1050 optional            -- Mythology of the Titans, on the floor of a corridor
+  collect 5536 quest 1050 optional            -- Mythology of the Titans, on the floor of a corridor: for Librarian Mae Paledust in Ironforge, taken on the Uldaman chapter's way
 
 step The Armory: Herod
   tip Herod spins with Whirlwind: everyone but the tank steps away until it ends. When he dies, a wave of trainees runs in: fight them at the door.

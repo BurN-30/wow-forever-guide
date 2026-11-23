@@ -39,14 +39,14 @@ return {
 
 	-- Step 5: Maraudon: along the way
 	["Maraudon: along the way"] = "Maraudon : en chemin",
-	-- plural, as words: Theradric Crystal Carvings = {item:17684} Theradric Crystal Carving
-	["Collected all through the dungeon: the Theradric Crystal Carvings, from the centaurs, satyrs and dryads and from most bosses. Every player with the quest loots their own."] = "À ramasser dans tout le donjon : les gravures de cristal théradrique, sur les centaures, les satyres, les dryades et la plupart des boss. Chaque joueur qui a la quête ramasse les siennes.",
 
 	-- Step 6: Maraudon: the orange side
 	["Maraudon: the orange side"] = "Maraudon : le côté orange",
 	-- {item:17696} Filled Cerulean Vial · {npc:13696} Noxxious Scion · {item:17702} Celebrian Rod
 	-- plural, as words: Vylestem Vines = {object:178905} Vylestem Vine
 	["On the orange side, by the Vylestem Vines: use the {item:17696} near one, a {npc:13696} comes out (45, immune to Nature); kill it to heal the vine, 8 times. Noxxion, at the end of this side, drops the {item:17702}."] = "Du côté orange, près des Vylestem Vines : utiliser la {item:17696} près de l'une d'elles, une {npc:13696} en sort (niveau 45, insensible à la Nature) ; la tuer guérit la vigne, 8 fois. Noxxion, au bout de ce côté, lâche le {item:17702}.",
+	-- plural, as words: Theradric Crystal Carvings = {item:17684} Theradric Crystal Carving
+	["Collected all through the dungeon: the Theradric Crystal Carvings, from the centaurs, satyrs and dryads and from most bosses. Every player with the quest loots their own."] = "À ramasser dans tout le donjon : les gravures de cristal théradrique, sur les centaures, les satyres, les dryades et la plupart des boss. Chaque joueur qui a la quête ramasse les siennes.",
 	-- {npc:13696} Noxxious Scion
 	["{npc:13696}: one per vine"] = "{npc:13696} : une par vigne",
 	-- {item:17702} Celebrian Rod
@@ -99,5 +99,4 @@ return {
 	-- Step 15: Nijel's Point: Keeper Marandis
 	-- {npc:13698} Keeper Marandis · {object:176948} Nijel's Point
 	["{npc:13698} stands in {object:176948} too."] = "{npc:13698} se tient aussi à la Combe de Nijel.",
-
 }

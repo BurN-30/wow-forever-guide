@@ -30,10 +30,6 @@ return {
 	-- {npc:264265} Magus Olvek · {quest:96800} Past Due · {npc:6487} Arcanist Doan
 	["{npc:264265}: {quest:96800}, {npc:6487}'s book"] = "{npc:264265} : {quest:96800}, livre de {npc:6487}",
 
-	-- Step 4: Mythology of the Titans
-	-- {npc:3979} Librarian Mae Paledust · {zone:1455} Ironforge
-	["Taken from {npc:3979} in {zone:1455}, on the Uldaman chapter's way: its book lies in the Library."] = "Prise auprès de {npc:3979} à {zone:1455}, sur le chemin du chapitre d'Uldaman : son livre est dans la Bibliothèque.",
-
 	-- Step 5: Before entering the Scarlet Monastery
 	["Before entering the Scarlet Monastery"] = "Avant d'entrer dans le Monastère écarlate",
 	-- {zone:1421} Silverpine Forest · {zone:1420} Tirisfal Glades
@@ -55,8 +51,8 @@ return {
 	["{npc:6487}, elite 37"] = "{npc:6487}, élite 37",
 	-- {item:273169} The Lost Magic of the Runemasters
 	["{item:273169}, red book on a table in Doan's room"] = "{item:273169}, livre rouge sur une table dans la salle de Doan",
-	-- {quest:1050} Mythology of the Titans
-	["{quest:1050}, on the floor of a corridor"] = "{quest:1050}, par terre dans un couloir",
+	-- {quest:1050} Mythology of the Titans · {npc:3979} Librarian Mae Paledust · {zone:1455} Ironforge
+	["{quest:1050}, on the floor of a corridor: for {npc:3979} in {zone:1455}, taken on the Uldaman chapter's way"] = "{quest:1050}, par terre dans un couloir : pour {npc:3979} à {zone:1455}, prise sur le chemin du chapitre d'Uldaman",
 
 	-- Step 7: The Armory: Herod
 	-- {npc:3975} Herod

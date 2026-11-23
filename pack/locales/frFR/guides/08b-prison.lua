@@ -31,18 +31,10 @@ return {
 
 	-- Step 5: What Comes Around, for whoever carries it
 	["What Comes Around, for whoever carries it"] = "Retour de bâton, pour qui la porte",
-	-- {npc:859} Guard Berton
-	["What Comes Around ({npc:859}, Lakeshire) wants Targorr's head: he is in the prison, and the hand-in comes after the run."] = "Retour de bâton ({npc:859}, Comté-du-Lac) demande la tête de Targorr : il est dans la prison, et le rendu vient après le donjon.",
-	-- {npc:859} Guard Berton
-	["{npc:859}, Lakeshire"] = "{npc:859}, Comté-du-Lac",
 
 	-- Step 6: Crime and Punishment, for whoever carries it
 	-- {quest:377} Crime and Punishment
 	["{quest:377}, for whoever carries it"] = "{quest:377}, pour qui la porte",
-	-- {quest:377} Crime and Punishment · {npc:270} Councilman Millstipe · {npc:1663} Dextren Ward
-	["{quest:377} ({npc:270}, Darkshire) wants {npc:1663}'s hand: he is in the prison, and the hand-in comes after the run."] = "{quest:377} ({npc:270}, Sombre-Comté) demande la main de {npc:1663} : il est dans la prison, et le rendu vient après le donjon.",
-	-- {npc:270} Councilman Millstipe
-	["{npc:270}, Darkshire"] = "{npc:270}, Sombre-Comté",
 
 	-- Step 7: Enter the Stockade
 	["Enter the Stockade"] = "Entrer dans la Prison",
@@ -59,8 +51,8 @@ return {
 	["Cells line both sides, 3 or 4 elites each, and runners flee into the next cell for help: stop them or clear each cell as you pass. {npc:1696} hides in a side cell of this corridor (often first on the right or second on the left); a patrol walks between the two wings."] = "Des cellules des deux côtés, 3 ou 4 élites chacune, et les fuyards courent chercher de l'aide dans la cellule voisine : les arrêter ou vider chaque cellule au passage. {npc:1696} se cache dans une cellule de ce couloir (souvent la 1re à droite ou la 2e à gauche) ; une patrouille circule entre les deux ailes.",
 	-- plural, as words: Red Wool Bandanas = {item:2909} Red Wool Bandana
 	["Red Wool Bandanas and the prisoners for Quell the Uprising come from every Defias."] = "Les bandanas en laine rouge et les prisonniers de Mater la révolte (Quell the Uprising) viennent de tous les Défias.",
-	-- {item:3630} Head of Targorr · {npc:1696} Targorr the Dread
-	["{item:3630}: {npc:1696}, elite 24"] = "{item:3630} : {npc:1696}, élite 24",
+	-- {item:3630} Head of Targorr · {npc:1696} Targorr the Dread · {npc:859} Guard Berton
+	["{item:3630}: {npc:1696}, elite 24. For What Comes Around ({npc:859}, Lakeshire): the hand-in comes after the run."] = "{item:3630} : {npc:1696}, élite 24. Pour Retour de bâton ({npc:859}, Comté-du-Lac) : le rendu vient après le donjon.",
 	-- {npc:1720} Bruegal Ironknuckle
 	["At the junction, type /target {npc:1720}: if a frame shows, the rare elite (26) is in a cell nearby, with the best loot of the dungeon."] = "Au croisement, taper /target {npc:1720} : si un cadre s'affiche, l'élite rare (26) est dans une cellule proche, avec le meilleur butin du donjon.",
 
@@ -68,8 +60,8 @@ return {
 	-- {npc:1663} Dextren Ward
 	["The west wing: {npc:1663}"] = "L'aile ouest : {npc:1663}",
 	["Left at the junction, to the small hall at the end. Clear every room around it first: his Intimidating Shout fears the group into fresh packs. He runs at low health: stop him."] = "À gauche au croisement, jusqu'à la petite salle du bout. Vider d'abord chaque pièce autour : son cri d'intimidation fait fuir le groupe vers des groupes frais. Il fuit à faible vie : l'arrêter.",
-	-- {item:3628} Hand of Dextren Ward
-	["{item:3628}, elite 26"] = "{item:3628}, élite 26",
+	-- {item:3628} Hand of Dextren Ward · {quest:377} Crime and Punishment · {npc:270} Councilman Millstipe
+	["{item:3628}, elite 26. For {quest:377} ({npc:270}, Darkshire): the hand-in comes after the run."] = "{item:3628}, élite 26. Pour {quest:377} ({npc:270}, Sombre-Comté) : le rendu vient après le donjon.",
 
 	-- Step 10: The east wing: Kam, Hamhock and Bazil Thredd
 	-- {npc:1717} Hamhock · {npc:1716} Bazil Thredd

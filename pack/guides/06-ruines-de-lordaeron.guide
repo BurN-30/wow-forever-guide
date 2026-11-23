@@ -46,7 +46,7 @@ step Captain Truman
   tip On the left just after the portal. The bosses can be done in any order. Any undead may drop a Bloodied Insignia: right-click it, then keep looting them, there are plenty for everyone.
   note Share each quest with the group: click it in the quest log, then Share.
   accept 95250                                -- Captain Truman
-  accept 95195 item 268535                    -- Bloodied Insignia, from any undead: right-click it
+  accept 95195 item 268535 optional           -- Bloodied Insignia, from any undead: right-click it
 
 step Witherfang
   tip The spider wing, King's Alley. Witherfang patrols with two spiders: kill them first and cleanse Leech Poison off the tank. Spider packs patrol too: pull with care.
@@ -67,7 +67,8 @@ step Market Street: The Abandoned (optional)
 
 step The Crest of Lordaeron
   tip One crest per run, at a random spot with no mark on the minimap: the top of the east tower (left of the top floor doors), the banshee crypt door before The Baron, the top of the west tower, the foot of the north-west tower by the double stairs, or the wall of Bjork's gazebo (nearly invisible: hover the wall).
-  accept 95189                                -- Crest of Lordaeron: each player clicks it
+  task "The Crest: clicked, or not found"
+  accept 95189 optional                       -- Crest of Lordaeron: each player clicks it
 
 step Bjork
   tip The undead troll patrolling the north-west: a simple fight, just wait out his short Anti-Magic Shield.
@@ -77,7 +78,7 @@ step Rath'mael
   tip The graveyard at the back. His one spell, Flamestrike, lands where the tank stood when he began it: step out at once, or stun him to stop it. The rare Lordaeron Captain is friendly to the Alliance: leave him be.
   kill 250657                                 -- Rath'mael
   collect 268540 x10 quest 95195              -- Bloodied Insignia, from the undead all run long
-  accept 92415                                -- Blood-stained letter, by Rath'mael: each player clicks their own
+  accept 92415 optional                       -- Blood-stained letter, by Rath'mael: each player clicks their own
 
 step Captain Truman: Abominable Creatures
   tip Back to the entrance on the way out: Captain Truman takes the Baron's head.

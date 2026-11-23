@@ -97,12 +97,12 @@ step Mages: Power in Uldaman
   only Mage
   when onquest 1956
   along until uld-archaedas
-  tip The Obsidian Sentinel, one of the bosses on the way to Archaedas, drops the Obsidian Power Source for Tabetha in Dustwallow Marsh.
-  collect 8053 quest 1956                 -- Obsidian Power Source: Obsidian Sentinel
+  collect 8053 quest 1956
 
 step Archaedas and the Discs of Norgannon
   label uld-archaedas
   tip Archaedas, the last boss, wakes the stone guardians around his room during the fight. Behind him, the Discs of Norgannon: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave.
+  note "Power in Uldaman, for Mages: the Obsidian Sentinel, one of the bosses on the way to Archaedas, drops the Obsidian Power Source for Tabetha in Dustwallow Marsh." only Mage
   kill 2748                               -- Archaedas
   accept 2278 object 131474               -- The Discs of Norgannon
   turnin 2278 object 131474

@@ -79,14 +79,14 @@ return {
 	-- Step 9: Mages: Power in Uldaman
 	-- {quest:1956} Power in Uldaman
 	["Mages: {quest:1956}"] = "Mages : {quest:1956}",
-	-- {npc:7023} Obsidian Sentinel · {npc:2748} Archaedas · {item:8053} Obsidian Power Source · {zone:1445} Dustwallow Marsh
-	["The {npc:7023}, one of the bosses on the way to {npc:2748}, drops the {item:8053} for Tabetha in {zone:1445}."] = "La {npc:7023}, l'un des boss sur le chemin d'{npc:2748}, lâche la {item:8053} pour Tabetha au {zone:1445}.",
 
 	-- Step 10: Archaedas and the Discs of Norgannon
 	-- {npc:2748} Archaedas · {object:131474} Discs of Norgannon
 	["{npc:2748} and the {object:131474}"] = "{npc:2748} et les Disques de Norgannon",
 	-- {npc:2748} Archaedas · {object:131474} Discs of Norgannon
 	["{npc:2748}, the last boss, wakes the stone guardians around his room during the fight. Behind him, the {object:131474}: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave."] = "{npc:2748}, le dernier boss, réveille les gardiens de pierre autour de sa salle pendant le combat. Derrière lui, les Disques de Norgannon : cliquer dessus, parler à l'esprit sur la gauche, puis cliquer de nouveau sur les disques pour la copie miniature avant de partir.",
+	-- {quest:1956} Power in Uldaman · {npc:7023} Obsidian Sentinel · {npc:2748} Archaedas · {item:8053} Obsidian Power Source · {zone:1445} Dustwallow Marsh
+	["{quest:1956}, for Mages: the {npc:7023}, one of the bosses on the way to {npc:2748}, drops the {item:8053} for Tabetha in {zone:1445}."] = "{quest:1956}, pour les mages : la {npc:7023}, l'un des boss sur le chemin d'{npc:2748}, lâche la {item:8053} pour Tabetha au {zone:1445}.",
 
 	-- Step 11: Rigglefuzz
 	["Leave by the front, south to the Valley of Fangs."] = "Sortir par l'entrée, au sud vers la Vallée des Crocs.",
@@ -127,5 +127,4 @@ return {
 	["{object:32356}: {npc:2916} and {npc:2918}"] = "{object:32356} : {npc:2916} et {npc:2918}",
 	-- {object:32356} Hall of Explorers · {zone:1453} Stormwind · {object:171524} Tinker Town · {zone:1418} Badlands
 	["Both stand in the {object:32356}. Karnik's last task, An Ambassador of Evil, leads to a second Uldaman run, not in this guide: do not take it. Last stop of the chapter: the route's own guide comes back where it was, in {zone:1453}: it has the class trainer visited there first (the Deeprun Tram from {object:171524}, or the flight), then flies on to Thelsamar for the {zone:1418}."] = "Tous deux se tiennent dans {object:32356}. La dernière tâche de Karnik, An Ambassador of Evil, mène à un second passage à Uldaman, hors de ce guide : ne pas la prendre. Dernier arrêt du chapitre : le guide du parcours revient où il en était, à {zone:1453} : il fait d'abord passer chez le maître de classe là-bas (le tram des profondeurs depuis {object:171524}, ou le vol), puis vole vers Thelsamar pour les {zone:1418}.",
-
 }

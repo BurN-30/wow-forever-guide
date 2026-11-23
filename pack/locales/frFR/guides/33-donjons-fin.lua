@@ -147,17 +147,14 @@ return {
 
 	-- Step 27: Blackrock Depths: along the way
 	["Blackrock Depths: along the way"] = "Profondeurs de Rochenoire : en chemin",
-	-- {quest:4123} The Heart of the Mountain
-	-- plural, as words: Dark Iron Fanny Packs = {item:11468} Dark Iron Fanny Pack · Relic Coffer Keys = {item:11078} Relic Coffer Key
-	["Collected all through the dungeon: the Dark Iron Fanny Packs, on the Anvilrage and Shadowforge dwarves (most of them carry one). The Relic Coffer Keys drop from the same dwarves, about one in eight, only for those on {quest:4123}: 12 keys open the 12 doors of the Black Vault (first visit), whoever carries them."] = "À ramasser dans tout le donjon : les sacoches Sombrefer (Dark Iron Fanny Packs), sur les nains Anvilrage et Shadowforge (la plupart en portent une). Les clés de coffre à reliques (Relic Coffer Keys) tombent des mêmes nains, environ une sur huit, seulement pour qui a {quest:4123} : 12 clés ouvrent les 12 portes de la chambre forte (Black Vault, première visite), quel que soit le joueur qui les porte.",
-	-- {quest:4286} The Good Stuff · {quest:4123} The Heart of the Mountain · {quest:4126} Hurley Blackbreath
-	["Share {quest:4286}, {quest:4123} and {quest:4126} with your group: click each in the quest log, then Share. The others cannot be shared."] = "Partager {quest:4286}, {quest:4123} et {quest:4126} avec le groupe : cliquer sur chacune dans le journal de quêtes, puis sur Partager. Les autres ne se partagent pas.",
 
 	-- Step 28: Blackrock Depths, first visit: before going in
 	["Blackrock Depths, first visit: before going in"] = "Profondeurs de Rochenoire, première visite : avant d'entrer",
 	["First visit, no key needed: the Detention Block (the prison), the Ring of the Law, the Shrine of Thaurissan, the Black Vault and the Hall of Crafting. Bosses 51 to 56: 54 or more advised."] = "Première visite, sans clé : la prison (Detention Block), l'arène (Ring of the Law), le sanctuaire de Thaurissan (Shrine of Thaurissan), la chambre forte (Black Vault) et la salle des artisans (Hall of Crafting). Boss 51 à 56 : niveau 54 ou plus conseillé.",
 	-- {quest:4341} Kharan Mighthammer · {quest:4241} Marshal Windsor · {quest:4286} The Good Stuff · {npc:9177} Oralius · {quest:4123} The Heart of the Mountain · {npc:9536} Maxwort Uberglint · {quest:3801} Dark Iron Legacy · {npc:8888} Franclorn Forgewright · {quest:4022} A Taste of Flame · {npc:9459} Cyrus Therepentous · {quest:4136} Ribbly Screwspigot · {npc:9544} Yuka Screwspigot · {quest:4126} Hurley Blackbreath · {npc:1267} Ragnar Thunderbrew · {npc:9500} Mistress Nagmara · {object:164869} Spectral Chalice · {npc:14387} Lothos Riftwaker
 	["In the quest log: {quest:4341} (King Magni), {quest:4241} (Maxwell), {quest:4286} ({npc:9177}), {quest:4123} ({npc:9536}), {quest:3801} ({npc:8888}, if taken). For the next visits: {quest:4022} ({npc:9459}), {quest:4136} ({npc:9544}), {quest:4126} ({npc:1267}). Not on this route: {npc:9500}'s quest in the tavern (its herbs and silver are gathered outside), the {object:164869}'s (miners), {npc:14387}'s Attunement to the Core (raid)."] = "Dans le journal de quêtes : {quest:4341} (le roi Magni), {quest:4241} (Maxwell), {quest:4286} ({npc:9177}), {quest:4123} ({npc:9536}), {quest:3801} ({npc:8888}, si prise). Pour les visites suivantes : {quest:4022} ({npc:9459}), {quest:4136} ({npc:9544}), {quest:4126} ({npc:1267}). Pas sur ce parcours : la quête de {npc:9500} dans la taverne (ses herbes et son argent se récoltent dehors), celle de {object:164869} (mineurs), Attunement to the Core de {npc:14387} (raid).",
+	-- {quest:4286} The Good Stuff · {quest:4123} The Heart of the Mountain · {quest:4126} Hurley Blackbreath
+	["Share {quest:4286}, {quest:4123} and {quest:4126} with your group: click each in the quest log, then Share. The others cannot be shared."] = "Partager {quest:4286}, {quest:4123} et {quest:4126} avec le groupe : cliquer sur chacune dans le journal de quêtes, puis sur Partager. Les autres ne se partagent pas.",
 	["Blackrock Depths"] = "Profondeurs de Rochenoire",
 
 	-- Step 29: Detention Block: Kharan Mighthammer and Windsor
@@ -165,6 +162,9 @@ return {
 	["Detention Block: {npc:9021} and Windsor"] = "Prison : {npc:9021} et Windsor",
 	-- {npc:9018} High Interrogator Gerstahn · {item:11140} Prison Cell Key · {quest:4341} Kharan Mighthammer · {quest:4241} Marshal Windsor · {npc:9021} Kharan Mighthammer · {npc:9025} Lord Roccor · {npc:9319} Houndmaster Grebmar
 	["The Detention Block opens past the entrance. {npc:9018}, in the southernmost room, drops the {item:11140}, which opens the cells (a rogue can pick them instead). {quest:4341} and {quest:4241} are locked in the cells of the south-east corridor: listen to {npc:9021}'s whole story; Windsor has given up, and his news goes back to Maxwell. {npc:9025} patrols the northern ring, {npc:9319} waits at its lowest point. To check in game: which cell holds whom."] = "La prison (Detention Block) s'ouvre après l'entrée. {npc:9018}, dans la salle la plus au sud, donne la {item:11140}, qui ouvre les cellules (un voleur peut les crocheter). {quest:4341} et {quest:4241} sont enfermés dans les cellules du couloir sud-est : écouter toute l'histoire de {npc:9021} ; Windsor a perdu espoir, et ses nouvelles repartent chez Maxwell. {npc:9025} patrouille dans l'anneau nord, {npc:9319} attend à son point le plus bas. À vérifier en jeu : quelle cellule pour qui.",
+	-- {quest:4123} The Heart of the Mountain
+	-- plural, as words: Dark Iron Fanny Packs = {item:11468} Dark Iron Fanny Pack · Relic Coffer Keys = {item:11078} Relic Coffer Key
+	["Collected all through the dungeon: the Dark Iron Fanny Packs, on the Anvilrage and Shadowforge dwarves (most of them carry one). The Relic Coffer Keys drop from the same dwarves, about one in eight, only for those on {quest:4123}: 12 keys open the 12 doors of the Black Vault (first visit), whoever carries them."] = "À ramasser dans tout le donjon : les sacoches Sombrefer (Dark Iron Fanny Packs), sur les nains Anvilrage et Shadowforge (la plupart en portent une). Les clés de coffre à reliques (Relic Coffer Keys) tombent des mêmes nains, environ une sur huit, seulement pour qui a {quest:4123} : 12 clés ouvrent les 12 portes de la chambre forte (Black Vault, première visite), quel que soit le joueur qui les porte.",
 	-- {quest:4341} Kharan Mighthammer
 	["{quest:4341}: listen to his whole story"] = "{quest:4341} : écouter toute son histoire",
 	["For King Magni"] = "Pour le roi Magni",
@@ -354,13 +354,13 @@ return {
 
 	-- Step 66: Lower Blackrock Spire: along the way
 	["Lower Blackrock Spire: along the way"] = "Pic Rochenoire inférieur : en chemin",
-	-- {npc:10220} Halycon · {item:12262} Empty Worg Pup Cage · {npc:10596} Mother Smolderweb
-	-- plural, as words: Bloodaxe Worg Pups = {npc:10221} Bloodaxe Worg Pup · Spire Spider Eggs = {item:12530} Spire Spider Egg
-	["The Bloodaxe Worg Pups play in Hordemar City and in {npc:10220}'s lair: target one and use the {item:12262}. The Spire Spider Eggs lie in the Skitterweb Tunnels, {npc:10596}'s halls: each egg sac gives 1 to 3, and spiderlings may hatch from them."] = "Les louveteaux worgs Bloodaxe (Bloodaxe Worg Pups) jouent dans la cité de Hordemar et dans l'antre de {npc:10220} : en cibler un et utiliser la {item:12262}. Les œufs d'araignée du Pic (Spire Spider Eggs) sont dans les tunnels des araignées (Skitterweb Tunnels), le domaine de {npc:10596} : chaque cocon en donne 1 à 3, et des araignées peuvent en éclore.",
 
 	-- Step 67: Highlord Omokk
 	-- {quest:4867} Urok Doomhowl · {item:12533} Roughshod Pike · {npc:9196} Highlord Omokk
 	["{quest:4867} needs a {item:12533}: they lean against the wall behind the Scarshield orcs, past the bridge out of Hordemar City. Then the Spirestone ogres: {npc:9196} (elite 59) and his two guards. His head is for the Urok event: one player with the quest carries the pike and the head."] = "{quest:4867} demande une {item:12533} : elles sont appuyées contre le mur derrière les orcs Scarshield, après le pont qui sort de la cité de Hordemar. Puis les ogres Spirestone : {npc:9196} (élite 59) et ses deux gardes. Sa tête sert pour l'événement d'Urok : un joueur qui a la quête porte la pique et la tête.",
+	-- {npc:10220} Halycon · {item:12262} Empty Worg Pup Cage · {npc:10596} Mother Smolderweb
+	-- plural, as words: Bloodaxe Worg Pups = {npc:10221} Bloodaxe Worg Pup · Spire Spider Eggs = {item:12530} Spire Spider Egg
+	["The Bloodaxe Worg Pups play in Hordemar City and in {npc:10220}'s lair: target one and use the {item:12262}. The Spire Spider Eggs lie in the Skitterweb Tunnels, {npc:10596}'s halls: each egg sac gives 1 to 3, and spiderlings may hatch from them."] = "Les louveteaux worgs Bloodaxe (Bloodaxe Worg Pups) jouent dans la cité de Hordemar et dans l'antre de {npc:10220} : en cibler un et utiliser la {item:12262}. Les œufs d'araignée du Pic (Spire Spider Eggs) sont dans les tunnels des araignées (Skitterweb Tunnels), le domaine de {npc:10596} : chaque cocon en donne 1 à 3, et des araignées peuvent en éclore.",
 	-- {npc:9196} Highlord Omokk · {quest:5081} Maxwell's Mission
 	["{npc:9196}, for {quest:5081}"] = "{npc:9196}, pour {quest:5081}",
 
@@ -558,7 +558,8 @@ return {
 	-- {quest:5526} Shards of the Felvine
 	["{quest:5526}: not done"] = "{quest:5526} : pas finie",
 	-- {quest:5526} Shards of the Felvine
-	["{quest:5526} is not done and the guide does not go back to Dire Maul: abandon it, or keep it for a run of your own."] = "{quest:5526} n'est pas finie et le guide ne retourne pas à Hache-Tripes : l'abandonner, ou la garder pour une visite à part.",
+	["{quest:5526} is not done and the guide does not go back to Dire Maul: keep it for a run of your own, or abandon it to free the log (right-click it in the quest log)."] = "{quest:5526} n'est pas finie et le guide ne retourne pas à Hache-Tripes : la garder pour une visite à part, ou l'abandonner pour libérer le journal (clic droit sur la quête dans le journal).",
+	["Kept for another run, or abandoned"] = "Gardée pour une autre visite, ou abandonnée",
 
 	-- Step 105: Stratholme (dungeon, optional)
 	["Stratholme (dungeon, optional)"] = "Stratholme (donjon, facultatif)",
@@ -603,15 +604,6 @@ return {
 
 	-- Step 112: Stratholme: along the way
 	["Stratholme: along the way"] = "Stratholme : en chemin",
-	-- {item:13180} Stratholme Holy Water · {npc:11140} Egan
-	-- plural, as words: Plagued Flesh Samples = {item:13174} Plagued Flesh Sample · Restless Souls = {npc:11122} Restless Soul · Spectral Citizens = {npc:10384} Spectral Citizen
-	["Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); {item:13180} in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; equip the blaster {npc:11140} gave you, target one and use the blaster on it, then again on the soul that breaks free."] = "À ramasser dans toute la ville : les échantillons de chair pestiférée (Plagued Flesh Sample) sur les goules, les abominations et les bêtes des cryptes (pas sur les squelettes) ; l'{item:13180} dans les caisses de ravitaillement le long des rues (certaines sont piégées : des insectes pestiférés en sortent). Âmes en peine : ne pas tuer les citoyens fantomatiques et spectraux (Ghostly Citizen, Spectral Citizen) ; équiper le fusil donné par {npc:11140}, en cibler un et utiliser le fusil sur lui, puis encore sur l'âme qui s'en libère.",
-	-- {quest:5212} The Flesh Does Not Lie · {quest:5251} The Archivist · {quest:5214} The Great Ezra Grimm · {quest:5243} Houses of the Holy · {quest:5282} The Restless Souls
-	["Share {quest:5212}, {quest:5251}, {quest:5214} and {quest:5243} with your group: click each in the quest log, then Share. {quest:5282} and Renfray's painting quest cannot be shared."] = "Partager {quest:5212}, {quest:5251}, {quest:5214} et {quest:5243} avec le groupe : clic sur chacune dans le journal, puis Partager. {quest:5282} et la quête du tableau de Renfray ne se partagent pas.",
-	-- {item:13180} Stratholme Holy Water
-	["{item:13180}: supply crates"] = "{item:13180} : caisses de ravitaillement",
-	-- {npc:11122} Restless Soul
-	["{npc:11122}, freed with the blaster"] = "{npc:11122}, libérée avec le fusil",
 
 	-- Step 113: Stratholme, first visit: before going in
 	["Stratholme, first visit: before going in"] = "Stratholme, première visite : avant d'entrer",
@@ -619,11 +611,16 @@ return {
 	["First visit, the living side, by the main gate across the bridge: {object:175435}, {object:175438}, {object:175434} and the Scarlet Bastion, then {object:175433} and {object:175440}. Leave {npc:10813} alive this time: {quest:5251} must be handed in before he dies, or his head starts nothing. Warcraft Tavern (written from Classic) says the doors of the Scarlet Bastion open with {item:7146}, from {npc:6487}'s chest in the Scarlet Monastery Library: to check in game."] = "Première visite, le côté vivant, par la grande porte au bout du pont : la place du Roi, l'allée du Marché, la place des Croisés et le Bastion écarlate (Scarlet Bastion), puis {object:175433} et {object:175440}. Laisser {npc:10813} en vie cette fois : {quest:5251} doit être rendue avant sa mort, sinon sa tête ne lance rien. D'après Warcraft Tavern (écrit d'après Classic), les portes du Bastion écarlate s'ouvrent avec {item:7146}, du coffre d'{npc:6487} dans la Bibliothèque du Monastère écarlate : à vérifier en jeu.",
 	-- {quest:5212} The Flesh Does Not Lie · {npc:11035} Betina Bigglezink · {quest:5251} The Archivist · {quest:5214} The Great Ezra Grimm · {npc:11033} Smokey LaRue · {quest:5243} Houses of the Holy · {quest:5281} The Restless Souls · {npc:11140} Egan · {zone:1452} Winterspring · {npc:16016} Anthion Harmon · {npc:10508} Ras Frostwhisper · {object:176631} Menethil's Gift
 	["In the quest log: {quest:5212} ({npc:11035}), {quest:5251} (Duke Nicholas), {quest:5214} ({npc:11033}), {quest:5243} (Leonid), {quest:5281} ({npc:11140}); Renfray's painting quest, for whoever took it. Not on this route: Sweet Serenity and Corruption ({zone:1452}), the dungeon set quests (Deliana, {npc:16016}), {npc:10508}'s chain ({object:176631})."] = "Dans le journal : {quest:5212} ({npc:11035}), {quest:5251} (duc Nicholas), {quest:5214} ({npc:11033}), {quest:5243} (Leonid), {quest:5281} ({npc:11140}) ; la quête du tableau de Renfray, pour qui l'a prise. Pas sur ce parcours : Sweet Serenity et Corruption ({zone:1452}), les quêtes d'ensembles de donjon (Deliana, {npc:16016}), la suite de {npc:10508} ({object:176631}).",
+	-- {quest:5212} The Flesh Does Not Lie · {quest:5251} The Archivist · {quest:5214} The Great Ezra Grimm · {quest:5243} Houses of the Holy · {quest:5281} The Restless Souls
+	["Share {quest:5212}, {quest:5251}, {quest:5214} and {quest:5243} with your group: click each in the quest log, then Share. {quest:5281} and Renfray's painting quest cannot be shared."] = "Partager {quest:5212}, {quest:5251}, {quest:5214} et {quest:5243} avec le groupe : clic sur chacune dans le journal, puis Partager. {quest:5281} et la quête du tableau de Renfray ne se partagent pas.",
 	["Stratholme"] = "Stratholme",
 
 	-- Step 114: King's Square: Ezra Grimm
 	-- {object:175435} King's Square · {npc:11058} Ezra Grimm
 	["Past the main gate, {object:175435}: follow the road round to the left to its dead end, under the sign of {npc:11058}'s Premium Tobacco. {npc:11058}, undead (elite 61), stands in front of his shop."] = "Passé la grande porte, la place du Roi : suivre la route vers la gauche jusqu'au cul-de-sac, sous l'enseigne du tabac de {npc:11058} (Premium Tobacco). {npc:11058}, mort-vivant (élite 61), se tient devant sa boutique.",
+	-- {item:13180} Stratholme Holy Water · {npc:11140} Egan
+	-- plural, as words: Plagued Flesh Samples = {item:13174} Plagued Flesh Sample · Restless Souls = {npc:11122} Restless Soul · Spectral Citizens = {npc:10384} Spectral Citizen
+	["Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); {item:13180} in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; equip the blaster {npc:11140} gave you, target one and use the blaster on it, then again on the soul that breaks free."] = "À ramasser dans toute la ville : les échantillons de chair pestiférée (Plagued Flesh Sample) sur les goules, les abominations et les bêtes des cryptes (pas sur les squelettes) ; l'{item:13180} dans les caisses de ravitaillement le long des rues (certaines sont piégées : des insectes pestiférés en sortent). Âmes en peine : ne pas tuer les citoyens fantomatiques et spectraux (Ghostly Citizen, Spectral Citizen) ; équiper le fusil donné par {npc:11140}, en cibler un et utiliser le fusil sur lui, puis encore sur l'âme qui s'en libère.",
 
 	-- Step 115: Market Row and Crusaders' Square
 	-- {object:175438} Market Row · {object:175434} Crusaders' Square
@@ -767,7 +764,7 @@ return {
 	-- {quest:5848} Of Love and Family
 	["{quest:5848}: not done"] = "{quest:5848} : pas finie",
 	-- {quest:5848} Of Love and Family
-	["{quest:5848} is not done and the guide does not go back to Stratholme: abandon it, or keep it for a run of your own."] = "{quest:5848} n'est pas finie et le guide ne retourne pas à Stratholme : l'abandonner, ou la garder pour une visite à part.",
+	["{quest:5848} is not done and the guide does not go back to Stratholme: keep it for a run of your own, or abandon it to free the log (right-click it in the quest log)."] = "{quest:5848} n'est pas finie et le guide ne retourne pas à Stratholme : la garder pour une visite à part, ou l'abandonner pour libérer le journal (clic droit sur la quête dans le journal).",
 
 	-- Step 144: The Skeleton Key (optional)
 	-- {item:13704} Skeleton Key

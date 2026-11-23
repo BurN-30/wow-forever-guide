@@ -45,12 +45,12 @@ step Warriors: Fire Hardened Mail
   only Warrior
   when onquest 1701
   along until rfk-charlga
-  tip Roogug, the first boss, drops the Vial of Phlogiston. The other items of the quest come from Stonetalon and the Wetlands: Polestar's class guides (Fire Hardened Armor) cover them.
-  collect 6841 quest 1701                     -- Vial of Phlogiston: Roogug
+  collect 6841 quest 1701
 
 step Razorfen Kraul: Charlga Razorflank
   label rfk-charlga
   tip Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her. Each player on The Crone of the Kraul loots the medallion.
+  note "Fire Hardened Mail, for Warriors: Roogug, the first boss, drops the Vial of Phlogiston. The other items of the quest come from Stonetalon and the Wetlands: Polestar's class guides (Fire Hardened Armor) cover them." only Warrior
   collect 5792 quest 1101                     -- Razorflank's Medallion: Charlga Razorflank
   kill 4421                                   -- Charlga Razorflank
 

@@ -25,16 +25,14 @@ return {
 	-- Step 3: Warriors: Fire Hardened Mail
 	-- {quest:1701} Fire Hardened Mail
 	["Warriors: {quest:1701}"] = "Guerriers : {quest:1701}",
-	-- {item:6841} Vial of Phlogiston · {zone:1437} Wetlands
-	["Roogug, the first boss, drops the {item:6841}. The other items of the quest come from Stonetalon and the {zone:1437}: Polestar's class guides (Fire Hardened Armor) cover them."] = "Roogug, le premier boss, lâche la {item:6841}. Les autres objets de la quête viennent des Serres-Rocheuses et des {zone:1437} : les guides de classe de Polestar (Fire Hardened Armor) les couvrent.",
-	-- {item:6841} Vial of Phlogiston
-	["{item:6841}: Roogug"] = "{item:6841} : Roogug",
 
 	-- Step 4: Razorfen Kraul: Charlga Razorflank
 	-- {npc:4421} Charlga Razorflank
 	["Razorfen Kraul: {npc:4421}"] = "Kraal de Tranchebauge : {npc:4421}",
 	-- {npc:4424} Aggem Thorncurse · {npc:4428} Death Speaker Jargba · {npc:4420} Overlord Ramtusk · {npc:4422} Agathelos the Raging · {npc:4421} Charlga Razorflank · {quest:1101} The Crone of the Kraul
 	["Roogug, {npc:4424}, {npc:4428}, {npc:4420} and {npc:4422} come before her (the codex's order). {npc:4421}, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her. Each player on {quest:1101} loots the medallion."] = "Roogug, {npc:4424}, {npc:4428}, {npc:4420} et {npc:4422} viennent avant elle (l'ordre du codex). {npc:4421}, le dernier boss, combat sur la rampe devant sa hutte et s'y téléporte de temps en temps : le tank la reprend. Sa Pureté dissipe tous les effets négatifs et la rend insensible un moment : pas de dégâts sur la durée sur elle. Chaque joueur qui a {quest:1101} ramasse le médaillon.",
+	-- {quest:1701} Fire Hardened Mail · {item:6841} Vial of Phlogiston · {zone:1437} Wetlands
+	["{quest:1701}, for Warriors: Roogug, the first boss, drops the {item:6841}. The other items of the quest come from Stonetalon and the {zone:1437}: Polestar's class guides (Fire Hardened Armor) cover them."] = "{quest:1701}, pour les guerriers : Roogug, le premier boss, lâche la {item:6841}. Les autres objets de la quête viennent des Serres-Rocheuses et des {zone:1437} : les guides de classe de Polestar (Fire Hardened Armor) les couvrent.",
 
 	-- Step 5: Shamans: Elemental Aid
 	-- {quest:96264} Elemental Aid

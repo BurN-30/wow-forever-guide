@@ -40,11 +40,6 @@ step Rethiel the Greenwarden
   tip On the Green Belt, east of the road, on the way to the dig. He gives it once Blisters on the Land is done, which the route did.
   accept 95646                                -- Rethiel the Greenwarden
 
-step Songblade Search, for whoever carries it
-  when onquest 95772
-  tip Dorin Songblade's quest, from Lakeshire: his daughter Daewyn is inside.
-  accept 95772                                -- Dorin Songblade, Lakeshire
-
 step Excavation Site entrance
   tip From the meeting stone near Thelgen Rock, follow the mountain path up to the portal. A single graveyard serves the area: a wipe means a long walk back.
   note In the log before going in: Lost in the Thicket Things (Caitlin Grassman), Highland Hides (James Halloran), Horrors in the Highland (Rethiel). Share each quest with the group: click it in the quest log, then Share. Talk to Ardin Grassman and Daewyn as soon as you find them inside: their follow-ups start with them.
@@ -72,7 +67,7 @@ step Relic Guardian
   tip The last boss, level 31, woken by the Archival Panel on its right. Thunderclap slows everyone within 10 yards, and it knocks back and stuns the tank for 5 seconds: rotate stuns and slows, keep healing the tank, kite round the structures if need be. Ardin Grassman waits on the wooden scaffold by its arena.
   turnin 95647                                -- Ardin Grassman, each player talks to him
   accept 95809
-  accept 95810 item 270865                    -- Titan Relic, from the Relic Guardian: right-click it
+  accept 95810 item 270865 optional           -- Titan Relic, from the Relic Guardian: right-click it
 
 step Rethiel's reward
   zone Wetlands
@@ -80,6 +75,7 @@ step Rethiel's reward
   turnin 95646                                -- Rethiel the Greenwarden
 
 step Prospector Whelgar
+  when onquest 95810
   tip In the small cave of the outdoor dig, west of the road.
   turnin 95810
   accept 98824
@@ -97,6 +93,7 @@ step Lakeshire: Dorin Songblade
   turnin 95795
 
 step Ironforge: High Explorer Magellas
+  when onquest 98824
   zone Ironforge
   tip Fly from Menethil Harbor to Ironforge, as the route does next: Magellas stands in the Hall of Explorers. He says you lack the Titan Relic? Abandon the quest and take it again from Whelgar for a new relic. Last stop of the chapter: the route's own guide comes back once this is handed in.
   fly "Ironforge"

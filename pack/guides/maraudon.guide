@@ -64,11 +64,11 @@ step Maraudon: before going in
 
 step Maraudon: along the way
   along until mara-end
-  tip Collected all through the dungeon: the Theradric Crystal Carvings, from the centaurs, satyrs and dryads and from most bosses. Every player with the quest loots their own.
-  collect 17684 x25 quest 7028        -- Theradric Crystal Carving
+  collect 17684 x25 quest 7028
 
 step Maraudon: the orange side
   tip On the orange side, by the Vylestem Vines: use the Filled Cerulean Vial near one, a Noxxious Scion comes out (45, immune to Nature); kill it to heal the vine, 8 times. Noxxion, at the end of this side, drops the Celebrian Rod.
+  note Collected all through the dungeon: the Theradric Crystal Carvings, from the centaurs, satyrs and dryads and from most bosses. Every player with the quest loots their own.
   kill 13696 x8 quest 7041            -- Noxxious Scion: one per vine
   collect 17702 quest 7044            -- Celebrian Rod: Noxxion
 

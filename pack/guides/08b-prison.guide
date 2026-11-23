@@ -54,15 +54,16 @@ step Old Town: Nikova Raskol
   tip Nikova Raskol stands in Old Town: the Red Wool Bandanas she wants drop from the Defias inside.
   accept 388                                  -- Nikova Raskol
 
+# The accepts of two quests carried from this pack's former route, for their objective lines inside
+# (the compiler wants an accept before them). Done at once for whoever carries them: no text of their
+# own, the advice is on the objective's line (Head of Targorr, Hand of Dextren Ward).
 step What Comes Around, for whoever carries it
   when onquest 386
-  tip What Comes Around (Guard Berton, Lakeshire) wants Targorr's head: he is in the prison, and the hand-in comes after the run.
-  accept 386                                  -- Guard Berton, Lakeshire
+  accept 386
 
 step Crime and Punishment, for whoever carries it
   when onquest 377
-  tip Crime and Punishment (Councilman Millstipe, Darkshire) wants Dextren Ward's hand: he is in the prison, and the hand-in comes after the run.
-  accept 377                                  -- Councilman Millstipe, Darkshire
+  accept 377
 
 step Enter the Stockade
   tip The gate is by Warden Thelwater, at the top of the stairs on the canal. Group of 5 at 24 to 29, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.
@@ -73,13 +74,13 @@ step The entry corridor and Targorr
   tip Cells line both sides, 3 or 4 elites each, and runners flee into the next cell for help: stop them or clear each cell as you pass. Targorr the Dread hides in a side cell of this corridor (often first on the right or second on the left); a patrol walks between the two wings.
   note Red Wool Bandanas and the prisoners for Quell the Uprising come from every Defias.
   kill 1696                                   -- Targorr the Dread
-  collect 3630 quest 386                      -- Head of Targorr: Targorr the Dread, elite 24
+  collect 3630 quest 386                      -- Head of Targorr: Targorr the Dread, elite 24. For What Comes Around (Guard Berton, Lakeshire): the hand-in comes after the run.
   note At the junction, type /target Bruegal Ironknuckle: if a frame shows, the rare elite (26) is in a cell nearby, with the best loot of the dungeon.
 
 step The west wing: Dextren Ward
   tip Left at the junction, to the small hall at the end. Clear every room around it first: his Intimidating Shout fears the group into fresh packs. He runs at low health: stop him.
   kill 1663                                   -- Dextren Ward
-  collect 3628 quest 377                      -- Hand of Dextren Ward, elite 26
+  collect 3628 quest 377                      -- Hand of Dextren Ward, elite 26. For Crime and Punishment (Councilman Millstipe, Darkshire): the hand-in comes after the run.
 
 step The east wing: Kam, Hamhock and Bazil Thredd
   tip Right at the junction. Kam Deepfury sits in a cell (second on the left); Hamhock comes with two linked Insurgents and casts Chain Lightning: crowd-control an add and spread out. Bazil Thredd waits at the very end: he hits one target hard and his Smoke Bomb stuns, so keep the tank topped up.

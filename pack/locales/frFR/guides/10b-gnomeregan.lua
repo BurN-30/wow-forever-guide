@@ -68,27 +68,22 @@ return {
 	["Group of 5, levels 29 to 38 in the group finder. Everything inside is elite and the mechanical foes hit hard."] = "Groupe de 5, niveaux 29 à 38 dans la recherche de groupe. Tout est élite à l'intérieur et les machines frappent fort.",
 	-- {quest:2928} Gyrodrillmatic Excavationators · {npc:6579} Shoni the Shilent · {zone:1453} Stormwind · {quest:2929} The Grand Betrayal · {quest:2930} Data Rescue · {quest:2922} Save Techbot's Brain! · {object:171524} Tinker Town · {quest:2926} Gnogaine · {quest:2924} Essential Artificials · {npc:6169} Klockmort Spannerspan · {quest:2962} The Only Cure is More Green Glow · {item:9280} Yellow Punch Card · {item:9308} Grime-Encrusted Object · {object:142487} Sparklematic 5200
 	["In the quest log before going in: {quest:2928} ({npc:6579}, {zone:1453}), {quest:2929}, {quest:2930} and {quest:2922} ({object:171524}), {quest:2926} (Ozzie, Kharanos). If you took them: {quest:2924} ({npc:6169}, {object:171524}), {quest:2962} (Ozzie, Kharanos). Bring the {item:9280} (or the White one), and 3 silver per {item:9308} you want to put in the {object:142487}."] = "Dans le journal avant d'entrer : {quest:2928} ({npc:6579}, {zone:1453}), {quest:2929}, {quest:2930} et {quest:2922} ({object:171524}), {quest:2926} (Ozzie, Kharanos). Si elles ont été prises : {quest:2924} ({npc:6169}, {object:171524}), {quest:2962} (Ozzie, Kharanos). Apporter la {item:9280} (ou la blanche), et 3 pièces d'argent par {item:9308} à mettre dans {object:142487}.",
+	["Share the quests with your group: click each in the quest log, then Share."] = "Partager les quêtes avec le groupe : clic sur chacune dans le journal, puis Partager.",
 	["Gnomeregan"] = "Gnomeregan",
 
 	-- Step 9: Gnomeregan: along the way
 	["Gnomeregan: along the way"] = "Gnomeregan : en chemin",
-	-- {item:9309} Robo-mechanical Guts · {npc:6579} Shoni the Shilent · {quest:2924} Essential Artificials
-	-- plural, as words: Artificial Extrapolators = {object:142344} Artificial Extrapolator
-	["Collected all through the dungeon. {item:9309} (24 for {npc:6579}): the troggs, slimes, leper gnomes and machines. {quest:2924}: the Artificial Extrapolators, rectangular boxes on the floor all around the dungeon; each one vanishes once used, so a full group on the quest may have to search the whole dungeon. Every player with the quest loots their own."] = "À ramasser dans tout le donjon. {item:9309} (24 pour {npc:6579}) : les troggs, limons, gnomes lépreux et machines. {quest:2924} : les extrapolateurs (Artificial Extrapolator), des boîtes rectangulaires posées au sol partout dans le donjon ; chacune disparaît une fois utilisée, un groupe entier sur la quête doit donc parfois fouiller tout le donjon. Chaque joueur qui a la quête ramasse les siens.",
-	["Share the quests with your group: click each in the quest log, then Share."] = "Partager les quêtes avec le groupe : clic sur chacune dans le journal, puis Partager.",
-	-- {item:9278} Essential Artificial
-	-- plural, as words: Artificial Extrapolators = {object:142344} Artificial Extrapolator
-	["{item:9278}: Artificial Extrapolators"] = "{item:9278} : extrapolateurs (Artificial Extrapolator)",
-	-- {item:9365} High Potency Radioactive Fallout
-	["{item:9365}: the heavy phial, on a living irradiated slime or horror"] = "{item:9365} : la fiole lourde, sur un limon ou une horreur irradiés vivants",
-	-- {quest:2945} Grime-Encrusted Ring
-	-- plural, as words: Dark Iron Agents = {npc:6212} Dark Iron Agent
-	["{quest:2945}, a drop from the Dark Iron Agents: right-click it"] = "{quest:2945}, sur les agents Sombrefer : clic droit dessus",
 
 	-- Step 10: Gnomeregan: the Sparklematic, the Dormitory and the Clean Room
 	["Gnomeregan: the Sparklematic, the Dormitory and the Clean Room"] = "Gnomeregan : le Sparklematic, le dortoir et la salle propre",
 	-- {object:142487} Sparklematic 5200 · {quest:2945} Grime-Encrusted Ring · {npc:7850} Kernobee · {npc:7079} Viscous Fallout · {object:3204} Booty Bay · {object:142475} Matrix Punchograph 3005-B
 	["{object:142487} machines stand in the room before the Dormitory: put the {quest:2945} in one to clean it. In the Dormitory, {npc:7850} waits before the {npc:7079} room: his escort runs all the way back to the dungeon's entrance; near the end a countdown starts, get him out before it reaches zero. His reward waits at {object:3204}, where the route goes at about 33. {object:142475}, in the Dormitory south of the Clean Room, turns the Yellow card into a Blue one."] = "Les machines {object:142487} sont dans la salle avant le dortoir : mettre l'{quest:2945} dans l'une d'elles pour le nettoyer. Dans le dortoir, {npc:7850} attend avant la salle de {npc:7079} : son escorte ramène jusqu'à l'entrée du donjon ; vers la fin, un compte à rebours démarre, le sortir avant zéro. Sa récompense attend à Baie-du-Butin, où le parcours passe vers 33. La matrice d'encodage 3005-B, dans le dortoir au sud de la salle blanche, change la carte jaune en bleue.",
+	-- {item:9309} Robo-mechanical Guts · {npc:6579} Shoni the Shilent · {quest:2924} Essential Artificials
+	-- plural, as words: Artificial Extrapolators = {object:142344} Artificial Extrapolator
+	["Collected all through the dungeon. {item:9309} (24 for {npc:6579}): the troggs, slimes, leper gnomes and machines. {quest:2924}: the Artificial Extrapolators, rectangular boxes on the floor all around the dungeon; each one vanishes once used, so a full group on the quest may have to search the whole dungeon. Every player with the quest loots their own."] = "À ramasser dans tout le donjon. {item:9309} (24 pour {npc:6579}) : les troggs, limons, gnomes lépreux et machines. {quest:2924} : les extrapolateurs (Artificial Extrapolator), des boîtes rectangulaires posées au sol partout dans le donjon ; chacune disparaît une fois utilisée, un groupe entier sur la quête doit donc parfois fouiller tout le donjon. Chaque joueur qui a la quête ramasse les siens.",
+	-- {item:9365} High Potency Radioactive Fallout · {quest:2962} The Only Cure is More Green Glow · {quest:2945} Grime-Encrusted Ring
+	-- plural, as words: Dark Iron Agents = {npc:6212} Dark Iron Agent
+	["The {item:9365}, for {quest:2962}: the heavy phial, on a living irradiated slime or horror. The {quest:2945} drops from the Dark Iron Agents: right-click it."] = "La {item:9365}, pour {quest:2962} : la fiole lourde, sur un limon ou une horreur irradiés vivants. {quest:2945} tombe des agents Sombrefer : clic droit dessus.",
 	-- {npc:7079} Viscous Fallout
 	["{npc:7079}, in the Clean Room"] = "{npc:7079}, dans la salle propre",
 	-- {item:9282} Blue Punch Card · {object:142475} Matrix Punchograph 3005-B
@@ -140,5 +135,4 @@ return {
 	-- Step 20: Stormwind: Shoni the Shilent
 	-- {zone:1453} Stormwind · {npc:6579} Shoni the Shilent · {object:28027} Dwarven District
 	["Take the Deeprun Tram to {zone:1453}: {npc:6579} is in the {object:28027}, by the tram. Last stop of the chapter: the route's own guide comes back once this is handed in."] = "Le Tram des profondeurs jusqu'à {zone:1453} : {npc:6579} est dans le {object:28027}, près du tram. Dernier arrêt du chapitre : le guide du parcours revient une fois la quête rendue.",
-
 }
