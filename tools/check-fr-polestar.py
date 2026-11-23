@@ -38,7 +38,8 @@ STARTS = ["deja", "apres", "tres", "pres", "etre", "meme", "premiere", "derniere
           "a cote", "jusqu'a", "la-bas", "derriere", "lacher", "interieur", "a l'est", "a l'ouest", "a l'interieur"]
 UNACCENTED += [w[0].upper() + w[1:] for w in STARTS]
 BAD_WORD = re.compile(r"(?<![\w'’-])(" + "|".join(re.escape(w) for w in UNACCENTED) + r")(?![\w'’-])")
-MOJIBAKE = re.compile("Ã.|â€|Â |�")
+TITLE_WORDS = {"the", "and", "for", "from", "with", "into"}
+MOJIBAKE =re.compile("Ã.|â€|Â |�")
 COLON = re.compile(r"(?<=[^\s\d}])[:;](?=\s|$)")  # a French ':' or ';' after a word wants a space
 
 
@@ -60,9 +61,11 @@ def check(en, fr):
     out = []
     if not fr.strip():
         return ["empty French"]
-    # A text made only of names (every word capitalised) stays in English when the game has no French
-    # name for it: the player reads it so on the screen. Any other text must be translated.
-    if fr == en and re.search(r"(?<![\w'])[a-z]{3,}", TOKEN.sub("", en)):
+    # A text made only of names (every word capitalised but the little words of a title, as in a quest
+    # name) stays in English when the game has no French name for it: the player reads it so on the
+    # screen. Any other text must be translated.
+    lower = [w for w in re.findall(r"(?<![\w'])[a-z]{3,}", TOKEN.sub("", en)) if w not in TITLE_WORDS]
+    if fr == en and lower:
         out.append("French identical to the English")
     if Counter(TOKEN.findall(en)) != Counter(TOKEN.findall(fr)):
         out.append(f"tokens differ: {sorted(TOKEN.findall(en))} / {sorted(TOKEN.findall(fr))}")
