@@ -6,7 +6,9 @@ quest tips, calm defaults, quest automation exceptions) is loaded by Polestar.to
 UI/GuideFrame.lua has gear, "?" help and "_" reduce buttons and a line menu entry,
 UI/GuideFrameTabs.lua leaves room for those buttons,
 Core/Automation.lua asks the module before it accepts or turns in a quest,
-and Quests/PartyChat.lua says only an objective's plain words in party chat.
+Quests/PartyChat.lua says only an objective's plain words in party chat,
+UI/WhatsNew.lua can show the Groupe Alliance notes under their own title,
+and Polestar_frFR/Texts.lua has French for guide texts Polestar leaves in English.
 The flight game (Polestar_Arcade/src/main.lua) has an AZERTY keyboard layout.
 Everything else is Polestar 0.4.2.2 as released.
 

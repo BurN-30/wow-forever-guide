@@ -16,18 +16,28 @@
    module's entry in a guide line's right-click menu, and
    Core/Automation.lua asks the module before it accepts or turns in a quest, and
    Quests/PartyChat.lua says only an objective's plain words in party chat (0.9.7);
-   ItemUseData.lua is made by tools/item-uses.py from the client's tables (0.10.0)
+   ItemUseData.lua is made by tools/item-uses.py from the client's tables (0.10.0);
+   branch greffe: GreffeData.lua and Greffe.lua (this pack's chapters offered on Polestar's own
+   route) and Notes.lua (written here by tools/notes-jeu.py from CHANGELOG.md, the pack version's
+   "### En jeu" / "### In game"), shown in UI/WhatsNew.lua's window, which takes WN.Extra;
+   Polestar_frFR/Texts.lua gets addons-src/Polestar_frFR/Complement.lua (made by
+   tools/fr-polestar.py: French for the texts Polestar leaves in English, only where its table
+   has none) right before its RegisterGuideTexts call, with a warning when the release is another
+   Polestar version than the one the complement was read from
    (POLESTAR_CHANGES below, each applied exactly once or the build stops). Polestar is GPL-3.0: the changed files say so.
 """
-import pathlib, shutil, subprocess, sys
+import importlib.util, json, pathlib, re, shutil, subprocess, sys
 
 forge, root, release = sys.argv[1], sys.argv[2], pathlib.Path(sys.argv[3])
 repo = pathlib.Path(__file__).resolve().parent.parent
 pack = repo / "pack"
 addons = repo / "addons"
-MODULE = ["Reliability.lua", "Tips.lua", "Danger.lua", "GroupeAlliance.lua", "ItemUseData.lua", "ItemUse.lua"]
+MODULE = ["Reliability.lua", "Tips.lua", "Danger.lua", "GroupeAlliance.lua", "ItemUseData.lua", "ItemUse.lua",
+          "GreffeData.lua", "Notes.lua", "Greffe.lua"]
+GENERATED = {"Notes.lua"}  # written by this build into the module, not in addons-src
 NOTICE = "Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide)"
 ARCADE_NOTICE = "Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide)"
+GREFFE_NOTICE = ARCADE_NOTICE
 
 POLESTAR_CHANGES = [
     ("Polestar.toc", "Alts\\Alts.xml\n",
@@ -104,9 +114,25 @@ POLESTAR_CHANGES = [
      "UI/GuideFrame.lua has gear, \"?\" help and \"_\" reduce buttons and a line menu entry,\r\n"
      "UI/GuideFrameTabs.lua leaves room for those buttons,\r\n"
      "Core/Automation.lua asks the module before it accepts or turns in a quest,\r\n"
-     "and Quests/PartyChat.lua says only an objective's plain words in party chat.\r\n"
+     "Quests/PartyChat.lua says only an objective's plain words in party chat,\r\n"
+     "UI/WhatsNew.lua can show the Groupe Alliance notes under their own title,\r\n"
+     "and Polestar_frFR/Texts.lua has French for guide texts Polestar leaves in English.\r\n"
      "The flight game (Polestar_Arcade/src/main.lua) has an AZERTY keyboard layout.\r\n"
      "Everything else is Polestar 0.4.2.2 as released.\r\n"),
+    # Branch greffe: Polestar's "What's new" window shows this pack's notes (Greffe.lua sets
+    # WN.Extra, an entry like Polestar's own with its own title and footer line): the window
+    # renders WN.Extra when set, under its title, and opening it then leaves Polestar's own
+    # "seen" flag alone, so Polestar's notes still open when Polestar changes version.
+    ("UI/WhatsNew.lua", "\tlocal entry = NOTES[1]\n",
+     "\t-- " + GREFFE_NOTICE + ": another addon's notes\n"
+     "\t-- (WN.Extra, the Groupe Alliance's) under their own title and footer line.\n"
+     "\tlocal entry = WN.Extra or NOTES[1]\n"),
+    ("UI/WhatsNew.lua", "\th.Title:SetText(L[\"What's new in Polestar %s\"]:format(entry.version))\n",
+     "\th.Title:SetText(entry.title or L[\"What's new in Polestar %s\"]:format(entry.version))\n"),
+    ("UI/WhatsNew.lua", "\tF.Site:SetText(L[\"Full notes: %s\"]:format(SITE))\n",
+     "\tF.Site:SetText(entry.site or L[\"Full notes: %s\"]:format(SITE))\n"),
+    ("UI/WhatsNew.lua", "\tns.DB().whatsNewSeen = WN.LATEST -- shown: a reload or logout from here does not repeat it\n",
+     "\tif not WN.Extra then ns.DB().whatsNewSeen = WN.LATEST end -- shown: a reload or logout from here does not repeat it (" + GREFFE_NOTICE + ": not for WN.Extra)\n"),
     # 0.12.2: AZERTY keyboards in the flight game (Polestar_Arcade, GPL-2.0-or-later).
     # The game names a key by the letter printed on it, so the W A S D of the original
     # sit far apart on an AZERTY keyboard. `/arcade azerty` or `/arcade qwerty` chooses;
@@ -186,7 +212,29 @@ for d in sorted((pack / "dist").iterdir()):
 polestar = addons / "Polestar"
 (polestar / "GroupeAlliance").mkdir()
 for f in MODULE:
-    shutil.copy2(repo / "addons-src" / "GroupeAlliance" / f, polestar / "GroupeAlliance" / f)
+    if f not in GENERATED:
+        shutil.copy2(repo / "addons-src" / "GroupeAlliance" / f, polestar / "GroupeAlliance" / f)
+# Notes.lua: this pack version's in-game notes (tools/notes-jeu.py).
+spec = importlib.util.spec_from_file_location("notes_jeu", repo / "tools" / "notes-jeu.py")
+notes_jeu = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(notes_jeu)
+version = json.loads((pack / "pack.json").read_text(encoding="utf-8"))["version"]
+(polestar / "GroupeAlliance" / "Notes.lua").write_text(
+    notes_jeu.notes_lua(version, (repo / "CHANGELOG.md").read_text(encoding="utf-8-sig")), encoding="utf-8", newline="\n")
+# Polestar_frFR/Texts.lua: our French for the texts Polestar leaves in English, only where its
+# table has none (tools/fr-polestar.py), right before it registers the table.
+complement = (repo / "addons-src" / "Polestar_frFR" / "Complement.lua").read_text(encoding="utf-8")
+texts = addons / "Polestar_frFR" / "Texts.lua"
+call = '\nPolestar.RegisterGuideTexts("frFR", "guides", t)\n'
+body = texts.read_bytes().decode("utf-8")
+if body.count(call) != 1:
+    sys.exit(f"Polestar change not applied: Polestar_frFR/Texts.lua: {call!r} found {body.count(call)} times")
+texts.write_bytes(body.replace(call, "\n" + complement + call).encode("utf-8"))
+released = re.search(r"^## Version: (\S+)", (polestar / "Polestar.toc").read_text(encoding="utf-8-sig"), re.M)
+made = re.search(r"^-- Polestar version: (\S+)", complement, re.M)
+if released and made and released.group(1) != made.group(1):
+    print(f"WARNING: Polestar_frFR complement comes from Polestar {made.group(1)}, the release is {released.group(1)}: "
+          "run tools/fr-polestar.py on its checkout (its French still applies, only where Polestar has none)")
 for name, old, new in POLESTAR_CHANGES:
     p = polestar / name
     text = p.read_bytes().decode("utf-8")

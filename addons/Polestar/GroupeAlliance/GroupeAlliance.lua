@@ -1073,6 +1073,11 @@ SlashCmdList.GROUPEALLIANCE = function(msg)
 		else GA.ItemUseToggle() end
 		return
 	end
+	-- /ga donjon (or dungeon): the dungeon chapter offered now (Greffe.lua).
+	if (word == "donjon" or word == "dungeon") and GA.GreffeSlash then
+		GA.GreffeSlash()
+		return
+	end
 	local arg = (msg or ""):lower():match("lang%s+(%a+)")
 	local db = settings()
 	if arg == "fr" or arg == "en" then db.lang = arg

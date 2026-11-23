@@ -314,9 +314,11 @@ end
 -- Lays the newest notes out; the window takes their height.
 local function render()
 	local K = UI.Welcome.Kit
-	local entry = NOTES[1]
+	-- Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide): another addon's notes
+	-- (WN.Extra, the Groupe Alliance's) under their own title and footer line.
+	local entry = WN.Extra or NOTES[1]
 	local h, p = F.Hero, F.Body
-	h.Title:SetText(L["What's new in Polestar %s"]:format(entry.version))
+	h.Title:SetText(entry.title or L["What's new in Polestar %s"]:format(entry.version))
 	K.place(h.Title, K.EDGE, 40)
 	local heroH = max(112, 40 + h.Title:GetStringHeight() + 28)
 	h:SetHeight(heroH)
@@ -355,7 +357,7 @@ local function render()
 	sf:SetHeight(viewH)
 	W.SetScrollContent(sf, viewH < bodyH and y or bodyH, viewH) -- scrolled to the end, the last note keeps its margin
 	W.ScrollTo(sf, 0)
-	F.Site:SetText(L["Full notes: %s"]:format(SITE))
+	F.Site:SetText(entry.site or L["Full notes: %s"]:format(SITE))
 	F:SetHeight(math.ceil(fixed + viewH))
 	if F.Rim and W.LayoutRim then W.LayoutRim(F) end
 end
@@ -391,7 +393,7 @@ local function open(why)
 		end
 	end
 	pending = nil
-	ns.DB().whatsNewSeen = WN.LATEST -- shown: a reload or logout from here does not repeat it
+	if not WN.Extra then ns.DB().whatsNewSeen = WN.LATEST end -- shown: a reload or logout from here does not repeat it (Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide): not for WN.Extra)
 	if not F then build() end
 	render()
 	F:Show()

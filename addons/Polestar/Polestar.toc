@@ -53,3 +53,6 @@ GroupeAlliance\Danger.lua
 GroupeAlliance\GroupeAlliance.lua
 GroupeAlliance\ItemUseData.lua
 GroupeAlliance\ItemUse.lua
+GroupeAlliance\GreffeData.lua
+GroupeAlliance\Notes.lua
+GroupeAlliance\Greffe.lua
