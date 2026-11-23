@@ -86,6 +86,14 @@ GA.GREFFE = {
 		where = { frFR = "Tanaris · groupe de 5 · Gahz'rilla, avec le Marteau de Zul'Farrak",
 			enUS = "Tanaris · group of 5 · Gahz'rilla, with the Mallet of Zul'Farrak" },
 	},
+	{
+		id = "groupe-alliance/greffe/temple-englouti", key = "temple", dungeon = "sunken-temple",
+		turnin = { 2585, 2581, 2601 }, min = 50, max = 56, done = { 1475 },
+		route = "forever/alliance/50-60/01-burning-steppes",
+		name = { frFR = "Le temple englouti", enUS = "The Sunken Temple" },
+		where = { frFR = "Marais des Chagrins · groupe de 5 · niveaux 50 à 60",
+			enUS = "Swamp of Sorrows · group of 5 · levels 50 to 60" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to

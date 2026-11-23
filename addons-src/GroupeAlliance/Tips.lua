@@ -1355,4 +1355,12 @@ ns.GA.Tips = {
 		frFR = "Second passage à Zul'Farrak : Qiaga la Gardienne (élite) en haut de l'autel donne le Maillet sacré ; utilisé sur l'autel au sommet de Jintha'Alor, il devient le Marteau de Zul'Farrak, qui appelle Gahz'rilla. Un seul par groupe.",
 		enUS = "Second Zul'Farrak run: Qiaga the Keeper (elite) at the top of the altar drops the Sacred Mallet; used on the altar at the top of Jintha'Alor, it becomes the Mallet of Zul'Farrak that calls Gahz'rilla. One per group.",
 	},
+	[1469] = { -- Rhapsody's Tale (route)
+		frFR = "Après ce rendu, Brohann propose Dans le temple d'Atal'Hakkar (Into The Temple of Atal'Hakkar) : la quête du chapitre du Temple englouti, proposé vers 51 depuis le donjon de Garde-du-Néant. La prendre si le groupe compte y aller.",
+		enUS = "After this hand-in, Brohann offers Into The Temple of Atal'Hakkar: the quest of the Sunken Temple chapter, offered around 51 from Nethergarde Keep. Take it if the group means to go.",
+	},
+	[3444] = { -- The Stone Circle (route)
+		frFR = "Après ce rendu, Marvon propose Dans les profondeurs (Into the Depths) et Le secret du cercle (Secret of the Circle) : deux quêtes du Temple englouti, rendues à l'intérieur (chapitre proposé vers 51). Les prendre si le groupe compte y aller.",
+		enUS = "After this hand-in, Marvon offers Into the Depths and Secret of the Circle: two Sunken Temple quests, handed in inside (chapter offered around 51). Take them if the group means to go.",
+	},
 }
