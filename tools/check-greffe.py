@@ -1741,6 +1741,82 @@ def finished_before(args):
                before=at_hook(ROUTE_DM, 155, 20), after=after)
 
 
+LATE_TURNIN = r'''
+return function(G, q)
+	-- Handed in, but the game's completed flag not set yet (BENCH.completed left alone).
+	G.dropLog(q)
+	BENCH.Fire("QUEST_TURNED_IN", q, 1000, 0)
+	BENCH.Fire("QUEST_REMOVED", q)
+	BENCH.Fire("QUEST_LOG_UPDATE")
+	G.tick()
+end
+'''
+
+
+def late_flag_end(args):
+    """R4: the chapter's last end hand-in made while the game's completed flag is not set yet when the
+    module looks (it can come late, Polestar's Core/Engine.lua says so and keeps its own list): the
+    tab closes all the same, on the session's hand-ins."""
+    fin = (166, 214, 373, 168, 167)
+
+    def before(L, G, ns):
+        L.globals().GREFFE.level = 21
+
+    def after(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        for q in fin[:-1]:
+            G.accept(q)
+            G.turnin(q)
+        G.accept(fin[-1])
+        G.tick(2)
+        r.check(CHAPTER_DM in G.tabs(), f"avant le dernier rendu de la fin ({fin[-1]}), l'onglet des Mortemines est ouvert : {G.tabs()}")
+        n = len(cp.lua_list(L.globals().BENCH.printed))
+        L.execute(LATE_TURNIN)(G, fin[-1])
+        G.tick(4)
+        flag = bool(L.globals().BENCH.completed[fin[-1]])
+        said = " | ".join(str(x) for x in cp.lua_list(G.printed(n + 1)))
+        r.say(f"{fin[-1]} rendue, drapeau « quête rendue » du jeu encore absent ({flag}) : onglets {G.tabs()} ; actif {G.active()[0]} ; chat : {said}")
+        r.check(not flag and CHAPTER_DM not in G.tabs() and G.active()[0] == ROUTE_DM and "terminé" in said,
+                "l'onglet se ferme sans attendre le drapeau du jeu (rendus de la session), le parcours revient, « chapitre terminé »")
+    return run(args, "Scénario R4 : fin du chapitre avant le drapeau « quête rendue » du jeu (Mortemines)",
+               prelude=ACCOUNT + open_chapter(ROUTE_DM, CHAPTER_DM), before=before, after=after)
+
+
+def reopened_finished(args):
+    """R5: a chapter already finished, opened again by the player from the guide list: a hand-in of
+    another quest leaves it open; a hand-in of its own (a conditional one left) still closes it."""
+    fin = (166, 214, 373, 168, 167)
+    other = 2040  # Underground Assault (Shoni the Shilent): a hand-in of the chapter outside its `fin`
+    stranger = 109  # Report to Gryan Stoutmantle: no hand-in of this chapter
+
+    def before(L, G, ns):
+        L.globals().GREFFE.level = 22
+        for q in fin:
+            L.globals().BENCH.completed[q] = True
+        G.addLog(stranger)
+
+    def after(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        r.check(CHAPTER_DM in G.tabs(), f"chapitre fini rouvert depuis la liste des guides : onglets {G.tabs()}")
+        n = len(cp.lua_list(L.globals().BENCH.printed))
+        G.turnin(stranger)
+        G.tick(4)
+        said = " | ".join(str(x) for x in cp.lua_list(G.printed(n + 1)))
+        r.say(f"Rendu d'une quête sans rapport ({stranger}) : onglets {G.tabs()} ; chat : {said or '-'}")
+        r.check(CHAPTER_DM in G.tabs() and "terminé" not in said, "un rendu sans rapport ne referme pas le chapitre rouvert, aucun « chapitre terminé »")
+        G.accept(other)
+        G.turnin(other)
+        G.tick(4)
+        said = " | ".join(str(x) for x in cp.lua_list(G.printed(n + 1)))
+        r.say(f"Rendu d'une quête du chapitre ({other}), sa fin déjà faite : onglets {G.tabs()} ; chat : {said}")
+        r.check(CHAPTER_DM not in G.tabs(), "un rendu du chapitre le referme, comme avant")
+    return run(args, "Scénario R5 : chapitre fini rouvert depuis la liste (Mortemines)",
+               prelude=ACCOUNT + char_db([ROUTE_DM, CHAPTER_DM], 2, ', gaGreffe = { answers = { mortemines = { a = "done", level = 21 } }, from = {} }'),
+               before=before, after=after)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--ui", type=pathlib.Path, required=True)
@@ -1770,7 +1846,7 @@ def main():
              ("mig-chapter", migration_chapter), ("notes", notes),
              ("b1-steps", step_holds), ("b1-skip", group_skipped_end), ("b1-nokey", no_key_end), ("b2-stop", stop_first),
              ("a1-horde", horde), ("a10-busy", busy_and_tabs), ("a4-background", background_close), ("b6-slash", slash_again),
-             ("a3-before", finished_before)]
+             ("a3-before", finished_before), ("r4-late", late_flag_end), ("r5-reopened", reopened_finished)]
     for key, fn in todo:
         if args.only and key not in args.only.split(","):
             continue
