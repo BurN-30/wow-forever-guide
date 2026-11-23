@@ -96,4 +96,6 @@ return {
 	-- {zone:1453} Stormwind
 	["{zone:1453} rewards"] = "Récompenses à {zone:1453}",
 	["Last stop of the chapter: the route's own guide comes back once these are handed in."] = "Dernier arrêt du chapitre : le guide du parcours revient une fois ces quêtes rendues.",
+	-- {npc:1646} Baros Alexston · {quest:389} Bazil Thredd · {npc:1719} Warden Thelwater
+	["{npc:1646}: {quest:389}, for the Stockade chapter ({npc:1719})"] = "{npc:1646} : {quest:389}, pour le chapitre de la Prison ({npc:1719})",
 }

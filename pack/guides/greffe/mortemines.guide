@@ -9,9 +9,11 @@
 # is closed (GroupeAlliance/Greffe.lua, GreffeData.lua). No `when group` question and no `next`:
 # opening the chapter is the answer, and the end goes back to the route.
 #
-# Polestar's route already does the Defias chain up to the traitor (65, 132, 135, 141, 142, 155)
-# and hands in An Unsent Letter (373) on its Stormwind stop and takes the Stockade's quest (389)
-# there: this chapter starts at Gryan's and Scout Riell's quests and stops at the rewards.
+# Polestar's route already does the Defias chain up to the traitor (65, 132, 135, 141, 142, 155):
+# this chapter starts at Gryan's and Scout Riell's quests and stops at the rewards. An Unsent Letter
+# (373) and the Stockade's Bazil Thredd (389) are on Polestar's Stormwind stop only behind `when
+# dungeon`, off in 0.4.2.2: the chapter hands in the letter to Baros Alexston and takes 389 from
+# him, for The Stockade Riots (391) in the Stockade chapter.
 guide groupe-alliance/greffe/mortemines
 title Dungeon · The Deadmines (18-24)
 folder Group Alliance
@@ -93,3 +95,4 @@ step Stormwind rewards
   turnin 167
   turnin 2040 optional                        -- Shoni the Shilent
   turnin 373                                  -- Baros Alexston, Cathedral Square
+  accept 389 optional                         -- Baros Alexston: Bazil Thredd, for the Stockade chapter (Warden Thelwater)
