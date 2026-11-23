@@ -17,7 +17,7 @@
    Core/Automation.lua asks the module before it accepts or turns in a quest, and
    Quests/PartyChat.lua says only an objective's plain words in party chat (0.9.7);
    ItemUseData.lua is made by tools/item-uses.py from the client's tables (0.10.0);
-   branch greffe: GreffeData.lua and Greffe.lua (this pack's chapters offered on Polestar's own
+   0.13.0: GreffeData.lua and Greffe.lua (this pack's chapters offered on Polestar's own
    route) and Notes.lua (written here by tools/notes-jeu.py from CHANGELOG.md, the pack version's
    "### En jeu" / "### In game"), shown in UI/WhatsNew.lua's window, which takes WN.Extra;
    Polestar_frFR/Texts.lua gets addons-src/Polestar_frFR/Complement.lua (made by
@@ -25,8 +25,19 @@
    has none) right before its RegisterGuideTexts call, with a warning when the release is another
    Polestar version than the one the complement was read from
    (POLESTAR_CHANGES below, each applied exactly once or the build stops). Polestar is GPL-3.0: the changed files say so.
+4. Polestar's inner functions the module calls (POLESTAR_USES: the dungeon heads-up's candidates,
+   its card, the tabs, the Codex, the retired guides) are still there, word for word, or the build
+   stops: another Polestar version that renamed one would leave a chapter unoffered, or two offers
+   for one dungeon, without any error in game.
+5. The quick checks; the build stops on the first that fails: tools/check-lua.py (the module and the
+   pack under Lua 5.1), tools/check-fr-polestar.py (our French for Polestar's guides),
+   tools/check-accroches.py (each chapter's hook still on Polestar's route, in range) and
+   tools/check-chapitres.py (each chapter against the route up to its hook). The bench
+   (tools/check-greffe.py, about a minute) needs the game's interface files: run it by hand.
 """
 import importlib.util, json, pathlib, re, shutil, subprocess, sys
+
+sys.stdout.reconfigure(encoding="utf-8")
 
 forge, root, release = sys.argv[1], sys.argv[2], pathlib.Path(sys.argv[3])
 repo = pathlib.Path(__file__).resolve().parent.parent
@@ -109,8 +120,10 @@ POLESTAR_CHANGES = [
      "end\n"),
     ("README.txt", "Leveling guides for World of Warcraft: Forever.\r\n",
      "Leveling guides for World of Warcraft: Forever.\r\n\r\n"
-     + NOTICE + ": the GroupeAlliance folder (Wowhead links,\r\n"
-     "quest tips, calm defaults, quest automation exceptions) is loaded by Polestar.toc,\r\n"
+     + GREFFE_NOTICE + ": the GroupeAlliance folder (Wowhead links,\r\n"
+     "quest tips, calm defaults, quest automation exceptions, the Groupe Alliance pack's\r\n"
+     "dungeon chapters offered on the route, which then stand in for the dungeon heads-up\r\n"
+     "of the same dungeons) is loaded by Polestar.toc,\r\n"
      "UI/GuideFrame.lua has gear, \"?\" help and \"_\" reduce buttons and a line menu entry,\r\n"
      "UI/GuideFrameTabs.lua leaves room for those buttons,\r\n"
      "Core/Automation.lua asks the module before it accepts or turns in a quest,\r\n"
@@ -119,7 +132,7 @@ POLESTAR_CHANGES = [
      "and Polestar_frFR/Texts.lua has French for guide texts Polestar leaves in English.\r\n"
      "The flight game (Polestar_Arcade/src/main.lua) has an AZERTY keyboard layout.\r\n"
      "Everything else is Polestar 0.4.2.2 as released.\r\n"),
-    # Branch greffe: Polestar's "What's new" window shows this pack's notes (Greffe.lua sets
+    # 0.13.0: Polestar's "What's new" window shows this pack's notes (Greffe.lua sets
     # WN.Extra, an entry like Polestar's own with its own title and footer line): the window
     # renders WN.Extra when set, under its title, and opening it then leaves Polestar's own
     # "seen" flag alone, so Polestar's notes still open when Polestar changes version.
@@ -184,6 +197,29 @@ POLESTAR_CHANGES = [
      "\telseif cmd == \"aggro\" then\n\t\tdb.aggroPause = not db.aggroPause\n"),
 ]
 
+# Polestar's inner functions and messages the Groupe Alliance module relies on (Greffe.lua), each
+# a line that must be in the release exactly as written. UI.DungeonToast.Candidates is called
+# through its table by DT.Check, so the module's wrapper (GA.HeldCandidates) is the one Polestar calls.
+POLESTAR_USES = [
+    ("UI/DungeonToast.lua", "UI.DungeonToast = DT\n"),
+    ("UI/DungeonToast.lua", "function DT.Candidates(level, mode, questId)\n"),
+    ("UI/DungeonToast.lua", "\tlocal c = DT.Candidates(level, mode, questId)[1]\n"),
+    ("UI/ClassToast.lua", "function CT.ShowCard(m)\n"),
+    ("UI/ClassToast.lua", "function CT.Hide()\n"),
+    ("UI/ClassToast.lua", "\tif was and ns.Fire then ns.Fire(\"HEADS_UP_HIDDEN\", was) end\n"),
+    ("Core/Engine.lua", "function Engine.OpenTab(id, activate, auto)\n"),
+    ("Core/Engine.lua", "function Engine.SelectTab(index)\n"),
+    ("Core/Engine.lua", "function Engine.CloseTab(index, quiet)\n"),
+    ("Core/Engine.lua", "function Engine.GetTabs(counts)\n"),
+    ("Core/Engine.lua", "function Engine.TabIds()\n"),
+    ("Core/Engine.lua", "function Engine.StartGuide()\n"),
+    ("Core/Engine.lua", "\tif not quiet then ns.Fire(\"TAB_CLOSED\", tab.guide.id) end\n"),
+    ("Core/Guides.lua", "Guides.GuideMatches = guideMatches\n"),
+    ("Core/Guides.lua", "function ns.RetireGuides(packId, list)\n"),
+    ("Lookup/Codex.lua", "function Codex.IsLoaded()\n"),
+]
+
+
 def run(*args):
     r = subprocess.run([forge, *args, str(pack), "--root", root, "--quiet"], cwd=pack,
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -241,4 +277,17 @@ for name, old, new in POLESTAR_CHANGES:
     if text.count(old) != 1:
         sys.exit(f"Polestar change not applied: {name}: {old!r} found {text.count(old)} times")
     p.write_bytes(text.replace(old, new).encode("utf-8"))
+missing = [f"{name}: {line.strip()}" for name, line in POLESTAR_USES
+           if (polestar / name).read_bytes().decode("utf-8").count(line) < 1]
+if missing:
+    sys.exit("Polestar changed a function the Groupe Alliance module calls (tools/build.py, POLESTAR_USES): "
+             + " | ".join(missing) + ". Read the new Polestar code, adapt GroupeAlliance/Greffe.lua, then this list.")
 print("addons:", ", ".join(sorted(p.name for p in addons.iterdir())))
+for check in ("check-lua.py", "check-fr-polestar.py", "check-accroches.py", "check-chapitres.py"):
+    r = subprocess.run([sys.executable, str(repo / "tools" / check)], capture_output=True, text=True,
+                       encoding="utf-8", errors="replace")
+    lines = (r.stdout + r.stderr).strip().splitlines()
+    print(f"{check}: " + (lines[-1] if lines else "(nothing)"))
+    if r.returncode:
+        print(r.stdout + r.stderr)
+        sys.exit(f"{check} failed: the addons are built, fix this before committing them")
