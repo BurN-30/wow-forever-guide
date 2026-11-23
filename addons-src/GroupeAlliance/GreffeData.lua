@@ -70,6 +70,22 @@ GA.GREFFE = {
 		where = { frFR = "Ouest de la Désolace · groupe de 5 · niveaux 46 à 55",
 			enUS = "Western Desolace · group of 5 · levels 46 to 55" },
 	},
+	{
+		id = "groupe-alliance/greffe/zul-farrak", key = "zulfarrak", dungeon = "zulfarrak",
+		turnin = 2864, min = 44, max = 50, done = { 2865, 2768, 3042 },
+		route = "forever/alliance/40-50/04-tanaris",
+		name = { frFR = "Zul'Farrak", enUS = "Zul'Farrak" },
+		where = { frFR = "Nord-ouest de Tanaris · groupe de 5 · niveaux 44 à 54",
+			enUS = "North-western Tanaris · group of 5 · levels 44 to 54" },
+	},
+	{
+		id = "groupe-alliance/greffe/zul-farrak-2", key = "zulfarrak2", dungeon = "zulfarrak",
+		turnin = 2941, accept = 2605, min = 48, max = 53, done = { 2770 },
+		route = "forever/alliance/40-50/07-un-goro-crater",
+		name = { frFR = "Zul'Farrak, second passage", enUS = "Zul'Farrak, second run" },
+		where = { frFR = "Tanaris · groupe de 5 · Gahz'rilla, avec le Marteau de Zul'Farrak",
+			enUS = "Tanaris · group of 5 · Gahz'rilla, with the Mallet of Zul'Farrak" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to

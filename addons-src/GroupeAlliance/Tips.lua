@@ -1345,4 +1345,14 @@ ns.GA.Tips = {
 		frFR = "Le camp de Rhapsody est en haut d'une colline : le sentier part vers 20,48, près d'un griffon dressé amical.",
 		enUS = "Rhapsody's camp sits on a hilltop: the path starts near 20,48, by a friendly trained gryphon.",
 	},
+	-- Lot B (route): quests of Polestar's own route whose next quest belongs to a dungeon chapter
+	-- of this pack (pack/guides/greffe), taken there or never.
+	[2769] = { -- The Brassbolts Brothers (route)
+		frFR = "Après ce rendu, Wizzle propose Gahz'rilla : le boss d'un second passage à Zul'Farrak, proposé vers 49 depuis Gadgetzan, avec le Marteau de Zul'Farrak fait dans les Hinterlands.",
+		enUS = "After this hand-in, Wizzle offers Gahz'rilla: the boss of a second Zul'Farrak run, offered around 49 from Gadgetzan, with the Mallet of Zul'Farrak made in the Hinterlands.",
+	},
+	[2989] = { -- The Altar of Zul (route)
+		frFR = "Second passage à Zul'Farrak : Qiaga la Gardienne (élite) en haut de l'autel donne le Maillet sacré ; utilisé sur l'autel au sommet de Jintha'Alor, il devient le Marteau de Zul'Farrak, qui appelle Gahz'rilla. Un seul par groupe.",
+		enUS = "Second Zul'Farrak run: Qiaga the Keeper (elite) at the top of the altar drops the Sacred Mallet; used on the altar at the top of Jintha'Alor, it becomes the Mallet of Zul'Farrak that calls Gahz'rilla. One per group.",
+	},
 }
