@@ -311,7 +311,7 @@ step Shrine of Thaurissan: the monument
   label brd-v1-end
   when done brd-start
   tip Back up through the Domicile to the Shrine: place Ironfel on the Monument of Franclorn Forgewright. The Shadowforge Key is the reward. Then walk out the way you came: round the stands, through the Ring of the Law (its gates stay open) and the Detention Block.
-  turnin 3802                         -- Monument of Franclorn Forgewright
+  turnin 3802 optional                -- Monument of Franclorn Forgewright
 
 step Flame Crest: Maxwort Uberglint
   when complete 4123
