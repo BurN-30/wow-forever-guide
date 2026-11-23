@@ -19587,3 +19587,223 @@ do
 	end
 	register()
 end
+
+-- Source: guides/greffe/monastere-ecarlate.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/greffe/monastere-ecarlate",
+			pack = "groupe-alliance",
+			title = "Dungeon · The Scarlet Monastery (34-46)",
+			faction = "Alliance",
+			minLevel = 36,
+			maxLevel = 46,
+			category = "Dungeons",
+			folder = "Group Alliance",
+			zone = 1424,
+			zoneName = "Hillsbrad Foothills",
+			author = "BurN-30",
+			version = 1,
+			group = true,
+			names = { ["item:273169"] = "The Lost Magic of the Runemasters", ["item:5536"] = "Mythology of the Titans", ["npc:264265"] = "Magus Olvek", ["npc:3974"] = "Houndmaster Loksey", ["npc:3975"] = "Herod", ["npc:3976"] = "Scarlet Commander Mograine", ["npc:3977"] = "High Inquisitor Whitemane", ["npc:3980"] = "Raleigh the Devout", ["npc:6487"] = "Arcanist Doan", ["object:171531"] = "The Library", ["quest:1053"] = "In the Name of the Light", ["quest:96800"] = "Past Due", ["zone:1420"] = "Tirisfal Glades", ["zone:1421"] = "Silverpine Forest", ["zone:1455"] = "Ironforge" },
+			steps = {
+				{
+					title = "Southshore: {npc:3980}",
+					note = "The Scarlet Monastery: four wings in {zone:1420}, for a group of 5, levels 30 to 42 (group finder: Graveyard 30-38, Library 33-41, Armory 36-44, Cathedral 38-46). {object:171531}, the Armory and the Cathedral hold the quests.",
+					goals = {
+						{ t = "accept", quest = 1053, title = "In the Name of the Light", npc = 3980, npcName = "Raleigh the Devout", minLevel = 34, qlvl = 40, pre = { 1052 }, preTitles = { [1052] = "Down the Scarlet Path" }, map = 1424, x = 51.47, y = 58.35, z = 18.5, f = "e", note = "{npc:3980}, upstairs in the inn: four Scarlet bosses" },
+					},
+				},
+				{
+					title = "{npc:264265}",
+					note = "On the way north: he stands on the western edge of the Dalaran crater, by the road from Hillsbrad to Silverpine.",
+					goals = {
+						{ t = "accept", quest = 96800, title = "Past Due", npc = 264265, npcName = "Magus Olvek", minLevel = 30, qlvl = 38, map = 1416, x = 9.75, y = 63.36, f = "e", note = "{npc:264265}: {quest:96800}, {npc:6487}'s book" },
+					},
+				},
+				{
+					title = "Before entering the Scarlet Monastery",
+					note = "Ride through {zone:1421}, then east across {zone:1420}: Horde land, keep clear of Brill and the guards on the roads. The monastery stands in the far north-east; the four wings are four doors in the courtyard.",
+					goals = {
+						{ t = "note", text = "In the log before going in: {quest:1053} (Raleigh, Southshore) and {quest:96800} ({npc:264265}, Alterac); {item:5536} too for whoever took it from Mae Paledust in {zone:1455}. Share each quest with the group: click it in the quest log, then Share." },
+						{ t = "goto", text = "Scarlet Monastery", map = 1420, x = 82.6, y = 33.8, f = "e", r = 25 },
+					},
+				},
+				{
+					title = "{object:171531}: {npc:3974} and {npc:6487}",
+					note = "Loksey and his dogs wait in a small alcove near the start. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for {npc:264265} is on a table on the right of Doan's room; {item:5536}, for whoever took it in {zone:1455}, on the floor of a Library corridor, under a window; the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him.",
+					goals = {
+						{ t = "kill", quest = 1053, title = "In the Name of the Light", target = "Houndmaster Loksey", npc = 3974, count = 1, oi = 4, note = "{npc:3974}, elite 34", group = { kind = "elite", rank = 1 } },
+						{ t = "kill", target = "Arcanist Doan", npc = 6487, note = "{npc:6487}, elite 37", group = { kind = "elite", rank = 1 } },
+						{ t = "collect", quest = 96800, title = "Past Due", item = 273169, itemName = "The Lost Magic of the Runemasters", oi = 1, note = "{item:273169}, red book on a table in Doan's room" },
+					},
+				},
+				{
+					title = "The Armory: {npc:3975}",
+					note = "{npc:3975} spins with Whirlwind: everyone but the tank steps away until it ends. When he dies, a wave of trainees runs in: fight them at the door.",
+					goals = {
+						{ t = "kill", quest = 1053, title = "In the Name of the Light", target = "Herod", npc = 3975, count = 1, oi = 3, note = "{npc:3975}, elite 40", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "The Cathedral: Mograine and Whitemane",
+					note = "Clear the chapel's pews first: pulling Mograine brings the whole room. Mograine first; when he falls, Whitemane runs in, puts the group to sleep and raises him once: kill him again, then her.",
+					goals = {
+						{ t = "kill", quest = 1053, title = "In the Name of the Light", target = "Scarlet Commander Mograine", npc = 3976, count = 1, oi = 2, note = "{npc:3976}, elite 42", group = { kind = "elite", rank = 1 } },
+						{ t = "kill", quest = 1053, title = "In the Name of the Light", target = "High Inquisitor Whitemane", npc = 3977, count = 1, oi = 1, note = "{npc:3977}, elite 42", group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "Back to {npc:264265}",
+					goals = {
+						{ t = "turnin", quest = 96800, title = "Past Due", npc = 264265, npcName = "Magus Olvek", map = 1416, x = 9.75, y = 63.36, f = "e" },
+					},
+				},
+				{
+					title = "Southshore rewards",
+					note = "Last stop of the chapter: the route's own guide comes back once this is handed in.",
+					goals = {
+						{ t = "turnin", quest = 1053, title = "In the Name of the Light", npc = 3980, npcName = "Raleigh the Devout", map = 1424, x = 51.47, y = 58.35, z = 18.5, f = "e", note = "{npc:3980}, upstairs in the inn" },
+					},
+				},
+			},
+		})
+	end
+	register()
+end
+
+-- Source: guides/greffe/mortemines.guide
+do
+	local function register()
+		Polestar.RegisterGuide({
+			id = "groupe-alliance/greffe/mortemines",
+			pack = "groupe-alliance",
+			title = "Dungeon · The Deadmines (18-24)",
+			faction = "Alliance",
+			minLevel = 18,
+			maxLevel = 24,
+			category = "Dungeons",
+			folder = "Group Alliance",
+			zone = 1436,
+			zoneName = "Westfall",
+			author = "BurN-30",
+			version = 1,
+			group = true,
+			names = { ["item:1875"] = "Thistlenettle's Badge", ["item:1894"] = "Miners' Union Card", ["item:2874"] = "An Unsent Letter", ["item:5397"] = "Defias Gunpowder", ["item:7365"] = "Gnoam Sprecklesprocket", ["item:915"] = "Red Silk Bandana", ["npc:1646"] = "Baros Alexston", ["npc:1763"] = "Gilnid", ["npc:234"] = "Gryan Stoutmantle", ["npc:3586"] = "Miner Johnson", ["npc:622"] = "Goblin Engineer", ["npc:624"] = "Undead Excavator", ["npc:626"] = "Foreman Thistlenettle", ["npc:636"] = "Defias Blackguard", ["npc:639"] = "Edwin VanCleef", ["npc:641"] = "Goblin Woodcarver", ["npc:642"] = "Sneed's Shredder", ["npc:643"] = "Sneed", ["npc:644"] = "Rhahk'Zor", ["npc:646"] = "Mr. Smite", ["npc:647"] = "Captain Greenskin", ["npc:656"] = "Wilder Thistlenettle", ["npc:6579"] = "Shoni the Shilent", ["npc:820"] = "Scout Riell", ["object:2098"] = "Cathedral Square", ["object:28027"] = "Dwarven District", ["object:81"] = "Sentinel Hill", ["quest:155"] = "The Defias Brotherhood", ["quest:168"] = "Collecting Memories", ["quest:2040"] = "Underground Assault", ["quest:214"] = "Red Silk Bandanas", ["zone:1453"] = "Stormwind" },
+			written = { ["In the log before the portal: {quest:155} and {quest:214} ({object:81}), {quest:168} and Oh Brother... ({zone:1453}), {quest:2040} if {npc:6579} gave it. One missing? {npc:234} and {npc:820} at {object:81}, {npc:656} in {zone:1453}."] = "In the log before the portal: The Defias Brotherhood and Red Silk Bandanas (Sentinel Hill), Collecting Memories and Oh Brother... (Stormwind), Underground Assault if Shoni gave it. One missing? Gryan and Scout Riell at Sentinel Hill, Wilder Thistlenettle in Stormwind." },
+			steps = {
+				{
+					title = "{object:81}: the Deadmines quests",
+					note = "The Deadmines: a 5-player dungeon under Moonbrook, levels 16 to 21 (17 to 26 in the group finder): at 20 or more it goes well. {npc:234} and {npc:820} stand at the top of the {object:81} tower.",
+					goals = {
+						{ t = "note", text = "Keep 6 free quest log slots. Everyone takes the quests at their own pace; meet at the Moonbrook entrance for the run." },
+						{ t = "accept", quest = 166, title = "The Defias Brotherhood", npc = 234, npcName = "Gryan Stoutmantle", minLevel = 14, qlvl = 22, pre = { 155 }, preTitles = { [155] = "The Defias Brotherhood" }, map = 1436, x = 56.33, y = 47.52, z = 60.7, f = "e", note = "{npc:234}: {npc:639}" },
+						{ t = "accept", quest = 214, title = "Red Silk Bandanas", npc = 820, npcName = "Scout Riell", minLevel = 14, qlvl = 17, pre = { 155 }, preTitles = { [155] = "The Defias Brotherhood" }, map = 1436, x = 56.67, y = 47.35, z = 95.8, f = "e", note = "{npc:820}, at the top of the tower: {quest:214}" },
+					},
+				},
+				{
+					title = "{zone:1453}: the miners' quests",
+					note = "Fly to {zone:1453} for two more quests of the mine; train while you are here. {npc:656} stands in the tavern of the {object:28027}, {npc:6579} nearby.",
+					goals = {
+						{ t = "fly", location = "Stormwind", node = 2 },
+						{ t = "accept", quest = 168, title = "Collecting Memories", npc = 656, npcName = "Wilder Thistlenettle", minLevel = 14, qlvl = 18, map = 1453, x = 70.31, y = 40.82, z = 99.9, note = "{npc:656}: {quest:168}" },
+						{ t = "accept", quest = 167, title = "Oh Brother. . .", npc = 656, npcName = "Wilder Thistlenettle", minLevel = 15, qlvl = 20, map = 1453, x = 70.31, y = 40.82, z = 99.9, note = "Oh Brother..." },
+						{ t = "accept", quest = 2040, title = "Underground Assault", npc = 6579, npcName = "Shoni the Shilent", minLevel = 15, qlvl = 20, map = 1453, x = 62.63, y = 34.11, z = 94.9, optional = true, note = "{npc:6579}: {quest:2040}" },
+					},
+				},
+				{
+					title = "Before entering the Deadmines",
+					note = "In the log before the portal: {quest:155} and {quest:214} ({object:81}), {quest:168} and Oh Brother... ({zone:1453}), {quest:2040} if {npc:6579} gave it. One missing? {npc:234} and {npc:820} at {object:81}, {npc:656} in {zone:1453}.",
+					goals = {
+						{ t = "note", text = "Share each quest with the group before going in: click it in the quest log, then Share." },
+						{ t = "fly", location = "Sentinel Hill", node = 4 },
+						{ t = "goto", text = "The Deadmines", map = 1436, x = 42.5, y = 71.7, f = "e", r = 25 },
+					},
+				},
+				{
+					title = "The mine outside the portal",
+					note = "Moonbrook's smithy hides the mine. Before the portal, the purple area of the minimap holds elite undead miners in pairs: the Miners' Union Cards drop there, not inside, and {npc:626} stands at the far end with a linked add.",
+					goals = {
+						{ t = "note", text = "Alone: around 20-21 for the cards, 23 for the Foreman. Two players: fine at 19-20. The cards drop rarely and each player loots their own: skip them if time runs short." },
+						{ t = "collect", quest = 168, title = "Collecting Memories", item = 1894, itemName = "Miners' Union Card", count = 4, oi = 1, map = 1436, x = 40.86, y = 80.81, f = "e", spots = { { x = 41.3, y = 82, r = 51, n = 19 } }, note = "{item:1894}: Undead Excavators and Dynamiters, elite", fromNpcs = { { npc = 623, npcName = "Skeletal Miner" }, { npc = 625, npcName = "Undead Dynamiter" }, { npc = 624, npcName = "Undead Excavator" } }, group = { kind = "elite", rank = 1 } },
+						{ t = "collect", quest = 167, title = "Oh Brother. . .", item = 1875, itemName = "Thistlenettle's Badge", count = 1, oi = 1, map = 1436, x = 42.2, y = 82.6, f = "e", note = "{item:1875}: {npc:626}, elite", from = "Foreman Thistlenettle", fromKind = "npc", fromRank = 1, fromId = 626, fromNpcs = { { npc = 626, npcName = "Foreman Thistlenettle" } }, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{npc:644}",
+					note = "Group of 5, level 18 or more. Pull the two Watchmen away from {npc:644} first, and turn around after every boss: patrols come from behind. {npc:3586}, a rare, may stand in the small tunnel on the left after him: kill his miners first.",
+					goals = {
+						{ t = "note", text = "{quest:214} drop from Defias all through the dungeon." },
+						{ t = "kill", target = "Rhahk'Zor", npc = 644, group = { kind = "elite", rank = 1 } },
+						{ t = "collect", quest = 214, title = "Red Silk Bandanas", item = 915, itemName = "Red Silk Bandana", count = 10, oi = 1, map = 1436, x = 42.11, y = 80.19, f = "e", spots = { { x = 42.9, y = 78.6, r = 57, n = 22 }, { x = 40, y = 78.1, r = 59, n = 19 }, { x = 42.3, y = 75.6, r = 55, n = 19 }, { x = 43.2, y = 73.2, r = 34, n = 7 } }, note = "{item:915}: any Defias", from = "Defias Digger", fromKind = "npc", fromAlso = "Defias Worker", fromId = 824, fromAlsoId = 1727, fromNpcs = { { npc = 1727, npcName = "Defias Worker" }, { npc = 824, npcName = "Defias Digger" } } },
+					},
+				},
+				{
+					title = "{npc:642} and {npc:643}",
+					note = "Clear every {npc:641} of the lumber room first, pulling them back to the previous room: the Shredder's Terrify sends you running into them. {npc:643} jumps out when it breaks; he disarms.",
+					goals = {
+						{ t = "collect", quest = 2040, title = "Underground Assault", item = 7365, itemName = "Gnoam Sprecklesprocket", count = 1, oi = 1, optional = true, note = "{item:7365}: {npc:642}", group = { kind = "elite", rank = 1 } },
+						{ t = "kill", target = "Sneed", npc = 643, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{npc:1763}'s foundry",
+					note = "Goblin Engineers and Craftsmen summon golems: kill or stun the goblin, the golem goes with it. {npc:1763} has an Engineer at his side.",
+					goals = {
+						{ t = "kill", target = "Gilnid", npc = 1763, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "The cannon door",
+					note = "The {item:5397} barrel sits in the alcove on the right just before the cannon. Fire the cannon, then step back: a patrol of elites comes out through the broken door. A Rogue can pick the lock instead.",
+					goals = {
+						{ t = "task", text = "The cannon door is open" },
+					},
+				},
+				{
+					title = "{npc:646}",
+					note = "In the cove: two stealthed Defias Blackguards join him by the walkway, kill them before he reaches 66%. At 66% and 33% he stuns the whole group for a few seconds and changes weapons: keep the tank's health up before each.",
+					goals = {
+						{ t = "kill", target = "Mr. Smite", npc = 646, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{npc:647}",
+					note = "On the ship. Crowd-control the Squallshaper, kill the Companion, then the Pirate, then Greenskin facing away from the group (Cleave).",
+					goals = {
+						{ t = "kill", target = "Captain Greenskin", npc = 647, group = { kind = "elite", rank = 1 } },
+					},
+				},
+				{
+					title = "{npc:639}",
+					note = "Captain's cabin, top of the ship. Two Blackguards join at the pull, two more at half health: a stun at 51 to 55% skips the second pair. Everyone on the quest loots their own head and their own letter.",
+					goals = {
+						{ t = "collect", quest = 166, title = "The Defias Brotherhood", item = 3637, itemName = "Head of VanCleef", count = 1, oi = 1, group = { kind = "elite", rank = 2 } },
+						{ t = "accept", quest = 373, title = "The Unsent Letter", item = 2874, itemName = "An Unsent Letter", minLevel = 16, qlvl = 22, note = "{item:2874}, on VanCleef: right-click it, it opens the Stockade chain" },
+						{ t = "note", text = "Cookie, on the lower deck, is optional: interrupt his healing cast. Do not hearth: leave by the back, along the coast." },
+					},
+				},
+				{
+					title = "{object:81} rewards",
+					note = "Out by the back of the cove and north along the road to {object:81}.",
+					goals = {
+						{ t = "turnin", quest = 166, title = "The Defias Brotherhood", npc = 234, npcName = "Gryan Stoutmantle", map = 1436, x = 56.33, y = 47.52, z = 60.7, f = "e" },
+						{ t = "turnin", quest = 214, title = "Red Silk Bandanas", npc = 820, npcName = "Scout Riell", map = 1436, x = 56.67, y = 47.35, z = 95.8, f = "e", note = "{npc:820}, top of the tower" },
+					},
+				},
+				{
+					title = "{zone:1453} rewards",
+					note = "Last stop of the chapter: the route's own guide comes back once these are handed in.",
+					goals = {
+						{ t = "fly", location = "Stormwind", node = 2 },
+						{ t = "turnin", quest = 168, title = "Collecting Memories", npc = 656, npcName = "Wilder Thistlenettle", map = 1453, x = 70.31, y = 40.82, z = 99.9, note = "{npc:656}, {object:28027}" },
+						{ t = "turnin", quest = 167, title = "Oh Brother. . .", npc = 656, npcName = "Wilder Thistlenettle", map = 1453, x = 70.31, y = 40.82, z = 99.9 },
+						{ t = "turnin", quest = 2040, title = "Underground Assault", npc = 6579, npcName = "Shoni the Shilent", map = 1453, x = 62.63, y = 34.11, z = 94.9, optional = true },
+						{ t = "turnin", quest = 373, title = "The Unsent Letter", npc = 1646, npcName = "Baros Alexston", map = 1453, x = 57.74, y = 47.86, z = 101.8, note = "{npc:1646}, {object:2098}" },
+					},
+				},
+			},
+		})
+	end
+	register()
+end

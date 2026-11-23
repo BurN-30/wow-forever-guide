@@ -1,0 +1,95 @@
+# Written for this pack by BurN-30 (GPL-3.0). Same sources as 07b-mortemines.guide (Polestar's
+# Forever data and Dungeons codex; boss order, quest drops and tips from Wowhead Forever, read on
+# 2026-11-08, rewritten). Not played in game yet.
+#
+# Self-contained chapter for Polestar's own route (prototype, branch greffe): the Groupe Alliance
+# module offers it once The Defias Traitor (155) is turned in at Sentinel Hill, which Polestar's
+# route does alone at about level 20 (forever/alliance/03-loch-modan), and opens it in a tab of its
+# own: Polestar's guide keeps its place in its tab and comes back when this chapter ends or its tab
+# is closed (GroupeAlliance/Greffe.lua, GreffeData.lua). No `when group` question and no `next`:
+# opening the chapter is the answer, and the end goes back to the route.
+#
+# Polestar's route already does the Defias chain up to the traitor (65, 132, 135, 141, 142, 155)
+# and hands in An Unsent Letter (373) on its Stormwind stop and takes the Stockade's quest (389)
+# there: this chapter starts at Gryan's and Scout Riell's quests and stops at the rewards.
+guide groupe-alliance/greffe/mortemines
+title Dungeon · The Deadmines (18-24)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 18-24
+zone Westfall
+
+step Sentinel Hill: the Deadmines quests
+  tip The Deadmines: a 5-player dungeon under Moonbrook, levels 16 to 21 (17 to 26 in the group finder): at 20 or more it goes well. Gryan Stoutmantle and Scout Riell stand at the top of the Sentinel Hill tower.
+  note Keep 6 free quest log slots. Everyone takes the quests at their own pace; meet at the Moonbrook entrance for the run.
+  accept 166                                  -- Gryan Stoutmantle: Edwin VanCleef
+  accept 214                                  -- Scout Riell, at the top of the tower: Red Silk Bandanas
+
+step Stormwind: the miners' quests
+  zone Stormwind City
+  tip Fly to Stormwind for two more quests of the mine; train while you are here. Wilder Thistlenettle stands in the tavern of the Dwarven District, Shoni the Shilent nearby.
+  fly "Stormwind"
+  accept 168                                  -- Wilder Thistlenettle: Collecting Memories
+  accept 167                                  -- Oh Brother...
+  accept 2040 optional                        -- Shoni the Shilent: Underground Assault
+
+step Before entering the Deadmines
+  zone Westfall
+  tip In the log before the portal: The Defias Brotherhood and Red Silk Bandanas (Sentinel Hill), Collecting Memories and Oh Brother... (Stormwind), Underground Assault if Shoni gave it. One missing? Gryan and Scout Riell at Sentinel Hill, Wilder Thistlenettle in Stormwind.
+  note Share each quest with the group before going in: click it in the quest log, then Share.
+  fly "Sentinel Hill"
+  goto 42.5,71.7 "The Deadmines" r 25
+
+step The mine outside the portal
+  tip Moonbrook's smithy hides the mine. Before the portal, the purple area of the minimap holds elite undead miners in pairs: the Miners' Union Cards drop there, not inside, and Foreman Thistlenettle stands at the far end with a linked add.
+  note Alone: around 20-21 for the cards, 23 for the Foreman. Two players: fine at 19-20. The cards drop rarely and each player loots their own: skip them if time runs short.
+  collect 1894 quest 168                      -- Miners' Union Card: Undead Excavators and Dynamiters, elite
+  collect 1875 quest 167 @42.2,82.6           -- Thistlenettle's Badge: Foreman Thistlenettle, elite
+
+step Rhahk'Zor
+  tip Group of 5, level 18 or more. Pull the two Watchmen away from Rhahk'Zor first, and turn around after every boss: patrols come from behind. Miner Johnson, a rare, may stand in the small tunnel on the left after him: kill his miners first.
+  note Red Silk Bandanas drop from Defias all through the dungeon.
+  kill 644                                    -- Rhahk'Zor
+  collect 915 quest 214                       -- Red Silk Bandana: any Defias
+
+step Sneed's Shredder and Sneed
+  tip Clear every Goblin Woodcarver of the lumber room first, pulling them back to the previous room: the Shredder's Terrify sends you running into them. Sneed jumps out when it breaks; he disarms.
+  collect 7365 quest 2040 optional            -- Gnoam Sprecklesprocket: Sneed's Shredder
+  kill 643                                    -- Sneed
+
+step Gilnid's foundry
+  tip Goblin Engineers and Craftsmen summon golems: kill or stun the goblin, the golem goes with it. Gilnid has an Engineer at his side.
+  kill 1763                                   -- Gilnid
+
+step The cannon door
+  tip The Defias Gunpowder barrel sits in the alcove on the right just before the cannon. Fire the cannon, then step back: a patrol of elites comes out through the broken door. A Rogue can pick the lock instead.
+  task "The cannon door is open"
+
+step Mr. Smite
+  tip In the cove: two stealthed Defias Blackguards join him by the walkway, kill them before he reaches 66%. At 66% and 33% he stuns the whole group for a few seconds and changes weapons: keep the tank's health up before each.
+  kill 646                                    -- Mr. Smite
+
+step Captain Greenskin
+  tip On the ship. Crowd-control the Squallshaper, kill the Companion, then the Pirate, then Greenskin facing away from the group (Cleave).
+  kill 647                                    -- Captain Greenskin
+
+step Edwin VanCleef
+  tip Captain's cabin, top of the ship. Two Blackguards join at the pull, two more at half health: a stun at 51 to 55% skips the second pair. Everyone on the quest loots their own head and their own letter.
+  collect 3637 quest 166                      -- Head of VanCleef
+  accept 373 item 2874                        -- An Unsent Letter, on VanCleef: right-click it, it opens the Stockade chain
+  note Cookie, on the lower deck, is optional: interrupt his healing cast. Do not hearth: leave by the back, along the coast.
+
+step Sentinel Hill rewards
+  tip Out by the back of the cove and north along the road to Sentinel Hill.
+  turnin 166                                  -- Gryan Stoutmantle
+  turnin 214                                  -- Scout Riell, top of the tower
+
+step Stormwind rewards
+  zone Stormwind City
+  tip Last stop of the chapter: the route's own guide comes back once these are handed in.
+  fly "Stormwind"
+  turnin 168                                  -- Wilder Thistlenettle, Dwarven District
+  turnin 167
+  turnin 2040 optional                        -- Shoni the Shilent
+  turnin 373                                  -- Baros Alexston, Cathedral Square
