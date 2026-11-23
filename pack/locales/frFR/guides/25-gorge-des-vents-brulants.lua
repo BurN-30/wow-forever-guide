@@ -41,40 +41,45 @@ return {
 	-- {object:179827} Wanted/Missing/Lost & Found
 	["The {object:179827} board"] = "Le panneau {object:179827}",
 
-	-- Step 9: Greater Lava Spider on the way
+	-- Step 8: Culling the Competition
+	["Culling the Competition"] = "Réduire la concurrence (Culling the Competition)",
+	["Take the bounty from the board only if you want to hunt the linked dwarf packs with a group. Skip it if you are alone."] = "Prendre cette prime au tableau seulement pour chasser en groupe les nains, qui se battent en groupes liés. Seul ? La passer.",
+
+	-- Step 10: Greater Lava Spider on the way
 	-- {npc:5858} Greater Lava Spider
 	["{npc:5858} on the way"] = "{npc:5858} en chemin",
 
-	-- Step 10: Zamael Lunthistle
-	["The night elf stands alone west of Thorium Point. Hear his story."] = "L'elfe de la nuit se tient seul à l'ouest de la Halte du Thorium. Écoutez son histoire.",
+	-- Step 11: Zamael Lunthistle
+	-- {npc:8436} Zamael Lunthistle · {npc:8282} Highlord Mastrogonde
+	["These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:8436} stands in the Twilight camp at Firewatch Ridge, west of Thorium Point, among level 48-49 Twilight elites, with {npc:8282} (51, rare elite) beside him: a group of 4. Skip it if you are alone."] = "Ce sont des monstres élites : mieux vaut se grouper et chercher des joueurs avec qui la faire. {npc:8436} se tient dans le camp du Crépuscule de la Crête de Guet-du-feu, à l'ouest de la Halte du Thorium, parmi des élites du Crépuscule de niveau 48-49, avec le {npc:8282} (51, élite rare) à côté de lui : un groupe de 4. Seul ? La passer.",
 
-	-- Step 13: Kalaran Windblade
+	-- Step 14: Kalaran Windblade
 	["Kalaran stands on the rim of the Cauldron, south of Thorium Point. Listen to his story."] = "Velarok se tient sur le bord du Chaudron, au sud de la Halte du Thorium. Écoutez son histoire.",
 
-	-- Step 16: On the way
+	-- Step 17: On the way
 	["On the way"] = "En chemin",
 	-- {npc:5846} Dark Iron Taskmaster
 	["{npc:5846} along the way to Thorium Point"] = "{npc:5846} sur le chemin vers la Halte du Thorium",
 	-- {npc:5844} Dark Iron Slaver
 	["{npc:5844} along the way to Thorium Point"] = "{npc:5844} sur le chemin vers la Halte du Thorium",
 
-	-- Step 17: Firewatch Ridge: kill these as you meet them
+	-- Step 18: Firewatch Ridge: kill these as you meet them
 	["Firewatch Ridge: kill these as you meet them"] = "Crête de Guet-du-feu : tuez-les au fur et à mesure",
 	-- {item:10551} Thorium Plated Dagger · {item:18959} Smithing Tuyere · {object:147516} Dark Iron · {item:11818} Grimesilt Outhouse Key
 	-- plural, as words: Heavy War Golems = {npc:5854} Heavy War Golem · Magma Elementals = {npc:5855} Magma Elemental · Lookouts = {npc:14634} Lookout · Dark Iron Slavers = {npc:5844} Dark Iron Slaver
 	["The spiders roam the plateaus and lava pools in the south-west of the gorge.\nHeavy War Golems patrol the floor of the Cauldron below Kalaran; Magma Elementals drift among them. Golems and elementals drop the oil, elementals the hearts.\nTaskmasters and Slavers drive the slaves all over the Cauldron, and any of them can carry a {item:10551}. The Steamsmiths work at the furnaces in the middle (the {item:18959}), the Lookouts stand on the southern ridges (the Spyglass). Any {object:147516} may drop the {item:11818}: keep it.\nCareful: Dark Iron Slavers (level 45-46) call for help from allies within 15 yd when pulled, cast Net from up to 15 yd, and use Rend in melee."] = "Les araignées parcourent les plateaux et les mares de lave au sud-ouest de la gorge.\nDes Golems de guerre lourds patrouillent au fond du Chaudron, sous Kalaran ; des Élémentaires de magma dérivent parmi eux. Golems et élémentaires lâchent l'huile, les élémentaires les cœurs.\nLes Sous-chefs et les Esclavagistes mènent les esclaves dans tout le Chaudron, et n'importe lequel peut porter une {item:10551}. Les Forge-vapeur travaillent aux fourneaux du centre (la {item:18959}), les Guetteurs se tiennent sur les crêtes du sud (la longue-vue). N'importe quel {object:147516} peut lâcher la {item:11818} : gardez-la.\nAttention : les Esclavagistes Sombrefer (niveau 45-46) appellent à l'aide les alliés dans un rayon de 15 m quand vous les attirez, lancent Filet jusqu'à 15 m et utilisent Pourfendre au corps à corps.",
 
-	-- Step 19: Thorium Plated Dagger on the way
+	-- Step 20: Thorium Plated Dagger on the way
 	-- {item:10551} Thorium Plated Dagger
 	["{item:10551} on the way"] = "{item:10551} en chemin",
 
-	-- Step 21: Incendosaur on the way
+	-- Step 23: Incendosaur on the way
 	-- {npc:9318} Incendosaur
 	["{npc:9318} on the way"] = "{npc:9318} en chemin",
 	-- {npc:9318} Incendosaur
 	["{npc:9318} along the way to Thorium Point"] = "{npc:9318} sur le chemin vers la Halte du Thorium",
 
-	-- Step 22: Searing Gorge: kill these as you meet them
+	-- Step 24: Searing Gorge: kill these as you meet them
 	-- {zone:1427} Searing Gorge
 	["{zone:1427}: kill these as you meet them"] = "{zone:1427} : tuez-les au fur et à mesure",
 	-- {npc:14621} Overseer Maltorius
@@ -83,52 +88,55 @@ return {
 	-- {item:18922} Secret Plans: Fiery Flux
 	["{item:18922}; below ground"] = "{item:18922} ; sous terre",
 
-	-- Step 23: Searing Gorge: kill these as you meet them
+	-- Step 25: Searing Gorge: kill these as you meet them
 	-- {npc:14621} Overseer Maltorius
 	["These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:14621} is a level 50 elite: most classes solo it at level 52, but you may need help. Skip it if you are alone: the route has you grind the XP back."] = "Ce sont des monstres élites : il est conseillé de se grouper, cherchez des joueurs avec qui le faire. {npc:14621} est un élite de niveau 50 : la plupart des classes le battent seules au niveau 52, mais vous aurez peut-être besoin d'aide. Passez-le si vous êtes seul : l'itinéraire vous fait regagner l'expérience en tuant des monstres.",
 
-	-- Step 25: Level 48.66
+	-- Step 27: Level 48.66
 	["Level 48.66"] = "Niveau 48.66",
 	-- {quest:7701} WANTED: Overseer Maltorius
 	["If you skipped {quest:7701}, grind here to level 48.66 to stay on the route's plan."] = "Si vous avez passé {quest:7701}, tuez des monstres ici jusqu'au niveau 48.66 pour suivre le plan de l'itinéraire.",
 	-- {npc:9318} Incendosaur
 	["grind on {npc:9318}"] = "tuez en boucle : {npc:9318}",
 
-	-- Step 27: Dark Iron dwarves
+	-- Step 29: Dark Iron dwarves
 	-- {object:147516} Dark Iron
 	["{object:147516} dwarves"] = "Nains {object:147516}",
 
-	-- Step 30: The Flame's Casing
+	-- Step 32: The Flame's Casing
 	-- {npc:5860} Twilight Dark Shaman
 	["These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:5860} (level 50 elite) needs a group of 3. Skip it if you are alone: the route has you grind the XP back."] = "Ce sont des monstres élites : il est conseillé de se grouper, cherchez des joueurs avec qui le faire. {npc:5860} (élite de niveau 50) demande un groupe de 3. Passez-le si vous êtes seul : l'itinéraire vous fait regagner l'expérience en tuant des monstres.",
 
-	-- Step 32: Level 48.98
+	-- Step 34: Level 48.98
 	["Level 48.98"] = "Niveau 48.98",
 	-- {quest:3452} The Flame's Casing
 	["If you skipped {quest:3452}, grind here to level 48.98 to stay on the route's plan."] = "Si vous avez passé {quest:3452}, tuez des monstres ici jusqu'au niveau 48.98 pour suivre le plan de l'itinéraire.",
 	-- {npc:5844} Dark Iron Slaver
 	["grind on {npc:5844}"] = "tuez en boucle : {npc:5844}",
 
-	-- Step 33: Margol's Horn
+	-- Step 35: Margol's Horn
 	-- {quest:3181} The Horn of the Beast
 	["These are elite mobs: grouping up is encouraged, look for people to do it with. {quest:3181} needs a group of 2. Skip it if you are alone: the route has you grind the XP back."] = "Ce sont des monstres élites : il est conseillé de se grouper, cherchez des joueurs avec qui le faire. {quest:3181} demande un groupe de 2. Passez-la si vous êtes seul : l'itinéraire vous fait regagner l'expérience en tuant des monstres.",
 	["Below ground"] = "Sous terre",
 
-	-- Step 34: Camp Cagg
+	-- Step 36: Camp Cagg
 	["Camp Cagg"] = "Camp Cagg",
 	-- {zone:1446} Tanaris · {zone:1435} Swamp of Sorrows · {zone:1445} Dustwallow Marsh
 	["The prisoner's next task, Ledger from {zone:1446}, sends you to the {zone:1435} and {zone:1445}: skip it."] = "La tâche suivante du prisonnier, Grand livre de {zone:1446}, vous envoie au {zone:1435} et au {zone:1445} : passez-la.",
 
-	-- Step 35: Dustfire Valley
+	-- Step 37: Dustfire Valley
 	["Dustfire Valley"] = "Vallée des Escarbilles",
 	-- {npc:8256} Curator Thorius · {zone:1455} Ironforge
 	["For {npc:8256} in {zone:1455}, later"] = "Pour {npc:8256} à {zone:1455}, plus tard",
 
-	-- Step 37: Fly to Ironforge
+	-- Step 39: Fly to Ironforge
 	-- {zone:1455} Ironforge
 	["Fly to {zone:1455}"] = "Envolez-vous vers {zone:1455}",
 	["Thorium Point flight master"] = "Maître de vol de la Halte du Thorium",
 
-	-- Step 38: Class trainer
+	-- Step 40: Class trainer
 	["Class trainer"] = "Maître de classe",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["The night elf stands alone west of Thorium Point. Hear his story."] = "L'elfe de la nuit se tient seul à l'ouest de la Halte du Thorium. Écoutez son histoire.",
 }

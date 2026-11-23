@@ -9048,7 +9048,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:2321"] = "Fine Thread", ["item:279386"] = "Sealed Company Request", ["item:279996"] = "Goaz Stone", ["item:280331"] = "Malignant Rotclaw Flesh", ["item:2997"] = "Bolt of Woolen Cloth", ["item:3713"] = "Soothing Spices", ["item:3719"] = "Hillman's Cloak", ["item:4433"] = "Waterlogged Envelope", ["npc:1071"] = "Longbraid the Grim", ["npc:1072"] = "Roggo Harlbarrow", ["npc:1075"] = "Rhag Garmason", ["npc:1077"] = "Prospector Whelgar", ["npc:1356"] = "Prospector Stormpike", ["npc:1418"] = "Bluegill Raider", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:211033"] = "Garion Wendell", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:2276"] = "Magistrate Henry Maleb", ["npc:2366"] = "Barkeep Kelly", ["npc:2381"] = "Micha Yance", ["npc:2382"] = "Darren Malvew", ["npc:2430"] = "Chef Jessen", ["npc:2438"] = "Bartolo Ginsetti", ["npc:251493"] = "Captain McManus", ["npc:2695"] = "Sara Balloo", ["npc:2696"] = "Foggy MacKreel", ["npc:270637"] = "Howin Kindfeather", ["npc:2708"] = "Archmage Malin", ["npc:2711"] = "Phin Odelic", ["npc:271334"] = "Maddened Rotclaw", ["npc:271338"] = "Ados", ["npc:271460"] = "Modr", ["npc:271462"] = "Golm", ["npc:271481"] = "Captive Fire Elemental", ["npc:2784"] = "King Magni Bronzebeard", ["npc:2916"] = "Historian Karnik", ["npc:482"] = "Elling Trias", ["npc:4961"] = "Dashel Stonefist", ["npc:5081"] = "Connor Rivers", ["npc:5479"] = "Wu Shen", ["npc:5502"] = "Shylamiir", ["npc:5504"] = "Sheldras Moontree", ["npc:5694"] = "High Sorcerer Andromath", ["npc:6236"] = "Klannoc Macleod", ["object:1162"] = "Menethil Harbor", ["object:171709"] = "High Seat", ["object:176370"] = "Boat to Auberdine", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "Slaughtered Lamb", ["object:2673"] = "Thandol Span", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["object:376"] = "Dun Modr", ["object:386691"] = "Library Book", ["object:671518"] = "Tattered Spellbook", ["quest:1078"] = "Retrieval for Mauren", ["quest:1718"] = "The Islander", ["quest:474"] = "Defeat Nek'rosh", ["quest:559"] = "Farren's Proof", ["quest:98283"] = "Carnage", ["zone:1413"] = "Barrens", ["zone:1416"] = "Alterac Mountains", ["zone:1424"] = "Hillsbrad Foothills", ["zone:1437"] = "Wetlands", ["zone:1442"] = "Stonetalon Mountains", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			names = { ["item:2321"] = "Fine Thread", ["item:279386"] = "Sealed Company Request", ["item:279996"] = "Goaz Stone", ["item:280331"] = "Malignant Rotclaw Flesh", ["item:2997"] = "Bolt of Woolen Cloth", ["item:3713"] = "Soothing Spices", ["item:3719"] = "Hillman's Cloak", ["item:4433"] = "Waterlogged Envelope", ["npc:1071"] = "Longbraid the Grim", ["npc:1072"] = "Roggo Harlbarrow", ["npc:1075"] = "Rhag Garmason", ["npc:1077"] = "Prospector Whelgar", ["npc:1356"] = "Prospector Stormpike", ["npc:1364"] = "Balgaras the Foul", ["npc:1418"] = "Bluegill Raider", ["npc:2091"] = "Chieftain Nek'rosh", ["npc:2104"] = "Captain Stoutfist", ["npc:211033"] = "Garion Wendell", ["npc:2228"] = "Lieutenant Farren Orinelle", ["npc:2276"] = "Magistrate Henry Maleb", ["npc:2366"] = "Barkeep Kelly", ["npc:2381"] = "Micha Yance", ["npc:2382"] = "Darren Malvew", ["npc:2430"] = "Chef Jessen", ["npc:2438"] = "Bartolo Ginsetti", ["npc:251493"] = "Captain McManus", ["npc:2695"] = "Sara Balloo", ["npc:2696"] = "Foggy MacKreel", ["npc:270637"] = "Howin Kindfeather", ["npc:2708"] = "Archmage Malin", ["npc:2711"] = "Phin Odelic", ["npc:271334"] = "Maddened Rotclaw", ["npc:271338"] = "Ados", ["npc:271460"] = "Modr", ["npc:271462"] = "Golm", ["npc:271481"] = "Captive Fire Elemental", ["npc:2784"] = "King Magni Bronzebeard", ["npc:2916"] = "Historian Karnik", ["npc:482"] = "Elling Trias", ["npc:4961"] = "Dashel Stonefist", ["npc:5081"] = "Connor Rivers", ["npc:5479"] = "Wu Shen", ["npc:5502"] = "Shylamiir", ["npc:5504"] = "Sheldras Moontree", ["npc:5694"] = "High Sorcerer Andromath", ["npc:6236"] = "Klannoc Macleod", ["object:1162"] = "Menethil Harbor", ["object:147516"] = "Dark Iron", ["object:171709"] = "High Seat", ["object:176370"] = "Boat to Auberdine", ["object:1772"] = "Tarren Mill", ["object:2096"] = "Trade District", ["object:2100"] = "Old Town", ["object:2101"] = "Mage Quarter", ["object:2117"] = "Stormwind Keep", ["object:2164"] = "Slaughtered Lamb", ["object:2673"] = "Thandol Span", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["object:376"] = "Dun Modr", ["object:386691"] = "Library Book", ["object:671518"] = "Tattered Spellbook", ["quest:1078"] = "Retrieval for Mauren", ["quest:1718"] = "The Islander", ["quest:474"] = "Defeat Nek'rosh", ["quest:559"] = "Farren's Proof", ["quest:98283"] = "Carnage", ["zone:1413"] = "Barrens", ["zone:1416"] = "Alterac Mountains", ["zone:1424"] = "Hillsbrad Foothills", ["zone:1437"] = "Wetlands", ["zone:1442"] = "Stonetalon Mountains", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
 			written = { ["{npc:2438} also wants a {item:3719}, a {item:2997} and {item:2321}: crafted or bought; the cloak is turned in when you are back in Southshore later."] = "Bartolo also wants a Hillman's Cloak, a Bolt of Woolen Cloth and Fine Thread: crafted or bought; the cloak is turned in when you are back in Southshore later.", ["{npc:4961} waits in the Pig and Whistle tavern in {object:2100}; he and his two thugs fight you, but stop once beaten."] = "Dashel waits in the Pig and Whistle tavern in Old Town; he and his two thugs fight you, but stop once beaten." },
 			steps = {
 				{
@@ -9129,8 +9129,9 @@ do
 					},
 				},
 				{
-					title = "{object:376}",
-					note = "North along the road to {object:376}. {npc:271460} stands in the ruins (use the {item:279996}); the {npc:271481} is held on the west side: lead it out to {npc:1072}.",
+					title = "{npc:271481}",
+					note = "North along the road to {object:376}. These are elite mobs: grouping up is encouraged, look for people to do it with. The {npc:271481} is held on the west side of the {object:147516} ruins, past level 27-30 elite dwarves, and {npc:1364} (34, elite) can be among them: lead it east out of the ruins, to {npc:1072} in the camp. Skip it if you are alone.",
+					when = { { k = "group", q = 87491 } },
 					goals = {
 						{ t = "accept", quest = 87491, title = "Spark of Freedom", npc = 271481, npcName = "Captive Fire Elemental", minLevel = 27, qlvl = 32, map = 1437, x = 45.67, y = 16.66, f = "e", escort = true },
 					},
@@ -9150,10 +9151,16 @@ do
 				},
 				{
 					title = "{object:376}",
-					note = "{npc:1071} stands in the dwarves' camp.",
+					note = "North along the road to {object:376}. {npc:271460} stands in the ruins (use the {item:279996}).\n{npc:1071} stands in the dwarves' camp.",
 					goals = {
 						{ t = "collect", quest = 98310, title = "Gleaning Our Future", item = 280396, itemName = "Heart of Modr", oi = 2, map = 1437, x = 51.01, y = 20.29, f = "e", spots = { { x = 50.5, y = 17.9, r = 83, n = 11 }, { x = 50.6, y = 14.6, r = 39, n = 3 }, { x = 50.5, y = 21.2, r = 15, n = 1, alt = true }, { x = 58.5, y = 63.2, r = 15, n = 1, alt = true } }, from = "Modr", fromKind = "npc", fromRank = 1, fromId = 271460, fromNpcs = { { npc = 271460, npcName = "Modr" } }, group = { kind = "elite", rank = 1 } },
 						{ t = "turnin", quest = 472, title = "Fall of Dun Modr", npc = 1071, npcName = "Longbraid the Grim", map = 1437, x = 49.8, y = 18.26, z = 80.1, f = "e" },
+					},
+				},
+				{
+					title = "{npc:1072}",
+					when = { { k = "group", q = 87491 } },
+					goals = {
 						{ t = "turnin", quest = 87491, title = "Spark of Freedom", npc = 1072, npcName = "Roggo Harlbarrow", map = 1437, x = 49.85, y = 18.09, z = 80.5, f = "e" },
 					},
 				},
@@ -10536,7 +10543,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:190309"] = "Wooden Figurine", ["item:2321"] = "Fine Thread", ["item:3658"] = "Recovered Tome", ["item:3659"] = "Worn Leather Book", ["item:3706"] = "Ensorcelled Parchment", ["item:4435"] = "Mote of Myzrael", ["item:4483"] = "Burning Key", ["item:4484"] = "Cresting Key", ["item:4485"] = "Thundering Key", ["item:4492"] = "Elven Gem", ["item:4525"] = "Trelane's Wand of Invocation", ["item:5040"] = "Shadow Hunter Knife", ["item:6913"] = "Heartswood Core", ["npc:1141"] = "Angus Stern", ["npc:12336"] = "Brother Crowley", ["npc:1344"] = "Prospector Ironband", ["npc:1356"] = "Prospector Stormpike", ["npc:1416"] = "Grimand Elmore", ["npc:1440"] = "Milton Sheaf", ["npc:1470"] = "Ghak Healtouch", ["npc:185335"] = "Summoned Incubus", ["npc:217412"] = "Amaryllis Webb", ["npc:217589"] = "Hay Weevil", ["npc:2276"] = "Magistrate Henry Maleb", ["npc:2285"] = "Count Remington Ridgewell", ["npc:2287"] = "Crushridge Warmonger", ["npc:2306"] = "Baron Vardus", ["npc:2318"] = "Argus Shadow Mage", ["npc:2320"] = "Nagaz", ["npc:2381"] = "Micha Yance", ["npc:2409"] = "Felicia Maline", ["npc:2417"] = "Grel'borg the Miser", ["npc:2432"] = "Darla Harris", ["npc:2434"] = "Shadowy Assassin", ["npc:2438"] = "Bartolo Ginsetti", ["npc:2487"] = "Fleet Master Seahorn", ["npc:2542"] = "Catelyn the Blade", ["npc:254797"] = "Lost One", ["npc:256028"] = "The Lost One", ["npc:2572"] = "Drywhisker Kobold", ["npc:2573"] = "Drywhisker Surveyor", ["npc:2574"] = "Drywhisker Digger", ["npc:2595"] = "Daggerspine Raider", ["npc:2596"] = "Daggerspine Sorceress", ["npc:269127"] = "Image of Archmage Modera", ["npc:2711"] = "Phin Odelic", ["npc:2712"] = "Quae", ["npc:2713"] = "Kinelory", ["npc:2714"] = "Forsaken Courier", ["npc:2760"] = "Burning Exile", ["npc:2761"] = "Cresting Exile", ["npc:2762"] = "Thundering Exile", ["npc:2766"] = "Lolo the Lookout", ["npc:2774"] = "Doctor Draxlegauge", ["npc:2789"] = "Skuerto", ["npc:2793"] = "Kor'gresh Coldrage", ["npc:5391"] = "Galen Goodward", ["npc:5476"] = "Watcher Biggs", ["npc:6122"] = "Gakin the Darkbinder", ["npc:767"] = "Swamp Jaguar", ["npc:858"] = "Sorrow Spinner", ["object:138492"] = "Shards of Myzrael", ["object:142698"] = "Witherbark Village", ["object:1760"] = "Weathered Bookcase", ["object:2101"] = "Mage Quarter", ["object:2164"] = "Slaughtered Lamb", ["object:2652"] = "Ebenezer Rustlocke's Corpse", ["object:2685"] = "Refuge Pointe", ["object:2689"] = "Stone of West Binding", ["object:2690"] = "Stone of Outer Binding", ["object:2691"] = "Stone of East Binding", ["object:2701"] = "Iridescent Shards", ["object:2702"] = "Stone of Inner Binding", ["object:2707"] = "Maiden's Folly Charts", ["object:2708"] = "Spirit of Silverpine Charts", ["object:2709"] = "Maiden's Folly Log", ["object:2710"] = "Spirit of Silverpine Log", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["quest:1421"] = "The Lost Caravan", ["quest:1739"] = "The Binding", ["quest:523"] = "Baron's Demise", ["quest:537"] = "Dark Council", ["quest:538"] = "Southshore", ["quest:551"] = "The Ensorcelled Parchment", ["quest:651"] = "Stones of Binding", ["quest:65602"] = "What Is Love?", ["quest:681"] = "Northfold Manor", ["quest:93176"] = "My Little Friends", ["zone:1416"] = "Alterac Mountains", ["zone:1417"] = "Arathi Highlands", ["zone:1421"] = "Silverpine Forest", ["zone:1424"] = "Hillsbrad Foothills", ["zone:1426"] = "Dun Morogh", ["zone:1430"] = "Deadwind Pass", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1435"] = "Swamp of Sorrows", ["zone:1443"] = "Desolace", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
+			names = { ["item:190309"] = "Wooden Figurine", ["item:2321"] = "Fine Thread", ["item:3658"] = "Recovered Tome", ["item:3659"] = "Worn Leather Book", ["item:3706"] = "Ensorcelled Parchment", ["item:4435"] = "Mote of Myzrael", ["item:4483"] = "Burning Key", ["item:4484"] = "Cresting Key", ["item:4485"] = "Thundering Key", ["item:4492"] = "Elven Gem", ["item:4525"] = "Trelane's Wand of Invocation", ["item:5040"] = "Shadow Hunter Knife", ["item:6913"] = "Heartswood Core", ["npc:1141"] = "Angus Stern", ["npc:12336"] = "Brother Crowley", ["npc:1344"] = "Prospector Ironband", ["npc:1356"] = "Prospector Stormpike", ["npc:1416"] = "Grimand Elmore", ["npc:1440"] = "Milton Sheaf", ["npc:1470"] = "Ghak Healtouch", ["npc:185335"] = "Summoned Incubus", ["npc:217412"] = "Amaryllis Webb", ["npc:217589"] = "Hay Weevil", ["npc:2276"] = "Magistrate Henry Maleb", ["npc:2285"] = "Count Remington Ridgewell", ["npc:2287"] = "Crushridge Warmonger", ["npc:2306"] = "Baron Vardus", ["npc:2318"] = "Argus Shadow Mage", ["npc:2320"] = "Nagaz", ["npc:2381"] = "Micha Yance", ["npc:2409"] = "Felicia Maline", ["npc:2417"] = "Grel'borg the Miser", ["npc:2432"] = "Darla Harris", ["npc:2434"] = "Shadowy Assassin", ["npc:2438"] = "Bartolo Ginsetti", ["npc:2487"] = "Fleet Master Seahorn", ["npc:2542"] = "Catelyn the Blade", ["npc:254797"] = "Lost One", ["npc:256028"] = "The Lost One", ["npc:2572"] = "Drywhisker Kobold", ["npc:2573"] = "Drywhisker Surveyor", ["npc:2574"] = "Drywhisker Digger", ["npc:2595"] = "Daggerspine Raider", ["npc:2596"] = "Daggerspine Sorceress", ["npc:269127"] = "Image of Archmage Modera", ["npc:2711"] = "Phin Odelic", ["npc:2712"] = "Quae", ["npc:2713"] = "Kinelory", ["npc:2714"] = "Forsaken Courier", ["npc:2760"] = "Burning Exile", ["npc:2761"] = "Cresting Exile", ["npc:2762"] = "Thundering Exile", ["npc:2766"] = "Lolo the Lookout", ["npc:2768"] = "Professor Phizzlethorpe", ["npc:2774"] = "Doctor Draxlegauge", ["npc:2789"] = "Skuerto", ["npc:2793"] = "Kor'gresh Coldrage", ["npc:5391"] = "Galen Goodward", ["npc:5476"] = "Watcher Biggs", ["npc:6122"] = "Gakin the Darkbinder", ["npc:767"] = "Swamp Jaguar", ["npc:858"] = "Sorrow Spinner", ["object:138492"] = "Shards of Myzrael", ["object:142698"] = "Witherbark Village", ["object:1760"] = "Weathered Bookcase", ["object:2101"] = "Mage Quarter", ["object:2164"] = "Slaughtered Lamb", ["object:2652"] = "Ebenezer Rustlocke's Corpse", ["object:2685"] = "Refuge Pointe", ["object:2689"] = "Stone of West Binding", ["object:2690"] = "Stone of Outer Binding", ["object:2691"] = "Stone of East Binding", ["object:2701"] = "Iridescent Shards", ["object:2702"] = "Stone of Inner Binding", ["object:2707"] = "Maiden's Folly Charts", ["object:2708"] = "Spirit of Silverpine Charts", ["object:2709"] = "Maiden's Folly Log", ["object:2710"] = "Spirit of Silverpine Log", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["quest:1421"] = "The Lost Caravan", ["quest:1739"] = "The Binding", ["quest:523"] = "Baron's Demise", ["quest:537"] = "Dark Council", ["quest:538"] = "Southshore", ["quest:551"] = "The Ensorcelled Parchment", ["quest:651"] = "Stones of Binding", ["quest:65602"] = "What Is Love?", ["quest:681"] = "Northfold Manor", ["quest:93176"] = "My Little Friends", ["zone:1416"] = "Alterac Mountains", ["zone:1417"] = "Arathi Highlands", ["zone:1421"] = "Silverpine Forest", ["zone:1424"] = "Hillsbrad Foothills", ["zone:1426"] = "Dun Morogh", ["zone:1430"] = "Deadwind Pass", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1435"] = "Swamp of Sorrows", ["zone:1443"] = "Desolace", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge" },
 			written = { ["West along the coast to the goblins' cove; {npc:2766} keeps watch on the rocks above it."] = "West along the coast to the goblins' cove; Lolo keeps watch on the rocks above it.", ["{item:2321} for {npc:2438}'s cloak, from {npc:2381}, if you have none"] = "Fine Thread for Bartolo's cloak, from Micha Yance, if you have none", ["{npc:2793}, an ogre mage, holds the cave at the southern end of the Witherbark valley."] = "Kor'gresh, an ogre mage, holds the cave at the southern end of the Witherbark valley.", ["{npc:5391} is caged at the north end of the sanctuary. Free him and keep him alive on the walk out; his strongbox waits by the road afterwards."] = "Galen is caged at the north end of the sanctuary. Free him and keep him alive on the walk out; his strongbox waits by the road afterwards.", ["{npc:6122} binds the incubus to you"] = "Gakin binds the incubus to you" },
 			steps = {
 				{
@@ -10765,12 +10772,20 @@ do
 						{ t = "turnin", quest = 663, title = "Land Ho!", npc = 2610, npcName = "Shakes O'Breen", map = 1417, x = 32.28, y = 81.38, z = 3.2, f = "e" },
 						{ t = "accept", quest = 662, title = "Deep Sea Salvage", npc = 2767, npcName = "First Mate Nilzlix", minLevel = 35, qlvl = 40, pre = { 663 }, preTitles = { [663] = "Land Ho!" }, map = 1417, x = 32.8, y = 81.48, z = 3.5, f = "e" },
 						{ t = "accept", quest = 664, title = "Drowned Sorrows", npc = 2769, npcName = "Captain Steelgut", minLevel = 35, qlvl = 40, pre = { 663 }, preTitles = { [663] = "Land Ho!" }, map = 1417, x = 34, y = 80.8, z = 9.3, f = "e" },
+					},
+				},
+				{
+					title = "{npc:2768}",
+					note = "A group quest at this level: two level 40 water elementals ambush {npc:2768}'s escort, and they are immune to frost. Grouping up is encouraged, look for people to do it with. Skip it if you are alone.",
+					when = { { k = "group", q = 665 } },
+					goals = {
 						{ t = "accept", quest = 665, title = "Sunken Treasure", npc = 2768, npcName = "Professor Phizzlethorpe", minLevel = 35, qlvl = 40, pre = { 663 }, preTitles = { [663] = "Land Ho!" }, map = 1417, x = 33.87, y = 80.55, z = 9.1, f = "e", escort = true },
 					},
 				},
 				{
 					title = "Phizzlethorpe",
 					note = "Escort the professor to the beach north of the cove and guard him while he works; naga attack in waves.\nCareful: The ambush is two level 40 water elementals, and they are immune to frost. If the fight happens inside the cave, the professor joins in instead of working and further elementals keep appearing; holding the elementals at the cave entrance, away from him, lets him finish with only the first two to deal with.",
+					when = { { k = "group", q = 665 } },
 					goals = {
 						{ t = "goto", map = 1417, x = 33.9, y = 80.6, f = "e" },
 						{ t = "complete", quest = 665, title = "Sunken Treasure", escort = true },
@@ -10778,6 +10793,7 @@ do
 				},
 				{
 					title = "{npc:2774}",
+					when = { { k = "group", q = 665 } },
 					goals = {
 						{ t = "turnin", quest = 665, title = "Sunken Treasure", npc = 2774, npcName = "Doctor Draxlegauge", map = 1417, x = 33.86, y = 80.45, z = 9.2, f = "e" },
 						{ t = "accept", quest = 666, title = "Sunken Treasure", npc = 2774, npcName = "Doctor Draxlegauge", minLevel = 35, qlvl = 40, pre = { 665 }, preTitles = { [665] = "Sunken Treasure" }, map = 1417, x = 33.86, y = 80.45, z = 9.2, f = "e" },
@@ -10788,7 +10804,6 @@ do
 					note = "The two wrecks lie in the bay west of the cove. The charts and logs are inside them; the gems lie on the sea floor around them. Daggerspine naga swim the whole bay.",
 					goals = {
 						{ t = "kill", quest = 664, title = "Drowned Sorrows", target = "Daggerspine Raider", npc = 2595, count = 10, oi = 1, map = 1417, x = 25.42, y = 85.23, z = -57.5, f = "e", spots = { { x = 23.8, y = 85.7, r = 60, n = 7 }, { x = 25.1, y = 89.2, z = -29.1, r = 51, n = 4 }, { x = 22.4, y = 89.6, z = -35.1, r = 52, n = 4 }, { x = 20.6, y = 85.6, z = -41.7, r = 70, n = 13 }, { x = 17.6, y = 89.3, r = 31, n = 2 } }, note = "{npc:2595}, underwater" },
-						{ t = "collect", quest = 666, title = "Sunken Treasure", item = 4492, itemName = "Elven Gem", count = 10, oi = 1, map = 1417, x = 25, y = 86, f = "e", spots = { { x = 24.2, y = 85.8, r = 62, n = 6 }, { x = 24.1, y = 89.1, r = 56, n = 7 }, { x = 21, y = 85.3, r = 48, n = 3 }, { x = 22, y = 90.8, r = 47, n = 5 }, { x = 18.5, y = 89.5, r = 22, n = 2 } }, note = "{item:4492}; underwater", from = "Calcified Elven Gem", fromKind = "object", fromId = 2712 },
 						{ t = "kill", quest = 664, title = "Drowned Sorrows", target = "Daggerspine Sorceress", npc = 2596, count = 3, oi = 2, map = 1417, x = 23.75, y = 84.84, z = -39.9, f = "e", spots = { { x = 22.2, y = 84.5, z = -41.3, r = 60, n = 5 }, { x = 22.8, y = 89.8, r = 36, n = 2 }, { x = 18.2, y = 87, z = -36, r = 15, n = 1, alt = true } }, note = "{npc:2596}, underwater" },
 						{ t = "collect", quest = 662, title = "Deep Sea Salvage", item = 4489, itemName = "Maiden's Folly Log", count = 1, oi = 2, map = 1417, x = 23.39, y = 85.09, f = "e", note = "{object:2709}; underwater", from = "Maiden's Folly Log", fromKind = "object", fromId = 2709 },
 						{ t = "collect", quest = 662, title = "Deep Sea Salvage", item = 4487, itemName = "Maiden's Folly Charts", count = 1, oi = 1, map = 1417, x = 23.05, y = 84.51, f = "e", note = "{object:2707}; underwater", from = "Maiden's Folly Charts", fromKind = "object", fromId = 2707 },
@@ -10797,10 +10812,23 @@ do
 					},
 				},
 				{
+					title = "The Drowned Reef",
+					when = { { k = "group", q = 665 } },
+					goals = {
+						{ t = "collect", quest = 666, title = "Sunken Treasure", item = 4492, itemName = "Elven Gem", count = 10, oi = 1, map = 1417, x = 20, y = 85, f = "e", spots = { { x = 21, y = 85.3, r = 48, n = 3 }, { x = 18.5, y = 89.5, r = 22, n = 2 }, { x = 24.2, y = 85.8, r = 62, n = 6 }, { x = 22, y = 90.8, r = 47, n = 5 }, { x = 24.1, y = 89.1, r = 56, n = 7 } }, note = "{item:4492}; underwater", from = "Calcified Elven Gem", fromKind = "object", fromId = 2712 },
+					},
+				},
+				{
 					title = "Faldir's Cove",
 					goals = {
 						{ t = "turnin", quest = 662, title = "Deep Sea Salvage", npc = 2767, npcName = "First Mate Nilzlix", map = 1417, x = 32.8, y = 81.48, z = 3.5, f = "e" },
 						{ t = "turnin", quest = 664, title = "Drowned Sorrows", npc = 2769, npcName = "Captain Steelgut", map = 1417, x = 34, y = 80.8, z = 9.3, f = "e" },
+					},
+				},
+				{
+					title = "Faldir's Cove",
+					when = { { k = "group", q = 665 } },
+					goals = {
 						{ t = "turnin", quest = 666, title = "Sunken Treasure", npc = 2774, npcName = "Doctor Draxlegauge", map = 1417, x = 33.86, y = 80.45, z = 9.2, f = "e" },
 						{ t = "accept", quest = 668, title = "Sunken Treasure", npc = 2774, npcName = "Doctor Draxlegauge", minLevel = 35, qlvl = 40, pre = { 666 }, preTitles = { [666] = "Sunken Treasure" }, map = 1417, x = 33.86, y = 80.45, z = 9.2, f = "e" },
 						{ t = "turnin", quest = 668, title = "Sunken Treasure", npc = 2610, npcName = "Shakes O'Breen", map = 1417, x = 32.28, y = 81.38, z = 3.2, f = "e" },
@@ -10842,12 +10870,20 @@ do
 					note = "The shards lie at the far end of Drywhisker Gorge.",
 					goals = {
 						{ t = "turnin", quest = 642, title = "The Princess Trapped", object = 2701, objName = "Iridescent Shards", map = 1417, x = 84.31, y = 30.95, z = 143.1, f = "e", note = "Below ground" },
+					},
+				},
+				{
+					title = "{object:2701}",
+					note = "{quest:651} is a group quest at this level: three Cresting Exiles (38-39) guard the {object:2691} and attack together. Grouping up is encouraged, look for people to do it with. Skip it if you are alone.",
+					when = { { k = "group", q = 651 } },
+					goals = {
 						{ t = "accept", quest = 651, title = "Stones of Binding", object = 2701, objName = "Iridescent Shards", minLevel = 30, qlvl = 38, pre = { 642 }, preTitles = { [642] = "The Princess Trapped" }, map = 1417, x = 84.31, y = 30.95, z = 143.1, f = "e" },
 					},
 				},
 				{
 					title = "{quest:651}",
 					note = "Each key lies at one of the Highlands' standing-stone circles: east of the shards, near {object:2685} and in the west. The {object:2702} stands west of {object:2685}.\nCareful: Each center stone is guarded by around three elementals near level 39 that attack together if you click the stone without clearing them: Burning Exiles at West, Thundering Exiles at Outer, Cresting Exiles at East.",
+					when = { { k = "group", q = 651 } },
 					goals = {
 						{ t = "collect", quest = 651, title = "Stones of Binding", item = 4484, itemName = "Cresting Key", count = 1, oi = 2, map = 1417, x = 66.7, y = 29.72, f = "e", note = "{item:4484}: {object:2691}", from = "Stone of East Binding", fromKind = "object", fromId = 2691 },
 					},
@@ -10869,6 +10905,7 @@ do
 				},
 				{
 					title = "Circle of Outer Binding",
+					when = { { k = "group", q = 651 } },
 					goals = {
 						{ t = "collect", quest = 651, title = "Stones of Binding", item = 4485, itemName = "Thundering Key", count = 1, oi = 3, map = 1417, x = 52.04, y = 50.73, f = "e", note = "{item:4485}: {object:2690}", from = "Stone of Outer Binding", fromKind = "object", fromId = 2690 },
 					},
@@ -10899,6 +10936,7 @@ do
 				},
 				{
 					title = "Circle of West Binding",
+					when = { { k = "group", q = 651 } },
 					goals = {
 						{ t = "collect", quest = 651, title = "Stones of Binding", item = 4483, itemName = "Burning Key", count = 1, oi = 1, map = 1417, x = 25.46, y = 30.11, f = "e", note = "{item:4483}: {object:2689}", from = "Stone of West Binding", fromKind = "object", fromId = 2689 },
 						{ t = "turnin", quest = 651, title = "Stones of Binding", object = 2702, objName = "Stone of Inner Binding", map = 1417, x = 36.23, y = 57.38, z = 17.3, f = "e" },
@@ -11085,7 +11123,7 @@ do
 			next = "groupe-alliance/20-strangleronce-marecage",
 			author = "BurN-30",
 			version = 1,
-			names = { ["item:15848"] = "Crate of Ghost Magnets", ["item:2868"] = "Patterned Bronze Bracers", ["item:4631"] = "Tablet of Ryun'eh", ["item:5797"] = "Indurium Flake", ["npc:11438"] = "Bibbly F'utzbuckle", ["npc:11560"] = "Magrami Spectre", ["npc:11561"] = "Undead Ravager", ["npc:11863"] = "Azore Aldamort", ["npc:12277"] = "Melizza Brimbuzzle", ["npc:12369"] = "Lord Kragaru", ["npc:1470"] = "Ghak Healtouch", ["npc:217590"] = "Flesh Picker", ["npc:2719"] = "Dustbelcher Lord", ["npc:2727"] = "Crag Coyote", ["npc:2729"] = "Elder Crag Coyote", ["npc:2735"] = "Lesser Rock Elemental", ["npc:2745"] = "Ambassador Infernus", ["npc:2785"] = "Theldurin the Lost", ["npc:2786"] = "Gerrig Bonegrip", ["npc:2817"] = "Rigglefuzz", ["npc:2831"] = "Giant Buzzard", ["npc:2860"] = "Sigrun Ironhew", ["npc:2893"] = "Stonevault Bonesnapper", ["npc:2910"] = "Prospector Ryedol", ["npc:2920"] = "Lucien Tosselwrench", ["npc:2921"] = "Lotwil Veriatus", ["npc:3980"] = "Raleigh the Devout", ["npc:4618"] = "Martek the Exiled", ["npc:4678"] = "Mana Eater", ["npc:4679"] = "Nether Maiden", ["npc:4680"] = "Doomwarder Captain", ["npc:4685"] = "Ley Hunter", ["npc:4964"] = "Commander Samaul", ["npc:5083"] = "Clerk Lendry", ["npc:5637"] = "Roetten Stonehammer", ["npc:5638"] = "Kreldig Ungor", ["npc:6019"] = "Hornizz Brimbuzzle", ["npc:92"] = "Rock Elemental", ["object:1162"] = "Menethil Harbor", ["object:126260"] = "Ancient Chest", ["object:176369"] = "Boat to Theramore", ["object:176751"] = "Kodo Bones", ["object:176948"] = "Nijel's Point", ["object:21057"] = "Foothold Citadel", ["object:35251"] = "Karnitol's Chest", ["quest:1106"] = "Martek the Exiled", ["quest:6161"] = "Claim Rackmore's Treasure!", ["quest:739"] = "Murdaloc", ["zone:1418"] = "Badlands", ["zone:1432"] = "Loch Modan", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1455"] = "Ironforge" },
+			names = { ["item:15848"] = "Crate of Ghost Magnets", ["item:2868"] = "Patterned Bronze Bracers", ["item:4631"] = "Tablet of Ryun'eh", ["item:5797"] = "Indurium Flake", ["npc:11438"] = "Bibbly F'utzbuckle", ["npc:11560"] = "Magrami Spectre", ["npc:11561"] = "Undead Ravager", ["npc:11863"] = "Azore Aldamort", ["npc:12277"] = "Melizza Brimbuzzle", ["npc:12369"] = "Lord Kragaru", ["npc:1470"] = "Ghak Healtouch", ["npc:217590"] = "Flesh Picker", ["npc:253274"] = "Magram Necrokhan", ["npc:2719"] = "Dustbelcher Lord", ["npc:2727"] = "Crag Coyote", ["npc:2729"] = "Elder Crag Coyote", ["npc:2735"] = "Lesser Rock Elemental", ["npc:2745"] = "Ambassador Infernus", ["npc:2785"] = "Theldurin the Lost", ["npc:2786"] = "Gerrig Bonegrip", ["npc:2817"] = "Rigglefuzz", ["npc:2831"] = "Giant Buzzard", ["npc:2860"] = "Sigrun Ironhew", ["npc:2893"] = "Stonevault Bonesnapper", ["npc:2910"] = "Prospector Ryedol", ["npc:2920"] = "Lucien Tosselwrench", ["npc:2921"] = "Lotwil Veriatus", ["npc:3980"] = "Raleigh the Devout", ["npc:4618"] = "Martek the Exiled", ["npc:4678"] = "Mana Eater", ["npc:4679"] = "Nether Maiden", ["npc:4680"] = "Doomwarder Captain", ["npc:4685"] = "Ley Hunter", ["npc:4964"] = "Commander Samaul", ["npc:5083"] = "Clerk Lendry", ["npc:5637"] = "Roetten Stonehammer", ["npc:5638"] = "Kreldig Ungor", ["npc:6019"] = "Hornizz Brimbuzzle", ["npc:92"] = "Rock Elemental", ["object:1162"] = "Menethil Harbor", ["object:126260"] = "Ancient Chest", ["object:176369"] = "Boat to Theramore", ["object:176751"] = "Kodo Bones", ["object:176948"] = "Nijel's Point", ["object:21057"] = "Foothold Citadel", ["object:35251"] = "Karnitol's Chest", ["quest:1106"] = "Martek the Exiled", ["quest:6134"] = "Ghost-o-plasm Round Up", ["quest:6161"] = "Claim Rackmore's Treasure!", ["quest:739"] = "Murdaloc", ["zone:1418"] = "Badlands", ["zone:1432"] = "Loch Modan", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1455"] = "Ironforge" },
 			written = { ["Follow the road west across the north of {zone:1443} to the ruins of Ethel Rethor. {npc:11863}'s tower stands on the hill there, on the way to the wreck."] = "Follow the road west across the north of Desolace to the ruins of Ethel Rethor. Azore's tower stands on the hill there, on the way to the wreck.", ["Head west into the Dustbowl; {npc:2921} works by his machines in the middle of it."] = "Head west into the Dustbowl; Lotwil works by his machines in the middle of it.", ["The Dustbelcher ogres camp just south of the valley; any of them drops scrap. Buzzards circle the plain to the east.\nThe battered skeleton lies at the edge of the Stonevault trogg camp; {quest:739}, Agmond's killer, walks among the Bonesnappers.\nThe Lesser Rock Elementals wander the Dustbowl west of {npc:2921}.\nCareful: Dustbelcher Lords are level 44-45. They use Battle Shout and Demoralizing Shout, and below 50% health they call for help from allies within 15 yd. Seven of them stand about 750 yd south of Kargath."] = "The Dustbelcher ogres camp just south of the valley; any of them drops scrap. Buzzards circle the plain to the east.\nThe battered skeleton lies at the edge of the Stonevault trogg camp; Murdaloc, Agmond's killer, walks among the Bonesnappers.\nThe Lesser Rock Elementals wander the Dustbowl west of Lotwil.\nCareful: Dustbelcher Lords are level 44-45. They use Battle Shout and Demoralizing Shout, and below 50% health they call for help from allies within 15 yd. Seven of them stand about 750 yd south of Kargath.", ["The Rock Elementals roam south-east of {npc:2921}; Giant Buzzards and Elder Crag Coyotes share the plain to their west."] = "The Rock Elementals roam south-east of Lotwil; Giant Buzzards and Elder Crag Coyotes share the plain to their west.", ["The wrecked ship's chest lies on the shore just west of {npc:11863}'s tower."] = "The wrecked ship's chest lies on the shore just west of Azore's tower.", ["escort {npc:12277} back toward the graveyard"] = "escort Melizza back toward the graveyard", ["{npc:12277} is held in the centaur camp west of the graveyard. Free her and keep her alive on the walk out; she stops by the graveyard.\nCareful: The scripted groups are linked and only appear during the escort, so you cannot clear them in advance or pull them one at a time. Clearing the normal centaurs on the path before you start does help."] = "Melizza is held in the centaur camp west of the graveyard. Free her and keep her alive on the walk out; she stops by the graveyard.\nCareful: The scripted groups are linked and only appear during the escort, so you cannot clear them in advance or pull them one at a time. Clearing the normal centaurs on the path before you start does help.", ["{npc:12369}, a centaur chieftain, camps on the north-west coast, north of {npc:11863}'s tower."] = "Lord Kragaru, a centaur chieftain, camps on the north-west coast, north of Azore's tower.", ["{npc:2920}, beside {npc:2921}"] = "Lucien Tosselwrench, beside Lotwil", ["{npc:2921}'s next test needs crafted gear: skip it."] = "Lotwil's next test needs crafted gear: skip it.", ["{npc:4618} and {npc:2817} camp together in the Valley of Fangs, in the middle of the {zone:1418}."] = "Martek and Rigglefuzz camp together in the Valley of Fangs, in the middle of the Badlands.", ["{npc:6019} stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; {object:176751} lie among the skeletons. A {npc:217590} crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off."] = "Hornizz stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; Kodo Bones lie among the skeletons. A Flesh Picker crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off." },
 			steps = {
 				{
@@ -11178,9 +11216,16 @@ do
 						{ t = "accept", quest = 739, title = "Murdaloc", object = 2875, objName = "Battered Dwarven Skeleton", minLevel = 30, qlvl = 42, pre = { 738 }, preTitles = { [738] = "Find Agmond" }, map = 1418, x = 50.89, y = 62.4, z = 243.5, f = "e" },
 						{ t = "note", text = "The skeleton's next task, {quest:739}, waits until the later {zone:1418} guide at 43." },
 						{ t = "collect", quest = 1108, title = "Indurium", item = 5797, itemName = "Indurium Flake", count = 10, oi = 1, map = 1418, x = 50.92, y = 64.36, f = "e", spots = { { x = 51, y = 66.1, r = 47, n = 7 }, { x = 49.8, y = 69.6, r = 67, n = 12 } }, optional = true, from = "Stonevault Bonesnapper", fromKind = "npc", fromAlso = "Stonevault Shaman", fromId = 2893, fromAlsoId = 2894, fromNpcs = { { npc = 2893, npcName = "Stonevault Bonesnapper" }, { npc = 2894, npcName = "Stonevault Shaman" } } },
-						{ t = "accept", quest = 709, title = "Solution to Doom", npc = 2785, npcName = "Theldurin the Lost", minLevel = 30, qlvl = 40, map = 1418, x = 51.39, y = 76.87, z = 244.9, f = "e" },
-						{ t = "collect", quest = 2500, title = "Badlands Reagent Run", item = 7848, itemName = "Rock Elemental Shard", count = 5, oi = 3, map = 1418, x = 53.8, y = 81.79, f = "e", spots = { { x = 54.7, y = 84, r = 59, n = 11 }, { x = 46.1, y = 77.6, r = 40, n = 1 }, { x = 40.9, y = 77.8, r = 47, n = 6 }, { x = 36.7, y = 74.9, r = 50, n = 5 }, { x = 43.3, y = 86.8, r = 40, n = 3 }, { x = 16.6, y = 84.9, r = 40, n = 2 }, { x = 5.9, y = 77.4, r = 62, n = 6 }, { x = 2.2, y = 80.7, r = 66, n = 9 }, { x = 18.6, y = 42.9, r = 49, n = 6 }, { x = 21.9, y = 46.1, r = 54, n = 7 }, { x = 26, y = 45.8, r = 40, n = 1 }, { x = 14.7, y = 35.2, r = 70, n = 9 }, { x = 43.5, y = 82.5, r = 55, n = 8, alt = true }, { x = 15.1, y = 89.7, r = 40, n = 5, alt = true }, { x = 13.9, y = 86.4, r = 42, n = 6, alt = true }, { x = 13.7, y = 39.7, r = 44, n = 3, alt = true }, { x = 4.7, y = 82.5, r = 40, n = 4, alt = true } }, spread = true, fromNpcs = { { npc = 2791, npcName = "Enraged Rock Elemental" }, { npc = 2735, npcName = "Lesser Rock Elemental" }, { npc = 2736, npcName = "Greater Rock Elemental" }, { npc = 92, npcName = "Rock Elemental" }, { npc = 2752, npcName = "Rumbler" } } },
+						{ t = "collect", quest = 2500, title = "Badlands Reagent Run", item = 7848, itemName = "Rock Elemental Shard", count = 5, oi = 3, map = 1418, x = 46.1, y = 77.64, f = "e", spots = { { x = 46.1, y = 77.6, r = 40, n = 1 }, { x = 40.9, y = 77.8, r = 47, n = 6 }, { x = 36.7, y = 74.9, r = 50, n = 5 }, { x = 43.3, y = 86.8, r = 40, n = 3 }, { x = 54.7, y = 84, r = 59, n = 11 }, { x = 16.6, y = 84.9, r = 40, n = 2 }, { x = 5.9, y = 77.4, r = 62, n = 6 }, { x = 2.2, y = 80.7, r = 66, n = 9 }, { x = 18.6, y = 42.9, r = 49, n = 6 }, { x = 21.9, y = 46.1, r = 54, n = 7 }, { x = 26, y = 45.8, r = 40, n = 1 }, { x = 14.7, y = 35.2, r = 70, n = 9 }, { x = 43.5, y = 82.5, r = 55, n = 8, alt = true }, { x = 15.1, y = 89.7, r = 40, n = 5, alt = true }, { x = 13.9, y = 86.4, r = 42, n = 6, alt = true }, { x = 13.7, y = 39.7, r = 44, n = 3, alt = true }, { x = 4.7, y = 82.5, r = 40, n = 4, alt = true } }, spread = true, fromNpcs = { { npc = 92, npcName = "Rock Elemental" }, { npc = 2735, npcName = "Lesser Rock Elemental" }, { npc = 2736, npcName = "Greater Rock Elemental" }, { npc = 2791, npcName = "Enraged Rock Elemental" }, { npc = 2752, npcName = "Rumbler" } } },
 						{ t = "collect", quest = 710, title = "Study of the Elements: Rock", item = 4626, itemName = "Small Stone Shard", count = 10, oi = 1, map = 1418, x = 23.1, y = 47.75, f = "e", spots = { { x = 21.9, y = 46.1, r = 54, n = 7 }, { x = 18.6, y = 42.9, r = 49, n = 6 }, { x = 14.5, y = 38.8, r = 52, n = 5 } }, from = "Lesser Rock Elemental", fromKind = "npc", fromId = 2735, fromNpcs = { { npc = 2735, npcName = "Lesser Rock Elemental" } } },
+					},
+				},
+				{
+					title = "{npc:2785}",
+					note = "These are elite mobs: grouping up is encouraged, look for people to do it with. Theldurin sits by the ruined camp south of the trogg camp; his tablet lies in the {object:126260}, among level 38 elites. Skip it if you are alone.",
+					when = { { k = "group", q = 709 } },
+					goals = {
+						{ t = "accept", quest = 709, title = "Solution to Doom", npc = 2785, npcName = "Theldurin the Lost", minLevel = 30, qlvl = 40, map = 1418, x = 51.39, y = 76.87, z = 244.9, f = "e" },
 					},
 				},
 				{
@@ -11199,6 +11244,7 @@ do
 				{
 					title = "The {object:126260}",
 					note = "Head north-east to the dwarven ruins in the north of the {zone:1418}; the chest sits among the Shadowforge dwarves. {npc:2745} nearby is elite: give him room.",
+					when = { { k = "group", q = 709 } },
 					goals = {
 						{ t = "collect", quest = 709, title = "Solution to Doom", item = 4631, itemName = "Tablet of Ryun'eh", count = 1, oi = 1, map = 1418, x = 39.34, y = 18.82, f = "e", note = "{item:4631}; below ground", from = "Ancient Chest", fromKind = "object", fromId = 126260 },
 					},
@@ -11206,9 +11252,16 @@ do
 				{
 					title = "{npc:2785}",
 					note = "Head south to Agmond's End.",
+					when = { { k = "group", q = 709 } },
 					goals = {
 						{ t = "turnin", quest = 709, title = "Solution to Doom", npc = 2785, npcName = "Theldurin the Lost", map = 1418, x = 51.39, y = 76.87, z = 244.9, f = "e" },
 						{ t = "accept", quest = 727, title = "To Ironforge for Yagyin's Digest", npc = 2785, npcName = "Theldurin the Lost", minLevel = 30, qlvl = 40, pre = { 709 }, preTitles = { [709] = "Solution to Doom" }, map = 1418, x = 51.39, y = 76.87, z = 244.9, f = "e", note = "for {npc:2786} in {zone:1455}: keep it" },
+					},
+				},
+				{
+					title = "Agmond's End",
+					note = "Head south to Agmond's End.",
+					goals = {
 						{ t = "kill", quest = 739, title = "Murdaloc", target = "Stonevault Bonesnapper", npc = 2893, count = 12, oi = 2, map = 1418, x = 51.18, y = 71.65, z = 242.5, f = "e", spots = { { x = 49, y = 71, r = 56, n = 5 }, { x = 51.3, y = 67, z = 241.8, r = 61, n = 9 } }, note = "{npc:2893}, 130 yd north" },
 					},
 				},
@@ -11294,6 +11347,13 @@ do
 					goals = {
 						{ t = "collect", quest = 5501, title = "Bone Collector", item = 13703, itemName = "Kodo Bone", count = 10, oi = 1, map = 1443, x = 53.89, y = 58.12, f = "e", spots = { { x = 53.8, y = 58.6, r = 63, n = 4 }, { x = 51.4, y = 59.1, r = 39, n = 3 }, { x = 54, y = 62.6, r = 53, n = 3 }, { x = 48.7, y = 58.4, r = 62, n = 4 }, { x = 46.2, y = 61.3, r = 15, n = 1, alt = true } }, from = "Kodo Bones", fromKind = "object", fromId = 176751 },
 						{ t = "kill", target = "Flesh Picker", npc = 217590, map = 1443, x = 49.94, y = 60.4, f = "e", spots = { { x = 49.9, y = 60.4, r = 15, n = 1 }, { x = 48.1, y = 56.9, r = 15, n = 1 } }, note = "{npc:217590}: catch it, for My Little Friends" },
+					},
+				},
+				{
+					title = "{npc:6019}",
+					note = "These are elite mobs: grouping up is encouraged, look for people to do it with. {quest:6134}'s magnets draw the Magrami Spectres a few yards from the Magram Necrokhans and Corpsefeeders (45, elite) in the Valley of Bones. Skip it if you are alone.",
+					when = { { k = "group", q = 6134 } },
+					goals = {
 						{ t = "accept", quest = 6134, title = "Ghost-o-plasm Round Up", npc = 6019, npcName = "Hornizz Brimbuzzle", minLevel = 34, qlvl = 39, map = 1443, x = 47.83, y = 61.83, z = 61.9, f = "e" },
 					},
 				},
@@ -11322,9 +11382,16 @@ do
 				},
 				{
 					title = "The Valley of Bones",
-					note = "Undead Ravagers roam the bone fields south of the Magram village, east of the Coven; at the far south-east, use the {item:15848} to draw the Magrami Spectres.",
+					note = "Undead Ravagers roam the bone fields south of the Magram village, east of the Coven.",
 					goals = {
 						{ t = "kill", quest = 261, title = "Down the Scarlet Path", target = "Undead Ravager", npc = 11561, count = 30, oi = 1, map = 1443, x = 58.34, y = 90.19, z = 69.3, f = "e", spots = { { x = 59.5, y = 90.2, z = 64.9, r = 53, n = 3 }, { x = 62.3, y = 90.9, z = 68.2, r = 53, n = 4 }, { x = 64.1, y = 91, z = 63.7, r = 44, n = 5 }, { x = 64.4, y = 88.2, z = 71.3, r = 37, n = 5 }, { x = 64.8, y = 85.6, r = 42, n = 3 }, { x = 64.4, y = 82.6, z = 64.5, r = 39, n = 3 }, { x = 59.6, y = 88.2, z = 70.9, r = 15, n = 1, alt = true } } },
+					},
+				},
+				{
+					title = "The Valley of Bones",
+					note = "At the far south-east of the bone fields, use the {item:15848} to draw the Magrami Spectres; the Magram Necrokhans and Corpsefeeders (45, elite) walk close by: keep the group together.",
+					when = { { k = "group", q = 6134 } },
+					goals = {
 						{ t = "use", quest = 6134, title = "Ghost-o-plasm Round Up", item = 15848, itemName = "Crate of Ghost Magnets", oi = 1, map = 1443, x = 63.5, y = 91.6, f = "e" },
 						{ t = "collect", quest = 6134, title = "Ghost-o-plasm Round Up", item = 15849, itemName = "Ghost-o-plasm", count = 8, oi = 1, map = 1443, x = 64.18, y = 91.63, f = "e", from = "Magrami Spectre", fromKind = "npc", fromId = 11560, fromNpcs = { { npc = 11560, npcName = "Magrami Spectre" } } },
 					},
@@ -11339,6 +11406,12 @@ do
 					title = "{npc:6019}",
 					goals = {
 						{ t = "turnin", quest = 6132, title = "Get Me Out of Here!", npc = 6019, npcName = "Hornizz Brimbuzzle", map = 1443, x = 47.83, y = 61.83, z = 61.9, f = "e" },
+					},
+				},
+				{
+					title = "{npc:6019}",
+					when = { { k = "group", q = 6134 } },
+					goals = {
 						{ t = "turnin", quest = 6134, title = "Ghost-o-plasm Round Up", npc = 6019, npcName = "Hornizz Brimbuzzle", map = 1443, x = 47.83, y = 61.83, z = 61.9, f = "e" },
 					},
 				},
@@ -11443,7 +11516,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:3713"] = "Soothing Spices", ["item:3853"] = "Moonsteel Broadsword", ["item:3910"] = "Snuff", ["item:3919"] = "Mistvale Giblets", ["item:4034"] = "Stone of the Tides", ["item:4611"] = "Blue Pearl", ["npc:1141"] = "Angus Stern", ["npc:1261"] = "Veron Amberstill", ["npc:1284"] = "Archbishop Benedictus", ["npc:1356"] = "Prospector Stormpike", ["npc:1440"] = "Milton Sheaf", ["npc:1449"] = "Witch Doctor Unbagwa", ["npc:1514"] = "Mokk the Savage", ["npc:1557"] = "Elder Mistvale Gorilla", ["npc:1907"] = "Naga Explorer", ["npc:217412"] = "Amaryllis Webb", ["npc:217588"] = "Arbor Tarantula", ["npc:2285"] = "Count Remington Ridgewell", ["npc:2487"] = "Fleet Master Seahorn", ["npc:2488"] = "Deeg", ["npc:2493"] = "Dizzy One-Eye", ["npc:2498"] = "Crank Fizzlebub", ["npc:2535"] = "Maury \"Club Foot\" Wilkins", ["npc:2536"] = "Jon-Jon the Crow", ["npc:2537"] = "Chucky \"Ten Thumbs\"", ["npc:2542"] = "Catelyn the Blade", ["npc:2546"] = "Fleet Master Firallon", ["npc:2616"] = "Privateer Groy", ["npc:2624"] = "Gazban", ["npc:265756"] = "Genn Fairweather", ["npc:2786"] = "Gerrig Bonegrip", ["npc:2860"] = "Sigrun Ironhew", ["npc:2888"] = "Garek", ["npc:2909"] = "Hammertoe Grez", ["npc:2910"] = "Prospector Ryedol", ["npc:384"] = "Katie Hunter", ["npc:3979"] = "Librarian Mae Paledust", ["npc:4377"] = "Darkmist Lurker", ["npc:4398"] = "Mudrock Burrower", ["npc:4503"] = "Mudcrush Durtfeet", ["npc:461"] = "Demisette Cloyce", ["npc:4730"] = "Lelanai", ["npc:4732"] = "Randal Hunter", ["npc:4753"] = "Jartsam", ["npc:4772"] = "Ultham Ironhorn", ["npc:4794"] = "Morgan Stern", ["npc:4897"] = "Helenia Olden", ["npc:4948"] = "Adjutant Tesoran", ["npc:4966"] = "Private Hendel", ["npc:4967"] = "Archmage Tervosh", ["npc:4968"] = "Lady Jaina Proudmoore", ["npc:5089"] = "Balos Jacken", ["npc:5384"] = "Brohann Caskbelly", ["npc:5476"] = "Watcher Biggs", ["npc:5635"] = "Falstad Wildhammer", ["npc:5637"] = "Roetten Stonehammer", ["npc:5694"] = "High Sorcerer Andromath", ["npc:6169"] = "Klockmort Spannerspan", ["npc:6171"] = "Duthorian Rall", ["npc:6236"] = "Klannoc Macleod", ["npc:6238"] = "Big Will", ["npc:6251"] = "Strahad Farsan", ["npc:6546"] = "Tabetha", ["npc:684"] = "Shadowmaw Panther", ["npc:690"] = "Cold Eye Basilisk", ["npc:715"] = "Hemet Nesingwary", ["npc:728"] = "Bhag'thera", ["npc:730"] = "Tethis", ["npc:731"] = "King Bangalash", ["npc:737"] = "Kebok", ["npc:739"] = "Brother Nimetz", ["npc:766"] = "Tangled Horror", ["npc:770"] = "Corporal Kaleb", ["npc:773"] = "Krazek", ["npc:7795"] = "Hydromancer Velratha", ["npc:7954"] = "Binjy Featherwhistle", ["npc:7955"] = "Milli Featherwhistle", ["object:1162"] = "Menethil Harbor", ["object:176370"] = "Boat to Auberdine", ["object:21053"] = "Sentry Point", ["object:21054"] = "North Point Tower", ["object:21056"] = "Theramore Isle", ["object:21057"] = "Foothold Citadel", ["object:2117"] = "Stormwind Keep", ["object:21509"] = "The Shady Rest Inn", ["object:2164"] = "Slaughtered Lamb", ["object:2169"] = "Blue Recluse", ["object:2744"] = "Giant Clam", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["object:32383"] = "Forlorn Cavern", ["object:81"] = "Sentinel Hill", ["object:95"] = "Eastvale Logging Camp", ["quest:1218"] = "Soothing Spices", ["quest:1260"] = "Morgan Stern", ["quest:1661"] = "The Tome of Nobility", ["quest:1719"] = "The Affray", ["quest:193"] = "Panther Mastery", ["quest:196"] = "Raptor Mastery", ["quest:197"] = "Raptor Mastery", ["quest:208"] = "Big Game Hunter", ["quest:2864"] = "Tran'rek", ["quest:3631"] = "Summon Felsteed", ["quest:3636"] = "Bring the Light", ["quest:543"] = "The Perenolde Tiara", ["quest:624"] = "Cortello's Riddle", ["quest:7070"] = "Shadowshard Fragments", ["quest:720"] = "A Sign of Hope", ["quest:93176"] = "My Little Friends", ["zone:1413"] = "Barrens", ["zone:1418"] = "Badlands", ["zone:1420"] = "Tirisfal Glades", ["zone:1426"] = "Dun Morogh", ["zone:1429"] = "Elwynn Forest", ["zone:1430"] = "Deadwind Pass", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1434"] = "Stranglethorn Vale", ["zone:1435"] = "Swamp of Sorrows", ["zone:1438"] = "Teldrassil", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1444"] = "Feralas", ["zone:1445"] = "Dustwallow Marsh", ["zone:1446"] = "Tanaris", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
+			names = { ["item:3713"] = "Soothing Spices", ["item:3853"] = "Moonsteel Broadsword", ["item:3910"] = "Snuff", ["item:3919"] = "Mistvale Giblets", ["item:4034"] = "Stone of the Tides", ["item:4611"] = "Blue Pearl", ["npc:1141"] = "Angus Stern", ["npc:1261"] = "Veron Amberstill", ["npc:1284"] = "Archbishop Benedictus", ["npc:1356"] = "Prospector Stormpike", ["npc:1440"] = "Milton Sheaf", ["npc:1449"] = "Witch Doctor Unbagwa", ["npc:1514"] = "Mokk the Savage", ["npc:1557"] = "Elder Mistvale Gorilla", ["npc:1907"] = "Naga Explorer", ["npc:217412"] = "Amaryllis Webb", ["npc:217588"] = "Arbor Tarantula", ["npc:2285"] = "Count Remington Ridgewell", ["npc:2486"] = "Fin Fizracket", ["npc:2487"] = "Fleet Master Seahorn", ["npc:2488"] = "Deeg", ["npc:2493"] = "Dizzy One-Eye", ["npc:2498"] = "Crank Fizzlebub", ["npc:2535"] = "Maury \"Club Foot\" Wilkins", ["npc:2536"] = "Jon-Jon the Crow", ["npc:2537"] = "Chucky \"Ten Thumbs\"", ["npc:2542"] = "Catelyn the Blade", ["npc:2546"] = "Fleet Master Firallon", ["npc:2616"] = "Privateer Groy", ["npc:2624"] = "Gazban", ["npc:265756"] = "Genn Fairweather", ["npc:2786"] = "Gerrig Bonegrip", ["npc:2860"] = "Sigrun Ironhew", ["npc:2888"] = "Garek", ["npc:2909"] = "Hammertoe Grez", ["npc:2910"] = "Prospector Ryedol", ["npc:384"] = "Katie Hunter", ["npc:3979"] = "Librarian Mae Paledust", ["npc:4377"] = "Darkmist Lurker", ["npc:4398"] = "Mudrock Burrower", ["npc:4503"] = "Mudcrush Durtfeet", ["npc:461"] = "Demisette Cloyce", ["npc:4730"] = "Lelanai", ["npc:4732"] = "Randal Hunter", ["npc:4753"] = "Jartsam", ["npc:4772"] = "Ultham Ironhorn", ["npc:4794"] = "Morgan Stern", ["npc:4897"] = "Helenia Olden", ["npc:4948"] = "Adjutant Tesoran", ["npc:4966"] = "Private Hendel", ["npc:4967"] = "Archmage Tervosh", ["npc:4968"] = "Lady Jaina Proudmoore", ["npc:5089"] = "Balos Jacken", ["npc:5384"] = "Brohann Caskbelly", ["npc:5476"] = "Watcher Biggs", ["npc:5635"] = "Falstad Wildhammer", ["npc:5637"] = "Roetten Stonehammer", ["npc:5694"] = "High Sorcerer Andromath", ["npc:6169"] = "Klockmort Spannerspan", ["npc:6171"] = "Duthorian Rall", ["npc:6236"] = "Klannoc Macleod", ["npc:6238"] = "Big Will", ["npc:6251"] = "Strahad Farsan", ["npc:6546"] = "Tabetha", ["npc:684"] = "Shadowmaw Panther", ["npc:690"] = "Cold Eye Basilisk", ["npc:715"] = "Hemet Nesingwary", ["npc:728"] = "Bhag'thera", ["npc:730"] = "Tethis", ["npc:731"] = "King Bangalash", ["npc:737"] = "Kebok", ["npc:739"] = "Brother Nimetz", ["npc:766"] = "Tangled Horror", ["npc:770"] = "Corporal Kaleb", ["npc:773"] = "Krazek", ["npc:7795"] = "Hydromancer Velratha", ["npc:7954"] = "Binjy Featherwhistle", ["npc:7955"] = "Milli Featherwhistle", ["object:1162"] = "Menethil Harbor", ["object:176370"] = "Boat to Auberdine", ["object:21053"] = "Sentry Point", ["object:21054"] = "North Point Tower", ["object:21056"] = "Theramore Isle", ["object:21057"] = "Foothold Citadel", ["object:2117"] = "Stormwind Keep", ["object:21509"] = "The Shady Rest Inn", ["object:2164"] = "Slaughtered Lamb", ["object:2169"] = "Blue Recluse", ["object:2744"] = "Giant Clam", ["object:28027"] = "Dwarven District", ["object:3204"] = "Booty Bay", ["object:32356"] = "Hall of Explorers", ["object:32383"] = "Forlorn Cavern", ["object:81"] = "Sentinel Hill", ["object:95"] = "Eastvale Logging Camp", ["quest:1218"] = "Soothing Spices", ["quest:1260"] = "Morgan Stern", ["quest:1661"] = "The Tome of Nobility", ["quest:1719"] = "The Affray", ["quest:193"] = "Panther Mastery", ["quest:196"] = "Raptor Mastery", ["quest:197"] = "Raptor Mastery", ["quest:208"] = "Big Game Hunter", ["quest:2864"] = "Tran'rek", ["quest:348"] = "Stranglethorn Fever", ["quest:3631"] = "Summon Felsteed", ["quest:3636"] = "Bring the Light", ["quest:543"] = "The Perenolde Tiara", ["quest:624"] = "Cortello's Riddle", ["quest:7070"] = "Shadowshard Fragments", ["quest:720"] = "A Sign of Hope", ["quest:93176"] = "My Little Friends", ["zone:1413"] = "Barrens", ["zone:1418"] = "Badlands", ["zone:1420"] = "Tirisfal Glades", ["zone:1426"] = "Dun Morogh", ["zone:1429"] = "Elwynn Forest", ["zone:1430"] = "Deadwind Pass", ["zone:1431"] = "Duskwood", ["zone:1432"] = "Loch Modan", ["zone:1434"] = "Stranglethorn Vale", ["zone:1435"] = "Swamp of Sorrows", ["zone:1438"] = "Teldrassil", ["zone:1441"] = "Thousand Needles", ["zone:1443"] = "Desolace", ["zone:1444"] = "Feralas", ["zone:1445"] = "Dustwallow Marsh", ["zone:1446"] = "Tanaris", ["zone:1453"] = "Stormwind", ["zone:1455"] = "Ironforge", ["zone:1457"] = "Darnassus" },
 			written = { ["Every Bloodsail drops {item:3910} and one of them carries {npc:2493}'s eye; the Swashbucklers walk the shore just north of town. The charts and orders lie in the pirate camp on the Wild Shore, south of {object:3204}."] = "Every Bloodsail drops Snuff and one of them carries Dizzy's eye; the Swashbucklers walk the shore just north of town. The charts and orders lie in the pirate camp on the Wild Shore, south of Booty Bay.", ["Into {zone:1453}"] = "Into Stormwind City", ["Take the Deeprun Tram from the {object:28027}. {npc:5637} is in the Reclaimers' hall by the {object:32356}, {npc:1356} in the hall itself, {npc:2786} in the {object:32383}. The next guide flies on to Thelsamar."] = "Take the Deeprun Tram from the Dwarven District. Roetten is in the Reclaimers' hall by the Hall of Explorers, Prospector Stormpike in the hall itself, Gerrig Bonegrip in the Forlorn Cavern. The next guide flies on to Thelsamar.", ["The deserters camp south of the road, west of {npc:4503}'s hut."] = "The deserters camp south of the road, west of Mudcrush's hut.", ["{npc:2498}'s next Zanzil errand starts in {zone:1441}: skip it."] = "Crank's next Zanzil errand starts in Thousand Needles: skip it.", ["{npc:2535} and {npc:2536}"] = "Maury and Jon-Jon", ["{npc:6236} offers The Windwatcher next (1791): the Whirlwind weapon chain, with an elite at the end, is in the Warrior class guide Whirlwind Weapon."] = "Klannoc offers The Windwatcher next (1791): the Whirlwind weapon chain, with an elite at the end, is in the Warrior class guide Whirlwind Weapon.", ["{zone:1413}"] = "The Barrens" },
 			steps = {
 				{
@@ -11848,15 +11921,28 @@ do
 						{ t = "accept", quest = 622, title = "Return to Corporal Kaleb", npc = 773, npcName = "Krazek", minLevel = 32, qlvl = 37, pre = { 627 }, preTitles = { [627] = "Favor for Krazek" }, map = 1434, x = 26.95, y = 77.21, z = 26.4, f = "e", note = "for {npc:770} at the Rebel Camp, on the northern loop" },
 						{ t = "accept", quest = 2864, title = "Tran'rek", npc = 773, npcName = "Krazek", minLevel = 40, qlvl = 45, closedBy = { 2865 }, preTitles = { [2865] = "Scarab Shells" }, map = 1434, x = 26.95, y = 77.21, z = 26.4, f = "e", note = "{npc:773}: for {quest:2864} in {zone:1446}, keep it" },
 						{ t = "accept", quest = 617, title = "Akiris by the Bundle", npc = 2494, npcName = "Privateer Bloads", minLevel = 38, qlvl = 43, map = 1434, x = 26.76, y = 76.38, z = 5, f = "e" },
-						{ t = "turnin", quest = 669, title = "Sunken Treasure", npc = 2487, npcName = "Fleet Master Seahorn", map = 1434, x = 27.17, y = 77.01, z = 28.8, f = "e", note = "{npc:2487}, top floor" },
 						{ t = "accept", quest = 621, title = "Zanzil's Secret", npc = 2498, npcName = "Crank Fizzlebub", minLevel = 35, qlvl = 44, map = 1434, x = 27.12, y = 77.21, z = 15.2, f = "e", note = "Inside" },
-						{ t = "note", text = "Seahorn's next errand goes back to Arathi: skip it." },
 						{ t = "turnin", quest = 603, title = "Ansirem's Key", npc = 2542, npcName = "Catelyn the Blade", map = 1434, x = 27.28, y = 77.53, z = 20.5, f = "e", note = "{npc:2542}, upstairs" },
 						{ t = "accept", quest = 610, title = "\"Pretty Boy\" Duncan", npc = 2542, npcName = "Catelyn the Blade", minLevel = 32, qlvl = 39, pre = { 603 }, preTitles = { [603] = "Ansirem's Key" }, map = 1434, x = 27.28, y = 77.53, z = 20.5, f = "e" },
 						{ t = "accept", quest = 2872, title = "Stoley's Debt", npc = 2501, npcName = "\"Sea Wolf\" MacKinley", minLevel = 40, qlvl = 45, closedBy = { 2873 }, preTitles = { [2873] = "Stoley's Shipment" }, map = 1434, x = 27.78, y = 77.07, z = 15.8, f = "e", note = "for Stoley in {zone:1446}: keep it; on the top floor" },
 						{ t = "sethome", npc = 6807, npcName = "Innkeeper Skindle", location = "Booty Bay", map = 1434, x = 27.04, y = 77.31, z = 15.2, f = "e", note = "Upstairs" },
-						{ t = "accept", quest = 348, title = "Stranglethorn Fever", npc = 2486, npcName = "Fin Fizracket", minLevel = 40, qlvl = 45, map = 1434, x = 27.61, y = 76.74, z = 15.5, f = "e" },
 						{ t = "accept", quest = 595, title = "The Bloodsail Buccaneers", npc = 2490, npcName = "First Mate Crazz", minLevel = 37, qlvl = 41, map = 1434, x = 28.1, y = 76.22, z = 9, f = "e" },
+					},
+				},
+				{
+					title = "{npc:2487}",
+					when = { { k = "group", q = 665 } },
+					goals = {
+						{ t = "turnin", quest = 669, title = "Sunken Treasure", npc = 2487, npcName = "Fleet Master Seahorn", map = 1434, x = 27.17, y = 77.01, z = 28.8, f = "e", note = "{npc:2487}, top floor" },
+						{ t = "note", text = "Seahorn's next errand goes back to Arathi: skip it." },
+					},
+				},
+				{
+					title = "{npc:2486}",
+					note = "Group quest: {quest:348} ends at {npc:1449} in Mistvale. Hand him ten gorilla fangs and he calls three waves of gorillas (41-42), one after another, then {npc:1514} (44). Take it if you have a friend or two along. Skip it if you are alone.",
+					when = { { k = "group", q = 348 } },
+					goals = {
+						{ t = "accept", quest = 348, title = "Stranglethorn Fever", npc = 2486, npcName = "Fin Fizracket", minLevel = 40, qlvl = 45, map = 1434, x = 27.61, y = 76.74, z = 15.5, f = "e" },
 					},
 				},
 				{
@@ -11911,6 +11997,7 @@ do
 				{
 					title = "Gorilla hills",
 					note = "Ride inland to the Mistvale gorilla hills. Elder Mistvale Gorillas drop the giblets; {npc:1449} sits among them.",
+					when = { { k = "group", q = 348 } },
 					goals = {
 						{ t = "accept", quest = 349, title = "Stranglethorn Fever", npc = 1449, npcName = "Witch Doctor Unbagwa", minLevel = 32, qlvl = 45, map = 1434, x = 35.27, y = 60.41, z = 44.6, f = "e", note = "{npc:1449}, inside Spirit Den" },
 						{ t = "collect", quest = 349, title = "Stranglethorn Fever", item = 2799, itemName = "Gorilla Fang", count = 10, oi = 1, map = 1434, x = 35.09, y = 60.75, f = "e", spots = { { x = 35.1, y = 60.8, r = 43, n = 1 }, { x = 31.4, y = 60.2, r = 43, n = 3 }, { x = 31.6, y = 67, r = 77, n = 6 }, { x = 41.2, y = 77.7, r = 52, n = 3 }, { x = 41.9, y = 81.8, r = 43, n = 2 }, { x = 39.4, y = 86.3, r = 56, n = 3 }, { x = 44.9, y = 36.9, r = 53, n = 3 }, { x = 47.9, y = 37.6, r = 55, n = 4 }, { x = 48.7, y = 33.3, r = 51, n = 4 }, { x = 45.5, y = 29.2, r = 43, n = 3 }, { x = 41.4, y = 28.4, r = 60, n = 3 }, { x = 38.5, y = 16.3, r = 43, n = 2 }, { x = 35.6, y = 63.4, r = 67, n = 6, alt = true }, { x = 33.7, y = 63.3, r = 57, n = 5, alt = true }, { x = 37.8, y = 61.3, r = 59, n = 5, alt = true }, { x = 32.4, y = 58.6, r = 43, n = 2, alt = true }, { x = 32.9, y = 65.7, r = 46, n = 5, alt = true }, { x = 33.9, y = 66.8, r = 75, n = 6, alt = true }, { x = 40.1, y = 79.4, r = 63, n = 4, alt = true }, { x = 41.9, y = 79.5, r = 43, n = 1, alt = true }, { x = 40.7, y = 81.5, r = 43, n = 3, alt = true }, { x = 41.2, y = 84.3, r = 57, n = 3, alt = true }, { x = 46.2, y = 35.1, r = 63, n = 4, alt = true }, { x = 42.2, y = 31.6, r = 47, n = 4, alt = true }, { x = 43.8, y = 31.6, r = 43, n = 3, alt = true }, { x = 48.6, y = 35.8, r = 43, n = 3, alt = true }, { x = 41.7, y = 26.7, r = 68, n = 4, alt = true }, { x = 43.9, y = 27.7, r = 85, n = 6, alt = true }, { x = 41.8, y = 24.4, r = 43, n = 1, alt = true }, { x = 39, y = 18, r = 43, n = 2, alt = true }, { x = 37.3, y = 17.4, r = 57, n = 7, alt = true } }, spread = true, fromNpcs = { { npc = 1511, npcName = "Enraged Silverback Gorilla" }, { npc = 1114, npcName = "Jungle Thunderer" }, { npc = 1108, npcName = "Mistvale Gorilla" }, { npc = 2521, npcName = "Skymane Gorilla" }, { npc = 1558, npcName = "Silverback Patriarch" } } },
@@ -11919,6 +12006,7 @@ do
 				{
 					title = "Unbagwa's ritual",
 					note = "Hand in the fangs and stay: three waves of gorillas come, {npc:1514} last. Fight at full health.",
+					when = { { k = "group", q = 348 } },
 					goals = {
 						{ t = "turnin", quest = 349, title = "Stranglethorn Fever", npc = 1449, npcName = "Witch Doctor Unbagwa", map = 1434, x = 35.27, y = 60.41, z = 44.6, f = "e", note = "{npc:1449}, inside Spirit Den" },
 						{ t = "collect", quest = 348, title = "Stranglethorn Fever", item = 2797, itemName = "Heart of Mokk", count = 1, oi = 1, map = 1434, x = 35.05, y = 60.88, f = "e", from = "Mokk the Savage", fromKind = "npc", fromId = 1514, fromNpcs = { { npc = 1514, npcName = "Mokk the Savage" } } },
@@ -11926,6 +12014,7 @@ do
 				},
 				{
 					title = "Gorilla hills",
+					note = "Ride inland to the Mistvale gorilla hills. Elder Mistvale Gorillas drop the giblets; {npc:1449} sits among them.",
 					label = "q606",
 					goals = {
 						{ t = "collect", quest = 606, title = "Scaring Shaky", item = 3919, itemName = "Mistvale Giblets", count = 5, oi = 1, map = 1434, x = 34.4, y = 62.52, f = "e", spots = { { x = 33.7, y = 63, r = 50, n = 4 }, { x = 34.5, y = 64.8, r = 35, n = 3 }, { x = 32.6, y = 65.7, r = 76, n = 7 }, { x = 33.8, y = 67, r = 54, n = 5 }, { x = 32.4, y = 58.6, r = 27, n = 2 }, { x = 31.4, y = 60.2, r = 43, n = 3 }, { x = 31.6, y = 67.7, r = 62, n = 4, alt = true } }, from = "Elder Mistvale Gorilla", fromKind = "npc", fromId = 1557, fromNpcs = { { npc = 1557, npcName = "Elder Mistvale Gorilla" } } },
@@ -11946,9 +12035,15 @@ do
 						{ t = "accept", quest = 607, title = "Return to MacKinley", npc = 2502, npcName = "\"Shaky\" Phillipe", minLevel = 30, qlvl = 41, pre = { 606 }, preTitles = { [606] = "Scaring Shaky" }, map = 1434, x = 26.9, y = 73.59, z = 9.1, f = "e" },
 						{ t = "turnin", quest = 617, title = "Akiris by the Bundle", npc = 2494, npcName = "Privateer Bloads", map = 1434, x = 26.76, y = 76.38, z = 5, f = "e" },
 						{ t = "accept", quest = 623, title = "Akiris by the Bundle", npc = 2494, npcName = "Privateer Bloads", minLevel = 38, qlvl = 43, pre = { 617 }, preTitles = { [617] = "Akiris by the Bundle" }, map = 1434, x = 26.76, y = 76.38, z = 5, f = "e", note = "for {npc:2616} in Theramore: keep it" },
-						{ t = "turnin", quest = 348, title = "Stranglethorn Fever", npc = 2486, npcName = "Fin Fizracket", map = 1434, x = 27.61, y = 76.74, z = 15.5, f = "e" },
 						{ t = "turnin", quest = 607, title = "Return to MacKinley", npc = 2501, npcName = "\"Sea Wolf\" MacKinley", map = 1434, x = 27.78, y = 77.07, z = 15.8, f = "e", note = "\"Sea Wolf\" MacKinley, on the top floor" },
 						{ t = "accept", quest = 609, title = "Voodoo Dues", npc = 2501, npcName = "\"Sea Wolf\" MacKinley", minLevel = 30, qlvl = 44, pre = { 607 }, preTitles = { [607] = "Return to MacKinley" }, map = 1434, x = 27.78, y = 77.07, z = 15.8, f = "e" },
+					},
+				},
+				{
+					title = "{npc:2486}",
+					when = { { k = "group", q = 348 } },
+					goals = {
+						{ t = "turnin", quest = 348, title = "Stranglethorn Fever", npc = 2486, npcName = "Fin Fizracket", map = 1434, x = 27.61, y = 76.74, z = 15.5, f = "e" },
 					},
 				},
 				{
@@ -12429,8 +12524,14 @@ do
 					note = "Take the Deeprun Tram from the {object:28027}. {npc:5637} is in the Reclaimers' hall by the {object:32356}, {npc:1356} in the hall itself, {npc:2786} in the {object:32383}. The next guide flies on to Thelsamar.",
 					goals = {
 						{ t = "turnin", quest = 1467, title = "Reagents for Reclaimers Inc.", npc = 5637, npcName = "Roetten Stonehammer", map = 1455, x = 69.95, y = 21.26, z = 503.5, f = "e" },
-						{ t = "turnin", quest = 727, title = "To Ironforge for Yagyin's Digest", npc = 2786, npcName = "Gerrig Bonegrip", map = 1455, x = 50.83, y = 5.62, z = 505, f = "e" },
 						{ t = "train", class = true, only = { classes = { "SHAMAN" } }, note = "{zone:1453} has no shaman trainer", candidates = { { npc = 258098, npcName = "Eldrun Stormbreaker", map = 1455, x = 47.1, y = 13.79, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 258113, npcName = "Ingrid Dunwald", map = 1426, x = 47.58, y = 51.95, f = "e", faction = "A", classes = { "SHAMAN" } }, { npc = 257446, npcName = "Teo Hammerstorm", map = 1426, x = 28.79, y = 66.18, f = "e", faction = "A", classes = { "SHAMAN" } } } },
+					},
+				},
+				{
+					title = "{npc:2786}",
+					when = { { k = "group", q = 709 } },
+					goals = {
+						{ t = "turnin", quest = 727, title = "To Ironforge for Yagyin's Digest", npc = 2786, npcName = "Gerrig Bonegrip", map = 1455, x = 50.83, y = 5.62, z = 505, f = "e" },
 					},
 				},
 				{
@@ -14264,7 +14365,7 @@ do
 			author = "BurN-30",
 			version = 1,
 			group = true,
-			names = { ["item:10000"] = "Margol's Horn", ["item:10551"] = "Thorium Plated Dagger", ["item:11818"] = "Grimesilt Outhouse Key", ["item:18922"] = "Secret Plans: Fiery Flux", ["item:18959"] = "Smithing Tuyere", ["item:3985"] = "Monogrammed Sash", ["item:4306"] = "Silk Cloth", ["npc:14621"] = "Overseer Maltorius", ["npc:14634"] = "Lookout Captain Lolo Longstriker", ["npc:5839"] = "Dark Iron Geologist", ["npc:5844"] = "Dark Iron Slaver", ["npc:5846"] = "Dark Iron Taskmaster", ["npc:5854"] = "Heavy War Golem", ["npc:5855"] = "Magma Elemental", ["npc:5858"] = "Greater Lava Spider", ["npc:5860"] = "Twilight Dark Shaman", ["npc:8256"] = "Curator Thorius", ["npc:8436"] = "Zamael Lunthistle", ["npc:8479"] = "Kalaran Windblade", ["npc:9318"] = "Incendosaur", ["object:147516"] = "Dark Iron", ["object:175704"] = "Singed Letter", ["object:179827"] = "Wanted/Missing/Lost & Found", ["object:3204"] = "Booty Bay", ["quest:3181"] = "The Horn of the Beast", ["quest:3377"] = "Prayer to Elune", ["quest:3441"] = "Divine Retribution", ["quest:3452"] = "The Flame's Casing", ["quest:7701"] = "WANTED: Overseer Maltorius", ["zone:1418"] = "Badlands", ["zone:1425"] = "Hinterlands", ["zone:1427"] = "Searing Gorge", ["zone:1435"] = "Swamp of Sorrows", ["zone:1445"] = "Dustwallow Marsh", ["zone:1446"] = "Tanaris", ["zone:1455"] = "Ironforge" },
+			names = { ["item:10000"] = "Margol's Horn", ["item:10551"] = "Thorium Plated Dagger", ["item:11818"] = "Grimesilt Outhouse Key", ["item:18922"] = "Secret Plans: Fiery Flux", ["item:18959"] = "Smithing Tuyere", ["item:3985"] = "Monogrammed Sash", ["item:4306"] = "Silk Cloth", ["npc:14621"] = "Overseer Maltorius", ["npc:14626"] = "Taskmaster Scrange", ["npc:14634"] = "Lookout Captain Lolo Longstriker", ["npc:5839"] = "Dark Iron Geologist", ["npc:5844"] = "Dark Iron Slaver", ["npc:5846"] = "Dark Iron Taskmaster", ["npc:5854"] = "Heavy War Golem", ["npc:5855"] = "Magma Elemental", ["npc:5858"] = "Greater Lava Spider", ["npc:5860"] = "Twilight Dark Shaman", ["npc:8256"] = "Curator Thorius", ["npc:8282"] = "Highlord Mastrogonde", ["npc:8436"] = "Zamael Lunthistle", ["npc:8479"] = "Kalaran Windblade", ["npc:9318"] = "Incendosaur", ["object:147516"] = "Dark Iron", ["object:175704"] = "Singed Letter", ["object:179827"] = "Wanted/Missing/Lost & Found", ["object:3204"] = "Booty Bay", ["quest:3181"] = "The Horn of the Beast", ["quest:3377"] = "Prayer to Elune", ["quest:3441"] = "Divine Retribution", ["quest:3452"] = "The Flame's Casing", ["quest:7701"] = "WANTED: Overseer Maltorius", ["zone:1418"] = "Badlands", ["zone:1425"] = "Hinterlands", ["zone:1427"] = "Searing Gorge", ["zone:1435"] = "Swamp of Sorrows", ["zone:1445"] = "Dustwallow Marsh", ["zone:1446"] = "Tanaris", ["zone:1455"] = "Ironforge" },
 			steps = {
 				{
 					title = "To Stoutlager Inn",
@@ -14318,8 +14419,15 @@ do
 						{ t = "accept", quest = 7727, title = "Incendosaurs? Whateverosaur is More Like It", npc = 14627, npcName = "Hansel Heavyhands", minLevel = 45, qlvl = 49, map = 1427, x = 38.58, y = 27.81, z = 309.3, f = "e" },
 						{ t = "accept", quest = 7724, title = "Fiery Menace!", npc = 14627, npcName = "Hansel Heavyhands", minLevel = 45, qlvl = 49, map = 1427, x = 38.58, y = 27.81, z = 309.3, f = "e" },
 						{ t = "accept", quest = 7723, title = "Curse These Fat Fingers", npc = 14627, npcName = "Hansel Heavyhands", minLevel = 45, qlvl = 49, map = 1427, x = 38.58, y = 27.81, z = 309.3, f = "e" },
-						{ t = "accept", quest = 7729, title = "JOB OPPORTUNITY: Culling the Competition", object = 179827, objName = "Wanted/Missing/Lost & Found", minLevel = 45, qlvl = 48, map = 1427, x = 37.65, y = 26.47, z = 309.2, f = "e" },
 						{ t = "accept", quest = 7728, title = "STOLEN: Smithing Tuyere and Lookout's Spyglass", object = 179827, objName = "Wanted/Missing/Lost & Found", minLevel = 45, qlvl = 48, map = 1427, x = 37.65, y = 26.47, z = 309.2, f = "e", note = "The {object:179827} board" },
+					},
+				},
+				{
+					title = "Culling the Competition",
+					note = "Take the bounty from the board only if you want to hunt the linked dwarf packs with a group. Skip it if you are alone.",
+					when = { { k = "group", q = 7729 } },
+					goals = {
+						{ t = "accept", quest = 7729, title = "JOB OPPORTUNITY: Culling the Competition", object = 179827, objName = "Wanted/Missing/Lost & Found", minLevel = 45, qlvl = 48, map = 1427, x = 37.65, y = 26.47, z = 309.2, f = "e" },
 					},
 				},
 				{
@@ -14338,19 +14446,22 @@ do
 				},
 				{
 					title = "{npc:8436}",
-					note = "The night elf stands alone west of Thorium Point. Hear his story.",
+					note = "These are elite mobs: grouping up is encouraged, look for people to do it with. {npc:8436} stands in the Twilight camp at Firewatch Ridge, west of Thorium Point, among level 48-49 Twilight elites, with {npc:8282} (51, rare elite) beside him: a group of 4. Skip it if you are alone.",
+					when = { { k = "group", q = 3377 } },
 					goals = {
 						{ t = "accept", quest = 3377, title = "Prayer to Elune", npc = 8436, npcName = "Zamael Lunthistle", minLevel = 40, qlvl = 50, map = 1427, x = 29.57, y = 26.29, z = 335.6, f = "e" },
 					},
 				},
 				{
 					title = "{quest:3377}",
+					when = { { k = "group", q = 3377 } },
 					goals = {
 						{ t = "kill", quest = 3377, title = "Prayer to Elune", target = "Zamael Lunthistle", npc = 8436, oi = 1, map = 1427, x = 29.6, y = 26.3, z = 335.6, f = "e" },
 					},
 				},
 				{
 					title = "{npc:8436}",
+					when = { { k = "group", q = 3377 } },
 					goals = {
 						{ t = "turnin", quest = 3377, title = "Prayer to Elune", npc = 8436, npcName = "Zamael Lunthistle", map = 1427, x = 29.57, y = 26.29, z = 335.6, f = "e" },
 					},
@@ -14377,6 +14488,7 @@ do
 				},
 				{
 					title = "On the way",
+					when = { { k = "group", q = 7729 } },
 					along = "q7729",
 					goals = {
 						{ t = "kill", quest = 7729, title = "JOB OPPORTUNITY: Culling the Competition", target = "Dark Iron Taskmaster", npc = 5846, count = 15, oi = 1, map = 1427, x = 37.49, y = 39.64, z = 184.9, f = "e", spots = { { x = 39.8, y = 44.5, r = 30, n = 2 }, { x = 34.8, y = 45.4, r = 41, n = 3 }, { x = 43.4, y = 33.4, z = 208.7, r = 47, n = 7 }, { x = 44.9, y = 39.7, r = 41, n = 3 }, { x = 40.1, y = 52.3, r = 40, n = 4 }, { x = 49.2, y = 39.6, z = 241.9, r = 15, n = 2 }, { x = 37.5, y = 39.6, z = 184.9, r = 15, n = 1, alt = true }, { x = 38, y = 32, z = 185.6, r = 15, n = 1, alt = true }, { x = 43.3, y = 28.2, z = 200.5, r = 15, n = 1, alt = true }, { x = 44.8, y = 51.9, z = 243.1, r = 15, n = 1, alt = true }, { x = 41.2, y = 23.3, z = 180.7, r = 15, n = 1, alt = true }, { x = 46.5, y = 25.3, z = 212.2, r = 15, n = 1, alt = true }, { x = 58, y = 41.9, z = 194.3, r = 15, n = 1, alt = true } }, note = "{npc:5846} along the way to Thorium Point" },
@@ -14416,10 +14528,16 @@ do
 					title = "Thorium Point",
 					label = "q7729",
 					goals = {
-						{ t = "turnin", quest = 7729, title = "JOB OPPORTUNITY: Culling the Competition", npc = 14626, npcName = "Taskmaster Scrange", map = 1427, x = 38.97, y = 27.51, z = 309.3, f = "e" },
 						{ t = "turnin", quest = 7728, title = "STOLEN: Smithing Tuyere and Lookout's Spyglass", npc = 14626, npcName = "Taskmaster Scrange", map = 1427, x = 38.97, y = 27.51, z = 309.3, f = "e" },
 						{ t = "turnin", quest = 7723, title = "Curse These Fat Fingers", npc = 14627, npcName = "Hansel Heavyhands", map = 1427, x = 38.58, y = 27.81, z = 309.3, f = "e" },
 						{ t = "turnin", quest = 7724, title = "Fiery Menace!", npc = 14627, npcName = "Hansel Heavyhands", map = 1427, x = 38.58, y = 27.81, z = 309.3, f = "e" },
+					},
+				},
+				{
+					title = "{npc:14626}",
+					when = { { k = "group", q = 7729 } },
+					goals = {
+						{ t = "turnin", quest = 7729, title = "JOB OPPORTUNITY: Culling the Competition", npc = 14626, npcName = "Taskmaster Scrange", map = 1427, x = 38.97, y = 27.51, z = 309.3, f = "e" },
 					},
 				},
 				{

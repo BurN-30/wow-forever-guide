@@ -60,11 +60,15 @@ return {
 	-- {quest:739} Murdaloc · {zone:1418} Badlands
 	["The skeleton's next task, {quest:739}, waits until the later {zone:1418} guide at 43."] = "La prochaine tâche du squelette, {quest:739}, attend le guide {zone:1418} ultérieur au niveau 43.",
 
-	-- Step 13: Lucien Tosselwrench
+	-- Step 12: Theldurin the Lost
+	-- {object:126260} Ancient Chest
+	["These are elite mobs: grouping up is encouraged, look for people to do it with. Theldurin sits by the ruined camp south of the trogg camp; his tablet lies in the {object:126260}, among level 38 elites. Skip it if you are alone."] = "Ce sont des monstres élites : mieux vaut se grouper et chercher des joueurs avec qui la faire. Theldurin est assis près du camp en ruine, au sud du camp des troggs ; sa tablette est dans le {object:126260}, parmi des élites de niveau 38. Seul ? La passer.",
+
+	-- Step 14: Lucien Tosselwrench
 	-- {npc:2921} Lotwil Veriatus
 	["{npc:2921}'s next test needs crafted gear: skip it."] = "Le test suivant de {npc:2921} demande de l'équipement fabriqué : passez-le.",
 
-	-- Step 14: The Ancient Chest
+	-- Step 15: The Ancient Chest
 	-- {object:126260} Ancient Chest
 	["The {object:126260}"] = "{object:126260}",
 	-- {zone:1418} Badlands · {npc:2745} Ambassador Infernus
@@ -72,41 +76,43 @@ return {
 	-- {item:4631} Tablet of Ryun'eh
 	["{item:4631}; below ground"] = "{item:4631} ; sous terre",
 
-	-- Step 15: Theldurin the Lost
+	-- Step 16: Theldurin the Lost
 	["Head south to Agmond's End."] = "Allez au sud jusqu'à la Fin d'Agmond.",
 	-- {npc:2786} Gerrig Bonegrip · {zone:1455} Ironforge
 	["for {npc:2786} in {zone:1455}: keep it"] = "pour {npc:2786} à {zone:1455} : gardez-la",
+
+	-- Step 17: Agmond's End
 	-- {npc:2893} Stonevault Bonesnapper
 	["{npc:2893}, 130 yd north"] = "{npc:2893}, 130 m au nord",
 
-	-- Step 16: Rock Elementals
+	-- Step 18: Rock Elementals
 	-- plural, as words: Rock Elementals = {npc:92} Rock Elemental
 	["Rock Elementals"] = "Elémentaires de roche",
 	-- {npc:2921} Lotwil Veriatus
 	-- plural, as words: Rock Elementals = {npc:92} Rock Elemental · Giant Buzzards = {npc:2831} Giant Buzzard · Elder Crag Coyotes = {npc:2729} Elder Crag Coyote
 	["The Rock Elementals roam south-east of {npc:2921}; Giant Buzzards and Elder Crag Coyotes share the plain to their west."] = "Les élémentaires de roche rôdent au sud-est de {npc:2921} ; des busards géants et des anciens coyotes des rochers partagent la plaine à leur ouest.",
 
-	-- Step 18: Lucien Tosselwrench
+	-- Step 20: Lucien Tosselwrench
 	-- {npc:2920} Lucien Tosselwrench · {npc:2921} Lotwil Veriatus
 	["{npc:2920}, beside {npc:2921}"] = "{npc:2920}, à côté de {npc:2921}",
 	-- {item:2868} Patterned Bronze Bracers
 	["only if you carry {item:2868} (a blacksmith's craft)"] = "seulement si vous avez des {item:2868} (fabriqués par un forgeron)",
 
-	-- Step 19: To Stoutlager Inn
+	-- Step 21: To Stoutlager Inn
 	["To Stoutlager Inn"] = "Vers l'Auberge de la Fortebière",
 	["Stoutlager Inn"] = "Auberge de la Fortebière",
 
-	-- Step 20: Thelsamar
+	-- Step 22: Thelsamar
 	["Thelsamar"] = "Thelsamar",
 	-- {npc:1470} Ghak Healtouch
 	["{npc:1470}, in the inn; below ground"] = "{npc:1470}, dans l'auberge ; sous terre",
 
-	-- Step 21: Fly to Menethil Harbor
+	-- Step 23: Fly to Menethil Harbor
 	-- {object:1162} Menethil Harbor
 	["Fly to {object:1162}"] = "Envolez-vous vers {object:1162}",
 	["Thelsamar flight master"] = "Maître de vol de Thelsamar",
 
-	-- Step 23: Theramore
+	-- Step 25: Theramore
 	["Theramore"] = "Theramore",
 	-- {object:21057} Foothold Citadel · {npc:5083} Clerk Lendry · {npc:4964} Commander Samaul
 	["The flight master stands by the gate of {object:21057}; {npc:5083} and {npc:4964} are inside the citadel."] = "Le maître de vol se tient près de la porte de {object:21057} ; {npc:5083} et {npc:4964} sont à l'intérieur de la citadelle.",
@@ -116,50 +122,59 @@ return {
 	["{npc:4964}, on the top floor"] = "{npc:4964}, au dernier étage",
 	["for the Dustwallow loop in the next guide"] = "pour la boucle du marécage d'Âprefange, dans le guide suivant",
 
-	-- Step 25: Bibbly F'utzbuckle
+	-- Step 27: Bibbly F'utzbuckle
 	["Follow the road south to Kormek's Hut."] = "Suivez la route au sud jusqu'à la hutte de Kormek.",
 
-	-- Step 26: Kodo Graveyard
+	-- Step 28: Kodo Graveyard
 	["Kodo Graveyard"] = "Cimetière des kodos",
 	-- {npc:6019} Hornizz Brimbuzzle · {object:176751} Kodo Bones · {npc:217590} Flesh Picker
 	["{npc:6019} stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; {object:176751} lie among the skeletons. A {npc:217590} crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off."] = "{npc:6019} se tient au bord du cimetière des kodos, au sud-ouest de la hutte de Kormek ; {object:176751} gisent parmi les squelettes. Un {npc:217590} rampent dans le cimetière : attrapez-en un avec le kit de démarrage d'entomologie, puis cochez-le.",
 	-- {npc:217590} Flesh Picker
 	["{npc:217590}: catch it, for My Little Friends"] = "{npc:217590} : attrapez-le, pour Mes petits amis",
 
-	-- Step 27: Maraudine centaurs
+	-- Step 29: Hornizz Brimbuzzle
+	-- {quest:6134} Ghost-o-plasm Round Up
+	-- plural, as words: Magrami Spectres = {npc:11560} Magrami Spectre · Magram Necrokhans = {npc:253274} Magram Necrokhan
+	["These are elite mobs: grouping up is encouraged, look for people to do it with. {quest:6134}'s magnets draw the Magrami Spectres a few yards from the Magram Necrokhans and Corpsefeeders (45, elite) in the Valley of Bones. Skip it if you are alone."] = "Ce sont des monstres élites : mieux vaut se grouper et chercher des joueurs avec qui la faire. Les aimants de {quest:6134} attirent les Spectres magrami à quelques mètres des Magram Necrokhans et Corpsefeeders (élites 45), dans les champs d'ossements. Seul ? La passer.",
+
+	-- Step 30: Maraudine centaurs
 	["Maraudine centaurs"] = "Centaures maraudine",
 	["The Maraudine centaurs hold the Valley of Spears west of the graveyard; every kind drops the totems."] = "Les centaures maraudines occupent la vallée des Lances à l'ouest du cimetière ; chaque type laisse tomber les totems.",
 
-	-- Step 28: Melizza Brimbuzzle
+	-- Step 31: Melizza Brimbuzzle
 	-- {npc:12277} Melizza Brimbuzzle
 	["{npc:12277} is held in the centaur camp west of the graveyard. Free her and keep her alive on the walk out; she stops by the graveyard.\nCareful: The scripted groups are linked and only appear during the escort, so you cannot clear them in advance or pull them one at a time. Clearing the normal centaurs on the path before you start does help."] = "{npc:12277} est retenue dans le camp de centaures à l'ouest du cimetière. Libérez-la et gardez-la en vie pendant la sortie ; elle s'arrête près du cimetière.\nAttention : les groupes scriptés sont liés et n'apparaissent que pendant l'escorte : vous ne pouvez ni les éliminer à l'avance ni les attirer un par un. Éliminer les centaures normaux sur le chemin avant de commencer aide quand même.",
 	-- {npc:12277} Melizza Brimbuzzle
 	["escort {npc:12277} back toward the graveyard"] = "escortez {npc:12277} jusqu'au cimetière",
 
-	-- Step 29: Mannoroc Coven
+	-- Step 32: Mannoroc Coven
 	["Mannoroc Coven"] = "Convent de Mannoroc",
 	-- {zone:1443} Desolace
 	-- plural, as words: Mana Eaters = {npc:4678} Mana Eater · Ley Hunters = {npc:4685} Ley Hunter · Nether Maidens = {npc:4679} Nether Maiden · Doomwarder Captains = {npc:4680} Doomwarder Captain
 	["The demons gather at the Mannoroc Coven in southern {zone:1443}: felhounds (Mana Eaters, Mage and Ley Hunters), Nether Maidens and Sisters, and Doomwarder Captains around the pit.\nCareful: Most of the mobs here walk patrol routes, so you can easily pull extra mobs."] = "Les démons se rassemblent au Convent de Mannoroc au sud de {zone:1443} : gangrechiens (mange-mana, chasseurs de mages et chasseurs Ley), vierges et sœurs du néant, et capitaines de la Garde funeste autour de la fosse.\nAttention : la plupart des monstres ici suivent des routes de patrouille, vous pouvez donc facilement attirer des monstres supplémentaires.",
 
-	-- Step 30: The Valley of Bones
+	-- Step 33: The Valley of Bones
 	["The Valley of Bones"] = "Vallée des Ossements",
-	-- {item:15848} Crate of Ghost Magnets
-	-- plural, as words: Undead Ravagers = {npc:11561} Undead Ravager · Magrami Spectres = {npc:11560} Magrami Spectre
-	["Undead Ravagers roam the bone fields south of the Magram village, east of the Coven; at the far south-east, use the {item:15848} to draw the Magrami Spectres."] = "Des Ravageurs morts-vivants parcourent les champs d'ossements au sud du Village des Magram, à l'est du Convent de Mannoroc ; à l'extrême sud-est, utilisez la {item:15848} pour attirer les Spectres magrami.",
+	-- plural, as words: Undead Ravagers = {npc:11561} Undead Ravager
+	["Undead Ravagers roam the bone fields south of the Magram village, east of the Coven."] = "Des Ravageurs morts-vivants parcourent les champs d'ossements au sud du Village des Magram, à l'est du Convent de Mannoroc.",
 
-	-- Step 33: Azore Aldamort
+	-- Step 34: The Valley of Bones
+	-- {item:15848} Crate of Ghost Magnets
+	-- plural, as words: Magrami Spectres = {npc:11560} Magrami Spectre · Magram Necrokhans = {npc:253274} Magram Necrokhan
+	["At the far south-east of the bone fields, use the {item:15848} to draw the Magrami Spectres; the Magram Necrokhans and Corpsefeeders (45, elite) walk close by: keep the group together."] = "À l'extrême sud-est des champs d'ossements, utiliser la {item:15848} pour attirer les Spectres magrami ; les Magram Necrokhans et Corpsefeeders (élites 45) passent tout près : rester groupés.",
+
+	-- Step 38: Azore Aldamort
 	-- {zone:1443} Desolace · {npc:11863} Azore Aldamort
 	["Follow the road west across the north of {zone:1443} to the ruins of Ethel Rethor. {npc:11863}'s tower stands on the hill there, on the way to the wreck."] = "Suivez la route vers l'ouest à travers le nord de {zone:1443} jusqu'aux ruines d'Ethel Rethor. La tour de {npc:11863} se dresse sur la colline là-bas, sur le chemin vers l'épave.",
 
-	-- Step 34: Karnitol's Chest
+	-- Step 39: Karnitol's Chest
 	-- {npc:11863} Azore Aldamort
 	["The wrecked ship's chest lies on the shore just west of {npc:11863}'s tower."] = "Le coffre du navire échoué se trouve sur le rivage, juste à l'ouest de la tour d'{npc:11863}.",
 
-	-- Step 35: Claim Rackmore's Treasure!
+	-- Step 40: Claim Rackmore's Treasure!
 	["Underwater"] = "Sous l'eau",
 
-	-- Step 36: Nijel's Point
+	-- Step 41: Nijel's Point
 	-- {object:176948} Nijel's Point
 	["Follow the road north to {object:176948}."] = "Suivez la route vers le nord jusqu'à {object:176948}.",
 	-- {npc:5637} Roetten Stonehammer · {zone:1455} Ironforge
@@ -167,15 +182,18 @@ return {
 	-- {npc:3980} Raleigh the Devout
 	["for {npc:3980} in Southshore: keep it"] = "pour {npc:3980} à Austrivage : gardez-le",
 
-	-- Step 37: Sar'theris Strand: kill these as you meet them
+	-- Step 42: Sar'theris Strand: kill these as you meet them
 	["Sar'theris Strand: kill these as you meet them"] = "Grève de Sar'theris : tuez-les au fur et à mesure",
 	-- {npc:12369} Lord Kragaru · {npc:11863} Azore Aldamort
 	["{npc:12369}, a centaur chieftain, camps on the north-west coast, north of {npc:11863}'s tower."] = "{npc:12369}, un chef centaure, campe sur la côte nord-ouest, au nord de la tour d'{npc:11863}.",
 
-	-- Step 40: Kormek's Hut
+	-- Step 45: Kormek's Hut
 	["Kormek's Hut"] = "Hutte de Kormek",
 
-	-- Step 42: Fly to Theramore
+	-- Step 47: Fly to Theramore
 	["Fly to Theramore"] = "Volez jusqu'à Theramore",
 	["The next guide starts in Theramore."] = "Le guide suivant commence à Theramore.",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Undead Ravagers roam the bone fields south of the Magram village, east of the Coven; at the far south-east, use the {item:15848} to draw the Magrami Spectres."] = "Des Ravageurs morts-vivants parcourent les champs d'ossements au sud du Village des Magram, à l'est du Convent de Mannoroc ; à l'extrême sud-est, utilisez la {item:15848} pour attirer les Spectres magrami.",
 }

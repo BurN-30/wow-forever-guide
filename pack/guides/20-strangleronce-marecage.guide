@@ -324,15 +324,27 @@ step Booty Bay
   accept 622                          -- for Corporal Kaleb at the Rebel Camp, on the northern loop
   accept 2864                         -- Krazek: for Tran'rek in Tanaris, keep it
   accept 617                          -- Privateer Bloads
-  turnin 669                          -- Fleet Master Seahorn, top floor
   accept 621                          -- Inside
-  note Seahorn's next errand goes back to Arathi: skip it.
   turnin 603                          -- Catelyn the Blade, upstairs
   accept 610
   accept 2872                         -- for Stoley in Tanaris: keep it; on the top floor
   sethome "Booty Bay"                 -- Upstairs
-  accept 348                          -- Fin Fizracket
   accept 595                          -- First Mate Crazz
+
+# Groupe Alliance 0.12.2: Sunken Treasure (669) only for a group that did Faldir's Cove in Group 16
+# (`when group 665`).
+step Fleet Master Seahorn
+  when group 665
+  turnin 669                          -- Fleet Master Seahorn, top floor
+  note Seahorn's next errand goes back to Arathi: skip it.
+
+# Groupe Alliance 0.12.2: Stranglethorn Fever (348) asked as a group quest (`when group 348`), as
+# in Polestar 0.4.2.2: three waves of gorillas (41-42), then Mokk the Savage (44), at 39-42 here.
+# Witch Doctor Unbagwa's Stranglethorn Fever (349) is offered only with 348 in the log.
+step Fin Fizracket
+  when group 348
+  tip Group quest: Stranglethorn Fever ends at Witch Doctor Unbagwa in Mistvale. Hand him ten gorilla fangs and he calls three waves of gorillas (41-42), one after another, then Mokk the Savage (44). Take it if you have a friend or two along. Skip it if you are alone.
+  accept 348                          -- Fin Fizracket
 
 # ---------------------------------------------------------------- The Bloodsail
 
@@ -372,17 +384,20 @@ step Booty Bay
   turnin 576                          -- Dizzy One-Eye
 
 step Gorilla hills
+  when group 348
   tip Ride inland to the Mistvale gorilla hills. Elder Mistvale Gorillas drop the giblets; Witch Doctor Unbagwa sits among them.
   accept 349                          -- Witch Doctor Unbagwa, inside Spirit Den
   collect 2799 quest 349              -- Gorilla Fang
 
 step Unbagwa's ritual
+  when group 348
   tip Hand in the fangs and stay: three waves of gorillas come, Mokk the Savage last. Fight at full health.
   turnin 349                          -- Witch Doctor Unbagwa, inside Spirit Den
   collect 2797 quest 348              -- Heart of Mokk
 
 step Gorilla hills
   label q606
+  tip Ride inland to the Mistvale gorilla hills. Elder Mistvale Gorillas drop the giblets; Witch Doctor Unbagwa sits among them.
   collect 3919 quest 606              -- Mistvale Giblets
 
 # ---------------------------------------------------------------- North of the bay
@@ -397,9 +412,12 @@ step Booty Bay
   accept 607
   turnin 617                          -- Privateer Bloads
   accept 623                          -- for Privateer Groy in Theramore: keep it
-  turnin 348                          -- Fin Fizracket
   turnin 607                          -- "Sea Wolf" MacKinley, on the top floor
   accept 609
+
+step Fin Fizracket
+  when group 348
+  turnin 348                          -- Fin Fizracket
 
 step The Bloodsail captains
   tip The captains stand on the ships anchored off the Wild Shore, each with a crew of 42-45 pirates: Stillwater (45) and Keelhaul (46) on the nearer decks, Fleet Master Firallon (48) on the flagship. At 42 this is a fight for a group or for the end of the guide; clear each deck first if you go. Cortello's scroll lies on the wreck by the shore.
@@ -749,8 +767,14 @@ step Ironforge
   zone Ironforge
   tip Take the Deeprun Tram from the Dwarven District. Roetten is in the Reclaimers' hall by the Hall of Explorers, Prospector Stormpike in the hall itself, Gerrig Bonegrip in the Forlorn Cavern. The next guide flies on to Thelsamar.
   turnin 1467                         -- Roetten Stonehammer
-  turnin 727                          -- Gerrig Bonegrip
   train class only Shaman             -- Stormwind has no shaman trainer
+
+# Groupe Alliance 0.12.2: To Ironforge for Yagyin's Digest (727) only for a group that did Solution
+# to Doom in Group 17 (`when group 709`).
+step Gerrig Bonegrip
+  when group 709
+  zone Ironforge
+  turnin 727                          -- Gerrig Bonegrip
 
 # Groupe Alliance 0.5.0: dungeon pickups in Ironforge, each dungeon asked once (Scarlet Monastery:
 # `when group 1053`, run in the next guide from Southshore; Uldaman: `when group 2240`, run in the

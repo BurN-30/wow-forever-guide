@@ -57,8 +57,15 @@ step Thorium Point
   accept 7727
   accept 7724
   accept 7723                         -- Hansel Heavyhands
-  accept 7729 object 179827
   accept 7728 object 179827           -- The Wanted/Missing/Lost & Found board
+
+# Groupe Alliance 0.12.2: JOB OPPORTUNITY: Culling the Competition (7729) asked as a group quest
+# (`when group 7729`), as in Polestar 0.4.2.2: the Taskmasters and Slavers stand in linked packs
+# and call for help. Prayer to Elune (3377) too: Zamael stands among level 48-49 Twilight elites.
+step Culling the Competition
+  when group 7729
+  tip Take the bounty from the board only if you want to hunt the linked dwarf packs with a group. Skip it if you are alone.
+  accept 7729 object 179827
 
 step Thorium Point
   when group 7701
@@ -69,13 +76,16 @@ step Greater Lava Spider on the way
   kill 5858 quest 7724
 
 step Zamael Lunthistle
-  tip The night elf stands alone west of Thorium Point. Hear his story.
+  when group 3377
+  tip These are elite mobs: grouping up is encouraged, look for people to do it with. Zamael Lunthistle stands in the Twilight camp at Firewatch Ridge, west of Thorium Point, among level 48-49 Twilight elites, with Highlord Mastrogonde (51, rare elite) beside him: a group of 4. Skip it if you are alone.
   accept 3377
 
 step Prayer to Elune
+  when group 3377
   kill 8436 quest 3377.1 @29.6,26.3 map 1427
 
 step Zamael Lunthistle
+  when group 3377
   turnin 3377
 
 step Kalaran Windblade
@@ -92,6 +102,7 @@ step Kalaran Windblade
 # ---------------------------------------------------------------- The Cauldron
 step On the way
   along until q7729
+  when group 7729
   kill 5846 quest 7729 -- Dark Iron Taskmaster along the way to Thorium Point
   kill 5844 quest 7729 -- Dark Iron Slaver along the way to Thorium Point
 
@@ -121,10 +132,13 @@ step Thorium Plated Dagger on the way
 
 step Thorium Point
   label q7729
-  turnin 7729
   turnin 7728                         -- Taskmaster Scrange
   turnin 7723                         -- Hansel Heavyhands
   turnin 7724
+
+step Taskmaster Scrange
+  when group 7729
+  turnin 7729
 
 step Incendosaur on the way
   along until q7727

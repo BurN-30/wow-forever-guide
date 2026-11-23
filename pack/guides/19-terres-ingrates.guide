@@ -84,9 +84,16 @@ step Agmond's End: kill these as you meet them
   accept 739                          -- Battered Dwarven Skeleton
   note The skeleton's next task, Murdaloc, waits until the later Badlands guide at 43.
   collect 5797 quest 1108 optional    -- Indurium Flake
-  accept 709                          -- Theldurin the Lost
   collect 7848 quest 2500             -- Rock Elemental Shard
   collect 4626 quest 710              -- Small Stone Shard
+
+# Groupe Alliance 0.12.2: Solution to Doom (709) asked as a group quest (`when group 709`), as in
+# Polestar 0.4.2.2: the Ancient Chest stands among level 38 elites. To Ironforge for Yagyin's
+# Digest (727) follows it, handed in at Ironforge in Group 18.
+step Theldurin the Lost
+  when group 709
+  tip These are elite mobs: grouping up is encouraged, look for people to do it with. Theldurin sits by the ruined camp south of the trogg camp; his tablet lies in the Ancient Chest, among level 38 elites. Skip it if you are alone.
+  accept 709                          -- Theldurin the Lost
 
 step Lotwil Veriatus
   turnin 710
@@ -98,13 +105,18 @@ step Lucien Tosselwrench
 # ---------------------------------------------------------------- The north
 
 step The Ancient Chest
+  when group 709
   tip Head north-east to the dwarven ruins in the north of the Badlands; the chest sits among the Shadowforge dwarves. Ambassador Infernus nearby is elite: give him room.
   collect 4631 quest 709              -- Tablet of Ryun'eh; below ground
 
 step Theldurin the Lost
+  when group 709
   tip Head south to Agmond's End.
   turnin 709
   accept 727                          -- for Gerrig Bonegrip in Ironforge: keep it
+
+step Agmond's End
+  tip Head south to Agmond's End.
   kill 2893 quest 739                         -- Stonevault Bonesnapper, 130 yd north
 
 step Rock Elementals
@@ -168,6 +180,12 @@ step Kodo Graveyard
   tip Hornizz stands at the edge of the Kodo Graveyard, south-west of Kormek's Hut; Kodo Bones lie among the skeletons. A Flesh Picker crawls about the graveyard: catch one with the Entomology Starter Kit, then tick it off.
   collect 13703 quest 5501            -- Kodo Bone
   kill 217590                         -- Flesh Picker: catch it, for My Little Friends
+
+# Groupe Alliance 0.12.2: Ghost-o-plasm Round Up (6134) asked as a group quest (`when group 6134`),
+# as in Polestar 0.4.2.2: the magnets draw the spectres beside level 45 elites.
+step Hornizz Brimbuzzle
+  when group 6134
+  tip These are elite mobs: grouping up is encouraged, look for people to do it with. Ghost-o-plasm Round Up's magnets draw the Magrami Spectres a few yards from the Magram Necrokhans and Corpsefeeders (45, elite) in the Valley of Bones. Skip it if you are alone.
   accept 6134                         -- Hornizz Brimbuzzle
 
 step Maraudine centaurs
@@ -187,8 +205,12 @@ step Mannoroc Coven
   collect 6252 quest 1466             -- Doomwarder Blood
 
 step The Valley of Bones
-  tip Undead Ravagers roam the bone fields south of the Magram village, east of the Coven; at the far south-east, use the Crate of Ghost Magnets to draw the Magrami Spectres.
+  tip Undead Ravagers roam the bone fields south of the Magram village, east of the Coven.
   kill 11561 quest 261                -- Undead Ravager
+
+step The Valley of Bones
+  when group 6134
+  tip At the far south-east of the bone fields, use the Crate of Ghost Magnets to draw the Magrami Spectres; the Magram Necrokhans and Corpsefeeders (45, elite) walk close by: keep the group together.
   use 15848 quest 6134.1 @63.5,91.6 map 1443
   collect 15849 quest 6134            -- Ghost-o-plasm
 
@@ -197,6 +219,9 @@ step Mannoroc Coven
 
 step Hornizz Brimbuzzle
   turnin 6132
+
+step Hornizz Brimbuzzle
+  when group 6134
   turnin 6134                         -- Hornizz Brimbuzzle
 
 step Azore Aldamort

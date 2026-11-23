@@ -188,15 +188,24 @@ step Faldir's Cove
   turnin 663                          -- Shakes O'Breen
   accept 662                          -- First Mate Nilzlix
   accept 664                          -- Captain Steelgut
+
+# Groupe Alliance 0.12.2: Sunken Treasure (665) asked as a group quest (`when group 665`), as in
+# Polestar 0.4.2.2: two level 40 water elementals ambush the escort. Its chain goes with it: 666,
+# 668 and 669 (handed in at Booty Bay in Group 18).
+step Professor Phizzlethorpe
+  when group 665
+  tip A group quest at this level: two level 40 water elementals ambush Professor Phizzlethorpe's escort, and they are immune to frost. Grouping up is encouraged, look for people to do it with. Skip it if you are alone.
   accept 665                          -- Professor Phizzlethorpe
 
 step Phizzlethorpe
+  when group 665
   tip Escort the professor to the beach north of the cove and guard him while he works; naga attack in waves.
   tip Careful: The ambush is two level 40 water elementals, and they are immune to frost. If the fight happens inside the cave, the professor joins in instead of working and further elementals keep appearing; holding the elementals at the cave entrance, away from him, lets him finish with only the first two to deal with.
   goto 33.9,80.6
   complete 665
 
 step Doctor Draxlegauge
+  when group 665
   turnin 665
   accept 666
 
@@ -204,16 +213,22 @@ step The Drowned Reef: kill these as you meet them
   zone Arathi Highlands
   tip The two wrecks lie in the bay west of the cove. The charts and logs are inside them; the gems lie on the sea floor around them. Daggerspine naga swim the whole bay.
   kill 2595 quest 664.1               -- Daggerspine Raider, underwater
-  collect 4492 quest 666              -- Elven Gem; underwater
   kill 2596 quest 664.2               -- Daggerspine Sorceress, underwater
   collect 4489 quest 662.2            -- Maiden's Folly Log; underwater
   collect 4487 quest 662.1            -- Maiden's Folly Charts; underwater
   collect 4490 quest 662.4            -- Spirit of Silverpine Log; underwater
   collect 4488 quest 662.3            -- Spirit of Silverpine Charts; underwater
 
+step The Drowned Reef
+  when group 665
+  collect 4492 quest 666              -- Elven Gem; underwater
+
 step Faldir's Cove
   turnin 662                          -- First Mate Nilzlix
   turnin 664                          -- Captain Steelgut
+
+step Faldir's Cove
+  when group 665
   turnin 666                          -- Doctor Draxlegauge
   accept 668
   turnin 668                          -- Shakes O'Breen
@@ -245,9 +260,16 @@ step Drywhisker Gorge: kill these as you meet them
 step Iridescent Shards
   tip The shards lie at the far end of Drywhisker Gorge.
   turnin 642                          -- Below ground
+
+# Groupe Alliance 0.12.2: Stones of Binding (651) asked as a group quest (`when group 651`), as in
+# Polestar 0.4.2.2: three elementals near level 39 guard each stone and attack together.
+step Iridescent Shards
+  when group 651
+  tip Stones of Binding is a group quest at this level: three Cresting Exiles (38-39) guard the Stone of East Binding and attack together. Grouping up is encouraged, look for people to do it with. Skip it if you are alone.
   accept 651
 
 step Stones of Binding
+  when group 651
   tip Each key lies at one of the Highlands' standing-stone circles: east of the shards, near Refuge Pointe and in the west. The Stone of Inner Binding stands west of Refuge Pointe.
   tip Careful: Each center stone is guarded by around three elementals near level 39 that attack together if you click the stone without clearing them: Burning Exiles at West, Thundering Exiles at Outer, Cresting Exiles at East.
   collect 4484 quest 651.2            -- Cresting Key: Stone of East Binding
@@ -264,6 +286,7 @@ step Forsaken Courier
   collect 4482 quest 658              -- Sealed Folder
 
 step Circle of Outer Binding
+  when group 651
   collect 4485 quest 651.3            -- Thundering Key: Stone of Outer Binding
 
 step Quae and Kinelory
@@ -283,6 +306,7 @@ step Quae
   accept 661                          -- For Phin Odelic in Southshore
 
 step Circle of West Binding
+  when group 651
   collect 4483 quest 651.1            -- Burning Key: Stone of West Binding
   turnin 651                          -- Stone of Inner Binding
 

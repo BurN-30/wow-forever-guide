@@ -69,8 +69,12 @@ step The Green Belt
 
 # ---------------------------------------------------------------- Dun Modr
 
-step Dun Modr
-  tip North along the road to Dun Modr. Modr stands in the ruins (use the Goaz Stone); the Captive Fire Elemental is held on the west side: lead it out to Roggo Harlbarrow.
+# Groupe Alliance 0.12.2: Spark of Freedom (87491) asked as a group quest (`when group 87491`), as
+# in Polestar 0.4.2.2 (#1313): the escort starts among the Dark Iron elites of Dun Modr (27-30, and
+# Balgaras the Foul, 34) and walks out through them.
+step Captive Fire Elemental
+  when group 87491
+  tip North along the road to Dun Modr. These are elite mobs: grouping up is encouraged, look for people to do it with. The Captive Fire Elemental is held on the west side of the Dark Iron ruins, past level 27-30 elite dwarves, and Balgaras the Foul (34, elite) can be among them: lead it east out of the ruins, to Roggo Harlbarrow in the camp. Skip it if you are alone.
   accept 87491                        -- Captive Fire Elemental
 
 # Groupe Alliance (0.9.9): MacKreel's Moonshine (647) gives 15 minutes to reach Brewmeister
@@ -89,9 +93,13 @@ step Waterlogged Envelope
 # Villard no longer offers it (Wowhead Forever comments), and Polestar 0.4.2.2 leaves it out too.
 step Dun Modr
   zone Wetlands
+  tip North along the road to Dun Modr. Modr stands in the ruins (use the Goaz Stone).
   collect 280396 quest 98310.2        -- Heart of Modr
   tip Longbraid the Grim stands in the dwarves' camp.
   turnin 472                              -- Longbraid the Grim
+
+step Roggo Harlbarrow
+  when group 87491
   turnin 87491                        -- Roggo Harlbarrow
 
 step Thandol Span
