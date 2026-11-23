@@ -1,0 +1,162 @@
+# Written for this pack by BurN-30 (GPL-3.0). Replaces 08b-prison.guide on Polestar's own route, with
+# the end of the Defias story (393 to 396) that 12-dalaran.guide carried. Same sources: quest ids,
+# givers, places and levels from Polestar's Forever data (data-v2026.11.1 and the forever-db of
+# Polestar 0.4.2.2) and its Dungeons codex; bosses, quest drops and tips from Wowhead Forever (quest
+# and NPC pages and their comments, read on 2026-11-08), the story's event tips from Wowhead Forever
+# comments (October and November 2026), rewritten. Polestar 0.4.2.2's run (GPL-3.0,
+# data/dungeon-runs.json and its `when dungeon "The Stockade"` steps of forever/alliance/06-wetlands):
+# the gate at Stormwind 52.4,70.0, Bazil Thredd (389) then The Stockade Riots (391) at the Warden's.
+# Not played in game yet.
+#
+# Self-contained chapter for Polestar's route: the Groupe Alliance module offers it on the last
+# Stormwind stop of forever/alliance/05-duskwood (Seeking Wisdom, 269, to Bishop Farthing, or Caretaker
+# Folsom's Sealed Crate, 72), about level 28-29, before the flight to the Wetlands; else on the last
+# Stormwind stop of forever/alliance/06-wetlands (Cleansing the Eye, 293, to Archbishop Benedictus),
+# about 30-31, where Polestar's own run was. Every giver and every hand-in is in Stormwind.
+# At the switch this chapter takes the id groupe-alliance/08b-prison.
+#
+# Compared with Polestar's run: the same Warden's quests; added The Color of Blood (388, Nikova
+# Raskol in Old Town, the bandanas of the run), The Curious Visitor and the end of the Defias story
+# (392 to 396: Lescovar, the Seal of Wrynn), the bosses one by one, and Bazil Thredd taken from Baros
+# Alexston for whoever handed in the Deadmines' letter without it. Left out, as by Polestar: What
+# Comes Around (386, Lakeshire), Crime and Punishment (377, Darkshire) and The Fury Runs Deep (378,
+# Dun Modr): their givers are off the route then; their hand-ins stay for a character who carries
+# them from this pack's former route.
+guide groupe-alliance/greffe/prison
+title Dungeon · The Stockade (25-31)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 25-31
+zone Stormwind City
+
+step Baros Alexston: Bazil Thredd (after the Deadmines)
+  when available 389
+  zone Stormwind City
+  tip Baros Alexston, in the City Hall on Cathedral Square, sends whoever handed in VanCleef's Unsent Letter to Warden Thelwater: it opens The Stockade Riots, the prison's best quest.
+  accept 389                                  -- Baros Alexston
+
+step Stormwind: Warden Thelwater
+  zone Stormwind City
+  tip The Stockade, Stormwind's prison taken over by rioting Defias, is a group dungeon in the canals between the Mage Quarter and Old Town, levels 24 to 32 in the group finder: at 26 or more it goes well. Warden Thelwater keeps its gate, south of the Cathedral Square.
+  note Keep 6 free quest log slots. Everyone takes the quests on their own; meet at the prison gate for the run.
+  accept 387                                  -- Warden Thelwater
+
+step Warden Thelwater: Bazil Thredd (after the Deadmines)
+  when onquest 389
+  zone Stormwind City
+  turnin 389 optional                         -- Warden Thelwater
+  accept 391 optional                         -- The Stockade Riots
+
+step Old Town: Nikova Raskol
+  zone Stormwind City
+  tip Nikova Raskol stands in Old Town: the Red Wool Bandanas she wants drop from the Defias inside.
+  accept 388                                  -- Nikova Raskol
+
+step For whoever carries them from this pack's former route
+  when onquest 386,377
+  tip What Comes Around (Guard Berton, Lakeshire) wants Targorr's head, Crime and Punishment (Councilman Millstipe, Darkshire) Dextren Ward's hand: both are in the prison, and their hand-ins come after the run.
+  accept 386 optional                         -- Guard Berton, Lakeshire
+  accept 377 optional                         -- Councilman Millstipe, Darkshire
+
+step Enter the Stockade
+  tip The gate is by Warden Thelwater, at the top of the stairs on the canal. Group of 5 at 24 to 29, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.
+  note In the log before going in: Quell the Uprising and The Stockade Riots (Warden Thelwater), The Color of Blood (Nikova Raskol). Share each quest with the group: click it in the quest log, then Share.
+  goto 52.4,70.0 "The Stockade" r 20 live
+
+step The entry corridor and Targorr
+  tip Cells line both sides, 3 or 4 elites each, and runners flee into the next cell for help: stop them or clear each cell as you pass. Targorr the Dread hides in a side cell of this corridor (often first on the right or second on the left); a patrol walks between the two wings.
+  note Red Wool Bandanas and the prisoners for Quell the Uprising come from every Defias.
+  collect 3630 quest 386 optional             -- Head of Targorr: Targorr the Dread, elite 24
+  kill 1696                                   -- Targorr the Dread
+  note At the junction, type /target Bruegal Ironknuckle: if a frame shows, the rare elite (26) is in a cell nearby, with the best loot of the dungeon.
+
+step The west wing: Dextren Ward
+  tip Left at the junction, to the small hall at the end. Clear every room around it first: his Intimidating Shout fears the group into fresh packs. He runs at low health: stop him.
+  collect 3628 quest 377 optional             -- Hand of Dextren Ward, elite 26
+  kill 1663                                   -- Dextren Ward
+
+step The east wing: Kam, Hamhock and Bazil Thredd
+  tip Right at the junction. Kam Deepfury sits in a cell (second on the left); Hamhock comes with two linked Insurgents and casts Chain Lightning: crowd-control an add and spread out. Bazil Thredd waits at the very end: he hits one target hard and his Smoke Bomb stuns, so keep the tank topped up.
+  kill 1666                                   -- Kam Deepfury
+  kill 1717                                   -- Hamhock
+  collect 2926 quest 391 optional             -- Head of Bazil Thredd, elite 29
+  kill 1716                                   -- Bazil Thredd
+
+step Finish the clear
+  tip One Convict short after a full clear? Wait a few minutes at the entrance for the respawn rather than resetting. Two chests, one in each wing. Leaving through the portal drops whatever chases you.
+  complete 387                                -- Defias Prisoners, Convicts and Insurgents
+  collect 2909 quest 388                      -- Red Wool Bandana: any Defias inside
+
+step Warden Thelwater
+  zone Stormwind City
+  turnin 387                                  -- Warden Thelwater
+
+step Warden Thelwater: The Stockade Riots
+  when onquest 391
+  zone Stormwind City
+  turnin 391 optional                         -- Warden Thelwater
+  accept 392 optional                         -- The Curious Visitor: for Baros Alexston, Cathedral Square
+
+# The end of the Defias story: only after The Stockade Riots, every hand-in optional so that the
+# chapter ends on its own quests (387, 388) for whoever leaves the story aside.
+step Baros Alexston: The Curious Visitor
+  when onquest 392
+  zone Stormwind City
+  tip Baros Alexston is in the City Hall on Cathedral Square. The end of the Defias story follows, all in Stormwind and at the farm by its gate: about 8,000 XP and the Seal of Wrynn, a ring, at the end. Short on time? Go straight to Nikova Raskol in Old Town.
+  turnin 392 optional                         -- Baros Alexston
+
+step Stormwind: the end of the Defias story
+  when turnedin 392
+  tip Only if you did The Stockade Riots. Baros Alexston is in the City Hall on Cathedral Square, Mathias Shaw upstairs at SI:7 in Old Town, Elling Trias upstairs in the cheese shop of the Trade District, Tyrion in the garden beside Stormwind Keep.
+  accept 393 optional                         -- Baros Alexston
+  turnin 393 optional                         -- Master Mathias Shaw
+  accept 350 optional
+  turnin 350 optional                         -- Elling Trias
+  accept 2745 optional
+  turnin 2745 optional                        -- Tyrion
+  accept 2746 optional
+
+step Clara's apples
+  when onquest 2746
+  zone Elwynn Forest
+  tip The bowl of apples sits on the table of the farmhouse just outside the Stormwind gate, south-west of the road. Silk Cloth: from your bags, humanoids or the Auction House.
+  collect 8683 x2 quest 2746 @33.95,57.16     -- Clara's Fresh Apple
+  collect 4306 x3 quest 2746                  -- Silk Cloth
+
+step The Attack!
+  when onquest 2746
+  zone Stormwind City
+  tip Lord Gregor Lescovar and Marzon the Silent Blade meet in the garden beside the keep: listen to them, then fight both, together. Better with the group.
+  turnin 2746 optional                        -- Tyrion
+  accept 434 optional
+  complete 434 optional @72.36,35.12          -- Overhear Lescovar and Marzon in the garden, then kill both
+
+step Brotherhood's End
+  when onquest 434
+  turnin 434 optional                         -- Elling Trias
+  accept 394 optional
+  turnin 394 optional                         -- Master Mathias Shaw
+  accept 395 optional
+  turnin 395 optional                         -- Baros Alexston
+  accept 396 optional
+  turnin 396 optional                         -- Lady Katrana Prestor, in the throne room of Stormwind Keep: Seal of Wrynn
+
+# Only for a character who carries them from this pack's former route.
+step Lakeshire: Guard Berton
+  zone Redridge Mountains
+  when onquest 386
+  tip Fly to Lakeshire and back: a few minutes for the biggest reward of the prison.
+  fly "Lakeshire"
+  turnin 386 optional                         -- Guard Berton
+
+step Darkshire: Councilman Millstipe
+  zone Duskwood
+  when onquest 377
+  fly "Darkshire"
+  turnin 377 optional                         -- Councilman Millstipe, town hall
+
+step Old Town: Nikova Raskol
+  zone Stormwind City
+  tip Last stop of the chapter: the route's own guide comes back once this is handed in.
+  turnin 388                                  -- Nikova Raskol

@@ -79,6 +79,14 @@ GA.GREFFE = {
 		where = { frFR = "Grève de Zoram, Orneval · groupe de 5 · niveaux 24 à 32",
 			enUS = "The Zoram Strand, Ashenvale · group of 5 · levels 24 to 32" },
 	},
+	{
+		id = "groupe-alliance/greffe/prison", key = "prison", dungeon = "stormwind-stockade",
+		turnin = { 269, 72, 293 }, min = 25, max = 31, done = { 387 },
+		route = "forever/alliance/05-duskwood", switchId = "groupe-alliance/08b-prison",
+		name = { frFR = "La Prison", enUS = "The Stockade" },
+		where = { frFR = "Hurlevent · groupe de 5 · niveaux 24 à 32",
+			enUS = "Stormwind · group of 5 · levels 24 to 32" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
