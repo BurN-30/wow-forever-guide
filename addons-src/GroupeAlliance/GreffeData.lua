@@ -87,6 +87,14 @@ GA.GREFFE = {
 		where = { frFR = "Hurlevent · groupe de 5 · niveaux 24 à 32",
 			enUS = "Stormwind · group of 5 · levels 24 to 32" },
 	},
+	{
+		id = "groupe-alliance/greffe/site-de-fouilles", key = "fouilles", dungeon = "excavation-site-wetlands",
+		turnin = 95737, min = 27, max = 34, done = { 95647, 95646 },
+		route = "forever/alliance/06-wetlands", switchId = "groupe-alliance/10-site-de-fouilles",
+		name = { frFR = "Le Site de fouilles : les Paluns", enUS = "Excavation Site: Wetlands" },
+		where = { frFR = "Les Paluns · groupe de 5 · niveaux 26 à 33",
+			enUS = "Wetlands · group of 5 · levels 26 to 33" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
