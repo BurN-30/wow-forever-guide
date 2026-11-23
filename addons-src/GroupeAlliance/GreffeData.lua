@@ -54,6 +54,14 @@ GA.GREFFE = {
 		where = { frFR = "Sud des Tarides, depuis Hurlevent · groupe de 5 · niveaux 37 à 46",
 			enUS = "Southern Barrens, from Stormwind · group of 5 · levels 37 to 46" },
 	},
+	{
+		id = "groupe-alliance/greffe/uldaman", key = "uldaman", dungeon = "uldaman",
+		turnin = { 94894, 94893 }, min = 41, max = 48, done = { 2240 },
+		route = "forever/alliance/40-50/01b-riverglades",
+		name = { frFR = "Uldaman", enUS = "Uldaman" },
+		where = { frFR = "Nord des Terres ingrates, depuis Forgefer · groupe de 5 · niveaux 41 à 51",
+			enUS = "Northern Badlands, from Ironforge · group of 5 · levels 41 to 51" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to

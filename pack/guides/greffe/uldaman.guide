@@ -1,0 +1,148 @@
+# Written for this pack by BurN-30 (GPL-3.0). From the Uldaman chapter of
+# 21-terres-ingrates-hinterlands.guide and its question in 20-strangleronce-marecage.guide (sources:
+# Polestar's Forever data and Dungeons codex, Wowhead Forever's zone and quest pages read on
+# 08/11/2026, Warcraft Tavern's Forever Uldaman quest guide read on 12/11/2026, room order from the
+# original game's comments). Not played in game yet.
+#
+# Self-contained chapter for Polestar's own route: the Groupe Alliance module offers it at the end of
+# forever/alliance/40-50/01b-riverglades, once Kilgar's head (94894) or Delivering Closure (94893) is
+# handed in in Stormwind (about level 44), when that guide sends the player to Thelsamar for the
+# Badlands. It opens in a tab of its own: the Deeprun Tram to Ironforge for the dungeon's quests, the
+# flight to Thelsamar, the Badlands and the dungeon, the rewards in Ironforge, and the flight back to
+# Thelsamar, where Polestar's Badlands guide (40-50/02-badlands) starts. Polestar's guide keeps its
+# place in its tab and comes back at the end.
+#
+# Compared with Polestar 0.4.2.2's own Uldaman page (Dungeons codex, Polestar_Codex, GPL-3.0, page
+# "uldaman"; out of its route on purpose, data/dungeon-runs.json "notInRoute": no quest of the
+# dungeon on a stop of the route in its window):
+# - its route already does the quests of the dig outside (Agmond's Fate 704, Uldaman Reagent Run 17,
+#   Solution to Doom 709 as a group question) and A Sign of Hope's first part (720, 30-40/06-badlands);
+#   none of this chapter's quests is taken or handed in by the route;
+# - same dungeon quests as this chapter: The Lost Dwarves and The Hidden Chamber (2398, 2240),
+#   Reclaimed Treasures (1360), Power Stones (2418), A Sign of Hope's chain (721 to 726), The Platinum
+#   Discs (2278, 2279, 2439), Power in Uldaman (1956, Mages), The Shattered Necklace (2198);
+# - on its page but not here: the rest of Talvash's necklace chain (2199 to 2361) and The Lost
+#   Tablets of Will (1139, after An Ambassador of Evil in Angor Fortress), which need a second run;
+#   Indurium Ore (1192), open only after Rizzle's Schematics at the Mirage Raceway, later on the route.
+# Prerequisites (Polestar's data): 721 after 720 (the route, 30-40/06), 722 to 726 one after the
+# other, 2240 after 2398, 2279 after 2278, 2439 after 2279, 1956 after 1955 (Mages).
+# Mythology of the Titans (1050) is offered on the Ironforge stop: it is for the Scarlet Monastery
+# chapter, offered at Southshore right after this one (greffe/monastere-ecarlate.guide).
+guide groupe-alliance/greffe/uldaman
+title Dungeon · Uldaman (42-48)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 42-48
+zone Badlands
+
+step Stormwind: the Uldaman chapter
+  zone Stormwind City
+  tip Uldaman: a dwarf and titan dungeon at the north end of the Badlands, for a group of 5, levels 41 to 51 in the group finder: best at 43 or more. Its quests start in Ironforge: the Deeprun Tram from the Dwarven District, then the flight to Thelsamar and south into the Badlands. The rewards are handed in in Ironforge at the end; the flight back to Thelsamar then joins the route's Badlands guide.
+  note Keep 6 free quest log slots. Everyone takes the quests at their own pace; meet at the dungeon's door for the run.
+  goto 64.5,7.5 "Tram to Ironforge"
+  zone Ironforge
+
+step Ironforge: Hall of Explorers
+  zone Ironforge
+  tip Prospector Stormpike, Krom Stoutarm and Librarian Mae Paledust all stand in the Hall of Explorers. Mae Paledust's quest is for the Scarlet Monastery, the next chapter, offered at Southshore: take it if your group plans that run too.
+  accept 2398                                 -- Prospector Stormpike
+  accept 1360                                 -- Krom Stoutarm
+  accept 1050 optional                        -- Librarian Mae Paledust: for the Scarlet Monastery
+
+step Fly to Thelsamar
+  zone Ironforge
+  goto 55.9,47.9 "Ironforge flight master"
+  fly "Thelsamar"
+  zone Loch Modan
+
+step Badlands: Prospector Ryedol
+  zone Badlands
+  tip Ride south through the pass into the Badlands. Ryedol's errand left at the start of the route's Badlands visit, A Sign of Hope, now serves Uldaman: it sends you to Hammertoe Grez, just outside the dungeon.
+  accept 721                                  -- Prospector Ryedol: for Hammertoe Grez, outside Uldaman
+
+step Valley of Fangs: Rigglefuzz
+  zone Badlands
+  tip Rigglefuzz's Power Stones drop from the Shadowforge dwarves at Uldaman's door, not often: take it only if your group means to farm them a little.
+  accept 2418 optional                        -- Rigglefuzz, Valley of Fangs
+
+step Uldaman: Hammertoe Grez
+  zone Badlands
+  tip Hammertoe Grez waits just outside Uldaman, west of the cave. His amulet is on Magregan Deepshadow, a Shadowforge dwarf (elite 38) outside the dungeon portal, south of Hammertoe.
+  turnin 721                                  -- Hammertoe Grez
+  accept 722
+  collect 4635 quest 722 @38.99,19.73         -- Hammertoe's Amulet: Magregan Deepshadow, elite 38
+  turnin 722                                  -- Hammertoe Grez
+  accept 723                                  -- For Prospector Ryedol, on the way out of the Badlands
+
+step The digsite and the outer cave
+  zone Badlands
+  tip The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. Krom's chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards.
+  collect 8009 x8 quest 2418 optional     -- Dentrium Power Stone: Shadowforge dwarves
+  collect 8052 x8 quest 2418 optional     -- An'Alleum Power Stone: Shadowforge dwarves
+  collect 8027 quest 1360                 -- Krom Stoutarm's Treasure, from his chest
+  goto 44.6,12.1 "Uldaman" r 25
+
+step Baelog and the hidden chamber
+  tip Baelog, Eric and Olaf wait in the first halls, at the top of a ramp. The chest beside Baelog holds the Gni'kiv Medallion, Revelosh drops the Shaft of Tsol: together they make the Staff of Prehistoria. Plant it in the Map Room, kill Ironaya (elite), then walk all the way into the chamber.
+  note Share each quest with your group: click it in the quest log, then Share. A Shattered Necklace may drop on the way: its chain goes on with Talvash del Kissel in Ironforge.
+  turnin 2398                             -- Baelog
+  accept 2240
+  complete 2240                           -- Explore the hidden chamber
+  accept 2198 item 7666 optional          -- Shattered Necklace, a drop: for Talvash del Kissel in Ironforge
+
+step Mages: Power in Uldaman
+  only Mage
+  when onquest 1956
+  along until uld-archaedas
+  tip The Obsidian Sentinel, one of the bosses on the way to Archaedas, drops the Obsidian Power Source for Tabetha in Dustwallow Marsh.
+  collect 8053 quest 1956                 -- Obsidian Power Source: Obsidian Sentinel
+
+step Archaedas and the Discs of Norgannon
+  label uld-archaedas
+  tip Archaedas, the last boss, wakes the stone guardians around his room during the fight. Behind him, the Discs of Norgannon: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave.
+  accept 2278 object 131474 optional      -- The Discs of Norgannon
+  turnin 2278 object 131474 optional
+  accept 2279 object 131474 optional
+
+step Rigglefuzz
+  when onquest 2418
+  zone Badlands
+  tip Leave by the front, south to the Valley of Fangs.
+  turnin 2418 optional                    -- Rigglefuzz
+
+step Prospector Ryedol
+  zone Badlands
+  tip On the way back north to the pass into Loch Modan and the Thelsamar flight.
+  turnin 723                                  -- Prospector Ryedol
+  accept 724                                  -- For Historian Karnik in Ironforge
+
+step Fly to Ironforge
+  zone Loch Modan
+  goto 33.9,50.8 "Thelsamar flight master"
+  fly "Ironforge"
+  zone Ironforge
+
+step Ironforge rewards
+  zone Ironforge
+  tip Prospector Stormpike, Krom Stoutarm and High Explorer Magellas are all in the Hall of Explorers; Talvash del Kissel in the Mystic Ward.
+  turnin 2240                             -- Prospector Stormpike
+  turnin 1360                             -- Krom Stoutarm
+  turnin 2279 optional                    -- High Explorer Magellas
+  turnin 2198 optional                    -- Talvash del Kissel: his follow-ups need another Uldaman run, not in this guide
+
+step The Vault of Ironforge: the Platinum Discs reward
+  when turnedin 2279
+  zone Ironforge
+  tip High Explorer Magellas hands a voucher for the Discs of Norgannon: Dinita Stonemantle pays it in the Vault of Ironforge.
+  accept 2439                                 -- High Explorer Magellas
+  turnin 2439 optional                        -- Dinita Stonemantle, in the Vault
+
+step Hall of Explorers: Historian Karnik and Advisor Belgrum
+  zone Ironforge
+  tip Both stand in the Hall of Explorers. Karnik's last task, An Ambassador of Evil, leads to a second Uldaman run, not in this guide: do not take it. Last stop of the chapter: the route's own guide comes back; its Badlands guide starts at Thelsamar, a flight from here.
+  turnin 724                                  -- Historian Karnik
+  accept 725
+  turnin 725                                  -- Advisor Belgrum
+  accept 726
+  turnin 726                                  -- Historian Karnik
