@@ -43,6 +43,18 @@ GA.GREFFE = {
 		where = { frFR = "Clairières de Tirisfal · groupe de 5 · niveaux 30 à 42",
 			enUS = "Tirisfal Glades · group of 5 · levels 30 to 42" },
 	},
+
+	-- Lot A: the chapters from the meeting point to the City of Dalaran (pack/guides/greffe/).
+	-- switchId: the id the chapter takes at the switch (its guide id in the pack up to 0.12.x),
+	-- read by whoever makes the switch; Greffe.lua does not read it.
+	{
+		id = "groupe-alliance/greffe/rendez-vous", key = "rendez-vous",
+		turnin = 109, min = 10, max = 17,
+		route = "forever/alliance/02-westfall", switchId = "groupe-alliance/02-rendez-vous-hurlevent",
+		name = { frFR = "Rendez-vous dans la Marche de l'Ouest", enUS = "Meeting in Westfall" },
+		where = { frFR = "Colline des sentinelles · jouer le parcours à plusieurs",
+			enUS = "Sentinel Hill · playing the route together" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to

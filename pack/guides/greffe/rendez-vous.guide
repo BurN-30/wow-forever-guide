@@ -1,0 +1,25 @@
+# Written for this pack by BurN-30 (GPL-3.0). Replaces 02-rendez-vous-hurlevent.guide on Polestar's own
+# route. Polestar 0.4.2.2 (GPL-3.0) brings every race to Westfall (forever/alliance/02-westfall) at its
+# own level: Humans at about 11, Dwarves and Gnomes at about 14 (their start goes on to Loch Modan),
+# Night Elves at about 15 (Darkshore first, forever/alliance/nightelf/02-darkshore). It has no meeting
+# point; its group tools are the party panel, "Sync to my guide" and "Wait for the group"
+# (docs/ARCHITECTURE.md, Party), named here as its interface names them.
+#
+# Short chapter: the Groupe Alliance module offers it once Report to Gryan Stoutmantle (109) is handed
+# in at Sentinel Hill, every race's first stop there. It says how friends of different levels play
+# the route together and where the group tools are, then ends when the player ticks its line.
+# At the switch this chapter takes the id groupe-alliance/02-rendez-vous-hurlevent.
+guide groupe-alliance/greffe/rendez-vous
+title Group · Meeting in Westfall
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 10-17
+zone Westfall
+
+step Sentinel Hill: playing the route together
+  zone Westfall
+  tip Polestar's route brings every race to Westfall, each at its own level: Humans at about 11, Dwarves and Gnomes at about 14, Night Elves at about 15. Whoever arrives first goes on: quests already handed in tick themselves for the others, and a friend ahead helps with their quests when you play together. Group XP stays good within about 4 levels.
+  note Polestar's group tools: the party panel (/polestar party) shows each friend's guide, step and level; its "Sync to my guide" button asks the others to come to your step, and each one accepts or declines. The option "Wait for the group" holds a hand-in until the friends in the zone are ready. Share a quest from the quest log: click it, then Share.
+  note Dungeons: a card offers each dungeon chapter of the group at the right moment of the route. The chapter opens in a tab of its own and the route comes back when it ends; /ga donjon shows the card again.
+  task "Read: the group plays together, or each at their own pace"
