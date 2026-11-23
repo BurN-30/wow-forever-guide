@@ -164,8 +164,15 @@ def main():
     sys.exit(1 if worst else 0)
 
 
+# For a scenario script built on this bench (tools/check-greffe.py): Lua run after the fake game
+# and before the addons load (saved variables, quest log), folders of addons/ left out, and a
+# call made once the login has run, with (L, BENCH, namespaces); its lines join the report.
+# BEFORE_LOGIN: calls made once every addon has loaded, before PLAYER_LOGIN, with the same arguments.
+PRELUDES, EXCLUDE, BEFORE_LOGIN, AFTER_LOGIN = [], set(), [], []
+
+
 def run(a, locale):
-    folders = [p for p in sorted((REPO / "addons").iterdir()) if p.is_dir()]
+    folders = [p for p in sorted((REPO / "addons").iterdir()) if p.is_dir() and p.name not in EXCLUDE]
     extra_names = set()
     for e in a.extra:
         for p in sorted(e.iterdir()):
@@ -213,6 +220,8 @@ def run(a, locale):
     for iid, it in ITEMS.items():
         items[iid] = L.table_from(it)
     L.execute("BENCH.InstallItems()")
+    for src in PRELUDES:
+        L.execute(src)
     L.execute("BENCH.SealGlobals()")
 
     for name, t in addons.items():
@@ -312,6 +321,8 @@ def run(a, locale):
     for n in order:
         if addons[n]["meta"].get("LoadOnDemand", "0").strip() != "1":
             load_addon(n)
+    for hook in BEFORE_LOGIN:
+        hook(L, B, namespaces)
     L.execute("BENCH.loggedIn = true")
     for step in ("PLAYER_LOGIN", ("PLAYER_ENTERING_WORLD", True, False), "SPELLS_CHANGED", "BAG_UPDATE_DELAYED",
                  "QUEST_LOG_UPDATE", ("UNIT_AURA", "player"), "GROUP_ROSTER_UPDATE"):
@@ -347,6 +358,14 @@ def run(a, locale):
         if addons[n]["meta"].get("LoadOnDemand", "0").strip() != "1" and not B.loaded[n]:
             B.errors[len(B.errors) + 1] = L.table(n, "load", "not loaded")
 
+    extra_lines, extra_bad = [], 0
+    for hook in AFTER_LOGIN:
+        more, more_bad = hook(L, B, namespaces)
+        extra_lines += more
+        extra_bad += more_bad
+    if AFTER_LOGIN:
+        lines, bad = report(L, B, addons, order, extra_names, compile_errors, locale)
+        return lines + extra_lines, bad + extra_bad
     item_use = item_use_scenarios(L, B, namespaces.get("Polestar"))
     lines, bad = report(L, B, addons, order, extra_names, compile_errors, locale)
     return lines + item_use[0], bad + item_use[1]
