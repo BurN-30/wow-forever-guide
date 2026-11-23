@@ -1304,11 +1304,11 @@ ns.GA.Tips = {
 		enUS = "After this hand-in, Wizzle offers Gahz'rilla: the boss of a second Zul'Farrak run, offered around 49 from Gadgetzan, with the Mallet of Zul'Farrak made in the Hinterlands.",
 	},
 	[2989] = { -- The Altar of Zul (route)
-		frFR = "Second passage à Zul'Farrak : Qiaga la Gardienne (élite) en haut de l'autel donne le Maillet sacré ; utilisé sur l'autel au sommet de Jintha'Alor, il devient le Marteau de Zul'Farrak, qui appelle Gahz'rilla. Un seul par groupe.",
-		enUS = "Second Zul'Farrak run: Qiaga the Keeper (elite) at the top of the altar drops the Sacred Mallet; used on the altar at the top of Jintha'Alor, it becomes the Mallet of Zul'Farrak that calls Gahz'rilla. One per group.",
+		frFR = "Second passage à Zul'Farrak : Qiaga la Gardienne (élite 50) en haut de l'autel donne le Maillet sacré ; utilisé sur l'autel au sommet de Jintha'Alor, il devient le Marteau de Zul'Farrak, qui appelle Gahz'rilla. Un seul par groupe. Jintha'Alor est plein de trolls élites et la quête vient vers 47-48 : y aller à plusieurs.",
+		enUS = "Second Zul'Farrak run: Qiaga the Keeper (elite 50) at the top of the altar drops the Sacred Mallet; used on the altar at the top of Jintha'Alor, it becomes the Mallet of Zul'Farrak that calls Gahz'rilla. One per group. Jintha'Alor is full of elite trolls and the quest comes at about 47-48: go there as a group.",
 	},
 	[1469] = { -- Rhapsody's Tale (route)
-		frFR = "Après ce rendu, Brohann propose Dans le temple d'Atal'Hakkar (Into The Temple of Atal'Hakkar) : la quête du chapitre du Temple englouti, proposé vers 51 depuis le donjon de Garde-du-Néant. La prendre si le groupe compte y aller.",
+		frFR = "Après ce rendu, Brohann propose Dans le temple d'Atal'Hakkar (Into The Temple of Atal'Hakkar) : la quête du chapitre du Temple englouti, proposé vers 51 depuis Rempart-du-Néant. La prendre si le groupe compte y aller.",
 		enUS = "After this hand-in, Brohann offers Into The Temple of Atal'Hakkar: the quest of the Sunken Temple chapter, offered around 51 from Nethergarde Keep. Take it if the group means to go.",
 	},
 	[3444] = { -- The Stone Circle (route)

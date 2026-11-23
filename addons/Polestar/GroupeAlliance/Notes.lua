@@ -8,12 +8,12 @@ GA.NOTES = {
 	version = "0.13.0",
 	frFR = {
 		{ "Le parcours est celui de Polestar", "ses guides de zone, tenus à jour par ses auteurs, avec moins d'allers-retours et les zones nouvelles de Forever. La progression est reprise d'après les quêtes déjà rendues : rien n'est à refaire." },
-		{ "Les donjons arrivent au bon moment", "une carte propose le donjon du niveau au fil du parcours. « Ouvrir le chapitre » l'ouvre dans un onglet, le parcours garde sa place et revient à la fin ; « Plus tard » le redemande au niveau suivant. /ga donjon pour revoir la proposition." },
+		{ "Les donjons arrivent au bon moment", "à la fin d'un arrêt du parcours, une carte propose le donjon du niveau. « Ouvrir le chapitre » l'ouvre dans un onglet, qui se ferme seul une fois ses rendus faits ; « Plus tard » le redemande au niveau suivant. S'arrêter avant : fermer l'onglet (sa croix). /ga donjon pour revoir une proposition, même refusée." },
 		{ "Le français est complété", "les textes que Polestar laissait en anglais dans ses guides Alliance sont traduits." },
 	},
 	enUS = {
 		{ "The route is Polestar's", "its zone guides, kept up to date by its authors, with fewer back-and-forth trips and Forever's new zones. Your progress carries over from the quests you handed in: nothing to do again." },
-		{ "Dungeons at the right moment", "along the route, a card offers the dungeon of your level. \"Open the chapter\" opens it in a tab; the route keeps its place and comes back at the end; \"Later\" asks again at the next level. /ga dungeon to see the offer again." },
+		{ "Dungeons at the right moment", "at the end of a stop of the route, a card offers the dungeon of your level. \"Open the chapter\" opens it in a tab, which closes by itself once its hand-ins are done; \"Later\" asks again at the next level. Stopping earlier: close the tab (its cross). /ga dungeon to see an offer again, even a declined one." },
 		{ "French completed", "the texts Polestar left in English in its Alliance guides are translated (French client)." },
 	},
 }
