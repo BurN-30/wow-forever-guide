@@ -2,6 +2,14 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.12.2 (2026-11-23)
+
+### Français
+- Le petit jeu « Arcade » des vols se joue maintenant au clavier AZERTY : Z et S pour avancer et reculer, Q et D pour les pas de côté, A et E pour tourner, et la rangée de chiffres sans Maj pour changer d'arme. C'est automatique sur un jeu en français. Pour choisir soi-même, taper `/arcade azerty` ou `/arcade qwerty` dans le chat : le choix est retenu. Les flèches, Ctrl, Espace et la souris ne changent pas.
+
+### English
+- The flight "Arcade" game can now be played on an AZERTY keyboard: Z and S to move, Q and D to strafe, A and E to turn, and the unshifted number row to change weapon. It is automatic on a French client. To choose yourself, type `/arcade azerty` or `/arcade qwerty` in chat: the choice is kept. Arrows, Ctrl, Space and the mouse do not change.
+
 ## v0.12.1 (2026-11-22)
 
 ### Français

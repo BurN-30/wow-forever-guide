@@ -27,6 +27,7 @@ pack = repo / "pack"
 addons = repo / "addons"
 MODULE = ["Reliability.lua", "Tips.lua", "Danger.lua", "GroupeAlliance.lua", "ItemUseData.lua", "ItemUse.lua"]
 NOTICE = "Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide)"
+ARCADE_NOTICE = "Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide)"
 
 POLESTAR_CHANGES = [
     ("Polestar.toc", "Alts\\Alts.xml\n",
@@ -104,7 +105,57 @@ POLESTAR_CHANGES = [
      "UI/GuideFrameTabs.lua leaves room for those buttons,\r\n"
      "Core/Automation.lua asks the module before it accepts or turns in a quest,\r\n"
      "and Quests/PartyChat.lua says only an objective's plain words in party chat.\r\n"
+     "The flight game (Polestar_Arcade/src/main.lua) has an AZERTY keyboard layout.\r\n"
      "Everything else is Polestar 0.4.2.2 as released.\r\n"),
+    # 0.12.2: AZERTY keyboards in the flight game (Polestar_Arcade, GPL-2.0-or-later).
+    # The game names a key by the letter printed on it, so the W A S D of the original
+    # sit far apart on an AZERTY keyboard. `/arcade azerty` or `/arcade qwerty` chooses;
+    # with neither, a French client gets AZERTY.
+    ("../Polestar_Arcade/src/main.lua",
+     "\tLALT = \"strafe\", RALT = \"strafe\",\n}\n",
+     "\tLALT = \"strafe\", RALT = \"strafe\",\n}\n"
+     "\n-- " + ARCADE_NOTICE + ": AZERTY keyboards.\n"
+     "-- A key is named by the letter printed on it: on an AZERTY keyboard the keys under the\n"
+     "-- left hand are Z Q S D (move, strafe) and A E (turn), and the number row gives\n"
+     "-- & e-acute \" ' ( - e-grave without Shift. /arcade azerty or /arcade qwerty chooses;\n"
+     "-- with neither, a French client gets AZERTY.\n"
+     "local AZERTY_KEYS = { Z = \"forward\", Q = \"strafeleft\", A = \"left\", W = false }\n"
+     "local QWERTY_KEYS = { W = \"forward\", A = \"strafeleft\", Q = \"left\", Z = false }\n"
+     "local AZERTY_DIGITS = { [\"&\"] = 1, [\"\\195\\169\"] = 2, ['\"'] = 3, [\"'\"] = 4, [\"(\"] = 5, [\"-\"] = 6, [\"\\195\\168\"] = 7 }\n"
+     "local function isAzerty()\n"
+     "\tif db and db.azerty ~= nil then return db.azerty end\n"
+     "\treturn (GetLocale and GetLocale() == \"frFR\") or false\n"
+     "end\n"
+     "local function applyKeyboard()\n"
+     "\tfor key, action in pairs(isAzerty() and AZERTY_KEYS or QWERTY_KEYS) do\n"
+     "\t\tbindings[key] = action or nil\n"
+     "\tend\n"
+     "end\n"
+     "UI.IsAzerty, UI.ApplyKeyboard = isAzerty, applyKeyboard\n"),
+    ("../Polestar_Arcade/src/main.lua",
+     "local function OnKeyDown(self, key)\n\tif held[key] then return end\n",
+     "local function OnKeyDown(self, key)\n\tif held[key] then return end\n"
+     "\tapplyKeyboard() -- " + ARCADE_NOTICE + "\n"),
+    ("../Polestar_Arcade/src/main.lua",
+     "\t\tlocal n = tonumber(key)\n\t\tif n and n >= 1 and n <= 7 then\n",
+     "\t\tlocal n = tonumber(key)\n"
+     "\t\t-- " + ARCADE_NOTICE + ": the AZERTY number row (\"-\" stays the automap's zoom while the map is open).\n"
+     "\t\tif not n and isAzerty() and not (key == \"-\" and D.AM.active) then n = AZERTY_DIGITS[key] end\n"
+     "\t\tif n and n >= 1 and n <= 7 then\n"),
+    ("../Polestar_Arcade/src/main.lua",
+     "\t\tif key == \"UP\" or key == \"W\" then G.MenuKey(\"up\")\n",
+     "\t\tif key == \"UP\" or key == \"W\" or key == \"Z\" then G.MenuKey(\"up\") -- " + ARCADE_NOTICE + ": Z on AZERTY\n"),
+    ("../Polestar_Arcade/src/main.lua",
+     "\tD.Print(\"/doom aggro - toggle auto save + pause when you enter combat\")\n",
+     "\tD.Print(\"/doom aggro - toggle auto save + pause when you enter combat\")\n"
+     "\tD.Print(\"/doom azerty | qwerty - keyboard layout (AZERTY by default on a French client)\") -- " + ARCADE_NOTICE + "\n"),
+    ("../Polestar_Arcade/src/main.lua",
+     "\telseif cmd == \"aggro\" then\n\t\tdb.aggroPause = not db.aggroPause\n",
+     "\telseif cmd == \"azerty\" or cmd == \"qwerty\" then -- " + ARCADE_NOTICE + "\n"
+     "\t\tdb.azerty = (cmd == \"azerty\")\n"
+     "\t\tapplyKeyboard()\n"
+     "\t\tD.Print(db.azerty and \"AZERTY keys: Z S move, Q D strafe, A E turn\" or \"QWERTY keys: W S move, A D strafe, Q E turn\")\n"
+     "\telseif cmd == \"aggro\" then\n\t\tdb.aggroPause = not db.aggroPause\n"),
 ]
 
 def run(*args):

@@ -99,12 +99,32 @@ local bindings = {
 	LALT = "strafe", RALT = "strafe",
 }
 
+-- Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide): AZERTY keyboards.
+-- A key is named by the letter printed on it: on an AZERTY keyboard the keys under the
+-- left hand are Z Q S D (move, strafe) and A E (turn), and the number row gives
+-- & e-acute " ' ( - e-grave without Shift. /arcade azerty or /arcade qwerty chooses;
+-- with neither, a French client gets AZERTY.
+local AZERTY_KEYS = { Z = "forward", Q = "strafeleft", A = "left", W = false }
+local QWERTY_KEYS = { W = "forward", A = "strafeleft", Q = "left", Z = false }
+local AZERTY_DIGITS = { ["&"] = 1, ["\195\169"] = 2, ['"'] = 3, ["'"] = 4, ["("] = 5, ["-"] = 6, ["\195\168"] = 7 }
+local function isAzerty()
+	if db and db.azerty ~= nil then return db.azerty end
+	return (GetLocale and GetLocale() == "frFR") or false
+end
+local function applyKeyboard()
+	for key, action in pairs(isAzerty() and AZERTY_KEYS or QWERTY_KEYS) do
+		bindings[key] = action or nil
+	end
+end
+UI.IsAzerty, UI.ApplyKeyboard = isAzerty, applyKeyboard
+
 local function setAction(action, down)
 	inp[action] = down
 end
 
 local function OnKeyDown(self, key)
 	if held[key] then return end
+	applyKeyboard() -- Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide)
 	held[key] = true
 	if G.state == "level" and not G.paused then
 		local action = bindings[key]
@@ -113,6 +133,8 @@ local function OnKeyDown(self, key)
 			return
 		end
 		local n = tonumber(key)
+		-- Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide): the AZERTY number row ("-" stays the automap's zoom while the map is open).
+		if not n and isAzerty() and not (key == "-" and D.AM.active) then n = AZERTY_DIGITS[key] end
 		if n and n >= 1 and n <= 7 then
 			inp.weapon = n - 1
 			return
@@ -147,7 +169,7 @@ local function OnKeyDown(self, key)
 		if UI.QuickLoad() then return end
 	end
 	if G.state == "menu" then
-		if key == "UP" or key == "W" then G.MenuKey("up")
+		if key == "UP" or key == "W" or key == "Z" then G.MenuKey("up") -- Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide): Z on AZERTY
 		elseif key == "DOWN" or key == "S" then G.MenuKey("down")
 		elseif key == "ENTER" or key == "SPACE" or key == "LCTRL" then G.MenuKey("enter")
 		elseif key == "ESCAPE" or key == "BACKSPACE" then
@@ -357,6 +379,7 @@ local function help()
 	D.Print("/doom save | load - quick save / load (F6 / F9 in game)")
 	D.Print("/doom save <1-5> | load <1-5> - save slots (also on the minimap button's right-click menu)")
 	D.Print("/doom aggro - toggle auto save + pause when you enter combat")
+	D.Print("/doom azerty | qwerty - keyboard layout (AZERTY by default on a French client)") -- Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide)
 	D.Print("/doom minimap - show or hide the minimap button")
 end
 
@@ -399,6 +422,10 @@ SlashCmdList.FREEDOOMARCADE = function(msg)
 		if cmd == "save" then UI.SaveSlot(slot) else UI.LoadSlot(slot) end
 	elseif cmd == "minimap" then
 		D.Minimap.Toggle()
+	elseif cmd == "azerty" or cmd == "qwerty" then -- Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide)
+		db.azerty = (cmd == "azerty")
+		applyKeyboard()
+		D.Print(db.azerty and "AZERTY keys: Z S move, Q D strafe, A E turn" or "QWERTY keys: W S move, A D strafe, Q E turn")
 	elseif cmd == "aggro" then
 		db.aggroPause = not db.aggroPause
 		D.Print("pause on aggro: " .. (db.aggroPause and "on" or "off"))

@@ -7,6 +7,7 @@ UI/GuideFrame.lua has gear, "?" help and "_" reduce buttons and a line menu entr
 UI/GuideFrameTabs.lua leaves room for those buttons,
 Core/Automation.lua asks the module before it accepts or turns in a quest,
 and Quests/PartyChat.lua says only an objective's plain words in party chat.
+The flight game (Polestar_Arcade/src/main.lua) has an AZERTY keyboard layout.
 Everything else is Polestar 0.4.2.2 as released.
 
 Install
