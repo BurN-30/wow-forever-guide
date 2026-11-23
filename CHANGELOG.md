@@ -7,10 +7,12 @@ Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (
 ### Français
 - Le petit jeu « Arcade » des vols se joue maintenant au clavier AZERTY : Z et S pour avancer et reculer, Q et D pour les pas de côté, A et E pour tourner, et la rangée de chiffres sans Maj pour changer d'arme. C'est automatique sur un jeu en français. Pour choisir soi-même, taper `/arcade azerty` ou `/arcade qwerty` dans le chat : le choix est retenu. Les flèches, Ctrl, Espace et la souris ne changent pas.
 - Groupe 12 (Paluns) : la quête facultative Hearts of the Lost est retirée du guide, avec son astuce. Comar Villard ne la propose plus sur Forever.
+- Groupes 28 et 30 (Silithus) : Se présenter au maréchal Bluewall (Report to Marshal Bluewall) et Passer le désert au peigne fin (Scouring the Desert) sont retirées. Forever ne les propose pas : le guide n'attend plus au Fort cénarien une quête que personne ne peut prendre.
 
 ### English
 - The flight "Arcade" game can now be played on an AZERTY keyboard: Z and S to move, Q and D to strafe, A and E to turn, and the unshifted number row to change weapon. It is automatic on a French client. To choose yourself, type `/arcade azerty` or `/arcade qwerty` in chat: the choice is kept. Arrows, Ctrl, Space and the mouse do not change.
 - Group 12 (Wetlands): the optional quest Hearts of the Lost is removed from the guide, with its tip. Comar Villard no longer offers it on Forever.
+- Groups 28 and 30 (Silithus): Report to Marshal Bluewall and Scouring the Desert are removed. Forever does not offer them: the guide no longer waits at Cenarion Hold for a quest nobody can take.
 
 ## v0.12.1 (2026-11-22)
 

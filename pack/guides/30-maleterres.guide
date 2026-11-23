@@ -562,10 +562,11 @@ step Level 56.89
   goto 54.9,31.2 map 1451 "Dredge Striker"
   level 56.89                          -- grind on Dredge Striker
 
+# Groupe Alliance 0.12.2: Report to Marshal Bluewall (9415) left out: Forever does not offer it
+# (Polestar's next branch, commit 3fb83395).
 step Cenarion Hold
   zone Silithus
   tip Follow the road south-west out of the pass to Cenarion Hold. Beetix Ficklespragg stands upstairs in his building: go up inside, the arrow cannot tell the floors apart.
-  accept 9415                         -- Rifleman Torrig, at the Alliance tents
   getfp "Cenarion Hold"
   turnin 8277
   accept 8278

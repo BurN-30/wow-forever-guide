@@ -155,14 +155,8 @@ step Hive'Ashi: kill these as you meet them
   collect 20378 quest 8284.1          -- Twilight Tablet Fragments
   collect 20404 x20 optional          -- Ten more for True Believers
 
-step Hive'Zora
-  tip Marshal Bluewall camps outside Hive'Zora, the western hive. Pick up a Silithyst at one of the red geysers nearby and carry it to the Alliance extractor at his camp.
-  tip Careful: You lose the Silithyst if you mount, stealth, use Divine Shield, Feign Death or Vanish. Blink and Power Word: Shield do not drop it.
-  turnin 9415                         -- Marshal Bluewall
-  accept 9419
-  complete 9419
-  turnin 9419
-
+# Groupe Alliance 0.12.2: Report to Marshal Bluewall and Scouring the Desert (9415, 9419) left
+# out: Forever does not offer them (Polestar's next branch, commit 3fb83395).
 step Cenarion Hold
   turnin 8318                         -- Bor Wildmane
   accept 8304                         -- Commander Mar'alith

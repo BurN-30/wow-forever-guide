@@ -369,8 +369,6 @@ return {
 	-- Step 93: Cenarion Hold
 	-- {npc:15189} Beetix Ficklespragg
 	["Follow the road south-west out of the pass to Cenarion Hold. {npc:15189} stands upstairs in his building: go up inside, the arrow cannot tell the floors apart."] = "Suivez la route vers le sud-ouest à la sortie du col jusqu'au Fort cénarien. {npc:15189} se tient à l'étage de son bâtiment : montez par l'intérieur, la flèche ne distingue pas les étages.",
-	-- {npc:17082} Rifleman Torrig
-	["{npc:17082}, at the Alliance tents"] = "{npc:17082}, aux tentes de l'Alliance",
 
 	-- Step 94: Silithus: kill these as you meet them
 	-- plural, as words: Dredge Crushers = {npc:11741} Dredge Crusher · Stonelash Pincers = {npc:11736} Stonelash Pincer · Rock Stalkers = {npc:11739} Rock Stalker
@@ -474,4 +472,7 @@ return {
 	["Escort {npc:9999}"] = "Escorter {npc:9999}",
 	-- {npc:9999} Ringo · {item:11804} Spraggle's Canteen
 	["Lead {npc:9999} north to Marshal's Refuge. When he faints, use {item:11804} on him to wake him."] = "Escortez {npc:9999} au nord jusqu'au Refuge des Marshal. Quand il s'évanouit, utilisez {item:11804} sur lui pour le réveiller.",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["{npc:17082}, at the Alliance tents"] = "{npc:17082}, aux tentes de l'Alliance",
 }
