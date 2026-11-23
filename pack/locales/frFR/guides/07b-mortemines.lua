@@ -11,9 +11,9 @@ return {
 
 	-- Step 1: Sentinel Hill: the Deadmines quests
 	-- {object:81} Sentinel Hill
-	["{object:81}: the Deadmines quests"] = "{object:81} : les quêtes des Mortemines",
+	["{object:81}: the Deadmines quests"] = "Colline des sentinelles : les quêtes des Mortemines",
 	-- {npc:234} Gryan Stoutmantle · {npc:820} Scout Riell · {object:81} Sentinel Hill
-	["The Deadmines: a 5-player dungeon under Moonbrook, levels 16 to 21 (17 to 26 in the group finder): at 20 or more it goes well. {npc:234} and {npc:820} stand at the top of the {object:81} tower."] = "Les Mortemines : un donjon pour 5 joueurs sous Ruisselune, niveaux 16 à 21 (17 à 26 dans la recherche de groupe) : à 20 ou plus, il passe bien. {npc:234} et {npc:820} se tiennent en haut de la tour de {object:81}.",
+	["The Deadmines: a 5-player dungeon under Moonbrook, levels 16 to 21 (17 to 26 in the group finder): at 20 or more it goes well. {npc:234} and {npc:820} stand at the top of the {object:81} tower."] = "Les Mortemines : un donjon pour 5 joueurs sous Ruisselune, niveaux 16 à 21 (17 à 26 dans la recherche de groupe) : à 20 ou plus, il passe bien. {npc:234} et {npc:820} se tiennent en haut de la tour de la Colline des sentinelles.",
 	["Keep 6 free quest log slots. Everyone takes the quests at their own pace; meet at the Moonbrook entrance for the run."] = "Garder 6 places libres dans le journal. Chacun prend les quêtes à son rythme ; rendez-vous à l'entrée de Ruisselune pour le donjon.",
 	-- {npc:820} Scout Riell · {quest:214} Red Silk Bandanas
 	["{npc:820}, at the top of the tower: {quest:214}"] = "{npc:820}, en haut de la tour : {quest:214}",
@@ -28,7 +28,7 @@ return {
 	-- Step 3: Before entering the Deadmines
 	["Before entering the Deadmines"] = "Avant d'entrer dans les Mortemines",
 	-- {quest:155} The Defias Brotherhood · {quest:214} Red Silk Bandanas · {object:81} Sentinel Hill · {quest:168} Collecting Memories · {zone:1453} Stormwind · {quest:2040} Underground Assault · {npc:6579} Shoni the Shilent · {npc:234} Gryan Stoutmantle · {npc:820} Scout Riell · {npc:656} Wilder Thistlenettle
-	["In the log before the portal: {quest:155} and {quest:214} ({object:81}), {quest:168} and Oh Brother... ({zone:1453}), {quest:2040} if {npc:6579} gave it. One missing? {npc:234} and {npc:820} at {object:81}, {npc:656} in {zone:1453}."] = "Dans le journal avant le portail : {quest:155} et {quest:214} ({object:81}), {quest:168} et Ah, mon frère... ({zone:1453}), {quest:2040} si {npc:6579} l'a donnée. Il en manque une ? {npc:234} et {npc:820} à {object:81}, {npc:656} à {zone:1453}.",
+	["In the log before the portal: {quest:155} and {quest:214} ({object:81}), {quest:168} and Oh Brother... ({zone:1453}), {quest:2040} if {npc:6579} gave it. One missing? {npc:234} and {npc:820} at {object:81}, {npc:656} in {zone:1453}."] = "Dans le journal avant le portail : {quest:155} et {quest:214} (Colline des sentinelles), {quest:168} et Ah, mon frère... ({zone:1453}), {quest:2040} si {npc:6579} l'a donnée. Il en manque une ? {npc:234} et {npc:820} à la Colline des sentinelles, {npc:656} à {zone:1453}.",
 	["Share each quest with the group before going in: click it in the quest log, then Share."] = "Partager chaque quête avec le groupe avant d'entrer : clic sur la quête dans le journal, puis Partager.",
 	["The Deadmines"] = "Les Mortemines",
 
@@ -86,16 +86,25 @@ return {
 
 	-- Step 12: Sentinel Hill rewards
 	-- {object:81} Sentinel Hill
-	["{object:81} rewards"] = "Récompenses à {object:81}",
+	["{object:81} rewards"] = "Récompenses à la Colline des sentinelles",
 	-- {object:81} Sentinel Hill
-	["Out by the back of the cove and north along the road to {object:81}."] = "Sortie par l'arrière de la crique, puis vers le nord par la route jusqu'à {object:81}.",
+	["Out by the back of the cove and north along the road to {object:81}."] = "Sortie par l'arrière de la crique, puis vers le nord par la route jusqu'à la Colline des sentinelles.",
 	-- {npc:820} Scout Riell
 	["{npc:820}, top of the tower"] = "{npc:820}, en haut de la tour",
 
-	-- Step 13: Stormwind rewards
-	-- {zone:1453} Stormwind
-	["{zone:1453} rewards"] = "Récompenses à {zone:1453}",
-	["Last stop of the chapter: the route's own guide comes back once these are handed in."] = "Dernier arrêt du chapitre : le guide du parcours revient une fois ces quêtes rendues.",
+	-- Step 13: Stormwind: Baros Alexston
+	-- {zone:1453} Stormwind · {npc:1646} Baros Alexston · {object:2159} City Hall · {object:2098} Cathedral Square · {quest:389} Bazil Thredd · {npc:1719} Warden Thelwater
+	["Fly to {zone:1453}: {npc:1646} stands in the {object:2159} on {object:2098}. His next quest, {quest:389}, is for the Stockade chapter ({npc:1719}): the route comes back to it in {zone:1453}."] = "Prendre le vol pour {zone:1453} : {npc:1646} se tient dans l'hôtel de ville, sur {object:2098}. Sa quête suivante, {quest:389}, est pour le chapitre de la Prison ({npc:1719}) : le parcours y revient à {zone:1453}.",
 	-- {npc:1646} Baros Alexston · {quest:389} Bazil Thredd · {npc:1719} Warden Thelwater
 	["{npc:1646}: {quest:389}, for the Stockade chapter ({npc:1719})"] = "{npc:1646} : {quest:389}, pour le chapitre de la Prison ({npc:1719})",
+
+	-- Step 14: Stormwind: Shoni the Shilent
+	-- {npc:6579} Shoni the Shilent · {object:28027} Dwarven District
+	["{npc:6579} stands by the tram in the {object:28027}."] = "{npc:6579} se tient près du tram, dans {object:28027}.",
+
+	-- Step 15: Stormwind rewards
+	-- {zone:1453} Stormwind
+	["{zone:1453} rewards"] = "Récompenses à {zone:1453}",
+	-- {npc:656} Wilder Thistlenettle · {object:28027} Dwarven District
+	["{npc:656} is in the tavern of the {object:28027}. Last stop of the chapter: the route's own guide comes back once these are handed in."] = "{npc:656} est dans la taverne de {object:28027}. Dernier arrêt du chapitre : le guide du parcours revient une fois ces quêtes rendues.",
 }

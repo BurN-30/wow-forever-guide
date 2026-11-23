@@ -31,7 +31,7 @@ zone Wetlands
 step Menethil Harbor: dungeon quests
   zone Wetlands
   tip Excavation Site: a 5-player Forever dungeon up the hill in the middle of the Wetlands, levels 26 to 33 in the group finder. Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards.
-  note Keep 6 free quest log slots. Caitlin Grassman is in her house, James Halloran by the north gate.
+  note Keep 6 free quest log slots. Caitlin Grassman is next to the inn, James Halloran near the docks.
   accept 95647                                -- Caitlin Grassman
   accept 98815                                -- James Halloran
 
@@ -43,7 +43,7 @@ step Rethiel the Greenwarden
 step Songblade Search, for whoever carries it
   when onquest 95772
   tip Dorin Songblade's quest, from Lakeshire: his daughter Daewyn is inside.
-  accept 95772 optional                       -- Dorin Songblade, Lakeshire
+  accept 95772                                -- Dorin Songblade, Lakeshire
 
 step Excavation Site entrance
   tip From the meeting stone near Thelgen Rock, follow the mountain path up to the portal. A single graveyard serves the area: a wipe means a long walk back.
@@ -61,8 +61,8 @@ step The tall grass and Shadetooth
 step Daewyn Songblade
   when onquest 95772
   tip Daewyn stands near the burned dig camp, by the Dragonmaw.
-  turnin 95772 optional                       -- Daewyn: Songblade Search, from Dorin in Lakeshire
-  accept 95795 optional
+  turnin 95772                                -- Daewyn: Songblade Search, from Dorin in Lakeshire
+  accept 95795
 
 step The Highland Horror
   tip The Highland Horror (elite 28) stands right of the Dragonmaw and the burned dig camp; only this one inside drops the rootcore, not the one outside the dungeon.
@@ -94,7 +94,7 @@ step Lakeshire: Dorin Songblade
   zone Redridge Mountains
   tip Only for whoever took Dorin's quest in Lakeshire: the flight there and back. Otherwise straight on to Ironforge.
   fly "Lakeshire"
-  turnin 95795 optional
+  turnin 95795
 
 step Ironforge: High Explorer Magellas
   zone Ironforge

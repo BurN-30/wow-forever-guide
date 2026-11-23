@@ -30,16 +30,16 @@
 # - same otherwise: Vyletongue Corruption (7041), Corruption of Earth and Seed (7065), Twisted Evils
 #   (7028), Legends of Maraudon and The Scepter of Celebras (7044, 7046), Seed of Life (7066).
 guide groupe-alliance/maraudon
-title Dungeon · Maraudon (45-51)
+title Dungeon · Maraudon (46-51)
 folder Group Alliance
 category Dungeons
 faction Alliance
-levels 45-51
+levels 46-51
 zone Desolace
 
 step Shen'dralas: Woodwyrd
   zone Shen'dralas
-  tip Maraudon: the caves of the centaurs' sacred ground in western Desolace, for a group of 5, levels 46 to 55 in the group finder: at 45-46 it takes a solid group. A long dungeon: two wings, then the inner part, whose last boss is 51. Woodwyrd, the treant in the middle of the Forlorn Gardens, wants water from inside it.
+  tip Maraudon: the caves of the centaurs' sacred ground in western Desolace, for a group of 5, levels 46 to 55 in the group finder: at 46 it takes a solid group, from about 48 it goes well. A long dungeon: two wings, then the inner part, whose last boss is 51. Woodwyrd, the treant in the middle of the Forlorn Gardens, wants water from inside it.
   note Keep 7 free quest log slots. The way: north into Desolace for Willow and Nijel's Point, back south-west to the caves, the run, then Woodwyrd and the hand-ins; the flight from Nijel's Point to Feathermoon Stronghold joins the route's Feralas guide.
   accept 93404 "Rot and Regret" @69.5,71.9                     -- Woodwyrd: Rot and Regret
 
@@ -90,14 +90,16 @@ step Maraudon: the Earth Song Falls
 step Maraudon: Princess Theradras
   label mara-end
   tip Princess Theradras, the last boss (51), at the far end of the inner part. Zaetar's Spirit then rises: its quest, Seed of Life, goes to Keeper Remulos in Moonglade; keep it until the route passes there, around 53 on the way to Winterspring.
-  kill 12201 quest 7065               -- Princess Theradras
+  kill 12201                          -- Princess Theradras
+  kill 12201 quest 7065               -- Princess Theradras, for Corruption of Earth and Seed
   accept 7066 optional                -- Zaetar's Spirit
 
 step Shen'dralas: Woodwyrd
+  when onquest 93404
   zone Shen'dralas
-  tip Out of the caves, south through the Valley of Bones to the Forlorn Gardens: pour the water on Woodwyrd, then hand it in.
+  tip Out of the caves, south through the Valley of Bones to the Forlorn Gardens: pour the water on Woodwyrd, then hand it in. No Vial of Earth Song Water? Skip this step: Rot and Regret waits for another run.
   complete 93404 "Rot and Regret" @69.0,70.6           -- Woodwyrd extinguished
-  turnin 93404 "Rot and Regret" optional               -- Woodwyrd
+  turnin 93404 "Rot and Regret"                        -- Woodwyrd
 
 step Maraudon: quests not done
   when onquest 7065
@@ -113,5 +115,10 @@ step Desolace: Willow
 step Nijel's Point: the rewards
   zone Desolace
   tip Last stop of the chapter: the route's own guide comes back once these are handed in. Then fly from Nijel's Point to Feathermoon Stronghold: the route's Feralas guide starts there.
-  turnin 7065 optional                -- Keeper Marandis
   turnin 7041                         -- Talendria
+
+step Nijel's Point: Keeper Marandis
+  when complete 7065
+  zone Desolace
+  tip Keeper Marandis stands in Nijel's Point too.
+  turnin 7065                         -- Keeper Marandis

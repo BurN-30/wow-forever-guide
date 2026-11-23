@@ -11,15 +11,15 @@ return {
 
 	-- Step 1: Nijel's Point: Brother Anton
 	-- {quest:261} Down the Scarlet Path · {npc:1182} Brother Anton · {object:176948} Nijel's Point · {zone:1443} Desolace
-	["Raleigh's quest for the monastery follows {quest:261}, from {npc:1182} at the north end of {object:176948}, in {zone:1443}: the route gives it at about 39."] = "La quête de Raleigh pour le monastère suit {quest:261}, de {npc:1182} au nord de {object:176948}, en {zone:1443} : le parcours la donne vers 39.",
+	["Raleigh's quest for the monastery follows {quest:261}, from {npc:1182} at the north end of {object:176948}, in {zone:1443}: the route gives it at about 39."] = "La quête de Raleigh pour le monastère suit {quest:261}, de {npc:1182} au nord de la Combe de Nijel, en {zone:1443} : le parcours la donne vers 39.",
 
 	-- Step 2: Southshore: Raleigh the Devout
 	-- {npc:3980} Raleigh the Devout
 	["Southshore: {npc:3980}"] = "Austrivage : {npc:3980}",
 	-- {zone:1420} Tirisfal Glades · {object:171531} The Library
-	["The Scarlet Monastery: four wings in {zone:1420}, for a group of 5, levels 30 to 42 (group finder: Graveyard 30-38, Library 33-41, Armory 36-44, Cathedral 38-46). {object:171531}, the Armory and the Cathedral hold the quests."] = "Le Monastère écarlate : quatre ailes dans {zone:1420}, pour un groupe de 5, niveaux 30 à 42 (recherche de groupe : Cimetière 30-38, Bibliothèque 33-41, Armurerie 36-44, Cathédrale 38-46). {object:171531}, l'Armurerie et la Cathédrale portent les quêtes.",
+	["The Scarlet Monastery: four wings in {zone:1420}, for a group of 5, levels 30 to 42 (group finder: Graveyard 30-38, Library 33-41, Armory 36-44, Cathedral 38-46). {object:171531}, the Armory and the Cathedral hold the quests."] = "Le Monastère écarlate : quatre ailes dans {zone:1420}, pour un groupe de 5, niveaux 30 à 42 (recherche de groupe : Cimetière 30-38, Bibliothèque 33-41, Armurerie 36-44, Cathédrale 38-46). La Bibliothèque, l'Armurerie et la Cathédrale portent les quêtes.",
 	-- {object:176948} Nijel's Point · {zone:1443} Desolace · {object:1162} Menethil Harbor · {npc:3980} Raleigh the Devout
-	["From {object:176948}, in {zone:1443}: the flight to Theramore, the boat to {object:1162}, then the flight to Southshore. {npc:3980} is upstairs in the inn."] = "Depuis {object:176948}, en {zone:1443} : le vol pour Theramore, le bateau pour {object:1162}, puis le vol pour Austrivage. {npc:3980} est à l'étage de l'auberge.",
+	["From {object:176948}, in {zone:1443}: the flight to Theramore, the boat to {object:1162}, then the flight to Southshore. {npc:3980} is upstairs in the inn."] = "Depuis la Combe de Nijel, en {zone:1443} : le vol pour Theramore, le bateau pour le port de Menethil, puis le vol pour Austrivage. {npc:3980} est à l'étage de l'auberge.",
 	-- {npc:3980} Raleigh the Devout · {quest:1052} Down the Scarlet Path · {npc:1182} Brother Anton
 	["{npc:3980}: {quest:1052}, from {npc:1182}"] = "{npc:3980} : {quest:1052}, de {npc:1182}",
 	-- {npc:3980} Raleigh the Devout
@@ -44,7 +44,7 @@ return {
 
 	-- Step 6: The Library: Houndmaster Loksey and Arcanist Doan
 	-- {object:171531} The Library · {npc:3974} Houndmaster Loksey · {npc:6487} Arcanist Doan
-	["{object:171531}: {npc:3974} and {npc:6487}"] = "{object:171531} : {npc:3974} et {npc:6487}",
+	["{object:171531}: {npc:3974} and {npc:6487}"] = "La Bibliothèque : {npc:3974} et {npc:6487}",
 	-- {npc:264265} Magus Olvek · {quest:1050} Mythology of the Titans · {zone:1455} Ironforge
 	["Loksey and his dogs wait in a small alcove near the start. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for {npc:264265} is on a table on the right of Doan's room; {quest:1050}, for whoever took it in {zone:1455}, on the floor of a Library corridor, under a window; the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him."] = "Loksey et ses chiens attendent dans une petite alcôve près de l'entrée. Doan est le dernier boss : à mi-vie, il se protège puis fait exploser tout ce qui l'entoure, sortir de la zone puis revenir. Le livre rouge pour {npc:264265} est sur une table à droite de la salle de Doan ; {quest:1050}, pour qui l'a prise à {zone:1455}, par terre dans un couloir de la Bibliothèque, sous une fenêtre ; la clé écarlate, pour les portes de l'Armurerie et de la Cathédrale, dans le coffre derrière lui.",
 	-- {npc:6548} Magus Tirth · {item:7274} Rituals of Power
@@ -67,7 +67,7 @@ return {
 	["{npc:3975}, elite 40"] = "{npc:3975}, élite 40",
 
 	-- Step 8: The Cathedral: Mograine and Whitemane
-	["The Cathedral: Mograine and Whitemane"] = "La Cathédrale : Mograine et Whitemane",
+	["The Cathedral: Mograine and Whitemane"] = "La Cathédrale : Mograine et Blanchetête",
 	["Clear the chapel's pews first: pulling Mograine brings the whole room. Mograine first; when he falls, Whitemane runs in, puts the group to sleep and raises him once: kill him again, then her."] = "Vider d'abord les bancs de la chapelle : attaquer Mograine attire toute la salle. Mograine d'abord ; quand il tombe, Blanchetête accourt, endort le groupe et le relève une fois : le tuer de nouveau, puis elle.",
 	-- {npc:3976} Scarlet Commander Mograine
 	["{npc:3976}, elite 42"] = "{npc:3976}, élite 42",
@@ -78,17 +78,14 @@ return {
 	-- {npc:264265} Magus Olvek
 	["Back to {npc:264265}"] = "Retour vers {npc:264265}",
 
-	-- Step 10: Ironforge: Mythology of the Titans
-	-- {zone:1455} Ironforge · {object:32356} Hall of Explorers
-	["From Southshore, the flight to {zone:1455} and back: Mae Paledust stands in the {object:32356}, by the bookshelves. Or keep it for a later stop in {zone:1455}: the route passes there at about 50."] = "Depuis Austrivage, le vol pour {zone:1455} et retour : Mae Paledust se tient dans {object:32356}, près des étagères. Ou la garder pour un passage ultérieur à {zone:1455} : le parcours y passe vers 50.",
-
-	-- Step 11: Southshore rewards
+	-- Step 10: Southshore rewards
 	["Southshore rewards"] = "Récompenses à Austrivage",
-	["Last stop of the chapter: the route's own guide comes back once this is handed in."] = "Dernier arrêt du chapitre : le guide du parcours revient une fois cette quête rendue.",
+	-- {object:1162} Menethil Harbor · {quest:1050} Mythology of the Titans · {zone:1455} Ironforge
+	["Last stop of the chapter: the route's own guide comes back once this is handed in. Its next stop is Theramore: the flight to {object:1162}, then the boat to Theramore. With {quest:1050} done, the chapter goes by {zone:1455} first."] = "Dernier arrêt du chapitre : le guide du parcours revient une fois cette quête rendue. Son arrêt suivant est Theramore : le vol pour le port de Menethil, puis le bateau pour Theramore. Avec {quest:1050} faite, le chapitre passe d'abord par {zone:1455}.",
 	-- {npc:3980} Raleigh the Devout
 	["{npc:3980}, upstairs in the inn"] = "{npc:3980}, à l'étage de l'auberge",
 
-	-- No longer in the guide (its English changed or it went away): reuse or delete.
-	-- ["In the log before going in: {quest:1053} (Raleigh, Southshore) and {quest:96800} ({npc:264265}, Alterac); {item:5536} too for whoever took it from Mae Paledust in {zone:1455}. Share each quest with the group: click it in the quest log, then Share."] = "Dans le journal avant d'entrer : {quest:1053} (Raleigh, Austrivage) et {quest:96800} ({npc:264265}, Alterac) ; {item:5536} aussi pour qui l'a prise auprès de Mae Paledust à {zone:1455}. Partager chaque quête avec le groupe : clic sur la quête dans le journal, puis Partager.",
-	-- ["Loksey and his dogs wait in a small alcove near the start. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for {npc:264265} is on a table on the right of Doan's room; {item:5536}, for whoever took it in {zone:1455}, on the floor of a Library corridor, under a window; the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him."] = "Loksey et ses chiens attendent dans une petite alcôve près de l'entrée. Doan est le dernier boss : à mi-vie, il se protège puis fait exploser tout ce qui l'entoure, sortir de la zone puis revenir. Le livre rouge pour {npc:264265} est sur une table à droite de la salle de Doan ; {item:5536}, pour qui l'a prise à {zone:1455}, par terre dans un couloir de la Bibliothèque, sous une fenêtre ; la clé écarlate, pour les portes de l'Armurerie et de la Cathédrale, dans le coffre derrière lui.",
+	-- Step 11: Ironforge: Mythology of the Titans
+	-- {zone:1455} Ironforge · {object:32356} Hall of Explorers · {object:1162} Menethil Harbor
+	["From Southshore, the flight to {zone:1455}: Mae Paledust stands in the {object:32356}, by the bookshelves. Last stop of the chapter: then the flight to {object:1162} and the boat to Theramore, where the route goes on."] = "Depuis Austrivage, le vol pour {zone:1455} : Mae Paledust se tient dans {object:32356}, près des étagères. Dernier arrêt du chapitre : ensuite le vol pour le port de Menethil et le bateau pour Theramore, où le parcours reprend.",
 }

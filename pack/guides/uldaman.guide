@@ -63,9 +63,10 @@ step Badlands: Prospector Ryedol
   accept 721                                  -- Prospector Ryedol: for Hammertoe Grez, outside Uldaman
 
 step Valley of Fangs: Rigglefuzz
+  when group 2418
   zone Badlands
-  tip Rigglefuzz's Power Stones drop from the Shadowforge dwarves at Uldaman's door, not often: take it only if your group means to farm them a little.
-  accept 2418 optional                        -- Rigglefuzz, Valley of Fangs
+  tip Rigglefuzz's Power Stones drop from the Shadowforge dwarves at Uldaman's door, not often: worth it only for a group that means to farm them a little. Otherwise skip it.
+  accept 2418                                 -- Rigglefuzz, Valley of Fangs
 
 step Uldaman: Hammertoe Grez
   zone Badlands
@@ -79,8 +80,8 @@ step Uldaman: Hammertoe Grez
 step The digsite and the outer cave
   zone Badlands
   tip The Shadowforge dwarves of the digsite in front of the cave and of the outer cave drop both power stones, not often: no need to enter the instance for them. Krom's chest is in the outer cave, at the back of the left-hand hall, behind a pillar, with two guards.
-  collect 8009 x8 quest 2418 optional     -- Dentrium Power Stone: Shadowforge dwarves
-  collect 8052 x8 quest 2418 optional     -- An'Alleum Power Stone: Shadowforge dwarves
+  collect 8009 x8 quest 2418              -- Dentrium Power Stone: Shadowforge dwarves
+  collect 8052 x8 quest 2418              -- An'Alleum Power Stone: Shadowforge dwarves
   collect 8027 quest 1360                 -- Krom Stoutarm's Treasure, from his chest
   goto 44.6,12.1 "Uldaman" r 25
 
@@ -102,15 +103,16 @@ step Mages: Power in Uldaman
 step Archaedas and the Discs of Norgannon
   label uld-archaedas
   tip Archaedas, the last boss, wakes the stone guardians around his room during the fight. Behind him, the Discs of Norgannon: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave.
-  accept 2278 object 131474 optional      -- The Discs of Norgannon
-  turnin 2278 object 131474 optional
-  accept 2279 object 131474 optional
+  kill 2748                               -- Archaedas
+  accept 2278 object 131474               -- The Discs of Norgannon
+  turnin 2278 object 131474
+  accept 2279 object 131474
 
 step Rigglefuzz
-  when onquest 2418
+  when complete 2418
   zone Badlands
   tip Leave by the front, south to the Valley of Fangs.
-  turnin 2418 optional                    -- Rigglefuzz
+  turnin 2418                             -- Rigglefuzz
 
 step Prospector Ryedol
   zone Badlands
@@ -129,19 +131,24 @@ step Ironforge rewards
   tip Prospector Stormpike, Krom Stoutarm and High Explorer Magellas are all in the Hall of Explorers; Talvash del Kissel in the Mystic Ward.
   turnin 2240                             -- Prospector Stormpike
   turnin 1360                             -- Krom Stoutarm
-  turnin 2279 optional                    -- High Explorer Magellas
-  turnin 2198 optional                    -- Talvash del Kissel: his follow-ups need another Uldaman run, not in this guide
+  turnin 2198                             -- Talvash del Kissel: his follow-ups need another Uldaman run, not in this guide
+
+step Hall of Explorers: High Explorer Magellas
+  when onquest 2279
+  zone Ironforge
+  tip The miniature Discs of Norgannon, from Archaedas's room: High Explorer Magellas stands in the Hall of Explorers.
+  turnin 2279                             -- High Explorer Magellas
 
 step The Vault of Ironforge: the Platinum Discs reward
   when turnedin 2279
   zone Ironforge
   tip High Explorer Magellas hands a voucher for the Discs of Norgannon: Dinita Stonemantle pays it in the Vault of Ironforge.
   accept 2439                                 -- High Explorer Magellas
-  turnin 2439 optional                        -- Dinita Stonemantle, in the Vault
+  turnin 2439                                 -- Dinita Stonemantle, in the Vault
 
 step Hall of Explorers: Historian Karnik and Advisor Belgrum
   zone Ironforge
-  tip Both stand in the Hall of Explorers. Karnik's last task, An Ambassador of Evil, leads to a second Uldaman run, not in this guide: do not take it. Last stop of the chapter: the route's own guide comes back; its Badlands guide starts at Thelsamar, a flight from here.
+  tip Both stand in the Hall of Explorers. Karnik's last task, An Ambassador of Evil, leads to a second Uldaman run, not in this guide: do not take it. Last stop of the chapter: the route's own guide comes back where it was, in Stormwind: it has the class trainer visited there first (the Deeprun Tram from Tinker Town, or the flight), then flies on to Thelsamar for the Badlands.
   turnin 724                                  -- Historian Karnik
   accept 725
   turnin 725                                  -- Advisor Belgrum

@@ -83,13 +83,14 @@ step Back to Magus Olvek
   zone Alterac Mountains
   turnin 96800                                -- Magus Olvek
 
+step Southshore rewards
+  zone Hillsbrad Foothills
+  tip Last stop of the chapter: the route's own guide comes back once this is handed in. Its next stop is Theramore: the flight to Menethil Harbor, then the boat to Theramore. With Mythology of the Titans done, the chapter goes by Ironforge first.
+  turnin 1053                                 -- Raleigh the Devout, upstairs in the inn
+
 step Ironforge: Mythology of the Titans
   when complete 1050
   zone Ironforge
-  tip From Southshore, the flight to Ironforge and back: Mae Paledust stands in the Hall of Explorers, by the bookshelves. Or keep it for a later stop in Ironforge: the route passes there at about 50.
-  turnin 1050 optional                        -- Librarian Mae Paledust
-
-step Southshore rewards
-  zone Hillsbrad Foothills
-  tip Last stop of the chapter: the route's own guide comes back once this is handed in.
-  turnin 1053                                 -- Raleigh the Devout, upstairs in the inn
+  tip From Southshore, the flight to Ironforge: Mae Paledust stands in the Hall of Explorers, by the bookshelves. Last stop of the chapter: then the flight to Menethil Harbor and the boat to Theramore, where the route goes on.
+  fly "Ironforge"
+  turnin 1050                                 -- Librarian Mae Paledust

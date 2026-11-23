@@ -11,7 +11,7 @@ return {
 
 	-- Step 1: Stormwind: Brohann Caskbelly
 	-- {zone:1435} Swamp of Sorrows · {npc:5384} Brohann Caskbelly · {zone:1453} Stormwind
-	["The Sunken Temple: a troll and dragon dungeon under the Pool of Tears in the {zone:1435}, levels 50 to 60, best at 51 to 55 with a group of 5. Its main quest is {npc:5384}'s, in {zone:1453}: from Nethergarde Keep, the flight to {zone:1453} and back, about 7 minutes."] = "Le temple englouti : un donjon de trolls et de dragons sous le Bassin des larmes, dans le {zone:1435}, niveaux 50 à 60, idéal de 51 à 55 en groupe de 5. Sa quête principale est celle de {npc:5384}, à {zone:1453} : depuis Rempart-du-Néant, le vol pour {zone:1453} et retour, environ 7 minutes.",
+	["The Sunken Temple: a troll and dragon dungeon under the Pool of Tears in the {zone:1435}, levels 50 to 60, best from about 52 with a group of 5: its last bosses are 55. Its main quest is {npc:5384}'s, in {zone:1453}: from Nethergarde Keep, the flight to {zone:1453} and back, about 7 minutes."] = "Le temple englouti : un donjon de trolls et de dragons sous le Bassin des larmes, dans le {zone:1435}, niveaux 50 à 60, idéal à partir de 52 environ en groupe de 5 : ses derniers boss sont de niveau 55. Sa quête principale est celle de {npc:5384}, à {zone:1453} : depuis Rempart-du-Néant, le vol pour {zone:1453} et retour, environ 7 minutes.",
 
 	-- Step 2: Sunken Temple: the Pool of Tears
 	["Sunken Temple: the Pool of Tears"] = "Temple englouti : le Bassin des larmes",
@@ -45,11 +45,12 @@ return {
 	-- {npc:5709} Shade of Eranikus
 	["Sunken Temple: the {npc:5709}"] = "Temple englouti : {npc:5709}",
 	-- {npc:5709} Shade of Eranikus · {item:10454} Essence of Eranikus · {object:148512} Essence Font
-	["The {npc:5709} waits at the very end, past the green dragons. He drops the {item:10454}: right-click it, then hand it in at the {object:148512} in his room before you leave."] = "{npc:5709} attend tout au fond, après les dragons verts, et laisse l'{item:10454} : clic droit dessus, puis la rendre au {object:148512}, dans la même salle, avant de partir.",
+	["The {npc:5709} waits at the very end, past the green dragons. He drops the {item:10454}: right-click it, then hand it in at the {object:148512} in his room before leaving."] = "{npc:5709} attend tout au fond, après les dragons verts, et laisse l'{item:10454} : clic droit dessus, puis la rendre au {object:148512}, dans la même salle, avant de partir.",
 	-- {item:10454} Essence of Eranikus
 	["{item:10454}, a drop"] = "{item:10454}, un butin",
 
 	-- Step 8: Stormwind: Brohann Caskbelly
 	-- {zone:1435} Swamp of Sorrows · {zone:1453} Stormwind · {zone:1455} Ironforge
 	["Out of the {zone:1435} to Nethergarde Keep, then the flight to {zone:1453}. Last stop of the chapter: the route's own guide comes back once this is handed in; its next stop, {zone:1455}, is a ride on the Deeprun Tram."] = "Sortir du {zone:1435} vers Rempart-du-Néant, puis le vol pour {zone:1453}. Dernier arrêt du chapitre : le guide du parcours revient une fois cette quête rendue ; son arrêt suivant, {zone:1455}, est à un trajet du Tram des profondeurs.",
+
 }

@@ -20,7 +20,7 @@ zone Westfall
 
 step Sentinel Hill: playing the route together
   zone Westfall
-  tip Polestar's route brings every race to Westfall, each at its own level: Humans at about 11, Dwarves and Gnomes at about 14, Night Elves at about 15. Whoever arrives first goes on: quests already handed in tick themselves for the others, and a friend ahead helps with their quests when you play together. Group XP stays good within about 4 levels.
+  tip Polestar's route brings every race to Westfall, each at its own level: Humans at about 11, Dwarves and Gnomes at about 14, Night Elves and the Skyborne (from Zephras Isle) at about 15. Whoever arrives first goes on: quests already handed in tick themselves for the others, and a friend ahead helps with their quests when you play together. Group XP stays good within about 4 levels.
   note Polestar's group tools: the party panel (/polestar party) shows each friend's guide, step and level; its "Sync to my guide" button asks the others to come to your step, and each one accepts or declines. The option "Wait for the group" holds a hand-in until the friends in the zone are ready. Share a quest from the quest log: click it, then Share.
   note Dungeons: a card offers each dungeon chapter of the group at the right moment of the route. The chapter opens in a tab of its own and the route comes back when it ends; /ga donjon shows the card again.
   task "Read: the group plays together, or each at their own pace"

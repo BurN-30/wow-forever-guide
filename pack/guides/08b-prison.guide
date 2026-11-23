@@ -46,19 +46,23 @@ step Stormwind: Warden Thelwater
 step Warden Thelwater: Bazil Thredd (after the Deadmines)
   when onquest 389
   zone Stormwind City
-  turnin 389 optional                         -- Warden Thelwater
-  accept 391 optional                         -- The Stockade Riots
+  turnin 389                                  -- Warden Thelwater
+  accept 391                                  -- The Stockade Riots
 
 step Old Town: Nikova Raskol
   zone Stormwind City
   tip Nikova Raskol stands in Old Town: the Red Wool Bandanas she wants drop from the Defias inside.
   accept 388                                  -- Nikova Raskol
 
-step For whoever carries them from this pack's former route
-  when onquest 386,377
-  tip What Comes Around (Guard Berton, Lakeshire) wants Targorr's head, Crime and Punishment (Councilman Millstipe, Darkshire) Dextren Ward's hand: both are in the prison, and their hand-ins come after the run.
-  accept 386 optional                         -- Guard Berton, Lakeshire
-  accept 377 optional                         -- Councilman Millstipe, Darkshire
+step What Comes Around, for whoever carries it
+  when onquest 386
+  tip What Comes Around (Guard Berton, Lakeshire) wants Targorr's head: he is in the prison, and the hand-in comes after the run.
+  accept 386                                  -- Guard Berton, Lakeshire
+
+step Crime and Punishment, for whoever carries it
+  when onquest 377
+  tip Crime and Punishment (Councilman Millstipe, Darkshire) wants Dextren Ward's hand: he is in the prison, and the hand-in comes after the run.
+  accept 377                                  -- Councilman Millstipe, Darkshire
 
 step Enter the Stockade
   tip The gate is by Warden Thelwater, at the top of the stairs on the canal. Group of 5 at 24 to 29, or 3 at 26 to 29. Every prisoner is elite (23 to 26); the Defias Prisoners disarm, so the tank builds threat before anyone hits.
@@ -68,21 +72,21 @@ step Enter the Stockade
 step The entry corridor and Targorr
   tip Cells line both sides, 3 or 4 elites each, and runners flee into the next cell for help: stop them or clear each cell as you pass. Targorr the Dread hides in a side cell of this corridor (often first on the right or second on the left); a patrol walks between the two wings.
   note Red Wool Bandanas and the prisoners for Quell the Uprising come from every Defias.
-  collect 3630 quest 386 optional             -- Head of Targorr: Targorr the Dread, elite 24
   kill 1696                                   -- Targorr the Dread
+  collect 3630 quest 386                      -- Head of Targorr: Targorr the Dread, elite 24
   note At the junction, type /target Bruegal Ironknuckle: if a frame shows, the rare elite (26) is in a cell nearby, with the best loot of the dungeon.
 
 step The west wing: Dextren Ward
   tip Left at the junction, to the small hall at the end. Clear every room around it first: his Intimidating Shout fears the group into fresh packs. He runs at low health: stop him.
-  collect 3628 quest 377 optional             -- Hand of Dextren Ward, elite 26
   kill 1663                                   -- Dextren Ward
+  collect 3628 quest 377                      -- Hand of Dextren Ward, elite 26
 
 step The east wing: Kam, Hamhock and Bazil Thredd
   tip Right at the junction. Kam Deepfury sits in a cell (second on the left); Hamhock comes with two linked Insurgents and casts Chain Lightning: crowd-control an add and spread out. Bazil Thredd waits at the very end: he hits one target hard and his Smoke Bomb stuns, so keep the tank topped up.
   kill 1666                                   -- Kam Deepfury
   kill 1717                                   -- Hamhock
-  collect 2926 quest 391 optional             -- Head of Bazil Thredd, elite 29
   kill 1716                                   -- Bazil Thredd
+  collect 2926 quest 391                      -- Head of Bazil Thredd, elite 29
 
 step Finish the clear
   tip One Convict short after a full clear? Wait a few minutes at the entrance for the respawn rather than resetting. Two chests, one in each wing. Leaving through the portal drops whatever chases you.
@@ -94,29 +98,35 @@ step Warden Thelwater
   turnin 387                                  -- Warden Thelwater
 
 step Warden Thelwater: The Stockade Riots
-  when onquest 391
+  when complete 391
   zone Stormwind City
-  turnin 391 optional                         -- Warden Thelwater
-  accept 392 optional                         -- The Curious Visitor: for Baros Alexston, Cathedral Square
+  turnin 391                                  -- Warden Thelwater
+
+step Warden Thelwater: The Curious Visitor (the end of the Defias story)
+  when group 392
+  when turnedin 391
+  zone Stormwind City
+  tip The end of the Defias story follows, all in Stormwind and at the farm by its gate: about 8,000 XP and the Seal of Wrynn, a ring, at the end; its last fight is better with the group. Short on time? Skip it: Nikova Raskol in Old Town ends the chapter.
+  accept 392                                  -- The Curious Visitor: for Baros Alexston, Cathedral Square
 
 # The end of the Defias story: only after The Stockade Riots, every hand-in optional so that the
 # chapter ends on its own quests (387, 388) for whoever leaves the story aside.
 step Baros Alexston: The Curious Visitor
   when onquest 392
   zone Stormwind City
-  tip Baros Alexston is in the City Hall on Cathedral Square. The end of the Defias story follows, all in Stormwind and at the farm by its gate: about 8,000 XP and the Seal of Wrynn, a ring, at the end. Short on time? Go straight to Nikova Raskol in Old Town.
-  turnin 392 optional                         -- Baros Alexston
+  tip Baros Alexston is in the City Hall on Cathedral Square.
+  turnin 392                                  -- Baros Alexston
 
 step Stormwind: the end of the Defias story
   when turnedin 392
   tip Only if you did The Stockade Riots. Baros Alexston is in the City Hall on Cathedral Square, Mathias Shaw upstairs at SI:7 in Old Town, Elling Trias upstairs in the cheese shop of the Trade District, Tyrion in the garden beside Stormwind Keep.
-  accept 393 optional                         -- Baros Alexston
-  turnin 393 optional                         -- Master Mathias Shaw
-  accept 350 optional
-  turnin 350 optional                         -- Elling Trias
-  accept 2745 optional
-  turnin 2745 optional                        -- Tyrion
-  accept 2746 optional
+  accept 393                                  -- Baros Alexston
+  turnin 393                                  -- Master Mathias Shaw
+  accept 350
+  turnin 350                                  -- Elling Trias
+  accept 2745
+  turnin 2745                                 -- Tyrion
+  accept 2746
 
 step Clara's apples
   when onquest 2746
@@ -129,33 +139,33 @@ step The Attack!
   when onquest 2746
   zone Stormwind City
   tip Lord Gregor Lescovar and Marzon the Silent Blade meet in the garden beside the keep: listen to them, then fight both, together. Better with the group.
-  turnin 2746 optional                        -- Tyrion
-  accept 434 optional
-  complete 434 optional @72.36,35.12          -- Overhear Lescovar and Marzon in the garden, then kill both
+  turnin 2746                                 -- Tyrion
+  accept 434
+  complete 434 @72.36,35.12                   -- Overhear Lescovar and Marzon in the garden, then kill both
 
 step Brotherhood's End
-  when onquest 434
-  turnin 434 optional                         -- Elling Trias
-  accept 394 optional
-  turnin 394 optional                         -- Master Mathias Shaw
-  accept 395 optional
-  turnin 395 optional                         -- Baros Alexston
-  accept 396 optional
-  turnin 396 optional                         -- Lady Katrana Prestor, in the throne room of Stormwind Keep: Seal of Wrynn
+  when complete 434
+  turnin 434                                  -- Elling Trias
+  accept 394
+  turnin 394                                  -- Master Mathias Shaw
+  accept 395
+  turnin 395                                  -- Baros Alexston
+  accept 396
+  turnin 396                                  -- Lady Katrana Prestor, in the throne room of Stormwind Keep: Seal of Wrynn
 
 # Only for a character who carries them from this pack's former route.
 step Lakeshire: Guard Berton
   zone Redridge Mountains
-  when onquest 386
+  when complete 386
   tip Fly to Lakeshire and back: a few minutes for the biggest reward of the prison.
   fly "Lakeshire"
-  turnin 386 optional                         -- Guard Berton
+  turnin 386                                  -- Guard Berton
 
 step Darkshire: Councilman Millstipe
   zone Duskwood
-  when onquest 377
+  when complete 377
   fly "Darkshire"
-  turnin 377 optional                         -- Councilman Millstipe, town hall
+  turnin 377                                  -- Councilman Millstipe, town hall
 
 step Old Town: Nikova Raskol
   zone Stormwind City

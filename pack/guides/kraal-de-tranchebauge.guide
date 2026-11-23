@@ -62,7 +62,7 @@ step Shamans: Elemental Aid
 
 step Razorfen Kraul: Heralath Fallowbrook
   tip Jump down from Charlga's area and kill a few quilboars: Heralath Fallowbrook, a night elf who died in the Kraul, lies by a tent in the north of that area. Mortality Wanes asks for Treshala's Pendant, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run. Its hand-in is in Darnassus, off the route: whenever the player is there, Polestar lists it.
-  accept 1142 optional                        -- Heralath Fallowbrook
+  accept 1142                                 -- Heralath Fallowbrook
   collect 5825 quest 1142 optional            -- Treshala's Pendant: quilboars of the Kraul, about 1 in 10
 
 step Razorfen Kraul: Willix the Importer
@@ -70,7 +70,11 @@ step Razorfen Kraul: Willix the Importer
   note Not there? Another group is escorting him: wait for him to come back, or join them.
   accept 1144                                 -- Willix the Importer
   complete 1144                               -- Escort him out of the Kraul
-  turnin 1144 optional                        -- Willix the Importer, at the entrance
+
+step Razorfen Kraul: Willix's reward
+  when complete 1144
+  tip Willix the Importer gives the reward himself, at the entrance, once he is safe.
+  turnin 1144                                 -- Willix the Importer, at the entrance
 
 step Falfindel Waywarder: back to the route
   zone Feralas

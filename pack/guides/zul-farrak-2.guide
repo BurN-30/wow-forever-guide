@@ -26,12 +26,14 @@ levels 49-53
 zone Tanaris
 
 step Zul'Farrak, second run: Wizzle Brassbolts
+  when group 2770
   zone Thousand Needles
-  tip A second Zul'Farrak run for Gahz'rilla, the boss of the sacred pool: 14,600 XP and the Carrot on a Stick, a trinket that speeds up a mount. One player of the group needs the Mallet of Zul'Farrak, made in the Hinterlands (the Sacred Mallet from Qiaga the Keeper at the top of the Altar of Zul, used on the altar at the very top of Jintha'Alor). Nobody has it? Close this chapter: Gahz'rilla cannot be called.
+  tip A second Zul'Farrak run for Gahz'rilla, the boss of the sacred pool: 14,600 XP and the Carrot on a Stick, a trinket that speeds up a mount. One player of the group needs the Mallet of Zul'Farrak, made in the Hinterlands (the Sacred Mallet from Qiaga the Keeper at the top of the Altar of Zul, used on the altar at the very top of Jintha'Alor). Nobody in the group has it? Skip it: Gahz'rilla cannot be called, and the chapter closes.
   note Wizzle stands at the Mirage Raceway on the Shimmering Flats, about 3 minutes north of Gadgetzan. Already took Gahz'rilla from him at 46? This step ticks itself.
   accept 2770                         -- Wizzle Brassbolts
 
 step Zul'Farrak: Gahz'rilla
+  when group 2770
   zone Tanaris
   tip Ride south-west to the walled city: the trolls are below you now, about an hour with a group of 5. Gahz'rilla's pool is in Hydromancer Velratha's courtyard, round the corner from the entrance. The player with the Mallet of Zul'Farrak uses it on the gong by the pool; Gahz'rilla rises from the water and throws players into the air: fight him in the pool, or under the ruin left of the archway, to soften the falls.
   note Share Gahz'rilla with the group before going in: click it in the quest log, then Share.
@@ -40,6 +42,7 @@ step Zul'Farrak: Gahz'rilla
   collect 8707 quest 2770             -- Gahz'rilla's Electrified Scale: Gahz'rilla
 
 step Mirage Raceway: Wizzle Brassbolts
+  when group 2770
   zone Thousand Needles
   tip Back north to the Mirage Raceway. Last stop of the chapter: the route's own guide comes back once this is handed in, at Gadgetzan.
   turnin 2770                         -- Wizzle Brassbolts

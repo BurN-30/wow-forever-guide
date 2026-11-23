@@ -15,15 +15,15 @@ return {
 	["Blackrock Depths: the {object:147516} dwarves' city under Blackrock Mountain, between the {zone:1427} and the {zone:1428}. Levels 52 to 60, bosses 51 to 59: easy for a group of 5 at 58 to 60; possible earlier at five (from about 54), difficult. The dungeon is huge: the guide splits it into three visits of one to two hours, with the quests given in {zone:1455}, Kharanos, the {zone:1428}, Lakeshire and {zone:1453}. Alone? Skip it."] = "Profondeurs de Rochenoire : la cité des nains {object:147516} sous le Mont Rochenoire, entre {zone:1427} et {zone:1428}. Niveaux 52 à 60, boss 51 à 59 : facile pour un groupe de 5 aux niveaux 58 à 60 ; possible plus tôt à cinq (vers 54), difficile. Le donjon est immense : le guide le découpe en trois visites d'une à deux heures, avec les quêtes données à {zone:1455}, Kharanos, dans {zone:1428}, à Comté-du-Lac et à {zone:1453}. Seul ? Le passer.",
 	["Keep 12 free quest log slots. Most of these quests cannot be shared: each player takes their own."] = "Garder 12 places libres dans le journal de quêtes. La plupart de ces quêtes ne se partagent pas : chaque joueur prend la sienne.",
 	-- {zone:1455} Ironforge · {object:1162} Menethil Harbor
-	["To {zone:1455}: the hearthstone when it is bound there; from Kalimdor, the flight to Theramore or Auberdine, the boat to {object:1162} and the flight to {zone:1455}."] = "Vers {zone:1455} : la pierre de foyer si elle y est liée ; depuis Kalimdor, le vol pour Theramore ou Auberdine, le bateau pour {object:1162} et le vol pour {zone:1455}.",
+	["To {zone:1455}: the hearthstone when it is bound there; from Kalimdor, the flight to Theramore or Auberdine, the boat to {object:1162} and the flight to {zone:1455}."] = "Vers {zone:1455} : la pierre de foyer si elle y est liée ; depuis Kalimdor, le vol pour Theramore ou Auberdine, le bateau pour le port de Menethil et le vol pour {zone:1455}.",
 
 	-- Step 2: Ironforge: Royal Historian Archesonus
 	-- {object:171709} High Seat · {quest:3701} The Smoldering Ruins of Thaurissan · {zone:1428} Burning Steppes · {zone:1453} Stormwind
-	["Archesonus stands in the {object:171709}, beside King Magni. Magni's quest for Blackrock Depths waits for {quest:3701}, which the route offered as a group quest at 50: its relics are in the {zone:1428}, on this chapter's way, and it is handed in here on the trip to {zone:1453}."] = "Archesonus se tient dans {object:171709}, à côté du roi Magni. La quête de Magni pour les Profondeurs de Rochenoire attend {quest:3701}, que le parcours a proposée comme quête de groupe à 50 : ses reliques sont dans les {zone:1428}, sur le chemin de ce chapitre, et elle se rend ici lors du trajet vers {zone:1453}.",
+	["Archesonus stands in the {object:171709}, beside King Magni. Magni's quest for Blackrock Depths waits for {quest:3701}, which the route offered as a group quest at 50: its relics are in the {zone:1428}, on this chapter's way, and it is handed in here on the trip to {zone:1453}."] = "Archesonus se tient dans le Haut Siège, à côté du roi Magni. La quête de Magni pour les Profondeurs de Rochenoire attend {quest:3701}, que le parcours a proposée comme quête de groupe à 50 : ses reliques sont dans les {zone:1428}, sur le chemin de ce chapitre, et elle se rend ici lors du trajet vers {zone:1453}.",
 
 	-- Step 3: Ironforge: King Magni Bronzebeard
 	-- {object:171709} High Seat · {npc:8879} Royal Historian Archesonus · {npc:9021} Kharan Mighthammer
-	["Magni stands in the {object:171709}, beside {npc:8879}. {npc:9021} is a prisoner in Blackrock Depths."] = "Magni se tient dans {object:171709}, à côté de {npc:8879}. {npc:9021} est prisonnier dans les Profondeurs de Rochenoire.",
+	["Magni stands in the {object:171709}, beside {npc:8879}. {npc:9021} is a prisoner in Blackrock Depths."] = "Magni se tient dans le Haut Siège, à côté de {npc:8879}. {npc:9021} est prisonnier dans les Profondeurs de Rochenoire.",
 
 	-- Step 4: Kharanos: Ragnar Thunderbrew
 	-- {npc:1267} Ragnar Thunderbrew
@@ -67,7 +67,7 @@ return {
 	["Ride north-east from the Vigil into the hills: Broodlings, Dragonspawn and Wyrmkin in packs, the three Black Drakes apart, one in the northern hills and two further south."] = "Partir au nord-est de la Veille, dans les collines : Broodlings, Dragonspawn et Wyrmkin en groupes, les trois Black Drakes à part, l'un dans les collines du nord, les deux autres plus au sud.",
 
 	-- Step 12: Fly to Lakeshire
-	["Fly to Lakeshire"] = "Envolez-vous vers Comté-du-Lac",
+	["Fly to Lakeshire"] = "Vol pour Comté-du-Lac",
 	["Morgan's Vigil flight master"] = "Maître de vol de la Veille de Morgan",
 
 	-- Step 13: Lakeshire: Magistrate Solomon
@@ -90,7 +90,7 @@ return {
 
 	-- Step 16: Ironforge: The Smoldering Ruins of Thaurissan
 	-- {zone:1453} Stormwind · {object:28027} Dwarven District · {npc:8879} Royal Historian Archesonus · {object:171709} High Seat · {zone:1455} Ironforge
-	["The Deeprun Tram from {zone:1453}'s {object:28027}: {npc:8879} and King Magni stand in the {object:171709}. Then the tram back to {zone:1453}, or the flight from {zone:1455} to Lakeshire."] = "Le Tram des profondeurs depuis {object:28027} de {zone:1453} : {npc:8879} et le roi Magni se tiennent dans {object:171709}. Puis le tram retour vers {zone:1453}, ou le vol de {zone:1455} pour Comté-du-Lac.",
+	["The Deeprun Tram from {zone:1453}'s {object:28027}: {npc:8879} and King Magni stand in the {object:171709}. Then the tram back to {zone:1453}, or the flight from {zone:1455} to Lakeshire."] = "Le Tram des profondeurs depuis {object:28027} de {zone:1453} : {npc:8879} et le roi Magni se tiennent dans le Haut Siège. Puis le tram retour vers {zone:1453}, ou le vol de {zone:1455} pour Comté-du-Lac.",
 	-- {npc:2784} King Magni Bronzebeard · {npc:9021} Kharan Mighthammer
 	["{npc:2784}: {npc:9021} is a prisoner in Blackrock Depths"] = "{npc:2784} : {npc:9021} est prisonnier dans les Profondeurs de Rochenoire",
 
@@ -139,7 +139,9 @@ return {
 	["{npc:8888} (one player is enough)"] = "{npc:8888} (un joueur suffit)",
 	-- {item:11000} Shadowforge Key · {object:161460} Shadowforge Lock · {npc:8888} Franclorn Forgewright
 	-- plural, as words: Shadowforge Gates = {object:170559} Shadowforge Gate
-	["The {item:11000} opens the doors of the second and third visits (the Shadowforge Gates of the prison and the {object:161460}): one key in the group is enough. {npc:8888}'s ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with {npc:8888}, then come back to life at your body or by a group mate's spell. To check in game."] = "La {item:11000} ouvre les portes des deuxième et troisième visites (les portes d'Ombreforge de la prison et {object:161460}) : une clé dans le groupe suffit. Le fantôme de {npc:8888} se tient sur son tombeau, dans le bâtiment suspendu, et seuls les morts le voient. Celui qui portera la clé : retirer son équipement (pas de frais de réparation), mourir dans la lave sous les chaînes, libérer son esprit, revenir en fantôme depuis le cimetière et parler à {npc:8888}, puis revenir à la vie près de son corps ou par le sort d'un équipier. À vérifier en jeu.",
+	["The {item:11000} opens the doors of the second and third visits (the Shadowforge Gates of the prison and the {object:161460}): one key in the group is enough. {npc:8888}'s ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off the gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with {npc:8888}, then come back to life at the body or by a group mate's spell. To check in game."] = "La {item:11000} ouvre les portes des deuxième et troisième visites (les portes d'Ombreforge de la prison et {object:161460}) : une clé dans le groupe suffit. Le fantôme de {npc:8888} se tient sur son tombeau, dans le bâtiment suspendu, et seuls les morts le voient. Pour celui qui portera la clé : retirer l'équipement (pas de frais de réparation), mourir dans la lave sous les chaînes, libérer l'esprit, revenir en fantôme depuis le cimetière et parler à {npc:8888}, puis revenir à la vie près du corps ou par le sort d'un équipier. À vérifier en jeu.",
+	-- {quest:3801} Dark Iron Legacy
+	["The key: one player of the group has it, or takes {quest:3801} here"] = "La clé : un joueur du groupe l'a déjà, ou prend {quest:3801} ici",
 	-- {npc:8888} Franclorn Forgewright
 	["{npc:8888}, as a ghost"] = "{npc:8888}, en fantôme",
 
@@ -192,7 +194,7 @@ return {
 	-- Step 33: Shrine of Thaurissan: the monument
 	["Shrine of Thaurissan: the monument"] = "Sanctuaire de Thaurissan : le monument",
 	-- {item:10999} Ironfel · {object:164689} Monument of Franclorn Forgewright · {item:11000} Shadowforge Key
-	["Back up through the Domicile to the Shrine: place {item:10999} on the {object:164689}. The {item:11000} is the reward. Then walk out the way you came: round the stands, through the Ring of the Law (its gates stay open) and the Detention Block."] = "Remonter par les logis jusqu'au sanctuaire : poser {item:10999} sur {object:164689}. La {item:11000} est la récompense. Puis ressortir par où le groupe est venu : le tour des gradins, l'arène (ses grilles restent ouvertes) et la prison.",
+	["Back up through the Domicile to the Shrine: whoever carries {item:10999} places it on the {object:164689}. The {item:11000} is the reward. Then walk out the way you came: round the stands, through the Ring of the Law (its gates stay open) and the Detention Block."] = "Remonter par les logis jusqu'au sanctuaire : qui porte {item:10999} le pose sur {object:164689}. La {item:11000} est la récompense. Puis ressortir par où le groupe est venu : le tour des gradins, l'arène (ses grilles restent ouvertes) et la prison.",
 
 	-- Step 34: Flame Crest: Maxwort Uberglint
 	-- {npc:9536} Maxwort Uberglint
@@ -216,7 +218,7 @@ return {
 
 	-- Step 38: Fly to Ironforge
 	-- {zone:1455} Ironforge
-	["Fly to {zone:1455}"] = "Envolez-vous vers {zone:1455}",
+	["Fly to {zone:1455}"] = "Vol pour {zone:1455}",
 
 	-- Step 39: Ironforge: King Magni Bronzebeard
 	-- {quest:4361} The Bearer of Bad News
@@ -227,8 +229,8 @@ return {
 
 	-- Step 41: Blackrock Depths, second visit: before going in
 	["Blackrock Depths, second visit: before going in"] = "Profondeurs de Rochenoire, deuxième visite : avant d'entrer",
-	-- {item:11000} Shadowforge Key · {npc:9016} Bael'Gar · {quest:4322} Jail Break! · {zone:1427} Searing Gorge
-	["Second visit, with the {item:11000}: Windsor's note, the Dark Iron Highway ({npc:9016}), Shadowforge City (Incendius), the West Garrison (Angerforge), the Manufactory (Argelmach), then {quest:4322} from Windsor's cell. Bosses 52 to 57: 56 or more advised. From Thorium Point, ride south across the {zone:1427} into Blackrock Mountain."] = "Deuxième visite, avec la {item:11000} : le billet pour Windsor, la grand-route (Dark Iron Highway, {npc:9016}), la ville d'Ombreforge (Shadowforge City, Incendius), la garnison ouest (West Garrison, Angerforge), la manufacture (Manufactory, Argelmach), puis {quest:4322} depuis la cellule de Windsor. Boss 52 à 57 : niveau 56 ou plus conseillé. Depuis la Halte du Thorium, traverser {zone:1427} vers le sud jusqu'au Mont Rochenoire.",
+	-- {item:11000} Shadowforge Key · {quest:3801} Dark Iron Legacy · {quest:4282} A Shred of Hope · {npc:9016} Bael'Gar · {quest:4322} Jail Break! · {zone:1427} Searing Gorge
+	["The second and third visits need the {item:11000}: one in the group is enough ({quest:3801}, first visit). Nobody has it? Skip {quest:4282}: the guide leaves these two visits out. Second visit, with the key: Windsor's note, the Dark Iron Highway ({npc:9016}), Shadowforge City (Incendius), the West Garrison (Angerforge), the Manufactory (Argelmach), then {quest:4322} from Windsor's cell. Bosses 52 to 57: 56 or more advised. From Thorium Point, ride south across the {zone:1427} into Blackrock Mountain."] = "Les deuxième et troisième visites demandent la {item:11000} : une dans le groupe suffit ({quest:3801}, première visite). Personne ne l'a ? Passer {quest:4282} : le guide laisse alors ces deux visites de côté. Deuxième visite, avec la clé : le billet pour Windsor, la grand-route (Dark Iron Highway, {npc:9016}), la ville d'Ombreforge (Shadowforge City, Incendius), la garnison ouest (West Garrison, Angerforge), la manufacture (Manufactory, Argelmach), puis {quest:4322} depuis la cellule de Windsor. Boss 52 à 57 : niveau 56 ou plus conseillé. Depuis la Halte du Thorium, traverser {zone:1427} vers le sud jusqu'au Mont Rochenoire.",
 	-- {quest:4022} A Taste of Flame · {npc:9459} Cyrus Therepentous · {quest:4263} Incendius! · {npc:9561} Jalinda Sprig · {quest:4322} Jail Break! · {quest:4362} The Fate of the Kingdom · {quest:4136} Ribbly Screwspigot · {quest:4126} Hurley Blackbreath
 	["In the quest log: {quest:4022} ({npc:9459}), {quest:4263} ({npc:9561}). Keep one free quest log slot for {quest:4322}. For the third visit: {quest:4362} (Magni), {quest:4136}, {quest:4126}."] = "Dans le journal de quêtes : {quest:4022} ({npc:9459}), {quest:4263} ({npc:9561}). Garder une place libre dans le journal pour {quest:4322}. Pour la troisième visite : {quest:4362} (Magni), {quest:4136}, {quest:4126}.",
 
@@ -244,7 +246,7 @@ return {
 	-- {npc:9016} Bael'Gar
 	["Dark Iron Highway: {npc:9016}"] = "Grand-route : {npc:9016}",
 	-- {object:170559} Shadowforge Gate · {npc:9016} Bael'Gar · {item:11231} Altered Black Dragonflight Molt
-	["The {object:170559} on the north side of the Detention Block opens with the key onto the Dark Iron Highway: large packs of dwarves. {npc:9016} (elite 54) stands at its west end; once he is down, use the {item:11231} on his remains."] = "{object:170559}, du côté nord de la prison, s'ouvre avec la clé sur la grand-route (Dark Iron Highway) : gros groupes de nains. {npc:9016} (élite 54) se tient à son extrémité ouest ; une fois tombé, utiliser le {item:11231} sur ses restes.",
+	["The {object:170559} on the north side of the Detention Block opens with the key onto the Dark Iron Highway: large packs of dwarves. {npc:9016} (elite 54) stands at its west end; once he is down, use the {item:11231} on his remains."] = "La porte d'Ombreforge, du côté nord de la prison, s'ouvre avec la clé sur la grand-route (Dark Iron Highway) : gros groupes de nains. {npc:9016} (élite 54) se tient à son extrémité ouest ; une fois tombé, utiliser le {item:11231} sur ses restes.",
 	-- {item:11230} Encased Fiery Essence · {npc:9016} Bael'Gar
 	["{item:11230}: the molt on {npc:9016}'s remains"] = "{item:11230} : le cuir altéré sur les restes de {npc:9016}",
 
@@ -252,12 +254,14 @@ return {
 	-- {npc:9017} Lord Incendius
 	["Shadowforge City: {npc:9017}"] = "Ville d'Ombreforge : {npc:9017}",
 	-- {npc:9017} Lord Incendius · {object:174825} Black Anvil
-	["The great doors at the east end of the Highway open on Shadowforge City, above a lava lake. {npc:9017} (elite 55) guards the {object:174825} on the central bridge: tank him in the middle, his Mighty Blow knocks you into the lava, with no way back up."] = "Les grandes portes à l'extrémité est de la grand-route donnent sur la ville d'Ombreforge (Shadowforge City), au-dessus d'un lac de lave. {npc:9017} (élite 55) garde {object:174825} sur le pont central : le tanker au milieu, son Coup puissant projette dans la lave, sans moyen de remonter.",
+	["The great doors at the east end of the Highway open on Shadowforge City, above a lava lake. {npc:9017} (elite 55) guards the {object:174825} on the central bridge: tank him in the middle, his Mighty Blow knocks you into the lava, with no way back up."] = "Les grandes portes à l'extrémité est de la grand-route donnent sur la ville d'Ombreforge (Shadowforge City), au-dessus d'un lac de lave. {npc:9017} (élite 55) garde l'Enclume noire sur le pont central : le tanker au milieu, son Coup puissant projette dans la lave, sans moyen de remonter.",
+	-- {npc:9017} Lord Incendius · {quest:4263} Incendius!
+	["{npc:9017}, for {quest:4263}"] = "{npc:9017}, pour {quest:4263}",
 
 	-- Step 45: West Garrison and the Manufactory
 	["West Garrison and the Manufactory"] = "Garnison ouest et manufacture",
 	-- {object:170570} East Garrison Door · {object:161460} Shadowforge Lock · {npc:9033} General Angerforge · {npc:8983} Golem Lord Argelmach · {item:11464} Marshal Windsor's Lost Information
-	["Back along the Highway to the Detention Block, then through the {object:170570} (the key) into the East Garrison. Go down the stairs to the {object:161460}, the great wheel, and open it with the key: the giant door over the Highway turns, and its passage leads across to the West Garrison. Down the left-hand stairs: {npc:9033} (elite 57, calls adds at low health). Down the right-hand stairs, across the Manufactory: {npc:8983} and his two golems (kill the golems first). Each drops part of {item:11464}."] = "Revenir par la grand-route jusqu'à la prison, puis passer {object:170570} (la clé) jusqu'à la garnison est (East Garrison). Descendre l'escalier jusqu'à {object:161460}, la grande roue, et l'ouvrir avec la clé : la porte géante au-dessus de la grand-route tourne, et son passage mène de l'autre côté, à la garnison ouest (West Garrison). Par l'escalier de gauche : {npc:9033} (élite 57, appelle des renforts quand sa vie baisse). Par l'escalier de droite, à travers la manufacture (Manufactory) : {npc:8983} et ses deux golems (tuer les golems d'abord). Chacun donne une partie de {item:11464}.",
+	["Back along the Highway to the Detention Block, then through the {object:170570} (the key) into the East Garrison. Go down the stairs to the {object:161460}, the great wheel, and open it with the key: the giant door over the Highway turns, and its passage leads across to the West Garrison. Down the left-hand stairs: {npc:9033} (elite 57, calls adds at low health). Down the right-hand stairs, across the Manufactory: {npc:8983} and his two golems (kill the golems first). Each drops part of {item:11464}."] = "Revenir par la grand-route jusqu'à la prison, puis passer la porte de la garnison est (la clé) jusqu'à la garnison est (East Garrison). Descendre l'escalier jusqu'à {object:161460}, la grande roue, et l'ouvrir avec la clé : la porte géante au-dessus de la grand-route tourne, et son passage mène de l'autre côté, à la garnison ouest (West Garrison). Par l'escalier de gauche : {npc:9033} (élite 57, appelle des renforts quand sa vie baisse). Par l'escalier de droite, à travers la manufacture (Manufactory) : {npc:8983} et ses deux golems (tuer les golems d'abord). Chacun donne une partie de {item:11464}.",
 
 	-- Step 46: Detention Block: Jail Break!
 	-- {quest:4322} Jail Break!
@@ -269,19 +273,19 @@ return {
 
 	-- Step 47: Blackrock Depths, third visit: the Grim Guzzler
 	["Blackrock Depths, third visit: the Grim Guzzler"] = "Profondeurs de Rochenoire, troisième visite : la taverne",
-	-- {object:170570} East Garrison Door · {object:161460} Shadowforge Lock · {quest:4136} Ribbly Screwspigot · {quest:4126} Hurley Blackbreath · {object:170571} Bar Door · {npc:9499} Plugger Spazzring · {npc:9503} Private Rocknot
+	-- {object:170570} East Garrison Door · {object:161460} Shadowforge Lock · {quest:4136} Ribbly Screwspigot · {quest:4126} Hurley Blackbreath · {object:170571} Bar Door · {npc:9499} Plugger Spazzring · {npc:9503} Private Rocknot · {npc:9502} Phalanx
 	-- plural, as words: Thunderbrew Lager Kegs = {object:164911} Thunderbrew Lager Keg · Dark Iron Ale Mugs = {item:11325} Dark Iron Ale Mug
-	["Third visit: the bottom of the dungeon, bosses 55 to 59, 58 or more advised. With the time, go on in the same run; or come back later: through the {object:170570}, the {object:161460} and the West Garrison again. Past Argelmach, the bridge leads to the Grim Guzzler: its patrons are neutral, so no area spells. {quest:4136} is friendly until threatened (his talk option): he fights with his cronies. Smash the three Thunderbrew Lager Kegs of the storage room near him: {quest:4126} comes with his cronies. To open the {object:170571}, buy Dark Iron Ale Mugs from {npc:9499} and give them to {npc:9503} until he loses his temper: Phalanx then breaks the door and attacks."] = "Troisième visite : le fond du donjon, boss 55 à 59, niveau 58 ou plus conseillé. Avec le temps, continuer dans la même instance ; sinon revenir plus tard, en repassant par {object:170570}, {object:161460} et la garnison ouest. Après Argelmach, le pont mène à la taverne (Grim Guzzler) : ses clients sont neutres, donc pas de sorts de zone. {quest:4136} reste amical jusqu'à ce qu'on le menace (son option de dialogue) : il se bat alors avec ses acolytes. Briser les trois tonneaux de bière Tonnebière (Thunderbrew Lager Kegs) de la réserve près de lui : {quest:4126} arrive avec ses acolytes. Pour ouvrir {object:170571}, acheter des chopes de bière Sombrefer (Dark Iron Ale Mugs) à {npc:9499} et les donner à {npc:9503} jusqu'à ce qu'il s'énerve : Phalanx enfonce alors la porte et attaque.",
+	["Third visit: the bottom of the dungeon, bosses 55 to 59, 58 or more advised. With the time, go on in the same run; or come back later: through the {object:170570}, the {object:161460} and the West Garrison again. Past Argelmach, the bridge leads to the Grim Guzzler: its patrons are neutral, so no area spells. {quest:4136} is friendly until threatened (his talk option): he fights with his cronies. Smash the three Thunderbrew Lager Kegs of the storage room near him: {quest:4126} comes with his cronies. To open the {object:170571}, buy Dark Iron Ale Mugs from {npc:9499} and give them to {npc:9503} until he loses his temper: {npc:9502} then breaks the door and attacks."] = "Troisième visite : le fond du donjon, boss 55 à 59, niveau 58 ou plus conseillé. Avec le temps, continuer dans la même instance ; sinon revenir plus tard, en repassant par la porte de la garnison est, {object:161460} et la garnison ouest. Après Argelmach, le pont mène à la taverne (Grim Guzzler) : ses clients sont neutres, donc pas de sorts de zone. {quest:4136} reste amical jusqu'à ce qu'on le menace (son option de dialogue) : il se bat alors avec ses acolytes. Briser les trois tonneaux de bière Tonnebière (Thunderbrew Lager Kegs) de la réserve près de lui : {quest:4126} arrive avec ses acolytes. Pour ouvrir la porte du bar, acheter des chopes de bière Sombrefer (Dark Iron Ale Mugs) à {npc:9499} et les donner à {npc:9503} jusqu'à ce qu'il s'énerve : {npc:9502} enfonce alors la porte et attaque.",
 
 	-- Step 48: Ambassador Flamelash and the Seven
 	-- {npc:9156} Ambassador Flamelash
 	["{npc:9156} and the Seven"] = "{npc:9156} et les Sept",
 	-- {object:170571} Bar Door · {npc:9156} Ambassador Flamelash · {npc:9039} Doom'rel
-	["Through the {object:170571}, left into the Chamber of Enchantment: {npc:9156} (elite 57) calls adds from the corners, kill them before they reach him. Then the Mold Foundry and the Summoners' Tomb: speak with {npc:9039} to start the Seven, who come one after the other; the door opens after the last. To the right on the way out: the Molten Bridge and the Molten Core's portal (raid)."] = "Passé {object:170571}, à gauche dans la salle des enchantements (Chamber of Enchantment) : {npc:9156} (élite 57) appelle des renforts depuis les coins, les tuer avant qu'ils l'atteignent. Puis la fonderie (Mold Foundry) et le tombeau des invocateurs (Summoners' Tomb) : parler à {npc:9039} pour lancer les Sept, qui arrivent l'un après l'autre ; la porte s'ouvre après le dernier. À droite en sortant : le pont de lave (Molten Bridge) et le portail du Cœur du Magma (raid).",
+	["Through the {object:170571}, left into the Chamber of Enchantment: {npc:9156} (elite 57) calls adds from the corners, kill them before they reach him. Then the Mold Foundry and the Summoners' Tomb: speak with {npc:9039} to start the Seven, who come one after the other; the door opens after the last. To the right on the way out: the Molten Bridge and the Molten Core's portal (raid)."] = "Passé la porte du bar, à gauche dans la salle des enchantements (Chamber of Enchantment) : {npc:9156} (élite 57) appelle des renforts depuis les coins, les tuer avant qu'ils l'atteignent. Puis la fonderie (Mold Foundry) et le tombeau des invocateurs (Summoners' Tomb) : parler à {npc:9039} pour lancer les Sept, qui arrivent l'un après l'autre ; la porte s'ouvre après le dernier. À droite en sortant : le pont de lave (Molten Bridge) et le portail du Cœur du Magma (raid).",
 
 	-- Step 49: The Lyceum and Magmus
 	-- {object:170558} The Lyceum · {npc:9938} Magmus
-	["{object:170558} and {npc:9938}"] = "{object:170558} et {npc:9938}",
+	["{object:170558} and {npc:9938}"] = "Le Lycée et {npc:9938}",
 	-- {npc:9938} Magmus
 	-- plural, as words: Shadowforge Flame Keepers = {npc:9956} Shadowforge Flame Keeper
 	["In the Lyceum, the Shadowforge Flame Keepers (red armour) drop two Shadowforge Torches: light the two braziers at the back, the doors open on the Iron Hall. {npc:9938} (elite 57) waits at the far end: keep out of the fire jets of the side alcoves."] = "Dans le lycée (Lyceum), les Shadowforge Flame Keepers (armure rouge) donnent deux torches d'Ombreforge : allumer les deux braseros du fond, les portes s'ouvrent sur la salle de fer (Iron Hall). {npc:9938} (élite 57) attend au bout : rester hors des jets de feu des alcôves latérales.",
@@ -291,6 +295,8 @@ return {
 	["The Imperial Seat: {npc:9019}"] = "Le siège impérial : {npc:9019}",
 	-- {npc:9019} Emperor Dagran Thaurissan · {npc:8929} Princess Moira Bronzebeard · {quest:4362} The Fate of the Kingdom
 	["{npc:9019} (elite 59) and {npc:8929}. {quest:4362}: kill the Emperor WITHOUT killing Moira, who heals him: one player keeps her busy and interrupts her, everyone else on the Emperor. She then stops fighting: speak with her."] = "{npc:9019} (élite 59) et {npc:8929}. {quest:4362} : tuer l'empereur SANS tuer Moira, qui le soigne : un joueur l'occupe et l'interrompt, tous les autres sur l'empereur. Elle cesse alors de combattre : lui parler.",
+	-- {npc:9019} Emperor Dagran Thaurissan · {quest:4362} The Fate of the Kingdom
+	["{npc:9019}, for {quest:4362}"] = "{npc:9019}, pour {quest:4362}",
 
 	-- Step 51: Flame Crest: Yuka Screwspigot
 	-- {npc:9544} Yuka Screwspigot
@@ -307,7 +313,8 @@ return {
 
 	-- Step 59: Blackrock Depths: quests not done
 	["Blackrock Depths: quests not done"] = "Profondeurs de Rochenoire : quêtes non finies",
-	["What is left of Blackrock Depths in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste des Profondeurs de Rochenoire dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
+	["What is left of Blackrock Depths in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log)."] = "Ce qui reste des Profondeurs de Rochenoire dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal (clic droit sur la quête dans le journal).",
+	["Each quest left: kept for another run, or abandoned"] = "Chaque quête restante : gardée pour une autre visite, ou abandonnée",
 
 	-- Step 60: Lower Blackrock Spire (dungeon, optional)
 	["Lower Blackrock Spire (dungeon, optional)"] = "Pic Rochenoire inférieur (donjon, facultatif)",
@@ -354,12 +361,16 @@ return {
 	-- Step 67: Highlord Omokk
 	-- {quest:4867} Urok Doomhowl · {item:12533} Roughshod Pike · {npc:9196} Highlord Omokk
 	["{quest:4867} needs a {item:12533}: they lean against the wall behind the Scarshield orcs, past the bridge out of Hordemar City. Then the Spirestone ogres: {npc:9196} (elite 59) and his two guards. His head is for the Urok event: one player with the quest carries the pike and the head."] = "{quest:4867} demande une {item:12533} : elles sont appuyées contre le mur derrière les orcs Scarshield, après le pont qui sort de la cité de Hordemar. Puis les ogres Spirestone : {npc:9196} (élite 59) et ses deux gardes. Sa tête sert pour l'événement d'Urok : un joueur qui a la quête porte la pique et la tête.",
+	-- {npc:9196} Highlord Omokk · {quest:5081} Maxwell's Mission
+	["{npc:9196}, for {quest:5081}"] = "{npc:9196}, pour {quest:5081}",
 
 	-- Step 68: Tazz'Alaor: War Master Voone
 	-- {npc:9237} War Master Voone
 	["Tazz'Alaor: {npc:9237}"] = "Tazz'Alaor : {npc:9237}",
 	-- {npc:9236} Shadow Hunter Vosh'gajin · {npc:9237} War Master Voone
 	["Down into Tazz'Alaor, the trolls' hall: {npc:9236} (elite 59, two priests at her side), then down the great ramp and along the hall to {npc:9237} (elite 59, no adds, hits very hard)."] = "Descendre dans Tazz'Alaor, la salle des trolls : {npc:9236} (élite 59, deux prêtres à ses côtés), puis la grande rampe et la salle jusqu'à {npc:9237} (élite 59, sans renforts, frappe très fort).",
+	-- {npc:9237} War Master Voone · {quest:5081} Maxwell's Mission
+	["{npc:9237}, for {quest:5081}"] = "{npc:9237}, pour {quest:5081}",
 
 	-- Step 69: Skitterweb Tunnels: Mother Smolderweb
 	-- {npc:10596} Mother Smolderweb
@@ -369,17 +380,21 @@ return {
 
 	-- Step 70: Urok's Tribute Pile
 	-- {object:175621} Urok's Tribute Pile · {item:12533} Roughshod Pike · {item:12534} Omokk's Head · {quest:4867} Urok Doomhowl
-	["Up the ramp past the tunnels, on the corner of the landing, behind two Spirestone orcs: {object:175621}, a heap of skulls. The player with the {item:12533} and {item:12534} stands by it and uses the head: waves of ogres come, then {quest:4867} (elite 60). Every 30 seconds, the pike used on the pile kills one ogre outright."] = "En haut de la rampe après les tunnels, au coin du palier, derrière deux orcs Spirestone : {object:175621}, un tas de crânes. Le joueur qui a la {item:12533} et {item:12534} se place à côté et utilise la tête : des vagues d'ogres arrivent, puis {quest:4867} (élite 60). Toutes les 30 secondes, la pique utilisée sur le tas tue un ogre d'un coup.",
+	["Up the ramp past the tunnels, on the corner of the landing, behind two Spirestone orcs: {object:175621}, a heap of skulls. The player with the {item:12533} and {item:12534} stands by it and uses the head: waves of ogres come, then {quest:4867} (elite 60). Every 30 seconds, the pike used on the pile kills one ogre outright."] = "En haut de la rampe après les tunnels, au coin du palier, derrière deux orcs Spirestone : le Tribut d'Urok, un tas de crânes. Le joueur qui a la {item:12533} et {item:12534} se place à côté et utilise la tête : des vagues d'ogres arrivent, puis {quest:4867} (élite 60). Toutes les 30 secondes, la pique utilisée sur le tas tue un ogre d'un coup.",
 
-	-- Step 71: Halycon and Gizrul
-	-- {npc:10220} Halycon
-	["{npc:10220} and Gizrul"] = "{npc:10220} et Gizrul",
+	-- Step 71: Halycon and Gizrul the Slavener
+	-- {npc:10220} Halycon · {npc:10268} Gizrul the Slavener
+	["{npc:10220} and {npc:10268}"] = "{npc:10220} et {npc:10268}",
 	-- {npc:9736} Quartermaster Zigris · {npc:10220} Halycon · {npc:10268} Gizrul the Slavener
 	["Past {npc:9736}, {npc:10220}'s lair: the great worg (elite 59) and her pups. {npc:10268} runs in right after her death: no time to rest in between."] = "Après {npc:9736}, l'antre de {npc:10220} : la grande worg (élite 59) et ses petits. {npc:10268} arrive aussitôt après sa mort : pas de repos entre les deux.",
+	-- {npc:10220} Halycon · {quest:4701} Put Her Down
+	["{npc:10220}, for {quest:4701}"] = "{npc:10220}, pour {quest:4701}",
 
 	-- Step 72: Overlord Wyrmthalak
 	-- {npc:9568} Overlord Wyrmthalak · {quest:5089} General Drakkisath's Command
 	["The last boss, {npc:9568} (elite 60), calls two adds at half health. He drops {quest:5089} for each player: right-click it."] = "Le dernier boss, {npc:9568} (élite 60), appelle deux renforts à la moitié de sa vie. Il donne {quest:5089} à chaque joueur : clic droit dessus.",
+	-- {npc:9568} Overlord Wyrmthalak · {quest:5081} Maxwell's Mission
+	["{npc:9568}, for {quest:5081}"] = "{npc:9568}, pour {quest:5081}",
 
 	-- Step 73: Hordemar City: Warosh
 	-- {npc:10799} Warosh
@@ -412,12 +427,12 @@ return {
 	-- Step 80: Lower Blackrock Spire: quests not done
 	["Lower Blackrock Spire: quests not done"] = "Pic Rochenoire inférieur : quêtes non finies",
 	-- {item:12344} Seal of Ascension · {npc:9196} Highlord Omokk · {npc:9237} War Master Voone · {npc:9568} Overlord Wyrmthalak · {zone:1445} Dustwallow Marsh · {item:12300} Orb of Draconic Energy
-	["What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or drop it to free the log.\nUpper Blackrock Spire, up the stairs on the left past the Spire's entrance, is not in this guide: a dungeon made for a raid group of ten, behind a door that opens only with the {item:12344}. The seal takes Vaelan's two quests, given inside Lower Blackrock Spire: the gemstones of {npc:9196}, {npc:9237} and {npc:9568} with an Unadorned Seal from the Spire's orcs, then Emberstrife, a drake of the Wyrmbog in {zone:1445}, beaten down and bound with the {item:12300}."] = "Ce qui reste du pic Rochenoire inférieur dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.\nLe pic Rochenoire supérieur, en haut de l'escalier à gauche après l'entrée du pic, n'est pas dans ce guide : un donjon fait pour un groupe de raid de dix, derrière une porte qui ne s'ouvre qu'avec le {item:12344}. Le sceau demande les deux quêtes de Vaelan, données dans le pic Rochenoire inférieur : les gemmes de {npc:9196}, {npc:9237} et {npc:9568} avec un sceau sans ornement (Unadorned Seal of Ascension) pris sur les orcs du pic, puis Emberstrife, un drake du Wyrmbog (Wyrmbog), dans le {zone:1445}, battu puis soumis avec l'{item:12300}.",
+	["What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log).\nUpper Blackrock Spire, up the stairs on the left past the Spire's entrance, is not in this guide: a dungeon made for a raid group of ten, behind a door that opens only with the {item:12344}. The seal takes Vaelan's two quests, given inside Lower Blackrock Spire: the gemstones of {npc:9196}, {npc:9237} and {npc:9568} with an Unadorned Seal from the Spire's orcs, then Emberstrife, a drake of the Wyrmbog in {zone:1445}, beaten down and bound with the {item:12300}."] = "Ce qui reste du pic Rochenoire inférieur dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal (clic droit sur la quête dans le journal).\nLe pic Rochenoire supérieur, en haut de l'escalier à gauche après l'entrée du pic, n'est pas dans ce guide : un donjon fait pour un groupe de raid de dix, derrière une porte qui ne s'ouvre qu'avec le {item:12344}. Le sceau demande les deux quêtes de Vaelan, données dans le pic Rochenoire inférieur : les gemmes de {npc:9196}, {npc:9237} et {npc:9568} avec un sceau sans ornement (Unadorned Seal of Ascension) pris sur les orcs du pic, puis Emberstrife, un drake du Wyrmbog (Wyrmbog), dans le {zone:1445}, battu puis soumis avec l'{item:12300}.",
 
 	-- Step 81: Dire Maul (dungeon, optional)
 	["Dire Maul (dungeon, optional)"] = "Hache-Tripes (donjon, facultatif)",
 	-- {zone:1444} Feralas · {object:152576} Feathermoon Stronghold
-	["Dire Maul: the ruined elf city in the middle of {zone:1444}, three wings. The guide does the eastern one (Warpwood Quarter, 55 to 58), whose imp carries the key of the others, then the western one (Capital Gardens, 58 to 60). A group of 5 at 58 to 60; possible from about 56, difficult. The quests come from {object:152576} and the Lariss Pavilion. Alone? Skip it."] = "Hache-Tripes : la cité elfe en ruine au milieu de {zone:1444}, en trois ailes. Le guide fait l'aile est (Warpwood Quarter, 55 à 58), dont le diablotin porte la clé des autres, puis l'aile ouest (Capital Gardens, 58 à 60). Un groupe de 5 aux niveaux 58 à 60 ; possible vers 56, difficile. Les quêtes se prennent à {object:152576} et au pavillon de Lariss. Seul ? Le passer.",
+	["Dire Maul: the ruined elf city in the middle of {zone:1444}, three wings. The guide does the eastern one (Warpwood Quarter, 55 to 58), whose imp carries the key of the others, then the western one (Capital Gardens, 58 to 60). A group of 5 at 58 to 60; possible from about 56, difficult. The quests come from {object:152576} and the Lariss Pavilion. Alone? Skip it."] = "Hache-Tripes : la cité elfe en ruine au milieu de {zone:1444}, en trois ailes. Le guide fait l'aile est (Warpwood Quarter, 55 à 58), dont le diablotin porte la clé des autres, puis l'aile ouest (Capital Gardens, 58 à 60). Un groupe de 5 aux niveaux 58 à 60 ; possible vers 56, difficile. Les quêtes se prennent au bastion de Plumelune et au pavillon de Lariss. Seul ? Le passer.",
 	["Keep 8 free quest log slots. The northern wing (the ogres' tribute) is not in the guide."] = "Garder 8 places libres dans le journal de quêtes. L'aile nord (le tribut des ogres) n'est pas dans le guide.",
 
 	-- Step 82: Feathermoon Stronghold
@@ -427,8 +442,8 @@ return {
 	-- Step 83: Lariss Pavilion: Azj'Tordin
 	-- {npc:14355} Azj'Tordin
 	["Lariss Pavilion: {npc:14355}"] = "Pavillon de Lariss : {npc:14355}",
-	-- {object:176945} Camp Mojache · {npc:14355} Azj'Tordin
-	["The Lariss Pavilion stands north-east of {object:176945} (Horde), east of Dire Maul: from Feathermoon, the flight to Thalanaar and the road west is the quickest way. {npc:14355}'s book is with Pusillin, the imp at the eastern wing's entrance."] = "Le pavillon de Lariss se trouve au nord-est de {object:176945} (Horde), à l'est de Hache-Tripes : depuis Feathermoon, le vol jusqu'à Thalanaar puis la route vers l'ouest est le plus rapide. Le livre de {npc:14355} est chez Pusillin, le diablotin de l'entrée de l'aile est.",
+	-- {object:176945} Camp Mojache · {npc:14355} Azj'Tordin · {npc:14354} Pusillin
+	["The Lariss Pavilion stands north-east of {object:176945} (Horde), east of Dire Maul: from Feathermoon, the flight to Thalanaar and the road west is the quickest way. {npc:14355}'s book is with {npc:14354}, the imp at the eastern wing's entrance."] = "Le pavillon de Lariss se trouve au nord-est du camp Mojache (Horde), à l'est de Hache-Tripes : depuis le bastion de Plumelune, le vol jusqu'à Thalanaar puis la route vers l'ouest est le plus rapide. Le livre de {npc:14355} est chez {npc:14354}, le diablotin de l'entrée de l'aile est.",
 
 	-- Step 84: Dire Maul: before going in
 	["Dire Maul: before going in"] = "Hache-Tripes : avant d'entrer",
@@ -439,27 +454,23 @@ return {
 	["Dire Maul"] = "Hache-Tripes",
 
 	-- Step 85: Warpwood Quarter: Pusillin
-	["Warpwood Quarter: Pusillin"] = "Aile est : Pusillin",
-	-- {npc:14355} Azj'Tordin · {item:18261} Book of Incantations · {item:18249} Crescent Key
-	["Pusillin the imp waits by the entrance: speak with him, then chase him through the first rooms, speaking with him each time he stops. He ends on a platform up a ramp near the back door, where he fights (elite 57). He drops {npc:14355}'s {item:18261} and the {item:18249}, which opens the western and northern wings: one key in the group is enough."] = "Pusillin le diablotin attend près de l'entrée : lui parler, puis le poursuivre à travers les premières salles, en lui reparlant à chaque arrêt. Il finit sur une plate-forme en haut d'une rampe près de la porte de derrière, où il se bat (élite 57). Il donne le {item:18261} de {npc:14355} et la {item:18249}, qui ouvre les ailes ouest et nord : une clé dans le groupe suffit.",
-	-- {item:18261} Book of Incantations
-	["{item:18261}: Pusillin"] = "{item:18261} : Pusillin",
-	-- {item:18249} Crescent Key
-	["{item:18249}: Pusillin"] = "{item:18249} : Pusillin",
+	-- {npc:14354} Pusillin
+	["Warpwood Quarter: {npc:14354}"] = "Aile est : {npc:14354}",
+	-- {npc:14354} Pusillin · {npc:14355} Azj'Tordin · {item:18261} Book of Incantations · {item:18249} Crescent Key
+	["{npc:14354} the imp waits by the entrance: speak with him, then chase him through the first rooms, speaking with him each time he stops. He ends on a platform up a ramp near the back door, where he fights (elite 57). He drops {npc:14355}'s {item:18261} and the {item:18249}, which opens the western and northern wings: one key in the group is enough."] = "{npc:14354} le diablotin attend près de l'entrée : lui parler, puis le poursuivre à travers les premières salles, en lui reparlant à chaque arrêt. Il finit sur une plate-forme en haut d'une rampe près de la porte de derrière, où il se bat (élite 57). Il donne le {item:18261} de {npc:14355} et la {item:18249}, qui ouvre les ailes ouest et nord : une clé dans le groupe suffit.",
 
 	-- Step 86: Warpwood Quarter: Lethtendris
-	["Warpwood Quarter: Lethtendris"] = "Aile est : Lethtendris",
-	-- {npc:7877} Latronicus Moonspear
-	["Lethtendris (elite 57), a blood elf warlock, fights with her imp Pimgib: interrupt her spells. Her web is for {npc:7877}."] = "Lethtendris (élite 57), une démoniste elfe de sang, se bat avec son diablotin Pimgib : interrompre ses sorts. Sa toile est pour {npc:7877}.",
-	-- {quest:7488} Lethtendris's Web
-	["{quest:7488}: Lethtendris"] = "{quest:7488} : Lethtendris",
+	-- {npc:14327} Lethtendris
+	["Warpwood Quarter: {npc:14327}"] = "Aile est : {npc:14327}",
+	-- {npc:14327} Lethtendris · {npc:7877} Latronicus Moonspear
+	["{npc:14327} (elite 57), a blood elf warlock, fights with her imp Pimgib: interrupt her spells. Her web is for {npc:7877}."] = "{npc:14327} (élite 57), une démoniste elfe de sang, se bat avec son diablotin Pimgib : interrompre ses sorts. Sa toile est pour {npc:7877}.",
 
 	-- Step 87: Warpwood Quarter: Alzzin the Wildshaper
 	-- {npc:11492} Alzzin the Wildshaper
 	["Warpwood Quarter: {npc:11492}"] = "Aile est : {npc:11492}",
 	-- {npc:11490} Zevrim Thornhoof · {npc:11491} Old Ironbark · {object:176907} Conservatory Door · {npc:11492} Alzzin the Wildshaper
 	-- plural, as words: Warpwood Crushers = {npc:13021} Warpwood Crusher
-	["Hydrospawn patrols the pool on the next level down. {npc:11490} (elite 57) sacrifices players on his altar; after him, speak with {npc:11491}: he opens the {object:176907}. Clear the Warpwood Crushers on the ramp, then {npc:11492} (elite 58), who changes shape."] = "Hydrospawn patrouille autour du bassin, un niveau plus bas. {npc:11490} (élite 57) sacrifie des joueurs sur son autel ; après lui, parler à {npc:11491} : il ouvre {object:176907}. Nettoyer les Warpwood Crushers de la rampe, puis {npc:11492} (élite 58), qui change de forme.",
+	["Hydrospawn patrols the pool on the next level down. {npc:11490} (elite 57) sacrifices players on his altar; after him, speak with {npc:11491}: he opens the {object:176907}. Clear the Warpwood Crushers on the ramp, then {npc:11492} (elite 58), who changes shape."] = "Hydrospawn patrouille autour du bassin, un niveau plus bas. {npc:11490} (élite 57) sacrifie des joueurs sur son autel ; après lui, parler à {npc:11491} : il ouvre la porte du Conservatoire. Nettoyer les Warpwood Crushers de la rampe, puis {npc:11492} (élite 58), qui change de forme.",
 
 	-- Step 88: Lariss Pavilion: Azj'Tordin
 	-- {npc:11492} Alzzin the Wildshaper · {item:18249} Crescent Key
@@ -501,17 +512,17 @@ return {
 
 	-- Step 94: Feathermoon Stronghold: Latronicus Moonspear
 	-- {object:152576} Feathermoon Stronghold
-	["Out of Dire Maul, back to {object:152576} (the flight from Thalanaar, or the road west and the boat)."] = "Sortir de Hache-Tripes et revenir à {object:152576} (le vol depuis Thalanaar, ou la route vers l'ouest et le bateau).",
+	["Out of Dire Maul, back to {object:152576} (the flight from Thalanaar, or the road west and the boat)."] = "Sortir de Hache-Tripes et revenir au bastion de Plumelune (le vol depuis Thalanaar, ou la route vers l'ouest et le bateau).",
 
 	-- Step 96: Dire Maul: quests not done
 	["Dire Maul: quests not done"] = "Hache-Tripes : quêtes non finies",
-	["What is left of Dire Maul in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste de Hache-Tripes dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
+	["What is left of Dire Maul in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log)."] = "Ce qui reste de Hache-Tripes dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal (clic droit sur la quête dans le journal).",
 
 	-- Step 97: Shards of the Felvine (optional)
 	-- {quest:5526} Shards of the Felvine
 	["{quest:5526} (optional)"] = "{quest:5526} (facultative)",
 	-- {zone:1450} Moonglade · {npc:11801} Rabine Saturna · {quest:5527} A Reliquary of Purity · {quest:5526} Shards of the Felvine · {zone:1451} Silithus · {npc:11492} Alzzin the Wildshaper
-	["From Feathermoon, the flight to {zone:1450}. Now that you have been inside Dire Maul, {npc:11801} offers {quest:5527}, then {quest:5526}. A long chain: the Reliquary lies in Southwind Village, in {zone:1451}; back to {npc:11801} in {zone:1450}; then a new run of the eastern wing of Dire Maul, where the Felvine grows behind {npc:11492} (elite 58); and back to {npc:11801}. Take it only if your group means to run the eastern wing again. Alone? Skip it."] = "Depuis Feathermoon, le vol jusqu'à {zone:1450}. Après une visite de Hache-Tripes, {npc:11801} propose {quest:5527}, puis {quest:5526}. Une longue chaîne : le reliquaire se trouve au Village de Sudevent, en {zone:1451} ; retour chez {npc:11801} à {zone:1450} ; puis une nouvelle visite de l'aile est de Hache-Tripes, où la gangrevigne pousse derrière {npc:11492} (élite 58) ; et retour chez {npc:11801}. À prendre seulement si le groupe compte refaire l'aile est. Seul ? La passer.",
+	["From Feathermoon, the flight to {zone:1450}. Now that you have been inside Dire Maul, {npc:11801} offers {quest:5527}, then {quest:5526}. A long chain: the Reliquary lies in Southwind Village, in {zone:1451}; back to {npc:11801} in {zone:1450}; then a new run of the eastern wing of Dire Maul, where the Felvine grows behind {npc:11492} (elite 58); and back to {npc:11801}. Take it only if your group means to run the eastern wing again. Alone? Skip it."] = "Depuis le bastion de Plumelune, le vol jusqu'à {zone:1450}. Après une visite de Hache-Tripes, {npc:11801} propose {quest:5527}, puis {quest:5526}. Une longue chaîne : le reliquaire se trouve au Village de Sudevent, en {zone:1451} ; retour chez {npc:11801} à {zone:1450} ; puis une nouvelle visite de l'aile est de Hache-Tripes, où la gangrevigne pousse derrière {npc:11492} (élite 58) ; et retour chez {npc:11801}. À prendre seulement si le groupe compte refaire l'aile est. Seul ? La passer.",
 	["Keep 2 free quest log slots."] = "Garder 2 places libres dans le journal de quêtes.",
 	["Nighthaven"] = "Havrenuit",
 
@@ -535,13 +546,13 @@ return {
 	["Dire Maul: the eastern wing again"] = "Hache-Tripes : l'aile est, à nouveau",
 	-- {zone:1450} Moonglade · {object:152576} Feathermoon Stronghold · {npc:11490} Zevrim Thornhoof · {npc:11491} Old Ironbark · {object:176907} Conservatory Door · {npc:11492} Alzzin the Wildshaper · {item:22201} Reliquary of Purity
 	-- plural, as words: Warpwood Crushers = {npc:13021} Warpwood Crusher
-	["From {zone:1450}, the flight to {object:152576} or Thalanaar, then Dire Maul's eastern wing, as in the first run: {npc:11490}, {npc:11491} at the {object:176907}, the Warpwood Crushers on the ramp, then {npc:11492} (elite 58). Once he is dead, the Felvine behind him drops its shards: loot one, then use the {item:22201}."] = "Depuis {zone:1450}, le vol jusqu'à {object:152576} ou Thalanaar, puis l'aile est de Hache-Tripes, comme la première fois : {npc:11490}, {npc:11491} devant {object:176907}, les Warpwood Crushers de la rampe, puis {npc:11492} (élite 58). Une fois qu'il est mort, la gangrevigne derrière lui lâche ses éclats : en ramasser un, puis utiliser le {item:22201}.",
+	["From {zone:1450}, the flight to {object:152576} or Thalanaar, then Dire Maul's eastern wing, as in the first run: {npc:11490}, {npc:11491} at the {object:176907}, the Warpwood Crushers on the ramp, then {npc:11492} (elite 58). Once he is dead, the Felvine behind him drops its shards: loot one, then use the {item:22201}."] = "Depuis {zone:1450}, le vol jusqu'au bastion de Plumelune ou Thalanaar, puis l'aile est de Hache-Tripes, comme la première fois : {npc:11490}, {npc:11491} devant la porte du Conservatoire, les Warpwood Crushers de la rampe, puis {npc:11492} (élite 58). Une fois qu'il est mort, la gangrevigne derrière lui lâche ses éclats : en ramasser un, puis utiliser le {item:22201}.",
 	-- {item:18540} Sealed Reliquary of Purity · {item:18501} Felvine Shard · {item:22201} Reliquary of Purity
 	["{item:18540}: a {item:18501} in the {item:22201}"] = "{item:18540} : un {item:18501} dans le {item:22201}",
 
 	-- Step 103: Moonglade: Rabine Saturna
 	-- {quest:5526} Shards of the Felvine · {npc:11801} Rabine Saturna · {zone:1450} Moonglade
-	["{quest:5526}: {npc:11801}, in her house in Nighthaven. From Feathermoon, the flight to {zone:1450}."] = "{quest:5526} : {npc:11801}, dans sa maison de Havrenuit. Depuis Feathermoon, le vol jusqu'à {zone:1450}.",
+	["{quest:5526}: {npc:11801}, in her house in Nighthaven. From Feathermoon, the flight to {zone:1450}."] = "{quest:5526} : {npc:11801}, dans sa maison de Havrenuit. Depuis le bastion de Plumelune, le vol jusqu'à {zone:1450}.",
 
 	-- Step 104: Shards of the Felvine: not done
 	-- {quest:5526} Shards of the Felvine
@@ -605,20 +616,20 @@ return {
 	-- Step 113: Stratholme, first visit: before going in
 	["Stratholme, first visit: before going in"] = "Stratholme, première visite : avant d'entrer",
 	-- {object:175435} King's Square · {object:175438} Market Row · {object:175434} Crusaders' Square · {object:175433} Festival Lane · {object:175440} Elders' Square · {npc:10813} Balnazzar · {quest:5251} The Archivist · {item:7146} The Scarlet Key · {npc:6487} Arcanist Doan
-	["First visit, the living side, by the main gate across the bridge: {object:175435}, {object:175438}, {object:175434} and the Scarlet Bastion, then {object:175433} and {object:175440}. Leave {npc:10813} alive this time: {quest:5251} must be handed in before he dies, or his head starts nothing. Warcraft Tavern (written from Classic) says the doors of the Scarlet Bastion open with {item:7146}, from {npc:6487}'s chest in the Scarlet Monastery Library: to check in game."] = "Première visite, le côté vivant, par la grande porte au bout du pont : {object:175435}, {object:175438}, {object:175434} et le Bastion écarlate (Scarlet Bastion), puis {object:175433} et {object:175440}. Laisser {npc:10813} en vie cette fois : {quest:5251} doit être rendue avant sa mort, sinon sa tête ne lance rien. D'après Warcraft Tavern (écrit d'après Classic), les portes du Bastion écarlate s'ouvrent avec {item:7146}, du coffre d'{npc:6487} dans la Bibliothèque du Monastère écarlate : à vérifier en jeu.",
+	["First visit, the living side, by the main gate across the bridge: {object:175435}, {object:175438}, {object:175434} and the Scarlet Bastion, then {object:175433} and {object:175440}. Leave {npc:10813} alive this time: {quest:5251} must be handed in before he dies, or his head starts nothing. Warcraft Tavern (written from Classic) says the doors of the Scarlet Bastion open with {item:7146}, from {npc:6487}'s chest in the Scarlet Monastery Library: to check in game."] = "Première visite, le côté vivant, par la grande porte au bout du pont : la place du Roi, l'allée du Marché, la place des Croisés et le Bastion écarlate (Scarlet Bastion), puis {object:175433} et {object:175440}. Laisser {npc:10813} en vie cette fois : {quest:5251} doit être rendue avant sa mort, sinon sa tête ne lance rien. D'après Warcraft Tavern (écrit d'après Classic), les portes du Bastion écarlate s'ouvrent avec {item:7146}, du coffre d'{npc:6487} dans la Bibliothèque du Monastère écarlate : à vérifier en jeu.",
 	-- {quest:5212} The Flesh Does Not Lie · {npc:11035} Betina Bigglezink · {quest:5251} The Archivist · {quest:5214} The Great Ezra Grimm · {npc:11033} Smokey LaRue · {quest:5243} Houses of the Holy · {quest:5281} The Restless Souls · {npc:11140} Egan · {zone:1452} Winterspring · {npc:16016} Anthion Harmon · {npc:10508} Ras Frostwhisper · {object:176631} Menethil's Gift
 	["In the quest log: {quest:5212} ({npc:11035}), {quest:5251} (Duke Nicholas), {quest:5214} ({npc:11033}), {quest:5243} (Leonid), {quest:5281} ({npc:11140}); Renfray's painting quest, for whoever took it. Not on this route: Sweet Serenity and Corruption ({zone:1452}), the dungeon set quests (Deliana, {npc:16016}), {npc:10508}'s chain ({object:176631})."] = "Dans le journal : {quest:5212} ({npc:11035}), {quest:5251} (duc Nicholas), {quest:5214} ({npc:11033}), {quest:5243} (Leonid), {quest:5281} ({npc:11140}) ; la quête du tableau de Renfray, pour qui l'a prise. Pas sur ce parcours : Sweet Serenity et Corruption ({zone:1452}), les quêtes d'ensembles de donjon (Deliana, {npc:16016}), la suite de {npc:10508} ({object:176631}).",
 	["Stratholme"] = "Stratholme",
 
 	-- Step 114: King's Square: Ezra Grimm
 	-- {object:175435} King's Square · {npc:11058} Ezra Grimm
-	["Past the main gate, {object:175435}: follow the road round to the left to its dead end, under the sign of {npc:11058}'s Premium Tobacco. {npc:11058}, undead (elite 61), stands in front of his shop."] = "Passé la grande porte, {object:175435} : suivre la route vers la gauche jusqu'au cul-de-sac, sous l'enseigne du tabac de {npc:11058} (Premium Tobacco). {npc:11058}, mort-vivant (élite 61), se tient devant sa boutique.",
+	["Past the main gate, {object:175435}: follow the road round to the left to its dead end, under the sign of {npc:11058}'s Premium Tobacco. {npc:11058}, undead (elite 61), stands in front of his shop."] = "Passé la grande porte, la place du Roi : suivre la route vers la gauche jusqu'au cul-de-sac, sous l'enseigne du tabac de {npc:11058} (Premium Tobacco). {npc:11058}, mort-vivant (élite 61), se tient devant sa boutique.",
 
 	-- Step 115: Market Row and Crusaders' Square
 	-- {object:175438} Market Row · {object:175434} Crusaders' Square
-	["{object:175438} and {object:175434}"] = "{object:175438} et {object:175434}",
+	["{object:175438} and {object:175434}"] = "L'allée du Marché et la place des Croisés",
 	-- {object:175435} King's Square · {object:175438} Market Row · {npc:10558} Hearthsinger Forresten · {object:175434} Crusaders' Square · {npc:10808} Timmy the Cruel · {npc:11120} Crimson Hammersmith
-	["Back through {object:175435}, then {object:175438} ({npc:10558}, rare, may walk there) to {object:175434}: {npc:10808} runs out once the square is cleared. Never click a pattern on the ground during a fight: it calls the {npc:11120}. The Scarlet Bastion opens on the square."] = "Revenir par {object:175435}, puis {object:175438} ({npc:10558}, rare, peut y passer) jusqu'à {object:175434} : {npc:10808} accourt une fois la place nettoyée. Ne jamais cliquer sur un motif au sol pendant un combat : il appelle {npc:11120}. Le Bastion écarlate s'ouvre sur la place.",
+	["Back through {object:175435}, then {object:175438} ({npc:10558}, rare, may walk there) to {object:175434}: {npc:10808} runs out once the square is cleared. Never click a pattern on the ground during a fight: it calls the {npc:11120}. The Scarlet Bastion opens on the square."] = "Revenir par la place du Roi, puis l'allée du Marché ({npc:10558}, rare, peut y passer) jusqu'à la place des Croisés : {npc:10808} accourt une fois la place nettoyée. Ne jamais cliquer sur un motif au sol pendant un combat : il appelle {npc:11120}. Le Bastion écarlate s'ouvre sur la place.",
 
 	-- Step 116: The Scarlet Bastion: Malor's Strongbox
 	-- {object:176112} Malor's Strongbox
@@ -645,7 +656,7 @@ return {
 	-- {object:175433} Festival Lane · {object:175440} Elders' Square
 	["{object:175433} and {object:175440}"] = "{object:175433} et {object:175440}",
 	-- {object:175433} Festival Lane · {npc:10516} The Unforgiven · {object:175440} Elders' Square · {npc:10435} Magistrate Barthilas · {item:12382} Key to the City · {object:175461} Service Entrance
-	["Out of the Bastion, {object:175433}: {npc:10516} (elite 57) calls spirits, kill them first. Then {object:175440}: {npc:10435} (elite 58) stands before Alonsus Chapel and drops the {item:12382}. It opens the {object:175461}, the gate on this square, and the gate of the Gauntlet: one key in the group is enough. Leave the dungeon by the {object:175461}, or the way you came; keep the group together, without resetting the instance: the next two visits come back into it."] = "En sortant du Bastion, {object:175433} : {npc:10516} (élite 57) appelle des esprits, les tuer d'abord. Puis {object:175440} : {npc:10435} (élite 58) se tient devant la chapelle d'Alonsus (Alonsus Chapel) et donne la {item:12382}. Elle ouvre {object:175461}, la porte de cette place, et la porte du Défilé (Gauntlet) : une clé dans le groupe suffit. Sortir du donjon par {object:175461}, ou par où le groupe est venu ; rester groupés, sans réinitialiser l'instance : les deux visites suivantes y reviennent.",
+	["Out of the Bastion, {object:175433}: {npc:10516} (elite 57) calls spirits, kill them first. Then {object:175440}: {npc:10435} (elite 58) stands before Alonsus Chapel and drops the {item:12382}. It opens the {object:175461}, the gate on this square, and the gate of the Gauntlet: one key in the group is enough, whoever loots it keeps it for the third visit. Leave the dungeon by the {object:175461}, or the way you came; keep the group together, without resetting the instance: the next two visits come back into it. An instance left empty too long may reset itself (to check in game): do not linger between visits."] = "En sortant du Bastion, {object:175433} : {npc:10516} (élite 57) appelle des esprits, les tuer d'abord. Puis {object:175440} : {npc:10435} (élite 58) se tient devant la chapelle d'Alonsus (Alonsus Chapel) et donne la {item:12382}. Elle ouvre {object:175461}, la porte de cette place, et la porte du Défilé (Gauntlet) : une clé dans le groupe suffit, qui la ramasse la garde pour la troisième visite. Sortir du donjon par {object:175461}, ou par où le groupe est venu ; rester groupés, sans réinitialiser l'instance : les deux visites suivantes y reviennent. Une instance restée vide trop longtemps peut se réinitialiser (à vérifier en jeu) : ne pas traîner entre deux visites.",
 
 	-- Step 120: Light's Hope Chapel: Betina Bigglezink
 	-- {npc:11035} Betina Bigglezink
@@ -694,59 +705,71 @@ return {
 	-- {npc:10917} Aurius · {item:12845} Medallion of Faith
 	["{npc:10917}: with the {item:12845}"] = "{npc:10917} : avec le {item:12845}",
 
-	-- Step 128: The Gauntlet and the ziggurats
+	-- Step 128: Elders' Square: Aurius' Reckoning
+	-- {item:12845} Medallion of Faith · {npc:10917} Aurius · {quest:5125} Aurius' Reckoning · {npc:10440} Baron Rivendare
+	["Hand the {item:12845} to {npc:10917}, then take {quest:5125}: he joins the fight against {npc:10440}."] = "Rendre le {item:12845} à {npc:10917}, puis prendre {quest:5125} : il rejoint le combat contre {npc:10440}.",
+
+	-- Step 129: The Gauntlet and the ziggurats
 	-- {object:175462} The Gauntlet
-	["{object:175462} and the ziggurats"] = "{object:175462} et les ziggourats",
+	["{object:175462} and the ziggurats"] = "Le Défilé et les ziggourats",
 	-- {item:12382} Key to the City · {npc:10437} Nerub'enkan · {npc:10436} Baroness Anastari · {npc:10438} Maleki the Pallid · {npc:10399} Thuzadin Acolyte · {item:13176} Scourge Data · {npc:11035} Betina Bigglezink
 	["The {item:12382} opens the gate of the Gauntlet. Three ziggurats stand on the dead side, each with a guardian at its door: {npc:10437} (the first, on the left), {npc:10436} (the second: she possesses a player, bring them to half health), {npc:10438} (the third). Kill each guardian, then every {npc:10399} inside: the {item:13176} for {npc:11035} lies in a small box in one of the three. Stonespine (rare) may walk between the first two."] = "La {item:12382} ouvre la porte du Défilé (Gauntlet). Trois ziggourats se dressent du côté mort-vivant, chacune avec un gardien à sa porte : {npc:10437} (la première, sur la gauche), {npc:10436} (la deuxième : elle possède un joueur, l'amener à la moitié de sa vie), {npc:10438} (la troisième). Tuer chaque gardien, puis chaque {npc:10399} à l'intérieur : les {item:13176} pour {npc:11035} sont dans une petite boîte, dans l'une des trois. Stonespine (rare) peut passer entre les deux premières.",
 	-- {item:13176} Scourge Data
 	["{item:13176}: a small box in one of the ziggurats"] = "{item:13176} : une petite boîte dans l'une des ziggourats",
 
-	-- Step 129: Slaughter Square: Ramstein the Gorger
+	-- Step 130: Slaughter Square: Ramstein the Gorger
 	-- {object:175449} Slaughter Square · {npc:10416} Bile Spewer · {npc:10417} Venom Belcher · {npc:10439} Ramstein the Gorger · {npc:11030} Mindless Undead
-	["With the three ziggurats cleared, the gates of {object:175449} open. Kill every {npc:10416} and {npc:10417} in the square: {npc:10439} (elite 61) comes out; he hits hard and knocks his target away. Then a horde of {npc:11030}, then three Black Guard Sentries at the door of the Slaughterhouse."] = "Les trois ziggourats nettoyées, les grilles de {object:175449} s'ouvrent. Tuer chaque {npc:10416} et chaque {npc:10417} de la place : {npc:10439} (élite 61) sort ; il frappe fort et repousse sa cible. Puis une horde de {npc:11030}, puis trois sentinelles de la Garde noire (Black Guard Sentry) à la porte de l'Abattoir (Slaughterhouse).",
+	["With the three ziggurats cleared, the gates of {object:175449} open. Kill every {npc:10416} and {npc:10417} in the square: {npc:10439} (elite 61) comes out; he hits hard and knocks his target away. Then a horde of {npc:11030}, then three Black Guard Sentries at the door of the Slaughterhouse."] = "Les trois ziggourats nettoyées, les grilles de la place de l'Abattoir s'ouvrent. Tuer chaque {npc:10416} et chaque {npc:10417} de la place : {npc:10439} (élite 61) sort ; il frappe fort et repousse sa cible. Puis une horde de {npc:11030}, puis trois sentinelles de la Garde noire (Black Guard Sentry) à la porte de l'Abattoir (Slaughterhouse).",
 
-	-- Step 130: The Slaughterhouse: Baron Rivendare
+	-- Step 131: The Slaughterhouse: Baron Rivendare
 	-- {npc:10440} Baron Rivendare
 	["The Slaughterhouse: {npc:10440}"] = "L'Abattoir : {npc:10440}",
 	-- {npc:10440} Baron Rivendare · {npc:10917} Aurius · {quest:5125} Aurius' Reckoning · {object:176631} Menethil's Gift · {npc:10508} Ras Frostwhisper
 	["{npc:10440} (elite 62) raises skeletons and his Unholy Aura hurts everyone near him; his Mortal Strike cuts the tank's healing. His head is for Duke Nicholas. Then speak with {npc:10917} for {quest:5125}. The glowing symbol in front of the Baron, {object:176631}, belongs to {npc:10508}'s chain: not in this guide."] = "{npc:10440} (élite 62) relève des squelettes et son Aura impie blesse tous ceux qui l'approchent ; sa Frappe mortelle réduit les soins reçus par le tank. Sa tête est pour le duc Nicholas. Parler ensuite à {npc:10917} pour {quest:5125}. Le symbole lumineux devant le baron, {object:176631}, appartient à la chaîne de {npc:10508} : pas dans ce guide.",
+
+	-- Step 132: The Slaughterhouse: Aurius, after the fight
+	-- {npc:10917} Aurius
+	["The Slaughterhouse: {npc:10917}, after the fight"] = "L'Abattoir : {npc:10917}, après le combat",
+	-- {npc:10917} Aurius
+	["{npc:10917} stands by the Baron's body once the fight is over: speak with him for the reward."] = "{npc:10917} se tient près du corps du baron une fois le combat fini : lui parler pour la récompense.",
 	-- {npc:10917} Aurius
 	["{npc:10917}, after the fight"] = "{npc:10917}, après le combat",
 
-	-- Step 131: Light's Hope Chapel: Betina Bigglezink
+	-- Step 133: Light's Hope Chapel: Betina Bigglezink
 	["Out of Stratholme, back east to Light's Hope Chapel."] = "Sortir de Stratholme et revenir vers l'est jusqu'à la chapelle de l'Espoir de Lumière.",
 
-	-- Step 132: Light's Hope Chapel: Duke Nicholas Zverenhoff
+	-- Step 134: Light's Hope Chapel: Duke Nicholas Zverenhoff
 	-- {quest:5263} Above and Beyond · {quest:5264} Lord Maxwell Tyrosus · {object:176317} Argent Hold
 	["{quest:5263}: Duke Nicholas sends you to {quest:5264}, inside the chapel, who opens the {object:176317}, the chest beside him, for your reward."] = "{quest:5263} : le duc Nicholas envoie voir {quest:5264}, dans la chapelle, qui ouvre {object:176317}, le coffre à côté de lui, pour la récompense.",
 
-	-- Step 133: Light's Hope Chapel: what is left to hand in
+	-- Step 135: Light's Hope Chapel: what is left to hand in
 	["Light's Hope Chapel: what is left to hand in"] = "Chapelle de l'Espoir de Lumière : ce qui reste à rendre",
 	-- {npc:10813} Balnazzar
 	["Finished in the second or third visit only, or {npc:10813}'s head kept without the ride: hand them in now."] = "Finies seulement à la deuxième ou à la troisième visite, ou la tête de {npc:10813} gardée sans faire la route : les rendre maintenant.",
+
+	-- Step 139: Light's Hope Chapel: The Truth Comes Crashing Down
 	-- {npc:11039} Duke Nicholas Zverenhoff · {npc:10813} Balnazzar
 	["{npc:11039}: the head of {npc:10813}"] = "{npc:11039} : la tête de {npc:10813}",
 
-	-- Step 134: Terrordale: Egan
+	-- Step 140: Terrordale: Egan
 	-- {npc:11140} Egan
 	["Ride west across the zone to {npc:11140}'s house in Terrordale."] = "Traverser la zone vers l'ouest jusqu'à la maison de {npc:11140}, à Val-Terreur.",
 
-	-- Step 135: Tirion Fordring: Of Love and Family
+	-- Step 141: Tirion Fordring: Of Love and Family
 	-- {npc:1855} Tirion Fordring
 	["West of Terrordale, {npc:1855}'s hut on the bank of the border river. His next quest, Find Myranda, leads to Hearthglen: not in this guide."] = "À l'ouest de Val-Terreur, la cabane de {npc:1855} sur la rive de la rivière frontière. Sa quête suivante, Find Myranda, mène à Âtreval : pas dans ce guide.",
 
-	-- Step 136: Stratholme: quests not done
+	-- Step 142: Stratholme: quests not done
 	["Stratholme: quests not done"] = "Stratholme : quêtes non finies",
-	["What is left of Stratholme in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste de Stratholme dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
+	["What is left of Stratholme in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log)."] = "Ce qui reste de Stratholme dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal (clic droit sur la quête dans le journal).",
 
-	-- Step 137: Of Love and Family: not done
+	-- Step 143: Of Love and Family: not done
 	-- {quest:5848} Of Love and Family
 	["{quest:5848}: not done"] = "{quest:5848} : pas finie",
 	-- {quest:5848} Of Love and Family
 	["{quest:5848} is not done and the guide does not go back to Stratholme: abandon it, or keep it for a run of your own."] = "{quest:5848} n'est pas finie et le guide ne retourne pas à Stratholme : l'abandonner, ou la garder pour une visite à part.",
 
-	-- Step 138: The Skeleton Key (optional)
+	-- Step 144: The Skeleton Key (optional)
 	-- {item:13704} Skeleton Key
 	["The {item:13704} (optional)"] = "La {item:13704} (facultative)",
 	-- {item:13704} Skeleton Key · {npc:11056} Alchemist Arbington · {npc:5411} Krinkle Goodsteel · {zone:1449} Un'Goro Crater · {npc:1852} Araj the Summoner
@@ -757,57 +780,57 @@ return {
 	-- {npc:11056} Alchemist Arbington · {npc:5411} Krinkle Goodsteel
 	["{npc:11056}: for {npc:5411} in Gadgetzan"] = "{npc:11056} : pour {npc:5411} à Gadgetzan",
 
-	-- Step 139: Gadgetzan: Krinkle Goodsteel
+	-- Step 145: Gadgetzan: Krinkle Goodsteel
 	-- {npc:5411} Krinkle Goodsteel
 	["Gadgetzan: {npc:5411}"] = "Gadgetzan : {npc:5411}",
 	-- {zone:1455} Ironforge · {object:1162} Menethil Harbor · {npc:5411} Krinkle Goodsteel · {item:14628} Imbued Skeletal Fragments
-	["The long way to Gadgetzan: from Chillwind Camp, the flight to {zone:1455}, then {object:1162}, the boat to Theramore and the flight to Gadgetzan. {npc:5411} stands at his forge in town; he wants the {item:14628} and 15 gold."] = "Le long trajet vers Gadgetzan : depuis le camp du Noroît, le vol pour {zone:1455}, puis {object:1162}, le bateau pour Theramore et le vol pour Gadgetzan. {npc:5411} se tient à sa forge en ville ; il veut les {item:14628} et 15 pièces d'or.",
+	["The long way to Gadgetzan: from Chillwind Camp, the flight to {zone:1455}, then {object:1162}, the boat to Theramore and the flight to Gadgetzan. {npc:5411} stands at his forge in town; he wants the {item:14628} and 15 gold."] = "Le long trajet vers Gadgetzan : depuis le camp du Noroît, le vol pour {zone:1455}, puis le port de Menethil, le bateau pour Theramore et le vol pour Gadgetzan. {npc:5411} se tient à sa forge en ville ; il veut les {item:14628} et 15 pièces d'or.",
 
-	-- Step 140: Fire Plume Ridge
+	-- Step 146: Fire Plume Ridge
 	["Fire Plume Ridge"] = "Crête de la Fournaise",
 	-- {zone:1449} Un'Goro Crater · {item:14644} Skeleton Key Mold
 	-- plural, as words: Thorium Bars = {item:12359} Thorium Bar · Living Blazes = {npc:6521} Living Blaze
 	["Two Thorium Bars in the bags (a miner, or the auction house). Ride west from Gadgetzan into {zone:1449} and climb Fire Plume Ridge in its middle: use the {item:14644} by the lava lake at the top. The Living Blazes up there are 54-55."] = "Deux barres de thorium dans les sacs (un mineur, ou l'hôtel des ventes). Partir à l'ouest de Gadgetzan vers le {zone:1449} et grimper sur la Crête de la Fournaise en son centre : utiliser le {item:14644} près du lac de lave au sommet. Les Brasiers vivants là-haut sont de niveau 54-55.",
 
-	-- Step 141: Chillwind Camp: Alchemist Arbington
+	-- Step 147: Chillwind Camp: Alchemist Arbington
 	-- {npc:11056} Alchemist Arbington
 	["Chillwind Camp: {npc:11056}"] = "Camp du Noroît : {npc:11056}",
 	-- {npc:1852} Araj the Summoner
 	["Back to Chillwind Camp the long way. {npc:1852}, the next task, is a level 61 elite in Andorhal: the whole group goes."] = "Retour au camp du Noroît par le long trajet. {npc:1852}, la tâche suivante, est un élite de niveau 61 à Andorhal : tout le groupe y va.",
 
-	-- Step 142: Andorhal: Araj the Summoner
+	-- Step 148: Andorhal: Araj the Summoner
 	-- {npc:1852} Araj the Summoner
 	["Andorhal: {npc:1852}"] = "Andorhal : {npc:1852}",
 	-- {npc:1852} Araj the Summoner
 	["Andorhal, the ruined city north of the camp: {npc:1852} (elite 61) stands in the middle of the town with his skeletons. Kill him, then click his phylactery for the scarab."] = "Andorhal, la ville en ruine au nord du camp : {npc:1852} (élite 61) se tient au milieu de la ville avec ses squelettes. Le tuer, puis cliquer sur son phylactère pour le scarabée.",
 
-	-- Step 143: Chillwind Camp: the Skeleton Key
+	-- Step 149: Chillwind Camp: the Skeleton Key
 	-- {item:13704} Skeleton Key
 	["Chillwind Camp: the {item:13704}"] = "Camp du Noroît : la {item:13704}",
 	-- {item:13704} Skeleton Key
 	["The {item:13704}"] = "La {item:13704}",
 
-	-- Step 144: Chillwind Camp: Weldon Barov
+	-- Step 150: Chillwind Camp: Weldon Barov
 	-- {npc:11023} Weldon Barov
 	["Chillwind Camp: {npc:11023}"] = "Camp du Noroît : {npc:11023}",
 	-- {npc:1855} Tirion Fordring · {npc:11023} Weldon Barov
 	["To Chillwind Camp: the flight from Light's Hope Chapel, or the road south from {npc:1855}'s hut. {npc:11023} stands in the camp: his family's fortune is four deeds, all in Scholomance."] = "Jusqu'au Camp du Noroît : le vol depuis la chapelle de l'Espoir de Lumière, ou la route vers le sud depuis la cabane de {npc:1855}. {npc:11023} se tient dans le camp : la fortune de sa famille, ce sont quatre titres de propriété, tous dans la Scholomance.",
 
-	-- Step 145: Caer Darrow: Eva Sarkhoff
+	-- Step 151: Caer Darrow: Eva Sarkhoff
 	-- {npc:11216} Eva Sarkhoff
 	["Caer Darrow: {npc:11216}"] = "Caer Darrow : {npc:11216}",
 	-- {npc:11216} Eva Sarkhoff
 	["Ride east to the lake and onto Caer Darrow. {npc:11216}, a ghost, stands with Lucien before the door of Scholomance."] = "Partir vers l'est jusqu'au lac et à Caer Darrow. {npc:11216}, un fantôme, se tient avec Lucien devant la porte de la Scholomance.",
 
-	-- Step 146: Scholomance: before going in
+	-- Step 152: Scholomance: before going in
 	["Scholomance: before going in"] = "Scholomance : avant d'entrer",
 	-- {item:13704} Skeleton Key · {object:179746} Great Ossuary · {npc:11622} Rattlegore · {item:13873} Viewing Room Key · {npc:10508} Ras Frostwhisper · {npc:1853} Darkmaster Gandling · {npc:10503} Jandice Barov · {object:175564} Brazier of the Herald
-	["The {item:13704} opens the door: the player who has it goes first. Inside: the Reliquary, the Chamber of Summoning, the {object:179746} ({npc:11622} and the {item:13873}), the Viewing Room, the Laboratory ({npc:10508}), then the six chambers round the Barov Family Vault and {npc:1853}. Leave {npc:10503} and the {object:175564} alone: Eva's chain sends you to them once Krastinov is dead, in the same instance."] = "La {item:13704} ouvre la porte : le joueur qui l'a passe le premier. À l'intérieur : le Reliquaire (Reliquary), la Chambre d'invocation (Chamber of Summoning), {object:179746} ({npc:11622} et la {item:13873}), la Salle d'observation (Viewing Room), le Laboratoire ({npc:10508}), puis les six salles autour du caveau de la famille Barov (Barov Family Vault) et {npc:1853}. Laisser {npc:10503} et {object:175564} de côté : la chaîne d'Eva y envoie une fois Krastinov mort, dans la même instance.",
+	["The {item:13704} opens the door: the player who has it goes first. Inside: the Reliquary, the Chamber of Summoning, the {object:179746} ({npc:11622} and the {item:13873}), the Viewing Room, the Laboratory ({npc:10508}), then the six chambers round the Barov Family Vault and {npc:1853}. Leave {npc:10503} and the {object:175564} alone: Eva's chain sends you to them once Krastinov is dead, in the same instance."] = "La {item:13704} ouvre la porte : le joueur qui l'a passe le premier. À l'intérieur : le Reliquaire (Reliquary), la Chambre d'invocation (Chamber of Summoning), le Grand ossuaire ({npc:11622} et la {item:13873}), la Salle d'observation (Viewing Room), le Laboratoire ({npc:10508}), puis les six salles autour du caveau de la famille Barov (Barov Family Vault) et {npc:1853}. Laisser {npc:10503} et le Brasero du Héraut de côté : la chaîne d'Eva y envoie une fois Krastinov mort, dans la même instance.",
 	-- {quest:5343} Barov Family Fortune · {npc:11023} Weldon Barov · {quest:5382} Doctor Theolen Krastinov, the Butcher · {npc:11216} Eva Sarkhoff · {quest:5529} Plagued Hatchlings · {npc:11035} Betina Bigglezink · {item:12368} Dawn's Gambit
 	["In the quest log: {quest:5343} ({npc:11023}), {quest:5382} ({npc:11216}), {quest:5529} ({npc:11035}). Share the three with your group: click each in the quest log, then Share. Not on this route: {item:12368}, the dungeon set quests, the class quests."] = "Dans le journal de quêtes : {quest:5343} ({npc:11023}), {quest:5382} ({npc:11216}), {quest:5529} ({npc:11035}). Partager les trois avec le groupe : cliquer sur chacune dans le journal de quêtes, puis sur Partager. Pas sur ce parcours : {item:12368}, les quêtes d'ensembles de donjon, les quêtes de classe.",
 	["Scholomance"] = "Scholomance",
 
-	-- Step 147: The Reliquary and the Chamber of Summoning
+	-- Step 153: The Reliquary and the Chamber of Summoning
 	["The Reliquary and the Chamber of Summoning"] = "Le Reliquaire et la Chambre d'invocation",
 	-- {object:176486} Deed to Southshore · {object:176487} Deed to Tarren Mill
 	["The Reliquary, the first great hall: the {object:176486} lies on a table in its back left corner, seen from the entrance. Then the Chamber of Summoning, and the great room after it: the {object:176487} lies on a table in its far corner, opposite the way in. Each player clicks the deeds for their own quest (to check in game)."] = "Le Reliquaire (Reliquary), la première grande salle : {object:176486} est posé sur une table dans son coin du fond à gauche, vu de l'entrée. Puis la Chambre d'invocation (Chamber of Summoning) et la grande salle qui la suit : {object:176487} est posé sur une table dans son coin opposé à l'entrée. Chaque joueur clique sur les titres pour sa propre quête (à vérifier en jeu).",
@@ -816,67 +839,63 @@ return {
 	-- {item:13451} The Deed to Tarren Mill
 	["{item:13451}: past the Chamber of Summoning"] = "{item:13451} : après la Chambre d'invocation",
 
-	-- Step 148: Great Ossuary: the hatchlings and Rattlegore
+	-- Step 154: Great Ossuary: the hatchlings and Rattlegore
 	-- {object:179746} Great Ossuary · {npc:11622} Rattlegore
-	["{object:179746}: the hatchlings and {npc:11622}"] = "{object:179746} : les dragonnets et {npc:11622}",
+	["{object:179746}: the hatchlings and {npc:11622}"] = "Le Grand ossuaire : les dragonnets et {npc:11622}",
 	-- {object:179746} Great Ossuary · {item:13920} Healthy Dragon Scale · {npc:11035} Betina Bigglezink · {npc:10503} Jandice Barov · {npc:11622} Rattlegore · {item:13873} Viewing Room Key
-	["The plagued hatchlings, dragon whelps, fill a room of the {object:179746}: a little more than twenty. A rare one drops a {item:13920}: keep it for {npc:11035}. {npc:10503} waits below their room, behind a torch on the south wall: leave her for now. {npc:11622} (elite 61), in the basement of the Ossuary, drops the {item:13873}, which opens the rest of the school."] = "Les dragonnets pestiférés (Plagued Hatchling) remplissent une salle de {object:179746} : un peu plus de vingt. Un rare donne une {item:13920} : la garder pour {npc:11035}. {npc:10503} attend sous leur salle, derrière une torche du mur sud : la laisser pour l'instant. {npc:11622} (élite 61), au sous-sol de l'ossuaire, donne la {item:13873}, qui ouvre le reste de l'école.",
+	["The plagued hatchlings, dragon whelps, fill a room of the {object:179746}: a little more than twenty. A rare one drops a {item:13920}: keep it for {npc:11035}. {npc:10503} waits below their room, behind a torch on the south wall: leave her for now. {npc:11622} (elite 61), in the basement of the Ossuary, drops the {item:13873}, which opens the rest of the school."] = "Les dragonnets pestiférés (Plagued Hatchling) remplissent une salle du Grand ossuaire : un peu plus de vingt. Un rare donne une {item:13920} : la garder pour {npc:11035}. {npc:10503} attend sous leur salle, derrière une torche du mur sud : la laisser pour l'instant. {npc:11622} (élite 61), au sous-sol de l'ossuaire, donne la {item:13873}, qui ouvre le reste de l'école.",
 	-- {item:13920} Healthy Dragon Scale
 	["{item:13920}: keep it"] = "{item:13920} : la garder",
 
-	-- Step 149: The Viewing Room and the Laboratory
+	-- Step 155: The Viewing Room and the Laboratory
 	["The Viewing Room and the Laboratory"] = "La Salle d'observation et le Laboratoire",
 	-- {npc:10433} Marduk Blackpool · {item:12368} Dawn's Gambit · {npc:10508} Ras Frostwhisper · {item:13471} The Deed to Brill
 	["The Viewing Room: Vectus and {npc:10433} stand among neutral students and fight only for {item:12368}: leave them. Then the Laboratory: {npc:10508} (elite 62), a lich who fears and knocks back. {item:13471} lies by the west wall of the Laboratory, at the back, past the alchemy lab."] = "La Salle d'observation (Viewing Room) : Vectus et {npc:10433} se tiennent parmi des élèves neutres et ne se battent que pour {item:12368} : les laisser. Puis le Laboratoire (Laboratory) : {npc:10508} (élite 62), une liche qui effraie et repousse. {item:13471} est près du mur ouest du Laboratoire, au fond, après le laboratoire d'alchimie.",
 	-- {item:13471} The Deed to Brill
 	["{item:13471}: the Laboratory"] = "{item:13471} : le Laboratoire",
 
-	-- Step 150: The Barov Family Vault: the six chambers
+	-- Step 156: The Barov Family Vault: the six chambers
 	["The Barov Family Vault: the six chambers"] = "Le caveau des Barov : les six salles",
 	-- {npc:10502} Lady Illucia Barov · {npc:10504} Lord Alexei Barov · {object:176485} Deed to Caer Darrow · {npc:10507} The Ravenian · {npc:10901} Lorekeeper Polkelt · {npc:11261} Doctor Theolen Krastinov · {npc:10505} Instructor Malicia · {object:176544} Remains of Eva Sarkhoff · {npc:11217} Lucien Sarkhoff · {npc:1853} Darkmaster Gandling
 	["The last hall: six chambers round the Barov Family Vault. Below, from the left: {npc:10502}, {npc:10504} (the {object:176485} lies on a slab beside him), {npc:10507}. Above, from the left: {npc:10901}, {npc:11261} (he enrages at half health: burn him fast), {npc:10505}. In Krastinov's chamber, burn the {object:176544} and of {npc:11217}, one on each side. {npc:1853} comes into the vault once the six are dead; he sends players into the side chambers."] = "La dernière salle : six chambres autour du caveau de la famille Barov (Barov Family Vault). En bas, depuis la gauche : {npc:10502}, {npc:10504} ({object:176485} est posé sur une dalle à côté de lui), {npc:10507}. En haut, depuis la gauche : {npc:10901}, {npc:11261} (il s'enrage à la moitié de sa vie : le tuer vite), {npc:10505}. Dans la salle de Krastinov, brûler {object:176544} et les restes de {npc:11217}, un de chaque côté. {npc:1853} entre dans le caveau une fois les six morts ; il envoie des joueurs dans les salles du tour.",
 	-- {item:13448} The Deed to Caer Darrow · {npc:10504} Lord Alexei Barov
 	["{item:13448}: beside {npc:10504}"] = "{item:13448} : à côté de {npc:10504}",
 
-	-- Step 151: Caer Darrow: Eva Sarkhoff
+	-- Step 157: Caer Darrow: Eva Sarkhoff
 	-- {npc:10503} Jandice Barov
 	["Walk back out of Scholomance, without resetting the instance: Eva stands at the door. Her next quest is {npc:10503}'s, near the entrance."] = "Ressortir de la Scholomance à pied, sans réinitialiser l'instance : Eva se tient à la porte. Sa quête suivante est celle de {npc:10503}, près de l'entrée.",
 
-	-- Step 152: Scholomance: Jandice Barov
+	-- Step 158: Scholomance: Jandice Barov
 	-- {npc:10503} Jandice Barov
 	["Scholomance: {npc:10503}"] = "Scholomance : {npc:10503}",
 	-- {npc:10503} Jandice Barov · {quest:5515} Krastinov's Bag of Horrors
 	["Back into the same instance, through the cleared halls to the hatchlings' room: the torch on its south wall opens the way down to {npc:10503} (elite 61). She splits into illusions: mark her. Her corpse holds {quest:5515}."] = "Retour dans la même instance, par les salles déjà nettoyées, jusqu'à la salle des dragonnets : la torche de son mur sud ouvre le passage vers {npc:10503} (élite 61). Elle se dédouble en illusions : la marquer. Son corps porte {quest:5515}.",
 
-	-- Step 153: Caer Darrow: Eva Sarkhoff
+	-- Step 159: Caer Darrow: Eva Sarkhoff
 	-- {quest:5384} Kirtonos the Herald · {item:13523} Blood of Innocents · {npc:14861} Blood Steward of Kirtonos
 	["Out to Eva again. {quest:5384}: she hands over the {item:13523} (Warcraft Tavern also has the {npc:14861} drop it: to check in game)."] = "Ressortir voir Eva. {quest:5384} : elle donne le {item:13523} (d'après Warcraft Tavern, le {npc:14861} le donne aussi : à vérifier en jeu).",
 
-	-- Step 154: Scholomance: Kirtonos the Herald
+	-- Step 160: Scholomance: Kirtonos the Herald
 	-- {quest:5384} Kirtonos the Herald
 	["Scholomance: {quest:5384}"] = "Scholomance : {quest:5384}",
 	-- {object:175564} Brazier of the Herald · {item:13523} Blood of Innocents · {quest:5384} Kirtonos the Herald
-	["Back in, to the balcony on the north side of the Chamber of Summoning: use the {object:175564} by the railing, with the {item:13523} in your bags. {quest:5384} (elite 60) flies in, and turns from gargoyle to man during the fight, cursing in that form."] = "Retour à l'intérieur, jusqu'au balcon du côté nord de la Chambre d'invocation : utiliser {object:175564}, près de la rambarde, avec le {item:13523} dans les sacs. {quest:5384} (élite 60) arrive en volant, et passe de gargouille à homme pendant le combat, avec des malédictions sous cette forme.",
+	["Back in, to the balcony on the north side of the Chamber of Summoning: use the {object:175564} by the railing, with the {item:13523} in your bags. {quest:5384} (elite 60) flies in, and turns from gargoyle to man during the fight, cursing in that form."] = "Retour à l'intérieur, jusqu'au balcon du côté nord de la Chambre d'invocation : utiliser le Brasero du Héraut, près de la rambarde, avec le {item:13523} dans les sacs. {quest:5384} (élite 60) arrive en volant, et passe de gargouille à homme pendant le combat, avec des malédictions sous cette forme.",
 
-	-- Step 155: Caer Darrow: Eva Sarkhoff
+	-- Step 161: Caer Darrow: Eva Sarkhoff
 	-- {item:13544} Spectral Essence · {npc:11286} Magistrate Marduke · {npc:10508} Ras Frostwhisper · {zone:1417} Arathi Highlands · {object:176631} Menethil's Gift
 	["The rewards include the {item:13544}: worn, it shows {npc:11286}, beside Eva. His chain against {npc:10508} goes to Stromgarde in the {zone:1417}, then Light's Hope Chapel, Stratholme ({object:176631}, before the Baron) and back to Scholomance: not in this guide."] = "Les récompenses comprennent l'{item:13544} : portée, elle fait voir {npc:11286}, à côté d'Eva. Sa chaîne contre {npc:10508} passe par Stromgarde dans les {zone:1417}, puis la chapelle de l'Espoir de Lumière, Stratholme ({object:176631}, devant le baron) et revient à la Scholomance : pas dans ce guide.",
 
-	-- Step 156: Chillwind Camp: Weldon Barov
+	-- Step 162: Chillwind Camp: Weldon Barov
 	-- {npc:11023} Weldon Barov
 	["Ride back west to Chillwind Camp. {npc:11023}'s next quest, The Last Barov, is in Horde lands: not in this guide."] = "Revenir vers l'ouest jusqu'au Camp du Noroît. La quête suivante de {npc:11023}, The Last Barov, est en terres de la Horde : pas dans ce guide.",
 
-	-- Step 157: Light's Hope Chapel: Betina Bigglezink
+	-- Step 163: Light's Hope Chapel: Betina Bigglezink
 	-- {quest:5529} Plagued Hatchlings · {quest:5582} Healthy Dragon Scale · {npc:11035} Betina Bigglezink
 	["{quest:5529}: the flight from Chillwind Camp to Light's Hope Chapel. A {quest:5582} in the bags? Once {quest:5529} is handed in, right-click it: its quest goes back to {npc:11035} at once."] = "{quest:5529} : le vol du Camp du Noroît jusqu'à la chapelle de l'Espoir de Lumière. Une {quest:5582} dans les sacs ? Une fois {quest:5529} rendue, clic droit dessus : sa quête se rend à {npc:11035} tout de suite.",
 	-- {quest:5582} Healthy Dragon Scale
 	["{quest:5582}, if one dropped"] = "{quest:5582}, si elle est tombée",
 
-	-- Step 158: Scholomance: quests not done
+	-- Step 164: Scholomance: quests not done
 	["Scholomance: quests not done"] = "Scholomance : quêtes non finies",
-	["What is left of Scholomance in the quest log is for another run: keep it for one, or drop it to free the log."] = "Ce qui reste de la Scholomance dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal.",
-
-	-- No longer in the guide (its English changed or it went away): reuse or delete.
-	-- ["End of route · Dungeons 52-60 (optional)"] = "Fin de parcours · Donjons 52-60 (facultatifs)",
-	-- ["From Cenarion Hold: a hearthstone bound in {zone:1455}, or the flight to Theramore, the boat to {object:1162} and the flight to {zone:1455}."] = "Depuis le Fort cénarien : une pierre de foyer liée à {zone:1455}, ou le vol pour Theramore, le bateau pour {object:1162} et le vol pour {zone:1455}.",
+	["What is left of Scholomance in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log)."] = "Ce qui reste de la Scholomance dans le journal de quêtes est pour une autre fois : le garder pour une autre visite, ou l'abandonner pour libérer le journal (clic droit sur la quête dans le journal).",
 }

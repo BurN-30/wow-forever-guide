@@ -108,8 +108,8 @@ step Blackfathom Deeps: Lady Sarevess and Gelihast
 step Blackfathom Deeps: Twilight Lord Kelris
   label bfd-kelris
   tip Kelris waits in the ceremonial chamber before the last room. Interrupt his Sleep and kill his adds first. Every player on Blackfathom Villainy loots their own head. Aku'mai, behind him, is optional: no quest, good loot.
-  collect 5881 quest 1200 optional            -- Head of Kelris
   kill 4832                                   -- Twilight Lord Kelris
+  collect 5881 quest 1200                     -- Head of Kelris
   kill 4829 optional                          -- Aku'mai
 
 step Hearthstone to Auberdine
@@ -124,18 +124,14 @@ step Darnassus: Blackfathom hand-ins (detour)
   zone Teldrassil
   fly "Rut'theran Village"
   zone Darnassus
-  turnin 1200 optional map 1457 @56.16,24.39  -- Dawnwatcher Selgorm
-  turnin 1199 optional map 1457 @55.24,23.99  -- Argent Guard Manados, with the 10 pendants
+  turnin 1200 map 1457 @56.16,24.39           -- Dawnwatcher Selgorm
 
 step Darnassus: Twilight Falls (detour)
   when complete 1199
-  when !complete 1200
   zone Darnassus
   tip From Auberdine to Rut'theran Village: the flight, or the boat from the Auberdine dock for whoever never learned that flight path; then the portal up to Darnassus. Argent Guard Manados stands with the Argent Dawn.
-  zone Teldrassil
-  fly "Rut'theran Village"
-  zone Darnassus
-  turnin 1199 optional map 1457 @55.24,23.99  -- Argent Guard Manados
+  enter "Darnassus" @55.24,23.99
+  turnin 1199 map 1457 @55.24,23.99           -- Argent Guard Manados, with the 10 pendants
 
 step Back to Auberdine
   when !zone "Darkshore"

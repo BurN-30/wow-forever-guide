@@ -39,7 +39,7 @@ step Southshore
 
 step Ruins of Lordaeron entrance
   zone Tirisfal Glades
-  tip Horde land: keep together and clear of the roads' guards. North past Hillsbrad Fields, round Dalaran, then swim north up Lordamere Lake into Tirisfal and follow the road to the ruined capital. If you die inside, the spirit healer is right outside the dungeon.
+  tip Horde land, on foot, at about level 20: keep together, clear of the roads and of Tarren Mill, whose guards are far above that level. North past Hillsbrad Fields, round Dalaran, then swim north up Lordamere Lake into Tirisfal and follow the road to the ruined capital: a long way on foot. The entrance's exact place is to check in game: the arrow leads to the data's point. A death inside sends the spirit to the healer right outside the dungeon.
   goto 63.2,67.5 "Ruins of Lordaeron" r 25
 
 step Captain Truman
@@ -59,11 +59,11 @@ step The Baron
 
 step Lordamere Overlook: Viktor the Vile (optional)
   tip Flesh Golems hit hard and knock you into other packs; ghouls come in threes and fours. Viktor is optional: light the chimney of the ruined house in the south-west, survive 4 to 6 waves (leave the last enemy of each wave alive a moment so casters can drink), then he jumps out. Short group? Skip him.
-  task "Viktor the Vile, or skipped" optional
+  task "Viktor the Vile, or skipped"
 
 step Market Street: The Abandoned (optional)
   tip The statue with green eyes starts 3 waves, and the skeleton mage in the south corridor must die too; then The Abandoned: Frost Nova, slows melee, drains the tank. Optional. The top of the west tower next to it is one of the Crest's spots.
-  task "The Abandoned, or skipped" optional
+  task "The Abandoned, or skipped"
 
 step The Crest of Lordaeron
   tip One crest per run, at a random spot with no mark on the minimap: the top of the east tower (left of the top floor doors), the banshee crypt door before The Baron, the top of the west tower, the foot of the north-west tower by the double stairs, or the wall of Bjork's gazebo (nearly invisible: hover the wall).

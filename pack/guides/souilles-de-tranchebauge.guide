@@ -55,12 +55,13 @@ step The road south
   goto 48.9,91.7 "Razorfen Downs"
 
 step Razorfen Downs: Myriam Moonsinger
-  tip Myriam Moonsinger waits on a hill outside the dungeon. Her quest is the one the route offered at 32: whoever did it then has nothing to take. The three targets live outside the portal, among the barrows and thorns (elites, 33).
-  accept 6626 optional                -- Myriam Moonsinger, on a hill outside
-  kill 7873 x8 quest 6626 optional @47.2,89.6  -- Razorfen Battleguard
-  kill 7874 x8 quest 6626 optional @47.2,91.5  -- Razorfen Thornweaver
-  kill 7872 x8 quest 6626 optional @47.3,90.3  -- Death's Head Cultist
-  turnin 6626 optional                -- Myriam Moonsinger
+  when group 6626
+  tip Myriam Moonsinger waits on a hill outside the dungeon. Her quest is the group quest the route offered at 32: the answer given then counts here too, and whoever did it then has nothing to take. The three targets live outside the portal, among the barrows and thorns (elites, 33).
+  accept 6626                         -- Myriam Moonsinger, on a hill outside
+  kill 7873 x8 quest 6626 @47.2,89.6  -- Razorfen Battleguard
+  kill 7874 x8 quest 6626 @47.2,91.5  -- Razorfen Thornweaver
+  kill 7872 x8 quest 6626 @47.3,90.3  -- Death's Head Cultist
+  turnin 6626                         -- Myriam Moonsinger
 
 step Razorfen Downs: Belnistrasz
   tip Belnistrasz waits in a prison cell inside. His quests cannot be shared: every player takes Scourge of the Downs and hands it in to him (he wants his Oathstone back) BEFORE anyone starts Extinguishing the Idol. Then he walks to the idol and casts while waves of enemies come: stay close and keep them off him; it ends at his brazier.

@@ -56,7 +56,7 @@ return {
 	["Warlocks: {quest:1740}"] = "Démonistes : {quest:1740}",
 	-- {object:1680} Shadowfang Keep · {item:6898} Orb of Soran'ruk
 	-- plural, as words: Twilight Acolytes = {npc:4809} Twilight Acolyte · Soran'ruk Fragments = {item:6914} Soran'ruk Fragment
-	["The Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from {object:1680}, a Horde dungeon: Polestar's class guides ({item:6898}) cover it."] = "Les acolytes du Crépuscule du quartier du Marteau du crépuscule lâchent les fragments de Soran'ruk. Le grand fragment vient du {object:1680}, un donjon de la Horde : les guides de classe de Polestar ({item:6898}) s'en chargent.",
+	["The Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from {object:1680}, a Horde dungeon: Polestar's class guides ({item:6898}) cover it."] = "Les acolytes du Crépuscule du quartier du Marteau du crépuscule lâchent les fragments de Soran'ruk. Le grand fragment vient du donjon d'Ombrecroc, un donjon de la Horde : les guides de classe de Polestar ({item:6898}) s'en chargent.",
 	-- {item:6914} Soran'ruk Fragment
 	-- plural, as words: Twilight Acolytes = {npc:4809} Twilight Acolyte
 	["{item:6914}: Twilight Acolytes"] = "{item:6914} : acolytes du Crépuscule",
@@ -101,16 +101,16 @@ return {
 	["{zone:1457}: Blackfathom hand-ins (detour)"] = "{zone:1457} : rendus de Brassenoire (détour)",
 	-- {zone:1457} Darnassus · {npc:4783} Dawnwatcher Selgorm · {npc:4784} Argent Guard Manados · {object:92525} Argent Dawn
 	["From Auberdine to Rut'theran Village: the flight, or the boat from the Auberdine dock for whoever never learned that flight path; then the portal up to {zone:1457}. {npc:4783} and {npc:4784} stand with the {object:92525}."] = "D'Auberdine au village de Rut'theran : le vol, ou le bateau du quai d'Auberdine pour qui n'a jamais appris ce trajet ; puis le portail qui monte à {zone:1457}. {npc:4783} et {npc:4784} se tiennent avec {object:92525}.",
-	-- {npc:4784} Argent Guard Manados
-	["{npc:4784}, with the 10 pendants"] = "{npc:4784}, avec les 10 pendentifs",
 
 	-- Step 15: Darnassus: Twilight Falls (detour)
 	-- {zone:1457} Darnassus · {quest:1199} Twilight Falls
 	["{zone:1457}: {quest:1199} (detour)"] = "{zone:1457} : {quest:1199} (détour)",
 	-- {zone:1457} Darnassus · {npc:4784} Argent Guard Manados · {object:92525} Argent Dawn
 	["From Auberdine to Rut'theran Village: the flight, or the boat from the Auberdine dock for whoever never learned that flight path; then the portal up to {zone:1457}. {npc:4784} stands with the {object:92525}."] = "D'Auberdine au village de Rut'theran : le vol, ou le bateau du quai d'Auberdine pour qui n'a jamais appris ce trajet ; puis le portail qui monte à {zone:1457}. {npc:4784} se tient avec {object:92525}.",
+	-- {npc:4784} Argent Guard Manados
+	["{npc:4784}, with the 10 pendants"] = "{npc:4784}, avec les 10 pendentifs",
 
 	-- Step 17: Auberdine: Gershala Nightwhisper
 	-- {npc:8997} Gershala Nightwhisper · {object:1162} Menethil Harbor
-	["Last stop of the chapter: {npc:8997} stands a short walk west of Terenthis. The route's own guide comes back once this is handed in: Terenthis, then the boat to {object:1162}."] = "Dernier arrêt du chapitre : {npc:8997} se tient à quelques pas à l'ouest de Terenthis. Le guide du parcours revient une fois la quête rendue : Terenthis, puis le bateau pour {object:1162}.",
+	["Last stop of the chapter: {npc:8997} stands a short walk west of Terenthis. The route's own guide comes back once this is handed in: Terenthis, then the boat to {object:1162}."] = "Dernier arrêt du chapitre : {npc:8997} se tient à quelques pas à l'ouest de Terenthis. Le guide du parcours revient une fois la quête rendue : Terenthis, puis le bateau pour le port de Menethil.",
 }

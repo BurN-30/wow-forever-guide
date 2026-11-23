@@ -24,10 +24,11 @@
 # back): only its Dungeons window's pick-up and hand-in guides, without the bosses. This chapter
 # keeps the dungeon whole. The Only Cure is More Green Glow (2962) has its own question (`when group
 # 2962`): a return to Kharanos before the run. A Green Sample and Power Overwhelming (92456, 92489), the
-# City of Dalaran's two Stormwind quests, are offered here as a question (`when group 92456`): the
-# Dalaran chapter comes at 31 to 37, and Polestar lists their hand-ins at the route's next Stormwind
-# stop. Data Rescue and Essential Artificials are optional hand-ins: a punch card or a box missed does
-# not hold the chapter.
+# City of Dalaran's two Stormwind quests, are offered here as a question (`when group 92456`, both
+# taken on "Do it"): the Dalaran chapter comes at 31 to 37, and Polestar lists their hand-ins at the
+# route's next Stormwind stop. Since 0.13.0 no hand-in is optional: each conditional one has its own
+# step (`when complete`), so a punch card or a box missed holds nothing, and the chapter's end is its
+# hand-ins without a condition (GreffeData.lua, `fin`).
 #
 # Prerequisites (Polestar's compiled guide, TrinityCore base): Gnogaine (2926) after The Day After
 # (2927); The Only Cure is More Green Glow (2962) after Gnogaine; Save Techbot's Brain (2922),
@@ -47,7 +48,7 @@ zone Ironforge
 
 step Stormwind: Shoni the Shilent
   zone Stormwind City
-  tip Gnomeregan: a 5-player dungeon under Dun Morogh, levels 29 to 38 in the group finder; Mekgineer Thermaplugg, the last boss, is 34. Shoni the Shilent stands by the tram in the Dwarven District; every other giver is in Tinker Town, at the Ironforge end of the tram.
+  tip Gnomeregan: a 5-player dungeon under Dun Morogh, levels 29 to 38 in the group finder, best from about 31; Mekgineer Thermaplugg, the last boss, is 34. Shoni the Shilent stands by the tram in the Dwarven District; every other giver is in Tinker Town, at the Ironforge end of the tram.
   note Keep 9 free quest log slots. Every quest can be shared except Gnogaine and its follow-up: each player takes those from Ozzie.
   accept 2928                                 -- Shoni the Shilent
 
@@ -55,8 +56,8 @@ step Stormwind: two quests for the City of Dalaran (optional)
   when group 92456
   zone Stormwind City
   tip The City of Dalaran, a Forever dungeon in the Alterac Mountains, has two Stormwind quests: about 18,800 XP. Its chapter comes once An Alarming Request is taken in Southshore (about 31). Shylamiir is in the Trade District, High Sorcerer Andromath in the Mage Quarter tower; the hand-ins wait for the route's next Stormwind stop.
-  accept 92456 optional                       -- Shylamiir
-  accept 92489 optional                       -- High Sorcerer Andromath
+  accept 92456                                -- Shylamiir
+  accept 92489                                -- High Sorcerer Andromath
 
 step Ironforge: Gnomeregan quests
   zone Ironforge
@@ -116,7 +117,7 @@ step Gnomeregan: the Sparklematic, the Dormitory and the Clean Room
   tip The Sparklematic 5200 machines stand in the room before the Dormitory: put the Grime-Encrusted Ring in one to clean it. In the Dormitory, Kernobee waits before the Viscous Fallout room: his escort runs all the way back to the dungeon's entrance; near the end a countdown starts, get him out before it reaches zero. His reward waits at Booty Bay, where the route goes at about 33. Matrix Punchograph 3005-B, in the Dormitory south of the Clean Room, turns the Yellow card into a Blue one.
   kill 7079                                   -- Viscous Fallout, in the Clean Room
   collect 9282 optional                       -- Blue Punch Card: the Yellow one, at Matrix Punchograph 3005-B
-  turnin 2945 object 142487 optional          -- The Sparklematic 5200
+  turnin 2945 object 142487                   -- The Sparklematic 5200
   accept 2947 object 142487 optional          -- Return of the Ring: for Talvash del Kissel in Ironforge
   accept 2904 optional                        -- Kernobee
   complete 2904 optional                      -- Escort Kernobee back to the entrance
@@ -148,7 +149,7 @@ step Kharanos: Ozzie Togglevolt (Green Glow)
   when complete 2962
   zone Dun Morogh
   tip Out of Gnomeregan and east to Kharanos, within the two hours of the fallout.
-  turnin 2962 optional                        -- Ozzie Togglevolt
+  turnin 2962                                 -- Ozzie Togglevolt
 
 step Tinker Town: the hand-ins
   zone Ironforge
@@ -159,18 +160,18 @@ step Tinker Town: the hand-ins
 step Tinker Town: Master Mechanic Castpipe
   when complete 2930
   zone Ironforge
-  turnin 2930 optional                        -- Master Mechanic Castpipe
+  turnin 2930                                 -- Master Mechanic Castpipe
 
 step Tinker Town: Klockmort Spannerspan
   when complete 2924
   zone Ironforge
-  turnin 2924 optional                        -- Klockmort Spannerspan
+  turnin 2924                                 -- Klockmort Spannerspan
 
 step Mystic Ward: Talvash del Kissel
   when complete 2947
   zone Ironforge
   tip Return of the Ring: Talvash del Kissel is in the Mystic Ward. His next quest, Gnome Improvement, asks for a Silver Bar and a Moss Agate: not in the guide.
-  turnin 2947 optional                        -- Talvash del Kissel
+  turnin 2947                                 -- Talvash del Kissel
 
 step Stormwind: Shoni the Shilent
   zone Stormwind City

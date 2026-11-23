@@ -46,11 +46,13 @@ step Image of Archmage Modera
   accept 92458                                -- Heart of Disruption: it brings the Dalaran Sewer Key
 
 step Stormwind's two quests, for whoever took them
-  when onquest 92456,92489
-  zone Stormwind City
+  when onquest 92456
   tip A Green Sample (Shylamiir) and Power Overwhelming (High Sorcerer Andromath), offered in Stormwind by the Gnomeregan chapter: both are done inside.
-  accept 92456 optional                       -- Shylamiir, Stormwind
-  accept 92489 optional                       -- High Sorcerer Andromath, Stormwind
+  accept 92456                                -- Shylamiir, Stormwind
+
+step Power Overwhelming, for whoever took it
+  when onquest 92489
+  accept 92489                                -- High Sorcerer Andromath, Stormwind
 
 step City of Dalaran: the sewer grate
   zone Alterac Mountains
@@ -80,11 +82,12 @@ step Krasus' Landing: Arcane Anomaly
 step Runeweaver Square: Fel Ancient
   tip Into the middle of the city from the east: Magus Fansy Goodbringer, by the magic shield, lowers it. The Fel Ancient roots two players and drops burning fel timber under them: a Druid's shapeshift or a Paladin's Blessing of Freedom frees them. The Fel Infused Blossom for A Green Sample is one of the big green bulbs of the square.
   kill 246003                                 -- Fel Ancient
-  collect 251983 quest 92456 optional         -- Fel Infused Blossom: a green bulb of the square
+  collect 251983 quest 92456                  -- Fel Infused Blossom: a green bulb of the square
 
 step Path of Renewal: Arcanic Enigma
   tip Counter-clockwise to the north-east, by Antonidas's statue. Kill its two Mana Phantoms first. The Enigma polymorphs players and silences everyone close to it: ranged players keep away.
-  kill 246016 quest 92489 optional            -- Arcanic Enigma
+  kill 246016                                 -- Arcanic Enigma
+  kill 246016 quest 92489                     -- Arcanic Enigma, for Power Overwhelming
 
 step Magus Commerce Exchange: Unstable Sentry
   tip West through the city, in a nook of the market. Spread out; when it casts Malfunction, everyone but the tank steps well away.

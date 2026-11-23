@@ -70,6 +70,7 @@ step Anvilmar's Rest: Faldrim Anvilmar
 step The fire elemental of the cavern
   tip South-east out of Anvilmar's Rest: Dark Iron dwarves from here on. Bloodhound Runts leave a disease that makes their target take more damage (Stoneform or a poultice clears it); Engineers throw dynamite; Summoners call fire elementals: interrupt them. Ranged players can shoot the kegs of blasting powder to hit the packs around them. In the natural cavern, the fire elemental boss burns everyone near him: kill the Dark Iron Summoner beside him first, ranged players keep away, and the healer watches the melee too.
   note Its name differs between sources (Infurnus in the dungeon journal, Magmatus in the guides): the only fire elemental boss of the dungeon.
+  task "The fire elemental is down"
 
 step Plunder
   tip Back in the halls, a pack of four Dark Iron dwarves stands between two kegs: shoot the kegs from afar first. Plunder, a stone golem, walks the hallway after it: pull him away from the others and tank him with his back to a wall, as he knocks back and charges whoever stands close.
@@ -79,14 +80,14 @@ step The Reliquary of Kings: Durgen Dirgehammer
   label hot-durgen
   tip North over the bridge of the Lesser Stone Golems to the round last room. Clear it before the pull: Durgen fears the whole group and whatever is left joins in. Kill his two Lesser Stone Golems first. Each player on Old Ironforge Incursion loots the head. Behind one of the vault doors of the room, the Treaty of Understanding: each player clicks it for their own quest.
   kill 261319                                 -- Durgen Dirgehammer
-  collect 274286 quest 96393 optional         -- Durgen Dirgehammer's Head
+  collect 274286 quest 96393                  -- Durgen Dirgehammer's Head
   accept 98423 item 281030                    -- Treaty of Understanding, behind a vault door of the room
 
 step King Magni: Old Ironforge Incursion
-  when onquest 96393
+  when complete 96393
   zone Ironforge
   tip Back out the way you came in: King Magni sits on the High Seat, east of the door.
-  turnin 96393 optional                       -- King Magni Bronzebeard
+  turnin 96393                                -- King Magni Bronzebeard
 
 step Ironforge rewards
   zone Ironforge

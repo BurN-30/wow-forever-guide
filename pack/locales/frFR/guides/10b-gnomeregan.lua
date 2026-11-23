@@ -11,7 +11,7 @@ return {
 
 	-- Step 1: Stormwind: Shoni the Shilent
 	-- {zone:1426} Dun Morogh · {npc:7800} Mekgineer Thermaplugg · {npc:6579} Shoni the Shilent · {object:28027} Dwarven District · {object:171524} Tinker Town · {zone:1455} Ironforge
-	["Gnomeregan: a 5-player dungeon under {zone:1426}, levels 29 to 38 in the group finder; {npc:7800}, the last boss, is 34. {npc:6579} stands by the tram in the {object:28027}; every other giver is in {object:171524}, at the {zone:1455} end of the tram."] = "Gnomeregan : un donjon pour 5 joueurs sous {zone:1426}, niveaux 29 à 38 dans la recherche de groupe ; {npc:7800}, le dernier boss, est de niveau 34. {npc:6579} se tient près du tram, dans le {object:28027} ; tous les autres donneurs sont à {object:171524}, au bout du tram côté {zone:1455}.",
+	["Gnomeregan: a 5-player dungeon under {zone:1426}, levels 29 to 38 in the group finder, best from about 31; {npc:7800}, the last boss, is 34. {npc:6579} stands by the tram in the {object:28027}; every other giver is in {object:171524}, at the {zone:1455} end of the tram."] = "Gnomeregan : un donjon pour 5 joueurs sous {zone:1426}, niveaux 29 à 38 dans la recherche de groupe, idéal à partir de 31 environ ; {npc:7800}, le dernier boss, est de niveau 34. {npc:6579} se tient près du tram, dans {object:28027} ; tous les autres donneurs sont à {object:171524}, au bout du tram côté {zone:1455}.",
 	-- {quest:2926} Gnogaine
 	["Keep 9 free quest log slots. Every quest can be shared except {quest:2926} and its follow-up: each player takes those from Ozzie."] = "Garder 9 places libres dans le journal. Toutes les quêtes se partagent sauf {quest:2926} et sa suite : chaque joueur les prend chez Ozzie.",
 
@@ -42,7 +42,7 @@ return {
 	-- Step 5: The Gnomeregan outskirts
 	["The Gnomeregan outskirts"] = "Les abords de Gnomeregan",
 	-- {npc:6213} Irradiated Invader · {item:9283} Empty Leaden Collection Phial · {npc:6231} Techbot · {quest:2930} Data Rescue · {item:9279} White Punch Card · {object:142345} Matrix Punchograph 3005-A · {item:9280} Yellow Punch Card
-	["West of Kharanos, the paths down to the dungeon's portal, outside the instance. Kill an {npc:6213} (green glow, elite 24) and use the {item:9283} on its corpse. {npc:6231} (elite 26) has his own room off the northern part of these paths: his Memory Core drops for every player on the quest.\n{quest:2930} starts out here too: the {item:9279} drops from the troggs and lepers of the outskirts (about 1 kill in 10), and {object:142345}, a machine also outside the portal, turns it into a {item:9280}."] = "À l'ouest de Kharanos, les chemins qui descendent vers le portail du donjon, hors de l'instance. Tuer un {npc:6213} (lueur verte, élite 24) et utiliser la {item:9283} sur son cadavre. {npc:6231} (élite 26) a sa propre salle au nord de ces chemins : son noyau de mémoire tombe pour chaque joueur qui a la quête.\n{quest:2930} commence aussi dehors : la {item:9279} tombe des troggs et des lépreux des abords (environ 1 sur 10), et {object:142345}, une machine elle aussi hors du portail, la change en {item:9280}.",
+	["West of Kharanos, the paths down to the dungeon's portal, outside the instance. Kill an {npc:6213} (green glow, elite 24) and use the {item:9283} on its corpse. {npc:6231} (elite 26) has his own room off the northern part of these paths: his Memory Core drops for every player on the quest.\n{quest:2930} starts out here too: the {item:9279} drops from the troggs and lepers of the outskirts (about 1 kill in 10), and {object:142345}, a machine also outside the portal, turns it into a {item:9280}."] = "À l'ouest de Kharanos, les chemins qui descendent vers le portail du donjon, hors de l'instance. Tuer un {npc:6213} (lueur verte, élite 24) et utiliser la {item:9283} sur son cadavre. {npc:6231} (élite 26) a sa propre salle au nord de ces chemins : son noyau de mémoire tombe pour chaque joueur qui a la quête.\n{quest:2930} commence aussi dehors : la {item:9279} tombe des troggs et des lépreux des abords (environ 1 sur 10), et la matrice d'encodage 3005-A, une machine elle aussi hors du portail, la change en {item:9280}.",
 	-- {item:9284} Full Leaden Collection Phial · {npc:6213} Irradiated Invader
 	["{item:9284}: the empty phial, on an {npc:6213}'s corpse"] = "{item:9284} : la fiole vide, sur le cadavre d'un {npc:6213}",
 	-- {item:9277} Techbot's Memory Core · {npc:6231} Techbot
@@ -50,7 +50,7 @@ return {
 	-- {item:9279} White Punch Card
 	["{item:9279}: troggs and lepers"] = "{item:9279} : troggs et lépreux",
 	-- {item:9280} Yellow Punch Card · {object:142345} Matrix Punchograph 3005-A
-	["{item:9280}: the White one, at {object:142345}"] = "{item:9280} : la blanche, dans {object:142345}",
+	["{item:9280}: the White one, at {object:142345}"] = "{item:9280} : la blanche, dans la matrice d'encodage 3005-A",
 
 	-- Step 6: Kharanos: The Only Cure is More Green Glow (optional detour)
 	-- {quest:2962} The Only Cure is More Green Glow
@@ -88,11 +88,11 @@ return {
 	-- Step 10: Gnomeregan: the Sparklematic, the Dormitory and the Clean Room
 	["Gnomeregan: the Sparklematic, the Dormitory and the Clean Room"] = "Gnomeregan : le Sparklematic, le dortoir et la salle propre",
 	-- {object:142487} Sparklematic 5200 · {quest:2945} Grime-Encrusted Ring · {npc:7850} Kernobee · {npc:7079} Viscous Fallout · {object:3204} Booty Bay · {object:142475} Matrix Punchograph 3005-B
-	["{object:142487} machines stand in the room before the Dormitory: put the {quest:2945} in one to clean it. In the Dormitory, {npc:7850} waits before the {npc:7079} room: his escort runs all the way back to the dungeon's entrance; near the end a countdown starts, get him out before it reaches zero. His reward waits at {object:3204}, where the route goes at about 33. {object:142475}, in the Dormitory south of the Clean Room, turns the Yellow card into a Blue one."] = "Les machines {object:142487} sont dans la salle avant le dortoir : mettre l'{quest:2945} dans l'une d'elles pour le nettoyer. Dans le dortoir, {npc:7850} attend avant la salle de {npc:7079} : son escorte ramène jusqu'à l'entrée du donjon ; vers la fin, un compte à rebours démarre, le sortir avant zéro. Sa récompense attend à {object:3204}, où le parcours passe vers 33. {object:142475}, dans le dortoir au sud de la salle blanche, change la carte jaune en bleue.",
+	["{object:142487} machines stand in the room before the Dormitory: put the {quest:2945} in one to clean it. In the Dormitory, {npc:7850} waits before the {npc:7079} room: his escort runs all the way back to the dungeon's entrance; near the end a countdown starts, get him out before it reaches zero. His reward waits at {object:3204}, where the route goes at about 33. {object:142475}, in the Dormitory south of the Clean Room, turns the Yellow card into a Blue one."] = "Les machines {object:142487} sont dans la salle avant le dortoir : mettre l'{quest:2945} dans l'une d'elles pour le nettoyer. Dans le dortoir, {npc:7850} attend avant la salle de {npc:7079} : son escorte ramène jusqu'à l'entrée du donjon ; vers la fin, un compte à rebours démarre, le sortir avant zéro. Sa récompense attend à Baie-du-Butin, où le parcours passe vers 33. La matrice d'encodage 3005-B, dans le dortoir au sud de la salle blanche, change la carte jaune en bleue.",
 	-- {npc:7079} Viscous Fallout
 	["{npc:7079}, in the Clean Room"] = "{npc:7079}, dans la salle propre",
 	-- {item:9282} Blue Punch Card · {object:142475} Matrix Punchograph 3005-B
-	["{item:9282}: the Yellow one, at {object:142475}"] = "{item:9282} : la jaune, dans {object:142475}",
+	["{item:9282}: the Yellow one, at {object:142475}"] = "{item:9282} : la jaune, dans la matrice d'encodage 3005-B",
 	-- {quest:2947} Return of the Ring · {npc:6826} Talvash del Kissel · {zone:1455} Ironforge
 	["{quest:2947}: for {npc:6826} in {zone:1455}"] = "{quest:2947} : pour {npc:6826} à {zone:1455}",
 	-- {npc:7850} Kernobee
@@ -101,9 +101,9 @@ return {
 	-- Step 11: Gnomeregan: the Launch Bay
 	["Gnomeregan: the Launch Bay"] = "Gnomeregan : la baie de lancement",
 	-- {npc:6235} Electrocutioner 6000 · {object:142476} Matrix Punchograph 3005-C
-	["{npc:6235} stands on the Launch Bay platform; {object:142476}, on the same platform, turns the Blue card into a Red one."] = "{npc:6235} se tient sur la plateforme de la baie de lancement ; {object:142476}, sur la même plateforme, change la carte bleue en rouge.",
+	["{npc:6235} stands on the Launch Bay platform; {object:142476}, on the same platform, turns the Blue card into a Red one."] = "{npc:6235} se tient sur la plateforme de la baie de lancement ; la matrice d'encodage 3005-C, sur la même plateforme, change la carte bleue en rouge.",
 	-- {item:9281} Red Punch Card · {object:142476} Matrix Punchograph 3005-C
-	["{item:9281}: the Blue one, at {object:142476}"] = "{item:9281} : la bleue, dans {object:142476}",
+	["{item:9281}: the Blue one, at {object:142476}"] = "{item:9281} : la bleue, dans la matrice d'encodage 3005-C",
 
 	-- Step 12: Gnomeregan: the Engineering Labs
 	["Gnomeregan: the Engineering Labs"] = "Gnomeregan : les laboratoires d'ingénierie",
@@ -140,4 +140,5 @@ return {
 	-- Step 20: Stormwind: Shoni the Shilent
 	-- {zone:1453} Stormwind · {npc:6579} Shoni the Shilent · {object:28027} Dwarven District
 	["Take the Deeprun Tram to {zone:1453}: {npc:6579} is in the {object:28027}, by the tram. Last stop of the chapter: the route's own guide comes back once this is handed in."] = "Le Tram des profondeurs jusqu'à {zone:1453} : {npc:6579} est dans le {object:28027}, près du tram. Dernier arrêt du chapitre : le guide du parcours revient une fois la quête rendue.",
+
 }

@@ -57,8 +57,8 @@ step Rhahk'Zor
 
 step Sneed's Shredder and Sneed
   tip Clear every Goblin Woodcarver of the lumber room first, pulling them back to the previous room: the Shredder's Terrify sends you running into them. Sneed jumps out when it breaks; he disarms.
-  collect 7365 quest 2040 optional            -- Gnoam Sprecklesprocket: Sneed's Shredder
   kill 643                                    -- Sneed
+  collect 7365 quest 2040                     -- Gnoam Sprecklesprocket: Sneed's Shredder
 
 step Gilnid's foundry
   tip Goblin Engineers and Craftsmen summon golems: kill or stun the goblin, the golem goes with it. Gilnid has an Engineer at his side.
@@ -87,12 +87,21 @@ step Sentinel Hill rewards
   turnin 166                                  -- Gryan Stoutmantle
   turnin 214                                  -- Scout Riell, top of the tower
 
+step Stormwind: Baros Alexston
+  zone Stormwind City
+  tip Fly to Stormwind: Baros Alexston stands in the City Hall on Cathedral Square. His next quest, Bazil Thredd, is for the Stockade chapter (Warden Thelwater): the route comes back to it in Stormwind.
+  fly "Stormwind"
+  turnin 373                                  -- Baros Alexston, Cathedral Square
+  accept 389                                  -- Baros Alexston: Bazil Thredd, for the Stockade chapter (Warden Thelwater)
+
+step Stormwind: Shoni the Shilent
+  when complete 2040
+  zone Stormwind City
+  tip Shoni the Shilent stands by the tram in the Dwarven District.
+  turnin 2040                                 -- Shoni the Shilent
+
 step Stormwind rewards
   zone Stormwind City
-  tip Last stop of the chapter: the route's own guide comes back once these are handed in.
-  fly "Stormwind"
+  tip Wilder Thistlenettle is in the tavern of the Dwarven District. Last stop of the chapter: the route's own guide comes back once these are handed in.
   turnin 168                                  -- Wilder Thistlenettle, Dwarven District
   turnin 167
-  turnin 2040 optional                        -- Shoni the Shilent
-  turnin 373                                  -- Baros Alexston, Cathedral Square
-  accept 389 optional                         -- Baros Alexston: Bazil Thredd, for the Stockade chapter (Warden Thelwater)

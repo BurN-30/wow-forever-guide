@@ -13,7 +13,7 @@ return {
 	-- {npc:1646} Baros Alexston · {quest:389} Bazil Thredd
 	["{npc:1646}: {quest:389} (after the Deadmines)"] = "{npc:1646} : {quest:389} (après les Mortemines)",
 	-- {npc:1646} Baros Alexston · {object:2159} City Hall · {object:2098} Cathedral Square · {npc:1719} Warden Thelwater · {quest:391} The Stockade Riots
-	["{npc:1646}, in the {object:2159} on {object:2098}, sends whoever handed in VanCleef's Unsent Letter to {npc:1719}: it opens {quest:391}, the prison's best quest."] = "{npc:1646}, dans l'{object:2159} sur la {object:2098}, envoie chez {npc:1719} qui a rendu la lettre jamais envoyée de VanCleef : elle ouvre {quest:391}, la meilleure quête de la prison.",
+	["{npc:1646}, in the {object:2159} on {object:2098}, sends whoever handed in VanCleef's Unsent Letter to {npc:1719}: it opens {quest:391}, the prison's best quest."] = "{npc:1646}, dans l'hôtel de ville sur la {object:2098}, envoie chez {npc:1719} qui a rendu la lettre jamais envoyée de VanCleef : elle ouvre {quest:391}, la meilleure quête de la prison.",
 
 	-- Step 2: Stormwind: Warden Thelwater
 	-- {zone:1453} Stormwind · {object:2101} Mage Quarter · {object:2100} Old Town · {npc:1719} Warden Thelwater · {object:2098} Cathedral Square
@@ -29,16 +29,22 @@ return {
 	-- plural, as words: Red Wool Bandanas = {item:2909} Red Wool Bandana
 	["{npc:1721} stands in {object:2100}: the Red Wool Bandanas she wants drop from the Defias inside."] = "{npc:1721} se tient dans la {object:2100} : les bandanas en laine rouge qu'elle veut tombent des Défias de la prison.",
 
-	-- Step 5: For whoever carries them from this pack's former route
-	["For whoever carries them from this pack's former route"] = "Pour qui les porte depuis l'ancien parcours du paquet",
-	-- {npc:859} Guard Berton · {quest:377} Crime and Punishment · {npc:270} Councilman Millstipe · {npc:1663} Dextren Ward
-	["What Comes Around ({npc:859}, Lakeshire) wants Targorr's head, {quest:377} ({npc:270}, Darkshire) {npc:1663}'s hand: both are in the prison, and their hand-ins come after the run."] = "Retour de bâton (What Comes Around, {npc:859}, Comté-du-Lac) veut la tête de Targorr, {quest:377} ({npc:270}, Sombre-Comté) la main de {npc:1663} : les deux sont dans la prison, et leurs rendus viennent après le donjon.",
+	-- Step 5: What Comes Around, for whoever carries it
+	["What Comes Around, for whoever carries it"] = "Retour de bâton, pour qui la porte",
+	-- {npc:859} Guard Berton
+	["What Comes Around ({npc:859}, Lakeshire) wants Targorr's head: he is in the prison, and the hand-in comes after the run."] = "Retour de bâton ({npc:859}, Comté-du-Lac) demande la tête de Targorr : il est dans la prison, et le rendu vient après le donjon.",
 	-- {npc:859} Guard Berton
 	["{npc:859}, Lakeshire"] = "{npc:859}, Comté-du-Lac",
+
+	-- Step 6: Crime and Punishment, for whoever carries it
+	-- {quest:377} Crime and Punishment
+	["{quest:377}, for whoever carries it"] = "{quest:377}, pour qui la porte",
+	-- {quest:377} Crime and Punishment · {npc:270} Councilman Millstipe · {npc:1663} Dextren Ward
+	["{quest:377} ({npc:270}, Darkshire) wants {npc:1663}'s hand: he is in the prison, and the hand-in comes after the run."] = "{quest:377} ({npc:270}, Sombre-Comté) demande la main de {npc:1663} : il est dans la prison, et le rendu vient après le donjon.",
 	-- {npc:270} Councilman Millstipe
 	["{npc:270}, Darkshire"] = "{npc:270}, Sombre-Comté",
 
-	-- Step 6: Enter the Stockade
+	-- Step 7: Enter the Stockade
 	["Enter the Stockade"] = "Entrer dans la Prison",
 	-- {npc:1719} Warden Thelwater
 	-- plural, as words: Defias Prisoners = {npc:1706} Defias Prisoner
@@ -47,7 +53,7 @@ return {
 	["In the log before going in: Quell the Uprising and {quest:391} ({npc:1719}), {quest:388} ({npc:1721}). Share each quest with the group: click it in the quest log, then Share."] = "Dans le journal avant d'entrer : Mater la révolte (Quell the Uprising) et {quest:391} ({npc:1719}), {quest:388} ({npc:1721}). Partager chaque quête avec le groupe : clic sur la quête dans le journal, puis Partager.",
 	["The Stockade"] = "La Prison",
 
-	-- Step 7: The entry corridor and Targorr
+	-- Step 8: The entry corridor and Targorr
 	["The entry corridor and Targorr"] = "Le couloir d'entrée et Targorr",
 	-- {npc:1696} Targorr the Dread
 	["Cells line both sides, 3 or 4 elites each, and runners flee into the next cell for help: stop them or clear each cell as you pass. {npc:1696} hides in a side cell of this corridor (often first on the right or second on the left); a patrol walks between the two wings."] = "Des cellules des deux côtés, 3 ou 4 élites chacune, et les fuyards courent chercher de l'aide dans la cellule voisine : les arrêter ou vider chaque cellule au passage. {npc:1696} se cache dans une cellule de ce couloir (souvent la 1re à droite ou la 2e à gauche) ; une patrouille circule entre les deux ailes.",
@@ -58,14 +64,14 @@ return {
 	-- {npc:1720} Bruegal Ironknuckle
 	["At the junction, type /target {npc:1720}: if a frame shows, the rare elite (26) is in a cell nearby, with the best loot of the dungeon."] = "Au croisement, taper /target {npc:1720} : si un cadre s'affiche, l'élite rare (26) est dans une cellule proche, avec le meilleur butin du donjon.",
 
-	-- Step 8: The west wing: Dextren Ward
+	-- Step 9: The west wing: Dextren Ward
 	-- {npc:1663} Dextren Ward
 	["The west wing: {npc:1663}"] = "L'aile ouest : {npc:1663}",
 	["Left at the junction, to the small hall at the end. Clear every room around it first: his Intimidating Shout fears the group into fresh packs. He runs at low health: stop him."] = "À gauche au croisement, jusqu'à la petite salle du bout. Vider d'abord chaque pièce autour : son cri d'intimidation fait fuir le groupe vers des groupes frais. Il fuit à faible vie : l'arrêter.",
 	-- {item:3628} Hand of Dextren Ward
 	["{item:3628}, elite 26"] = "{item:3628}, élite 26",
 
-	-- Step 9: The east wing: Kam, Hamhock and Bazil Thredd
+	-- Step 10: The east wing: Kam, Hamhock and Bazil Thredd
 	-- {npc:1717} Hamhock · {npc:1716} Bazil Thredd
 	["The east wing: Kam, {npc:1717} and {npc:1716}"] = "L'aile est : Kam, {npc:1717} et {npc:1716}",
 	-- {npc:1666} Kam Deepfury · {npc:1717} Hamhock · {npc:1716} Bazil Thredd
@@ -73,7 +79,7 @@ return {
 	-- {item:2926} Head of Bazil Thredd
 	["{item:2926}, elite 29"] = "{item:2926}, élite 29",
 
-	-- Step 10: Finish the clear
+	-- Step 11: Finish the clear
 	["Finish the clear"] = "Finir le nettoyage",
 	["One Convict short after a full clear? Wait a few minutes at the entrance for the respawn rather than resetting. Two chests, one in each wing. Leaving through the portal drops whatever chases you."] = "Un forçat manquant après un tour complet ? Attendre quelques minutes la réapparition à l'entrée plutôt que réinitialiser. Deux coffres, un par aile. Ressortir par le portail fait lâcher prise à tout poursuivant.",
 	-- plural, as words: Defias Prisoners = {npc:1706} Defias Prisoner
@@ -81,46 +87,50 @@ return {
 	-- {item:2909} Red Wool Bandana
 	["{item:2909}: any Defias inside"] = "{item:2909} : n'importe quel Défias à l'intérieur",
 
-	-- Step 12: Warden Thelwater: The Stockade Riots
+	-- Step 14: Warden Thelwater: The Curious Visitor (the end of the Defias story)
+	-- {npc:1719} Warden Thelwater · {quest:392} The Curious Visitor
+	["{npc:1719}: {quest:392} (the end of the Defias story)"] = "{npc:1719} : {quest:392} (la fin de l'histoire des Défias)",
+	-- {zone:1453} Stormwind · {item:2933} Seal of Wrynn · {npc:1721} Nikova Raskol · {object:2100} Old Town
+	["The end of the Defias story follows, all in {zone:1453} and at the farm by its gate: about 8,000 XP and the {item:2933}, a ring, at the end; its last fight is better with the group. Short on time? Skip it: {npc:1721} in {object:2100} ends the chapter."] = "La fin de l'histoire des Défias suit, toute à {zone:1453} et à la ferme près de sa porte : environ 8 000 XP et le {item:2933}, une bague, à la fin ; son dernier combat passe mieux en groupe. Peu de temps ? La passer : {npc:1721}, dans {object:2100}, termine le chapitre.",
 	-- {quest:392} The Curious Visitor · {npc:1646} Baros Alexston · {object:2098} Cathedral Square
 	["{quest:392}: for {npc:1646}, {object:2098}"] = "{quest:392} : pour {npc:1646}, {object:2098}",
 
-	-- Step 13: Baros Alexston: The Curious Visitor
-	-- {npc:1646} Baros Alexston · {object:2159} City Hall · {object:2098} Cathedral Square · {zone:1453} Stormwind · {item:2933} Seal of Wrynn · {npc:1721} Nikova Raskol · {object:2100} Old Town
-	["{npc:1646} is in the {object:2159} on {object:2098}. The end of the Defias story follows, all in {zone:1453} and at the farm by its gate: about 8,000 XP and the {item:2933}, a ring, at the end. Short on time? Go straight to {npc:1721} in {object:2100}."] = "{npc:1646} est dans l'{object:2159} sur la {object:2098}. La fin de l'histoire des Défias suit, toute à {zone:1453} et à la ferme près de sa porte : environ 8 000 XP et le {item:2933}, une bague, à la fin. Peu de temps ? Aller directement voir {npc:1721} dans la {object:2100}.",
+	-- Step 15: Baros Alexston: The Curious Visitor
+	-- {npc:1646} Baros Alexston · {object:2159} City Hall · {object:2098} Cathedral Square
+	["{npc:1646} is in the {object:2159} on {object:2098}."] = "{npc:1646} est dans l'hôtel de ville, sur {object:2098}.",
 
-	-- Step 14: Stormwind: the end of the Defias story
+	-- Step 16: Stormwind: the end of the Defias story
 	-- {zone:1453} Stormwind
 	["{zone:1453}: the end of the Defias story"] = "{zone:1453} : la fin de l'histoire des Défias",
 	-- {quest:391} The Stockade Riots · {npc:1646} Baros Alexston · {object:2159} City Hall · {object:2098} Cathedral Square · {object:2100} Old Town · {npc:482} Elling Trias · {object:2096} Trade District · {npc:7766} Tyrion · {object:2117} Stormwind Keep
-	["Only if you did {quest:391}. {npc:1646} is in the {object:2159} on {object:2098}, Mathias Shaw upstairs at SI:7 in {object:2100}, {npc:482} upstairs in the cheese shop of the {object:2096}, {npc:7766} in the garden beside {object:2117}."] = "Seulement après {quest:391}. {npc:1646} est dans l'{object:2159} sur la {object:2098}, Mathias Shaw à l'étage du SI:7 dans la {object:2100}, {npc:482} à l'étage de la fromagerie du {object:2096}, {npc:7766} dans le jardin à côté du {object:2117}.",
+	["Only if you did {quest:391}. {npc:1646} is in the {object:2159} on {object:2098}, Mathias Shaw upstairs at SI:7 in {object:2100}, {npc:482} upstairs in the cheese shop of the {object:2096}, {npc:7766} in the garden beside {object:2117}."] = "Seulement après {quest:391}. {npc:1646} est dans l'hôtel de ville sur la {object:2098}, Mathias Shaw à l'étage du SI:7 dans la {object:2100}, {npc:482} à l'étage de la fromagerie du {object:2096}, {npc:7766} dans le jardin à côté du {object:2117}.",
 
-	-- Step 15: Clara's apples
+	-- Step 17: Clara's apples
 	["Clara's apples"] = "Les pommes de Clara",
 	-- {zone:1453} Stormwind · {item:4306} Silk Cloth
-	["The bowl of apples sits on the table of the farmhouse just outside the {zone:1453} gate, south-west of the road. {item:4306}: from your bags, humanoids or the Auction House."] = "Le bol de pommes repose sur la table de la ferme juste à l'extérieur de la porte de {zone:1453}, au sud-ouest de la route. {item:4306} : dans vos sacs, sur des humanoïdes ou à l'hôtel des ventes.",
+	["The bowl of apples sits on the table of the farmhouse just outside the {zone:1453} gate, south-west of the road. {item:4306}: from your bags, humanoids or the Auction House."] = "Le bol de pommes repose sur la table de la ferme juste à l'extérieur de la porte de {zone:1453}, au sud-ouest de la route. {item:4306} : dans les sacs, sur des humanoïdes ou à l'hôtel des ventes.",
 
-	-- Step 16: The Attack!
+	-- Step 18: The Attack!
 	-- {npc:1754} Lord Gregor Lescovar · {npc:1755} Marzon the Silent Blade
 	["{npc:1754} and {npc:1755} meet in the garden beside the keep: listen to them, then fight both, together. Better with the group."] = "{npc:1754} et {npc:1755} se retrouvent dans le jardin à côté du donjon : les écouter, puis les combattre tous les deux, ensemble. Mieux avec le groupe.",
 	-- {npc:1755} Marzon the Silent Blade
 	["Overhear Lescovar and {npc:1755} in the garden, then kill both"] = "Écouter Lescovar et {npc:1755} dans le jardin, puis les tuer tous les deux",
 
-	-- Step 17: Brotherhood's End
+	-- Step 19: Brotherhood's End
 	-- {npc:1749} Lady Katrana Prestor · {object:2117} Stormwind Keep · {item:2933} Seal of Wrynn
 	["{npc:1749}, in the throne room of {object:2117}: {item:2933}"] = "{npc:1749}, dans la salle du trône de l'{object:2117} : {item:2933}",
 
-	-- Step 18: Lakeshire: Guard Berton
+	-- Step 20: Lakeshire: Guard Berton
 	-- {npc:859} Guard Berton
 	["Lakeshire: {npc:859}"] = "Comté-du-Lac : {npc:859}",
 	["Fly to Lakeshire and back: a few minutes for the biggest reward of the prison."] = "Aller-retour en vol à Comté-du-Lac : quelques minutes pour la plus grosse récompense de la Prison.",
 
-	-- Step 19: Darkshire: Councilman Millstipe
+	-- Step 21: Darkshire: Councilman Millstipe
 	-- {npc:270} Councilman Millstipe
 	["Darkshire: {npc:270}"] = "Sombre-Comté : {npc:270}",
 	-- {npc:270} Councilman Millstipe
 	["{npc:270}, town hall"] = "{npc:270}, hôtel de ville",
 
-	-- Step 20: Old Town: Nikova Raskol
+	-- Step 22: Old Town: Nikova Raskol
 	["Last stop of the chapter: the route's own guide comes back once this is handed in."] = "Dernier arrêt du chapitre : le guide du parcours revient une fois cette quête rendue.",
 }

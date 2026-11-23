@@ -13,9 +13,9 @@ return {
 	-- {npc:4453} Wizzle Brassbolts
 	["Zul'Farrak, second run: {npc:4453}"] = "Zul'Farrak, second passage : {npc:4453}",
 	-- {quest:2770} Gahz'rilla · {item:11122} Carrot on a Stick · {item:9240} Mallet of Zul'Farrak · {zone:1425} Hinterlands · {item:9241} Sacred Mallet · {npc:7996} Qiaga the Keeper
-	["A second Zul'Farrak run for {quest:2770}, the boss of the sacred pool: 14,600 XP and the {item:11122}, a trinket that speeds up a mount. One player of the group needs the {item:9240}, made in the {zone:1425} (the {item:9241} from {npc:7996} at the top of the Altar of Zul, used on the altar at the very top of Jintha'Alor). Nobody has it? Close this chapter: {quest:2770} cannot be called."] = "Un second passage à Zul'Farrak pour {quest:2770}, le boss du bassin sacré : 14 600 points d'expérience et la {item:11122}, un bijou qui accélère la monture. Un joueur du groupe doit avoir le {item:9240}, fait dans les {zone:1425} (le {item:9241} de {npc:7996} en haut de l'Autel de Zul, utilisé sur l'autel tout en haut de Jintha'Alor). Personne ne l'a ? Fermer ce chapitre : {quest:2770} ne peut pas être appelé.",
+	["A second Zul'Farrak run for {quest:2770}, the boss of the sacred pool: 14,600 XP and the {item:11122}, a trinket that speeds up a mount. One player of the group needs the {item:9240}, made in the {zone:1425} (the {item:9241} from {npc:7996} at the top of the Altar of Zul, used on the altar at the very top of Jintha'Alor). Nobody in the group has it? Skip it: {quest:2770} cannot be called, and the chapter closes."] = "Un second passage à Zul'Farrak pour {quest:2770}, le boss du bassin sacré : 14 600 XP et la {item:11122}, un bijou qui accélère la monture. Un joueur du groupe doit avoir le {item:9240}, fait dans les {zone:1425} (le {item:9241} pris sur {npc:7996} au sommet de l'autel de Zul, utilisé sur l'autel tout en haut de Jintha'Alor). Personne dans le groupe ne l'a ? La passer : {quest:2770} ne peut pas être appelé, et le chapitre se ferme.",
 	-- {npc:4453} Wizzle Brassbolts · {object:151976} Shimmering Flats · {quest:2770} Gahz'rilla
-	["{npc:4453} stands at the Mirage Raceway on the {object:151976}, about 3 minutes north of Gadgetzan. Already took {quest:2770} from him at 46? This step ticks itself."] = "{npc:4453} se tient au circuit de Mirage sur les {object:151976}, à environ 3 minutes au nord de Gadgetzan. {quest:2770} déjà prise auprès de lui à 46 ? Cette étape se coche seule.",
+	["{npc:4453} stands at the Mirage Raceway on the {object:151976}, about 3 minutes north of Gadgetzan. Already took {quest:2770} from him at 46? This step ticks itself."] = "{npc:4453} se tient au circuit de Mirage sur les Salines, à environ 3 minutes au nord de Gadgetzan. {quest:2770} déjà prise auprès de lui à 46 ? Cette étape se coche seule.",
 
 	-- Step 2: Zul'Farrak: Gahz'rilla
 	-- {quest:2770} Gahz'rilla
@@ -30,6 +30,6 @@ return {
 
 	-- Step 3: Mirage Raceway: Wizzle Brassbolts
 	-- {npc:4453} Wizzle Brassbolts
-	["Mirage Raceway: {npc:4453}"] = "Piste des Mirages : {npc:4453}",
+	["Mirage Raceway: {npc:4453}"] = "Circuit de Mirage : {npc:4453}",
 	["Back north to the Mirage Raceway. Last stop of the chapter: the route's own guide comes back once this is handed in, at Gadgetzan."] = "Retour au nord vers le circuit de Mirage. Dernier arrêt du chapitre : le guide du parcours revient une fois cette quête rendue, à Gadgetzan.",
 }

@@ -39,7 +39,7 @@ zone Swamp of Sorrows
 step Stormwind: Brohann Caskbelly
   when !onquest 1475
   zone Stormwind City
-  tip The Sunken Temple: a troll and dragon dungeon under the Pool of Tears in the Swamp of Sorrows, levels 50 to 60, best at 51 to 55 with a group of 5. Its main quest is Brohann Caskbelly's, in Stormwind: from Nethergarde Keep, the flight to Stormwind and back, about 7 minutes.
+  tip The Sunken Temple: a troll and dragon dungeon under the Pool of Tears in the Swamp of Sorrows, levels 50 to 60, best from about 52 with a group of 5: its last bosses are 55. Its main quest is Brohann Caskbelly's, in Stormwind: from Nethergarde Keep, the flight to Stormwind and back, about 7 minutes.
   accept 1475                         -- Brohann Caskbelly
 
 step Sunken Temple: the Pool of Tears
@@ -59,18 +59,20 @@ step Marvon Rivetseeker: Secret of the Circle
   accept 3447                         -- Marvon Rivetseeker
 
 step Sunken Temple: the circle and the Altar of Hakkar
+  when onquest 3446,3447
   tip On the upper ring, six Atal'ai statues stand around the central pit: click them in this order, south, north, south-west, south-east, north-west, north-east (the original game's order, to check in game); the Idol of Hakkar rises, with a chest. The Altar of Hakkar is at the bottom of the central pit, where Atal'alarion waits.
-  turnin 3447 object 148838 optional  -- Idol of Hakkar
-  turnin 3446 object 148836 optional  -- Altar of Hakkar
+  turnin 3447 object 148838           -- Idol of Hakkar
+  turnin 3446 object 148836           -- Altar of Hakkar
 
 step Sunken Temple: the tablets and Jammal'an
   tip The Atal'ai Tablets lie in the temple's halls: pick them up as you clear. Jammal'an the Prophet waits on the upper level, once the six troll champions of the balconies around the central pit are dead.
   collect 6288 x10 quest 1475         -- Atal'ai Tablet
 
 step Sunken Temple: the Shade of Eranikus
-  tip The Shade of Eranikus waits at the very end, past the green dragons. He drops the Essence of Eranikus: right-click it, then hand it in at the Essence Font in his room before you leave.
+  tip The Shade of Eranikus waits at the very end, past the green dragons. He drops the Essence of Eranikus: right-click it, then hand it in at the Essence Font in his room before leaving.
+  kill 5709                           -- Shade of Eranikus
   accept 3373 item 10454 optional     -- Essence of Eranikus, a drop
-  turnin 3373 object 148512 optional  -- Essence Font
+  turnin 3373 object 148512           -- Essence Font
 
 step Stormwind: Brohann Caskbelly
   zone Stormwind City

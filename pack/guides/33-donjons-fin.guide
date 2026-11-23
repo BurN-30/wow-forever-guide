@@ -260,9 +260,10 @@ step Blackrock Mountain: Overmaster Pyron
 
 step Franclorn Forgewright (one player is enough)
   when done brd-start
-  tip The Shadowforge Key opens the doors of the second and third visits (the Shadowforge Gates of the prison and the Shadowforge Lock): one key in the group is enough. Franclorn's ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with Franclorn, then come back to life at your body or by a group mate's spell. To check in game.
+  tip The Shadowforge Key opens the doors of the second and third visits (the Shadowforge Gates of the prison and the Shadowforge Lock): one key in the group is enough. Franclorn's ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off the gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with Franclorn, then come back to life at the body or by a group mate's spell. To check in game.
+  task "The key: one player of the group has it, or takes Dark Iron Legacy here"
   accept 3801 optional                -- Franclorn Forgewright, as a ghost
-  turnin 3801 optional
+  turnin 3801
   accept 3802 optional
 
 step Blackrock Depths: along the way
@@ -294,24 +295,25 @@ step Detention Block: Kharan and Windsor
 step Ring of the Law and the Shrine of Thaurissan
   when done brd-start
   tip The open gate on the east side of the Detention Block leads into the Ring of the Law: the gate closes behind you, two waves of beasts come, then a random boss. Once it is down, a second gate opens into the East Garrison. From there, climb the stairs beside the arena gate and walk round the stands, close to the inner railing (the Arena Spectators come at you when you pass too near), to the Shrine of Thaurissan: Pyromancer Loregrain kneels before the Monument of Franclorn Forgewright.
-  kill 9024 optional                  -- Pyromancer Loregrain
+  kill 9024                           -- Pyromancer Loregrain
 
 step The Domicile and the Black Vault
   when done brd-start
   tip From the Shrine, the bridge leads into the Domicile, then to the upper balcony of the Hall of Crafting, which opens on the Black Vault: Warder Stilgiss and Verek (elite 56 and 55). With 12 Relic Coffer Keys, open the 12 Relic Coffer doors; after the last one, the Warbringer Constructs wake, then Watchman Doomgrip comes. The Secret Safe under the Dark Coffer then holds the Heart of the Mountain. Fewer than 12 keys? Leave it: the guide does not come back to the vault.
-  kill 9041 optional                  -- Warder Stilgiss
+  kill 9041                           -- Warder Stilgiss
   collect 11309 quest 4123 optional   -- The Heart of the Mountain: the Secret Safe
 
 step Hall of Crafting: Fineous Darkvire
   when done brd-start
   tip Fineous Darkvire (elite 54) walks up and down the winding ramp of the Hall of Crafting: clear the ramp first, interrupt his Holy Light. He drops Ironfel for every player on Dark Iron Legacy.
+  kill 9056                           -- Fineous Darkvire
   collect 10999 quest 3802            -- Ironfel: Fineous Darkvire
 
 step Shrine of Thaurissan: the monument
   label brd-v1-end
   when done brd-start
-  tip Back up through the Domicile to the Shrine: place Ironfel on the Monument of Franclorn Forgewright. The Shadowforge Key is the reward. Then walk out the way you came: round the stands, through the Ring of the Law (its gates stay open) and the Detention Block.
-  turnin 3802 optional                -- Monument of Franclorn Forgewright
+  tip Back up through the Domicile to the Shrine: whoever carries Ironfel places it on the Monument of Franclorn Forgewright. The Shadowforge Key is the reward. Then walk out the way you came: round the stands, through the Ring of the Law (its gates stay open) and the Detention Block.
+  turnin 3802                         -- Monument of Franclorn Forgewright
 
 step Flame Crest: Maxwort Uberglint
   when complete 4123
@@ -358,14 +360,16 @@ step Fly to Thorium Point
   zone Searing Gorge
 
 step Blackrock Depths, second visit: before going in
+  label brd-v2-start
   when done brd-start
+  when group 4282
   zone Searing Gorge
-  tip Second visit, with the Shadowforge Key: Windsor's note, the Dark Iron Highway (Bael'Gar), Shadowforge City (Incendius), the West Garrison (Angerforge), the Manufactory (Argelmach), then Jail Break! from Windsor's cell. Bosses 52 to 57: 56 or more advised. From Thorium Point, ride south across the Searing Gorge into Blackrock Mountain.
+  tip The second and third visits need the Shadowforge Key: one in the group is enough (Dark Iron Legacy, first visit). Nobody has it? Skip A Shred of Hope: the guide leaves these two visits out. Second visit, with the key: Windsor's note, the Dark Iron Highway (Bael'Gar), Shadowforge City (Incendius), the West Garrison (Angerforge), the Manufactory (Argelmach), then Jail Break! from Windsor's cell. Bosses 52 to 57: 56 or more advised. From Thorium Point, ride south across the Searing Gorge into Blackrock Mountain.
   note In the quest log: A Taste of Flame (Cyrus), Incendius! (Jalinda Sprig). Keep one free quest log slot for Jail Break!. For the third visit: The Fate of the Kingdom (Magni), Ribbly Screwspigot, Hurley Blackbreath.
   goto 34.8,85.3 map 1427 "Blackrock Depths" r 25
 
 step Detention Block: A Crumpled Up Note
-  when done brd-start
+  when done brd-v2-start
   when turnedin 4242
   tip The Anvilrage dwarves of the Detention Block drop A Crumpled Up Note (about one in four) to those who handed in Abandoned Hope: right-click it. Kill Gerstahn again for the Prison Cell Key and bring the note to Windsor.
   accept 4264                         -- A Crumpled Up Note: Anvilrage dwarves
@@ -373,50 +377,58 @@ step Detention Block: A Crumpled Up Note
   accept 4282
 
 step Dark Iron Highway: Bael'Gar
-  when done brd-start
+  when done brd-v2-start
   tip The Shadowforge Gate on the north side of the Detention Block opens with the key onto the Dark Iron Highway: large packs of dwarves. Bael'Gar (elite 54) stands at its west end; once he is down, use the Altered Black Dragonflight Molt on his remains.
+  kill 9016                           -- Bael'Gar
   collect 11230 quest 4024            -- Encased Fiery Essence: the molt on Bael'Gar's remains
 
 step Shadowforge City: Lord Incendius
-  when done brd-start
+  when done brd-v2-start
   tip The great doors at the east end of the Highway open on Shadowforge City, above a lava lake. Lord Incendius (elite 55) guards the Black Anvil on the central bridge: tank him in the middle, his Mighty Blow knocks you into the lava, with no way back up.
-  kill 9017 quest 4263                -- Lord Incendius
+  kill 9017                           -- Lord Incendius
+  kill 9017 quest 4263                -- Lord Incendius, for Incendius!
 
 step West Garrison and the Manufactory
-  when done brd-start
+  when done brd-v2-start
   tip Back along the Highway to the Detention Block, then through the East Garrison Door (the key) into the East Garrison. Go down the stairs to the Shadowforge Lock, the great wheel, and open it with the key: the giant door over the Highway turns, and its passage leads across to the West Garrison. Down the left-hand stairs: General Angerforge (elite 57, calls adds at low health). Down the right-hand stairs, across the Manufactory: Golem Lord Argelmach and his two golems (kill the golems first). Each drops part of Marshal Windsor's Lost Information.
+  kill 9033                           -- General Angerforge
   collect 11464 quest 4282            -- Marshal Windsor's Lost Information: General Angerforge
+  kill 8983                           -- Golem Lord Argelmach
   collect 11465 quest 4282            -- Marshal Windsor's Lost Information: Golem Lord Argelmach
 
 step Detention Block: Jail Break!
   label brd-v2-end
-  when done brd-start
+  when done brd-v2-start
   tip Back to Windsor's cell. Everyone hands in A Shred of Hope before anyone starts Jail Break!, with a free quest log slot. Windsor gets his gear back in the supply room clockwise from his cell, then frees his friends from the cells of the corridor round the Ring of the Law: open each cell when he asks, not before. Stay near him; he must not die. At the end he runs to the entrance and the quest is done. Failed? Abandon it, leave and reset the dungeon, then try again.
   turnin 4282                         -- Marshal Windsor
   accept 4322
   complete 4322                       -- Escort Marshal Windsor
 
 step Blackrock Depths, third visit: the Grim Guzzler
-  when done brd-start
+  when done brd-v2-start
   tip Third visit: the bottom of the dungeon, bosses 55 to 59, 58 or more advised. With the time, go on in the same run; or come back later: through the East Garrison Door, the Shadowforge Lock and the West Garrison again. Past Argelmach, the bridge leads to the Grim Guzzler: its patrons are neutral, so no area spells. Ribbly Screwspigot is friendly until threatened (his talk option): he fights with his cronies. Smash the three Thunderbrew Lager Kegs of the storage room near him: Hurley Blackbreath comes with his cronies. To open the Bar Door, buy Dark Iron Ale Mugs from Plugger Spazzring and give them to Private Rocknot until he loses his temper: Phalanx then breaks the door and attacks.
+  kill 9543                           -- Ribbly Screwspigot
   collect 11313 quest 4136            -- Ribbly's Head: Ribbly Screwspigot
+  kill 9537                           -- Hurley Blackbreath
   collect 11312 quest 4126            -- Lost Thunderbrew Recipe: Hurley Blackbreath
+  kill 9502                           -- Phalanx
 
 step Ambassador Flamelash and the Seven
-  when done brd-start
+  when done brd-v2-start
   tip Through the Bar Door, left into the Chamber of Enchantment: Ambassador Flamelash (elite 57) calls adds from the corners, kill them before they reach him. Then the Mold Foundry and the Summoners' Tomb: speak with Doom'rel to start the Seven, who come one after the other; the door opens after the last. To the right on the way out: the Molten Bridge and the Molten Core's portal (raid).
-  kill 9156 optional                  -- Ambassador Flamelash
+  kill 9156                           -- Ambassador Flamelash
 
 step The Lyceum and Magmus
-  when done brd-start
+  when done brd-v2-start
   tip In the Lyceum, the Shadowforge Flame Keepers (red armour) drop two Shadowforge Torches: light the two braziers at the back, the doors open on the Iron Hall. Magmus (elite 57) waits at the far end: keep out of the fire jets of the side alcoves.
-  kill 9938 optional                  -- Magmus
+  kill 9938                           -- Magmus
 
 step The Imperial Seat: Emperor Dagran Thaurissan
   label brd-v3-end
-  when done brd-start
+  when done brd-v2-start
   tip Emperor Dagran Thaurissan (elite 59) and Princess Moira Bronzebeard. The Fate of the Kingdom: kill the Emperor WITHOUT killing Moira, who heals him: one player keeps her busy and interrupts her, everyone else on the Emperor. She then stops fighting: speak with her.
-  kill 9019 quest 4362                -- Emperor Dagran Thaurissan
+  kill 9019                           -- Emperor Dagran Thaurissan
+  kill 9019 quest 4362                -- Emperor Dagran Thaurissan, for The Fate of the Kingdom
   turnin 4362                         -- Princess Moira Bronzebeard
   accept 4363
 
@@ -468,7 +480,9 @@ step Kharanos: Ragnar Thunderbrew
 step Blackrock Depths: quests not done
   label brd-end
   when done brd-start
-  tip What is left of Blackrock Depths in the quest log is for another run: keep it for one, or drop it to free the log.
+  when onquest 4123,4282,4322,4362,4263,4024,4136,4126,4286,3802
+  tip What is left of Blackrock Depths in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log).
+  task "Each quest left: kept for another run, or abandoned"
   abandon 4123 optional
   abandon 4282 optional
   abandon 4322 optional
@@ -553,33 +567,39 @@ step Highlord Omokk
   when done lbrs-start
   tip Urok Doomhowl needs a Roughshod Pike: they lean against the wall behind the Scarshield orcs, past the bridge out of Hordemar City. Then the Spirestone ogres: Highlord Omokk (elite 59) and his two guards. His head is for the Urok event: one player with the quest carries the pike and the head.
   collect 12533 optional              -- Roughshod Pike
-  kill 9196 quest 5081                -- Highlord Omokk
+  kill 9196                           -- Highlord Omokk
+  kill 9196 quest 5081                -- Highlord Omokk, for Maxwell's Mission
   collect 12534 optional              -- Omokk's Head
 
 step Tazz'Alaor: War Master Voone
   when done lbrs-start
   tip Down into Tazz'Alaor, the trolls' hall: Shadow Hunter Vosh'gajin (elite 59, two priests at her side), then down the great ramp and along the hall to War Master Voone (elite 59, no adds, hits very hard).
-  kill 9237 quest 5081                -- War Master Voone
+  kill 9237                           -- War Master Voone
+  kill 9237 quest 5081                -- War Master Voone, for Maxwell's Mission
 
 step Skitterweb Tunnels: Mother Smolderweb
   when done lbrs-start
   tip The spiders' tunnels: the eggs for Kibler. Mother Smolderweb (elite 59) waits at the top. Whoever has Mother's Milk lets her poison them, and nobody removes that poison; then kill her. The poison must still be there at Ragged John's: if it would wear off before the end of the run (to check in game), that player goes out right after her and comes back.
-  kill 10596 optional                 -- Mother Smolderweb
+  kill 10596                          -- Mother Smolderweb
 
 step Urok's Tribute Pile
   when done lbrs-start
   tip Up the ramp past the tunnels, on the corner of the landing, behind two Spirestone orcs: Urok's Tribute Pile, a heap of skulls. The player with the Roughshod Pike and Omokk's Head stands by it and uses the head: waves of ogres come, then Urok Doomhowl (elite 60). Every 30 seconds, the pike used on the pile kills one ogre outright.
+  kill 10584                          -- Urok Doomhowl
   collect 12712 quest 4867            -- Warosh's Mojo: Urok Doomhowl
 
 step Halycon and Gizrul
   when done lbrs-start
   tip Past Quartermaster Zigris, Halycon's lair: the great worg (elite 59) and her pups. Gizrul the Slavener runs in right after her death: no time to rest in between.
-  kill 10220 quest 4701               -- Halycon
+  kill 10220                          -- Halycon
+  kill 10220 quest 4701               -- Halycon, for Put Her Down
+  kill 10268                          -- Gizrul the Slavener
 
 step Overlord Wyrmthalak
   when done lbrs-start
   tip The last boss, Overlord Wyrmthalak (elite 60), calls two adds at half health. He drops General Drakkisath's Command for each player: right-click it.
-  kill 9568 quest 5081                -- Overlord Wyrmthalak
+  kill 9568                           -- Overlord Wyrmthalak
+  kill 9568 quest 5081                -- Overlord Wyrmthalak, for Maxwell's Mission
   accept 5089                         -- General Drakkisath's Command: Overlord Wyrmthalak
 
 step Hordemar City: Warosh
@@ -623,7 +643,9 @@ step Morgan's Vigil: General Drakkisath's Command
 step Lower Blackrock Spire: quests not done
   label lbrs-end
   when done lbrs-start
-  tip What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or drop it to free the log.
+  when onquest 4701,4729,4862,4866,4867,5081
+  tip What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log).
+  task "Each quest left: kept for another run, or abandoned"
   tip Upper Blackrock Spire, up the stairs on the left past the Spire's entrance, is not in this guide: a dungeon made for a raid group of ten, behind a door that opens only with the Seal of Ascension. The seal takes Vaelan's two quests, given inside Lower Blackrock Spire: the gemstones of Highlord Omokk, War Master Voone and Overlord Wyrmthalak with an Unadorned Seal from the Spire's orcs, then Emberstrife, a drake of the Wyrmbog in Dustwallow Marsh, beaten down and bound with the Orb of Draconic Energy.
   abandon 4701 optional
   abandon 4729 optional
@@ -684,18 +706,20 @@ step Dire Maul: before going in
 step Warpwood Quarter: Pusillin
   when done dm-start
   tip Pusillin the imp waits by the entrance: speak with him, then chase him through the first rooms, speaking with him each time he stops. He ends on a platform up a ramp near the back door, where he fights (elite 57). He drops Azj'Tordin's Book of Incantations and the Crescent Key, which opens the western and northern wings: one key in the group is enough.
+  kill 14354                          -- Pusillin
   collect 18261 quest 7441            -- Book of Incantations: Pusillin
   collect 18249 optional              -- Crescent Key: Pusillin
 
 step Warpwood Quarter: Lethtendris
   when done dm-start
   tip Lethtendris (elite 57), a blood elf warlock, fights with her imp Pimgib: interrupt her spells. Her web is for Latronicus.
+  kill 14327                          -- Lethtendris
   collect 18426 quest 7488            -- Lethtendris's Web: Lethtendris
 
 step Warpwood Quarter: Alzzin the Wildshaper
   when done dm-start
   tip Hydrospawn patrols the pool on the next level down. Zevrim Thornhoof (elite 57) sacrifices players on his altar; after him, speak with Old Ironbark: he opens the Conservatory Door. Clear the Warpwood Crushers on the ramp, then Alzzin the Wildshaper (elite 58), who changes shape.
-  kill 11492 optional                 -- Alzzin the Wildshaper
+  kill 11492                          -- Alzzin the Wildshaper
 
 step Lariss Pavilion: Azj'Tordin
   when complete 7441
@@ -731,8 +755,8 @@ step The Shen'dralar Ancient and his treasure
   turnin 7461                         -- Shen'dralar Ancient
   accept 7462 optional                -- Shen'dralar Ancient
   accept 7877 optional                -- Shen'dralar Ancient: the same quest, the other version
-  turnin 7462 optional                -- Treasure of the Shen'dralar, under the ramp of the Athenaeum
-  turnin 7877 optional
+  turnin 7462                         -- Treasure of the Shen'dralar, under the ramp of the Athenaeum
+  turnin 7877
 
 step Feathermoon Stronghold: Latronicus Moonspear
   when complete 7488
@@ -748,7 +772,9 @@ step Feathermoon Stronghold: Scholar Runethorn
 step Dire Maul: quests not done
   label dm-end
   when done dm-start
-  tip What is left of Dire Maul in the quest log is for another run: keep it for one, or drop it to free the log.
+  when onquest 7488,7482,7441,7461
+  tip What is left of Dire Maul in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log).
+  task "Each quest left: kept for another run, or abandoned"
   abandon 7488 optional
   abandon 7482 optional
   abandon 7441 optional
@@ -925,12 +951,12 @@ step King's Square: Ezra Grimm
 step Market Row and Crusaders' Square
   when done strat-start
   tip Back through King's Square, then Market Row (Hearthsinger Forresten, rare, may walk there) to Crusaders' Square: Timmy the Cruel runs out once the square is cleared. Never click a pattern on the ground during a fight: it calls the Crimson Hammersmith. The Scarlet Bastion opens on the square.
-  kill 10808 optional                 -- Timmy the Cruel
+  kill 10808                          -- Timmy the Cruel
 
 step The Scarlet Bastion: Malor's Strongbox
   when done strat-start
   tip In the Bastion, Malor the Zealous (elite 60) guards the Hoard: his strongbox, on the ground beside him, holds the Medallion of Faith. One medallion per run: whoever loots it keeps it for Aurius, in the third visit. Cannon Master Willey (elite 60) holds the armoury and calls riflemen: the cannons of his room fire on them.
-  kill 11032 optional                 -- Malor the Zealous
+  kill 11032                          -- Malor the Zealous
   collect 12845 optional              -- Medallion of Faith: Malor's Strongbox
 
 step The Scarlet Bastion: Archivist Galford
@@ -948,8 +974,9 @@ step The Scarlet Bastion: the painting
 step Festival Lane and Elders' Square
   label strat-v1-end
   when done strat-start
-  tip Out of the Bastion, Festival Lane: The Unforgiven (elite 57) calls spirits, kill them first. Then Elders' Square: Magistrate Barthilas (elite 58) stands before Alonsus Chapel and drops the Key to the City. It opens the Service Entrance, the gate on this square, and the gate of the Gauntlet: one key in the group is enough. Leave the dungeon by the Service Entrance, or the way you came; keep the group together, without resetting the instance: the next two visits come back into it.
-  kill 10435 optional                 -- Magistrate Barthilas
+  tip Out of the Bastion, Festival Lane: The Unforgiven (elite 57) calls spirits, kill them first. Then Elders' Square: Magistrate Barthilas (elite 58) stands before Alonsus Chapel and drops the Key to the City. It opens the Service Entrance, the gate on this square, and the gate of the Gauntlet: one key in the group is enough, whoever loots it keeps it for the third visit. Leave the dungeon by the Service Entrance, or the way you came; keep the group together, without resetting the instance: the next two visits come back into it. An instance left empty too long may reset itself (to check in game): do not linger between visits.
+  kill 10516                          -- The Unforgiven
+  kill 10435                          -- Magistrate Barthilas
   collect 12382 optional              -- Key to the City: Magistrate Barthilas
 
 step Light's Hope Chapel: Betina Bigglezink
@@ -979,7 +1006,7 @@ step Stratholme, second visit: Balnazzar
   when done strat-start
   tip Second visit: back into the same instance by the main gate, through the cleared streets to the Scarlet Bastion's last chamber. Grand Crusader Dathrohan (elite 62) turns into Balnazzar, a dread lord, during the fight: dispel his Deep Sleep, stand at range from his Psychic Scream. His head starts The Truth Comes Crashing Down for those who handed in The Archivist: right-click it.
   goto 26.5,10.4 map 1423 "Stratholme" r 25
-  kill 10813 optional                 -- Balnazzar
+  kill 10813                          -- Balnazzar
   accept 5262                         -- Head of Balnazzar: Balnazzar
 
 step Light's Hope Chapel: The Truth Comes Crashing Down
@@ -999,30 +1026,41 @@ step Stratholme, third visit: before going in
 
 step Elders' Square: Aurius
   when done strat-start
+  when has 12845
   tip Aurius waits in Alonsus Chapel, on Elders' Square: the player with the Medallion of Faith hands it in, then takes Aurius' Reckoning. With the medallion handed in during this instance, Aurius joins the fight against Baron Rivendare. Whether he offers Aurius' Reckoning to the others of the group too: to check in game.
-  accept 5122 optional                -- Aurius: with the Medallion of Faith
-  turnin 5122 optional
-  accept 5125 optional                -- Aurius
+  accept 5122                         -- Aurius: with the Medallion of Faith
+
+step Elders' Square: Aurius' Reckoning
+  when done strat-start
+  when onquest 5122
+  tip Hand the Medallion of Faith to Aurius, then take Aurius' Reckoning: he joins the fight against Baron Rivendare.
+  turnin 5122                         -- Aurius
+  accept 5125                         -- Aurius
 
 step The Gauntlet and the ziggurats
   when done strat-start
   tip The Key to the City opens the gate of the Gauntlet. Three ziggurats stand on the dead side, each with a guardian at its door: Nerub'enkan (the first, on the left), Baroness Anastari (the second: she possesses a player, bring them to half health), Maleki the Pallid (the third). Kill each guardian, then every Thuzadin Acolyte inside: the Scourge Data for Betina lies in a small box in one of the three. Stonespine (rare) may walk between the first two.
-  kill 10437 optional                 -- Nerub'enkan
-  kill 10436 optional                 -- Baroness Anastari
-  kill 10438 optional                 -- Maleki the Pallid
+  kill 10437                          -- Nerub'enkan
+  kill 10436                          -- Baroness Anastari
+  kill 10438                          -- Maleki the Pallid
   collect 13176 quest 5213            -- Scourge Data: a small box in one of the ziggurats
 
 step Slaughter Square: Ramstein the Gorger
   when done strat-start
   tip With the three ziggurats cleared, the gates of Slaughter Square open. Kill every Bile Spewer and Venom Belcher in the square: Ramstein the Gorger (elite 61) comes out; he hits hard and knocks his target away. Then a horde of Mindless Undead, then three Black Guard Sentries at the door of the Slaughterhouse.
-  kill 10439 optional                 -- Ramstein the Gorger
+  kill 10439                          -- Ramstein the Gorger
 
 step The Slaughterhouse: Baron Rivendare
   label strat-v3-end
   when done strat-start
   tip Baron Rivendare (elite 62) raises skeletons and his Unholy Aura hurts everyone near him; his Mortal Strike cuts the tank's healing. His head is for Duke Nicholas. Then speak with Aurius for Aurius' Reckoning. The glowing symbol in front of the Baron, Menethil's Gift, belongs to Ras Frostwhisper's chain: not in this guide.
+  kill 10440                          -- Baron Rivendare
   collect 13251 quest 5263            -- Head of Baron Rivendare
-  turnin 5125 optional                -- Aurius, after the fight
+
+step The Slaughterhouse: Aurius, after the fight
+  when complete 5125
+  tip Aurius stands by the Baron's body once the fight is over: speak with him for the reward.
+  turnin 5125                         -- Aurius, after the fight
 
 step Light's Hope Chapel: Betina Bigglezink
   when complete 5213
@@ -1041,14 +1079,30 @@ step Light's Hope Chapel: Duke Nicholas Zverenhoff
   turnin 5265                         -- The Argent Hold
 
 step Light's Hope Chapel: what is left to hand in
-  when onquest 5212,5214,5243,5251,5262
+  when complete 5212
   zone Eastern Plaguelands
   tip Finished in the second or third visit only, or Balnazzar's head kept without the ride: hand them in now.
-  turnin 5212 optional                -- Betina Bigglezink
-  turnin 5214 optional                -- Smokey LaRue
-  turnin 5243 optional                -- Leonid Barthalomew the Revered
-  turnin 5251 optional                -- Duke Nicholas Zverenhoff
-  turnin 5262 optional                -- Duke Nicholas Zverenhoff: the head of Balnazzar
+  turnin 5212                         -- Betina Bigglezink
+
+step Light's Hope Chapel: Smokey LaRue
+  when complete 5214
+  zone Eastern Plaguelands
+  turnin 5214                         -- Smokey LaRue
+
+step Light's Hope Chapel: Leonid Barthalomew the Revered
+  when complete 5243
+  zone Eastern Plaguelands
+  turnin 5243                         -- Leonid Barthalomew the Revered
+
+step Light's Hope Chapel: Duke Nicholas Zverenhoff
+  when complete 5251
+  zone Eastern Plaguelands
+  turnin 5251                         -- Duke Nicholas Zverenhoff
+
+step Light's Hope Chapel: The Truth Comes Crashing Down
+  when onquest 5262
+  zone Eastern Plaguelands
+  turnin 5262                         -- Duke Nicholas Zverenhoff: the head of Balnazzar
 
 step Terrordale: Egan
   when complete 5282
@@ -1065,7 +1119,9 @@ step Tirion Fordring: Of Love and Family
 step Stratholme: quests not done
   label strat-end
   when done strat-start
-  tip What is left of Stratholme in the quest log is for another run: keep it for one, or drop it to free the log.
+  when onquest 5212,5213,5214,5243,5251,5262,5263,5282,5125,5848
+  tip What is left of Stratholme in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log).
+  task "Each quest left: kept for another run, or abandoned"
   abandon 5212 optional
   abandon 5213 optional
   abandon 5214 optional
@@ -1164,13 +1220,13 @@ step The Great Ossuary: the hatchlings and Rattlegore
   tip The plagued hatchlings, dragon whelps, fill a room of the Great Ossuary: a little more than twenty. A rare one drops a Healthy Dragon Scale: keep it for Betina. Jandice Barov waits below their room, behind a torch on the south wall: leave her for now. Rattlegore (elite 61), in the basement of the Ossuary, drops the Viewing Room Key, which opens the rest of the school.
   kill 10678 quest 5529               -- Plagued Hatchling
   collect 13920 optional              -- Healthy Dragon Scale: keep it
-  kill 11622 optional                 -- Rattlegore
+  kill 11622                          -- Rattlegore
   collect 13873 optional              -- Viewing Room Key: Rattlegore
 
 step The Viewing Room and the Laboratory
   when done scholo-start
   tip The Viewing Room: Vectus and Marduk Blackpool stand among neutral students and fight only for Dawn's Gambit: leave them. Then the Laboratory: Ras Frostwhisper (elite 62), a lich who fears and knocks back. The Deed to Brill lies by the west wall of the Laboratory, at the back, past the alchemy lab.
-  kill 10508 optional                 -- Ras Frostwhisper
+  kill 10508                          -- Ras Frostwhisper
   collect 13471 quest 5343            -- The Deed to Brill: the Laboratory
 
 step The Barov Family Vault: the six chambers
@@ -1180,7 +1236,7 @@ step The Barov Family Vault: the six chambers
   kill 11261 quest 5382               -- Doctor Theolen Krastinov
   interact 176544 quest 5382          -- Remains of Eva Sarkhoff
   interact 176545 quest 5382          -- Remains of Lucien Sarkhoff
-  kill 1853 optional                  -- Darkmaster Gandling
+  kill 1853                           -- Darkmaster Gandling
 
 step Caer Darrow: Eva Sarkhoff
   label scholo-v1-end
@@ -1225,12 +1281,14 @@ step Light's Hope Chapel: Betina Bigglezink
   tip Plagued Hatchlings: the flight from Chillwind Camp to Light's Hope Chapel. A Healthy Dragon Scale in the bags? Once Plagued Hatchlings is handed in, right-click it: its quest goes back to Betina at once.
   turnin 5529                         -- Betina Bigglezink
   accept 5582 optional                -- Healthy Dragon Scale, if one dropped
-  turnin 5582 optional
+  turnin 5582
 
 step Scholomance: quests not done
   label scholo-end
   when done scholo-start
-  tip What is left of Scholomance in the quest log is for another run: keep it for one, or drop it to free the log.
+  when onquest 5343,5382,5515,5384,5529
+  tip What is left of Scholomance in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log).
+  task "Each quest left: kept for another run, or abandoned"
   abandon 5343 optional
   abandon 5382 optional
   abandon 5515 optional
