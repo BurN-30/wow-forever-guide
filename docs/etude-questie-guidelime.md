@@ -1,12 +1,14 @@
 # Questie, Guidelime et notre guide : étude du 08/11/2026
 
+> Étude écrite pour la 0.3.0 et laissée telle quelle : elle parle des guides de parcours du paquet de l'époque. Depuis la 0.13.0, le parcours est celui de Polestar d'un bout à l'autre et le paquet n'ajoute plus que ses chapitres (voir « Le parcours et les donjons » dans le README). Ses conclusions sur Questie et Guidelime tiennent toujours.
+
 ## En bref
 
 - **Questie : pas besoin de l'installer.** Ce qu'il apporte d'utile pour nous (objectifs des quêtes sur la carte, zones où trouver les monstres, rendus prêts, donneurs de quêtes) existe déjà dans Polestar, tiré en partie de la même base de données, mais était éteint par défaut. Le paquet l'allume maintenant, en version légère : carte du monde seulement, quêtes de l'étape en avant, le reste atténué.
 - **Questie ne se justifie que** pour son suivi d'objectifs (qui remplace celui du jeu), son journal de quêtes ou les trajets de patrouille des PNJ. Coût : 212 Mo sur le disque (dont environ 185 Mo inutiles pour Forever), une base de 15,5 Mo chargée en jeu, des micro-saccades signalées le 07/11 (corrigées le jour même, sans recul).
 - **Guidelime : non.** Il exige Questie sur Forever, et ses guides Alliance gratuits ne sont pas meilleurs que les nôtres pour un groupe francophone : plus de quêtes (Mortemines, Prison, élites), mais texte sec en anglais, sans astuces, et le Site de fouilles manque ou est bridé. On leur reprend des idées et des quêtes, pas l'addon.
 - **Jouer chacun à son rythme** : Polestar le gère déjà mieux que les deux autres. Il relit le journal de quêtes et les quêtes rendues à chaque connexion, coche ce qui est fait, reprend à la première étape utile. Guidelime coche aussi tout seul, mais Questie n'a pas de guide. Le paquet ajoute « Passer les quêtes grises » par défaut, pour qu'un joueur en avance ne soit pas renvoyé vers des quêtes qui ne rapportent plus rien.
-- **« Limité à 44 »** : aucun plafond à 44 trouvé. Le plafond de WoW Forever est 60 depuis la sortie du 04/11 (pendant la bêta : 20 puis 30), et Blizzard dit qu'il restera à 60. Aucune limite de 44 addons non plus dans le jeu. Le nombre vient peut-être d'ailleurs (un écran, un ami, un serveur ?) : à préciser. Nos guides s'arrêtent à 33 et passent ensuite aux guides de Polestar jusqu'à 60, donc rien n'est à couper.
+- **« Limité à 44 »** : aucun plafond à 44 trouvé. Le plafond de WoW Forever est 60 depuis la sortie du 04/11 (pendant la bêta : 20 puis 30), et Blizzard dit qu'il restera à 60. Aucune limite de 44 addons non plus dans le jeu. Le nombre vient peut-être d'ailleurs (un écran, un ami, un serveur ?) : à préciser. À l'époque, les guides du paquet s'arrêtaient à 33 et passaient ensuite aux guides de Polestar jusqu'à 60, donc rien n'était à couper.
 
 ## Ce qui a changé dans le paquet (version 0.3.0)
 
