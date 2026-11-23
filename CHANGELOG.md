@@ -2,6 +2,38 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.13.0 (2026-11-23)
+
+### Français
+- Relancer le jeu : quitter complètement WoW puis le relancer, un /reload ne suffit pas pour cette version (fichiers d'addon ajoutés, que le jeu ne lit qu'au lancement).
+- Le parcours est maintenant celui de Polestar : ses guides de zone, tenus à jour par ses auteurs, avec moins d'allers-retours et les zones nouvelles de Forever (les Riverglades, Shen'dralas, le mont Hyjal). Les 30 guides de parcours du paquet (départs, Groupes 1 à 30, Solo · Loch Modan) sont retirés.
+- Les donjons sont proposés au fil du parcours : une carte apparaît au bon moment, au plus tard quand Polestar aurait proposé le même donjon, avec « Ouvrir le chapitre », « Plus tard » (redemandé au niveau suivant) ou « Pas pour moi ». Le chapitre s'ouvre dans son propre onglet : le guide du parcours garde sa place et revient tout seul à la fin. Une seule proposition par donjon : la carte de Polestar pour un donjon du paquet ne sort plus. Revoir la proposition : `/ga donjon`.
+- 17 chapitres de donjon, refaits pour partir du parcours de Polestar, chacun avec ses quêtes à prendre, une étape « avant d'entrer » et le donjon boss par boss : Salle des Thanes (vers 15), Ruines de Lordaeron (20), Mortemines (21), Profondeurs de Brassenoire (25), Prison (29), Site de fouilles (30), Gnomeregan (31), Cité de Dalaran (31), Kraal de Tranchebauge (33), Monastère écarlate (39), Souilles de Tranchebauge (41), Uldaman (44), Maraudon (46), Zul'Farrak (46, puis Gahz'rilla vers 49), Temple englouti (51), et les donjons 55-60 (Rochenoire, Hache-Tripes, Stratholme, Scholomance) à partir du niveau 55. Plus le rendez-vous dans la Marche de l'Ouest, pour jouer à plusieurs.
+- La progression est reprise d'après les quêtes faites : un personnage en cours de route est placé dans le guide de Polestar de son niveau, les quêtes déjà rendues comptent, rien n'est à refaire. Un chapitre de donjon ouvert reste ouvert.
+- Le français est complété : les 853 textes que Polestar laisse en anglais dans ses guides Alliance, Shen'dralas et le mont Hyjal compris, sont traduits. Une traduction de Polestar passe toujours avant la nôtre.
+- Polestar propose de nouveau ses guides de quêtes de classe dans un onglet, comme sans le paquet.
+- Les nouveautés du guide s'affichent une fois en jeu, dans la fenêtre des nouveautés de Polestar.
+
+### En jeu
+- **Le parcours est celui de Polestar** : ses guides de zone, tenus à jour par ses auteurs, avec moins d'allers-retours et les zones nouvelles de Forever. La progression est reprise d'après les quêtes déjà rendues : rien n'est à refaire.
+- **Les donjons arrivent au bon moment** : une carte propose le donjon du niveau au fil du parcours. « Ouvrir le chapitre » l'ouvre dans un onglet, le parcours garde sa place et revient à la fin ; « Plus tard » le redemande au niveau suivant. /ga donjon pour revoir la proposition.
+- **Le français est complété** : les textes que Polestar laissait en anglais dans ses guides Alliance sont traduits.
+
+### English
+- Restart the game: quit WoW completely, then start it again; a /reload is not enough for this version (addon files added, which the game only reads at startup).
+- The route is now Polestar's own: its zone guides, kept up to date by its authors, with fewer back-and-forth trips and Forever's new zones (the Riverglades, Shen'dralas, Mount Hyjal). The pack's 30 leveling guides (starts, Groups 1 to 30, Solo · Loch Modan) are removed.
+- Dungeons are offered along the route: a card shows up at the right moment, at the latest when Polestar would have offered the same dungeon, with "Open the chapter", "Later" (asked again at the next level) or "Not for me". The chapter opens in a tab of its own: the route's guide keeps its place and comes back by itself at the end. One offer per dungeon: Polestar's own card for a dungeon of the pack no longer shows. To see the offer again: `/ga dungeon`.
+- 17 dungeon chapters, redone to start from Polestar's route, each with its quests to take, a "before going in" step and the dungeon boss by boss: Hall of Thanes (about 15), Ruins of Lordaeron (20), Deadmines (21), Blackfathom Deeps (25), Stockade (29), Excavation Site (30), Gnomeregan (31), City of Dalaran (31), Razorfen Kraul (33), Scarlet Monastery (39), Razorfen Downs (41), Uldaman (44), Maraudon (46), Zul'Farrak (46, then Gahz'rilla at about 49), Sunken Temple (51), and the level 55-60 dungeons (Blackrock, Dire Maul, Stratholme, Scholomance) from level 55. Plus the Westfall meeting point, for playing together.
+- Your progress carries over from the quests you did: a character halfway along is placed in Polestar's guide for its level, quests already handed in count, nothing to do again. An open dungeon chapter stays open.
+- French is completed: the 853 texts Polestar leaves in English in its Alliance guides, Shen'dralas and Mount Hyjal included, are translated. A translation by Polestar always comes before ours.
+- Polestar offers its class quest guides in a tab again, as without the pack.
+- The guide's news shows once in game, in Polestar's "What's new" window.
+
+### In game
+- **The route is Polestar's**: its zone guides, kept up to date by its authors, with fewer back-and-forth trips and Forever's new zones. Your progress carries over from the quests you handed in: nothing to do again.
+- **Dungeons at the right moment**: along the route, a card offers the dungeon of your level. "Open the chapter" opens it in a tab; the route keeps its place and comes back at the end; "Later" asks again at the next level. /ga dungeon to see the offer again.
+- **French completed**: the texts Polestar left in English in its Alliance guides are translated (French client).
+
 ## v0.12.2 (2026-11-23)
 
 ### Français
