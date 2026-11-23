@@ -172,6 +172,7 @@ step Cenarion Hold
   accept 8282                         -- Noggle Ficklespragg
 
 step Southwind Village
+  when onquest 5527
   tip Ride east to the ruins of Southwind Village. The Dusty Reliquary lies among the ruined buildings, watched by Tortured Sentinels.
   collect 22201 quest 5527.1          -- Dusty Reliquary; inside
 
@@ -322,21 +323,20 @@ step Umber
   turnin 6844                         -- Umber walks around Nighthaven: look inside the circle on the map
   accept 6845
 
+# Groupe Alliance 0.12.2: A Reliquary of Purity (5527) only for a player who took it in Group 28
+# (optional there: Rabine offers it only after a visit to Dire Maul).
 step Rabine Saturna
+  when onquest 5527
   tip Rabine Saturna's house stands in Nighthaven, east of Umber.
   turnin 5527
+
+step Rabine Saturna
+  tip Rabine Saturna's house stands in Nighthaven, east of Umber.
   turnin 6845
 
-# Groupe Alliance 0.12.0: Shards of the Felvine (5526), Rabine's next quest, done in Dire Maul (the
-# end-of-route chapter, behind Alzzin the Wildshaper), asked here (`when group 5526`): Rabine is its
-# only giver and the route never comes back to Moonglade before; the chapter brings it back to her.
-# Level 60, required 56, after A Reliquary of Purity (Polestar's Forever data, TrinityCore). Dropped
-# after Dire Maul when not done.
-step Rabine Saturna: Shards of the Felvine (optional)
-  when group 5526
-  zone Moonglade
-  tip Rabine's next quest, Shards of the Felvine, is done in Dire Maul, in the guide's end-of-route chapter (after Group 30), behind the eastern wing's last boss; the chapter then brings it back here. Take it only if your group means to run Dire Maul then: it stays in the quest log until that. Alone? Skip it.
-  accept 5526                         -- Rabine Saturna
+# Groupe Alliance 0.12.2: the Shards of the Felvine question (5526) moved to the end-of-route
+# chapter, after Dire Maul: A Reliquary of Purity (5527), its prerequisite, is offered only after a
+# visit to Dire Maul, so almost nobody could take 5526 here.
 
 step Umber
   accept 1185                         -- Umber walks around Nighthaven: look inside the circle on the map

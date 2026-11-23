@@ -307,8 +307,8 @@ return {
 	["{npc:9299} in Gadgetzan: keep it"] = "{npc:9299} à Gadgetzan : gardez-la",
 
 	-- Step 80: Rabine Saturna
-	-- {zone:1450} Moonglade
-	["Walk into Timbermaw Hold and take the {zone:1450} branch of the tunnel to Nighthaven."] = "Entrez dans le Repaire des Grumegueules et prenez la branche du tunnel vers {zone:1450} jusqu'à Havrenuit.",
+	-- {zone:1450} Moonglade · {quest:1123} Rabine Saturna · {quest:5527} A Reliquary of Purity
+	["Walk into Timbermaw Hold and take the {zone:1450} branch of the tunnel to Nighthaven.\n{quest:1123} offers {quest:5527} only to a character who has already been inside Dire Maul: without the offer, carry on without it."] = "Entrer dans le Repaire des Grumegueules et prendre la branche du tunnel vers {zone:1450} jusqu'à Havrenuit.\n{quest:1123} ne propose {quest:5527} qu'à un personnage déjà entré dans Hache-Tripes : sans cette proposition, continuer sans elle.",
 	-- {zone:1451} Silithus
 	["For {zone:1451}: keep it"] = "Pour {zone:1451} : gardez-la",
 
@@ -474,5 +474,6 @@ return {
 	["Lead {npc:9999} north to Marshal's Refuge. When he faints, use {item:11804} on him to wake him."] = "Escortez {npc:9999} au nord jusqu'au Refuge des Marshal. Quand il s'évanouit, utilisez {item:11804} sur lui pour le réveiller.",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["Walk into Timbermaw Hold and take the {zone:1450} branch of the tunnel to Nighthaven."] = "Entrez dans le Repaire des Grumegueules et prenez la branche du tunnel vers {zone:1450} jusqu'à Havrenuit.",
 	-- ["{npc:17082}, at the Alliance tents"] = "{npc:17082}, aux tentes de l'Alliance",
 }

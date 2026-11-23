@@ -470,11 +470,18 @@ step Moonglade
   zone Moonglade
   goto 51.7,45.1 "Moonglade"
 
+# Groupe Alliance 0.12.2: A Reliquary of Purity (5527) is optional: Rabine Saturna offers it only to
+# a character who has been inside Dire Maul (players' reports #3104 and #3270, Polestar 0.4.2.2's
+# data/guide-fixes.json, which makes the accept optional too), so the step held everyone else. Its
+# Silithus objective and its hand-in (Group 30) apply only to a player who took it (Polestar's
+# engine). Shards of the Felvine (5526), the next quest, is asked after Dire Maul in the
+# end-of-route chapter.
 step Rabine Saturna
   zone Moonglade
   tip Walk into Timbermaw Hold and take the Moonglade branch of the tunnel to Nighthaven.
+  tip Rabine Saturna offers A Reliquary of Purity only to a character who has already been inside Dire Maul: without the offer, carry on without it.
   turnin 6762
-  accept 5527
+  accept 5527 optional
   accept 1124                         -- For Silithus: keep it
 
 # Groupe Alliance 0.11.0: Seed of Life (7066), from Zaetar's Spirit after Maraudon (Group 20).

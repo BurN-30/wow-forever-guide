@@ -587,8 +587,8 @@ step Lower Blackrock Spire: quests not done
 # Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
 # Dungeons codex; prerequisites cross-checked with the TrinityCore base: no disagreement (The
 # Treasure of the Shen'dralar after The Madness Within; Shards of the Felvine after A Reliquary of
-# Purity, handed in to Rabine Saturna in Group 30; Lethtendris's Web needs nothing, its errand from
-# Stormwind or Ironforge is dropped by the compiler). Rooms, bosses and how-to: Warcraft Tavern's
+# Purity; Lethtendris's Web needs nothing, its errand from Stormwind or Ironforge is dropped by the
+# compiler). Rooms, bosses and how-to: Warcraft Tavern's
 # Forever Dire Maul East and West dungeon and quest guides (warcrafttavern.com/forever/guides/
 # dire-maul-east, dire-maul-west, dire-maul-east-quests, dire-maul-west-quests, read on 12/11/2026),
 # written from Classic (closed in the Forever beta): places inside are to check in game.
@@ -596,7 +596,7 @@ step Lower Blackrock Spire: quests not done
 # dm-start`. Flow: Feathermoon (Latronicus, Runethorn) -> Lariss Pavilion (Azj'Tordin) -> the eastern
 # wing (Pusillin and the Crescent Key, Lethtendris, Zevrim, Alzzin and the Felvine) -> out by its
 # back door to Azj'Tordin -> the western wing (the five pylons, the Shen'dralar Ancient, Immol'thar,
-# Tortheldrin, the Athenaeum) -> Feathermoon -> Moonglade (Rabine, Shards of the Felvine, if taken).
+# Tortheldrin, the Athenaeum) -> Feathermoon. Then Shards of the Felvine, its own question (0.12.2).
 # The Treasure of the Shen'dralar has two versions in the data (7462 for the Alliance, 7877 for
 # every race), both after The Madness Within: the guide offers both, optional, and the Ancient gives
 # the one Forever uses (to check in game).
@@ -608,7 +608,7 @@ step Lower Blackrock Spire: quests not done
 step Dire Maul (dungeon, optional)
   label dm-start
   when group 7488
-  tip Dire Maul: the ruined elf city in the middle of Feralas, three wings. The guide does the eastern one (Warpwood Quarter, 55 to 58), whose imp carries the key of the others, then the western one (Capital Gardens, 58 to 60). A group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Feathermoon Stronghold, the Lariss Pavilion and, if taken in Group 30, Moonglade. Alone? Skip it.
+  tip Dire Maul: the ruined elf city in the middle of Feralas, three wings. The guide does the eastern one (Warpwood Quarter, 55 to 58), whose imp carries the key of the others, then the western one (Capital Gardens, 58 to 60). A group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Feathermoon Stronghold and the Lariss Pavilion. Alone? Skip it.
   note Keep 8 free quest log slots. The northern wing (the ogres' tribute) is not in the guide.
   goto 30.3,43.3 map 1444 "Feathermoon Stronghold" r 40
 
@@ -629,7 +629,7 @@ step Dire Maul: before going in
   when done dm-start
   zone Feralas
   tip Dire Maul stands on the plateau in the middle of Feralas. The eastern wing opens on the east wall of the central courtyard, and from Eldreth Row at the city's gates; both lead to the upper level of the Warpwood Quarter.
-  note In the quest log: Lethtendris's Web (Latronicus), Elven Legends (Runethorn), Pusillin and the Elder Azj'Tordin. If taken in Group 30: Shards of the Felvine (Rabine Saturna). A class book found in the dungeon starts a quest of its own: it goes to Lorekeeper Lydros, in the Athenaeum (western wing). Not on this route: the northern wing's quests, Lydros's libram quests.
+  note In the quest log: Lethtendris's Web (Latronicus), Elven Legends (Runethorn), Pusillin and the Elder Azj'Tordin. A class book found in the dungeon starts a quest of its own: it goes to Lorekeeper Lydros, in the Athenaeum (western wing). Not on this route: the northern wing's quests, Lydros's libram quests.
   goto 59.2,45.1 map 1444 "Dire Maul" r 25
 
 step Warpwood Quarter: Pusillin
@@ -645,9 +645,8 @@ step Warpwood Quarter: Lethtendris
 
 step Warpwood Quarter: Alzzin the Wildshaper
   when done dm-start
-  tip Hydrospawn patrols the pool on the next level down. Zevrim Thornhoof (elite 57) sacrifices players on his altar; after him, speak with Old Ironbark: he opens the Conservatory Door. Clear the Warpwood Crushers on the ramp, then Alzzin the Wildshaper (elite 58), who changes shape. Shards of the Felvine: once he is dead, the Felvine behind him drops its shards; loot one, then use the Reliquary of Purity.
+  tip Hydrospawn patrols the pool on the next level down. Zevrim Thornhoof (elite 57) sacrifices players on his altar; after him, speak with Old Ironbark: he opens the Conservatory Door. Clear the Warpwood Crushers on the ramp, then Alzzin the Wildshaper (elite 58), who changes shape.
   kill 11492 optional                 -- Alzzin the Wildshaper
-  collect 18540 quest 5526            -- Sealed Reliquary of Purity: a Felvine Shard in the Reliquary of Purity
 
 step Lariss Pavilion: Azj'Tordin
   when complete 7441
@@ -697,12 +696,6 @@ step Feathermoon Stronghold: Scholar Runethorn
   zone Feralas
   turnin 7482                         -- Scholar Runethorn
 
-step Moonglade: Rabine Saturna
-  when complete 5526
-  zone Moonglade
-  tip Shards of the Felvine: Rabine Saturna, in her house in Nighthaven. From Feathermoon, the flight to Moonglade.
-  turnin 5526                         -- Rabine Saturna
-
 step Dire Maul: quests not done
   label dm-end
   when done dm-start
@@ -712,8 +705,64 @@ step Dire Maul: quests not done
   abandon 7441 optional
   abandon 7461 optional
 
-# Groupe Alliance 0.12.0: Shards of the Felvine (5526), taken in Group 30 with its own question,
-# when Dire Maul was skipped or the shard not sealed: nothing brings the guide back to Moonglade.
+# Groupe Alliance 0.12.2: Shards of the Felvine (5526), Rabine Saturna's quest behind Alzzin the
+# Wildshaper, asked here (it was asked in Group 30 before). Its prerequisite, A Reliquary of Purity
+# (5527, level 60, required 56), is offered only to a character who has been inside Dire Maul
+# (players' reports #3104 and #3270, Polestar 0.4.2.2's data/guide-fixes.json): so the chain starts
+# after the dungeon, at Rabine in Nighthaven (Moonglade 51.7,45.1, Polestar's Forever data), goes to
+# Southwind Village in Silithus for the Dusty Reliquary, back to Rabine, then into the eastern wing
+# again for the Felvine, and back to Rabine. Asked once (`when group 5526`), only after the Dire Maul
+# chapter (`when done dm-start`); later steps need `when done felvine-start`, and the steps of 5527
+# are passed by a player who already handed it in (taken in Group 28 after an earlier visit to Dire
+# Maul). Dropped at the end when not done.
+step Shards of the Felvine (optional)
+  label felvine-start
+  when done dm-start
+  when group 5526
+  zone Moonglade
+  tip From Feathermoon, the flight to Moonglade. Now that you have been inside Dire Maul, Rabine Saturna offers A Reliquary of Purity, then Shards of the Felvine. A long chain: the Reliquary lies in Southwind Village, in Silithus; back to Rabine in Moonglade; then a new run of the eastern wing of Dire Maul, where the Felvine grows behind Alzzin the Wildshaper (elite 58); and back to Rabine. Take it only if your group means to run the eastern wing again. Alone? Skip it.
+  note Keep 2 free quest log slots.
+  goto 51.7,45.1 map 1450 "Nighthaven" r 40
+
+step Moonglade: Rabine Saturna
+  when done felvine-start
+  when !turnedin 5527
+  zone Moonglade
+  tip Rabine Saturna's house stands in Nighthaven.
+  accept 5527                         -- Rabine Saturna
+
+step Southwind Village
+  when done felvine-start
+  when onquest 5527
+  zone Silithus
+  tip From Moonglade, the flight to Cenarion Hold, then east to the ruins of Southwind Village. The Dusty Reliquary lies among the ruined buildings, watched by Tortured Sentinels.
+  collect 22201 quest 5527.1          -- Dusty Reliquary; inside
+
+step Moonglade: Rabine Saturna
+  when done felvine-start
+  when onquest 5527
+  zone Moonglade
+  tip From Cenarion Hold, the flight back to Moonglade.
+  turnin 5527                         -- Rabine Saturna
+
+step Moonglade: Rabine Saturna
+  when done felvine-start
+  zone Moonglade
+  accept 5526                         -- Rabine Saturna
+
+step Dire Maul: the eastern wing again
+  when done felvine-start
+  zone Feralas
+  tip From Moonglade, the flight to Feathermoon Stronghold or Thalanaar, then Dire Maul's eastern wing, as in the first run: Zevrim Thornhoof, Old Ironbark at the Conservatory Door, the Warpwood Crushers on the ramp, then Alzzin the Wildshaper (elite 58). Once he is dead, the Felvine behind him drops its shards: loot one, then use the Reliquary of Purity.
+  goto 59.2,45.1 map 1444 "Dire Maul" r 25
+  collect 18540 quest 5526            -- Sealed Reliquary of Purity: a Felvine Shard in the Reliquary of Purity
+
+step Moonglade: Rabine Saturna
+  when complete 5526
+  zone Moonglade
+  tip Shards of the Felvine: Rabine Saturna, in her house in Nighthaven. From Feathermoon, the flight to Moonglade.
+  turnin 5526                         -- Rabine Saturna
+
 step Shards of the Felvine: not done
   when onquest 5526
   when !complete 5526

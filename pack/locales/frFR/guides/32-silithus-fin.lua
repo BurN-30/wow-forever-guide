@@ -239,12 +239,6 @@ return {
 	-- {npc:11801} Rabine Saturna · {npc:11939} Umber
 	["{npc:11801}'s house stands in Nighthaven, east of {npc:11939}."] = "La maison de {npc:11801} se dresse à Havrenuit, à l'est de {npc:11939}.",
 
-	-- Step 56: Rabine Saturna: Shards of the Felvine (optional)
-	-- {npc:11801} Rabine Saturna · {quest:5526} Shards of the Felvine
-	["{npc:11801}: {quest:5526} (optional)"] = "{npc:11801} : {quest:5526} (facultatif)",
-	-- {npc:11801} Rabine Saturna · {quest:5526} Shards of the Felvine
-	["{npc:11801}'s next quest, {quest:5526}, is done in Dire Maul, in the guide's end-of-route chapter (after Group 30), behind the eastern wing's last boss; the chapter then brings it back here. Take it only if your group means to run Dire Maul then: it stays in the quest log until that. Alone? Skip it."] = "La quête suivante de {npc:11801}, {quest:5526}, se fait à Hache-Tripes, dans le chapitre de fin de parcours du guide (après le Groupe 30), derrière le dernier boss de l'aile est ; le chapitre la ramène ensuite ici. La prendre seulement si le groupe compte faire Hache-Tripes à ce moment-là : elle reste dans le journal jusque-là. Seul ? La passer.",
-
 	-- Step 58: Nighthaven
 	["Nighthaven"] = "Havrenuit",
 	["Learn the flight path in Nighthaven."] = "Apprenez le point de vol de Havrenuit.",
@@ -390,5 +384,7 @@ return {
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Hive'Zora"] = "Ruche'Zora",
 	-- ["{npc:10778}'s ghost wanders by the farmhouse of Felstone Field, west of Andorhal. The Jabbering Ghouls in the field carry the other half of the charm: combine the two halves."] = "Le fantôme de {npc:10778} erre près de la ferme du Champ de Felstone, à l'ouest d'Andorhal. Les goules jacassantes du champ portent l'autre moitié du porte-bonheur : assemblez les deux moitiés.",
+	-- ["{npc:11801}'s next quest, {quest:5526}, is done in Dire Maul, in the guide's end-of-route chapter (after Group 30), behind the eastern wing's last boss; the chapter then brings it back here. Take it only if your group means to run Dire Maul then: it stays in the quest log until that. Alone? Skip it."] = "La quête suivante de {npc:11801}, {quest:5526}, se fait à Hache-Tripes, dans le chapitre de fin de parcours du guide (après le Groupe 30), derrière le dernier boss de l'aile est ; le chapitre la ramène ensuite ici. La prendre seulement si le groupe compte faire Hache-Tripes à ce moment-là : elle reste dans le journal jusque-là. Seul ? La passer.",
+	-- ["{npc:11801}: {quest:5526} (optional)"] = "{npc:11801} : {quest:5526} (facultatif)",
 	-- ["{npc:17080} camps outside Hive'Zora, the western hive. Pick up a Silithyst at one of the red geysers nearby and carry it to the Alliance extractor at his camp.\nCareful: You lose the Silithyst if you mount, stealth, use Divine Shield, Feign Death or Vanish. Blink and Power Word: Shield do not drop it."] = "{npc:17080} campe devant la Ruche'Zora, la ruche de l'ouest. Ramassez de la silithyste à l'un des geysers rouges voisins et portez-la jusqu'à l'extracteur de l'Alliance à son camp.\nAttention : vous perdez la silithyste si vous montez en monture, vous camouflez, utilisez Bouclier divin, Feindre la mort ou Disparition. Transfert et Mot de pouvoir : Bouclier ne la font pas tomber.",
 }
