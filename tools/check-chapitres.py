@@ -27,7 +27,12 @@ dans l'ordre de ses étapes.
   atteint pendant le chapitre ;
 - une étape (hors étape `along`) sans aucun objectif qui retient (que des `note` ou des objectifs
   `optional`) : Polestar la passe d'office (docs/GUIDE_FORMAT.md, « a step of optional goals only
-  is done at once »), sauf exception justifiée dans SANS_OBJECTIF ci-dessous ;
+  is done at once »), sauf exception justifiée dans SANS_OBJECTIF ci-dessous ; une prise `accept Q` sous
+  `when onquest Q` (ou `complete Q`, `turnedin Q`) ne retient pas : la quête est au journal dès que
+  l'étape s'applique, la prise est donc faite et l'étape passée sans que son texte soit vu. Seule est
+  permise (note) l'étape « porteuse » qui ne contient que de telles prises et aucun texte (ni `tip`, ni
+  `note`, ni note `--`) : la prise que demande le compilateur avant les lignes d'objectif d'une quête
+  prise ailleurs ;
 - un rendu `optional` : un rendu ne l'est jamais (Polestar laisse de lui-même le rendu d'une quête
   que le joueur n'a pas prise sur une prise facultative ou sous condition, et une quête qui peut ne
   pas être finie a son étape `when complete`) ;
@@ -166,8 +171,36 @@ def check_chapter(guides, entry, race, out):
     return {"hook": hook, "offer": offer, "log": len(log), "peak": peak, "handins": sorted(fin)}
 
 
-def holds(goal):
-    return goal.get("t") not in HOLDS_NOT and not goal.get("optional")
+def in_log(step):
+    """Quests the step's `when` holds only with them in the log or handed in: a `onquest`, `complete` or
+    `turnedin` (not `!`) naming one quest. Their `accept` is done as soon as the step applies (Polestar,
+    Core/Engine.lua, goalDoneLive: an accept is done once its quest is in the log or done)."""
+    out = set()
+    for p in step.get("when") or []:
+        qs = quests(p.get("q"))
+        if not p.get("neg") and p.get("k") in ("onquest", "complete", "turnedin") and len(qs) == 1:
+            out.add(qs[0])
+    return out
+
+
+def holds(goal, step=None):
+    if goal.get("t") in HOLDS_NOT or goal.get("optional"):
+        return False
+    # `accept Q` under `when onquest Q`: done before the step is ever shown, it holds nothing.
+    return not (step and goal.get("t") == "accept" and goal.get("quest") in in_log(step))
+
+
+def has_text(step):
+    """The step says something to the player: a tip, a note line, or a goal's `--` note."""
+    return bool(step.get("note")) or any(x.get("t") == "note" or x.get("note") for x in step["goals"])
+
+
+def carrier(step):
+    """A step that only takes, for the compiler, quests its `when` already puts in the log (the accept
+    the objective lines of a quest carried from elsewhere need), with no text at all: passed at once,
+    nothing of it is lost."""
+    goals = step["goals"]
+    return bool(goals) and not has_text(step) and all(x.get("t") == "accept" and x.get("quest") in in_log(step) for x in goals)
 
 
 def check_steps(g, entry, out):
@@ -175,10 +208,16 @@ def check_steps(g, entry, out):
     for n, step in enumerate(g["steps"], 1):
         if step.get("along"):
             continue
-        if not any(holds(x) for x in step["goals"]):
+        if not any(holds(x, step) for x in step["goals"]):
             why = SANS_OBJECTIF.get((entry["key"], step["title"]))
+            dead = [x.get("quest") for x in step["goals"] if x.get("t") == "accept" and x.get("quest") in in_log(step)]
             if why:
                 out.append(("info", f"étape {n} « {step['title']} » sans objectif qui retient, permis : {why}"))
+            elif carrier(step):
+                out.append(("info", f"étape {n} « {step['title']} » : seulement la prise de {dead}, déjà au journal sous son `when` (passée d'office, sans texte : permis)"))
+            elif dead:
+                out.append(("fail", f"étape {n} « {step['title']} » : son seul objectif qui retiendrait est la prise de {dead}, faite dès que la quête est au journal, "
+                                    f"donc dès que l'étape s'applique (`when onquest`) : Polestar la passe d'office et son texte n'est jamais affiché"))
             else:
                 out.append(("fail", f"étape {n} « {step['title']} » : aucun objectif qui retient (que des notes ou des objectifs facultatifs), Polestar la passe d'office"))
         for x in step["goals"]:

@@ -65,9 +65,9 @@ def load(addons=ADDONS):
         for s in (g.steps or {}).values():
             goals = []
             for x in (s.goals or {}).values():
-                goals.append({k: to_py(x[k]) for k in ("t", "quest", "optional", "pre", "preAll", "closedBy", "minLevel", "qlvl", "title", "item", "npc", "object", "only") if x[k] is not None})
+                goals.append({k: to_py(x[k]) for k in ("t", "quest", "optional", "pre", "preAll", "closedBy", "minLevel", "qlvl", "title", "item", "npc", "object", "only", "note") if x[k] is not None})
             steps.append({"title": s.title, "when": to_py(s.when) or [], "only": to_py(s.only), "goals": goals, "label": s.label,
-                          "along": s.along})
+                          "along": s.along, "note": s.note})
         out[g.id] = {
             "id": g.id, "pack": g.pack, "title": g.title, "category": g.category, "faction": g.faction,
             "minLevel": g.minLevel, "maxLevel": g.maxLevel, "factionLevels": to_py(g.factionLevels),
