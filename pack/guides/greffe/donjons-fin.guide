@@ -1,0 +1,1235 @@
+# Written for this pack by BurN-30 (GPL-3.0). The end-of-route dungeons, every one optional with its
+# own question. A dungeon whose level the route never reaches near its door goes here, with the
+# chains that lead into it when they could not be finished on the way.
+#
+# Self-contained chapter for Polestar's own route (copy of 33-donjons-fin.guide, which takes this id
+# back when the pack drops its own route: groupe-alliance/33-donjons-fin). The Groupe Alliance module
+# offers it once the last hand-ins at Cenarion Hold are done, at the end of
+# forever/alliance/50-60/06-silithus (level 58 to 60), and opens it in a tab of its own: Polestar's
+# route ends there. Its five dungeons keep their own questions (`when group`): opening the chapter
+# is not a yes to all of them.
+#
+# Compared with Polestar 0.4.2.2 (its Dungeons codex pages "blackrock-depths", "blackrock-spire",
+# "dire-maul", "stratholme" and "scholomance", Polestar_Codex, GPL-3.0; no run of these in its route,
+# data/dungeon-runs.json "notInRoute" for Blackrock Depths: the route passes the mountain at 48-49,
+# before any of its quests): Polestar has no step of these dungeons in its route, only the Dungeons
+# window's generated pick-up and hand-in guides, without boss-by-boss steps or French. This chapter
+# stays, and carries what Polestar's route no longer takes and the chapter needs:
+# - The Smoldering Ruins of Thaurissan (3701), a group question on Polestar's route (50-60/01), which
+#   Kharan Mighthammer (4341) needs: taken in Ironforge at the start when not done, its relics on the
+#   way through the Burning Steppes, handed in on the Stormwind trip of Windsor's chain;
+# - Of Love and Family (5846, after Of Lost Honor 5845, which Polestar's route does after its group
+#   question Of Forgotten Memories, 50-60/04), then Renfray's (5848): before Stratholme;
+# - the Skeleton Key's chain (5538, 5801, 5803, 5505, after Skeletal Fragments 5537, which the route
+#   hands in at Chillwind Camp): before Scholomance, with its own question;
+# - Shards of the Felvine (5526) and A Reliquary of Purity (5527): after Dire Maul's eastern wing
+#   (0.12.2).
+#
+# ================================================================ Blackrock Depths
+# Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
+# Dungeons codex (data-v2026.11.1); prerequisites cross-checked with the TrinityCore Forever world
+# base (2026-10-14): no disagreement. Rooms, bosses and how-to: Warcraft Tavern's Forever Blackrock
+# Depths dungeon and quest guides (warcrafttavern.com/forever/guides/blackrock-depths and
+# .../blackrock-depths-quests, 11/11/2026), written from Classic (the dungeon was closed in the
+# Forever beta), and warcraft.wiki.gg (Shadowforge Key, East Garrison, Dark Iron Legacy, Marshal
+# Windsor, A Shred of Hope, Jail Break!), read on 12/11/2026. Wowhead Forever could not be read
+# (robot check). Not played in game yet: places inside are to check in game.
+#
+# Asked once (`when group 4286`, The Good Stuff: no prerequisite, level 50); every later step needs
+# `when done brd-start`. Three visits, in the order of the rooms:
+#   1. no key: the Detention Block (Kharan, Windsor), the Ring of the Law, the Shrine of
+#      Thaurissan, the Black Vault, the Hall of Crafting (Fineous: Ironfel), back to the Shrine's
+#      monument (Dark Iron Legacy: the Shadowforge Key);
+#   2. the key: the note for Windsor, the Dark Iron Highway (Bael'Gar), Shadowforge City
+#      (Incendius), the Shadowforge Lock, the West Garrison (Angerforge), the Manufactory
+#      (Argelmach), Jail Break! from Windsor's cell;
+#   3. the same instance or a new one: the Grim Guzzler (Ribbly, Hurley, Phalanx), Flamelash, the
+#      Seven, the Lyceum, Magmus, the Emperor (Moira kept alive).
+# The Shadowforge Lock needed the key until patch 4.0.3a (warcraft.wiki.gg, East Garrison), and the
+# game's own data keeps Forever on 1.x rules: so the second visit starts with the key.
+#
+# Prerequisites (Polestar's compiled guide, TrinityCore): Kharan Mighthammer (4341) after The
+# Smoldering Ruins of Thaurissan (3701, taken here when not done); Incendius! (4263) after Overmaster Pyron (4262);
+# A Taste of Flame (4024) after 4023 or 4022 (group questions on the route at 50); Dark Iron Legacy 3802 after 3801; The True
+# Masters 4183 to 4224, Marshal Windsor (4241), Abandoned Hope (4242), A Crumpled Up Note (4264, an
+# item that drops only once 4242 is handed in), A Shred of Hope (4282), Jail Break! (4322), one after
+# the other from Dragonkin Menace (4182, offered here). Ribbly Screwspigot (4136) and
+# Hurley Blackbreath (4126) need nothing: their errands (Yorba Screwspigot in Tanaris, Enohar
+# Thunderbrew at Nethergarde Keep) are left out, as the compiler drops them.
+# Left out: The Love Potion (Mistress Nagmara, in the Grim Guzzler: Gromsblood, the Azshara giants'
+# Giant Silver Veins and a vial filled in Un'Goro), The Spectral Chalice (miners), Rocknot's Ale
+# (only what opens the Bar Door), Attunement to the Core (raid), the level 58-60 dungeon set chains.
+guide groupe-alliance/greffe/donjons-fin
+title End of route · Dungeons 52-60 (optional)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 52-60
+zone Silithus
+
+step Blackrock Depths (dungeon, optional)
+  label brd-start
+  when group 4286
+  zone Silithus
+  tip Blackrock Depths: the Dark Iron dwarves' city under Blackrock Mountain, between the Searing Gorge and the Burning Steppes. Levels 52 to 60, bosses 51 to 59: easy for a group of 5 at 58 to 60; possible earlier at five (from about 54), difficult. The dungeon is huge: the guide splits it into three visits of one to two hours, with the quests given in Ironforge, Kharanos, the Burning Steppes, Lakeshire and Stormwind. Alone? Skip it.
+  note Keep 12 free quest log slots. Most of these quests cannot be shared: each player takes their own.
+  note From Cenarion Hold: a hearthstone bound in Ironforge, or the flight to Theramore, the boat to Menethil Harbor and the flight to Ironforge.
+  fly "Ironforge"
+  zone Ironforge
+
+step Ironforge: Royal Historian Archesonus
+  when done brd-start
+  when !turnedin 3701
+  zone Ironforge
+  tip Archesonus stands in the High Seat, beside King Magni. Magni's quest for Blackrock Depths waits for The Smoldering Ruins of Thaurissan, which the route offered as a group quest at 50: its relics are in the Burning Steppes, on this chapter's way, and it is handed in here on the trip to Stormwind.
+  accept 3701                         -- Royal Historian Archesonus
+
+step Ironforge: King Magni Bronzebeard
+  when done brd-start
+  when turnedin 3701
+  zone Ironforge
+  tip Magni stands in the High Seat, beside Royal Historian Archesonus. Kharan is a prisoner in Blackrock Depths.
+  accept 4341                         -- King Magni Bronzebeard
+
+step Kharanos: Ragnar Thunderbrew
+  when done brd-start
+  zone Dun Morogh
+  tip Ride out of Ironforge down to Kharanos: Ragnar is in the Thunderbrew Distillery. His lost recipe is in the Grim Guzzler, the tavern of Blackrock Depths (third visit).
+  accept 4126                         -- Ragnar Thunderbrew
+
+step Fly to Morgan's Vigil
+  when done brd-start
+  zone Ironforge
+  goto 55.9,47.9 "Ironforge flight master"
+  fly "Morgan's Vigil"
+  zone Burning Steppes
+
+step Morgan's Vigil
+  when done brd-start
+  zone Burning Steppes
+  tip Oralius, Jalinda Sprig, Helendis Riverhorn and Marshal Maxwell stand in the camp. Overmaster Pyron is outside the dungeon, on the way in; Incendius, inside, comes after him.
+  accept 4286                         -- Oralius: the fanny packs drop all through the dungeon
+  accept 4262                         -- Jalinda Sprig
+
+step Ruins of Thaurissan: the relics
+  when done brd-start
+  when onquest 3701
+  zone Burning Steppes
+  tip The relics are the carved stones scattered through the Ruins of Thaurissan, west of Flame Crest: click them until the information is recovered. The War Reavers and Thaurissan Firewalkers there are 53-55, and Thauris Balgarr (57) holds the Dark Iron camp south-west of Flame Crest: take the relics at the edge of the ruins.
+  interact 153556 quest 3701.1        -- Thaurissan Relic
+
+step Morgan's Vigil: Helendis Riverhorn
+  when done brd-start
+  when turnedin 4182
+  tip Helendis's chain (Dragonkin Menace done) leads to Marshal Windsor, a prisoner in Blackrock Depths: first a round trip to Lakeshire and Stormwind, by flight.
+  accept 4183                         -- Helendis Riverhorn
+
+step Morgan's Vigil: Dragonkin Menace
+  when done brd-start
+  when !turnedin 4182
+  tip Marshal Windsor's chain starts with Helendis's Dragonkin Menace: the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52.
+  accept 4182                         -- Helendis Riverhorn
+
+step The black dragonkin
+  when done brd-start
+  when onquest 4182
+  tip Ride north-east from the Vigil into the hills: Broodlings, Dragonspawn and Wyrmkin in packs, the three Black Drakes apart, one in the northern hills and two further south.
+  kill 7047 quest 4182                -- Black Broodling
+  kill 7040 quest 4182                -- Black Dragonspawn
+  kill 7041 quest 4182                -- Black Wyrmkin
+  kill 7044 quest 4182                -- Black Drake
+
+step Morgan's Vigil: Helendis Riverhorn
+  when done brd-start
+  when onquest 4182
+  turnin 4182                         -- Helendis Riverhorn
+  accept 4183
+
+step Fly to Lakeshire
+  when done brd-start
+  when onquest 4183
+  zone Burning Steppes
+  goto 84.4,68.3 "Morgan's Vigil flight master"
+  fly "Lakeshire"
+  zone Redridge Mountains
+
+step Lakeshire: Magistrate Solomon
+  when done brd-start
+  when onquest 4183
+  zone Redridge Mountains
+  tip Solomon is in the town hall of Lakeshire.
+  turnin 4183                         -- Magistrate Solomon
+  accept 4184
+
+step Fly to Stormwind
+  when done brd-start
+  when onquest 4184
+  zone Redridge Mountains
+  goto 30.4,59.0 "Lakeshire flight master"
+  fly "Stormwind"
+  zone Stormwind City
+
+step Stormwind Keep: Bolvar and Lady Prestor
+  when done brd-start
+  when onquest 4184
+  zone Stormwind City
+  tip Highlord Bolvar Fordragon is in the throne room at the back of Stormwind Keep, Lady Katrana Prestor at his side: speak with her, then with him again.
+  turnin 4184                         -- Highlord Bolvar Fordragon
+  accept 4185
+  kill 1749 quest 4185                -- Lady Katrana Prestor: speak with her
+  turnin 4185                         -- Highlord Bolvar Fordragon
+  accept 4186
+
+step Ironforge: The Smoldering Ruins of Thaurissan
+  when done brd-start
+  when complete 3701
+  zone Ironforge
+  tip The Deeprun Tram from Stormwind's Dwarven District: Royal Historian Archesonus and King Magni stand in the High Seat. Then the tram back to Stormwind, or the flight from Ironforge to Lakeshire.
+  turnin 3701                         -- Royal Historian Archesonus
+  accept 4341                         -- King Magni Bronzebeard: Kharan is a prisoner in Blackrock Depths
+
+step Fly to Lakeshire
+  when done brd-start
+  when onquest 4186
+  zone Stormwind City
+  goto 66.3,62.7 "Stormwind flight master"
+  fly "Lakeshire"
+  zone Redridge Mountains
+
+step Lakeshire: Magistrate Solomon
+  when done brd-start
+  when onquest 4186
+  zone Redridge Mountains
+  turnin 4186                         -- Magistrate Solomon
+  accept 4223
+
+step Fly to Morgan's Vigil
+  when done brd-start
+  when onquest 4223
+  zone Redridge Mountains
+  goto 30.4,59.0 "Lakeshire flight master"
+  fly "Morgan's Vigil"
+  zone Burning Steppes
+
+step Morgan's Vigil: Marshal Maxwell
+  when done brd-start
+  when onquest 4223
+  zone Burning Steppes
+  tip Maxwell sends you to Ragged John, at Flame Crest: the guide goes there next.
+  turnin 4223                         -- Marshal Maxwell
+  accept 4224
+
+step Flame Crest
+  when done brd-start
+  zone Burning Steppes
+  tip Ride north along the road, then climb to the goblin camp on Flame Crest. Ragged John tells his story in the camp; Maxwort Uberglint and Yuka Screwspigot give one quest each for the dungeon.
+  kill 9563 quest 4224                -- Ragged John: speak with him, to the end of his story
+  accept 4123                         -- Maxwort Uberglint
+  accept 4136                         -- Yuka Screwspigot
+
+step Cyrus Therepentous: the Frenzied Black Drake
+  when done brd-start
+  when !turnedin 4023
+  when !turnedin 4022
+  tip A Taste of Flame, first part (a group quest on the route at 50): Cyrus hides in a cave in the far east of the Steppes. The Frenzied Black Drake (elite 54) appears outside it and drops the molt.
+  accept 4023                         -- Cyrus Therepentous
+  collect 10575 quest 4023 @94.4,31.8 map 1428
+  turnin 4023
+
+step Cyrus Therepentous
+  when done brd-start
+  tip Cyrus hands over an Altered Black Dragonflight Molt with the quest: it goes on Bael'Gar's remains, in the dungeon (second visit).
+  accept 4024                         -- Cyrus Therepentous
+
+step Morgan's Vigil: Marshal Maxwell
+  when done brd-start
+  when complete 4224
+  tip Ride back south to the Vigil: Maxwell now sends you after Marshal Windsor, in the dungeon's prison.
+  turnin 4224                         -- Marshal Maxwell
+  accept 4241
+
+step Blackrock Mountain: Overmaster Pyron
+  when done brd-start
+  zone Burning Steppes
+  tip Ride west along the road, past Blackrock Stronghold, into Blackrock Mountain. Inside, cross the great chain to the hanging building in the middle (Forgewright's Tomb), go down through it, then down the next chain to the Grinding Quarry: Overmaster Pyron (elite 52) walks there. The dungeon's door is past the quarry, on the left, at the far end of the Masonry.
+  goto 29.9,31.8 "Blackrock Mountain"
+  kill 9026 quest 4262 @34.8,85.3 map 1427 -- Overmaster Pyron: the Grinding Quarry, before the dungeon's door
+
+step Franclorn Forgewright (one player is enough)
+  when done brd-start
+  tip The Shadowforge Key opens the doors of the second and third visits (the Shadowforge Gates of the prison and the Shadowforge Lock): one key in the group is enough. Franclorn's ghost stands on his tomb in the hanging building, and only the dead see him. Whoever will carry the key: take off your gear (no repair bill), die in the lava under the chains, release, run back as a ghost from the graveyard and speak with Franclorn, then come back to life at your body or by a group mate's spell. To check in game.
+  accept 3801 optional                -- Franclorn Forgewright, as a ghost
+  turnin 3801 optional
+  accept 3802 optional
+
+step Blackrock Depths: along the way
+  when done brd-start
+  along until brd-end
+  tip Collected all through the dungeon: the Dark Iron Fanny Packs, on the Anvilrage and Shadowforge dwarves (most of them carry one). The Relic Coffer Keys drop from the same dwarves, about one in eight, only for those on The Heart of the Mountain: 12 keys open the 12 doors of the Black Vault (first visit), whoever carries them.
+  note Share The Good Stuff, The Heart of the Mountain and Hurley Blackbreath with your group: click each in the quest log, then Share. The others cannot be shared.
+  collect 11468 quest 4286            -- Dark Iron Fanny Pack
+  collect 11078 x12 optional          -- Relic Coffer Key
+
+step Blackrock Depths, first visit: before going in
+  when done brd-start
+  tip First visit, no key needed: the Detention Block (the prison), the Ring of the Law, the Shrine of Thaurissan, the Black Vault and the Hall of Crafting. Bosses 51 to 56: 54 or more advised.
+  note In the quest log: Kharan Mighthammer (King Magni), Marshal Windsor (Maxwell), The Good Stuff (Oralius), The Heart of the Mountain (Maxwort), Dark Iron Legacy (Franclorn, if taken). For the next visits: A Taste of Flame (Cyrus), Ribbly Screwspigot (Yuka), Hurley Blackbreath (Ragnar). Not on this route: Mistress Nagmara's quest in the tavern (its herbs and silver are gathered outside), the Spectral Chalice's (miners), Lothos Riftwaker's Attunement to the Core (raid).
+  goto 34.8,85.3 map 1427 "Blackrock Depths" r 25
+
+step Detention Block: Kharan and Windsor
+  when done brd-start
+  tip The Detention Block opens past the entrance. High Interrogator Gerstahn, in the southernmost room, drops the Prison Cell Key, which opens the cells (a rogue can pick them instead). Kharan Mighthammer and Marshal Windsor are locked in the cells of the south-east corridor: listen to Kharan's whole story; Windsor has given up, and his news goes back to Maxwell. Lord Roccor patrols the northern ring, Houndmaster Grebmar waits at its lowest point. To check in game: which cell holds whom.
+  collect 11140 optional              -- Prison Cell Key: High Interrogator Gerstahn
+  turnin 4341                         -- Kharan Mighthammer
+  accept 4342
+  kill 9021 quest 4342                -- Kharan Mighthammer: listen to his whole story
+  turnin 4342
+  accept 4361                         -- For King Magni
+  turnin 4241                         -- Marshal Windsor
+  accept 4242                         -- For Marshal Maxwell
+
+step Ring of the Law and the Shrine of Thaurissan
+  when done brd-start
+  tip The open gate on the east side of the Detention Block leads into the Ring of the Law: the gate closes behind you, two waves of beasts come, then a random boss. Once it is down, a second gate opens into the East Garrison. From there, climb the stairs beside the arena gate and walk round the stands, close to the inner railing (the Arena Spectators come at you when you pass too near), to the Shrine of Thaurissan: Pyromancer Loregrain kneels before the Monument of Franclorn Forgewright.
+  kill 9024 optional                  -- Pyromancer Loregrain
+
+step The Domicile and the Black Vault
+  when done brd-start
+  tip From the Shrine, the bridge leads into the Domicile, then to the upper balcony of the Hall of Crafting, which opens on the Black Vault: Warder Stilgiss and Verek (elite 56 and 55). With 12 Relic Coffer Keys, open the 12 Relic Coffer doors; after the last one, the Warbringer Constructs wake, then Watchman Doomgrip comes. The Secret Safe under the Dark Coffer then holds the Heart of the Mountain. Fewer than 12 keys? Leave it: the guide does not come back to the vault.
+  kill 9041 optional                  -- Warder Stilgiss
+  collect 11309 quest 4123 optional   -- The Heart of the Mountain: the Secret Safe
+
+step Hall of Crafting: Fineous Darkvire
+  when done brd-start
+  tip Fineous Darkvire (elite 54) walks up and down the winding ramp of the Hall of Crafting: clear the ramp first, interrupt his Holy Light. He drops Ironfel for every player on Dark Iron Legacy.
+  collect 10999 quest 3802            -- Ironfel: Fineous Darkvire
+
+step Shrine of Thaurissan: the monument
+  label brd-v1-end
+  when done brd-start
+  tip Back up through the Domicile to the Shrine: place Ironfel on the Monument of Franclorn Forgewright. The Shadowforge Key is the reward. Then walk out the way you came: round the stands, through the Ring of the Law (its gates stay open) and the Detention Block.
+  turnin 3802                         -- Monument of Franclorn Forgewright
+
+step Flame Crest: Maxwort Uberglint
+  when complete 4123
+  zone Burning Steppes
+  tip Out of Blackrock Mountain on the Burning Steppes side, then north-east to Flame Crest.
+  turnin 4123                         -- Maxwort Uberglint
+
+step Morgan's Vigil: Marshal Maxwell
+  when onquest 4242
+  zone Burning Steppes
+  tip Ride back to Morgan's Vigil. Abandoned Hope: Maxwell takes the bad news; pick your reward. From now on, the Anvilrage dwarves of the Detention Block drop A Crumpled Up Note for you (second visit).
+  turnin 4242                         -- Marshal Maxwell
+
+step Morgan's Vigil: Jalinda Sprig
+  when complete 4262
+  zone Burning Steppes
+  turnin 4262                         -- Jalinda Sprig
+  accept 4263                         -- Lord Incendius, in the dungeon: second visit
+
+step Morgan's Vigil: Oralius
+  when complete 4286
+  zone Burning Steppes
+  turnin 4286                         -- Oralius
+
+step Fly to Ironforge
+  when onquest 4361
+  zone Burning Steppes
+  goto 84.4,68.3 "Morgan's Vigil flight master"
+  fly "Ironforge"
+  zone Ironforge
+
+step Ironforge: King Magni Bronzebeard
+  when onquest 4361
+  zone Ironforge
+  tip The Bearer of Bad News: Magni then asks you to save Princess Moira, the Emperor's prisoner at the bottom of the dungeon (third visit).
+  turnin 4361                         -- King Magni Bronzebeard
+  accept 4362
+
+step Fly to Thorium Point
+  when onquest 4362
+  zone Ironforge
+  goto 55.9,47.9 "Ironforge flight master"
+  fly "Thorium Point"
+  zone Searing Gorge
+
+step Blackrock Depths, second visit: before going in
+  when done brd-start
+  zone Searing Gorge
+  tip Second visit, with the Shadowforge Key: Windsor's note, the Dark Iron Highway (Bael'Gar), Shadowforge City (Incendius), the West Garrison (Angerforge), the Manufactory (Argelmach), then Jail Break! from Windsor's cell. Bosses 52 to 57: 56 or more advised. From Thorium Point, ride south across the Searing Gorge into Blackrock Mountain.
+  note In the quest log: A Taste of Flame (Cyrus), Incendius! (Jalinda Sprig). Keep one free quest log slot for Jail Break!. For the third visit: The Fate of the Kingdom (Magni), Ribbly Screwspigot, Hurley Blackbreath.
+  goto 34.8,85.3 map 1427 "Blackrock Depths" r 25
+
+step Detention Block: A Crumpled Up Note
+  when done brd-start
+  when turnedin 4242
+  tip The Anvilrage dwarves of the Detention Block drop A Crumpled Up Note (about one in four) to those who handed in Abandoned Hope: right-click it. Kill Gerstahn again for the Prison Cell Key and bring the note to Windsor.
+  accept 4264                         -- A Crumpled Up Note: Anvilrage dwarves
+  turnin 4264                         -- Marshal Windsor
+  accept 4282
+
+step Dark Iron Highway: Bael'Gar
+  when done brd-start
+  tip The Shadowforge Gate on the north side of the Detention Block opens with the key onto the Dark Iron Highway: large packs of dwarves. Bael'Gar (elite 54) stands at its west end; once he is down, use the Altered Black Dragonflight Molt on his remains.
+  collect 11230 quest 4024            -- Encased Fiery Essence: the molt on Bael'Gar's remains
+
+step Shadowforge City: Lord Incendius
+  when done brd-start
+  tip The great doors at the east end of the Highway open on Shadowforge City, above a lava lake. Lord Incendius (elite 55) guards the Black Anvil on the central bridge: tank him in the middle, his Mighty Blow knocks you into the lava, with no way back up.
+  kill 9017 quest 4263                -- Lord Incendius
+
+step West Garrison and the Manufactory
+  when done brd-start
+  tip Back along the Highway to the Detention Block, then through the East Garrison Door (the key) into the East Garrison. Go down the stairs to the Shadowforge Lock, the great wheel, and open it with the key: the giant door over the Highway turns, and its passage leads across to the West Garrison. Down the left-hand stairs: General Angerforge (elite 57, calls adds at low health). Down the right-hand stairs, across the Manufactory: Golem Lord Argelmach and his two golems (kill the golems first). Each drops part of Marshal Windsor's Lost Information.
+  collect 11464 quest 4282            -- Marshal Windsor's Lost Information: General Angerforge
+  collect 11465 quest 4282            -- Marshal Windsor's Lost Information: Golem Lord Argelmach
+
+step Detention Block: Jail Break!
+  label brd-v2-end
+  when done brd-start
+  tip Back to Windsor's cell. Everyone hands in A Shred of Hope before anyone starts Jail Break!, with a free quest log slot. Windsor gets his gear back in the supply room clockwise from his cell, then frees his friends from the cells of the corridor round the Ring of the Law: open each cell when he asks, not before. Stay near him; he must not die. At the end he runs to the entrance and the quest is done. Failed? Abandon it, leave and reset the dungeon, then try again.
+  turnin 4282                         -- Marshal Windsor
+  accept 4322
+  complete 4322                       -- Escort Marshal Windsor
+
+step Blackrock Depths, third visit: the Grim Guzzler
+  when done brd-start
+  tip Third visit: the bottom of the dungeon, bosses 55 to 59, 58 or more advised. With the time, go on in the same run; or come back later: through the East Garrison Door, the Shadowforge Lock and the West Garrison again. Past Argelmach, the bridge leads to the Grim Guzzler: its patrons are neutral, so no area spells. Ribbly Screwspigot is friendly until threatened (his talk option): he fights with his cronies. Smash the three Thunderbrew Lager Kegs of the storage room near him: Hurley Blackbreath comes with his cronies. To open the Bar Door, buy Dark Iron Ale Mugs from Plugger Spazzring and give them to Private Rocknot until he loses his temper: Phalanx then breaks the door and attacks.
+  collect 11313 quest 4136            -- Ribbly's Head: Ribbly Screwspigot
+  collect 11312 quest 4126            -- Lost Thunderbrew Recipe: Hurley Blackbreath
+
+step Ambassador Flamelash and the Seven
+  when done brd-start
+  tip Through the Bar Door, left into the Chamber of Enchantment: Ambassador Flamelash (elite 57) calls adds from the corners, kill them before they reach him. Then the Mold Foundry and the Summoners' Tomb: speak with Doom'rel to start the Seven, who come one after the other; the door opens after the last. To the right on the way out: the Molten Bridge and the Molten Core's portal (raid).
+  kill 9156 optional                  -- Ambassador Flamelash
+
+step The Lyceum and Magmus
+  when done brd-start
+  tip In the Lyceum, the Shadowforge Flame Keepers (red armour) drop two Shadowforge Torches: light the two braziers at the back, the doors open on the Iron Hall. Magmus (elite 57) waits at the far end: keep out of the fire jets of the side alcoves.
+  kill 9938 optional                  -- Magmus
+
+step The Imperial Seat: Emperor Dagran Thaurissan
+  label brd-v3-end
+  when done brd-start
+  tip Emperor Dagran Thaurissan (elite 59) and Princess Moira Bronzebeard. The Fate of the Kingdom: kill the Emperor WITHOUT killing Moira, who heals him: one player keeps her busy and interrupts her, everyone else on the Emperor. She then stops fighting: speak with her.
+  kill 9019 quest 4362                -- Emperor Dagran Thaurissan
+  turnin 4362                         -- Princess Moira Bronzebeard
+  accept 4363
+
+step Flame Crest: Yuka Screwspigot
+  when complete 4136
+  zone Burning Steppes
+  tip Out of the dungeon (the way back or your hearthstone), then out of Blackrock Mountain on the Burning Steppes side, north-east to Flame Crest.
+  turnin 4136                         -- Yuka Screwspigot
+
+step Cyrus Therepentous
+  when complete 4024
+  zone Burning Steppes
+  tip East along the hills to Cyrus's cave.
+  turnin 4024                         -- Cyrus Therepentous
+
+step Morgan's Vigil: Marshal Maxwell
+  when complete 4322
+  zone Burning Steppes
+  tip Ride back south to Morgan's Vigil. Maxwell's next quest, Stormwind Rendezvous, starts the long chain to Onyxia's Lair, through Upper Blackrock Spire: not in this guide.
+  turnin 4322                         -- Marshal Maxwell
+
+step Morgan's Vigil: Jalinda Sprig
+  when complete 4263
+  zone Burning Steppes
+  turnin 4263                         -- Jalinda Sprig
+
+step Morgan's Vigil: Oralius
+  when complete 4286
+  zone Burning Steppes
+  turnin 4286                         -- Oralius
+
+step Fly to Ironforge
+  when onquest 4363
+  zone Burning Steppes
+  goto 84.4,68.3 "Morgan's Vigil flight master"
+  fly "Ironforge"
+  zone Ironforge
+
+step Ironforge: King Magni Bronzebeard
+  when onquest 4363
+  zone Ironforge
+  turnin 4363                         -- King Magni Bronzebeard
+
+step Kharanos: Ragnar Thunderbrew
+  when complete 4126
+  zone Dun Morogh
+  turnin 4126                         -- Ragnar Thunderbrew
+
+step Blackrock Depths: quests not done
+  label brd-end
+  when done brd-start
+  tip What is left of Blackrock Depths in the quest log is for another run: keep it for one, or drop it to free the log.
+  abandon 4123 optional
+  abandon 4282 optional
+  abandon 4322 optional
+  abandon 4362 optional
+  abandon 4263 optional
+  abandon 4024 optional
+  abandon 4136 optional
+  abandon 4126 optional
+  abandon 4286 optional
+  abandon 3802 optional
+
+# ================================================================ Lower Blackrock Spire
+# Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
+# Dungeons codex (Blackrock Spire, lower and upper together); prerequisites cross-checked with the
+# TrinityCore base: no disagreement (Message to Maxwell 5002 after Bijou's Belongings 5001, Maxwell's
+# Mission 5081 after 5002; the others need nothing). Rooms, bosses and how-to: Warcraft Tavern's
+# Forever Lower Blackrock Spire dungeon and quest guides (warcrafttavern.com/forever/guides/
+# lower-blackrock-spire and .../lower-blackrock-spire-quests, read on 12/11/2026), written from
+# Classic (closed in the Forever beta): places inside are to check in game.
+# Asked once (`when group 4701`, Put Her Down: no prerequisite, level 55); every later step needs
+# `when done lbrs-start`. Flow: Morgan's Vigil (Helendis) -> Flame Crest (Kibler, Ragged John) ->
+# the Spire: Hordemar City (Warosh, Bijou and her belongings) -> out to Maxwell and back, the bosses
+# left alive (Warcraft Tavern's advice) -> Omokk, Tazz'Alaor (Voone), the Skitterweb Tunnels
+# (Smolderweb, the eggs), Urok's Tribute Pile, Halycon, Wyrmthalak -> Warosh -> Flame Crest ->
+# Morgan's Vigil.
+# Left out: Seal of Ascension (Vaelan: the key of Upper Blackrock Spire, a 10-player dungeon, then
+# Emberstrife in Dustwallow Marsh), The Final Tablets (Mosh'aru's chain), Snakestone of the Shadow
+# Huntress (Kilram, Winterspring), Deliana's dungeon set quests, General Drakkisath's Demise (Upper
+# Blackrock Spire).
+step Lower Blackrock Spire (dungeon, optional)
+  label lbrs-start
+  when group 4701
+  tip Lower Blackrock Spire: the orc city in the upper part of Blackrock Mountain, above Blackrock Depths. Levels 55 to 60, bosses 58 to 60: a group of 5 at 58 to 60 (possible from about 56, difficult). The quests come from Morgan's Vigil and Flame Crest, one more from a goblin hidden inside; the run has one short trip out to Morgan's Vigil and back. Alone? Skip it.
+  note Keep 9 free quest log slots.
+  goto 85.0,68.8 map 1428 "Morgan's Vigil" r 40
+
+step Morgan's Vigil: Helendis Riverhorn
+  when done lbrs-start
+  zone Burning Steppes
+  tip Put Her Down: Halycon, the great worg of the Spire. Marshal Maxwell's own quest comes later, through Bijou, a goblin hidden in the dungeon.
+  accept 4701                         -- Helendis Riverhorn
+
+step Flame Crest: Kibler and Ragged John
+  when done lbrs-start
+  zone Burning Steppes
+  tip Ride north to Flame Crest. Kibler stands inside the cave: his two quests give two pets, the Worg Carrier and the Smolderweb Carrier, and he hands over an Empty Worg Pup Cage. Ragged John, in the camp: Mother's Milk, a rare reward.
+  accept 4729                         -- Kibler
+  accept 4862                         -- Kibler
+  accept 4866                         -- Ragged John
+
+step Lower Blackrock Spire: before going in
+  when done lbrs-start
+  zone Burning Steppes
+  tip Into Blackrock Mountain on the Burning Steppes side. Two ways to the portal: the door beside the Blackrock Spire meeting stone and the path up (elites on it), or along the great chain and the wall to the balcony where Bodley stands, then a jump down onto it, with no fight. Inside, the stairs up on the left lead to Upper Blackrock Spire: not this time.
+  note In the quest log: Put Her Down (Helendis), Kibler's Exotic Pets and En-Ay-Es-Tee-Why (Kibler), Mother's Milk (Ragged John). Given inside: Urok Doomhowl (Warosh) and Bijou's Belongings (Bijou). Not on this route: Seal of Ascension (Vaelan, inside: the key of Upper Blackrock Spire, a 10-player dungeon), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, Winterspring), Deliana's dungeon set quests (Ironforge).
+  goto 33.2,24.9 map 1428 "Blackrock Spire" r 25
+
+step Hordemar City: Warosh and Bijou
+  when done lbrs-start
+  tip Past the entrance door, Hordemar City. Warosh walks around its first part. Bijou waits on a ledge overlooking the city: one of the ramps down to Tazz'Alaor, the trolls' hall with the purple light, climbs to her. Her belongings are in a small chest tucked in a corner at the bottom of Hordemar City (it has several places). Leave Highlord Omokk, War Master Voone and Overlord Wyrmthalak alive for now: Marshal Maxwell's quest, given for Bijou's message, asks for them.
+  accept 4867                         -- Warosh
+  accept 5001                         -- Bijou
+  collect 12345 quest 5001            -- Bijou's Belongings: a small chest at the bottom of Hordemar City
+  turnin 5001                         -- Bijou
+  accept 5002
+
+step Message to Maxwell: out and back
+  when onquest 5002
+  zone Burning Steppes
+  tip Leave the dungeon without resetting it: as long as the group stays together, the same instance waits, bosses alive (to check in game). Ride to Morgan's Vigil and back, a good quarter of an hour; a hearthstone bound at the Vigil shortens the way there.
+  turnin 5002                         -- Marshal Maxwell
+  accept 5081
+
+step Lower Blackrock Spire: along the way
+  when done lbrs-start
+  along until lbrs-end
+  tip The Bloodaxe Worg Pups play in Hordemar City and in Halycon's lair: target one and use the Empty Worg Pup Cage. The Spire Spider Eggs lie in the Skitterweb Tunnels, Mother Smolderweb's halls: each egg sac gives 1 to 3, and spiderlings may hatch from them.
+  collect 12263 quest 4729            -- Caged Worg Pup
+  collect 12530 quest 4862            -- Spire Spider Egg
+
+step Highlord Omokk
+  when done lbrs-start
+  tip Urok Doomhowl needs a Roughshod Pike: they lean against the wall behind the Scarshield orcs, past the bridge out of Hordemar City. Then the Spirestone ogres: Highlord Omokk (elite 59) and his two guards. His head is for the Urok event: one player with the quest carries the pike and the head.
+  collect 12533 optional              -- Roughshod Pike
+  kill 9196 quest 5081                -- Highlord Omokk
+  collect 12534 optional              -- Omokk's Head
+
+step Tazz'Alaor: War Master Voone
+  when done lbrs-start
+  tip Down into Tazz'Alaor, the trolls' hall: Shadow Hunter Vosh'gajin (elite 59, two priests at her side), then down the great ramp and along the hall to War Master Voone (elite 59, no adds, hits very hard).
+  kill 9237 quest 5081                -- War Master Voone
+
+step Skitterweb Tunnels: Mother Smolderweb
+  when done lbrs-start
+  tip The spiders' tunnels: the eggs for Kibler. Mother Smolderweb (elite 59) waits at the top. Whoever has Mother's Milk lets her poison them, and nobody removes that poison; then kill her. The poison must still be there at Ragged John's: if it would wear off before the end of the run (to check in game), that player goes out right after her and comes back.
+  kill 10596 optional                 -- Mother Smolderweb
+
+step Urok's Tribute Pile
+  when done lbrs-start
+  tip Up the ramp past the tunnels, on the corner of the landing, behind two Spirestone orcs: Urok's Tribute Pile, a heap of skulls. The player with the Roughshod Pike and Omokk's Head stands by it and uses the head: waves of ogres come, then Urok Doomhowl (elite 60). Every 30 seconds, the pike used on the pile kills one ogre outright.
+  collect 12712 quest 4867            -- Warosh's Mojo: Urok Doomhowl
+
+step Halycon and Gizrul
+  when done lbrs-start
+  tip Past Quartermaster Zigris, Halycon's lair: the great worg (elite 59) and her pups. Gizrul the Slavener runs in right after her death: no time to rest in between.
+  kill 10220 quest 4701               -- Halycon
+
+step Overlord Wyrmthalak
+  when done lbrs-start
+  tip The last boss, Overlord Wyrmthalak (elite 60), calls two adds at half health. He drops General Drakkisath's Command for each player: right-click it.
+  kill 9568 quest 5081                -- Overlord Wyrmthalak
+  accept 5089                         -- General Drakkisath's Command: Overlord Wyrmthalak
+
+step Hordemar City: Warosh
+  when complete 4867
+  tip Back to the entrance: Warosh walks around the first part of Hordemar City.
+  turnin 4867                         -- Warosh
+
+step Flame Crest: Ragged John
+  when onquest 4866
+  zone Burning Steppes
+  tip Out of the Spire, north-east to Flame Crest. Ragged John: his talk option, while the poison is still on you. Poison gone? Mother's Milk cannot be done this time: skip this step.
+  kill 9563 quest 4866                -- Ragged John: let him milk you
+  turnin 4866                         -- Ragged John
+
+step Flame Crest: Kibler's worg pup
+  when complete 4729
+  zone Burning Steppes
+  turnin 4729                         -- Kibler
+
+step Flame Crest: Kibler's spider eggs
+  when complete 4862
+  zone Burning Steppes
+  turnin 4862                         -- Kibler
+
+step Morgan's Vigil: Helendis Riverhorn
+  when complete 4701
+  zone Burning Steppes
+  turnin 4701                         -- Helendis Riverhorn
+
+step Morgan's Vigil: Marshal Maxwell
+  when complete 5081
+  zone Burning Steppes
+  turnin 5081                         -- Marshal Maxwell
+
+step Morgan's Vigil: General Drakkisath's Command
+  when onquest 5089
+  zone Burning Steppes
+  tip Maxwell's next quest, General Drakkisath's Demise, is for Upper Blackrock Spire (10 players, the Seal of Ascension to open it): not in this guide.
+  turnin 5089                         -- Marshal Maxwell
+
+step Lower Blackrock Spire: quests not done
+  label lbrs-end
+  when done lbrs-start
+  tip What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or drop it to free the log.
+  tip Upper Blackrock Spire, up the stairs on the left past the Spire's entrance, is not in this guide: a dungeon made for a raid group of ten, behind a door that opens only with the Seal of Ascension. The seal takes Vaelan's two quests, given inside Lower Blackrock Spire: the gemstones of Highlord Omokk, War Master Voone and Overlord Wyrmthalak with an Unadorned Seal from the Spire's orcs, then Emberstrife, a drake of the Wyrmbog in Dustwallow Marsh, beaten down and bound with the Orb of Draconic Energy.
+  abandon 4701 optional
+  abandon 4729 optional
+  abandon 4862 optional
+  abandon 4866 optional
+  abandon 4867 optional
+  abandon 5081 optional
+
+# ================================================================ Dire Maul
+# Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
+# Dungeons codex; prerequisites cross-checked with the TrinityCore base: no disagreement (The
+# Treasure of the Shen'dralar after The Madness Within; Shards of the Felvine after A Reliquary of
+# Purity; Lethtendris's Web needs nothing, its errand from Stormwind or Ironforge is dropped by the
+# compiler). Rooms, bosses and how-to: Warcraft Tavern's
+# Forever Dire Maul East and West dungeon and quest guides (warcrafttavern.com/forever/guides/
+# dire-maul-east, dire-maul-west, dire-maul-east-quests, dire-maul-west-quests, read on 12/11/2026),
+# written from Classic (closed in the Forever beta): places inside are to check in game.
+# Asked once (`when group 7488`, Lethtendris's Web: level 54); every later step needs `when done
+# dm-start`. Flow: Feathermoon (Latronicus, Runethorn) -> Lariss Pavilion (Azj'Tordin) -> the eastern
+# wing (Pusillin and the Crescent Key, Lethtendris, Zevrim, Alzzin and the Felvine) -> out by its
+# back door to Azj'Tordin -> the western wing (the five pylons, the Shen'dralar Ancient, Immol'thar,
+# Tortheldrin, the Athenaeum) -> Feathermoon. Then Shards of the Felvine, its own question (0.12.2).
+# The Treasure of the Shen'dralar has two versions in the data (7462 for the Alliance, 7877 for
+# every race), both after The Madness Within: the guide offers both, optional, and the Ancient gives
+# the one Forever uses (to check in game).
+# Left out: the northern wing (The Gordok Ogre Suit, Free Knot!, Unfinished Gordok Business, A
+# Broken Trap, The Gordok Taste Test: the tribute run), Lorekeeper Lydros's libram quests (black
+# diamonds, enchanting shards and other materials), the class books that drop in the dungeon (a
+# player's own quest, handed to Lydros), the class quests (Arcane Refreshment, Quel'Serrar, the
+# warlock's and paladin's mounts), Isalien (dungeon set).
+step Dire Maul (dungeon, optional)
+  label dm-start
+  when group 7488
+  tip Dire Maul: the ruined elf city in the middle of Feralas, three wings. The guide does the eastern one (Warpwood Quarter, 55 to 58), whose imp carries the key of the others, then the western one (Capital Gardens, 58 to 60). A group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Feathermoon Stronghold and the Lariss Pavilion. Alone? Skip it.
+  note Keep 8 free quest log slots. The northern wing (the ogres' tribute) is not in the guide.
+  goto 30.3,43.3 map 1444 "Feathermoon Stronghold" r 40
+
+step Feathermoon Stronghold
+  when done dm-start
+  zone Feralas
+  tip Latronicus Moonspear stands in the fort; Scholar Runethorn walks the road through it.
+  accept 7488                         -- Latronicus Moonspear
+  accept 7482                         -- Scholar Runethorn
+
+step Lariss Pavilion: Azj'Tordin
+  when done dm-start
+  zone Feralas
+  tip The Lariss Pavilion stands north-east of Camp Mojache (Horde), east of Dire Maul: from Feathermoon, the flight to Thalanaar and the road west is the quickest way. Azj'Tordin's book is with Pusillin, the imp at the eastern wing's entrance.
+  accept 7441                         -- Azj'Tordin
+
+step Dire Maul: before going in
+  when done dm-start
+  zone Feralas
+  tip Dire Maul stands on the plateau in the middle of Feralas. The eastern wing opens on the east wall of the central courtyard, and from Eldreth Row at the city's gates; both lead to the upper level of the Warpwood Quarter.
+  note In the quest log: Lethtendris's Web (Latronicus), Elven Legends (Runethorn), Pusillin and the Elder Azj'Tordin. A class book found in the dungeon starts a quest of its own: it goes to Lorekeeper Lydros, in the Athenaeum (western wing). Not on this route: the northern wing's quests, Lydros's libram quests.
+  goto 59.2,45.1 map 1444 "Dire Maul" r 25
+
+step Warpwood Quarter: Pusillin
+  when done dm-start
+  tip Pusillin the imp waits by the entrance: speak with him, then chase him through the first rooms, speaking with him each time he stops. He ends on a platform up a ramp near the back door, where he fights (elite 57). He drops Azj'Tordin's Book of Incantations and the Crescent Key, which opens the western and northern wings: one key in the group is enough.
+  collect 18261 quest 7441            -- Book of Incantations: Pusillin
+  collect 18249 optional              -- Crescent Key: Pusillin
+
+step Warpwood Quarter: Lethtendris
+  when done dm-start
+  tip Lethtendris (elite 57), a blood elf warlock, fights with her imp Pimgib: interrupt her spells. Her web is for Latronicus.
+  collect 18426 quest 7488            -- Lethtendris's Web: Lethtendris
+
+step Warpwood Quarter: Alzzin the Wildshaper
+  when done dm-start
+  tip Hydrospawn patrols the pool on the next level down. Zevrim Thornhoof (elite 57) sacrifices players on his altar; after him, speak with Old Ironbark: he opens the Conservatory Door. Clear the Warpwood Crushers on the ramp, then Alzzin the Wildshaper (elite 58), who changes shape.
+  kill 11492 optional                 -- Alzzin the Wildshaper
+
+step Lariss Pavilion: Azj'Tordin
+  when complete 7441
+  zone Feralas
+  tip The door at the back of Alzzin's room opens with the Crescent Key straight onto the Lariss Pavilion.
+  turnin 7441                         -- Azj'Tordin
+
+step Dire Maul West: before going in
+  when done dm-start
+  zone Feralas
+  tip Back to the central courtyard of Dire Maul: the western wing opens on its west wall, with the Crescent Key. Five pylons, great crystals, shield Immol'thar's prison: kill every Arcane Aberration and Mana Remnant around a pylon to shut it down.
+  goto 59.2,45.1 map 1444 "Dire Maul" r 25
+
+step Capital Gardens and the Court of the Highborne
+  when done dm-start
+  tip The first pylon stands in the Capital Gardens, right in front of the entrance. Kill the wandering Ancients before Tendris Warpwood (elite 60), who calls them all. Upstairs, the Court of the Highborne: two more pylons, Illyanna Ravenoak and Magister Kalendris. The Shen'dralar Ancient stands on the bridge of the upper level.
+  accept 7461                         -- Shen'dralar Ancient
+
+step Immol'thar and Prince Tortheldrin
+  when done dm-start
+  tip The last two pylons stand either side of the door of the Prison of Immol'thar: with all five down, its force field is gone. Immol'thar (elite 61) calls adds and moves players to the middle of the room; he enrages at half health. A small tunnel then leads to the Athenaeum: Prince Tortheldrin (elite 60).
+  kill 11496 quest 7461               -- Immol'thar
+  kill 11486 quest 7461               -- Prince Tortheldrin
+
+step The Athenaeum: Elven Legends
+  when done dm-start
+  tip The skeletal remains lie on the floor beside Lorekeeper Lydros, in the Athenaeum: choose to mourn the great loss.
+  interact 179544 quest 7482          -- Skeletal remains, beside Lorekeeper Lydros
+
+step The Shen'dralar Ancient and his treasure
+  when done dm-start
+  tip Back to the Shen'dralar Ancient on the bridge of the Court of the Highborne. His next quest sends you to the Treasure of the Shen'dralar, a chest under the ramp of the Athenaeum: take the one he offers.
+  turnin 7461                         -- Shen'dralar Ancient
+  accept 7462 optional                -- Shen'dralar Ancient
+  accept 7877 optional                -- Shen'dralar Ancient: the same quest, the other version
+  turnin 7462 optional                -- Treasure of the Shen'dralar, under the ramp of the Athenaeum
+  turnin 7877 optional
+
+step Feathermoon Stronghold: Latronicus Moonspear
+  when complete 7488
+  zone Feralas
+  tip Out of Dire Maul, back to Feathermoon Stronghold (the flight from Thalanaar, or the road west and the boat).
+  turnin 7488                         -- Latronicus Moonspear
+
+step Feathermoon Stronghold: Scholar Runethorn
+  when complete 7482
+  zone Feralas
+  turnin 7482                         -- Scholar Runethorn
+
+step Dire Maul: quests not done
+  label dm-end
+  when done dm-start
+  tip What is left of Dire Maul in the quest log is for another run: keep it for one, or drop it to free the log.
+  abandon 7488 optional
+  abandon 7482 optional
+  abandon 7441 optional
+  abandon 7461 optional
+
+# Groupe Alliance 0.12.2: Shards of the Felvine (5526), Rabine Saturna's quest behind Alzzin the
+# Wildshaper, asked here (it was asked in Group 30 before). Its prerequisite, A Reliquary of Purity
+# (5527, level 60, required 56), is offered only to a character who has been inside Dire Maul
+# (players' reports #3104 and #3270, Polestar 0.4.2.2's data/guide-fixes.json): so the chain starts
+# after the dungeon, at Rabine in Nighthaven (Moonglade 51.7,45.1, Polestar's Forever data), goes to
+# Southwind Village in Silithus for the Dusty Reliquary, back to Rabine, then into the eastern wing
+# again for the Felvine, and back to Rabine. Asked once (`when group 5526`), only after the Dire Maul
+# chapter (`when done dm-start`); later steps need `when done felvine-start`, and the steps of 5527
+# are passed by a player who already handed it in (taken in Group 28 after an earlier visit to Dire
+# Maul). Dropped at the end when not done.
+step Shards of the Felvine (optional)
+  label felvine-start
+  when done dm-start
+  when group 5526
+  zone Moonglade
+  tip From Feathermoon, the flight to Moonglade. Now that you have been inside Dire Maul, Rabine Saturna offers A Reliquary of Purity, then Shards of the Felvine. A long chain: the Reliquary lies in Southwind Village, in Silithus; back to Rabine in Moonglade; then a new run of the eastern wing of Dire Maul, where the Felvine grows behind Alzzin the Wildshaper (elite 58); and back to Rabine. Take it only if your group means to run the eastern wing again. Alone? Skip it.
+  note Keep 2 free quest log slots.
+  goto 51.7,45.1 map 1450 "Nighthaven" r 40
+
+step Moonglade: Rabine Saturna
+  when done felvine-start
+  when !turnedin 5527
+  zone Moonglade
+  tip Rabine Saturna's house stands in Nighthaven.
+  accept 5527                         -- Rabine Saturna
+
+step Southwind Village
+  when done felvine-start
+  when onquest 5527
+  zone Silithus
+  tip From Moonglade, the flight to Cenarion Hold, then east to the ruins of Southwind Village. The Dusty Reliquary lies among the ruined buildings, watched by Tortured Sentinels.
+  collect 22201 quest 5527.1          -- Dusty Reliquary; inside
+
+step Moonglade: Rabine Saturna
+  when done felvine-start
+  when onquest 5527
+  zone Moonglade
+  tip From Cenarion Hold, the flight back to Moonglade.
+  turnin 5527                         -- Rabine Saturna
+
+step Moonglade: Rabine Saturna
+  when done felvine-start
+  zone Moonglade
+  accept 5526                         -- Rabine Saturna
+
+step Dire Maul: the eastern wing again
+  when done felvine-start
+  zone Feralas
+  tip From Moonglade, the flight to Feathermoon Stronghold or Thalanaar, then Dire Maul's eastern wing, as in the first run: Zevrim Thornhoof, Old Ironbark at the Conservatory Door, the Warpwood Crushers on the ramp, then Alzzin the Wildshaper (elite 58). Once he is dead, the Felvine behind him drops its shards: loot one, then use the Reliquary of Purity.
+  goto 59.2,45.1 map 1444 "Dire Maul" r 25
+  collect 18540 quest 5526            -- Sealed Reliquary of Purity: a Felvine Shard in the Reliquary of Purity
+
+step Moonglade: Rabine Saturna
+  when complete 5526
+  zone Moonglade
+  tip Shards of the Felvine: Rabine Saturna, in her house in Nighthaven. From Feathermoon, the flight to Moonglade.
+  turnin 5526                         -- Rabine Saturna
+
+step Shards of the Felvine: not done
+  when onquest 5526
+  when !complete 5526
+  tip Shards of the Felvine is not done and the guide does not go back to Dire Maul: abandon it, or keep it for a run of your own.
+  abandon 5526
+
+# ================================================================ Stratholme and Scholomance
+# Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
+# Dungeons codex; prerequisites cross-checked with the TrinityCore base: no disagreement (The Active
+# Agent after The Flesh Does Not Lie; The Truth Comes Crashing Down, started by the Head of Balnazzar,
+# after The Archivist; Above and Beyond after it, then Lord Maxwell Tyrosus and The Argent Hold;
+# The Restless Souls 5282 after 5281, handed to Egan on the route; Of Love and Family 5848 after 5846,
+# handed to Renfray on Caer Darrow, after Of Lost Honor 5845, done on the route; Krastinov's Bag of Horrors after Doctor Theolen Krastinov, Kirtonos
+# the Herald after the bag; Healthy Dragon Scale after Plagued Hatchlings). Polestar's data and
+# Warcraft Tavern name the tobacco merchant Ezra Grimm (The Great Ezra Grimm); TrinityCore keeps
+# the old title, The Great Fras Siabi. Rooms, bosses and how-to: Warcraft Tavern's Forever
+# Stratholme (living and undead) and Scholomance dungeon and quest guides (warcrafttavern.com/
+# forever/guides/stratholme-living, stratholme-undead, stratholme-living-quests,
+# stratholme-undead-quests, scholomance, scholomance-quests, read on 12/11/2026), written from
+# Classic (both closed in the Forever beta): places inside are to check in game.
+# Both questions are asked at Light's Hope Chapel (`when group 5212`, The Flesh Does Not Lie;
+# `when group 5382`, Doctor Theolen Krastinov, the Butcher), where Betina Bigglezink gives a quest of
+# each dungeon; later steps need `when done strat-start` or `when done scholo-start`.
+# Stratholme, three visits in one instance, as its quest chains ask (Warcraft Tavern: The Archivist
+# must be handed in before Balnazzar dies, The Truth Comes Crashing Down before the Baron does):
+#   1. the living side, by the main gate: Ezra Grimm, the Scarlet Bastion (Malor's strongbox,
+#      Archivist Galford and the painting), Elders' Square (Barthilas: the Key to the City);
+#   2. Balnazzar, then a ride to Light's Hope and back;
+#   3. the dead side, by the Service Entrance: Aurius, the three ziggurats, Ramstein, the Baron.
+# Scholomance, one instance: the deeds, the hatchlings, Rattlegore, Ras Frostwhisper, the six
+# chambers and Krastinov, then two trips out to Eva Sarkhoff at the door and back in (Jandice
+# Barov, then Kirtonos, both near the entrance), as Warcraft Tavern advises.
+# Left out: Menethil's Gift and the rest of Ras Frostwhisper's chain (The Human, Ras Frostwhisper:
+# Stromgarde in the Arathi Highlands, Light's Hope, Stratholme before the Baron, Scholomance again;
+# the TrinityCore base also asks Friendly standing with Caer Darrow, faction 574, for its first
+# quest, which Polestar's data does not); Dawn's Gambit (after Tinkee Steamboil's chain, through
+# Upper Blackrock Spire); The Last Barov (Horde lands); Sweet Serenity and Corruption (Winterspring,
+# the Crimson Hammersmith and the Black Guard Swordsmith); Dead Man's Plea, Deliana's and Anthion
+# Harmon's dungeon set quests; the class quests (Judgment and Redemption, Imp Delivery).
+step Stratholme (dungeon, optional)
+  label strat-start
+  when group 5212
+  tip Stratholme: the dead city in the north-west of the Eastern Plaguelands, levels 58 to 60, bosses 57 to 62: a group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Light's Hope Chapel, from Egan in Terrordale and, for whoever helped Tirion Fordring on the route (Of Lost Honor), from Artist Renfray on Caer Darrow. Its quest chains ask for three visits to the same instance: the living side, then Balnazzar, then the dead side, with rides back to Light's Hope in between. Alone? Skip it.
+  note Keep 8 free quest log slots. Scholomance is asked next, here too: one of its quests is given in this chapel.
+  goto 71.7,49.9 map 1423 live "Light's Hope Chapel" r 40
+
+step Scholomance (dungeon, optional)
+  label scholo-start
+  when group 5382
+  tip Scholomance: the school of necromancy under Caer Darrow, the island of the lake in the south-east of the Western Plaguelands. Levels 58 to 60, bosses 58 to 62: a group of 5 at 59 or 60. Its door opens only with the Skeleton Key, the reward of The Key to Scholomance, a long chain from Alchemist Arbington at Chillwind Camp that the guide offers before the run: one key in the group is enough. The guide runs it after Stratholme; Betina Bigglezink, in this chapel, gives one of its quests, the others come from Chillwind Camp and from Eva Sarkhoff at its door. Alone? Skip it.
+  note Keep 4 free quest log slots.
+  goto 71.7,49.9 map 1423 live "Light's Hope Chapel" r 40
+
+step Light's Hope Chapel: Stratholme
+  when done strat-start
+  zone Eastern Plaguelands
+  tip Leonid Barthalomew the Revered stands inside the chapel; Betina Bigglezink, Duke Nicholas Zverenhoff and Smokey LaRue stand around it.
+  accept 5212                         -- Betina Bigglezink
+  accept 5251                         -- Duke Nicholas Zverenhoff
+  accept 5214                         -- Smokey LaRue
+  accept 5243                         -- Leonid Barthalomew the Revered
+
+step Light's Hope Chapel: Scholomance
+  when done scholo-start
+  zone Eastern Plaguelands
+  tip Plagued Hatchlings: the dragon whelps of Scholomance. Betina's other Scholomance quest, Dawn's Gambit, comes only after Tinkee Steamboil's chain through Upper Blackrock Spire: not in this guide.
+  accept 5529                         -- Betina Bigglezink
+
+step Terrordale: Egan
+  when done strat-start
+  zone Eastern Plaguelands
+  tip Ride west across the zone to Terrordale: Egan waits in the westernmost of its three houses, where the route found him. His blaster frees the ghosts of Stratholme.
+  accept 5282                         -- Egan
+
+step Tirion Fordring: Of Love and Family
+  when done strat-start
+  when turnedin 5845
+  zone Eastern Plaguelands
+  tip West of Terrordale, Tirion's hut on the bank of the border river. Of Love and Family follows Of Lost Honor, done on the route: it goes to Artist Renfray, on Caer Darrow in the lake of the Western Plaguelands, whose own quest is a painting in Stratholme.
+  accept 5846                         -- Tirion Fordring
+
+step Caer Darrow: Artist Renfray
+  when done strat-start
+  when onquest 5846
+  zone Western Plaguelands
+  tip Ride south through the Western Plaguelands to the lake and onto Caer Darrow: Renfray paints inside the ruined house. His quest cannot be shared. Then back north-east to Stratholme.
+  turnin 5846                         -- Artist Renfray, inside
+  accept 5848
+
+step Stratholme: along the way
+  when done strat-start
+  along until strat-end
+  tip Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); Stratholme Holy Water in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; equip the blaster Egan gave you, target one and use the blaster on it, then again on the soul that breaks free.
+  note Share The Flesh Does Not Lie, The Archivist, The Great Ezra Grimm and Houses of the Holy with your group: click each in the quest log, then Share. The Restless Souls and Renfray's painting quest cannot be shared.
+  collect 13174 quest 5212            -- Plagued Flesh Sample
+  collect 13180 quest 5243            -- Stratholme Holy Water: supply crates
+  kill 11122 quest 5282               -- Restless Soul, freed with the blaster
+
+step Stratholme, first visit: before going in
+  when done strat-start
+  zone Eastern Plaguelands
+  tip First visit, the living side, by the main gate across the bridge: King's Square, Market Row, Crusaders' Square and the Scarlet Bastion, then Festival Lane and Elders' Square. Leave Balnazzar alive this time: The Archivist must be handed in before he dies, or his head starts nothing. Warcraft Tavern (written from Classic) says the doors of the Scarlet Bastion open with The Scarlet Key, from Arcanist Doan's chest in the Scarlet Monastery Library: to check in game.
+  note In the quest log: The Flesh Does Not Lie (Betina), The Archivist (Duke Nicholas), The Great Ezra Grimm (Smokey LaRue), Houses of the Holy (Leonid), The Restless Souls (Egan); Renfray's painting quest, for whoever took it. Not on this route: Sweet Serenity and Corruption (Winterspring), the dungeon set quests (Deliana, Anthion Harmon), Ras Frostwhisper's chain (Menethil's Gift).
+  goto 26.5,10.4 map 1423 "Stratholme" r 25
+
+step King's Square: Ezra Grimm
+  when done strat-start
+  tip Past the main gate, King's Square: follow the road round to the left to its dead end, under the sign of Ezra Grimm's Premium Tobacco. Ezra Grimm, undead (elite 61), stands in front of his shop.
+  collect 13172 quest 5214            -- Grimm's Premium Tobacco: Ezra Grimm
+
+step Market Row and Crusaders' Square
+  when done strat-start
+  tip Back through King's Square, then Market Row (Hearthsinger Forresten, rare, may walk there) to Crusaders' Square: Timmy the Cruel runs out once the square is cleared. Never click a pattern on the ground during a fight: it calls the Crimson Hammersmith. The Scarlet Bastion opens on the square.
+  kill 10808 optional                 -- Timmy the Cruel
+
+step The Scarlet Bastion: Malor's Strongbox
+  when done strat-start
+  tip In the Bastion, Malor the Zealous (elite 60) guards the Hoard: his strongbox, on the ground beside him, holds the Medallion of Faith. One medallion per run: whoever loots it keeps it for Aurius, in the third visit. Cannon Master Willey (elite 60) holds the armoury and calls riflemen: the cannons of his room fire on them.
+  kill 11032 optional                 -- Malor the Zealous
+  collect 12845 optional              -- Medallion of Faith: Malor's Strongbox
+
+step The Scarlet Bastion: Archivist Galford
+  when done strat-start
+  tip Archivist Galford (elite 60) holds his library, across the hall from the last chamber, Balnazzar's: spread out against his fire. Once he is dead, use the Scarlet Archive, the book on the table behind him: the room burns. Leave Balnazzar for the second visit.
+  kill 10811 quest 5251               -- Archivist Galford
+  interact 176245 quest 5251          -- Scarlet Archive: set it on fire
+
+step The Scarlet Bastion: the painting
+  when done strat-start
+  when onquest 5848
+  tip Of Love and Family: an Unfinished Painting hangs on the wall of Galford's library, the twin moons on it; Renfray's painting is hidden behind it.
+  collect 14679 quest 5848            -- Of Love and Family: behind the Unfinished Painting
+
+step Festival Lane and Elders' Square
+  label strat-v1-end
+  when done strat-start
+  tip Out of the Bastion, Festival Lane: The Unforgiven (elite 57) calls spirits, kill them first. Then Elders' Square: Magistrate Barthilas (elite 58) stands before Alonsus Chapel and drops the Key to the City. It opens the Service Entrance, the gate on this square, and the gate of the Gauntlet: one key in the group is enough. Leave the dungeon by the Service Entrance, or the way you came; keep the group together, without resetting the instance: the next two visits come back into it.
+  kill 10435 optional                 -- Magistrate Barthilas
+  collect 12382 optional              -- Key to the City: Magistrate Barthilas
+
+step Light's Hope Chapel: Betina Bigglezink
+  when complete 5212
+  zone Eastern Plaguelands
+  tip Ride back east to Light's Hope Chapel, a good ten minutes. Betina's next quest is for the third visit.
+  turnin 5212                         -- Betina Bigglezink
+  accept 5213                         -- The Scourge Data: a ziggurat of the dead side
+
+step Light's Hope Chapel: Duke Nicholas Zverenhoff
+  when complete 5251
+  zone Eastern Plaguelands
+  tip The Archivist handed in: Balnazzar's head now starts the next quest (second visit).
+  turnin 5251                         -- Duke Nicholas Zverenhoff
+
+step Light's Hope Chapel: Smokey LaRue
+  when complete 5214
+  zone Eastern Plaguelands
+  turnin 5214                         -- Smokey LaRue
+
+step Light's Hope Chapel: Leonid Barthalomew the Revered
+  when complete 5243
+  zone Eastern Plaguelands
+  turnin 5243                         -- Leonid Barthalomew the Revered
+
+step Stratholme, second visit: Balnazzar
+  when done strat-start
+  tip Second visit: back into the same instance by the main gate, through the cleared streets to the Scarlet Bastion's last chamber. Grand Crusader Dathrohan (elite 62) turns into Balnazzar, a dread lord, during the fight: dispel his Deep Sleep, stand at range from his Psychic Scream. His head starts The Truth Comes Crashing Down for those who handed in The Archivist: right-click it.
+  goto 26.5,10.4 map 1423 "Stratholme" r 25
+  kill 10813 optional                 -- Balnazzar
+  accept 5262                         -- Head of Balnazzar: Balnazzar
+
+step Light's Hope Chapel: The Truth Comes Crashing Down
+  label strat-v2-end
+  when onquest 5262
+  zone Eastern Plaguelands
+  tip Out by the Service Entrance in Elders' Square (or the way you came) and back to Light's Hope Chapel. Duke Nicholas takes the head and sends you after Baron Rivendare, the last boss of the dead side: the third visit, in the same instance. Rather not ride again? Skip this step: Above and Beyond then waits for another run.
+  turnin 5262                         -- Duke Nicholas Zverenhoff
+  accept 5263
+
+step Stratholme, third visit: before going in
+  when done strat-start
+  zone Eastern Plaguelands
+  tip Third visit, the dead side: the Service Entrance, the gate east of the main one, opens with the Key to the City onto Elders' Square. Bosses 59 to 62: 60 advised. Opening the gate of the Gauntlet starts Baron Rivendare's 45-minute countdown: it only matters for Ysida Harmon (Dead Man's Plea, a dungeon set quest), no quest of this guide depends on it.
+  note In the quest log: The Active Agent (Betina), Above and Beyond (Duke Nicholas). Whoever carries the Medallion of Faith: Aurius, just inside.
+  enter "Stratholme" @26.5,10.4 map 1423
+
+step Elders' Square: Aurius
+  when done strat-start
+  tip Aurius waits in Alonsus Chapel, on Elders' Square: the player with the Medallion of Faith hands it in, then takes Aurius' Reckoning. With the medallion handed in during this instance, Aurius joins the fight against Baron Rivendare. Whether he offers Aurius' Reckoning to the others of the group too: to check in game.
+  accept 5122 optional                -- Aurius: with the Medallion of Faith
+  turnin 5122 optional
+  accept 5125 optional                -- Aurius
+
+step The Gauntlet and the ziggurats
+  when done strat-start
+  tip The Key to the City opens the gate of the Gauntlet. Three ziggurats stand on the dead side, each with a guardian at its door: Nerub'enkan (the first, on the left), Baroness Anastari (the second: she possesses a player, bring them to half health), Maleki the Pallid (the third). Kill each guardian, then every Thuzadin Acolyte inside: the Scourge Data for Betina lies in a small box in one of the three. Stonespine (rare) may walk between the first two.
+  kill 10437 optional                 -- Nerub'enkan
+  kill 10436 optional                 -- Baroness Anastari
+  kill 10438 optional                 -- Maleki the Pallid
+  collect 13176 quest 5213            -- Scourge Data: a small box in one of the ziggurats
+
+step Slaughter Square: Ramstein the Gorger
+  when done strat-start
+  tip With the three ziggurats cleared, the gates of Slaughter Square open. Kill every Bile Spewer and Venom Belcher in the square: Ramstein the Gorger (elite 61) comes out; he hits hard and knocks his target away. Then a horde of Mindless Undead, then three Black Guard Sentries at the door of the Slaughterhouse.
+  kill 10439 optional                 -- Ramstein the Gorger
+
+step The Slaughterhouse: Baron Rivendare
+  label strat-v3-end
+  when done strat-start
+  tip Baron Rivendare (elite 62) raises skeletons and his Unholy Aura hurts everyone near him; his Mortal Strike cuts the tank's healing. His head is for Duke Nicholas. Then speak with Aurius for Aurius' Reckoning. The glowing symbol in front of the Baron, Menethil's Gift, belongs to Ras Frostwhisper's chain: not in this guide.
+  collect 13251 quest 5263            -- Head of Baron Rivendare
+  turnin 5125 optional                -- Aurius, after the fight
+
+step Light's Hope Chapel: Betina Bigglezink
+  when complete 5213
+  zone Eastern Plaguelands
+  tip Out of Stratholme, back east to Light's Hope Chapel.
+  turnin 5213                         -- Betina Bigglezink
+
+step Light's Hope Chapel: Duke Nicholas Zverenhoff
+  when complete 5263
+  zone Eastern Plaguelands
+  tip Above and Beyond: Duke Nicholas sends you to Lord Maxwell Tyrosus, inside the chapel, who opens the Argent Hold, the chest beside him, for your reward.
+  turnin 5263                         -- Duke Nicholas Zverenhoff
+  accept 5264
+  turnin 5264                         -- Lord Maxwell Tyrosus
+  accept 5265
+  turnin 5265                         -- The Argent Hold
+
+step Light's Hope Chapel: what is left to hand in
+  when onquest 5212,5214,5243,5251,5262
+  zone Eastern Plaguelands
+  tip Finished in the second or third visit only, or Balnazzar's head kept without the ride: hand them in now.
+  turnin 5212 optional                -- Betina Bigglezink
+  turnin 5214 optional                -- Smokey LaRue
+  turnin 5243 optional                -- Leonid Barthalomew the Revered
+  turnin 5251 optional                -- Duke Nicholas Zverenhoff
+  turnin 5262 optional                -- Duke Nicholas Zverenhoff: the head of Balnazzar
+
+step Terrordale: Egan
+  when complete 5282
+  zone Eastern Plaguelands
+  tip Ride west across the zone to Egan's house in Terrordale.
+  turnin 5282                         -- Egan
+
+step Tirion Fordring: Of Love and Family
+  when complete 5848
+  zone Eastern Plaguelands
+  tip West of Terrordale, Tirion's hut on the bank of the border river. His next quest, Find Myranda, leads to Hearthglen: not in this guide.
+  turnin 5848                         -- Tirion Fordring
+
+step Stratholme: quests not done
+  label strat-end
+  when done strat-start
+  tip What is left of Stratholme in the quest log is for another run: keep it for one, or drop it to free the log.
+  abandon 5212 optional
+  abandon 5213 optional
+  abandon 5214 optional
+  abandon 5243 optional
+  abandon 5251 optional
+  abandon 5262 optional
+  abandon 5263 optional
+  abandon 5282 optional
+  abandon 5125 optional
+  abandon 5848 optional
+
+# Of Love and Family (5848), taken from Renfray, when Stratholme was not finished: nothing brings the
+# guide back to Tirion.
+step Of Love and Family: not done
+  when onquest 5848
+  when !complete 5848
+  tip Of Love and Family is not done and the guide does not go back to Stratholme: abandon it, or keep it for a run of your own.
+  abandon 5848
+
+step The Skeleton Key (optional)
+  label key-start
+  when done scholo-start
+  when !turnedin 5505
+  when group 5505
+  zone Western Plaguelands
+  tip The Skeleton Key opens Scholomance: one player of the group with it is enough, and a rogue can pick the lock instead. Its chain is long: Alchemist Arbington at Chillwind Camp, Krinkle Goodsteel in Gadgetzan (15 gold), Fire Plume Ridge in Un'Goro Crater with two Thorium Bars, then Araj the Summoner (elite 61) in Andorhal. Somebody in the group already has the key? Skip it.
+  note To Chillwind Camp: the flight from Light's Hope Chapel, or the road south from Tirion's hut. Alchemist Arbington stands in the camp.
+  accept 5538                         -- Alchemist Arbington: for Krinkle Goodsteel in Gadgetzan
+
+step Gadgetzan: Krinkle Goodsteel
+  when done key-start
+  when onquest 5538
+  zone Tanaris
+  tip The long way to Gadgetzan: from Chillwind Camp, the flight to Ironforge, then Menethil Harbor, the boat to Theramore and the flight to Gadgetzan. Krinkle Goodsteel stands at his forge in town; he wants the Imbued Skeletal Fragments and 15 gold.
+  turnin 5538                         -- Krinkle Goodsteel
+  accept 5801
+
+step Fire Plume Ridge
+  when done key-start
+  when onquest 5801
+  zone Un'Goro Crater
+  tip Two Thorium Bars in the bags (a miner, or the auction house). Ride west from Gadgetzan into Un'Goro Crater and climb Fire Plume Ridge in its middle: use the Skeleton Key Mold by the lava lake at the top. The Living Blazes up there are 54-55.
+  use 14644 quest 5801.1 @48.9,47.0 map 1449
+  collect 14645 quest 5801.1 @48.9,47.0 -- Unfinished Skeleton Key
+
+step Chillwind Camp: Alchemist Arbington
+  when done key-start
+  when complete 5801
+  zone Western Plaguelands
+  tip Back to Chillwind Camp the long way. Araj the Summoner, the next task, is a level 61 elite in Andorhal: the whole group goes.
+  turnin 5801                         -- Alchemist Arbington
+  accept 5803
+
+step Andorhal: Araj the Summoner
+  when done key-start
+  when onquest 5803
+  zone Western Plaguelands
+  tip Andorhal, the ruined city north of the camp: Araj the Summoner (elite 61) stands in the middle of the town with his skeletons. Kill him, then click his phylactery for the scarab.
+  collect 14610 quest 5803.1 @45.6,69.3 -- Araj's Scarab: Araj the Summoner
+
+step Chillwind Camp: the Skeleton Key
+  when done key-start
+  when complete 5803
+  zone Western Plaguelands
+  turnin 5803                         -- Alchemist Arbington
+  accept 5505
+  turnin 5505                         -- The Skeleton Key
+
+step Chillwind Camp: Weldon Barov
+  when done scholo-start
+  zone Western Plaguelands
+  tip To Chillwind Camp: the flight from Light's Hope Chapel, or the road south from Tirion's hut. Weldon Barov stands in the camp: his family's fortune is four deeds, all in Scholomance.
+  accept 5343                         -- Weldon Barov
+
+step Caer Darrow: Eva Sarkhoff
+  when done scholo-start
+  zone Western Plaguelands
+  tip Ride east to the lake and onto Caer Darrow. Eva Sarkhoff, a ghost, stands with Lucien before the door of Scholomance.
+  accept 5382                         -- Eva Sarkhoff
+
+step Scholomance: before going in
+  when done scholo-start
+  zone Western Plaguelands
+  tip The Skeleton Key opens the door: the player who has it goes first. Inside: the Reliquary, the Chamber of Summoning, the Great Ossuary (Rattlegore and the Viewing Room Key), the Viewing Room, the Laboratory (Ras Frostwhisper), then the six chambers round the Barov Family Vault and Darkmaster Gandling. Leave Jandice Barov and the Brazier of the Herald alone: Eva's chain sends you to them once Krastinov is dead, in the same instance.
+  note In the quest log: Barov Family Fortune (Weldon Barov), Doctor Theolen Krastinov, the Butcher (Eva Sarkhoff), Plagued Hatchlings (Betina). Share the three with your group: click each in the quest log, then Share. Not on this route: Dawn's Gambit, the dungeon set quests, the class quests.
+  goto 69.7,73.2 map 1422 "Scholomance" r 25
+
+step The Reliquary and the Chamber of Summoning
+  when done scholo-start
+  tip The Reliquary, the first great hall: the Deed to Southshore lies on a table in its back left corner, seen from the entrance. Then the Chamber of Summoning, and the great room after it: the Deed to Tarren Mill lies on a table in its far corner, opposite the way in. Each player clicks the deeds for their own quest (to check in game).
+  collect 13450 quest 5343            -- The Deed to Southshore: the Reliquary
+  collect 13451 quest 5343            -- The Deed to Tarren Mill: past the Chamber of Summoning
+
+step The Great Ossuary: the hatchlings and Rattlegore
+  when done scholo-start
+  tip The plagued hatchlings, dragon whelps, fill a room of the Great Ossuary: a little more than twenty. A rare one drops a Healthy Dragon Scale: keep it for Betina. Jandice Barov waits below their room, behind a torch on the south wall: leave her for now. Rattlegore (elite 61), in the basement of the Ossuary, drops the Viewing Room Key, which opens the rest of the school.
+  kill 10678 quest 5529               -- Plagued Hatchling
+  collect 13920 optional              -- Healthy Dragon Scale: keep it
+  kill 11622 optional                 -- Rattlegore
+  collect 13873 optional              -- Viewing Room Key: Rattlegore
+
+step The Viewing Room and the Laboratory
+  when done scholo-start
+  tip The Viewing Room: Vectus and Marduk Blackpool stand among neutral students and fight only for Dawn's Gambit: leave them. Then the Laboratory: Ras Frostwhisper (elite 62), a lich who fears and knocks back. The Deed to Brill lies by the west wall of the Laboratory, at the back, past the alchemy lab.
+  kill 10508 optional                 -- Ras Frostwhisper
+  collect 13471 quest 5343            -- The Deed to Brill: the Laboratory
+
+step The Barov Family Vault: the six chambers
+  when done scholo-start
+  tip The last hall: six chambers round the Barov Family Vault. Below, from the left: Lady Illucia Barov, Lord Alexei Barov (the Deed to Caer Darrow lies on a slab beside him), The Ravenian. Above, from the left: Lorekeeper Polkelt, Doctor Theolen Krastinov (he enrages at half health: burn him fast), Instructor Malicia. In Krastinov's chamber, burn the Remains of Eva Sarkhoff and of Lucien Sarkhoff, one on each side. Darkmaster Gandling comes into the vault once the six are dead; he sends players into the side chambers.
+  collect 13448 quest 5343            -- The Deed to Caer Darrow: beside Lord Alexei Barov
+  kill 11261 quest 5382               -- Doctor Theolen Krastinov
+  interact 176544 quest 5382          -- Remains of Eva Sarkhoff
+  interact 176545 quest 5382          -- Remains of Lucien Sarkhoff
+  kill 1853 optional                  -- Darkmaster Gandling
+
+step Caer Darrow: Eva Sarkhoff
+  label scholo-v1-end
+  when complete 5382
+  zone Western Plaguelands
+  tip Walk back out of Scholomance, without resetting the instance: Eva stands at the door. Her next quest is Jandice Barov's, near the entrance.
+  turnin 5382                         -- Eva Sarkhoff
+  accept 5515
+
+step Scholomance: Jandice Barov
+  when onquest 5515
+  tip Back into the same instance, through the cleared halls to the hatchlings' room: the torch on its south wall opens the way down to Jandice Barov (elite 61). She splits into illusions: mark her. Her corpse holds Krastinov's Bag of Horrors.
+  collect 13725 quest 5515            -- Krastinov's Bag of Horrors: Jandice Barov
+
+step Caer Darrow: Eva Sarkhoff
+  when complete 5515
+  zone Western Plaguelands
+  tip Out to Eva again. Kirtonos the Herald: she hands over the Blood of Innocents (Warcraft Tavern also has the Blood Steward of Kirtonos drop it: to check in game).
+  turnin 5515                         -- Eva Sarkhoff
+  accept 5384
+
+step Scholomance: Kirtonos the Herald
+  when onquest 5384
+  tip Back in, to the balcony on the north side of the Chamber of Summoning: use the Brazier of the Herald by the railing, with the Blood of Innocents in your bags. Kirtonos the Herald (elite 60) flies in, and turns from gargoyle to man during the fight, cursing in that form.
+  kill 10506 quest 5384               -- Kirtonos the Herald
+
+step Caer Darrow: Eva Sarkhoff
+  when complete 5384
+  zone Western Plaguelands
+  tip The rewards include the Spectral Essence: worn, it shows Magistrate Marduke, beside Eva. His chain against Ras Frostwhisper goes to Stromgarde in the Arathi Highlands, then Light's Hope Chapel, Stratholme (Menethil's Gift, before the Baron) and back to Scholomance: not in this guide.
+  turnin 5384                         -- Eva Sarkhoff
+
+step Chillwind Camp: Weldon Barov
+  when complete 5343
+  zone Western Plaguelands
+  tip Ride back west to Chillwind Camp. Weldon's next quest, The Last Barov, is in Horde lands: not in this guide.
+  turnin 5343                         -- Weldon Barov
+
+step Light's Hope Chapel: Betina Bigglezink
+  when complete 5529
+  zone Eastern Plaguelands
+  tip Plagued Hatchlings: the flight from Chillwind Camp to Light's Hope Chapel. A Healthy Dragon Scale in the bags? Once Plagued Hatchlings is handed in, right-click it: its quest goes back to Betina at once.
+  turnin 5529                         -- Betina Bigglezink
+  accept 5582 optional                -- Healthy Dragon Scale, if one dropped
+  turnin 5582 optional
+
+step Scholomance: quests not done
+  label scholo-end
+  when done scholo-start
+  tip What is left of Scholomance in the quest log is for another run: keep it for one, or drop it to free the log.
+  abandon 5343 optional
+  abandon 5382 optional
+  abandon 5515 optional
+  abandon 5384 optional
+  abandon 5529 optional

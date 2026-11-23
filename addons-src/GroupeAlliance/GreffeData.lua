@@ -94,6 +94,14 @@ GA.GREFFE = {
 		where = { frFR = "Marais des Chagrins · groupe de 5 · niveaux 50 à 60",
 			enUS = "Swamp of Sorrows · group of 5 · levels 50 to 60" },
 	},
+	{
+		id = "groupe-alliance/greffe/donjons-fin", key = "donjons-fin", dungeon = "blackrock-depths",
+		turnin = { 8287, 8304, 8282 }, min = 57, max = 60, done = {},
+		route = "forever/alliance/50-60/06-silithus",
+		name = { frFR = "Les donjons de fin de parcours", enUS = "The end-of-route dungeons" },
+		where = { frFR = "Rochenoire, Hache-Tripes, Stratholme, Scholomance · groupe de 5 · niveaux 52 à 60",
+			enUS = "Blackrock, Dire Maul, Stratholme, Scholomance · group of 5 · levels 52 to 60" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
