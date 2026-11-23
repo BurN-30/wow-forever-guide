@@ -71,6 +71,14 @@ GA.GREFFE = {
 		where = { frFR = "Clairières de Tirisfal, par le bateau de Baie-du-Sud · groupe de 5 · niveaux 15 à 22",
 			enUS = "Tirisfal Glades, by the Southshore boat · group of 5 · levels 15 to 22" },
 	},
+	{
+		id = "groupe-alliance/greffe/brassenoire", key = "brassenoire", dungeon = "blackfathom-deeps",
+		turnin = { 1025, 1054, 98027 }, min = 23, max = 28, done = { 1275 },
+		route = "forever/alliance/06-ashenvale",
+		name = { frFR = "Les Profondeurs de Brassenoire", enUS = "Blackfathom Deeps" },
+		where = { frFR = "Grève de Zoram, Orneval · groupe de 5 · niveaux 24 à 32",
+			enUS = "The Zoram Strand, Ashenvale · group of 5 · levels 24 to 32" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
