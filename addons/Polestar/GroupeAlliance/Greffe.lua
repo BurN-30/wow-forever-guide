@@ -37,7 +37,10 @@
 --    hand-ins (GreffeData.lua, `fin`: the hand-ins of its steps without a condition) are all
 --    done and no other hand-in of the chapter waits in the log, ready to hand in (a boss line or
 --    a goto left unticked does not hold it, nor a group quest skipped, a quest never taken or one
---    the group could not finish), its tab closes and the tab it came from comes back; when the
+--    the group could not finish), its tab closes and the tab it came from comes back. This is looked
+--    at on a hand-in of the chapter, counted at once (the session's hand-ins, the game's completed
+--    flag can come later): a finished chapter opened again from the guide list stays open on a
+--    hand-in of another quest. When the
 --    player closes the chapter's tab (TAB_CLOSED), that tab comes back too if the chapter's tab
 --    was the one on screen. Without a tab to come
 --    back to (a chapter opened from the guide list, or by Polestar's "Sync to my
@@ -190,7 +193,16 @@ GA.GreffeAnswer = function(key, a)
 end
 
 local function C() return ns.Compat end
-local function done(q) local c = C() return type(q) == "number" and c and c.IsQuestCompleted(q) or false end
+-- Quests handed in this session (QUEST_TURNED_IN): the game's completed flag can come later than
+-- the hand-in (Polestar keeps the same list for it, Core/Engine.lua `turnedIn`), so neither a
+-- chapter's end nor a hook waits for that flag.
+local turnedIn = {}
+local function done(q)
+	if type(q) ~= "number" then return false end
+	if turnedIn[q] then return true end
+	local c = C()
+	return c and c.IsQuestCompleted(q) and true or false
+end
 local function inLog(q) local c = C() return type(q) == "number" and c and c.IsOnQuest(q) or false end
 
 local function isLeveling(g)
@@ -613,12 +625,26 @@ function GA.ChapterFinished(h)
 	return true
 end
 
--- An open chapter that is finished gives way: its tab closes, the route comes back.
-function GA.ChapterDoneCheck()
+-- Whether quest q is one of chapter h's hand-ins (its `fin`, or another turn-in of its steps).
+local function handinOf(h, q)
+	for _, x in ipairs(GA.ChapterFin(h.id)) do
+		if x == q then return true end
+	end
+	for _, x in ipairs(others(h.id)) do
+		if x == q then return true end
+	end
+	return false
+end
+
+-- An open chapter that is finished gives way: its tab closes, the route comes back. Looked at when
+-- quest q leaves the log (handed in, or abandoned while it held the chapter), and only for the
+-- chapters q is a hand-in of: a chapter the player opened again from the guide list once finished
+-- stays open on a hand-in that has nothing to do with it. Without q, every open chapter.
+function GA.ChapterDoneCheck(q)
 	local E = ns.Engine
 	local open = E and E.TabIds and E.TabIds() or {}
 	for _, h in ipairs(GA.GREFFE or {}) do
-		if open[h.id] and GA.ChapterFinished(h) then GA.ChapterBack(h.id, true) end
+		if open[h.id] and (type(q) ~= "number" or handinOf(h, q)) and GA.ChapterFinished(h) then GA.ChapterBack(h.id, true) end
 	end
 end
 
@@ -659,12 +685,17 @@ for _, msg in ipairs({ "STEP_CHANGED", "GUIDE_CHANGED", "GUIDE_PLACED" }) do
 	ns.On(msg, function() ns.After(0, function() GA.GreffeCheck("step") end) end)
 end
 if ns.RegisterEvent then
-	ns.RegisterEvent("QUEST_TURNED_IN", function()
+	ns.RegisterEvent("QUEST_TURNED_IN", function(_, questID)
 		turnins = turnins + 1
+		if type(questID) == "number" then turnedIn[questID] = true end
 		ns.After(1, function()
-			GA.ChapterDoneCheck()
+			GA.ChapterDoneCheck(questID)
 			GA.GreffeCheck("turnin")
 		end)
+	end)
+	-- A quest abandoned that held a finished chapter (another hand-in of it, ready in the log).
+	ns.RegisterEvent("QUEST_REMOVED", function(_, questID)
+		if type(questID) == "number" then ns.After(1, function() GA.ChapterDoneCheck(questID) end) end
 	end)
 	-- A hook that is a quest taken (Down the Scarlet Path, An Alarming Request): looked at once it
 	-- is in the log, even when the step it belongs to goes on.

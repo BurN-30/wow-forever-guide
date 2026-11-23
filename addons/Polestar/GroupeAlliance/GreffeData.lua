@@ -17,7 +17,14 @@
 --            before, with Polestar's Dungeons window or alone) and is never offered
 --   fin      the chapter's end: its hand-ins without a condition (non-optional turn-ins of steps
 --            without `when`, of a quest the chapter takes without a condition or the route surely
---            gives). Once they are all handed in, and no other hand-in of the chapter waits in the
+--            gives). "Without a condition" means every player of the chapter has the quest: taken
+--            from someone or something always there (a giver, the Discs of Norgannon, a drop the data
+--            gives at 100%, like VanCleef's letter), in a step without `when`, not `optional`. A quest
+--            started by an item that may not drop for everyone, or by an object at a random spot or
+--            one the data cannot place (the Treaty of Understanding, the Bloodied Insignia, the
+--            Crest of Lordaeron, the blood-stained letter, the Titan Relic), is taken `optional`:
+--            its hand-in then holds only whoever took it, and it is not in `fin`.
+--            Once they are all handed in, and no other hand-in of the chapter waits in the
 --            log ready to hand in, the chapter's tab closes and the route comes back (Greffe.lua,
 --            GA.ChapterFinished). A hand-in under a condition (a group question, `when complete`,
 --            a quest taken on a condition or optionally) never counts: a player who skips it is not
@@ -52,7 +59,7 @@ GA.GREFFE = {
 	{ -- about 15-16, last stop at Sentinel Hill before the flight to Stormwind (Polestar's card: 15)
 		id = "groupe-alliance/04-salle-des-thanes", key = "thanes", dungeon = "the-hall-of-thanes",
 		turnin = 13, min = 13, max = 19, done = { 96403, 96394 },
-		fin = { 96395, 96403, 96394, 98423 },
+		fin = { 96395, 96403, 96394 },
 		route = "forever/alliance/02-westfall",
 		name = { frFR = "La Salle des Thanes", enUS = "The Hall of Thanes" },
 		where = { frFR = "Sous Forgefer · groupe de 5 · dès le niveau 13",
@@ -61,7 +68,7 @@ GA.GREFFE = {
 	{ -- about 19-20, Auberdine before the boat (Polestar has no card: the Undercity's dungeon)
 		id = "groupe-alliance/06-ruines-de-lordaeron", key = "ruines", dungeon = "ruins-of-lordaeron",
 		turnin = { 947, 2139 }, accept = 948, min = 17, max = 22, done = { 95250 },
-		fin = { 95250, 95195, 92415, 95189 },
+		fin = { 95250 },
 		route = "forever/alliance/03-darkshore",
 		name = { frFR = "Les Ruines de Lordaeron", enUS = "The Ruins of Lordaeron" },
 		where = { frFR = "Clairières de Tirisfal, par le bateau d'Austrivage · groupe de 5 · dès le niveau 15",
@@ -97,7 +104,7 @@ GA.GREFFE = {
 	{ -- about 30, Menethil before the flight to Ironforge (Polestar's card: 31)
 		id = "groupe-alliance/10-site-de-fouilles", key = "fouilles", dungeon = "excavation-site-wetlands",
 		turnin = 95737, min = 27, max = 34, done = { 95647, 95646 },
-		fin = { 95647, 95646, 95810, 98815, 95809, 98824 },
+		fin = { 95647, 95646, 98815, 95809 },
 		route = "forever/alliance/06-wetlands",
 		name = { frFR = "Le Site de fouilles : les Paluns", enUS = "Excavation Site: Wetlands" },
 		where = { frFR = "Les Paluns · groupe de 5 · dès le niveau 26",
