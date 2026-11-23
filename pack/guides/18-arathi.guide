@@ -132,16 +132,22 @@ step Southshore
   zone Hillsbrad Foothills
   accept 500                          -- Marshal Redpath
 
+# Groupe Alliance 0.12.2: Baron's Demise (523), Dark Council (537) and The Ensorcelled Parchment
+# (551, then Stormpike's Deciphering, 554) are optional: Baron Vardus and Nagaz, who also guards the
+# parchment's chest, are level 40 (Polestar's Forever data), for players of 37 to 39 here. Polestar
+# 0.4.2.2 leaves the three out at 38. An optional accept is not taken by the quest automation, and
+# its objectives and turn-ins apply only to a player who took it (Polestar's engine).
 step Shadowy Assassin
   tip A Shadowy Assassin lurks unseen on the edge of Southshore; kill him and read the contract he carries.
+  tip Baron's Demise and Dark Council are optional: Baron Vardus and Nagaz are level 40, a hard fight alone at 37 to 39. Take them with a group, or if your class can handle a level 40; the guide goes on without them.
   sethome "Southshore"
   kill 2434                           -- Shadowy Assassin
   collect 3668 "Assassin's Contract"
   accept 522
   turnin 522                          -- Magistrate Henry Maleb, inside
-  accept 523
+  accept 523 optional
   turnin 525                          -- Magistrate Henry Maleb
-  accept 537
+  accept 537 optional
 
 step Southshore
   zone Hillsbrad Foothills
@@ -334,8 +340,9 @@ step Strahnbrad: kill these as you meet them
 step Crushridge ogres
   tip The Crushridge ogres hold the hills north of Strahnbrad. Farther north, a worn wooden chest holds the Ensorcelled Parchment; Nagaz of the Dark Council stands right by it.
   collect 2843 quest 500              -- Dirty Knucklebones
-  collect 3706 "Ensorcelled Parchment" -- Inside
-  accept 551
+  tip The Ensorcelled Parchment is optional too: leave the chest if Nagaz is too strong for you.
+  collect 3706 "Ensorcelled Parchment" optional -- Inside
+  accept 551 optional
   collect 3672 quest 537.2            -- Head of Nagaz
 
 step Silverpine Forest
@@ -368,7 +375,7 @@ step Southshore
   turnin 540 optional -- Loremaster Dibbs
   accept 542 optional -- For Milton Sheaf in Stormwind: keep it
   turnin 551
-  accept 554
+  accept 554 optional
   turnin 564                          -- Darren Malvew
 
 # ---------------------------------------------------------------- Loch Modan

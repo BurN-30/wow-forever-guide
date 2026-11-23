@@ -87,8 +87,8 @@ return {
 	["{zone:1455} flight master"] = "Maître de vol de {zone:1455}",
 
 	-- Step 23: Shadowy Assassin
-	-- {npc:2434} Shadowy Assassin · {quest:538} Southshore
-	["A {npc:2434} lurks unseen on the edge of {quest:538}; kill him and read the contract he carries."] = "Un {npc:2434} rôde invisible au bord de {quest:538} ; tuez-le et lisez le contrat qu'il porte.",
+	-- {npc:2434} Shadowy Assassin · {quest:538} Southshore · {quest:523} Baron's Demise · {quest:537} Dark Council · {npc:2306} Baron Vardus · {npc:2320} Nagaz
+	["A {npc:2434} lurks unseen on the edge of {quest:538}; kill him and read the contract he carries.\n{quest:523} and {quest:537} are optional: {npc:2306} and {npc:2320} are level 40, a hard fight alone at 37 to 39. Take them with a group, or if your class can handle a level 40; the guide goes on without them."] = "Un {npc:2434} rôde invisible au bord de {quest:538} : le tuer et lire le contrat qu'il porte.\n{quest:523} et {quest:537} sont facultatives : {npc:2306} et {npc:2320} sont niveau 40, un combat difficile seul entre 37 et 39. Les prendre en groupe, ou si la classe tient face à un niveau 40 ; le guide continue sans elles.",
 	-- {npc:2276} Magistrate Henry Maleb
 	["{npc:2276}, inside"] = "{npc:2276}, à l'intérieur",
 
@@ -227,8 +227,8 @@ return {
 
 	-- Step 56: Crushridge ogres
 	["Crushridge ogres"] = "Ogres Cassecrête",
-	-- {item:3706} Ensorcelled Parchment · {npc:2320} Nagaz · {quest:537} Dark Council
-	["The Crushridge ogres hold the hills north of Strahnbrad. Farther north, a worn wooden chest holds the {item:3706}; {npc:2320} of the {quest:537} stands right by it."] = "Les ogres Cassecrête occupent les collines au nord de Strahnbrande. Plus au nord, un coffre en bois usé contient le {item:3706} ; {npc:2320} du {quest:537} se tient juste à côté.",
+	-- {item:3706} Ensorcelled Parchment · {npc:2320} Nagaz · {quest:537} Dark Council · {quest:551} The Ensorcelled Parchment
+	["The Crushridge ogres hold the hills north of Strahnbrad. Farther north, a worn wooden chest holds the {item:3706}; {npc:2320} of the {quest:537} stands right by it.\n{quest:551} is optional too: leave the chest if {npc:2320} is too strong for you."] = "Les ogres Cassecrête occupent les collines au nord de Strahnbrande. Plus au nord, un coffre en bois usé contient le {item:3706} ; {npc:2320} du {quest:537} se tient juste à côté.\n{quest:551} est facultative aussi : laisser le coffre si {npc:2320} est trop fort.",
 	["Inside"] = "À l'intérieur",
 
 	-- Step 58: Dalaran
@@ -253,4 +253,8 @@ return {
 
 	-- Step 66: Prospector Ironband
 	["South-east along the loch to the dig site."] = "Longez le loch vers le sud-est jusqu'au site de fouilles.",
+
+	-- No longer in the guide (its English changed or it went away): reuse or delete.
+	-- ["A {npc:2434} lurks unseen on the edge of {quest:538}; kill him and read the contract he carries."] = "Un {npc:2434} rôde invisible au bord de {quest:538} ; tuez-le et lisez le contrat qu'il porte.",
+	-- ["The Crushridge ogres hold the hills north of Strahnbrad. Farther north, a worn wooden chest holds the {item:3706}; {npc:2320} of the {quest:537} stands right by it."] = "Les ogres Cassecrête occupent les collines au nord de Strahnbrande. Plus au nord, un coffre en bois usé contient le {item:3706} ; {npc:2320} du {quest:537} se tient juste à côté.",
 }
