@@ -1,5 +1,6 @@
--- Groupe Alliance: this pack's chapters grafted on Polestar's own route
--- (prototype of the branch greffe; tools/build.py adds this file to Polestar.toc).
+-- Groupe Alliance: this pack's chapters offered on Polestar's own route (tools/build.py adds this
+-- file to Polestar.toc). Since 0.13.0 the pack has no leveling guide of its own: Polestar's route
+-- leads, and this pack's chapters (dungeons, the Westfall meeting point) come in at the right moment.
 --
 --  * Chapters offered at the right moment (GreffeData.lua, GA.GREFFE): while the
 --    active tab holds a leveling guide that is not this pack's, a chapter whose
@@ -15,7 +16,16 @@
 --      "later" offered again once the player has gained a level, while in range;
 --      "no"    never offered again (the guide list still has the chapter);
 --      "done"  finished, or one of its `done` quests handed in.
---    The card's close button counts as "later".
+--    The card's close button counts as "later". The meeting point (kind "meeting")
+--    says so on its card instead of "group dungeon".
+--  * One offer per dungeon: Polestar's own dungeon heads-up (UI/DungeonToast.lua) leaves out a
+--    dungeon one of these chapters covers (`dungeon`, a key or a list) while that chapter can
+--    still be offered or has been (answered, open, done, or the player's level not above its
+--    max): GA.GreffeHolds, applied to UI.DungeonToast.Candidates (its "any" mode, the
+--    /polestar dungeontoast command, is left alone). Never worse than Polestar alone: a chapter
+--    whose hook the player went past without doing it is offered when Polestar's own rule opens
+--    the dungeon (UI.DungeonToast.Candidates in "any" mode, once the Codex is loaded: at a
+--    level-up), and a chapter the player outlevelled without seeing it lets Polestar's card through.
 --  * Opening: the chapter goes into a tab of its own (Engine.OpenTab, as Polestar's
 --    Dungeons window opens a pick-up guide); Polestar's guide keeps its tab and its
 --    place. The tab it came from is kept (gaGreffe.from[chapter id]).
@@ -55,6 +65,9 @@ local T = {
 		head = "NIVEAU %d · DONJON DU GROUPE",
 		facts = "Niveau %d · Donjon du groupe",
 		title = "%s : le chapitre du groupe",
+		headMeeting = "NIVEAU %d · RENDEZ-VOUS DU GROUPE",
+		factsMeeting = "Niveau %d · Jouer à plusieurs",
+		titleMeeting = "%s",
 		route = "Le guide du parcours garde sa place dans son onglet et revient à la fin du chapitre.",
 		open = "Ouvrir le chapitre",
 		later = "Plus tard",
@@ -71,6 +84,9 @@ local T = {
 		head = "LEVEL %d · GROUP DUNGEON",
 		facts = "Level %d · Group dungeon",
 		title = "%s: the group's chapter",
+		headMeeting = "LEVEL %d · GROUP MEETING POINT",
+		factsMeeting = "Level %d · Playing together",
+		titleMeeting = "%s",
 		route = "The route's guide keeps its place in its tab and comes back when the chapter ends.",
 		open = "Open the chapter",
 		later = "Later",
@@ -101,9 +117,22 @@ local function state()
 end
 GA.GreffeState = state
 
-local byId, byKey = {}, {}
+-- The Dungeons codex keys a chapter covers (`dungeon`: one key, or a list for the end-of-route
+-- chapter's five dungeons).
+local function dungeonsOf(h)
+	if type(h.dungeon) == "table" then return h.dungeon end
+	if type(h.dungeon) == "string" then return { h.dungeon } end
+	return {}
+end
+GA.GreffeDungeons = dungeonsOf
+
+local byId, byKey, byDungeon = {}, {}, {}
 for _, h in ipairs(GA.GREFFE or {}) do
 	byId[h.id], byKey[h.key] = h, h
+	for _, d in ipairs(dungeonsOf(h)) do
+		byDungeon[d] = byDungeon[d] or {}
+		table.insert(byDungeon[d], h)
+	end
 end
 
 local function answerOf(h)
@@ -132,6 +161,77 @@ end
 -- Which chapter is due
 ---------------------------------------------------------------------------
 
+-- The guide that follows g on the player's route (`nextChoices` holds one per faction on the
+-- guides both factions share, e.g. Shen'dralas).
+local function nextOf(g)
+	local G = ns.Guides
+	local list = type(g.nextChoices) == "table" and g.nextChoices or { g.next }
+	local player = ns.Compat and ns.Compat.GetPlayerInfo and ns.Compat.GetPlayerInfo() or nil
+	local first
+	for _, id in ipairs(list) do
+		local t = type(id) == "string" and G.Get(id)
+		if t then
+			if not player or not G.GuideMatches or G.GuideMatches(t, player) then return id end
+			first = first or id
+		end
+	end
+	return first
+end
+
+-- Whether the active tab's guide comes before chapter h's hook on Polestar's route: h.route, or
+-- a guide whose `next` chain leads to it. The hook is still ahead: the chapter waits for it.
+local function beforeHook(h)
+	local E, G = ns.Engine, ns.Guides
+	if not (h.route and E and E.GetGuide and G and G.Get) then return false end
+	local g = E.GetGuide()
+	local id, seen, n = g and g.id, {}, 0
+	while type(id) == "string" and not seen[id] and n < 80 do
+		if id == h.route then return true end
+		seen[id], n = true, n + 1
+		local x = G.Get(id)
+		if not x then return false end
+		id = nextOf(x)
+	end
+	return false
+end
+GA.GreffeBeforeHook = beforeHook
+
+-- The dungeons Polestar's own heads-up rule opens to the character now (UI.DungeonToast.Candidates
+-- in "any" mode: level at or past the dungeon's best-at, quests to take now), or nil when it
+-- cannot say without loading the Codex (only a level-up loads it). Cached per level and hand-in.
+local turnins = 0
+local opened = { level = nil, turnins = nil, set = nil }
+local function polestarOpens(level)
+	local X = ns.Codex
+	if not (X and X.IsLoaded and X.IsLoaded()) then return nil end
+	if opened.level == level and opened.turnins == turnins then return opened.set end
+	local DT = ns.UI and ns.UI.DungeonToast
+	local candidates = GA.PolestarCandidates or (DT and DT.Candidates)
+	local set = {}
+	if candidates then
+		local ok, list = pcall(candidates, level, "any")
+		if ok and type(list) == "table" then
+			for _, c in ipairs(list) do
+				if type(c) == "table" and c.key then set[c.key] = true end
+			end
+		end
+	end
+	opened.level, opened.turnins, opened.set = level, turnins, set
+	return set
+end
+
+-- Whether Polestar would offer one of chapter h's dungeons now while h's hook is behind the player
+-- (passed on the route without being done, or the player is not on Polestar's route).
+local function openedLate(h, level)
+	if beforeHook(h) then return false end
+	local set = polestarOpens(level)
+	if not set then return false end
+	for _, d in ipairs(dungeonsOf(h)) do
+		if set[d] then return true end
+	end
+	return false
+end
+
 -- Why chapter h is not offered now, or nil when it is due.
 function GA.GreffeWhy(h, level)
 	local E, G = ns.Engine, ns.Guides
@@ -153,11 +253,52 @@ function GA.GreffeWhy(h, level)
 	local hooked = false
 	for _, q in ipairs(type(h.turnin) == "table" and h.turnin or { h.turnin }) do hooked = hooked or done(q) end
 	for _, q in ipairs(type(h.accept) == "table" and h.accept or { h.accept }) do hooked = hooked or inLog(q) or done(q) end
-	if not hooked then return "hook" end
+	if not hooked and not openedLate(h, level) then return "hook" end
 	local g = E.GetGuide and E.GetGuide()
 	if not isLeveling(g) or g.pack == PACK then return "route" end
 	return nil
 end
+
+-- Whether one of this pack's chapters holds dungeon `key` back from Polestar's own heads-up at
+-- `level`: a chapter covering it whose guide is in, answered (open, later, no, done), open in a
+-- tab, done by one of its `done` quests, or not outlevelled yet (it will be offered on the route).
+function GA.GreffeHolds(key, level)
+	local E, G = ns.Engine, ns.Guides
+	for _, h in ipairs(byDungeon[key] or {}) do
+		if G and G.Get and G.Get(h.id) then
+			if answerOf(h) or (E and E.TabIds and E.TabIds()[h.id]) then return true end
+			for _, q in ipairs(h.done or {}) do
+				if done(q) then return true end
+			end
+			if type(level) ~= "number" or level <= h.max then return true end
+		end
+	end
+	return false
+end
+
+-- Polestar's dungeon heads-up (UI/DungeonToast.lua): its candidates leave out the dungeons this
+-- pack's chapters hold (GA.GreffeHolds), so the player is asked once per dungeon, by the chapter.
+-- "any" (the /polestar dungeontoast command, and GA's own look at what Polestar would open) is
+-- left whole. Without that function (another Polestar version), Polestar's cards stay as they are.
+local function holdPolestarCards()
+	local DT = ns.UI and ns.UI.DungeonToast
+	if not (DT and type(DT.Candidates) == "function") or DT.Candidates == GA.HeldCandidates then return end
+	local released = DT.Candidates
+	GA.PolestarCandidates = released
+	GA.HeldCandidates = function(level, mode, questId)
+		local list = released(level, mode, questId)
+		if mode == "any" or type(list) ~= "table" then return list end
+		local lv = type(level) == "number" and level or (GA.PlayerLevel and GA.PlayerLevel())
+		local out = {}
+		for _, c in ipairs(list) do
+			if not (type(c) == "table" and GA.GreffeHolds(c.key, lv)) then out[#out + 1] = c end
+		end
+		return out
+	end
+	DT.Candidates = GA.HeldCandidates
+end
+holdPolestarCards()
+ns.OnInit(holdPolestarCards)
 
 -- The chapters due now, the one that leaves the player's level first first.
 function GA.GreffeDue(level)
@@ -185,25 +326,18 @@ function GA.GreffeModel(h)
 	local lv = GA.PlayerLevel and GA.PlayerLevel() or h.min
 	local Th = ns.Theme
 	local name = h.name[lang()] or h.name.enUS
-	local m = { greffe = h.key, titleColor = "text", iconColor = "dungeon" }
-	if Th and Th.Media then m.icon = Th.Media("icon-dungeon") end
-	m.head = tr("head"):format(lv)
-	m.facts = tr("facts"):format(lv)
-	m.title = tr("title"):format(name)
+	local meeting = h.kind == "meeting"
+	local m = { greffe = h.key, titleColor = "text", iconColor = meeting and "accent" or "dungeon" }
+	if Th and Th.Media then m.icon = Th.Media(meeting and "flag" or "icon-dungeon") end
+	m.head = tr(meeting and "headMeeting" or "head"):format(lv)
+	m.facts = tr(meeting and "factsMeeting" or "facts"):format(lv)
+	m.title = tr(meeting and "titleMeeting" or "title"):format(name)
 	m.giver = h.where[lang()] or h.where.enUS
 	m.route = tr("route")
 	m.act = { label = tr("open"), run = function() return GA.OpenChapter(h) end }
 	m.off = { label = tr("no"), run = function() setAnswer(h, "no") quiet = true end }
 	m.later = { label = tr("later"), run = function() setAnswer(h, "later") quiet = true end }
 	return m
-end
-
--- Polestar's own heads-up card for the same dungeon is told: one question, ours.
-local function toldToPolestar(h)
-	if not h.dungeon then return end
-	local s = ns.CharState()
-	s.dungeonToastSeen = type(s.dungeonToastSeen) == "table" and s.dungeonToastSeen or {}
-	s.dungeonToastSeen[h.dungeon] = true
 end
 
 GA.greffeShown = nil -- the key on the card, for the bench and /ga donjon
@@ -217,7 +351,6 @@ function GA.GreffeCheck(why)
 	if CT and CT.current ~= nil then return nil end -- another heads-up, or ours, on the card
 	local h = GA.GreffeDue()[1]
 	if not h then return nil end
-	toldToPolestar(h)
 	GA.greffeShown = h.key
 	if CT and CT.ShowCard then
 		-- On screen, or waiting for the guide window to show (the card keeps it as current).
@@ -374,11 +507,15 @@ for _, msg in ipairs({ "STEP_CHANGED", "GUIDE_CHANGED", "GUIDE_PLACED" }) do
 end
 if ns.RegisterEvent then
 	ns.RegisterEvent("QUEST_TURNED_IN", function()
+		turnins = turnins + 1
 		ns.After(1, function()
 			GA.ChapterDoneCheck()
 			GA.GreffeCheck("turnin")
 		end)
 	end)
+	-- A hook that is a quest taken (Down the Scarlet Path, An Alarming Request): looked at once it
+	-- is in the log, even when the step it belongs to goes on.
+	ns.RegisterEvent("QUEST_ACCEPTED", function() ns.After(1, function() GA.GreffeCheck("accept") end) end)
 	ns.RegisterEvent("PLAYER_LEVEL_UP", function() ns.After(2, function() GA.GreffeCheck("level") end) end)
 	ns.RegisterEvent("PLAYER_REGEN_ENABLED", function() ns.After(1, function() GA.GreffeCheck("combat") end) end)
 end

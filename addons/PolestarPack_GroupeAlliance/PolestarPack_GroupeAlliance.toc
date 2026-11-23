@@ -1,8 +1,8 @@
 ## Interface: 16001
-## Title: Polestar Community: Group Alliance 1-60
-## Notes: Alliance route to 60 for friends who play alone or together: start guides, Stormwind meeting point, zones, optional Forever and classic dungeons, group quests.
+## Title: Polestar Community: Group Alliance · dungeons
+## Notes: Chapters on Polestar's Alliance route: the Westfall meeting point and 17 dungeon chapters, each offered once at the right moment, boss by boss, with the quests to take first.
 ## Author: BurN-30
-## Version: 0.12.2
+## Version: 0.13.0
 ## Category: Polestar
 ## Group: Polestar
 ## Dependencies: Polestar

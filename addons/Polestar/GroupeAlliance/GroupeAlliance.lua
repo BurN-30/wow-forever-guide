@@ -18,8 +18,7 @@
 --    step or the next two.
 --  * Calm defaults for a group of beginners, as Polestar defaults (the player
 --    can still change them in Polestar's options): no guide-end or route-choice
---    window, no class guide offered by itself, group quests asked one by one, guides suggested from this pack first (Polestar's own
---    fill in where it has none), no welcome window, Polestar's minimap button on,
+--    window, group quests asked one by one, no welcome window, Polestar's minimap button on,
 --    grey quests left out (friends play at different times: whoever is ahead
 --    is not sent back to quests that no longer give XP), and Polestar's quest
 --    map marks on, kept calm (0.6.2): turn-ins, and the objectives of the
@@ -52,9 +51,10 @@ ns.RegisterDefaults("behavior", {
 	gaShared = true, -- ours: a quest a party member shares or starts (escort), taken from the next steps too
 	guideEnd = "continue", -- the next guide loads in place, no window
 	routeChoice = "recommended", -- no route-choice window
-	offerClassQuests = false, -- no tab opening by itself: class quests are in this pack's guides
 	groupQuests = "ask", -- friends who often play alone: each group quest is asked once (Skip it / Do it with a group)
-	suggestFrom = "groupe-alliance", -- this pack first, Polestar fills in
+	-- 0.13.0: the route is Polestar's own, so its defaults come back for the guides suggested
+	-- (behavior.suggestFrom: Polestar's pack) and for the class guides it offers in a tab
+	-- (behavior.offerClassQuests): this pack has no leveling guide, and no class quest, any more.
 	skipGrey = true, -- whoever went ahead alone is not sent back to grey quests
 })
 -- Polestar's quest marks (Quests/QuestDB.lua), off by default there. Settings
@@ -119,7 +119,8 @@ local T = {
 			"|cffa385ffEscorte|r en bout de ligne : quête d'escorte, en groupe chacun la prend avant le départ.",
 			"Quête de groupe : le guide propose « La passer » ou « La faire en groupe » ; seul, la passer.",
 			"Quêtes de l'étape en cours prises et rendues toutes seules. Maj enfoncée : pas cette fois. Clic droit sur une ligne : jamais pour cette quête.",
-			"Changer de guide : /polestar guides, ou le + des onglets.",
+			"Parcours : les guides de Polestar. En changer : /polestar guides, ou le + des onglets.",
+			"Donjons : une carte propose le chapitre du groupe au bon moment ; /ga donjon pour la revoir.",
 			"/ga lang fr, en ou auto : langue des liens Wowhead.",
 			"/ga objets : allumer ou éteindre la ligne « À quoi sert cet objet » des infobulles d'objets.",
 			"Réduire : bouton _ ; masquer : /polestar hide, raccourci dans Options > Raccourcis > Polestar.",
@@ -187,7 +188,8 @@ local T = {
 			"|cffa385ffEscort|r at the end of a line: an escort quest, in a group everyone takes it before the start.",
 			"Group quest: the guide asks \"Skip it\" or \"Do it with a group\"; alone, Skip it.",
 			"The current step's quests are accepted and turned in for you. Hold Shift: not this time. Right-click a line: never for that quest.",
-			"Change guide: /polestar guides, or the tabs' +.",
+			"Route: Polestar's own guides. Change: /polestar guides, or the tabs' +.",
+			"Dungeons: a card offers the group's chapter at the right moment; /ga dungeon to see it again.",
 			"/ga lang fr, en or auto: Wowhead link language.",
 			"/ga items: turn the \"What is this item for\" line of item tooltips on or off.",
 			"Reduce: the _ button; hide: /polestar hide, key binding in Options > Keybindings > Polestar.",
@@ -663,12 +665,11 @@ end
 local TIP_MARK = "  |TInterface\\AddOns\\Polestar\\Media\\UI\\star:12:12:0:0:32:32:0:32:0:32:140:255:140|t"
 
 -- Escorts (0.7.4). Polestar compiles `escort` on an escort quest's accept and
--- objective lines (Core/Engine.lua, goal views). Two escorts of this pack's
--- route lack it in Polestar's data, listed here (accept and objective lines,
--- never the turn-in): Escape Through Stealth (995, Volcor walks out of the
--- cave, the same NPC as 994, flagged) and Gyromast's Revenge (2078, the
--- Threshwackonator follows the player to Gelkak).
-GA.EXTRA_ESCORTS = { [995] = true, [2078] = true }
+-- objective lines (Core/Engine.lua, goal views). An escort that lacks it in
+-- Polestar's data is listed here (accept and objective lines, never the
+-- turn-in). None since 0.13.0: the two of this pack's own route (Escape Through
+-- Stealth, 995, and Gyromast's Revenge, 2078) are on no guide any more.
+GA.EXTRA_ESCORTS = {}
 local ESCORT_KINDS = { accept = true, complete = true, kill = true, collect = true, interact = true, use = true, talk = true }
 function GA.IsEscort(goal)
 	if type(goal) ~= "table" then return false end

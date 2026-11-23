@@ -19,10 +19,6 @@ ns.GA.Tips = {
 		frFR = "Les Défias sont dans les Collines de la Dague au sud-est de Ruisselune (52,71) : ils viennent un par un, réapparition rapide.",
 		enUS = "The Defias are in the Dagger Hills south-east of Moonbrook (52,71): they come one at a time and respawn fast.",
 	},
-	[19] = { -- Tharil'zun (wowhead forever)
-		frFR = "Il n'est pas dans le donjon : derrière le portail cassé à droite de l'entrée, près d'un feu, avec deux gardes.",
-		enUS = "He is not inside the keep: behind the broken gate right of its entrance, by a camp fire, with two guards.",
-	},
 	[22] = { -- Goretusk Liver Pie (wowhead forever)
 		frFR = "Le foie tombe rarement des sangliers : le faire en même temps que les autres quêtes de la zone qui demandent de les tuer.",
 		enUS = "Livers drop rarely from the boars, so do it alongside the other zone quests that have you killing them.",
@@ -110,10 +106,6 @@ ns.GA.Tips = {
 	[102] = { -- Patrolling Westfall (wowhead forever)
 		frFR = "Les pattes tombent environ une fois sur quatre ; bon coin de gnolls au nord de la Mine Veine-de-Jango (43,14), ils viennent souvent à plusieurs.",
 		enUS = "The paws drop about one in four; a good gnoll camp lies north of Jangolode Mine (43,14), they often come in pairs.",
-	},
-	[115] = { -- Shadow Magic (wowhead forever)
-		frFR = "Seuls les exhalombres Blackrock donnent les orbes ; en solo, la grotte au nord de Comté-du-Lac, un par un.",
-		enUS = "Only Blackrock Shadowcasters drop the orbs; alone, the cave north of Lakeshire, one at a time.",
 	},
 	[125] = { -- The Lost Tools (wowhead forever)
 		frFR = "La caisse repose au fond du lac Placide, sous le « L » de Lake sur la carte ; l'atteindre par la rive sud près du pont évite les murlocs.",
@@ -423,10 +415,6 @@ ns.GA.Tips = {
 		frFR = "Escorte très difficile en solo : nettoyer les camps sur le trajet avant de la lancer, ou venir avec un soigneur.",
 		enUS = "A very hard escort solo: clear the camps along the route before starting it, or bring a healer.",
 	},
-	[995] = { -- Escape Through Stealth (wowhead forever)
-		frFR = "La sortie discrète, faisable seul, donne la même suite que la version par la force : Voyage vers Ashenvale.",
-		enUS = "The quiet way out, fine alone, leads to the same next quest as the Force way: Trek to Ashenvale.",
-	},
 	[997] = { -- Denalan's Earth (route)
 		frFR = "La quête remet un objet : garder une place libre dans les sacs avant de l'accepter.",
 		enUS = "The quest hands over an item: keep a free bag slot before accepting it.",
@@ -474,10 +462,6 @@ ns.GA.Tips = {
 	[2040] = { -- Underground Assault (wowhead forever)
 		frFR = "L'indicateur Gnoam tombe sur le déchiqueteur de Sneed ; vider d'abord tous les sculpteurs gobelins, car la peur que lance le déchiqueteur fait fuir vers eux.",
 		enUS = "Gnoam drops from Sneed's Shredder; clear every Goblin Woodcarver first, the Shredder's fear sends you running into them.",
-	},
-	[2078] = { -- Gyromast's Revenge (wowhead forever)
-		frFR = "Le robot se réinitialise dans l'eau : l'eau sert à fuir, pas à le tirer de loin. Il craint la peur (Cri psychique, Peur).",
-		enUS = "The robot resets in the water: water is an escape, not a way to shoot it from afar. Fear works on it (Psychic Scream, Fear).",
 	},
 	[2098] = { -- Gyromast's Retrieval (wowhead forever)
 		frFR = "Chaque morceau de clé vient d'un type précis : les grands oiseaux coureurs du sud, les murlocs de la côte et les crabes de récif.",
@@ -643,14 +627,6 @@ ns.GA.Tips = {
 		frFR = "Les caisses sont dans les bâtiments de Ruisselune, grande école comprise : inutile d'affronter des élites.",
 		enUS = "The crates sit inside Moonbrook's buildings, the big schoolhouse included: no elite to fight.",
 	},
-	[92749] = { -- A Dynamite Plan (wowhead forever)
-		frFR = "Il faut 10 Dynamite basique (peu chère), pas de la Dynamite grossière malgré le texte : hôtel des ventes ou un ami ingénieur.",
-		enUS = "It needs 10 Rough Dynamite (cheap), not Coarse whatever the text says: Auction House or an engineer friend.",
-	},
-	[92753] = { -- Destruction in Deadmines (wowhead forever)
-		frFR = "Poser les explosifs près du centre de la fonderie de Gilnid, puis sortir par l'arrière après VanCleef : pas de pierre de foyer, Alba attend dehors.",
-		enUS = "Plant the explosives near the middle of Gilnid's foundry, then leave by the back after VanCleef: no hearthstone, Alba waits outside.",
-	},
 	[92909] = { -- Harvesting the Harvesters (route)
 		frFR = "Les pièces tombent très rarement des golems : ne pas les farmer, rendre la quête seulement si elles sont tombées en route.",
 		enUS = "The parts drop very rarely from the golems: don't farm them, hand it in only if they dropped on the way.",
@@ -722,10 +698,6 @@ ns.GA.Tips = {
 	[98025] = { -- WANTED: Jai'vhanel (wowhead forever)
 		frFR = "Le hibou vole vers 45,58, en contournant Ameth'Aran ; aucun renfort, et la plume compte pour tout le groupe.",
 		enUS = "The owl flies around 45,58, reached by skirting Ameth'Aran; no adds, and the feather counts for the whole group.",
-	},
-	[98028] = { -- Baron Marinous (wowhead forever)
-		frFR = "Un naga sur onze environ lâche un fragment : les regrouper (échangeables, aussi à l'hôtel des ventes) sur un seul joueur et invoquer une fois, chacun reçoit son globe. Immunisé au Givre.",
-		enUS = "About one naga in eleven drops a fragment: pool them (tradeable, also on the Auction House) on one player and summon once, everyone gets a globe. Immune to Frost.",
 	},
 	[98042] = { -- It's All Fun and Games Until... (wowhead forever)
 		frFR = "L'Œil sans pareil tombe rarement (8 à 20 membres du crépuscule tués selon les joueurs) ; les disciples se soignent, les interrompre. Le livre ne se prend qu'après Le Glaive du Maître.",
@@ -867,21 +839,9 @@ ns.GA.Tips = {
 	},
 	-- 0.5.0: guides 37-43 (18 to 21), from Wowhead comments (mostly from the original game,
 	-- three or more agreeing), rewritten.
-	[212] = { -- A Meal Served Cold (classic)
-		frFR = "Trente minutes dès l'acceptation : basilics Oeil-de-glace le long de la route au centre de Strangleronce (vers 34,40). Échouée ? La reprendre sans l'abandonner garde le jarret.",
-		enUS = "Thirty minutes from the moment you accept: Cold Eye Basilisks along the road in central Stranglethorn (around 34,40). Failed? Take it again without abandoning, the haunch stays.",
-	},
 	[500] = { -- Crushridge Bounty (classic)
 		frFR = "Pas besoin des ogres élites : les ogres normaux de niveau 35 vers 50,58 en Alterac lâchent les dents environ une fois sur trois.",
 		enUS = "No need for the elite ogres: the normal level 35 ogres around 50,58 in Alterac drop them about one kill in three.",
-	},
-	[523] = { -- Baron's Demise (classic)
-		frFR = "Le baron Vardus change de camp : au nord de Strahnbrande (vers 49,17 ou 53,20) ou dans la cave de l'auberge (59,43). Pas au premier ? Faire le tour.",
-		enUS = "Baron Vardus moves between camps: north of Strahnbrad (near 49,17 or 53,20) or in the inn's cellar (59,43). Not at the first one? Check the others.",
-	},
-	[537] = { -- Dark Council (classic)
-		frFR = "Nagaz (40) est dans la maison au bord du lac au nord de Dalaran (39,14), avec des assassins ; les mages de l'ombre sont à Strahnbrande.",
-		enUS = "Nagaz (40) is in the lakeside house north of Dalaran (39,14), with assassins; the shadow mages are in Strahnbrad.",
 	},
 	[540] = { -- Preserving Knowledge (classic)
 		frFR = "La bibliothèque au livre est dans l'école vers 39,46, gardée par un élite 40 ; les tomes tombent sur les ogres normaux dehors.",
@@ -890,10 +850,6 @@ ns.GA.Tips = {
 	[543] = { -- The Perenolde Tiara (classic)
 		frFR = "Grel'borg l'Avare, ogre mage élite 39 à deux têtes, erre vers 41,46 dans les ruines d'Alterac. Rendu au donjon de Hurlevent (74,30).",
 		enUS = "Grel'borg the Miser, a two-headed level 39 elite ogre mage, roams near 41,46 in the Ruins of Alterac. Handed in at Stormwind Keep (74,30).",
-	},
-	[551] = { -- The Ensorcelled Parchment (classic)
-		frFR = "Le coffre est dans la maison de Nagaz (39,14), avec des hommes de main camouflés : avancer prudemment.",
-		enUS = "The chest is in Nagaz's house (39,14), with hidden henchmen: move in carefully.",
 	},
 	[642] = { -- The Princess Trapped (classic)
 		frFR = "Le chemin de la grotte part vers 80,40, la grotte est vers 81,36 ; des lanceurs de sorts kobolds. Après les 12 éclats, cliquer le grand cristal.",
@@ -958,10 +914,6 @@ ns.GA.Tips = {
 	[710] = { -- Study of the Elements: Rock (classic)
 		frFR = "Seuls les PETITS élémentaires de roche (37-39) lâchent l'éclat, pas ceux de niveau 40 ; taux faible, le meilleur coin vers 23,43.",
 		enUS = "Only the LESSER Rock Elementals (37-39) drop the shard, not the level 40 ones; low rate, best spot near 23,43.",
-	},
-	[716] = { -- Stone Is Better than Cloth (classic)
-		frFR = "Les Brassards guillochés en bronze ne tombent pas : un forgeron les fabrique, ou l'hôtel des ventes (environ 50 pa).",
-		enUS = "The Patterned Bronze Bracers do not drop: a blacksmith crafts them, or the Auction House (about 50 silver).",
 	},
 	[718] = { -- Mirages (classic)
 		frFR = "La caisse est au camp Kosh (vers 65,24), à plusieurs places possibles (sous l'appentis, près du chariot, du chaudron) : longer le mur nord.",
@@ -1344,5 +1296,23 @@ ns.GA.Tips = {
 	[1451] = { -- Rhapsody Shindigger (classic)
 		frFR = "Le camp de Rhapsody est en haut d'une colline : le sentier part vers 20,48, près d'un griffon dressé amical.",
 		enUS = "Rhapsody's camp sits on a hilltop: the path starts near 20,48, by a friendly trained gryphon.",
+	},
+	-- Lot B (route): quests of Polestar's own route whose next quest belongs to a dungeon chapter
+	-- of this pack (pack/guides/greffe), taken there or never.
+	[2769] = { -- The Brassbolts Brothers (route)
+		frFR = "Après ce rendu, Wizzle propose Gahz'rilla : le boss d'un second passage à Zul'Farrak, proposé vers 49 depuis Gadgetzan, avec le Marteau de Zul'Farrak fait dans les Hinterlands.",
+		enUS = "After this hand-in, Wizzle offers Gahz'rilla: the boss of a second Zul'Farrak run, offered around 49 from Gadgetzan, with the Mallet of Zul'Farrak made in the Hinterlands.",
+	},
+	[2989] = { -- The Altar of Zul (route)
+		frFR = "Second passage à Zul'Farrak : Qiaga la Gardienne (élite) en haut de l'autel donne le Maillet sacré ; utilisé sur l'autel au sommet de Jintha'Alor, il devient le Marteau de Zul'Farrak, qui appelle Gahz'rilla. Un seul par groupe.",
+		enUS = "Second Zul'Farrak run: Qiaga the Keeper (elite) at the top of the altar drops the Sacred Mallet; used on the altar at the top of Jintha'Alor, it becomes the Mallet of Zul'Farrak that calls Gahz'rilla. One per group.",
+	},
+	[1469] = { -- Rhapsody's Tale (route)
+		frFR = "Après ce rendu, Brohann propose Dans le temple d'Atal'Hakkar (Into The Temple of Atal'Hakkar) : la quête du chapitre du Temple englouti, proposé vers 51 depuis le donjon de Garde-du-Néant. La prendre si le groupe compte y aller.",
+		enUS = "After this hand-in, Brohann offers Into The Temple of Atal'Hakkar: the quest of the Sunken Temple chapter, offered around 51 from Nethergarde Keep. Take it if the group means to go.",
+	},
+	[3444] = { -- The Stone Circle (route)
+		frFR = "Après ce rendu, Marvon propose Dans les profondeurs (Into the Depths) et Le secret du cercle (Secret of the Circle) : deux quêtes du Temple englouti, rendues à l'intérieur (chapitre proposé vers 51). Les prendre si le groupe compte y aller.",
+		enUS = "After this hand-in, Marvon offers Into the Depths and Secret of the Circle: two Sunken Temple quests, handed in inside (chapter offered around 51). Take them if the group means to go.",
 	},
 }

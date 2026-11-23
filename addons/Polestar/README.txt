@@ -1,8 +1,10 @@
 Polestar 0.4.2.2
 Leveling guides for World of Warcraft: Forever.
 
-Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide): the GroupeAlliance folder (Wowhead links,
-quest tips, calm defaults, quest automation exceptions) is loaded by Polestar.toc,
+Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide): the GroupeAlliance folder (Wowhead links,
+quest tips, calm defaults, quest automation exceptions, the Groupe Alliance pack's
+dungeon chapters offered on the route, which then stand in for the dungeon heads-up
+of the same dungeons) is loaded by Polestar.toc,
 UI/GuideFrame.lua has gear, "?" help and "_" reduce buttons and a line menu entry,
 UI/GuideFrameTabs.lua leaves room for those buttons,
 Core/Automation.lua asks the module before it accepts or turns in a quest,
