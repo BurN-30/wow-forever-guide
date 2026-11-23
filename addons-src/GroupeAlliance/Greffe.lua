@@ -513,6 +513,9 @@ if ns.RegisterEvent then
 			GA.GreffeCheck("turnin")
 		end)
 	end)
+	-- A hook that is a quest taken (Down the Scarlet Path, An Alarming Request): looked at once it
+	-- is in the log, even when the step it belongs to goes on.
+	ns.RegisterEvent("QUEST_ACCEPTED", function() ns.After(1, function() GA.GreffeCheck("accept") end) end)
 	ns.RegisterEvent("PLAYER_LEVEL_UP", function() ns.After(2, function() GA.GreffeCheck("level") end) end)
 	ns.RegisterEvent("PLAYER_REGEN_ENABLED", function() ns.After(1, function() GA.GreffeCheck("combat") end) end)
 end
