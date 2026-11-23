@@ -1,0 +1,45 @@
+# Written for this pack by BurN-30 (GPL-3.0). From the second Zul'Farrak run of 23-tanaris.guide,
+# 24-hinterlands.guide and 26-un-goro.guide (sources: Polestar's Forever data, prerequisites as the
+# TrinityCore base; the Sacred Mallet from Qiaga the Keeper, elite 50, at the top of the Altar of Zul,
+# 48.6,68.2, used at the Jintha'Alor altar, 59.7,77.8; Gahz'rilla's gong by the pool in Hydromancer
+# Velratha's courtyard: Warcraft Tavern's Forever Zul'Farrak guides read on 12/11/2026, written from
+# Classic). Not played in game yet.
+#
+# Self-contained chapter for Polestar's own route: the Groupe Alliance module offers it at Gadgetzan
+# on the Un'Goro guide's landing (forever/alliance/40-50/07-un-goro-crater, The Borrower 2941 or The
+# Thirsty Goblin 2605, about level 49.5), and opens it in a tab of its own: Wizzle Brassbolts at the
+# Mirage Raceway, the walled city, Gahz'rilla, Wizzle again. Polestar's guide keeps its place.
+#
+# Compared with Polestar 0.4.2.2: its Zul'Farrak run leaves Gahz'rilla out ("leftOut": "Wizzle
+# Brassbolts at the Mirage Raceway, level 50, 5 over there"); its Dungeons codex page
+# ("zulfarrak", Polestar_Codex, GPL-3.0) names the mallet's making as the dungeon's one attunement.
+# Its route goes to the top of the Altar of Zul for The Altar of Zul (2989, 40-50/05-the-hinterlands,
+# 47-48), where Qiaga stands: the tips of this pack (Tips.lua, 2769 and 2989) say there what this
+# chapter needs. Nekrum's Medallion (2991) opens only once Thadius Grimshade (2990) is handed in at
+# Nethergarde Keep at 50-51, after this chapter: left out of it.
+guide groupe-alliance/zul-farrak-2
+title Dungeon · Zul'Farrak, second run (49-53)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 49-53
+zone Tanaris
+
+step Zul'Farrak, second run: Wizzle Brassbolts
+  zone Thousand Needles
+  tip A second Zul'Farrak run for Gahz'rilla, the boss of the sacred pool: 14,600 XP and the Carrot on a Stick, a trinket that speeds up a mount. One player of the group needs the Mallet of Zul'Farrak, made in the Hinterlands (the Sacred Mallet from Qiaga the Keeper at the top of the Altar of Zul, used on the altar at the very top of Jintha'Alor). Nobody has it? Close this chapter: Gahz'rilla cannot be called.
+  note Wizzle stands at the Mirage Raceway on the Shimmering Flats, about 3 minutes north of Gadgetzan. Already took Gahz'rilla from him at 46? This step ticks itself.
+  accept 2770                         -- Wizzle Brassbolts
+
+step Zul'Farrak: Gahz'rilla
+  zone Tanaris
+  tip Ride south-west to the walled city: the trolls are below you now, about an hour with a group of 5. Gahz'rilla's pool is in Hydromancer Velratha's courtyard, round the corner from the entrance. The player with the Mallet of Zul'Farrak uses it on the gong by the pool; Gahz'rilla rises from the water and throws players into the air: fight him in the pool, or under the ruin left of the archway, to soften the falls.
+  note Share Gahz'rilla with the group before going in: click it in the quest log, then Share.
+  goto 38.7,20.1 "Zul'Farrak" r 25
+  use 9240 optional                   -- Mallet of Zul'Farrak, at the gong
+  collect 8707 quest 2770             -- Gahz'rilla's Electrified Scale: Gahz'rilla
+
+step Mirage Raceway: Wizzle Brassbolts
+  zone Thousand Needles
+  tip Back north to the Mirage Raceway. Last stop of the chapter: the route's own guide comes back once this is handed in, at Gadgetzan.
+  turnin 2770                         -- Wizzle Brassbolts

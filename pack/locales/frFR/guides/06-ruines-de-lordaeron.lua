@@ -7,25 +7,28 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	["Group 5 · Ruins of Lordaeron (dungeon 17-21)"] = "Groupe 5 · Ruines de Lordaeron (donjon 17-21)",
+	["Dungeon · Ruins of Lordaeron (17-22)"] = "Donjon · Ruines de Lordaeron (17-22)",
 
-	-- Step 1: Auberdine: boat to Southshore
-	["Auberdine: boat to Southshore"] = "Auberdine : bateau pour Austrivage",
-	-- {zone:1420} Tirisfal Glades · {zone:1453} Stormwind
-	["Ruins of Lordaeron: a 5-player Forever dungeon in {zone:1420}, best at 16 to 22 (17 or more is comfortable). Alone? Skip it: the guide takes you to {zone:1453} for Redridge. The Southshore boat leaves from Auberdine's pier. Keep 4 free quest log slots."] = "Ruines de Lordaeron : un donjon de Forever pour 5 joueurs, à {zone:1420}, idéal de 16 à 22 (confortable dès 17). Seul ? La passer : le guide mène à {zone:1453} pour les Carmines. Le bateau pour Austrivage part du ponton d'Auberdine. Garder 4 places libres dans le journal.",
+	-- Step 1: Auberdine: the boat to Southshore
+	["Auberdine: the boat to Southshore"] = "Auberdine : le bateau pour Austrivage",
+	-- {zone:1420} Tirisfal Glades · {object:1162} Menethil Harbor
+	["Ruins of Lordaeron: a 5-player Forever dungeon in {zone:1420}, levels 15 to 22 in the group finder: at 18 or more it goes well. The boat for {object:1162} goes on to Southshore: stay aboard at Menethil."] = "Ruines de Lordaeron : un donjon de Forever pour 5 joueurs dans les {zone:1420}, niveaux 15 à 22 dans la recherche de groupe : à 18 ou plus, il passe bien. Le bateau pour {object:1162} continue jusqu'à Austrivage : rester à bord à Menethil.",
+	["Keep 5 free quest log slots. Horde land past Southshore: travel together."] = "Garder 5 places libres dans le journal. Terre de la Horde passé Austrivage : voyager ensemble.",
+	["Boat to Southshore"] = "Bateau pour Austrivage",
 
 	-- Step 2: Southshore
 	["Southshore"] = "Austrivage",
+	["Off the boat, the flight master stands by the inn: take the flight path, then sell and repair."] = "En descendant du bateau, le maître de vol se tient près de l'auberge : prendre le point de vol, puis vendre et réparer.",
 
 	-- Step 3: Ruins of Lordaeron entrance
 	["Ruins of Lordaeron entrance"] = "Entrée des Ruines de Lordaeron",
-	["Horde land: travel together. North past Hillsbrad Fields, around Dalaran, then swim north up Lordamere Lake into Tirisfal and follow the road. If you die inside, the spirit healer is right outside the dungeon."] = "Terres de la Horde : voyager ensemble. Au nord par les champs de Hautebrande, contourner Dalaran, puis nager vers le nord sur le lac Lordamere jusqu'à Tirisfal et suivre la route. Mort dans le donjon ? Le gardien des âmes est juste à la sortie.",
+	["Horde land: keep together and clear of the roads' guards. North past Hillsbrad Fields, round Dalaran, then swim north up Lordamere Lake into Tirisfal and follow the road to the ruined capital. If you die inside, the spirit healer is right outside the dungeon."] = "Terre de la Horde : rester groupés, à l'écart des gardes des routes. Vers le nord par les champs de Hautebrande, autour de Dalaran, puis nager vers le nord sur le lac Lordamere jusqu'à Tirisfal et suivre la route jusqu'à la capitale en ruine. En cas de mort à l'intérieur, le gardien des âmes est juste devant le donjon.",
 	["Ruins of Lordaeron"] = "Ruines de Lordaeron",
 
 	-- Step 4: Captain Truman
 	-- {quest:95195} Bloodied Insignia
-	["On your left just after the portal. The bosses can be done in any order. Any undead may drop a {quest:95195}: right-click it, then keep looting them, there are plenty for everyone."] = "À gauche juste après le portail. Les boss se font dans n'importe quel ordre. N'importe quel mort-vivant peut lâcher {quest:95195} : clic droit dessus, puis continuer à les ramasser, il y en a pour tout le monde.",
-	["Share each quest with your group: click it in the quest log, then Share."] = "Partagez chaque quête au groupe : clic sur la quête dans le journal, puis Partager.",
+	["On the left just after the portal. The bosses can be done in any order. Any undead may drop a {quest:95195}: right-click it, then keep looting them, there are plenty for everyone."] = "À gauche juste après le portail. Les boss se font dans n'importe quel ordre. N'importe quel mort-vivant peut lâcher un {quest:95195} : clic droit dessus, puis continuer à les ramasser, il y en a pour tout le monde.",
+	["Share each quest with the group: click it in the quest log, then Share."] = "Partager chaque quête avec le groupe : clic sur la quête dans le journal, puis Partager.",
 	-- {quest:95195} Bloodied Insignia
 	["{quest:95195}, from any undead: right-click it"] = "{quest:95195}, sur n'importe quel mort-vivant : clic droit dessus",
 
@@ -70,25 +73,28 @@ return {
 	["{quest:95195}, from the undead all run long"] = "{quest:95195}, sur les morts-vivants pendant tout le donjon",
 	-- {npc:250657} Rath'mael
 	["Blood-stained letter, by {npc:250657}: each player clicks their own"] = "Lettre tachée de sang, près de {npc:250657} : chaque joueur clique la sienne",
+
+	-- Step 12: Captain Truman: Abominable Creatures
+	-- {npc:265701} Captain Truman
+	["Back to the entrance on the way out: {npc:265701} takes the Baron's head."] = "Retour à l'entrée en sortant : {npc:265701} prend la tête du Baron.",
 	-- {npc:265701} Captain Truman
 	["{npc:265701}, by the entrance"] = "{npc:265701}, près de l'entrée",
 
-	-- Step 12: Stormwind rewards
+	-- Step 13: Southshore: the boat to Menethil Harbor
+	-- {object:1162} Menethil Harbor
+	["Southshore: the boat to {object:1162}"] = "Austrivage : le bateau pour {object:1162}",
+	-- {object:1162} Menethil Harbor · {zone:1432} Loch Modan
+	["Back south to Southshore by the way you came. The boat calls at Auberdine, then {object:1162}: get off at Menethil, where the route's next guide starts ({zone:1432})."] = "Retour vers le sud jusqu'à Austrivage par le même chemin. Le bateau passe par Auberdine, puis {object:1162} : descendre à Menethil, où commence le guide suivant du parcours ({zone:1432}).",
+	-- {object:1162} Menethil Harbor
+	["Boat to {object:1162}"] = "Bateau pour {object:1162}",
+	-- {zone:1453} Stormwind
+	["Back to the route: click its tab now. This tab stays open for the three {zone:1453} rewards: the route reaches {zone:1453} at about 20, by the Deeprun Tram, and Polestar lists the hand-ins once there; this tab closes when they are in."] = "Retour au parcours : cliquer maintenant sur son onglet. Cet onglet reste ouvert pour les trois récompenses de {zone:1453} : le parcours arrive à {zone:1453} vers 20, par le Tram des profondeurs, et Polestar y affiche les rendus ; cet onglet se ferme une fois les quêtes rendues.",
+
+	-- Step 14: Stormwind rewards
 	-- {zone:1453} Stormwind
 	["{zone:1453} rewards"] = "Récompenses à {zone:1453}",
-	-- {npc:466} General Marcus Jonathan · {npc:15991} Lady Dena Kennedy
-	["{npc:466} by the gate, the Matron at the orphanage, {npc:15991} in the keep."] = "{npc:466} près de la porte, la matrone à l'orphelinat, {npc:15991} au donjon.",
-	-- {zone:1431} Duskwood · {npc:228} Avette Fellwood · {item:279870} Tarnished Locket
-	["Next letter for Darkshire, in {zone:1431} later: {npc:228} gives the {item:279870}"] = "Lettre suivante pour Sombre-Comté, plus tard au {zone:1431} : {npc:228} donne {item:279870}",
-
-	-- No longer in the guide (its English changed or it went away): reuse or delete.
-	-- ["Blood-stained letter, by a body in the graveyard"] = "Lettre tachée de sang, près d'un corps au cimetière",
-	-- ["Group 5 · Ruins of Lordaeron (dungeon 15-20)"] = "Groupe 5 · Ruines de Lordaeron (donjon 15-20)",
-	-- ["Horde land: travel as a group. The dungeon stairs are on the left of the outer courtyard."] = "Terres de la Horde : voyager en groupe. L'escalier du donjon est à gauche de la cour extérieure.",
-	-- ["Inside the dungeon"] = "Dans le donjon",
-	-- ["Next letter for Darkshire, in {zone:1431} later"] = "Lettre suivante pour Sombre-Comté, plus tard dans {zone:1431}",
-	-- ["The Southshore boat leaves from Auberdine's pier. Keep 4 free quest log slots."] = "Le bateau pour Austrivage part du ponton d'Auberdine. Garder 4 places libres dans le journal.",
-	-- ["{npc:265701} stands on the left just after the portal. Right-click each quest item as it drops; every player needs their own."] = "{npc:265701} est à gauche juste après le portail. Clic droit sur chaque objet de quête ramassé ; chacun a besoin du sien.",
-	-- ["{quest:95189}, in a tower or side room"] = "{quest:95189}, dans une tour ou une salle annexe",
-	-- ["{quest:95195}, from the undead"] = "{quest:95195}, sur les morts-vivants",
+	-- {npc:466} General Marcus Jonathan · {npc:14450} Orphan Matron Nightingale · {npc:15991} Lady Dena Kennedy · {zone:1431} Duskwood
+	["{npc:466} stands at the city gate, {npc:14450} in the orphanage, {npc:15991} in the keep. The Matron gives the next letter, for Darkshire in {zone:1431}: the route stops there at about 25."] = "{npc:466} se tient à la porte de la ville, {npc:14450} à l'orphelinat, {npc:15991} dans le donjon. La matrone donne la lettre suivante, pour Sombre-Comté dans le {zone:1431} : le parcours s'y arrête vers 25.",
+	-- {npc:228} Avette Fellwood
+	["For {npc:228} in Darkshire"] = "Pour {npc:228}, à Sombre-Comté",
 }

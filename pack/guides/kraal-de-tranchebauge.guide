@@ -1,0 +1,78 @@
+# Written for this pack by BurN-30 (GPL-3.0). The Razorfen Kraul chapter of 11-mille-pointes.guide,
+# made a guide of its own. Same sources: quest ids, givers, levels and prerequisites from Polestar's
+# Forever data (data-v2026.11.1 and the forever-db of Polestar 0.4.2.2) and the TrinityCore Forever
+# world base (no prerequisite for 1142 and 1144); boss order and drops from Polestar's Dungeons codex
+# (Razorflank's Medallion and the Tattered Note on Charlga Razorflank); places inside from Warcraft
+# Tavern's and Icy Veins' Forever guides (12/11/2026): Heralath and Willix by a tent below Charlga's
+# area. Polestar 0.4.2.2 (GPL-3.0): the route's walk down the Great Lift and over to Falfindel
+# Waywarder (forever/alliance/30-40/03-ashenvale), and data/dungeon-runs.json ("no giver on a stop the
+# route makes"; the route passes about 1,040 yards from the door). Not played in game yet.
+#
+# Self-contained chapter for Polestar's route: the Groupe Alliance module offers it once Henrig
+# Lonebrow's Journal (1100) is handed in to Falfindel Waywarder, just over the Feralas border north of
+# Highperch (forever/alliance/30-40/03-ashenvale, about level 32-33). Falfindel's next quest, The
+# Crone of the Kraul (1101), is the dungeon's: the route says to leave it. The chapter takes it, goes
+# back up the Great Lift to the Kraul, runs it, and comes back to Falfindel, where the route goes on
+# east through Thousand Needles.
+# A new id in 0.13.0: up to 0.12.x its steps were inside one of the pack's zone guides.
+#
+# Compared with the old chapter (asked on the road south through the Barrens at 27-30, two quests
+# found inside): the hook and The Crone of the Kraul (7,950 XP, a blue reward) are new, the quests
+# are level 30 to 34 at 32-33. Left out: Blueleaf Tubers (1221, Mebok in Ratchet, reached only at
+# the end of that guide). Mortality Wanes (1142) goes to Treshala Fallowbrook in Darnassus: off the
+# route, Polestar lists its hand-in whenever the player is in Darnassus.
+guide groupe-alliance/kraal-de-tranchebauge
+title Dungeon · Razorfen Kraul (29-37)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 29-37
+zone The Barrens
+
+step Falfindel Waywarder: The Crone of the Kraul
+  zone Feralas
+  tip Razorfen Kraul: a 5-player quilboar dungeon in the bramble at the southern edge of the Barrens, west of the top of the Great Lift, levels 29 to 38 in the group finder; the last bosses are 33. Falfindel wants the medallion of Charlga Razorflank, its last boss.
+  note Keep 3 free quest log slots.
+  accept 1101                                 -- Falfindel Waywarder
+
+step Razorfen Kraul entrance
+  zone The Barrens
+  tip Back east to the Great Lift and up: wait on the platform until the lift is level with it before you step on. At the top, west along the cliffs into the bramble. Horde land: keep clear of the Horde's camps and guards.
+  note Willix the Importer and Heralath Fallowbrook give their quests inside, at the end: nothing else to take beforehand. Share The Crone of the Kraul with the group: click it in the quest log, then Share.
+  goto 42.9,90.2 "Razorfen Kraul" r 25
+
+step Warriors: Fire Hardened Mail
+  only Warrior
+  when onquest 1701
+  along until rfk-charlga
+  tip Roogug, the first boss, drops the Vial of Phlogiston. The other items of the quest come from Stonetalon and the Wetlands: Polestar's class guides (Fire Hardened Armor) cover them.
+  collect 6841 quest 1701                     -- Vial of Phlogiston: Roogug
+
+step Razorfen Kraul: Charlga Razorflank
+  label rfk-charlga
+  tip Roogug, Aggem Thorncurse, Death Speaker Jargba, Overlord Ramtusk and Agathelos the Raging come before her (the codex's order). Charlga, the last boss, fights on the ramp outside her hut and teleports back into it now and then: the tank grabs her again. Her Purity dispels every debuff and makes her immune for a while: no damage-over-time on her. Each player on The Crone of the Kraul loots the medallion.
+  collect 5792 quest 1101                     -- Razorflank's Medallion: Charlga Razorflank
+  kill 4421                                   -- Charlga Razorflank
+
+step Shamans: Elemental Aid
+  only Shaman
+  when onquest 96264
+  tip Elemental Aid (Veyric Thunderhame, Arathi Highlands): the Tattered Note comes from Charlga Razorflank. To check in game: the drop rate is not known.
+  collect 274463 quest 96264                  -- Tattered Note: Charlga Razorflank
+
+step Razorfen Kraul: Heralath Fallowbrook
+  tip Jump down from Charlga's area and kill a few quilboars: Heralath Fallowbrook, a night elf who died in the Kraul, lies by a tent in the north of that area. Mortality Wanes asks for Treshala's Pendant, about 1 quilboar in 10, for each player on the quest: by now most of the Kraul is cleared, so it often takes the walk back or a second run. Its hand-in is in Darnassus, off the route: whenever the player is there, Polestar lists it.
+  accept 1142 optional                        -- Heralath Fallowbrook
+  collect 5825 quest 1142 optional            -- Treshala's Pendant: quilboars of the Kraul, about 1 in 10
+
+step Razorfen Kraul: Willix the Importer
+  tip Willix the Importer, a goblin, is held in the same tent as Heralath. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end.
+  note Not there? Another group is escorting him: wait for him to come back, or join them.
+  accept 1144                                 -- Willix the Importer
+  complete 1144                               -- Escort him out of the Kraul
+  turnin 1144 optional                        -- Willix the Importer, at the entrance
+
+step Falfindel Waywarder: back to the route
+  zone Feralas
+  tip Back to the Great Lift and down, then west past Highperch to Falfindel's camp. Last stop of the chapter: the route's own guide comes back once this is handed in, and goes on east through Thousand Needles.
+  turnin 1101                                 -- Falfindel Waywarder

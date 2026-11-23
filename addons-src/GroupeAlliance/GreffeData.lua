@@ -33,7 +33,7 @@ ns.GA = GA
 
 GA.GREFFE = {
 	{ -- about 11 to 16 by race: the first stop at Sentinel Hill
-		id = "groupe-alliance/greffe/rendez-vous", key = "rendez-vous", kind = "meeting",
+		id = "groupe-alliance/02-rendez-vous-hurlevent", key = "rendez-vous", kind = "meeting",
 		turnin = 109, min = 10, max = 17,
 		route = "forever/alliance/02-westfall",
 		name = { frFR = "Rendez-vous dans la Marche de l'Ouest", enUS = "Meeting in Westfall" },
@@ -41,7 +41,7 @@ GA.GREFFE = {
 			enUS = "Sentinel Hill · playing the route together" },
 	},
 	{ -- about 15-16, last stop at Sentinel Hill before the flight to Stormwind (Polestar's card: 15)
-		id = "groupe-alliance/greffe/salle-des-thanes", key = "thanes", dungeon = "the-hall-of-thanes",
+		id = "groupe-alliance/04-salle-des-thanes", key = "thanes", dungeon = "the-hall-of-thanes",
 		turnin = 13, min = 13, max = 19, done = { 96403, 96394 },
 		route = "forever/alliance/02-westfall",
 		name = { frFR = "La Salle des Thanes", enUS = "The Hall of Thanes" },
@@ -49,7 +49,7 @@ GA.GREFFE = {
 			enUS = "Under Ironforge · group of 5 · levels 13 to 20" },
 	},
 	{ -- about 19-20, Auberdine before the boat (Polestar has no card: the Undercity's dungeon)
-		id = "groupe-alliance/greffe/ruines-de-lordaeron", key = "ruines", dungeon = "ruins-of-lordaeron",
+		id = "groupe-alliance/06-ruines-de-lordaeron", key = "ruines", dungeon = "ruins-of-lordaeron",
 		turnin = { 947, 2139 }, accept = 948, min = 17, max = 22, done = { 95250 },
 		route = "forever/alliance/03-darkshore",
 		name = { frFR = "Les Ruines de Lordaeron", enUS = "The Ruins of Lordaeron" },
@@ -57,7 +57,7 @@ GA.GREFFE = {
 			enUS = "Tirisfal Glades, by the Southshore boat · group of 5 · levels 15 to 22" },
 	},
 	{ -- about 21, The Defias Traitor handed in at Sentinel Hill (Polestar's card: 21)
-		id = "groupe-alliance/greffe/mortemines", key = "mortemines", dungeon = "deadmines",
+		id = "groupe-alliance/07b-mortemines", key = "mortemines", dungeon = "deadmines",
 		turnin = 155, min = 18, max = 24, done = { 166, 214 },
 		route = "forever/alliance/03-loch-modan",
 		name = { frFR = "Les Mortemines", enUS = "The Deadmines" },
@@ -65,7 +65,7 @@ GA.GREFFE = {
 			enUS = "Under Moonbrook, Westfall · group of 5 · levels 16 to 21" },
 	},
 	{ -- about 25, Astranaar before the flight to Auberdine (Polestar's card: 29)
-		id = "groupe-alliance/greffe/brassenoire", key = "brassenoire", dungeon = "blackfathom-deeps",
+		id = "groupe-alliance/brassenoire", key = "brassenoire", dungeon = "blackfathom-deeps",
 		turnin = { 1025, 1054, 98027 }, min = 23, max = 28, done = { 1275 },
 		route = "forever/alliance/06-ashenvale",
 		name = { frFR = "Les Profondeurs de Brassenoire", enUS = "Blackfathom Deeps" },
@@ -73,7 +73,7 @@ GA.GREFFE = {
 			enUS = "The Zoram Strand, Ashenvale · group of 5 · levels 24 to 32" },
 	},
 	{ -- about 28-29, last Stormwind stop of Duskwood; else 30-31 at Stormwind (Polestar's card: 29)
-		id = "groupe-alliance/greffe/prison", key = "prison", dungeon = "stormwind-stockade",
+		id = "groupe-alliance/08b-prison", key = "prison", dungeon = "stormwind-stockade",
 		turnin = { 269, 72, 293 }, min = 25, max = 31, done = { 387 },
 		route = "forever/alliance/05-duskwood",
 		name = { frFR = "La Prison", enUS = "The Stockade" },
@@ -81,7 +81,7 @@ GA.GREFFE = {
 			enUS = "Stormwind · group of 5 · levels 24 to 32" },
 	},
 	{ -- about 30, Menethil before the flight to Ironforge (Polestar's card: 31)
-		id = "groupe-alliance/greffe/site-de-fouilles", key = "fouilles", dungeon = "excavation-site-wetlands",
+		id = "groupe-alliance/10-site-de-fouilles", key = "fouilles", dungeon = "excavation-site-wetlands",
 		turnin = 95737, min = 27, max = 34, done = { 95647, 95646 },
 		route = "forever/alliance/06-wetlands",
 		name = { frFR = "Le Site de fouilles : les Paluns", enUS = "Excavation Site: Wetlands" },
@@ -89,7 +89,7 @@ GA.GREFFE = {
 			enUS = "Wetlands · group of 5 · levels 26 to 33" },
 	},
 	{ -- about 30-31, Stormwind (Polestar's card: 35)
-		id = "groupe-alliance/greffe/gnomeregan", key = "gnomeregan", dungeon = "gnomeregan",
+		id = "groupe-alliance/10b-gnomeregan", key = "gnomeregan", dungeon = "gnomeregan",
 		turnin = 293, min = 29, max = 35, done = { 2929 },
 		route = "forever/alliance/06-wetlands",
 		name = { frFR = "Gnomeregan", enUS = "Gnomeregan" },
@@ -97,7 +97,7 @@ GA.GREFFE = {
 			enUS = "Dun Morogh · group of 5 · levels 29 to 38" },
 	},
 	{ -- about 31 at Southshore, or 37 at Modera's camp (Polestar's card: 33)
-		id = "groupe-alliance/greffe/dalaran", key = "dalaran", dungeon = "city-of-dalaran",
+		id = "groupe-alliance/12-dalaran", key = "dalaran", dungeon = "city-of-dalaran",
 		accept = 92432, turnin = 92432, min = 30, max = 38, done = { 92457, 92458 },
 		route = "forever/alliance/30-40/01-hillsbrad-foothills",
 		name = { frFR = "La Cité de Dalaran", enUS = "The City of Dalaran" },
@@ -105,7 +105,7 @@ GA.GREFFE = {
 			enUS = "Alterac Mountains · group of 5 · levels 28 to 35" },
 	},
 	{ -- about 32-33, Falfindel north of Highperch (Polestar's card: 33)
-		id = "groupe-alliance/greffe/kraal-de-tranchebauge", key = "kraal", dungeon = "razorfen-kraul",
+		id = "groupe-alliance/kraal-de-tranchebauge", key = "kraal", dungeon = "razorfen-kraul",
 		turnin = 1100, min = 29, max = 37, done = { 1101, 1144 },
 		route = "forever/alliance/30-40/03-ashenvale",
 		name = { frFR = "Le Kraal de Tranchebauge", enUS = "Razorfen Kraul" },
@@ -113,7 +113,7 @@ GA.GREFFE = {
 			enUS = "Southern Barrens · group of 5 · levels 29 to 38" },
 	},
 	{ -- about 39, Down the Scarlet Path taken at Nijel's Point; else 44 at Raleigh's (Polestar's card: 39)
-		id = "groupe-alliance/greffe/monastere-ecarlate", key = "monastere", dungeon = "scarlet-monastery",
+		id = "groupe-alliance/monastere-ecarlate", key = "monastere", dungeon = "scarlet-monastery",
 		accept = 1052, turnin = 1052, min = 37, max = 46, done = { 1053 },
 		route = "forever/alliance/30-40/06b-desolace",
 		name = { frFR = "Le Monastère écarlate", enUS = "The Scarlet Monastery" },
@@ -122,7 +122,7 @@ GA.GREFFE = {
 	},
 	{ -- about 41, Brohann in Stormwind (Polestar's card: 44). Same max as the Monastery: when both
 		-- are due at Raleigh's (both answered "Later"), the Monastery comes first.
-		id = "groupe-alliance/greffe/souilles-de-tranchebauge", key = "souilles", dungeon = "razorfen-downs",
+		id = "groupe-alliance/souilles-de-tranchebauge", key = "souilles", dungeon = "razorfen-downs",
 		turnin = 1448, min = 39, max = 46, done = { 3636 },
 		route = "forever/alliance/40-50/01-stranglethorn-vale",
 		name = { frFR = "Les Souilles de Tranchebauge", enUS = "Razorfen Downs" },
@@ -130,7 +130,7 @@ GA.GREFFE = {
 			enUS = "Southern Barrens, from Stormwind · group of 5 · levels 37 to 46" },
 	},
 	{ -- about 44, end of the Riverglades in Stormwind (Polestar shows no card on its route)
-		id = "groupe-alliance/greffe/uldaman", key = "uldaman", dungeon = "uldaman",
+		id = "groupe-alliance/uldaman", key = "uldaman", dungeon = "uldaman",
 		turnin = { 94894, 94893 }, min = 41, max = 48, done = { 2240 },
 		route = "forever/alliance/40-50/01b-riverglades",
 		name = { frFR = "Uldaman", enUS = "Uldaman" },
@@ -138,7 +138,7 @@ GA.GREFFE = {
 			enUS = "Northern Badlands, from Ironforge · group of 5 · levels 41 to 51" },
 	},
 	{ -- about 45-46, end of Shen'dralas (Polestar's card: 49)
-		id = "groupe-alliance/greffe/maraudon", key = "maraudon", dungeon = "maraudon",
+		id = "groupe-alliance/maraudon", key = "maraudon", dungeon = "maraudon",
 		turnin = { 99257, 99258 }, min = 45, max = 51, done = { 7065, 7046 },
 		route = "forever/40-50/shendralas",
 		name = { frFR = "Maraudon", enUS = "Maraudon" },
@@ -146,7 +146,7 @@ GA.GREFFE = {
 			enUS = "Western Desolace · group of 5 · levels 46 to 55" },
 	},
 	{ -- about 46, Tran'rek at the first Gadgetzan stop (Polestar's card: 50)
-		id = "groupe-alliance/greffe/zul-farrak", key = "zulfarrak", dungeon = "zulfarrak",
+		id = "groupe-alliance/zul-farrak", key = "zulfarrak", dungeon = "zulfarrak",
 		turnin = 2864, min = 44, max = 50, done = { 2865, 2768, 3042 },
 		route = "forever/alliance/40-50/04-tanaris",
 		name = { frFR = "Zul'Farrak", enUS = "Zul'Farrak" },
@@ -154,7 +154,7 @@ GA.GREFFE = {
 			enUS = "North-western Tanaris · group of 5 · levels 44 to 54" },
 	},
 	{ -- about 49-50, the Un'Goro guide's Gadgetzan stops (The Borrower, then Marin, Andi Lynn, Tran'rek)
-		id = "groupe-alliance/greffe/zul-farrak-2", key = "zulfarrak2", dungeon = "zulfarrak",
+		id = "groupe-alliance/zul-farrak-2", key = "zulfarrak2", dungeon = "zulfarrak",
 		turnin = { 2941, 2605, 5863, 3362 }, min = 48, max = 53, done = { 2770 },
 		route = "forever/alliance/40-50/07-un-goro-crater",
 		name = { frFR = "Zul'Farrak, second passage", enUS = "Zul'Farrak, second run" },
@@ -162,7 +162,7 @@ GA.GREFFE = {
 			enUS = "Tanaris · group of 5 · Gahz'rilla, with the Mallet of Zul'Farrak" },
 	},
 	{ -- about 51, the blood mages at Nethergarde (Polestar's card: 56)
-		id = "groupe-alliance/greffe/temple-englouti", key = "temple", dungeon = "sunken-temple",
+		id = "groupe-alliance/temple-englouti", key = "temple", dungeon = "sunken-temple",
 		turnin = { 2585, 2581, 2601 }, min = 50, max = 56, done = { 1475 },
 		route = "forever/alliance/50-60/01-burning-steppes",
 		name = { frFR = "Le temple englouti", enUS = "The Sunken Temple" },
@@ -172,7 +172,7 @@ GA.GREFFE = {
 	{ -- level 55 once Extinguish the Firegut is handed in at Morgan's Vigil (about 50), wherever the
 		-- player is (Polestar's Blackrock Depths card: 55; Dire Maul, the Spire, Stratholme: 58-59);
 		-- else at the end of Silithus, the route's last hand-ins
-		id = "groupe-alliance/greffe/donjons-fin", key = "donjons-fin",
+		id = "groupe-alliance/33-donjons-fin", key = "donjons-fin",
 		dungeon = { "blackrock-depths", "blackrock-spire", "dire-maul", "stratholme", "scholomance" },
 		turnin = { 3823, 8287, 8304, 8282 }, min = 55, max = 60, done = {},
 		route = "forever/alliance/50-60/01-burning-steppes",

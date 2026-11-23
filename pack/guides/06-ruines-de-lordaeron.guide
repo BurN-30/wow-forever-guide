@@ -1,89 +1,98 @@
 # Adapted from Aurum's chapter aurum-druid/ruins-of-lordaeron (Aurums Night Elf Druid Guide 0.4.37,
-# GPL-3.0). Changes: for every class (no Aquatic Form swim), no fixed reward choice, shorter tips,
-# group notes. Ids cross-checked against Polestar 0.3.2's reference data, Polestar's Dungeons
-# codex and RestedXP's free Forever dungeon guide (11-20).
-# 0.4.0 (BurN-30): optional (asked once, `when group 95250`, then `when done rl-start`), the
-# dungeon boss by boss, after Wowhead Forever's Ruins of Lordaeron guide (updated 2026-11-05)
-# and the quest comments read on 2026-11-08, rewritten.
-# Not checked in game: the walk from Southshore to the Ruins (the arrow plans it).
+# GPL-3.0), as 06-ruines-de-lordaeron.guide was. Same sources: Polestar's Forever data and Dungeons
+# codex, the dungeon boss by boss after Wowhead Forever's Ruins of Lordaeron guide and quest comments
+# (read on 2026-11-08), rewritten; the door from Polestar 0.4.2.2's data/dungeon-runs.json (Tirisfal
+# 63.2,67.5, players' recordings), the boat loop Auberdine - Menethil Harbor - Southshore from its
+# travel data (TaxiPath 11167). Not played in game yet; the Alliance's way in is to check in game
+# (Polestar's codex lists the dungeon in the Undercity, while its quests are Alliance-only).
+#
+# Self-contained chapter for Polestar's route: the Groupe Alliance module offers it once the last
+# Auberdine stop of forever/alliance/03-darkshore is done (Cave Mushrooms, 947, Tharnariun's Hope,
+# 2139, handed in; Onu, 948, taken), about level 19, where the route boards the boat to Menethil
+# Harbor. The same boat goes on to Southshore: the chapter gets off there, runs the Ruins and comes
+# back by boat to Menethil Harbor, where the route's Loch Modan guide starts. The rewards are in
+# Stormwind, which that guide reaches at about 20: the chapter's tab stays open until they are
+# handed in (Polestar lists a ready quest's hand-in when its giver is on the player's map).
+# Since 0.13.0 the chapter has the id its guide had up to 0.12.x (groupe-alliance/06-ruines-de-lordaeron): a tab saved on it opens
+# the chapter.
+# Polestar has no Alliance run here (its run is the Horde's): nothing of its own to compare but the
+# door and the boat.
 guide groupe-alliance/06-ruines-de-lordaeron
-title Group 5 · Ruins of Lordaeron (dungeon 17-21)
+title Dungeon · Ruins of Lordaeron (17-22)
 folder Group Alliance
 category Dungeons
 faction Alliance
-levels 17-21
-zone Darkshore
-next groupe-alliance/07-carmines
+levels 17-22
+zone Tirisfal Glades
 
-step Auberdine: boat to Southshore
-  label rl-start
-  when group 95250
-  tip Ruins of Lordaeron: a 5-player Forever dungeon in Tirisfal Glades, best at 16 to 22 (17 or more is comfortable). Alone? Skip it: the guide takes you to Stormwind for Redridge. The Southshore boat leaves from Auberdine's pier. Keep 4 free quest log slots.
-  level 16
+step Auberdine: the boat to Southshore
+  zone Darkshore
+  tip Ruins of Lordaeron: a 5-player Forever dungeon in Tirisfal Glades, levels 15 to 22 in the group finder: at 18 or more it goes well. The boat for Menethil Harbor goes on to Southshore: stay aboard at Menethil.
+  note Keep 5 free quest log slots. Horde land past Southshore: travel together.
+  goto 32.4,43.8 "Boat to Southshore"
 
 step Southshore
-  when done rl-start
   zone Hillsbrad Foothills
+  tip Off the boat, the flight master stands by the inn: take the flight path, then sell and repair.
   getfp "Southshore"
-  vendor nearest
+  vendor nearest optional
 
 step Ruins of Lordaeron entrance
-  when done rl-start
   zone Tirisfal Glades
-  tip Horde land: travel together. North past Hillsbrad Fields, around Dalaran, then swim north up Lordamere Lake into Tirisfal and follow the road. If you die inside, the spirit healer is right outside the dungeon.
+  tip Horde land: keep together and clear of the roads' guards. North past Hillsbrad Fields, round Dalaran, then swim north up Lordamere Lake into Tirisfal and follow the road to the ruined capital. If you die inside, the spirit healer is right outside the dungeon.
   goto 63.2,67.5 "Ruins of Lordaeron" r 25
 
 step Captain Truman
-  when done rl-start
-  tip On your left just after the portal. The bosses can be done in any order. Any undead may drop a Bloodied Insignia: right-click it, then keep looting them, there are plenty for everyone.
-  note Share each quest with your group: click it in the quest log, then Share.
-  accept 95250
-  accept 95195 item 268535 -- Bloodied Insignia, from any undead: right-click it
+  tip On the left just after the portal. The bosses can be done in any order. Any undead may drop a Bloodied Insignia: right-click it, then keep looting them, there are plenty for everyone.
+  note Share each quest with the group: click it in the quest log, then Share.
+  accept 95250                                -- Captain Truman
+  accept 95195 item 268535                    -- Bloodied Insignia, from any undead: right-click it
 
 step Witherfang
-  when done rl-start
   tip The spider wing, King's Alley. Witherfang patrols with two spiders: kill them first and cleanse Leech Poison off the tank. Spider packs patrol too: pull with care.
-  kill 250483 -- Witherfang
+  kill 250483                                 -- Witherfang
 
 step The Baron
-  when done rl-start
   tip Right from the entrance. Skeletons and banshees guard him; the banshees silence, so stun the packs. His head drops for everyone on the quest. The crypt door with a banshee in front of him is one of the Crest's spots.
-  collect 268518 quest 95250 -- Head of the Baron
-  kill 250660 -- The Baron
+  collect 268518 quest 95250                  -- Head of the Baron
+  kill 250660                                 -- The Baron
 
 step Lordamere Overlook: Viktor the Vile (optional)
-  when done rl-start
   tip Flesh Golems hit hard and knock you into other packs; ghouls come in threes and fours. Viktor is optional: light the chimney of the ruined house in the south-west, survive 4 to 6 waves (leave the last enemy of each wave alive a moment so casters can drink), then he jumps out. Short group? Skip him.
   task "Viktor the Vile, or skipped" optional
 
 step Market Street: The Abandoned (optional)
-  when done rl-start
   tip The statue with green eyes starts 3 waves, and the skeleton mage in the south corridor must die too; then The Abandoned: Frost Nova, slows melee, drains the tank. Optional. The top of the west tower next to it is one of the Crest's spots.
   task "The Abandoned, or skipped" optional
 
 step The Crest of Lordaeron
-  when done rl-start
   tip One crest per run, at a random spot with no mark on the minimap: the top of the east tower (left of the top floor doors), the banshee crypt door before The Baron, the top of the west tower, the foot of the north-west tower by the double stairs, or the wall of Bjork's gazebo (nearly invisible: hover the wall).
-  accept 95189 -- Crest of Lordaeron: each player clicks it
+  accept 95189                                -- Crest of Lordaeron: each player clicks it
 
 step Bjork
-  when done rl-start
   tip The undead troll patrolling the north-west: a simple fight, just wait out his short Anti-Magic Shield.
-  kill 256097 -- Bjork
+  kill 256097                                 -- Bjork
 
 step Rath'mael
-  when done rl-start
   tip The graveyard at the back. His one spell, Flamestrike, lands where the tank stood when he began it: step out at once, or stun him to stop it. The rare Lordaeron Captain is friendly to the Alliance: leave him be.
-  kill 250657 -- Rath'mael
-  collect 268540 x10 quest 95195 -- Bloodied Insignia, from the undead all run long
-  accept 92415 -- Blood-stained letter, by Rath'mael: each player clicks their own
-  turnin 95250 -- Captain Truman, by the entrance
+  kill 250657                                 -- Rath'mael
+  collect 268540 x10 quest 95195              -- Bloodied Insignia, from the undead all run long
+  accept 92415                                -- Blood-stained letter, by Rath'mael: each player clicks their own
+
+step Captain Truman: Abominable Creatures
+  tip Back to the entrance on the way out: Captain Truman takes the Baron's head.
+  turnin 95250                                -- Captain Truman, by the entrance
+
+step Southshore: the boat to Menethil Harbor
+  zone Hillsbrad Foothills
+  tip Back south to Southshore by the way you came. The boat calls at Auberdine, then Menethil Harbor: get off at Menethil, where the route's next guide starts (Loch Modan).
+  goto 50.7,70.4 "Boat to Menethil Harbor"
+  note Back to the route: click its tab now. This tab stays open for the three Stormwind rewards: the route reaches Stormwind at about 20, by the Deeprun Tram, and Polestar lists the hand-ins once there; this tab closes when they are in.
 
 step Stormwind rewards
-  when done rl-start
   zone Stormwind City
-  tip General Marcus Jonathan by the gate, the Matron at the orphanage, Lady Dena Kennedy in the keep.
-  turnin 95195
-  turnin 92415
-  accept 95161 optional -- Next letter for Darkshire, in Duskwood later: Avette Fellwood gives the Tarnished Locket
-  turnin 95189
+  tip General Marcus Jonathan stands at the city gate, Orphan Matron Nightingale in the orphanage, Lady Dena Kennedy in the keep. The Matron gives the next letter, for Darkshire in Duskwood: the route stops there at about 25.
+  turnin 95195                                -- General Marcus Jonathan
+  turnin 92415                                -- Orphan Matron Nightingale
+  accept 95161 optional                       -- For Avette Fellwood in Darkshire
+  turnin 95189                                -- Lady Dena Kennedy

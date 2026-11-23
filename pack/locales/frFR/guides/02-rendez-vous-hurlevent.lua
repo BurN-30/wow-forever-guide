@@ -7,23 +7,15 @@
 -- The comments are rewritten by sync.
 return {
 	-- Guide
-	-- {zone:1453} Stormwind
-	["Group 1 · Meet in {zone:1453}"] = "Groupe 1 · Rendez-vous à {zone:1453}",
+	-- {zone:1436} Westfall
+	["Group · Meeting in {zone:1436}"] = "Groupe · Rendez-vous en {zone:1436}",
 
-	-- Step 1: Night Elves: Darnassus to Stormwind
-	-- {zone:1457} Darnassus · {zone:1453} Stormwind
-	["Night Elves: {zone:1457} to {zone:1453}"] = "Elfes de la nuit : de {zone:1457} à {zone:1453}",
-	-- {zone:1453} Stormwind
-	["Portal down to Rut'theran Village, boat to Auberdine, then the {zone:1453} boat from the same pier."] = "Portail vers Rut'theran, bateau pour Auberdine, puis bateau pour {zone:1453} sur le même ponton.",
-	["Druids: Cure Poison at 14, Aquatic Form at 16 and Cat Form at 20 come from class quests (Polestar guides, Class)."] = "Druides : Guérison du poison (14), Forme aquatique (16) et Forme de félin (20) s'obtiennent par des quêtes de classe (guides Polestar, Classe).",
-
-	-- Step 2: Stormwind: meeting point
-	-- {zone:1453} Stormwind
-	["{zone:1453}: meeting point"] = "{zone:1453} : point de rendez-vous",
-	["Play at your own pace: quests already turned in tick themselves and the guide picks up where you are, so friends who play at other times can go ahead or fall behind. Together, group XP is best within 4 levels; ahead of the others, help them with their quests when you play together."] = "Chacun joue à son rythme : les quêtes déjà rendues se cochent toutes seules et le guide reprend où vous en êtes, donc on peut prendre de l'avance ou du retard sur les autres. Ensemble, l'XP de groupe est meilleure à 4 niveaux d'écart ou moins ; en avance, aidez les autres sur leurs quêtes quand vous jouez ensemble.",
-	["Group up with your friends when they are online"] = "Former le groupe avec les autres s'ils sont connectés",
-
-	-- No longer in the guide (its English changed or it went away): reuse or delete.
-	-- ["Group XP: keep the whole group within 4 levels. Ahead? Play class quests or professions solo, not zone quests."] = "XP de groupe : pas plus de 4 niveaux d'écart. En avance ? Quêtes de classe ou métiers en solo, pas les quêtes de zone.",
-	-- ["Group up with your friends"] = "Former le groupe avec les autres",
+	-- Step 1: Sentinel Hill: playing the route together
+	-- {object:81} Sentinel Hill
+	["{object:81}: playing the route together"] = "{object:81} : jouer le parcours à plusieurs",
+	-- {zone:1436} Westfall
+	["Polestar's route brings every race to {zone:1436}, each at its own level: Humans at about 11, Dwarves and Gnomes at about 14, Night Elves at about 15. Whoever arrives first goes on: quests already handed in tick themselves for the others, and a friend ahead helps with their quests when you play together. Group XP stays good within about 4 levels."] = "Le parcours de Polestar amène chaque race en {zone:1436}, chacune à son niveau : les humains vers 11, les nains et les gnomes vers 14, les elfes de la nuit vers 15. Le premier arrivé continue : les quêtes déjà rendues se cochent seules pour les autres, et un ami en avance aide aux quêtes des autres quand le groupe joue ensemble. L'XP de groupe reste bonne jusqu'à environ 4 niveaux d'écart.",
+	["Polestar's group tools: the party panel (/polestar party) shows each friend's guide, step and level; its \"Sync to my guide\" button asks the others to come to your step, and each one accepts or declines. The option \"Wait for the group\" holds a hand-in until the friends in the zone are ready. Share a quest from the quest log: click it, then Share."] = "Les outils de groupe de Polestar : le panneau de groupe (/polestar party) montre le guide, l'étape et le niveau de chaque ami ; son bouton « Synchro sur mon guide » propose aux autres de rejoindre son étape, et chacun accepte ou refuse. Le réglage « Attendre le groupe » retient un rendu tant que les amis de la zone ne sont pas prêts. Partager une quête depuis le journal : clic sur la quête, puis Partager.",
+	["Dungeons: a card offers each dungeon chapter of the group at the right moment of the route. The chapter opens in a tab of its own and the route comes back when it ends; /ga donjon shows the card again."] = "Donjons : une carte propose chaque chapitre de donjon du groupe au bon moment du parcours. Le chapitre s'ouvre dans son propre onglet et le parcours revient à la fin ; /ga donjon remontre la carte.",
+	["Read: the group plays together, or each at their own pace"] = "Lu : le groupe joue ensemble, ou chacun à son rythme",
 }

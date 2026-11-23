@@ -1,6 +1,33 @@
-# Written for this pack by BurN-30 (GPL-3.0). The end-of-route dungeons: chained after Group 30,
-# every chapter optional with its own question. A dungeon whose level the route never reaches near
-# its door goes here, with the chains that lead into it when they could not be finished on the way.
+# Written for this pack by BurN-30 (GPL-3.0). The end-of-route dungeons, every one optional with its
+# own question. A dungeon whose level the route never reaches near its door goes here, with the
+# chains that lead into it when they could not be finished on the way.
+#
+# Self-contained chapter for Polestar's own route. The Groupe Alliance module offers it at level 55
+# once Extinguish the Firegut (3823) is handed in at Morgan's Vigil (Polestar's route, 50-60/01, at
+# about 50), wherever the player stands then: that is when Polestar's own Blackrock Depths card would
+# come (its other four dungeons come at 58-59). For whoever answered "Later", again at each level
+# and at the end of forever/alliance/50-60/06-silithus (the last hand-ins at Cenarion Hold, 58 to 60),
+# where Polestar's route ends. It opens in a tab of its own; Polestar's guide keeps its place in its
+# tab. The dungeons come in the order of their levels (Blackrock Depths 52-60, Lower Blackrock Spire
+# 55-60, Dire Maul 54-60, Stratholme and Scholomance 58-60), each with its own question (`when
+# group`): opening the chapter is not a yes to all of them, and a group that stops after one dungeon
+# closes the tab (the chapter stays in the guide list).
+#
+# Compared with Polestar 0.4.2.2 (its Dungeons codex pages "blackrock-depths", "blackrock-spire",
+# "dire-maul", "stratholme" and "scholomance", Polestar_Codex, GPL-3.0; no run of these in its route,
+# data/dungeon-runs.json "notInRoute" for Blackrock Depths: the route passes the mountain at 48-49,
+# before any of its quests): Polestar has no step of these dungeons in its route, only the Dungeons
+# window's generated pick-up and hand-in guides, without boss-by-boss steps or French. This chapter
+# stays, and carries what Polestar's route no longer takes and the chapter needs:
+# - The Smoldering Ruins of Thaurissan (3701), a group question on Polestar's route (50-60/01), which
+#   Kharan Mighthammer (4341) needs: taken in Ironforge at the start when not done, its relics on the
+#   way through the Burning Steppes, handed in on the Stormwind trip of Windsor's chain;
+# - Of Love and Family (5846, after Of Lost Honor 5845, which Polestar's route does after its group
+#   question Of Forgotten Memories, 50-60/04), then Renfray's (5848): before Stratholme;
+# - the Skeleton Key's chain (5538, 5801, 5803, 5505, after Skeletal Fragments 5537, which the route
+#   hands in at Chillwind Camp): before Scholomance, with its own question;
+# - Shards of the Felvine (5526) and A Reliquary of Purity (5527): after Dire Maul's eastern wing
+#   (0.12.2).
 #
 # ================================================================ Blackrock Depths
 # Quest ids, givers, levels, prerequisites, objectives, drops: Polestar's Forever data and its
@@ -26,38 +53,45 @@
 # game's own data keeps Forever on 1.x rules: so the second visit starts with the key.
 #
 # Prerequisites (Polestar's compiled guide, TrinityCore): Kharan Mighthammer (4341) after The
-# Smoldering Ruins of Thaurissan (3701, Group 29); Incendius! (4263) after Overmaster Pyron (4262);
-# A Taste of Flame (4024) after 4023 (Group 25) or 4022; Dark Iron Legacy 3802 after 3801; The True
+# Smoldering Ruins of Thaurissan (3701, taken here when not done); Incendius! (4263) after Overmaster Pyron (4262);
+# A Taste of Flame (4024) after 4023 or 4022 (group questions on the route at 50); Dark Iron Legacy 3802 after 3801; The True
 # Masters 4183 to 4224, Marshal Windsor (4241), Abandoned Hope (4242), A Crumpled Up Note (4264, an
 # item that drops only once 4242 is handed in), A Shred of Hope (4282), Jail Break! (4322), one after
-# the other from Dragonkin Menace (4182, Group 25, offered again here). Ribbly Screwspigot (4136) and
+# the other from Dragonkin Menace (4182, offered here). Ribbly Screwspigot (4136) and
 # Hurley Blackbreath (4126) need nothing: their errands (Yorba Screwspigot in Tanaris, Enohar
 # Thunderbrew at Nethergarde Keep) are left out, as the compiler drops them.
 # Left out: The Love Potion (Mistress Nagmara, in the Grim Guzzler: Gromsblood, the Azshara giants'
 # Giant Silver Veins and a vial filled in Un'Goro), The Spectral Chalice (miners), Rocknot's Ale
 # (only what opens the Bar Door), Attunement to the Core (raid), the level 58-60 dungeon set chains.
 guide groupe-alliance/33-donjons-fin
-title End of route · Dungeons 52-60 (optional)
+title Dungeons 55-60 · Blackrock, Dire Maul, Stratholme, Scholomance
 folder Group Alliance
 category Dungeons
 faction Alliance
-levels 52-60
-zone Western Plaguelands
+levels 55-60
+zone Burning Steppes
 
 step Blackrock Depths (dungeon, optional)
   label brd-start
   when group 4286
-  zone Western Plaguelands
   tip Blackrock Depths: the Dark Iron dwarves' city under Blackrock Mountain, between the Searing Gorge and the Burning Steppes. Levels 52 to 60, bosses 51 to 59: easy for a group of 5 at 58 to 60; possible earlier at five (from about 54), difficult. The dungeon is huge: the guide splits it into three visits of one to two hours, with the quests given in Ironforge, Kharanos, the Burning Steppes, Lakeshire and Stormwind. Alone? Skip it.
   note Keep 12 free quest log slots. Most of these quests cannot be shared: each player takes their own.
-  goto 42.9,85.0 "Chillwind Camp flight master"
+  note To Ironforge: the hearthstone when it is bound there; from Kalimdor, the flight to Theramore or Auberdine, the boat to Menethil Harbor and the flight to Ironforge.
   fly "Ironforge"
   zone Ironforge
 
+step Ironforge: Royal Historian Archesonus
+  when done brd-start
+  when !turnedin 3701
+  zone Ironforge
+  tip Archesonus stands in the High Seat, beside King Magni. Magni's quest for Blackrock Depths waits for The Smoldering Ruins of Thaurissan, which the route offered as a group quest at 50: its relics are in the Burning Steppes, on this chapter's way, and it is handed in here on the trip to Stormwind.
+  accept 3701                         -- Royal Historian Archesonus
+
 step Ironforge: King Magni Bronzebeard
   when done brd-start
+  when turnedin 3701
   zone Ironforge
-  tip Magni stands in the High Seat, beside Royal Historian Archesonus, who took The Smoldering Ruins of Thaurissan in Group 29. Kharan is a prisoner in Blackrock Depths.
+  tip Magni stands in the High Seat, beside Royal Historian Archesonus. Kharan is a prisoner in Blackrock Depths.
   accept 4341                         -- King Magni Bronzebeard
 
 step Kharanos: Ragnar Thunderbrew
@@ -80,16 +114,23 @@ step Morgan's Vigil
   accept 4286                         -- Oralius: the fanny packs drop all through the dungeon
   accept 4262                         -- Jalinda Sprig
 
+step Ruins of Thaurissan: the relics
+  when done brd-start
+  when onquest 3701
+  zone Burning Steppes
+  tip The relics are the carved stones scattered through the Ruins of Thaurissan, west of Flame Crest: click them until the information is recovered. The War Reavers and Thaurissan Firewalkers there are 53-55, and Thauris Balgarr (57) holds the Dark Iron camp south-west of Flame Crest: take the relics at the edge of the ruins.
+  interact 153556 quest 3701.1        -- Thaurissan Relic
+
 step Morgan's Vigil: Helendis Riverhorn
   when done brd-start
   when turnedin 4182
-  tip Helendis's chain (Dragonkin Menace done in Group 25) leads to Marshal Windsor, a prisoner in Blackrock Depths: first a round trip to Lakeshire and Stormwind, by flight.
+  tip Helendis's chain (Dragonkin Menace done) leads to Marshal Windsor, a prisoner in Blackrock Depths: first a round trip to Lakeshire and Stormwind, by flight.
   accept 4183                         -- Helendis Riverhorn
 
 step Morgan's Vigil: Dragonkin Menace
   when done brd-start
   when !turnedin 4182
-  tip Marshal Windsor's chain starts with Helendis's Dragonkin Menace (offered in Group 25): the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52.
+  tip Marshal Windsor's chain starts with Helendis's Dragonkin Menace: the black dragonkin of the hills east of Flame Crest and of the eastern edge of the Steppes, elite at around 52.
   accept 4182                         -- Helendis Riverhorn
 
 step The black dragonkin
@@ -142,6 +183,14 @@ step Stormwind Keep: Bolvar and Lady Prestor
   turnin 4185                         -- Highlord Bolvar Fordragon
   accept 4186
 
+step Ironforge: The Smoldering Ruins of Thaurissan
+  when done brd-start
+  when complete 3701
+  zone Ironforge
+  tip The Deeprun Tram from Stormwind's Dwarven District: Royal Historian Archesonus and King Magni stand in the High Seat. Then the tram back to Stormwind, or the flight from Ironforge to Lakeshire.
+  turnin 3701                         -- Royal Historian Archesonus
+  accept 4341                         -- King Magni Bronzebeard: Kharan is a prisoner in Blackrock Depths
+
 step Fly to Lakeshire
   when done brd-start
   when onquest 4186
@@ -185,7 +234,7 @@ step Cyrus Therepentous: the Frenzied Black Drake
   when done brd-start
   when !turnedin 4023
   when !turnedin 4022
-  tip A Taste of Flame, first part (offered in Group 25): Cyrus hides in a cave in the far east of the Steppes. The Frenzied Black Drake (elite 54) appears outside it and drops the molt.
+  tip A Taste of Flame, first part (a group quest on the route at 50): Cyrus hides in a cave in the far east of the Steppes. The Frenzied Black Drake (elite 54) appears outside it and drops the molt.
   accept 4023                         -- Cyrus Therepentous
   collect 10575 quest 4023 @94.4,31.8 map 1428
   turnin 4023
@@ -774,8 +823,8 @@ step Shards of the Felvine: not done
 # Dungeons codex; prerequisites cross-checked with the TrinityCore base: no disagreement (The Active
 # Agent after The Flesh Does Not Lie; The Truth Comes Crashing Down, started by the Head of Balnazzar,
 # after The Archivist; Above and Beyond after it, then Lord Maxwell Tyrosus and The Argent Hold;
-# The Restless Souls 5282 after 5281, handed to Egan in Group 28; Of Love and Family 5848 after 5846,
-# handed to Renfray in Group 30; Krastinov's Bag of Horrors after Doctor Theolen Krastinov, Kirtonos
+# The Restless Souls 5282 after 5281, handed to Egan on the route; Of Love and Family 5848 after 5846,
+# handed to Renfray on Caer Darrow, after Of Lost Honor 5845, done on the route; Krastinov's Bag of Horrors after Doctor Theolen Krastinov, Kirtonos
 # the Herald after the bag; Healthy Dragon Scale after Plagued Hatchlings). Polestar's data and
 # Warcraft Tavern name the tobacco merchant Ezra Grimm (The Great Ezra Grimm); TrinityCore keeps
 # the old title, The Great Fras Siabi. Rooms, bosses and how-to: Warcraft Tavern's Forever
@@ -805,14 +854,14 @@ step Shards of the Felvine: not done
 step Stratholme (dungeon, optional)
   label strat-start
   when group 5212
-  tip Stratholme: the dead city in the north-west of the Eastern Plaguelands, levels 58 to 60, bosses 57 to 62: a group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Light's Hope Chapel, from Egan in Terrordale and, if taken in Group 30, from Artist Renfray. Its quest chains ask for three visits to the same instance: the living side, then Balnazzar, then the dead side, with rides back to Light's Hope in between. Alone? Skip it.
+  tip Stratholme: the dead city in the north-west of the Eastern Plaguelands, levels 58 to 60, bosses 57 to 62: a group of 5 at 58 to 60; possible from about 56, difficult. The quests come from Light's Hope Chapel, from Egan in Terrordale and, for whoever helped Tirion Fordring on the route (Of Lost Honor), from Artist Renfray on Caer Darrow. Its quest chains ask for three visits to the same instance: the living side, then Balnazzar, then the dead side, with rides back to Light's Hope in between. Alone? Skip it.
   note Keep 8 free quest log slots. Scholomance is asked next, here too: one of its quests is given in this chapel.
   goto 71.7,49.9 map 1423 live "Light's Hope Chapel" r 40
 
 step Scholomance (dungeon, optional)
   label scholo-start
   when group 5382
-  tip Scholomance: the school of necromancy under Caer Darrow, the island of the lake in the south-east of the Western Plaguelands. Levels 58 to 60, bosses 58 to 62: a group of 5 at 59 or 60. Its door opens only with the Skeleton Key, the reward of The Key to Scholomance (Group 30, Chillwind Camp): one key in the group is enough; nobody has it? Skip it. The guide runs it after Stratholme; Betina Bigglezink, in this chapel, gives one of its quests, the others come from Chillwind Camp and from Eva Sarkhoff at its door. Alone? Skip it.
+  tip Scholomance: the school of necromancy under Caer Darrow, the island of the lake in the south-east of the Western Plaguelands. Levels 58 to 60, bosses 58 to 62: a group of 5 at 59 or 60. Its door opens only with the Skeleton Key, the reward of The Key to Scholomance, a long chain from Alchemist Arbington at Chillwind Camp that the guide offers before the run: one key in the group is enough. The guide runs it after Stratholme; Betina Bigglezink, in this chapel, gives one of its quests, the others come from Chillwind Camp and from Eva Sarkhoff at its door. Alone? Skip it.
   note Keep 4 free quest log slots.
   goto 71.7,49.9 map 1423 live "Light's Hope Chapel" r 40
 
@@ -834,14 +883,29 @@ step Light's Hope Chapel: Scholomance
 step Terrordale: Egan
   when done strat-start
   zone Eastern Plaguelands
-  tip Ride west across the zone to Terrordale: Egan waits in the westernmost of its three houses, where Group 28 found him. His blaster frees the ghosts of Stratholme.
+  tip Ride west across the zone to Terrordale: Egan waits in the westernmost of its three houses, where the route found him. His blaster frees the ghosts of Stratholme.
   accept 5282                         -- Egan
+
+step Tirion Fordring: Of Love and Family
+  when done strat-start
+  when turnedin 5845
+  zone Eastern Plaguelands
+  tip West of Terrordale, Tirion's hut on the bank of the border river. Of Love and Family follows Of Lost Honor, done on the route: it goes to Artist Renfray, on Caer Darrow in the lake of the Western Plaguelands, whose own quest is a painting in Stratholme.
+  accept 5846                         -- Tirion Fordring
+
+step Caer Darrow: Artist Renfray
+  when done strat-start
+  when onquest 5846
+  zone Western Plaguelands
+  tip Ride south through the Western Plaguelands to the lake and onto Caer Darrow: Renfray paints inside the ruined house. His quest cannot be shared. Then back north-east to Stratholme.
+  turnin 5846                         -- Artist Renfray, inside
+  accept 5848
 
 step Stratholme: along the way
   when done strat-start
   along until strat-end
   tip Collected all through the city: Plagued Flesh Samples on the ghouls, the abominations and the crypt beasts (not on the skeletons); Stratholme Holy Water in the supply crates by the streets (some are trapped: plagued insects swarm out). Restless Souls: do not kill the Ghostly and Spectral Citizens; equip the blaster Egan gave you, target one and use the blaster on it, then again on the soul that breaks free.
-  note Share The Flesh Does Not Lie, The Archivist, The Great Ezra Grimm and Houses of the Holy with your group: click each in the quest log, then Share. The Restless Souls and Of Love and Family cannot be shared.
+  note Share The Flesh Does Not Lie, The Archivist, The Great Ezra Grimm and Houses of the Holy with your group: click each in the quest log, then Share. The Restless Souls and Renfray's painting quest cannot be shared.
   collect 13174 quest 5212            -- Plagued Flesh Sample
   collect 13180 quest 5243            -- Stratholme Holy Water: supply crates
   kill 11122 quest 5282               -- Restless Soul, freed with the blaster
@@ -850,7 +914,7 @@ step Stratholme, first visit: before going in
   when done strat-start
   zone Eastern Plaguelands
   tip First visit, the living side, by the main gate across the bridge: King's Square, Market Row, Crusaders' Square and the Scarlet Bastion, then Festival Lane and Elders' Square. Leave Balnazzar alive this time: The Archivist must be handed in before he dies, or his head starts nothing. Warcraft Tavern (written from Classic) says the doors of the Scarlet Bastion open with The Scarlet Key, from Arcanist Doan's chest in the Scarlet Monastery Library: to check in game.
-  note In the quest log: The Flesh Does Not Lie (Betina), The Archivist (Duke Nicholas), The Great Ezra Grimm (Smokey LaRue), Houses of the Holy (Leonid), The Restless Souls (Egan); if taken in Group 30, Of Love and Family (Renfray). Not on this route: Sweet Serenity and Corruption (Winterspring), the dungeon set quests (Deliana, Anthion Harmon), Ras Frostwhisper's chain (Menethil's Gift).
+  note In the quest log: The Flesh Does Not Lie (Betina), The Archivist (Duke Nicholas), The Great Ezra Grimm (Smokey LaRue), Houses of the Holy (Leonid), The Restless Souls (Egan); Renfray's painting quest, for whoever took it. Not on this route: Sweet Serenity and Corruption (Winterspring), the dungeon set quests (Deliana, Anthion Harmon), Ras Frostwhisper's chain (Menethil's Gift).
   goto 26.5,10.4 map 1423 "Stratholme" r 25
 
 step King's Square: Ezra Grimm
@@ -1013,13 +1077,62 @@ step Stratholme: quests not done
   abandon 5125 optional
   abandon 5848 optional
 
-# Groupe Alliance 0.12.0: Of Love and Family (5848), taken in Group 30 with its own question, when
-# Stratholme was skipped: nothing brings the guide back to Tirion.
+# Of Love and Family (5848), taken from Renfray, when Stratholme was not finished: nothing brings the
+# guide back to Tirion.
 step Of Love and Family: not done
   when onquest 5848
   when !complete 5848
   tip Of Love and Family is not done and the guide does not go back to Stratholme: abandon it, or keep it for a run of your own.
   abandon 5848
+
+step The Skeleton Key (optional)
+  label key-start
+  when done scholo-start
+  when !turnedin 5505
+  when group 5505
+  zone Western Plaguelands
+  tip The Skeleton Key opens Scholomance: one player of the group with it is enough, and a rogue can pick the lock instead. Its chain is long: Alchemist Arbington at Chillwind Camp, Krinkle Goodsteel in Gadgetzan (15 gold), Fire Plume Ridge in Un'Goro Crater with two Thorium Bars, then Araj the Summoner (elite 61) in Andorhal. Somebody in the group already has the key? Skip it.
+  note To Chillwind Camp: the flight from Light's Hope Chapel, or the road south from Tirion's hut. Alchemist Arbington stands in the camp.
+  accept 5538                         -- Alchemist Arbington: for Krinkle Goodsteel in Gadgetzan
+
+step Gadgetzan: Krinkle Goodsteel
+  when done key-start
+  when onquest 5538
+  zone Tanaris
+  tip The long way to Gadgetzan: from Chillwind Camp, the flight to Ironforge, then Menethil Harbor, the boat to Theramore and the flight to Gadgetzan. Krinkle Goodsteel stands at his forge in town; he wants the Imbued Skeletal Fragments and 15 gold.
+  turnin 5538                         -- Krinkle Goodsteel
+  accept 5801
+
+step Fire Plume Ridge
+  when done key-start
+  when onquest 5801
+  zone Un'Goro Crater
+  tip Two Thorium Bars in the bags (a miner, or the auction house). Ride west from Gadgetzan into Un'Goro Crater and climb Fire Plume Ridge in its middle: use the Skeleton Key Mold by the lava lake at the top. The Living Blazes up there are 54-55.
+  use 14644 quest 5801.1 @48.9,47.0 map 1449
+  collect 14645 quest 5801.1 @48.9,47.0 -- Unfinished Skeleton Key
+
+step Chillwind Camp: Alchemist Arbington
+  when done key-start
+  when complete 5801
+  zone Western Plaguelands
+  tip Back to Chillwind Camp the long way. Araj the Summoner, the next task, is a level 61 elite in Andorhal: the whole group goes.
+  turnin 5801                         -- Alchemist Arbington
+  accept 5803
+
+step Andorhal: Araj the Summoner
+  when done key-start
+  when onquest 5803
+  zone Western Plaguelands
+  tip Andorhal, the ruined city north of the camp: Araj the Summoner (elite 61) stands in the middle of the town with his skeletons. Kill him, then click his phylactery for the scarab.
+  collect 14610 quest 5803.1 @45.6,69.3 -- Araj's Scarab: Araj the Summoner
+
+step Chillwind Camp: the Skeleton Key
+  when done key-start
+  when complete 5803
+  zone Western Plaguelands
+  turnin 5803                         -- Alchemist Arbington
+  accept 5505
+  turnin 5505                         -- The Skeleton Key
 
 step Chillwind Camp: Weldon Barov
   when done scholo-start

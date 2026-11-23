@@ -41,45 +41,15 @@ ns.GA.Reliability = {
 	[95809] = { "?", BETA_ROUTE }, [95810] = { "?", BETA_ROUTE }, [98824] = { "?", BETA_ROUTE },
 	[92456] = { "?", BETA_ROUTE }, [92489] = { "?", BETA_ROUTE }, [92432] = { "?", BETA_ROUTE },
 	[92457] = { "?", BETA_ROUTE }, [92458] = { "?", BETA_ROUTE },
-	-- Solo · Loch Modan: quests confirmed (Polestar data, RestedXP's live guides, Lodestar),
-	-- but places missing from Polestar's data.
-	[86667] = { "?", {
-		frFR = "Les deux PNJ et la plaque de neige manquent aux données Polestar : positions reprises de Lodestar (bêta) et des guides RestedXP.",
-		enUS = "Both NPCs and the snowy patch are missing from Polestar's data: places from Lodestar (beta) and RestedXP's guides.",
-	} },
-	[86758] = { "?", {
-		frFR = "Daguecroc manque aux données Polestar : position reprise de Lodestar (bêta), sur la rive est selon RestedXP.",
-		enUS = "Daggerfang is missing from Polestar's data: place from Lodestar (beta), on the east shore per RestedXP.",
-	} },
-	[86614] = { "?", {
-		frFR = "La boîte de pêche manque aux données Polestar : plusieurs emplacements possibles au fond du lac (RestedXP).",
-		enUS = "The fishing toolbox is missing from Polestar's data: several possible spots on the lake floor (RestedXP).",
-	} },
 	-- 0.4.0: group quests and the Deadmines and Stockade chapters, from Polestar's Forever data
 	-- and Wowhead Forever; not played in game yet.
 	[95999] = { "?", {
 		frFR = "Gar'im est à 72,8 ; 86,3 dans les données Polestar, vers 77 ; 86 selon un commentaire Wowhead de 2026 : à vérifier en jeu.",
 		enUS = "Gar'im is at 72.8, 86.3 in Polestar's data, near 77, 86 per a 2026 Wowhead comment: to check in game.",
 	} },
-	[115] = { "?", {
-		frFR = "Les données Polestar demandent Barricade rochenoire rendue d'abord ; un commentaire Wowhead ajoute La scierie d'Alther, contredit par un autre.",
-		enUS = "Polestar's data needs Blackrock Blockade handed in first; one Wowhead comment adds Alther's Mill, another says no.",
-	} },
-	[92749] = { "?", {
-		frFR = "Le nombre (10) et le type (Dynamite basique) viennent de deux commentaires Wowhead de la bêta ; le texte de la quête dit encore Dynamite grossière.",
-		enUS = "The amount (10) and kind (Rough Dynamite) come from two beta Wowhead comments; the quest text still says Coarse.",
-	} },
 	[95646] = { "?", {
 		frFR = "Les données Polestar n'ont pas de prérequis ; deux commentaires Wowhead exigent la chaîne de Rethiel (463, 276, 277, 275).",
 		enUS = "Polestar's data has no prerequisite; two Wowhead comments require Rethiel's chain (463, 276, 277, 275).",
-	} },
-	[98028] = { "?", {
-		frFR = "Taux des fragments tiré du tableau de butin de Wowhead (environ 9 % sur les nagas, 42 % sur la maîtresse des bêtes) ; Pierre de la Brasse d'après les commentaires.",
-		enUS = "Fragment rates from Wowhead's drop table (about 9% from the naga, 42% from the Beastmistress); the Fathom Stone from the comments.",
-	} },
-	[2078] = { "?", {
-		frFR = "Conseils de combat tirés de commentaires Classic : aucun retour de Forever encore.",
-		enUS = "Fight advice from Classic comments: no Forever report yet.",
 	} },
 	[386] = { "?", {
 		frFR = "Cellule de Targorr variable selon les commentaires ; le guide Wowhead Forever (bêta) le place au bout du couloir nord.",
@@ -103,7 +73,7 @@ ns.GA.Reliability = {
 		frFR = "Ordre des ailes et combats repris du jeu d'origine ; besoin d'une clé pour l'Armurerie et la Cathédrale sur Forever non confirmé.",
 		enUS = "Wing order and fights from the original game; whether the Armory and Cathedral need a key on Forever is not confirmed.",
 	} },
-	-- 0.5.0: Uldaman (20b-uldaman).
+	-- 0.5.0: Uldaman (its chapter since 0.13.0: uldaman.guide).
 	[2398] = { "?", ULDAMAN }, [2240] = { "?", ULDAMAN }, [1360] = { "?", ULDAMAN }, [2418] = { "?", ULDAMAN },
 	[2278] = { "?", ULDAMAN }, [2279] = { "?", ULDAMAN }, [2198] = { "?", ULDAMAN },
 	[1437] = { "?", {
@@ -114,8 +84,8 @@ ns.GA.Reliability = {
 		frFR = "Un commentaire Forever dit qu'un humain ne peut pas la prendre ; Wowhead retire les humains de toutes les quêtes propres à Forever, sans doute une erreur d'affichage : à vérifier en jeu avec un humain.",
 		enUS = "One Forever comment says a human cannot take it; Wowhead leaves humans out of every Forever-only quest, likely a display error: to check in game with a human.",
 	} },
-	-- 0.6.0: Zul'Farrak (23-tanaris).
+	-- 0.6.0: Zul'Farrak (its chapter since 0.13.0: zul-farrak.guide).
 	[2865] = { "?", ZULFARRAK }, [3042] = { "?", ZULFARRAK }, [2768] = { "?", ZULFARRAK },
-	-- 0.7.0: Sunken Temple (24-hinterlands, 27-steppes-ardentes).
+	-- 0.7.0: Sunken Temple (its chapter since 0.13.0: temple-englouti.guide).
 	[1475] = { "?", SUNKEN }, [3373] = { "?", SUNKEN },
 }

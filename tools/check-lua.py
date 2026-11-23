@@ -8,8 +8,10 @@
    Polestar (ns) and of the game: the calm defaults are registered, the tip mark is added to a
    line whose quest has a tip (and only then), the tooltip gets the tip line, /ga answers.
 3. Per-objective tips: each goals["item:<id>"] (npc, object) key of Tips.lua is an objective line
-   of that quest in the built guides.
-4. Escort badge: the quests marked in the built guides are the pack's known escorts.
+   of that quest in the guides the player follows (since 0.13.0, Polestar's route and this pack's
+   chapters: every compiled guide of addons/Polestar_Guides* and the built pack).
+4. Escort badge: the lines marked in those guides are exactly Polestar's escorts plus the pack's
+   own list (GA.EXTRA_ESCORTS), and each quest of that list is in the guides.
 5. Off by default: only the addons of OFF_BY_DEFAULT say `## DefaultState: disabled`.
 It cannot replace a test in game: it only catches typos and broken calls.
 """
@@ -152,9 +154,12 @@ local line = NS.UI.GoalLine(esc)
 check(line:find("Escorte", 1, true) ~= nil, "escort badge on a flagged line")
 check(line:find("icon-kill", 1, true) ~= nil and line:find("Escorte", 1, true) < line:find("icon-kill", 1, true), "badge before the difficulty mark")
 check(NS.UI.GoalLine({ t = "accept", quest = 900003, status = "done", escort = true }):find("Escorte", 1, true) == nil, "no badge once done")
-check(NS.UI.GoalLine({ t = "accept", quest = 995, status = "active" }):find("Escorte", 1, true) ~= nil, "badge from our list (995)")
-check(NS.UI.GoalLine({ t = "kill", quest = 2078, status = "active" }):find("Escorte", 1, true) ~= nil, "badge from our list (2078)")
-check(NS.UI.GoalLine({ t = "turnin", quest = 995, status = "active" }):find("Escorte", 1, true) == nil, "no badge on a turn-in")
+-- Our list (GA.EXTRA_ESCORTS, empty since 0.13.0) tried with a quest put in it for the test.
+NS.GA.EXTRA_ESCORTS[900004] = true
+check(NS.UI.GoalLine({ t = "accept", quest = 900004, status = "active" }):find("Escorte", 1, true) ~= nil, "badge from our list (accept)")
+check(NS.UI.GoalLine({ t = "kill", quest = 900004, status = "active" }):find("Escorte", 1, true) ~= nil, "badge from our list (objective)")
+check(NS.UI.GoalLine({ t = "turnin", quest = 900004, status = "active" }):find("Escorte", 1, true) == nil, "no badge on a turn-in")
+NS.GA.EXTRA_ESCORTS[900004] = nil
 check(NS.UI.GoalLine({ t = "accept", quest = 1, status = "active" }):find("Escorte", 1, true) == nil, "no badge on a plain quest")
 TIPLINES = {}
 HOOKS.Tooltip({ psGoal = esc, HookScript = function() end })
@@ -309,9 +314,12 @@ failed = ", ".join(x for x in (failed, failed2, failed3) if x)
 print("quest automation: " + ("ok" if not (failed2 or failed3) else "FAILED: " + ", ".join(x for x in (failed2, failed3) if x)))
 
 # 3. Per-objective tips: every goals["kind:id"] key of Tips.lua is an objective line (collect,
-# kill, use, interact) of that quest in the built pack's guides.
+# kill, use, interact) of that quest in the guides the player follows: Polestar's (its route since
+# 0.13.0) and the built pack's chapters.
 import re
-guides = (repo / "addons" / "PolestarPack_GroupeAlliance" / "Guides.lua").read_text(encoding="utf-8")
+guides = "\n".join(f.read_text(encoding="utf-8") for d in sorted((repo / "addons").iterdir())
+                   if d.is_dir() and (d.name.startswith("Polestar_Guides") or d.name == "PolestarPack_GroupeAlliance")
+                   for f in sorted(d.glob("*.lua")))
 objectives = set()
 for m in re.finditer(r'\{ t = "(?:collect|kill|use|interact)", quest = (\d+),([^{}]*)', guides):
     for kind in ("item", "npc", "object"):
@@ -328,13 +336,10 @@ for m in re.finditer(r"^\t\[(\d+)\] = \{[^\n]*\n\t\tgoals = \{\n(.*?)\n\t\t\},",
             missing.append(f"{m.group(1)} {key}")
 print(f"objective tips: {nkeys} keys, " + ("ok" if not missing else "NOT IN THE GUIDES: " + ", ".join(missing)))
 
-# 4. Escort badge (0.7.4): the quests whose lines get the badge in the built guides
-# (GA.IsEscort on each goal: Polestar's compiled `escort` plus GA.EXTRA_ESCORTS) are
-# exactly the pack's known escorts below; each quest of our list is in the guides.
-ESCORTS = {155, 219, 660, 665, 731, 945, 994, 995, 1222, 1393, 1440, 1560, 2078, 3367,
-           4261, 4491, 4901, 5203, 5321, 6132, 87491, 99053,
-           1144, 2904, 3525}  # 0.11.0: Willix the Importer (Razorfen Kraul), A Fine Mess (Gnomeregan),
-           # Extinguishing the Idol (Razorfen Downs)
+# 4. Escort badge (0.7.4): the quests whose lines get the badge (GA.IsEscort on each goal:
+# Polestar's compiled `escort` plus GA.EXTRA_ESCORTS) are exactly those Polestar flags plus our
+# list; each quest of our list is in the guides.
+flagged = {int(m.group(1)) for m in re.finditer(r'\{ t = "\w+", quest = (\d+),[^\n]*escort = true', guides)}
 is_escort = L.eval("function(t, q, e) return NS.GA.IsEscort({ t = t, quest = q, escort = e or nil }) end")
 marked, quests = set(), set()
 for m in re.finditer(r'\{ t = "(\w+)", quest = (\d+),([^\n]*)', guides):
@@ -342,10 +347,10 @@ for m in re.finditer(r'\{ t = "(\w+)", quest = (\d+),([^\n]*)', guides):
     quests.add(q)
     if is_escort(m.group(1), q, "escort = true" in m.group(3)):
         marked.add(q)
-extra = {int(q) for q in L.eval("(function() local o = {} for q in pairs(NS.GA.EXTRA_ESCORTS) do o[#o + 1] = q end return table.concat(o, ',') end)()").split(",")}
+extra = {int(q) for q in L.eval("(function() local o = {} for q in pairs(NS.GA.EXTRA_ESCORTS) do o[#o + 1] = q end return table.concat(o, ',') end)()").split(",") if q}
 escort_bad = []
-if marked != ESCORTS:
-    escort_bad.append("marked " + str(sorted(marked - ESCORTS)) + ", missing " + str(sorted(ESCORTS - marked)))
+if marked != flagged | extra:
+    escort_bad.append("marked " + str(sorted(marked - flagged - extra)) + ", missing " + str(sorted((flagged | extra) - marked)))
 if extra - quests:
     escort_bad.append("listed but not in the guides " + str(sorted(extra - quests)))
 print(f"escort badge: {len(marked)} quests ({len(extra)} from our list), " + ("ok" if not escort_bad else "FAILED: " + "; ".join(escort_bad)))

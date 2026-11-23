@@ -1,0 +1,93 @@
+# Written for this pack by BurN-30 (GPL-3.0). From the Razorfen Downs steps of 22-feralas.guide and
+# their question in 20-strangleronce-marecage.guide (sources: Polestar's Forever data and Dungeons
+# codex; prerequisites cross-checked with the TrinityCore Forever base, 3525 after 3523; Warcraft
+# Tavern's Forever quest guide read on 12/11/2026: Myriam on a hill outside, her three targets
+# outside the portal, Belnistrasz in a prison cell inside, neither of his quests shareable, Bring
+# the Light not shareable). Not played in game yet.
+#
+# Self-contained chapter for Polestar's own route. Polestar never passes Razorfen Downs at its level
+# (data/dungeon-runs.json "notInRoute": nearest point 1,048 yards away at 32-33), and its quest giver
+# away from the door, Archbishop Benedictus, is in Stormwind. The Groupe Alliance module offers this
+# chapter once In Search of The Temple (1448) is handed in to Brohann Caskbelly in Stormwind
+# (forever/alliance/40-50/01-stranglethorn-vale, about level 41), the route's last Stormwind stop
+# before the Riverglades: Benedictus first, the flight to Booty Bay and the boat to Ratchet, the
+# road south through the Barrens to the door, the run, the same way back and Benedictus again. The
+# route's guide keeps its place in its tab and comes back at the end, in Stormwind.
+#
+# Compared with Polestar 0.4.2.2's own Razorfen Downs page (Dungeons codex, Polestar_Codex,
+# GPL-3.0, page "razorfen-downs"):
+# - A Host of Evil (6626, Myriam Moonsinger) is a group question of Polestar's route at 32-33
+#   (30-40/03-ashenvale): kept here, optional, for whoever skipped it then;
+# - same quests otherwise: Scourge of the Downs and Extinguishing the Idol (3523, 3525), Bring the
+#   Light (3636);
+# - on its page but not here: The Coldbringer's Eye (96773, Archmage Lan'dalock in the Alterac
+#   Mountains, off this chapter's way), Agamaggan's Blood (93604, the end of a Shen'dralas chain the
+#   route reaches at 45), Bring the End (3341, Horde).
+guide groupe-alliance/souilles-de-tranchebauge
+title Dungeon · Razorfen Downs (39-45)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 39-45
+zone The Barrens
+
+step Stormwind: Archbishop Benedictus
+  zone Stormwind City
+  tip Razorfen Downs: the quilboar and Scourge barrows at the southern edge of the Barrens, for a group of 5, levels 37 to 46: at 41 it fits. Archbishop Benedictus stands in the Cathedral of Light. Bring the Light cannot be shared: every player takes it here.
+  note The trip: the flight to Booty Bay, the boat to Ratchet, then the road south through the Barrens; the same way back to Stormwind at the end. Keep 4 free quest log slots.
+  accept 3636                         -- Archbishop Benedictus
+
+step Fly to Booty Bay
+  zone Stormwind City
+  goto 66.3,62.7 "Stormwind flight master"
+  fly "Booty Bay"
+  zone Stranglethorn Vale
+
+step Boat to Ratchet
+  zone Stranglethorn Vale
+  tip The boat to Ratchet leaves from Booty Bay's dock, by Wharfmaster Lozgil.
+  goto 26.3,73.6 "Boat to Ratchet"
+  zone The Barrens
+
+step The road south
+  zone The Barrens
+  tip From Ratchet, ride west to the road, then south down the Barrens past Camp Taurajo (Horde: keep east of it and away from its guards) to the top of the Great Lift. Razorfen Downs is a few hundred yards north-east of the lift, among thorny hills.
+  goto 48.9,91.7 "Razorfen Downs"
+
+step Razorfen Downs: Myriam Moonsinger
+  tip Myriam Moonsinger waits on a hill outside the dungeon. Her quest is the one the route offered at 32: whoever did it then has nothing to take. The three targets live outside the portal, among the barrows and thorns (elites, 33).
+  accept 6626 optional                -- Myriam Moonsinger, on a hill outside
+  kill 7873 x8 quest 6626 optional @47.2,89.6  -- Razorfen Battleguard
+  kill 7874 x8 quest 6626 optional @47.2,91.5  -- Razorfen Thornweaver
+  kill 7872 x8 quest 6626 optional @47.3,90.3  -- Death's Head Cultist
+  turnin 6626 optional                -- Myriam Moonsinger
+
+step Razorfen Downs: Belnistrasz
+  tip Belnistrasz waits in a prison cell inside. His quests cannot be shared: every player takes Scourge of the Downs and hands it in to him (he wants his Oathstone back) BEFORE anyone starts Extinguishing the Idol. Then he walks to the idol and casts while waves of enemies come: stay close and keep them off him; it ends at his brazier.
+  note Share nothing here: each player talks to Belnistrasz.
+  accept 3523                         -- Belnistrasz
+  turnin 3523
+  accept 3525
+  complete 3525                       -- Protect him at the idol
+  turnin 3525 object 152097           -- Belnistrasz's Brazier
+
+step Razorfen Downs: Amnennar the Coldbringer
+  tip The last boss (elite 41), at the far end: he casts frost novas and calls frozen spectres; keep the healer out of his reach.
+  kill 7358 quest 3636                -- Amnennar the Coldbringer
+
+step Back to Ratchet
+  zone The Barrens
+  tip The same way back: north along the road past Camp Taurajo to Ratchet, the boat to Booty Bay, then the flight to Stormwind. A hearthstone bound in Stormwind saves the whole trip.
+  goto 63.4,38.5 "Boat to Booty Bay"
+  zone Stranglethorn Vale
+
+step Fly to Stormwind
+  zone Stranglethorn Vale
+  goto 27.5,77.7 "Booty Bay flight master"
+  fly "Stormwind"
+  zone Stormwind City
+
+step Stormwind: Bring the Light
+  zone Stormwind City
+  tip Last stop of the chapter: the route's own guide comes back once this is handed in.
+  turnin 3636                         -- Archbishop Benedictus, in the Cathedral of Light

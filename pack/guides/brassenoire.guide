@@ -1,0 +1,148 @@
+# Written for this pack by BurN-30 (GPL-3.0). The Blackfathom Deeps chapter of
+# 09-orneval-paluns.guide, made a guide of its own. Same sources: quest ids, givers, levels,
+# prerequisites, drops and rewards from Polestar's Forever data (data-v2026.11.1 and the forever-db
+# of Polestar 0.4.2.2) and Dungeons codex, cross-checked with the TrinityCore Forever world base
+# (2026-10-14); places inside and the In Search of Thaelrid question from Warcraft Tavern's and Icy
+# Veins' WoW Forever quest guides (read on 12/11/2026), rewritten. Polestar 0.4.2.2's run
+# (GPL-3.0, data/dungeon-runs.json and its `when dungeon "Blackfathom Deeps"` steps): the way in by
+# the sunken ruins' pit at the north end of the Zoram Strand, Thaelrid by a campfire in an
+# underwater side room off Ghamoo-ra's room. Not played in game yet.
+#
+# Self-contained chapter for Polestar's route: the Groupe Alliance module offers it at the end of
+# forever/alliance/06-ashenvale's first Ashenvale visit (Raene Wolfrunner's and Maliynn's hand-ins
+# in Astranaar, about level 25), whose next steps are the flight to Auberdine and the boat to
+# Menethil Harbor: Gershala Nightwhisper and the Argent Dawn's quests are taken at Auberdine and in
+# Darnassus, the dungeon is run at about 25-26, and the chapter ends at Auberdine, where the route
+# goes on (Terenthis, the boat).
+# A new id in 0.13.0: up to 0.12.x its steps were inside one of the pack's zone guides.
+#
+# Compared with Polestar's run (Gershala's quest taken at Auberdine at about 22, the run on the Zoram
+# Strand at about 24, the hand-in at Auberdine at about 28.5, the Argent Dawn left to its Dungeons
+# page): one detour instead of three stops spread over six levels, at the dungeon's own level (its
+# codex floor is 25.2), with the Argent Dawn's three quests (about 19,600 XP) as an optional
+# Darnassus detour, and the bosses one by one. Polestar's placement costs no travel; it needs a
+# chapter that can wait for the route, which the Groupe Alliance module does not do.
+# Left out, as by Polestar: Knowledge in the Deeps (971, Gerrig Bonegrip in Ironforge, not on the
+# way); the Warlock's Orb of Soran'ruk and the Paladin's Kor Gem only for whoever holds them.
+guide groupe-alliance/brassenoire
+title Dungeon · Blackfathom Deeps (23-28)
+folder Group Alliance
+category Dungeons
+faction Alliance
+levels 23-28
+zone Ashenvale
+
+step Auberdine: Gershala Nightwhisper
+  zone Darkshore
+  tip Blackfathom Deeps: a 5-player dungeon on the north-west coast of Ashenvale, levels 24 to 32 in the group finder: at 25 or more it goes well. Its quests are taken here and in Darnassus, the dungeon is run from the Zoram Strand, and they are handed in back here.
+  note Keep 5 free quest log slots. Bind your hearthstone at the inn: it brings you back here after the dungeon.
+  fly "Auberdine"
+  accept 1275                                 -- Gershala Nightwhisper
+  sethome "Auberdine"
+
+step Darnassus: the Argent Dawn (Blackfathom Deeps, optional detour)
+  when group 1198
+  zone Darnassus
+  tip Two more Blackfathom quests wait in Darnassus, with the Argent Dawn: In Search of Thaelrid, then Blackfathom Villainy from Thaelrid inside the dungeon, and Twilight Falls. About 19,600 XP with the hand-ins, and a blue reward. The detour: the boat from the Auberdine dock to Rut'theran Village (Night Elves fly), the portal up to Darnassus, then back; the hand-ins need the same trip after the dungeon. Short on time? Skip it.
+  zone Teldrassil
+  getfp "Rut'theran Village" only Human,Dwarf,Gnome,Skyborne
+  fly "Rut'theran Village" only NightElf
+  zone Darnassus
+  accept 1198 map 1457 @55.36,25.03           -- Dawnwatcher Shaedlass
+  accept 1199 map 1457 @55.24,23.99           -- Argent Guard Manados
+
+step Back to Auberdine
+  when onquest 1198
+  zone Darkshore
+  tip Back down the portal to Rut'theran Village, then the flight to Auberdine.
+  fly "Auberdine"
+
+step Blackfathom Deeps: before going in
+  zone Ashenvale
+  tip South along the coast road out of Darkshore, then the Ashenvale shore to the Zoram Strand, its north end: about ten minutes' ride. The way in is the sunken ruins' pit at the north end of the strand: down the stairs, then swim through the tunnels under the wall, past the blue crystals, to the portal. Every enemy inside is elite.
+  note In the log before going in: Researching the Corruption (Gershala Nightwhisper, Auberdine); In Search of Thaelrid and Twilight Falls for whoever went to Darnassus. Share each quest with the group: click it in the quest log, then Share.
+  goto 14.5,14.2 "Blackfathom Deeps" r 25
+
+step Blackfathom Deeps: along the way
+  along until bfd-kelris
+  tip Collected all through the dungeon: the brain stems from the nagas and the Fallenroot satyrs (those outside the portal drop them too), the Twilight Pendants from the Twilight's Hammer cultists, about 4 kills in 5 for each. Every player with the quest loots their own; with a full group on them, a second run may be needed.
+  collect 5952 x8 quest 1275                  -- Corrupted Brain Stem: Blackfathom nagas, Fallenroot satyrs
+  collect 5879 x10 quest 1199 optional        -- Twilight Pendant: Twilight's Hammer cultists
+
+step Paladins: Seeking the Kor Gem
+  only Paladin
+  when onquest 1442
+  along until bfd-kelris
+  tip The Blackfathom Tide Priestesses, Oracles and Sea Witches (the naga casters) drop the Corrupted Kor Gem, about 1 in 2. Thundris Windweaver in Auberdine cleanses it, on the way back.
+  collect 6995 quest 1442                     -- Corrupted Kor Gem: naga casters
+
+step Warlocks: The Orb of Soran'ruk
+  only Warlock
+  when onquest 1740
+  along until bfd-kelris
+  tip The Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from Shadowfang Keep, a Horde dungeon: Polestar's class guides (Orb of Soran'ruk) cover it.
+  collect 6914 x3 quest 1740                  -- Soran'ruk Fragment: Twilight Acolytes
+
+step Blackfathom Deeps: Ghamoo-ra's pool
+  tip The great turtle Ghamoo-ra lives in the first big pool. Argent Guard Thaelrid waits by a campfire in an underwater side cave, its entrance south-east of the same pool (next step).
+  kill 4887                                   -- Ghamoo-ra
+
+step Blackfathom Deeps: Argent Guard Thaelrid
+  when onquest 1198
+  tip Thaelrid of the Argent Dawn waits in an underwater cave whose entrance is south-east of Ghamoo-ra's pool. Talk to him BEFORE killing Kelris: Kelris's head drops only for players who already hold Blackfathom Villainy.
+  turnin 1198                                 -- Argent Guard Thaelrid
+  accept 1200
+
+step Blackfathom Deeps: Argent Guard Thaelrid (without the Darnassus quest)
+  when !onquest 1198
+  when !turnedin 1198
+  tip Thaelrid of the Argent Dawn waits in an underwater cave whose entrance is south-east of Ghamoo-ra's pool. He offers Blackfathom Villainy without In Search of Thaelrid too. Talk to him BEFORE killing Kelris; not offered? Carry on.
+  talk 4787                                   -- Argent Guard Thaelrid
+  accept 1200 optional
+
+step Blackfathom Deeps: Lady Sarevess and Gelihast
+  tip Lady Sarevess, the second boss, comes with two guards: interrupt her Forked Lightning, it chains between players standing close (spread out). Gelihast, the murloc of the side cave, is optional: pull his murlocs one at a time; the stone behind him gives the Blessing of Blackfathom. The Twilight's Hammer cultists come after them.
+  kill 4831                                   -- Lady Sarevess
+  kill 6243 optional                          -- Gelihast
+
+step Blackfathom Deeps: Twilight Lord Kelris
+  label bfd-kelris
+  tip Kelris waits in the ceremonial chamber before the last room. Interrupt his Sleep and kill his adds first. Every player on Blackfathom Villainy loots their own head. Aku'mai, behind him, is optional: no quest, good loot.
+  collect 5881 quest 1200 optional            -- Head of Kelris
+  kill 4832                                   -- Twilight Lord Kelris
+  kill 4829 optional                          -- Aku'mai
+
+step Hearthstone to Auberdine
+  zone Darkshore
+  tip Out by the portal, then the hearthstone: it was bound in Auberdine at the start of the chapter. On cooldown? Ride back north along the coast.
+  goto 38.3,43.1 "Auberdine"
+
+step Darnassus: Blackfathom hand-ins (detour)
+  when complete 1200
+  zone Darnassus
+  tip From Auberdine to Rut'theran Village: the flight, or the boat from the Auberdine dock for whoever never learned that flight path; then the portal up to Darnassus. Dawnwatcher Selgorm and Argent Guard Manados stand with the Argent Dawn.
+  zone Teldrassil
+  fly "Rut'theran Village"
+  zone Darnassus
+  turnin 1200 optional map 1457 @56.16,24.39  -- Dawnwatcher Selgorm
+  turnin 1199 optional map 1457 @55.24,23.99  -- Argent Guard Manados, with the 10 pendants
+
+step Darnassus: Twilight Falls (detour)
+  when complete 1199
+  when !complete 1200
+  zone Darnassus
+  tip From Auberdine to Rut'theran Village: the flight, or the boat from the Auberdine dock for whoever never learned that flight path; then the portal up to Darnassus. Argent Guard Manados stands with the Argent Dawn.
+  zone Teldrassil
+  fly "Rut'theran Village"
+  zone Darnassus
+  turnin 1199 optional map 1457 @55.24,23.99  -- Argent Guard Manados
+
+step Back to Auberdine
+  when !zone "Darkshore"
+  zone Darkshore
+  fly "Auberdine"
+
+step Auberdine: Gershala Nightwhisper
+  zone Darkshore
+  tip Last stop of the chapter: Gershala stands a short walk west of Terenthis. The route's own guide comes back once this is handed in: Terenthis, then the boat to Menethil Harbor.
+  turnin 1275                                 -- Gershala Nightwhisper

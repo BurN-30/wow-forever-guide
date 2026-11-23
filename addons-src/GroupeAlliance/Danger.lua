@@ -15,22 +15,14 @@ local _, ns = ...
 ns.GA = ns.GA or {}
 
 ns.GA.Danger = {
-	-- Redridge Mountains: the Stonewatch elites (07-carmines)
+	-- Redridge Mountains: the Stonewatch elites (on Polestar's route since 0.13.0)
 	[95999] = { lvl = 26, grp = 2,
 		frFR = "L'incinérateur Gar'im est un élite 23 avec un diablotin et deux aides, et un sort de feu de 2,5 s. Seul : niveau 26 avec une interruption ; à deux : tuer les aides d'abord, garder l'interruption pour son feu.",
 		enUS = "Incinerator Gar'im is a level 23 elite with an imp, two helpers and a 2.5 s fire cast. Alone: level 26 with an interrupt; as a pair: kill the helpers first, save the interrupt for his fire.",
 	},
-	[19] = { lvl = 28, grp = 3,
-		frFR = "Tharil'zun est un élite 24 avec deux gardes, devant le donjon de Guet-de-Pierre. Seul : vers 28-29 ; à deux ou trois vers 23-25 : neutraliser un garde et le tuer vite.",
-		enUS = "Tharil'zun is a level 24 elite with two guards, outside Stonewatch Keep. Alone: about 28-29; two or three players at 23-25: crowd-control a guard and burst him.",
-	},
 	[169] = { lvl = 32, grp = 5,
 		frFR = "Gath'Ilzogg est un élite 26 au sommet d'un donjon plein d'élites qui réapparaissent vite, avec deux gardes et un dragonnet. Pas de solo raisonnable : groupe de 4 ou 5 vers 24-26.",
 		enUS = "Gath'Ilzogg is a level 26 elite atop a keep full of fast-respawning elites, with two guards and a whelp. No sensible solo: a group of 4 or 5 at 24-26.",
-	},
-	[115] = { lvl = 25, grp = 2,
-		frFR = "Les orbes ne tombent que sur les exhalombres Blackrock, élites 22-23. Seul : la grotte au nord de Comté-du-Lac, en les tirant un par un ; à plusieurs : dans le donjon avec Tharil'zun.",
-		enUS = "Only Blackrock Shadowcasters, level 22-23 elites, drop the orbs. Alone: the cave north of Lakeshire, one at a time; in a group: in the keep along with Tharil'zun.",
 	},
 	-- Westfall: the Deadmines' quests done outside the instance (07b-mortemines)
 	[168] = { lvl = 21, grp = 2,
@@ -57,14 +49,6 @@ ns.GA.Danger = {
 	[2139] = { lvl = 19, grp = 2,
 		frFR = "La mère de la tanière et ses quatre oursons viennent ensemble, et elle renverse. Seul : niveau 19, oursons d'abord ; en cas de pépin, sauter de la corniche sous la grotte, ils abandonnent. À deux : une formalité.",
 		enUS = "The Den Mother and her four cubs come together, and she knocks you down. Alone: level 19, cubs first; if it goes wrong, jump off the ledge below the cave, they give up. Two players: a formality.",
-	},
-	[2078] = { lvl = 22, grp = 2,
-		frFR = "Le Threshwackonator 4100 est un robot élite 20 qui frappe à 80-100. Seul : il faut une immobilisation ou une peur (druide, démoniste, mage, prêtre) ; corps à corps sans contrôle : venir à deux.",
-		enUS = "The Threshwackonator 4100 is a level 20 elite robot hitting for 80-100. Alone you need a root or a fear (Druid, Warlock, Mage, Priest); melee without control: come as a pair.",
-	},
-	[98028] = { lvl = 21, grp = 2,
-		frFR = "Baron Marinous est un élite 21 invoqué, immunisé au Givre, qui lance Éclair de givre et Nova de givre. Seul : niveau 20-21 à distance en jouant la ligne de vue des piliers ; à plusieurs : une seule invocation, chacun reçoit son globe.",
-		enUS = "Baron Marinous is a summoned level 21 elite, immune to Frost, casting Frostbolt and Frost Nova. Alone: level 20-21 at range, using the pillars to break line of sight; in a group: one summon, everyone gets a globe.",
 	},
 	[994] = { lvl = 24, grp = 3,
 		frFR = "Volcor fonce dans le camp de furbolgs et des renforts arrivent même camp vidé, dont deux chamans qui soignent. Seul : prendre Évasion par la ruse à la place (même suite) ; Évasion par la force à deux ou trois, avec un soigneur.",

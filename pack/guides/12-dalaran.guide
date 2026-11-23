@@ -1,121 +1,103 @@
-# Adapted from Aurum's chapter aurum-druid/dalaran-finale (Aurums Night Elf Druid Guide 0.4.37,
-# GPL-3.0). Changes: for every class, Stormwind pickups moved before the trip, no fixed reward
-# choice, shorter tips. Ids cross-checked against Polestar 0.3.2's reference data and Dungeons
-# codex and the MittenQuest Forever pack (Stormwind 31-35). Untested in game (Aurum: past 20).
+# Written for this pack by BurN-30 (GPL-3.0). Replaces 12-dalaran.guide (adapted from Aurum's chapter
+# aurum-druid/dalaran-finale, Aurums Night Elf Druid Guide 0.4.37, GPL-3.0) on Polestar's own route,
+# rebuilt from the Image of Archmage Modera's camp. Sources: Polestar 0.4.2.2 (GPL-3.0), its `when
+# dungeon "City of Dalaran"` steps of forever/alliance/30-40/05-arathi-highlands (Modera's camp on
+# the lake shore west of Dalaran, just over the Silverpine border; the sewer grate in the western wall
+# 30 yards away, at Alterac Mountains 8.8,59.5 from players' recordings; Heart of Disruption brings
+# the Dalaran Sewer Key), data/dungeon-runs.json and its Dungeons codex (quests, objectives, bosses);
+# the way through the city and the bosses from Warcraft Tavern's City of Dalaran guide (read
+# 23/11/2026), rewritten. Not played in game yet.
+#
+# Self-contained chapter for Polestar's route: the Groupe Alliance module offers it once An Alarming
+# Request (92432, level 30) is taken from Emissary Jacques in Southshore
+# (forever/alliance/30-40/01-hillsbrad-foothills, about 31), or handed in to Modera
+# (30-40/05-arathi-highlands, about 37) for whoever put it off. From Southshore it is a short ride to
+# Modera; the run follows at once and the hand-ins are in the same camp.
+# Since 0.13.0 the chapter has the id its guide had up to 0.12.x (groupe-alliance/12-dalaran): a tab saved on it opens
+# the chapter.
+#
+# Compared with Polestar's run (at about 37, Modera's two quests, no bosses): the same camp, grate
+# and quests, offered from 31 when the dungeon (28 to 35, codex floor 31.7) still gives its full XP,
+# with the bosses one by one and the order through the city. The old chapter's Stormwind start is
+# gone: A Green Sample and Power Overwhelming (92456, 92489) are offered in Stormwind by the Gnomeregan
+# chapter (about 31) and done here for whoever holds them; their hand-ins wait for the route's next
+# Stormwind stop, where Polestar lists them. The end of the Defias story (393 to 396) moved to the
+# Stockade chapter. Left out, as by Polestar: Friend of the Kirin Tor (92459, 270 XP for a walk),
+# Unstable Magic (96603, level 60).
 guide groupe-alliance/12-dalaran
-title Group 11 · City of Dalaran (dungeon 28-35, optional)
+title Dungeon · City of Dalaran (30-38)
 folder Group Alliance
 category Dungeons
 faction Alliance
-levels 30-33
-zone Stormwind City
-next groupe-alliance/14-paluns-hautebrande
-
-# Groupe Alliance 0.5.0: the end of the Defias story in Stormwind (393 to 396, Seal of Wrynn),
-# only for whoever finished the Stockade chain (The Curious Visitor, 392, in 08b-prison).
-# Ids, givers and places from Polestar's Forever data; event tips from Wowhead Forever comments
-# (October and November 2026), rewritten.
-
-step Stormwind: the end of the Defias story
-  when turnedin 392
-  tip Only if you did The Stockade Riots. Baros Alexston is in the City Hall on Cathedral Square, Mathias Shaw upstairs at SI:7 in Old Town, Elling Trias upstairs in the cheese shop of the Trade District, Tyrion in the garden beside Stormwind Keep.
-  accept 393                              -- Baros Alexston
-  turnin 393                              -- Master Mathias Shaw
-  accept 350
-  turnin 350                              -- Elling Trias
-  accept 2745
-  turnin 2745                             -- Tyrion
-  accept 2746
-
-step Clara's apples
-  when onquest 2746
-  zone Elwynn Forest
-  tip The bowl of apples sits on the table of the farmhouse just outside the Stormwind gate, south-west of the road. Silk Cloth: from your bags, humanoids or the Auction House.
-  collect 8683 x2 quest 2746 @33.95,57.16 -- Clara's Fresh Apple
-  collect 4306 x3 quest 2746              -- Silk Cloth
-
-step The Attack!
-  when onquest 2746
-  zone Stormwind City
-  turnin 2746                             -- Tyrion
-  accept 434
-  complete 434 @72.36,35.12               -- Overhear Lescovar and Marzon in the garden, then kill both
-
-step Brotherhood's End
-  when onquest 434
-  turnin 434                              -- Elling Trias
-  accept 394
-  turnin 394                              -- Master Mathias Shaw
-  accept 395
-  turnin 395                              -- Baros Alexston
-  accept 396
-  turnin 396                              -- Lady Katrana Prestor, in the throne room of Stormwind Keep: Seal of Wrynn
-
-# Groupe Alliance 0.7.0: the dungeon is optional, like the other chapters: asked once at the
-# first dungeon pickup (`when group 92456`, Polestar's "Skip it / Do it with a group" banner),
-# every later dungeon step needs it done (`when done dal-start`). Skipped: the end of the Defias
-# story above stays, then the guide sends the player back to Menethil Harbor. An Alarming
-# Request (92432) is still taken in Southshore and handed in near Dalaran by the next guides
-# (14-paluns-hautebrande, 18-arathi): it is a plain errand, not the dungeon.
-
-step Stormwind: two dungeon quests
-  label dal-start
-  when group 92456
-  tip City of Dalaran: a 5-player Forever dungeon in the Alterac Mountains, from level 28 (28 to 35 in the group finder). This chapter takes its four quests, runs the dungeon, then hands them in. Alone? Skip it: the guide goes on to the Wetlands.
-  note Group: level 30 required for An Alarming Request, the quest that opens the way to Dalaran. Below 30? Level up first.
-  tip Shylamiir is in the Trade District, High Sorcerer Andromath in the Mage Quarter tower.
-  accept 92456
-  accept 92489
+levels 30-38
+zone Alterac Mountains
 
 step Southshore: Emissary Jacques
-  when done dal-start
   zone Hillsbrad Foothills
-  tip From Stormwind: use your hearthstone (Deepwater Tavern, Menethil Harbor) or fly to Menethil Harbor, then take the boat to Southshore. His quest needs level 30: below that, the guide waits here. Ahead of the others? Take it, they can take it from him later on their own.
-  level 30
-  getfp "Southshore"
-  accept 92432
+  tip City of Dalaran: a 5-player Forever dungeon in the Alterac Mountains, levels 28 to 35 in the group finder. Emissary Jacques's errand leads to the Image of Archmage Modera, by the city's wall: she gives the dungeon's two quests and the key of its sewers. His quest needs level 30.
+  note Keep 4 free quest log slots.
+  accept 92432                                -- Emissary Jacques
 
 step Image of Archmage Modera
-  when done dal-start
   zone Silverpine Forest
-  tip North-west past Hillsbrad Fields, by Dalaran's outer sewer. Avoid Tarren Mill.
-  turnin 92432
-  accept 92457
-  accept 92458
+  tip North-west past Hillsbrad Fields and round Dalaran's dome, keeping clear of Tarren Mill: the Kirin Tor camp is on the lake shore west of the city, just over the border into Silverpine Forest.
+  turnin 92432                                -- Image of Archmage Modera
+  accept 92457                                -- Starving Arcane
+  accept 92458                                -- Heart of Disruption: it brings the Dalaran Sewer Key
 
-step City of Dalaran entrance
-  when done dal-start
+step Stormwind's two quests, for whoever took them
+  when onquest 92456,92489
+  zone Stormwind City
+  tip A Green Sample (Shylamiir) and Power Overwhelming (High Sorcerer Andromath), offered in Stormwind by the Gnomeregan chapter: both are done inside.
+  accept 92456 optional                       -- Shylamiir, Stormwind
+  accept 92489 optional                       -- High Sorcerer Andromath, Stormwind
+
+step City of Dalaran: the sewer grate
   zone Alterac Mountains
-  tip Group of 5. Open the sewer gate with the key from Modera and follow the large pipe.
-  goto 14.7,63 "City of Dalaran" r 25
+  tip The way in is the sewer grate in the city's western wall, by the lake, 30 yards from Modera's camp: the key opens it for the group.
+  note In the log before going in: Starving Arcane and Heart of Disruption (Modera); A Green Sample and Power Overwhelming for whoever took them in Stormwind. Share each quest with the group: click it in the quest log, then Share.
+  goto 8.8,59.5 "City of Dalaran" r 20
 
-# Groupe Alliance 0.11.0 (review): places inside from two WoW Forever guides read on 12/11/2026
-# and rewritten: Warcraft Tavern (City of Dalaran quests, 11/11/2026: Magus Fansy Goodbringer and the
-# shield, the bulbs, the Arcanic Enigma, Modera on the Violet Citadel steps) and Icy Veins (dungeon
-# guide, 23/09/2026: Fel Ancient in the middle, Arcanic Enigma by Antonidas's statue with two Mana
-# Phantoms).
-step Inside the dungeon
-  when done dal-start
-  tip Out of the sewers, the remnants and mana echoes are all over the streets. The Fel Ancient guards Runeweaver Square, in the middle, behind a magic shield: talk to Magus Fansy Goodbringer, on its east side, to lower it; the Fel Infused Blossom is one of the big green bulbs of the square. The Arcanic Enigma, the mana elemental for Power Overwhelming, roams the north-east of the town, by Antonidas's statue: kill its two Mana Phantoms first. Last, Archmage Modera waits on the steps of the Violet Citadel: talk to her for the portal to the Shade of the Archmage, who drops the Arcane Mote.
-  note Share each quest with your group: click it in the quest log, then Share.
-  complete 92456
-  complete 92489
-  complete 92457
-  complete 92458
+step The sewers: Atrexis the Grave Knight
+  tip Inside the Cantrips & Crows, cross the bridge and turn right: three large pipes lead to the Underbelly. Mindless Horrors fear (a Shaman's Tremor Totem helps), Kirin Tor Necromancers raise skeletons two at a time: the tank picks them up. Atrexis, in the summoning circle, is a stronger necromancer: clear the undead around him without pulling him, then a Shaman can purge his Unholy Frenzy.
+  note The square room by the sewers' exit holds a summoning circle: only with a Tome of Dalaran (from Shadowfang Keep, a Horde dungeon) does it call the hidden boss, Lyn the Ignored.
+  kill 247126                                 -- Atrexis the Grave Knight
 
-# Groupe Alliance 0.6.1: no Stormwind trip after the dungeon. The next guide starts at the
-# Deepwater Tavern, where the hearthstone is bound (Thousand Needles guide), and stops in Stormwind
-# later on (14-paluns-hautebrande): A Green Sample and Power Overwhelming are handed in there.
+step The streets of Dalaran: along the way
+  along until dal-shade
+  tip Out of the sewers, the arcane remnants are all over the streets: Seeking and Saturated Remnants for Modera. A Saturated Remnant leaves a Mana Leak field when it dies (casters stand in it), Mana Fiends explode when they die (spread out), Mana Phantoms cast Mana Burn (interrupt it).
+  kill 247003 quest 92457.1                   -- Seeking Remnant
+  kill 247001 quest 92457.2                   -- Saturated Remnant
+
+step The Violet Hold: Mana Devourer
+  tip Left from the sewers' exit. Clear every enemy of the hold first: they join the fight. The mana serpent drains the tank and hits the whole group now and then: heal through it.
+  kill 246008                                 -- Mana Devourer
+
+step Krasus' Landing: Arcane Anomaly
+  tip Back out and right. Clear the landing, then everyone stands close behind the boss: its Focal Blast is a beam that turns round it, easy to walk round from up close.
+  kill 245999                                 -- Arcane Anomaly
+
+step Runeweaver Square: Fel Ancient
+  tip Into the middle of the city from the east: Magus Fansy Goodbringer, by the magic shield, lowers it. The Fel Ancient roots two players and drops burning fel timber under them: a Druid's shapeshift or a Paladin's Blessing of Freedom frees them. The Fel Infused Blossom for A Green Sample is one of the big green bulbs of the square.
+  kill 246003                                 -- Fel Ancient
+  collect 251983 quest 92456 optional         -- Fel Infused Blossom: a green bulb of the square
+
+step Path of Renewal: Arcanic Enigma
+  tip Counter-clockwise to the north-east, by Antonidas's statue. Kill its two Mana Phantoms first. The Enigma polymorphs players and silences everyone close to it: ranged players keep away.
+  kill 246016 quest 92489 optional            -- Arcanic Enigma
+
+step Magus Commerce Exchange: Unstable Sentry
+  tip West through the city, in a nook of the market. Spread out; when it casts Malfunction, everyone but the tank steps well away.
+  kill 246017                                 -- Unstable Sentry
+
+step The Violet Citadel: Shade of the Archmage
+  label dal-shade
+  tip Archmage Modera waits on the citadel's steps: talk to her for the portal to the Violet Chamber. A small room: ranged players spread out. Step out of the way of the slow bouncing orb (Bounding Mana). Out of mana, he polymorphs the whole group and casts Evocation: whoever can break free hits him then. Each player on Heart of Disruption loots the Arcane Mote.
+  kill 246020                                 -- Shade of the Archmage
+  collect 251961 quest 92458                  -- Arcane Mote
 
 step Modera's rewards
-  when done dal-start
   zone Silverpine Forest
-  turnin 92457
-  turnin 92458
-  note Next: Menethil Harbor, where your hearthstone is still bound (Deepwater Tavern). Shylamiir and High Sorcerer Andromath take their quests at the next guide's Stormwind stop.
-
-step Dalaran skipped: back to Menethil Harbor
-  when !group 92456
-  zone Wetlands
-  tip Use your hearthstone (Deepwater Tavern, Menethil Harbor), or fly from Stormwind to Menethil Harbor if it is on cooldown.
-  goto 10.7,61.0 "Deepwater Tavern"
+  tip Back out through the grate to Modera's camp. Last stop of the chapter: the route's own guide comes back once these are handed in. A Green Sample and Power Overwhelming go to Stormwind: Polestar lists them at the route's next Stormwind stop.
+  turnin 92457                                -- Image of Archmage Modera
+  turnin 92458                                -- Image of Archmage Modera

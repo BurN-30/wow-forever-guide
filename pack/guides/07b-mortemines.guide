@@ -1,175 +1,98 @@
-# Written for this pack by BurN-30 (GPL-3.0). Quest ids, givers, places and levels from
-# Polestar's Forever data (data-v2026.11.1: QuestieDB Forever, the 1.60.1 client) and its
-# Dungeons codex; boss order, quest drops and tips from Wowhead Forever (quest, NPC and zone
-# pages, its Deadmines guide and the comments, read on 2026-11-08), rewritten. Not played in
-# game yet.
+# Written for this pack by BurN-30 (GPL-3.0). Same sources as 07b-mortemines.guide (Polestar's
+# Forever data and Dungeons codex; boss order, quest drops and tips from Wowhead Forever, read on
+# 2026-11-08, rewritten). Not played in game yet.
 #
-# Optional chapter: the first step asks once (`when group 132`, Polestar's "Skip it / Do it
-# with a group" banner) and every later step needs it done (`when done dm-start`). Skipped,
-# over level 24, or without The Defias Brotherhood (65) handed in to Wiley in Lakeshire
-# (07-carmines): the whole chapter is left out and Duskwood follows.
+# Self-contained chapter for Polestar's own route (since 0.13.0, same id as before): the Groupe Alliance
+# module offers it once The Defias Traitor (155) is turned in at Sentinel Hill, which Polestar's
+# route does alone at about level 20 (forever/alliance/03-loch-modan), and opens it in a tab of its
+# own: Polestar's guide keeps its place in its tab and comes back when this chapter ends or its tab
+# is closed (GroupeAlliance/Greffe.lua, GreffeData.lua). No `when group` question and no `next`:
+# opening the chapter is the answer, and the end goes back to the route.
 #
-# Flow: Lakeshire (Wiley) -> Sentinel Hill (Gryan) -> Stormwind (Shaw, Thistlenettle, Shoni,
-# Sprite Jumpsprocket, Jasper Fel) -> Sentinel Hill (the Messenger, the Traitor's escort, Alba
-# Fairmoon) -> Moonbrook: the undead outside, then the Deadmines boss by boss -> the cove exit
-# (Alba) -> Sentinel Hill -> Stormwind rewards.
+# Polestar's route already does the Defias chain up to the traitor (65, 132, 135, 141, 142, 155):
+# this chapter starts at Gryan's and Scout Riell's quests and stops at the rewards. An Unsent Letter
+# (373) and the Stockade's Bazil Thredd (389) are on Polestar's Stormwind stop only behind `when
+# dungeon`, off in 0.4.2.2: the chapter hands in the letter to Baros Alexston and takes 389 from
+# him, for The Stockade Riots (391) in the Stockade chapter.
 guide groupe-alliance/07b-mortemines
-title Group 6b · The Deadmines (dungeon 16-21, optional)
+title Dungeon · The Deadmines (18-24)
 folder Group Alliance
 category Dungeons
 faction Alliance
-levels 20-23
-zone Redridge Mountains
-next groupe-alliance/08-bois-de-la-penombre
+levels 18-24
+zone Westfall
 
-step Lakeshire: Wiley the Black
-  label dm-start
-  when group 132
-  when turnedin 65
-  when level<25
-  tip The Deadmines: a 5-player dungeon under Moonbrook, in Westfall, levels 16 to 21 (17 to 26 in the group finder): here, at 20 or more, it goes well. This chapter takes its quests on the way, then the dungeon boss by boss. Alone? Skip it: the guide goes on to Duskwood.
-  note Keep 8 free quest log slots. Everyone takes the quests at their own pace; meet at the Moonbrook entrance for the run.
-  accept 132                                  -- Wiley the Black, upstairs in the inn
+step Sentinel Hill: the Deadmines quests
+  tip The Deadmines: a 5-player dungeon under Moonbrook, levels 16 to 21 (17 to 26 in the group finder): at 20 or more it goes well. Gryan Stoutmantle and Scout Riell stand at the top of the Sentinel Hill tower.
+  note Keep 6 free quest log slots. Everyone takes the quests at their own pace; meet at the Moonbrook entrance for the run.
+  accept 166                                  -- Gryan Stoutmantle: Edwin VanCleef
+  accept 214                                  -- Scout Riell, at the top of the tower: Red Silk Bandanas
 
-step Sentinel Hill
-  when done dm-start
-  zone Westfall
-  fly "Sentinel Hill"
-  turnin 132                                  -- Gryan Stoutmantle
-  accept 135
-
-step Stormwind
-  when done dm-start
+step Stormwind: the miners' quests
   zone Stormwind City
-  tip Fly to Stormwind. Mathias Shaw is upstairs at SI:7 in Old Town, Jasper Fel in the same building; Wilder Thistlenettle (tavern), Shoni the Shilent and Sprite Jumpsprocket are in the Dwarven District. Train while you are here.
+  tip Fly to Stormwind for two more quests of the mine; train while you are here. Wilder Thistlenettle stands in the tavern of the Dwarven District, Shoni the Shilent nearby.
   fly "Stormwind"
-  turnin 135                                  -- Master Mathias Shaw
-  accept 141
-  accept 168                                  -- Wilder Thistlenettle
-  accept 167
-  accept 2040 optional                        -- Shoni the Shilent
-  accept 92749 optional                       -- Sprite Jumpsprocket: only after Explosive Consultation, from Alba in Westfall
-  accept 92750 optional
-  turnin 92750 optional                       -- Jasper Fel, SI:7
-  accept 92751 optional
-  turnin 92751 optional                       -- Sprite Jumpsprocket
-  buy 4358 x10 optional                       -- Rough Dynamite (not Coarse, whatever the text says): Auction House or an engineer friend
-  turnin 92749 optional
-  accept 92752 optional                       -- For Alba Fairmoon in Westfall
+  accept 168                                  -- Wilder Thistlenettle: Collecting Memories
+  accept 167                                  -- Oh Brother...
+  accept 2040 optional                        -- Shoni the Shilent: Underground Assault
 
-step Sentinel Hill
-  when done dm-start
+step Before entering the Deadmines
   zone Westfall
+  tip In the log before the portal: The Defias Brotherhood and Red Silk Bandanas (Sentinel Hill), Collecting Memories and Oh Brother... (Stormwind), Underground Assault if Shoni gave it. One missing? Gryan and Scout Riell at Sentinel Hill, Wilder Thistlenettle in Stormwind.
+  note Share each quest with the group before going in: click it in the quest log, then Share.
   fly "Sentinel Hill"
-  turnin 141                                  -- Gryan Stoutmantle
-  accept 142
-
-step The Defias Messenger
-  when done dm-start
-  tip He walks the road from the Moonbrook smithy to the Gold Coast Quarry and the Jangolode Mine, and back: wait for him by the smithy. He runs at low health and can drag Moonbrook's Defias along: root or slow him and finish him fast.
-  collect 1381 quest 142 @45.1,69.3           -- A Mysterious Message: Defias Messenger
-
-step Sentinel Hill
-  when done dm-start
-  turnin 142                                  -- Gryan Stoutmantle
-  accept 155                                  -- The Defias Traitor, at the foot of the tower ramp
-  turnin 92752 optional                       -- Alba Fairmoon
-  accept 92753 optional
-
-step Escort the Defias Traitor
-  when done dm-start
-  tip He walks to Moonbrook. The hard spot is the fountain: a Defias by the cart and the caster at the fountain join in, so deal with the caster first (Polymorph, Fear). Clearing Moonbrook beforehand makes it easy alone at 18.
-  note Not there? Someone is escorting him: wait for him to come back, or group up with them. Since 05/11 he can vanish when crossing a zone border (a known bug, fix on the way): abandon and take the quest again.
-  complete 155                                -- Escort him to Moonbrook
-
-step Sentinel Hill
-  when done dm-start
-  turnin 155                                  -- Gryan Stoutmantle
-  accept 166
-  accept 214                                  -- Scout Riell, at the top of the tower
+  goto 42.5,71.7 "The Deadmines" r 25
 
 step The mine outside the portal
-  when done dm-start
   tip Moonbrook's smithy hides the mine. Before the portal, the purple area of the minimap holds elite undead miners in pairs: the Miners' Union Cards drop there, not inside, and Foreman Thistlenettle stands at the far end with a linked add.
   note Alone: around 20-21 for the cards, 23 for the Foreman. Two players: fine at 19-20. The cards drop rarely and each player loots their own: skip them if time runs short.
   collect 1894 quest 168                      -- Miners' Union Card: Undead Excavators and Dynamiters, elite
   collect 1875 quest 167 @42.2,82.6           -- Thistlenettle's Badge: Foreman Thistlenettle, elite
-  goto 42.5,71.7 "The Deadmines" r 25
 
 step Rhahk'Zor
-  when done dm-start
   tip Group of 5, level 18 or more. Pull the two Watchmen away from Rhahk'Zor first, and turn around after every boss: patrols come from behind. Miner Johnson, a rare, may stand in the small tunnel on the left after him: kill his miners first.
-  note Share each quest with your group: click it in the quest log, then Share. Red Silk Bandanas drop from Defias all through the dungeon.
+  note Red Silk Bandanas drop from Defias all through the dungeon.
   kill 644                                    -- Rhahk'Zor
   collect 915 quest 214                       -- Red Silk Bandana: any Defias
 
-# Groupe Alliance 0.11.0 (review): the Paladin class quest of the codex (The Test of Righteousness,
-# 1654), only for Paladins who hold it. Whitestone Oak Lumber: Goblin Woodcarvers (Polestar's
-# Forever data, 100 %). The rest of the chain (Shadowfang Keep, Blackfathom Deeps) is in
-# Polestar's class guide forever/class/paladin/verigans-fist.
-step Paladins: The Test of Righteousness
-  only Paladin
-  when done dm-start
-  when onquest 1654
-  along until dm-sneed
-  tip The Goblin Woodcarvers of the lumber room, before Sneed's Shredder, drop the Whitestone Oak Lumber. The chain also needs Jordan's Smithing Hammer (Shadowfang Keep, not on this route) and the Kor Gem (Blackfathom Deeps): Polestar's class guides (Verigan's Fist) cover all of it.
-  collect 6994 quest 1654                     -- Whitestone Oak Lumber: Goblin Woodcarvers
-
 step Sneed's Shredder and Sneed
-  label dm-sneed
-  when done dm-start
   tip Clear every Goblin Woodcarver of the lumber room first, pulling them back to the previous room: the Shredder's Terrify sends you running into them. Sneed jumps out when it breaks; he disarms.
   collect 7365 quest 2040 optional            -- Gnoam Sprecklesprocket: Sneed's Shredder
   kill 643                                    -- Sneed
 
 step Gilnid's foundry
-  when done dm-start
-  tip Goblin Engineers and Craftsmen summon golems: kill or stun the goblin, the golem goes with it. Gilnid has an Engineer at his side. Plant the explosives near the middle of the room before pulling him.
-  complete 92753 optional                     -- Place the explosives, near the middle of the foundry
+  tip Goblin Engineers and Craftsmen summon golems: kill or stun the goblin, the golem goes with it. Gilnid has an Engineer at his side.
   kill 1763                                   -- Gilnid
 
 step The cannon door
-  when done dm-start
   tip The Defias Gunpowder barrel sits in the alcove on the right just before the cannon. Fire the cannon, then step back: a patrol of elites comes out through the broken door. A Rogue can pick the lock instead.
-  task "The cannon door is open" optional
+  task "The cannon door is open"
 
 step Mr. Smite
-  when done dm-start
   tip In the cove: two stealthed Defias Blackguards join him by the walkway, kill them before he reaches 66%. At 66% and 33% he stuns the whole group for a few seconds and changes weapons: keep the tank's health up before each.
   kill 646                                    -- Mr. Smite
 
 step Captain Greenskin
-  when done dm-start
   tip On the ship. Crowd-control the Squallshaper, kill the Companion, then the Pirate, then Greenskin facing away from the group (Cleave).
   kill 647                                    -- Captain Greenskin
 
 step Edwin VanCleef
-  when done dm-start
   tip Captain's cabin, top of the ship. Two Blackguards join at the pull, two more at half health: a stun at 51 to 55% skips the second pair. Everyone on the quest loots their own head and their own letter.
   collect 3637 quest 166                      -- Head of VanCleef
   accept 373 item 2874                        -- An Unsent Letter, on VanCleef: right-click it, it opens the Stockade chain
   note Cookie, on the lower deck, is optional: interrupt his healing cast. Do not hearth: leave by the back, along the coast.
 
-step The cove exit: Alba Fairmoon
-  when done dm-start
-  tip Out by the back of the cove; Alba waits right outside with the Detonator. No item reward on this chain: XP and reputation.
-  turnin 92753 optional                       -- Alba Fairmoon
-  accept 92819 optional
-  interact 581792 quest 92819 optional        -- The Detonator, beside her
-  turnin 92819 optional
-
 step Sentinel Hill rewards
-  when done dm-start
+  tip Out by the back of the cove and north along the road to Sentinel Hill.
   turnin 166                                  -- Gryan Stoutmantle
   turnin 214                                  -- Scout Riell, top of the tower
 
 step Stormwind rewards
-  when done dm-start
   zone Stormwind City
+  tip Last stop of the chapter: the route's own guide comes back once these are handed in.
   fly "Stormwind"
   turnin 168                                  -- Wilder Thistlenettle, Dwarven District
   turnin 167
   turnin 2040 optional                        -- Shoni the Shilent
   turnin 373                                  -- Baros Alexston, Cathedral Square
-  accept 389                                  -- For Warden Thelwater: the Stockade, after Duskwood
-  note Duskwood next: fly to Darkshire if you know its flight path, else ride south through Elwynn.
+  accept 389 optional                         -- Baros Alexston: Bazil Thredd, for the Stockade chapter (Warden Thelwater)
