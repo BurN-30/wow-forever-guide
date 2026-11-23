@@ -111,6 +111,14 @@ GA.GREFFE = {
 		where = { frFR = "Sud des Tarides · groupe de 5 · niveaux 29 à 38",
 			enUS = "Southern Barrens · group of 5 · levels 29 to 38" },
 	},
+	{
+		id = "groupe-alliance/greffe/dalaran", key = "dalaran", dungeon = "city-of-dalaran",
+		accept = 92432, turnin = 92432, min = 30, max = 38, done = { 92457, 92458 },
+		route = "forever/alliance/30-40/01-hillsbrad-foothills", switchId = "groupe-alliance/12-dalaran",
+		name = { frFR = "La Cité de Dalaran", enUS = "The City of Dalaran" },
+		where = { frFR = "Montagnes d'Alterac · groupe de 5 · niveaux 28 à 35",
+			enUS = "Alterac Mountains · group of 5 · levels 28 to 35" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
