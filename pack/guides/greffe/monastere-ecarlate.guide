@@ -3,15 +3,24 @@
 # Loksey 34, Doan 37, Herod 40, Mograine and Whitemane 42; Past Due, 96800, from Wowhead Forever,
 # 08/11/2026; Mythology of the Titans from Warcraft Tavern, 11/11/2026). Not played in game yet.
 #
-# Self-contained chapter for Polestar's own route (prototype, branch greffe): the Groupe Alliance
-# module offers it once Down the Scarlet Path (1052) is turned in to Raleigh the Devout in
-# Southshore, where Polestar's route says "Raleigh's next errand is in the Scarlet Monastery: skip
-# it" (forever/alliance/40-50/02-badlands, about level 44), and opens it in a tab of its own:
-# Polestar's guide keeps its place in its tab and comes back when this chapter ends or its tab is
-# closed (GroupeAlliance/Greffe.lua, GreffeData.lua). No `when group` question and no `next`.
+# Self-contained chapter for Polestar's own route: the Groupe Alliance module offers it once Down
+# the Scarlet Path (1052) is turned in to Raleigh the Devout in Southshore, where Polestar's route
+# says "Raleigh's next errand is in the Scarlet Monastery: skip it" (forever/alliance/40-50/02-badlands,
+# about level 44), and opens it in a tab of its own: Polestar's guide keeps its place in its tab and
+# comes back when this chapter ends or its tab is closed (GroupeAlliance/Greffe.lua, GreffeData.lua).
+# No `when group` question and no `next`.
 #
-# Mythology of the Titans (1050) is Librarian Mae Paledust's quest in Ironforge, which Polestar's
-# route does not take: the Library's tip says where its book lies, with no goal of its own.
+# Compared with Polestar 0.4.2.2's own Scarlet Monastery page (Dungeons codex, Polestar_Codex,
+# GPL-3.0, page "scarlet-monastery"; its route never enters Tirisfal Glades, data/dungeon-runs.json
+# "notInRoute"): the same In the Name of the Light and Past Due, plus three quests:
+# - Mythology of the Titans (1050, Librarian Mae Paledust, Ironforge): taken on the Uldaman chapter's
+#   first Ironforge stop, just before this one (greffe/uldaman.guide); here its book is collected in
+#   the Library and it is handed in on an optional trip to Ironforge before Raleigh's reward;
+# - Rituals of Power (1951, Mages only, Magus Tirth's chain to Tabetha): named in the Library's tip;
+# - The Eye of Bhossca (78676, Rogues, the Dead Drop in Silverpine Forest): left out, its objective's
+#   place in the dungeon is in no data.
+# Polestar's page has no boss-by-boss tips, no step before the door and no French: this chapter keeps
+# them.
 guide groupe-alliance/greffe/monastere-ecarlate
 title Dungeon · The Scarlet Monastery (34-46)
 folder Group Alliance
@@ -29,6 +38,11 @@ step Magus Olvek
   tip On the way north: he stands on the western edge of the Dalaran crater, by the road from Hillsbrad to Silverpine.
   accept 96800                                -- Magus Olvek: Past Due, Arcanist Doan's book
 
+step Mythology of the Titans
+  when onquest 1050
+  tip Taken from Librarian Mae Paledust in Ironforge, on the Uldaman chapter's way: its book lies in the Library.
+  accept 1050                                 -- Librarian Mae Paledust, Ironforge
+
 step Before entering the Scarlet Monastery
   zone Tirisfal Glades
   tip Ride through Silverpine Forest, then east across Tirisfal Glades: Horde land, keep clear of Brill and the guards on the roads. The monastery stands in the far north-east; the four wings are four doors in the courtyard.
@@ -37,9 +51,11 @@ step Before entering the Scarlet Monastery
 
 step The Library: Houndmaster Loksey and Arcanist Doan
   tip Loksey and his dogs wait in a small alcove near the start. Doan is the last boss: at half health he shields himself and blows up everything near him, run out and come back. The red book for Magus Olvek is on a table on the right of Doan's room; Mythology of the Titans, for whoever took it in Ironforge, on the floor of a Library corridor, under a window; the Scarlet Key, for the Armory and Cathedral doors, in the chest behind him.
+  note Mages on Magus Tirth's chain: the book of Rituals of Power, for Tabetha, is in the Library too.
   kill 3974 quest 1053                        -- Houndmaster Loksey, elite 34
   kill 6487                                   -- Arcanist Doan, elite 37
   collect 273169 quest 96800                  -- The Lost Magic of the Runemasters, red book on a table in Doan's room
+  collect 5536 quest 1050 optional            -- Mythology of the Titans, on the floor of a corridor
 
 step The Armory: Herod
   tip Herod spins with Whirlwind: everyone but the tank steps away until it ends. When he dies, a wave of trainees runs in: fight them at the door.
@@ -53,6 +69,12 @@ step The Cathedral: Mograine and Whitemane
 step Back to Magus Olvek
   zone Alterac Mountains
   turnin 96800                                -- Magus Olvek
+
+step Ironforge: Mythology of the Titans
+  when complete 1050
+  zone Ironforge
+  tip From Southshore, the flight to Ironforge and back: Mae Paledust stands in the Hall of Explorers, by the bookshelves. Or keep it for a later stop in Ironforge: the route passes there at about 50.
+  turnin 1050 optional                        -- Librarian Mae Paledust
 
 step Southshore rewards
   zone Hillsbrad Foothills

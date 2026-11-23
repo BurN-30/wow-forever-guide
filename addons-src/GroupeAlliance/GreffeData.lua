@@ -119,6 +119,65 @@ GA.GREFFE = {
 		where = { frFR = "Montagnes d'Alterac · groupe de 5 · niveaux 28 à 35",
 			enUS = "Alterac Mountains · group of 5 · levels 28 to 35" },
 	},
+	-- Lot B: the dungeons of 39 to 60 (pack/guides/greffe). Hooks read in Polestar 0.4.2.2's
+	-- route; levels: the dungeons' Forever ranges (Polestar's Dungeons codex). Razorfen Downs keeps
+	-- max 46, like the Scarlet Monastery: when both are due at Raleigh's, the Monastery comes first.
+	{
+		id = "groupe-alliance/greffe/souilles-de-tranchebauge", key = "souilles", dungeon = "razorfen-downs",
+		turnin = 1448, min = 39, max = 46, done = { 3636 },
+		route = "forever/alliance/40-50/01-stranglethorn-vale",
+		name = { frFR = "Les Souilles de Tranchebauge", enUS = "Razorfen Downs" },
+		where = { frFR = "Sud des Tarides, depuis Hurlevent · groupe de 5 · niveaux 37 à 46",
+			enUS = "Southern Barrens, from Stormwind · group of 5 · levels 37 to 46" },
+	},
+	{
+		id = "groupe-alliance/greffe/uldaman", key = "uldaman", dungeon = "uldaman",
+		turnin = { 94894, 94893 }, min = 41, max = 48, done = { 2240 },
+		route = "forever/alliance/40-50/01b-riverglades",
+		name = { frFR = "Uldaman", enUS = "Uldaman" },
+		where = { frFR = "Nord des Terres ingrates, depuis Forgefer · groupe de 5 · niveaux 41 à 51",
+			enUS = "Northern Badlands, from Ironforge · group of 5 · levels 41 to 51" },
+	},
+	{
+		id = "groupe-alliance/greffe/maraudon", key = "maraudon", dungeon = "maraudon",
+		turnin = { 99257, 99258 }, min = 45, max = 51, done = { 7065, 7046 },
+		route = "forever/40-50/shendralas",
+		name = { frFR = "Maraudon", enUS = "Maraudon" },
+		where = { frFR = "Ouest de la Désolace · groupe de 5 · niveaux 46 à 55",
+			enUS = "Western Desolace · group of 5 · levels 46 to 55" },
+	},
+	{
+		id = "groupe-alliance/greffe/zul-farrak", key = "zulfarrak", dungeon = "zulfarrak",
+		turnin = 2864, min = 44, max = 50, done = { 2865, 2768, 3042 },
+		route = "forever/alliance/40-50/04-tanaris",
+		name = { frFR = "Zul'Farrak", enUS = "Zul'Farrak" },
+		where = { frFR = "Nord-ouest de Tanaris · groupe de 5 · niveaux 44 à 54",
+			enUS = "North-western Tanaris · group of 5 · levels 44 to 54" },
+	},
+	{
+		id = "groupe-alliance/greffe/zul-farrak-2", key = "zulfarrak2", dungeon = "zulfarrak",
+		turnin = 2941, accept = 2605, min = 48, max = 53, done = { 2770 },
+		route = "forever/alliance/40-50/07-un-goro-crater",
+		name = { frFR = "Zul'Farrak, second passage", enUS = "Zul'Farrak, second run" },
+		where = { frFR = "Tanaris · groupe de 5 · Gahz'rilla, avec le Marteau de Zul'Farrak",
+			enUS = "Tanaris · group of 5 · Gahz'rilla, with the Mallet of Zul'Farrak" },
+	},
+	{
+		id = "groupe-alliance/greffe/temple-englouti", key = "temple", dungeon = "sunken-temple",
+		turnin = { 2585, 2581, 2601 }, min = 50, max = 56, done = { 1475 },
+		route = "forever/alliance/50-60/01-burning-steppes",
+		name = { frFR = "Le temple englouti", enUS = "The Sunken Temple" },
+		where = { frFR = "Marais des Chagrins · groupe de 5 · niveaux 50 à 60",
+			enUS = "Swamp of Sorrows · group of 5 · levels 50 to 60" },
+	},
+	{
+		id = "groupe-alliance/greffe/donjons-fin", key = "donjons-fin", dungeon = "blackrock-depths",
+		turnin = { 8287, 8304, 8282 }, min = 57, max = 60, done = {},
+		route = "forever/alliance/50-60/06-silithus",
+		name = { frFR = "Les donjons de fin de parcours", enUS = "The end-of-route dungeons" },
+		where = { frFR = "Rochenoire, Hache-Tripes, Stratholme, Scholomance · groupe de 5 · niveaux 52 à 60",
+			enUS = "Blackrock, Dire Maul, Stratholme, Scholomance · group of 5 · levels 52 to 60" },
+	},
 }
 
 -- This pack's leveling guides up to 0.12.x. Once a version leaves them out (the switch to
