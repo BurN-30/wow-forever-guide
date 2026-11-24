@@ -80,6 +80,7 @@ local function check(ok, what) if not ok then table.insert(out, what) end end
 check(DEFAULTS.behavior.skipGrey == true, "skipGrey default")
 check(DEFAULTS.behavior.groupQuests == "ask", "group quests asked")
 check(DEFAULTS.qol.mapObjectives == true and DEFAULTS.qol.guideDim == true, "quest marks defaults")
+check(DEFAULTS.ui.instance == "show", "guide window kept in dungeons (0.13.1)")
 local tipQuest
 for q, t in pairs(NS.GA.Tips) do if t.enUS then tipQuest = q break end end
 local withTip = NS.UI.GoalLine({ quest = tipQuest, status = "active" })

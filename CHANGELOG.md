@@ -2,6 +2,26 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.13.1 (2026-11-25)
+
+### Français
+- La fenêtre du guide reste visible en donjon (et en raid, en champ de bataille, en arène) : c'est là que les chapitres de donjon servent. Depuis la 0.13.0, Polestar la cachait dès l'entrée et il fallait taper `/polestar` pour la revoir.
+- La cacher en donjon, pour qui préfère : roue dentée en haut à droite de la fenêtre du guide, **Guide**, onglet **Fenêtre**, réglage **Dans les donjons et champs de bataille** : **Masquer** (ou taper « donjon » dans la case de recherche des réglages). Ce choix est gardé d'une session à l'autre et les mises à jour suivantes n'y touchent pas. Avec **Masquer**, `/polestar` la rouvre dans le donjon jusqu'à la sortie.
+- Un `/reload` dans le chat suffit après la mise à jour, pas besoin de relancer le jeu.
+
+### En jeu
+- **La fenêtre reste visible en donjon** : plus besoin de taper /polestar en entrant dans un donjon pour suivre le chapitre.
+- **La cacher quand même** : roue dentée, Guide, Fenêtre, « Dans les donjons et champs de bataille » : Masquer. Le choix est gardé.
+
+### English
+- The guide window stays visible in dungeons (and in raids, battlegrounds and arenas): that is where the dungeon chapters are read. Since 0.13.0, Polestar hid it on the way in and `/polestar` was needed to see it again.
+- To hide it in dungeons anyway: the gear at the top right of the guide window, **Guide**, **Window** tab, **In dungeons and battlegrounds**: **Hide** (or type "dungeon" in the settings' search box). That choice is kept from one session to the next and later updates leave it alone. With **Hide**, `/polestar` opens it inside until you leave.
+- A `/reload` in chat is enough after the update, no need to restart the game.
+
+### In game
+- **The window stays in dungeons**: no more typing /polestar on the way into a dungeon to follow the chapter.
+- **To hide it anyway**: gear, Guide, Window, "In dungeons and battlegrounds": Hide. The choice is kept.
+
 ## v0.13.0 (2026-11-23)
 
 ### Français

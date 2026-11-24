@@ -19,6 +19,7 @@
 --  * Calm defaults for a group of beginners, as Polestar defaults (the player
 --    can still change them in Polestar's options): no guide-end or route-choice
 --    window, group quests asked one by one, no welcome window, Polestar's minimap button on,
+--    the guide window kept in dungeons and battlegrounds (0.13.1),
 --    grey quests left out (friends play at different times: whoever is ahead
 --    is not sent back to quests that no longer give XP), and Polestar's quest
 --    map marks on, kept calm (0.6.2): turn-ins, and the objectives of the
@@ -75,6 +76,16 @@ ns.RegisterDefaults("qol", {
 -- Polestar's own minimap button (Maps/MinimapButton.lua), off by default
 -- outside the gamepad interface: on, a click shows or hides the guide.
 ns.RegisterDefaults("maps", { minimapButton = true })
+-- 0.13.1: the guide window stays in dungeons, raids, battlegrounds and arenas
+-- (ui.instance "show"): this pack's dungeon chapters are read in there, and
+-- Polestar 0.4 hides the window there by default (UI/UI.lua, the rule in
+-- UI/GuideFrameWindow.lua). Like the defaults above, nothing is written: every
+-- profile without a choice of its own gets "show" from the first load of this
+-- version on. A player who picks Hide (gear, Guide, Window, In dungeons) has
+-- "hide" stored in that profile, as it is unlike the default (Core/Init.lua's
+-- ns.Set), so it lasts over sessions and the pack never changes it; a "hide"
+-- stored before Polestar 0.4 (when "show" was its default) is kept as well.
+ns.RegisterDefaults("ui", { instance = "show" })
 
 local function settings()
 	local db = ns.DB()
