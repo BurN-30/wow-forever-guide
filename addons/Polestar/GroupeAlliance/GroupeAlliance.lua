@@ -93,10 +93,23 @@ local function settings()
 	return db.groupeAlliance
 end
 
+-- 0.14.0: /ga lang now sets the module's language as well as its links'. A value saved before (0.13.1
+-- and earlier) chose the Wowhead links above all: once per account it becomes the links' language
+-- only (wowheadLang), so the module goes on following Polestar's language after the update.
+local function langSettings()
+	local db = settings()
+	if db.langV ~= 2 then
+		if db.lang == "fr" or db.lang == "en" then db.wowheadLang = db.lang end
+		db.lang, db.langV = nil, 2
+	end
+	return db
+end
+GA.LangSettings = langSettings
+
 -- The module's language: /ga lang fr or en, else (auto) the language Polestar shows (0.14.0:
 -- Polestar 0.4.3's Settings > General > Language, ns.Names.Language), else the client's.
 local function locale()
-	local lang = settings().lang
+	local lang = langSettings().lang
 	if lang == "fr" then return "frFR" end
 	if lang == "en" then return "enUS" end
 	local N = ns.Names
@@ -110,7 +123,7 @@ local T = {
 	frFR = {
 		hint = "Ctrl+clic : lien Wowhead (commentaires utiles)",
 		copy = "Lien Wowhead",
-		lang = "Langue des liens Wowhead : %s (auto, fr, en).",
+		lang = "Langue du Groupe Alliance et des liens Wowhead : %s (auto, fr, en). Les réglages du Groupe Alliance changent de langue au prochain /reload.",
 		reliable = "Fiabilité",
 		tip = "Astuce",
 		danger = "Difficile au niveau %d",
@@ -138,7 +151,7 @@ local T = {
 			"Parcours : les guides de Polestar. En changer : /polestar guides, ou le + des onglets.",
 			"Donjons : une carte propose le chapitre du groupe au bon moment ; /ga donjon pour la revoir, même après « Pas pour moi », ou savoir pourquoi aucun n'est proposé.",
 			"Chapitre ouvert : son onglet se ferme seul à la fin. Groupe qui s'arrête avant ? Fermer l'onglet (sa croix) ramène au parcours ; le chapitre reste dans /polestar guides, Groupe Alliance.",
-			"/ga lang fr, en ou auto : langue du Groupe Alliance et des liens Wowhead (auto : celle de Polestar).",
+			"/ga lang fr, en ou auto : langue du Groupe Alliance et des liens Wowhead (auto : celle de Polestar) ; /reload pour les réglages.",
 			"/ga objets : allumer ou éteindre la ligne « À quoi sert cet objet » des infobulles d'objets.",
 			"Réduire : bouton _ ; masquer : /polestar hide, raccourci dans Options > Raccourcis > Polestar.",
 			"Roue dentée : réglages de Polestar (flèche, affichage, automatismes).",
@@ -180,7 +193,7 @@ local T = {
 	enUS = {
 		hint = "Ctrl-click: Wowhead link (useful comments)",
 		copy = "Wowhead link",
-		lang = "Wowhead link language: %s (auto, fr, en).",
+		lang = "Group Alliance and Wowhead link language: %s (auto, fr, en). Group Alliance's settings change language at the next /reload.",
 		reliable = "Reliability",
 		tip = "Tip",
 		danger = "Hard at level %d",
@@ -208,7 +221,7 @@ local T = {
 			"Route: Polestar's own guides. Change: /polestar guides, or the tabs' +.",
 			"Dungeons: a card offers the group's chapter at the right moment; /ga dungeon to see it again, even after \"Not for me\", or to learn why none is offered.",
 			"An open chapter: its tab closes by itself at the end. The group stops before? Closing the tab (its cross) brings the route back; the chapter stays in /polestar guides, Group Alliance.",
-			"/ga lang fr, en or auto: language of Group Alliance and its Wowhead links (auto: Polestar's).",
+			"/ga lang fr, en or auto: language of Group Alliance and its Wowhead links (auto: Polestar's); /reload for the settings.",
 			"/ga items: turn the \"What is this item for\" line of item tooltips on or off.",
 			"Reduce: the _ button; hide: /polestar hide, key binding in Options > Keybindings > Polestar.",
 			"Gear: Polestar's settings (arrow, display, automation).",
@@ -634,7 +647,8 @@ end)
 -- https://www.wowhead.com/forever/quest=96394 (English) and
 -- https://www.wowhead.com/forever/fr/quest=96394 (French), checked on 2026-11-06.
 local function wowhead(kind, id)
-	local lang = locale() == "frFR" and "fr/" or ""
+	local own = langSettings().wowheadLang
+	local lang = (own == "fr" or (own ~= "en" and locale() == "frFR")) and "fr/" or ""
 	return ("https://www.wowhead.com/forever/%s%s=%d"):format(lang, kind, id)
 end
 
@@ -1133,9 +1147,9 @@ SlashCmdList.GROUPEALLIANCE = function(msg)
 		return
 	end
 	local arg = (msg or ""):lower():match("lang%s+(%a+)")
-	local db = settings()
-	if arg == "fr" or arg == "en" then db.lang = arg
-	elseif arg == "auto" then db.lang = nil
+	local db = langSettings()
+	if arg == "fr" or arg == "en" then db.lang, db.wowheadLang = arg, nil
+	elseif arg == "auto" then db.lang, db.wowheadLang = nil, nil
 	elseif not arg then
 		for _, line in ipairs(tr("help")) do print(line) end
 	end

@@ -7,19 +7,19 @@ ns.GA = GA
 GA.NOTES = {
 	version = "0.14.0",
 	frFR = {
-		{ "Relancer le jeu après la mise à jour", "Polestar passe de 42 à 22 dossiers ; le programme d'installation retire les anciens." },
+		{ "Relancer le jeu après la mise à jour", "Polestar passe de 42 à 22 dossiers ; l'installation retire les anciens et les garde dans _guide-sauvegarde." },
 		{ "Escortes", "Polestar demande « La faire » ou « La passer ». En groupe, répondre « La faire » ; dans un chapitre, « La passer » retire la quête." },
 		{ "Marques", "La double tête de Polestar signale les étapes de groupe, d'escorte et d'élites ; l'orange et le rouge du paquet, les quêtes bien au-dessus du niveau." },
-		{ "Langue", "le paquet suit la langue choisie dans Polestar (Réglages > Général > Langue), sauf /ga lang." },
+		{ "Langue", "le paquet suit la langue choisie dans Polestar (Réglages > Général > Langue). /ga lang règle maintenant tout le paquet ; /ga lang auto pour suivre Polestar." },
 		{ "Jeu des vols", "AZERTY sur un jeu en français ; /doom keys pour changer." },
-		{ "Boutons du guide", "roue dentée, aide et réduire restent avec le style d'onglets par défaut." },
+		{ "Boutons du guide", "roue dentée, « ? » et « _ » seulement avec la disposition Standard et le style d'onglets par défaut ; avec Atlas, ils disparaissent (/ga reste)." },
 	},
 	enUS = {
-		{ "Restart the game after the update", "Polestar goes from 42 to 22 folders; the installer removes the old ones." },
+		{ "Restart the game after the update", "Polestar goes from 42 to 22 folders; the install removes the old ones and keeps them in _guide-sauvegarde." },
 		{ "Escorts", "Polestar asks \"Do it\" or \"Skip it\". In a group, answer \"Do it\"; in a chapter, \"Skip it\" takes the quest out." },
 		{ "Marks", "Polestar's two heads show group, escort and elite steps; the pack's orange and red, quests well above your level." },
-		{ "Language", "the pack follows the language chosen in Polestar (Settings > General > Language), unless /ga lang." },
+		{ "Language", "the pack follows the language chosen in Polestar (Settings > General > Language). /ga lang now sets the whole pack; /ga lang auto to follow Polestar." },
 		{ "Flight game", "AZERTY on a French client; /doom keys to change it." },
-		{ "Guide buttons", "gear, help and reduce stay with the default tab style." },
+		{ "Guide buttons", "gear, \"?\" and \"_\" only with the Standard layout and the default tab style; with Atlas they disappear (/ga still works)." },
 	},
 }

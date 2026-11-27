@@ -274,23 +274,29 @@ GA.GreffeBeforeHook = beforeHook
 -- The dungeons Polestar's own heads-up rule opens to the character now (UI.DungeonToast.Candidates
 -- in "any" mode: level at or past the dungeon's best-at, quests to take now), or nil when it
 -- cannot say without loading the Codex (only a level-up loads it).
--- 0.14.0: since Polestar 0.4.3 a candidate costs the dungeon's whole pick-up plan, with route plans
--- for its givers (Dungeons.PickupPlan, ns.TravelCost; Polestar's own check spreads them, a few a
--- frame). Worked out at most once per level and heads-up setting, an empty answer kept as well:
--- within a level, the quests taken or handed in change which dungeons Polestar would open only for
--- one whose quests the player is doing anyway.
+-- Cached per level, Polestar's heads-up and dungeon settings, and quests handed in or taken (any of
+-- them can open a dungeon's page: a prerequisite handed in), an empty answer included; an answer
+-- that raised an error is not kept. 0.14.0: since Polestar 0.4.3 a candidate costs the dungeon's
+-- whole pick-up plan, with route plans for its givers (Dungeons.PickupPlan, ns.TravelCost), worked
+-- out here in one go where Polestar spreads its own a few a frame: only asked for a chapter in range
+-- whose hook is not done (openedLate), and at most once per state as above, as in 0.13.1. Our checks
+-- stay before Polestar's (1 s after a hand-in, 2 s after a level-up; Polestar's at 1.5 s): waiting
+-- for its plans would let its card come first.
+local turnins, accepts = 0, 0
 local opened = { key = nil, set = nil }
 local function polestarOpens(level)
 	local X = ns.Codex
 	if not (X and X.IsLoaded and X.IsLoaded()) then return nil end
-	local key = tostring(level) .. ":" .. tostring(ns.Get and ns.Get("dungeons.headsUp"))
+	local key = table.concat({ tostring(level), tostring(ns.Get and ns.Get("dungeons.headsUp")),
+		tostring(ns.Get and ns.Get("dungeons.enabled")), turnins, accepts }, ":")
 	if opened.key == key then return opened.set end
 	local DT = ns.UI and ns.UI.DungeonToast
 	local candidates = GA.PolestarCandidates or (DT and DT.Candidates)
 	local set = {}
 	if candidates then
 		local ok, list = pcall(candidates, level, "any")
-		if ok and type(list) == "table" then
+		if not ok then return set end
+		if type(list) == "table" then
 			for _, c in ipairs(list) do
 				if type(c) == "table" and c.key then set[c.key] = true end
 			end
@@ -692,6 +698,7 @@ for _, msg in ipairs({ "STEP_CHANGED", "GUIDE_CHANGED", "GUIDE_PLACED" }) do
 end
 if ns.RegisterEvent then
 	ns.RegisterEvent("QUEST_TURNED_IN", function(_, questID)
+		turnins = turnins + 1
 		if type(questID) == "number" then turnedIn[questID] = true end
 		ns.After(1, function()
 			GA.ChapterDoneCheck(questID)
@@ -705,6 +712,7 @@ if ns.RegisterEvent then
 	-- A hook that is a quest taken (Down the Scarlet Path, An Alarming Request): looked at once it
 	-- is in the log, even when the step it belongs to goes on.
 	ns.RegisterEvent("QUEST_ACCEPTED", function()
+		accepts = accepts + 1
 		ns.After(1, function() GA.GreffeCheck("accept") end)
 	end)
 	ns.RegisterEvent("PLAYER_LEVEL_UP", function() ns.After(2, function() GA.GreffeCheck("level") end) end)
