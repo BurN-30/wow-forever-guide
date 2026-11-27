@@ -23,7 +23,7 @@ Les numéros restent ceux de la 1.3.8. Restent les correctifs 3, 4 et 6 ; le 1 e
 
 Nouveautés de l'auteur à connaître (journal de la 1.5.0) : éditeur de style refait (**General** et **All Tooltips**, réglages par type d'infobulle, **Row Spacing** et **Section Spacing**) ; le fondu des infobulles passe sous **All Tooltips**, rubrique **Behavior** ; les enchantements reviennent après les effets « Équipé » et « Chances quand vous touchez » ; l'enchantement temporaire de l'arme d'un autre joueur (« Windfury 4 » dans les notes de l'auteur) s'affiche avec les enchantements ; la pierre de foyer écrit le lieu de retour en bleu.
 
-Vérifié le 27/11/2026, hors jeu : le patch appliqué sur la release redonne le dossier du dépôt octet pour octet ; `check-pack.py` charge l'addon avec tout le paquet, clients français et anglais (résultat dans le rapport de la 0.14.0). Lecture du code seulement pour le retrait du correctif 1 : la nouvelle condition a été lue, pas rejouée sur des lignes d'infobulle.
+Vérifié le 27/11/2026, hors jeu : le patch appliqué sur la release redonne le dossier du dépôt octet pour octet ; `check-pack.py` charge l'addon avec tout le paquet, clients français et anglais : aucune erreur de PrettyTooltip. Lecture du code seulement pour le retrait du correctif 1 : la nouvelle condition a été lue, pas rejouée sur des lignes d'infobulle.
 
 ### Passage à la 1.4.2 (22/11/2026)
 
@@ -87,7 +87,7 @@ Vérifié et laissé tel quel :
 - Client anglais : `Locale/English.lua` colle au client enUS là où un ticket le touche (noms de métiers identiques à SkillLine enUS, « Rare » et « Rare Elite » de `MAP_LEGEND_*`, « iLvl » est l'abréviation du client, `ITEM_LEVEL_ABBR`). Rien à changer.
 - Les noms de quêtes, PNJ et lieux des exemples de l'éditeur de style n'ont pas été vérifiés : ils ne servent qu'aux aperçus.
 
-### Correctif 4 : noms des membres du groupe sous une quête (demande de Nathan, 10/11)
+### Correctif 4 : noms des membres du groupe sous une quête (demande du propriétaire du paquet, 10/11)
 
 - Ticket : aucun, vu en jeu par le groupe (infobulle d'un monstre de quête quand plusieurs membres ont la quête).
 - Clients : les deux (lignes typées par le jeu, aucune chaîne lue).
@@ -113,12 +113,12 @@ Vérifié et laissé tel quel :
 - Banc : lecteur `readQuest` réel sur les lignes du journal (un objectif sans compte gris, un blanc, un compté en cours, un compté rempli) et sur une ligne typée gris clair, en anglais et en français : la release laisse l'objectif gris décoché, la copie du pack le coche, le reste ne bouge pas.
 - Réappliquer : ajouter `isGrey` après `isRed`, et avant `objective.completed = objectiveDone(objective)` : `if objective.completed == nil and row.textColor ~= row.color and isGrey(row.textColor) then objective.completed = true end`. À retirer si l'amont lit la couleur de ces lignes.
 
-### Audit des distinctions (demande de Nathan, 10/11)
+### Audit des distinctions (demande du propriétaire du paquet, 10/11)
 
 Audit fait sur la 1.3.8 : les numéros de ligne sont ceux de cette version.
 
 
-Après le correctif 4, Nathan a demandé de chercher les autres endroits où l'infobulle d'origine distingue une information (couleur, retrait, ordre, séparateur) et où PrettyTooltip la rend indistincte ou trompeuse. Méthode : chaque type d'infobulle (objet, unité joueur, PNJ et familier, aura, quête, sort, objet du monde, recette, courrier, trajets) et chaque type de ligne (`Enum.TooltipDataLineType`, `TooltipInfoSharedDocumentation.lua` 34 à 85) comparés au code de l'interface de Forever (dépôt Gethe/wow-ui-source, branche `forever`, build 1.60.1.70888, famille Mainline). `TooltipDataRules.lua` n'ajoute que trois choses aux lignes : la couleur du nom d'unité (lignes 7 à 16), l'icône d'objectif terminé ou non (100 à 113) et le retrait de `GemSocketEnchantment` (122 à 128) ; le reste vient des champs `leftColor`, `usable` et `completed` donnés par le client, que PrettyTooltip lit.
+Après le correctif 4, le propriétaire du paquet a demandé de chercher les autres endroits où l'infobulle d'origine distingue une information (couleur, retrait, ordre, séparateur) et où PrettyTooltip la rend indistincte ou trompeuse. Méthode : chaque type d'infobulle (objet, unité joueur, PNJ et familier, aura, quête, sort, objet du monde, recette, courrier, trajets) et chaque type de ligne (`Enum.TooltipDataLineType`, `TooltipInfoSharedDocumentation.lua` 34 à 85) comparés au code de l'interface de Forever (dépôt Gethe/wow-ui-source, branche `forever`, build 1.60.1.70888, famille Mainline). `TooltipDataRules.lua` n'ajoute que trois choses aux lignes : la couleur du nom d'unité (lignes 7 à 16), l'icône d'objectif terminé ou non (100 à 113) et le retrait de `GemSocketEnchantment` (122 à 128) ; le reste vient des champs `leftColor`, `usable` et `completed` donnés par le client, que PrettyTooltip lit.
 
 | Endroit (PrettyTooltip) | Ce que le jeu distingue | Ce que fait PrettyTooltip | Verdict |
 |---|---|---|---|
@@ -193,7 +193,7 @@ The patches keep their 1.3.8 numbers. Patches 3, 4 and 6 remain; patch 1 is drop
 
 Upstream changes worth knowing (1.5.0 changelog): the style editor is redone (**General** and **All Tooltips**, per tooltip type settings, **Row Spacing** and **Section Spacing**); tooltip fading moves under **All Tooltips**, **Behavior**; enchants come after Equip and chance on hit effects again; another player's temporary weapon enchant ("Windfury 4") shows with the enchants; the Hearthstone shows your home in blue.
 
-Checked on 2026-11-27, outside the game: the patch applied to the release rebuilds the repository's folder byte for byte; `check-pack.py` loads the addon with the whole pack, French and English clients (results in the 0.14.0 report). Patch 1's removal rests on reading the code: the new condition was read, not replayed on tooltip lines.
+Checked on 2026-11-27, outside the game: the patch applied to the release rebuilds the repository's folder byte for byte; `check-pack.py` loads the addon with the whole pack, French and English clients: no PrettyTooltip error. Patch 1's removal rests on reading the code: the new condition was read, not replayed on tooltip lines.
 
 ### Moving to 1.4.2 (2026-11-22)
 
@@ -249,7 +249,7 @@ Still needed in 1.4.2 (same lines): upstream keeps "NI %s" and "NPD".
 
 Checked and left alone: the "unconfirmed" reading strings (`formats.rare` and `formats.rareElite` match the client's `MAP_LEGEND_RARE` and `MAP_LEGEND_RAREELITE` in both languages; `formats.baseManaCost` has no GlobalStrings counterpart and Classic spells cost flat mana), skill names (match SkillLine in frFR and enUS), dispel types (match SpellDispelType frFR), quest tags (QuestInfo frFR). `Locale/English.lua` matches the enUS client wherever a ticket touches it; its "iLvl" is the client's own `ITEM_LEVEL_ABBR`.
 
-### Patch 4: party member names under a quest (Nathan's request, 11/10)
+### Patch 4: party member names under a quest (the pack owner's request, 11/10)
 
 - Issue: none, seen in game by the group (tooltip of a quest mob when several members have the quest).
 - Clients: both (lines typed by the game, no string parsed).
@@ -274,11 +274,11 @@ Checked and left alone: the "unconfirmed" reading strings (`formats.rare` and `f
 - Bench: the real `readQuest` on the quest log's lines (a grey objective without a count, a white one, a counted one in progress, a counted one done) and on a typed light grey line, English and French: the release leaves the grey objective unticked, the pack's copy ticks it, nothing else moves.
 - Re-apply: add `isGrey` after `isRed`, and before `objective.completed = objectiveDone(objective)`: `if objective.completed == nil and row.textColor ~= row.color and isGrey(row.textColor) then objective.completed = true end`. Drop it if upstream reads these lines' color.
 
-### Distinction audit (Nathan's request, 11/10)
+### Distinction audit (the pack owner's request, 11/10)
 
 Audit made on 1.3.8: line numbers are that version's.
 
-After patch 4, Nathan asked to look for other places where the default tooltip tells information apart (color, indent, order, separator) and PrettyTooltip renders it indistinct or misleading. Every tooltip type and every `Enum.TooltipDataLineType` was compared with Forever's UI code (Gethe/wow-ui-source, `forever` branch, build 1.60.1.70888). `TooltipDataRules.lua` only adds the unit name color, the objective done icon and the `GemSocketEnchantment` indent; everything else comes from the client's `leftColor`, `usable` and `completed` fields, which PrettyTooltip reads.
+After patch 4, the pack owner asked to look for other places where the default tooltip tells information apart (color, indent, order, separator) and PrettyTooltip renders it indistinct or misleading. Every tooltip type and every `Enum.TooltipDataLineType` was compared with Forever's UI code (Gethe/wow-ui-source, `forever` branch, build 1.60.1.70888). `TooltipDataRules.lua` only adds the unit name color, the objective done icon and the `GemSocketEnchantment` indent; everything else comes from the client's `leftColor`, `usable` and `completed` fields, which PrettyTooltip reads.
 
 | Place (PrettyTooltip) | What the game tells apart | What PrettyTooltip does | Verdict |
 |---|---|---|---|
