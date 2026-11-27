@@ -2,7 +2,7 @@
 ## Title: Polestar Community: Group Alliance · dungeons
 ## Notes: Chapters on Polestar's Alliance route: the Westfall meeting point and 17 dungeon chapters, each offered once at the right moment, boss by boss, with the quests to take first.
 ## Author: BurN-30
-## Version: 0.14.0
+## Version: 0.14.1
 ## Category: Polestar
 ## Group: Polestar
 ## Dependencies: Polestar

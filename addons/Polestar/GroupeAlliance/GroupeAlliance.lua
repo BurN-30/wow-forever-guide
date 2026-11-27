@@ -669,8 +669,8 @@ local function onClick(row, button)
 	end
 end
 
--- Polestar's tooltips go through Widgets.Tooltip(owner, anchor, title, lines);
--- a goal row carries its goal as owner.psGoal.
+-- Polestar's tooltips go through Widgets.Tooltip(owner, anchor, title, lines), and an item
+-- line's through Widgets.ItemTip (Polestar 0.4.3); a goal row carries its goal as owner.psGoal.
 -- The tip mark: Polestar's own star (Media/UI/star.tga, 32x32), tinted the
 -- tooltip's tip green, after the line's text.
 -- The tip of a guide line (Tips.lua). An entry gives a tip for the whole quest (frFR, enUS)
@@ -801,11 +801,15 @@ ns.On("SETTING_CHANGED", function(path)
 	if GF and GF.Render then GF.Render() end
 end)
 
+-- A guide line's tooltip comes two ways (0.14.1): Widgets.Tooltip for most lines, and, since
+-- Polestar 0.4.3, Widgets.ItemTip for a line whose subject is an item (UI/GuideFrame.lua,
+-- goalTooltip: the game's item tooltip, the guide's lines added by its `extra` before Show).
+-- ourLines(owner, tt) adds this module's lines to tooltip `tt` (no Show) and hooks the line's Ctrl-click;
+-- false when owner is not a guide line with a subject.
 local hooked = setmetatable({}, { __mode = "k" })
-local function afterTooltip(owner)
-	if not (owner and owner.psGoal and GameTooltip:IsOwned(owner)) then return end
-	local goal = owner.psGoal
-	if not subject(goal) then return end
+local function ourLines(owner, tt)
+	local goal = type(owner) == "table" and owner.psGoal
+	if not (type(goal) == "table" and subject(goal) and tt) then return false end
 	if not hooked[owner] and owner.HookScript then
 		owner:HookScript("OnClick", onClick)
 		hooked[owner] = true
@@ -817,36 +821,75 @@ local function afterTooltip(owner)
 		if grp then head = head .. ", " .. tr("dangerGroup"):format(grp) end
 		local r, g, b = 1, 0.6, 0.12
 		if gap >= 3 then r, g, b = 1, 0.3, 0.3 end
-		GameTooltip:AddLine(head .. ".", r, g, b, true)
-		if why then GameTooltip:AddLine(why, 1, 0.82, 0.6, true) end
+		tt:AddLine(head .. ".", r, g, b, true)
+		if why then tt:AddLine(why, 1, 0.82, 0.6, true) end
 	end
 	if q and (goal.t == "accept" or goal.t == "turnin") and goal.status ~= "done" and GA.NoAuto(q) then
-		GameTooltip:AddLine(tr("autoHeld"), 0.8, 0.8, 0.8, true)
+		tt:AddLine(tr("autoHeld"), 0.8, 0.8, 0.8, true)
 	end
 	-- The badge's tooltip: the line's own, with what an escort is and how to
 	-- do it in a group. Badge off: the group line only, as in 0.7.3.
 	if GA.EscortBadge(goal) then
 		local hex = escortHex()
 		local r, g, b = tonumber(hex:sub(3, 4), 16) / 255, tonumber(hex:sub(5, 6), 16) / 255, tonumber(hex:sub(7, 8), 16) / 255
-		GameTooltip:AddLine(tr("escortBadge") .. (locale() == "frFR" and " : " or ": ") .. tr("escortWhat"), r, g, b, true)
-		GameTooltip:AddLine(tr("escortGroup"), 1, 0.82, 0.6, true)
-		GameTooltip:AddLine(tr("escortNear"), 1, 0.82, 0.6, true)
+		tt:AddLine(tr("escortBadge") .. (locale() == "frFR" and " : " or ": ") .. tr("escortWhat"), r, g, b, true)
+		tt:AddLine(tr("escortGroup"), 1, 0.82, 0.6, true)
+		tt:AddLine(tr("escortNear"), 1, 0.82, 0.6, true)
 		if ns.Get("behavior.autoAccept") and ns.Get("behavior.gaShared") then
-			GameTooltip:AddLine(tr("escortAuto"), 0.8, 0.8, 0.8, true)
+			tt:AddLine(tr("escortAuto"), 0.8, 0.8, 0.8, true)
 		end
 	elseif GA.IsEscort(goal) and goal.status ~= "done" and goal.status ~= "skipped" then
-		GameTooltip:AddLine(tr("escortGroup"), 1, 0.82, 0.6, true)
+		tt:AddLine(tr("escortGroup"), 1, 0.82, 0.6, true)
 	end
 	local tip = GA.TipOf(goal)
 	if tip then
-		GameTooltip:AddLine(tr("tip") .. (locale() == "frFR" and " : " or ": ") .. (tip[locale()] or tip.enUS), 0.55, 1, 0.55, true)
+		tt:AddLine(tr("tip") .. (locale() == "frFR" and " : " or ": ") .. (tip[locale()] or tip.enUS), 0.55, 1, 0.55, true)
 	end
 	local rel = q and GA.Reliability and GA.Reliability[q]
 	if rel then
-		GameTooltip:AddLine(("|cffffd100%s|r  %s%s%s"):format(rel[1], tr("reliable"), locale() == "frFR" and " : " or ": ", rel[2][locale()] or rel[2].enUS), 0.8, 0.8, 0.8, true)
+		tt:AddLine(("|cffffd100%s|r  %s%s%s"):format(rel[1], tr("reliable"), locale() == "frFR" and " : " or ": ", rel[2][locale()] or rel[2].enUS), 0.8, 0.8, 0.8, true)
 	end
-	GameTooltip:AddLine(tr("hint"), 0.55, 0.75, 1, true)
-	GameTooltip:Show()
+	tt:AddLine(tr("hint"), 0.55, 0.75, 1, true)
+	return true
+end
+GA.GuideLines = ourLines
+
+-- While Widgets.ItemTip runs for a guide line, its `extra` adds our lines: a Widgets.Tooltip
+-- called from inside it (none in Polestar 0.4.3) would not add them a second time.
+local inItemTip = false
+
+-- After Widgets.Tooltip(owner, ...): its Show is done, ours follows our lines.
+local function afterTooltip(owner)
+	if inItemTip or not (owner and owner.psGoal and GameTooltip:IsOwned(owner)) then return end
+	if ourLines(owner, GameTooltip) then GameTooltip:Show() end
+end
+
+-- Widgets.ItemTip(owner, item, extra, place) for a guide line (owner.psGoal, a goal table): its
+-- `extra` is wrapped, so our lines come right after the guide's, before the tooltip's Show. The
+-- wrapped `extra` is the one Polestar keeps to set the tooltip again when the item's data arrives
+-- (GET_ITEM_INFO_RECEIVED, Theme/Widgets.lua's `arrived`, which calls its local setGameTip and not
+-- Widgets.ItemTip): our lines come back with it. A hook after Widgets.ItemTip (hooksecurefunc)
+-- would miss that second pass. Every other owner (reward and loot tiles, class cards, dungeons,
+-- purchases: no psGoal) goes to Polestar's function untouched.
+local function hookItemTip()
+	local W = ns.Widgets
+	if not (W and type(W.ItemTip) == "function") or W.ItemTip == GA.GuideItemTip then return end
+	local released = W.ItemTip
+	GA.PolestarItemTip = released
+	GA.GuideItemTip = function(owner, item, extra, place)
+		local goal = type(owner) == "table" and owner.psGoal
+		if not (type(goal) == "table" and subject(goal)) then return released(owner, item, extra, place) end
+		local guide = extra
+		local function withOurs(tip)
+			if guide then guide(tip) end
+			if tip and (not tip.IsOwned or tip:IsOwned(owner)) then ourLines(owner, tip) end
+		end
+		inItemTip = true
+		local ok, err = pcall(released, owner, item, withOurs, place)
+		inItemTip = false
+		if not ok then error(err, 0) end
+	end
+	W.ItemTip = GA.GuideItemTip
 end
 
 ---------------------------------------------------------------------------
@@ -1073,6 +1116,7 @@ ns.OnInit(function()
 	if (tonumber(db.welcomeSeen) or 0) < 1 then db.welcomeSeen = 1 end
 	local W = ns.Widgets
 	if W and W.Tooltip then hooksecurefunc(W, "Tooltip", afterTooltip) end
+	hookItemTip()
 	markTips()
 	hookPins()
 	autoOptions()
