@@ -879,9 +879,9 @@ ns.GA.Tips = {
 		frFR = "Les lunettes montrent les gemmes, qui reviennent en une minute environ ; vers 21,90, deux apparaissent ensemble.",
 		enUS = "The goggles show the gems, which come back in about a minute; around 21,90, two appear together.",
 	},
-	[691] = { -- Worth Its Weight in Gold (classic)
-		frFR = "La grotte des trolls est vers 68,75 (en bas à droite) : défenses sur tous les trolls, sacoche sur ceux qui ont du mana. L'autre grotte, ce sont des ogres.",
-		enUS = "The troll cave is near 68,75 (lower right): tusks from any troll, the pouch from those with mana. The other cave holds ogres.",
+	[691] = { -- Worth Its Weight in Gold (classic); 0.14.0: the knife, after Polestar 0.4.3 and its data (5040 from 2557, 4522 from 2555)
+		frFR = "Le village des Witherbark, vers 68,75 (en bas à droite de la carte) : aller d'abord au fond du village, où les Chasseurs des ombres Witherbark lâchent le Couteau de chasseur d'ombre et les trolls serrés autour d'eux la plupart des défenses ; les Sorciers-docteurs Witherbark, entre les huttes, lâchent les bourses-médecine, au retour.",
+		enUS = "Witherbark Village, near 68,75 (lower right of the map): go to its far end first, where the Witherbark Shadow Hunters drop the Shadow Hunter Knife and the trolls packed around them most of the tusks; the Witherbark Witch Doctors among the huts drop the medicine pouches, on the way back out.",
 	},
 	[738] = { -- Find Agmond (classic)
 		frFR = "Le squelette de nain est vers 51,62, facile à manquer : clic droit dessus.",

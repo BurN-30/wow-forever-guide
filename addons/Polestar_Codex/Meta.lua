@@ -63,25 +63,25 @@ end
 
 C.Register("meta", {
 	build = "1.60.1.70888",
-	builtAt = "2026-11-21T00:00:00.000Z",
+	builtAt = "2026-11-24T00:00:00.000Z",
 	counts = {
 		instance = 35,
-		item = 22213,
+		item = 22328,
 		mount = 139,
-		npc = 10601,
-		object = 1330,
+		npc = 10692,
+		object = 1430,
 		pet = 97,
-		quest = 6093,
-		rare = 397,
+		quest = 6193,
+		rare = 398,
 		recipe = 2766,
 		tabard = 41,
-		treasure = 196,
+		treasure = 199,
 		zone = 60,
 	},
 	coverage = {
-		items = 25256,
+		items = 25371,
 		share = 0.765,
-		withSource = 19322,
+		withSource = 19409,
 	},
 	localExtras = false,
 	parity = {
@@ -118,12 +118,12 @@ C.Register("meta", {
 		},
 		["drop chances"] = {
 			internalOnly = {
-				confirmed = 291,
-				cut = 291,
+				confirmed = 298,
+				cut = 298,
 				notInForever = 1929,
-				unverified = 1539,
+				unverified = 1546,
 			},
-			match = 16948,
+			match = 16934,
 			share = 0.818,
 			total = 20707,
 		},
@@ -133,8 +133,8 @@ C.Register("meta", {
 				notInForever = 0,
 				unverified = 0,
 			},
-			match = 7,
-			share = 0.5,
+			match = 8,
+			share = 0.571,
 			total = 14,
 		},
 		["instance levels"] = {
@@ -162,20 +162,20 @@ C.Register("meta", {
 			internalOnly = {
 				confirmed = 0,
 				notInForever = 0,
-				unverified = 98,
+				unverified = 128,
 			},
-			match = 15870,
-			oursOnly = 3452,
-			share = 0.994,
+			match = 15840,
+			oursOnly = 3569,
+			share = 0.992,
 			total = 15968,
 		},
 		["items: container"] = {
 			internalOnly = {
 				confirmed = 0,
 				notInForever = 0,
-				unverified = 0,
+				unverified = 1,
 			},
-			match = 2095,
+			match = 2094,
 			share = 1,
 			total = 2095,
 		},
@@ -193,9 +193,9 @@ C.Register("meta", {
 			internalOnly = {
 				confirmed = 0,
 				notInForever = 0,
-				unverified = 54,
+				unverified = 57,
 			},
-			match = 8752,
+			match = 8749,
 			share = 0.994,
 			total = 8806,
 		},
@@ -203,10 +203,10 @@ C.Register("meta", {
 			internalOnly = {
 				confirmed = 0,
 				notInForever = 0,
-				unverified = 1,
+				unverified = 3,
 			},
-			match = 3287,
-			share = 1,
+			match = 3285,
+			share = 0.999,
 			total = 3288,
 		},
 		["items: pvp"] = {
@@ -223,10 +223,10 @@ C.Register("meta", {
 			internalOnly = {
 				confirmed = 0,
 				notInForever = 0,
-				unverified = 80,
+				unverified = 109,
 			},
-			match = 2020,
-			share = 0.962,
+			match = 1991,
+			share = 0.948,
 			total = 2100,
 		},
 		["items: rep"] = {
@@ -243,10 +243,10 @@ C.Register("meta", {
 			internalOnly = {
 				confirmed = 0,
 				notInForever = 0,
-				unverified = 24,
+				unverified = 46,
 			},
-			match = 2224,
-			share = 0.989,
+			match = 2202,
+			share = 0.98,
 			total = 2248,
 		},
 		["items: world"] = {
@@ -263,11 +263,11 @@ C.Register("meta", {
 			internalOnly = {
 				confirmed = 0,
 				notInForever = 0,
-				unverified = 97,
+				unverified = 161,
 			},
-			match = 832,
-			oursOnly = 161,
-			share = 0.896,
+			match = 768,
+			oursOnly = 233,
+			share = 0.827,
 			total = 929,
 		},
 		mounts = {
@@ -296,9 +296,9 @@ C.Register("meta", {
 				notInForever = 0,
 				unverified = 0,
 			},
-			match = 553,
-			share = 0.793,
-			total = 697,
+			match = 405,
+			share = 0.64,
+			total = 633,
 		},
 		["quest chains"] = {
 			internalOnly = {
@@ -306,9 +306,9 @@ C.Register("meta", {
 				notInForever = 0,
 				unverified = 2,
 			},
-			match = 225,
-			share = 0.482,
-			total = 467,
+			match = 222,
+			share = 0.543,
+			total = 409,
 		},
 		["quest enders"] = {
 			internalOnly = {
@@ -316,9 +316,9 @@ C.Register("meta", {
 				notInForever = 0,
 				unverified = 8,
 			},
-			match = 627,
-			share = 0.987,
-			total = 635,
+			match = 563,
+			share = 0.986,
+			total = 571,
 		},
 		["quest givers"] = {
 			internalOnly = {
@@ -326,9 +326,9 @@ C.Register("meta", {
 				notInForever = 0,
 				unverified = 13,
 			},
-			match = 586,
-			share = 0.978,
-			total = 599,
+			match = 522,
+			share = 0.976,
+			total = 535,
 		},
 		["quest rewards"] = {
 			internalOnly = {
@@ -336,9 +336,9 @@ C.Register("meta", {
 				notInForever = 0,
 				unverified = 3,
 			},
-			match = 530,
-			share = 0.958,
-			total = 553,
+			match = 469,
+			share = 0.953,
+			total = 492,
 		},
 		["rare levels"] = {
 			internalOnly = {
@@ -346,19 +346,19 @@ C.Register("meta", {
 				notInForever = 0,
 				unverified = 0,
 			},
-			match = 378,
+			match = 379,
 			share = 1,
-			total = 378,
+			total = 379,
 		},
 		["rare loot"] = {
 			internalOnly = {
 				confirmed = 0,
-				notInForever = 427,
-				unverified = 582,
+				notInForever = 425,
+				unverified = 599,
 			},
-			match = 47766,
+			match = 47758,
 			share = 0.979,
-			total = 48775,
+			total = 48782,
 		},
 		["rare positions"] = {
 			internalOnly = {
@@ -366,19 +366,19 @@ C.Register("meta", {
 				notInForever = 2,
 				unverified = 0,
 			},
-			match = 360,
+			match = 361,
 			share = 0.989,
-			total = 364,
+			total = 365,
 		},
 		rares = {
 			internalOnly = {
 				confirmed = 5,
 				notInForever = 1,
-				unverified = 25,
+				unverified = 24,
 			},
-			match = 382,
+			match = 383,
 			oursOnly = 15,
-			share = 0.925,
+			share = 0.927,
 			total = 413,
 		},
 		tabards = {
@@ -395,9 +395,9 @@ C.Register("meta", {
 			internalOnly = {
 				confirmed = 0,
 				notInForever = 0,
-				unverified = 37,
+				unverified = 38,
 			},
-			match = 4468,
+			match = 4467,
 			share = 0.992,
 			total = 4505,
 		},
@@ -418,7 +418,7 @@ C.Register("meta", {
 				unverified = 1,
 			},
 			match = 64,
-			oursOnly = 132,
+			oursOnly = 135,
 			share = 0.985,
 			total = 65,
 		},
@@ -438,12 +438,12 @@ C.Register("meta", {
 		{
 			licence = "No license file in Questie/Questie or Questie/QuestieDB; CurseForge lists GPL-3.0, and the maintainers ask that it be treated as all rights reserved (https://github.com/Questie/Questie/issues/4447). Read from the local install; facts only (quest, NPC, object and item facts, no code or text) ship in Polestar's packs, credited here, and come out if the maintainers ask (data build --no-questie).",
 			name = "QuestieDB (Questie-Forever), baked Forever store and support data",
-			version = "1.1.2 e1652ce62113c152da682baf2d6fb85f1396bcfb",
+			version = "1.1.5 47a4756b775e8c73687fd3066d6c13f0bc43a55e",
 		},
 		{
 			licence = "Public web pages; facts (XP numbers) only, used locally with permission",
 			name = "Quest XP for quests QuestieDB lacks: two Forever web quest databases (one from the beta client's quest cache)",
-			version = "133 quests; cache data/sources/webxp/quest-xp.json",
+			version = "132 quests; cache data/sources/webxp/quest-xp.json",
 		},
 		{
 			licence = "Public web pages; facts (ids, XP, levels, instance categories, rewards) only, used locally",
@@ -492,7 +492,7 @@ C.Register("meta", {
 		{
 			licence = "See forever-db/NOTICE.md and datapackage.json",
 			name = "Polestar's open Forever database (forever-db): quest XP",
-			version = "4387 quests; forever-db/data/quest.jsonl",
+			version = "4862 quests; forever-db/data/quest.jsonl",
 		},
 		{
 			licence = "Public web pages; facts only (levels, classification, positions, drop counts, requirements)",
@@ -512,7 +512,7 @@ C.Register("meta", {
 		{
 			licence = "Facts only (quest and item ids), each entry with its sources",
 			name = "Curated attunement goals (data/codex/attunements.json): the web quest database (Forever pages), warcraft.wiki.gg",
-			version = "16 attunements",
+			version = "20 attunements",
 		},
 		{
 			licence = "Facts only (levels), each row with its source",

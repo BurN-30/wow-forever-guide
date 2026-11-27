@@ -20,7 +20,7 @@
 ## Title-zhTW: Polestar Codex
 ## Notes-zhTW: Polestar 的一部分：物品、坐騎、寵物、NPC、任務及其取得方式、地城與稀有怪物，供查詢、地城與稀有頁面使用。按需載入。
 ## Author: Polestar
-## Version: 0.4.2.2
+## Version: 0.4.3.1
 ## Category: Polestar
 ## Group: Polestar
 ## LoadOnDemand: 1
@@ -43,6 +43,7 @@ Npcs2.lua
 Npcs3.lua
 Rares1.lua
 Roles1.lua
+Professions1.lua
 Objects1.lua
 Treasures1.lua
 Quests1.lua

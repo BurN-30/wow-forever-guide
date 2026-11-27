@@ -4,7 +4,7 @@
 local Q = Polestar and Polestar.QuestDB
 if not (Q and Q.SetMeta) then return end
 
-Q.SetMeta({items=3078,npcs=5772,objects=1144,quests=6093,schema=2})
+Q.SetMeta({items=3147,npcs=5856,objects=1234,quests=6193,schema=2})
 
 if Polestar.RegisterMapFrames then
 	Polestar.RegisterMapFrames({ era = {

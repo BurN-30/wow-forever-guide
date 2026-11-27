@@ -2,7 +2,7 @@
 ## Title: Group Alliance · dungeons (frFR)
 ## Notes: French texts of Group Alliance · dungeons. Loaded on demand on a French client.
 ## Author: BurN-30
-## Version: 0.13.1
+## Version: 0.14.0
 ## Category: Polestar
 ## Group: Polestar
 ## LoadOnDemand: 1

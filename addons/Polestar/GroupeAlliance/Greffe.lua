@@ -67,7 +67,10 @@ ns.GA = GA
 
 local PACK = "groupe-alliance"
 
+-- 0.14.0: the module's language (GA.Locale, GroupeAlliance.lua: /ga lang, else the language
+-- Polestar shows), so the cards and notes match the chapters' texts, which Polestar loads in it.
 local function lang()
+	if GA.Locale then return GA.Locale() end
 	return (GetLocale and GetLocale() == "frFR") and "frFR" or "enUS"
 end
 
@@ -270,15 +273,18 @@ GA.GreffeBeforeHook = beforeHook
 
 -- The dungeons Polestar's own heads-up rule opens to the character now (UI.DungeonToast.Candidates
 -- in "any" mode: level at or past the dungeon's best-at, quests to take now), or nil when it
--- cannot say without loading the Codex (only a level-up loads it). Cached per level, hand-in and
--- quest taken; an empty answer is not kept (Polestar's heads-up switched off in its options gives
--- none, and may be switched on again).
-local turnins, accepts = 0, 0
-local opened = { level = nil, turnins = nil, accepts = nil, set = nil }
+-- cannot say without loading the Codex (only a level-up loads it).
+-- 0.14.0: since Polestar 0.4.3 a candidate costs the dungeon's whole pick-up plan, with route plans
+-- for its givers (Dungeons.PickupPlan, ns.TravelCost; Polestar's own check spreads them, a few a
+-- frame). Worked out at most once per level and heads-up setting, an empty answer kept as well:
+-- within a level, the quests taken or handed in change which dungeons Polestar would open only for
+-- one whose quests the player is doing anyway.
+local opened = { key = nil, set = nil }
 local function polestarOpens(level)
 	local X = ns.Codex
 	if not (X and X.IsLoaded and X.IsLoaded()) then return nil end
-	if opened.level == level and opened.turnins == turnins and opened.accepts == accepts then return opened.set end
+	local key = tostring(level) .. ":" .. tostring(ns.Get and ns.Get("dungeons.headsUp"))
+	if opened.key == key then return opened.set end
 	local DT = ns.UI and ns.UI.DungeonToast
 	local candidates = GA.PolestarCandidates or (DT and DT.Candidates)
 	local set = {}
@@ -290,7 +296,7 @@ local function polestarOpens(level)
 			end
 		end
 	end
-	if next(set) then opened.level, opened.turnins, opened.accepts, opened.set = level, turnins, accepts, set end
+	opened.key, opened.set = key, set
 	return set
 end
 
@@ -686,7 +692,6 @@ for _, msg in ipairs({ "STEP_CHANGED", "GUIDE_CHANGED", "GUIDE_PLACED" }) do
 end
 if ns.RegisterEvent then
 	ns.RegisterEvent("QUEST_TURNED_IN", function(_, questID)
-		turnins = turnins + 1
 		if type(questID) == "number" then turnedIn[questID] = true end
 		ns.After(1, function()
 			GA.ChapterDoneCheck(questID)
@@ -700,7 +705,6 @@ if ns.RegisterEvent then
 	-- A hook that is a quest taken (Down the Scarlet Path, An Alarming Request): looked at once it
 	-- is in the log, even when the step it belongs to goes on.
 	ns.RegisterEvent("QUEST_ACCEPTED", function()
-		accepts = accepts + 1
 		ns.After(1, function() GA.GreffeCheck("accept") end)
 	end)
 	ns.RegisterEvent("PLAYER_LEVEL_UP", function() ns.After(2, function() GA.GreffeCheck("level") end) end)

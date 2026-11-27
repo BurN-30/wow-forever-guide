@@ -364,12 +364,16 @@ end
 -- offer that the guide doesn't take holds nothing back: nobody picks it, so
 -- the helper would wait for good (#3088: Gadgetzan's innkeeper offers
 -- Overseas Delivery, off the route, at every level, and the bind never
--- came). One whose id the client doesn't give still counts.
-function QoL.HasQuestBusiness()
+-- came). One whose id the client doesn't give still counts. With `anyOffer`,
+-- every quest on offer counts (the flight map, #3428: a flight master's own
+-- quest, Ride to Orgrimmar at Devrak, stays in sight and the player picks
+-- the flight, one click).
+function QoL.HasQuestBusiness(anyOffer)
 	local G = C_GossipInfo
 	if not G then return false end
 	local n = G.GetNumAvailableQuests and G.GetNumAvailableQuests() or 0
 	if n > 0 then
+		if anyOffer then return true end
 		local list = G.GetAvailableQuests and G.GetAvailableQuests() or {}
 		if #list < n then return true end
 		local E = ns.Engine
@@ -483,6 +487,30 @@ end
 function Client.UseSlot(bag, slot)
 	local C = C_Container
 	if C and C.UseContainerItem then C.UseContainerItem(bag, slot) end
+end
+
+-- What a merchant pays for each item in a bag slot, in copper: the price the
+-- slot's tooltip gives (a damaged item sells for less than its vendor price,
+-- by its durability: a Frayed Robe of 4c at 32/35 sells for 2c, #3997), else
+-- the item's vendor price (Client.SellPrice); nil while uncached. A stack
+-- keeps the vendor price: nothing that stacks wears.
+-- Client: C_TooltipInfo.GetBagItem, its SellPrice line (TooltipDataLineType 11).
+local SELL_PRICE_LINE = (Enum and Enum.TooltipDataLineType and Enum.TooltipDataLineType.SellPrice) or 11
+function Client.SlotSellPrice(bag, slot, itemID, count)
+	local T = C_TooltipInfo
+	if (count or 1) == 1 and T and T.GetBagItem then
+		local ok, data = pcall(T.GetBagItem, bag, slot)
+		local lines = ok and type(data) == "table" and data.lines
+		if type(lines) == "table" then
+			for _, l in ipairs(lines) do
+				if type(l) == "table" and readable(l.type) == SELL_PRICE_LINE then
+					local price = readable(l.price)
+					if type(price) == "number" then return price end
+				end
+			end
+		end
+	end
+	return Client.SellPrice(itemID)
 end
 
 -- Free slots in one bag and its family: 0 (or nil) for a bag that holds
