@@ -103,10 +103,17 @@ New-Item -ItemType Directory -Force -Path $addons | Out-Null
 Say "Dossier des addons : $addons"
 
 $folders = Get-ChildItem -LiteralPath $source -Directory
+# 0.14.0 : comme le programme d'installation (installer-exe/Updater.cs), les dossiers remplacés et les
+# anciens dossiers retirés partent dans Interface\_guide-sauvegarde (vidé à chaque installation), avec
+# un LISEZMOI.txt pour revenir en arrière.
+$backup = Join-Path (Split-Path -Parent $addons) "_guide-sauvegarde"
+if (Test-Path -LiteralPath $backup) { Remove-Item -LiteralPath $backup -Recurse -Force }
+New-Item -ItemType Directory -Force -Path $backup | Out-Null
+$moved = 0
 $n = 0
 foreach ($f in $folders) {
 	$dest = Join-Path $addons $f.Name
-	if (Test-Path -LiteralPath $dest) { Remove-Item -LiteralPath $dest -Recurse -Force }
+	if (Test-Path -LiteralPath $dest) { Move-Item -LiteralPath $dest -Destination (Join-Path $backup $f.Name); $moved++ }
 	Copy-Item -LiteralPath $f.FullName -Destination $dest -Recurse -Force
 	$n++
 }
@@ -117,8 +124,20 @@ $legacy = '^(Polestar_(Guides|Names)_[a-z]{2}[A-Z]{2}|GroupeAlliance|Polestar_(E
 	'|Polestar_Skin_(Aurora|Beacon|Hairline|Lanterns|Lumen|Sheen|Umbra|Vellum|Waymark)' +
 	'|Polestar_Guides_(Dwarf|Gnome|Human|NightElf|Orc|Scourge|Skyborne|Tauren|Troll))$'
 Get-ChildItem -LiteralPath $addons -Directory -ErrorAction SilentlyContinue |
-	Where-Object { $_.Name -cmatch $legacy } |
-	ForEach-Object { Remove-Item -LiteralPath $_.FullName -Recurse -Force; Say "Ancien dossier retiré : $($_.Name)" }
+	Where-Object { $_.Name -match $legacy } |
+	ForEach-Object {
+		Move-Item -LiteralPath $_.FullName -Destination (Join-Path $backup $_.Name)
+		$moved++
+		Say "Ancien dossier retiré (gardé dans _guide-sauvegarde) : $($_.Name)"
+	}
+if ($moved -gt 0) {
+	Set-Content -LiteralPath (Join-Path $backup "LISEZMOI.txt") -Encoding UTF8 -Value @(
+		"Ancienne version du guide, sauvegardée le $(Get-Date -Format 'dd/MM/yyyy HH:mm').",
+		"Pour revenir en arrière : supprimer les dossiers du même nom dans ..\AddOns, puis y déplacer ceux-ci.")
+	Say "Ancienne version sauvegardée dans $backup"
+} else {
+	Remove-Item -LiteralPath $backup -Recurse -Force
+}
 
 Say "$n addons installés ou mis à jour." "Green"
 Say "Relancez WoW : les guides s'ouvrent tout seuls, rien à cocher."
