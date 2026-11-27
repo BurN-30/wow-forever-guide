@@ -50,13 +50,6 @@
   },
   {
     "guide": "forever/50-60/mount-hyjal",
-    "en": "Alchemy Workstation",
-    "amont": "Poste d'alchimie",
-    "nous": "Alchemy Workstation",
-    "pourquoi": "Hyjal"
-  },
-  {
-    "guide": "forever/50-60/mount-hyjal",
     "en": "Alliance: the amulet from the second pass goes to {npc:244517}: ride west across the foothills and north up the valley to {area:16848}, about four minutes, then back up to the Summit.",
     "amont": "Alliance : l'amulette du deuxième passage va pour {npc:244517} : chevauchez vers l'ouest à travers les contreforts puis vers le nord dans la vallée jusqu'à {area:16848}, environ quatre minutes, puis remontez au Sommet.",
     "nous": "Alliance : l'amulette du second passage va à {npc:244517} : chevaucher vers l'ouest à travers les contreforts, puis vers le nord en remontant la vallée jusqu'à {area:16848}, environ quatre minutes, puis remonter au sommet.",
@@ -113,23 +106,9 @@
   },
   {
     "guide": "forever/50-60/mount-hyjal",
-    "en": "Deadwood Den Guardians",
-    "amont": "Les gardiens de tanière Deadwood",
-    "nous": "Deadwood Den Guardians",
-    "pourquoi": "Hyjal"
-  },
-  {
-    "guide": "forever/50-60/mount-hyjal",
-    "en": "Disease Workstation",
-    "amont": "Poste de maladie",
-    "nous": "Disease Workstation",
-    "pourquoi": "Hyjal"
-  },
-  {
-    "guide": "forever/50-60/mount-hyjal",
     "en": "East across the Cradle to {npc:268168}.",
     "amont": "À l'est, à travers le Berceau, vers {npc:268168}.",
-    "nous": "À l'est, à travers le Cradle, jusqu'à {npc:268168}.",
+    "nous": "À l'est, à travers le Berceau, jusqu'à {npc:268168}.",
     "pourquoi": "Hyjal"
   },
   {
@@ -143,7 +122,7 @@
     "guide": "forever/50-60/mount-hyjal",
     "en": "East from the Cradle towards the {area:16867}, where the Wormwing harpies nest: a corrupted growth on the shrine's western slope starts a quest for {npc:260825}.",
     "amont": "À l'est, depuis le Berceau, vers {area:16867}, où nichent les harpies Aile-verm : une excroissance corrompue sur la pente ouest du sanctuaire lance une quête pour {npc:260825}.",
-    "nous": "À l'est depuis le Cradle, vers {area:16867}, où nichent les harpies Aile-de-ver : une excroissance corrompue sur le versant ouest du sanctuaire lance une quête pour {npc:260825}.",
+    "nous": "À l'est depuis le Berceau, vers {area:16867}, où nichent les harpies Aile-de-ver : une excroissance corrompue sur le versant ouest du sanctuaire lance une quête pour {npc:260825}.",
     "pourquoi": "Hyjal"
   },
   {
@@ -255,7 +234,7 @@
     "guide": "forever/50-60/mount-hyjal",
     "en": "Into {area:16866}, north of the Cradle: the ruins of a Horde base, now held by demons. {npc:263406} and {npc:249052} camp at its western edge; {npc:267121}, a blademaster, waits a little east of them. Doomguards (elites, levels 58-59) walk among the demons: pull carefully.",
     "amont": "Vers {area:16866}, au nord du Berceau : les ruines d'une base de la Horde, désormais tenues par des démons. {npc:263406} et {npc:249052} campent à sa lisière ouest ; {npc:267121}, un maître de guerre, attend un peu à l'est d'eux. Les Gardes funestes (élites, niveaux 58-59) marchent parmi les démons : attirez avec précaution.",
-    "nous": "Dans {area:16866}, au nord du Cradle : les ruines d'une base de la Horde, désormais tenues par des démons. {npc:263406} et {npc:249052} campent à son bord ouest ; {npc:267121}, un maître-lame, attend un peu à l'est d'eux. Des Gardes funestes (élites, niveaux 58-59) circulent parmi les démons : attirer avec prudence.",
+    "nous": "Dans {area:16866}, au nord du Berceau : les ruines d'une base de la Horde, désormais tenues par des démons. {npc:263406} et {npc:249052} campent à son bord ouest ; {npc:267121}, un maître-lame, attend un peu à l'est d'eux. Des Gardes funestes (élites, niveaux 58-59) circulent parmi les démons : attirer avec prudence.",
     "pourquoi": "Hyjal"
   },
   {
@@ -283,7 +262,7 @@
     "guide": "forever/50-60/mount-hyjal",
     "en": "North to the old bridge over the Cradle: touch the crow effigy on it and {npc:267158}, the crow wild god, appears.",
     "amont": "Au nord, vers le vieux pont sur le Berceau : touchez l'effigie de corbeau qui s'y trouve et {npc:267158}, le dieu sauvage des corbeaux, apparaît.",
-    "nous": "Au nord, jusqu'au vieux pont sur le Cradle : toucher l'effigie de corbeau posée dessus, et {npc:267158}, le dieu sauvage corbeau, apparaît.",
+    "nous": "Au nord, jusqu'au vieux pont sur le Berceau : toucher l'effigie de corbeau posée dessus, et {npc:267158}, le dieu sauvage corbeau, apparaît.",
     "pourquoi": "Hyjal"
   },
   {
@@ -332,7 +311,7 @@
     "guide": "forever/50-60/mount-hyjal",
     "en": "North-east across the Cradle to {npc:249234}'s camp at the edge of {area:16866}.",
     "amont": "Au nord-est, à travers le Berceau, vers le camp de {npc:249234} à la lisière de {area:16866}.",
-    "nous": "Au nord-est, à travers le Cradle, jusqu'au camp de {npc:249234}, au bord de {area:16866}.",
+    "nous": "Au nord-est, à travers le Berceau, jusqu'au camp de {npc:249234}, au bord de {area:16866}.",
     "pourquoi": "Hyjal"
   },
   {
@@ -374,7 +353,7 @@
     "guide": "forever/50-60/mount-hyjal",
     "en": "On to the old bridge over the Cradle: touch the crow effigy on it and {npc:267158} appears again.",
     "amont": "Continuez vers le vieux pont sur le Berceau : touchez l'effigie de corbeau qui s'y trouve et {npc:267158} apparaît à nouveau.",
-    "nous": "Puis jusqu'au vieux pont sur le Cradle : toucher l'effigie de corbeau posée dessus, et {npc:267158} réapparaît.",
+    "nous": "Puis jusqu'au vieux pont sur le Berceau : toucher l'effigie de corbeau posée dessus, et {npc:267158} réapparaît.",
     "pourquoi": "Hyjal"
   },
   {
@@ -389,13 +368,6 @@
     "en": "Seeds and owl eggs",
     "amont": "Graines et œufs de hibou",
     "nous": "Graines et œufs de chouette",
-    "pourquoi": "Hyjal"
-  },
-  {
-    "guide": "forever/50-60/mount-hyjal",
-    "en": "Slime Workstation",
-    "amont": "Poste de limon",
-    "nous": "Slime Workstation",
     "pourquoi": "Hyjal"
   },
   {
@@ -750,16 +722,9 @@
   },
   {
     "guide": "forever/50-60/mount-hyjal",
-    "en": "Vessel Workstation",
-    "amont": "Poste de récipient",
-    "nous": "Vessel Workstation",
-    "pourquoi": "Hyjal"
-  },
-  {
-    "guide": "forever/50-60/mount-hyjal",
     "en": "West across the Cradle to {npc:255693}, another of the wild gods.",
     "amont": "À l'ouest, à travers le Berceau, vers {npc:255693}, un autre des dieux sauvages.",
-    "nous": "À l'ouest, à travers le Cradle, jusqu'à {npc:255693}, un autre des dieux sauvages.",
+    "nous": "À l'ouest, à travers le Berceau, jusqu'à {npc:255693}, un autre des dieux sauvages.",
     "pourquoi": "Hyjal"
   },
   {
