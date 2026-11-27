@@ -18,8 +18,8 @@ end
 --   findKind(name, kinds) -> the kind a longer name holds: "Zandalari Crafting Reagent"
 --   isProfession(name, professions, marked) -> whether a requirement names a
 --     profession the shared list does not; marked: the game marks it a requirement
---   isSetBonus(text, line, context), isSetPiece(left, item, context) -> whether
---     a line in an item set is a bonus, or a piece, the shared reader would miss
+--   isSetPiece(left, item, context) -> whether a line in an item set is a piece
+--     the shared reader would miss
 --   readLine(item, line, context) -> true when the client takes the line itself
 --   afterReadLine(item, line, context) after each line, taken or not
 --   afterRead(model, context) once the item is read, a crafted item first
@@ -77,6 +77,12 @@ local function imbueLine(text)
         if name and name ~= "" and tonumber(left) then return true end
     end
     return false
+end
+
+-- The game's green, #00FF00, as enchants and effects are written.
+local function isGreen(color)
+    local c = rgb(color)
+    return c ~= nil and c[1] < .2 and c[2] > .9 and c[3] < .2
 end
 
 local PRIMARY_STATS = { STRENGTH = true, AGILITY = true, STAMINA = true, INTELLECT = true, SPIRIT = true,
@@ -557,7 +563,7 @@ local function readContent(read, line, context, left, right, trimmed, original)
     local lineType = line.type
     local setName, count, total = unformat(trimmed, ITEM_SET_NAME)
     if setName and tonumber(count) and tonumber(total) and not item.setName then
-        item.setName, item.setCount = setName, count .. "/" .. total
+        item.setName, item.setCount, item.setWorn = setName, count .. "/" .. total, tonumber(count)
         read.inSet, read.setTotal = true, tonumber(total)
     elseif LINE.SellPrice and lineType == LINE.SellPrice then
         item.hasSellPrice = true
@@ -586,13 +592,17 @@ local function readContent(read, line, context, left, right, trimmed, original)
             -- game's color: "You haven't collected this appearance".
             item.footerLeft[#item.footerLeft].color = rgb(line.leftColor)
         end
-    -- A client can recognize more of a set's bonuses, as retail's active "Set: ...".
-    -- [pack patch #47] An active bonus is written "Set: ..." (ITEM_SET_BONUS, "Complet : ..." in French)
-    -- on WoW Forever too, not only on retail: it stays in the list, in the game's green.
-    elseif read.inSet and (unformat(trimmed, ITEM_SET_BONUS_GRAY) or unformat(trimmed, ITEM_SET_BONUS)
-        or (extension and extension.isSetBonus and extension.isSetBonus(trimmed, line, context))) then
+    -- A bonus not yet active has its count, "(3) Set: ..."; the game drops it once active.
+    elseif read.inSet and (unformat(trimmed, ITEM_SET_BONUS_GRAY) or unformat(trimmed, ITEM_SET_BONUS)) then
         add(item.setBonuses, left, right)
-        item.setBonuses[#item.setBonuses].active = isActive(line.leftColor)
+        local bonus = item.setBonuses[#item.setBonuses]
+        bonus.active = isActive(line.leftColor)
+        local pieces, text = unformat(trimmed, ITEM_SET_BONUS_GRAY)
+        if pieces then
+            bonus.pieces, bonus.text = tonumber(pieces), text
+        else
+            bonus.text = unformat(trimmed, ITEM_SET_BONUS)
+        end
     -- Set pieces are names alone: letters (of any alphabet), spaces,
     -- apostrophes, and hyphens. A client can allow more pieces than the
     -- set counts, as retail's appearance sets list.
@@ -652,6 +662,9 @@ local function readContent(read, line, context, left, right, trimmed, original)
         -- Its gear marker stands for the words.
         add(item.effects, withoutLabel(trimmed, ITEM_SPELL_TRIGGER_ONUSE), "")
         item.effects[#item.effects].use = true
+        -- A hearthstone names the player's home; drawn in the place color.
+        local home = game.bindLocation and game.bindLocation()
+        if home and home ~= "" and trimmed:find(home, 1, true) then item.effects[#item.effects].place = home end
     elseif isType(lineType, "ItemSpellTriggerOnUse") or isType(lineType, "ItemSpellTriggerOnEquip")
         or startsWith(trimmed, ITEM_SPELL_TRIGGER_ONEQUIP) or startsWith(trimmed, ITEM_SPELL_TRIGGER_ONUSE) then
         add(item.effects, left, right)
@@ -722,8 +735,10 @@ local function readText(read, line, context)
     elseif extension and extension.readLine and extension.readLine(item, line, context) == true then
         -- The client took the line. Recipe routing, names and levels, and
         -- the sell price stay the shared reader's.
-    elseif right == "" and imbueLine(plainText(trimmed)) then
-        -- A weapon's temporary enchant, "Windfury Weapon (59 min)", under its enchants.
+    elseif right == "" and (imbueLine(plainText(trimmed)) or read.imbueMayFollow and item.weaponDamage
+        and lineType == LINE.None and isGreen(line.leftColor)) then
+        -- A weapon's temporary enchant, "Windfury Weapon (59 min)", under its enchants. Another
+        -- player's names no time left, "Windfury 4": green, after an enchant or effect.
         item.imbues = item.imbues or {}
         for _, row in ipairs(enchantRows(util.trim(plainText(trimmed)))) do add(item.imbues, row, "") end
     elseif lineType == LINE.EquipSlot then
@@ -773,6 +788,7 @@ local function readLine(read, lineNumber, line)
         read.nestedID = number(line.tooltipID)
     end
     local effects, effectCount = item.effects, #item.effects
+    local imbueCount = item.imbues and #item.imbues or 0
     -- The amount is drawn by a money frame, not as text, so take it from the data.
     if LINE.SellPrice and line.type == LINE.SellPrice then
         item.hasSellPrice = true
@@ -780,6 +796,10 @@ local function readLine(read, lineNumber, line)
         if price then item.sellPrice = price end
     end
     if line.lineIndex and not readText(read, line, context) then return false end
+    local kind = line.type
+    read.imbueMayFollow = (item.imbues ~= nil and #item.imbues > imbueCount) or isType(kind, "ItemEnchantmentPermanent")
+        or isType(kind, "ItemSpellTriggerOnProc") or isType(kind, "ItemSpellTriggerOnEquip")
+        or isType(kind, "ItemSpellTriggerOnUse")
     -- An effect the game sets apart from the one before with a blank line
     -- stays apart: "Use:", "When crafting:", "Usable with:".
     if read.blankBefore and effectCount > 0 and #effects > effectCount then effects[effectCount + 1].apart = true end
@@ -900,6 +920,19 @@ local function addSellPrice(read, itemInfo)
     end
 end
 
+-- Bonuses come in count order, active ones first, and a set's first bonus needs
+-- two pieces. When the counts from two to the pieces worn are as many as the
+-- active bonuses without one, each of those counts is known.
+local function countActiveBonuses(item)
+    if not item or not item.setWorn then return end
+    local uncounted = {}
+    for _, bonus in ipairs(item.setBonuses) do
+        if not bonus.pieces and bonus.active then uncounted[#uncounted + 1] = bonus end
+    end
+    if #uncounted == 0 or #uncounted ~= item.setWorn - 1 then return end
+    for index, bonus in ipairs(uncounted) do bonus.pieces = index + 1 end
+end
+
 local function readModel(tooltip, data, game)
     if isSecret(data) or not data or isSecret(data.lines) or not data.lines then return end
     local itemInfo = getItemInfo(tooltip, data)
@@ -916,6 +949,8 @@ local function readModel(tooltip, data, game)
     if not model.name or model.name == "" then return end
     if not readAppended(read) then return end
     findPair(read)
+    countActiveBonuses(model)
+    countActiveBonuses(model.created)
     -- Crafted gear can need a profession too; only a recipe teaches.
     local recipe = (model.created and not model.created.paired) or (model.skill and model.teaches)
     if recipe then
@@ -1070,7 +1105,7 @@ end
 
 local function drawSockets(panel, sockets, y, style)
     for _, row in ipairs(sockets) do
-        local x, size = pad() + (row.indent or 0), socketIconSize(style)
+        local x, size = pad(panel) + (row.indent or 0), socketIconSize(style)
         local width = socketArtWidth(row, style)
         if row.icon then
             -- Inside its border, when it has one.
@@ -1101,13 +1136,20 @@ end
 -- names one; enchants read as stats and keep theirs.
 local function drawMarked(panel, list, y, style, color, marker, numbers)
     local hang = markerIndent(panel, style)
-    local width = panel.width - 2 * pad() - hang
+    local width = panel.width - 2 * pad(panel) - hang
     for _, row in ipairs(list) do
         local text, rowStyle, rowColor = row.left, style, color
         if row.inactive then
             text, rowStyle, rowColor = util.uncolored(text), inactiveStyle(style), row.color
         elseif numbers then
             text = ns.Stats.styleEffect(text, ns.option("statColors"))
+        end
+        if row.place and not row.inactive then
+            local first, last = text:find(row.place, 1, true)
+            if first then
+                text = text:sub(1, first - 1) .. "|cff" .. util.hex(ns.Palette.roles.place) .. row.place .. "|r"
+                    .. text:sub(last + 1)
+            end
         end
         local stands = row.onHit and MARKED.onHit or row.use and MARKED.use
         if row.note then
@@ -1116,12 +1158,12 @@ local function drawMarked(panel, list, y, style, color, marker, numbers)
         elseif hang > 0 then
             local shown = stands and stands[1] or marker
             if row.inactive then shown = ns.Stats.tintedMarker(shown, row.color) end
-            styledAt(panel, shown, pad(), y, hang, rowStyle, rowColor)
+            styledAt(panel, shown, pad(panel), y, hang, rowStyle, rowColor)
         elseif stands then
             -- Without its marker, the line keeps its words.
             text = (stands[2] or "") .. text
         end
-        y = y + styledAt(panel, text, pad() + hang, y, width, rowStyle, rowColor) + 3
+        y = y + styledAt(panel, text, pad(panel) + hang, y, width, rowStyle, rowColor) + 3
     end
     return y
 end
@@ -1229,7 +1271,7 @@ local function setCountStyle(setName)
     local style = {}
     for field, value in pairs(setName) do style[field] = value end
     style.size = math.max(8, setName.size - 3)
-    if not setName.customFont then style.font = bodyFont() end
+    if not setName.customFont then style.font = bodyFont("item") end
     return style
 end
 
@@ -1420,7 +1462,7 @@ local function drawDurability(panel, durability, y, style)
     local current, maximum = durability[1], durability[2]
     local color = durabilityColor(current, maximum)
     local track = acquireTexture(panel, nil, 0)
-    track:SetPoint("TOPLEFT", panel, "TOPLEFT", pad(), -(y + math.floor(style.size / 2)))
+    track:SetPoint("TOPLEFT", panel, "TOPLEFT", pad(panel), -(y + math.floor(style.size / 2)))
     track:SetSize(DURABILITY_BAR, 4)
     track:SetVertexColor(.16, .14, .13, 1)
     local fill = acquireTexture(panel, nil, 1)
@@ -1430,13 +1472,13 @@ local function drawDurability(panel, durability, y, style)
     fill:SetVertexColor(color[1], color[2], color[3], 1)
     if width < 1 then fill:Hide() end
     local healthy = maximum > 0 and current / maximum >= .5
-    return styledAt(panel, current .. " / " .. maximum, pad() + DURABILITY_BAR + 7, y,
+    return styledAt(panel, current .. " / " .. maximum, pad(panel) + DURABILITY_BAR + 7, y,
         math.max(90, style.size * 8), style, healthy and { .82, .78, .71 } or color)
 end
 
 -- Weapon damage, armor, stats, and effects.
 local function drawStats(panel, model, styles, y)
-    local inner = panel.width - 2 * pad()
+    local inner = panel.width - 2 * pad(panel)
     local top = y
     local swapped = swapsDamage(model)
     if model.weaponDps then
@@ -1447,11 +1489,11 @@ local function drawStats(panel, model, styles, y)
     end
     if model.weaponDamage or #model.weaponBonus > 0 then
         if model.weaponDamage then
-            y = y + styledAt(panel, swapped and rateText(model) or weaponText(model), pad() + 7, y, inner - 7,
+            y = y + styledAt(panel, swapped and rateText(model) or weaponText(model), pad(panel) + 7, y, inner - 7,
                 styles.damage, SMALL_COLOR)
         end
         for _, bonus in ipairs(model.weaponBonus) do
-            y = y + 2 + styledAt(panel, damageText(bonus), pad() + 7, y + 2, inner - 7, styles.damage,
+            y = y + 2 + styledAt(panel, damageText(bonus), pad(panel) + 7, y + 2, inner - 7, styles.damage,
                 SMALL_COLOR)
         end
         y = y + 7
@@ -1470,34 +1512,22 @@ local function drawStats(panel, model, styles, y)
         or #model.weaponBonus > 0
     local underDivider
     if (#model.secondary > 0 or #model.equipEffects > 0) and above then
-        y = divider(panel, y, GOLD_RULE, DIVIDER_AFTER)
+        y = divider(panel, y, GOLD_RULE, ui.sectionSpace(DIVIDER_AFTER, panel))
         underDivider = y
     end
     y = drawGroup(panel, model.secondary, y, secondaryStyle(styles), { .90, .85, .74 })
-    -- Enchants and gems stand apart from the rows around them, once between
-    -- two of them; first under the divider, they start where anything would.
-    local apartAt
-    local function standApart()
-        if y > top and y ~= underDivider and y ~= apartAt then
-            y = y + APART_SPACE
-            apartAt = y
-        end
-    end
-    local enchanted = #model.enchants > 0 or (model.imbues ~= nil and #model.imbues > 0)
-    local socketed = hasSockets(model)
-    if enchanted then standApart() end
+    -- The item's own Equip effects, then what is added to it: enchants and gems.
+    y = drawMarked(panel, model.equipEffects, y, styles.equipEffects, EQUIP_EFFECT_COLOR, STAT_MARKER, true)
+    -- Enchants follow as effects do.
     y = drawMarked(panel, enchantRowsOf(model, styles), y, styles.enchants, { .90, .85, .74 }, ENCHANT_MARKER)
     -- Temporary enchants under the permanent ones.
     if model.imbues then y = drawMarked(panel, model.imbues, y, styles.enchants, { .90, .85, .74 }, ENCHANT_MARKER) end
-    -- Use effects and flavor add their own space after them.
-    if enchanted and (socketed or #model.equipEffects > 0) then standApart() end
-    if socketed then
-        standApart()
+    -- Gems stand apart from the rows above them; first under the divider, they
+    -- start where anything would.
+    if hasSockets(model) then
+        if y > top and y ~= underDivider then y = y + APART_SPACE end
         y = drawSockets(panel, model.sockets, y, socketStyle(styles))
-        if #model.equipEffects > 0 then standApart() end
     end
-    -- Equip effects after what is added to the item: its enchants and gems.
-    y = drawMarked(panel, model.equipEffects, y, styles.equipEffects, EQUIP_EFFECT_COLOR, STAT_MARKER, true)
     -- Use effects and flavor stand apart from the stats above them; first under
     -- the divider, they start where anything would.
     if #model.effects > 0 and y > top then y = y + 5 end
@@ -1510,13 +1540,13 @@ end
 
 -- The set's name and count, its pieces, and its bonuses.
 local function drawSet(panel, model, styles, y)
-    local inner = panel.width - 2 * pad()
+    local inner = panel.width - 2 * pad(panel)
     local countStyle = setCountStyle(styles.setName)
     local count = model.setCount or ""
     local countWidth = math.max(42, measureStyled(panel, count, countStyle) + 2)
-    local titleHeight = styledAt(panel, model.setName, pad(), y, inner - countWidth - 3,
+    local titleHeight = styledAt(panel, model.setName, pad(panel), y, inner - countWidth - 3,
         styles.setName, { 1, .76, .18 })
-    local countHeight = styledAt(panel, count, panel.width - pad() - countWidth, y, countWidth,
+    local countHeight = styledAt(panel, count, panel.width - pad(panel) - countWidth, y, countWidth,
         countStyle, { 1, .76, .18 }, "RIGHT")
     y = y + math.max(24, titleHeight + 7, countHeight + 7)
     for _, row in ipairs(model.setItems) do
@@ -1530,6 +1560,14 @@ local function drawSet(panel, model, styles, y)
             y, styles.setItems, color, 5)
     end
     if #model.setBonuses > 0 then y = y + 7 end
+    -- Each bonus's count, as (3), in a column of its own, the text wrapping beside
+    -- it; "Set:" goes without saying under the set.
+    local style = styles.setBonuses
+    local piecesWidth = 0
+    for _, row in ipairs(model.setBonuses) do
+        if row.pieces then piecesWidth = math.max(piecesWidth, measureStyled(panel, "(" .. row.pieces .. ")", style)) end
+    end
+    local textIndent = 3 + (piecesWidth > 0 and piecesWidth + 6 or 0)
     for _, row in ipairs(model.setBonuses) do
         local color = { .68, .65, .57 }
         if row.active == true then
@@ -1537,21 +1575,24 @@ local function drawSet(panel, model, styles, y)
         elseif row.active == false then
             color = { .44, .42, .40 }
         end
-        y = drawRow(panel, row, y, styles.setBonuses, color, 3)
+        if row.pieces then
+            styledAt(panel, "(" .. row.pieces .. ")", pad(panel) + 3, y, piecesWidth + 2, style, color)
+        end
+        y = drawRow(panel, { left = row.text or row.left, right = row.right }, y, style, color, textIndent, 5)
     end
     return y
 end
 
 -- The item a recipe crafts: a small header, then its own stats and effects.
 local function drawCreated(panel, created, styles, y)
-    local inner = panel.width - 2 * pad()
+    local inner = panel.width - 2 * pad(panel)
     local quality = QUALITY[created.quality] or created.nameColor or QUALITY[1]
     local indent = 0
     local top = y
     if created.icon then
         local px = ui.pixel(panel)
         local border = acquireTexture(panel, nil, 0)
-        border:SetPoint("TOPLEFT", panel, "TOPLEFT", pad(), -ui.snap(panel, y))
+        border:SetPoint("TOPLEFT", panel, "TOPLEFT", pad(panel), -ui.snap(panel, y))
         border:SetSize(CREATED_ICON + 2 * px, CREATED_ICON + 2 * px)
         border:SetVertexColor(quality[1] * .8, quality[2] * .8, quality[3] * .8, 1)
         local icon = acquireTexture(panel, created.icon, 1)
@@ -1560,16 +1601,18 @@ local function drawCreated(panel, created, styles, y)
         icon:SetTexCoord(.08, .92, .08, .92)
         indent = CREATED_ICON + 10
     end
-    y = y + styledAt(panel, created.name, pad() + indent, y, inner - indent, styles.createdName, quality) + 2
+    y = y + styledAt(panel, created.name, pad(panel) + indent, y, inner - indent, styles.createdName, quality) + 2
     local subtitle = createdSubtitle(created)
     if subtitle then
-        y = y + styledAt(panel, subtitle, pad() + indent, y, inner - indent, styles.subtitle,
+        y = y + styledAt(panel, subtitle, pad(panel) + indent, y, inner - indent, styles.subtitle,
             createdUnmet(created) and UNUSABLE_COLOR or { quality[1] * .5 + .5, quality[2] * .5 + .5, quality[3] * .5 + .5 }) + 2
     end
     y = math.max(y, top + CREATED_ICON + 2) + 8
     local stats = hasStats(created)
     if stats then y = drawStats(panel, created, styles, y) end
-    if created.setName then y = drawSet(panel, created, styles, divider(panel, y, GOLD_RULE, stats and 11 or 0)) end
+    if created.setName then y = drawSet(panel, created, styles,
+        divider(panel, y, GOLD_RULE, ui.sectionSpace(stats and 11 or 0, panel)))
+    end
     -- Its footer's lines, as whose classes may use it or an appearance not yet
     -- collected, under the rest: the recipe's footer is its own.
     local footer = {}
@@ -1582,7 +1625,7 @@ end
 
 -- Durability and requirements on the left, prices on the right.
 local function drawFooter(panel, model, footerRight, footer, y)
-    local inner = panel.width - 2 * pad()
+    local inner = panel.width - 2 * pad(panel)
     for index = 1, math.max(#model.footerLeft, #footerRight) do
         local left = model.footerLeft[index]
         local right = footerRight[index]
@@ -1595,13 +1638,13 @@ local function drawFooter(panel, model, footerRight, footer, y)
                 color = right.met and { 1, 1, 1 } or { 1, .34, .28 }
             end
             rightWidth = math.min(measureStyled(panel, content, footer) + 2, inner * .6)
-            h2 = styledAt(panel, content, panel.width - pad() - rightWidth, y,
+            h2 = styledAt(panel, content, panel.width - pad(panel) - rightWidth, y,
                 rightWidth, footer, color, "RIGHT")
         end
         if left and left.durability then
             h1 = drawDurability(panel, left.durability, y, footer)
         elseif left then
-            h1 = styledAt(panel, left.left, pad(), y, inner - rightWidth - COLUMN_GAP,
+            h1 = styledAt(panel, left.left, pad(panel), y, inner - rightWidth - COLUMN_GAP,
                 footer, left.color or { .82, .78, .71 })
         end
         y = y + math.max(h1, h2, footer.size + 2) + 4
@@ -1613,7 +1656,7 @@ local function itemStyles()
     local styles = {}
     for _, element in ipairs(ns.ELEMENTS) do
         if not element.tooltipType or element.tooltipType == "shared" then
-            styles[element.key] = styleOf(element.key)
+            styles[element.key] = styleOf(element.key, "item")
         end
     end
     return styles

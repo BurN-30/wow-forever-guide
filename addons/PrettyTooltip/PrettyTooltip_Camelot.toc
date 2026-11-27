@@ -4,8 +4,8 @@
 ## Author: FallenShard
 ## X-License: MIT
 ## X-Curse-Project-ID: 1720719
-## Version: 1.4.2
-## X-Pack-Patches: wow-forever-guide (BurN-30) - #47 frFR party-names quest-log-done, see docs/prettytooltip-correctifs.md
+## Version: 1.5.0
+## X-Pack-Patches: wow-forever-guide (BurN-30) - frFR party-names quest-log-done, see docs/prettytooltip-correctifs.md
 ## IconTexture: Interface\AddOns\PrettyTooltip\art\logo
 ## SavedVariables: PrettyTooltipDB, PrettyTooltipCaptures
 ## OptionalDeps: Questie, Auctionator, DialogueUI, EllesmereUI, LibSharedMedia-3.0

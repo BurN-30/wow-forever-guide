@@ -1,3 +1,21 @@
+# PrettyTooltip 1.5.0
+
+## Style editor
+
+- The style editor was redone to be more intuitive to use. All options are divided into "General" that concern high-level settings and "All Tooltips" that contain general settings for all tooltips as well as per-tooltip type settings that can override general settings for the given type.
+- New settings: **Row Spacing** and **Section Spacing**, and per type its own scale, padding, minimum width, panel style, opacities, and icon placement. Tooltip fading, with **Fade Delay** and **Fade Duration**, is now under All Tooltips' Behavior.
+- Fixed errors when choosing a font for a single part.
+
+## Tooltips
+
+- Fixed a Lua error that occurred if a font was found missing.
+
+## Items
+
+- Set bonuses you have earned stay with their set instead of falling among other addons' rows, and show the pieces they need, as **(2)**, when the pieces you wear leave no doubt. Each bonus wraps beside its count.
+- Enchants come after the item's own Equip and chance on hit effects again, as before 1.4.0, without extra space around them. Another player's temporary weapon enchant, as **Windfury 4**, now shows with the enchants.
+- The Hearthstone shows your home in blue. ([#19](https://github.com/FallenShard/PrettyTooltip/issues/19))
+
 # PrettyTooltip 1.4.2
 
 ## Tooltips

@@ -1,7 +1,7 @@
 diff -ruN a/PrettyTooltip/Locale/frFR.lua b/PrettyTooltip/Locale/frFR.lua
---- a/PrettyTooltip/Locale/frFR.lua	2026-11-22 15:03:39.959961400 +0100
-+++ b/PrettyTooltip/Locale/frFR.lua	2026-11-22 15:03:40.111892500 +0100
-@@ -93,7 +93,7 @@
+--- a/PrettyTooltip/Locale/frFR.lua	2026-11-27 09:46:17.798779000 +0100
++++ b/PrettyTooltip/Locale/frFR.lua	2026-11-27 09:46:18.233954100 +0100
+@@ -115,7 +115,7 @@
  L["Recipe"] = "Recette"
  L["Made by %s"] = "Fabriqué par %s"
  L["Expected value"] = "Valeur estimée"
@@ -10,7 +10,7 @@ diff -ruN a/PrettyTooltip/Locale/frFR.lua b/PrettyTooltip/Locale/frFR.lua
  L["Creates"] = "Crée"
  L["Reagents"] = "Composants"
  L["Equipped"] = "Équipé"
-@@ -131,7 +131,7 @@
+@@ -153,7 +153,7 @@
  L["Ready to turn in"] = "À rendre"
  L["In progress"] = "En cours"
  L["AFK"] = "ABS"
@@ -20,33 +20,19 @@ diff -ruN a/PrettyTooltip/Locale/frFR.lua b/PrettyTooltip/Locale/frFR.lua
  -- The spell power rows.
  L["Healing per Second"] = "Soins par seconde"
 diff -ruN a/PrettyTooltip/PrettyTooltip_Camelot.toc b/PrettyTooltip/PrettyTooltip_Camelot.toc
---- a/PrettyTooltip/PrettyTooltip_Camelot.toc	2026-11-22 15:03:40.051214700 +0100
-+++ b/PrettyTooltip/PrettyTooltip_Camelot.toc	2026-11-22 15:03:40.177553500 +0100
+--- a/PrettyTooltip/PrettyTooltip_Camelot.toc	2026-11-27 09:46:17.784737300 +0100
++++ b/PrettyTooltip/PrettyTooltip_Camelot.toc	2026-11-27 09:46:17.923612600 +0100
 @@ -5,6 +5,7 @@
  ## X-License: MIT
  ## X-Curse-Project-ID: 1720719
- ## Version: 1.4.2
-+## X-Pack-Patches: wow-forever-guide (BurN-30) - #47 frFR party-names quest-log-done, see docs/prettytooltip-correctifs.md
+ ## Version: 1.5.0
++## X-Pack-Patches: wow-forever-guide (BurN-30) - frFR party-names quest-log-done, see docs/prettytooltip-correctifs.md
  ## IconTexture: Interface\AddOns\PrettyTooltip\art\logo
  ## SavedVariables: PrettyTooltipDB, PrettyTooltipCaptures
  ## OptionalDeps: Questie, Auctionator, DialogueUI, EllesmereUI, LibSharedMedia-3.0
-diff -ruN a/PrettyTooltip/Tooltips/Item.lua b/PrettyTooltip/Tooltips/Item.lua
---- a/PrettyTooltip/Tooltips/Item.lua	2026-11-22 15:03:39.986014700 +0100
-+++ b/PrettyTooltip/Tooltips/Item.lua	2026-11-22 15:03:40.146969300 +0100
-@@ -587,7 +587,9 @@
-             item.footerLeft[#item.footerLeft].color = rgb(line.leftColor)
-         end
-     -- A client can recognize more of a set's bonuses, as retail's active "Set: ...".
--    elseif read.inSet and (unformat(trimmed, ITEM_SET_BONUS_GRAY)
-+    -- [pack patch #47] An active bonus is written "Set: ..." (ITEM_SET_BONUS, "Complet : ..." in French)
-+    -- on WoW Forever too, not only on retail: it stays in the list, in the game's green.
-+    elseif read.inSet and (unformat(trimmed, ITEM_SET_BONUS_GRAY) or unformat(trimmed, ITEM_SET_BONUS)
-         or (extension and extension.isSetBonus and extension.isSetBonus(trimmed, line, context))) then
-         add(item.setBonuses, left, right)
-         item.setBonuses[#item.setBonuses].active = isActive(line.leftColor)
 diff -ruN a/PrettyTooltip/Tooltips/Quest.lua b/PrettyTooltip/Tooltips/Quest.lua
---- a/PrettyTooltip/Tooltips/Quest.lua	2026-11-22 15:03:39.989521200 +0100
-+++ b/PrettyTooltip/Tooltips/Quest.lua	2026-11-22 15:03:40.148977000 +0100
+--- a/PrettyTooltip/Tooltips/Quest.lua	2026-11-27 09:46:17.872462900 +0100
++++ b/PrettyTooltip/Tooltips/Quest.lua	2026-11-27 09:46:18.661345200 +0100
 @@ -70,6 +70,18 @@
      return type(color) == "table" and color[1] > .9 and color[2] < .4 and color[3] < .4
  end
@@ -79,8 +65,8 @@ diff -ruN a/PrettyTooltip/Tooltips/Quest.lua b/PrettyTooltip/Tooltips/Quest.lua
          model.objectives[#model.objectives + 1] = objective
      elseif label then
 diff -ruN a/PrettyTooltip/Tooltips/Unit.lua b/PrettyTooltip/Tooltips/Unit.lua
---- a/PrettyTooltip/Tooltips/Unit.lua	2026-11-22 15:03:39.992533500 +0100
-+++ b/PrettyTooltip/Tooltips/Unit.lua	2026-11-22 15:03:40.147474100 +0100
+--- a/PrettyTooltip/Tooltips/Unit.lua	2026-11-27 09:46:17.863938200 +0100
++++ b/PrettyTooltip/Tooltips/Unit.lua	2026-11-27 09:46:18.667873500 +0100
 @@ -332,6 +332,15 @@
                      if not isSecret(line.completed) then
                          model.quests[#model.quests].completed = line.completed == true

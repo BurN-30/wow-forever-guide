@@ -1,14 +1,29 @@
-# PrettyTooltip 1.4.2 : correctifs du pack / pack patches
+# PrettyTooltip 1.5.0 : correctifs du pack / pack patches
 
 Français d'abord, [English below](#english).
 
 ## Français
 
-Le pack installe PrettyTooltip 1.4.2 (FallenShard, licence MIT), à partir de la release officielle [v1.4.2](https://github.com/FallenShard/PrettyTooltip/releases/tag/v1.4.2) du 16/11/2026 (`PrettyTooltip-v1.4.2.zip`). Depuis la 1.4.0, le même téléchargement sert aussi au WoW actuel : l'addon a un `.toc` par jeu, `PrettyTooltip_Camelot.toc` (WoW Forever) et `PrettyTooltip_Mainline.toc` (WoW actuel), et plus de `PrettyTooltip.toc`. Le numéro de version reste 1.4.2 dans `PrettyTooltip_Camelot.toc`, pour que l'auteur reconnaisse la base ; une ligne `## X-Pack-Patches:` y signale les changements.
+Le pack installe PrettyTooltip 1.5.0 (FallenShard, licence MIT), à partir de la release officielle [v1.5.0](https://github.com/FallenShard/PrettyTooltip/releases/tag/v1.5.0) (`PrettyTooltip-v1.5.0.zip`, relevée le 27/11/2026). Depuis la 1.4.0, le même téléchargement sert aussi au WoW actuel : l'addon a un `.toc` par jeu, `PrettyTooltip_Camelot.toc` (WoW Forever) et `PrettyTooltip_Mainline.toc` (WoW actuel), et plus de `PrettyTooltip.toc`. Le numéro de version reste 1.5.0 dans `PrettyTooltip_Camelot.toc`, pour que l'auteur reconnaisse la base ; une ligne `## X-Pack-Patches:` y signale les changements.
 
-Ce fichier liste chaque écart avec la release. Le diff complet est dans [`prettytooltip-1.4.2.patch`](prettytooltip-1.4.2.patch) : appliqué sur la release décompressée (`git apply -p1 docs/prettytooltip-1.4.2.patch` depuis le dossier qui contient `PrettyTooltip`), il redonne le dossier `addons/PrettyTooltip` du dépôt octet pour octet (vérifié le 22/11/2026).
+Ce fichier liste chaque écart avec la release. Le diff complet est dans [`prettytooltip-1.5.0.patch`](prettytooltip-1.5.0.patch) : appliqué sur la release décompressée (`git apply -p1 docs/prettytooltip-1.5.0.patch` depuis le dossier qui contient `PrettyTooltip`), il redonne le dossier `addons/PrettyTooltip` du dépôt octet pour octet (vérifié le 27/11/2026).
 
-Chaque ajout dans le code porte la marque `[pack patch]` (`[pack patch #47]` pour le correctif 1), à chercher pour les retrouver. Le correctif 3 change seulement deux valeurs de `Locale/frFR.lua`, sans marque.
+Chaque ajout dans le code porte la marque `[pack patch]`, à chercher pour les retrouver. Le correctif 3 change seulement deux valeurs de `Locale/frFR.lua`, sans marque.
+
+### Passage à la 1.5.0 (27/11/2026)
+
+Les numéros restent ceux de la 1.3.8. Restent les correctifs 3, 4 et 6 ; le 1 est retiré.
+
+| Correctif | En 1.5.0 | Raison |
+|---|---|---|
+| 1, bonus d'ensemble actif (#47) | **retiré** | fait par l'auteur en 1.5.0 pour tous les jeux : la condition de `readContent` (`Tooltips/Item.lua` ligne 596) accepte maintenant `ITEM_SET_BONUS` sans extension propre au WoW actuel, exactement notre correction ; en plus, le bonus actif reçoit son nombre de pièces, « (2) », quand les pièces portées le disent sans doute (`countActiveBonuses`) |
+| 3, traduction française | gardé | l'amont garde « NI %s » et « NPD » (lignes 118 et 156 de `Locale/frFR.lua`, décalées de 22 lignes) |
+| 4, noms des membres du groupe sous une quête | gardé | s'applique tel quel (`Tooltips/Unit.lua`, repères aux lignes 335 et 528) |
+| 6, objectifs remplis du journal de la carte | gardé | s'applique tel quel (`Tooltips/Quest.lua`, repères aux lignes 73 et 166) |
+
+Nouveautés de l'auteur à connaître (journal de la 1.5.0) : éditeur de style refait (**General** et **All Tooltips**, réglages par type d'infobulle, **Row Spacing** et **Section Spacing**) ; le fondu des infobulles passe sous **All Tooltips**, rubrique **Behavior** ; les enchantements reviennent après les effets « Équipé » et « Chances quand vous touchez » ; l'enchantement temporaire de l'arme d'un autre joueur (« Windfury 4 » dans les notes de l'auteur) s'affiche avec les enchantements ; la pierre de foyer écrit le lieu de retour en bleu.
+
+Vérifié le 27/11/2026, hors jeu : le patch appliqué sur la release redonne le dossier du dépôt octet pour octet ; `check-pack.py` charge l'addon avec tout le paquet, clients français et anglais (résultat dans le rapport de la 0.14.0). Lecture du code seulement pour le retrait du correctif 1 : la nouvelle condition a été lue, pas rejouée sur des lignes d'infobulle.
 
 ### Passage à la 1.4.2 (22/11/2026)
 
@@ -36,8 +51,9 @@ Nouveautés de l'auteur à connaître (journal des versions 1.3.9 à 1.4.2) :
 - Les termes du client viennent de la table GlobalStrings du build 1.60.1.70862 (wago.tools, produit wowf, frFR et enUS).
 - Le jeu ne peut pas être lancé ici. En 1.3.8, chaque correction a été vérifiée hors jeu : syntaxe Lua 5.1 des 54 fichiers de l'addon, et lecteur réel de l'addon (`Core/Util.lua`, `Game/TooltipData.lua`, `Tooltips/Aura.lua` ou `Tooltips/Item.lua` chargés sous Lua 5.1) appliqué aux lignes d'infobulle du ticket, en anglais et en français : la release reproduit le bug, la copie corrigée non. Reste à confirmer en jeu (voir plus bas).
 
-### Correctif 1 : bonus d'ensemble actif déplacé en bas (ticket #47)
+### Correctif 1 : bonus d'ensemble actif déplacé en bas (ticket #47), retiré
 
+- Retiré le 27/11/2026 : l'auteur fait la même correction en 1.5.0, pour Forever aussi (« Set bonuses you have earned stay with their set instead of falling among other addons' rows »), et y ajoute le nombre de pièces du bonus actif quand il est sûr. Ce qui suit décrit le correctif tel qu'il était de la 1.3.8 à la 1.4.2.
 - Ticket : [#47](https://github.com/FallenShard/PrettyTooltip/issues/47), « when you get a set bonus it disappears from the list of bonuses and goes in a bottom region », étiquette `bug`, toujours ouvert le 22/11/2026.
 - Clients : les deux. La correction lit les chaînes du jeu (`ITEM_SET_BONUS`, `ITEM_SET_BONUS_GRAY`), pas un texte écrit en dur : « Set: » en anglais, « Complet : » en français.
 - Fichier : `Tooltips/Item.lua`, lignes 589 à 594 (fonction `readContent`, appelée par `readModel`) ; repère `[pack patch #47]`.
@@ -153,7 +169,7 @@ Aucun ticket ne cite Polestar, Auctionator ou le client français ; les rapports
 
 ### À vérifier en jeu
 
-1. **#47** (clients FR et EN) : avec un ensemble dont un bonus est actif (par exemple 2 pièces d'un ensemble à bonus « (2) »), survoler une pièce. Attendu : le bonus actif reste dans la liste des bonus, en tête, en vert, écrit « Complet : … » (« Set: … » en anglais) ; les bonus inactifs suivent en gris ; plus de ligne de bonus isolée en bas du cadre. Vérifier aussi un ensemble sans aucun bonus actif (rien ne change) et la comparaison avec l'objet équipé (Maj).
+1. **#47** (version de l'auteur depuis la 1.5.0, clients FR et EN ; le nombre « (2) » devant le bonus actif est nouveau) : avec un ensemble dont un bonus est actif (par exemple 2 pièces d'un ensemble à bonus « (2) »), survoler une pièce. Attendu : le bonus actif reste dans la liste des bonus, en tête, en vert, écrit « Complet : … » (« Set: … » en anglais) ; les bonus inactifs suivent en gris ; plus de ligne de bonus isolée en bas du cadre. Vérifier aussi un ensemble sans aucun bonus actif (rien ne change) et la comparaison avec l'objet équipé (Maj).
 2. **#49** (version de l'auteur depuis la 1.3.9, clients FR et EN) : taper `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 1)`, survoler une amélioration (par exemple une armure de démoniste, une bénédiction). Attendu : la description sous le nom, puis la durée et la barre ; le numéro ne remplace plus la description. Ensuite `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 0)` : cadre identique à avant, sans la ligne du numéro.
 3. **Traduction** (client FR seulement) : survoler une pièce d'équipement (plaque « NivO 25 » sous l'icône, texte entier, non coupé) ; survoler un joueur en mode Ne pas déranger (`/dnd` tapé par un second personnage) : plaque « Occupé(e) ». Sur le client anglais, rien ne change (« iLvl 25 », « DND »).
 4. **Noms du groupe** (clients FR et EN) : en groupe, avec la même quête que d'autres membres, survoler un monstre de cette quête. Attendu : sous le titre de la quête, chaque nom en jaune, et ses objectifs décalés en dessous, en beige.
@@ -162,7 +178,22 @@ Aucun ticket ne cite Polestar, Auctionator ou le client français ; les rapports
 
 ## English
 
-PrettyTooltip 1.4.2 (FallenShard, MIT licence), installed from the official [v1.4.2](https://github.com/FallenShard/PrettyTooltip/releases/tag/v1.4.2) release of 2026-11-16 (`PrettyTooltip-v1.4.2.zip`), with the patches below. Since 1.4.0 the same download also runs on current retail WoW: the addon has one `.toc` per game, `PrettyTooltip_Camelot.toc` (WoW Forever) and `PrettyTooltip_Mainline.toc` (retail), and no `PrettyTooltip.toc` any more. `PrettyTooltip_Camelot.toc` keeps version 1.4.2 so the author recognises the base; a `## X-Pack-Patches:` line there flags the changes. The full diff is [`prettytooltip-1.4.2.patch`](prettytooltip-1.4.2.patch): `git apply -p1 docs/prettytooltip-1.4.2.patch`, run from the folder holding the unzipped `PrettyTooltip`, rebuilds the repository's `addons/PrettyTooltip` byte for byte (checked 2026-11-22). Every code addition carries a `[pack patch]` mark (`[pack patch #47]` for patch 1); patch 3 only changes two values in `Locale/frFR.lua`, without a mark.
+PrettyTooltip 1.5.0 (FallenShard, MIT licence), installed from the official [v1.5.0](https://github.com/FallenShard/PrettyTooltip/releases/tag/v1.5.0) release (`PrettyTooltip-v1.5.0.zip`, taken on 2026-11-27), with the patches below. Since 1.4.0 the same download also runs on current retail WoW: the addon has one `.toc` per game, `PrettyTooltip_Camelot.toc` (WoW Forever) and `PrettyTooltip_Mainline.toc` (retail), and no `PrettyTooltip.toc` any more. `PrettyTooltip_Camelot.toc` keeps version 1.5.0 so the author recognises the base; a `## X-Pack-Patches:` line there flags the changes. The full diff is [`prettytooltip-1.5.0.patch`](prettytooltip-1.5.0.patch): `git apply -p1 docs/prettytooltip-1.5.0.patch`, run from the folder holding the unzipped `PrettyTooltip`, rebuilds the repository's `addons/PrettyTooltip` byte for byte (checked 2026-11-27). Every code addition carries a `[pack patch]` mark; patch 3 only changes two values in `Locale/frFR.lua`, without a mark.
+
+### Moving to 1.5.0 (2026-11-27)
+
+The patches keep their 1.3.8 numbers. Patches 3, 4 and 6 remain; patch 1 is dropped.
+
+| Patch | In 1.5.0 | Why |
+|---|---|---|
+| 1, active set bonus (#47) | **dropped** | done by the author in 1.5.0 for every game: `readContent`'s condition (`Tooltips/Item.lua` line 596) now accepts `ITEM_SET_BONUS` with no retail-only extension, exactly our fix; on top of it, the active bonus gets its piece count, "(2)", when the pieces worn leave no doubt (`countActiveBonuses`) |
+| 3, French translation | kept | upstream still has "NI %s" and "NPD" (lines 118 and 156 of `Locale/frFR.lua`, 22 lines down) |
+| 4, party member names under a quest | kept | applies as is (`Tooltips/Unit.lua`, markers at lines 335 and 528) |
+| 6, done objectives in the world map quest log | kept | applies as is (`Tooltips/Quest.lua`, markers at lines 73 and 166) |
+
+Upstream changes worth knowing (1.5.0 changelog): the style editor is redone (**General** and **All Tooltips**, per tooltip type settings, **Row Spacing** and **Section Spacing**); tooltip fading moves under **All Tooltips**, **Behavior**; enchants come after Equip and chance on hit effects again; another player's temporary weapon enchant ("Windfury 4") shows with the enchants; the Hearthstone shows your home in blue.
+
+Checked on 2026-11-27, outside the game: the patch applied to the release rebuilds the repository's folder byte for byte; `check-pack.py` loads the addon with the whole pack, French and English clients (results in the 0.14.0 report). Patch 1's removal rests on reading the code: the new condition was read, not replayed on tooltip lines.
 
 ### Moving to 1.4.2 (2026-11-22)
 
@@ -190,8 +221,9 @@ Upstream changes worth knowing (changelog 1.3.9 to 1.4.2):
 - Client wording comes from the GlobalStrings table of build 1.60.1.70862 (wago.tools, product wowf, frFR and enUS).
 - The game cannot be run here. On 1.3.8 each fix was checked outside the game: Lua 5.1 syntax of the addon's 54 files, and the addon's real reader (`Core/Util.lua`, `Game/TooltipData.lua`, `Tooltips/Aura.lua` or `Tooltips/Item.lua` loaded under Lua 5.1) run on the issue's tooltip lines in English and French: the release reproduces the bug, the patched copy does not. In-game checks are listed below.
 
-### Patch 1: an active set bonus moves to the bottom (issue #47)
+### Patch 1: an active set bonus moves to the bottom (issue #47), dropped
 
+- Dropped on 2026-11-27: the author makes the same fix in 1.5.0, on Forever too ("Set bonuses you have earned stay with their set instead of falling among other addons' rows"), and adds the active bonus's piece count when it is certain. What follows describes the patch as it was from 1.3.8 to 1.4.2.
 - Issue still open on 2026-11-22. Clients: both (reads the game's `ITEM_SET_BONUS` and `ITEM_SET_BONUS_GRAY`: "Set:" in English, "Complet :" in French).
 - File: `Tooltips/Item.lua`, lines 589 to 594 (`readContent`, called by `readModel`); `[pack patch #47]` marker.
 - Cause: the client prints an inactive bonus as "(3) Set: ..." (`ITEM_SET_BONUS_GRAY`) and an active one as "Set: ..." (`ITEM_SET_BONUS`), without the piece count. The reader only knew the first form, so a bonus that became active left the bonus list and fell into the miscellaneous rows at the bottom. Since 1.4.0 upstream recognises the active form through a retail-only extension (`extension.isSetBonus`); on Forever nothing recognises it yet.
@@ -280,7 +312,7 @@ State read on 2026-11-10 on 1.3.8, updated for #50.
 
 ### In-game checks
 
-1. **#47** (FR and EN clients): with a set that has one active bonus, hover a piece. Expected: the active bonus stays first in the bonus list, green ("Set: ..." / "Complet : ..."), inactive bonuses follow in grey, no stray bonus line at the bottom. Also check a set with no active bonus (unchanged) and the comparison with the equipped item (Shift).
+1. **#47** (the author's fix since 1.5.0, FR and EN clients; the "(2)" before the active bonus is new): with a set that has one active bonus, hover a piece. Expected: the active bonus stays first in the bonus list, green ("Set: ..." / "Complet : ..."), inactive bonuses follow in grey, no stray bonus line at the bottom. Also check a set with no active bonus (unchanged) and the comparison with the equipped item (Shift).
 2. **#49** (the author's fix since 1.3.9, FR and EN clients): `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 1)`, hover a buff. Expected: description under the name, then time and bar; the ID no longer replaces the description. Then `/run C_CVar.SetCVar("tooltipShowAuraSpellIDs", 0)`: panel as before, without the ID line.
 3. **Translation** (FR client only): item plate "NivO 25" under the icon, not cut; a player in Do Not Disturb (`/dnd` on a second character) shows "Occupé(e)". The English client is unchanged ("iLvl 25", "DND").
 4. **Party names** (FR and EN clients): in a group sharing a quest, hover one of its mobs. Expected: under the quest title, each name in yellow, its objectives indented below in beige.
