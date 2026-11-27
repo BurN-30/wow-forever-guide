@@ -13,7 +13,11 @@ fenêtre (--headless --no-self-update --no-shortcut --ignore-running), trois foi
 2. relance : « déjà à jour », rien de téléchargé, rien de touché ;
 3. par-dessus une ancienne installation simulée (paquet v0.0.1, ancien dossier GroupeAlliance) :
    les anciens dossiers partent dans Interface\\_guide-sauvegarde avec leur contenu, les
-   nouveautés des versions sautées sont listées.
+   nouveautés des versions sautées sont listées ;
+4. par-dessus le paquet 0.13.1 (Polestar 0.4.2.2 : 44 dossiers Polestar*), avec etat.txt qui les liste :
+   les 21 dossiers que Polestar 0.4.3 a fondus dans d'autres partent dans la sauvegarde ;
+5. le même, sans etat.txt (installation par le ZIP, autre PC) : ces noms connus partent aussi.
+   Polestar_Recorder, que le paquet ne livre pas, n'est jamais touché.
 
 Un autre addon et le dossier WTF ne doivent jamais être touchés. Code de sortie 1 au premier
 contrôle qui échoue (avec la fin du journal du programme), 0 si tout passe. Le dossier
@@ -39,6 +43,20 @@ PACK = "PolestarPack_GroupeAlliance"
 REPO_PATH = "/repos/test/wow-forever-guide"
 OLD_VERSION, SKIPPED_VERSION = "0.0.1", "0.0.2"
 TIMEOUT = 600  # secondes par lancement
+# Le paquet 0.13.1 : Polestar 0.4.2.2 en 42 dossiers (plus les deux du paquet), dont 21 que
+# Polestar 0.4.3 a fondus dans d'autres (Polestar_Skins, Polestar_Guides_Alliance et _Horde, Polestar).
+OLD_0131 = "0.13.1"
+OLD_0131_POLESTAR = [
+    "Polestar", "Polestar_Arcade", "Polestar_Codex", "Polestar_deDE", "Polestar_esES", "Polestar_esMX",
+    "Polestar_Experimental", "Polestar_frFR", "Polestar_Guides", "Polestar_Guides_Alliance", "Polestar_Guides_Dwarf",
+    "Polestar_Guides_Gnome", "Polestar_Guides_Horde", "Polestar_Guides_Human", "Polestar_Guides_NightElf",
+    "Polestar_Guides_Orc", "Polestar_Guides_Scourge", "Polestar_Guides_Skyborne", "Polestar_Guides_Tauren",
+    "Polestar_Guides_Troll", "Polestar_ItemDB", "Polestar_koKR", "Polestar_Looks", "Polestar_Nav", "Polestar_Nav_EK",
+    "Polestar_Nav_Kalimdor", "Polestar_Options", "Polestar_ptBR", "Polestar_QuestDB", "Polestar_ruRU",
+    "Polestar_SkinAPI", "Polestar_Skin_Aurora", "Polestar_Skin_Beacon", "Polestar_Skin_Hairline",
+    "Polestar_Skin_Lanterns", "Polestar_Skin_Lumen", "Polestar_Skin_Sheen", "Polestar_Skin_Umbra",
+    "Polestar_Skin_Vellum", "Polestar_Skin_Waymark", "Polestar_zhCN", "Polestar_zhTW",
+]
 
 
 class Echec(Exception):
@@ -293,6 +311,43 @@ def main():
                   f"nouveautés de la version sautée v{SKIPPED_VERSION} non affichées")
             check((snapshot(addons / "AutreAddon"), snapshot(wow / "_forever_" / "WTF")) == other, "autre addon ou WTF modifié")
             print(f"OK {step} : anciens dossiers sauvegardés ({', '.join(sorted(old))}), versions sautées listées")
+
+            # 4 et 5. Par-dessus le paquet 0.13.1 (Polestar 0.4.2.2, 44 dossiers Polestar*) : avec la mémoire du
+            # programme qui les liste (4), puis sans elle, comme après une installation par le ZIP (5).
+            # Les dossiers que Polestar 0.4.3 a fondus dans d'autres partent dans la sauvegarde,
+            # Polestar_Recorder (jamais livré par le paquet) et l'autre addon restent.
+            for step, with_state in (("4. mise à jour du paquet 0.13.1 (Polestar 0.4.2.2)", True),
+                                     ("5. même mise à jour, sans etat.txt", False)):
+                data = tmp / ("donnees4" if with_state else "donnees5")
+                run = Runner(exe, gh.latest_url, data)
+                wow, addons = fake_game(tmp / ("jeu4" if with_state else "jeu5"))
+                iface = addons.parent
+                folders = OLD_0131_POLESTAR + [PACK, PACK + "_frFR"]
+                for folder in folders + ["Polestar_Recorder"]:
+                    (addons / folder).mkdir()
+                    version_line = f"## Version: {OLD_0131}\n" if folder.startswith(PACK) else "## Version: 0.4.2.2\n"
+                    (addons / folder / f"{folder}.toc").write_text("## Interface: 16001\n" + version_line, encoding="utf-8")
+                if with_state:
+                    data.mkdir()
+                    (data / "etat.txt").write_text(f"jeu=\nversion={OLD_0131}\ndossiers={';'.join(folders)}\nraccourci=1\n",
+                                                   encoding="utf-8")
+                other = snapshot(addons / "AutreAddon"), snapshot(addons / "Polestar_Recorder"), snapshot(wow / "_forever_" / "WTF")
+                code, log = run.run(wow)
+                check(code == 0, f"code de retour {code}")
+                check(f"Mise à jour de v{OLD_0131} vers v{version}" in log, "version installée non reconnue (v" + OLD_0131 + ")")
+                roots, _ = check_installed(addons, z, version)
+                gone = [f for f in OLD_0131_POLESTAR if f not in roots]
+                left = [f for f in gone if (addons / f).exists()]
+                check(not left, f"anciens dossiers laissés dans AddOns : {left}")
+                missing = [f for f in gone if not (iface / "_guide-sauvegarde" / f / f"{f}.toc").is_file()]
+                check(not missing, f"anciens dossiers absents de la sauvegarde : {missing}")
+                check((addons / "Polestar_Skins").is_dir() or "Polestar_Skins" not in roots, "Polestar_Skins absent")
+                check((snapshot(addons / "AutreAddon"), snapshot(addons / "Polestar_Recorder"),
+                       snapshot(wow / "_forever_" / "WTF")) == other, "autre addon, Polestar_Recorder ou WTF modifié")
+                kept = sorted(f.name for f in addons.iterdir() if f.is_dir())
+                check(kept == sorted(roots + ["AutreAddon", "Polestar_Recorder"]), f"dossiers inattendus dans AddOns : {kept}")
+                print(f"OK {step} : {len(gone)} anciens dossiers retirés et sauvegardés, {len(roots)} dossiers en place, "
+                      "Polestar_Recorder et l'autre addon intacts")
         except Echec as e:
             print(f"ÉCHEC {step} : {e}", file=sys.stderr)
             print("  Fin du journal du programme :\n" + run.tail(), file=sys.stderr)

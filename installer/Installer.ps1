@@ -111,9 +111,13 @@ foreach ($f in $folders) {
 	$n++
 }
 # Les anciennes versions de Polestar (0.2.x) avaient des dossiers de langue séparés ;
-# l'addon GroupeAlliance (paquet 0.1.0) est maintenant dans le dossier Polestar.
+# l'addon GroupeAlliance (paquet 0.1.0) est maintenant dans le dossier Polestar ;
+# Polestar 0.4.3 a fondu dans d'autres dossiers ceux de la 0.4.2.2 nommés ici (paquet 0.13.x).
+$legacy = '^(Polestar_(Guides|Names)_[a-z]{2}[A-Z]{2}|GroupeAlliance|Polestar_(Experimental|Looks|SkinAPI)' +
+	'|Polestar_Skin_(Aurora|Beacon|Hairline|Lanterns|Lumen|Sheen|Umbra|Vellum|Waymark)' +
+	'|Polestar_Guides_(Dwarf|Gnome|Human|NightElf|Orc|Scourge|Skyborne|Tauren|Troll))$'
 Get-ChildItem -LiteralPath $addons -Directory -ErrorAction SilentlyContinue |
-	Where-Object { $_.Name -match '^Polestar_(Guides|Names)_[a-z]{2}[A-Z]{2}$' -or $_.Name -eq 'GroupeAlliance' } |
+	Where-Object { $_.Name -cmatch $legacy } |
 	ForEach-Object { Remove-Item -LiteralPath $_.FullName -Recurse -Force; Say "Ancien dossier retiré : $($_.Name)" }
 
 Say "$n addons installés ou mis à jour." "Green"

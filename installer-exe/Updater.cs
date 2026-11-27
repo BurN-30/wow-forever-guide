@@ -53,8 +53,13 @@ namespace GuideWoWForever
 		const string StagingName = "_guide-maj-en-cours";
 		const string BackupName = "_guide-sauvegarde";
 
-		// Dossiers des anciennes versions (Polestar 0.2.x, paquet 0.1.0) à retirer.
-		static readonly Regex Legacy = new Regex(@"^(Polestar_(Guides|Names)_[a-z]{2}[A-Z]{2}|GroupeAlliance)$");
+		// Dossiers des anciennes versions à retirer : Polestar 0.2.x (dossiers de langue), paquet
+		// 0.1.0 (GroupeAlliance), et ceux de Polestar 0.4.2.2 que Polestar 0.4.3 a fondus dans d'autres
+		// (paquet 0.13.x) : utile quand etat.txt ne les liste pas (installation par le ZIP, autre PC).
+		static readonly Regex Legacy = new Regex(@"^(Polestar_(Guides|Names)_[a-z]{2}[A-Z]{2}|GroupeAlliance"
+			+ @"|Polestar_(Experimental|Looks|SkinAPI)"
+			+ @"|Polestar_Skin_(Aurora|Beacon|Hairline|Lanterns|Lumen|Sheen|Umbra|Vellum|Waymark)"
+			+ @"|Polestar_Guides_(Dwarf|Gnome|Human|NightElf|Orc|Scourge|Skyborne|Tauren|Troll))$");
 
 		readonly Options o;
 		readonly IUi ui;
