@@ -1,0 +1,45 @@
+# Auctionator 354 (plusmouse, Borjamacare ; tous droits réservés) : correctifs du pack wow-forever-guide.
+# Base : Auctionator-354.zip publié sur CurseForge (SHA-1 ece0e7fc267c1d9267fc19083e10d0827bbdd723, SHA-256 67e3d471abc0fc725db5dfc4a72015c69f469e882717b1efe750a26670bbbb22). Détail : docs/auctionator-correctifs.md
+# Appliquer depuis le dossier qui contient Auctionator : git -c core.autocrlf=false apply -p1 auctionator-354.patch
+diff -ruN a/Auctionator/Auctionator.toc b/Auctionator/Auctionator.toc
+--- a/Auctionator/Auctionator.toc
++++ b/Auctionator/Auctionator.toc
+@@ -1,6 +1,7 @@
+ ## Interface: 120100, 120105, 16001, 50504, 38000, 20506, 11508, 11509
+ ## Title: Auctionator
+ ## Version: 354
++## X-Pack-Patches: wow-forever-guide (BurN-30) - suffix price keys (DBKeyFromLink), price key migration guard; see docs/auctionator-correctifs.md
+ ## Author: plusmouse, Borjamacare
+ ## X-Website: https://www.curseforge.com/wow/addons/auctionator
+ ## X-Category: Auction/Economy
+diff -ruN a/Auctionator/Source/Utilities/DBKeyFromLink.lua b/Auctionator/Source/Utilities/DBKeyFromLink.lua
+--- a/Auctionator/Source/Utilities/DBKeyFromLink.lua
++++ b/Auctionator/Source/Utilities/DBKeyFromLink.lua
+@@ -57,6 +57,10 @@
+             if index then
+               callback({"gr:" .. itemID .. ":" .. index, basicKey})
+             elseif #Auctionator.Utilities.SuffixesExtraChecks > 0 then
++              -- [pack patch] `seen` was a global never set back to false: after one item matched here,
++              -- an item with a suffix no check matches never called back (no price). Local, as in
++              -- Source_ModernAH/Utilities/DBKeyFromBrowseResult.lua.
++              local seen = false
+               for _, bonusID in ipairs(Auctionator.Utilities.SuffixesExtraChecks) do
+                 local newLink = "item:" .. itemID .. string.rep(":", 12) .. "1:" .. bonusID
+                 local newName = C_Item.GetItemNameByID(newLink)
+diff -ruN a/Auctionator/Source/Variables/Main.lua b/Auctionator/Source/Variables/Main.lua
+--- a/Auctionator/Source/Variables/Main.lua
++++ b/Auctionator/Source/Variables/Main.lua
+@@ -175,8 +175,11 @@
+     local new = {suffixes = true}
+     for key, value in pairs(AUCTIONATOR_PRICE_DATABASE[realm]) do
+       local p1, p2 = key:match("(gr:%d+:)([%a%s']+)")
+-      if p1 and p2 then
+-        local newKey = p1 .. tIndexOf(Auctionator.Utilities.SuffixLabels, p2)
++      -- [pack patch] A label this version does not list (tIndexOf: nil) keeps its key, instead of a
++      -- Lua error that would stop the whole price database from loading.
++      local index = p1 and p2 and tIndexOf(Auctionator.Utilities.SuffixLabels, p2)
++      if index then
++        local newKey = p1 .. index
+         new[newKey] = value
+       else
+         new[key] = value
