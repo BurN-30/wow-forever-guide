@@ -55,6 +55,12 @@ step Rhahk'Zor
   kill 644                                    -- Rhahk'Zor
   collect 915 quest 214                       -- Red Silk Bandana: any Defias
 
+step Paladins: Whitestone Oak Lumber
+  only Paladin
+  when onquest 1654
+  tip The Goblin Woodcarvers of the lumber room drop the Whitestone Oak Lumber for The Test of Righteousness (Jordan Stilwell, Ironforge): one is enough.
+  collect 6994 quest 1654                     -- Whitestone Oak Lumber: Goblin Woodcarver
+
 step Sneed's Shredder and Sneed
   tip Clear every Goblin Woodcarver of the lumber room first, pulling them back to the previous room: the Shredder's Terrify sends you running into them. Sneed jumps out when it breaks; he disarms.
   kill 643                                    -- Sneed

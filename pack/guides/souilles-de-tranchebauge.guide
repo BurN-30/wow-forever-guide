@@ -66,6 +66,7 @@ step Razorfen Downs: Myriam Moonsinger
 step Razorfen Downs: Belnistrasz
   tip Belnistrasz waits in a prison cell inside. His quests cannot be shared: every player takes Scourge of the Downs and hands it in to him (he wants his Oathstone back) BEFORE anyone starts Extinguishing the Idol. Then he walks to the idol and casts while waves of enemies come: stay close and keep them off him; it ends at his brazier.
   note Share nothing here: each player talks to Belnistrasz.
+  note Polestar asks whether to do this escort: in a group, answer Do it (Skip it takes the quest out of the chapter).
   accept 3523                         -- Belnistrasz
   turnin 3523
   accept 3525

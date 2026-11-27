@@ -508,8 +508,8 @@ step Blackrock Depths: quests not done
 # left alive (Warcraft Tavern's advice) -> Omokk, Tazz'Alaor (Voone), the Skitterweb Tunnels
 # (Smolderweb, the eggs), Urok's Tribute Pile, Halycon, Wyrmthalak -> Warosh -> Flame Crest ->
 # Morgan's Vigil.
-# Left out: Seal of Ascension (Vaelan: the key of Upper Blackrock Spire, a 10-player dungeon, then
-# Emberstrife in Dustwallow Marsh), The Final Tablets (Mosh'aru's chain), Snakestone of the Shadow
+# Left out: Seal of Ascension (Vaelan, then Emberstrife in Dustwallow Marsh: on Forever it no longer
+# rewards the seal, and Upper Blackrock Spire takes no key: Polestar 0.4.3.1, data/codex/attunements.json), The Final Tablets (Mosh'aru's chain), Snakestone of the Shadow
 # Huntress (Kilram, Winterspring), Deliana's dungeon set quests, General Drakkisath's Demise (Upper
 # Blackrock Spire).
 step Lower Blackrock Spire (dungeon, optional)
@@ -537,7 +537,7 @@ step Lower Blackrock Spire: before going in
   when done lbrs-start
   zone Burning Steppes
   tip Into Blackrock Mountain on the Burning Steppes side. Two ways to the portal: the door beside the Blackrock Spire meeting stone and the path up (elites on it), or along the great chain and the wall to the balcony where Bodley stands, then a jump down onto it, with no fight. Inside, the stairs up on the left lead to Upper Blackrock Spire: not this time.
-  note In the quest log: Put Her Down (Helendis), Kibler's Exotic Pets and En-Ay-Es-Tee-Why (Kibler), Mother's Milk (Ragged John). Given inside: Urok Doomhowl (Warosh) and Bijou's Belongings (Bijou). Not on this route: Seal of Ascension (Vaelan, inside: the key of Upper Blackrock Spire, a 10-player dungeon), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, Winterspring), Deliana's dungeon set quests (Ironforge).
+  note In the quest log: Put Her Down (Helendis), Kibler's Exotic Pets and En-Ay-Es-Tee-Why (Kibler), Mother's Milk (Ragged John). Given inside: Urok Doomhowl (Warosh) and Bijou's Belongings (Bijou). Not on this route: Seal of Ascension (Vaelan, inside: on Forever it no longer rewards the seal, and Upper Blackrock Spire, a 10-player dungeon, takes no key), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, Winterspring), Deliana's dungeon set quests (Ironforge).
   goto 33.2,24.9 map 1428 "Blackrock Spire" r 25
 
 step Hordemar City: Warosh and Bijou
@@ -611,7 +611,7 @@ step Flame Crest: Ragged John
   when onquest 4866
   zone Burning Steppes
   tip Out of the Spire, north-east to Flame Crest. Ragged John: his talk option, while the poison is still on you. Poison gone? Mother's Milk cannot be done this time: skip this step.
-  kill 9563 quest 4866                -- Ragged John: let him milk you
+  complete 4866 @65.1,23.7            -- Ragged John: let him milk you
   turnin 4866                         -- Ragged John
 
 step Flame Crest: Kibler's worg pup
@@ -637,7 +637,7 @@ step Morgan's Vigil: Marshal Maxwell
 step Morgan's Vigil: General Drakkisath's Command
   when onquest 5089
   zone Burning Steppes
-  tip Maxwell's next quest, General Drakkisath's Demise, is for Upper Blackrock Spire (10 players, the Seal of Ascension to open it): not in this guide.
+  tip Maxwell's next quest, General Drakkisath's Demise, is for Upper Blackrock Spire (10 players): not in this guide.
   turnin 5089                         -- Marshal Maxwell
 
 step Lower Blackrock Spire: quests not done
@@ -646,7 +646,7 @@ step Lower Blackrock Spire: quests not done
   when onquest 4701,4729,4862,4866,4867,5081
   tip What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log).
   task "Each quest left: kept for another run, or abandoned"
-  tip Upper Blackrock Spire, up the stairs on the left past the Spire's entrance, is not in this guide: a dungeon made for a raid group of ten, behind a door that opens only with the Seal of Ascension. The seal takes Vaelan's two quests, given inside Lower Blackrock Spire: the gemstones of Highlord Omokk, War Master Voone and Overlord Wyrmthalak with an Unadorned Seal from the Spire's orcs, then Emberstrife, a drake of the Wyrmbog in Dustwallow Marsh, beaten down and bound with the Orb of Draconic Energy.
+  tip Upper Blackrock Spire, up the stairs on the left past the Spire's entrance, is not in this guide: a dungeon made for a raid group of ten. Upper Blackrock Spire takes no key on Forever (the Seal of Ascension quest no longer rewards it).
   abandon 4701 optional
   abandon 4729 optional
   abandon 4862 optional
@@ -853,8 +853,8 @@ step Shards of the Felvine: not done
 # The Restless Souls 5282 after 5281, handed to Egan on the route; Of Love and Family 5848 after 5846,
 # handed to Renfray on Caer Darrow, after Of Lost Honor 5845, done on the route; Krastinov's Bag of Horrors after Doctor Theolen Krastinov, Kirtonos
 # the Herald after the bag; Healthy Dragon Scale after Plagued Hatchlings). Polestar's data and
-# Warcraft Tavern name the tobacco merchant Ezra Grimm (The Great Ezra Grimm); TrinityCore keeps
-# the old title, The Great Fras Siabi. Rooms, bosses and how-to: Warcraft Tavern's Forever
+# Warcraft Tavern name the tobacco merchant Ezra Grimm (The Great Ezra Grimm, also the quest's
+# title in Polestar 0.4.3.1's data). Rooms, bosses and how-to: Warcraft Tavern's Forever
 # Stratholme (living and undead) and Scholomance dungeon and quest guides (warcrafttavern.com/
 # forever/guides/stratholme-living, stratholme-undead, stratholme-living-quests,
 # stratholme-undead-quests, scholomance, scholomance-quests, read on 12/11/2026), written from
@@ -1151,6 +1151,7 @@ step The Skeleton Key (optional)
   zone Western Plaguelands
   tip The Skeleton Key opens Scholomance: one player of the group with it is enough, and a rogue can pick the lock instead. Its chain is long: Alchemist Arbington at Chillwind Camp, Krinkle Goodsteel in Gadgetzan (15 gold), Fire Plume Ridge in Un'Goro Crater with two Thorium Bars, then Araj the Summoner (elite 61) in Andorhal. Somebody in the group already has the key? Skip it.
   note To Chillwind Camp: the flight from Light's Hope Chapel, or the road south from Tirion's hut. Alchemist Arbington stands in the camp.
+  note Arbington offers nothing? The first part of the key's chain (All Along the Watchtowers, Scholomance, Skeletal Fragments) is on the route in Western Plaguelands; Polestar's Attunements page (guide menu, Attunements, Skeleton Key, Guide me) leads through it.
   accept 5538                         -- Alchemist Arbington: for Krinkle Goodsteel in Gadgetzan
 
 step Gadgetzan: Krinkle Goodsteel

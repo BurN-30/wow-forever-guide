@@ -35,6 +35,8 @@ return {
 	["The way in is the sewer grate in the city's western wall, by the lake, 30 yards from Modera's camp: the key opens it for the group."] = "L'entrée est la grille des égouts dans le mur ouest de la ville, au bord du lac, à 30 mètres du camp de Modera : la clé l'ouvre pour tout le groupe.",
 	-- {quest:92457} Starving Arcane · {quest:92458} Heart of Disruption · {quest:92456} A Green Sample · {quest:92489} Power Overwhelming · {zone:1453} Stormwind
 	["In the log before going in: {quest:92457} and {quest:92458} (Modera); {quest:92456} and {quest:92489} for whoever took them in {zone:1453}. Share each quest with the group: click it in the quest log, then Share."] = "Dans le journal avant d'entrer : {quest:92457} et {quest:92458} (Modera) ; {quest:92456} et {quest:92489} pour qui les a prises à {zone:1453}. Partager chaque quête avec le groupe : clic sur la quête dans le journal, puis Partager.",
+	-- {zone:1416} Alterac Mountains
+	["Polestar's data also names the Alliance's own way in, a sewer pipe at {zone:1416} 14.7,63, which needs no key: not yet checked in game."] = "Les données de Polestar indiquent aussi l'entrée propre à l'Alliance, une conduite d'égout dans les {zone:1416} en 14.7,63, sans clé : pas encore vérifié en jeu.",
 	["City of Dalaran"] = "Cité de Dalaran",
 
 	-- Step 6: The sewers: Atrexis the Grave Knight

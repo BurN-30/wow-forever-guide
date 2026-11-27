@@ -47,6 +47,7 @@ return {
 	["{npc:8516} waits in a prison cell inside. His quests cannot be shared: every player takes {quest:3523} and hands it in to him (he wants his Oathstone back) BEFORE anyone starts {quest:3525}. Then he walks to the idol and casts while waves of enemies come: stay close and keep them off him; it ends at his brazier."] = "{npc:8516} attend dans une cellule à l'intérieur. Ses quêtes ne se partagent pas : chaque joueur prend {quest:3523} et la lui rend (il veut récupérer sa pierre de serment) AVANT que quiconque lance {quest:3525}. Il marche alors jusqu'à l'idole et incante pendant que des vagues d'ennemis arrivent : rester près de lui et les tenir loin ; cela finit à son brasero.",
 	-- {npc:8516} Belnistrasz
 	["Share nothing here: each player talks to {npc:8516}."] = "Rien à partager ici : chaque joueur parle à {npc:8516}.",
+	["Polestar asks whether to do this escort: in a group, answer Do it (Skip it takes the quest out of the chapter)."] = "Polestar demande s'il faut faire cette escorte : en groupe, répondre « La faire » (« La passer » retire la quête du chapitre).",
 	["Protect him at the idol"] = "Le protéger à l'idole",
 
 	-- Step 7: Razorfen Downs: Amnennar the Coldbringer

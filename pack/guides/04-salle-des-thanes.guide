@@ -36,18 +36,25 @@ step Stormwind: the tram to Ironforge
   fly "Stormwind"
   goto 64.5,7.5 "Tram to Ironforge"
 
+step Earthseer Farsen: Underground Map
+  when onquest 96391
+  zone Dun Morogh
+  tip Carrying the Underground Map (the Dark Iron Map of the spies, in the Dwarf and Gnome starts)? Earthseer Farsen takes it, then gives Old Ironforge Incursion, the head of the last boss for King Magni, about 3,200 XP. Out of Ironforge's gate first, east past Kharanos to his camp above Gol'Bolar Quarry, then back for the dungeon's other quests: one trip through the city.
+  turnin 96391 @64.8,58.4                     -- Earthseer Farsen
+  accept 96393 @64.8,58.4                     -- Earthseer Farsen
+
+step Earthseer Farsen: Old Ironforge Incursion (optional)
+  when available 96393
+  zone Dun Morogh
+  tip Only for whoever handed in Underground Map (the Dark Iron Map of the spies, in the Dwarf and Gnome starts): Earthseer Farsen gives Old Ironforge Incursion, the head of the last boss for King Magni, about 3,200 XP. Out of Ironforge's gate first, east past Kharanos to his camp above Gol'Bolar Quarry: about 10 minutes there and back. Short on time? Skip it.
+  accept 96393 @64.8,58.4                     -- Earthseer Farsen
+
 step Ironforge: Thom Filch and Afadra Dunwall
   zone Ironforge
   tip Gryth Thurden, the gryphon master, stands in the Great Forge: take the flight path on the way. Then west past the High Seat: Thom Filch and Afadra Dunwall stand a few steps apart, by the way down to the dungeon.
   getfp "Ironforge"
   accept 96403                                -- Thom Filch: Important Heirlooms
   accept 96394                                -- Afadra Dunwall: The Restless Dead
-
-step Earthseer Farsen: Old Ironforge Incursion (optional)
-  when available 96393
-  zone Dun Morogh
-  tip Only for whoever handed in Underground Map (the Dark Iron Map of the spies, in the Dwarf and Gnome starts): Earthseer Farsen gives Old Ironforge Incursion, the head of the last boss for King Magni, about 3,200 XP. Out of Ironforge's gate, east past Kharanos to his camp above Gol'Bolar Quarry: about 10 minutes there and back. Short on time? Skip it.
-  accept 96393 @64.8,58.4                     -- Earthseer Farsen
 
 step Before entering the Hall of Thanes
   zone Ironforge

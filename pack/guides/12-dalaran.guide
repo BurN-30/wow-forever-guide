@@ -60,6 +60,7 @@ step City of Dalaran: the sewer grate
   zone Alterac Mountains
   tip The way in is the sewer grate in the city's western wall, by the lake, 30 yards from Modera's camp: the key opens it for the group.
   note In the log before going in: Starving Arcane and Heart of Disruption (Modera); A Green Sample and Power Overwhelming for whoever took them in Stormwind. Share each quest with the group: click it in the quest log, then Share.
+  note Polestar's data also names the Alliance's own way in, a sewer pipe at Alterac Mountains 14.7,63, which needs no key: not yet checked in game.
   goto 8.8,59.5 "City of Dalaran" r 20
 
 step The sewers: Atrexis the Grave Knight

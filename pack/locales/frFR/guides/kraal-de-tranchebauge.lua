@@ -54,6 +54,7 @@ return {
 	-- {quest:1144} Willix the Importer · {npc:4510} Heralath Fallowbrook
 	["{quest:1144}, a goblin, is held in the same tent as {npc:4510}. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end."] = "{quest:1144}, un gobelin, est retenu dans la même tente que {npc:4510}. Chacun prend sa quête avant qu'il se mette en marche ; il retourne à l'entrée par le côté sud, devant de nombreux sangliers cuirassés. Il donne lui-même la récompense à la fin.",
 	["Not there? Another group is escorting him: wait for him to come back, or join them."] = "Pas là ? Un autre groupe l'escorte : attendre son retour, ou se joindre à eux.",
+	["Polestar asks whether to do this escort: in a group, answer Do it (Skip it takes the quest out of the chapter)."] = "Polestar demande s'il faut faire cette escorte : en groupe, répondre « La faire » (« La passer » retire la quête du chapitre).",
 	["Escort him out of the Kraul"] = "L'escorter hors du kraal",
 
 	-- Step 8: Razorfen Kraul: Willix the Importer's reward

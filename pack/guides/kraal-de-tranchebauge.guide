@@ -68,6 +68,7 @@ step Razorfen Kraul: Heralath Fallowbrook
 step Razorfen Kraul: Willix the Importer
   tip Willix the Importer, a goblin, is held in the same tent as Heralath. Everyone takes his quest before he starts walking; he walks back to the entrance by the south side, past many armored boars. He gives the reward himself at the end.
   note Not there? Another group is escorting him: wait for him to come back, or join them.
+  note Polestar asks whether to do this escort: in a group, answer Do it (Skip it takes the quest out of the chapter).
   accept 1144                                 -- Willix the Importer
   complete 1144                               -- Escort him out of the Kraul
 
