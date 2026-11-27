@@ -15,7 +15,7 @@ return {
 	-- {zone:1443} Desolace
 	["Maraudon: the caves of the centaurs' sacred ground in western {zone:1443}, for a group of 5, levels 46 to 55 in the group finder: at 46 it takes a solid group, from about 48 it goes well. A long dungeon: two wings, then the inner part, whose last boss is 51. Woodwyrd, the treant in the middle of the Forlorn Gardens, wants water from inside it."] = "Maraudon : les grottes de la terre sacrée des centaures, à l'ouest de la {zone:1443}, pour un groupe de 5, niveaux 46 à 55 dans la recherche de groupe : à 46, il faut un groupe solide, à partir de 48 environ il passe bien. Un long donjon : deux ailes, puis la partie intérieure, dont le dernier boss est de niveau 51. Woodwyrd, le tréant au milieu des Forlorn Gardens, veut de l'eau de l'intérieur.",
 	-- {zone:1443} Desolace · {npc:13656} Willow · {object:176948} Nijel's Point · {object:152576} Feathermoon Stronghold · {zone:1444} Feralas
-	["Keep 7 free quest log slots. The way: north into {zone:1443} for {npc:13656} and {object:176948}, back south-west to the caves, the run, then Woodwyrd and the hand-ins; the flight from {object:176948} to {object:152576} joins the route's {zone:1444} guide."] = "Garder 7 places libres dans le journal. Le trajet : au nord en {zone:1443} pour {npc:13656} et la Combe de Nijel, retour au sud-ouest vers les grottes, le donjon, puis Woodwyrd et les rendus ; le vol de la Combe de Nijel pour le bastion de Plumelune rejoint le guide {zone:1444} du parcours.",
+	["Keep 7 free quest log slots. The way: north into {zone:1443} for {npc:13656} and {object:176948}, back south-west to the caves, the run, then Woodwyrd and the hand-ins; the flight from {object:176948} to {object:152576} joins the route's {zone:1444} guide."] = "Garder 7 places libres dans le journal. Le trajet : au nord en {zone:1443} pour {npc:13656} et la Combe de Nijel ({object:176948}), retour au sud-ouest vers les grottes, le donjon, puis Woodwyrd et les rendus ; le vol de la Combe de Nijel ({object:176948}) pour le bastion de Plumelune ({object:152576}) rejoint le guide {zone:1444} du parcours.",
 	-- {quest:93404} Rot and Regret
 	["Woodwyrd: {quest:93404}"] = "Woodwyrd : {quest:93404}",
 
@@ -32,7 +32,7 @@ return {
 	-- {npc:13697} Cavindra · {item:17693} Coated Cerulean Vial
 	["Ride south-west to the Valley of Spears: the caves of Maraudon open in the hills west of it. {npc:13697} waits in the first cave. Fill the {item:17693} at an orange crystal pool, outside the orange portal (the right-hand path where the caves split); the blue water does not count."] = "Partir au sud-ouest vers la vallée des Lances : les grottes de Maraudon s'ouvrent dans les collines à l'ouest. {npc:13697} attend dans la première grotte. Remplir la {item:17693} à un bassin aux cristaux orange, devant le portail orange (le chemin de droite là où les grottes se séparent) ; l'eau bleue ne compte pas.",
 	-- {quest:93404} Rot and Regret · {quest:7028} Twisted Evils · {npc:13656} Willow · {quest:7041} Vyletongue Corruption · {quest:7065} Corruption of Earth and Seed · {object:176948} Nijel's Point · {quest:7044} Legends of Maraudon · {npc:13697} Cavindra · {npc:11715} Talendria
-	["In the quest log before going in: {quest:93404} (Woodwyrd), {quest:7028} ({npc:13656}), {quest:7041} and {quest:7065} ({object:176948}), {quest:7044} ({npc:13697}, here). Share each one but {npc:11715}'s with the group: click it in the quest log, then Share."] = "Dans le journal avant d'entrer : {quest:93404} (Woodwyrd), {quest:7028} ({npc:13656}), {quest:7041} et {quest:7065} (Combe de Nijel), {quest:7044} ({npc:13697}, ici). Partager chacune sauf celle de {npc:11715} avec le groupe : clic sur la quête dans le journal, puis Partager.",
+	["In the quest log before going in: {quest:93404} (Woodwyrd), {quest:7028} ({npc:13656}), {quest:7041} and {quest:7065} ({object:176948}), {quest:7044} ({npc:13697}, here). Share each one but {npc:11715}'s with the group: click it in the quest log, then Share."] = "Dans le journal avant d'entrer : {quest:93404} (Woodwyrd), {quest:7028} ({npc:13656}), {quest:7041} et {quest:7065} (Combe de Nijel ({object:176948})), {quest:7044} ({npc:13697}, ici). Partager chacune sauf celle de {npc:11715} avec le groupe : clic sur la quête dans le journal, puis Partager.",
 	-- {item:17696} Filled Cerulean Vial
 	["{item:17696}: the orange crystal pool"] = "{item:17696} : le bassin aux cristaux orange",
 	["Maraudon"] = "Maraudon",
@@ -92,11 +92,11 @@ return {
 
 	-- Step 14: Nijel's Point: the rewards
 	-- {object:176948} Nijel's Point
-	["{object:176948}: the rewards"] = "Combe de Nijel : les récompenses",
+	["{object:176948}: the rewards"] = "Combe de Nijel ({object:176948}) : les récompenses",
 	-- {object:176948} Nijel's Point · {object:152576} Feathermoon Stronghold · {zone:1444} Feralas
-	["Last stop of the chapter: the route's own guide comes back once these are handed in. Then fly from {object:176948} to {object:152576}: the route's {zone:1444} guide starts there."] = "Dernier arrêt du chapitre : le guide du parcours revient une fois ces quêtes rendues. Prendre ensuite le vol de la Combe de Nijel pour le bastion de Plumelune : le guide {zone:1444} du parcours commence là.",
+	["Last stop of the chapter: the route's own guide comes back once these are handed in. Then fly from {object:176948} to {object:152576}: the route's {zone:1444} guide starts there."] = "Dernier arrêt du chapitre : le guide du parcours revient une fois ces quêtes rendues. Prendre ensuite le vol de la Combe de Nijel ({object:176948}) pour le bastion de Plumelune ({object:152576}) : le guide {zone:1444} du parcours commence là.",
 
 	-- Step 15: Nijel's Point: Keeper Marandis
 	-- {npc:13698} Keeper Marandis · {object:176948} Nijel's Point
-	["{npc:13698} stands in {object:176948} too."] = "{npc:13698} se tient aussi à la Combe de Nijel.",
+	["{npc:13698} stands in {object:176948} too."] = "{npc:13698} se tient aussi à la Combe de Nijel ({object:176948}).",
 }

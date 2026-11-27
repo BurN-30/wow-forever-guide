@@ -56,7 +56,7 @@ return {
 	["{quest:1442}, for Paladins: the Blackfathom Tide Priestesses, Oracles and Sea Witches (the naga casters) drop the {item:6995}, about 1 in 2. {npc:3649} in Auberdine cleanses it, on the way back."] = "{quest:1442}, pour les paladins : les prêtresses des marées, oracles et sorcières des mers de Brassenoire (les nagas lanceuses de sorts) lâchent la {item:6995}, environ 1 fois sur 2. {npc:3649}, à Auberdine, la purifie au retour.",
 	-- {quest:1740} The Orb of Soran'ruk · {object:1680} Shadowfang Keep · {item:6898} Orb of Soran'ruk
 	-- plural, as words: Twilight Acolytes = {npc:4809} Twilight Acolyte · Soran'ruk Fragments = {item:6914} Soran'ruk Fragment
-	["{quest:1740}, for Warlocks: the Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from {object:1680}, a Horde dungeon: Polestar's class guides ({item:6898}) cover it."] = "{quest:1740}, pour les démonistes : les acolytes du Crépuscule du quartier du Marteau du crépuscule lâchent les fragments de Soran'ruk. Le grand fragment vient du donjon d'Ombrecroc, un donjon de la Horde : les guides de classe de Polestar ({item:6898}) s'en chargent.",
+	["{quest:1740}, for Warlocks: the Twilight Acolytes of the Twilight's Hammer area drop the Soran'ruk Fragments. The large fragment comes from {object:1680}, a Horde dungeon: Polestar's class guides ({item:6898}) cover it."] = "{quest:1740}, pour les démonistes : les acolytes du Crépuscule du quartier du Marteau du crépuscule lâchent les fragments de Soran'ruk. Le grand fragment vient du donjon d'Ombrecroc ({object:1680}), un donjon de la Horde : les guides de classe de Polestar ({item:6898}) s'en chargent.",
 
 	-- Step 9: Blackfathom Deeps: Argent Guard Thaelrid
 	-- {npc:4787} Argent Guard Thaelrid
@@ -103,5 +103,5 @@ return {
 
 	-- Step 17: Auberdine: Gershala Nightwhisper
 	-- {npc:8997} Gershala Nightwhisper · {object:1162} Menethil Harbor
-	["Last stop of the chapter: {npc:8997} stands a short walk west of Terenthis. The route's own guide comes back once this is handed in: Terenthis, then the boat to {object:1162}."] = "Dernier arrêt du chapitre : {npc:8997} se tient à quelques pas à l'ouest de Terenthis. Le guide du parcours revient une fois la quête rendue : Terenthis, puis le bateau pour le port de Menethil.",
+	["Last stop of the chapter: {npc:8997} stands a short walk west of Terenthis. The route's own guide comes back once this is handed in: Terenthis, then the boat to {object:1162}."] = "Dernier arrêt du chapitre : {npc:8997} se tient à quelques pas à l'ouest de Terenthis. Le guide du parcours revient une fois la quête rendue : Terenthis, puis le bateau pour le port de Menethil ({object:1162}).",
 }

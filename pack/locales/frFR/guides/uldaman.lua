@@ -82,9 +82,9 @@ return {
 
 	-- Step 10: Archaedas and the Discs of Norgannon
 	-- {npc:2748} Archaedas · {object:131474} Discs of Norgannon
-	["{npc:2748} and the {object:131474}"] = "{npc:2748} et les Disques de Norgannon",
+	["{npc:2748} and the {object:131474}"] = "{npc:2748} et {object:131474}",
 	-- {npc:2748} Archaedas · {object:131474} Discs of Norgannon
-	["{npc:2748}, the last boss, wakes the stone guardians around his room during the fight. Behind him, the {object:131474}: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave."] = "{npc:2748}, le dernier boss, réveille les gardiens de pierre autour de sa salle pendant le combat. Derrière lui, les Disques de Norgannon : cliquer dessus, parler à l'esprit sur la gauche, puis cliquer de nouveau sur les disques pour la copie miniature avant de partir.",
+	["{npc:2748}, the last boss, wakes the stone guardians around his room during the fight. Behind him, the {object:131474}: click them, talk to the spirit on the left, then click the Discs again for the miniature copy before you leave."] = "{npc:2748}, le dernier boss, réveille les gardiens de pierre autour de sa salle pendant le combat. Derrière lui, {object:131474} : cliquer dessus, parler à l'esprit sur la gauche, puis cliquer de nouveau sur les disques pour la copie miniature avant de partir.",
 	-- {quest:1956} Power in Uldaman · {npc:7023} Obsidian Sentinel · {npc:2748} Archaedas · {item:8053} Obsidian Power Source · {zone:1445} Dustwallow Marsh
 	["{quest:1956}, for Mages: the {npc:7023}, one of the bosses on the way to {npc:2748}, drops the {item:8053} for Tabetha in {zone:1445}."] = "{quest:1956}, pour les mages : la {npc:7023}, l'un des boss sur le chemin d'{npc:2748}, lâche la {item:8053} pour Tabetha au {zone:1445}.",
 
@@ -112,13 +112,13 @@ return {
 
 	-- Step 15: Hall of Explorers: High Explorer Magellas
 	-- {object:131474} Discs of Norgannon · {npc:2748} Archaedas · {npc:5387} High Explorer Magellas · {object:32356} Hall of Explorers
-	["The miniature {object:131474}, from {npc:2748}'s room: {npc:5387} stands in the {object:32356}."] = "La copie miniature des Disques de Norgannon, prise dans la salle d'{npc:2748} : {npc:5387} se tient dans {object:32356}.",
+	["The miniature {object:131474}, from {npc:2748}'s room: {npc:5387} stands in the {object:32356}."] = "La copie miniature des disques ({object:131474}), prise dans la salle d'{npc:2748} : {npc:5387} se tient dans {object:32356}.",
 
 	-- Step 16: The Vault of Ironforge: the Platinum Discs reward
 	-- {object:32377} Vault of Ironforge
-	["The {object:32377}: the Platinum Discs reward"] = "La chambre forte de Forgefer : la récompense des disques de platine",
+	["The {object:32377}: the Platinum Discs reward"] = "La chambre forte de Forgefer ({object:32377}) : la récompense des disques de platine",
 	-- {npc:5387} High Explorer Magellas · {object:131474} Discs of Norgannon · {npc:7292} Dinita Stonemantle · {object:32377} Vault of Ironforge
-	["{npc:5387} hands a voucher for the {object:131474}: {npc:7292} pays it in the {object:32377}."] = "{npc:5387} remet un bon pour {object:131474} : {npc:7292} le paie dans la chambre forte de Forgefer.",
+	["{npc:5387} hands a voucher for the {object:131474}: {npc:7292} pays it in the {object:32377}."] = "{npc:5387} remet un bon pour {object:131474} : {npc:7292} le paie dans la chambre forte de Forgefer ({object:32377}).",
 	-- {npc:7292} Dinita Stonemantle
 	["{npc:7292}, in the Vault"] = "{npc:7292}, dans la Chambre forte",
 

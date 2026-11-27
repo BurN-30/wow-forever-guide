@@ -508,8 +508,9 @@ step Blackrock Depths: quests not done
 # left alive (Warcraft Tavern's advice) -> Omokk, Tazz'Alaor (Voone), the Skitterweb Tunnels
 # (Smolderweb, the eggs), Urok's Tribute Pile, Halycon, Wyrmthalak -> Warosh -> Flame Crest ->
 # Morgan's Vigil.
-# Left out: Seal of Ascension (Vaelan, then Emberstrife in Dustwallow Marsh: on Forever it no longer
-# rewards the seal, and Upper Blackrock Spire takes no key: Polestar 0.4.3.1, data/codex/attunements.json), The Final Tablets (Mosh'aru's chain), Snakestone of the Shadow
+# Left out: Seal of Ascension (Vaelan, then Emberstrife in Dustwallow Marsh: Polestar 0.4.3.1's data,
+# data/codex/attunements.json, say Forever's quest no longer rewards the seal and Upper Blackrock
+# Spire takes no key; not checked in game), The Final Tablets (Mosh'aru's chain), Snakestone of the Shadow
 # Huntress (Kilram, Winterspring), Deliana's dungeon set quests, General Drakkisath's Demise (Upper
 # Blackrock Spire).
 step Lower Blackrock Spire (dungeon, optional)
@@ -537,7 +538,7 @@ step Lower Blackrock Spire: before going in
   when done lbrs-start
   zone Burning Steppes
   tip Into Blackrock Mountain on the Burning Steppes side. Two ways to the portal: the door beside the Blackrock Spire meeting stone and the path up (elites on it), or along the great chain and the wall to the balcony where Bodley stands, then a jump down onto it, with no fight. Inside, the stairs up on the left lead to Upper Blackrock Spire: not this time.
-  note In the quest log: Put Her Down (Helendis), Kibler's Exotic Pets and En-Ay-Es-Tee-Why (Kibler), Mother's Milk (Ragged John). Given inside: Urok Doomhowl (Warosh) and Bijou's Belongings (Bijou). Not on this route: Seal of Ascension (Vaelan, inside: on Forever it no longer rewards the seal, and Upper Blackrock Spire, a 10-player dungeon, takes no key), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, Winterspring), Deliana's dungeon set quests (Ironforge).
+  note In the quest log: Put Her Down (Helendis), Kibler's Exotic Pets and En-Ay-Es-Tee-Why (Kibler), Mother's Milk (Ragged John). Given inside: Urok Doomhowl (Warosh) and Bijou's Belongings (Bijou). Not on this route: Seal of Ascension (Vaelan, inside; by Polestar's data, Forever's quest no longer rewards the seal and Upper Blackrock Spire, a 10-player dungeon, takes no key: not yet checked in game), The Final Tablets (the Mosh'aru tablets), Snakestone of the Shadow Huntress (Kilram, Winterspring), Deliana's dungeon set quests (Ironforge).
   goto 33.2,24.9 map 1428 "Blackrock Spire" r 25
 
 step Hordemar City: Warosh and Bijou
@@ -646,7 +647,7 @@ step Lower Blackrock Spire: quests not done
   when onquest 4701,4729,4862,4866,4867,5081
   tip What is left of Lower Blackrock Spire in the quest log is for another run: keep it for one, or abandon it to free the log (right-click it in the quest log).
   task "Each quest left: kept for another run, or abandoned"
-  tip Upper Blackrock Spire, up the stairs on the left past the Spire's entrance, is not in this guide: a dungeon made for a raid group of ten. Upper Blackrock Spire takes no key on Forever (the Seal of Ascension quest no longer rewards it).
+  tip Upper Blackrock Spire, up the stairs on the left past the Spire's entrance, is not in this guide: a dungeon made for a raid group of ten. By Polestar's data it takes no key on Forever (the Seal of Ascension quest no longer rewards the seal): not yet checked in game.
   abandon 4701 optional
   abandon 4729 optional
   abandon 4862 optional

@@ -13,7 +13,7 @@ return {
 	-- {npc:1646} Baros Alexston · {quest:389} Bazil Thredd
 	["{npc:1646}: {quest:389} (after the Deadmines)"] = "{npc:1646} : {quest:389} (après les Mortemines)",
 	-- {npc:1646} Baros Alexston · {object:2159} City Hall · {object:2098} Cathedral Square · {npc:1719} Warden Thelwater · {quest:391} The Stockade Riots
-	["{npc:1646}, in the {object:2159} on {object:2098}, sends whoever handed in VanCleef's Unsent Letter to {npc:1719}: it opens {quest:391}, the prison's best quest."] = "{npc:1646}, dans l'hôtel de ville sur la {object:2098}, envoie chez {npc:1719} qui a rendu la lettre jamais envoyée de VanCleef : elle ouvre {quest:391}, la meilleure quête de la prison.",
+	["{npc:1646}, in the {object:2159} on {object:2098}, sends whoever handed in VanCleef's Unsent Letter to {npc:1719}: it opens {quest:391}, the prison's best quest."] = "{npc:1646}, dans l'hôtel de ville ({object:2159}) sur la {object:2098}, envoie chez {npc:1719} qui a rendu la lettre jamais envoyée de VanCleef : elle ouvre {quest:391}, la meilleure quête de la prison.",
 
 	-- Step 2: Stormwind: Warden Thelwater
 	-- {zone:1453} Stormwind · {object:2101} Mage Quarter · {object:2100} Old Town · {npc:1719} Warden Thelwater · {object:2098} Cathedral Square
@@ -89,13 +89,13 @@ return {
 
 	-- Step 15: Baros Alexston: The Curious Visitor
 	-- {npc:1646} Baros Alexston · {object:2159} City Hall · {object:2098} Cathedral Square
-	["{npc:1646} is in the {object:2159} on {object:2098}."] = "{npc:1646} est dans l'hôtel de ville, sur {object:2098}.",
+	["{npc:1646} is in the {object:2159} on {object:2098}."] = "{npc:1646} est dans l'hôtel de ville ({object:2159}), sur {object:2098}.",
 
 	-- Step 16: Stormwind: the end of the Defias story
 	-- {zone:1453} Stormwind
 	["{zone:1453}: the end of the Defias story"] = "{zone:1453} : la fin de l'histoire des Défias",
 	-- {quest:391} The Stockade Riots · {npc:1646} Baros Alexston · {object:2159} City Hall · {object:2098} Cathedral Square · {object:2100} Old Town · {npc:482} Elling Trias · {object:2096} Trade District · {npc:7766} Tyrion · {object:2117} Stormwind Keep
-	["Only if you did {quest:391}. {npc:1646} is in the {object:2159} on {object:2098}, Mathias Shaw upstairs at SI:7 in {object:2100}, {npc:482} upstairs in the cheese shop of the {object:2096}, {npc:7766} in the garden beside {object:2117}."] = "Seulement après {quest:391}. {npc:1646} est dans l'hôtel de ville sur la {object:2098}, Mathias Shaw à l'étage du SI:7 dans la {object:2100}, {npc:482} à l'étage de la fromagerie du {object:2096}, {npc:7766} dans le jardin à côté du {object:2117}.",
+	["Only if you did {quest:391}. {npc:1646} is in the {object:2159} on {object:2098}, Mathias Shaw upstairs at SI:7 in {object:2100}, {npc:482} upstairs in the cheese shop of the {object:2096}, {npc:7766} in the garden beside {object:2117}."] = "Seulement après {quest:391}. {npc:1646} est dans l'hôtel de ville ({object:2159}) sur la {object:2098}, Mathias Shaw à l'étage du SI:7 dans la {object:2100}, {npc:482} à l'étage de la fromagerie du {object:2096}, {npc:7766} dans le jardin à côté du {object:2117}.",
 
 	-- Step 17: Clara's apples
 	["Clara's apples"] = "Les pommes de Clara",

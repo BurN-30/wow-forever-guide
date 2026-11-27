@@ -12,7 +12,7 @@ return {
 	-- Step 1: Auberdine: the boat to Southshore
 	["Auberdine: the boat to Southshore"] = "Auberdine : le bateau pour Austrivage",
 	-- {zone:1420} Tirisfal Glades · {object:1162} Menethil Harbor
-	["Ruins of Lordaeron: a 5-player Forever dungeon in {zone:1420}, levels 15 to 22 in the group finder: at 18 or more it goes well. The boat for {object:1162} goes on to Southshore: stay aboard at Menethil."] = "Ruines de Lordaeron : un donjon de Forever pour 5 joueurs dans les {zone:1420}, niveaux 15 à 22 dans la recherche de groupe : à 18 ou plus, il passe bien. Le bateau pour le port de Menethil continue jusqu'à Austrivage : rester à bord à Menethil.",
+	["Ruins of Lordaeron: a 5-player Forever dungeon in {zone:1420}, levels 15 to 22 in the group finder: at 18 or more it goes well. The boat for {object:1162} goes on to Southshore: stay aboard at Menethil."] = "Ruines de Lordaeron : un donjon de Forever pour 5 joueurs dans les {zone:1420}, niveaux 15 à 22 dans la recherche de groupe : à 18 ou plus, il passe bien. Le bateau pour le port de Menethil ({object:1162}) continue jusqu'à Austrivage : rester à bord à Menethil.",
 	["Keep 5 free quest log slots. Horde land past Southshore: travel together."] = "Garder 5 places libres dans le journal. Terre de la Horde passé Austrivage : voyager ensemble.",
 	["Boat to Southshore"] = "Bateau pour Austrivage",
 
@@ -23,7 +23,7 @@ return {
 	-- Step 3: Ruins of Lordaeron entrance
 	["Ruins of Lordaeron entrance"] = "Entrée des Ruines de Lordaeron",
 	-- {object:1772} Tarren Mill
-	["Horde land, on foot, at about level 20: keep together, clear of the roads and of {object:1772}, whose guards are far above that level. North past Hillsbrad Fields, round Dalaran, then swim north up Lordamere Lake into Tirisfal and follow the road to the ruined capital: a long way on foot. The entrance's exact place is to check in game: the arrow leads to the data's point. A death inside sends the spirit to the healer right outside the dungeon."] = "Terre de la Horde, à pied, vers le niveau 20 : rester groupés, à l'écart des routes et de Moulin-de-Tarren, dont les gardes sont bien au-dessus de ce niveau. Vers le nord par les champs de Hautebrande, autour de Dalaran, puis nager vers le nord sur le lac Lordamere jusqu'à Tirisfal et suivre la route jusqu'à la capitale en ruine : un long trajet à pied. La place exacte de l'entrée est à vérifier en jeu : la flèche mène au point des données. En cas de mort à l'intérieur, le gardien des âmes est juste devant le donjon.",
+	["Horde land, on foot, at about level 20: keep together, clear of the roads and of {object:1772}, whose guards are far above that level. North past Hillsbrad Fields, round Dalaran, then swim north up Lordamere Lake into Tirisfal and follow the road to the ruined capital: a long way on foot. The entrance's exact place is to check in game: the arrow leads to the data's point. A death inside sends the spirit to the healer right outside the dungeon."] = "Terre de la Horde, à pied, vers le niveau 20 : rester groupés, à l'écart des routes et de Moulin-de-Tarren ({object:1772}), dont les gardes sont bien au-dessus de ce niveau. Vers le nord par les champs de Hautebrande, autour de Dalaran, puis nager vers le nord sur le lac Lordamere jusqu'à Tirisfal et suivre la route jusqu'à la capitale en ruine : un long trajet à pied. La place exacte de l'entrée est à vérifier en jeu : la flèche mène au point des données. En cas de mort à l'intérieur, le gardien des âmes est juste devant le donjon.",
 	["Ruins of Lordaeron"] = "Ruines de Lordaeron",
 
 	-- Step 4: Captain Truman
@@ -84,11 +84,11 @@ return {
 
 	-- Step 13: Southshore: the boat to Menethil Harbor
 	-- {object:1162} Menethil Harbor
-	["Southshore: the boat to {object:1162}"] = "Austrivage : le bateau pour le port de Menethil",
+	["Southshore: the boat to {object:1162}"] = "Austrivage : le bateau pour le port de Menethil ({object:1162})",
 	-- {object:1162} Menethil Harbor · {zone:1432} Loch Modan
-	["Back south to Southshore by the way you came. The boat calls at Auberdine, then {object:1162}: get off at Menethil, where the route's next guide starts ({zone:1432})."] = "Retour vers le sud jusqu'à Austrivage par le même chemin. Le bateau passe par Auberdine, puis le port de Menethil : descendre à Menethil, où commence le guide suivant du parcours ({zone:1432}).",
+	["Back south to Southshore by the way you came. The boat calls at Auberdine, then {object:1162}: get off at Menethil, where the route's next guide starts ({zone:1432})."] = "Retour vers le sud jusqu'à Austrivage par le même chemin. Le bateau passe par Auberdine, puis le port de Menethil ({object:1162}) : descendre à Menethil, où commence le guide suivant du parcours ({zone:1432}).",
 	-- {object:1162} Menethil Harbor
-	["Boat to {object:1162}"] = "Bateau pour le port de Menethil",
+	["Boat to {object:1162}"] = "Bateau pour le port de Menethil ({object:1162})",
 	-- {zone:1453} Stormwind
 	["Back to the route: click its tab now. This tab stays open for the three {zone:1453} rewards: the route reaches {zone:1453} at about 20, by the Deeprun Tram, and Polestar lists the hand-ins once there; this tab closes when they are in."] = "Retour au parcours : cliquer maintenant sur son onglet. Cet onglet reste ouvert pour les trois récompenses de {zone:1453} : le parcours arrive à {zone:1453} vers 20, par le Tram des profondeurs, et Polestar y affiche les rendus ; cet onglet se ferme une fois les quêtes rendues.",
 

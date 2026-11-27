@@ -12,7 +12,7 @@ return {
 
 	-- Step 1: Menethil Harbor: dungeon quests
 	-- {object:1162} Menethil Harbor
-	["{object:1162}: dungeon quests"] = "Port de Menethil : quêtes du donjon",
+	["{object:1162}: dungeon quests"] = "Port de Menethil ({object:1162}) : quêtes du donjon",
 	-- {zone:1437} Wetlands
 	["Excavation Site: a 5-player Forever dungeon up the hill in the middle of the {zone:1437}, levels 26 to 33 in the group finder. Everything inside is elite and the last boss is 31: about 39,000 XP of quests and blue rewards."] = "Site de fouilles : un donjon de Forever pour 5 joueurs en haut de la colline au milieu des {zone:1437}, niveaux 26 à 33 dans la recherche de groupe. Tout est élite à l'intérieur et le dernier boss est de niveau 31 : environ 39 000 XP de quêtes et des récompenses bleues.",
 	-- {npc:1480} Caitlin Grassman · {npc:2094} James Halloran
@@ -81,5 +81,5 @@ return {
 
 	-- Step 13: Ironforge: High Explorer Magellas
 	-- {object:1162} Menethil Harbor · {zone:1455} Ironforge · {object:32356} Hall of Explorers · {item:270865} Titan Relic
-	["Fly from {object:1162} to {zone:1455}, as the route does next: Magellas stands in the {object:32356}. He says you lack the {item:270865}? Abandon the quest and take it again from Whelgar for a new relic. Last stop of the chapter: the route's own guide comes back once this is handed in."] = "Vol du port de Menethil à {zone:1455}, comme le fait ensuite le parcours : Magellas se tient dans le {object:32356}. Il dit que la {item:270865} manque ? Abandonner la quête et la reprendre chez Whelgar pour une nouvelle relique. Dernier arrêt du chapitre : le guide du parcours revient une fois la quête rendue.",
+	["Fly from {object:1162} to {zone:1455}, as the route does next: Magellas stands in the {object:32356}. He says you lack the {item:270865}? Abandon the quest and take it again from Whelgar for a new relic. Last stop of the chapter: the route's own guide comes back once this is handed in."] = "Vol du port de Menethil ({object:1162}) à {zone:1455}, comme le fait ensuite le parcours : Magellas se tient dans le {object:32356}. Il dit que la {item:270865} manque ? Abandonner la quête et la reprendre chez Whelgar pour une nouvelle relique. Dernier arrêt du chapitre : le guide du parcours revient une fois la quête rendue.",
 }

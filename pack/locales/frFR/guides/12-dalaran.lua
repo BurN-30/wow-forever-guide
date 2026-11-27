@@ -18,7 +18,7 @@ return {
 
 	-- Step 2: Image of Archmage Modera
 	-- {object:1772} Tarren Mill · {zone:1421} Silverpine Forest
-	["North-west past Hillsbrad Fields and round Dalaran's dome, keeping clear of {object:1772}: the Kirin Tor camp is on the lake shore west of the city, just over the border into {zone:1421}."] = "Vers le nord-ouest par les champs de Hautebrande, puis autour du dôme de Dalaran, à l'écart de Moulin-de-Tarren : le camp du Kirin Tor est sur la rive du lac, à l'ouest de la ville, juste après la frontière de la {zone:1421}.",
+	["North-west past Hillsbrad Fields and round Dalaran's dome, keeping clear of {object:1772}: the Kirin Tor camp is on the lake shore west of the city, just over the border into {zone:1421}."] = "Vers le nord-ouest par les champs de Hautebrande, puis autour du dôme de Dalaran, à l'écart de Moulin-de-Tarren ({object:1772}) : le camp du Kirin Tor est sur la rive du lac, à l'ouest de la ville, juste après la frontière de la {zone:1421}.",
 	-- {quest:92458} Heart of Disruption · {item:277507} Dalaran Sewer Key
 	["{quest:92458}: it brings the {item:277507}"] = "{quest:92458} : elle donne la {item:277507}",
 
@@ -46,7 +46,7 @@ return {
 	-- plural, as words: Mindless Horrors = {npc:255068} Mindless Horror · Kirin Tor Necromancers = {npc:269134} Kirin Tor Necromancer
 	["Inside the Cantrips & Crows, cross the bridge and turn right: three large pipes lead to the Underbelly. Mindless Horrors fear (a Shaman's {npc:5913} helps), Kirin Tor Necromancers raise skeletons two at a time: the tank picks them up. {npc:247126}, in the summoning circle, is a stronger necromancer: clear the undead around him without pulling him, then a Shaman can purge his Unholy Frenzy."] = "Depuis la taverne (Cantrips & Crows), traverser le pont et tourner à droite : trois grosses canalisations mènent aux Entrailles (Underbelly). Les Horreurs décérébrées font fuir de peur (le {npc:5913} d'un chaman aide), les Nécromanciens du Kirin Tor lèvent des squelettes deux par deux : le tank les reprend. {npc:247126}, dans le cercle d'invocation, est un nécromancien plus fort : nettoyer les morts-vivants autour de lui sans l'attirer ; un chaman peut purger sa Frénésie impie.",
 	-- {item:275989} Tome of Dalaran · {object:1680} Shadowfang Keep · {npc:247032} Lyn the Ignored
-	["The square room by the sewers' exit holds a summoning circle: only with a {item:275989} (from {object:1680}, a Horde dungeon) does it call the hidden boss, {npc:247032}."] = "La salle carrée près de la sortie des égouts abrite un cercle d'invocation : seul un {item:275989} (venu du donjon d'Ombrecroc, un donjon de la Horde) y appelle le boss caché, {npc:247032}.",
+	["The square room by the sewers' exit holds a summoning circle: only with a {item:275989} (from {object:1680}, a Horde dungeon) does it call the hidden boss, {npc:247032}."] = "La salle carrée près de la sortie des égouts abrite un cercle d'invocation : seul un {item:275989} (venu du donjon d'Ombrecroc ({object:1680}), un donjon de la Horde) y appelle le boss caché, {npc:247032}.",
 
 	-- Step 7: The streets of Dalaran: along the way
 	["The streets of Dalaran: along the way"] = "Les rues de Dalaran : en chemin",

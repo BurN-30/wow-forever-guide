@@ -15,30 +15,30 @@ return {
 	-- {zone:1455} Ironforge
 	["The Hall of Thanes: a 5-player Forever dungeon under {zone:1455}, levels 13 to 20 in the group finder: at 15 or more it goes well. Its quests are taken in {zone:1455}, a few steps from its door, and handed in there."] = "La Salle des Thanes : un donjon de Forever pour 5 joueurs sous {zone:1455}, niveaux 13 à 20 dans la recherche de groupe : à 15 ou plus, il passe bien. Ses quêtes se prennent à {zone:1455}, à quelques pas de sa porte, et s'y rendent.",
 	-- {object:171709} High Seat
-	["Keep 5 free quest log slots. Everyone takes the quests on their own; meet at the door, west of the {object:171709}."] = "Garder 5 places libres dans le journal. Chacun prend les quêtes de son côté ; rendez-vous à la porte, à l'ouest du Haut Siège.",
+	["Keep 5 free quest log slots. Everyone takes the quests on their own; meet at the door, west of the {object:171709}."] = "Garder 5 places libres dans le journal. Chacun prend les quêtes de son côté ; rendez-vous à la porte, à l'ouest du trône ({object:171709}).",
 	-- {zone:1455} Ironforge
 	["Tram to {zone:1455}"] = "Tram pour {zone:1455}",
 
 	-- Step 2: Earthseer Farsen: Underground Map
 	-- {quest:96391} Underground Map · {item:274268} Dark Iron Map · {npc:264936} Earthseer Farsen · {quest:96393} Old Ironforge Incursion · {object:149024} Gol'Bolar Quarry
-	["Carrying the {quest:96391} (the {item:274268} of the spies, in the Dwarf and Gnome starts)? {npc:264936} takes it, then gives {quest:96393}, the head of the last boss for King Magni, about 3,200 XP. Out of Ironforge's gate first, east past Kharanos to his camp above {object:149024}, then back for the dungeon's other quests: one trip through the city."] = "Avec {quest:96391} dans le journal (la {item:274268} des espions, dans les départs nain et gnome) ? {npc:264936} la prend, puis donne {quest:96393}, la tête du dernier boss pour le roi Magni, environ 3 200 XP. D'abord par la porte de Forgefer, vers l'est passé Kharanos jusqu'à son camp au-dessus de la carrière de Gol'Bolar, puis retour pour les autres quêtes du donjon : une seule traversée de la ville.",
+	["Carrying the {quest:96391} (the {item:274268} of the spies, in the Dwarf and Gnome starts)? {npc:264936} takes it, then gives {quest:96393}, the head of the last boss for King Magni, about 3,200 XP. Out of Ironforge's gate first, east past Kharanos to his camp above {object:149024}, then back for the dungeon's other quests: one trip through the city."] = "Avec {quest:96391} dans le journal (la {item:274268} des espions, dans les départs nain et gnome) ? {npc:264936} la prend, puis donne {quest:96393}, la tête du dernier boss pour le roi Magni, environ 3 200 XP. D'abord par la porte de Forgefer, vers l'est passé Kharanos jusqu'à son camp au-dessus de la carrière de Gol'Bolar ({object:149024}), puis retour pour les autres quêtes du donjon : une seule traversée de la ville.",
 
 	-- Step 3: Earthseer Farsen: Old Ironforge Incursion (optional)
 	-- {npc:264936} Earthseer Farsen · {quest:96393} Old Ironforge Incursion
 	["{npc:264936}: {quest:96393} (optional)"] = "{npc:264936} : {quest:96393} (facultatif)",
 	-- {quest:96391} Underground Map · {item:274268} Dark Iron Map · {npc:264936} Earthseer Farsen · {quest:96393} Old Ironforge Incursion · {object:149024} Gol'Bolar Quarry
-	["Only for whoever handed in {quest:96391} (the {item:274268} of the spies, in the Dwarf and Gnome starts): {npc:264936} gives {quest:96393}, the head of the last boss for King Magni, about 3,200 XP. Out of Ironforge's gate first, east past Kharanos to his camp above {object:149024}: about 10 minutes there and back. Short on time? Skip it."] = "Seulement pour qui a rendu {quest:96391} (la {item:274268} des espions, dans les départs nain et gnome) : {npc:264936} donne {quest:96393}, la tête du dernier boss pour le roi Magni, environ 3 200 XP. D'abord par la porte de Forgefer, vers l'est passé Kharanos jusqu'à son camp au-dessus de la carrière de Gol'Bolar : une dizaine de minutes aller et retour. Peu de temps ? Le passer.",
+	["Only for whoever handed in {quest:96391} (the {item:274268} of the spies, in the Dwarf and Gnome starts): {npc:264936} gives {quest:96393}, the head of the last boss for King Magni, about 3,200 XP. Out of Ironforge's gate first, east past Kharanos to his camp above {object:149024}: about 10 minutes there and back. Short on time? Skip it."] = "Seulement pour qui a rendu {quest:96391} (la {item:274268} des espions, dans les départs nain et gnome) : {npc:264936} donne {quest:96393}, la tête du dernier boss pour le roi Magni, environ 3 200 XP. D'abord par la porte de Forgefer, vers l'est passé Kharanos jusqu'à son camp au-dessus de la carrière de Gol'Bolar ({object:149024}) : une dizaine de minutes aller et retour. Peu de temps ? Le passer.",
 
 	-- Step 4: Ironforge: Thom Filch and Afadra Dunwall
 	-- {zone:1455} Ironforge · {npc:265003} Thom Filch · {npc:264943} Afadra Dunwall
 	["{zone:1455}: {npc:265003} and {npc:264943}"] = "{zone:1455} : {npc:265003} et {npc:264943}",
 	-- {npc:1573} Gryth Thurden · {object:32372} Great Forge · {object:171709} High Seat · {npc:265003} Thom Filch · {npc:264943} Afadra Dunwall
-	["{npc:1573}, the gryphon master, stands in the {object:32372}: take the flight path on the way. Then west past the {object:171709}: {npc:265003} and {npc:264943} stand a few steps apart, by the way down to the dungeon."] = "{npc:1573}, le maître des griffons, se tient dans la Grande Forge : prendre le point de vol au passage. Puis vers l'ouest, passé le Haut Siège : {npc:265003} et {npc:264943} se tiennent à quelques pas l'un de l'autre, près du chemin qui descend au donjon.",
+	["{npc:1573}, the gryphon master, stands in the {object:32372}: take the flight path on the way. Then west past the {object:171709}: {npc:265003} and {npc:264943} stand a few steps apart, by the way down to the dungeon."] = "{npc:1573}, le maître des griffons, se tient dans la salle des forges ({object:32372}) : prendre le point de vol au passage. Puis vers l'ouest, passé le trône ({object:171709}) : {npc:265003} et {npc:264943} se tiennent à quelques pas l'un de l'autre, près du chemin qui descend au donjon.",
 
 	-- Step 5: Before entering the Hall of Thanes
 	["Before entering the Hall of Thanes"] = "Avant d'entrer dans la Salle des Thanes",
 	-- {object:171709} High Seat
-	["From the {object:171709}, the cobwebbed passage on the left goes down to the door. Mind the edges on the way: the lava below kills."] = "Depuis le Haut Siège, le passage couvert de toiles d'araignée à gauche descend jusqu'à la porte. Attention aux bords en chemin : la lave en contrebas tue.",
+	["From the {object:171709}, the cobwebbed passage on the left goes down to the door. Mind the edges on the way: the lava below kills."] = "Depuis le trône ({object:171709}), le passage couvert de toiles d'araignée à gauche descend jusqu'à la porte. Attention aux bords en chemin : la lave en contrebas tue.",
 	-- {quest:96403} Important Heirlooms · {npc:265003} Thom Filch · {quest:96394} The Restless Dead · {npc:264943} Afadra Dunwall · {quest:96393} Old Ironforge Incursion · {npc:264936} Earthseer Farsen
 	["In the log: {quest:96403} ({npc:265003}) and {quest:96394} ({npc:264943}); {quest:96393} for whoever took it from {npc:264936}. Share each quest with the group: click it in the quest log, then Share."] = "Dans le journal : {quest:96403} ({npc:265003}) et {quest:96394} ({npc:264943}) ; {quest:96393} pour qui l'a prise chez {npc:264936}. Partager chaque quête avec le groupe : clic sur la quête dans le journal, puis Partager.",
 	["The Hall of Thanes"] = "La salle des Thanes",
@@ -82,13 +82,13 @@ return {
 	-- {quest:96393} Old Ironforge Incursion
 	["King Magni: {quest:96393}"] = "Le roi Magni : {quest:96393}",
 	-- {object:171709} High Seat
-	["Back out the way you came in: King Magni sits on the {object:171709}, east of the door."] = "Ressortir par le même chemin : le roi Magni siège sur le Haut Siège, à l'est de la porte.",
+	["Back out the way you came in: King Magni sits on the {object:171709}, east of the door."] = "Ressortir par le même chemin : le roi Magni siège sur son trône ({object:171709}), à l'est de la porte.",
 
 	-- Step 12: Ironforge rewards
 	-- {zone:1455} Ironforge
 	["{zone:1455} rewards"] = "Récompenses à {zone:1455}",
 	-- {object:171709} High Seat · {zone:1453} Stormwind · {object:171524} Tinker Town
-	["Back out the way you came in. King Magni sits on the {object:171709}, east of the door. Last stop of the chapter: the route's own guide comes back once these are handed in, and goes on in {zone:1453} (the tram from {object:171524})."] = "Ressortir par le même chemin. Le roi Magni siège sur le Haut Siège, à l'est de la porte. Dernier arrêt du chapitre : le guide du parcours revient une fois ces quêtes rendues, et continue à {zone:1453} (le tram depuis {object:171524}).",
+	["Back out the way you came in. King Magni sits on the {object:171709}, east of the door. Last stop of the chapter: the route's own guide comes back once these are handed in, and goes on in {zone:1453} (the tram from {object:171524})."] = "Ressortir par le même chemin. Le roi Magni siège sur son trône ({object:171709}), à l'est de la porte. Dernier arrêt du chapitre : le guide du parcours revient une fois ces quêtes rendues, et continue à {zone:1453} (le tram depuis {object:171524}).",
 
 	-- No longer in the guide (its English changed or it went away): reuse or delete.
 	-- ["Only for whoever handed in {quest:96391} (the {item:274268} of the spies, in the Dwarf and Gnome starts): {npc:264936} gives {quest:96393}, the head of the last boss for King Magni, about 3,200 XP. Out of Ironforge's gate, east past Kharanos to his camp above {object:149024}: about 10 minutes there and back. Short on time? Skip it."] = "Seulement pour qui a rendu {quest:96391} (la {item:274268} des espions, dans les départs nain et gnome) : {npc:264936} donne {quest:96393}, la tête du dernier boss pour le roi Magni, environ 3 200 XP. Par la porte de Forgefer, vers l'est passé Kharanos jusqu'à son camp au-dessus de la carrière de Gol'Bolar : une dizaine de minutes aller et retour. Peu de temps ? Le passer.",

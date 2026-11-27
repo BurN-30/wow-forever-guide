@@ -38,6 +38,7 @@
    breaks a file stops the build here, not at the player's login.
 5. The quick checks; the build stops on the first that fails: tools/check-lua.py (the module and the
    pack under Lua 5.1), tools/check-fr-polestar.py (our French for Polestar's guides),
+   tools/check-fr-chapitres.py (0.14.0: every French text of the chapters is in the built addon),
    tools/check-accroches.py (each chapter's hook still on Polestar's route, in range) and
    tools/check-chapitres.py (each chapter against the route up to its hook). The bench
    (tools/check-greffe.py, about a minute) needs the game's interface files: run it by hand.
@@ -308,7 +309,7 @@ if bad:
     sys.exit("Lua 5.1 refuses a file the build changed: " + " | ".join(bad))
 print("Lua 5.1 syntax: " + ", ".join(n for n in changed if n.endswith(".lua") or n == "Polestar_frFR_Texts") + ": ok")
 print("addons:", ", ".join(sorted(p.name for p in addons.iterdir())))
-for check in ("check-lua.py", "check-fr-polestar.py", "check-accroches.py", "check-chapitres.py"):
+for check in ("check-lua.py", "check-fr-polestar.py", "check-fr-chapitres.py", "check-accroches.py", "check-chapitres.py"):
     r = subprocess.run([sys.executable, str(repo / "tools" / check)], capture_output=True, text=True,
                        encoding="utf-8", errors="replace")
     lines = (r.stdout + r.stderr).strip().splitlines()

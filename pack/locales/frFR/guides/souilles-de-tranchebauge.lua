@@ -13,23 +13,23 @@ return {
 	-- {zone:1413} Barrens · {npc:1284} Archbishop Benedictus · {quest:3636} Bring the Light
 	["Razorfen Downs: the quilboar and Scourge barrows at the southern edge of the {zone:1413}, for a group of 5, levels 37 to 46: at 41 it fits. {npc:1284} stands in the Cathedral of Light. {quest:3636} cannot be shared: every player takes it here."] = "Les Souilles de Tranchebauge : les terriers des huranes et du Fléau au sud des {zone:1413}, pour un groupe de 5, niveaux 37 à 46 : à 41, c'est le bon moment. {npc:1284} se tient dans la Cathédrale de la Lumière. {quest:3636} ne se partage pas : chaque joueur la prend ici.",
 	-- {object:3204} Booty Bay · {zone:1413} Barrens · {zone:1453} Stormwind
-	["The trip: the flight to {object:3204}, the boat to Ratchet, then the road south through the {zone:1413}; the same way back to {zone:1453} at the end. Keep 4 free quest log slots."] = "Le trajet : le vol pour Baie-du-Butin, le bateau pour Cabestan, puis la route vers le sud à travers les {zone:1413} ; le même chemin au retour vers {zone:1453} à la fin. Garder 4 places libres dans le journal.",
+	["The trip: the flight to {object:3204}, the boat to Ratchet, then the road south through the {zone:1413}; the same way back to {zone:1453} at the end. Keep 4 free quest log slots."] = "Le trajet : le vol pour Baie-du-Butin ({object:3204}), le bateau pour Cabestan, puis la route vers le sud à travers les {zone:1413} ; le même chemin au retour vers {zone:1453} à la fin. Garder 4 places libres dans le journal.",
 
 	-- Step 2: Fly to Booty Bay
 	-- {object:3204} Booty Bay
-	["Fly to {object:3204}"] = "Vol pour Baie-du-Butin",
+	["Fly to {object:3204}"] = "Vol pour Baie-du-Butin ({object:3204})",
 	-- {zone:1453} Stormwind
 	["{zone:1453} flight master"] = "Maître de vol de {zone:1453}",
 
 	-- Step 3: Boat to Ratchet
 	["Boat to Ratchet"] = "Bateau pour Cabestan",
 	-- {object:3204} Booty Bay · {npc:4631} Wharfmaster Lozgil
-	["The boat to Ratchet leaves from {object:3204}'s dock, by {npc:4631}."] = "Le bateau pour Cabestan part du quai de Baie-du-Butin, près de {npc:4631}.",
+	["The boat to Ratchet leaves from {object:3204}'s dock, by {npc:4631}."] = "Le bateau pour Cabestan part du quai de Baie-du-Butin ({object:3204}), près de {npc:4631}.",
 
 	-- Step 4: The road south
 	["The road south"] = "La route du sud",
 	-- {zone:1413} Barrens · {object:19844} Great Lift
-	["From Ratchet, ride west to the road, then south down the {zone:1413} past Camp Taurajo (Horde: keep east of it and away from its guards) to the top of the {object:19844}. Razorfen Downs is a few hundred yards north-east of the lift, among thorny hills."] = "Depuis Cabestan, rejoindre la route à l'ouest, puis descendre les {zone:1413} vers le sud en passant le Camp Taurajo (Horde : rester à l'est, loin de ses gardes) jusqu'au haut du Grand élévateur. Les Souilles de Tranchebauge sont à quelques centaines de mètres au nord-est de l'élévateur, parmi des collines d'épines.",
+	["From Ratchet, ride west to the road, then south down the {zone:1413} past Camp Taurajo (Horde: keep east of it and away from its guards) to the top of the {object:19844}. Razorfen Downs is a few hundred yards north-east of the lift, among thorny hills."] = "Depuis Cabestan, rejoindre la route à l'ouest, puis descendre les {zone:1413} vers le sud en passant le Camp Taurajo (Horde : rester à l'est, loin de ses gardes) jusqu'au haut du Grand élévateur ({object:19844}). Les Souilles de Tranchebauge sont à quelques centaines de mètres au nord-est de l'élévateur, parmi des collines d'épines.",
 	["Razorfen Downs"] = "Souilles de Tranchebauge",
 
 	-- Step 5: Razorfen Downs: Myriam Moonsinger
@@ -58,15 +58,15 @@ return {
 	-- Step 8: Back to Ratchet
 	["Back to Ratchet"] = "Retour à Cabestan",
 	-- {object:3204} Booty Bay · {zone:1453} Stormwind
-	["The same way back: north along the road past Camp Taurajo to Ratchet, the boat to {object:3204}, then the flight to {zone:1453}. A hearthstone bound in {zone:1453} saves the whole trip."] = "Le même chemin au retour : vers le nord par la route en passant le Camp Taurajo jusqu'à Cabestan, le bateau pour Baie-du-Butin, puis le vol pour {zone:1453}. Une pierre de foyer liée à {zone:1453} évite tout le trajet.",
+	["The same way back: north along the road past Camp Taurajo to Ratchet, the boat to {object:3204}, then the flight to {zone:1453}. A hearthstone bound in {zone:1453} saves the whole trip."] = "Le même chemin au retour : vers le nord par la route en passant le Camp Taurajo jusqu'à Cabestan, le bateau pour Baie-du-Butin ({object:3204}), puis le vol pour {zone:1453}. Une pierre de foyer liée à {zone:1453} évite tout le trajet.",
 	-- {object:3204} Booty Bay
-	["Boat to {object:3204}"] = "Bateau pour Baie-du-Butin",
+	["Boat to {object:3204}"] = "Bateau pour Baie-du-Butin ({object:3204})",
 
 	-- Step 9: Fly to Stormwind
 	-- {zone:1453} Stormwind
 	["Fly to {zone:1453}"] = "Prendre un vol pour {zone:1453}",
 	-- {object:3204} Booty Bay
-	["{object:3204} flight master"] = "Maître de vol de Baie-du-Butin",
+	["{object:3204} flight master"] = "Maître de vol de Baie-du-Butin ({object:3204})",
 
 	-- Step 10: Stormwind: Bring the Light
 	["Last stop of the chapter: the route's own guide comes back once this is handed in."] = "Dernier arrêt du chapitre : le guide du parcours revient une fois cette quête rendue.",
