@@ -1242,6 +1242,52 @@ def hook_passed(args):
                before=set_level(32), after=after)
 
 
+def hook_passed_open_later(args):
+    """0.14.0 (review M1): the Kraal's hook passed without being done, and Polestar's own rule does not
+    open Razorfen Kraul yet at this level; a hand-in in the same level opens it (a prerequisite of its
+    page, played here by the rule's answer changing at the hand-in). The module must see it at once:
+    the chapter comes back from "hook" without waiting for the next level. An answer that raised an
+    error is not kept either. Polestar's rule is stood in for (GA.PolestarCandidates) to drive it."""
+    route = "forever/alliance/30-40/04-stranglethorn-vale"
+
+    def after(L, G, ns, r):
+        G.tick(6)
+        G.clearOther()
+        ns.Codex.Load()
+        L.globals().POLESTAR_NS = ns
+        L.execute('''
+            BENCH_OPEN, BENCH_FAIL, BENCH_CALLS = false, false, 0
+            BENCH_REAL_CANDIDATES = POLESTAR_NS.GA.PolestarCandidates
+            POLESTAR_NS.GA.PolestarCandidates = function(level, mode)
+                BENCH_CALLS = BENCH_CALLS + 1
+                if BENCH_FAIL then error("bench: a passing error") end
+                if BENCH_OPEN then return { { key = "razorfen-kraul" } } end
+                return {}
+            end
+        ''')
+        h = G.entry("kraal")
+        w1 = ns.GA.GreffeWhy(h, 32)
+        r.say(f"Niveau 32, 1100 jamais rendue, la règle de Polestar n'ouvre pas encore le Kraal : raison « {w1} ».")
+        r.check(w1 == "hook", "ni accroche ni donjon ouvert : pas de proposition")
+        L.globals().BENCH_OPEN = True
+        G.turnin(1069)  # a hand-in of the level (Deep Ocean, Vast Sea), the rule's answer changes with it
+        G.tick(2)
+        w2 = ns.GA.GreffeWhy(h, 32)
+        r.say(f"Un rendu dans le même niveau, la règle ouvre maintenant le Kraal : raison « {w2} ».")
+        r.check(w2 != "hook", "le rendu remet le calcul à jour : le chapitre n'attend plus le niveau suivant")
+        calls = L.globals().BENCH_CALLS
+        L.globals().BENCH_FAIL = True
+        G.turnin(1070)
+        ns.GA.GreffeWhy(h, 32)
+        L.globals().BENCH_FAIL = False
+        w3 = ns.GA.GreffeWhy(h, 32)
+        r.say(f"Après une erreur de la règle, appels {calls} puis {L.globals().BENCH_CALLS}, raison « {w3} ».")
+        r.check(w3 != "hook" and L.globals().BENCH_CALLS >= calls + 2, "une réponse en erreur n'est pas gardée : la suivante refait le calcul")
+        ns.GA.PolestarCandidates = L.globals().BENCH_REAL_CANDIDATES
+    return run(args, "Scénario P2b : accroche dépassée, donjon ouvert par un rendu du même niveau", prelude=ACCOUNT + char_db([route], 1, others_answered("kraal")),
+               before=set_level(32), after=after)
+
+
 def hook_ahead(args):
     """The hook still ahead on the route: the Deadmines at the level-up to 21 in Loch Modan, before
     The Defias Traitor (155): neither Polestar's card nor ours; ours at 155."""
@@ -1373,11 +1419,17 @@ def notes(args):
         t1 = WN.frame and WN.frame.Hero.Title.GetText(WN.frame.Hero.Title)
         r.say(f"Polestar a aussi changé de version (drapeau 0.3.7) : d'abord « {t1} ».")
         r.check(bool(WN.IsShown()) and "Groupe Alliance" not in str(t1), "les notes de Polestar s'ouvrent d'abord, sous leur titre")
+        LC = ns.UI.LayoutCard
+        offered = bool(LC and LC.Offered and LC.Offered())
+        shown1 = bool(LC and LC.IsShown and LC.IsShown())
+        r.say(f"Choix de disposition (Atlas ou Standard) offert : {offered} ; affiché sous les notes de Polestar : {shown1}.")
+        r.check(shown1 == offered, "sous les notes de Polestar, le choix de disposition est là quand Polestar l'offre")
         WN.Hide()
         G.tick(10)
         t2 = WN.frame.Hero.Title.GetText(WN.frame.Hero.Title)
         r.say(f"Fermées : puis « {t2} » ; drapeau de Polestar {ns.DB().whatsNewSeen}.")
         r.check(bool(WN.IsShown()) and "Groupe Alliance" in str(t2), "puis les nôtres, une fois les siennes fermées")
+        r.check(not (LC and LC.IsShown and LC.IsShown()), "pas de choix de disposition sous nos notes")
         r.check(ns.DB().whatsNewSeen == WN.LATEST, "les notes de Polestar restent marquées vues")
     lines, b = run(args, "Scénario E3 : Polestar et notre paquet changent ensemble", before=before, after=both,
                    prelude='PolestarDB = { welcomeSeen = 1, whatsNewSeen = "0.3.7", groupeAlliance = { autoTold = true } }\n' + char_db([ROUTE_DM]))
@@ -1847,7 +1899,7 @@ def main():
              ("c-rfd-ulda", lambda a: two_due(a, "Souilles avant Uldaman à la fin des Riverglades", "forever/alliance/40-50/01b-riverglades", 94893, 44,
                                               "souilles", "uldaman", done=(1448,), later={"souilles": 43})),
              ("c-temple2", temple_with_quest), ("c-end55", end_dungeons_55),
-             ("p-levels", polestar_levels), ("p-passed", hook_passed), ("p-ahead", hook_ahead), ("p-outlevelled", outlevelled),
+             ("p-levels", polestar_levels), ("p-passed", hook_passed), ("p-passed-later", hook_passed_open_later), ("p-ahead", hook_ahead), ("p-outlevelled", outlevelled),
              ("mig29", lambda a: migration(a, "mig29", hooks=MIG_HOOKS)), ("mig34", lambda a: migration(a, "mig34")),
              ("mig46", lambda a: migration(a, "mig46")), ("mig55", lambda a: migration(a, "mig55")),
              ("mig-chapter", migration_chapter), ("notes", notes),

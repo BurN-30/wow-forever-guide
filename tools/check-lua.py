@@ -405,6 +405,16 @@ check(GA.Locale() == "enUS", "/ga lang en wins")
 S.lang = nil
 NS.Names = nil
 check(GA.Locale() == "frFR", "without Polestar's language: the client's")
+-- A French player who had typed /ga lang en under 0.13.1 (then: the Wowhead links' language).
+NS.DB().groupeAlliance = { lang = "en" }
+NS.Names = { Language = function() return "frFR" end }
+local S2 = NS.DB().groupeAlliance
+check(GA.Locale() == "frFR" and S2.wowheadLang == "en" and S2.lang == nil and S2.langV == 2,
+  "a /ga lang en of 0.13.1 stays the links' language only: the module follows Polestar (French)")
+S2.lang = "en"
+check(GA.Locale() == "enUS", "a /ga lang en typed since 0.14.0 sets the module's language")
+NS.DB().groupeAlliance = S
+NS.Names = nil
 Polestar_ArcadeDB = nil
 GA.ArcadeKeys()
 check(Polestar_ArcadeDB.keys == "azerty" and Polestar_ArcadeDB.gaKeys == 1, "first game on a French client: AZERTY")
