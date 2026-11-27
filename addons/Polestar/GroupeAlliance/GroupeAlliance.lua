@@ -807,8 +807,11 @@ end)
 -- ourLines(owner, tt) adds this module's lines to tooltip `tt` (no Show) and hooks the line's Ctrl-click;
 -- false when owner is not a guide line with a subject.
 local hooked = setmetatable({}, { __mode = "k" })
-local function ourLines(owner, tt)
-	local goal = type(owner) == "table" and owner.psGoal
+local function ourLines(owner, tt, goal)
+	if type(owner) ~= "table" then return false end
+	-- `goal`: the goal the tooltip was set for, when the caller kept it (a line's frame is
+	-- reused, so owner.psGoal may have moved on by the time the item's data arrives).
+	if goal == nil then goal = owner.psGoal end
 	if not (type(goal) == "table" and subject(goal) and tt) then return false end
 	if not hooked[owner] and owner.HookScript then
 		owner:HookScript("OnClick", onClick)
@@ -882,7 +885,15 @@ local function hookItemTip()
 		local guide = extra
 		local function withOurs(tip)
 			if guide then guide(tip) end
-			if tip and (not tip.IsOwned or tip:IsOwned(owner)) then ourLines(owner, tip) end
+			-- Our lines run inside Polestar's `extra`, before its Show: an error of ours must not
+			-- cost the line its tooltip. It goes to the game's error handler instead.
+			if tip and (not tip.IsOwned or tip:IsOwned(owner)) then
+				local ok, err = pcall(ourLines, owner, tip, goal)
+				if not ok then
+					local handler = geterrorhandler and geterrorhandler()
+					if handler then handler(err) end
+				end
+			end
 		end
 		inItemTip = true
 		local ok, err = pcall(released, owner, item, withOurs, place)
