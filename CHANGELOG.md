@@ -2,6 +2,52 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.14.0 (2026-11-27)
+
+### Français
+- Relancer le jeu : quitter complètement WoW puis le relancer, un /reload ne suffit pas pour cette version (dossiers d'addon ajoutés et retirés). Polestar tient maintenant en 22 dossiers au lieu de 42 : le programme d'installation retire les anciens (ils sont gardés dans `Interface\_guide-sauvegarde`).
+- Polestar 0.4.3.1 : nouvelle page de réglages, disposition « Atlas » au choix (la fenêtre des nouveautés de Polestar propose de l'essayer ; la fermer par sa croix garde la disposition d'avant), choix de la langue de Polestar (Réglages > Général > Langue), flèche qui suit mieux les chemins, et des dizaines d'étapes corrigées. Les boutons du guide (roue dentée, aide, réduire) restent en haut à droite de la fenêtre avec le style d'onglets par défaut, « Au-dessus de la barre d'étape » ; avec un autre style, ils ne s'affichent pas.
+- Escortes : Polestar demande maintenant « La faire » ou « La passer » pour une escorte, y compris dans deux chapitres (Willix l'Importateur au Kraal de Tranchebauge, Belnistrasz aux Souilles de Tranchebauge) : en groupe, répondre « La faire ». « La passer » retire la quête du chapitre, qui se ferme quand même à la fin.
+- Marques de difficulté : Polestar marque lui-même d'une double tête les étapes de groupe, d'escorte ou d'élites. Les marques orange et rouges du paquet restent pour les quêtes trois niveaux ou plus au-dessus du personnage et pour les cas rédigés à la main ; celles du paquet sur les élites et les escortes sont retirées, en doublon.
+- Quêtes grises : toujours laissées de côté. Polestar 0.4.3 les aurait remises dans le parcours de chaque personnage existant ; le choix fait par le joueur dans les réglages est gardé.
+- Langue : les textes du paquet (aide, cartes des donjons, astuces, « À quoi sert cet objet ») suivent la langue choisie dans Polestar, sauf `/ga lang fr` ou `/ga lang en`.
+- Jeu des vols : Polestar gère maintenant lui-même les claviers (`/doom keys azerty`, `/doom keys qwerty`, ou `/doom keys wow` pour les touches de déplacement du personnage). Sur un jeu en français, AZERTY est choisi une fois tout seul ; un choix fait avant avec `/arcade` est repris.
+- Chapitres : Le lait matriarcal (pic Rochenoire) se coche de nouveau, une fois le lait pris ; le pic Rochenoire supérieur ne demande plus de clé sur Forever ; la clé squelette dit où commence sa chaîne ; Salle des Thanes : La carte souterraine se rend au Terre-voyant Farsen avant les quêtes de Forgefer, en un seul passage ; Mortemines : le bois des paladins (Le test de droiture) ; Dalaran : l'entrée sans clé de l'Alliance signalée.
+- Français : 264 textes que Polestar traduit maintenant sortent du complément, 17 nouveaux sont traduits ; notre français du mont Hyjal (168 textes) et de 6 autres textes reste devant celui de Polestar, tant que le sien ne change pas.
+- PrettyTooltip 1.5.0 : éditeur de style refait (`/ptip`, la page des options du jeu n'a plus qu'un bouton qui l'ouvre), réglages par type d'infobulle ; l'auteur corrige lui-même le bonus d'ensemble actif, qui affiche en plus son nombre de pièces, « (2) ».
+- BuffAlerts Forever 3.14.1, toujours éteint à la première installation : alertes cachées à cheval (par défaut), alerte du sac de couchage douillet, parchemins et buffs de camp comptés comme le buff de classe qu'ils remplacent, aussi sur le jeu en français.
+- Auctionator 354, avec deux correctifs du paquet : les prix des objets à suffixe ne s'arrêtent plus après le premier, et la conversion des anciens prix ne peut plus bloquer l'addon.
+
+### En jeu
+- **Relancer le jeu après la mise à jour** : Polestar passe de 42 à 22 dossiers ; le programme d'installation retire les anciens.
+- **Escortes** : Polestar demande « La faire » ou « La passer ». En groupe, répondre « La faire » ; dans un chapitre, « La passer » retire la quête.
+- **Marques** : La double tête de Polestar signale les étapes de groupe, d'escorte et d'élites ; l'orange et le rouge du paquet, les quêtes bien au-dessus du niveau.
+- **Langue** : le paquet suit la langue choisie dans Polestar (Réglages > Général > Langue), sauf /ga lang.
+- **Jeu des vols** : AZERTY sur un jeu en français ; /doom keys pour changer.
+- **Boutons du guide** : roue dentée, aide et réduire restent avec le style d'onglets par défaut.
+
+### English
+- Restart the game: quit WoW completely, then start it again; a /reload is not enough for this version (addon folders added and removed). Polestar now comes in 22 folders instead of 42: the installer removes the old ones (kept in `Interface\_guide-sauvegarde`).
+- Polestar 0.4.3.1: a new settings page, an "Atlas" layout to choose (Polestar's "What's new" window offers to try it, its cross puts yours back), a language setting for Polestar (Settings > General > Language), an arrow that follows the paths better, and dozens of fixed steps. The guide's buttons (gear, help, reduce) stay at the top right of the window with the default tab style, "Above the step bar"; with another style they do not show.
+- Escorts: Polestar now asks "Do it" or "Skip it" for an escort, in two chapters too (Willix in Razorfen Kraul, Belnistrasz in Razorfen Downs): in a group, answer "Do it". "Skip it" takes the quest out of the chapter, which still closes at its end.
+- Difficulty marks: Polestar marks group, escort and elite steps with two heads itself. The pack's orange and red marks stay for quests three or more levels above the character and for the hand-written cases; the pack's marks on elites and escorts are removed, as duplicates.
+- Grey quests: still left out. Polestar 0.4.3 would have put them back on every existing character's route; a choice made in the settings is kept.
+- Language: the pack's texts (help, dungeon cards, tips, "What is this item for") follow the language chosen in Polestar, unless `/ga lang fr` or `/ga lang en`.
+- Flight game: Polestar now handles keyboards itself (`/doom keys azerty`, `/doom keys qwerty`, or `/doom keys wow` for the character's movement keys). On a French client AZERTY is picked once by itself; a choice made before with `/arcade` is kept.
+- Chapters: Mother's Milk (Blackrock Spire) ticks again once you are milked; Upper Blackrock Spire takes no key on Forever any more; the Skeleton Key says where its chain starts; Hall of Thanes: the Underground Map is handed to Earthseer Farsen before the Ironforge quests, in one trip; Deadmines: the paladins' lumber (The Test of Righteousness); Dalaran: the Alliance's keyless way in noted.
+- French: 264 texts Polestar now translates leave the complement, 17 new ones are translated; our Mount Hyjal French (168 texts) and 6 other texts stay before Polestar's, as long as Polestar's does not change.
+- PrettyTooltip 1.5.0: a redone style editor (`/ptip`; the game's options page only has a button that opens it), settings per tooltip type; the author now fixes the active set bonus himself, which also shows its piece count, "(2)".
+- BuffAlerts Forever 3.14.1, still off on a first install: alerts hidden while mounted (default), a Cozy Sleeping Bag alert, scrolls and camp buffs counted as the class buff they replace, on the French client too.
+- Auctionator 354, with two pack fixes: prices of items with a suffix no longer stop after the first one, and converting old prices can no longer stop the addon.
+
+### In game
+- **Restart the game after the update**: Polestar goes from 42 to 22 folders; the installer removes the old ones.
+- **Escorts**: Polestar asks "Do it" or "Skip it". In a group, answer "Do it"; in a chapter, "Skip it" takes the quest out.
+- **Marks**: Polestar's two heads show group, escort and elite steps; the pack's orange and red, quests well above your level.
+- **Language**: the pack follows the language chosen in Polestar (Settings > General > Language), unless /ga lang.
+- **Flight game**: AZERTY on a French client; /doom keys to change it.
+- **Guide buttons**: gear, help and reduce stay with the default tab style.
+
 ## v0.13.1 (2026-11-25)
 
 ### Français
