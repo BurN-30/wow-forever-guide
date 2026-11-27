@@ -1328,6 +1328,11 @@ def notes(args):
     assert "GA.NOTES = nil" not in notes_src, f"CHANGELOG.md has no in-game notes for {version}"
     rows, bad = [], 0
     saved = {}
+    # "Polestar's own notes seen": its newest notes' version (UI/WhatsNew.lua, NOTES[1]), and since
+    # Polestar 0.4.3 the layout section they come with too (UI/LayoutCard.lua, PolestarDB.layoutCardSeen).
+    wn_src = (REPO / "addons" / "Polestar" / "UI" / "WhatsNew.lua").read_text(encoding="utf-8")
+    latest = re.search(r'^local NOTES = \{\s*\{\s*version = "([^"]+)"', wn_src, re.M).group(1)
+    seen = f'whatsNewSeen = "{latest}", layoutCardSeen = 1'
 
     def before(L, G, ns):
         err = L.eval("function(src, ns) local f, e = loadstring(src, '@Notes.lua') if not f then return e end f('Polestar', ns) return nil end")(notes_src, ns)
@@ -1342,12 +1347,14 @@ def notes(args):
         heads = [str(n.Head.GetText(n.Head)) for n in cp.lua_list(WN.frame.Body.Notes) if n.Head]
         r.say(f"Notes affichées : {heads} ; pied : « {WN.frame.Site.GetText(WN.frame.Site)} ».")
         r.check(ns.DB().whatsNewSeen == WN.LATEST, f"le drapeau de Polestar ne bouge pas ({ns.DB().whatsNewSeen})")
+        LC = ns.UI.LayoutCard
+        r.check(not (LC and LC.IsShown and LC.IsShown()), "pas de choix de disposition de Polestar sous nos notes (0.14.0)")
         WN.Hide()
         G.tick(2)
         saved["db"] = to_py(ns.DB().groupeAlliance)
         r.check(saved["db"].get("notesSeen") == "0.13.0", f"vue pour ce compte : groupeAlliance.notesSeen = {saved['db'].get('notesSeen')}")
     lines, b = run(args, "Scénario E1 : nos notes de version, première connexion", before=before, after=first,
-                   prelude='PolestarDB = { welcomeSeen = 1, whatsNewSeen = "0.4.0", groupeAlliance = { autoTold = true } }\n' + char_db([ROUTE_DM]))
+                   prelude='PolestarDB = { welcomeSeen = 1, ' + seen + ', groupeAlliance = { autoTold = true } }\n' + char_db([ROUTE_DM]))
     rows += lines
     bad += b
 
@@ -1356,7 +1363,7 @@ def notes(args):
         WN = ns.UI.WhatsNew
         r.check(not WN.IsShown(), "connexion suivante, même compte : la fenêtre ne s'ouvre plus")
     lines, b = run(args, "Scénario E2 : connexion suivante", before=before, after=second,
-                   prelude=f'PolestarDB = {{ welcomeSeen = 1, whatsNewSeen = "0.4.0", groupeAlliance = {lua_literal(saved.get("db", {}))} }}\n' + char_db([ROUTE_DM]))
+                   prelude=f'PolestarDB = {{ welcomeSeen = 1, {seen}, groupeAlliance = {lua_literal(saved.get("db", {}))} }}\n' + char_db([ROUTE_DM]))
     rows += lines
     bad += b
 
@@ -1383,7 +1390,7 @@ def notes(args):
         title = WN.frame and WN.frame.Hero.Title.GetText(WN.frame.Hero.Title)
         r.check(bool(WN.IsShown()) and "Group Alliance 0.13.0" in str(title), f"client anglais : titre et notes en anglais (« {title} »)")
     lines, b = run(args, "Scénario E4 : client anglais", locale="enUS", before=before, after=english_notes,
-                   prelude='PolestarDB = { welcomeSeen = 1, whatsNewSeen = "0.4.0", groupeAlliance = { autoTold = true } }\n' + char_db([ROUTE_DM]))
+                   prelude='PolestarDB = { welcomeSeen = 1, ' + seen + ', groupeAlliance = { autoTold = true } }\n' + char_db([ROUTE_DM]))
     rows += lines
     bad += b
     return rows, bad

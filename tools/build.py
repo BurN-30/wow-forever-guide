@@ -5,10 +5,10 @@
 1. forge guide lint, then forge guide compile of pack/ (Polestar's guides as context);
 2. the Polestar* folders of addons/ = the Polestar release (unzipped Polestar-<version>.zip)
    and the compiled pack (PolestarPack_GroupeAlliance and its _frFR texts addon); the other
-   folders (Auctionator as released, PrettyTooltip as released plus the pack patches of
-   docs/prettytooltip-1.4.2.patch, BuffAlertsForever as released plus PackPatches.lua, see
-   docs/buffalerts-3.13.0.patch, !BugGrabber as released, BugSack as released plus
-   PackPatches.lua, see docs/bugsack-12.1.9.patch) are committed and left alone;
+   folders (Auctionator 354 as released plus the pack patches of docs/auctionator-354.patch,
+   PrettyTooltip 1.5.0 as released plus docs/prettytooltip-1.5.0.patch, BuffAlertsForever 3.14.1
+   as released plus PackPatches.lua, see docs/buffalerts-3.14.1.patch, !BugGrabber as released,
+   BugSack as released plus PackPatches.lua, see docs/bugsack-12.1.9.patch) are committed and left alone;
 3. the Groupe Alliance module (addons-src/GroupeAlliance) goes inside Polestar's own
    folder, so there is no extra addon to tick: its files are added to Polestar.toc,
    UI/GuideFrame.lua gets the gear, "?" help and "_" reduce buttons at the tab strip's
@@ -19,7 +19,10 @@
    ItemUseData.lua is made by tools/item-uses.py from the client's tables (0.10.0);
    0.13.0: GreffeData.lua and Greffe.lua (this pack's chapters offered on Polestar's own
    route) and Notes.lua (written here by tools/notes-jeu.py from CHANGELOG.md, the pack version's
-   "### En jeu" / "### In game"), shown in UI/WhatsNew.lua's window, which takes WN.Extra;
+   "### En jeu" / "### In game"), shown in UI/WhatsNew.lua's window, which takes WN.Extra
+   (0.14.0: without Polestar 0.4.3's layout section under them);
+   0.14.0: Core/Engine.lua's migration "skipGreyOn" leaves the module's default (grey quests left
+   out) to the profiles that never chose;
    Polestar_frFR/Texts.lua gets addons-src/Polestar_frFR/Complement.lua (made by
    tools/fr-polestar.py: French for the texts Polestar leaves in English, only where its table
    has none) right before its RegisterGuideTexts call, with a warning when the release is another
@@ -51,8 +54,8 @@ MODULE = ["Reliability.lua", "Tips.lua", "Danger.lua", "GroupeAlliance.lua", "It
           "GreffeData.lua", "Notes.lua", "Greffe.lua"]
 GENERATED = {"Notes.lua"}  # written by this build into the module, not in addons-src
 NOTICE = "Modified by BurN-30 on 2026-11-08 (github.com/BurN-30/wow-forever-guide)"
-ARCADE_NOTICE = "Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide)"
-GREFFE_NOTICE = ARCADE_NOTICE
+GREFFE_NOTICE = "Modified by BurN-30 on 2026-11-23 (github.com/BurN-30/wow-forever-guide)"
+POLESTAR_0431_NOTICE = "Modified by BurN-30 on 2026-11-27 (github.com/BurN-30/wow-forever-guide)"
 
 POLESTAR_CHANGES = [
     ("Polestar.toc", "Alts\\Alts.xml\n",
@@ -124,18 +127,29 @@ POLESTAR_CHANGES = [
      "end\n"),
     ("README.txt", "Leveling guides for World of Warcraft: Forever.\r\n",
      "Leveling guides for World of Warcraft: Forever.\r\n\r\n"
-     + GREFFE_NOTICE + ": the GroupeAlliance folder (Wowhead links,\r\n"
+     + POLESTAR_0431_NOTICE + ": the GroupeAlliance folder (Wowhead links,\r\n"
      "quest tips, calm defaults, quest automation exceptions, the Groupe Alliance pack's\r\n"
      "dungeon chapters offered on the route, which then stand in for the dungeon heads-up\r\n"
      "of the same dungeons) is loaded by Polestar.toc,\r\n"
      "UI/GuideFrame.lua has gear, \"?\" help and \"_\" reduce buttons and a line menu entry,\r\n"
      "UI/GuideFrameTabs.lua leaves room for those buttons,\r\n"
      "Core/Automation.lua asks the module before it accepts or turns in a quest,\r\n"
+     "Core/Engine.lua keeps the module's default for leaving out grey quests,\r\n"
      "Quests/PartyChat.lua says only an objective's plain words in party chat,\r\n"
-     "UI/WhatsNew.lua can show the Groupe Alliance notes under their own title,\r\n"
-     "and Polestar_frFR/Texts.lua has French for guide texts Polestar leaves in English.\r\n"
-     "The flight game (Polestar_Arcade/src/main.lua) has an AZERTY keyboard layout.\r\n"
-     "Everything else is Polestar 0.4.2.2 as released.\r\n"),
+     "UI/WhatsNew.lua can show the Groupe Alliance notes under their own title\r\n"
+     "(without the layout choice under them),\r\n"
+     "and Polestar_frFR/Texts.lua has French for guide texts Polestar leaves in English\r\n"
+     "(and ours before Polestar's for Mount Hyjal and a few texts, while Polestar's is the one judged).\r\n"
+     "Everything else is Polestar 0.4.3.1 as released.\r\n"),
+    # 0.14.0: Polestar 0.4.3 turns "leave out grey quests" (behavior.skipGrey) on by default and
+    # its migration "skipGreyOn" stores it off in every profile saved before, as it was off by
+    # default there. With this module it was on by default (GroupeAlliance.lua's RegisterDefaults,
+    # since 0.6): a profile without a value had it on, so the migration would turn it off for every
+    # player of the pack. It runs once and keeps what the player chose (a stored value).
+    ("Core/Engine.lua", "\tif s.behavior.skipGrey == nil then s.behavior.skipGrey = false end\n",
+     "\t-- " + POLESTAR_0431_NOTICE + ": with the Groupe Alliance module,\n"
+     "\t-- grey quests were already left out by default (no value: on), so nothing changes here.\n"
+     "\tif s.behavior.skipGrey == nil and not ns.GA then s.behavior.skipGrey = false end\n"),
     # 0.13.0: Polestar's "What's new" window shows this pack's notes (Greffe.lua sets
     # WN.Extra, an entry like Polestar's own with its own title and footer line): the window
     # renders WN.Extra when set, under its title, and opening it then leaves Polestar's own
@@ -150,55 +164,13 @@ POLESTAR_CHANGES = [
      "\tF.Site:SetText(entry.site or L[\"Full notes: %s\"]:format(SITE))\n"),
     ("UI/WhatsNew.lua", "\tns.DB().whatsNewSeen = WN.LATEST -- shown: a reload or logout from here does not repeat it\n",
      "\tif not WN.Extra then ns.DB().whatsNewSeen = WN.LATEST end -- shown: a reload or logout from here does not repeat it (" + GREFFE_NOTICE + ": not for WN.Extra)\n"),
-    # 0.12.2: AZERTY keyboards in the flight game (Polestar_Arcade, GPL-2.0-or-later).
-    # The game names a key by the letter printed on it, so the W A S D of the original
-    # sit far apart on an AZERTY keyboard. `/arcade azerty` or `/arcade qwerty` chooses;
-    # with neither, a French client gets AZERTY.
-    ("../Polestar_Arcade/src/main.lua",
-     "\tLALT = \"strafe\", RALT = \"strafe\",\n}\n",
-     "\tLALT = \"strafe\", RALT = \"strafe\",\n}\n"
-     "\n-- " + ARCADE_NOTICE + ": AZERTY keyboards.\n"
-     "-- A key is named by the letter printed on it: on an AZERTY keyboard the keys under the\n"
-     "-- left hand are Z Q S D (move, strafe) and A E (turn), and the number row gives\n"
-     "-- & e-acute \" ' ( - e-grave without Shift. /arcade azerty or /arcade qwerty chooses;\n"
-     "-- with neither, a French client gets AZERTY.\n"
-     "local AZERTY_KEYS = { Z = \"forward\", Q = \"strafeleft\", A = \"left\", W = false }\n"
-     "local QWERTY_KEYS = { W = \"forward\", A = \"strafeleft\", Q = \"left\", Z = false }\n"
-     "local AZERTY_DIGITS = { [\"&\"] = 1, [\"\\195\\169\"] = 2, ['\"'] = 3, [\"'\"] = 4, [\"(\"] = 5, [\"-\"] = 6, [\"\\195\\168\"] = 7 }\n"
-     "local function isAzerty()\n"
-     "\tif db and db.azerty ~= nil then return db.azerty end\n"
-     "\treturn (GetLocale and GetLocale() == \"frFR\") or false\n"
-     "end\n"
-     "local function applyKeyboard()\n"
-     "\tfor key, action in pairs(isAzerty() and AZERTY_KEYS or QWERTY_KEYS) do\n"
-     "\t\tbindings[key] = action or nil\n"
-     "\tend\n"
-     "end\n"
-     "UI.IsAzerty, UI.ApplyKeyboard = isAzerty, applyKeyboard\n"),
-    ("../Polestar_Arcade/src/main.lua",
-     "local function OnKeyDown(self, key)\n\tif held[key] then return end\n",
-     "local function OnKeyDown(self, key)\n\tif held[key] then return end\n"
-     "\tapplyKeyboard() -- " + ARCADE_NOTICE + "\n"),
-    ("../Polestar_Arcade/src/main.lua",
-     "\t\tlocal n = tonumber(key)\n\t\tif n and n >= 1 and n <= 7 then\n",
-     "\t\tlocal n = tonumber(key)\n"
-     "\t\t-- " + ARCADE_NOTICE + ": the AZERTY number row (\"-\" stays the automap's zoom while the map is open).\n"
-     "\t\tif not n and isAzerty() and not (key == \"-\" and D.AM.active) then n = AZERTY_DIGITS[key] end\n"
-     "\t\tif n and n >= 1 and n <= 7 then\n"),
-    ("../Polestar_Arcade/src/main.lua",
-     "\t\tif key == \"UP\" or key == \"W\" then G.MenuKey(\"up\")\n",
-     "\t\tif key == \"UP\" or key == \"W\" or key == \"Z\" then G.MenuKey(\"up\") -- " + ARCADE_NOTICE + ": Z on AZERTY\n"),
-    ("../Polestar_Arcade/src/main.lua",
-     "\tD.Print(\"/doom aggro - toggle auto save + pause when you enter combat\")\n",
-     "\tD.Print(\"/doom aggro - toggle auto save + pause when you enter combat\")\n"
-     "\tD.Print(\"/doom azerty | qwerty - keyboard layout (AZERTY by default on a French client)\") -- " + ARCADE_NOTICE + "\n"),
-    ("../Polestar_Arcade/src/main.lua",
-     "\telseif cmd == \"aggro\" then\n\t\tdb.aggroPause = not db.aggroPause\n",
-     "\telseif cmd == \"azerty\" or cmd == \"qwerty\" then -- " + ARCADE_NOTICE + "\n"
-     "\t\tdb.azerty = (cmd == \"azerty\")\n"
-     "\t\tapplyKeyboard()\n"
-     "\t\tD.Print(db.azerty and \"AZERTY keys: Z S move, Q D strafe, A E turn\" or \"QWERTY keys: W S move, A D strafe, Q E turn\")\n"
-     "\telseif cmd == \"aggro\" then\n\t\tdb.aggroPause = not db.aggroPause\n"),
+    # 0.14.0: Polestar 0.4.3's window adds its layout section (Atlas or Standard, the tab styles:
+    # UI/LayoutCard.lua) under its own notes; not under the Groupe Alliance's (WN.Extra).
+    ("UI/WhatsNew.lua", "\t\tsection, kept = lc ~= nil and lc.Offered(), nil\n",
+     "\t\tsection, kept = not WN.Extra and lc ~= nil and lc.Offered(), nil -- " + POLESTAR_0431_NOTICE + ": not under WN.Extra\n"),
+    # 0.12.2 to 0.13.1 changed the flight game (Polestar_Arcade/src/main.lua) for AZERTY keyboards.
+    # Polestar 0.4.3 does it itself (/doom keys azerty, or /doom keys wow for the keys the character
+    # moves with, and a hint on a keyboard whose forward key is not W): no change of ours there since 0.14.0.
 ]
 
 # Polestar's inner functions and messages the Groupe Alliance module relies on (Greffe.lua), each
@@ -208,8 +180,13 @@ POLESTAR_USES = [
     ("UI/DungeonToast.lua", "UI.DungeonToast = DT\n"),
     ("UI/DungeonToast.lua", "function DT.Candidates(level, mode, questId)\n"),
     ("UI/DungeonToast.lua", "\tlocal c = DT.Candidates(level, mode, questId)[1]\n"),
-    # the candidates' shape the module reads (c.key)
-    ("UI/DungeonToast.lua", "\t\t\t\t\tout[#out + 1] = { key = d.key, name = d.name, zoneName = d.zoneName, minLevel = min, maxLevel = max, best = best, take = take, level = level,\n"),
+    # the candidates' shape the module reads (c.key; 0.4.3 counts `take` from the pick-up guide's plan)
+    ("UI/DungeonToast.lua", "\t\t\t\t\tout[#out + 1] = { key = d.key, name = d.name, zoneName = d.zoneName, minLevel = min, maxLevel = max, best = best, take = #guide.take, level = level,\n"),
+    # 0.4.3: a check works its candidates out a few route plans a frame through DT.Candidates (the
+    # module's wrapper, which passes ns.TravelCost's answers through untouched), then DT.Check.
+    ("UI/DungeonToast.lua", "\tlocal ok, err = pcall(DT.Candidates, level, mode, questId)\n"),
+    # Polestar 0.4.3's layout section under its "What's new" notes (UI/LayoutCard.lua), kept off our notes
+    ("UI/LayoutCard.lua", "function LC.Offered() return atlasInstalled() end\n"),
     ("UI/ClassToast.lua", "function CT.ShowCard(m)\n"),
     ("UI/ClassToast.lua", "function CT.Hide()\n"),
     ("UI/ClassToast.lua", "\tCT.current = m\n"),
@@ -263,8 +240,8 @@ def run(*args):
 run("guide", "lint")
 run("guide", "compile")
 # Only the Polestar folders are rebuilt; the other addons shipped with the guide
-# (Auctionator as released, PrettyTooltip with docs/prettytooltip-1.4.2.patch,
-# BuffAlertsForever with docs/buffalerts-3.13.0.patch, !BugGrabber as released, BugSack
+# (Auctionator with docs/auctionator-354.patch, PrettyTooltip with docs/prettytooltip-1.5.0.patch,
+# BuffAlertsForever with docs/buffalerts-3.14.1.patch, !BugGrabber as released, BugSack
 # with docs/bugsack-12.1.9.patch) are committed and stay as they are.
 addons.mkdir(exist_ok=True)
 for d in sorted(addons.iterdir()):

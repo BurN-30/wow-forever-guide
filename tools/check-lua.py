@@ -13,6 +13,14 @@
 4. Escort badge: the lines marked in those guides are exactly Polestar's escorts plus the pack's
    own list (GA.EXTRA_ESCORTS), and each quest of that list is in the guides.
 5. Off by default: only the addons of OFF_BY_DEFAULT say `## DefaultState: disabled`.
+6. (0.14.0) The module's language follows the language Polestar shows unless /ga lang says, and the
+   flight game gets AZERTY on a French client once (a 0.12.2-0.13.1 choice kept, a later one too).
+7. (0.14.0) Polestar 0.4.3's migration "skipGreyOn", as built, run by its own Core/Profiles.lua:
+   grey quests stay left out for a 0.13.x player who never chose, a "no" stays, a first install
+   has the default, it runs once; without the module it behaves as released.
+8. (0.14.0) The pack's fixes of Auctionator 354 (suffix price keys, price key migration) and of
+   BuffAlerts Forever 3.14.1 (scroll and camp buffs in French), on the shipped files.
+Parts 3 and 4 read the side-shelf guides' steps too (Polestar 0.4.3's `stepsSrc`).
 It cannot replace a test in game: it only catches typos and broken calls.
 """
 import pathlib, sys
@@ -91,11 +99,15 @@ HOOKS.Tooltip({ psGoal = { quest = tipQuest }, HookScript = function() end })
 check(#TIPLINES >= 2 and TIPLINES[1]:find("Astuce", 1, true) ~= nil, "tooltip tip line")
 SlashCmdList.GROUPEALLIANCE("")
 check(#PRINTED > 0, "/ga prints its help")
--- Difficulty marks: an elite quest above the player (from Polestar's data), a
--- curated entry, nothing once the player has the level.
+-- Difficulty marks: a quest 3 or more levels above the player (from Polestar's data), a
+-- curated entry, nothing once the player has the level. 0.14.0: elite work and escorts get no
+-- mark of ours below that gap (Polestar 0.4.3 marks those steps itself).
 NS.Compat = { GetQuestLevel = function(q) return q == 900001 and 20 or (q == 900002 and 30) or nil end }
 local elite = { quest = 900001, t = "complete", status = "active", party = { kind = "elite" } }
-check(NS.UI.GoalLine(elite):find("icon-kill", 1, true) ~= nil, "danger mark on an elite quest above the player")
+check(NS.UI.GoalLine(elite):find("icon-kill", 1, true) == nil, "no mark of ours on elite work 2 levels above (Polestar's own)")
+PLAYER_LEVEL = 16
+check(NS.UI.GoalLine(elite):find("icon-kill", 1, true) ~= nil, "danger mark on a quest 4 levels above the player, elite or not")
+PLAYER_LEVEL = 18
 check(NS.UI.GoalLine({ quest = 900001, t = "turnin", status = "active", party = { kind = "elite" } }):find("icon-kill", 1, true) == nil, "no danger mark on a turn-in")
 check(NS.UI.GoalLine({ quest = 900002, t = "accept", status = "active" }):find("icon-kill", 1, true) ~= nil, "danger mark on a red quest")
 PLAYER_LEVEL = 25
@@ -321,6 +333,10 @@ import re
 guides = "\n".join(f.read_text(encoding="utf-8") for d in sorted((repo / "addons").iterdir())
                    if d.is_dir() and (d.name.startswith("Polestar_Guides") or d.name == "PolestarPack_GroupeAlliance")
                    for f in sorted(d.glob("*.lua")))
+# Polestar 0.4.3: a side-shelf guide (class, profession, reputation...) carries its steps as Lua
+# source in a string, `stepsSrc = "return { ... }"`: read in, so their lines count as the others.
+decode = L.eval("function(lit) local f = assert(loadstring('return ' .. lit)) return f() end")
+guides += "\n" + "\n".join(decode(m.group(1)) for m in re.finditer(r'stepsSrc = ("(?:[^"\\]|\\.)*")', guides))
 objectives = set()
 for m in re.finditer(r'\{ t = "(?:collect|kill|use|interact)", quest = (\d+),([^{}]*)', guides):
     for kind in ("item", "npc", "object"):
@@ -370,4 +386,172 @@ for d in sorted(p for p in (repo / "addons").iterdir() if p.is_dir()):
     if (states == ["disabled"]) != (d.name in OFF_BY_DEFAULT):
         state_bad.append(f"{d.name} {states or 'none'}")
 print(f"off by default: {', '.join(sorted(OFF_BY_DEFAULT))}, " + ("ok" if not state_bad else "FAILED: " + "; ".join(state_bad)))
-sys.exit(1 if bad or failed or missing or escort_bad or state_bad else 0)
+
+# 6. (0.14.0) The module's language follows Polestar's (ns.Names.Language) unless /ga lang says;
+# the flight game's keys on a French client (GA.ArcadeKeys, once per account, a 0.13 choice kept).
+L.execute(r'''
+local out = {}
+local function check(ok, what) if not ok then table.insert(out, what) end end
+local GA = NS.GA
+NS.DB().groupeAlliance = NS.DB().groupeAlliance or {}
+local S = NS.DB().groupeAlliance
+S.lang = nil
+NS.Names = { Language = function() return "enUS" end }
+check(GA.Locale() == "enUS", "Polestar shown in English on a French client: the module in English")
+NS.Names = { Language = function() return "frFR" end }
+check(GA.Locale() == "frFR", "Polestar shown in French: the module in French")
+S.lang = "en"
+check(GA.Locale() == "enUS", "/ga lang en wins")
+S.lang = nil
+NS.Names = nil
+check(GA.Locale() == "frFR", "without Polestar's language: the client's")
+Polestar_ArcadeDB = nil
+GA.ArcadeKeys()
+check(Polestar_ArcadeDB.keys == "azerty" and Polestar_ArcadeDB.gaKeys == 1, "first game on a French client: AZERTY")
+Polestar_ArcadeDB = { keys = "qwerty", azerty = false }
+GA.ArcadeKeys()
+check(Polestar_ArcadeDB.keys == "qwerty", "a /arcade qwerty of 0.12.2-0.13.1 kept")
+Polestar_ArcadeDB = { keys = "qwerty" }
+GA.ArcadeKeys()
+check(Polestar_ArcadeDB.keys == "azerty", "the game's QWERTY default, from before the pack's 0.14.0: AZERTY")
+Polestar_ArcadeDB.keys = "qwerty"
+GA.ArcadeKeys()
+check(Polestar_ArcadeDB.keys == "qwerty", "a /doom keys qwerty after that is the player's: kept")
+local locale = GetLocale
+GetLocale = function() return "enUS" end
+Polestar_ArcadeDB = { keys = "qwerty" }
+GA.ArcadeKeys()
+check(Polestar_ArcadeDB.keys == "qwerty", "an English client keeps QWERTY")
+GetLocale = locale
+Polestar_ArcadeDB = nil
+OUT = table.concat(out, ", ")
+''')
+lang_bad = L.eval("OUT")
+print("language and flight game keys: " + ("ok" if not lang_bad else "FAILED: " + lang_bad))
+
+# 7. (0.14.0) Polestar 0.4.3's migration "skipGreyOn" (Core/Engine.lua, as built: tools/build.py keeps
+# the module's default) run by Polestar's own Core/Profiles.lua over a saved profile: a 0.13.x
+# player who never chose keeps grey quests left out, one who chose "no" keeps it, a first install
+# has the default, and it runs once.
+SKIP = r'''
+local NS2 = setmetatable({}, { __index = function(_, k) if k == "GA" then return nil end return function() end end })
+local DB2
+NS2.L = setmetatable({}, { __index = function(_, k) return k end })
+NS2.DB = function() return DB2 end
+NS2.CharState = function() return DB2.char end
+NS2.SafeCall = function(fn, ...) return pcall(fn, ...) end
+NS2.IsNewAccount = function() return NEW_ACCOUNT end
+NS2.GA = WITH_GA and {} or nil
+function SKIP_RUN(settings, profiles, migrations)
+  DB2 = { settings = settings, profiles = profiles or {}, migrations = migrations, char = {} }
+  LOAD_PROFILES("Polestar", NS2)
+  LOAD_MIGRATION("Polestar", NS2)
+  NS2.Profiles.Load()
+  return DB2
+end
+'''
+engine = (repo / "addons" / "Polestar" / "Core" / "Engine.lua").read_text(encoding="utf-8")
+m = re.search(r'ns\.RegisterMigration\("skipGreyOn", function\(s\).*?\nend, \{ strings = false \}\)\n', engine, re.S)
+skip_bad = []
+if not m:
+    skip_bad.append("migration skipGreyOn not found in the built Core/Engine.lua")
+else:
+    L.globals().LOAD_PROFILES = L.eval("function(src) local f = assert(loadstring(src, '@Profiles.lua')) return f end")(
+        (repo / "addons" / "Polestar" / "Core" / "Profiles.lua").read_text(encoding="utf-8"))
+    L.globals().LOAD_MIGRATION = L.eval("function(src) local f = assert(loadstring('local _, ns = ...\\n' .. src, '@Engine.lua')) return f end")(m.group(0))
+    def case(settings, new_account, with_ga=True, migrations=None):
+        L.globals().NEW_ACCOUNT, L.globals().WITH_GA = new_account, with_ga
+        L.execute(SKIP)
+        return L.globals().SKIP_RUN(L.table_from(settings) if settings is not None else L.table(), None,
+                                    L.table_from(migrations) if migrations else None)
+    def grey(db):
+        b = db.settings.behavior
+        return None if b is None else b.skipGrey
+    db = case({"behavior": L.table()}, False)
+    if grey(db) is not None:
+        skip_bad.append(f"0.13.x profile without a choice: skipGrey {grey(db)} stored (the module's default, on, is lost)")
+    db = case({"behavior": L.table_from({"skipGrey": False})}, False)
+    if grey(db) is not False:
+        skip_bad.append("0.13.x profile with skipGrey off chosen: not kept")
+    db = case(None, True)
+    if grey(db) is not None:
+        skip_bad.append("first install: skipGrey stored")
+    if not (db.migrations and db.migrations.skipGreyOn):
+        skip_bad.append("the migration is not marked done")
+    db2 = case({"behavior": L.table()}, False, True, {"skipGreyOn": True})
+    if grey(db2) is not None:
+        skip_bad.append("second login: the migration ran again")
+    # The same profile without the module (Polestar as released): the release's behaviour, off stored.
+    db3 = case({"behavior": L.table()}, False, False)
+    if grey(db3) is not False:
+        skip_bad.append("without the module the release's migration should store off (the bench no longer reads it)")
+print("grey quests over Polestar 0.4.3's migration: " + ("ok, 5 cases" if not skip_bad else "FAILED: " + "; ".join(skip_bad)))
+
+# 8. (0.14.0) The pack's fixes of Auctionator 354 (docs/auctionator-correctifs.md) and of BuffAlerts
+# Forever 3.14.1 (docs/buffalerts-correctifs.md, patch 7), each on the shipped files.
+A = lua51.LuaRuntime(unpack_returned_tuples=True)
+A.execute(r'''
+Auctionator = { Utilities = {}, Constants = { IsForever = true, IsLegacyAH = false, ITEM_LEVEL_THRESHOLD = 1 } }
+Auctionator.Utilities.IsEquipment = function() return true end
+Auctionator.Utilities.SuffixesToLabel = {}
+Auctionator.Utilities.SuffixesExtraChecks = { 777 }
+Auctionator.Utilities.SuffixBonusIDs = { [777] = 5 }
+Auctionator.Utilities.SuffixLabels = { "of the Bear" }
+function strsplit(sep, s) local t = {} for p in (s .. sep):gmatch("(.-)" .. sep) do t[#t + 1] = p end return unpack(t) end
+NAMES = { [100] = "Blade", ["item:100:x"] = "Blade of Power", ["item:100" .. string.rep(":", 12) .. "1:777"] = "Blade of Power",
+  [200] = "Axe", ["item:200:x"] = "Axe of Mystery" }
+C_Item = {
+  GetItemInfoInstant = function(link) local id = tonumber(tostring(link):match("item:(%d+)") or link) return id, nil, nil, nil, nil, 2 end,
+  GetItemNameByID = function(x) return NAMES[x] or NAMES[tonumber(tostring(x):match("item:(%d+)") or x)] end,
+}
+Item = { CreateFromItemLink = function() return { IsItemEmpty = function() return false end, ContinueOnItemLoad = function(_, fn) fn() end } end }
+function tIndexOf(t, v) for i, x in ipairs(t) do if x == v then return i end end return nil end
+''')
+auc = repo / "addons" / "Auctionator"
+A.execute((auc / "Source" / "Utilities" / "DBKeyFromLink.lua").read_text(encoding="utf-8"))
+k1, k2 = A.execute(r'''
+local a, b
+Auctionator.Utilities.DBKeyFromLink("item:100:x", function(k) a = k[1] end)
+Auctionator.Utilities.DBKeyFromLink("item:200:x", function(k) b = k[1] end)
+return a, b
+''')
+auc_bad = []
+if k1 != "gr:100:5" or k2 != "200":
+    auc_bad.append(f"suffix keys: {k1}, {k2} (expected gr:100:5, then 200 for a suffix nothing matches)")
+main = (auc / "Source" / "Variables" / "Main.lua").read_text(encoding="utf-8")
+i = main.index("  if Auctionator.Constants.IsForever and AUCTIONATOR_PRICE_DATABASE[realm].suffixes == nil then")
+block = main[i:main.index("  assert(AUCTIONATOR_PRICE_DATABASE[realm]", i)]
+A.execute('AUCTIONATOR_PRICE_DATABASE = { R = { ["gr:5:of the Bear"] = 1, ["gr:6:of the Unknown"] = 2 } }')
+ok, err = A.eval("function(src) local f = assert(loadstring('local realm = ...\\n' .. src)) local ok, e = pcall(f, 'R') return ok, tostring(e) end")(block)
+if not ok or A.eval('AUCTIONATOR_PRICE_DATABASE.R["gr:5:1"]') != 1 or A.eval('AUCTIONATOR_PRICE_DATABASE.R["gr:6:of the Unknown"]') != 2:
+    auc_bad.append(f"price key migration: {err if not ok else 'keys not as expected'}")
+B = lua51.LuaRuntime(unpack_returned_tuples=True)
+B.execute(r'''
+local function magic() local t t = setmetatable({}, { __index = function() return function() return t end end, __call = function() return t end }) return t end
+setmetatable(_G, { __index = function() return magic() end })
+function issecretvalue() return false end
+FR = { [8099] = "Endurance", [18191] = "Endurance augmentée", [8096] = "Intelligence", [8112] = "Esprit", [18193] = "Esprit augmenté",
+  [429959] = "Bien reposé", [1225478] = "Bien reposé" }
+C_Spell = { GetSpellName = function(id) return FR[id] end, GetSpellInfo = function() return nil end }
+function GetLocale() return "frFR" end
+function CreateFrame() return magic() end
+function InCombatLockdown() return false end
+function GetTime() return 0 end
+SlashCmdList = {}
+''')
+ns_b = B.table()
+ba = repo / "addons" / "BuffAlertsForever"
+for f in ("Data.lua", "Core.lua", "Party.lua", "Options.lua", "PackPatches.lua"):
+    B.eval("function(src, name, ns) local f = assert(loadstring(src, name)) f('BuffAlertsForever', ns) end")(
+        (ba / f).read_text(encoding="utf-8"), "@" + f, ns_b)
+for fk, name in (("fortitude", "Endurance"), ("fortitude", "Endurance augmentée"), ("arcaneIntellect", "Intelligence"),
+                 ("divineSpirit", "Esprit"), ("divineSpirit", "Esprit augmenté"), ("fortitude", "Stamina")):
+    if not ns_b.IsEquivalent(fk, name):
+        auc_bad.append(f"BuffAlerts: {name!r} does not count as {fk} on a French client")
+if ns_b.IsEquivalent("fortitude", "Bien nourri"):
+    auc_bad.append("BuffAlerts: food counted as Fortitude")
+rested = list(ns_b.FAMILIES.wellRested.names.values())
+if "Bien reposé" not in rested:
+    auc_bad.append("BuffAlerts: the sleeping bag's buff has no French name")
+print("Auctionator 354 and BuffAlerts 3.14.1 fixes: " + ("ok" if not auc_bad else "FAILED: " + "; ".join(auc_bad)))
+sys.exit(1 if bad or failed or missing or escort_bad or state_bad or lang_bad or skip_bad or auc_bad else 0)

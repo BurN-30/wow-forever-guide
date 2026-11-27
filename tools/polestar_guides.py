@@ -6,7 +6,9 @@ tools/check-accroches.py and tools/check-lua.py (Lua 5.1 through lupa, as the ga
   table = greffe()           GreffeData.lua's GA.GREFFE and GA.RETIRED, as Python
 
 load() runs the compiled Guides.lua of every Polestar_Guides* and PolestarPack_GroupeAlliance folder
-of addons/ (forge guide compile writes them: Polestar.RegisterGuide({...}) blocks) with a stand-in
+of addons/ (forge guide compile writes them: Polestar.RegisterGuide({...}) blocks; since Polestar 0.4.3
+the race start guides are in Polestar_Guides_Alliance, and a side-shelf guide's steps come as Lua
+source, `stepsSrc`, read in here as Polestar does on first use) with a stand-in
 for Polestar's registration calls, and returns {id: guide} as plain Python (dicts and lists). A
 step's `when` predicates are kept as compiled ({k, neg, quest...}), and its `along` and `label`; a goal
 keeps t, quest, optional, pre (one of them is enough), preAll (all of them), closedBy, minLevel.
@@ -59,13 +61,20 @@ def load(addons=ADDONS):
                 continue
             L.execute(text, folder.name)
     out = {}
+    # Polestar 0.4.3: a side-shelf guide (class, profession, reputation, dungeon pick-up...) carries
+    # its steps as Lua source, `stepsSrc` ("return { ... }"), read in on first use (Core/Guides.lua,
+    # "Deferred steps"): read in here too, so the checks see every guide's steps.
+    read_steps = L.eval("function(src) local f = assert(loadstring(src)) return f() end")
     for g in L.globals().GUIDES.values():
         # Only what the checks read: the names tables are large and not needed.
         steps = []
-        for s in (g.steps or {}).values():
+        raw = g.steps
+        if raw is None and isinstance(g.stepsSrc, str):
+            raw = read_steps(g.stepsSrc)
+        for s in (raw or {}).values():
             goals = []
             for x in (s.goals or {}).values():
-                goals.append({k: to_py(x[k]) for k in ("t", "quest", "optional", "pre", "preAll", "closedBy", "minLevel", "qlvl", "title", "item", "npc", "object", "only", "note") if x[k] is not None})
+                goals.append({k: to_py(x[k]) for k in ("t", "quest", "optional", "pre", "preAll", "closedBy", "minLevel", "qlvl", "title", "item", "npc", "object", "only", "note", "escort") if x[k] is not None})
             steps.append({"title": s.title, "when": to_py(s.when) or [], "only": to_py(s.only), "goals": goals, "label": s.label,
                           "along": s.along, "note": s.note})
         out[g.id] = {
@@ -118,8 +127,24 @@ def alliance_route(guides, race="Human"):
     return out
 
 
+def escort_choices(g):
+    """Quests of guide g that Polestar 0.4.3 leaves to the player as escorts (Core/Engine.lua, layoutOf:
+    a required `accept` carrying the compiled `escort`, unless a step's `when group` names the quest):
+    the route waits at the accept and asks, and a "Skip it" takes its accept, work and hand-in out."""
+    out = {int(x["quest"]) for s in g["steps"] for x in s["goals"]
+           if x.get("t") == "accept" and x.get("escort") and not x.get("optional") and isinstance(x.get("quest"), (int, float))}
+    for s in g["steps"]:
+        for p in s.get("when") or []:
+            if p.get("k") == "group":
+                for q in (p.get("q") if isinstance(p.get("q"), list) else [p.get("q")]):
+                    if isinstance(q, (int, float)):
+                        out.discard(int(q))
+    return out
+
+
 def is_dungeon_step(step):
-    """A `when dungeon` step: off in Polestar 0.4.2.2 (its dungeon runs are read as passed)."""
+    """A `when dungeon` step: off in Polestar 0.4.2.2 and 0.4.3.1 (ns.dungeonRoute false, Core/Init.lua:
+    its dungeon runs are read as passed)."""
     return any(p.get("k") == "dungeon" and not p.get("neg") for p in step.get("when") or [])
 
 

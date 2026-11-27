@@ -9,10 +9,11 @@ tools/polestar_guides.py) et la table des chapitres (addons-src/GroupeAlliance/G
 Pour chaque chapitre et chaque race de l'Alliance (Humain, Nain, Gnome, Elfe de la nuit ; classe
 guerrier, sans quête de classe dans les chapitres), le parcours de Polestar est suivi depuis le
 départ de la race jusqu'à l'étape de la première accroche du chapitre, comprise (étapes `when
-dungeon` laissées : désactivées dans Polestar 0.4.2.2), ou jusqu'à la première étape au niveau
+dungeon` laissées : désactivées dans Polestar 0.4.2.2 et 0.4.3.1), ou jusqu'à la première étape au niveau
 minimal du chapitre quand l'accroche vient avant (il attend alors ce niveau). Une étape à question
 de groupe (`when
-group`) ou un objectif facultatif compte comme « peut-être fait ». Puis le chapitre est suivi
+group`), un objectif facultatif ou une escorte laissée au choix du joueur (Polestar 0.4.3 : prise
+d'escorte requise marquée `escort`) compte comme « peut-être fait ». Puis le chapitre est suivi
 dans l'ordre de ses étapes.
 
 Échecs (code de sortie 1) :
@@ -60,6 +61,7 @@ COND = {"onquest", "turnedin", "complete", "available", "done", "has", "group", 
 # 0.13.0: each step either holds (a hand-in, a boss line, a task to tick) or is an `along` step.
 SANS_OBJECTIF = {}
 HOLDS_NOT = {"note"}
+GUIDES = {}  # every compiled guide (main), for the route's escorts left to the player
 
 
 def quests(v):
@@ -79,7 +81,10 @@ def route_state(route, entry, race):
     tin, acc = set(entry["turnin"]), set(entry["accept"])
     sure, maybe, log = set(), set(), []
     hook = offer = None
+    choices = {}  # guide id -> its escorts left to the player (Polestar 0.4.3: asked, may be skipped)
     for gid, i, lv, step in route:
+        if gid not in choices:
+            choices[gid] = pg.escort_choices(GUIDES[gid]) if gid in GUIDES else set()
         if hook and lv >= entry["min"]:
             offer = (gid, i, lv)
             break
@@ -93,7 +98,7 @@ def route_state(route, entry, race):
                 continue
             q = int(q)
             t = goal.get("t")
-            unsure = group or goal.get("optional")
+            unsure = group or goal.get("optional") or q in choices[gid]
             if t == "accept":
                 if q not in sure and q not in log:
                     log.append(q)
@@ -241,6 +246,9 @@ def check_end(g, entry, given, out, race):
     given: quests the route surely hands over before the hook (in the log or done). -> the computed set"""
     firm, unsure = set(given), set()
     computed, conditional, last_fin = set(), {}, 0
+    # Polestar 0.4.3: an escort of the chapter is the player's choice ("Do it" / "Skip it"); skipped,
+    # its accept, work and hand-in are out (Core/Engine.lua, goalApplies): its hand-in has a condition.
+    choices = pg.escort_choices(g)
     for n, step in enumerate(g["steps"], 1):
         cond = bool(kinds(step))
         for x in step["goals"]:
@@ -248,8 +256,11 @@ def check_end(g, entry, given, out, race):
             if not isinstance(q, (int, float)):
                 continue
             q, t = int(q), x.get("t")
+            if q in choices and t == "turnin" and not x.get("optional"):
+                conditional.setdefault(q, (n, step["title"], "escorte laissée au choix du joueur, Polestar 0.4.3"))
+                continue
             if t == "accept":
-                if (cond and not takes_if_missing(step, q)) or x.get("optional"):
+                if (cond and not takes_if_missing(step, q)) or x.get("optional") or q in choices:
                     if q not in firm:
                         unsure.add(q)
                 else:
@@ -293,6 +304,7 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
     detail = "--detail" in sys.argv
     guides = pg.load()
+    GUIDES.update(guides)
     table, _ = pg.greffe()
     fails = warns = 0
     for entry in table:
@@ -305,7 +317,11 @@ def main():
                 facts = f
         seen, rows = set(), []
         for lvl, text in out:
-            key = (lvl, text.split(" : ", 1)[-1])
+            # The same finding for several races is shown once: only a leading "<race> : " is left out
+            # of the key (0.14.0: the key was the text after its first " : ", so two notes that ended
+            # alike, such as two conditional hand-ins of one chapter, showed as one).
+            race_of = next((r for r in pg.STARTS if text.startswith(r + " : ")), None)
+            key = (lvl, text[len(race_of) + 3:] if race_of else text)
             if key in seen:
                 continue
             seen.add(key)
