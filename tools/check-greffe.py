@@ -19,7 +19,8 @@ Ruins' tab left open, Stockade and Gnomeregan due together, Dalaran's two hooks,
 Monastery before Razorfen Downs, Razorfen Downs before Uldaman, the end-of-route dungeons), "never
 worse than Polestar alone" (P: the level each dungeon's own card would come at on the route, ours no
 later; a hook gone past; a chapter outlevelled), the migration of characters of 0.12.x (D, histories
-in tools/check-greffe-historique.json) and the notes (E).
+in tools/check-greffe-historique.json), the notes (E) and, since 0.14.1, this module's lines in the
+tooltip of a guide line hovered through Polestar's own code, an item line and another (T).
 
 What it proves: what Polestar's engine and this pack's module do with these quest states, saved
 tabs and answers, in Polestar's own Lua. What it cannot: the game's quest log and events in their
@@ -1876,6 +1877,125 @@ def reopened_finished(args):
                before=before, after=after)
 
 
+# ---------------------------------------------------------------------------------------------
+# T (0.14.1): this module's lines in the tooltip of a guide line, hovered through Polestar's own
+# code (the row's OnEnter in UI/GuideFrame.lua). Polestar 0.4.3 shows an item line's tooltip with
+# Widgets.ItemTip (the game's item tooltip, the guide's lines in its `extra`) instead of
+# Widgets.Tooltip, which the module hooked alone: the tip, the hint and the Ctrl-click were lost on
+# those lines. Then the tooltip set again when the item's data arrives (GET_ITEM_INFO_RECEIVED).
+# ---------------------------------------------------------------------------------------------
+TIP_LIB = r'''
+-- The rows of the guide window on screen (Polestar's goal rows carry their goal as psGoal).
+function G.rows()
+	local out = {}
+	for _, f in ipairs(BENCH.frames) do
+		local goal = rawget(f, "psGoal")
+		if type(goal) == "table" and f.__shown and f.__scripts.OnEnter then out[#out + 1] = f end
+	end
+	return out
+end
+-- The first step of the active guide with a line of each kind that has a tip of ours: an item
+-- line (Polestar's subjectKind "item": shown with Widgets.ItemTip) and a line without an item.
+function G.tipSteps()
+	local E, GA = G.ns.Engine, G.ns.GA
+	local g = E.GetGuide()
+	local item, plain
+	for i = 1, #g.steps do
+		if item and plain then break end
+		E.Goto(i)
+		G.tick(1)
+		for _, f in ipairs(G.rows()) do
+			local goal = f.psGoal
+			if GA.TipOf(goal) then
+				if goal.item and goal.subjectKind == "item" and not item then item = { step = i, quest = goal.quest, item = goal.item, t = goal.t }
+				elseif not goal.item and not plain then plain = { step = i, quest = goal.quest, t = goal.t } end
+			end
+		end
+	end
+	return item, plain
+end
+-- Shows step `want.step` and returns its row for that goal.
+function G.rowFor(want)
+	G.ns.Engine.Goto(want.step)
+	G.tick(1)
+	for _, f in ipairs(G.rows()) do
+		local goal = f.psGoal
+		if goal.quest == want.quest and goal.t == want.t and goal.item == want.item then return f end
+	end
+end
+function G.tipLines() local out = {} for i, l in ipairs(GameTooltip.__lines) do out[i] = tostring(l) end return out end
+function G.count(lines, text) local n = 0 for _, l in ipairs(lines) do if l:find(text, 1, true) then n = n + 1 end end return n end
+-- The tip line as the module writes it, in French.
+function G.tipText(row) local t = G.ns.GA.TipOf(row.psGoal) return t and ("Astuce : " .. (t.frFR or t.enUS)) end
+-- A Ctrl-click on the row: the link Polestar's copy window gets, or nil.
+function G.ctrlClick(row)
+	local UI, copied = G.ns.UI, nil
+	local show, ctrl = UI.ShowCopy, IsControlKeyDown
+	UI.ShowCopy = function(_, link) copied = link end
+	IsControlKeyDown = function() return true end
+	BENCH.Run(row, "OnClick", "LeftButton")
+	UI.ShowCopy, IsControlKeyDown = show, ctrl
+	return copied
+end
+'''
+
+
+def guide_tooltips(args):
+    """T: our lines in a guide line's tooltip, through the row's own OnEnter, item line and other line."""
+    def after(L, G, ns, r):
+        L.execute(TIP_LIB)
+        G.tick(6)
+        hint = "Ctrl+clic : lien Wowhead"
+        item, plain = G.tipSteps()
+        r.say(f"Guide de Polestar `{ROUTE_DM}` : ligne à objet avec astuce {to_py(item)} ; ligne sans objet avec astuce {to_py(plain)}.")
+        r.check(item is not None and plain is not None, "le guide a une ligne de chaque sorte, avec une astuce du module")
+        if item is None or plain is None:
+            return
+        # The item line first, on a row hovered for the first time (its Ctrl-click not hooked yet).
+        row = G.rowFor(item)
+        r.check(row is not None, f"la ligne à objet est à l'écran (étape {item.step})")
+        if row is None:
+            return
+        tip = G.tipText(row)
+        L.globals().BENCH.Run(row, "OnEnter")
+        lines = cp.lua_list(G.tipLines())
+        r.say(f"Survol de la ligne à objet (quête {item.quest}, objet {item.item}) : {len(lines)} lignes : {' / '.join(lines)}")
+        r.check(G.count(G.tipLines(), "(game line)") == 1, "la ligne à objet montre l'infobulle d'objet du jeu (Widgets.ItemTip, Polestar 0.4.3)")
+        r.check(G.count(G.tipLines(), tip) == 1, f"l'astuce est dans l'infobulle, une fois (« {tip[:60]}... »)")
+        r.check(G.count(G.tipLines(), hint) == 1, "l'indice Ctrl+clic est dans l'infobulle, une fois")
+        link = G.ctrlClick(row)
+        r.check(link is not None and f"/fr/quest={item.quest}" in str(link), f"Ctrl+clic sur la ligne à objet : lien Wowhead ({link})")
+        # The game's item data arrives: Polestar sets the tooltip again (Theme/Widgets.lua, `arrived`).
+        L.globals().GameTooltip.AddLine(L.globals().GameTooltip, "(bench mark)")
+        L.globals().BENCH.Fire("GET_ITEM_INFO_RECEIVED", item.item, True)
+        lines = cp.lua_list(G.tipLines())
+        r.say(f"GET_ITEM_INFO_RECEIVED {item.item} : {len(lines)} lignes : {' / '.join(lines)}")
+        r.check(G.count(G.tipLines(), "(bench mark)") == 0 and G.count(G.tipLines(), "(game line)") == 1, "l'infobulle est bien reposée par Polestar")
+        r.check(G.count(G.tipLines(), tip) == 1 and G.count(G.tipLines(), hint) == 1, "après le repos : l'astuce et l'indice reviennent, une fois chacun")
+        # The line without an item: Widgets.Tooltip, as before.
+        L.globals().GameTooltip.Hide(L.globals().GameTooltip)
+        row2 = G.rowFor(plain)
+        r.check(row2 is not None, f"la ligne sans objet est à l'écran (étape {plain.step})")
+        if row2 is None:
+            return
+        tip2 = G.tipText(row2)
+        L.globals().BENCH.Run(row2, "OnEnter")
+        lines = cp.lua_list(G.tipLines())
+        r.say(f"Survol de la ligne sans objet (quête {plain.quest}, {plain.t}) : {len(lines)} lignes : {' / '.join(lines)}")
+        r.check(G.count(G.tipLines(), tip2) == 1 and G.count(G.tipLines(), hint) == 1, "ligne sans objet : l'astuce et l'indice, une fois chacun")
+        link = G.ctrlClick(row2)
+        r.check(link is not None and f"/fr/quest={plain.quest}" in str(link), f"Ctrl+clic sur la ligne sans objet : lien Wowhead ({link})")
+        # Another owner of Widgets.ItemTip (a reward or loot tile: no psGoal) keeps Polestar's lines only.
+        tile = L.eval('function() local f = CreateFrame("Button") return f end')()
+        L.execute('GBENCH_EXTRA = function(tip) tip:AddLine("(tile extra)") end')
+        ns.Widgets.ItemTip(tile, item.item, L.globals().GBENCH_EXTRA)
+        lines = cp.lua_list(G.tipLines())
+        r.check(G.count(G.tipLines(), "(tile extra)") == 1 and G.count(G.tipLines(), hint) == 0 and G.count(G.tipLines(), "Astuce") == 0,
+                f"une tuile d'objet sans ligne du guide (Widgets.ItemTip ailleurs) : rien du module ({' / '.join(lines)})")
+    return run(args, "Scénario T : nos lignes dans l'infobulle d'une ligne du guide, survolée par le code de Polestar (0.14.1)",
+               prelude=ACCOUNT + char_db([ROUTE_DM]), after=after)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--ui", type=pathlib.Path, required=True)
@@ -1905,7 +2025,8 @@ def main():
              ("mig-chapter", migration_chapter), ("notes", notes),
              ("b1-steps", step_holds), ("b1-skip", group_skipped_end), ("b1-nokey", no_key_end), ("b2-stop", stop_first),
              ("a1-horde", horde), ("a10-busy", busy_and_tabs), ("a4-background", background_close), ("b6-slash", slash_again),
-             ("a3-before", finished_before), ("r4-late", late_flag_end), ("r5-reopened", reopened_finished)]
+             ("a3-before", finished_before), ("r4-late", late_flag_end), ("r5-reopened", reopened_finished),
+             ("t-tips", guide_tooltips)]
     for key, fn in todo:
         if args.only and key not in args.only.split(","):
             continue

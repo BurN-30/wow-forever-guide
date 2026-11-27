@@ -2,6 +2,22 @@
 
 Chaque section `## vX.Y.Z` devient les notes de la release GitHub du même tag (voir `tools/release.py`). Le programme d'installation affiche la partie `### Français` ou `### English` selon la langue de Windows : garder ces deux titres et des puces courtes.
 
+## v0.14.1 (2026-11-27)
+
+### Français
+- Lignes du guide dont l'objectif est un objet (« ramasser », « tuer pour un objet ») : depuis la 0.14.0, leur infobulle montrait l'objet mais plus rien du Groupe Alliance. L'astuce en vert annoncée par l'étoile verte, l'explication de la marque orange ou rouge, les lignes d'escorte et de fiabilité et l'indice « Ctrl+clic » manquaient, et le Ctrl+clic vers Wowhead ne marchait pas sur ces lignes. Tout revient, sous les lignes du guide, y compris quand l'infobulle se recharge à l'arrivée des données de l'objet. Cause : Polestar 0.4.3 affiche ces lignes avec l'infobulle d'objet du jeu, un chemin que le paquet ne suivait pas. Les autres lignes (prendre, rendre, tuer sans objet) n'étaient pas touchées.
+- Un `/reload` dans le chat suffit après la mise à jour, pas besoin de relancer le jeu (aucun fichier d'addon ajouté ni retiré).
+
+### En jeu
+- **Astuces des lignes à objet** : au survol d'une ligne « ramasser » ou « tuer pour un objet », l'astuce en vert, la marque de difficulté et l'indice Ctrl+clic reviennent sous l'infobulle de l'objet ; le Ctrl+clic donne de nouveau le lien Wowhead.
+
+### English
+- Guide lines whose objective is an item ("collect", "kill for an item"): since 0.14.0 their tooltip showed the item but nothing from Group Alliance. The green tip the green star announces, the orange or red mark's explanation, the escort and reliability lines and the "Ctrl-click" hint were missing, and Ctrl-click for the Wowhead link did nothing on those lines. All of it is back, under the guide's lines, also when the tooltip reloads as the item's data arrives. Cause: Polestar 0.4.3 shows those lines with the game's item tooltip, a path the pack did not follow. The other lines (accept, turn in, kill without an item) were not affected.
+- A `/reload` in chat is enough after the update, no need to restart the game (no addon file added or removed).
+
+### In game
+- **Tips on item lines**: hovering a "collect" or "kill for an item" line shows the green tip, the difficulty mark and the Ctrl-click hint again under the item's tooltip; Ctrl-click gives the Wowhead link again.
+
 ## v0.14.0 (2026-11-27)
 
 ### Français

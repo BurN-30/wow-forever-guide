@@ -736,20 +736,13 @@ function BENCH.InstallItems()
 end
 BENCH.completed = {}
 
--- An item tooltip shown: the post-calls of every addon, in the order they were added.
--- keep: run the post-calls again on the tooltip as it is (the game refreshes a shown
--- tooltip that way), without a new owner.
-function BENCH.Tooltip(tip, itemID, keep, owner)
-	if not keep then
-		tip:SetOwner(owner or UIParent, "ANCHOR_NONE")
-		-- The game's own lines come first: the name and one more.
-		local it = B.items[itemID]
-		tip:AddLine(it and it.name or ("Item " .. itemID))
-		tip:AddLine("(game line)")
-	end
+-- The item's data handed to the tooltip, then the post-calls of every addon, in the order they
+-- were added (the game's TooltipDataProcessor), then OnTooltipSetItem. The bench's own fields
+-- (rawset: not noted as a function an addon wrote into a game frame).
+local function itemPostCalls(tip, itemID)
 	local data = { type = 0, id = itemID, lines = {}, hyperlink = "item:" .. itemID }
-	tip.GetPrimaryTooltipData = function() return data end
-	tip.GetItem = function() return "Item " .. itemID, "|cffffffff|Hitem:" .. itemID .. "::::::::20:::::|h[Item]|h|r", itemID end
+	rawset(tip, "GetPrimaryTooltipData", function() return data end)
+	rawset(tip, "GetItem", function() return "Item " .. itemID, "|cffffffff|Hitem:" .. itemID .. "::::::::20:::::|h[Item]|h|r", itemID end)
 	for _, c in ipairs(TooltipDataProcessor.postCalls) do
 		if c.kind == (Enum.TooltipDataType and Enum.TooltipDataType.Item or 0) or c.kind == "ALL" or c.kind == TooltipDataProcessor.AllTypes then
 			local prev = B.current
@@ -760,7 +753,36 @@ function BENCH.Tooltip(tip, itemID, keep, owner)
 		end
 	end
 	if tip.__scripts.OnTooltipSetItem then BENCH.Run(tip, "OnTooltipSetItem") end
+end
+
+-- The game's own lines of an item: its name and one more.
+local function itemLines(tip, itemID)
+	local it = B.items[itemID]
+	tip:AddLine(it and it.name or ("Item " .. itemID))
+	tip:AddLine("(game line)")
+end
+
+-- An item tooltip shown: the post-calls of every addon, in the order they were added.
+-- keep: run the post-calls again on the tooltip as it is (the game refreshes a shown
+-- tooltip that way), without a new owner.
+function BENCH.Tooltip(tip, itemID, keep, owner)
+	if not keep then
+		tip:SetOwner(owner or UIParent, "ANCHOR_NONE")
+		itemLines(tip, itemID)
+	end
+	itemPostCalls(tip, itemID)
 	local ok, err = pcall(tip.Show, tip)
 	if not ok then BENCH.Error("tooltip Show (hooks)", err) end
 	return #tip.__lines
+end
+
+-- tooltip:SetHyperlink("item:N" or an item link) (0.14.1), as the game's: the tooltip keeps its
+-- owner, its lines become the item's, then every addon's item post-calls; no Show (the caller's).
+-- Another kind of link (a spell, a quest) leaves the tooltip as it is.
+function FrameMethods:SetHyperlink(link)
+	local id = type(link) == "string" and tonumber(link:match("item:(%d+)"))
+	if not id then return end
+	clearTip(self)
+	itemLines(self, id)
+	itemPostCalls(self, id)
 end

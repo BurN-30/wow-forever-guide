@@ -75,7 +75,9 @@ NS = {
   OnInit = function(fn) INIT = fn end, OnLogin = function() end, On = function() end,
   IsLoggedIn = function() return false end, Get = function() return nil end, Set = function() end, Fire = function() end,
   UI = { GoalLine = function(goal) return "line " .. tostring(goal.quest) end },
-  Widgets = { Tooltip = function() end, HideTooltip = function() end },
+  -- ItemTip: Polestar's game item tooltip, its `extra` run on the tooltip (Theme/Widgets.lua, setGameTip).
+  Widgets = { Tooltip = function() end, HideTooltip = function() end,
+    ItemTip = function(owner, item, extra) if extra then extra(GameTooltip) end end },
 }
 ''')
 run = L.eval("function(src, name) local f, err = loadstring(src, name); if not f then error(err) end; f('Polestar', NS) end")
@@ -97,6 +99,15 @@ check(NS.UI.GoalLine({ quest = tipQuest, status = "done" }):find("star", 1, true
 check(NS.UI.GoalLine({ quest = 1, status = "active" }):find("star", 1, true) == nil, "no tip mark without a tip")
 HOOKS.Tooltip({ psGoal = { quest = tipQuest }, HookScript = function() end })
 check(#TIPLINES >= 2 and TIPLINES[1]:find("Astuce", 1, true) ~= nil, "tooltip tip line")
+-- 0.14.1: an item line's tooltip (Widgets.ItemTip, Polestar 0.4.3): our lines after the guide's, in its `extra`;
+-- another owner of Widgets.ItemTip (no psGoal) gets nothing of ours.
+TIPLINES = {}
+NS.Widgets.ItemTip({ psGoal = { quest = tipQuest, item = 1, t = "collect" }, HookScript = function() end }, 1, function(t) t:AddLine("guide line") end)
+check(TIPLINES[1] == "guide line" and #TIPLINES >= 3 and TIPLINES[2]:find("Astuce", 1, true) ~= nil, "item line tooltip: our tip after the guide's lines")
+TIPLINES = {}
+NS.Widgets.ItemTip({}, 1, function(t) t:AddLine("tile") end)
+check(#TIPLINES == 1 and TIPLINES[1] == "tile", "Widgets.ItemTip without a guide line: nothing of ours")
+TIPLINES = {}
 SlashCmdList.GROUPEALLIANCE("")
 check(#PRINTED > 0, "/ga prints its help")
 -- Difficulty marks: a quest 3 or more levels above the player (from Polestar's data), a
