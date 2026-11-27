@@ -10,6 +10,9 @@ Every entry is checked, English key against French value:
   - no em dash, no en dash, no replacement character, no broken UTF-8, no common word left without
     its accent, no space missing before a French colon or semicolon;
   - no key given twice in the file.
+Without an argument, tools/fr-texts-polestar-preferes.json too (0.14.0: our French put before
+Polestar's for texts judged one by one): ours passes the same checks, each text once, with
+Polestar's judged French given and unlike ours.
 Prints each defect and the total; exits 1 when there is any.
 """
 import json, pathlib, re, sys
@@ -17,6 +20,7 @@ from collections import Counter
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 DEFAULT = REPO / "tools" / "fr-texts-polestar-manquants.json"
+PREFER = REPO / "tools" / "fr-texts-polestar-preferes.json"
 TOKEN = re.compile(r"\{[a-z]+:\d+\}")
 ESCAPE = re.compile(r"\|c[0-9a-fA-F]{8}|\|r|\|T[^|]*\|t|\|H[^|]*\|h|\|h|\|n|%[sd]")
 ADDRESS = re.compile(r"(?<![\w'’-])(tu|vous|votre|vos|ton|ta|tes|te|toi|t'|t’)(?![\w'’-])|(?<=-)(toi|vous|te)\b", re.I)
@@ -100,7 +104,25 @@ def main():
             print(f"{d}\n    EN: {en[:100]!r}")
             defects += 1
     print(f"{len(data)} texts, {sum(1 for v in data.values() if v.strip())} translated, {defects} defects")
-    sys.exit(1 if defects else 0)
+    # 0.14.0: the texts where ours goes before Polestar's (tools/fr-texts-polestar-preferes.json): ours
+    # passes the same checks, each (guide, English) once, Polestar's judged text given and unlike ours.
+    pdefects = 0
+    if len(sys.argv) <= 1 and PREFER.exists():
+        prefer = json.loads(PREFER.read_text(encoding="utf-8"))
+        seen = set()
+        for e in prefer:
+            key = (e.get("guide"), e.get("en"))
+            problems = check(e.get("en", ""), e.get("nous", ""))
+            if key in seen:
+                problems.append("given twice")
+            seen.add(key)
+            if not e.get("amont") or e.get("amont") == e.get("nous"):
+                problems.append("no judged upstream text, or the same as ours")
+            for d in problems:
+                print(f"preferred: {d}\n    {e.get('guide')}: {e.get('en', '')[:100]!r}")
+                pdefects += 1
+        print(f"{len(prefer)} preferred texts (ours before Polestar's), {pdefects} defects")
+    sys.exit(1 if defects or pdefects else 0)
 
 
 if __name__ == "__main__":
