@@ -29,8 +29,13 @@ local type, tonumber, pairs, ipairs, find, sub, format, gmatch, concat, floor =
 
 ns.RegisterDefaults("qol", { gaItemUse = true })
 
-local FR = GetLocale and GetLocale() == "frFR"
-local T = FR and {
+-- 0.14.0: the language the module shows (GA.Locale: /ga lang, else the language Polestar shows,
+-- Settings > General > Language), read each time: Polestar sets it at ADDON_LOADED, after this file.
+local function isFR()
+	if GA.Locale then return GA.Locale() == "frFR" end
+	return GetLocale and GetLocale() == "frFR" or false
+end
+local T_FR = {
 	quest = "Quête : %s",
 	questAny = "Objet de quête",
 	notTaken = "pas encore prise",
@@ -52,7 +57,8 @@ local T = FR and {
 	optionHelp = "Une ligne sous l'infobulle d'un objet : quête qui le demande, métier qui l'utilise (et dès quel niveau), sort de classe, nourriture adaptée ou dépassée, objet seulement à vendre. Rien quand l'information n'est pas sûre.",
 	on = "Groupe Alliance : ligne « À quoi sert cet objet » allumée (/ga objets pour l'éteindre).",
 	off = "Groupe Alliance : ligne « À quoi sert cet objet » éteinte (/ga objets pour la rallumer).",
-} or {
+}
+local T_EN = {
 	quest = "Quest: %s",
 	questAny = "Quest item",
 	notTaken = "not taken yet",
@@ -75,9 +81,11 @@ local T = FR and {
 	on = "Group Alliance: \"What is this item for\" line on (/ga items to turn it off).",
 	off = "Group Alliance: \"What is this item for\" line off (/ga items to turn it back on).",
 }
+local T = setmetatable({}, { __index = function(_, k) return (isFR() and T_FR or T_EN)[k] end })
 GA.ItemUseText = T
 
-local NAME = FR and 2 or 1 -- the data's names: { English, French }
+-- The data's names: { English, French }.
+local function nameIndex() return isFR() and 2 or 1 end
 local SEP = " \194\183 "    -- " · " between two pieces
 local MAX_NAMES = 3         -- professions or classes named on the line, the rest counted
 local GOOD, OUTGROWN = 0.9, 0.6 -- share of the level's usual food: right for it, outgrown
@@ -187,7 +195,7 @@ end
 local function skillName(sl)
 	local D = GA.ItemUseData
 	local s = D and D.skills and D.skills[sl]
-	return s and s[NAME] or nil
+	return s and s[nameIndex()] or nil
 end
 
 local function knows(sl)
@@ -230,7 +238,7 @@ local function className(token)
 	if type(n) == "string" and n ~= "" then return n end
 	local D = GA.ItemUseData
 	local c = D and D.classes and D.classes[token]
-	return c and c[NAME] or token
+	return c and c[nameIndex()] or token
 end
 
 local function spellName(id)
@@ -514,7 +522,7 @@ local function gameOptions()
 	help:SetPoint("TOPLEFT", box, "BOTTOMLEFT", 4, -6)
 	help:SetWidth(520)
 	help:SetJustifyH("LEFT")
-	help:SetText(T.optionHelp .. "\n/ga " .. (FR and "objets" or "items"))
+	help:SetText(T.optionHelp .. "\n/ga " .. (isFR() and "objets" or "items"))
 	box:SetScript("OnClick", function(self) ns.Set("qol.gaItemUse", self:GetChecked() and true or false) end)
 	canvas:SetScript("OnShow", function() box:SetChecked(ns.Get("qol.gaItemUse") and true or false) end)
 	local ok, category = pcall(Settings.RegisterCanvasLayoutCategory, canvas, "Groupe Alliance")

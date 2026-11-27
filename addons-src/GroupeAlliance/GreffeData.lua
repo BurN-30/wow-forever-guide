@@ -1,6 +1,6 @@
 -- Groupe Alliance: where this pack's chapters join Polestar's own route (Greffe.lua reads it).
 --
--- One entry per chapter, in the order of Polestar's Alliance route (0.4.2.2). When two
+-- One entry per chapter, in the order of Polestar's Alliance route (0.4.2.2, the same in 0.4.3.1). When two
 -- chapters are due at once, the one with the lower `max` comes first, then the one higher in
 -- this table.
 --   id       the chapter's guide id (a guide of this pack, category Dungeons, no `next`)
@@ -35,7 +35,7 @@
 --            offered or has been (Greffe.lua, GA.GreffeHolds), so each dungeon is offered once,
 --            by this pack's chapter; a chapter whose hook the player went past without doing it is
 --            offered when Polestar's card would have come
---   route    Polestar's guide whose step hands in or takes the first hook quest (Polestar 0.4.2.2):
+--   route    Polestar's guide whose step hands in or takes the first hook quest (Polestar 0.4.2.2, checked again on 0.4.3.1):
 --            the hook still ahead while the active guide comes before it on the route; also read
 --            by tools/check-accroches.py, which fails when a new Polestar version moves the hook
 --   name     the dungeon's name, per client language
@@ -150,7 +150,9 @@ GA.GREFFE = {
 		-- are due at Raleigh's (both answered "Later"), the Monastery comes first.
 		id = "groupe-alliance/souilles-de-tranchebauge", key = "souilles", dungeon = "razorfen-downs",
 		turnin = 1448, min = 39, max = 46, done = { 3636 },
-		fin = { 3636, 3523, 3525 },
+		-- 0.14.0: Extinguishing the Idol (3525) is an escort, so Polestar 0.4.3 asks "Do it / Skip it"
+		-- and a skip takes its hand-in out: not in `fin`, its hand-in holds the tab once it is ready.
+		fin = { 3636, 3523 },
 		route = "forever/alliance/40-50/01-stranglethorn-vale",
 		name = { frFR = "Les Souilles de Tranchebauge", enUS = "Razorfen Downs" },
 		where = { frFR = "Sud des Tarides, depuis Hurlevent · groupe de 5 · dès le niveau 37",

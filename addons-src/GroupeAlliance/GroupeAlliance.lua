@@ -36,7 +36,7 @@
 --    says what an escort is and how to do it in a group. Off: ui.gaEscortBadge.
 --  * Group quests are asked, one by one (Polestar's "Skip it / Do it with a
 --    group" banner): whoever plays alone skips them in one click.
---  * /ga lang auto|fr|en: language of the links (default: the client's).
+--  * /ga lang auto|fr|en: language of the module and its links (auto: the language Polestar shows, 0.14.0).
 local _, ns = ...
 local GA = ns.GA or {}
 ns.GA = GA
@@ -93,11 +93,16 @@ local function settings()
 	return db.groupeAlliance
 end
 
+-- The module's language: /ga lang fr or en, else (auto) the language Polestar shows (0.14.0:
+-- Polestar 0.4.3's Settings > General > Language, ns.Names.Language), else the client's.
 local function locale()
 	local lang = settings().lang
 	if lang == "fr" then return "frFR" end
 	if lang == "en" then return "enUS" end
-	return GetLocale() == "frFR" and "frFR" or "enUS"
+	local N = ns.Names
+	local shown = N and N.Language and N.Language()
+	if type(shown) ~= "string" then shown = GetLocale() end
+	return shown == "frFR" and "frFR" or "enUS"
 end
 GA.Locale = locale
 
@@ -133,7 +138,7 @@ local T = {
 			"Parcours : les guides de Polestar. En changer : /polestar guides, ou le + des onglets.",
 			"Donjons : une carte propose le chapitre du groupe au bon moment ; /ga donjon pour la revoir, même après « Pas pour moi », ou savoir pourquoi aucun n'est proposé.",
 			"Chapitre ouvert : son onglet se ferme seul à la fin. Groupe qui s'arrête avant ? Fermer l'onglet (sa croix) ramène au parcours ; le chapitre reste dans /polestar guides, Groupe Alliance.",
-			"/ga lang fr, en ou auto : langue des liens Wowhead.",
+			"/ga lang fr, en ou auto : langue du Groupe Alliance et des liens Wowhead (auto : celle de Polestar).",
 			"/ga objets : allumer ou éteindre la ligne « À quoi sert cet objet » des infobulles d'objets.",
 			"Réduire : bouton _ ; masquer : /polestar hide, raccourci dans Options > Raccourcis > Polestar.",
 			"Roue dentée : réglages de Polestar (flèche, affichage, automatismes).",
@@ -203,7 +208,7 @@ local T = {
 			"Route: Polestar's own guides. Change: /polestar guides, or the tabs' +.",
 			"Dungeons: a card offers the group's chapter at the right moment; /ga dungeon to see it again, even after \"Not for me\", or to learn why none is offered.",
 			"An open chapter: its tab closes by itself at the end. The group stops before? Closing the tab (its cross) brings the route back; the chapter stays in /polestar guides, Group Alliance.",
-			"/ga lang fr, en or auto: Wowhead link language.",
+			"/ga lang fr, en or auto: language of Group Alliance and its Wowhead links (auto: Polestar's).",
 			"/ga items: turn the \"What is this item for\" line of item tooltips on or off.",
 			"Reduce: the _ button; hide: /polestar hide, key binding in Options > Keybindings > Polestar.",
 			"Gear: Polestar's settings (arrow, display, automation).",
@@ -735,14 +740,12 @@ function GA.DangerOf(goal)
 	if e then
 		rec, grp, text = e.lvl, e.grp, e[locale()] or e.enUS
 	else
+		-- 0.14.0: no mark of our own for elite work or an escort any more: Polestar 0.4.3 marks
+		-- those steps itself (UI.StepMark, two heads: elites at the player's level or above, an
+		-- escort, a group quest; muted for elites below). A quest 3 or more levels above stays ours.
 		local qlvl = questLevel(q)
 		if not qlvl then return nil end
-		local p = goal.party
-		if type(p) == "table" and p.kind == "elite" then
-			rec, grp, text = qlvl + 2, 3, tr("dangerElite")
-		elseif GA.IsEscort(goal) then
-			rec, text = qlvl, tr("dangerEscort")
-		elseif qlvl >= plvl + 3 then
+		if qlvl >= plvl + 3 then
 			rec, grp, text = qlvl - 1, 2, tr("dangerHigh")
 		end
 	end
@@ -1075,6 +1078,43 @@ ns.OnInit(function()
 	if nav and nav.Report then
 		nav.Report.psTipLines = { T[locale()].report }
 	end
+end)
+
+---------------------------------------------------------------------------
+-- The flight game on an AZERTY keyboard (0.14.0). Polestar 0.4.3's Freedoom Arcade has its own
+-- keyboard modes (/doom keys qwerty | azerty | wow, saved as `keys` in Polestar_ArcadeDB), QWERTY by
+-- default with a one-time hint. From 0.12.2 to 0.13.1 the pack changed its file instead: AZERTY by
+-- default on a French client, `azerty` (true/false) saved by /arcade azerty | qwerty. Once per
+-- account, when the game's addon loads: a choice made then is taken over, else a French client
+-- gets AZERTY; a QWERTY found then is the game's default (Polestar 0.4.2.2's game had no `keys`),
+-- not a choice. Later choices (/doom keys) are the player's and stay. No file of the game changes.
+---------------------------------------------------------------------------
+
+local ARCADE, ARCADE_DB = "Polestar_Arcade", "Polestar_ArcadeDB"
+function GA.ArcadeKeys()
+	local db = _G[ARCADE_DB]
+	-- Nothing saved yet (a first game): the table the game then takes as its own (`_G[dbName] or {}`).
+	if db == nil then
+		db = {}
+		_G[ARCADE_DB] = db
+	end
+	if type(db) ~= "table" or db.gaKeys then return end
+	if db.azerty == true or db.azerty == false then
+		db.keys = db.azerty and "azerty" or "qwerty"
+	elseif (db.keys == nil or db.keys == "qwerty") and GetLocale and GetLocale() == "frFR" then
+		db.keys = "azerty"
+	end
+	db.gaKeys = 1
+end
+if ns.RegisterEvent then
+	ns.RegisterEvent("ADDON_LOADED", function(_, name)
+		if name == ARCADE then GA.ArcadeKeys() end
+	end)
+end
+ns.OnLogin(function()
+	local A = C_AddOns
+	local loaded = A and A.IsAddOnLoaded and A.IsAddOnLoaded(ARCADE)
+	if loaded then GA.ArcadeKeys() end
 end)
 
 SLASH_GROUPEALLIANCE1 = "/ga"
