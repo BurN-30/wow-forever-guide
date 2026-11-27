@@ -102,7 +102,7 @@ end
 local COL_W = 252      -- width of one section column
 local MAX_COLS = 4     -- number of columns; sections fill the shortest column
 local MAX_VIEW_H = 600 -- taller content scrolls with the mouse wheel
-local BOTTOM_H = 100   -- room for the buttons and global checkboxes under the scroll area
+local BOTTOM_H = 128   -- room for the buttons and global checkboxes under the scroll area
 
 -- Element heights used to measure a section before it is laid out
 local H_HEADER, H_CHECK, H_CYCLE, H_SLIDER, H_GAP, H_MARGIN = 30, 26, 26, 48, 10, 20
@@ -414,6 +414,11 @@ function ns.CreateOptions()
         function() return ns.db.sleepMode end,
         function(v) ns.db.sleepMode = v; ns.Update(); ns.UpdateParty() end)
     sleep:SetPoint("BOTTOMLEFT", move, "TOPLEFT", -2, 6)
+
+    local mounted = CreateCheck(panel, "Hide alerts while mounted",
+        function() return ns.db.hideMounted end,
+        function(v) ns.db.hideMounted = v; ns.Update(); ns.UpdateParty() end)
+    mounted:SetPoint("BOTTOMLEFT", sleep, "TOPLEFT", 0, 0)
 
     local reset = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
     reset:SetSize(150, 24)

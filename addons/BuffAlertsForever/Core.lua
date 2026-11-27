@@ -372,6 +372,15 @@ local function RefreshSelfFromAuras()
                 local charges = fam.charges and (tonumber(a.applications) or 0) > 0 and tonumber(a.applications) or fam.charges
                 t[#t + 1] = { sid = a.sid, name = a.name, family = fk, charges = charges,
                               expires = (a.exp and a.exp > 0) and a.exp or math.huge }
+            else
+                -- A scroll or camp buff that replaces one of this alert's buffs also counts
+                for _, want in ipairs(alert.families) do
+                    if ns.IsEquivalent(want, a.name) then
+                        t[#t + 1] = { sid = a.sid, name = a.name, family = want, equivalent = true,
+                                      expires = (a.exp and a.exp > 0) and a.exp or math.huge }
+                        break
+                    end
+                end
             end
         end
         trackers[alert.key] = t
@@ -379,8 +388,21 @@ local function RefreshSelfFromAuras()
     return true
 end
 
+-- Is this buff a stronger replacement for family fk (scroll, camp buff, or learned from a blocked cast)?
+function ns.IsEquivalent(fk, name)
+    if not name or IsSecret(name) then return false end
+    local eq = ns.EQUIVALENTS[fk]
+    if eq then
+        for _, n in ipairs(eq.names or {}) do if name == n then return true end end
+        for _, p in ipairs(eq.patterns or {}) do if name:find(p, 1, true) then return true end end
+    end
+    local learned = db and db.learned and db.learned[fk]
+    return learned ~= nil and learned[name] == true
+end
+
 -- Does the active buff satisfy the alert? (strict mode requires the recommended buff, at the recommended rank or higher)
 local function Satisfies(entry, alert)
+    if entry.equivalent then return true end
     if not db[alert.key].strict then return true end
     local rec = recommended[alert.key]
     if not rec then return true end
@@ -390,8 +412,11 @@ local function Satisfies(entry, alert)
     return info.rank <= recInfo.rank
 end
 
+local bouncedUntil = {}    -- alertKey -> GetTime() until which a blocked cast keeps the alert quiet
+
 local function BuffMissing(alert)
     local now = GetTime()
+    if bouncedUntil[alert.key] and now < bouncedUntil[alert.key] then return false end
     for _, entry in ipairs(trackers[alert.key] or {}) do
         if now < entry.expires and Satisfies(entry, alert) then return false end
     end
@@ -429,12 +454,51 @@ local function CastOnSelf()
     return ok and res == true
 end
 
+-- "A more powerful spell is already active": a scroll or camp buff blocks this class buff.
+-- Learn which of your buffs did it, so the alert treats it as the class buff from now on.
+local function OnBuffBounced(spellID)
+    if spellID == nil or IsSecret(spellID) then return end
+    local fk = FamilyOf(spellID, SpellName(spellID))
+    if not fk then return end
+    db.learned = db.learned or {}
+    local candidates, list = {}, ns.ScanAuras("player")
+    for _, a in ipairs(list or {}) do
+        -- Unknown, timed buffs only (scrolls and camp buffs last minutes; auras and short procs are ignored)
+        if not FamilyOf(a.sid, a.name) and a.exp and a.exp > 0 and (a.dur or 0) >= 60 then
+            candidates[a.name] = true
+        end
+    end
+    local old, narrowed = db.learned[fk], {}
+    if old then
+        for n in pairs(old) do if candidates[n] then narrowed[n] = true end end
+    end
+    if next(narrowed) then
+        db.learned[fk] = narrowed                         -- seen again: keep only the buffs present both times
+    elseif next(candidates) then
+        local merged = old or {}
+        for n in pairs(candidates) do merged[n] = true end
+        db.learned[fk] = merged                            -- a new source of the same buff
+    end
+    for _, alert in ipairs(myAlerts) do
+        if FamilySet(alert)[fk] then
+            -- Until the buffs can be read again (or nothing was learned), stay quiet for a while
+            bouncedUntil[alert.key] = GetTime() + ((list and next(candidates)) and 2 or 300)
+        end
+    end
+    selfDirty = true
+    ns.Update()
+    if ns.UpdateParty then ns.UpdateParty() end
+end
+
+local lastFailed, lastBounceMsg = nil, nil
+
 local function OnPlayerCast(spellID)
     if spellID == nil or IsSecret(spellID) then return end
     -- Any cast spends a Clearcasting-type proc
     for _, alert in ipairs(myProc) do procExp[alert.key] = nil end
     -- Some casts consume a tracked buff (e.g. Judgement removes the active Seal)
     for _, alert in ipairs(myAlerts) do
+        bouncedUntil[alert.key] = nil
         for _, id in ipairs(alert.consumedBy or {}) do
             if spellID == id then trackers[alert.key] = {} end
         end
@@ -605,6 +669,21 @@ local function IsLevelOne()
     return ok and not IsSecret(level) and level == 1
 end
 
+-- Does the player own the item (bags, bank-free count, or toy box)? Checks by ID, then by name
+local function OwnsItem(item)
+    if PlayerHasToy then
+        local ok, has = SafeCall(PlayerHasToy, item.id)
+        if ok and not IsSecret(has) and has then return true end
+    end
+    local getCount = (C_Item and C_Item.GetItemCount) or GetItemCount
+    for _, key in ipairs({ item.id, item.name }) do
+        local ok, n = SafeCall(getCount, key)
+        if ok and not IsSecret(n) and (tonumber(n) or 0) > 0 then return true end
+    end
+    return false
+end
+ns.OwnsItem = OwnsItem
+
 local function UpdateSelfAlert(alert)
     local f = frames[alert.key]
     local upgrade = upgrades[alert.key]
@@ -613,6 +692,7 @@ local function UpdateSelfAlert(alert)
     -- A spell you have never learned gets no alert of its own; the "Train" badge only rides on a
     -- normal alert (e.g. Mage Armor not learned yet shows on the Armor alert when no armor is active)
     local known = recommended[alert.key] ~= nil or alert.noSpell
+    if alert.ownItem and not OwnsItem(alert.ownItem) then known = false end
     local cfg = db[alert.key]
     if not cfg.enabled or not known or PlayerDead() or OnTaxi()
        or (cfg.combatOnly and not inCombat) or (alert.hideInCombat and inCombat)
@@ -959,9 +1039,16 @@ function ns.IsSleeping()
     return ok and not IsSecret(resting) and resting and true or false
 end
 
+-- Mounted (and out of combat): all alerts stay hidden while the option is on
+function ns.IsMountedHidden()
+    if not db or not db.hideMounted or inCombat or ns.unlocked then return false end
+    local ok, mounted = SafeCall(IsMounted)
+    return ok and not IsSecret(mounted) and mounted and true or false
+end
+
 function ns.Update()
     if not db or not playerClass then return end
-    if db.hideAll and not ns.unlocked then
+    if (db.hideAll and not ns.unlocked) or ns.IsMountedHidden() then
         for _, f in pairs(frames) do f:Hide() end
         return
     end
@@ -1121,6 +1208,8 @@ driver:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5)
         SafeRegister("UNIT_AURA")
         pcall(driver.RegisterUnitEvent, driver, "UNIT_COMBAT", "player", "target")
         SafeRegister("UNIT_SPELLCAST_SUCCEEDED", "player")
+        SafeRegister("UNIT_SPELLCAST_FAILED", "player")
+        SafeRegister("UI_ERROR_MESSAGE")
         driver:SetScript("OnUpdate", OnUpdate)
         if ns.InitParty then ns.InitParty() end
         if ns.CreateOptions then ns.CreateOptions() end
@@ -1168,6 +1257,29 @@ driver:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5)
 
     elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
         OnPlayerCast(arg3)
+
+    -- The failed cast and the error text can arrive in either order; match them within a second
+    elseif event == "UNIT_SPELLCAST_FAILED" then
+        if CastOnSelf() then
+            if lastBounceMsg and GetTime() - lastBounceMsg < 1 then
+                lastBounceMsg = nil
+                OnBuffBounced(arg3)
+            else
+                lastFailed = { id = arg3, t = GetTime() }
+            end
+        end
+
+    elseif event == "UI_ERROR_MESSAGE" then
+        local bounced = SPELL_FAILED_AURA_BOUNCED or "A more powerful spell is already active"
+        if arg2 and not IsSecret(arg2) and arg2 == bounced then
+            if lastFailed and GetTime() - lastFailed.t < 1 then
+                local id = lastFailed.id
+                lastFailed = nil
+                OnBuffBounced(id)
+            else
+                lastBounceMsg = GetTime()
+            end
+        end
     end
 end)
 
@@ -1244,8 +1356,28 @@ SlashCmdList.BUFFALERTSFOREVER = function(msg)
         Print("Your buffs:")
         for _, a in ipairs(list) do
             local fk = FamilyOf(a.sid, a.name)
+            if not fk then
+                for eqk in pairs(ns.FAMILIES) do
+                    if ns.IsEquivalent(eqk, a.name) then fk = "counts as " .. eqk break end
+                end
+            end
             Print("  " .. tostring(a.name) .. " (ID " .. tostring(a.sid) .. ")" .. (fk and (" -> " .. fk) or ""))
         end
+        for fk, names in pairs(db.learned or {}) do
+            local l = {}
+            for n in pairs(names) do l[#l + 1] = n end
+            if #l > 0 then Print("Learned as " .. fk .. ": " .. table.concat(l, ", ")) end
+        end
+    elseif msg == "forget" then
+        db.learned = {}
+        selfDirty = true
+        Print("Forgot all learned replacement buffs.")
+    elseif msg == "mount" then
+        db.hideMounted = not db.hideMounted
+        ns.Update()
+        if ns.UpdateParty then ns.UpdateParty() end
+        if ns.RefreshOptions then ns.RefreshOptions() end
+        Print(db.hideMounted and "Alerts hidden while mounted." or "Alerts shown while mounted.")
     elseif msg == "sleep" then
         db.sleepMode = not db.sleepMode
         ns.Update()

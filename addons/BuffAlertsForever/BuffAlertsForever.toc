@@ -2,8 +2,8 @@
 ## Title: BuffAlerts Forever
 ## Notes: Buff and ability alerts for Warrior, Warlock, Mage, Paladin, Druid, Shaman, Rogue, Priest and Hunter.
 ## Author: Thork
-## Version: 3.13.0
-## X-Pack-Patches: wow-forever-guide (BurN-30) - food/campfire/Victory Rush/Reckless Swings names in every language, Battle Shout sound, options keys in combat, alerts under the buffs (medium size), Reset to defaults, Clearcasting in combat in every language, off on a first install; see PackPatches.lua and docs/buffalerts-correctifs.md
+## Version: 3.14.1
+## X-Pack-Patches: wow-forever-guide (BurN-30) - food/campfire/sleeping bag/Victory Rush/Reckless Swings names in every language, scroll and camp buffs in every language, Battle Shout sound, options keys in combat, alerts under the buffs (medium size), Reset to defaults, Clearcasting in combat in every language, off on a first install; see PackPatches.lua and docs/buffalerts-correctifs.md
 ## DefaultState: disabled
 ## IconTexture: Interface\AddOns\BuffAlertsForever\icon.png
 ## SavedVariables: BuffAlertsForeverDB

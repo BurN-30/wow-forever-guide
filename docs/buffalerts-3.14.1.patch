@@ -1,6 +1,6 @@
-# BuffAlerts Forever 3.13.0 (Thork, MIT) : correctifs du pack wow-forever-guide.
-# Base : BuffAlertsForever-3.13.0.zip publié sur CurseForge (SHA-256 995513121663364b1269f2855d3d724760c49bba28defb7d5eec1665c2c8ea26). Détail : docs/buffalerts-correctifs.md
-# Appliquer depuis le dossier qui contient BuffAlertsForever : git -c core.autocrlf=false apply -p1 buffalerts-3.13.0.patch
+# BuffAlerts Forever 3.14.1 (Thork, MIT) : correctifs du pack wow-forever-guide.
+# Base : BuffAlerts-Forever-3.14.1.zip publié sur CurseForge (SHA-1 a4465f517b92f171919864639c4279210954c4f6, SHA-256 370cc9b6cd27527ba249fed7087e8a31fcb51724a9d44517576bdd7a567fd8fe). Détail : docs/buffalerts-correctifs.md
+# Appliquer depuis le dossier qui contient BuffAlertsForever : git -c core.autocrlf=false apply -p1 buffalerts-3.14.1.patch
 # (fichiers de l'addon en LF, gardés tels quels ; seuls le .toc et le nouveau PackPatches.lua diffèrent de la release ;
 # le .toc : la ligne X-Pack-Patches, « DefaultState: disabled » (éteint à la première installation) et PackPatches.lua).
 diff -ruN a/BuffAlertsForever/BuffAlertsForever.toc b/BuffAlertsForever/BuffAlertsForever.toc
@@ -9,8 +9,8 @@ diff -ruN a/BuffAlertsForever/BuffAlertsForever.toc b/BuffAlertsForever/BuffAler
 @@ -3,6 +3,8 @@
  ## Notes: Buff and ability alerts for Warrior, Warlock, Mage, Paladin, Druid, Shaman, Rogue, Priest and Hunter.
  ## Author: Thork
- ## Version: 3.13.0
-+## X-Pack-Patches: wow-forever-guide (BurN-30) - food/campfire/Victory Rush/Reckless Swings names in every language, Battle Shout sound, options keys in combat, alerts under the buffs (medium size), Reset to defaults, Clearcasting in combat in every language, off on a first install; see PackPatches.lua and docs/buffalerts-correctifs.md
+ ## Version: 3.14.1
++## X-Pack-Patches: wow-forever-guide (BurN-30) - food/campfire/sleeping bag/Victory Rush/Reckless Swings names in every language, scroll and camp buffs in every language, Battle Shout sound, options keys in combat, alerts under the buffs (medium size), Reset to defaults, Clearcasting in combat in every language, off on a first install; see PackPatches.lua and docs/buffalerts-correctifs.md
 +## DefaultState: disabled
  ## IconTexture: Interface\AddOns\BuffAlertsForever\icon.png
  ## SavedVariables: BuffAlertsForeverDB
@@ -23,7 +23,7 @@ diff -ruN a/BuffAlertsForever/BuffAlertsForever.toc b/BuffAlertsForever/BuffAler
 diff -ruN a/BuffAlertsForever/PackPatches.lua b/BuffAlertsForever/PackPatches.lua
 --- a/BuffAlertsForever/PackPatches.lua
 +++ b/BuffAlertsForever/PackPatches.lua
-@@ -0,0 +1,245 @@
+@@ -0,0 +1,294 @@
 +-- BuffAlerts Forever: patches of the wow-forever-guide pack (BurN-30, https://github.com/BurN-30/wow-forever-guide).
 +-- MIT, like the rest of the addon. The release files are left untouched; this file is listed last in
 +-- BuffAlertsForever.toc, so it runs after Data.lua, Core.lua, Party.lua and Options.lua but before
@@ -41,11 +41,14 @@ diff -ruN a/BuffAlertsForever/PackPatches.lua b/BuffAlertsForever/PackPatches.lu
 +-- of WoW Forever in Data.lua (34428 does not exist on Forever, Reckless Swings has none), so Core finds
 +-- them by their English name only (BestKnown) and never on a French client. Their Forever spells
 +-- (SpellName, build 1.60.1.70888) give the name in the client's language.
++-- 3.14.1: the Cozy Sleeping Bag's buff (wellRested) has its ID, 429959, but its second English name,
++-- "Well Rested" (1225478), is matched by name only: both are "Bien reposé" in French.
 +local NAME_SOURCES = {
 +    wellFed  = { 19705, 1283082 },               -- "Well Fed" (frFR "Bien nourri", "Personnage bien nourri")
 +    campfire = { 1229741, 7353, 18191, 18193 },  -- "Camp Benefits", "Cozy Fire", "Increased Stamina", "Increased Spirit"
 +    victoryRush    = { 402927 },                 -- "Victory Rush" (frFR "Ivresse de la victoire")
 +    recklessSwings = { 1329554 },                -- "Reckless Swings" (frFR "Frappes téméraires")
++    wellRested     = { 429959, 1225478 },        -- "Well-Rested", "Well Rested" (frFR "Bien reposé")
 +}
 +
 +local function AddLocalizedNames()
@@ -248,8 +251,54 @@ diff -ruN a/BuffAlertsForever/PackPatches.lua b/BuffAlertsForever/PackPatches.lu
 +end)
 +
 +------------------------------------------------------------
++-- [pack patch #7] Scrolls and camp buffs that replace a class buff, in every language (3.14.1)
++-- Since 3.13.1 a Scroll of Stamina, Intellect or Spirit, or a camp buff, counts as the priest's or
++-- mage's buff it replaces (Data.lua ns.EQUIVALENTS), matched by English name or fragment only: on a
++-- French client "Endurance", "Intelligence" and "Esprit" never match, so the alert and the party
++-- indicator stay up until a blocked cast teaches the name (Core OnBuffBounced). Each exact English
++-- name gets its twin in the client's language (SpellName, build 1.60.1.70888): 8099 Stamina /
++-- Endurance, 18191 Increased Stamina / Endurance augmentée, 8096 Intellect / Intelligence,
++-- 8112 Spirit / Esprit, 18193 Increased Spirit / Esprit augmenté.
++------------------------------------------------------------
++local EQUIVALENT_SOURCES = {
++    fortitude       = { 8099, 18191 },
++    arcaneIntellect = { 8096 },
++    divineSpirit    = { 8112, 18193 },
++}
++
++local function AddLocalizedEquivalents()
++    local getName = C_Spell and C_Spell.GetSpellName
++    if not (getName and ns.EQUIVALENTS) then return end
++    for fk, ids in pairs(EQUIVALENT_SOURCES) do
++        local eq = ns.EQUIVALENTS[fk]
++        if eq then
++            eq.names = eq.names or {}
++            for _, id in ipairs(ids) do
++                local ok, name = pcall(getName, id)
++                if ok and type(name) == "string" and name ~= "" and not (ns.IsSecret and ns.IsSecret(name)) then
++                    local known = false
++                    for _, n in ipairs(eq.names) do
++                        if n == name then known = true; break end
++                    end
++                    if not known then eq.names[#eq.names + 1] = name end
++                end
++            end
++        end
++    end
++end
++
++AddLocalizedEquivalents()
++local equivalentFrame = CreateFrame("Frame")
++equivalentFrame:RegisterEvent("PLAYER_LOGIN")
++equivalentFrame:SetScript("OnEvent", function(self)
++    self:UnregisterEvent("PLAYER_LOGIN")
++    AddLocalizedEquivalents()
++end)
++
++------------------------------------------------------------
 +-- [pack patch #5] "Reset to defaults" stopped halfway
-+-- ns.ResetDefaults (Core.lua) runs pairs() on every entry of ns.DEFAULTS, and hideAll is a boolean:
++-- ns.ResetDefaults (Core.lua) runs pairs() on every entry of ns.DEFAULTS, and hideAll is a boolean
++-- (so are sleepMode since 3.12.0 and hideMounted since 3.14.0):
 +-- Lua error "table expected, got boolean" as soon as it is reached, so the rest of the reset,
 +-- Resolve() and the refresh never run. Plain values are reset here and left out of the call.
 +------------------------------------------------------------

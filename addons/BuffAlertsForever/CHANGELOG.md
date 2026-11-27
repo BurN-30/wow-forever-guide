@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.14.1
+- New small top-of-screen alert for the Cozy Sleeping Bag buff (Well-Rested), next to the food and campfire alerts. Only shown if you own the sleeping bag. Hidden in combat; can be disabled, resized and moved.
+
+## 3.14.0
+- New option "Hide alerts while mounted" (on by default): all alerts and party indicators stay hidden while you ride, and come back when you dismount or enter combat. Toggle in the options or with `/balert mount`.
+
+## 3.13.1
+- Fixed: having a scroll (Stamina, Intellect, Spirit) or a stronger camp buff that replaces a class buff no longer makes the addon keep asking you to rebuff. Applies to your own alerts and to the party indicators.
+- When a cast fails with "A more powerful spell is already active", the addon learns which of your buffs is blocking it and counts it as that class buff from then on. `/balert buffs` shows what was learned, `/balert forget` clears it.
+
 ## 3.13.0
 - **Shaman:** Water Shield support. The Shield alert accepts Lightning Shield or Water Shield and recommends Water Shield for Restoration (Auto/Fixed choice available).
 - **Druid:** the Omen of Clarity alert is now a Clearcasting proc alert: it shows only while Clearcasting is active, with a countdown, instead of permanently.

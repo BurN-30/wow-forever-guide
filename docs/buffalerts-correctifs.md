@@ -1,14 +1,36 @@
-# BuffAlerts Forever 3.13.0 : correctifs et réglages du pack / pack patches and defaults
+# BuffAlerts Forever 3.14.1 : correctifs et réglages du pack / pack patches and defaults
 
 Français d'abord, [English below](#english).
 
 ## Français
 
-Le pack installe BuffAlerts Forever 3.13.0 (Thork, licence MIT), à partir du fichier publié sur [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlertsForever-3.13.0.zip`, SHA-256 `995513121663364b1269f2855d3d724760c49bba28defb7d5eec1665c2c8ea26`). Le numéro de version reste 3.13.0 dans `BuffAlertsForever.toc`, pour que l'auteur reconnaisse la base ; une ligne `## X-Pack-Patches:` signale les changements.
+Le pack installe BuffAlerts Forever 3.14.1 (Thork, licence MIT), à partir du fichier publié sur [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlerts-Forever-3.14.1.zip`, SHA-1 `a4465f517b92f171919864639c4279210954c4f6`, SHA-256 `370cc9b6cd27527ba249fed7087e8a31fcb51724a9d44517576bdd7a567fd8fe`). Le numéro de version reste 3.14.1 dans `BuffAlertsForever.toc`, pour que l'auteur reconnaisse la base ; une ligne `## X-Pack-Patches:` signale les changements.
 
 Les fichiers de la release ne sont pas modifiés, sauf trois lignes du `.toc` : `## X-Pack-Patches:`, `## DefaultState: disabled` (éteint à la première installation, réglage 6) et `PackPatches.lua`. Tout le code que le pack change tient dans ce seul fichier ajouté, `PackPatches.lua`, chargé en dernier par le `.toc` : il passe après `Data.lua`, `Core.lua`, `Party.lua` et `Options.lua`, mais avant les événements `ADDON_LOADED` et `PLAYER_LOGIN`, donc avant que l'addon lise ses réglages. Pour reprendre une nouvelle version de l'addon : recopier la release, puis rajouter au `.toc` la ligne `## X-Pack-Patches:` et la ligne `PackPatches.lua`, et vérifier que chaque correctif sert encore (voir « À retirer quand »).
 
-Le diff complet est dans [`buffalerts-3.13.0.patch`](buffalerts-3.13.0.patch) : appliqué sur la release décompressée (`git -c core.autocrlf=false apply -p1 docs/buffalerts-3.13.0.patch` depuis le dossier qui contient `BuffAlertsForever`), il redonne le dossier `addons/BuffAlertsForever` du dépôt octet pour octet (vérifié le 22/11/2026). Les fichiers de l'addon sont en LF et le restent. Chaque correctif porte la marque `[pack patch #n]` dans `PackPatches.lua`. Le réglage 6 (éteint à la première installation) tient dans le `.toc` et n'a pas de marque : le `[pack patch #6]` de `PackPatches.lua` est le correctif 6 (Idées claires en combat).
+Le diff complet est dans [`buffalerts-3.14.1.patch`](buffalerts-3.14.1.patch) : appliqué sur la release décompressée (`git -c core.autocrlf=false apply -p1 docs/buffalerts-3.14.1.patch` depuis le dossier qui contient `BuffAlertsForever`), il redonne le dossier `addons/BuffAlertsForever` du dépôt octet pour octet (vérifié le 27/11/2026). Les fichiers de l'addon sont en LF et le restent. Chaque correctif porte la marque `[pack patch #n]` dans `PackPatches.lua`. Le réglage 6 (éteint à la première installation) tient dans le `.toc` et n'a pas de marque : le `[pack patch #6]` de `PackPatches.lua` est le correctif 6 (Idées claires en combat).
+
+### Passage à la 3.14.1 (27/11/2026)
+
+Journal de l'addon lu (3.13.1, 3.14.0, 3.14.1) et code comparé à la 3.13.0 (`Data.lua`, `Core.lua`, `Party.lua`, `Options.lua`). Aucun correctif n'est rendu inutile par la nouvelle version ; deux sont étendus à ce qu'elle ajoute.
+
+| Correctif ou réglage | En 3.14.1 | Raison |
+|---|---|---|
+| 1, nourriture, feu de camp, *Victory Rush*, *Reckless Swings* dans la langue du client | gardé, **étendu** au sac de couchage | `wellFed` et `campfire` toujours sans numéro (`Data.lua` 68 à 73), `victoryRush` toujours avec le seul numéro 34428, `recklessSwings` sans numéro. La nouvelle famille `wellRested` (sac de couchage douillet, 3.14.1, `Data.lua` 76) a le numéro 429959, reconnu dans toutes les langues ; son second nom anglais, « Well Rested » (sort 1225478), n'est lu que par son nom : les deux s'appellent « Bien reposé » en français, ajouté. |
+| 2, son du Cri de guerre | gardé | `battleShout` toujours sans son par défaut (`Data.lua` 380) |
+| 3, touches de la fenêtre d'options en combat | gardé | `Options.lua` 346 à 353 appelle toujours `SetPropagateKeyboardInput` sans tester le combat |
+| 4, grandes alertes sous les améliorations | gardé tel quel | aucune grande alerte nouvelle ; la nouvelle alerte du sac de couchage est une petite icône de la rangée du haut (`Data.lua` 373 : x = -110, à gauche de l'arme absente), laissée à la place de l'auteur |
+| 5, « Reset to defaults » | gardé | `ns.ResetDefaults` (`Core.lua` 635) parcourt toujours chaque entrée avec `pairs`, et il y a maintenant trois booléens : `hideAll`, `sleepMode` et le nouveau `hideMounted` (`Data.lua` 367 à 369) ; notre enveloppe écarte toute valeur qui n'est pas une table |
+| 6, Idées claires en combat | gardé | `costSpells` toujours en noms anglais (`Data.lua` 288) |
+| 7, parchemins et buffs de camp qui remplacent un buff de classe | **nouveau** | voir le correctif 7 : la 3.13.1 les reconnaît par leur nom anglais seulement |
+| Réglage 6, éteint à la première installation | gardé | `## DefaultState: disabled` dans le `.toc` |
+
+Nouveautés de l'auteur à connaître :
+- 3.13.1 : un parchemin (Endurance, Intelligence, Esprit) ou un buff de camp plus fort qui remplace un buff de classe compte pour lui (alertes du joueur et indicateurs du groupe) ; quand un sort est refusé par « Un sort plus puissant est déjà actif », l'addon apprend quel buff le bloque (`/balert buffs` montre ce qu'il a appris, `/balert forget` l'oublie). Ce message est lu par la chaîne du jeu `SPELL_FAILED_AURA_BOUNCED`, donc dans toutes les langues.
+- 3.14.0 : « Hide alerts while mounted », allumé par défaut : toutes les alertes et les indicateurs du groupe se cachent à cheval, et reviennent en mettant pied à terre ou en combat ; `/balert mount`.
+- 3.14.1 : petite alerte du sac de couchage douillet (*Cozy Sleeping Bag*, objet 211527, buff « Bien reposé », jusqu'à 3 % d'expérience en plus), à côté de la nourriture et du feu de camp, seulement si le sac est dans les sacs (ou la collection de jouets), cachée en combat. Le sac est reconnu par son numéro d'objet, donc dans toutes les langues.
+
+Vérifié le 27/11/2026 : numéros et noms dans les tables SpellName enUS et frFR (build 1.60.1.70888 pour 429959, 1225478, 8099, 8096, 8112, 18191, 18193 ; l'objet 211527 « Cozy Sleeping Bag » dans ItemSparse 1.60.1.70888) ; banc hors jeu (les cinq fichiers de l'addon sous Lua 5.1 avec un faux jeu dont `C_Spell.GetSpellName` répond depuis SpellName) : sur le client français, la release ne reconnaît ni « Endurance », ni « Intelligence », ni « Esprit », ni « Bien reposé » ; la copie du pack les reconnaît ; sur le client anglais, les mêmes réponses dans les deux. Le diff redonne le dossier octet pour octet.
 
 ### Passage à la 3.13.0 (22/11/2026)
 
@@ -70,7 +92,8 @@ En 3.11.4, le seul texte écrit en dur qui sert à repérer quelque chose en deh
 - Vérifié sur tout SpellName : les 30 sorts nommés « Well Fed » en anglais s'appellent « Bien nourri » (27) ou « Personnage bien nourri » (3) en français, et ces deux noms français ne désignent que des « Well Fed ». Même correspondance exacte, dans les deux sens, pour les quatre noms du camp. Le français reconnaît donc exactement les mêmes améliorations que l'anglais. « Warm Fire » n'existe pas sur le build (aucun sort de ce nom) : rien à traduire.
 - Laissé : les fragments anglais (« Cozy », « Warm »…) restent valables en anglais seulement. Le français s'appuie sur les noms exacts, dont « Avantages du camp », l'amélioration de camp de Forever confirmée par l'auteur en 3.11.4.
 - Étendu en 3.13.0 aux deux alertes du guerrier qui n'ont, elles aussi, que leur nom anglais : *Victory Rush* (le numéro 34428 de `Data.lua` n'existe pas sur Forever) et *Reckless Swings* (aucun numéro). L'addon les cherche par ce nom (`BestKnown`, `Core.lua` 126 à 140), ce qui échoue sur le client français. Leurs sorts de Forever donnent le nom traduit : 402927 « Victory Rush » / « Ivresse de la victoire », 1329554 « Reckless Swings » / « Frappes téméraires » (SpellName, build 1.60.1.70888).
-- À retirer quand : l'amont donne des numéros de sort à `wellFed` et `campfire` (et des numéros de Forever à `victoryRush` et `recklessSwings`), ou traduit ces noms.
+- Étendu en 3.14.1 à la famille `wellRested` (sac de couchage douillet) : 429959 « Well-Rested » et 1225478 « Well Rested » s'appellent tous deux « Bien reposé » en français, et « Bien reposé » ne désigne que ces deux sorts (SpellName, build 1.60.1.70888). Le premier est déjà reconnu par son numéro ; le second ne l'était que par son nom anglais.
+- À retirer quand : l'amont donne des numéros de sort à `wellFed` et `campfire` (et des numéros de Forever à `victoryRush`, `recklessSwings` et au second buff du sac de couchage), ou traduit ces noms.
 
 ### Réglage 2 : son sur l'alerte du Cri de guerre
 
@@ -153,6 +176,25 @@ En 3.11.4, le seul texte écrit en dur qui sert à repérer quelque chose en deh
 
 - À retirer quand : l'amont cherche ces sorts par leur numéro, ou traduit ces noms.
 
+### Correctif 7 : parchemins et buffs de camp dans la langue du client (3.14.1)
+
+- Clients : français (et toute autre langue que l'anglais). Sur le client anglais, rien ne change.
+- Fichiers : `Data.lua` lignes 305 à 313 (`ns.EQUIVALENTS`), `Core.lua` 392 à 401 (`ns.IsEquivalent`), lue par `RefreshSelfFromAuras` (alertes du joueur) et par `MemberMissing` (`Party.lua`, indicateurs du groupe).
+- Cause : depuis la 3.13.1, un parchemin d'Endurance, d'Intelligence ou d'Esprit, ou un buff de camp, compte pour le buff de prêtre ou de mage qu'il remplace (Robustesse, Intelligence des arcanes, Esprit divin). L'addon les reconnaît par leurs noms anglais exacts (« Stamina », « Intellect », « Spirit », « Increased Spirit ») et par les fragments anglais « Stamina » et « Intellect ». Sur le client français, ces buffs s'appellent « Endurance », « Endurance augmentée », « Intelligence », « Esprit » et « Esprit augmenté » : rien ne correspond, l'alerte et l'indicateur du groupe restent affichés jusqu'à ce qu'un sort refusé (« Un sort plus puissant est déjà actif. ») apprenne le nom à l'addon. Reproduit au banc avec la release.
+- Correction (`PackPatches.lua`, `[pack patch #7]`) : chaque nom anglais exact reçoit son équivalent dans la langue du client, lu par `C_Spell.GetSpellName` sur un sort qui porte ce nom (SpellName, build 1.60.1.70888). Ajout fait au chargement, refait à la connexion. Sur le client anglais, les noms obtenus sont déjà reconnus (« Increased Stamina » l'est par le fragment « Stamina ») : rien ne change.
+
+| Famille | Sort | enUS | frFR |
+|---|---|---|---|
+| `fortitude` | 8099 | Stamina | Endurance |
+| `fortitude` | 18191 | Increased Stamina | Endurance augmentée |
+| `arcaneIntellect` | 8096 | Intellect | Intelligence |
+| `divineSpirit` | 8112 | Spirit | Esprit |
+| `divineSpirit` | 18193 | Increased Spirit | Esprit augmenté |
+
+- Vérifié sur tout SpellName : « Intelligence » ne désigne que des « Intellect » (10 sorts), « Esprit » que des « Spirit » (6), « Esprit augmenté » et « Endurance augmentée » que les deux sorts de chaque nom. « Endurance » désigne les six « Stamina » et un septième sort, 20550, *Endurance* en anglais : le talent racial passif des Taurens. S'il apparaît parmi les buffs, un Tauren sur le client français compterait comme ayant Robustesse ; il ne joue pas dans un groupe de l'Alliance.
+- Laissé : les fragments (`patterns`) restent anglais ; les noms exacts suffisent pour les parchemins et les buffs de camp connus.
+- À retirer quand : l'amont reconnaît ces buffs par leur numéro, ou traduit ces noms.
+
 ### Réglage 6 : éteint à la première installation (0.10.0)
 
 - Clients : les deux. Choix du groupe : BuffAlerts ne doit pas s'imposer (jugé trop voyant) ; qui en veut l'allume.
@@ -194,6 +236,9 @@ En 3.11.4, le seul texte écrit en dur qui sert à repérer quelque chose en deh
 1. **Cri de guerre** (guerrier, clients FR et EN) : sans Cri de guerre, engager un combat : icône en haut à droite, sous les améliorations, et son d'avertissement. Lancer le Cri : l'icône disparaît. Rester en combat jusqu'aux 5 dernières secondes : icône avec compte à rebours et son. Hors combat : jamais d'icône. Vérifier aussi qu'un Cri lancé avant le combat éteint bien l'alerte à l'engagement.
 2. **Fulgurance, Vengeance, Exécution** (guerrier, FR et EN) : icônes quand le jeu les rend utilisables, avec compte à rebours pour Fulgurance et Vengeance.
 3. **Nourriture et feu de camp** (toutes classes, client FR d'abord, puis EN) : manger un plat qui donne « Bien nourri » : l'icône de nourriture disparaît. S'installer à un feu de camp jusqu'à « Avantages du camp » : l'icône du feu de camp disparaît. Si une icône reste, taper `/balert buffs` et noter le nom et le numéro affichés.
+   **Sac de couchage** (3.14.1, avec le sac douillet dans les sacs) : une petite icône à gauche de la rangée du haut tant que « Bien reposé » manque ; utiliser le sac : elle disparaît. Sans le sac : jamais d'icône.
+   **Parchemins** (correctif 7, client FR d'abord) : un prêtre ou un mage sous un parchemin d'Endurance ou d'Intelligence : pas d'alerte de Robustesse ou d'Intelligence des arcanes, et pas d'indicateur à côté d'un membre du groupe qui a le parchemin.
+   **À cheval** (3.14.0) : en selle hors combat, aucune alerte ; en combat ou à pied, elles reviennent.
 4. **Druide** (FR et EN) : Marque du fauve et Épines s'éteignent une fois lancées, y compris en forme de félin ; avec le talent Augure de clarté, l'icône Idées claires n'apparaît que pendant le déclenchement, avec son compte à rebours ; en groupe, petite icône de la Marque à côté du cadre d'un membre qui ne l'a pas.
 5. **Démoniste** (FR et EN) : armure (Peau de démon ou Armure démoniaque), icône « démon absent » quand le démon est renvoyé ou mort, icône des fragments d'âme sous 5 (hors combat).
 6. **Mage** (FR et EN) : armure et Intelligence des arcanes ; en groupe, icône d'Intelligence à côté des membres à mana qui ne l'ont pas (pas à côté du guerrier).
@@ -207,9 +252,28 @@ En 3.11.4, le seul texte écrit en dur qui sert à repérer quelque chose en deh
 
 ## English
 
-BuffAlerts Forever 3.13.0 (Thork, MIT licence), installed from the file published on [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlertsForever-3.13.0.zip`, SHA-256 `995513121663364b1269f2855d3d724760c49bba28defb7d5eec1665c2c8ea26`). `BuffAlertsForever.toc` keeps version 3.13.0 so the author recognises the base; a `## X-Pack-Patches:` line flags the changes.
+BuffAlerts Forever 3.14.1 (Thork, MIT licence), installed from the file published on [CurseForge](https://www.curseforge.com/wow/addons/buffalerts) (`BuffAlerts-Forever-3.14.1.zip`, SHA-1 `a4465f517b92f171919864639c4279210954c4f6`, SHA-256 `370cc9b6cd27527ba249fed7087e8a31fcb51724a9d44517576bdd7a567fd8fe`). `BuffAlertsForever.toc` keeps version 3.14.1 so the author recognises the base; a `## X-Pack-Patches:` line flags the changes.
 
-The release files are not modified, except three `.toc` lines: `## X-Pack-Patches:`, `## DefaultState: disabled` (off on a first install, default 6) and `PackPatches.lua`. All the code the pack changes lives in that one added file, `PackPatches.lua`, listed last in the `.toc`: it runs after `Data.lua`, `Core.lua`, `Party.lua` and `Options.lua` but before `ADDON_LOADED` and `PLAYER_LOGIN`, so before the addon reads its settings. To take a new upstream version: copy the release, add the `## X-Pack-Patches:` and `PackPatches.lua` lines back to the `.toc`, and check each patch is still needed. The full diff is [`buffalerts-3.13.0.patch`](buffalerts-3.13.0.patch): `git -c core.autocrlf=false apply -p1 docs/buffalerts-3.13.0.patch`, run from the folder holding the unzipped `BuffAlertsForever`, rebuilds the repository's `addons/BuffAlertsForever` byte for byte (checked 2026-11-22; files stay LF). Each patch carries a `[pack patch #n]` mark. Default 6 (off on a first install) lives in the `.toc` and has no mark: the `[pack patch #6]` in `PackPatches.lua` is patch 6 (Clearcasting in combat).
+The release files are not modified, except three `.toc` lines: `## X-Pack-Patches:`, `## DefaultState: disabled` (off on a first install, default 6) and `PackPatches.lua`. All the code the pack changes lives in that one added file, `PackPatches.lua`, listed last in the `.toc`: it runs after `Data.lua`, `Core.lua`, `Party.lua` and `Options.lua` but before `ADDON_LOADED` and `PLAYER_LOGIN`, so before the addon reads its settings. To take a new upstream version: copy the release, add the `## X-Pack-Patches:` and `PackPatches.lua` lines back to the `.toc`, and check each patch is still needed. The full diff is [`buffalerts-3.14.1.patch`](buffalerts-3.14.1.patch): `git -c core.autocrlf=false apply -p1 docs/buffalerts-3.14.1.patch`, run from the folder holding the unzipped `BuffAlertsForever`, rebuilds the repository's `addons/BuffAlertsForever` byte for byte (checked 2026-11-27; files stay LF). Each patch carries a `[pack patch #n]` mark. Default 6 (off on a first install) lives in the `.toc` and has no mark: the `[pack patch #6]` in `PackPatches.lua` is patch 6 (Clearcasting in combat).
+
+### Moving to 3.14.1 (2026-11-27)
+
+The addon's changelog read (3.13.1, 3.14.0, 3.14.1) and its code compared with 3.13.0 (`Data.lua`, `Core.lua`, `Party.lua`, `Options.lua`). The new version makes no patch useless; two are extended to what it adds.
+
+| Patch or default | In 3.14.1 | Why |
+|---|---|---|
+| 1, food, campfire, Victory Rush, Reckless Swings in the client's language | kept, **extended** to the sleeping bag | `wellFed` and `campfire` still have no ID (`Data.lua` 68-73), `victoryRush` still only 34428, `recklessSwings` none. The new `wellRested` family (Cozy Sleeping Bag, 3.14.1, `Data.lua` 76) has ID 429959, recognised in every language; its second English name, "Well Rested" (spell 1225478), is matched by name only: both are "Bien reposé" in French, added. |
+| 2, Battle Shout sound | kept | `battleShout` still has no sound by default (`Data.lua` 380) |
+| 3, options window keys in combat | kept | `Options.lua` 346-353 still calls `SetPropagateKeyboardInput` without checking for combat |
+| 4, large alerts under the buffs | kept as is | no new large alert; the new sleeping bag alert is a small icon of the top row (`Data.lua` 373: x = -110, left of the missing weapon), left where the author put it |
+| 5, Reset to defaults | kept | `ns.ResetDefaults` (`Core.lua` 635) still runs `pairs` on every entry, and there are now three booleans: `hideAll`, `sleepMode` and the new `hideMounted` (`Data.lua` 367-369); our wrapper leaves out any value that is not a table |
+| 6, Clearcasting in combat | kept | `costSpells` still English names (`Data.lua` 288) |
+| 7, scrolls and camp buffs that replace a class buff | **new** | see patch 7: 3.13.1 recognises them by English name only |
+| Default 6, off on a first install | kept | `## DefaultState: disabled` in the `.toc` |
+
+Upstream changes worth knowing: 3.13.1, a scroll (Stamina, Intellect, Spirit) or a stronger camp buff that replaces a class buff counts as it (own alerts and party indicators), and a cast refused with "A more powerful spell is already active" teaches the addon which buff blocks it (`/balert buffs`, `/balert forget`; the message is read through the game's `SPELL_FAILED_AURA_BOUNCED`, so in every language); 3.14.0, "Hide alerts while mounted", on by default (`/balert mount`); 3.14.1, a small Cozy Sleeping Bag alert (item 211527, "Well-Rested" buff), only when the bag is in the bags or the toy box, hidden in combat, recognised by item ID in every language.
+
+Checked on 2026-11-27: IDs and names in the SpellName tables enUS and frFR (build 1.60.1.70888 for 429959, 1225478, 8099, 8096, 8112, 18191, 18193; item 211527 "Cozy Sleeping Bag" in ItemSparse 1.60.1.70888); an out-of-game bench (the addon's five files under Lua 5.1 with a fake game whose `C_Spell.GetSpellName` answers from SpellName): on the French client the release recognises neither "Endurance", "Intelligence", "Esprit" nor "Bien reposé", the pack's copy does; on the English client both answer the same. The diff rebuilds the folder byte for byte.
 
 ### Moving to 3.13.0 (2026-11-22)
 
@@ -239,7 +303,8 @@ Class spells are matched by spell ID (`FamilyOf`, `Core.lua` 99-110), each ID va
 - Files (3.13.0): `Data.lua` 68-73, `Core.lua` 107-112 (name fallback in `FamilyOf`) and 245-253 (name table, in `Resolve`).
 - Fix: each exact English name gets its twin in the client's language through `C_Spell.GetSpellName` on a spell with exactly that English name (19705 and 1283082 for Well Fed, 1229741, 7353, 18191, 18193 for the camp names), at load and again at login. Checked over the whole SpellName table: the English and French names map one to one, so French matches exactly the buffs English does. The English-only fragments ("Cozy", "Warm"...) are left as they are.
 - Extended in 3.13.0 to the two warrior alerts that also have only their English name: Victory Rush (ID 34428 in `Data.lua` does not exist on Forever) and Reckless Swings (no ID). The addon looks them up by that name (`BestKnown`, `Core.lua` 126-140), which fails on the French client. Their Forever spells give the translated name: 402927 "Victory Rush" / "Ivresse de la victoire", 1329554 "Reckless Swings" / "Frappes téméraires" (SpellName, build 1.60.1.70888).
-- Drop it once upstream gives these families spell IDs (and Forever IDs to `victoryRush` and `recklessSwings`) or translates the names.
+- Extended in 3.14.1 to the `wellRested` family (Cozy Sleeping Bag): 429959 "Well-Rested" and 1225478 "Well Rested" are both "Bien reposé" in French, a name only those two spells have (SpellName, build 1.60.1.70888). The first is already recognised by ID; the second only by its English name.
+- Drop it once upstream gives these families spell IDs (and Forever IDs to `victoryRush`, `recklessSwings` and the sleeping bag's second buff) or translates the names.
 
 ### Default 2: sound on the Battle Shout alert
 
@@ -276,6 +341,15 @@ Class spells are matched by spell ID (`FamilyOf`, `Core.lua` 99-110), each ID va
 - Cause: since 3.13.0 the Clearcasting alert is a proc alert. In combat the game hides buffs, so the addon watches five druid spells whose mana cost drops to 0 while Clearcasting is up (`costSpells`). It finds them with `C_Spell.GetSpellInfo` on their English names only ("Healing Touch", "Wrath", "Regrowth", "Moonfire", "Rejuvenation"): on the French client none of those names is a spell, the list stays empty and the alert never shows in combat. Out of combat Clearcasting is matched by its ID (16870), in every language.
 - Fix (`PackPatches.lua`, `[pack patch #6]`): each spell's name in the client's language is added to `costSpells`, read by `C_Spell.GetSpellName` on its rank 1 (SpellName table, build 1.60.1.70888, wago.tools): 5185 Healing Touch / Toucher guérisseur, 5176 Wrath / Colère, 8936 Regrowth / Rétablissement, 8921 Moonfire / Eclat lunaire, 774 Rejuvenation / Récupération. Added at load and again at login; the addon reads the list again every 5 s out of combat. On the English client the names found are already there: nothing is added.
 - Drop it once upstream looks these spells up by ID or translates the names.
+
+### Patch 7: scrolls and camp buffs in the client's language (3.14.1)
+
+- Clients: French (and any language but English). Nothing changes on the English client.
+- Files: `Data.lua` 305-313 (`ns.EQUIVALENTS`), `Core.lua` 392-401 (`ns.IsEquivalent`), read by `RefreshSelfFromAuras` (own alerts) and `MemberMissing` (`Party.lua`, party indicators).
+- Cause: since 3.13.1 a Scroll of Stamina, Intellect or Spirit, or a camp buff, counts as the priest's or mage's buff it replaces. The addon matches them by exact English names ("Stamina", "Intellect", "Spirit", "Increased Spirit") and the English fragments "Stamina" and "Intellect". The French client calls them "Endurance", "Endurance augmentée", "Intelligence", "Esprit" and "Esprit augmenté": nothing matches, so the alert and the party indicator stay up until a refused cast teaches the addon the name. Reproduced on the bench with the release.
+- Fix (`PackPatches.lua`, `[pack patch #7]`): each exact English name gets its twin in the client's language, read with `C_Spell.GetSpellName` from a spell of that name (SpellName, build 1.60.1.70888): 8099 Stamina / Endurance, 18191 Increased Stamina / Endurance augmentée, 8096 Intellect / Intelligence, 8112 Spirit / Esprit, 18193 Increased Spirit / Esprit augmenté. Done at load and again at login. On the English client the names are already recognised: nothing changes.
+- Checked over all of SpellName: "Intelligence", "Esprit", "Esprit augmenté" and "Endurance augmentée" name only those English buffs. "Endurance" also names spell 20550, the Tauren racial passive *Endurance*: if it shows among the buffs, a Tauren on a French client would count as having Fortitude; Tauren do not play in an Alliance group.
+- Drop it once upstream recognises these buffs by ID or translates the names.
 
 ### Default 6: off on a first install (0.10.0)
 

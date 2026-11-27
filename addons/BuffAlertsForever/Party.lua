@@ -62,10 +62,9 @@ local function MemberMissing(alert, unit)
     if not list then return false end
     for _, a in ipairs(list) do
         local fk = ns.FamilyOf(a.sid, a.name)
-        if fk then
-            for _, want in ipairs(alert.families) do
-                if fk == want then return false end
-            end
+        for _, want in ipairs(alert.families) do
+            -- The buff itself, or a scroll/camp buff that replaces it
+            if fk == want or ns.IsEquivalent(want, a.name) then return false end
         end
     end
     return true
@@ -76,7 +75,7 @@ function ns.UpdateParty()
     for index, alert in ipairs(myParty) do
         local cfg = ns.db[alert.key]
         -- Only check buffs the player can actually cast (e.g. Divine Spirit needs the talent)
-        local active = cfg.enabled and not ns.db.hideAll and not ns.IsSleeping() and ns.HasRecommendation(alert.iconFrom) and not ns.IsInCombat()
+        local active = cfg.enabled and not ns.db.hideAll and not ns.IsSleeping() and not ns.IsMountedHidden() and ns.HasRecommendation(alert.iconFrom) and not ns.IsInCombat()
             and SafeBool(IsInGroup) and not SafeBool(IsInRaid)
         if not active and not ns.unlocked then
             HideAll(alert.key)

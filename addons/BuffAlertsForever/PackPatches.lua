@@ -15,11 +15,14 @@ local ADDON, ns = ...
 -- of WoW Forever in Data.lua (34428 does not exist on Forever, Reckless Swings has none), so Core finds
 -- them by their English name only (BestKnown) and never on a French client. Their Forever spells
 -- (SpellName, build 1.60.1.70888) give the name in the client's language.
+-- 3.14.1: the Cozy Sleeping Bag's buff (wellRested) has its ID, 429959, but its second English name,
+-- "Well Rested" (1225478), is matched by name only: both are "Bien reposé" in French.
 local NAME_SOURCES = {
     wellFed  = { 19705, 1283082 },               -- "Well Fed" (frFR "Bien nourri", "Personnage bien nourri")
     campfire = { 1229741, 7353, 18191, 18193 },  -- "Camp Benefits", "Cozy Fire", "Increased Stamina", "Increased Spirit"
     victoryRush    = { 402927 },                 -- "Victory Rush" (frFR "Ivresse de la victoire")
     recklessSwings = { 1329554 },                -- "Reckless Swings" (frFR "Frappes téméraires")
+    wellRested     = { 429959, 1225478 },        -- "Well-Rested", "Well Rested" (frFR "Bien reposé")
 }
 
 local function AddLocalizedNames()
@@ -222,8 +225,54 @@ costFrame:SetScript("OnEvent", function(self)
 end)
 
 ------------------------------------------------------------
+-- [pack patch #7] Scrolls and camp buffs that replace a class buff, in every language (3.14.1)
+-- Since 3.13.1 a Scroll of Stamina, Intellect or Spirit, or a camp buff, counts as the priest's or
+-- mage's buff it replaces (Data.lua ns.EQUIVALENTS), matched by English name or fragment only: on a
+-- French client "Endurance", "Intelligence" and "Esprit" never match, so the alert and the party
+-- indicator stay up until a blocked cast teaches the name (Core OnBuffBounced). Each exact English
+-- name gets its twin in the client's language (SpellName, build 1.60.1.70888): 8099 Stamina /
+-- Endurance, 18191 Increased Stamina / Endurance augmentée, 8096 Intellect / Intelligence,
+-- 8112 Spirit / Esprit, 18193 Increased Spirit / Esprit augmenté.
+------------------------------------------------------------
+local EQUIVALENT_SOURCES = {
+    fortitude       = { 8099, 18191 },
+    arcaneIntellect = { 8096 },
+    divineSpirit    = { 8112, 18193 },
+}
+
+local function AddLocalizedEquivalents()
+    local getName = C_Spell and C_Spell.GetSpellName
+    if not (getName and ns.EQUIVALENTS) then return end
+    for fk, ids in pairs(EQUIVALENT_SOURCES) do
+        local eq = ns.EQUIVALENTS[fk]
+        if eq then
+            eq.names = eq.names or {}
+            for _, id in ipairs(ids) do
+                local ok, name = pcall(getName, id)
+                if ok and type(name) == "string" and name ~= "" and not (ns.IsSecret and ns.IsSecret(name)) then
+                    local known = false
+                    for _, n in ipairs(eq.names) do
+                        if n == name then known = true; break end
+                    end
+                    if not known then eq.names[#eq.names + 1] = name end
+                end
+            end
+        end
+    end
+end
+
+AddLocalizedEquivalents()
+local equivalentFrame = CreateFrame("Frame")
+equivalentFrame:RegisterEvent("PLAYER_LOGIN")
+equivalentFrame:SetScript("OnEvent", function(self)
+    self:UnregisterEvent("PLAYER_LOGIN")
+    AddLocalizedEquivalents()
+end)
+
+------------------------------------------------------------
 -- [pack patch #5] "Reset to defaults" stopped halfway
--- ns.ResetDefaults (Core.lua) runs pairs() on every entry of ns.DEFAULTS, and hideAll is a boolean:
+-- ns.ResetDefaults (Core.lua) runs pairs() on every entry of ns.DEFAULTS, and hideAll is a boolean
+-- (so are sleepMode since 3.12.0 and hideMounted since 3.14.0):
 -- Lua error "table expected, got boolean" as soon as it is reached, so the rest of the reset,
 -- Resolve() and the refresh never run. Plain values are reset here and left out of the call.
 ------------------------------------------------------------

@@ -72,6 +72,9 @@ ns.FAMILIES = {
                  names = { "Camp Benefits", "Cozy Fire", "Warm Fire", "Increased Stamina", "Increased Spirit" },
                  patterns = { "Camp Benefit", "Cozy", "Campfire", "Camp Fire", "Warm" } },
 
+    -- Cozy Sleeping Bag buff (up to 3% bonus experience)
+    wellRested = { label = "Well-Rested", duration = 7200, ids = { 429959 }, names = { "Well-Rested", "Well Rested" } },
+
     -- Shaman weapon imbues (not auras: only used to know the skill exists, for the icon and for casts)
     rockbiter       = { label = "Rockbiter Weapon",   duration = 300, ids = { 25485, 25479, 16316, 16315, 16314, 10399, 8019, 8018, 8017 } },
     flametongue     = { label = "Flametongue Weapon", duration = 300, ids = { 25489, 16342, 16341, 16339, 8030, 8027, 8024 } },
@@ -209,6 +212,10 @@ ns.SELF_ALERTS = {
     -- Consumable reminders for every class (hidden in combat, where you cannot eat anyway)
     { key = "foodBuff", class = "ALL", label = "Food buff", noSpell = true, hideInCombat = true,
       families = { "wellFed" }, icon = "Interface\\Icons\\INV_Misc_Food_15" },
+    -- ownItem: only shown if you own this item (bags or toy box), by ID or name
+    { key = "sleepingBagBuff", class = "ALL", label = "Sleeping Bag buff", noSpell = true, hideInCombat = true,
+      families = { "wellRested" }, icon = "Interface\\Icons\\INV_Misc_Bag_10",
+      ownItem = { id = 211527, name = "Cozy Sleeping Bag" } },
     { key = "campfireBuff", class = "ALL", label = "Campfire buff", noSpell = true, hideInCombat = true,
       families = { "campfire" }, icon = "Interface\\Icons\\Spell_Fire_Fire" },
 
@@ -295,6 +302,16 @@ ns.WEAPON_ALERTS = {
       icon = "Interface\\Icons\\Ability_Poisons" },
 }
 
+-- Equivalent buffs: scrolls and camp buffs that do not stack with a class buff and replace it.
+-- While one is on you (or on a party member), that class buff counts as present.
+-- names = exact buff names, patterns = name fragments. Buffs that block a cast with
+-- "A more powerful spell is already active" are also learned automatically (see Core.lua).
+ns.EQUIVALENTS = {
+    fortitude       = { names = { "Stamina" }, patterns = { "Stamina" } },          -- Scroll of Stamina, camp stamina buffs
+    arcaneIntellect = { names = { "Intellect" }, patterns = { "Intellect" } },      -- Scroll of Intellect, camp intellect buffs
+    divineSpirit    = { names = { "Spirit", "Increased Spirit" } },                 -- Scroll of Spirit, camp spirit buffs
+}
+
 -- Utility alerts (small, top of the screen). check = function name in ns.UtilityChecks
 ns.UTILITY_ALERTS = {
     { key = "soulShards",    class = "WARLOCK", label = "Soul Shards",   check = "soulShards",    icon = "Interface\\Icons\\INV_Misc_Gem_Amethyst_02",
@@ -349,9 +366,11 @@ ns.DEFAULTS = {
     -- Global
     hideAll          = false,
     sleepMode        = true,    -- no buff alerts while resting in a city or inn
+    hideMounted      = true,    -- no alerts while mounted (out of combat)
     -- All classes (anchored to the top of the screen)
     foodBuff         = { enabled = true, size = 36, x = -22, y = -40, anchor = "TOP" },
     campfireBuff     = { enabled = true, size = 36, x =  22, y = -40, anchor = "TOP" },
+    sleepingBagBuff  = { enabled = true, size = 36, x = -110, y = -40, anchor = "TOP" },
     missingWeapon    = { enabled = true, size = 36, x = -66, y = -40, anchor = "TOP" },
     durability       = { enabled = true, size = 36, x =  66, y = -40, anchor = "TOP", threshold = 20 },
     soulShards       = { enabled = true, size = 36, x = 110, y = -40, anchor = "TOP", threshold = 5 },
